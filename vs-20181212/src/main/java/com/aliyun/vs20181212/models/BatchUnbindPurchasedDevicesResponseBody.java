@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result list.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchUnbindPurchasedDevicesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
 
     public static class BatchUnbindPurchasedDevicesResponseBodyResults extends TeaModel {
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
@@ -44,6 +51,11 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Error message.</p>
+         * <blockquote>
+         * <p>This field appears only when an error occurs.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>some error</p>
          */

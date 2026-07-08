@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountStatResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of device spaces.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAccountStatResponseBody extends TeaModel {
     public Long groupLimit;
 
     /**
+     * <p>Number of device groups in the current region.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -19,15 +23,17 @@ public class DescribeAccountStatResponseBody extends TeaModel {
     public Long groupNum;
 
     /**
-     * <p>ID</p>
+     * <p>Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3238848****092996</p>
+     * <p>1165*****601</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -35,6 +41,8 @@ public class DescribeAccountStatResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Maximum number of templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -42,6 +50,8 @@ public class DescribeAccountStatResponseBody extends TeaModel {
     public Long templateLimit;
 
     /**
+     * <p>Current number of templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

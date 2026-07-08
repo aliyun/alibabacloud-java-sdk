@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupRequest extends TeaModel {
     /**
+     * <p>Space ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>337639*****224964-cn-qingdao</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>Specifies whether to return the statistics of devices in the group. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

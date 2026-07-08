@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyRenderingInstanceBandwidthRequest extends TeaModel {
     /**
+     * <p>The maximum outbound bandwidth for rate limiting. Unit: Mbit/s. You must specify at least one of MaxIngressBandwidth and MaxEgressBandwidth.</p>
+     * <ul>
+     * <li><p>By default, no rate limit is configured for the instance.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter or set it to 0, the last configuration is retained.</p>
+     * </li>
+     * <li><p>If you set this parameter to a value less than 0, the rate limit is reset to unlimited.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +22,16 @@ public class ModifyRenderingInstanceBandwidthRequest extends TeaModel {
     public Integer maxEgressBandwidth;
 
     /**
+     * <p>The maximum inbound bandwidth for rate limiting. Unit: Mbit/s. You must specify at least one of MaxIngressBandwidth and MaxEgressBandwidth.</p>
+     * <ul>
+     * <li><p>By default, no rate limit is configured for the instance.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter or set it to 0, the last configuration is retained.</p>
+     * </li>
+     * <li><p>If you set this parameter to a value less than 0, the rate limit is reset to unlimited.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +39,7 @@ public class ModifyRenderingInstanceBandwidthRequest extends TeaModel {
     public Integer maxIngressBandwidth;
 
     /**
+     * <p>The ID of the cloud application service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

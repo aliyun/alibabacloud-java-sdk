@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRenderingInstanceResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6DFE7B89-8532-566F-B5CE-924B10FCE7AC</p>

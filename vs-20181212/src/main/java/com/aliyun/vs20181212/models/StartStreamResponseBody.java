@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartStreamResponseBody extends TeaModel {
     /**
+     * <p>Stream ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****997-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class StartStreamResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Stream name.</p>
+     * 
      * <strong>example:</strong>
      * <p>31000000000000000002</p>
      */
@@ -19,6 +23,8 @@ public class StartStreamResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

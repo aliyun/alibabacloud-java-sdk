@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingDataPackagesResponseBody extends TeaModel {
+    /**
+     * <p>A list of data packages for the cloud application service.</p>
+     */
     @NameInMap("DataPackages")
     public java.util.List<ListRenderingDataPackagesResponseBodyDataPackages> dataPackages;
 
@@ -17,6 +20,8 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of Graphic Computing Service instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -53,10 +58,24 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
     }
 
     public static class ListRenderingDataPackagesResponseBodyDataPackages extends TeaModel {
+        /**
+         * <p>The category. Valid values:</p>
+         * <ul>
+         * <li><p>Package</p>
+         * </li>
+         * <li><p>Baseline</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Package</p>
+         */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>The creation time of the Graphic Computing Service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-15T10:23:06+08:00</p>
          */
@@ -64,6 +83,8 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The ID of the data pack.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp-449ea3d16c0841b8bf33ec5bbc86a152</p>
          */
@@ -71,6 +92,8 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String dataPackageId;
 
         /**
+         * <p>Remarks.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -78,6 +101,8 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the Graphic Computing Service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>render-342012a227dc4ddf91f024639e43051a</p>
          */
@@ -85,6 +110,8 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
+         * <p>The size of the data pack.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -92,6 +119,12 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public Integer size;
 
         /**
+         * <p>The status of the data pack. Valid values:
+         * available
+         * packing
+         * failed
+         * bonded</p>
+         * 
          * <strong>example:</strong>
          * <p>available</p>
          */
@@ -99,6 +132,8 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-06T02:03:59Z</p>
          */

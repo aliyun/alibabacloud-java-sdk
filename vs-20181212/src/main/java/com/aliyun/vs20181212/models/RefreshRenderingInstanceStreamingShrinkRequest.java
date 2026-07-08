@@ -4,10 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class RefreshRenderingInstanceStreamingShrinkRequest extends TeaModel {
+    /**
+     * <p>Client information.</p>
+     */
     @NameInMap("ClientInfo")
     public String clientInfoShrink;
 
     /**
+     * <p>Cloud application service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

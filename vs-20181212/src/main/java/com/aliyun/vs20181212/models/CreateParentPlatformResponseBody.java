@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateParentPlatformResponseBody extends TeaModel {
     /**
+     * <p>上级平台ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>359*****374-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class CreateParentPlatformResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>请求ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordsRequest extends TeaModel {
     /**
+     * <p>Specify the end time for the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class DescribeRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +27,8 @@ public class DescribeRecordsRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Page size. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -31,6 +36,8 @@ public class DescribeRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Specifies whether to use a private bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +45,11 @@ public class DescribeRecordsRequest extends TeaModel {
     public Boolean privateBucket;
 
     /**
+     * <p>The field to sort the records by. Valid value:</p>
+     * <ul>
+     * <li>Id (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Id</p>
      */
@@ -45,6 +57,14 @@ public class DescribeRecordsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The sorting method. Valid values:</p>
+     * <ul>
+     * <li><p>asc (ascending, default)</p>
+     * </li>
+     * <li><p>desc (descending)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -52,6 +72,7 @@ public class DescribeRecordsRequest extends TeaModel {
     public String sortDirection;
 
     /**
+     * <p>Query records by start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +82,7 @@ public class DescribeRecordsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Query by stream ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +92,13 @@ public class DescribeRecordsRequest extends TeaModel {
     public String streamId;
 
     /**
+     * <p>The type of the recording record to query. Valid values:</p>
+     * <ul>
+     * <li><p>record (Recording)</p>
+     * </li>
+     * <li><p>snapshot</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

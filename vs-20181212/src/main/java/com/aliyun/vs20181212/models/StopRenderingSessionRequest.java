@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopRenderingSessionRequest extends TeaModel {
     /**
+     * <p>Unique ID of the end customer. Specify either SessionId or ClientId.</p>
+     * 
      * <strong>example:</strong>
      * <p>04c30850-1d91-4da1-b811-66d0ee94af7d</p>
      */
@@ -12,6 +14,7 @@ public class StopRenderingSessionRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>Project ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class StopRenderingSessionRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>Session ID. Specify either SessionId or ClientId.</p>
+     * 
      * <strong>example:</strong>
      * <p>session-i205217481741918129226</p>
      */

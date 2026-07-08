@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEdgeWorkersShrinkRequest extends TeaModel {
     /**
+     * <p>This parameter is required for renewal scenarios.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-14T15:20:37+08:00</p>
      */
@@ -12,6 +14,8 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The list of cluster IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
      */
@@ -19,6 +23,8 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String hiveIdsShrink;
 
     /**
+     * <p>The list of payload IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>ew-xxxxxx</p>
      */
@@ -26,6 +32,8 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String instanceIdsShrink;
 
     /**
+     * <p>The page number of the query. The value starts from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +50,8 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The list of package IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;pk-4fbf3928d40e43948b98acdb4fb5aaed&quot;]</p>
      */
@@ -47,6 +59,8 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String planIdsShrink;
 
     /**
+     * <p>Specification</p>
+     * 
      * <strong>example:</strong>
      * <p>ew.gn8t6xlarge-rb.x1p</p>
      */
@@ -54,12 +68,17 @@ public class ListEdgeWorkersShrinkRequest extends TeaModel {
     public String spec;
 
     /**
+     * <p>The parameter for filtering by time range. The time must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-05-25T06:35:26+08:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The list of statuses.</p>
+     */
     @NameInMap("Statuses")
     public String statusesShrink;
 

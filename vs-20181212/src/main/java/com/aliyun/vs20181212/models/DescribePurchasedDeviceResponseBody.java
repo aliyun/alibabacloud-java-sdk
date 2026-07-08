@@ -5,26 +5,44 @@ import com.aliyun.tea.*;
 
 public class DescribePurchasedDeviceResponseBody extends TeaModel {
     /**
+     * <p>Device creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-12-10T21:00:00Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>Device description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx路口摄像头</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****174-cn-qingdao</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>Space name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试空间</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
+     * <p>Device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>33763****77224964-cn-qingdao</p>
      */
@@ -32,6 +50,8 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Device name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -39,6 +59,8 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>Order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2117*****0447</p>
      */
@@ -46,6 +68,8 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>Region where the space belongs, also known as the service center.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
      */
@@ -53,6 +77,8 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String region;
 
     /**
+     * <p>Device registration code.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345*****67890</p>
      */
@@ -60,6 +86,8 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String registerCode;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -67,6 +95,16 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Device child type. Valid values:</p>
+     * <ul>
+     * <li><p>bullet (bullet camera)</p>
+     * </li>
+     * <li><p>dome (dome camera)</p>
+     * </li>
+     * <li><p>ptz (PTZ)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dome</p>
      */
@@ -74,6 +112,16 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String subType;
 
     /**
+     * <p>Device type. Valid values:</p>
+     * <ul>
+     * <li><p>ipc (camera)</p>
+     * </li>
+     * <li><p>platform</p>
+     * </li>
+     * <li><p>ied (intelligent device)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ipc</p>
      */
@@ -81,6 +129,8 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>Device vendor.</p>
+     * 
      * <strong>example:</strong>
      * <p>8yd*****qem</p>
      */

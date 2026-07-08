@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecoverRenderingDataPackageRequest extends TeaModel {
     /**
+     * <p>Cloud application service data pack ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class RecoverRenderingDataPackageRequest extends TeaModel {
     @NameInMap("DataPackageId")
     public String dataPackageId;
 
+    /**
+     * <p>Data loading mode. Valid values: System or Process. Default value: System. System indicates system-level loading, which offers high stability but takes longer. Process indicates process-level loading, which provides high timeliness but relatively lower stability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Process</p>
+     */
     @NameInMap("LoadMode")
     public String loadMode;
 
     /**
+     * <p>Cloud application service instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

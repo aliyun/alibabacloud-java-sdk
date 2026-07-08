@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
     /**
+     * <p>Time interval between records, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
+     * <p>The domain name of the Visual Edge Computing Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>End time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-24T03:30:46Z</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
     public DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerInterval reqBpsDataPerInterval;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +44,8 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-24T16:00:00Z</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedDevicesResponseBody extends TeaModel {
+    /**
+     * <p>The list of devices.</p>
+     */
     @NameInMap("Devices")
     public java.util.List<DescribePurchasedDevicesResponseBodyDevices> devices;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +47,8 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of devices.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,36 +110,62 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
 
     public static class DescribePurchasedDevicesResponseBodyDevices extends TeaModel {
         /**
+         * <p>The time the device was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:00:17Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The device description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx路口摄像头</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the group to which the device belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****174-cn-qingdao</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>Group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试空间</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
+         * <p>The device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx路口摄像头</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2117*****0447</p>
          */
@@ -134,6 +173,8 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         public String orderId;
 
         /**
+         * <p>The region to which the space belongs. This is the service center.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -141,6 +182,8 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The device registration code.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234*****67890</p>
          */
@@ -148,6 +191,16 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         public String registerCode;
 
         /**
+         * <p>The device subtype. Valid values:</p>
+         * <ul>
+         * <li><p>bullet (bullet camera)</p>
+         * </li>
+         * <li><p>dome (dome camera)</p>
+         * </li>
+         * <li><p>ptz (PTZ camera)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>dome</p>
          */
@@ -155,12 +208,28 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         public String subType;
 
         /**
+         * <p>The device type. Valid values:</p>
+         * <ul>
+         * <li><p>ipc (camera)</p>
+         * </li>
+         * <li><p>platform (platform)</p>
+         * </li>
+         * <li><p>ied (intelligent edge device)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ipc</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The device vendor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>公司A</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 

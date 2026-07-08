@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordsResponseBody extends TeaModel {
     /**
+     * <p>The start time to query the next record.</p>
+     * <blockquote>
+     * <p>Applies only to snapshot queries.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2018-12-10T11:00:00Z</p>
      */
@@ -12,6 +17,11 @@ public class DescribeRecordsResponseBody extends TeaModel {
     public String nextStartTime;
 
     /**
+     * <p>The total number of pages.</p>
+     * <blockquote>
+     * <p>Applies only to recording queries.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +29,11 @@ public class DescribeRecordsResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>The page number.</p>
+     * <blockquote>
+     * <p>Applies only to recording queries.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,16 +41,26 @@ public class DescribeRecordsResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The page size.</p>
+     * <blockquote>
+     * <p>Applies only to recording queries.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The list of stored records.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeRecordsResponseBodyRecords> records;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -43,6 +68,11 @@ public class DescribeRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of stored records.</p>
+     * <blockquote>
+     * <p>Applies only to recording queries.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -112,6 +142,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
 
     public static class DescribeRecordsResponseBodyRecords extends TeaModel {
         /**
+         * <p>The end time of the stored record.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-23T18:33:48</p>
          */
@@ -119,6 +151,18 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The format of the stored file. Valid values:</p>
+         * <ul>
+         * <li><p>mp4</p>
+         * </li>
+         * <li><p>flv</p>
+         * </li>
+         * <li><p>hls</p>
+         * </li>
+         * <li><p>jpg</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>hls</p>
          */
@@ -126,6 +170,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String fileFormat;
 
         /**
+         * <p>The height.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -133,6 +179,11 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public Long height;
 
         /**
+         * <p>The ID of the stored record.</p>
+         * <blockquote>
+         * <p>Applies only to recording queries.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2be2a673-6033-4874-b6f2-f2bc0a1*****</p>
          */
@@ -140,6 +191,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The bucket where the file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_oss_bucket</p>
          */
@@ -147,6 +200,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
+         * <p>The OSS endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-qingdao.aliyuncs.com</p>
          */
@@ -154,6 +209,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String ossEndpoint;
 
         /**
+         * <p>The object of the stored file.</p>
+         * 
          * <strong>example:</strong>
          * <p>record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</p>
          */
@@ -161,6 +218,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String ossObject;
 
         /**
+         * <p>The start time of the stored record.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-23T18:19:32</p>
          */
@@ -168,6 +227,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The stream ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323*****997-cn-qingdao</p>
          */
@@ -175,6 +236,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String streamId;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>388*****204-cn-qingdao</p>
          */
@@ -182,6 +245,14 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The type of the stored record. Valid values:</p>
+         * <ul>
+         * <li><p>record</p>
+         * </li>
+         * <li><p>snapshot</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>record</p>
          */
@@ -189,6 +260,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The URL of the stored file.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8">http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</a></p>
          */
@@ -196,6 +269,8 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>The width.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */

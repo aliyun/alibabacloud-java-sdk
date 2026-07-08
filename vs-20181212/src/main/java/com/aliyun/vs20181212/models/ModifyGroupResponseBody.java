@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the space.</p>
+     * 
      * <strong>example:</strong>
      * <p>32388487739092994-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class ModifyGroupResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
+    /**
+     * <p>The list of devices.</p>
+     */
     @NameInMap("Devices")
     public java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> devices;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +47,8 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of devices.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,6 +110,8 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
 
     public static class DescribeParentPlatformDevicesResponseBodyDevices extends TeaModel {
         /**
+         * <p>The GB ID of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>310101*****7542007</p>
          */
@@ -104,6 +119,8 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         public String gbId;
 
         /**
+         * <p>The ID of the space to which the device belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>3484*****8732174-cn-qingdao</p>
          */
@@ -111,16 +128,26 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3487*****323380-cn-qingdao</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试设备1</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The parent device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3614*****766212-cn-qingdao</p>
          */

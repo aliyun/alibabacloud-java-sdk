@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePresetResponseBody extends TeaModel {
     /**
+     * <p>The device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****380-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class DeletePresetResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F18FD685-B194-4489-9609-F80A9490A258</p>
      */

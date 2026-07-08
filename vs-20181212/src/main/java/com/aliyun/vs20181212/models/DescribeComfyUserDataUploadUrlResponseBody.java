@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyUserDataUploadUrlResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyUserDataUploadUrlResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The expiration time of the upload URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-08-28T16:00Z</p>
      */
@@ -19,6 +23,8 @@ public class DescribeComfyUserDataUploadUrlResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -26,7 +32,7 @@ public class DescribeComfyUserDataUploadUrlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -35,6 +41,8 @@ public class DescribeComfyUserDataUploadUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The URL for uploading the user file.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-bucket.oss-cn-shanghai-cloudspe.aliyuncs.com/path/userid/test.png?x-oss-date=20260602T093618Z&amp;x-oss-expires=29&amp;x-oss-security-token=xxxxx%2F68FY2NI6nyNgueynMjneKjKXD6l5tS5h3S2%xxxxx%xxxx%xxxxxxx%2Fb%xxxx%sdffeeeaasdf%xxx%xx%xx%xxxx%2BeASOv2N8q%xxx%2B6XBxllroojFliSTfsqGI2YMHpoRwJmyfXK32BQPb2SvQ0AM23soq%2FspAI4f9vtFG0yv9fKWMw%xxxxxxxxx%xxxxxxxx%3D%3D&amp;x-oss-signature-version=OSS4-HMAC&amp;x-oss-credential=STS.xxxxx%2F20260dfa202%2Fcn-shanghai-cloud%2Foss%2Faliyun_v4_request&amp;x-oss-signature=xxxxxxxxxxxxxx</p>
      */

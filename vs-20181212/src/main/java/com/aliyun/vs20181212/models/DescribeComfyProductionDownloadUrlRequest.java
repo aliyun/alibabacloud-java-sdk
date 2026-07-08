@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyProductionDownloadUrlRequest extends TeaModel {
     /**
+     * <p>The ID of the production.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

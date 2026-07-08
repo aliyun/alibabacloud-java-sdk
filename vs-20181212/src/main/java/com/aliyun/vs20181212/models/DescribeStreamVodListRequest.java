@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamVodListRequest extends TeaModel {
     /**
+     * <p>VOD record end time (unix timestamp, unit: seconds)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeStreamVodListRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Stream ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class DescribeStreamVodListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>VOD record start time (unix timestamp, unit: seconds)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

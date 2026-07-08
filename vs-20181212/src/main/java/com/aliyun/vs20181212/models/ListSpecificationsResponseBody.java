@@ -110,8 +110,6 @@ public class ListSpecificationsResponseBody extends TeaModel {
         public Integer shard;
 
         /**
-         * <p><code>RenderingSpec</code></p>
-         * 
          * <strong>example:</strong>
          * <p>crs.xic.s1</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadCloudAppResponseBody extends TeaModel {
     /**
+     * <p>The cloud application ID, which uniquely identifies the application package.</p>
+     * 
      * <strong>example:</strong>
      * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
      */
@@ -12,6 +14,8 @@ public class UploadCloudAppResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

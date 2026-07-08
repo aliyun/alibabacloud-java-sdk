@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAppPatchesRequest extends TeaModel {
     /**
+     * <p>The ID of the cloud application. This ID corresponds to a unique application package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListCloudAppPatchesRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The time range for filtering. The time must be in UTC and in the ISO 8601 standard format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2017-12-10T21:00:00Z</p>
      */
@@ -21,6 +24,9 @@ public class ListCloudAppPatchesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number of the list to return. The value starts from 1.
+     * Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +34,9 @@ public class ListCloudAppPatchesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. The maximum value is 100.
+     * Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,6 +44,8 @@ public class ListCloudAppPatchesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the patch package.</p>
+     * 
      * <strong>example:</strong>
      * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
      */
@@ -42,6 +53,8 @@ public class ListCloudAppPatchesRequest extends TeaModel {
     public String patchId;
 
     /**
+     * <p>The name of the patch package.</p>
+     * 
      * <strong>example:</strong>
      * <p>patch-1</p>
      */
@@ -49,6 +62,8 @@ public class ListCloudAppPatchesRequest extends TeaModel {
     public String patchName;
 
     /**
+     * <p>The start of the time range to query. The time is in UTC and follows the ISO 8601 standard. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2015-11-29T00:00:00Z</p>
      */

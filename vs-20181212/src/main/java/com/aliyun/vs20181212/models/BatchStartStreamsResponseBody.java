@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchStartStreamsResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Results list.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchStartStreamsResponseBodyResults> results;
 
@@ -37,6 +42,11 @@ public class BatchStartStreamsResponseBody extends TeaModel {
 
     public static class BatchStartStreamsResponseBodyResults extends TeaModel {
         /**
+         * <p>Error message for the stream.</p>
+         * <blockquote>
+         * <p>This field appears only if the stream fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>stream not found</p>
          */
@@ -44,6 +54,8 @@ public class BatchStartStreamsResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>Stream ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323*****997-cn-qingdao</p>
          */
@@ -51,6 +63,8 @@ public class BatchStartStreamsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Stream name.</p>
+         * 
          * <strong>example:</strong>
          * <p>31000000*****0000002</p>
          */

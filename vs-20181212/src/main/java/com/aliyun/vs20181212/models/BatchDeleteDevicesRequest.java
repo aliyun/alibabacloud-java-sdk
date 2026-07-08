@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteDevicesRequest extends TeaModel {
     /**
+     * <p>Device ID. Separate multiple values with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

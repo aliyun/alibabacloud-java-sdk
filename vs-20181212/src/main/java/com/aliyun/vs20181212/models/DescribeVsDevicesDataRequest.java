@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDevicesDataRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query. The end time must be later than the start time.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>The date must follow the ISO 8601 standard and be in UTC. The format is YYYY-MM-DDThh:mm:ssZ.</p>
+     * </li>
+     * <li><p>The minimum data granularity is 5 minutes.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, data from the last 24 hours is retrieved by default.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2022-01-30T16:00:00Z</p>
      */
@@ -12,6 +24,8 @@ public class DescribeVsDevicesDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>You can query by space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****174-cn-qingdao</p>
      */
@@ -22,6 +36,18 @@ public class DescribeVsDevicesDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The start of the time range to query.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>The date must follow the ISO 8601 standard and be in UTC. The format is YYYY-MM-DDThh:mm:ssZ.</p>
+     * </li>
+     * <li><p>The minimum data granularity is 5 minutes.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, data from the last 24 hours is retrieved by default.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2022-01-04T16:00:00Z</p>
      */

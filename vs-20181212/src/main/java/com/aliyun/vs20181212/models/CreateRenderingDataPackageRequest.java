@@ -4,20 +4,44 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateRenderingDataPackageRequest extends TeaModel {
+    /**
+     * <p>Data type. Valid values:</p>
+     * <ul>
+     * <li><p>Package (default value).</p>
+     * </li>
+     * <li><p>Baseline.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Package</p>
+     */
     @NameInMap("Category")
     public String category;
 
     /**
+     * <p>Description.</p>
+     * 
      * <strong>example:</strong>
      * <p>testdescription</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Billing type. Valid values:</p>
+     * <ul>
+     * <li>Hour: Hour.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
+     */
     @NameInMap("InstanceBillingCycle")
     public String instanceBillingCycle;
 
     /**
+     * <p>Cloud application service instance ID (Note: This operation is only for crs.cp.\* series instance types.)</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

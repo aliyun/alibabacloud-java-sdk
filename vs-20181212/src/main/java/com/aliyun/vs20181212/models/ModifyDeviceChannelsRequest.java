@@ -5,12 +5,24 @@ import com.aliyun.tea.*;
 
 public class ModifyDeviceChannelsRequest extends TeaModel {
     /**
+     * <p>An array of channels in a JSON-formatted string.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ChannelId&quot;:12333,&quot;Name&quot;:&quot;测试&quot;,&quot;DeviceStatus&quot;:&quot;on&quot;}]</p>
      */
     @NameInMap("Channels")
     public String channels;
 
     /**
+     * <p>The status of the device. Valid values:</p>
+     * <ul>
+     * <li><p>on: online</p>
+     * </li>
+     * <li><p>off: offline</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -18,6 +30,8 @@ public class ModifyDeviceChannelsRequest extends TeaModel {
     public String deviceStatus;
 
     /**
+     * <p>The device serial number.</p>
+     * 
      * <strong>example:</strong>
      * <p>210235C3GN32090008286cf17e130d</p>
      */
@@ -25,6 +39,7 @@ public class ModifyDeviceChannelsRequest extends TeaModel {
     public String dsn;
 
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

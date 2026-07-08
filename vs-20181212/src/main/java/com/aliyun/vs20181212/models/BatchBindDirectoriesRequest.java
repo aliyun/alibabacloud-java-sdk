@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchBindDirectoriesRequest extends TeaModel {
     /**
+     * <p>Device ID. Separate multiple values with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BatchBindDirectoriesRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

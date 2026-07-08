@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OpenVsServiceResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>150275784</p>
      */
@@ -12,6 +14,8 @@ public class OpenVsServiceResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

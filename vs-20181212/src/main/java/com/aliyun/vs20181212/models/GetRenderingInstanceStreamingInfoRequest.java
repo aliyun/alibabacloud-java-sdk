@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRenderingInstanceStreamingInfoRequest extends TeaModel {
     /**
+     * <p>Cloud application service instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

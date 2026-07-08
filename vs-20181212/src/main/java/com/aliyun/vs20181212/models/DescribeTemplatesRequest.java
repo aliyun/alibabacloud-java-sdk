@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesRequest extends TeaModel {
     /**
+     * <p>Template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>323434****83423432</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Filter templates by the bound instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****998-cn-qingdao</p>
      */
@@ -22,6 +26,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +35,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Number of entries per page. Default: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,6 +44,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Sort results by the specified field. Default: sort by ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>id</p>
      */
@@ -43,6 +53,14 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Sort order. Default: ascending. Valid values:</p>
+     * <ul>
+     * <li><p>asc (ascending)</p>
+     * </li>
+     * <li><p>desc (descending)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -50,6 +68,8 @@ public class DescribeTemplatesRequest extends TeaModel {
     public String sortDirection;
 
     /**
+     * <p>Filter templates by template type.</p>
+     * 
      * <strong>example:</strong>
      * <p>record</p>
      */

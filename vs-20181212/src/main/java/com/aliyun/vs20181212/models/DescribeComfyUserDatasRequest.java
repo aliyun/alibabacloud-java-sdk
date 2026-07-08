@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyUserDatasRequest extends TeaModel {
     /**
+     * <p>The name of the file to query, or the folder to query. For a folder, provide the path ending with a forward slash (/).</p>
+     * 
      * <strong>example:</strong>
      * <p>myfile</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyUserDatasRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The page number of the list to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeComfyUserDatasRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

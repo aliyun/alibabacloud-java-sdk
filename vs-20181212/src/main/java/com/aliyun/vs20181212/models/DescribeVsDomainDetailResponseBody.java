@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainDetailResponseBody extends TeaModel {
+    /**
+     * <p>Domain configuration details.</p>
+     */
     @NameInMap("DomainConfig")
     public DescribeVsDomainDetailResponseBodyDomainConfig domainConfig;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</p>
      */
@@ -37,16 +42,26 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeVsDomainDetailResponseBodyDomainConfig extends TeaModel {
         /**
+         * <p>The CNAME assigned to the Visual Edge Computing Service domain. You must configure your DNS provider to point your domain to this CNAME.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com.*****.com</p>
          */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The domain description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试使用</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The Visual Edge Computing Service domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
@@ -54,6 +69,16 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The status of the Visual Edge Computing Service accelerated domain. Valid values:</p>
+         * <ul>
+         * <li><p><strong>online</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>offline</strong>: Disabled.</p>
+         * </li>
+         * <li><p><strong>configuring</strong>: Being configured.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>online</p>
          */
@@ -61,6 +86,11 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
+         * <p>The domain type.</p>
+         * <blockquote>
+         * <p>Static value: vs</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>vs</p>
          */
@@ -68,6 +98,8 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         public String domainType;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-19T10:27:23Z</p>
          */
@@ -75,6 +107,8 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The most recent modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-19T10:27:23Z</p>
          */
@@ -82,6 +116,8 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The region where the domain is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -89,6 +125,14 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>Indicates whether HTTPS is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>on</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong> (default): Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
@@ -96,6 +140,16 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         public String SSLProtocol;
 
         /**
+         * <p>The acceleration region. Valid values:</p>
+         * <ul>
+         * <li><p><strong>domestic</strong></p>
+         * </li>
+         * <li><p><strong>overseas</strong></p>
+         * </li>
+         * <li><p><strong>global</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>domestic</p>
          */

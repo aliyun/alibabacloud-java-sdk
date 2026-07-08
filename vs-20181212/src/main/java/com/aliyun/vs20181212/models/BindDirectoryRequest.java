@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindDirectoryRequest extends TeaModel {
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BindDirectoryRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

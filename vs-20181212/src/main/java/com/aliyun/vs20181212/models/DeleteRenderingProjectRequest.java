@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRenderingProjectRequest extends TeaModel {
     /**
+     * <p>Project ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

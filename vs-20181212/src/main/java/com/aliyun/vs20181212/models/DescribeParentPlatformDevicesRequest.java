@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParentPlatformDevicesRequest extends TeaModel {
     /**
+     * <p>Query by parent platform ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class DescribeParentPlatformDevicesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +27,8 @@ public class DescribeParentPlatformDevicesRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The page size. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -31,6 +36,8 @@ public class DescribeParentPlatformDevicesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Sort by the specified field. Sorted by id by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>id</p>
      */
@@ -38,6 +45,12 @@ public class DescribeParentPlatformDevicesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Sort order. Ascending by default. Valid values:</p>
+     * <ul>
+     * <li>asc (ascending)</li>
+     * <li>desc (descending)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */

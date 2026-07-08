@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyRenderingChargeTypeResponseBody extends TeaModel {
     /**
+     * <p>The ID of the Graphic Computing Service instance</p>
+     * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */

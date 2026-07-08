@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopDeviceRequest extends TeaModel {
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class StopDeviceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Time to restart the stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-10T10:00:00Z</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAppsResponseBody extends TeaModel {
+    /**
+     * <p>List of cloud application information.</p>
+     */
     @NameInMap("CloudApps")
     public java.util.List<ListCloudAppsResponseBodyCloudApps> cloudApps;
 
     /**
+     * <p>Page number of the query list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Number of rows per page for paged queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -29,6 +38,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of matching cloud application entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
 
     public static class ListCloudAppsResponseBodyCloudApps extends TeaModel {
         /**
+         * <p>Application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
@@ -89,6 +102,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>Application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>com.aaa.bbb</p>
          */
@@ -96,6 +111,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>Application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.5.0</p>
          */
@@ -103,19 +120,35 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>Application description.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Package format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apk</p>
+         */
         @NameInMap("PkgFormat")
         public String pkgFormat;
 
+        /**
+         * <p>Package type: android/win.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
+         */
         @NameInMap("PkgType")
         public String pkgType;
 
         /**
+         * <p>Stable patch package ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
          */
@@ -123,6 +156,18 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String stablePatchId;
 
         /**
+         * <p>The application upload status. Valid values:</p>
+         * <ol>
+         * <li><p>Created</p>
+         * </li>
+         * <li><p>Doing</p>
+         * </li>
+         * <li><p>Success: The desired state.</p>
+         * </li>
+         * <li><p>Failed: The desired state.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -130,6 +175,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Status description.</p>
+         * 
          * <strong>example:</strong>
          * <p>upload success</p>
          */
@@ -137,6 +184,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
+         * <p>Latest status update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:48:34+08:00</p>
          */
@@ -144,6 +193,8 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Application upload time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:28:14+08:00</p>
          */

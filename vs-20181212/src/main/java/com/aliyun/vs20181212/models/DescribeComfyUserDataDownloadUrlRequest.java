@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyUserDataDownloadUrlRequest extends TeaModel {
     /**
+     * <p>The name of the file to download.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

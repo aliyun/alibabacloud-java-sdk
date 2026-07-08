@@ -4,10 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyDirectoryRequest extends TeaModel {
+    /**
+     * <p>The description of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>目录2</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +23,12 @@ public class ModifyDirectoryRequest extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The name of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>目录2</p>
+     */
     @NameInMap("Name")
     public String name;
 

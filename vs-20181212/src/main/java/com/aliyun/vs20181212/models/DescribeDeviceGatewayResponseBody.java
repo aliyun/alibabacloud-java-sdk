@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDeviceGatewayResponseBody extends TeaModel {
     /**
+     * <p>Alibaba Cloud service endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.0.1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     public String host;
 
     /**
+     * <p>Port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -19,6 +23,8 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     public Long port;
 
     /**
+     * <p>Device registration protocol.</p>
+     * 
      * <strong>example:</strong>
      * <p>gb28181</p>
      */
@@ -26,6 +32,8 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     public String protocol;
 
     /**
+     * <p>Request ID for this task.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -33,6 +41,8 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Token code.</p>
+     * 
      * <strong>example:</strong>
      * <p>f5578fbc-694c-461d-a2a2-eb090775cef0</p>
      */

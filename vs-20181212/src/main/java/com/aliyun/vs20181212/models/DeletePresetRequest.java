@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePresetRequest extends TeaModel {
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class DeletePresetRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The preset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

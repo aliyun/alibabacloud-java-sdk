@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartStreamRequest extends TeaModel {
     /**
+     * <p>For an NVR historical stream, the End Time (UNIX timestamp, in seconds).</p>
+     * 
      * <strong>example:</strong>
      * <p>1599336385</p>
      */
@@ -12,6 +14,7 @@ public class StartStreamRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Stream ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +27,8 @@ public class StartStreamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>For an NVR historical stream, the Start Time (UNIX timestamp, in seconds).</p>
+     * 
      * <strong>example:</strong>
      * <p>1589336385</p>
      */

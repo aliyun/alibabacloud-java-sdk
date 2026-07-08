@@ -4,10 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DeleteRenderingInstanceConfigurationRequest extends TeaModel {
+    /**
+     * <p>Configuration content. Purge all configured modules by default.</p>
+     */
     @NameInMap("Configuration")
     public java.util.List<DeleteRenderingInstanceConfigurationRequestConfiguration> configuration;
 
     /**
+     * <p>Cloud application service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +42,14 @@ public class DeleteRenderingInstanceConfigurationRequest extends TeaModel {
     }
 
     public static class DeleteRenderingInstanceConfigurationRequestConfiguration extends TeaModel {
+        /**
+         * <p>List attribute names to purge. Purge all configured attributes for this module by default.</p>
+         */
         @NameInMap("AttributeNames")
         public java.util.List<String> attributeNames;
 
         /**
+         * <p>Module name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

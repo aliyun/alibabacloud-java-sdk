@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListCloudAppInstallationsResponseBody extends TeaModel {
+    /**
+     * <p>List of installation records.</p>
+     */
     @NameInMap("InstallationInfos")
     public java.util.List<ListCloudAppInstallationsResponseBodyInstallationInfos> installationInfos;
 
     /**
+     * <p>Page number of the returned list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Number of entries per page for paged queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -29,6 +38,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of installation records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
 
     public static class ListCloudAppInstallationsResponseBodyInstallationInfos extends TeaModel {
         /**
+         * <p>Application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
          */
@@ -89,6 +102,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>Application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>com.aaa.bbb</p>
          */
@@ -96,6 +111,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>Application version.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.5.0</p>
          */
@@ -103,6 +120,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String appVersion;
 
         /**
+         * <p>Installation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:48:34+08:00</p>
          */
@@ -110,6 +129,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String installationTime;
 
         /**
+         * <p>Patch package ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
          */
@@ -117,6 +138,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String patchId;
 
         /**
+         * <p>Cloud application service instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
@@ -124,6 +147,14 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
+         * <p>Cloud application installation status. Valid values:</p>
+         * <ol>
+         * <li><p>Intermediate states: install-init, installing</p>
+         * </li>
+         * <li><p>Final states: installed, install-failed</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>installed</p>
          */
@@ -131,6 +162,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Status description.</p>
+         * 
          * <strong>example:</strong>
          * <p>install success</p>
          */
@@ -138,6 +171,8 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
+         * <p>Time when the status was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:50:04+08:00</p>
          */

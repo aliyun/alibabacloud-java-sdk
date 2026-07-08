@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopMoveRequest extends TeaModel {
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class StopMoveRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Specifies whether to stop panning. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -24,6 +27,8 @@ public class StopMoveRequest extends TeaModel {
     public Boolean pan;
 
     /**
+     * <p>Specifies whether to stop tilting. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -31,6 +36,8 @@ public class StopMoveRequest extends TeaModel {
     public Boolean tilt;
 
     /**
+     * <p>Specifies whether to stop zooming. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

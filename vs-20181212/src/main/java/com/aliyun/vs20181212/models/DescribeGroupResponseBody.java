@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupResponseBody extends TeaModel {
     /**
+     * <p>Alias for the space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>337639*****24964-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String aliasId;
 
     /**
+     * <p>The name of the application used by the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>live</p>
      */
@@ -19,6 +23,8 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String app;
 
     /**
+     * <p>The callback URL that is used to receive device status updates in the group.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
      */
@@ -26,16 +32,26 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String callback;
 
     /**
+     * <p>The time when the group was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-02-28T17:00:17Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>A description of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>上海高速监控</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Indicates whether the group is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +59,11 @@ public class DescribeGroupResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The GB/T 28181 ID that is associated with the group.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3100000*****0000001</p>
      */
@@ -50,6 +71,11 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String gbId;
 
     /**
+     * <p>The IP address of the GB/T 28181 signaling server that is associated with the group.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>10.10.10.10</p>
      */
@@ -57,19 +83,38 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String gbIp;
 
     /**
+     * <p>The port of the GB/T 28181 signaling server that is associated with the group.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>5060</p>
      */
     @NameInMap("GbPort")
     public Long gbPort;
 
+    /**
+     * <p>The TCP ports of the GB/T 28181 signaling server that are provided by the group.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+     * </blockquote>
+     */
     @NameInMap("GbTcpPorts")
     public java.util.List<String> gbTcpPorts;
 
+    /**
+     * <p>The UDP ports of the GB/T 28181 signaling server that are provided by the group.</p>
+     * <blockquote>
+     * <p>This parameter is returned only for groups that use the GB/T 28181 protocol for stream ingest.</p>
+     * </blockquote>
+     */
     @NameInMap("GbUdpPorts")
     public java.util.List<String> gbUdpPorts;
 
     /**
+     * <p>The ID of the space.</p>
+     * 
      * <strong>example:</strong>
      * <p>337639****224964-cn-qingdao</p>
      */
@@ -77,6 +122,14 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The ingest protocol used by the group. Valid values:</p>
+     * <ul>
+     * <li><p>gb28181</p>
+     * </li>
+     * <li><p>rtmp</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gb28181</p>
      */
@@ -84,16 +137,37 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String inProtocol;
 
     /**
+     * <p>Indicates whether on-demand stream pulling is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("LazyPull")
     public Boolean lazyPull;
 
+    /**
+     * <p>The name of the space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>上海高速监控</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The streaming protocol used by the group. Valid values:</p>
+     * <ul>
+     * <li><p>flv</p>
+     * </li>
+     * <li><p>hls</p>
+     * </li>
+     * <li><p>rtmp</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>You can specify multiple protocols. Separate them with commas (,).</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>flv,hls,rtmp</p>
      */
@@ -101,6 +175,8 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String outProtocol;
 
     /**
+     * <p>The streaming domain used by the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -108,6 +184,8 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String playDomain;
 
     /**
+     * <p>The ingest domain used by the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo.aliyundoc.com</p>
      */
@@ -115,6 +193,8 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String pushDomain;
 
     /**
+     * <p>The region where the space is located, which is the service center.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
      */
@@ -122,16 +202,23 @@ public class DescribeGroupResponseBody extends TeaModel {
     public String region;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics of devices in the group.</p>
+     */
     @NameInMap("Stats")
     public DescribeGroupResponseBodyStats stats;
 
     /**
+     * <p>The status of the group.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -321,6 +408,8 @@ public class DescribeGroupResponseBody extends TeaModel {
 
     public static class DescribeGroupResponseBodyStats extends TeaModel {
         /**
+         * <p>The total number of devices in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -328,6 +417,8 @@ public class DescribeGroupResponseBody extends TeaModel {
         public Long deviceNum;
 
         /**
+         * <p>The number of intelligent electronic devices (IEDs) in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -335,6 +426,8 @@ public class DescribeGroupResponseBody extends TeaModel {
         public Long iedNum;
 
         /**
+         * <p>The number of cameras in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -342,6 +435,8 @@ public class DescribeGroupResponseBody extends TeaModel {
         public Long ipcNum;
 
         /**
+         * <p>The number of platforms in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

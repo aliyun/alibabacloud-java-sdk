@@ -4,10 +4,18 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingInstanceGatewayRequest extends TeaModel {
+    /**
+     * <p>The time range for filtering. The time must be in ISO 8601 format and in UTC, such as \<code>yyyy-MM-ddTHH:mm:ssZ\\</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-05-20T12:23:02Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>The ID of the gateway instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>render-xxx</p>
      */
@@ -15,6 +23,8 @@ public class ListRenderingInstanceGatewayRequest extends TeaModel {
     public String gatewayInstanceId;
 
     /**
+     * <p>The page number of the list to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +32,8 @@ public class ListRenderingInstanceGatewayRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,12 +41,20 @@ public class ListRenderingInstanceGatewayRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the cloud application service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    /**
+     * <p>This parameter specifies the time range filter. The time must be in ISO 8601 format and UTC time, such as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-05-18T02:20:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

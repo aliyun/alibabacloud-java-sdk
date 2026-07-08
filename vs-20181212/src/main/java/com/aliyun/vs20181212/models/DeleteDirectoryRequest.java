@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDirectoryRequest extends TeaModel {
     /**
+     * <p>The folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchUnbindParentPlatformDevicesRequest extends TeaModel {
     /**
+     * <p>The device IDs. Separate multiple values with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class BatchUnbindParentPlatformDevicesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the parent platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

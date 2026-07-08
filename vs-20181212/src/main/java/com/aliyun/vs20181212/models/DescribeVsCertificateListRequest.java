@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsCertificateListRequest extends TeaModel {
     /**
+     * <p>Domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */

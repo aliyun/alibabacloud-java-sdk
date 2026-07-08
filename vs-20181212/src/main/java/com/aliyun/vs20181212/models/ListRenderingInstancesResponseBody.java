@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingInstancesResponseBody extends TeaModel {
+    /**
+     * <p>List of cloud application service instances</p>
+     */
     @NameInMap("RenderingInstances")
     public java.util.List<ListRenderingInstancesResponseBodyRenderingInstances> renderingInstances;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -15,6 +20,8 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of cloud application service instances</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -52,6 +59,8 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
 
     public static class ListRenderingInstancesResponseBodyRenderingInstances extends TeaModel {
         /**
+         * <p>Creation time of the cloud application service instance</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-11-17T02:18:04Z</p>
          */
@@ -59,6 +68,8 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>ID of the cloud application service instance</p>
+         * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
@@ -66,12 +77,20 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
+         * <p>Instance type of the cloud application service</p>
+         * 
          * <strong>example:</strong>
          * <p>crs.cp.l1</p>
          */
         @NameInMap("RenderingSpec")
         public String renderingSpec;
 
+        /**
+         * <p>Storage capacity, in GB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("StorageSize")
         public Integer storageSize;
 

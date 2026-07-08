@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateRenderingInstanceSettingsRequest extends TeaModel {
     /**
+     * <p>ID of the cloud application service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    /**
+     * <p>List of instance settings.</p>
+     */
     @NameInMap("Settings")
     public java.util.List<UpdateRenderingInstanceSettingsRequestSettings> settings;
 
@@ -37,6 +42,8 @@ public class UpdateRenderingInstanceSettingsRequest extends TeaModel {
 
     public static class UpdateRenderingInstanceSettingsRequestSettings extends TeaModel {
         /**
+         * <p>Name of the instance setting.</p>
+         * 
          * <strong>example:</strong>
          * <p>navbar.hide</p>
          */
@@ -44,6 +51,8 @@ public class UpdateRenderingInstanceSettingsRequest extends TeaModel {
         public String attributeName;
 
         /**
+         * <p>Value of the instance setting.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

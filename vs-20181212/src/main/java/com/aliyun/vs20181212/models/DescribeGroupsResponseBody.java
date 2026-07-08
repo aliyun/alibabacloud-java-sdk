@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupsResponseBody extends TeaModel {
+    /**
+     * <p>List of groups.</p>
+     */
     @NameInMap("Groups")
     public java.util.List<DescribeGroupsResponseBodyGroups> groups;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -22,6 +29,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +47,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -97,6 +110,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
 
     public static class DescribeGroupsResponseBodyGroupsStats extends TeaModel {
         /**
+         * <p>Total number of devices in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -104,6 +119,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public Long deviceNum;
 
         /**
+         * <p>Number of intelligent devices in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -111,6 +128,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public Long iedNum;
 
         /**
+         * <p>Number of cameras in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -118,6 +137,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public Long ipcNum;
 
         /**
+         * <p>Number of platforms in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -165,6 +186,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
 
     public static class DescribeGroupsResponseBodyGroups extends TeaModel {
         /**
+         * <p>Alias for the group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>337639*****24964-cn-qingdao</p>
          */
@@ -172,6 +195,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String aliasId;
 
         /**
+         * <p>Application name used by the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>live</p>
          */
@@ -179,6 +204,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String app;
 
         /**
+         * <p>Callback URL for device status updates in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
@@ -186,16 +213,26 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String callback;
 
         /**
+         * <p>Time when the group was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:00:17Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>Group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试视图计算</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Whether the group is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,6 +240,11 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>GB ID provided by the group.</p>
+         * <blockquote>
+         * <p>This applies only to groups that use the GB protocol.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>31000000000000000001</p>
          */
@@ -210,6 +252,11 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String gbId;
 
         /**
+         * <p>GB signaling server IP address provided by the group.</p>
+         * <blockquote>
+         * <p>This applies only to groups that use the GB protocol.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>10.10.10.10</p>
          */
@@ -217,6 +264,11 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String gbIp;
 
         /**
+         * <p>GB signaling server port associated with the group.</p>
+         * <blockquote>
+         * <p>This applies only to groups that use the GB protocol.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>5060</p>
          */
@@ -230,6 +282,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public java.util.List<String> gbUdpPorts;
 
         /**
+         * <p>Group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>33763950877224964-cn-qingdao</p>
          */
@@ -237,6 +291,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Ingest protocol used by the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>gb28181</p>
          */
@@ -244,16 +300,26 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String inProtocol;
 
         /**
+         * <p>Whether on-demand stream pulling is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("LazyPull")
         public Boolean lazyPull;
 
+        /**
+         * <p>Group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的空间</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Playback protocol used by the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp,flv,hls</p>
          */
@@ -261,6 +327,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String outProtocol;
 
         /**
+         * <p>Streaming domain used by the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo.aliyundoc.com</p>
          */
@@ -268,6 +336,8 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String playDomain;
 
         /**
+         * <p>Ingest domain used by the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
@@ -275,16 +345,29 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String pushDomain;
 
         /**
+         * <p>The region where the space is located. This region serves as the service center.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Device statistics for the group.</p>
+         */
         @NameInMap("Stats")
         public DescribeGroupsResponseBodyGroupsStats stats;
 
         /**
+         * <p>Group status. Valid values:</p>
+         * <ul>
+         * <li><p>on (enabled)</p>
+         * </li>
+         * <li><p>off (disabled)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */

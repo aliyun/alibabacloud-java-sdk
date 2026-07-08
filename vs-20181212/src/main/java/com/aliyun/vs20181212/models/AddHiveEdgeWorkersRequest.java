@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddHiveEdgeWorkersRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddHiveEdgeWorkersRequest extends TeaModel {
     public String hiveId;
 
     /**
+     * <p>A list of instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

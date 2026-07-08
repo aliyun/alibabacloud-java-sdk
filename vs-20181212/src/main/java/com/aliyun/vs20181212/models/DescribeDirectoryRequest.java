@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDirectoryRequest extends TeaModel {
     /**
+     * <p>The directory ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

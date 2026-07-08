@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchBindDirectoriesResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Results list.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchBindDirectoriesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
 
     public static class BatchBindDirectoriesResponseBodyResults extends TeaModel {
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
@@ -44,6 +51,8 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Directory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>399*****488-cn-qingdao</p>
          */
@@ -51,6 +60,11 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
+         * <p>Error message for the binding.</p>
+         * <blockquote>
+         * <p>Appears only if an error occurs.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>An error occurred while processing your request.</p>
          */

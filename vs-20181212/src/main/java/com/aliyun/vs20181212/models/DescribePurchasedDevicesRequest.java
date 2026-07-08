@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribePurchasedDevicesRequest extends TeaModel {
     /**
+     * <p>Queries by the ID of the group to which the device belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****174-cn-qingdao</p>
      */
@@ -12,12 +14,20 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>Queries by device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4070*****1132-cn-qingdao</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>Queries by device name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx路口摄像头</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -25,6 +35,8 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,6 +44,8 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of entries per page. The default is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -39,6 +53,11 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The field to sort by. Valid value:</p>
+     * <ul>
+     * <li>id (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>id</p>
      */
@@ -46,6 +65,14 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The sorting order. The default is ascending. Valid values:</p>
+     * <ul>
+     * <li><p>asc (ascending)</p>
+     * </li>
+     * <li><p>desc (descending)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -53,6 +80,16 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     public String sortDirection;
 
     /**
+     * <p>Queries by device subtype. Valid values:</p>
+     * <ul>
+     * <li><p>bullet (bullet camera)</p>
+     * </li>
+     * <li><p>dome (dome camera)</p>
+     * </li>
+     * <li><p>ptz (PTZ camera)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>dome</p>
      */
@@ -60,12 +97,28 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     public String subType;
 
     /**
+     * <p>Queries by device type. Valid values:</p>
+     * <ul>
+     * <li><p>ipc (camera)</p>
+     * </li>
+     * <li><p>platform (platform)</p>
+     * </li>
+     * <li><p>ied (intelligent edge device)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ipc</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>Queries by device vendor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>公司A</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

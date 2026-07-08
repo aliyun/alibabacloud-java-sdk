@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParentPlatformRequest extends TeaModel {
     /**
+     * <p>The ID of the parent platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

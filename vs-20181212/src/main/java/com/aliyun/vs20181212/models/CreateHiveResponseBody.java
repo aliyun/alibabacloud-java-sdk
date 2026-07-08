@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateHiveResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>hive-6c1418bf513e400bb697307c077a0ec3</p>
      */
@@ -12,6 +14,8 @@ public class CreateHiveResponseBody extends TeaModel {
     public String hiveId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

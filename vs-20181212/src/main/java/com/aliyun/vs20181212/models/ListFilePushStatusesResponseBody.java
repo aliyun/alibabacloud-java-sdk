@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFilePushStatusesResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The list of file push status records.</p>
+     */
     @NameInMap("PushStatuses")
     public java.util.List<ListFilePushStatusesResponseBodyPushStatuses> pushStatuses;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -29,6 +38,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of matching file push records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
 
     public static class ListFilePushStatusesResponseBodyPushStatuses extends TeaModel {
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
          */
@@ -89,6 +102,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>myfile</p>
          */
@@ -96,6 +111,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The scheduled push start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-26T16:32:20+08:00</p>
          */
@@ -103,6 +120,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String pushTime;
 
         /**
+         * <p>The cloud application service instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
@@ -110,6 +129,18 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
+         * <p>The file push status. Valid values:</p>
+         * <ol>
+         * <li><p>Created</p>
+         * </li>
+         * <li><p>Doing</p>
+         * </li>
+         * <li><p>Success: desired state</p>
+         * </li>
+         * <li><p>Failed: desired state</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -117,6 +148,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The status description.</p>
+         * 
          * <strong>example:</strong>
          * <p>push success</p>
          */
@@ -124,6 +157,8 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
+         * <p>The latest update time of the status.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-26T17:02:10+08:00</p>
          */

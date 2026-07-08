@@ -8,6 +8,8 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     public DescribeVsDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
     /**
+     * <p>The time interval for each record. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>2100</p>
      */
@@ -15,6 +17,8 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
+     * <p>Domain name</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -22,6 +26,8 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>End time</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-01T07:10:48Z</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Request ID for this operation</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +44,8 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Start time</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-18T16:00:00Z</p>
      */

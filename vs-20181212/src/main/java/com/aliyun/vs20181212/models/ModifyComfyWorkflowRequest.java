@@ -4,10 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyComfyWorkflowRequest extends TeaModel {
+    /**
+     * <p>The new workflow description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一个图生视频的工作流</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the workflow to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +23,12 @@ public class ModifyComfyWorkflowRequest extends TeaModel {
     @NameInMap("WorkflowId")
     public String workflowId;
 
+    /**
+     * <p>The new workflow name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图生视频工作流示例</p>
+     */
     @NameInMap("WorkflowName")
     public String workflowName;
 

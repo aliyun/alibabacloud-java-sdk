@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCloudAppPatchesResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,12 +14,17 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The list of cloud application patches.</p>
+     */
     @NameInMap("Patches")
     public java.util.List<ListCloudAppPatchesResponseBodyPatches> patches;
 
@@ -31,6 +38,8 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -84,6 +93,8 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
 
     public static class ListCloudAppPatchesResponseBodyPatches extends TeaModel {
         /**
+         * <p>The ID of the patch package.</p>
+         * 
          * <strong>example:</strong>
          * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
          */
@@ -91,6 +102,8 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String patchId;
 
         /**
+         * <p>The name of the patch package.</p>
+         * 
          * <strong>example:</strong>
          * <p>patch-1</p>
          */
@@ -98,6 +111,22 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String patchName;
 
         /**
+         * <p>The upload status of the application. Valid values:</p>
+         * <ol>
+         * <li><p>Created</p>
+         * </li>
+         * <li><p>Doing</p>
+         * </li>
+         * <li><p>Success: A final state.</p>
+         * </li>
+         * <li><p>Failed: A final state.</p>
+         * </li>
+         * <li><p>Deleting</p>
+         * </li>
+         * <li><p>DeleteFailed: A final state.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>Doing</p>
          */
@@ -105,6 +134,8 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The description of the status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Uploading</p>
          */
@@ -112,6 +143,8 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
+         * <p>The time when the status was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-23T02:12:28</p>
          */
@@ -119,6 +152,8 @@ public class ListCloudAppPatchesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The time when the patch was uploaded.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-24T14:45:36+08:00</p>
          */

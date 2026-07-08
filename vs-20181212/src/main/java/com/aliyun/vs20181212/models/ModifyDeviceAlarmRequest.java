@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDeviceAlarmRequest extends TeaModel {
     /**
+     * <p>The alarm ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDeviceAlarmRequest extends TeaModel {
     public String alarmId;
 
     /**
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyDeviceAlarmRequest extends TeaModel {
     public Integer channelId;
 
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,12 @@ public class ModifyDeviceAlarmRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The alarm status. Valid values:</p>
+     * <ul>
+     * <li>1 (upload completed)</li>
+     * <li>2 (upload failed)</li>
+     * <li>3 (general error)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

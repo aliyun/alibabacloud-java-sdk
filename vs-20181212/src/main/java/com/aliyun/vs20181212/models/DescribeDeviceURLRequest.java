@@ -8,6 +8,8 @@ public class DescribeDeviceURLRequest extends TeaModel {
     public Boolean auth;
 
     /**
+     * <p>Authentication validity period, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -15,6 +17,7 @@ public class DescribeDeviceURLRequest extends TeaModel {
     public Long expire;
 
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +27,14 @@ public class DescribeDeviceURLRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Stream mode. Valid values:</p>
+     * <ul>
+     * <li><p>play</p>
+     * </li>
+     * <li><p>push</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>push</p>
      */
@@ -31,6 +42,18 @@ public class DescribeDeviceURLRequest extends TeaModel {
     public String mode;
 
     /**
+     * <p>Stream protocol. Valid values:</p>
+     * <ul>
+     * <li><p>rtmp</p>
+     * </li>
+     * <li><p>flv</p>
+     * </li>
+     * <li><p>hls</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>When Mode is set to push, only rtmp is supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +66,7 @@ public class DescribeDeviceURLRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

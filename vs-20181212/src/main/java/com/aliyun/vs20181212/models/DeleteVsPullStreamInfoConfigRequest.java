@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVsPullStreamInfoConfigRequest extends TeaModel {
     /**
+     * <p>The application name for the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteVsPullStreamInfoConfigRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Your stream pulling domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class DeleteVsPullStreamInfoConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The name of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartDeviceResponseBody extends TeaModel {
     /**
+     * <p>Device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>323884****9092996</p>
      */
@@ -12,6 +14,8 @@ public class StartDeviceResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Request ID for this task.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

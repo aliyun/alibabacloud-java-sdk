@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GotoPresetRequest extends TeaModel {
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class GotoPresetRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Preset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

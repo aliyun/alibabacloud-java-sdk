@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ContinuousAdjustRequest extends TeaModel {
     /**
+     * <p>Zoom speed parameter. A positive value increases the focal length.<br>Value range: -1.0 to 1.0<br></p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */
@@ -12,6 +14,7 @@ public class ContinuousAdjustRequest extends TeaModel {
     public String focus;
 
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ContinuousAdjustRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Aperture speed parameter. A positive value increases the aperture.<br>Value range: -1.0 to 1.0<br></p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */

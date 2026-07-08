@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveHiveEdgeWorkersShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the target Hive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class MoveHiveEdgeWorkersShrinkRequest extends TeaModel {
     public String hiveId;
 
     /**
+     * <p>The IDs of the cloud application service instances to move.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

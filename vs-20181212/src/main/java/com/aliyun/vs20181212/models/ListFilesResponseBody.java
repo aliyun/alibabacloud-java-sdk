@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListFilesResponseBody extends TeaModel {
+    /**
+     * <p>List of file information.</p>
+     */
     @NameInMap("Files")
     public java.util.List<ListFilesResponseBodyFiles> files;
 
     /**
+     * <p>Page number of the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListFilesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Number of entries per page for paged queries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListFilesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -29,6 +38,8 @@ public class ListFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of matching file records.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -81,10 +92,18 @@ public class ListFilesResponseBody extends TeaModel {
     }
 
     public static class ListFilesResponseBodyFiles extends TeaModel {
+        /**
+         * <p>File description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我的文件</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>File ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
          */
@@ -92,6 +111,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>File name.</p>
+         * 
          * <strong>example:</strong>
          * <p>myfile</p>
          */
@@ -99,6 +120,18 @@ public class ListFilesResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>Upload status. Valid values:</p>
+         * <ol>
+         * <li><p>Created</p>
+         * </li>
+         * <li><p>Doing</p>
+         * </li>
+         * <li><p>Success (desired state)</p>
+         * </li>
+         * <li><p>Failed (desired state)</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -106,6 +139,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Status description.</p>
+         * 
          * <strong>example:</strong>
          * <p>upload success</p>
          */
@@ -113,6 +148,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
+         * <p>Destination path for pushing the file to the service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>/data/tmp/test/xxx.tar</p>
          */
@@ -120,6 +157,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String targetPath;
 
         /**
+         * <p>Most recent status update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-28T14:15:08+08:00</p>
          */
@@ -127,6 +166,8 @@ public class ListFilesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Upload start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-28T14:10:12+08:00</p>
          */

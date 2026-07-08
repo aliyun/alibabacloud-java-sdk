@@ -4,10 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateDirectoryRequest extends TeaModel {
+    /**
+     * <p>Folder description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>目录1</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Space ID to which the folder belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +24,11 @@ public class CreateDirectoryRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>Folder name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>目录1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -26,6 +37,10 @@ public class CreateDirectoryRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Parent folder ID.</p>
+     * <blockquote>
+     * <p>When you create a device space, the system automatically creates a root directory for that space. Use the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeDirectories">DescribeDirectories</a> API to query the corresponding root directory.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

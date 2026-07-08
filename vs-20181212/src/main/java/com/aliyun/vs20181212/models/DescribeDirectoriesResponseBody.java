@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
+    /**
+     * <p>List of directories.</p>
+     */
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +47,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of directories.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,16 +110,26 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
         /**
+         * <p>Directory creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-09-10T10:00:00Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>Directory description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录2</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>ID of the group to which the directory belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****174-cn-qingdao</p>
          */
@@ -114,16 +137,26 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>Directory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>399*****488-cn-qingdao</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Directory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>目录2</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Parent directory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>399*****774-cn-qingdao</p>
          */

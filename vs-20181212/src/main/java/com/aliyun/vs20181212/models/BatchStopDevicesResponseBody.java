@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchStopDevicesResponseBody extends TeaModel {
     /**
+     * <p>Request ID for this task.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result list.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchStopDevicesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class BatchStopDevicesResponseBody extends TeaModel {
 
     public static class BatchStopDevicesResponseBodyResultsStreams extends TeaModel {
         /**
+         * <p>Stream error message. (Appears only when an error occurs)</p>
+         * 
          * <strong>example:</strong>
          * <p>Stream not found</p>
          */
@@ -44,6 +51,8 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>Stream ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323884****9092997</p>
          */
@@ -51,6 +60,8 @@ public class BatchStopDevicesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Name</p>
+         * 
          * <strong>example:</strong>
          * <p>32388*****39092997</p>
          */
@@ -90,12 +101,17 @@ public class BatchStopDevicesResponseBody extends TeaModel {
 
     public static class BatchStopDevicesResponseBodyResults extends TeaModel {
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>32388487****92996</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Device stream list.</p>
+         */
         @NameInMap("Streams")
         public java.util.List<BatchStopDevicesResponseBodyResultsStreams> streams;
 

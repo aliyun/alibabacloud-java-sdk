@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsUpPeakPublishStreamDataRequest extends TeaModel {
     /**
+     * <p>Domain name to query. Returns data at the domain granularity.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsUpPeakPublishStreamDataRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Enables or disables domain-level statistics. Valid values: on or off. When set to on, the response shows domain-level data. When set to off or omitted, the response shows user-level data. Default is user-level data.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,6 +23,7 @@ public class DescribeVsUpPeakPublishStreamDataRequest extends TeaModel {
     public String domainSwitch;
 
     /**
+     * <p>End time of stream ingest, in UTC format. The time range between StartTime and EndTime must be within 30 days. EndTime must be later than the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +36,7 @@ public class DescribeVsUpPeakPublishStreamDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Start time of stream ingest, in UTC format. The time range between StartTime and EndTime must be within 30 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

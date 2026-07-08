@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchSetVsDomainConfigsResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</p>
      */

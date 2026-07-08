@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainPvDataResponseBody extends TeaModel {
     /**
+     * <p>This static field defines the time interval for each record, with a value of either 1 hour or 1 day.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
+     * <p>The domain name for Visual Edge Computing Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end of the time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-12T15:59:59Z</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
     public DescribeVsDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +44,8 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The beginning of the time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-22T00:00:00Z</p>
      */

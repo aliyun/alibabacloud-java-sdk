@@ -5,16 +5,37 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateRequest extends TeaModel {
     /**
+     * <p>The callback URL that is used after the template is executed.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
      */
     @NameInMap("Callback")
     public String callback;
 
+    /**
+     * <p>The description of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>录制模板</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The file format for storage. Separate multiple values with commas. Valid values:</p>
+     * <ul>
+     * <li><p>mp4</p>
+     * </li>
+     * <li><p>flv</p>
+     * </li>
+     * <li><p>hls</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Recording in FLV and MP4 formats is not supported in the China (Qingdao) region.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>hls</p>
      */
@@ -22,6 +43,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public String fileFormat;
 
     /**
+     * <p>The storage path for FLV files. For information about the format, see the description of the Mp4 parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
      */
@@ -29,6 +52,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public String flv;
 
     /**
+     * <p>The storage path for HLS M3U8 files. For information about the format, see the description of the Mp4 parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
      */
@@ -36,6 +61,14 @@ public class ModifyTemplateRequest extends TeaModel {
     public String hlsM3u8;
 
     /**
+     * <p>The storage path for HLS TS files.</p>
+     * <ul>
+     * <li><p>The path supports variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}.</p>
+     * </li>
+     * <li><p>You must include the {UnixTimestamp} and {Sequence} variables.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>osspath/record/{StreamName}/{UnixTimestamp}_{Sequence}</p>
      */
@@ -43,6 +76,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String hlsTs;
 
     /**
+     * <p>The ID of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +86,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The operation interval, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -59,6 +95,16 @@ public class ModifyTemplateRequest extends TeaModel {
     public Long interval;
 
     /**
+     * <p>The storage path for JPG files. This path is used for on-demand snapshots.</p>
+     * <ul>
+     * <li><p>Only JPG images are supported.</p>
+     * </li>
+     * <li><p>The path supports variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}.</p>
+     * </li>
+     * <li><p>You must include either {UnixTimestamp} or {Sequence}.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}_ondemand.jpg</p>
      */
@@ -66,6 +112,14 @@ public class ModifyTemplateRequest extends TeaModel {
     public String jpgOnDemand;
 
     /**
+     * <p>The storage path for JPG files. This path is used to overwrite snapshots.</p>
+     * <ul>
+     * <li><p>Only JPG images are supported.</p>
+     * </li>
+     * <li><p>The path supports variables such as {AppName} and {StreamName}.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>osspath/snapshot/{AppName}/{StreamName}.jpg</p>
      */
@@ -73,6 +127,16 @@ public class ModifyTemplateRequest extends TeaModel {
     public String jpgOverwrite;
 
     /**
+     * <p>The storage path for JPG files. This path is used for sequence snapshots.</p>
+     * <ul>
+     * <li><p>Only JPG images are supported.</p>
+     * </li>
+     * <li><p>The path supports variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}.</p>
+     * </li>
+     * <li><p>You must include either {UnixTimestamp} or {Sequence}.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg</p>
      */
@@ -80,16 +144,32 @@ public class ModifyTemplateRequest extends TeaModel {
     public String jpgSequence;
 
     /**
+     * <p>The storage path for MP4 files.</p>
+     * <ul>
+     * <li><p>The path supports variables such as {AppName}, {StreamName}, {Sequence}, {EscapedStartTime}, and {EscapedEndTime}.</p>
+     * </li>
+     * <li><p>You must include {EscapedStartTime} and {EscapedEndTime}.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
      */
     @NameInMap("Mp4")
     public String mp4;
 
+    /**
+     * <p>The name of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>录制模板</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>bucketname</p>
      */
@@ -97,6 +177,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public String ossBucket;
 
     /**
+     * <p>The domain name of the OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-qingdao.aliyuncs.com</p>
      */
@@ -104,6 +186,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public String ossEndpoint;
 
     /**
+     * <p>The prefix of the OSS file.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-prefix</p>
      */
@@ -114,6 +198,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region where the Object Storage Service (OSS) bucket is located.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
      */
@@ -121,6 +207,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The retention period for time shifting, in days.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -128,6 +216,8 @@ public class ModifyTemplateRequest extends TeaModel {
     public Long retention;
 
     /**
+     * <p>An array of transcoding configurations of the TransConfig type, in a JSON-formatted string.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;Fps&quot;:25,&quot;Gop&quot;:50,&quot;Height&quot;:720,&quot;VideoCodec&quot;:&quot;h264&quot;,&quot;Width&quot;:1280,&quot;Name&quot;:&quot;sd&quot;,&quot;VideoBitrate&quot;:800}]</p>
      */
@@ -135,6 +225,14 @@ public class ModifyTemplateRequest extends TeaModel {
     public String transConfigsJSON;
 
     /**
+     * <p>The trigger type of the template. The default value is auto. Valid values:</p>
+     * <ul>
+     * <li><p>auto (automatic)</p>
+     * </li>
+     * <li><p>ondemand (on-demand)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>auto</p>
      */

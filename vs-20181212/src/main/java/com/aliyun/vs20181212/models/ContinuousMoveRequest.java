@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContinuousMoveRequest extends TeaModel {
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,9 @@ public class ContinuousMoveRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Pan speed. A positive value moves the camera left.<br>
+     * Valid values: -1.0 to 1.0<br></p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */
@@ -24,6 +28,9 @@ public class ContinuousMoveRequest extends TeaModel {
     public String pan;
 
     /**
+     * <p>Tilt speed. A positive value moves the camera up.<br>
+     * Valid values: -1.0 to 1.0<br></p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */
@@ -31,6 +38,9 @@ public class ContinuousMoveRequest extends TeaModel {
     public String tilt;
 
     /**
+     * <p>Zoom speed. A positive value zooms in.<br>
+     * Valid values: -1.0 to 1.0<br></p>
+     * 
      * <strong>example:</strong>
      * <p>0.5</p>
      */

@@ -8,6 +8,8 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     public DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries displayed per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +26,8 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B31FC4AD-3592-573E-8063-878F722B322A</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries that meet the criteria.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +44,8 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     public Integer totalNum;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

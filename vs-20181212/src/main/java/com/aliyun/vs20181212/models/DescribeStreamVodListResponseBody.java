@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeStreamVodListResponseBody extends TeaModel {
+    /**
+     * <p>VOD record list</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeStreamVodListResponseBodyRecords> records;
 
     /**
+     * <p>Request ID of this task.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -37,6 +42,8 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
 
     public static class DescribeStreamVodListResponseBodyRecords extends TeaModel {
         /**
+         * <p>VOD record end time (unix timestamp, unit: seconds)</p>
+         * 
          * <strong>example:</strong>
          * <p>1634873413</p>
          */
@@ -44,6 +51,8 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>VOD record start time (unix timestamp, unit: seconds)</p>
+         * 
          * <strong>example:</strong>
          * <p>1639077653</p>
          */

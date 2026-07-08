@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateRenderingInstanceSettingsShrinkRequest extends TeaModel {
     /**
+     * <p>ID of the cloud application service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    /**
+     * <p>List of instance settings.</p>
+     */
     @NameInMap("Settings")
     public String settingsShrink;
 

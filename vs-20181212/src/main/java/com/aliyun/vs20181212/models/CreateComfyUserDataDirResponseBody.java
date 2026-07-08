@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateComfyUserDataDirResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 0 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The returned message. If the request fails, this parameter contains the failure reason.</p>
+     * 
      * <strong>example:</strong>
      * <p>conn failed!</p>
      */
@@ -19,7 +23,7 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

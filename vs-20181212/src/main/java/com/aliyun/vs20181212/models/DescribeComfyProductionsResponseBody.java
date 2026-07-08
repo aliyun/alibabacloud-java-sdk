@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyProductionsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,17 +32,22 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>A list of productions.</p>
+     */
     @NameInMap("Productions")
     public java.util.List<DescribeComfyProductionsResponseBodyProductions> productions;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -45,6 +56,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of productions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -114,6 +127,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
 
     public static class DescribeComfyProductionsResponseBodyProductions extends TeaModel {
         /**
+         * <p>The ID of the Comfy task.</p>
+         * 
          * <strong>example:</strong>
          * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
          */
@@ -121,6 +136,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String comfyTaskId;
 
         /**
+         * <p>The creation time of the production, in ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-06T20:20:26+08:00</p>
          */
@@ -128,6 +145,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The file name of the production.</p>
+         * 
          * <strong>example:</strong>
          * <p>1755051607877.mp4</p>
          */
@@ -135,6 +154,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The ID of the production.</p>
+         * 
          * <strong>example:</strong>
          * <p>3e5bda20-5cd4-4d55-8d23-88d624a18caa</p>
          */
@@ -142,6 +163,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String productionId;
 
         /**
+         * <p>The state of the production.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -149,6 +172,8 @@ public class DescribeComfyProductionsResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The last modification time of the production, as a Unix timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1773707865</p>
          */

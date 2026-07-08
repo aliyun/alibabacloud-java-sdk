@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPublicKeysResponseBody extends TeaModel {
     /**
+     * <p>The page number of the returned list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class ListPublicKeysResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>A list of public keys.</p>
+     */
     @NameInMap("PublicKeys")
     public java.util.List<ListPublicKeysResponseBodyPublicKeys> publicKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -29,6 +38,8 @@ public class ListPublicKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,16 +93,26 @@ public class ListPublicKeysResponseBody extends TeaModel {
 
     public static class ListPublicKeysResponseBodyPublicKeys extends TeaModel {
         /**
+         * <p>The content of the public key. The content is encoded in Base64 format by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>verify_30d89ccb0905c8c7882c1d14a991954b</p>
          */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The description of the public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试使用</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The public key group.</p>
+         * 
          * <strong>example:</strong>
          * <p>mygroup</p>
          */
@@ -99,16 +120,32 @@ public class ListPublicKeysResponseBody extends TeaModel {
         public String keyGroup;
 
         /**
+         * <p>The name of the public key.</p>
+         * 
          * <strong>example:</strong>
          * <p>mykey</p>
          */
         @NameInMap("KeyName")
         public String keyName;
 
+        /**
+         * <p>The type of the public key. Valid values:</p>
+         * <ul>
+         * <li><p><strong>adb</strong>: ADB key</p>
+         * </li>
+         * <li><p><strong>ssh</strong>: SSH key</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh</p>
+         */
         @NameInMap("KeyType")
         public String keyType;
 
         /**
+         * <p>The time when the public key was uploaded.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-11T14:26:48+08:00</p>
          */

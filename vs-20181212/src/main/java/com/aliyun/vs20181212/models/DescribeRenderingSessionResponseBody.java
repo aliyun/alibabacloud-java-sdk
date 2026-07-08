@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenderingSessionResponseBody extends TeaModel {
+    /**
+     * <p>Additional optional ingress network information</p>
+     */
     @NameInMap("AdditionalIngresses")
     public java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngresses> additionalIngresses;
 
     /**
+     * <p>Cloud application ID</p>
+     * 
      * <strong>example:</strong>
      * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
      */
@@ -15,6 +20,8 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     public String appId;
 
     /**
+     * <p>End client ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c91263a0-f9ac-45bd-bbe9-6e293ad32d91</p>
      */
@@ -22,32 +29,64 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     public String clientId;
 
     /**
+     * <p>Instance hostname. Defaults to the EIP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>111.45.29.96</p>
      */
     @NameInMap("Hostname")
     public String hostname;
 
+    /**
+     * <p>Carrier code. Valid values:</p>
+     * <ol>
+     * <li><p>cmcc</p>
+     * </li>
+     * <li><p>unicom</p>
+     * </li>
+     * <li><p>telecom</p>
+     * </li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
+    /**
+     * <p>Cloud application service instance location</p>
+     */
     @NameInMap("Location")
     public DescribeRenderingSessionResponseBodyLocation location;
 
     /**
+     * <p>Cloud application patch package ID. An empty value means the original version.</p>
+     * 
      * <strong>example:</strong>
      * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
      */
     @NameInMap("PatchId")
     public String patchId;
 
+    /**
+     * <p>Port mapping information</p>
+     */
     @NameInMap("PortMappings")
     public java.util.List<DescribeRenderingSessionResponseBodyPortMappings> portMappings;
 
+    /**
+     * <p>Cloud application service instance ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
+     */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -55,6 +94,8 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Session ID</p>
+     * 
      * <strong>example:</strong>
      * <p>session-i205217481741918129226</p>
      */
@@ -62,12 +103,17 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>Start time</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05-18T02:20:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>Session state information</p>
+     */
     @NameInMap("StateInfo")
     public DescribeRenderingSessionResponseBodyStateInfo stateInfo;
 
@@ -181,9 +227,21 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings extends TeaModel {
+        /**
+         * <p>Public port or port range, such as 22. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11060/11079</p>
+         */
         @NameInMap("ExternalPort")
         public String externalPort;
 
+        /**
+         * <p>Private port or port range. Each private port maps one-to-one with a public port. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11060/11079</p>
+         */
         @NameInMap("InternalPort")
         public String internalPort;
 
@@ -211,12 +269,35 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingSessionResponseBodyAdditionalIngresses extends TeaModel {
+        /**
+         * <p>Domain name or IP address of the cloud application service instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111.45.29.96</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>Carrier code. Valid values:</p>
+         * <ol>
+         * <li><p>cmcc</p>
+         * </li>
+         * <li><p>unicom</p>
+         * </li>
+         * <li><p>telecom</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>List of port mappings</p>
+         */
         @NameInMap("PortMappings")
         public java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings> portMappings;
 
@@ -253,6 +334,8 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
 
     public static class DescribeRenderingSessionResponseBodyLocation extends TeaModel {
         /**
+         * <p>Province code of the cloud application service instance</p>
+         * 
          * <strong>example:</strong>
          * <p>310000</p>
          */
@@ -276,6 +359,8 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
 
     public static class DescribeRenderingSessionResponseBodyPortMappings extends TeaModel {
         /**
+         * <p>Public port or port range, such as 22. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+         * 
          * <strong>example:</strong>
          * <p>10013/10020</p>
          */
@@ -283,6 +368,8 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         public String externalPort;
 
         /**
+         * <p>Private port or port range. Each private port maps one-to-one with a public port. For a port range, use a forward slash (/) to separate the start and end ports. Example: 10/20.</p>
+         * 
          * <strong>example:</strong>
          * <p>49008/49015</p>
          */
@@ -313,10 +400,34 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingSessionResponseBodyStateInfo extends TeaModel {
+        /**
+         * <p>State description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>已启动</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>Session state. Valid values:</p>
+         * <ol>
+         * <li><p>SessionStarting: Starting the session</p>
+         * </li>
+         * <li><p>SessionStartSuspended: Session start is suspended. Retry by calling Start again.</p>
+         * </li>
+         * <li><p>SessionStarted: Session started or in use</p>
+         * </li>
+         * <li><p>SessionStartFailed: Session failed to start</p>
+         * </li>
+         * <li><p>SessionAbnormal: Session became abnormal after starting successfully</p>
+         * </li>
+         * <li><p>SessionStopping: Stopping the session</p>
+         * </li>
+         * <li><p>SessionStopFailed: Session failed to stop</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>SessionStarted</p>
          */
@@ -324,6 +435,8 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>Time when the state was last updated</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-15T10:05:20+08:00</p>
          */

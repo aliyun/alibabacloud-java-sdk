@@ -8,6 +8,7 @@ public class UpdateVsPullStreamInfoConfigRequest extends TeaModel {
     public String always;
 
     /**
+     * <p>The name of the application to which the live stream belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class UpdateVsPullStreamInfoConfigRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Your stream pulling domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,11 @@ public class UpdateVsPullStreamInfoConfigRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end time of stream pulling.</p>
+     * <blockquote>
+     * <p>UTC time format. The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2018-12-10T18:00:00Z</p>
      */
@@ -36,6 +43,10 @@ public class UpdateVsPullStreamInfoConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The origin server of your live stream.</p>
+     * <blockquote>
+     * <p>Supports multiple values, separated by English semicolons (;).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +56,11 @@ public class UpdateVsPullStreamInfoConfigRequest extends TeaModel {
     public String sourceUrl;
 
     /**
+     * <p>The start time of stream pulling.</p>
+     * <blockquote>
+     * <p>UTC time format. The interval between StartTime and EndTime must be within 7 days.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-10T10:00:00Z</p>
      */
@@ -52,6 +68,7 @@ public class UpdateVsPullStreamInfoConfigRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The name of the live stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

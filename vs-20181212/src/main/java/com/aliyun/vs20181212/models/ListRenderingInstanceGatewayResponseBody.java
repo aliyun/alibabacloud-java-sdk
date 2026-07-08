@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
+    /**
+     * <p>A list of custom gateway information.</p>
+     */
     @NameInMap("GatewayConfigurationInfos")
     public java.util.List<ListRenderingInstanceGatewayResponseBodyGatewayConfigurationInfos> gatewayConfigurationInfos;
 
     /**
+     * <p>The page number of the query results list</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -29,6 +38,8 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
 
     public static class ListRenderingInstanceGatewayResponseBodyGatewayConfigurationInfos extends TeaModel {
         /**
+         * <p>The time when the cloud application service instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-15 10:19:13</p>
          */
@@ -89,6 +102,8 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The ID of the custom gateway instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>render-xxx</p>
          */
@@ -96,6 +111,8 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         public String gatewayInstanceId;
 
         /**
+         * <p>The ID of the cloud application service instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>render-342012a227dc4ddf91f024639e43051a</p>
          */
@@ -103,6 +120,14 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
+         * <p>The status of the custom gateway. Valid values:</p>
+         * <ol>
+         * <li><p>Transitional states: creating, deleting</p>
+         * </li>
+         * <li><p>Desired states: available, failed</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>available</p>
          */
@@ -110,6 +135,8 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the information was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-02 12:08:26</p>
          */

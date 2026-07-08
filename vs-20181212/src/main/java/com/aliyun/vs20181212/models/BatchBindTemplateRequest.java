@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchBindTemplateRequest extends TeaModel {
     /**
+     * <p>Apply to all streams within the scope. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class BatchBindTemplateRequest extends TeaModel {
     public Boolean applyAll;
 
     /**
+     * <p>Instance ID. Separate multiple values with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,13 @@ public class BatchBindTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Instance type. Valid values:</p>
+     * <ul>
+     * <li><p>group (space)</p>
+     * </li>
+     * <li><p>stream (stream)</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,8 @@ public class BatchBindTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Replace existing bindings. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,6 +52,7 @@ public class BatchBindTemplateRequest extends TeaModel {
     public Boolean replace;
 
     /**
+     * <p>Template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

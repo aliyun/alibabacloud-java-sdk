@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStartStreamsRequest extends TeaModel {
     /**
+     * <p>Stream ID. Separate multiple IDs with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

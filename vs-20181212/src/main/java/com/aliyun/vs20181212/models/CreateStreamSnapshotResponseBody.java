@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateStreamSnapshotResponseBody extends TeaModel {
     /**
+     * <p>Image format.</p>
+     * 
      * <strong>example:</strong>
      * <p>jpg</p>
      */
@@ -12,6 +14,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public String format;
 
     /**
+     * <p>Image height.</p>
+     * 
      * <strong>example:</strong>
      * <p>720</p>
      */
@@ -19,6 +23,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public Long height;
 
     /**
+     * <p>Stream ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****997-cn-qingdao</p>
      */
@@ -26,6 +32,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The OSS bucket of the snapshot file.</p>
+     * 
      * <strong>example:</strong>
      * <p>examplebucket</p>
      */
@@ -33,6 +41,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public String ossBucket;
 
     /**
+     * <p>The OSS endpoint of the snapshot file.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-qingdao.aliyuncs.com</p>
      */
@@ -40,6 +50,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public String ossEndpoint;
 
     /**
+     * <p>The OSS object of the snapshot file.</p>
+     * 
      * <strong>example:</strong>
      * <p>photos/live/340200*****100049/ondemand-1639126601767.jpg</p>
      */
@@ -47,6 +59,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public String ossObject;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -54,6 +68,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The snapshot timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1639126601767</p>
      */
@@ -61,6 +77,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public Long timestamp;
 
     /**
+     * <p>The URL of the snapshot file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg">http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg</a></p>
      */
@@ -68,6 +86,8 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
     public String url;
 
     /**
+     * <p>Image width.</p>
+     * 
      * <strong>example:</strong>
      * <p>1280</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamsResponseBody extends TeaModel {
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -12,6 +14,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,16 +32,23 @@ public class DescribeStreamsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of streams.</p>
+     */
     @NameInMap("Streams")
     public java.util.List<DescribeStreamsResponseBodyStreams> streams;
 
     /**
+     * <p>Total number of streams.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -97,6 +110,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
 
     public static class DescribeStreamsResponseBodyStreams extends TeaModel {
         /**
+         * <p>Application that owns this stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>live</p>
          */
@@ -104,6 +119,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String app;
 
         /**
+         * <p>Time when the stream was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-12-10T17:00:00Z</p>
          */
@@ -111,6 +128,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>Device ID of this stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
@@ -118,6 +137,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>Indicates whether the stream is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -125,6 +146,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
+         * <p>The ID of the group to which the stream belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****174-cn-qingdao</p>
          */
@@ -132,6 +155,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>Video stream height in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */
@@ -139,6 +164,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public Integer height;
 
         /**
+         * <p>Stream ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323*****997-cn-qingdao</p>
          */
@@ -146,6 +173,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Stream name.</p>
+         * 
          * <strong>example:</strong>
          * <p>31000000*****0000002</p>
          */
@@ -153,6 +182,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Streaming domain for this stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo.aliyundoc.com</p>
          */
@@ -160,6 +191,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String playDomain;
 
         /**
+         * <p>Stream protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>gb28181</p>
          */
@@ -167,6 +200,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>Ingest domain for this stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
@@ -174,6 +209,14 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String pushDomain;
 
         /**
+         * <p>Stream status. Valid values:</p>
+         * <ul>
+         * <li><p>on (online)</p>
+         * </li>
+         * <li><p>off (offline)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -181,6 +224,8 @@ public class DescribeStreamsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Video stream width in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */

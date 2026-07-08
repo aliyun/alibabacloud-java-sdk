@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateComfyTaskResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 0 indicates a successful request. For a list of other values, see Error Codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class CreateComfyTaskResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The returned message. It provides more details about the request status.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class CreateComfyTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -28,6 +32,8 @@ public class CreateComfyTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the asynchronous task. You can use this ID to query the task status on the Task Query tab in the Intelligent Media Management console.</p>
+     * 
      * <strong>example:</strong>
      * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
      */

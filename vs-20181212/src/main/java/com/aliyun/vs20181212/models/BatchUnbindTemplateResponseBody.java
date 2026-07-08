@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchUnbindTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Bindings")
     public java.util.List<BatchUnbindTemplateResponseBodyBindings> bindings;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -37,6 +42,11 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
 
     public static class BatchUnbindTemplateResponseBodyBindings extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * <blockquote>
+         * <p>This field appears only when the operation fails.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>some error</p>
          */
@@ -44,6 +54,8 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323*****994-cn-qingdao</p>
          */
@@ -51,6 +63,8 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>group</p>
          */
@@ -58,6 +72,8 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323*****998-cn-qingdao</p>
          */

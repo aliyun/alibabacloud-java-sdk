@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainRecordDataRequest extends TeaModel {
     /**
+     * <p>Visual Edge Computing Service domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsDomainRecordDataRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>End time of the data range. Must be later than StartTime. Use ISO 8601 notation in UTC. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-19T15:59:59Z</p>
      */
@@ -22,6 +26,8 @@ public class DescribeVsDomainRecordDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Region information</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsDomainRecordDataRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>Start time of the data range. Use ISO 8601 notation in UTC. Format: YYYY-MM-DDThh:mm:ssZ. Minimum data granularity is 5 minutes. If you omit this parameter, the API returns data from the last 24 hours.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-29T16:00:00Z</p>
      */

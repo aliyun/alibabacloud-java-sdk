@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ForbidVsStreamRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class ForbidVsStreamRequest extends TeaModel {
     public String controlStreamAction;
 
     /**
+     * <p>The accelerated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class ForbidVsStreamRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Only &quot;publisher&quot; is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +38,8 @@ public class ForbidVsStreamRequest extends TeaModel {
     public String liveStreamType;
 
     /**
+     * <p>Specifies whether to only interrupt the stream without adding it to the blacklist. A value of \<code>yes\\</code> indicates that the stream is only interrupted.</p>
+     * 
      * <strong>example:</strong>
      * <p>yes</p>
      */
@@ -45,6 +50,8 @@ public class ForbidVsStreamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The time to resume the stream. The time is in UTC format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2015-12-01T17:37:00Z</p>
      */
@@ -52,6 +59,7 @@ public class ForbidVsStreamRequest extends TeaModel {
     public String resumeTime;
 
     /**
+     * <p>The stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

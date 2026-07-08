@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsVerifyContentResponseBody extends TeaModel {
     /**
+     * <p>校验内容。</p>
+     * 
      * <strong>example:</strong>
      * <p>verify_dffeb6610035dcb77b413a59c3*****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsVerifyContentResponseBody extends TeaModel {
     public String content;
 
     /**
+     * <p>请求ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

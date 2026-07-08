@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRenderingInstanceAttributeRequest extends TeaModel {
     /**
+     * <p>Password for the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyRenderingInstanceAttributeRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>ID of the cloud application service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

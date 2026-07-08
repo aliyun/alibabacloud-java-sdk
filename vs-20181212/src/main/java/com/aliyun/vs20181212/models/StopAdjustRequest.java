@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopAdjustRequest extends TeaModel {
     /**
+     * <p>Stop adjusting the zoom. Default is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class StopAdjustRequest extends TeaModel {
     public Boolean focus;
 
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class StopAdjustRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Stop adjusting the aperture. Default is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

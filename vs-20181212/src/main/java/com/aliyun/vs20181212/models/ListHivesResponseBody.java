@@ -58,6 +58,10 @@ public class ListHivesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>基础型S1</p>
+         */
         @NameInMap("Description")
         public String description;
 

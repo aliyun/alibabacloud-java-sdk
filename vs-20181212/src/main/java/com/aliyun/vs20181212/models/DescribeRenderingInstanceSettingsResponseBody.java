@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -13,6 +13,9 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of instance configurations.</p>
+     */
     @NameInMap("Settings")
     public java.util.List<DescribeRenderingInstanceSettingsResponseBodySettings> settings;
 
@@ -39,6 +42,8 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
 
     public static class DescribeRenderingInstanceSettingsResponseBodySettings extends TeaModel {
         /**
+         * <p>The name of an instance configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>navbar.hide</p>
          */
@@ -46,6 +51,8 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
         public String attributeName;
 
         /**
+         * <p>The value of an instance configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

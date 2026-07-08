@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeParentPlatformsRequest extends TeaModel {
     /**
+     * <p>Query by the GB ID of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>31000*****2170123451</p>
      */
@@ -15,6 +17,8 @@ public class DescribeParentPlatformsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number. Default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class DescribeParentPlatformsRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Page size. Default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +35,8 @@ public class DescribeParentPlatformsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Sort by the specified field. Sorted by id by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>id</p>
      */
@@ -36,6 +44,12 @@ public class DescribeParentPlatformsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Sort order. Ascending by default. Valid values:</p>
+     * <ul>
+     * <li>asc (ascending)</li>
+     * <li>desc (descending)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -43,6 +57,8 @@ public class DescribeParentPlatformsRequest extends TeaModel {
     public String sortDirection;
 
     /**
+     * <p>Query by the status of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

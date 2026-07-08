@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ManageLoginResponseBody extends TeaModel {
+    /**
+     * <p>Connection information.</p>
+     */
     @NameInMap("LoginInfo")
     public ManageLoginResponseBodyLoginInfo loginInfo;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,10 +41,18 @@ public class ManageLoginResponseBody extends TeaModel {
     }
 
     public static class ManageLoginResponseBodyLoginInfo extends TeaModel {
+        /**
+         * <p>Port for ADB connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10005</p>
+         */
         @NameInMap("AdbLoginPort")
         public Integer adbLoginPort;
 
         /**
+         * <p>Host for SSH connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>12.10.4.10</p>
          */
@@ -47,6 +60,8 @@ public class ManageLoginResponseBody extends TeaModel {
         public String loginHostname;
 
         /**
+         * <p>Port for SSH connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>10004</p>
          */

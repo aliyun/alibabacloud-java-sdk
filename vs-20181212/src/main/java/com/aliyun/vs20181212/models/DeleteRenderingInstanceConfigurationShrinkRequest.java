@@ -4,10 +4,14 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DeleteRenderingInstanceConfigurationShrinkRequest extends TeaModel {
+    /**
+     * <p>Configuration content. Purge all configured modules by default.</p>
+     */
     @NameInMap("Configuration")
     public String configurationShrink;
 
     /**
+     * <p>Cloud application service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

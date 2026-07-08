@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -12,6 +14,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,16 +32,23 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F3F88C96-CA6E-573E-B8F7-5BE83A1A0BCF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Template list.</p>
+     */
     @NameInMap("Templates")
     public java.util.List<DescribeTemplatesResponseBodyTemplates> templates;
 
     /**
+     * <p>Total number of templates.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -97,6 +110,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyTemplatesTransConfigs extends TeaModel {
         /**
+         * <p>Video frame rate in fps.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
@@ -104,6 +119,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long fps;
 
         /**
+         * <p>Video GOP in frames.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -111,6 +128,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long gop;
 
         /**
+         * <p>Video height.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */
@@ -118,6 +137,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long height;
 
         /**
+         * <p>Transcoding rule name. This name becomes the suffix of the transcoded stream. Use a descriptive suffix such as sd or 200k. Only letters and numbers are allowed.</p>
+         * 
          * <strong>example:</strong>
          * <p>sd</p>
          */
@@ -125,6 +146,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Video bitrate in kbps.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -132,6 +155,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long videoBitrate;
 
         /**
+         * <p>Video encoding.</p>
+         * 
          * <strong>example:</strong>
          * <p>h264</p>
          */
@@ -139,6 +164,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String videoCodec;
 
         /**
+         * <p>Video width.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */
@@ -146,6 +173,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long width;
 
         /**
+         * <p>Transcoding configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>399788187729597430-cn-qingdao</p>
          */
@@ -225,6 +254,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
         /**
+         * <p>Callback URL after template execution.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
          */
@@ -232,16 +263,26 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String callback;
 
         /**
+         * <p>Template creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-12-10T10:00:00Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>Template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>录制模板</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Storage file format. Separate multiple values with commas. Valid values: mp4, flv, hls, jpg.</p>
+         * 
          * <strong>example:</strong>
          * <p>hls</p>
          */
@@ -249,6 +290,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String fileFormat;
 
         /**
+         * <p>FLV storage path.</p>
+         * <blockquote>
+         * <p>This applies only to recording templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
@@ -256,6 +302,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String flv;
 
         /**
+         * <p>HLS storage path for M3U8 files.</p>
+         * <blockquote>
+         * <p>This applies only to recording templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
@@ -263,6 +314,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String hlsM3u8;
 
         /**
+         * <p>HLS storage path for TS files.</p>
+         * <blockquote>
+         * <p>This applies only to recording templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>osspath/record/{StreamName}/{UnixTimestamp}_{Sequence}</p>
          */
@@ -270,6 +326,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String hlsTs;
 
         /**
+         * <p>Template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323*****998-cn-qingdao</p>
          */
@@ -277,6 +335,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Operation interval in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600</p>
          */
@@ -284,6 +344,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long interval;
 
         /**
+         * <p>JPG storage path for on-demand snapshots.</p>
+         * <blockquote>
+         * <p>This applies only to snapshot templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}_ondemand.jpg</p>
          */
@@ -291,6 +356,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String jpgOnDemand;
 
         /**
+         * <p>JPG storage path for overwrite snapshots.</p>
+         * <blockquote>
+         * <p>This applies only to snapshot templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>osspath/snapshot/{AppName}/{StreamName}.jpg</p>
          */
@@ -298,6 +368,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String jpgOverwrite;
 
         /**
+         * <p>JPG storage path for sequential snapshots.</p>
+         * <blockquote>
+         * <p>This applies only to snapshot templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg</p>
          */
@@ -305,16 +380,29 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String jpgSequence;
 
         /**
+         * <p>MP4 storage path.</p>
+         * <blockquote>
+         * <p>This applies only to recording templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
          */
         @NameInMap("Mp4")
         public String mp4;
 
+        /**
+         * <p>Template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>录制模板</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_oss_bucket</p>
          */
@@ -322,6 +410,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
+         * <p>OSS domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-qingdao.aliyuncs.com</p>
          */
@@ -329,6 +419,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String ossEndpoint;
 
         /**
+         * <p>OSS file prefix.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_prefix</p>
          */
@@ -336,6 +428,8 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String ossFilePrefix;
 
         /**
+         * <p>OSS region, also known as service center.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */
@@ -343,16 +437,38 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>Time-shifting retention period in days.</p>
+         * <blockquote>
+         * <p>This applies only to time-shifting templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("Retention")
         public Long retention;
 
+        /**
+         * <p>Transcoding configuration list.</p>
+         * <blockquote>
+         * <p>This applies only to transcoding templates.</p>
+         * </blockquote>
+         */
         @NameInMap("TransConfigs")
         public java.util.List<DescribeTemplatesResponseBodyTemplatesTransConfigs> transConfigs;
 
         /**
+         * <p>Template trigger type. Valid values:</p>
+         * <ul>
+         * <li><p>auto (automatic)</p>
+         * </li>
+         * <li><p>ondemand (on demand)</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This applies only to recording templates.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
@@ -360,6 +476,18 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String trigger;
 
         /**
+         * <p>Template type. Valid values:</p>
+         * <ul>
+         * <li><p>record (recording)</p>
+         * </li>
+         * <li><p>snapshot (snapshot)</p>
+         * </li>
+         * <li><p>transcode (transcoding)</p>
+         * </li>
+         * <li><p>timeshift (time shifting)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>record</p>
          */

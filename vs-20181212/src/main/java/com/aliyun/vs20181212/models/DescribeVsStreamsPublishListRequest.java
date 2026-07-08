@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsStreamsPublishListRequest extends TeaModel {
     /**
+     * <p>The application name of the live stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxApp</p>
      */
@@ -12,6 +14,7 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Your domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,15 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end time.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>Use UTC format. Example: 2016-06-30T19:00:00Z</p>
+     * </li>
+     * <li><p>The interval between EndTime and StartTime must not exceed 30 days.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +42,18 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p>stream_name_desc (sort by stream name in descending order)</p>
+     * </li>
+     * <li><p>stream_name_asc (sort by stream name in ascending order)</p>
+     * </li>
+     * <li><p>publish_time_desc (sort by publish time in descending order)</p>
+     * </li>
+     * <li><p>publish_time_asc (sort by publish time in ascending order) (default)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>publish_time_asc</p>
      */
@@ -40,6 +64,8 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +73,9 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 3000.<br>
+     * Valid values: 1 to 3000.<br></p>
+     * 
      * <strong>example:</strong>
      * <p>3000</p>
      */
@@ -54,6 +83,14 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to use fuzzy matching for the stream name. Valid values:</p>
+     * <ul>
+     * <li><p>fuzzy (fuzzy match)</p>
+     * </li>
+     * <li><p>strict (exact match)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>fuzzy</p>
      */
@@ -61,6 +98,10 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The start time.</p>
+     * <blockquote>
+     * <p>Use UTC format. Example: 2016-06-29T19:00:00Z</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +111,8 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The live stream name.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxStream</p>
      */
@@ -77,6 +120,16 @@ public class DescribeVsStreamsPublishListRequest extends TeaModel {
     public String streamName;
 
     /**
+     * <p>The stream type. Valid values:</p>
+     * <ul>
+     * <li><p>all (all streams) (default)</p>
+     * </li>
+     * <li><p>raw (raw stream)</p>
+     * </li>
+     * <li><p>trans (transcoded stream)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */

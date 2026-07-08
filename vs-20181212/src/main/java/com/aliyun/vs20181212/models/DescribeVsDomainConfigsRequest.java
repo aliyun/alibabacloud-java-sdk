@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainConfigsRequest extends TeaModel {
     /**
+     * <p>Your accelerated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class DescribeVsDomainConfigsRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>List of feature names.</p>
+     * <blockquote>
+     * <p>Supports multiple values separated by commas (,).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

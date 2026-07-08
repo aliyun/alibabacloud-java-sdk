@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyUserDatasResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number of the returned list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -42,6 +50,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -114,6 +124,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
 
     public static class DescribeComfyUserDatasResponseBodyUserDatas extends TeaModel {
         /**
+         * <p>The name of the file or folder.</p>
+         * 
          * <strong>example:</strong>
          * <p>myfile</p>
          */
@@ -121,6 +133,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file size in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -128,6 +142,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The entry type. Valid values are \<code>file\\</code> and \<code>dir\\</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>file</p>
          */
@@ -135,6 +151,8 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The time the file was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1776646928000</p>
          */

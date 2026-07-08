@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindTemplateResponseBody extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****994-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class BindTemplateResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The type of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>group</p>
      */
@@ -19,6 +23,8 @@ public class BindTemplateResponseBody extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -26,6 +32,8 @@ public class BindTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****998-cn-qingdao</p>
      */

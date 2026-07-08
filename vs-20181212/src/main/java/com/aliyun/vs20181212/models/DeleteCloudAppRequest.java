@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudAppRequest extends TeaModel {
     /**
+     * <p>The cloud application ID, which corresponds to a unique application package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

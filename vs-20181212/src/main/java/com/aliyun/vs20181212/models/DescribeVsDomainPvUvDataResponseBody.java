@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     /**
+     * <p>Time interval in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
+     * <p>Visual Edge Computing Service domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>End time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-11-24T00:00:00Z</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     public DescribeVsDomainPvUvDataResponseBodyPvUvDataInfos pvUvDataInfos;
 
     /**
+     * <p>Request ID for this operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +44,8 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-12T10:00:00Z</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListEdgeWorkersResponseBody extends TeaModel {
+    /**
+     * <p>The list of payloads.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListEdgeWorkersResponseBodyInstances> instances;
 
     /**
+     * <p>The page number of the query. The value starts from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxx</p>
      */
@@ -29,6 +38,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +93,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
 
     public static class ListEdgeWorkersResponseBodyInstances extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-14T15:20:37+08:00</p>
          */
@@ -89,6 +102,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The expiration time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-14T15:20:37+08:00</p>
          */
@@ -96,6 +111,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>hive-58mq6jynvgxxmlid3pt39x6gk-0</p>
          */
@@ -103,6 +120,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String hiveId;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>as-d135ca4425c24b99b79cd0b6c552cac9</p>
          */
@@ -110,6 +129,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The package ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pk-db3394401cc8403f85e4d72d99b52449</p>
          */
@@ -117,6 +138,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String planId;
 
         /**
+         * <p>The specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>crs.xic.s1</p>
          */
@@ -124,6 +147,8 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String spec;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Idle</p>
          */

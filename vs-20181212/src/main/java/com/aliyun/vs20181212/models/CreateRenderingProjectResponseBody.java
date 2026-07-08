@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRenderingProjectResponseBody extends TeaModel {
     /**
+     * <p>The project ID. Call ListRenderingProjects to view the project ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>project-b93ea81de76f48609eed3cd420f0399f</p>
      */

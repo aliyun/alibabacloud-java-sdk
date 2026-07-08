@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartRecordStreamRequest extends TeaModel {
     /**
+     * <p>The stream\&quot;s App name.</p>
+     * 
      * <strong>example:</strong>
      * <p>live</p>
      */
@@ -12,6 +14,8 @@ public class StartRecordStreamRequest extends TeaModel {
     public String app;
 
     /**
+     * <p>Stream ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****997-cn-qingdao</p>
      */
@@ -19,6 +23,8 @@ public class StartRecordStreamRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Stream name.</p>
+     * 
      * <strong>example:</strong>
      * <p>310000*****000002</p>
      */
@@ -29,6 +35,8 @@ public class StartRecordStreamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The stream\&quot;s playback domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

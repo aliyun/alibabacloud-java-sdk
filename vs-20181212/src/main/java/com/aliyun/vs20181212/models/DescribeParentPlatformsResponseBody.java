@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeParentPlatformsResponseBody extends TeaModel {
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,23 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>List of parent platforms.</p>
+     */
     @NameInMap("Platforms")
     public java.util.List<DescribeParentPlatformsResponseBodyPlatforms> platforms;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -36,6 +47,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of parent platforms.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,6 +110,12 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
 
     public static class DescribeParentPlatformsResponseBodyPlatforms extends TeaModel {
         /**
+         * <p>Whether to enable automatically. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -104,6 +123,12 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public Boolean autoStart;
 
         /**
+         * <p>Whether to enable local authentication. Valid values:</p>
+         * <ul>
+         * <li>true (default)</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -111,6 +136,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public Boolean clientAuth;
 
         /**
+         * <p>Local GB ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>31010*****317542006</p>
          */
@@ -118,6 +145,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public String clientGbId;
 
         /**
+         * <p>Local SIP service IP.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
          */
@@ -125,6 +154,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public String clientIp;
 
         /**
+         * <p>Local password.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin123</p>
          */
@@ -132,6 +163,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public String clientPassword;
 
         /**
+         * <p>Local SIP service port.</p>
+         * 
          * <strong>example:</strong>
          * <p>5160</p>
          */
@@ -139,6 +172,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public Long clientPort;
 
         /**
+         * <p>Local username.</p>
+         * 
          * <strong>example:</strong>
          * <p>user01</p>
          */
@@ -146,16 +181,26 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public String clientUsername;
 
         /**
+         * <p>Parent platform creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2018-12-10T21:00:00Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>Parent platform description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>国标级联平台描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Parent platform GB ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>31000*****2170123451</p>
          */
@@ -163,6 +208,8 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public String gbId;
 
         /**
+         * <p>Parent platform ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>359*****374-cn-qingdao</p>
          */
@@ -170,16 +217,26 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Parent platform SIP service IP.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.10.10.10</p>
          */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>Parent platform name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>国标级联平台测试</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Parent platform SIP service port.</p>
+         * 
          * <strong>example:</strong>
          * <p>5060</p>
          */
@@ -187,6 +244,11 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public Long port;
 
         /**
+         * <p>Parent platform protocol. Valid values:</p>
+         * <ul>
+         * <li>gb28181 (GB standard)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>gb28181</p>
          */
@@ -194,6 +256,13 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>Parent platform status. Valid values:</p>
+         * <ul>
+         * <li>on (online)</li>
+         * <li>off (offline)</li>
+         * <li>failed (failed)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */

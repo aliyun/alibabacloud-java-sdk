@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchUnbindDirectoriesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64DB7F34-11A8-45DC-A421-40ACF446282C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchUnbindDirectoriesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
 
     public static class BatchUnbindDirectoriesResponseBodyResults extends TeaModel {
         /**
+         * <p>Folder ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
@@ -44,6 +51,8 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The folder ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>399*****488-cn-qingdao</p>
          */
@@ -51,6 +60,11 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
+         * <p>The error message for the detach operation.</p>
+         * <blockquote>
+         * <p>This field appears only if an error occurs.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>An error occurred while processing your request.</p>
          */

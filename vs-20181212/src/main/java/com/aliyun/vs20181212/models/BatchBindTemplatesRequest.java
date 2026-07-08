@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchBindTemplatesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to apply the template to all streams in the scope. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class BatchBindTemplatesRequest extends TeaModel {
     public Boolean applyAll;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,13 @@ public class BatchBindTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance type. Valid values:</p>
+     * <ul>
+     * <li><p>group</p>
+     * </li>
+     * <li><p>stream</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,8 @@ public class BatchBindTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Specifies whether to replace existing bindings. The default value is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +52,7 @@ public class BatchBindTemplatesRequest extends TeaModel {
     public Boolean replace;
 
     /**
+     * <p>The template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +62,14 @@ public class BatchBindTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The template type. Valid values:</p>
+     * <ul>
+     * <li><p>record (recording)</p>
+     * </li>
+     * <li><p>snapshot (snapshotting)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>timeshift</p>
      */

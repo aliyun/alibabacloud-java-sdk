@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateComfyWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The returned message. If <code>Status</code> is <code>Failed</code>, this parameter provides the reason for the failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>conn failed!</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of missing nodes.</p>
+     */
     @NameInMap("MissingNodes")
     public java.util.List<String> missingNodes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -29,6 +38,8 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workflow status.</p>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -36,6 +47,8 @@ public class CreateComfyWorkflowResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The workflow ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5c</p>
      */

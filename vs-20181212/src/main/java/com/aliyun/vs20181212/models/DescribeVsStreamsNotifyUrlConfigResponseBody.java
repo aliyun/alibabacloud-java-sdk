@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
+    /**
+     * <p>Configuration information.</p>
+     */
     @NameInMap("LiveStreamsNotifyConfig")
     public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig liveStreamsNotifyConfig;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -43,12 +48,20 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         public String authType;
 
         /**
+         * <p>Your ingest domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Webhook address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/callback">https://example.com/callback</a></p>
+         */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 

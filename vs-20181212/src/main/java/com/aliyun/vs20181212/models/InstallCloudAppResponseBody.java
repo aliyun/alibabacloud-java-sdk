@@ -4,22 +4,42 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class InstallCloudAppResponseBody extends TeaModel {
+    /**
+     * <p>Number of failed cloud application service instances</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FailedInstanceCount")
     public Integer failedInstanceCount;
 
+    /**
+     * <p>List of failed cloud application service instances</p>
+     */
     @NameInMap("FailedInstances")
     public java.util.List<InstallCloudAppResponseBodyFailedInstances> failedInstances;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Number of successful cloud application service instances</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("SuccessInstanceCount")
     public Integer successInstanceCount;
 
+    /**
+     * <p>List of successful cloud application service instances</p>
+     */
     @NameInMap("SuccessInstances")
     public java.util.List<InstallCloudAppResponseBodySuccessInstances> successInstances;
 
@@ -69,12 +89,30 @@ public class InstallCloudAppResponseBody extends TeaModel {
     }
 
     public static class InstallCloudAppResponseBodyFailedInstances extends TeaModel {
+        /**
+         * <p>Failure error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300000</p>
+         */
         @NameInMap("ErrCode")
         public Integer errCode;
 
+        /**
+         * <p>Failure reason message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rejected due to timeout</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>Cloud application service instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
+         */
         @NameInMap("RenderingInstanceId")
         public String renderingInstanceId;
 
@@ -110,6 +148,12 @@ public class InstallCloudAppResponseBody extends TeaModel {
     }
 
     public static class InstallCloudAppResponseBodySuccessInstances extends TeaModel {
+        /**
+         * <p>Cloud application service instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-5130e2feb23f442fb9456a3d977f03d4</p>
+         */
         @NameInMap("RenderingInstanceId")
         public String renderingInstanceId;
 

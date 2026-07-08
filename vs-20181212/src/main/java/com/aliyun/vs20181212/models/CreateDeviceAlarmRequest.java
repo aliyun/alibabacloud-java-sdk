@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateDeviceAlarmRequest extends TeaModel {
     /**
+     * <p>The Alarm Metric. Valid values:</p>
+     * <ul>
+     * <li>0: other</li>
+     * <li>1: motion detection alerting</li>
+     * <li>2: intelligent alerting</li>
+     * <li>3: switch alerting</li>
+     * <li>4: video loss alerting.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +22,7 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     public Integer alarm;
 
     /**
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +32,7 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     public Integer channelId;
 
     /**
+     * <p>The end time. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +42,8 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The expiration time of the media upload URL. Unit: seconds. Default value: 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -39,6 +51,7 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     public Long expire;
 
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +61,13 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The media object type. Valid values:</p>
+     * <ul>
+     * <li>0: none</li>
+     * <li>1: JPEG image</li>
+     * <li>2: video</li>
+     * <li>3: GIF image.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +80,7 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The start time. Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +90,7 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The alert subtype.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SubAlarm")

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqTrafficDataRequest extends TeaModel {
     /**
+     * <p>Visual Edge Computing Service domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsDomainReqTrafficDataRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>End time of the query. Must be later than the start time. Specify in ISO 8601 format using UTC time.<br>Format: YYYY-MM-DDThh:mm:ssZ<br></p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-13T10:00:41Z</p>
      */
@@ -19,6 +23,19 @@ public class DescribeVsDomainReqTrafficDataRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Time granularity of the query. Unit: seconds. Valid values:</p>
+     * <ul>
+     * <li><p><strong>300</strong> (default).</p>
+     * </li>
+     * <li><p><strong>3600</strong>.</p>
+     * </li>
+     * <li><p><strong>86400</strong>.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If you omit this parameter or specify an unsupported value, the default value <strong>300</strong> is used.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -26,6 +43,8 @@ public class DescribeVsDomainReqTrafficDataRequest extends TeaModel {
     public String interval;
 
     /**
+     * <p>ISP name in English. Call DescribeCdnRegionAndIsp to get valid values. If you omit this parameter, the system returns data for all ISPs.</p>
+     * 
      * <strong>example:</strong>
      * <p>unicom</p>
      */
@@ -33,6 +52,8 @@ public class DescribeVsDomainReqTrafficDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
+     * <p>Region name in English. Call DescribeCdnRegionAndIsp to get valid values. If you omit this parameter, the system returns data for all regions.</p>
+     * 
      * <strong>example:</strong>
      * <p>shanghai</p>
      */
@@ -43,6 +64,8 @@ public class DescribeVsDomainReqTrafficDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Start time of the query. Specify in ISO 8601 format using UTC time.<br>Format: YYYY-MM-DDThh:mm:ssZ<br>Minimum time granularity is 5 minutes.<br>If you omit this parameter, the system returns data for the last 24 hours.<br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-30T16:00:00Z</p>
      */

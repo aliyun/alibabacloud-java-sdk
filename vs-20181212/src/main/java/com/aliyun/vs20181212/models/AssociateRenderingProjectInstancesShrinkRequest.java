@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateRenderingProjectInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>Project ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AssociateRenderingProjectInstancesShrinkRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>List of cloud application service instance IDs</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RenderingInstanceIds")

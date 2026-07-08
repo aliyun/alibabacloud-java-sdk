@@ -4,22 +4,42 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class UninstallCloudAppResponseBody extends TeaModel {
+    /**
+     * <p>The number of cloud application service instances that failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FailedInstanceCount")
     public Integer failedInstanceCount;
 
+    /**
+     * <p>List of failed cloud application service instances</p>
+     */
     @NameInMap("FailedInstances")
     public java.util.List<UninstallCloudAppResponseBodyFailedInstances> failedInstances;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Number of successfully uninstalled cloud application instances</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("SuccessInstanceCount")
     public Integer successInstanceCount;
 
+    /**
+     * <p>A list of service instances for which the cloud application was uninstalled successfully.</p>
+     */
     @NameInMap("SuccessInstances")
     public java.util.List<UninstallCloudAppResponseBodySuccessInstances> successInstances;
 
@@ -69,12 +89,30 @@ public class UninstallCloudAppResponseBody extends TeaModel {
     }
 
     public static class UninstallCloudAppResponseBodyFailedInstances extends TeaModel {
+        /**
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300000</p>
+         */
         @NameInMap("ErrCode")
         public Integer errCode;
 
+        /**
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rejected due to timeout</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>Cloud application instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
+         */
         @NameInMap("RenderingInstanceId")
         public String renderingInstanceId;
 
@@ -110,6 +148,12 @@ public class UninstallCloudAppResponseBody extends TeaModel {
     }
 
     public static class UninstallCloudAppResponseBodySuccessInstances extends TeaModel {
+        /**
+         * <p>Cloud application instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>render-e6cf423c787e4e43b460a788da254fe3</p>
+         */
         @NameInMap("RenderingInstanceId")
         public String renderingInstanceId;
 

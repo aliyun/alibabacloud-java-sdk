@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyProductionsRequest extends TeaModel {
     /**
+     * <p>The page number of the results to return. Pages are 1-indexed. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyProductionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,7 @@ public class DescribeComfyProductionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the Comfy task whose productions you want to list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class SetVsStreamsNotifyUrlConfigRequest extends TeaModel {
     /**
+     * <p>The primary key associated with the playback domain name. This key generates authenticated URLs.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/464513.html">DescribeVsDomainConfigs</a> operation to query the AuthKey value.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ocs*****ace</p>
      */
@@ -12,6 +17,18 @@ public class SetVsStreamsNotifyUrlConfigRequest extends TeaModel {
     public String authKey;
 
     /**
+     * <p>The authentication type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>no_auth</strong> (disabled)</p>
+     * </li>
+     * <li><p><strong>type_a</strong> (method A)</p>
+     * </li>
+     * <li><p><strong>type_b</strong> (method B)</p>
+     * </li>
+     * <li><p><strong>type_c</strong> (method C)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>type_a</p>
      */
@@ -19,6 +36,7 @@ public class SetVsStreamsNotifyUrlConfigRequest extends TeaModel {
     public String authType;
 
     /**
+     * <p>Your accelerated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +46,10 @@ public class SetVsStreamsNotifyUrlConfigRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The URL to which live stream information is pushed.</p>
+     * <blockquote>
+     * <p>This URL must start with http\:// or https\://.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

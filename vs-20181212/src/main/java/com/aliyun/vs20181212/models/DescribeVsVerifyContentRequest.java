@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVsVerifyContentRequest extends TeaModel {
     /**
+     * <p>The Visual Edge Computing Service domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

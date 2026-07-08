@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeviceChannelsRequest extends TeaModel {
     /**
+     * <p>Query by device ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class DescribeDeviceChannelsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +27,8 @@ public class DescribeDeviceChannelsRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of entries per page. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

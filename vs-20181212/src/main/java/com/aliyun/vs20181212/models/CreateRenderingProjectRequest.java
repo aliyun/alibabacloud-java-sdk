@@ -4,10 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateRenderingProjectRequest extends TeaModel {
+    /**
+     * <p>The description of the project. The description can be 0 to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>项目概述</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The custom name of the project. This name is the unique identifier for the project.
+     * The name must meet the following requirements:</p>
+     * <ol>
+     * <li><p>Be 1 to 128 characters in length.</p>
+     * </li>
+     * <li><p>Contain only lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
+     * </li>
+     * <li><p>Start and end with a letter or a digit.</p>
+     * </li>
+     * </ol>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +32,9 @@ public class CreateRenderingProjectRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <p>The session properties.</p>
+     */
     @NameInMap("SessionAttribs")
     public CreateRenderingProjectRequestSessionAttribs sessionAttribs;
 
@@ -50,6 +69,14 @@ public class CreateRenderingProjectRequest extends TeaModel {
 
     public static class CreateRenderingProjectRequestSessionAttribs extends TeaModel {
         /**
+         * <p>The mode to start the cloud application service for the session. Valid values:</p>
+         * <ol>
+         * <li><p>Async: asynchronous</p>
+         * </li>
+         * <li><p>Sync: synchronous</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>Async</p>
          */

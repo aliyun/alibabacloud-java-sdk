@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindPurchasedDeviceRequest extends TeaModel {
     /**
+     * <p>The ID of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

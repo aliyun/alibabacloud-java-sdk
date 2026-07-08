@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDeviceGatewayRequest extends TeaModel {
     /**
+     * <p>Client IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.0.1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDeviceGatewayRequest extends TeaModel {
     public String clientIp;
 
     /**
+     * <p>Time-to-live (TTL).</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -19,6 +23,7 @@ public class DescribeDeviceGatewayRequest extends TeaModel {
     public Long expire;
 
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

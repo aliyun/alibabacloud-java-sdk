@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
     /**
+     * <p>National standard ID associated with the workspace. (Applies only to workspaces using national standard ingest.)</p>
+     * 
      * <strong>example:</strong>
      * <p>31000000****00000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateGroupResponseBody extends TeaModel {
     public String gbId;
 
     /**
+     * <p>IP address of the national standard signaling gateway server associated with the workspace. (Applies only to workspaces using national standard ingest.)</p>
+     * 
      * <strong>example:</strong>
      * <p>10.10.10.10</p>
      */
@@ -19,6 +23,8 @@ public class CreateGroupResponseBody extends TeaModel {
     public String gbIp;
 
     /**
+     * <p>National standard signaling server port provided by the workspace. (Applies only to workspaces using national standard ingest.)</p>
+     * 
      * <strong>example:</strong>
      * <p>5060</p>
      */
@@ -26,6 +32,8 @@ public class CreateGroupResponseBody extends TeaModel {
     public Long gbPort;
 
     /**
+     * <p>Workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>33763****77224964-cn-qingdao</p>
      */
@@ -33,6 +41,8 @@ public class CreateGroupResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsCertificateListResponseBody extends TeaModel {
+    /**
+     * <p>Certificate ID.</p>
+     */
     @NameInMap("CertificateListModel")
     public DescribeVsCertificateListResponseBodyCertificateListModel certificateListModel;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6E310519-E035-51AB-80D4-C1CBECD39EB5</p>
      */
@@ -37,6 +42,8 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
 
     public static class DescribeVsCertificateListResponseBodyCertificateListModelCertList extends TeaModel {
         /**
+         * <p>ID of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>6338888</p>
          */
@@ -44,6 +51,8 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         public Long certId;
 
         /**
+         * <p>Name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>cert-5391062</p>
          */
@@ -51,6 +60,8 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         public String certName;
 
         /**
+         * <p>Common Name (CN) field in the certificate. Usually a domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
          */
@@ -58,6 +69,8 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         public String common;
 
         /**
+         * <p>Fingerprint of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>3EB2585309AE5C8F369****7CDA6A8F5CEC8B2D4</p>
          */
@@ -65,6 +78,8 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         public String fingerprint;
 
         /**
+         * <p>Issuer of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxCert Inc</p>
          */
@@ -72,6 +87,8 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>Timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1632462708</p>
          */
@@ -134,10 +151,15 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVsCertificateListResponseBodyCertificateListModel extends TeaModel {
+        /**
+         * <p>List of certificates.</p>
+         */
         @NameInMap("CertList")
         public java.util.List<DescribeVsCertificateListResponseBodyCertificateListModelCertList> certList;
 
         /**
+         * <p>Number of certificates.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

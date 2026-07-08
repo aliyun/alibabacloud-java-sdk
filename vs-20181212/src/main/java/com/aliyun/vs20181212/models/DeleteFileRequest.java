@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFileRequest extends TeaModel {
     /**
+     * <p>File ID. Each file has a unique ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

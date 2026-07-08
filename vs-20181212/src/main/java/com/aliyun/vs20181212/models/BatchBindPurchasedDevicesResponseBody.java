@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchBindPurchasedDevicesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
 
     public static class BatchBindPurchasedDevicesResponseBodyResults extends TeaModel {
         /**
+         * <p>The ID of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
@@ -44,6 +51,8 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The error message for the device. This parameter is returned only when an error occurs.</p>
+         * 
          * <strong>example:</strong>
          * <p>some error</p>
          */
@@ -51,6 +60,8 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>Space ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>238*****380-cn-qingdao</p>
          */
@@ -58,6 +69,8 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         public String groupId;
 
         /**
+         * <p>The region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>
          */

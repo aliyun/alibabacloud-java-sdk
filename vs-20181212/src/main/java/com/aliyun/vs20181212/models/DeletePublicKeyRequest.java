@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePublicKeyRequest extends TeaModel {
     /**
+     * <p>The name of the public key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

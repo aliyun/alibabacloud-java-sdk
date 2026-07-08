@@ -4,10 +4,18 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListFilesRequest extends TeaModel {
+    /**
+     * <p>This parameter filters data by time range. It must conform to the ISO 8601 standard and use UTC time in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-31T06:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>File ID. Each ID corresponds to a unique active file.</p>
+     * 
      * <strong>example:</strong>
      * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
      */
@@ -15,6 +23,8 @@ public class ListFilesRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>File name.</p>
+     * 
      * <strong>example:</strong>
      * <p>myfile</p>
      */
@@ -22,6 +32,8 @@ public class ListFilesRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The page number to retrieve. Page numbering starts at 1.Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,12 +41,20 @@ public class ListFilesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of rows per page for a paged query. The value must be in the range of 1 to 100. The default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>Start time of the time range filter. Specify in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-30T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

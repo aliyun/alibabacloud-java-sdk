@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyComfyWorkflowResponseBody extends TeaModel {
     /**
+     * <p>The error code. This parameter is returned only if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,26 +14,44 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-07T02:27:06Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The workflow description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是一个图生视频的工作流</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The returned message. This parameter provides error details if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>conn failed!</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The workflow name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图生视频工作流示例</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -39,6 +59,8 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-07T02:27:06Z</p>
      */
@@ -46,6 +68,8 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
     public String updatedTime;
 
     /**
+     * <p>The workflow ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>
      */

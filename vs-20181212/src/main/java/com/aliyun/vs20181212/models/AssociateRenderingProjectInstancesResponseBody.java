@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
     /**
+     * <p>Number of failed cloud application service instances</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("FailedInstanceCount")
     public String failedInstanceCount;
 
+    /**
+     * <p>List of instances that failed to associate</p>
+     */
     @NameInMap("FailedInstances")
     public java.util.List<AssociateRenderingProjectInstancesResponseBodyFailedInstances> failedInstances;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -22,12 +29,17 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Number of successful cloud application service instances</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("SuccessInstanceCount")
     public String successInstanceCount;
 
+    /**
+     * <p>List of successfully associated instances</p>
+     */
     @NameInMap("SuccessInstances")
     public java.util.List<AssociateRenderingProjectInstancesResponseBodySuccessInstances> successInstances;
 
@@ -78,6 +90,8 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
 
     public static class AssociateRenderingProjectInstancesResponseBodyFailedInstances extends TeaModel {
         /**
+         * <p>Failure reason</p>
+         * 
          * <strong>example:</strong>
          * <p>invalid id</p>
          */
@@ -85,6 +99,8 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Cloud application service instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
          */
@@ -116,6 +132,8 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
 
     public static class AssociateRenderingProjectInstancesResponseBodySuccessInstances extends TeaModel {
         /**
+         * <p>Description</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -123,6 +141,8 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Cloud application service instance ID</p>
+         * 
          * <strong>example:</strong>
          * <p>render-5130e2feb23f442fb9456a3d977f03d4</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDirectoryResponseBody extends TeaModel {
     /**
+     * <p>Folder ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>399*****488-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class CreateDirectoryResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

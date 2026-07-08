@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PushFileRequest extends TeaModel {
     /**
+     * <p>File ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PushFileRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>Cloud application service instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

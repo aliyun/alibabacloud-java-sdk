@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainConfigsResponseBody extends TeaModel {
+    /**
+     * <p>Domain name configurations.</p>
+     */
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigs> domainConfigs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D94D0E1E-E71B-562D-8C18-969BB3653FBD</p>
      */
@@ -37,6 +42,8 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
 
     public static class DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs extends TeaModel {
         /**
+         * <p>The name of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>auth_type</p>
          */
@@ -44,6 +51,8 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         public String argName;
 
         /**
+         * <p>The argument value.</p>
+         * 
          * <strong>example:</strong>
          * <p>req_auth</p>
          */
@@ -75,16 +84,23 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
 
     public static class DescribeVsDomainConfigsResponseBodyDomainConfigs extends TeaModel {
         /**
+         * <p>The configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6295</p>
          */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <p>Each function.</p>
+         */
         @NameInMap("FunctionArgs")
         public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs> functionArgs;
 
         /**
+         * <p>The function name.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliauth</p>
          */
@@ -92,6 +108,18 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         public String functionName;
 
         /**
+         * <p>Status. Valid values:</p>
+         * <ul>
+         * <li><p>success</p>
+         * </li>
+         * <li><p>testing</p>
+         * </li>
+         * <li><p>failed</p>
+         * </li>
+         * <li><p>configuring</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */

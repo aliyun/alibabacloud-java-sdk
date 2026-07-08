@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>3000</p>
      */
@@ -22,6 +26,8 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     public DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>119F7639-4646-51A4-B6C1-300D391C0104</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of matching entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +44,8 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     public Integer totalNum;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

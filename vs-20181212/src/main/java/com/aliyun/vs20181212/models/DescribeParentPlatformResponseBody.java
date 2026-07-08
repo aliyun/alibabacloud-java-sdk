@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeParentPlatformResponseBody extends TeaModel {
     /**
+     * <p>Specifies whether to enable the parent platform automatically. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +18,12 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public Boolean autoStart;
 
     /**
+     * <p>Specifies whether to enable local authentication. Valid values:</p>
+     * <ul>
+     * <li>true (default)</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,8 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public Boolean clientAuth;
 
     /**
+     * <p>The local GB ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31010*****317542006</p>
      */
@@ -26,6 +40,8 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String clientGbId;
 
     /**
+     * <p>The local SIP service IP address.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.0.1</p>
      */
@@ -33,6 +49,8 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String clientIp;
 
     /**
+     * <p>The local password.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin123</p>
      */
@@ -40,6 +58,8 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String clientPassword;
 
     /**
+     * <p>The local SIP service port.</p>
+     * 
      * <strong>example:</strong>
      * <p>5160</p>
      */
@@ -47,6 +67,8 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public Long clientPort;
 
     /**
+     * <p>The local username.</p>
+     * 
      * <strong>example:</strong>
      * <p>user01</p>
      */
@@ -54,16 +76,26 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String clientUsername;
 
     /**
+     * <p>The time when the parent platform was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-12-10T21:00:00Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The description of the parent platform.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>级联平台描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The GB ID of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>31000*****2170123451</p>
      */
@@ -71,6 +103,8 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String gbId;
 
     /**
+     * <p>The ID of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>359*****374-cn-qingdao</p>
      */
@@ -78,16 +112,26 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The SIP service IP address of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.10.10.10</p>
      */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The name of the parent platform.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>国标级联平台测试</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The SIP service port of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>5060</p>
      */
@@ -95,6 +139,11 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public Long port;
 
     /**
+     * <p>The protocol of the parent platform. Valid values:</p>
+     * <ul>
+     * <li>gb28181 (GB standard)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gb28181</p>
      */
@@ -102,6 +151,8 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -109,6 +160,13 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the parent platform. Valid values:</p>
+     * <ul>
+     * <li>on (online)</li>
+     * <li>off (offline)</li>
+     * <li>failed (failed)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

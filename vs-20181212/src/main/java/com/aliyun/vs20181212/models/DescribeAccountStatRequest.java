@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountStatRequest extends TeaModel {
+    /**
+     * <p>Alibaba Cloud account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1165*****601</p>
+     */
     @NameInMap("Id")
     public String id;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindTemplateRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,13 @@ public class UnbindTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The type of the instance. Valid values:</p>
+     * <ul>
+     * <li><p>group</p>
+     * </li>
+     * <li><p>stream</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,8 @@ public class UnbindTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****998-cn-qingdao</p>
      */
@@ -33,6 +43,14 @@ public class UnbindTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The type of the template. Valid values:</p>
+     * <ul>
+     * <li><p>record</p>
+     * </li>
+     * <li><p>snapshot</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>record</p>
      */

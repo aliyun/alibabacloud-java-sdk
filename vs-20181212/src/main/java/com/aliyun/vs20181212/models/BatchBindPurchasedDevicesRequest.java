@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchBindPurchasedDevicesRequest extends TeaModel {
     /**
+     * <p>The ID of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BatchBindPurchasedDevicesRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The ID of the device group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class BatchBindPurchasedDevicesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

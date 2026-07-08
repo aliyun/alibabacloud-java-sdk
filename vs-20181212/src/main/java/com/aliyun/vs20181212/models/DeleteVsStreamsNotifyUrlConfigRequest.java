@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVsStreamsNotifyUrlConfigRequest extends TeaModel {
     /**
+     * <p>The accelerated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

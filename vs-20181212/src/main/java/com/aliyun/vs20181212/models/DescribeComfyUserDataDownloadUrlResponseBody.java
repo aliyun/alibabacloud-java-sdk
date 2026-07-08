@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The download URL for the application package.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a>.</p>
      */
@@ -19,6 +23,8 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
     public String downloadUrl;
 
     /**
+     * <p>The expiration time for the download link.</p>
+     * 
      * <strong>example:</strong>
      * <p>1752805579553</p>
      */
@@ -26,6 +32,8 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
+     * <p>The result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,7 +41,7 @@ public class DescribeComfyUserDataDownloadUrlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

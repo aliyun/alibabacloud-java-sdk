@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseRenderingInstanceRequest extends TeaModel {
     /**
+     * <p>Graphic Computing Service application instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

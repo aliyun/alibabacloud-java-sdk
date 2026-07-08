@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindParentPlatformDeviceRequest extends TeaModel {
     /**
+     * <p>The ID of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class BindParentPlatformDeviceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the parent platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

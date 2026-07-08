@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeviceRequest extends TeaModel {
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeDeviceRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Return directory information. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -21,6 +24,8 @@ public class DescribeDeviceRequest extends TeaModel {
     public Boolean includeDirectory;
 
     /**
+     * <p>Return stream statistics. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

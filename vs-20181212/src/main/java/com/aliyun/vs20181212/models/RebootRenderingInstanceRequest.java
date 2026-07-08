@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebootRenderingInstanceRequest extends TeaModel {
     /**
+     * <p>ID of the cloud application service instance</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

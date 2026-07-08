@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class SyncCatalogsRequest extends TeaModel {
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>3238****739092996</p>
+     * <p>3238****739092996-cn-shenzhen</p>
      */
     @NameInMap("Id")
     public String id;

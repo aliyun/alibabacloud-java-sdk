@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateFileInfoRequest extends TeaModel {
     /**
+     * <p>The file description.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试使用</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the file. Each file has a unique ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

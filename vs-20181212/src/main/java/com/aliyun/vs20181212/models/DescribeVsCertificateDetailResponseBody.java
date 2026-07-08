@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsCertificateDetailResponseBody extends TeaModel {
     /**
+     * <p>The certificate content.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----xxxxx-----END CERTIFICATE-----</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
     public String cert;
 
     /**
+     * <p>The certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>63000000</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
     public Long certId;
 
     /**
+     * <p>The certificate name.</p>
+     * 
      * <strong>example:</strong>
      * <p>cert-539xxxxx</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
     public String certName;
 
     /**
+     * <p>The key.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -33,6 +41,8 @@ public class DescribeVsCertificateDetailResponseBody extends TeaModel {
     public String key;
 
     /**
+     * <p>The request ID for this operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>D94D0E1E-E71B-562D-8C18-969BB3653FBD</p>
      */

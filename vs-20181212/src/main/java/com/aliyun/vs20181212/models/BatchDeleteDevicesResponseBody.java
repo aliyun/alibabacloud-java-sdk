@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteDevicesResponseBody extends TeaModel {
     /**
+     * <p>The request ID of this task.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Result list.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchDeleteDevicesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
 
     public static class BatchDeleteDevicesResponseBodyResults extends TeaModel {
         /**
+         * <p>Device error message. (Only present if an error occurs)</p>
+         * 
          * <strong>example:</strong>
          * <p>Device not found</p>
          */
@@ -44,6 +51,8 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323884****9092996</p>
          */

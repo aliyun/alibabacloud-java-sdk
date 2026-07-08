@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class SyncCatalogsResponseBody extends TeaModel {
     /**
+     * <p>Device ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>3238****739092996</p>
+     * <p>3238****739092996-cn-shenzhen</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

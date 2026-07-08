@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateResponseBody extends TeaModel {
     /**
+     * <p>The ID of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****998-cn-qingdao</p>
      */
@@ -12,6 +14,8 @@ public class ModifyTemplateResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

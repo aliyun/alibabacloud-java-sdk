@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebootRenderingServerShrinkRequest extends TeaModel {
     /**
+     * <p>List of cloud application service instance IDs</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RenderingInstanceIds")

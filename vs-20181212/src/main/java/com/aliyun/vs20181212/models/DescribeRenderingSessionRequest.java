@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRenderingSessionRequest extends TeaModel {
     /**
+     * <p>Unique ID of the end client. Specify either SessionId or ClientId.</p>
+     * 
      * <strong>example:</strong>
      * <p>d27c89d6-4fe3-4855-a89c-ea721c708b0b</p>
      */
@@ -12,6 +14,7 @@ public class DescribeRenderingSessionRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>Project ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeRenderingSessionRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>Session ID. Specify either SessionId or ClientId.</p>
+     * 
      * <strong>example:</strong>
      * <p>session-i205217481741918129226</p>
      */

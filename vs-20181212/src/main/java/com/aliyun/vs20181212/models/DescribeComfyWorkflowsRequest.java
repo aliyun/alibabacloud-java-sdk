@@ -4,10 +4,18 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeComfyWorkflowsRequest extends TeaModel {
+    /**
+     * <p>The workflow name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>图生视频工作流</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,8 @@ public class DescribeComfyWorkflowsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of Comfy workflows per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

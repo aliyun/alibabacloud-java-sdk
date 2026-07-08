@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStopDevicesRequest extends TeaModel {
     /**
+     * <p>Device ID. Separate multiple values with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class BatchStopDevicesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Stream restart trigger time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-10-14T23:00:00Z</p>
      */

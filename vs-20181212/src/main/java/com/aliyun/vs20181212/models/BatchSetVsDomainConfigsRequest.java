@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchSetVsDomainConfigsRequest extends TeaModel {
     /**
+     * <p>Your accelerated domain names.</p>
+     * <blockquote>
+     * <p>Supports multiple domain names separated by commas (,).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class BatchSetVsDomainConfigsRequest extends TeaModel {
     public String domainNames;
 
     /**
+     * <p>List of features.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

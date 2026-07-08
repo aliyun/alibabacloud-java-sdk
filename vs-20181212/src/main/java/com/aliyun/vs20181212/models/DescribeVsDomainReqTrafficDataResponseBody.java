@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
     /**
+     * <p>Time granularity of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
+     * <p>Domain name of the Visual Edge Computing Service</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>End time of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-22T03:40:41Z</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
     public DescribeVsDomainReqTrafficDataResponseBodyReqTrafficDataPerInterval reqTrafficDataPerInterval;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</p>
      */
@@ -36,6 +44,8 @@ public class DescribeVsDomainReqTrafficDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Start time of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-09-21T16:00:00Z</p>
      */

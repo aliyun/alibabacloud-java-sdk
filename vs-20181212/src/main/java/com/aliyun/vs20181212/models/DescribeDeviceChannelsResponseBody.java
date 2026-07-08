@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceChannelsResponseBody extends TeaModel {
+    /**
+     * <p>The list of channels.</p>
+     */
     @NameInMap("Channels")
     public java.util.List<DescribeDeviceChannelsResponseBodyChannels> channels;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     public Long pageCount;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4641C72D-462E-4AEA-8485-FC267AF90B0A</p>
      */
@@ -36,6 +47,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of channels.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,6 +110,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
 
     public static class DescribeDeviceChannelsResponseBodyChannels extends TeaModel {
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -104,6 +119,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         public Long channelId;
 
         /**
+         * <p>The device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
@@ -111,6 +128,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The status of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -118,16 +137,26 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         public String deviceStatus;
 
         /**
+         * <p>The GB ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3100000****000000002</p>
          */
         @NameInMap("GbId")
         public String gbId;
 
+        /**
+         * <p>The name of the channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通道1</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Other configurations of the device.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -135,6 +164,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         public String params;
 
         /**
+         * <p>The stream ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>323*****997-cn-qingdao</p>
          */
@@ -142,6 +173,8 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         public String streamId;
 
         /**
+         * <p>The status of the stream.</p>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */

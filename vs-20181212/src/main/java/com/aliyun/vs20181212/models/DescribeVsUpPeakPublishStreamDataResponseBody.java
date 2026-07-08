@@ -8,6 +8,8 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
     public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatas describeVsUpPeakPublishStreamDatas;
 
     /**
+     * <p>ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>27A3C548-A699-48F9-97CD-F35D81075AF3</p>
      */

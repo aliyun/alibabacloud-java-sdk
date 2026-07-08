@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyParentPlatformRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically enable the platform. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +18,12 @@ public class ModifyParentPlatformRequest extends TeaModel {
     public Boolean autoStart;
 
     /**
+     * <p>Specifies whether to enable local authentication. Valid values:</p>
+     * <ul>
+     * <li>true (default)</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,8 @@ public class ModifyParentPlatformRequest extends TeaModel {
     public Boolean clientAuth;
 
     /**
+     * <p>The local password.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin123</p>
      */
@@ -26,16 +40,26 @@ public class ModifyParentPlatformRequest extends TeaModel {
     public String clientPassword;
 
     /**
+     * <p>The local username.</p>
+     * 
      * <strong>example:</strong>
      * <p>user01</p>
      */
     @NameInMap("ClientUsername")
     public String clientUsername;
 
+    /**
+     * <p>The description of the parent platform.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>国标级联修改测试</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The GB ID of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>31000*****2170123451</p>
      */
@@ -43,6 +67,7 @@ public class ModifyParentPlatformRequest extends TeaModel {
     public String gbId;
 
     /**
+     * <p>The ID of the parent platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,12 +77,20 @@ public class ModifyParentPlatformRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The SIP service IP of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.10.10.10</p>
      */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The name of the parent platform.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>国标级联修改测试</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -65,6 +98,8 @@ public class ModifyParentPlatformRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The SIP service port of the parent platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>5060</p>
      */

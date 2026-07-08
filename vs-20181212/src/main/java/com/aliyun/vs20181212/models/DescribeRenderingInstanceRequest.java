@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRenderingInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the rendering instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

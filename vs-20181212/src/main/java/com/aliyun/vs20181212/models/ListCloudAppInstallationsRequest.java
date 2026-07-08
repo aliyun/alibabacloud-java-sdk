@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCloudAppInstallationsRequest extends TeaModel {
     /**
+     * <p>Cloud application ID. Each ID maps to a unique application package.</p>
+     * 
      * <strong>example:</strong>
      * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
      */
@@ -12,6 +14,8 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>com.aaa.bbb</p>
      */
@@ -19,16 +23,26 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Application version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
     @NameInMap("AppVersion")
     public String appVersion;
 
+    /**
+     * <p>Time range filter. Use ISO 8601 format and UTC time, such as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-06-02T02:18:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
+     * <p>Page number of the returned list. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +50,8 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Number of entries per page for paged queries. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -43,22 +59,41 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Patch package ID. Supported only in Windows scenarios.</p>
+     * <ol>
+     * <li>Set to origin to return only original versions.</li>
+     * </ol>
+     * 
      * <strong>example:</strong>
      * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
      */
     @NameInMap("PatchId")
     public String patchId;
 
+    /**
+     * <p>Project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project-b93ea81de76f48609eed3cd420f0399f</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
     /**
+     * <p>Cloud application service instance ID. Use this to list installations on a specific instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    /**
+     * <p>Start time of the time range filter. Specify in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-05-26T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateComfyTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the resource pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateComfyTaskRequest extends TeaModel {
     public String hiveId;
 
     /**
+     * <p>The parameters to replace in the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateComfyTaskRequest extends TeaModel {
     public String userParameters;
 
     /**
+     * <p>The ID of the Comfy workflow to start.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

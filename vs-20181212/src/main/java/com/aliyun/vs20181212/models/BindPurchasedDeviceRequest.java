@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindPurchasedDeviceRequest extends TeaModel {
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BindPurchasedDeviceRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The space ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class BindPurchasedDeviceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region to which the space belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

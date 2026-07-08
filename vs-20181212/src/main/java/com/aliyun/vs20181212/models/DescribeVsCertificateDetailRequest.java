@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVsCertificateDetailRequest extends TeaModel {
     /**
+     * <p>The certificate name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

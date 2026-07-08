@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStopStreamsRequest extends TeaModel {
     /**
+     * <p>The stream IDs. To specify multiple IDs, separate them with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class BatchStopStreamsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The time to stop the streams. You can specify a future time to stop the streams.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-10T10:00:00Z</p>
      */

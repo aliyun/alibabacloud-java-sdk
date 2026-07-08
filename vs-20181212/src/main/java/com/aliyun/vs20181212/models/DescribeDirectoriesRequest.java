@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDirectoriesRequest extends TeaModel {
     /**
+     * <p>ID of the group to which the directory belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>Disable paging. Default is false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -24,6 +27,8 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number. Default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -31,6 +36,8 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Page size. Default is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -38,6 +45,8 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Query by parent directory ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>399*****774-cn-qingdao</p>
      */
@@ -45,6 +54,8 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public String parentId;
 
     /**
+     * <p>Sort by the specified field. Default is by ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ID</p>
      */
@@ -52,6 +63,14 @@ public class DescribeDirectoriesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Sort order. Default is ascending. Values:</p>
+     * <ul>
+     * <li><p>asc (ascending)</p>
+     * </li>
+     * <li><p>desc (descending)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */

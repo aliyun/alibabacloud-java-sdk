@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The configuration.</p>
+     */
     @NameInMap("Configuration")
     public java.util.List<DescribeRenderingInstanceConfigurationResponseBodyConfiguration> configuration;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
 
     public static class DescribeRenderingInstanceConfigurationResponseBodyConfigurationAttributes extends TeaModel {
         /**
+         * <p>The name of the attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>lon</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
         public String name;
 
         /**
+         * <p>The value of the attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -74,10 +83,35 @@ public class DescribeRenderingInstanceConfigurationResponseBody extends TeaModel
     }
 
     public static class DescribeRenderingInstanceConfigurationResponseBodyConfiguration extends TeaModel {
+        /**
+         * <p>The list of properties for the module.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<DescribeRenderingInstanceConfigurationResponseBodyConfigurationAttributes> attributes;
 
         /**
+         * <p>The name of the device simulation feature module. Valid values:</p>
+         * <ol>
+         * <li><p>ctl: The control module.</p>
+         * </li>
+         * <li><p>prop: The property module.</p>
+         * </li>
+         * <li><p>location: The location module.</p>
+         * </li>
+         * <li><p>battery: The battery module.</p>
+         * </li>
+         * <li><p>network: The network module.</p>
+         * </li>
+         * <li><p>bluetooth: The Bluetooth module.</p>
+         * </li>
+         * <li><p>sim: The SIM card module.</p>
+         * </li>
+         * <li><p>display: The device module.</p>
+         * </li>
+         * <li><p>system: The basic module.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>location</p>
          */

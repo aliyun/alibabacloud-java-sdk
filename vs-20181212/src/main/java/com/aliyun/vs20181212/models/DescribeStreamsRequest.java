@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamsRequest extends TeaModel {
     /**
+     * <p>Filter by application.</p>
+     * 
      * <strong>example:</strong>
      * <p>live</p>
      */
@@ -12,6 +14,8 @@ public class DescribeStreamsRequest extends TeaModel {
     public String app;
 
     /**
+     * <p>Filter by device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****380-cn-qingdao</p>
      */
@@ -19,6 +23,8 @@ public class DescribeStreamsRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Filter by domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -26,6 +32,8 @@ public class DescribeStreamsRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The ID of the space to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****174-cn-qingdao</p>
      */
@@ -33,6 +41,11 @@ public class DescribeStreamsRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>Stream ID.</p>
+     * <blockquote>
+     * <p>Enter multiple IDs separated by commas (,).</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>323*****997-cn-qingdao</p>
      */
@@ -40,6 +53,11 @@ public class DescribeStreamsRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Filter by stream name.</p>
+     * <blockquote>
+     * <p>Enter multiple names separated by commas (,).</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3100000*****00000002</p>
      */
@@ -50,6 +68,8 @@ public class DescribeStreamsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -57,6 +77,8 @@ public class DescribeStreamsRequest extends TeaModel {
     public Long pageNum;
 
     /**
+     * <p>Number of items per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -64,6 +86,8 @@ public class DescribeStreamsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Parent device ID of the device that hosts this stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>399*****774-cn-qingdao</p>
      */
@@ -71,6 +95,23 @@ public class DescribeStreamsRequest extends TeaModel {
     public String parentId;
 
     /**
+     * <p>Sort results by a field. Valid values:</p>
+     * <ul>
+     * <li><p>Id (default)</p>
+     * </li>
+     * <li><p>GroupId</p>
+     * </li>
+     * <li><p>Name</p>
+     * </li>
+     * <li><p>DeviceId</p>
+     * </li>
+     * <li><p>Protocol</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>You can specify only one field.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Id</p>
      */
@@ -78,6 +119,14 @@ public class DescribeStreamsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Sort order. Valid values:</p>
+     * <ul>
+     * <li><p>asc (ascending, default)</p>
+     * </li>
+     * <li><p>desc (descending)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */

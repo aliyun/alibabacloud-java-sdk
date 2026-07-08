@@ -8,6 +8,8 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
     public DescribeVsPullStreamInfoConfigResponseBodyLiveAppRecordList liveAppRecordList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

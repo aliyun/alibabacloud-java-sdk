@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindTemplateRequest extends TeaModel {
     /**
+     * <p>Whether to apply the template to all streams in the scope. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class BindTemplateRequest extends TeaModel {
     public Boolean applyAll;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,13 @@ public class BindTemplateRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The type of the instance. Valid values:</p>
+     * <ul>
+     * <li><p>group</p>
+     * </li>
+     * <li><p>stream</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +43,8 @@ public class BindTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Whether to replace an existing binding. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,6 +52,7 @@ public class BindTemplateRequest extends TeaModel {
     public Boolean replace;
 
     /**
+     * <p>The ID of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +62,14 @@ public class BindTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The type of the template. Valid values:</p>
+     * <ul>
+     * <li><p>record</p>
+     * </li>
+     * <li><p>snapshot</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>record</p>
      */

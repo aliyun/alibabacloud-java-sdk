@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribePresetsResponseBody extends TeaModel {
     /**
+     * <p>Device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****380-cn-qingdao</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>List of presets.</p>
+     */
     @NameInMap("Presets")
     public java.util.List<DescribePresetsResponseBodyPresets> presets;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9FE0CA83-BFD3-4EBD-A429-FABB9B9AE772</p>
      */
@@ -52,12 +59,20 @@ public class DescribePresetsResponseBody extends TeaModel {
 
     public static class DescribePresetsResponseBodyPresets extends TeaModel {
         /**
+         * <p>Preset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Preset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>预置位2</p>
+         */
         @NameInMap("Name")
         public String name;
 

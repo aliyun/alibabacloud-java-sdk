@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateParentPlatformRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically enable the parent platform. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +18,12 @@ public class CreateParentPlatformRequest extends TeaModel {
     public Boolean autoStart;
 
     /**
+     * <p>Specifies whether to enable local authentication. Valid values:</p>
+     * <ul>
+     * <li>true (default)</li>
+     * <li>false.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +31,8 @@ public class CreateParentPlatformRequest extends TeaModel {
     public Boolean clientAuth;
 
     /**
+     * <p>The local password.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin123</p>
      */
@@ -26,16 +40,25 @@ public class CreateParentPlatformRequest extends TeaModel {
     public String clientPassword;
 
     /**
+     * <p>The local username.</p>
+     * 
      * <strong>example:</strong>
      * <p>user01</p>
      */
     @NameInMap("ClientUsername")
     public String clientUsername;
 
+    /**
+     * <p>The description of the parent platform.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>级联平台测试</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The national standard ID of the parent platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +68,7 @@ public class CreateParentPlatformRequest extends TeaModel {
     public String gbId;
 
     /**
+     * <p>The SIP service IP address of the parent platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +78,11 @@ public class CreateParentPlatformRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The name of the parent platform.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>级联平台测试</p>
      */
     @NameInMap("Name")
     public String name;
@@ -63,6 +91,7 @@ public class CreateParentPlatformRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The SIP service port of the parent platform.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +101,11 @@ public class CreateParentPlatformRequest extends TeaModel {
     public Long port;
 
     /**
+     * <p>The protocol of the parent platform. Valid values:</p>
+     * <ul>
+     * <li>gb28181: Chinese National Standard (GB28181).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gb28181</p>
      */

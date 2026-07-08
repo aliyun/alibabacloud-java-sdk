@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopRecordStreamRequest extends TeaModel {
     /**
+     * <p>App name of the stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>live</p>
      */
@@ -12,6 +14,8 @@ public class StopRecordStreamRequest extends TeaModel {
     public String app;
 
     /**
+     * <p>Stream ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>323*****997-cn-qingdao</p>
      */
@@ -19,6 +23,8 @@ public class StopRecordStreamRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>Stream name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -29,6 +35,8 @@ public class StopRecordStreamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Playback domain name of the stream.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

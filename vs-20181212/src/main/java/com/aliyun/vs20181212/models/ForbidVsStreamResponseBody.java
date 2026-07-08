@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ForbidVsStreamResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>119F7639-4646-51A4-B6C1-300D391C0104</p>
      */

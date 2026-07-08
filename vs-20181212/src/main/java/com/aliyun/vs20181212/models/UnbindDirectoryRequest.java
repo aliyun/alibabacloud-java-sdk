@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindDirectoryRequest extends TeaModel {
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UnbindDirectoryRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Folder ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,6 +8,8 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
     public BatchForbidVsStreamResponseBodyForbidResult forbidResult;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B058D71B-76EA-5DF6-ACAF-A617C1E7937F</p>
      */

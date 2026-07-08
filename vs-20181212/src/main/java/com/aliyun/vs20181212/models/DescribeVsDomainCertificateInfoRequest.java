@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainCertificateInfoRequest extends TeaModel {
     /**
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

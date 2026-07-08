@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeVsStreamRequest extends TeaModel {
     /**
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class ResumeVsStreamRequest extends TeaModel {
     public String controlStreamAction;
 
     /**
+     * <p>Your accelerated domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,10 @@ public class ResumeVsStreamRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The stream type.</p>
+     * <blockquote>
+     * <p>Only publisher is supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +44,7 @@ public class ResumeVsStreamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The stream name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

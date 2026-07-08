@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
     /**
+     * <p>The total number of domain names under your account.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
     public Long domainCount;
 
     /**
+     * <p>The total number of <strong>running</strong> domain names under your account.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
     public Long domainOnlineCount;
 
     /**
+     * <p>The end time of the query time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-12-10T18:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -33,6 +41,8 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-10T10:00:00Z</p>
      */

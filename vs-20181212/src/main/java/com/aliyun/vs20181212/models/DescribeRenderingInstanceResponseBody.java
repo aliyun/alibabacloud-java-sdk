@@ -4,23 +4,39 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenderingInstanceResponseBody extends TeaModel {
+    /**
+     * <p>A list of optional ingress network information.</p>
+     */
     @NameInMap("AdditionalIngresses")
     public java.util.List<DescribeRenderingInstanceResponseBodyAdditionalIngresses> additionalIngresses;
 
+    /**
+     * <p>The configuration information of the rendering instance.</p>
+     */
     @NameInMap("ConfigInfo")
     public DescribeRenderingInstanceResponseBodyConfigInfo configInfo;
 
     /**
+     * <p>The instance creation time, in UTC (ISO 8601).</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-07T02:27:06Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>The egress IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.8.8</p>
+     */
     @NameInMap("EgressIp")
     public String egressIp;
 
     /**
+     * <p>The domain name or access IP address of the rendering instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-xxx.ecr.aliyuncs.com</p>
      */
@@ -28,50 +44,103 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     public String hostname;
 
     /**
+     * <p>The billing method of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The internal IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.1.17.32</p>
+     */
     @NameInMap("InternalIp")
     public String internalIp;
 
+    /**
+     * <p>The ISP code. Valid values:</p>
+     * <ol>
+     * <li><p><code>cmcc</code></p>
+     * </li>
+     * <li><p><code>unicom</code></p>
+     * </li>
+     * <li><p><code>telecom</code></p>
+     * </li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
+     */
     @NameInMap("Isp")
     public String isp;
 
+    /**
+     * <p>A list of port mappings.</p>
+     */
     @NameInMap("PortMappings")
     public java.util.List<DescribeRenderingInstanceResponseBodyPortMappings> portMappings;
 
     /**
+     * <p>The ID of the rendering instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    /**
+     * <p>The specification of the rendering instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crs.cp.l1</p>
+     */
     @NameInMap("RenderingSpec")
     public String renderingSpec;
 
+    /**
+     * <p>The operational status of the rendering instance.</p>
+     */
     @NameInMap("RenderingStatus")
     public DescribeRenderingInstanceResponseBodyRenderingStatus renderingStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The attributes of the rendering instance.</p>
+     */
     @NameInMap("ResourceAttributes")
     public DescribeRenderingInstanceResponseBodyResourceAttributes resourceAttributes;
 
+    /**
+     * <p>The status of the underlying computing resource.</p>
+     */
     @NameInMap("ResourceStatus")
     public DescribeRenderingInstanceResponseBodyResourceStatus resourceStatus;
 
+    /**
+     * <p>The storage capacity of the rendering instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("StorageSize")
     public Integer storageSize;
 
+    /**
+     * <p>The system information of the rendering instance, such as its resolution.</p>
+     */
     @NameInMap("SystemInfo")
     public DescribeRenderingInstanceResponseBodySystemInfo systemInfo;
 
@@ -217,9 +286,21 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingInstanceResponseBodyAdditionalIngressesPortMappings extends TeaModel {
+        /**
+         * <p>The external port or port range, such as <code>22</code>. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12500/12519</p>
+         */
         @NameInMap("ExternalPort")
         public String externalPort;
 
+        /**
+         * <p>The internal port or port range. The ports correspond one-to-one with the external ports. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11120/11139</p>
+         */
         @NameInMap("InternalPort")
         public String internalPort;
 
@@ -247,12 +328,35 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingInstanceResponseBodyAdditionalIngresses extends TeaModel {
+        /**
+         * <p>The domain name or IP address of the rendering instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.66.165.213</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>The ISP code. Valid values:</p>
+         * <ol>
+         * <li><p><code>cmcc</code></p>
+         * </li>
+         * <li><p><code>unicom</code></p>
+         * </li>
+         * <li><p><code>telecom</code></p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>cmcc</p>
+         */
         @NameInMap("Isp")
         public String isp;
 
+        /**
+         * <p>A list of port mappings.</p>
+         */
         @NameInMap("PortMappings")
         public java.util.List<DescribeRenderingInstanceResponseBodyAdditionalIngressesPortMappings> portMappings;
 
@@ -289,6 +393,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     public static class DescribeRenderingInstanceResponseBodyConfigInfoConfigurationAttributes extends TeaModel {
         /**
+         * <p>The name of the attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>lon</p>
          */
@@ -296,6 +402,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The value of the attribute.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -326,10 +434,35 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingInstanceResponseBodyConfigInfoConfiguration extends TeaModel {
+        /**
+         * <p>A list of attributes.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<DescribeRenderingInstanceResponseBodyConfigInfoConfigurationAttributes> attributes;
 
         /**
+         * <p>The name of the physical device simulation module. Valid values:</p>
+         * <ol>
+         * <li><p><code>ctl</code>: Control module</p>
+         * </li>
+         * <li><p><code>prop</code>: Property module</p>
+         * </li>
+         * <li><p><code>location</code>: Location module</p>
+         * </li>
+         * <li><p><code>battery</code>: Battery module</p>
+         * </li>
+         * <li><p><code>network</code>: Network module</p>
+         * </li>
+         * <li><p><code>bluetooth</code>: Bluetooth module</p>
+         * </li>
+         * <li><p><code>sim</code>: SIM card module</p>
+         * </li>
+         * <li><p><code>display</code>: Display module</p>
+         * </li>
+         * <li><p><code>system</code>: System module</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>location</p>
          */
@@ -361,6 +494,16 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     public static class DescribeRenderingInstanceResponseBodyConfigInfoNetworkConfig extends TeaModel {
         /**
+         * <p>The status of the bandwidth configuration. Valid values:</p>
+         * <ol>
+         * <li><p><code>waiting</code>: The configuration is being applied.</p>
+         * </li>
+         * <li><p><code>success</code>: The configuration change is complete.</p>
+         * </li>
+         * <li><p><code>failed</code>: The configuration change failed.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -368,6 +511,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public String bandwidthStatus;
 
         /**
+         * <p>The maximum egress bandwidth, in Mbps. A value of 0 indicates no limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -375,6 +520,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public Integer maxEgressBandwidth;
 
         /**
+         * <p>The maximum ingress bandwidth, in Mbps. A value of 0 indicates no limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -382,6 +529,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public Integer maxIngressBandwidth;
 
         /**
+         * <p>The time the configuration was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-17T09:54:35Z</p>
          */
@@ -428,9 +577,15 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingInstanceResponseBodyConfigInfo extends TeaModel {
+        /**
+         * <p>A list of configured physical device simulation modules.</p>
+         */
         @NameInMap("Configuration")
         public java.util.List<DescribeRenderingInstanceResponseBodyConfigInfoConfiguration> configuration;
 
+        /**
+         * <p>Ingress and egress bandwidth limits, in Mbps.</p>
+         */
         @NameInMap("NetworkConfig")
         public DescribeRenderingInstanceResponseBodyConfigInfoNetworkConfig networkConfig;
 
@@ -459,6 +614,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     public static class DescribeRenderingInstanceResponseBodyPortMappings extends TeaModel {
         /**
+         * <p>The external port or port range, such as <code>22</code>. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>10013/10020</p>
          */
@@ -466,6 +623,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public String externalPort;
 
         /**
+         * <p>The internal port or port range. The ports correspond one-to-one with the external ports. For a port range, use a forward slash (<code>/</code>) to separate the start and end ports, for example, <code>10/20</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>49008/49015</p>
          */
@@ -496,10 +655,18 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenderingInstanceResponseBodyRenderingStatus extends TeaModel {
+        /**
+         * <p>Additional details about the current status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>工作中</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The name of the last action performed on the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>MigrateLocalData</p>
          */
@@ -507,6 +674,20 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public String latestAction;
 
         /**
+         * <p>The operational status of the instance. Valid values:</p>
+         * <ol>
+         * <li><p><code>Preparing</code>: The instance is being initialized.</p>
+         * </li>
+         * <li><p><code>Rebooting</code>: The instance is rebooting.</p>
+         * </li>
+         * <li><p><code>Resetting</code>: The instance is being reset.</p>
+         * </li>
+         * <li><p><code>Working</code>: The instance is running normally. This is a terminal state.</p>
+         * </li>
+         * <li><p><code>Failure</code>: The instance has failed to start or operate. This is a terminal state.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>Working</p>
          */
@@ -546,6 +727,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     public static class DescribeRenderingInstanceResponseBodyResourceAttributes extends TeaModel {
         /**
+         * <p>The configuration of the edge media service. Valid values:</p>
+         * <ol>
+         * <li><p><code>ON</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>OFF</code>: Disabled.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -553,6 +742,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public String edgeMediaService;
 
         /**
+         * <p>The ingress network access configuration. Valid values:</p>
+         * <ol>
+         * <li><p><code>ON</code>: Enabled. The rendering instance can be accessed from the public internet.</p>
+         * </li>
+         * <li><p><code>OFF</code>: Disabled.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -560,6 +757,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public String inAccess;
 
         /**
+         * <p>The egress network access configuration. Valid values:</p>
+         * <ol>
+         * <li><p><code>ON</code>: Enabled. The rendering instance can access the public internet.</p>
+         * </li>
+         * <li><p><code>OFF</code>: Disabled.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -567,6 +772,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public String outAccess;
 
         /**
+         * <p>The resource zone. Valid values: <code>Private</code> and <code>Public</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -614,6 +821,16 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     public static class DescribeRenderingInstanceResponseBodyResourceStatus extends TeaModel {
         /**
+         * <p>The running status of the computing resource. Valid values:</p>
+         * <ol>
+         * <li><p><code>running</code>: The edge instance is running normally.</p>
+         * </li>
+         * <li><p><code>operating</code>: The edge instance is under maintenance.</p>
+         * </li>
+         * <li><p><code>error</code>: An exception is detected on the edge instance.</p>
+         * </li>
+         * </ol>
+         * 
          * <strong>example:</strong>
          * <p>running</p>
          */
@@ -637,6 +854,8 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     public static class DescribeRenderingInstanceResponseBodySystemInfo extends TeaModel {
         /**
+         * <p>The refresh rate of the instance, in Hz.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -644,6 +863,26 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public Integer frequency;
 
         /**
+         * <p>The resolution. Valid values:</p>
+         * <ul>
+         * <li><p><code>1920*864</code></p>
+         * </li>
+         * <li><p><code>1080*1920</code></p>
+         * </li>
+         * <li><p><code>1920*1080</code></p>
+         * </li>
+         * <li><p><code>720*1280</code></p>
+         * </li>
+         * <li><p><code>2400*1080</code></p>
+         * </li>
+         * <li><p><code>1080*2400</code></p>
+         * </li>
+         * <li><p><code>1280*720</code></p>
+         * </li>
+         * <li><p><code>864*1920</code></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1920*1080</p>
          */

@@ -8,6 +8,7 @@ public class DescribeVodStreamURLRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The file URL of the VOD video.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

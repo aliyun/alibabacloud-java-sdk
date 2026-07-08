@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopTransferStreamRequest extends TeaModel {
     /**
+     * <p>The stream ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,8 @@ public class StopTransferStreamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The name of the transcoding rule. You must bind a transcoding template first.</p>
+     * 
      * <strong>example:</strong>
      * <p>sd</p>
      */

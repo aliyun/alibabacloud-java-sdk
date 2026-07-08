@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRenderingDataPackageResponseBody extends TeaModel {
     /**
+     * <p>Cloud application service data pack ID</p>
+     * 
      * <strong>example:</strong>
      * <p>dp-9f8c57355d224ad7beaf95e145f22111</p>
      */
@@ -12,6 +14,8 @@ public class CreateRenderingDataPackageResponseBody extends TeaModel {
     public String dataPackageId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

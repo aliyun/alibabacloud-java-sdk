@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of workflows on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,8 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -40,12 +50,17 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of workflows that match the query.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>A list of Comfy workflows.</p>
+     */
     @NameInMap("Workflows")
     public java.util.List<DescribeComfyWorkflowsResponseBodyWorkflows> workflows;
 
@@ -112,19 +127,35 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
 
     public static class DescribeComfyWorkflowsResponseBodyWorkflows extends TeaModel {
         /**
+         * <p>The time when the workflow was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-02-03T07:31:45+08:00</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The workflow description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个图生视频工作流</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图生视频工作流</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The time when the workflow was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>1778897586</p>
          */
@@ -132,6 +163,8 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
         public String updatedTime;
 
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>
          */

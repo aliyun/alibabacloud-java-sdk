@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
     /**
+     * <p>Application name used by the workspace. Default value: live</p>
+     * 
      * <strong>example:</strong>
      * <p>live</p>
      */
@@ -12,16 +14,31 @@ public class CreateGroupRequest extends TeaModel {
     public String app;
 
     /**
+     * <p>Callback URL triggered when device or stream status updates in the workspace</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
      */
     @NameInMap("Callback")
     public String callback;
 
+    /**
+     * <p>Workspace description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我的视频监控</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Ingest protocol used by the workspace. Valid values:</p>
+     * <ul>
+     * <li><p>gb28181</p>
+     * </li>
+     * <li><p>rtmp</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +48,14 @@ public class CreateGroupRequest extends TeaModel {
     public String inProtocol;
 
     /**
+     * <p>Whether to enable on-demand stream pulling. Valid values:</p>
+     * <ul>
+     * <li><p>false (default)</p>
+     * </li>
+     * <li><p>true</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -38,12 +63,26 @@ public class CreateGroupRequest extends TeaModel {
     public Boolean lazyPull;
 
     /**
+     * <p>Workspace name</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我的视频监控</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Playback protocols used by the workspace. Separate multiple values with commas. Valid values:</p>
+     * <ul>
+     * <li><p>flv</p>
+     * </li>
+     * <li><p>hls</p>
+     * </li>
+     * <li><p>rtmp</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>flv,rtmp</p>
      */
@@ -54,6 +93,8 @@ public class CreateGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Streaming domain used by the workspace</p>
+     * 
      * <strong>example:</strong>
      * <p>demo.aliyundoc.com</p>
      */
@@ -61,6 +102,8 @@ public class CreateGroupRequest extends TeaModel {
     public String playDomain;
 
     /**
+     * <p>Ingest domain used by the workspace</p>
+     * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
      */
@@ -68,6 +111,8 @@ public class CreateGroupRequest extends TeaModel {
     public String pushDomain;
 
     /**
+     * <p>Region where the workspace is located, that is, the service center</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

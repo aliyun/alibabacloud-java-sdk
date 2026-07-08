@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UploadFileResponseBody extends TeaModel {
     /**
+     * <p>The ID of the file. This ID is unique for each file.</p>
+     * 
      * <strong>example:</strong>
      * <p>f-1671330gr7934d4771813f7141d28db2f7</p>
      */
@@ -12,6 +14,8 @@ public class UploadFileResponseBody extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */

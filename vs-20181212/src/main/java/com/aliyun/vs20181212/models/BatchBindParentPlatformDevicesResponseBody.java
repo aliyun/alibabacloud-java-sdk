@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Results")
     public java.util.List<BatchBindParentPlatformDevicesResponseBodyResults> results;
 
@@ -37,6 +42,8 @@ public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
 
     public static class BatchBindParentPlatformDevicesResponseBodyResults extends TeaModel {
         /**
+         * <p>The device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>348*****380-cn-qingdao</p>
          */
@@ -44,6 +51,11 @@ public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The error message.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when an error occurs.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>some error</p>
          */
@@ -51,6 +63,8 @@ public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
         public String error;
 
         /**
+         * <p>The ID of the parent platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>361*****212-cn-qingdao</p>
          */

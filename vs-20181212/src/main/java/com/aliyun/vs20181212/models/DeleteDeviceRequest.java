@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDeviceRequest extends TeaModel {
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

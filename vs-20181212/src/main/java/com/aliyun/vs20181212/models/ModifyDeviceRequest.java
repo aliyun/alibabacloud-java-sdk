@@ -5,6 +5,24 @@ import com.aliyun.tea.*;
 
 public class ModifyDeviceRequest extends TeaModel {
     /**
+     * <p>GB-compliant alarm method to subscribe to. Valid values:</p>
+     * <ul>
+     * <li><p>0 (all)</p>
+     * </li>
+     * <li><p>5 (video alarm)</p>
+     * </li>
+     * <li><p>7 (other alarms)</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li><p>An empty value means no subscription.</p>
+     * </li>
+     * <li><p>Multiple values are supported. Separate them with commas.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +33,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public Boolean autoDirectory;
 
     /**
+     * <p>Whether to enable location subscription for the device. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,16 +42,26 @@ public class ModifyDeviceRequest extends TeaModel {
     public Boolean autoPos;
 
     /**
+     * <p>Whether to automatically start the stream. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("AutoStart")
     public Boolean autoStart;
 
+    /**
+     * <p>Device description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx路口摄像头</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>Directory ID for the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>399*****488-cn-qingdao</p>
      */
@@ -39,6 +69,11 @@ public class ModifyDeviceRequest extends TeaModel {
     public String directoryId;
 
     /**
+     * <p>GB-compliant device ID.</p>
+     * <blockquote>
+     * <p>This parameter applies only to GB-compliant protocols.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3100000****000000002</p>
      */
@@ -46,6 +81,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public String gbId;
 
     /**
+     * <p>Space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>348*****174-cn-qingdao</p>
      */
@@ -53,6 +90,7 @@ public class ModifyDeviceRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>Device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +100,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>IP address of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.10.10.10</p>
      */
@@ -69,6 +109,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public String ip;
 
     /**
+     * <p>The device dimension.</p>
+     * 
      * <strong>example:</strong>
      * <p>119.20</p>
      */
@@ -76,12 +118,20 @@ public class ModifyDeviceRequest extends TeaModel {
     public String latitude;
 
     /**
+     * <p>Longitude of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>45.00</p>
      */
     @NameInMap("Longitude")
     public String longitude;
 
+    /**
+     * <p>Device name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx路口摄像头</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -89,6 +139,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Additional device parameters, formatted as a JSON-serialized string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -96,6 +148,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public String params;
 
     /**
+     * <p>Parent device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>399*****774-cn-qingdao</p>
      */
@@ -103,6 +157,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public String parentId;
 
     /**
+     * <p>Password for the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
@@ -110,6 +166,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>Port number of the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -117,6 +175,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public Long port;
 
     /**
+     * <p>Location subscription interval, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -124,6 +184,16 @@ public class ModifyDeviceRequest extends TeaModel {
     public Long posInterval;
 
     /**
+     * <p>Device type. Valid values:</p>
+     * <ul>
+     * <li><p>ipc (camera)</p>
+     * </li>
+     * <li><p>platform (platform)</p>
+     * </li>
+     * <li><p>ied (intelligent device)</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ipc</p>
      */
@@ -131,6 +201,8 @@ public class ModifyDeviceRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>Stream URL on the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>rtmp://xxx/xxx</p>
      */
@@ -138,12 +210,20 @@ public class ModifyDeviceRequest extends TeaModel {
     public String url;
 
     /**
+     * <p>Username for the device.</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>Device vendor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>公司A</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

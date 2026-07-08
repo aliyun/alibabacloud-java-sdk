@@ -11,10 +11,17 @@ public class ResetRenderingInstanceRequest extends TeaModel {
     @NameInMap("ActionName")
     public String actionName;
 
+    /**
+     * <p>Data baseline ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dp-449ea3d16c0841b8bf33ec5bbc86a152</p>
+     */
     @NameInMap("DataPackageId")
     public String dataPackageId;
 
     /**
+     * <p>Service instance ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

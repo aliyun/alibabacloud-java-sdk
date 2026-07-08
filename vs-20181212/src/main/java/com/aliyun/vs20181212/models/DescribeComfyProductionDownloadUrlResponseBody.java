@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The download link for the production. Use an Alibaba Cloud Object Storage Service (OSS) SDK to download the file.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a></p>
      */
@@ -19,6 +23,8 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
     public String downloadUrl;
 
     /**
+     * <p>The download link\&quot;s expiration time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2029-03-28T16:00Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -33,7 +41,7 @@ public class DescribeComfyProductionDownloadUrlResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

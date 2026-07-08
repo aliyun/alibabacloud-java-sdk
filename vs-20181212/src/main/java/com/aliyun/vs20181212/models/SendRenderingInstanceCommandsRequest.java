@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class SendRenderingInstanceCommandsRequest extends TeaModel {
     /**
+     * <p>A shell command string. Enter multiple commands separated by semicolons (;) or line feeds.</p>
+     * <ul>
+     * <li>Dangerous commands such as rm and reboot are disabled.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +17,23 @@ public class SendRenderingInstanceCommandsRequest extends TeaModel {
     @NameInMap("Commands")
     public String commands;
 
+    /**
+     * <p>The response pattern for the command. Valid values:</p>
+     * <ol>
+     * <li><p>Sync: The response is returned synchronously. This is the default value.</p>
+     * </li>
+     * <li><p>Async: The response is returned asynchronously.</p>
+     * </li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>Async</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
     /**
+     * <p>The ID of the cloud application service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +42,18 @@ public class SendRenderingInstanceCommandsRequest extends TeaModel {
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    /**
+     * <p>The timeout period for command execution, in seconds. The value range depends on the Mode parameter:</p>
+     * <ol>
+     * <li><p>If Mode is set to Sync, the value range is 0 to 30. The default value is 30.</p>
+     * </li>
+     * <li><p>If Mode is set to Async, the value range is 0 to 3600. The default value is 300.</p>
+     * </li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

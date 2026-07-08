@@ -4,10 +4,15 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingProjectInstancesResponseBody extends TeaModel {
+    /**
+     * <p>List of cloud application service instances</p>
+     */
     @NameInMap("RenderingInstances")
     public java.util.List<ListRenderingProjectInstancesResponseBodyRenderingInstances> renderingInstances;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
@@ -15,6 +20,8 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of cloud application service instances</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -51,10 +58,18 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
     }
 
     public static class ListRenderingProjectInstancesResponseBodyRenderingInstancesStateInfo extends TeaModel {
+        /**
+         * <p>Description of the current status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>正在会话中</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>Instance status</p>
+         * 
          * <strong>example:</strong>
          * <p>InUse</p>
          */
@@ -62,6 +77,8 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>Time when the status was last updated</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-11T18:19:04+08:00</p>
          */
@@ -101,6 +118,8 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
 
     public static class ListRenderingProjectInstancesResponseBodyRenderingInstances extends TeaModel {
         /**
+         * <p>Time when the instance was associated with the project</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-11T18:19:04+08:00</p>
          */
@@ -108,12 +127,17 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         public String associationTime;
 
         /**
+         * <p>Cloud application service instance</p>
+         * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         @NameInMap("RenderingInstanceId")
         public String renderingInstanceId;
 
+        /**
+         * <p>Status information for the project instance</p>
+         */
         @NameInMap("StateInfo")
         public ListRenderingProjectInstancesResponseBodyRenderingInstancesStateInfo stateInfo;
 

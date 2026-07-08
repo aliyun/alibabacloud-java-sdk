@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateRenderingInstanceConfigurationShrinkRequest extends TeaModel {
     /**
+     * <p>The configuration content.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Configuration")
     public String configurationShrink;
 
     /**
+     * <p>The ID of the cloud application service instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
