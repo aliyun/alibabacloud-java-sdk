@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RefundInstanceResponseBody extends TeaModel {
     /**
+     * <p>The unique ID generated for the request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>D3F1FA43-1C26-50A2-8F0F-7A03851DBB46</p>
      */

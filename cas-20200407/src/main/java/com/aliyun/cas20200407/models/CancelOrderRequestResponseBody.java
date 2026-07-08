@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelOrderRequestResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot and locate problems.</p>
      * 
      * <strong>example:</strong>
      * <p>082FAB35-6AB9-4FD5-8750-D36673548E76</p>

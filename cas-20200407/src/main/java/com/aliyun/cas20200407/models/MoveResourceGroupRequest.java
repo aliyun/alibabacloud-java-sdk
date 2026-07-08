@@ -34,12 +34,14 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource.\
+     * <p>The type of the resource.<br>
      * Default value: <strong>instance</strong></p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>instance: certificate order</li>
-     * <li>Certificate: certificate</li>
+     * <li><p>instance: certificate order</p>
+     * </li>
+     * <li><p>Certificate: certificate</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

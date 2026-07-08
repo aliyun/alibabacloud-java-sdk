@@ -4,10 +4,15 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class ListCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The list of certificates.</p>
+     */
     @NameInMap("CertificateList")
     public java.util.List<ListCertificatesResponseBodyCertificateList> certificateList;
 
     /**
+     * <p>The current page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListCertificatesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
      */
@@ -22,6 +29,8 @@ public class ListCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListCertificatesResponseBody extends TeaModel {
     public Integer showSize;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,16 @@ public class ListCertificatesResponseBody extends TeaModel {
 
     public static class ListCertificatesResponseBodyCertificateList extends TeaModel {
         /**
+         * <p>The encryption algorithm of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>RSA</strong></p>
+         * </li>
+         * <li><p><strong>ECC</strong></p>
+         * </li>
+         * <li><p><strong>SM2</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RSA</p>
          */
@@ -89,6 +110,15 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String algorithm;
 
         /**
+         * <p>The global ID of the certificate. This ID is used across Alibaba Cloud services and is in the <code>Certificate ID-Region ID</code> format. For example, if a certificate ID is <code>123</code>, the <code>CertIdentifier</code> is <code>123-cn-hangzhou</code> for the Alibaba Cloud China site and <code>123-ap-southeast-1</code> for the Alibaba Cloud International site (www\.alibabacloud.com).</p>
+         * <ul>
+         * <li><p>For the Alibaba Cloud China website, the format is certificate ID + &quot;-cn-hangzhou&quot;.</p>
+         * </li>
+         * <li><p>For the Alibaba Cloud International website (www\.alibabacloud.com), the format is certificate ID + &quot;-ap-southeast-1&quot;.</p>
+         * </li>
+         * </ul>
+         * <p>For example, if the certificate ID is 123, the CertIdentifier is &quot;123-cn-hangzhou&quot; for the China site and &quot;123-ap-southeast-1&quot; for the International site.</p>
+         * 
          * <strong>example:</strong>
          * <p>21589515-cn-hangzhou</p>
          */
@@ -96,6 +126,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
+         * <p>The ID of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>17281539</p>
          */
@@ -103,6 +135,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String certificateId;
 
         /**
+         * <p>The name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -110,6 +144,16 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String certificateName;
 
         /**
+         * <p>The source of the certificate.</p>
+         * <ul>
+         * <li><p>BUY: A purchased certificate.</p>
+         * </li>
+         * <li><p>TEST: A test certificate.</p>
+         * </li>
+         * <li><p>UPLOAD: An uploaded certificate.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BUY</p>
          */
@@ -117,6 +161,18 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String certificateSource;
 
         /**
+         * <p>The status of the certificate.</p>
+         * <ul>
+         * <li><p><strong>issued</strong>: The certificate is issued.</p>
+         * </li>
+         * <li><p><strong>revoked</strong>: The certificate is revoked.</p>
+         * </li>
+         * <li><p><strong>willExpire</strong>: The certificate is about to expire.</p>
+         * </li>
+         * <li><p><strong>expired</strong>: The certificate has expired.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>issued</p>
          */
@@ -124,6 +180,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
+         * <p>The common name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
          */
@@ -131,6 +189,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
+         * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -138,6 +198,14 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>Indicates whether a private key is available. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: A private key is available.</p>
+         * </li>
+         * <li><p><strong>false</strong>: A private key is not available.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -145,6 +213,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Boolean existPrivateKey;
 
         /**
+         * <p>The fingerprint of the public key.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -152,6 +222,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String fingerPrint;
 
         /**
+         * <p>The ID of the certificate instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>cas-cn-v***</p>
          */
@@ -159,6 +231,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The certification authority.</p>
+         * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
          */
@@ -166,6 +240,14 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>The key size, in bits.</p>
+         * <ul>
+         * <li><p>For RSA keys, typical sizes are 2048, 3072, or 4096.</p>
+         * </li>
+         * <li><p>For ECC or SM2 keys, the typical size is 256.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2048</p>
          */
@@ -173,6 +255,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
+         * <p>The end of the certificate validity period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1749580567000</p>
          */
@@ -180,6 +264,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Long notAfter;
 
         /**
+         * <p>The beginning of the certificate validity period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1760745600000</p>
          */
@@ -187,15 +273,23 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Long notBefore;
 
         /**
+         * <p>The serial number of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
         @NameInMap("Serial")
         public String serial;
 
+        /**
+         * <p>An array that contains the alternative domain names of the certificate. This parameter corresponds to the <code>Subject Alternative Name</code> field of the certificate.</p>
+         */
         @NameInMap("SubjectAlternativeNames")
         public java.util.List<String> subjectAlternativeNames;
 
+        /**
+         * <p>The list of Alibaba Cloud products in which the certificate is deployed.</p>
+         */
         @NameInMap("UsingProductList")
         public java.util.List<String> usingProductList;
 

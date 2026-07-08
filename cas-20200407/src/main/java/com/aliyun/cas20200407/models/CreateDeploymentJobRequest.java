@@ -28,8 +28,10 @@ public class CreateDeploymentJobRequest extends TeaModel {
      * <p>The type of the deployment task.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>cloud: multi-cloud deployment task.</li>
-     * <li>user: cloud service deployment task. This type of task does not support cloud servers.</li>
+     * <li><p>cloud: multi-cloud deployment task.</p>
+     * </li>
+     * <li><p>user: cloud service deployment task. This type of task does not support cloud servers.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

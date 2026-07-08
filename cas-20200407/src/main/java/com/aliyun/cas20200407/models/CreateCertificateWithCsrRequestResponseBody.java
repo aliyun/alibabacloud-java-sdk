@@ -7,7 +7,7 @@ public class CreateCertificateWithCsrRequestResponseBody extends TeaModel {
     /**
      * <p>The ID of the certificate application order.</p>
      * <blockquote>
-     * <p> You can use the ID to query the status of the certificate application. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</p>
+     * <p>You can use the ID to query the status of the certificate application. For more information, see <a href="https://help.aliyun.com/document_detail/164111.html">DescribeCertificateState</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

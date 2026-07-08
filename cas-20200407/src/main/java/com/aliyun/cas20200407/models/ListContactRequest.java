@@ -23,7 +23,7 @@ public class ListContactRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The number of contacts per page.</p>
+     * <p>The number of entries to return on each page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

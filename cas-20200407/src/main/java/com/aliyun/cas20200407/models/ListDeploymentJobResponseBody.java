@@ -32,7 +32,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
      * <p>The number of deployment tasks per page. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>50</p>
      */
     @NameInMap("ShowSize")
     public Integer showSize;
@@ -104,9 +104,12 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         /**
          * <p>The type of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>upload</strong>: uploaded certificate</li>
-         * <li><strong>buy</strong>: purchased certificate</li>
-         * <li><strong>free</strong>: free certificate, available only on the China site (aliyun.com)</li>
+         * <li><p><strong>upload</strong>: uploaded certificate</p>
+         * </li>
+         * <li><p><strong>buy</strong>: purchased certificate</p>
+         * </li>
+         * <li><p><strong>free</strong>: free certificate, available only on the China site (aliyun.com)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,8 +121,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the deployment task is deleted. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: not deleted</li>
-         * <li><strong>1</strong>: deleted</li>
+         * <li><p><strong>0</strong>: not deleted</p>
+         * </li>
+         * <li><p><strong>1</strong>: deleted</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,7 +173,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
          * <p>The instance ID of the deployment task.</p>
          * 
          * <strong>example:</strong>
-         * <p>cas-job-user-0gvntn</p>
+         * <p>cas-job-user-***</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -176,8 +181,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         /**
          * <p>The type of the deployment task.</p>
          * <ul>
-         * <li><strong>cloud</strong>: multi-cloud deployment task.</li>
-         * <li><strong>user</strong>: cloud service deployment task. This type of task does not support ECS instances.</li>
+         * <li><p><strong>cloud</strong>: multi-cloud deployment task.</p>
+         * </li>
+         * <li><p><strong>user</strong>: cloud service deployment task. This type of task does not support ECS instances.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,8 +214,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the rollback worker is included. For example, if a cloud service involved in a deployment task has been rolled back, <strong>1</strong> is returned. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The rollback worker is not included.</li>
-         * <li><strong>1</strong>: The rollback worker is included.</li>
+         * <li><p><strong>0</strong>: The rollback worker is not included.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The rollback worker is included.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -238,12 +247,18 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         /**
          * <p>The status of the deployment task. Valid values:</p>
          * <ul>
-         * <li><strong>pending</strong></li>
-         * <li><strong>editing</strong></li>
-         * <li><strong>scheduling</strong></li>
-         * <li><strong>processing</strong></li>
-         * <li><strong>error</strong></li>
-         * <li><strong>success</strong></li>
+         * <li><p><strong>pending</strong></p>
+         * </li>
+         * <li><p><strong>editing</strong></p>
+         * </li>
+         * <li><p><strong>scheduling</strong></p>
+         * </li>
+         * <li><p><strong>processing</strong></p>
+         * </li>
+         * <li><p><strong>error</strong></p>
+         * </li>
+         * <li><p><strong>success</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +271,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
          * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>1666884372152785</p>
+         * <p>166688437*****</p>
          */
         @NameInMap("UserId")
         public Long userId;

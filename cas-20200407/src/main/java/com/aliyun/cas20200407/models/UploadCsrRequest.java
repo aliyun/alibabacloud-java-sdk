@@ -15,7 +15,7 @@ public class UploadCsrRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>The private key content of the certificate in the PEM format.</p>
+     * <p>The content of the certificate\&quot;s private key in PEM format.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</p>
@@ -24,7 +24,7 @@ public class UploadCsrRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The name of the CSR.</p>
+     * <p>The name of the CSR. The name can be up to 50 characters long and can contain uppercase letters (A–Z), lowercase letters (a–z), digits (0–9), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>

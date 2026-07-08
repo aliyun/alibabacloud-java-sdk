@@ -22,9 +22,12 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
     /**
      * <p>The type of the certificate. Valid values:</p>
      * <ul>
-     * <li><strong>upload</strong>: uploaded certificate</li>
-     * <li><strong>buy</strong>: purchased certificate</li>
-     * <li><strong>free</strong>: free certificate available only on the China site (aliyun.com)</li>
+     * <li><p><strong>upload</strong>: uploaded certificate</p>
+     * </li>
+     * <li><p><strong>buy</strong>: purchased certificate</p>
+     * </li>
+     * <li><p><strong>free</strong>: free certificate available only on the China site (aliyun.com)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +48,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the deployment job was deleted. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: not deleted</li>
-     * <li><strong>1</strong>: deleted</li>
+     * <li><p><strong>0</strong>: not deleted</p>
+     * </li>
+     * <li><p><strong>1</strong>: deleted</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +91,7 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
      * <p>The ID of the deployment job.</p>
      * 
      * <strong>example:</strong>
-     * <p>8888</p>
+     * <p>43222</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -103,9 +108,12 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
     /**
      * <p>The type of the deployment job. Valid values:</p>
      * <ul>
-     * <li><strong>cloud</strong>: multi-cloud deployment job.</li>
-     * <li><strong>trustee</strong>: hosted deployment job available only on the China site (aliyun.com).</li>
-     * <li><strong>user</strong>: cloud service deployment job. The cloud server is not included.</li>
+     * <li><p><strong>cloud</strong>: multi-cloud deployment job.</p>
+     * </li>
+     * <li><p><strong>trustee</strong>: hosted deployment job available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p><strong>user</strong>: cloud service deployment job. The cloud server is not included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -144,8 +152,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the deployment job includes the rollback worker. For example, if a cloud service in a deployment job has been rolled back, <strong>1</strong> is returned. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The rollback worker is not included.</li>
-     * <li><strong>1</strong>: The rollback worker is included.</li>
+     * <li><p><strong>0</strong>: The rollback worker is not included.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The rollback worker is included.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,12 +185,18 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
     /**
      * <p>The status of the deployment job. Valid values:</p>
      * <ul>
-     * <li><strong>pending</strong></li>
-     * <li><strong>editing</strong></li>
-     * <li><strong>scheduling</strong></li>
-     * <li><strong>processing</strong></li>
-     * <li><strong>error</strong></li>
-     * <li><strong>success</strong></li>
+     * <li><p><strong>pending</strong></p>
+     * </li>
+     * <li><p><strong>editing</strong></p>
+     * </li>
+     * <li><p><strong>scheduling</strong></p>
+     * </li>
+     * <li><p><strong>processing</strong></p>
+     * </li>
+     * <li><p><strong>error</strong></p>
+     * </li>
+     * <li><p><strong>success</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -193,7 +209,7 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
      * <p>The ID of the Alibaba Cloud account in which the deployment job is created.</p>
      * 
      * <strong>example:</strong>
-     * <p>166688437XXXX785</p>
+     * <p>166688437******</p>
      */
     @NameInMap("UserId")
     public Long userId;
@@ -387,7 +403,7 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
          * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhangsan</p>
+         * <p>John</p>
          */
         @NameInMap("Name")
         public String name;

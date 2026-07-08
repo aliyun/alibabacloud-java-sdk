@@ -9,7 +9,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
      * <p>If you do not specify this parameter, Certificate Management Service automatically generates a CSR file for the domain name in the certificate application order that you want to renew.</p>
      * <p>A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.</p>
      * <blockquote>
-     * <p> The <strong>CN</strong> field in the CSR file specifies the domain name that is bound to the certificate.</p>
+     * <p>The <strong>CN</strong> field in the CSR file specifies the domain name that is bound to the certificate.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
     /**
      * <p>The ID of the certificate application order that you want to renew.</p>
      * <blockquote>
-     * <p> After you call the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a>, <a href="https://help.aliyun.com/document_detail/455292.html">CreateCertificateRequest</a>, or <a href="https://help.aliyun.com/document_detail/455801.html">CreateCertificateWithCsrRequest</a> operation to submit a certificate application, you can obtain the ID of the certificate application order from the <strong>OrderId</strong> response parameter. You can also call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the order ID.</p>
+     * <p>After you call the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a>, <a href="https://help.aliyun.com/document_detail/455292.html">CreateCertificateRequest</a>, or <a href="https://help.aliyun.com/document_detail/455801.html">CreateCertificateWithCsrRequest</a> operation to submit a certificate application, you can obtain the ID of the certificate application order from the <strong>OrderId</strong> response parameter. You can also call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the order ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,7 +32,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<RenewCertificateOrderForPackageRequestRequestTags> tags;
@@ -69,7 +69,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
     public static class RenewCertificateOrderForPackageRequestRequestTags extends TeaModel {
         /**
          * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</p>
          * 
          * <strong>example:</strong>
          * <p>account</p>
@@ -79,7 +79,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends TeaModel {
 
         /**
          * <p>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</p>
-         * <p>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * <p>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http\://\&quot; or \&quot;https\://\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

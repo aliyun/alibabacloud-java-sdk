@@ -14,7 +14,7 @@ public class ListCsrRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListCsrRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The keyword.</p>
+     * <p>The keyword for fuzzy search. For example, you can specify a domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>

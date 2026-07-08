@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VerifyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1ed33293-2e48-6b14-861e-538e28e408eb</p>
@@ -14,10 +14,12 @@ public class VerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the signature is valid. Valid values:</p>
+     * <p>The result of the signature verification. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

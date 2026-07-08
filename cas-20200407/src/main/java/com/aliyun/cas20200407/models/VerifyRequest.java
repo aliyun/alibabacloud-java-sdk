@@ -5,27 +5,36 @@ import com.aliyun.tea.*;
 
 public class VerifyRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation to obtain the unique identifier of a certificate.</p>
+     * <p>The unique identifier of the certificate. To get this parameter, call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation.</p>
      * <ul>
-     * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
-     * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
+     * <li><p>The identifier for an SSL certificate is typically in the format \<code>{Certificate ID}-cn-hangzhou\\</code>.</p>
+     * </li>
+     * <li><p>For a PCA certificate, this is the value of the \<code>Identifier\\</code> field.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>5870821-cn-hangzhou</p>
+     * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>The custom identifier. This key must be unique.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>6bb538d538c70c01f81jh2</strong></strong></p>
+     */
     @NameInMap("CustomIdentifier")
     public String customIdentifier;
 
     /**
-     * <p>The data for which you want to verify the signature. The value must be encoded in Base64.\
-     * For example, if the hexadecimal data that you want to verify is [0x31, 0x32, 0x33, 0x34], set the parameter to the Base64-encoded value MTIzNA==. If you set MessageType to RAW, the size of the data must be less than 4 KB. If the size of the data is greater than 4 KB, you can set MessageType to DIGEST and set Message to the digest of the data. The digest is also called hash value. You can compute the digest of the data on an on-premises machine. The certificate repository uses your certificate application system to compute the message digest. The message digest algorithm that is used must meet the requirements of the specified signature algorithm. The following signature algorithms require different message digest algorithms:</p>
+     * <p>The data to verify. The data must be Base64-encoded. For example, if the hexadecimal content of the data to sign is \<code>[0x31, 0x32, 0x33, 0x34]\\</code>, the Base64-encoded value is \<code>MTIzNA==\\</code>. If you set \<code>MessageType\\</code> to \<code>RAW\\</code>, the data size must be less than 4 KB. If the data to sign is larger than 4 KB, set \<code>MessageType\\</code> to \<code>DIGEST\\</code>. Then, set \<code>Message\\</code> to the message digest, or hash, that you calculate locally. The hashing algorithm for the digest must be compatible with the signature algorithm:<br></p>
      * <ul>
-     * <li>If the signature algorithm is SHA256withRSA, SHA256withRSA/PSS, or SHA256withECDSA, the message digest algorithm must be SHA-256.</li>
-     * <li>If the signature algorithm is SM3withSM2, the message digest algorithm must be SM3.</li>
+     * <li><p>The hashing algorithm for \<code>SHA256withRSA\\</code>, \<code>SHA256withRSA/PSS\\</code>, and \<code>SHA256withECDSA\\</code> is SHA-256.</p>
+     * </li>
+     * <li><p>The hashing algorithm for \<code>SM3withSM2\\</code> is SM3.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,10 +45,12 @@ public class VerifyRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The value type of the Message parameter. Valid values:</p>
+     * <p>The message type. Valid values:</p>
      * <ul>
-     * <li><strong>RAW</strong>: the raw data. This is the default value.</li>
-     * <li><strong>DIGEST</strong>: the message digest of the raw data.</li>
+     * <li><p><strong>RAW</strong> (default): The raw data.</p>
+     * </li>
+     * <li><p><strong>DIGEST</strong>: The message digest of the raw data.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,7 +61,7 @@ public class VerifyRequest extends TeaModel {
     public String messageType;
 
     /**
-     * <p>The signature value. The value must be encoded in Base64.</p>
+     * <p>The signature value. The value must be Base64-encoded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,10 +73,14 @@ public class VerifyRequest extends TeaModel {
     /**
      * <p>The signature algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>SHA256withRSA</strong></li>
-     * <li><strong>SHA256withRSA/PSS</strong></li>
-     * <li><strong>SHA256withECDSA</strong></li>
-     * <li><strong>SM3withSM2</strong></li>
+     * <li><p><strong>SHA256withRSA</strong></p>
+     * </li>
+     * <li><p><strong>SHA256withRSA/PSS</strong></p>
+     * </li>
+     * <li><p><strong>SHA256withECDSA</strong></p>
+     * </li>
+     * <li><p><strong>SM3withSM2</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -75,6 +90,12 @@ public class VerifyRequest extends TeaModel {
     @NameInMap("SigningAlgorithm")
     public String signingAlgorithm;
 
+    /**
+     * <p>The ID of the repository. To get this parameter, call the <a href="https://help.aliyun.com/document_detail/453246.html">ListCertWarehouse</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("WarehouseId")
     public String warehouseId;
 

@@ -23,10 +23,10 @@ public class UploadUserCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The ID of the certificate instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>cas-upload-j2ofdb</p>
+     * <p>cas-upload-xki1d0</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

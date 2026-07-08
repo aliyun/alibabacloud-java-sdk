@@ -5,41 +5,50 @@ import com.aliyun.tea.*;
 
 public class SignRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation to obtain the identifier.</p>
+     * <p>The unique identifier of the certificate. You can get this value by calling the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation.</p>
      * <ul>
-     * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
-     * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
+     * <li><p>The identifier of an SSL certificate is typically in the format \&quot;{Certificate ID}-cn-hangzhou\&quot;.</p>
+     * </li>
+     * <li><p>For a PCA certificate, this is the Identifier from the corresponding private certificate.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ccaf0c629c2be1e2abb63bb76b</p>
+     * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>A unique, user-defined identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em><strong>e6bb538d538c70c01f81fg3</strong></em>*</p>
+     */
     @NameInMap("CustomIdentifier")
     public String customIdentifier;
 
     /**
-     * <p>The data to sign. The value must be encoded in Base64.\
-     * For example, if the hexadecimal data that you want to sign is [0x31, 0x32, 0x33, 0x34], set the parameter to the Base64-encoded value MTIzNA==. If you set MessageType to RAW, the size of the data must be less than 4 KB. If the size of the data is greater than 4 KB, you can set MessageType to DIGEST and set Message to the digest of the data. The digest is a hash value. You can compute the digest of the data on an on-premises machine. The certificate application repository uses the digest that you compute in your own certificate application system. The message digest algorithm that you use must match the specified signature algorithm. The following items describe the details:</p>
-     * <ul>
-     * <li>If the signature algorithm is SHA256withRSA, SHA256withRSA/PSS, or SHA256withECDSA, the message digest algorithm must be SHA-256.</li>
-     * <li>If the signature algorithm is SM3withSM2, the message digest algorithm must be SM3.</li>
-     * </ul>
+     * <p>The data to sign. The MessageType parameter determines the format of this data. If MessageType is set to RAW, Message is the raw data. If MessageType is set to BASE64, Message is the Base64-encoded raw data. If MessageType is set to DIGEST, Message is the message digest (hash value). If MessageType is set to BLIND, Message is the Base64-encoded blinded message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>message</p>
+     * <p>MTIzNA==</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The value type of the Message parameter. Valid values:</p>
+     * <p>The message type. Valid values:</p>
      * <ul>
-     * <li>RAW: the raw data. This is the default value.</li>
-     * <li>DIGEST: the message digest (hash value) of the raw data.</li>
+     * <li><p><code>RAW</code> (default): The raw data.</p>
+     * </li>
+     * <li><p><code>DIGEST</code>: The message digest (hash value) of the raw data.</p>
+     * </li>
+     * <li><p><code>BASE64</code>: The Base64-encoded raw data.</p>
+     * </li>
+     * <li><p><code>BLIND</code>: Enables blind signing. This is supported only for certificates that use an RSA algorithm.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,10 +61,16 @@ public class SignRequest extends TeaModel {
     /**
      * <p>The signature algorithm. Valid values:</p>
      * <ul>
-     * <li>SHA256withRSA</li>
-     * <li>SHA256withRSA/PSS</li>
-     * <li>SHA256withECDSA</li>
-     * <li>SM3withSM2</li>
+     * <li><p><code>SHA256withRSA</code></p>
+     * </li>
+     * <li><p><code>SHA256withRSA/PSS</code></p>
+     * </li>
+     * <li><p><code>SHA256withECDSA</code></p>
+     * </li>
+     * <li><p><code>SM3withSM2</code></p>
+     * </li>
+     * <li><p><code>SHA256withRSA/P7</code></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,6 +80,15 @@ public class SignRequest extends TeaModel {
     @NameInMap("SigningAlgorithm")
     public String signingAlgorithm;
 
+    /**
+     * <p>The repository ID.</p>
+     * <blockquote>
+     * <p>You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("WarehouseId")
     public Long warehouseId;
 

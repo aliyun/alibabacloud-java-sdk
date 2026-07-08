@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudResourcesRequest extends TeaModel {
     /**
-     * <p>The certificate IDs.</p>
+     * <p>The certificate IDs. Separate multiple IDs with commas (,).</p>
      */
     @NameInMap("CertIds")
     public java.util.List<Long> certIds;
@@ -14,45 +14,69 @@ public class ListCloudResourcesRequest extends TeaModel {
      * <p>The cloud service provider.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Tencent</li>
-     * <li>Huawei</li>
-     * <li>Aws</li>
-     * <li>aliyun</li>
+     * <li><p>Tencent</p>
+     * </li>
+     * <li><p>Huawei</p>
+     * </li>
+     * <li><p>Aws</p>
+     * </li>
+     * <li><p>aliyun</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Tencent</p>
+     * <p>aliyun</p>
      */
     @NameInMap("CloudName")
     public String cloudName;
 
     /**
-     * <p>The cloud service.</p>
+     * <p>The cloud service name. Used to filter resources by cloud service.</p>
      * <p>Valid values when CloudName is set to aliyun:</p>
      * <ul>
-     * <li>SLB: Classic Load Balancer (CLB). This value is available only on the China site (aliyun.com).</li>
-     * <li>LIVE: ApsaraVideo Live. This value is available only on the China site (aliyun.com).</li>
-     * <li>webHosting: Cloud Web Hosting. This value is available only on the China site (aliyun.com).</li>
-     * <li>VOD: ApsaraVideo VOD. This value is available only on the China site (aliyun.com).</li>
-     * <li>CR: Container Registry. This value is available only on the China site (aliyun.com).</li>
-     * <li>DCDN: Dynamic Content Delivery Network (DCDN).</li>
-     * <li>DDOS: Anti-DDoS.</li>
-     * <li>CDN: Alibaba Cloud CDN (CDN).</li>
-     * <li>ALB: Application Load Balancer (ALB).</li>
-     * <li>APIGateway: API Gateway.</li>
-     * <li>FC: Function Compute.</li>
-     * <li>GA: Global Accelerator (GA).</li>
-     * <li>MSE: Microservices Engine (MSE).</li>
-     * <li>NLB: Network Load Balancer (NLB).</li>
-     * <li>OSS: Object Storage Service (OSS).</li>
-     * <li>SAE: Serverless App Engine (SAE).</li>
-     * <li>WAF: Web Application Firewall (WAF).</li>
+     * <li><p>SLB: Classic Load Balancer (CLB). This value is available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p>LIVE: ApsaraVideo Live. This value is available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p>webHosting: Cloud Web Hosting. This value is available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p>VOD: ApsaraVideo VOD. This value is available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p>CR: Container Registry. This value is available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p>DCDN: Dynamic Content Delivery Network (DCDN).</p>
+     * </li>
+     * <li><p>DDOS: Anti-DDoS.</p>
+     * </li>
+     * <li><p>CDN: Alibaba Cloud CDN (CDN).</p>
+     * </li>
+     * <li><p>ALB: Application Load Balancer (ALB).</p>
+     * </li>
+     * <li><p>APIGateway: API Gateway.</p>
+     * </li>
+     * <li><p>FC: Function Compute.</p>
+     * </li>
+     * <li><p>GA: Global Accelerator (GA).</p>
+     * </li>
+     * <li><p>MSE: Microservices Engine (MSE).</p>
+     * </li>
+     * <li><p>NLB: Network Load Balancer (NLB).</p>
+     * </li>
+     * <li><p>OSS: Object Storage Service (OSS).</p>
+     * </li>
+     * <li><p>SAE: Serverless App Engine (SAE).</p>
+     * </li>
+     * <li><p>WAF: Web Application Firewall (WAF).</p>
+     * </li>
      * </ul>
      * <p>Valid values when CloudName is set to Tencent:</p>
      * <ul>
-     * <li>TencentCDN: Content Delivery Network (CDN).</li>
-     * <li>TencentCLB: CLB.</li>
-     * <li>TencentWAF: WAF.</li>
+     * <li><p>TencentCDN: Content Delivery Network (CDN).</p>
+     * </li>
+     * <li><p>TencentCLB: CLB.</p>
+     * </li>
+     * <li><p>TencentWAF: WAF.</p>
+     * </li>
      * </ul>
      * <p>Valid value when CloudName is set to Huawei:</p>
      * <ul>
@@ -60,10 +84,14 @@ public class ListCloudResourcesRequest extends TeaModel {
      * </ul>
      * <p>Valid values when CloudName is set to Aws:</p>
      * <ul>
-     * <li>AwsCloudFront: Amazon CloudFront.</li>
-     * <li>AwsCLB: CLB.</li>
-     * <li>AwsALB: ALB.</li>
-     * <li>AwsNLB: NLB.</li>
+     * <li><p>AwsCloudFront: Amazon CloudFront.</p>
+     * </li>
+     * <li><p>AwsCLB: CLB.</p>
+     * </li>
+     * <li><p>AwsALB: ALB.</p>
+     * </li>
+     * <li><p>AwsNLB: NLB.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +122,7 @@ public class ListCloudResourcesRequest extends TeaModel {
      * <p>The AccessKey ID that is used to access cloud resources.</p>
      * 
      * <strong>example:</strong>
-     * <p>21</p>
+     * <p>AK96*******6M</p>
      */
     @NameInMap("SecretId")
     public String secretId;

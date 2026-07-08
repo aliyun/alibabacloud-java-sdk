@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceSummaryResponseBody extends TeaModel {
     /**
+     * <p>The remaining quota for automatic reissue.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public Integer autoReissueCount;
 
     /**
+     * <p>The remaining certificate quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public Integer certificateCount;
 
     /**
+     * <p>The total number of inactive instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public Integer inactiveCount;
 
     /**
+     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</p>
      */
@@ -33,6 +41,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of instances that are about to expire.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

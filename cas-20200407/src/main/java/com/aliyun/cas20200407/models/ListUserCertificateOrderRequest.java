@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserCertificateOrderRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListUserCertificateOrderRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The domain name that is bound or the ID of the resource. Fuzzy match is supported.</p>
+     * <p>Performs a fuzzy query. The keyword can be a domain name or a resource ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cert-instanceId</p>
@@ -23,12 +23,16 @@ public class ListUserCertificateOrderRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The type of the order. Default value: <strong>CPACK</strong>. Valid values:</p>
+     * <p>The resource type. Default value: <strong>CPACK</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>CPACK</strong>: virtual resource order. If you set OrderType to CPACK, only the information about orders that are generated to consume the certificate quota is returned.</li>
-     * <li><strong>BUY</strong>: purchase order. If you set OrderType to BUY, only the information about purchase orders is returned. In most cases, this type of order can be ignored.</li>
-     * <li><strong>UPLOAD</strong>: uploaded certificate. If you set OrderType to UPLOAD, only uploaded certificates are returned.</li>
-     * <li><strong>CERT</strong>: certificate. If you set OrderType to CERT, both issued certificates and uploaded certificates are returned.</li>
+     * <li><p><strong>CPACK</strong>: An order for a resource plan. Only orders created from a resource plan are returned.</p>
+     * </li>
+     * <li><p><strong>BUY</strong>: A direct purchase. Only orders created from direct purchases are returned. You can ignore this type in most cases.</p>
+     * </li>
+     * <li><p><strong>UPLOAD</strong>: An uploaded certificate. Only uploaded certificates are returned.</p>
+     * </li>
+     * <li><p><strong>CERT</strong>: A certificate. Both issued and uploaded certificates are returned.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +42,7 @@ public class ListUserCertificateOrderRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation to obtain the ID.</p>
+     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******4wia</p>
@@ -56,18 +60,26 @@ public class ListUserCertificateOrderRequest extends TeaModel {
     public Long showSize;
 
     /**
-     * <p>The certificate status of the order. Valid values:</p>
+     * <p>The status of the order. Valid values:</p>
      * <ul>
-     * <li><strong>PAYED</strong>: pending application. You can set Status to PAYED only if you set OrderType to CPACK or BUY.</li>
-     * <li><strong>CHECKING</strong>: validating. You can set Status to CHECKING only if you set OrderType to CPACK or BUY.</li>
-     * <li><strong>CHECKED_FAIL</strong>: validation failed. You can set Status to CHECKED_FAIL only if you set OrderType to CPACK or BUY.</li>
-     * <li><strong>ISSUED</strong>: issued.</li>
-     * <li><strong>WILLEXPIRED</strong>: about to expire.</li>
-     * <li><strong>EXPIRED</strong>: expired.</li>
-     * <li><strong>NOTACTIVATED</strong>: not activated. You can set Status to NOTACTIVATED only if you set OrderType to CPACK or BUY.</li>
-     * <li><strong>REVOKED</strong>: revoked. You can set Status to REVOKED only if you set OrderType to CPACK or BUY.</li>
+     * <li><p><strong>PAYED</strong>: The certificate is pending application. This value is valid only when OrderType is set to CPACK or BUY.</p>
+     * </li>
+     * <li><p><strong>CHECKING</strong>: The certificate is under review. This value is valid only when OrderType is set to CPACK or BUY.</p>
+     * </li>
+     * <li><p><strong>CHECKED_FAIL</strong>: The review failed. This value is valid only when OrderType is set to CPACK or BUY.</p>
+     * </li>
+     * <li><p><strong>ISSUED</strong>: The certificate is issued.</p>
+     * </li>
+     * <li><p><strong>WILLEXPIRED</strong>: The certificate is about to expire.</p>
+     * </li>
+     * <li><p><strong>EXPIRED</strong>: The certificate has expired.</p>
+     * </li>
+     * <li><p><strong>NOTACTIVATED</strong>: The certificate is not activated. This value is valid only when OrderType is set to CPACK or BUY.</p>
+     * </li>
+     * <li><p><strong>REVOKED</strong>: The certificate is revoked. This value is valid only when OrderType is set to CPACK or BUY.</p>
+     * </li>
      * </ul>
-     * <p>If you set OrderType to CERT or UPLOAD and Status is left empty, valid certificates are returned by default, including issued certificates and certificates that are about to expire. If you set OrderType to CPACK or BUY and Status is left empty, all orders are returned by default.</p>
+     * <p>If OrderType is CERT or UPLOAD and you leave this parameter empty, active certificates are returned by default. Active certificates are those in the ISSUED or WILLEXPIRED state. If OrderType is CPACK or BUY and you leave this parameter empty, all orders are returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>ISSUED</p>

@@ -17,8 +17,10 @@ public class ListDeploymentJobRequest extends TeaModel {
      * <p>The type of the deployment task.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>cloud: multi-cloud deployment task.</li>
-     * <li>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</li>
+     * <li><p>cloud: multi-cloud deployment task.</p>
+     * </li>
+     * <li><p>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +30,10 @@ public class ListDeploymentJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The number of certificates per page. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: 50.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>50</p>
      */
     @NameInMap("ShowSize")
     public Integer showSize;
@@ -40,12 +42,18 @@ public class ListDeploymentJobRequest extends TeaModel {
      * <p>The status of the deployment task.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>success</li>
-     * <li>pending</li>
-     * <li>scheduling</li>
-     * <li>processing</li>
-     * <li>error</li>
-     * <li>editing</li>
+     * <li><p>success</p>
+     * </li>
+     * <li><p>pending</p>
+     * </li>
+     * <li><p>scheduling</p>
+     * </li>
+     * <li><p>processing</p>
+     * </li>
+     * <li><p>error</p>
+     * </li>
+     * <li><p>editing</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

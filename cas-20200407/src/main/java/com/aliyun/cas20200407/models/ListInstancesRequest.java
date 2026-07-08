@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
+     * <p>The certification authority (CA) brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
+     * 
      * <strong>example:</strong>
      * <p>Digicert</p>
      */
@@ -12,6 +14,14 @@ public class ListInstancesRequest extends TeaModel {
     public String brand;
 
     /**
+     * <p>The status of the certificate. Valid values:</p>
+     * <ul>
+     * <li><strong>issued</strong>: issued.</li>
+     * <li><strong>revoked</strong>: revoked.</li>
+     * <li><strong>willExpire</strong>: about to expire.</li>
+     * <li><strong>expired</strong>: expired.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>issued</p>
      */
@@ -19,6 +29,8 @@ public class ListInstancesRequest extends TeaModel {
     public String certificateStatus;
 
     /**
+     * <p>The type of the certificate. Valid values: DV, OV, and EV.</p>
+     * 
      * <strong>example:</strong>
      * <p>DV</p>
      */
@@ -26,6 +38,8 @@ public class ListInstancesRequest extends TeaModel {
     public String certificateType;
 
     /**
+     * <p>The page number of the current page in a paged query. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +47,8 @@ public class ListInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
+     * 
      * <strong>example:</strong>
      * <p>BUY</p>
      */
@@ -40,6 +56,8 @@ public class ListInstancesRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The keyword for fuzzy match. Matches domain names, instance names, or corresponding resource IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -47,6 +65,8 @@ public class ListInstancesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ae******4wia</p>
      */
@@ -54,6 +74,8 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The number of instances to display per page in a paged query. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -61,6 +83,17 @@ public class ListInstancesRequest extends TeaModel {
     public Integer showSize;
 
     /**
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>inactive</strong>: pending use.</li>
+     * <li><strong>pending</strong>: under review. The latest certificate is being reviewed.</li>
+     * <li><strong>willExpire</strong>: about to expire.</li>
+     * <li><strong>expired</strong>: expired.</li>
+     * <li><strong>refund</strong>: refunded.</li>
+     * <li><strong>normal</strong>: normal.</li>
+     * <li><strong>closed</strong>: closed and unavailable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>inactive</p>
      */

@@ -158,7 +158,7 @@ public class ListContactResponseBody extends TeaModel {
          * <p>The name of the contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>ty-yaoyue.com</p>
+         * <p>John</p>
          */
         @NameInMap("Name")
         public String name;

@@ -7,7 +7,7 @@ public class CreateCertificateRequestRequest extends TeaModel {
     /**
      * <p>The domain name that you want to bind to the certificate. You can specify only one domain name.</p>
      * <blockquote>
-     * <p> The domain name must match the certificate specifications that you specify for the <strong>ProductCode</strong> parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as <code>*.aliyundoc.com</code> for this parameter.</p>
+     * <p>The domain name must match the certificate specifications that you specify for the <strong>ProductCode</strong> parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as <code>*.aliyundoc.com</code> for this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,23 +40,30 @@ public class CreateCertificateRequestRequest extends TeaModel {
     /**
      * <p>The specifications of the certificate. Valid values:</p>
      * <ul>
-     * <li><strong>digicert-free-1-free</strong> (default): DigiCert single-domain DV certificate, which is free and valid for 3 months.</li>
-     * <li><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate, which is free and valid for 1 year. This value is available only on the China site (aliyun.com).</li>
-     * <li><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</li>
-     * <li><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</li>
-     * <li><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</li>
-     * <li><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</li>
-     * <li><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</li>
+     * <li><p><strong>digicert-free-1-free</strong> (default): DigiCert single-domain DV certificate, which is free and valid for 3 months.</p>
+     * </li>
+     * <li><p><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate, which is free and valid for 1 year. This value is available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</p>
+     * </li>
+     * <li><p><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</p>
+     * </li>
+     * <li><p><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</p>
+     * </li>
+     * <li><p><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</p>
+     * </li>
+     * <li><p><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>symantec-free-1-free</p>
+     * <p>symantec-dv-1-starter</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateCertificateRequestRequestTags> tags;
@@ -74,8 +81,10 @@ public class CreateCertificateRequestRequest extends TeaModel {
     /**
      * <p>The method to verify the ownership of a domain name. Valid values:</p>
      * <ul>
-     * <li><strong>DNS</strong>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</li>
-     * <li><strong>FILE</strong>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</li>
+     * <li><p><strong>DNS</strong>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</p>
+     * </li>
+     * <li><p><strong>FILE</strong>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</p>
+     * </li>
      * </ul>
      * <p>For more information about the verification methods, see <a href="https://help.aliyun.com/document_detail/48016.html">Verify the ownership of a domain name</a>.</p>
      * <p>This parameter is required.</p>
@@ -152,7 +161,7 @@ public class CreateCertificateRequestRequest extends TeaModel {
          * <p>The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.</p>
          * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p> You must specify at least one of <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
+         * <p>You must specify at least one of <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

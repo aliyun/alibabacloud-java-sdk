@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCertRequest extends TeaModel {
     /**
-     * <p>证书的类型 。取值：</p>
+     * <p>The certificate type. Valid values:</p>
      * <ul>
-     * <li><strong>CA</strong>：表示CA证书。</li>
-     * <li><strong>CERT</strong>：表示签发的证书。</li>
+     * <li><p><strong>CA</strong>: CA certificate</p>
+     * </li>
+     * <li><p><strong>CERT</strong>: issued certificate</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListCertRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number to return. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +29,16 @@ public class ListCertRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.</p>
+     * <p>A comma-separated list of certificate identifiers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aaa,bbb</p>
+     */
+    @NameInMap("Identifiers")
+    public String identifiers;
+
+    /**
+     * <p>The keyword for a fuzzy search by name, domain name, or subject alternative name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -36,7 +47,7 @@ public class ListCertRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 50.</p>
+     * <p>The number of entries per page. The default value is 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -47,8 +58,10 @@ public class ListCertRequest extends TeaModel {
     /**
      * <p>The source of the certificate. Valid values:</p>
      * <ul>
-     * <li><strong>upload</strong>: uploaded certificate</li>
-     * <li><strong>aliyun</strong>: Alibaba Cloud certificate</li>
+     * <li><p><strong>upload</strong>: uploaded certificate</p>
+     * </li>
+     * <li><p><strong>aliyun</strong>: Alibaba Cloud certificate</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +71,12 @@ public class ListCertRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The status of the certificate. Valid values:</p>
+     * <p>The certificate status. Valid values:</p>
      * <ul>
-     * <li><strong>ISSUE</strong>: issued</li>
-     * <li><strong>REVOKE</strong>: revoked</li>
+     * <li><p><strong>ISSUE</strong>: issued</p>
+     * </li>
+     * <li><p><strong>REVOKE</strong>: revoked</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +86,7 @@ public class ListCertRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the certificate repository. You can call the ListCertWarehouse API operation to query the IDs of certificate repositories.</p>
+     * <p>The warehouse ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/453246.html">ListCertWarehouse</a> API.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -98,6 +113,14 @@ public class ListCertRequest extends TeaModel {
     }
     public Long getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListCertRequest setIdentifiers(String identifiers) {
+        this.identifiers = identifiers;
+        return this;
+    }
+    public String getIdentifiers() {
+        return this.identifiers;
     }
 
     public ListCertRequest setKeyWord(String keyWord) {

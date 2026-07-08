@@ -257,24 +257,42 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         /**
          * <p>The name of the cloud service. Valid values:</p>
          * <ul>
-         * <li><strong>SLB</strong>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>LIVE</strong>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>webHosting</strong>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>VOD</strong>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>CR</strong>: Container Registry. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>DCDN</strong>: Dynamic Content Delivery Network (DCDN).</li>
-         * <li><strong>DDOS</strong>: Anti-DDoS.</li>
-         * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</li>
-         * <li><strong>ALB</strong>: Application Load Balancer (ALB).</li>
-         * <li><strong>APIGateway</strong>: API Gateway.</li>
-         * <li><strong>FC</strong>: Function Compute.</li>
-         * <li><strong>GA</strong>: Global Accelerator (GA).</li>
-         * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
-         * <li><strong>NLB</strong>: Network Load Balancer (NLB).</li>
-         * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
-         * <li><strong>SAE</strong>: Serverless App Engine (SAE).</li>
-         * <li><strong>TencentCDN</strong>: Tencent Cloud Content Delivery Network (CDN).</li>
-         * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+         * <li><p><strong>SLB</strong>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>LIVE</strong>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>webHosting</strong>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>VOD</strong>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>CR</strong>: Container Registry. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>DCDN</strong>: Dynamic Content Delivery Network (DCDN).</p>
+         * </li>
+         * <li><p><strong>DDOS</strong>: Anti-DDoS.</p>
+         * </li>
+         * <li><p><strong>CDN</strong>: Alibaba Cloud CDN (CDN).</p>
+         * </li>
+         * <li><p><strong>ALB</strong>: Application Load Balancer (ALB).</p>
+         * </li>
+         * <li><p><strong>APIGateway</strong>: API Gateway.</p>
+         * </li>
+         * <li><p><strong>FC</strong>: Function Compute.</p>
+         * </li>
+         * <li><p><strong>GA</strong>: Global Accelerator (GA).</p>
+         * </li>
+         * <li><p><strong>MSE</strong>: Microservices Engine (MSE).</p>
+         * </li>
+         * <li><p><strong>NLB</strong>: Network Load Balancer (NLB).</p>
+         * </li>
+         * <li><p><strong>OSS</strong>: Object Storage Service (OSS).</p>
+         * </li>
+         * <li><p><strong>SAE</strong>: Serverless App Engine (SAE).</p>
+         * </li>
+         * <li><p><strong>TencentCDN</strong>: Tencent Cloud Content Delivery Network (CDN).</p>
+         * </li>
+         * <li><p><strong>WAF</strong>: Web Application Firewall (WAF).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

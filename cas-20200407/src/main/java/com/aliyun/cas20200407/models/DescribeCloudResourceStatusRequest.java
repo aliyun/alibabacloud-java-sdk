@@ -7,11 +7,11 @@ public class DescribeCloudResourceStatusRequest extends TeaModel {
     /**
      * <p>The AccessKey secret used to access cloud resources.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2712219.html">ListCloudAccess</a> operation to obtain the ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2712219.html">ListCloudAccess</a> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>AKID9*******XX</p>
+     * <p>AKID9AHG6iCZlncN7yPmOsQ1X******</p>
      */
     @NameInMap("SecretId")
     public String secretId;

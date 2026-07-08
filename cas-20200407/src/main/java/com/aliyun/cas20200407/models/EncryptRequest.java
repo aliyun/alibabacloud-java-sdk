@@ -7,9 +7,12 @@ public class EncryptRequest extends TeaModel {
     /**
      * <p>The encryption algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>RSAES_OAEP_SHA_1</strong></li>
-     * <li><strong>RSAES_OAEP_SHA_256</strong></li>
-     * <li><strong>SM2PKE</strong></li>
+     * <li><p><strong>RSAES_OAEP_SHA_1</strong></p>
+     * </li>
+     * <li><p><strong>RSAES_OAEP_SHA_256</strong></p>
+     * </li>
+     * <li><p><strong>SM2PKE</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -20,26 +23,36 @@ public class EncryptRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation to obtain the identifier.</p>
+     * <p>The unique identifier of the certificate. To obtain this parameter, call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation.</p>
      * <ul>
-     * <li>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</li>
-     * <li>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</li>
+     * <li><p>The identifier of an SSL certificate is usually in the {Certificate ID}-cn-hangzhou format.</p>
+     * </li>
+     * <li><p>For a private certificate authority (PCA) certificate, this is the value of the Identifier field of the private certificate.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>12345678-1234-1234-1234-12345678****</p>
+     * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
+    /**
+     * <p>The custom identifier, which serves as a unique key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>6bb538d538c70c01f81dg3</strong></strong></p>
+     */
     @NameInMap("CustomIdentifier")
     public String customIdentifier;
 
     /**
-     * <p>The value type of the Message parameter. Valid values:</p>
+     * <p>The message type. Valid values:</p>
      * <ul>
-     * <li>RAW: The value of the Plaintext parameter is directly encrypted. This is the default value.</li>
-     * <li>Base64: The value of the Plaintext parameter is Base64-encoded data. The data is decoded and then encrypted.</li>
+     * <li><p>RAW (default): Directly encrypts the value of Plaintext.</p>
+     * </li>
+     * <li><p>Base64: Decodes the Base64-encoded value of Plaintext and then encrypts the decoded data.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,11 +62,14 @@ public class EncryptRequest extends TeaModel {
     public String messageType;
 
     /**
-     * <p>The data that you want to encrypt. The value of this parameter can be raw data or Base64-encoded data. For more information, see the description of the MessageType parameter. For example, if the hexadecimal data that you want to encrypt is <code>[0x31, 0x32, 0x33, 0x34]</code>, the Base64-encoded data is MTIzNA==. The size of data that can be encrypted varies based on the encryption algorithm that you use. The following list describes the relationship between the encryption algorithms and data sizes:</p>
+     * <p>The data to encrypt. The data can be plaintext or Base64-encoded plaintext. For more information, see the MessageType parameter. If you use Base64 encoding, for example, if the hexadecimal content of the data to be encrypted is <code>[0x31, 0x32, 0x33, 0x34]</code>, the corresponding Base64-encoded string is MTIzNA==. The maximum size of Plaintext depends on the Algorithm:</p>
      * <ul>
-     * <li><strong>RSAES_OAEP_SHA_1</strong>: 214 bytes</li>
-     * <li><strong>RSAES_OAEP_SHA_256</strong>: 190 bytes</li>
-     * <li><strong>SM2PKE</strong>: 6,047 bytes</li>
+     * <li><p><strong>RSAES_OAEP_SHA_1</strong>: 214 bytes.</p>
+     * </li>
+     * <li><p><strong>RSAES_OAEP_SHA_256</strong>: 190 bytes.</p>
+     * </li>
+     * <li><p><strong>SM2PKE</strong>: 6047 bytes.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,6 +79,15 @@ public class EncryptRequest extends TeaModel {
     @NameInMap("Plaintext")
     public String plaintext;
 
+    /**
+     * <p>The repository ID.</p>
+     * <blockquote>
+     * <p>To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("WarehouseId")
     public Long warehouseId;
 

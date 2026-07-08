@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request to help troubleshoot and locate issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>0068247C-A454-5FC9-93BF-C41CBB5CD19E</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadCsrResponseBody extends TeaModel {
     /**
-     * <p>The ID of the CSR.</p>
+     * <p>The unique ID of the CSR. You can use this ID to obtain the content of the CSR. For more information, see <a href="https://help.aliyun.com/document_detail/2709720.html">GetCsrDetail</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>2271</p>

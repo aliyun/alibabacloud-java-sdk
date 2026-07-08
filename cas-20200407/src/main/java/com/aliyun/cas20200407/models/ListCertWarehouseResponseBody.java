@@ -113,8 +113,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the certificate application repository has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,11 +155,16 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         /**
          * <p>The type of the certificate application repository. Valid values:</p>
          * <ul>
-         * <li><strong>ssl</strong>: certificate application repository of SSL certificates</li>
-         * <li><strong>uploadPCA</strong>: certificate application repository of uploaded private certificates</li>
-         * <li><strong>free</strong>: certificate application repository of free certificates, available only on the China site (aliyun.com)</li>
-         * <li><strong>aliyunPCA</strong>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</li>
-         * <li><strong>disable</strong>: disabled certificate application repository</li>
+         * <li><p><strong>ssl</strong>: certificate application repository of SSL certificates</p>
+         * </li>
+         * <li><p><strong>uploadPCA</strong>: certificate application repository of uploaded private certificates</p>
+         * </li>
+         * <li><p><strong>free</strong>: certificate application repository of free certificates, available only on the China site (aliyun.com)</p>
+         * </li>
+         * <li><p><strong>aliyunPCA</strong>: certificate application repository of private certificates purchased from Alibaba Cloud PCA, available only on the China site (aliyun.com)</p>
+         * </li>
+         * <li><p><strong>disable</strong>: disabled certificate application repository</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -32,7 +32,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
      * <p>The number of entries per page. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>50</p>
      */
     @NameInMap("ShowSize")
     public Integer showSize;
@@ -131,7 +131,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>The cloud service provider to which the cloud resource in the worker task belongs.</p>
          * <blockquote>
-         * <p> This parameter is not returned if you deploy certificates to Alibaba Cloud services.</p>
+         * <p>This parameter is not returned if you deploy certificates to Alibaba Cloud services.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -143,24 +143,42 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>The cloud service to which the cloud resource in the worker task belongs. Valid values:</p>
          * <ul>
-         * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN). This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>SLB</strong>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>DCDN</strong>: Dynamic Content Delivery Network (DCDN). This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>DDOS</strong>: Anti-DDoS. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>LIVE</strong>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>webHosting</strong>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>VOD</strong>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>CR</strong>: Container Registry. This value is supported only at the China site (aliyun.com).</li>
-         * <li><strong>ALB</strong>: Application Load Balancer (ALB).</li>
-         * <li><strong>APIGateway</strong>: API Gateway.</li>
-         * <li><strong>FC</strong>: Function Compute.</li>
-         * <li><strong>GA</strong>: Global Accelerator (GA).</li>
-         * <li><strong>MSE</strong>: Microservices Engine (MSE).</li>
-         * <li><strong>NLB</strong>: Network Load Balancer (NLB).</li>
-         * <li><strong>OSS</strong>: Object Storage Service (OSS).</li>
-         * <li><strong>SAE</strong>: Serverless App Engine (SAE).</li>
-         * <li><strong>TencentCDN</strong>: Tencent Cloud Content Delivery Network (CDN).</li>
-         * <li><strong>WAF</strong>: Web Application Firewall (WAF).</li>
+         * <li><p><strong>CDN</strong>: Alibaba Cloud CDN (CDN). This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>SLB</strong>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>DCDN</strong>: Dynamic Content Delivery Network (DCDN). This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>DDOS</strong>: Anti-DDoS. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>LIVE</strong>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>webHosting</strong>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>VOD</strong>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>CR</strong>: Container Registry. This value is supported only at the China site (aliyun.com).</p>
+         * </li>
+         * <li><p><strong>ALB</strong>: Application Load Balancer (ALB).</p>
+         * </li>
+         * <li><p><strong>APIGateway</strong>: API Gateway.</p>
+         * </li>
+         * <li><p><strong>FC</strong>: Function Compute.</p>
+         * </li>
+         * <li><p><strong>GA</strong>: Global Accelerator (GA).</p>
+         * </li>
+         * <li><p><strong>MSE</strong>: Microservices Engine (MSE).</p>
+         * </li>
+         * <li><p><strong>NLB</strong>: Network Load Balancer (NLB).</p>
+         * </li>
+         * <li><p><strong>OSS</strong>: Object Storage Service (OSS).</p>
+         * </li>
+         * <li><p><strong>SAE</strong>: Serverless App Engine (SAE).</p>
+         * </li>
+         * <li><p><strong>TencentCDN</strong>: Tencent Cloud Content Delivery Network (CDN).</p>
+         * </li>
+         * <li><p><strong>WAF</strong>: Web Application Firewall (WAF).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,15 +199,17 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the cloud resource in the worker task is the default resource. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>true</p>
          */
         @NameInMap("DefaultResource")
         public Boolean defaultResource;
@@ -224,7 +244,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>The ID of the cloud resource in the worker task.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -245,7 +265,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>The listener ID of the cloud resource in the worker task.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -266,7 +286,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>The order ID of the worker task, which is the same as the order ID of the certificate.</p>
          * <blockquote>
-         * <p> If the CertId parameter is returned, this parameter is not returned.</p>
+         * <p>If the CertId parameter is returned, this parameter is not returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -278,7 +298,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>The listening port of the cloud resource in the worker task.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -326,15 +346,24 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         /**
          * <p>The status of the worker task. Valid values:</p>
          * <ul>
-         * <li><strong>editing</strong></li>
-         * <li><strong>pending</strong></li>
-         * <li><strong>scheduling</strong></li>
-         * <li><strong>processing</strong></li>
-         * <li><strong>error</strong></li>
-         * <li><strong>success</strong></li>
-         * <li><strong>rollback</strong></li>
-         * <li><strong>rollback_success</strong></li>
-         * <li><strong>rollback_error</strong></li>
+         * <li><p><strong>editing</strong></p>
+         * </li>
+         * <li><p><strong>pending</strong></p>
+         * </li>
+         * <li><p><strong>scheduling</strong></p>
+         * </li>
+         * <li><p><strong>processing</strong></p>
+         * </li>
+         * <li><p><strong>error</strong></p>
+         * </li>
+         * <li><p><strong>success</strong></p>
+         * </li>
+         * <li><p><strong>rollback</strong></p>
+         * </li>
+         * <li><p><strong>rollback_success</strong></p>
+         * </li>
+         * <li><p><strong>rollback_error</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -347,7 +376,7 @@ public class ListWorkerResourceResponseBody extends TeaModel {
          * <p>The ID of the Alibaba Cloud account to which the worker task belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>1666884372152785</p>
+         * <p>166688437******</p>
          */
         @NameInMap("UserId")
         public Long userId;

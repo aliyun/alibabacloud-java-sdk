@@ -4,14 +4,26 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class GetCertWarehouseQuotaResponseBody extends TeaModel {
+    /**
+     * <p>The total quota for the certificate application service. This includes both complimentary and purchased quotas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5000</p>
+     */
     @NameInMap("AppTotalQuota")
     public Long appTotalQuota;
 
+    /**
+     * <p>The used quota for the certificate application service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("AppUseCount")
     public Long appUseCount;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -20,7 +32,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total quota for certificate repositories, including the free quota and purchased quota.</p>
+     * <p>The total quota for the electronic contract signing service. This includes both complimentary and purchased quotas.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -29,7 +41,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
     public Long totalQuota;
 
     /**
-     * <p>The used quota.</p>
+     * <p>The used quota for the electronic contract signing service.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

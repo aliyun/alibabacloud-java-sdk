@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeploymentJobRequest extends TeaModel {
     /**
-     * <p>The ID of the deployment job. The <strong>ID</strong> of the job is returned after you call the <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a> operation. You can also call the <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a> operation to obtain the ID.</p>
+     * <p>The ID of the deployment job. To get the job ID, call the <a href="https://help.aliyun.com/document_detail/2712234.html">CreateDeploymentJob</a> or <a href="https://help.aliyun.com/document_detail/2712223.html">ListDeploymentJob</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -114,7 +114,7 @@ public class ListCloudResourcesResponseBody extends TeaModel {
          * <p>The name of the certificate bound to the cloud resource.</p>
          * 
          * <strong>example:</strong>
-         * <p>shop.amsaudio.cn</p>
+         * <p>example</p>
          */
         @NameInMap("CertName")
         public String certName;
@@ -131,11 +131,11 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The AccessKey ID that is used to access cloud resources.</p>
          * <blockquote>
-         * <p> This parameter is returned only when you deploy certificates to cloud services of third-party clouds.</p>
+         * <p>This parameter is returned only when you deploy certificates to cloud services of third-party clouds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>AK96*******6M</p>
          */
         @NameInMap("CloudAccessId")
         public String cloudAccessId;
@@ -144,10 +144,14 @@ public class ListCloudResourcesResponseBody extends TeaModel {
          * <p>The cloud service provider.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Tencent</li>
-         * <li>Huawei</li>
-         * <li>Aws</li>
-         * <li>aliyun</li>
+         * <li><p>Tencent</p>
+         * </li>
+         * <li><p>Huawei</p>
+         * </li>
+         * <li><p>Aws</p>
+         * </li>
+         * <li><p>aliyun</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,11 +181,13 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the cloud resource is the default resource. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: yes</p>
+         * </li>
+         * <li><p><strong>0</strong>: no</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -194,7 +200,7 @@ public class ListCloudResourcesResponseBody extends TeaModel {
          * <p>The domain name bound to the cloud resource.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://www.tkgeo.ru">www.tkgeo.ru</a></p>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
@@ -202,8 +208,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether HTTPS is enabled for the cloud resource. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes.</li>
-         * <li><strong>0</strong>: no.</li>
+         * <li><p><strong>1</strong>: yes.</p>
+         * </li>
+         * <li><p><strong>0</strong>: no.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,11 +250,11 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The instance ID of the cloud resource.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>nlb-rv05agjc97ovm14il5</p>
+         * <p>nlb-rv05a********14il5</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -254,11 +262,11 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The listener ID of the cloud resource.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>lsn-jiugof6t23et66lsnc@443</p>
+         * <p>lsn-jiug********66lsnc@443</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
@@ -266,11 +274,11 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>The listening port of the cloud resource.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
+         * <p>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>8047</p>
+         * <p>443</p>
          */
         @NameInMap("ListenerPort")
         public String listenerPort;
@@ -296,11 +304,13 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether an Alibaba Cloud SSL certificate is used. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: yes</li>
-         * <li><strong>0</strong>: no</li>
+         * <li><p><strong>1</strong>: yes</p>
+         * </li>
+         * <li><p><strong>0</strong>: no</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required only when you deploy certificates to services of multiple clouds.</p>
+         * <p>This parameter is required only when you deploy certificates to services of multiple clouds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -313,7 +323,7 @@ public class ListCloudResourcesResponseBody extends TeaModel {
          * <p>The ID of the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
-         * <p>1666884372152785</p>
+         * <p>1666884372******</p>
          */
         @NameInMap("UserId")
         public Long userId;

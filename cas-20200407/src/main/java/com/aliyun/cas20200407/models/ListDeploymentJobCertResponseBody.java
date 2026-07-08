@@ -72,7 +72,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
          * <p>The name of the certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>edkog.shop</p>
+         * <p>cert-11488855</p>
          */
         @NameInMap("CertName")
         public String certName;
@@ -80,9 +80,12 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         /**
          * <p>The type of the certificate order. Valid values:</p>
          * <ul>
-         * <li><strong>upload</strong>: uploaded certificate.</li>
-         * <li><strong>buy</strong>: purchased certificate.</li>
-         * <li><strong>free</strong>: free certificate. This value is available only on the China site (aliyun.com).</li>
+         * <li><p><strong>upload</strong>: uploaded certificate.</p>
+         * </li>
+         * <li><p><strong>buy</strong>: purchased certificate.</p>
+         * </li>
+         * <li><p><strong>free</strong>: free certificate. This value is available only on the China site (aliyun.com).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +107,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
          * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
-         * <p>vaultwebhook.vault-webhook.svc</p>
+         * <p>example.com</p>
          */
         @NameInMap("CommonName")
         public String commonName;
@@ -112,8 +115,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the certificate is hosted. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,7 +157,7 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         /**
          * <p>The ID of the certificate order.</p>
          * <blockquote>
-         * <p> If CertId is returned, this parameter is not returned.</p>
+         * <p>If CertId is returned, this parameter is not returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -170,19 +175,32 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         /**
          * <p>The status code of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>payed</strong>: paid and pending application</li>
-         * <li><strong>checking</strong>: being validated</li>
-         * <li><strong>checkedFail</strong>: validation failed</li>
-         * <li><strong>revoked</strong>: revoked</li>
-         * <li><strong>revokeChecking</strong>: revocation request being validated</li>
-         * <li><strong>issued</strong>: issued (excluding hosted certificates that are issued, certificates that are about to expire, expired certificates, and uploaded certificates)</li>
-         * <li><strong>trustee</strong>: hosted and issued</li>
-         * <li><strong>upload</strong>: uploaded (excluding certificates that are about to expire and expired certificates)</li>
-         * <li><strong>willExpired</strong>: about to expire (including certificates issued by using the Certificate Management Service console and uploaded certificates)</li>
-         * <li><strong>expired</strong>: expired (including certificates issued by using the Certificate Management Service console and uploaded certificates)</li>
-         * <li><strong>validity</strong>: valid (including certificates that are not expired or revoked)</li>
-         * <li><strong>refund</strong>: refunded</li>
-         * <li><strong>closed</strong>: closed</li>
+         * <li><p><strong>payed</strong>: paid and pending application</p>
+         * </li>
+         * <li><p><strong>checking</strong>: being validated</p>
+         * </li>
+         * <li><p><strong>checkedFail</strong>: validation failed</p>
+         * </li>
+         * <li><p><strong>revoked</strong>: revoked</p>
+         * </li>
+         * <li><p><strong>revokeChecking</strong>: revocation request being validated</p>
+         * </li>
+         * <li><p><strong>issued</strong>: issued (excluding hosted certificates that are issued, certificates that are about to expire, expired certificates, and uploaded certificates)</p>
+         * </li>
+         * <li><p><strong>trustee</strong>: hosted and issued</p>
+         * </li>
+         * <li><p><strong>upload</strong>: uploaded (excluding certificates that are about to expire and expired certificates)</p>
+         * </li>
+         * <li><p><strong>willExpired</strong>: about to expire (including certificates issued by using the Certificate Management Service (CAS) console and uploaded certificates)</p>
+         * </li>
+         * <li><p><strong>expired</strong>: expired (including certificates issued by using the CAS console and uploaded certificates)</p>
+         * </li>
+         * <li><p><strong>validity</strong>: valid (including certificates that are not expired or revoked)</p>
+         * </li>
+         * <li><p><strong>refund</strong>: refunded</p>
+         * </li>
+         * <li><p><strong>closed</strong>: closed</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

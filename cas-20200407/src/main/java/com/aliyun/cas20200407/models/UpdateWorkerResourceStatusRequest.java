@@ -15,7 +15,7 @@ public class UpdateWorkerResourceStatusRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The desired status.</p>
+     * <p>The desired status of the worker resource.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>rollback</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadUserCertificateRequest extends TeaModel {
     /**
-     * <p>The content of the certificate in the PEM format.</p>
+     * <p>The content of a non-SM certificate in PEM format.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</p>
@@ -14,7 +14,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String cert;
 
     /**
-     * <p>The content of the encryption certificate in PEM format.</p>
+     * <p>The content of the SM encryption certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -25,7 +25,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String encryptCert;
 
     /**
-     * <p>The private key of the encryption certificate in the PEM format.</p>
+     * <p>The content of the private key of the SM encryption certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN EC PRIVATE KEY-----
@@ -36,7 +36,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String encryptPrivateKey;
 
     /**
-     * <p>The private key of the certificate in the PEM format.</p>
+     * <p>The private key of a non-SM certificate in PEM format.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -47,9 +47,9 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The name of the certificate. The name can be up to 64 characters in length, and can contain all types of characters, such as letters, digits, and underscores (_).</p>
+     * <p>The custom name of the certificate. The name can be up to 63 characters long and can contain letters, digits, and underscores (_).</p>
      * <blockquote>
-     * <p> The name must be unique within an Alibaba Cloud account.</p>
+     * <p>Certificate names must be unique for each user.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -60,7 +60,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>the resource group id.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae****vty</p>
@@ -69,7 +69,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The content of the signing certificate in the PEM format.</p>
+     * <p>The content of the SM signing certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -80,7 +80,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String signCert;
 
     /**
-     * <p>The private key of the signing certificate in the PEM format.</p>
+     * <p>The content of the private key of the SM signing certificate in PEM format. This parameter is invalid if Cert and Key are not empty.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN EC PRIVATE KEY-----
@@ -91,7 +91,7 @@ public class UploadUserCertificateRequest extends TeaModel {
     public String signPrivateKey;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<UploadUserCertificateRequestTags> tags;

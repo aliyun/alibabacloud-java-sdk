@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateDetailRequest extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

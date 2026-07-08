@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceSummaryRequest extends TeaModel {
     /**
+     * <p>The instance type. Valid values: BUY: a paid certificate. TEST: a test certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>TEST</p>
      */

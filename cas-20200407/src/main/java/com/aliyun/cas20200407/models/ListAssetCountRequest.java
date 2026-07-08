@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAssetCountRequest extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListAssetCountRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>The expiration date of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-07-13</p>
      */
@@ -19,6 +23,8 @@ public class ListAssetCountRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>The number of entries to return on each page. Default value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListAssetCountRequest extends TeaModel {
     public Long showSize;
 
     /**
+     * <p>The date of certificate issuance.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-07-13</p>
      */

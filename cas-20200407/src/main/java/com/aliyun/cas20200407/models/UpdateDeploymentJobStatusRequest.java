@@ -15,12 +15,15 @@ public class UpdateDeploymentJobStatusRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The desired status.</p>
+     * <p>The desired status of the deployment task.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>pending</li>
-     * <li>scheduling</li>
-     * <li>editing</li>
+     * <li><p>pending</p>
+     * </li>
+     * <li><p>scheduling</p>
+     * </li>
+     * <li><p>editing</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

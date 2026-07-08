@@ -1,3 +1,9 @@
+2026-07-08 Version: 3.2.9
+- Update API GetInstanceDetail: add response parameters Body.CertificateNotBefore.
+- Update API ListInstances: add response parameters Body.InstanceList.$.CertificateNotBefore.
+- Update API RevokeCertificate: add request parameters CertificateId.
+
+
 2026-03-02 Version: 3.2.0
 - Support API GetAssetCount.
 - Support API GetRiskCount.

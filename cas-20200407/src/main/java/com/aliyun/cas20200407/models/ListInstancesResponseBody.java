@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p>The current page number in a paged query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of instances.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<ListInstancesResponseBodyInstanceList> instanceList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789ABC</p>
      */
@@ -22,6 +29,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer showSize;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -82,6 +93,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstanceList extends TeaModel {
         /**
+         * <p>Indicates whether automatic managed renewal is enabled. Valid values:</p>
+         * <ul>
+         * <li>enable: enabled.</li>
+         * <li>disable: disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enable</p>
          */
@@ -89,6 +106,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String autoReissue;
 
         /**
+         * <p>The CA brand. Valid values: WoSign, CFCA, DigiCert, GeoTrust, GlobalSign, vTrus, and Alibaba.</p>
+         * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
          */
@@ -96,6 +115,13 @@ public class ListInstancesResponseBody extends TeaModel {
         public String brand;
 
         /**
+         * <p>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+         * <ul>
+         * <li>For the China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
+         * <li>For the China site: certificate ID + &quot;-ap-southeast-1&quot;</li>
+         * </ul>
+         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>21795675-cn-hangzhou</p>
          */
@@ -103,6 +129,17 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
+         * <p>The domain name of the latest issued certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.com,<a href="http://www.abc.com">www.abc.com</a></p>
+         */
+        @NameInMap("CertificateDomain")
+        public String certificateDomain;
+
+        /**
+         * <p>The certificate ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>18541349</p>
          */
@@ -110,6 +147,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long certificateId;
 
         /**
+         * <p>The certificate name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cert-13216408</p>
          */
@@ -117,13 +156,20 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certificateName;
 
         /**
+         * <p>The end time of the latest certificate, in UNIX timestamp format. If no certificate has been issued, this value is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
          */
         @NameInMap("CertificateNotAfter")
         public Long certificateNotAfter;
 
+        @NameInMap("CertificateNotBefore")
+        public Long certificateNotBefore;
+
         /**
+         * <p>The revocation time of the latest certificate, in UNIX timestamp format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
          */
@@ -131,6 +177,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long certificateRevokeTime;
 
         /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>issued</strong>: issued.</li>
+         * <li><strong>revoked</strong>: revoked.</li>
+         * <li><strong>willExpire</strong>: about to expire.</li>
+         * <li><strong>expired</strong>: expired.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>issued</p>
          */
@@ -138,6 +192,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
+         * <p>The type of the certificate. Valid values: DV, OV, and EV.</p>
+         * 
          * <strong>example:</strong>
          * <p>DV</p>
          */
@@ -145,6 +201,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certificateType;
 
         /**
+         * <p>The domain name bound to the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.com</p>
          */
@@ -152,6 +210,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String domain;
 
         /**
+         * <p>The number of exact-match domain names.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,6 +219,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer fullDomainCount;
 
         /**
+         * <p>The expiration time of the instance, in UNIX timestamp format. If no certificate has been issued, this value is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
          */
@@ -166,6 +228,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long instanceEndTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cas_dv-cn-123</p>
          */
@@ -173,6 +237,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The start time of the instance, in UNIX timestamp format. If no certificate has been issued, this value is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
          */
@@ -180,6 +246,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long instanceStartTime;
 
         /**
+         * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
+         * 
          * <strong>example:</strong>
          * <p>BUY</p>
          */
@@ -187,6 +255,15 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The certificate algorithm. Default value: RSA_2048. Valid values:</p>
+         * <ul>
+         * <li><strong>RSA_2048</strong></li>
+         * <li><strong>RSA_3072</strong></li>
+         * <li><strong>RSA_4096</strong></li>
+         * <li><strong>ECC_256</strong></li>
+         * <li><strong>SM2</strong>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RSA_2048</p>
          */
@@ -194,6 +271,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String keyAlgorithm;
 
         /**
+         * <p>The end time of the instance purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
          */
@@ -201,6 +280,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long orderEndTime;
 
         /**
+         * <p>The start time of the instance purchase, in UNIX timestamp format. This value is used to determine the refund time limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
          */
@@ -208,6 +289,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long orderStartTime;
 
         /**
+         * <p>The result returned by the CA during the last certificate operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>pending</p>
          */
@@ -215,6 +298,17 @@ public class ListInstancesResponseBody extends TeaModel {
         public String pendingResult;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The purchased instance specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>ss.dv.t</p>
          */
@@ -222,6 +316,17 @@ public class ListInstancesResponseBody extends TeaModel {
         public String spec;
 
         /**
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>inactive</strong>: pending use.</li>
+         * <li><strong>pending</strong>: under review. The latest certificate is being reviewed.</li>
+         * <li><strong>willExpire</strong>: about to expire.</li>
+         * <li><strong>expired</strong>: expired.</li>
+         * <li><strong>refund</strong>: refunded.</li>
+         * <li><strong>normal</strong>: normal.</li>
+         * <li><strong>closed</strong>: closed and unavailable.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>inactive</p>
          */
@@ -229,6 +334,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The list of cloud services to which the latest certificate is deployed.</p>
+         */
+        @NameInMap("UsingProductList")
+        public java.util.List<String> usingProductList;
+
+        /**
+         * <p>The number of wildcard domain names.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -264,6 +377,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.certIdentifier;
         }
 
+        public ListInstancesResponseBodyInstanceList setCertificateDomain(String certificateDomain) {
+            this.certificateDomain = certificateDomain;
+            return this;
+        }
+        public String getCertificateDomain() {
+            return this.certificateDomain;
+        }
+
         public ListInstancesResponseBodyInstanceList setCertificateId(Long certificateId) {
             this.certificateId = certificateId;
             return this;
@@ -286,6 +407,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Long getCertificateNotAfter() {
             return this.certificateNotAfter;
+        }
+
+        public ListInstancesResponseBodyInstanceList setCertificateNotBefore(Long certificateNotBefore) {
+            this.certificateNotBefore = certificateNotBefore;
+            return this;
+        }
+        public Long getCertificateNotBefore() {
+            return this.certificateNotBefore;
         }
 
         public ListInstancesResponseBodyInstanceList setCertificateRevokeTime(Long certificateRevokeTime) {
@@ -392,6 +521,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.pendingResult;
         }
 
+        public ListInstancesResponseBodyInstanceList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListInstancesResponseBodyInstanceList setSpec(String spec) {
             this.spec = spec;
             return this;
@@ -406,6 +543,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListInstancesResponseBodyInstanceList setUsingProductList(java.util.List<String> usingProductList) {
+            this.usingProductList = usingProductList;
+            return this;
+        }
+        public java.util.List<String> getUsingProductList() {
+            return this.usingProductList;
         }
 
         public ListInstancesResponseBodyInstanceList setWildcardDomainCount(Integer wildcardDomainCount) {

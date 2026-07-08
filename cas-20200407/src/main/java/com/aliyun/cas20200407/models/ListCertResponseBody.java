@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCertResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the certificates.</p>
+     * <p>The list of certificates.</p>
      */
     @NameInMap("CertList")
     public java.util.List<ListCertResponseBodyCertList> certList;
 
     /**
-     * <p>The page number of the returned page. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListCertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned per page. Default value: 50.</p>
+     * <p>The page size. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -38,7 +38,7 @@ public class ListCertResponseBody extends TeaModel {
     public Long showSize;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class ListCertResponseBody extends TeaModel {
 
     public static class ListCertResponseBodyCertList extends TeaModel {
         /**
-         * <p>The expiration time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The expiration date of the certificate. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1634283958000</p>
@@ -102,7 +102,24 @@ public class ListCertResponseBody extends TeaModel {
         public Long afterDate;
 
         /**
-         * <p>The issuance time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The encryption algorithm of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p><strong>RSA</strong>: the RSA algorithm</p>
+         * </li>
+         * <li><p><strong>ECC</strong>: the ECC algorithm</p>
+         * </li>
+         * <li><p><strong>SM2</strong>: the SM2 algorithm</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
+         */
+        @NameInMap("Algorithm")
+        public String algorithm;
+
+        /**
+         * <p>The start date of the certificate\&quot;s validity period. This value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1665819958000</p>
@@ -111,10 +128,12 @@ public class ListCertResponseBody extends TeaModel {
         public Long beforeDate;
 
         /**
-         * <p>证书的类型 。取值：</p>
+         * <p>The type of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>CA</strong>：表示CA证书。</li>
-         * <li><strong>CERT</strong>：表示签发的证书。</li>
+         * <li><p><strong>CA</strong>: a Certificate Authority (CA) certificate</p>
+         * </li>
+         * <li><p><strong>CERT</strong>: an issued certificate</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +143,7 @@ public class ListCertResponseBody extends TeaModel {
         public String certType;
 
         /**
-         * <p>The domain name.</p>
+         * <p>The common name of the certificate. This is typically the primary domain name associated with the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.alibaba.com</p>
@@ -133,10 +152,12 @@ public class ListCertResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>Indicates whether the certificate contains a private key. Valid values:</p>
+         * <p>Indicates whether a private key is available for the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +185,7 @@ public class ListCertResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas.</p>
+         * <p>The Subject Alternative Names (SANs) associated with the certificate. Multiple domain names are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>*.alibaba.com,aliyun.alibaba.com</p>
@@ -173,10 +194,30 @@ public class ListCertResponseBody extends TeaModel {
         public String sans;
 
         /**
+         * <p>The serial number of the certificate. This parameter is returned only if the <code>OrderType</code> request parameter is set to <code>CERT</code> or <code>UPLOAD</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>038abf4c27c33a7c11ad6658124135b52180</p>
+         */
+        @NameInMap("SerialNo")
+        public String serialNo;
+
+        /**
+         * <p>The signature algorithm of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256WITHRSA</p>
+         */
+        @NameInMap("SignAlgorithm")
+        public String signAlgorithm;
+
+        /**
          * <p>The source of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>upload</strong>: uploaded certificate</li>
-         * <li><strong>aliyun</strong>: Alibaba Cloud certificate</li>
+         * <li><p><strong>upload</strong>: The certificate is uploaded.</p>
+         * </li>
+         * <li><p><strong>aliyun</strong>: The certificate is from Alibaba Cloud.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,8 +229,10 @@ public class ListCertResponseBody extends TeaModel {
         /**
          * <p>The status of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>ISSUE</strong>: issued</li>
-         * <li><strong>REVOKE</strong>: revoked</li>
+         * <li><p><strong>ISSUE</strong>: The certificate is issued.</p>
+         * </li>
+         * <li><p><strong>REVOKE</strong>: The certificate is revoked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +242,7 @@ public class ListCertResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the certificate repository.</p>
+         * <p>The warehouse ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -208,7 +251,7 @@ public class ListCertResponseBody extends TeaModel {
         public Long whId;
 
         /**
-         * <p>The instance ID of the certificate repository.</p>
+         * <p>The warehouse instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test_whInstanceId</p>
@@ -227,6 +270,14 @@ public class ListCertResponseBody extends TeaModel {
         }
         public Long getAfterDate() {
             return this.afterDate;
+        }
+
+        public ListCertResponseBodyCertList setAlgorithm(String algorithm) {
+            this.algorithm = algorithm;
+            return this;
+        }
+        public String getAlgorithm() {
+            return this.algorithm;
         }
 
         public ListCertResponseBodyCertList setBeforeDate(Long beforeDate) {
@@ -283,6 +334,22 @@ public class ListCertResponseBody extends TeaModel {
         }
         public String getSans() {
             return this.sans;
+        }
+
+        public ListCertResponseBodyCertList setSerialNo(String serialNo) {
+            this.serialNo = serialNo;
+            return this;
+        }
+        public String getSerialNo() {
+            return this.serialNo;
+        }
+
+        public ListCertResponseBodyCertList setSignAlgorithm(String signAlgorithm) {
+            this.signAlgorithm = signAlgorithm;
+            return this;
+        }
+        public String getSignAlgorithm() {
+            return this.signAlgorithm;
         }
 
         public ListCertResponseBodyCertList setSourceType(String sourceType) {
