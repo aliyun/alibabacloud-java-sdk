@@ -7,7 +7,7 @@ public class DescribePhoneNumberAnalysisAIRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the ****<a href="https://dytns.console.aliyun.com/analysis/square"><strong>Labels</strong></a> page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.</p>
+     * <p>In <strong>Cell Phone Number Service</strong> -&gt; <a href="https://dytns.console.aliyun.com/analysis/square"><strong>Tag Square</strong></a>, select a tag and submit a usage application. After the application is approved, you will receive the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribePhoneNumberAnalysisAIRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The phone number to be queried.</p>
+     * <p>The phone number to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribePhoneNumberAnalysisAIRequest extends TeaModel {
     public String inputNumber;
 
     /**
-     * <p>The model parameter configuration. This field is required by some labels.</p>
+     * <p>The model parameter configuration (required by some tag capabilities).</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;trainingJobId&quot;: &quot;17**********48&quot;}</p>
@@ -40,9 +40,9 @@ public class DescribePhoneNumberAnalysisAIRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The score threshold for the phone number. Valid values: <strong>0 to 100</strong>.</p>
+     * <p>The phone number score threshold. Valid values: <strong>0 to 100</strong>.</p>
      * <blockquote>
-     * <p> The system provided by Alibaba Cloud determines whether to accept the specified score threshold. When the system does not accept the specified score threshold, the value of this field is invalid.</p>
+     * <p>Whether to accept the specified score threshold is determined by the server. When the specified score threshold is not accepted, the data entered in this field is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

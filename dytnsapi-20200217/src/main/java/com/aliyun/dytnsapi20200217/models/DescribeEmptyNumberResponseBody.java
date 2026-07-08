@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeEmptyNumberResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>返回状态码。取值：</p>
      * <ul>
-     * <li><strong>OK</strong>: The request is successful.</li>
-     * <li><strong>InvalidPhoneNumber.Check</strong>: The phone number is invalid.</li>
+     * <li><p><strong>OK</strong>：成功。</p>
+     * </li>
+     * <li><p><strong>InvalidPhoneNumber.Check</strong>：手机号非法。</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,13 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>返回结果。</p>
      */
     @NameInMap("Data")
     public DescribeEmptyNumberResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>状态码的描述。</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -33,7 +35,7 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     * <p>公共参数，每个请求返回的ID都是唯一的，可用于排查和定位问题。</p>
      * 
      * <strong>example:</strong>
      * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
@@ -80,7 +82,7 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
 
     public static class DescribeEmptyNumberResponseBodyData extends TeaModel {
         /**
-         * <p>The specified phone number.</p>
+         * <p>传入的手机号。</p>
          * 
          * <strong>example:</strong>
          * <p>189****1234</p>
@@ -89,12 +91,16 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
         public String number;
 
         /**
-         * <p>The returned status for the queried phone number. Valid values:</p>
+         * <p>检测手机号返回状态。取值：</p>
          * <ul>
-         * <li><strong>EMPTY</strong>: The queried phone number is a nonexistent number.</li>
-         * <li><strong>NORMAL</strong>: The queried phone number is valid.</li>
-         * <li><strong>SUSPECT_EMPTY</strong>: The queried phone number is suspected to be a nonexistent number.</li>
-         * <li><strong>UNKNOWN</strong>: The queried phone number is unknown.</li>
+         * <li><p><strong>EMPTY</strong>：空号。</p>
+         * </li>
+         * <li><p><strong>NORMAL</strong>：正常。</p>
+         * </li>
+         * <li><p><strong>SUSPECT_EMPTY</strong>：疑似空号。</p>
+         * </li>
+         * <li><p><strong>UNKNOWN</strong>：未知。</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

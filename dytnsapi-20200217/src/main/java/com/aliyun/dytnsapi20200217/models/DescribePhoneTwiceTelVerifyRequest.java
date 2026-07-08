@@ -7,7 +7,7 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Phone Number Verification Service console</a>, get the Authorization ID. This ID is your authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,15 +18,19 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The phone number to be queried.</p>
+     * <p>The phone number to be queried. The number can be a mobile phone number or an encrypted string.</p>
      * <ul>
-     * <li>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</li>
-     * <li>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</li>
-     * <li>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</li>
+     * <li><p>If the value of <strong>Mask</strong> is <strong>NORMAL</strong>, <strong>InputNumber</strong> is an 11-digit mobile phone number.</p>
+     * </li>
+     * <li><p>If the value of <strong>Mask</strong> is <strong>MD5</strong>, <strong>InputNumber</strong> is a 32-bit encrypted string.</p>
+     * </li>
+     * <li><p>If the value of <strong>Mask</strong> is <strong>SHA256</strong>, <strong>InputNumber</strong> is a 64-bit encrypted string.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>The encrypted string is not case-sensitive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,9 +42,12 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
     /**
      * <p>The encryption method of the phone number. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
-     * <li><strong>MD5</strong></li>
-     * <li><strong>SHA256</strong></li>
+     * <li><p><strong>NORMAL</strong>: The phone number is not encrypted.</p>
+     * </li>
+     * <li><p><strong>MD5</strong></p>
+     * </li>
+     * <li><p><strong>SHA256</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -60,15 +67,15 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The registration time. Specify the time in the yyyy-MM-dd HH:mm:ss format. This time is the service registration time of the mobile phone user. If the service registration time is later than the time when the phone number is assigned by a carrier, it indicates that the phone number is not a reassigned number. Otherwise, the phone number is a reassigned number.</p>
+     * <p>The registration time of a phone number. The time must be in the <code>yyyy-MM-dd HH:mm:ss</code> format. The value of this parameter is the registration time of a mobile phone user in your business. If the registration time is later than the time when a carrier assigns a number, the number is not a recycled number. Otherwise, the number is a recycled number.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If a carrier allocates a single number multiple times, the system will determine whether the phone number is a reassigned number based on the time when the carrier last allocated the phone number.</p>
+     * <li><p>If a phone number is assigned for multiple times, the system uses the last assignment time as the criterion.</p>
      * </li>
-     * <li><p>The service registration time must be later than 00:00:00 on January 1, 1970.</p>
+     * <li><p>The registration time must be later than <code>1970-01-01 00:00:00</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

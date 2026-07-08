@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SaveContactsRequest extends TeaModel {
     /**
+     * <p>The business type. Set the value to <strong>contact</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>dytns</p>
      */
@@ -12,6 +14,8 @@ public class SaveContactsRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The contact email.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:1234@alibaba-inc.com">1234@alibaba-inc.com</a></p>
      */
@@ -19,12 +23,18 @@ public class SaveContactsRequest extends TeaModel {
     public String contactEmail;
 
     /**
+     * <p>The contact name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张光宇</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
+     * <p>The contact phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>122354532434</p>
      */
@@ -32,6 +42,8 @@ public class SaveContactsRequest extends TeaModel {
     public String contactPhone;
 
     /**
+     * <p>Specifies whether to enable email alerts. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -39,6 +51,8 @@ public class SaveContactsRequest extends TeaModel {
     public Integer mailStatus;
 
     /**
+     * <p>Specifies whether to enable status warnings. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -46,6 +60,8 @@ public class SaveContactsRequest extends TeaModel {
     public Boolean openStatusWarning;
 
     /**
+     * <p>Specifies whether to enable attribution warnings. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -56,6 +72,8 @@ public class SaveContactsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Specifies whether to enable phone alerts. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

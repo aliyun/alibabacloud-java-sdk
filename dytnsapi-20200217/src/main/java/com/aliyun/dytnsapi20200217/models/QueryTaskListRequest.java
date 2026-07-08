@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskListRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -15,6 +17,8 @@ public class QueryTaskListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page size. Maximum value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -27,10 +31,15 @@ public class QueryTaskListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The task statuses.</p>
+     */
     @NameInMap("Result")
     public java.util.List<Long> result;
 
     /**
+     * <p>The tag ID. You can call the <a href="~~QueryTagListPage~~">QueryTagListPage</a> operation to query tag IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -38,6 +47,8 @@ public class QueryTaskListRequest extends TeaModel {
     public Long tagId;
 
     /**
+     * <p>The task ID. You can call the DescribeTasks operation to query the list of task IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>91</p>
      */
@@ -45,12 +56,17 @@ public class QueryTaskListRequest extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Example</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>An array of task types.</p>
+     */
     @NameInMap("TaskType")
     public java.util.List<Long> taskType;
 

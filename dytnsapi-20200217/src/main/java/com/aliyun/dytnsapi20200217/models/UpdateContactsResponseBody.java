@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateContactsResponseBody extends TeaModel {
     /**
+     * <p>The request status code. The value <code>OK</code> indicates a successful request. For more information about other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateContactsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the operation was successful. A value of <strong>true</strong> indicates success, and a value of <strong>false</strong> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,8 @@ public class UpdateContactsResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class UpdateContactsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68A40250-50CD-034C-B728-0BD******177</p>
      */

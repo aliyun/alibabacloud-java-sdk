@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContactsRequest extends TeaModel {
     /**
+     * <p>The business type. Set the value to <code>dytns</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>dytns</p>
      */
@@ -12,6 +14,8 @@ public class ListContactsRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The contact ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1298647</p>
      */

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CertNoThreeElementVerificationRequest extends TeaModel {
     /**
+     * <p>The authorization code. Sources:</p>
+     * <ul>
+     * <li>In the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, select the <strong>ID Card Three Elements</strong> tag, and submit a usage application. After the application is approved, you will obtain the authorization code.</li>
+     * <li>On the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page of the Cell Phone Number Service console, view the approved <strong>ID Card Three Elements</strong> authorization ID.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,15 +19,17 @@ public class CertNoThreeElementVerificationRequest extends TeaModel {
     public String authCode;
 
     /**
+     * <p>The name to be verified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>张三</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
+     * <p>The ID card number to be verified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +39,7 @@ public class CertNoThreeElementVerificationRequest extends TeaModel {
     public String certNo;
 
     /**
+     * <p>The BASE64 encoding of the portrait photo to be verified. <strong>Remove the encoded URI information (such as <code>data:image/png;base64,</code>) before submission</strong>. The photo size and the BASE64-encoded size must not exceed 50 KB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,8 +49,10 @@ public class CertNoThreeElementVerificationRequest extends TeaModel {
     public String certPicture;
 
     /**
+     * <p>Specifies whether to encrypt. Currently only unencrypted is supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>不加密</p>
      */
     @NameInMap("Mask")
     public String mask;

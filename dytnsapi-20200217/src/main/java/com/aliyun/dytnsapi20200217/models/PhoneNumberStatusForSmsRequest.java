@@ -7,7 +7,7 @@ public class PhoneNumberStatusForSmsRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Phone Number Pedia console</a>, obtain the authorization ID and use it as the value for this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,15 +18,21 @@ public class PhoneNumberStatusForSmsRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The phone number to be queried.</p>
+     * <p>The phone number to query.</p>
      * <ul>
-     * <li>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</li>
-     * <li>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</li>
-     * <li>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</li>
+     * <li><p>If <code>Mask</code> is set to <code>NORMAL</code>, specify an 11-digit phone number.</p>
+     * </li>
+     * <li><p>If <code>Mask</code> is set to <code>MD5</code>, specify a 32-character encrypted string.</p>
+     * </li>
+     * <li><p>If <code>Mask</code> is set to <code>SHA256</code>, specify a 64-character encrypted string.</p>
+     * </li>
+     * <li><p>If <code>Mask</code> is set to <code>SM3</code>, specify a 64-character encrypted string.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * <p>Notice: </p>
      * </blockquote>
+     * <p>The encrypted string is not case-sensitive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,11 +42,16 @@ public class PhoneNumberStatusForSmsRequest extends TeaModel {
     public String inputNumber;
 
     /**
-     * <p>The encryption method of the phone number. Valid values:</p>
+     * <p>The encryption method for the phone number. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: plaintext</li>
-     * <li><strong>MD5</strong></li>
-     * <li><strong>SHA256</strong></li>
+     * <li><p><strong>NORMAL</strong>: The number is not encrypted.</p>
+     * </li>
+     * <li><p><strong>MD5</strong></p>
+     * </li>
+     * <li><p><strong>SHA256</strong></p>
+     * </li>
+     * <li><p><strong>SM3</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

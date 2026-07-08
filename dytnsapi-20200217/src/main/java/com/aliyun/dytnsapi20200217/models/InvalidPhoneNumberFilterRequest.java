@@ -7,7 +7,7 @@ public class InvalidPhoneNumberFilterRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>Log on to the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>. On the <strong>My Applications</strong> page, obtain the authorization ID, which serves as the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,7 +30,7 @@ public class InvalidPhoneNumberFilterRequest extends TeaModel {
     /**
      * <p>The encryption method of the phone number.</p>
      * <blockquote>
-     * <p> Only the NORMAL encryption method is supported.</p>
+     * <p>Notice: Only the NORMAL encryption method is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

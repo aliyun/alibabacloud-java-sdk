@@ -7,7 +7,7 @@ public class CompanyThreeElementsVerificationRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page in the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>Log on to the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a> and go to the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page to obtain the authorization ID, which is the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,17 +18,17 @@ public class CompanyThreeElementsVerificationRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The enterprise name.</p>
+     * <p>The company name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>某企业</p>
      */
     @NameInMap("EpCertName")
     public String epCertName;
 
     /**
-     * <p>The business license number.</p>
+     * <p>The company certificate number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,14 +38,14 @@ public class CompanyThreeElementsVerificationRequest extends TeaModel {
     public String epCertNo;
 
     /**
-     * <p>The name of the legal representative.</p>
+     * <p>The name of the company\&quot;s legal representative.</p>
      * <blockquote>
-     * <p> If an enterprise has multiple legal representatives, separate them with commas (,).</p>
+     * <p>If the company has multiple legal representatives, separate the names with the Chinese enumeration comma (&quot;、&quot;).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>张三</p>
      */
     @NameInMap("LegalPersonCertName")
     public String legalPersonCertName;

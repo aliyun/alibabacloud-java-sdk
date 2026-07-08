@@ -16,7 +16,7 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -25,13 +25,13 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CompanyThreeElementsVerificationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -40,7 +40,7 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     * <p>The common parameter. Each request returns a unique ID, which can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>68A40250-50CD-034C-B728-0BD135850177</p>
@@ -95,16 +95,16 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
 
     public static class CompanyThreeElementsVerificationResponseBodyDataDetailInfo extends TeaModel {
         /**
-         * <p>The business status of the enterprise.</p>
+         * <p>The operating status of the company.</p>
          * 
          * <strong>example:</strong>
-         * <p>Active</p>
+         * <p>在营（开业）</p>
          */
         @NameInMap("EnterpriseStatus")
         public String enterpriseStatus;
 
         /**
-         * <p>The business term of the enterprise.</p>
+         * <p>The business term of the company.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-25/2053-05-24</p>
@@ -137,30 +137,36 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
 
     public static class CompanyThreeElementsVerificationResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the enterprise.</p>
+         * <p>The company details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;enterpriseStatus&quot;: &quot;在营（开业）&quot;,
+         *       &quot;openTime&quot;: &quot;2023-05-25/2053-05-24&quot;
+         * }</p>
          */
         @NameInMap("DetailInfo")
         public CompanyThreeElementsVerificationResponseBodyDataDetailInfo detailInfo;
 
         /**
-         * <p>The fields to be verified.</p>
+         * <p>The fields whose verification results are inconsistent.</p>
          */
         @NameInMap("InconsistentData")
         public java.util.List<String> inconsistentData;
 
         /**
-         * <p>The code of the verification result. Valid values:</p>
+         * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li>0: The three elements belong to the same enterprise.</li>
-         * <li>1: The three elements belong to the same enterprise, and the business status of the enterprise is abnormal.</li>
-         * <li>2: The legal representative information cannot match the enterprise information.</li>
-         * <li>3: The three elements do not belong to the same enterprise.</li>
-         * <li>4: No information about the enterprise is found.</li>
-         * <li>5: No information about the legal representative is found.</li>
+         * <li>0: The verification is consistent.</li>
+         * <li>1: The verification is consistent, but the company is not operating normally.</li>
+         * <li>2: The person-company verification is inconsistent.</li>
+         * <li>3: The two-element company verification failed.</li>
+         * <li>4: The company is not found.</li>
+         * <li>5: The person does not exist in the database.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>2</p>
          */
         @NameInMap("ReasonCode")
         public Long reasonCode;
@@ -168,12 +174,12 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         /**
          * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li>true: The three elements belong to the same enterprise and the business status of the enterprise is Active.</li>
-         * <li>false: The three elements do not belong to the same enterprise.</li>
+         * <li>true: The information is consistent and the company is operating normally.</li>
+         * <li>false: The verification failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("VerifyResult")
         public String verifyResult;

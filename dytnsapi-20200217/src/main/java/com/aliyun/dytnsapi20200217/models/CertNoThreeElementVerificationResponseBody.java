@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CertNoThreeElementVerificationResponseBody extends TeaModel {
     /**
+     * <p>The details about why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,16 +16,27 @@ public class CertNoThreeElementVerificationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code. Valid values:</p>
+     * <ul>
+     * <li>OK: The request is successful.</li>
+     * <li>For other error codes, see the error code list below.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public CertNoThreeElementVerificationResponseBodyData data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -31,6 +44,8 @@ public class CertNoThreeElementVerificationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68A40250-50CD-034C-B728-0BD******177</p>
      */
@@ -84,6 +99,22 @@ public class CertNoThreeElementVerificationResponseBody extends TeaModel {
 
     public static class CertNoThreeElementVerificationResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the verification result is consistent. Returned values:</p>
+         * <ul>
+         * <li><p>0: The name matches the ID card number, but they are recognized as not the same person.</p>
+         * </li>
+         * <li><p>1: The name matches the ID card number, and they are recognized as the same person.</p>
+         * </li>
+         * <li><p>2: The name matches the ID card number, and they are suspected to be the same person.</p>
+         * </li>
+         * <li><p>3: The name matches the ID card number, but no portrait information is found in the database.</p>
+         * </li>
+         * <li><p>4: Invalid identity information (the name does not match the ID card number).</p>
+         * </li>
+         * <li><p>5: The photo quality is unqualified.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

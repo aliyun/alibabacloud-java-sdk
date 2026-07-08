@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CertNoTwoElementVerificationResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,16 +16,23 @@ public class CertNoTwoElementVerificationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public CertNoTwoElementVerificationResponseBodyData data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -31,6 +40,8 @@ public class CertNoTwoElementVerificationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
@@ -84,6 +95,16 @@ public class CertNoTwoElementVerificationResponseBody extends TeaModel {
 
     public static class CertNoTwoElementVerificationResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the verification result is consistent. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Consistent</p>
+         * </li>
+         * <li><p><strong>0</strong>: Inconsistent</p>
+         * </li>
+         * <li><p><strong>2</strong>: Not found</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -7,7 +7,7 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>On the <strong>My Applications</strong> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, the authorization ID is the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,12 +20,12 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     /**
      * <p>The ID card number to be verified.</p>
      * <ul>
-     * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
-     * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
-     * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+     * <li>If Mask is set to NORMAL, this field is in plaintext.</li>
+     * <li>If Mask is set to MD5, encrypt this field by using MD5.</li>
+     * <li>If Mask is set to SHA256, encrypt this field by using SHA256.</li>
      * </ul>
      * <blockquote>
-     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * <p>Notice: Letters in the encrypted string are case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -38,12 +38,12 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     /**
      * <p>The phone number to be verified.</p>
      * <ul>
-     * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
-     * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
-     * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+     * <li>If Mask is set to NORMAL, this field is in plaintext.</li>
+     * <li>If Mask is set to MD5, encrypt this field by using MD5.</li>
+     * <li>If Mask is set to SHA256, encrypt this field by using SHA256.</li>
      * </ul>
      * <blockquote>
-     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * <p>Notice: Letters in the encrypted string are case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -56,9 +56,12 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     /**
      * <p>The encryption method. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
-     * <li><strong>MD5</strong></li>
-     * <li><strong>SHA256</strong></li>
+     * <li><p><strong>NORMAL</strong>: No encryption.</p>
+     * </li>
+     * <li><p><strong>MD5</strong></p>
+     * </li>
+     * <li><p><strong>SHA256</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,17 +74,17 @@ public class ThreeElementsVerificationRequest extends TeaModel {
     /**
      * <p>The name to be verified.</p>
      * <ul>
-     * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
-     * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
-     * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+     * <li>If Mask is set to NORMAL, this field is in plaintext.</li>
+     * <li>If Mask is set to MD5, encrypt this field by using MD5.</li>
+     * <li>If Mask is set to SHA256, encrypt this field by using SHA256.</li>
      * </ul>
      * <blockquote>
-     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * <p>Notice: Letters in the encrypted string are case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Aliyun</p>
+     * <p>阿里云</p>
      */
     @NameInMap("Name")
     public String name;

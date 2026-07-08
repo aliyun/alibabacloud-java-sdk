@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UAIDVerificationResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,16 +16,26 @@ public class UAIDVerificationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code. Valid values:</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public UAIDVerificationResponseBodyData data;
 
     /**
+     * <p>The description of the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -31,6 +43,8 @@ public class UAIDVerificationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68A40250-50CD-034C-B728-0BD******177</p>
      */
@@ -84,6 +98,8 @@ public class UAIDVerificationResponseBody extends TeaModel {
 
     public static class UAIDVerificationResponseBodyData extends TeaModel {
         /**
+         * <p>The obtained UAID value.</p>
+         * 
          * <strong>example:</strong>
          * <p>B1E0C1********9F757AF52A035</p>
          */

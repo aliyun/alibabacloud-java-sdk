@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUsageStatisticsByTagIdRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>20230308</p>
@@ -14,7 +14,7 @@ public class QueryUsageStatisticsByTagIdRequest extends TeaModel {
     public String beginTime;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>20230406</p>
@@ -35,10 +35,10 @@ public class QueryUsageStatisticsByTagIdRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -53,7 +53,7 @@ public class QueryUsageStatisticsByTagIdRequest extends TeaModel {
      * <p>The tag ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>14</p>
+     * <p>89</p>
      */
     @NameInMap("TagId")
     public Long tagId;

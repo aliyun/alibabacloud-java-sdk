@@ -7,7 +7,7 @@ public class DescribePhoneNumberOnlineTimeRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>Log on to the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, go to the <strong>My Applications</strong> page, and obtain the authorization ID, which is the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,14 +18,14 @@ public class DescribePhoneNumberOnlineTimeRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The carrier. Valid values:</p>
+     * <p>The external carrier. Valid values:</p>
      * <ul>
-     * <li><strong>MOBILE</strong>: China Mobile</li>
-     * <li><strong>UNICOM</strong>: China Unicom</li>
-     * <li><strong>TELECOM</strong>: China Telecom</li>
+     * <li><strong>MOBILE</strong>: China Mobile.</li>
+     * <li><strong>UNICOM</strong>: China Unicom.</li>
+     * <li><strong>TELECOM</strong>: China Telecom.</li>
      * </ul>
      * <blockquote>
-     * <p> Alibaba Cloud automatically determines the carrier based on the carrier who assigns the phone number. Therefore, the value of this field does not affect the query result.</p>
+     * <p>Notice: This parameter is optional. Alibaba Cloud automatically determines the carrier type based on the phone number. The value of this field has no impact on the query result.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,12 @@ public class DescribePhoneNumberOnlineTimeRequest extends TeaModel {
     /**
      * <p>The phone number to be queried.</p>
      * <ul>
-     * <li>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</li>
-     * <li>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</li>
-     * <li>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</li>
+     * <li>If Mask is set to NORMAL, this field is an 11-digit phone number.</li>
+     * <li>If Mask is set to MD5, this field is a 32-character encrypted string.</li>
+     * <li>If Mask is set to SHA256, this field is a 64-character encrypted string.</li>
      * </ul>
      * <blockquote>
-     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * <p>Notice: Letters in the encrypted string are case-insensitive.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -55,7 +55,7 @@ public class DescribePhoneNumberOnlineTimeRequest extends TeaModel {
     /**
      * <p>The encryption method of the phone number. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+     * <li><strong>NORMAL</strong>: no encryption</li>
      * <li><strong>MD5</strong></li>
      * <li><strong>SHA256</strong></li>
      * </ul>

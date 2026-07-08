@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactsRequest extends TeaModel {
     /**
+     * <p>The ID of the contact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

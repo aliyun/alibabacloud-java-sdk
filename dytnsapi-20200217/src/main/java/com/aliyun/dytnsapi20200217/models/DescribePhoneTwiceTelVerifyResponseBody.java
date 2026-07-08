@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li><strong>OK</strong>: The request is successful.</li>
-     * <li><strong>PortabilityNumberNotSupported</strong>: The phone number that is involved in mobile number portability is not supported.</li>
-     * <li><strong>RequestNumberNotSupported</strong>: You are not allowed to query phone numbers assigned by China Broadnet (that is, phone numbers start with 192) and phone numbers assigned by virtual network operators (VNOs).</li>
-     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * <li><p><strong>OK</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>PortabilityNumberNotSupported</strong>: Queries for this ported number are not supported.</p>
+     * </li>
+     * <li><p><strong>RequestNumberNotSupported</strong>: Queries are not supported for numbers from China Broadnet (starting with 192), mobile virtual network operators, and other unsupported carriers.</p>
+     * </li>
+     * <li><p><strong>RequestFrequencyLimit</strong>: Carriers limit frequent queries for the same number. If you receive this error code, try again later.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You are charged for phone number verifications if the value of Code is OK and the value of VerifyResult is not 0. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Pricing</a>.</p>
+     * <p>A charge applies when the value of <code>Code</code> is <code>OK</code> and the value of <code>VerifyResult</code> is not <code>0</code>. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Phone Number Service pricing</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,13 +27,13 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>A data structure that contains the verification results.</p>
      */
     @NameInMap("Data")
     public DescribePhoneTwiceTelVerifyResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>A description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +42,7 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID. It is a common parameter and can be used to troubleshoot and locate issues.</p>
+     * <p>The unique ID of the request. This common parameter is returned with each request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>68A40250-50CD-034C-B728-0BD135850177</p>
@@ -85,14 +89,17 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
 
     public static class DescribePhoneTwiceTelVerifyResponseBodyData extends TeaModel {
         /**
-         * <p>The carrier. Valid values:</p>
+         * <p>The carrier that provides service for the number. Valid values:</p>
          * <ul>
-         * <li><strong>CMCC</strong>: China Mobile</li>
-         * <li><strong>CUCC</strong>: China Unicom</li>
-         * <li><strong>CTCC</strong>: China Telecom</li>
+         * <li><p><strong>CMCC</strong>: China Mobile.</p>
+         * </li>
+         * <li><p><strong>CUCC</strong>: China Unicom.</p>
+         * </li>
+         * <li><p><strong>CTCC</strong>: China Telecom.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The returned result indicates the carrier who assigns the phone number. If the phone number involves mobile number portability, the carrier after mobile number portability is returned.</p>
+         * <p>The carrier that currently provides service for the number. For a ported number, this is the destination carrier.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,12 +109,18 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
         public String carrier;
 
         /**
-         * <p>The result of the request. Valid values:</p>
+         * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: It is unable to judge whether the phone number is a reassigned number.</li>
-         * <li><strong>1</strong>: The phone number is a reassigned number.</li>
-         * <li><strong>2</strong>: The phone number is not a reassigned number.</li>
-         * <li><strong>3</strong>: The phone number has been canceled.</li>
+         * <li><p><strong>0</strong>: Cannot be determined.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The number is a recycled number.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The number is not a recycled number.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The number has been deactivated.</p>
+         * </li>
+         * <li><p><strong>4</strong>: Unknown: The number was transferred to a new owner.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

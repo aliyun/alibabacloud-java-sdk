@@ -4,36 +4,18 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
-     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribePhoneNumberAnalysisTransparentResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>OK</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

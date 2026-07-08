@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class PhoneNumberEncryptResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The status code of the request.</p>
      * <ul>
-     * <li>The value OK indicates that the request was successful.</li>
-     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * <li><p>The value OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,13 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Details about the returned entries.</p>
+     * <p>The array.</p>
      */
     @NameInMap("Data")
     public java.util.List<PhoneNumberEncryptResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -89,7 +91,7 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         public String encryptedNumber;
 
         /**
-         * <p>The time when the phone number expires.</p>
+         * <p>The expiration time of the phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-27 16:05:23</p>
@@ -106,6 +108,13 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         @NameInMap("OriginalNumber")
         public String originalNumber;
 
+        /**
+         * <p>The custom ID reserved for the caller when the request was initiated. This ID is eventually returned to the caller.</p>
+         * <p>The value is of the string type. The maximum length is 64 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>215044c917374256269257695e9d22</p>
+         */
         @NameInMap("OutId")
         public String outId;
 

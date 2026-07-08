@@ -16,7 +16,7 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -25,13 +25,13 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The structure.</p>
      */
     @NameInMap("Data")
     public CompanyFourElementsVerificationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -40,7 +40,7 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     * <p>The common parameter. The ID returned for each request is unique and can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
@@ -95,10 +95,10 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
 
     public static class CompanyFourElementsVerificationResponseBodyDataDetailInfo extends TeaModel {
         /**
-         * <p>The business status of the enterprise.</p>
+         * <p>The operating status of the enterprise.</p>
          * 
          * <strong>example:</strong>
-         * <p>Active</p>
+         * <p>在营（开业）</p>
          */
         @NameInMap("EnterpriseStatus")
         public String enterpriseStatus;
@@ -137,26 +137,30 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
 
     public static class CompanyFourElementsVerificationResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the enterprise.</p>
+         * <p>The enterprise details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;enterpriseStatus&quot;: &quot;在营（开业）&quot;, 
+         * &quot;openTime&quot;: &quot;2023-05-25/2053-05-24&quot; }</p>
          */
         @NameInMap("DetailInfo")
         public CompanyFourElementsVerificationResponseBodyDataDetailInfo detailInfo;
 
         /**
-         * <p>The fields to be verified.</p>
+         * <p>The fields that failed verification.</p>
          */
         @NameInMap("InconsistentData")
         public java.util.List<String> inconsistentData;
 
         /**
-         * <p>The code of the verification result. Valid values:</p>
+         * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li>0: The four elements belong to the same enterprise.</li>
-         * <li>1: The four elements belong to the same enterprise, but the business status of the enterprise is abnormal.</li>
-         * <li>2: The legal representative information cannot match the enterprise information.</li>
-         * <li>3: The four elements do not belong to the same enterprise.</li>
-         * <li>4: No information about the enterprise is found.</li>
-         * <li>5: No information about the legal representative is found.</li>
+         * <li>0: Verification passed.</li>
+         * <li>1: Verification passed, but the enterprise is not operating normally.</li>
+         * <li>2: The legal person and enterprise information are inconsistent.</li>
+         * <li>3: The enterprise four-element verification failed.</li>
+         * <li>4: The enterprise was not found.</li>
+         * <li>5: The legal person was not found in the database.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -168,8 +172,8 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
         /**
          * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li>true: The four elements belong to the same enterprise and the business status of the enterprise is Active.</li>
-         * <li>false: The four elements do not belong to the same enterprise.</li>
+         * <li>true: The information is consistent and the enterprise is operating normally.</li>
+         * <li>false: Verification failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
     /**
+     * <p>Details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,16 +16,26 @@ public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The response status code. Valid values:</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request was successful.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetUAIDApplyTokenSignResponseBodyData data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -31,6 +43,8 @@ public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>68A40250-50CD-034C-B728-0BD******177</p>
      */
@@ -84,6 +98,16 @@ public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
 
     public static class GetUAIDApplyTokenSignResponseBodyData extends TeaModel {
         /**
+         * <p>The mobile carrier. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CM</strong>: China Mobile</p>
+         * </li>
+         * <li><p><strong>CU</strong>: China Unicom</p>
+         * </li>
+         * <li><p><strong>CT</strong>: China Telecom</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CM</p>
          */
@@ -91,6 +115,8 @@ public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
         public String carrier;
 
         /**
+         * <p>The external ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b8b5b3a*******0b9893484fdf412c99</p>
          */
@@ -98,6 +124,8 @@ public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
         public String outId;
 
         /**
+         * <p>The signature value.</p>
+         * 
          * <strong>example:</strong>
          * <p>D2E204D74EEB373E468632********23F592C4C9</p>
          */

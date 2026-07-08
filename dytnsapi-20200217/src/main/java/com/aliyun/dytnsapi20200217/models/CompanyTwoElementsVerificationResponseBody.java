@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>Details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -16,7 +16,7 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -25,13 +25,13 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The struct.</p>
      */
     @NameInMap("Data")
     public CompanyTwoElementsVerificationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -40,7 +40,7 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     * <p>The common parameter. Each request returns a unique ID, which can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>68A40250-50CD-034C-B728-0BD135850177</p>
@@ -95,10 +95,10 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
 
     public static class CompanyTwoElementsVerificationResponseBodyDataDetailInfo extends TeaModel {
         /**
-         * <p>The business status of the enterprise.</p>
+         * <p>The operating status of the enterprise.</p>
          * 
          * <strong>example:</strong>
-         * <p>Active</p>
+         * <p>在营（开业）</p>
          */
         @NameInMap("EnterpriseStatus")
         public String enterpriseStatus;
@@ -137,24 +137,33 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
 
     public static class CompanyTwoElementsVerificationResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the enterprise.</p>
+         * <p>Enterprise details.</p>
+         * <blockquote>
+         * <p>This field is not returned for public institutions or civil groups.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;enterpriseStatus&quot;: &quot;在营（开业）&quot;,
+         *       &quot;openTime&quot;: &quot;2023-05-25/2053-05-24&quot;
+         * }</p>
          */
         @NameInMap("DetailInfo")
         public CompanyTwoElementsVerificationResponseBodyDataDetailInfo detailInfo;
 
         /**
-         * <p>The fields to be verified.</p>
+         * <p>The fields that are inconsistent in the verification.</p>
          */
         @NameInMap("InconsistentData")
         public java.util.List<String> inconsistentData;
 
         /**
-         * <p>The code of the verification result. Valid values:</p>
+         * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li>0: The two elements belong to the same enterprise.</li>
-         * <li>1: The two elements belong to the same enterprise, but the business status of the enterprise is abnormal.</li>
-         * <li>3: The two elements do not belong to the same enterprise.</li>
-         * <li>4: No information about the enterprise is found.</li>
+         * <li>0: Verification consistent</li>
+         * <li>1: Verification consistent, the enterprise is not in normal operation</li>
+         * <li>3: The two enterprise elements failed verification</li>
+         * <li>4: No such enterprise found</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,9 +175,12 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
         /**
          * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li>true: The two elements belong to the same enterprise and the business status of the enterprise is Active.</li>
-         * <li>false: The two elements do not belong to the same enterprise.</li>
+         * <li>true: The information is verified to be consistent, and the enterprise is operating normally.</li>
+         * <li>false: The verification failed.</li>
          * </ul>
+         * <blockquote>
+         * <p>The operating status verification is not supported for public institutions or civil groups. Only the consistency between the enterprise name and the enterprise certificate number is verified.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>

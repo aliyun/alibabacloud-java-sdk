@@ -4,13 +4,21 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li>OK: The request is successful.</li>
+     * <li>OK: success</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,13 +28,13 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DescribePhoneNumberAnalysisAIResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -90,11 +98,11 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
 
     public static class DescribePhoneNumberAnalysisAIResponseBodyData extends TeaModel {
         /**
-         * <p>The returned code.</p>
+         * <p>The returned result code.</p>
          * <ul>
-         * <li>YES: The specified phone number is valid.</li>
-         * <li>NO: The specified phone number is invalid.</li>
-         * <li>UNKNOWN: The specified phone number is unknown</li>
+         * <li>YES: valid</li>
+         * <li>NO: invalid</li>
+         * <li>UNKNOWN: unknown</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +112,7 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The specified phone number.</p>
+         * <p>The phone number that was passed in.</p>
          * 
          * <strong>example:</strong>
          * <p>187****5620</p>

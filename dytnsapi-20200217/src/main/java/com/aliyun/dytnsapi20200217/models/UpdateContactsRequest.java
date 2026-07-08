@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateContactsRequest extends TeaModel {
     /**
+     * <p>The email address of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:XXXX@alibaba-inc.com">XXXX@alibaba-inc.com</a></p>
      */
@@ -12,6 +14,7 @@ public class UpdateContactsRequest extends TeaModel {
     public String contactEmail;
 
     /**
+     * <p>The ID of the contact to update. You can retrieve the ID by calling the ListContacts operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateContactsRequest extends TeaModel {
     public Long contactId;
 
     /**
+     * <p>The name of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXX</p>
      */
@@ -28,6 +33,8 @@ public class UpdateContactsRequest extends TeaModel {
     public String contactName;
 
     /**
+     * <p>The mobile phone number of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>192XXXXXXXX</p>
      */
@@ -35,6 +42,14 @@ public class UpdateContactsRequest extends TeaModel {
     public String contactPhone;
 
     /**
+     * <p>Enables or disables email alerts. Valid values:</p>
+     * <ul>
+     * <li><p>0: disabled.</p>
+     * </li>
+     * <li><p>1: enabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +57,15 @@ public class UpdateContactsRequest extends TeaModel {
     public Integer mailStatus;
 
     /**
+     * <p>Enables or disables alerts for number status.
+     * Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -49,6 +73,8 @@ public class UpdateContactsRequest extends TeaModel {
     public Boolean openStatusWarning;
 
     /**
+     * <p>Enables or disables alerts for number attribution queries. Valid values: -<strong>true</strong>: enabled. -<strong>false</strong>: disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,6 +85,14 @@ public class UpdateContactsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Enables or disables phone call alerts. Valid values:</p>
+     * <ul>
+     * <li><p>0: disabled.</p>
+     * </li>
+     * <li><p>1: enabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

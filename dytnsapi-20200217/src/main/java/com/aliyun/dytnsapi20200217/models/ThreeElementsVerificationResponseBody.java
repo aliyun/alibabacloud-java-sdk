@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ThreeElementsVerificationResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><strong>OK</strong>: The request is successful.</li>
-     * <li>For more information, see Error codes in this documentation.</li>
-     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * <li><strong>OK</strong>: The request was successful.</li>
+     * <li>For other error codes, see the error code table in this chapter.</li>
+     * <li><strong>RequestFrequencyLimit</strong>: Due to carrier restrictions, repeated high-frequency queries on the same number within a short period are prohibited. If this error code is returned, try again later.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,13 +19,13 @@ public class ThreeElementsVerificationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ThreeElementsVerificationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -83,51 +83,57 @@ public class ThreeElementsVerificationResponseBody extends TeaModel {
         /**
          * <p>The basic carrier. Valid values:</p>
          * <ul>
-         * <li><strong>China Mobile</strong></li>
-         * <li><strong>China Unicom</strong></li>
-         * <li><strong>China Telecom</strong></li>
+         * <li><p><strong>China Mobile</strong>.</p>
+         * </li>
+         * <li><p><strong>China Unicom</strong>.</p>
+         * </li>
+         * <li><p><strong>China Telecom</strong>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>China Mobile</p>
+         * <p>中国移动</p>
          */
         @NameInMap("BasicCarrier")
         public String basicCarrier;
 
         /**
-         * <p>Indicates whether the specified name, phone number, and ID card number belong to the same user. Valid values:</p>
+         * <p>Indicates whether the verification results are consistent. Returned values:</p>
          * <ul>
-         * <li><strong>1</strong>: The specified name, phone number, and ID card number belong to the same user.</li>
-         * <li><strong>0</strong>: The specified name, phone number, and ID card number do not belong to the same user.</li>
-         * <li><strong>2</strong>: The specified name, phone number, and ID card number cannot be found.</li>
+         * <li><strong>1</strong>: Consistent</li>
+         * <li><strong>0</strong>: Inconsistent</li>
+         * <li><strong>2</strong>: Not found<blockquote>
+         * <p>The data update timeliness varies by carrier and city, and is typically between T+1 and T+3.
+         * The verification results for mobile phone numbers of different carriers in different states are as follows:</p>
+         * </blockquote>
+         * </li>
          * </ul>
-         * <p><strong>Note</strong> The phone number registration data of a user is usually updated one or three days after registration. The registration data can be queried only after the update. The following table shows the verification results under different phone number states.</p>
          * <table>
          * <thead>
          * <tr>
-         * <th>Carrier/Phone number state</th>
-         * <th>Out-of-service</th>
-         * <th>Nonexistent</th>
-         * <th>Canceled</th>
+         * <th>Carrier/Mobile Phone Number Status</th>
+         * <th>Suspended</th>
+         * <th>Empty Number</th>
+         * <th>Deregistered</th>
          * </tr>
          * </thead>
          * <tbody><tr>
          * <td>China Mobile</td>
-         * <td>Verifications can be carried out normally.</td>
-         * <td>The specified name, phone number, and ID card number cannot be found.</td>
-         * <td>The specified name, phone number, and ID card number cannot be found.</td>
+         * <td>Normal verification</td>
+         * <td>Not found</td>
+         * <td>Not found</td>
          * </tr>
          * <tr>
          * <td>China Unicom</td>
-         * <td>Verifications can be carried out normally.</td>
-         * <td>The specified name, phone number, and ID card number do not belong to the same user.</td>
-         * <td>The specified name, phone number, and ID card number do not belong to the same user.</td>
+         * <td>Normal verification</td>
+         * <td>Inconsistent</td>
+         * <td>Inconsistent</td>
          * </tr>
          * <tr>
          * <td>China Telecom</td>
-         * <td>Verifications can be carried out normally.</td>
-         * <td>The specified name, phone number, and ID card number cannot be found.</td>
-         * <td>The specified name, phone number, and ID card number cannot be found.</td>
+         * <td>Normal verification</td>
+         * <td>Not found</td>
+         * <td>Not found</td>
          * </tr>
          * </tbody></table>
          * 

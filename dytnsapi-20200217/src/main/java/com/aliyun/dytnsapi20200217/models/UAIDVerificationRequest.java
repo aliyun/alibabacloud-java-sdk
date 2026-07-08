@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class UAIDVerificationRequest extends TeaModel {
     /**
+     * <p>The authorization code.</p>
+     * <blockquote>
+     * <p>In <strong>Cell Phone Number Service</strong> -&gt; <a href="https://dytns.console.aliyun.com/analysis/square"><strong>Tag Marketplace</strong></a>, select a tag and submit a usage application. After the application is approved, you will obtain this authorization code.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class UAIDVerificationRequest extends TeaModel {
     public String authCode;
 
     /**
+     * <p>The carrier of the user. Valid values:</p>
+     * <ul>
+     * <li><strong>CM</strong>: China Mobile.</li>
+     * <li><strong>CU</strong>: China Unicom.</li>
+     * <li><strong>CT</strong>: China Telecom.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,13 +33,17 @@ public class UAIDVerificationRequest extends TeaModel {
     public String carrier;
 
     /**
+     * <p>The public IP address. This parameter is required when the carrier is China Unicom (CU). Both IPv4 and IPv6 addresses are supported.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>2408:8440:308:29dc:ed00:c4ec:475c:25a4</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
+     * <p>The external serial number.</p>
+     * 
      * <strong>example:</strong>
      * <p>b8b5b3a*******0b9893484fdf412c99</p>
      */
@@ -40,8 +54,10 @@ public class UAIDVerificationRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The province ID. This parameter is optional when the carrier is China Unicom (CU). The value must be the same as the value of the province field in the response returned when the token is obtained.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("Province")
     public String province;
@@ -53,6 +69,10 @@ public class UAIDVerificationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The carrier authorization token.  </p>
+     * <blockquote>
+     * <p>For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +82,9 @@ public class UAIDVerificationRequest extends TeaModel {
     public String token;
 
     /**
+     * <p>The user authorization code, which indicates that the user has granted authorization. The value must be a unique random number that does not exceed 128 characters in length.  </p>
+     * <p><warning>When you integrate the service, we recommend that you include UAID-related content in the privacy policy of your product.</warning></p>
+     * 
      * <strong>example:</strong>
      * <p>Md****a3Em</p>
      */

@@ -4,17 +4,25 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This parameter is returned only if the request is denied because the RAM user or RAM role does not have the required permissions.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The status code of the request. Valid values:</p>
      * <ul>
      * <li><strong>OK</strong>: The request is successful.</li>
-     * <li><strong>InvalidParameter</strong>: The specified phone number is invalid or the parameter format is invalid.</li>
-     * <li><strong>PhoneNumberNotfound</strong>: No attribute information can be found for the specified phone number.</li>
-     * <li><strong>isp.UNKNOWN</strong>: An unknown exception occurred.</li>
-     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * <li><strong>InvalidParameter</strong>: The phone number is invalid or the format of the parameter is invalid.</li>
+     * <li><strong>PhoneNumberNotfound</strong>: The carrier information of the phone number is not found.</li>
+     * <li><strong>isp.UNKNOWN</strong>: An unknown error occurred.</li>
+     * <li><strong>RequestFrequencyLimit</strong>: Due to carrier restrictions, you cannot frequently query the same number in a short period of time. If this error code is returned, try again later.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,13 +32,13 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribePhoneNumberOperatorAttributeResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -96,41 +104,43 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         /**
          * <p>The basic carrier. Valid values:</p>
          * <ul>
-         * <li><strong>China Mobile</strong></li>
-         * <li><strong>China Unicom</strong></li>
-         * <li><strong>China Telecom</strong></li>
-         * <li><strong>China Broadnet</strong></li>
+         * <li><strong>China Mobile</strong>.</li>
+         * <li><strong>China Unicom</strong>.</li>
+         * <li><strong>China Telecom</strong>.</li>
+         * <li><strong>China Broadnet</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>China Mobile</p>
+         * <p>中国移动</p>
          */
         @NameInMap("BasicCarrier")
         public String basicCarrier;
 
         /**
-         * <p>The actual carrier, including the virtual network operator (VNO). If the phone number involves mobile number portability, the value of this parameter is the carrier after mobile number portability.</p>
+         * <p>The actual carrier (including the mobile virtual network operator). If number portability is enabled, the value indicates the carrier after number portability.</p>
          * 
          * <strong>example:</strong>
-         * <p>China Mobile</p>
+         * <p>中国移动</p>
          */
         @NameInMap("Carrier")
         public String carrier;
 
         /**
-         * <p>The city where the phone number is registered.</p>
+         * <p>The city to which the phone number belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>hangzhou</p>
+         * <p>杭州</p>
          */
         @NameInMap("City")
         public String city;
 
         /**
-         * <p>Indicates whether the phone number involves mobile number portability. Valid values:</p>
+         * <p>Indicates whether the number has been ported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: yes</p>
+         * </li>
+         * <li><p><strong>false</strong>: no</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,10 +159,10 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
         public Long numberSegment;
 
         /**
-         * <p>The province where the phone number is registered.</p>
+         * <p>The province to which the phone number belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhejiang</p>
+         * <p>浙江</p>
          */
         @NameInMap("Province")
         public String province;

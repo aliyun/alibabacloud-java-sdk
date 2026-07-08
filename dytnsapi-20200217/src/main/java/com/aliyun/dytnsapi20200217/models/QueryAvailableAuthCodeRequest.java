@@ -14,7 +14,7 @@ public class QueryAvailableAuthCodeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tag ID.</p>
+     * <p>The tag ID. You can call the <a href="~~QueryTagListPage~~">QueryTagListPage</a> operation to query tag IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>

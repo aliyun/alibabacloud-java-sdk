@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CertNoTwoElementVerificationRequest extends TeaModel {
     /**
+     * <p>The authorization code.</p>
+     * <blockquote>
+     * <p>In <strong>Cell Phone Number Service</strong> -&gt; <a href="https://dytns.console.aliyun.com/analysis/square"><strong>Tag Marketplace</strong></a>, select a tag and submit an application for use. After the application is approved, you will obtain the authorization code.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,19 +18,21 @@ public class CertNoTwoElementVerificationRequest extends TeaModel {
     public String authCode;
 
     /**
+     * <p>The name to be verified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>张三</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
+     * <p>The ID card number to be verified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>331021200001010000</p>
+     * <p>3***************0</p>
      */
     @NameInMap("CertNo")
     public String certNo;

@@ -7,7 +7,7 @@ public class DescribeEmptyNumberRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>On the <strong>My Applications</strong> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, obtain the authorization ID, which is the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DescribeEmptyNumberRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The phone number to be queried.</p>
+     * <p>The phone number to query.</p>
      * <blockquote>
-     * <p> You can query only one phone number a time.</p>
+     * <p>Only single-number queries are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,11 +31,14 @@ public class DescribeEmptyNumberRequest extends TeaModel {
     public String inputNumber;
 
     /**
-     * <p>The encryption method of the phone number. Valid values:</p>
+     * <p>The encryption method for the phone number. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
-     * <li><strong>MD5</strong></li>
-     * <li><strong>SHA256</strong></li>
+     * <li><p><strong>NORMAL</strong>: no encryption.</p>
+     * </li>
+     * <li><p><strong>MD5</strong></p>
+     * </li>
+     * <li><p><strong>SHA256</strong>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

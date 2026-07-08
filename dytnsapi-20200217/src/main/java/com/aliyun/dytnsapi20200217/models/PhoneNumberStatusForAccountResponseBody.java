@@ -7,9 +7,12 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
      * <ul>
-     * <li><strong>OK</strong>: The request is successful.</li>
-     * <li><strong>OperatorLimit</strong>: The carrier prohibits the query of the phone number.</li>
-     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * <li><p><strong>OK</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>OperatorLimit</strong>: The query is prohibited by the carrier.</p>
+     * </li>
+     * <li><p><strong>RequestFrequencyLimit</strong>: Carriers restrict frequent queries for the same number within a short period. If you receive this error code, try again later.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,13 +22,13 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Data")
     public PhoneNumberStatusForAccountResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -34,7 +37,7 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     * <p>The ID of the request. This ID is unique to each request and can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
@@ -81,14 +84,17 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
 
     public static class PhoneNumberStatusForAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The basic carrier who assings the phone number. If the queried phone number involves mobile number portability, the carrier after mobile number portability is returned. Valid values:</p>
+         * <p>The number\&quot;s current carrier. If the number has been ported to a new carrier through mobile number portability, the new carrier is returned. Valid values:</p>
          * <ul>
-         * <li><strong>CMCC</strong>: China Mobile</li>
-         * <li><strong>CUCC</strong>: China Unicom</li>
-         * <li><strong>CTCC</strong>: China Telecom</li>
+         * <li><p><strong>CMCC</strong>: China Mobile</p>
+         * </li>
+         * <li><p><strong>CUCC</strong>: China Unicom</p>
+         * </li>
+         * <li><p><strong>CTCC</strong>: China Telecom</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> You are not allowed to query the phone numbers assigned by China Broadnet.</p>
+         * <p>Queries for China Broadnet numbers are not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -98,17 +104,23 @@ public class PhoneNumberStatusForAccountResponseBody extends TeaModel {
         public String carrier;
 
         /**
-         * <p>The returned status for the queried phone number. Valid values:</p>
+         * <p>The status of the phone number. Valid values:</p>
          * <ul>
-         * <li><strong>NORMAL</strong>: The queried phone number is valid.</li>
-         * <li><strong>SHUTDOWN</strong>: The queried phone number is suspended.</li>
-         * <li><strong>POWER_OFF</strong>: The queried phone number cannot be connected.</li>
-         * <li><strong>NOT_EXIST</strong>: The queried phone number is a nonexistent number.</li>
-         * <li><strong>DEFECT</strong>: The queried phone number is invalid.</li>
-         * <li><strong>UNKNOWN</strong>: The queried phone number is unknown.</li>
+         * <li><p><strong>NORMAL</strong>: The number is active.</p>
+         * </li>
+         * <li><p><strong>SHUTDOWN</strong>: The number is suspended or temporarily out of service.</p>
+         * </li>
+         * <li><p><strong>POWER_OFF</strong>: The phone is powered off.</p>
+         * </li>
+         * <li><p><strong>NOT_EXIST</strong>: The number is non-existent.</p>
+         * </li>
+         * <li><p><strong>DEFECT</strong>: The number is invalid.</p>
+         * </li>
+         * <li><p><strong>UNKNOWN</strong>: The status is unknown.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> Due to system adjustment of the carrier, the BUSY and POWER_OFF states cannot be returned for the numbers assigned by China Telecom. <a href="https://help.aliyun.com/document_detail/2489709.html">For more information, see the official announcements</a>.</p>
+         * <p>Due to adjustments in the carrier\&quot;s system, China Telecom numbers do not return the <code>busy</code> and <code>powered off</code> statuses. For more information, <a href="https://help.aliyun.com/document_detail/2489709.html">see the official announcement</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

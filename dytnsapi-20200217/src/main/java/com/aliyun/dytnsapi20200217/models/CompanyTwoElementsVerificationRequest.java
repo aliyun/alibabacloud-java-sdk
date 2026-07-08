@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CompanyTwoElementsVerificationRequest extends TeaModel {
     /**
-     * <p>The authorization code.</p>
+     * <p>Authorization code.</p>
      * <blockquote>
-     * <p> On the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page in the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>Log on to the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a>, and obtain the authorization ID (i.e., authorization code) on the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,17 +18,17 @@ public class CompanyTwoElementsVerificationRequest extends TeaModel {
     public String authCode;
 
     /**
-     * <p>The enterprise name.</p>
+     * <p>Enterprise name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>某企业</p>
      */
     @NameInMap("EpCertName")
     public String epCertName;
 
     /**
-     * <p>The business license number.</p>
+     * <p>Enterprise certificate number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

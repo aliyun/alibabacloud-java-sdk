@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTagApplyRuleResponseBody extends TeaModel {
     /**
-     * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+     * <p>The request status code. <strong>OK</strong> indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
     public QueryTagApplyRuleResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -40,12 +40,14 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: successful.</p>
+     * </li>
+     * <li><p>false: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -97,25 +99,31 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
 
     public static class QueryTagApplyRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The requirements for application materials.</p>
+         * <p>The application material requirements. This parameter is returned when NeedApplyMaterial=1.</p>
          * 
          * <strong>example:</strong>
-         * <p>Requirements for application materials</p>
+         * <p>申请材料的要求是XXX</p>
          */
         @NameInMap("ApplyMaterialDesc")
         public String applyMaterialDesc;
 
         /**
-         * <p>Indicates whether the application is automatically approved.</p>
+         * <p>Indicates whether to automatically approve. Valid values:</p>
+         * <ul>
+         * <li><p>0: do not automatically approve.</p>
+         * </li>
+         * <li><p>1: automatically approve.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>16</p>
+         * <p>1</p>
          */
         @NameInMap("AutoAudit")
         public Long autoAudit;
 
         /**
-         * <p>The URL for the billing documentation.</p>
+         * <p>The billing standard description link.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyundoc.com</p>
@@ -124,25 +132,37 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
         public String chargingStandardLink;
 
         /**
-         * <p>indicates whether encrypted queries are supported.</p>
+         * <p>Indicates whether encrypted query is supported. Valid values:</p>
+         * <ul>
+         * <li><p>0: not supported.</p>
+         * </li>
+         * <li><p>1: supported.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>99</p>
+         * <p>0</p>
          */
         @NameInMap("EncryptedQuery")
         public Long encryptedQuery;
 
         /**
-         * <p>Indicates whether application materials are required.</p>
+         * <p>Indicates whether application materials need to be provided. Valid values:</p>
+         * <ul>
+         * <li><p>0: not required.</p>
+         * </li>
+         * <li><p>1: required.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>46</p>
+         * <p>1</p>
          */
         @NameInMap("NeedApplyMaterial")
         public Long needApplyMaterial;
 
         /**
-         * <p>The URL for the service agreement.</p>
+         * <p>The service agreement link.</p>
          * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>

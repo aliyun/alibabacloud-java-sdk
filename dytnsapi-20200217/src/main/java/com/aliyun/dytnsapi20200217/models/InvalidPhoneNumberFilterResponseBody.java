@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The status code of the request. Valid values:</p>
      * <ul>
-     * <li><strong>OK</strong>: The request is successful.</li>
-     * <li><strong>MobileNumberIllegal</strong>: The phone number is invalid.</li>
-     * <li><strong>EncyrptTypeIllegal</strong>: The encryption type is invalid.</li>
-     * <li><strong>MobileNumberTypeNotMatch</strong>: The phone number does not match the encryption type.</li>
-     * <li><strong>CarrierIllegal</strong>: The carrier type is invalid.</li>
-     * <li><strong>AuthCodeNotExist</strong>: The authorization code does not exist.</li>
-     * <li><strong>PortabilityNumberNotSupported</strong>: Mobile number portability is not supported.</li>
-     * <li><strong>Unknown</strong>: An unknown exception occurred.</li>
-     * <li><strong>AuthCodeAndApiNotMatch</strong>: A system exception occurred.</li>
-     * <li><strong>AuthCodeAndApiNotMatch</strong>: The authorization code does not match the API operation.</li>
-     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * <li><p><strong>OK</strong>: The request is successful.</p>
+     * </li>
+     * <li><p><strong>MobileNumberIllegal</strong>: The mobile number is invalid.</p>
+     * </li>
+     * <li><p><strong>EncyrptTypeIllegal</strong>: The encryption type is invalid.</p>
+     * </li>
+     * <li><p><strong>MobileNumberTypeNotMatch</strong>: The mobile number does not match the encryption type.</p>
+     * </li>
+     * <li><p><strong>CarrierIllegal</strong>: The carrier type is invalid.</p>
+     * </li>
+     * <li><p><strong>AuthCodeNotExist</strong>: The authorization code does not exist.</p>
+     * </li>
+     * <li><p><strong>PortabilityNumberNotSupported</strong>: Mobile number portability is not supported.</p>
+     * </li>
+     * <li><p><strong>Unknown</strong>: An unknown exception occurred.</p>
+     * </li>
+     * <li><p><strong>AuthCodeAndApiNotMatch</strong>: A system exception occurred.</p>
+     * </li>
+     * <li><p><strong>AuthCodeAndApiNotMatch</strong>: The AuthCode does not match the API operation.</p>
+     * </li>
+     * <li><p><strong>RequestFrequencyLimit</strong>: Due to carrier restrictions, repeated high-frequency queries against the same phone number within a short period of time are prohibited. If this error code is returned, try again later.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,13 +38,13 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Details about the returned entries.</p>
+     * <p>The array of returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<InvalidPhoneNumberFilterResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -89,10 +100,12 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
 
     public static class InvalidPhoneNumberFilterResponseBodyData extends TeaModel {
         /**
-         * <p>The returned filter results.</p>
+         * <p>The filtering result.</p>
          * <ul>
-         * <li><strong>YES</strong>: the valid phone number. The mappings are returned.</li>
-         * <li><strong>NO</strong>: the invalid phone number. No mappings are returned.</li>
+         * <li><p><strong>YES</strong>: A valid phone number. The mapping relationship is returned.</p>
+         * </li>
+         * <li><p><strong>NO</strong>: An invalid phone number. The mapping relationship is not returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +124,7 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
         public String encryptedNumber;
 
         /**
-         * <p>The time when the phone number expires.</p>
+         * <p>The expiration time of the phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-27 16:05:23</p>

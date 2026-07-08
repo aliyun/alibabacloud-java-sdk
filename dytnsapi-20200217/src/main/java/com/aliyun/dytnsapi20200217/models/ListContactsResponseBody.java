@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListContactsResponseBody extends TeaModel {
     /**
+     * <p>The status code. <code>OK</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>An array of contact information objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListContactsResponseBodyData> data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ListContactsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
@@ -67,6 +76,8 @@ public class ListContactsResponseBody extends TeaModel {
 
     public static class ListContactsResponseBodyData extends TeaModel {
         /**
+         * <p>The contact email.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx @alibaba-inc.com</p>
          */
@@ -74,16 +85,26 @@ public class ListContactsResponseBody extends TeaModel {
         public String contactEmail;
 
         /**
+         * <p>The contact ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("ContactId")
         public Long contactId;
 
+        /**
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>黄勇</p>
+         */
         @NameInMap("ContactName")
         public String contactName;
 
         /**
+         * <p>The contact mobile number.</p>
+         * 
          * <strong>example:</strong>
          * <p>19211111111</p>
          */
@@ -91,6 +112,14 @@ public class ListContactsResponseBody extends TeaModel {
         public String contactPhone;
 
         /**
+         * <p>The email status.</p>
+         * <ul>
+         * <li><p>1: Normal</p>
+         * </li>
+         * <li><p>0: Abnormal</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -98,6 +127,8 @@ public class ListContactsResponseBody extends TeaModel {
         public Integer mailStatus;
 
         /**
+         * <p>The calling number.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -105,6 +136,14 @@ public class ListContactsResponseBody extends TeaModel {
         public Integer main;
 
         /**
+         * <p>Specifies whether the number status warning is enabled.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -112,6 +151,14 @@ public class ListContactsResponseBody extends TeaModel {
         public Boolean openStatusWarning;
 
         /**
+         * <p>Specifies whether the number attribution query warning is enabled.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -119,6 +166,14 @@ public class ListContactsResponseBody extends TeaModel {
         public Boolean opentAttributionWarning;
 
         /**
+         * <p>The number status.</p>
+         * <ul>
+         * <li><p>1: Normal</p>
+         * </li>
+         * <li><p>0: Abnormal</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

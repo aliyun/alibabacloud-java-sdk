@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class DeleteContactsResponseBody extends TeaModel {
     /**
+     * <p>The response code. <code>OK</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the operation succeeded. Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     */
     @NameInMap("Data")
     public Boolean data;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +35,8 @@ public class DeleteContactsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */

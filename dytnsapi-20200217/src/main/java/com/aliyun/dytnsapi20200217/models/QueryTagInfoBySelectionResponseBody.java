@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     /**
-     * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+     * <p>The request status code. The value <strong>OK</strong> indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,13 +14,13 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryTagInfoBySelectionResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,14 +38,16 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -151,7 +153,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
          * <p>The input hint.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>无</p>
          */
         @NameInMap("Hint")
         public String hint;
@@ -169,13 +171,13 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
          * <p>The Chinese name of the parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>none</p>
+         * <p>无</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type. The code that corresponds to EnumUIWidgetTypes.</p>
+         * <p>The code corresponding to the type EnumUIWidgetTypes.</p>
          * 
          * <strong>example:</strong>
          * <p>aqzx</p>
@@ -184,7 +186,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The definitions of the enumerated values such as Code or Desc.</p>
+         * <p>The definition of an enumerated value, in the format of code:desc.</p>
          */
         @NameInMap("ValueDict")
         public java.util.List<QueryTagInfoBySelectionResponseBodyDataParamListValueDict> valueDict;
@@ -251,11 +253,17 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         @NameInMap("AuthCodeList")
         public java.util.List<String> authCodeList;
 
+        /**
+         * <p>The tag type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SINGLE_STAGE</p>
+         */
         @NameInMap("ComplexityType")
         public String complexityType;
 
         /**
-         * <p>The URL for the API demo.</p>
+         * <p>The link to the API demo.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></p>
@@ -264,7 +272,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         public String demoAddress;
 
         /**
-         * <p>The URL for the API documentation.</p>
+         * <p>The link to the API documentation.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></p>
@@ -273,7 +281,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         public String docAddress;
 
         /**
-         * <p>The URL for the definitions of the enumerated values.</p>
+         * <p>The link to the enumerated value definition.</p>
          * 
          * <strong>example:</strong>
          * <p>example.aliyundoc.com</p>
@@ -285,7 +293,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
          * <p>The flow name.</p>
          * 
          * <strong>example:</strong>
-         * <p>process name</p>
+         * <p>查询</p>
          */
         @NameInMap("FlowName")
         public String flowName;
@@ -303,7 +311,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
          * <p>The industry name.</p>
          * 
          * <strong>example:</strong>
-         * <p>logistics</p>
+         * <p>物流</p>
          */
         @NameInMap("IndustryName")
         public String industryName;
@@ -314,6 +322,12 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
         @NameInMap("ParamList")
         public java.util.List<QueryTagInfoBySelectionResponseBodyDataParamList> paramList;
 
+        /**
+         * <p>The rich text description. This field is available only for complex tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("RichTextDescription")
         public String richTextDescription;
 
@@ -330,7 +344,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
          * <p>The scene name.</p>
          * 
          * <strong>example:</strong>
-         * <p>General scenario</p>
+         * <p>通用</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
@@ -348,7 +362,7 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
          * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Number ownership</p>
+         * <p>号码归属</p>
          */
         @NameInMap("TagName")
         public String tagName;

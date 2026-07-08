@@ -7,7 +7,7 @@ public class DescribePhoneNumberOperatorAttributeRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>On the <strong>My Applications</strong> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, obtain the authorization ID, which is the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,21 +18,26 @@ public class DescribePhoneNumberOperatorAttributeRequest extends TeaModel {
     public String authCode;
 
     /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("FlowName")
     public String flowName;
 
     /**
-     * <p>The phone number to be queried.</p>
+     * <p>The phone number that you want to query.</p>
      * <ul>
-     * <li>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</li>
-     * <li>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</li>
-     * <li>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</li>
+     * <li>If Mask is set to NORMAL, this field is an 11-digit phone number.</li>
+     * <li>If Mask is set to MD5, this field is a 32-character encrypted string.</li>
+     * <li>If Mask is set to SHA256, this field is a 64-character encrypted string.</li>
+     * <li>If Mask is set to SM3, this field is a 64-character encrypted string.</li>
      * </ul>
      * <blockquote>
-     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * <p>Notice: The letters in the encrypted string are not case-sensitive.</notice></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,12 +50,13 @@ public class DescribePhoneNumberOperatorAttributeRequest extends TeaModel {
     /**
      * <p>The encryption method of the phone number. Valid values:</p>
      * <ul>
-     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
-     * <li><strong>MD5</strong>: The phone number is MD5-encrypted.</li>
-     * <li><strong>SHA256</strong>: The phone number is SHA256-encrypted.</li>
+     * <li><strong>NORMAL</strong>: no encryption</li>
+     * <li><strong>MD5</strong>: MD5 encryption</li>
+     * <li><strong>SHA256</strong>: SHA256 encryption</li>
+     * <li><strong>SM3</strong>: SM3 encryption</li>
      * </ul>
      * <blockquote>
-     * <p>Letters in the string must be uppercase.</p>
+     * <p>Notice: All letters in the string must be uppercase.</notice></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -70,8 +76,12 @@ public class DescribePhoneNumberOperatorAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>A system parameter. You do not need to specify this parameter.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("ResultCount")
     public String resultCount;

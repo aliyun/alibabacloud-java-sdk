@@ -7,7 +7,7 @@ public class PhoneNumberEncryptRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
      * <blockquote>
-     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * <p>On the <strong>My Applications</strong> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, obtain the authorization ID, which is the authorization code.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class PhoneNumberEncryptRequest extends TeaModel {
     /**
      * <p>The phone number to be queried.</p>
      * <blockquote>
-     * <p> You can query only one phone number at a time.</p>
+     * <p>Currently, only single phone number queries are supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class PhoneNumberEncryptRequest extends TeaModel {
     public String inputNumber;
 
     /**
-     * <p>The encryption method of the phone number. Set the value to <strong>NORMAL</strong>.</p>
+     * <p>The encryption method of the phone number. Valid value: <strong>NORMAL</strong>.</p>
      * <blockquote>
-     * <p> Only the NORMAL encryption method is supported.</p>
+     * <p>Notice: Currently, only the NORMAL encryption method is supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,6 +43,12 @@ public class PhoneNumberEncryptRequest extends TeaModel {
     @NameInMap("Mask")
     public String mask;
 
+    /**
+     * <p>The user-defined outId. This parameter is optional. The format is not limited, and the length must be less than or equal to 64 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>213e367117422635749191493eea68</p>
+     */
     @NameInMap("OutId")
     public String outId;
 

@@ -8,7 +8,7 @@ public class QueryPackageTypeInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>产品名称，如dysms</p>
+     * <p>The product name. The value must be dytns.</p>
      * 
      * <strong>example:</strong>
      * <p>dytns</p>

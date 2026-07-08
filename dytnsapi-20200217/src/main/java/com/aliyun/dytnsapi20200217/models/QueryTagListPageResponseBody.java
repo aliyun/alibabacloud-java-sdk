@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTagListPageResponseBody extends TeaModel {
     /**
-     * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+     * <p>The response code. <strong>OK</strong> indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
     public QueryTagListPageResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The description of the response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,10 +38,12 @@ public class QueryTagListPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: successful.</p>
+     * </li>
+     * <li><p>false: failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +99,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
 
     public static class QueryTagListPageResponseBodyDataRecords extends TeaModel {
         /**
-         * <p>The API operation that is called by the frontend.</p>
+         * <p>The name of the API called by the frontend.</p>
          * 
          * <strong>example:</strong>
          * <p>TwoElementsVerification</p>
@@ -106,7 +108,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
         public String apiName;
 
         /**
-         * <p>Code</p>
+         * <p>The response code. OK indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -115,7 +117,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The URL for the API documentation.</p>
+         * <p>The API document link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP</a></p>
@@ -145,25 +147,25 @@ public class QueryTagListPageResponseBody extends TeaModel {
          * <p>The industry name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test</p>
+         * <p>测试</p>
          */
         @NameInMap("IndustryName")
         public String industryName;
 
         /**
-         * <p>The tag description.</p>
+         * <p>The tag introduction.</p>
          * 
          * <strong>example:</strong>
-         * <p>for autotest new</p>
+         * <p>这个标签是查询号码状态的。</p>
          */
         @NameInMap("Introduction")
         public String introduction;
 
         /**
-         * <p>Indicates whether the number is activated.</p>
+         * <p>Indicates whether the activation has been applied for.</p>
          * 
          * <strong>example:</strong>
-         * <p>45</p>
+         * <p>是</p>
          */
         @NameInMap("IsOpen")
         public Long isOpen;
@@ -172,15 +174,17 @@ public class QueryTagListPageResponseBody extends TeaModel {
          * <p>The tag name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Aliyun</p>
+         * <p>阿里云</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <ul>
-         * <li>0: The number is hidden.</li>
-         * <li>1: The number is public.</li>
+         * <li><p>0: hidden.</p>
+         * </li>
+         * <li><p>1: public.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +206,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
          * <p>The scene name.</p>
          * 
          * <strong>example:</strong>
-         * <p>check</p>
+         * <p>查询</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
@@ -312,7 +316,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
 
     public static class QueryTagListPageResponseBodyData extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -330,13 +334,13 @@ public class QueryTagListPageResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The retruned data.</p>
+         * <p>The data list.</p>
          */
         @NameInMap("Records")
         public java.util.List<QueryTagListPageResponseBodyDataRecords> records;
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -345,7 +349,7 @@ public class QueryTagListPageResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>91</p>
