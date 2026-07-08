@@ -4,10 +4,24 @@ package com.aliyun.appstream_center20210218.models;
 import com.aliyun.tea.*;
 
 public class GetAuthCodeRequest extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
+    @NameInMap("AdDomain")
+    public String adDomain;
+
+    /**
+     * <p>Specifies whether to synchronously create an EndUserId based on <code>ExternalUserId</code>. This parameter takes effect only when <code>EndUserId</code> is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoCreateUser")
     public Boolean autoCreateUser;
 
     /**
+     * <p>The username of the China Desktop Service (China Desktop Service) convenience account, which is unique within an Alibaba Cloud account. This parameter and <code>ExternalUserId</code> cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>alice</p>
      */
@@ -15,6 +29,8 @@ public class GetAuthCodeRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The external user ID. This ID is defined by the caller and must be unique within an Alibaba Cloud account. This parameter and <code>EndUserId</code> cannot both be empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>alice</p>
      */
@@ -22,6 +38,23 @@ public class GetAuthCodeRequest extends TeaModel {
     public String externalUserId;
 
     /**
+     * <p>The access policy that restricts the access permissions of the authorization code. An empty value indicates no restrictions.</p>
+     * <p>Syntax:</p>
+     * <pre><code class="language-json">{
+     *       &quot;Version&quot;: &quot;1&quot;,
+     *       &quot;Resource&quot;: {
+     *             &quot;Type&quot;: &quot;&lt;Resource type&gt;&quot;,
+     *             &quot;Id&quot;: &quot;&lt;Resource ID&gt;&quot;
+     *       }
+     * }
+     * </code></pre>
+     * <p>Valid values of <Resource type>:</p>
+     * <ul>
+     * <li>AppInstanceGroup: delivery group. You can call the ListAppInstanceGroup operation to obtain the ID.</li>
+     * <li>AppInstance: application instance (dedicated field).</li>
+     * <li>App: application. You can call the ListAppInstanceGroup operation to obtain the ID.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{
      *       &quot;Version&quot;: &quot;1&quot;,
@@ -40,6 +73,22 @@ public class GetAuthCodeRequest extends TeaModel {
     public static GetAuthCodeRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAuthCodeRequest self = new GetAuthCodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetAuthCodeRequest setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    public GetAuthCodeRequest setAdDomain(String adDomain) {
+        this.adDomain = adDomain;
+        return this;
+    }
+    public String getAdDomain() {
+        return this.adDomain;
     }
 
     public GetAuthCodeRequest setAutoCreateUser(Boolean autoCreateUser) {

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetStsTokenResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CCF92035-6231-5ABB-930E-1E003C32****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the token.</p>
+     */
     @NameInMap("StsTokenModel")
     public GetStsTokenResponseBodyStsTokenModel stsTokenModel;
 
@@ -37,6 +42,8 @@ public class GetStsTokenResponseBody extends TeaModel {
 
     public static class GetStsTokenResponseBodyStsTokenModel extends TeaModel {
         /**
+         * <p>The tenant ID, which is the UID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>105552640689****</p>
          */
@@ -44,6 +51,8 @@ public class GetStsTokenResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>be4be09e-cd00-4b4c-add7-11b4d8****</p>
          */
@@ -51,6 +60,8 @@ public class GetStsTokenResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The temporary credentials.</p>
+         * 
          * <strong>example:</strong>
          * <p>sts****</p>
          */
@@ -58,6 +69,8 @@ public class GetStsTokenResponseBody extends TeaModel {
         public String stsToken;
 
         /**
+         * <p>The tenant ID, which is the UID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>105552640689****</p>
          */

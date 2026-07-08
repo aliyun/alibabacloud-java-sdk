@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExpireLoginTokenRequest extends TeaModel {
     /**
+     * <p>The logon username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExpireLoginTokenRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ExpireLoginTokenRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The ID of the workspace. This parameter is required if you log on using a workspace ID. You can leave this parameter empty if you log on using an organization ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing+dir-172301****</p>
      */
@@ -30,6 +34,7 @@ public class ExpireLoginTokenRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The ID of the logon session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

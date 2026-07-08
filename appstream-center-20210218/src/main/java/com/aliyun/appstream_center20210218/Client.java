@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-shanghai", "appstream-center.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "appstream-center.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually invalidates a logon token.</p>
+     * <p>Manually expires a logon token before its automatic expiration.</p>
      * 
      * @param request ExpireLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +76,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Manually invalidates a logon token.</p>
+     * <p>Manually expires a logon token before its automatic expiration.</p>
      * 
      * @param request ExpireLoginTokenRequest
      * @return ExpireLoginTokenResponse
@@ -84,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</p>
+     * <p>Obtains an authorization code that contains user identity and permission information. The authorization code can be used to launch a cloud application in integration scenarios.</p>
      * 
      * @param request GetAuthCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -98,6 +102,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountType)) {
+            body.put("AccountType", request.accountType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.adDomain)) {
+            body.put("AdDomain", request.adDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoCreateUser)) {
             body.put("AutoCreateUser", request.autoCreateUser);
         }
@@ -134,7 +146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</p>
+     * <p>Obtains an authorization code that contains user identity and permission information. The authorization code can be used to launch a cloud application in integration scenarios.</p>
      * 
      * @param request GetAuthCodeRequest
      * @return GetAuthCodeResponse
@@ -146,7 +158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取stsToken</p>
+     * <p>Gets a Security Token Service (STS) token.</p>
      * 
      * @param request GetStsTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -186,7 +198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取stsToken</p>
+     * <p>Gets a Security Token Service (STS) token.</p>
      * 
      * @param request GetStsTokenRequest
      * @return GetStsTokenResponse
