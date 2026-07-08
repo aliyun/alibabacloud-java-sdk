@@ -28,6 +28,9 @@ public class E2BListedSandbox extends TeaModel {
     @NameInMap("metadata")
     public java.util.Map<String, String> metadata;
 
+    @NameInMap("resourceGroupID")
+    public String resourceGroupID;
+
     @NameInMap("sandboxID")
     public String sandboxID;
 
@@ -37,11 +40,20 @@ public class E2BListedSandbox extends TeaModel {
     @NameInMap("state")
     public String state;
 
+    @NameInMap("teamID")
+    public String teamID;
+
+    @NameInMap("teamName")
+    public String teamName;
+
     @NameInMap("templateID")
     public String templateID;
 
     @NameInMap("templateName")
     public String templateName;
+
+    @NameInMap("userID")
+    public String userID;
 
     @NameInMap("volumeMounts")
     public java.util.List<E2BVolumeMount> volumeMounts;
@@ -115,6 +127,14 @@ public class E2BListedSandbox extends TeaModel {
         return this.metadata;
     }
 
+    public E2BListedSandbox setResourceGroupID(String resourceGroupID) {
+        this.resourceGroupID = resourceGroupID;
+        return this;
+    }
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
     public E2BListedSandbox setSandboxID(String sandboxID) {
         this.sandboxID = sandboxID;
         return this;
@@ -139,6 +159,22 @@ public class E2BListedSandbox extends TeaModel {
         return this.state;
     }
 
+    public E2BListedSandbox setTeamID(String teamID) {
+        this.teamID = teamID;
+        return this;
+    }
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    public E2BListedSandbox setTeamName(String teamName) {
+        this.teamName = teamName;
+        return this;
+    }
+    public String getTeamName() {
+        return this.teamName;
+    }
+
     public E2BListedSandbox setTemplateID(String templateID) {
         this.templateID = templateID;
         return this;
@@ -153,6 +189,14 @@ public class E2BListedSandbox extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public E2BListedSandbox setUserID(String userID) {
+        this.userID = userID;
+        return this;
+    }
+    public String getUserID() {
+        return this.userID;
     }
 
     public E2BListedSandbox setVolumeMounts(java.util.List<E2BVolumeMount> volumeMounts) {

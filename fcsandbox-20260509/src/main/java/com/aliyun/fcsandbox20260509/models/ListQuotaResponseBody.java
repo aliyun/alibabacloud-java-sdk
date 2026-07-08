@@ -7,6 +7,9 @@ public class ListQuotaResponseBody extends TeaModel {
     @NameInMap("code")
     public String code;
 
+    @NameInMap("maxResults")
+    public Integer maxResults;
+
     @NameInMap("message")
     public String message;
 
@@ -30,6 +33,14 @@ public class ListQuotaResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListQuotaResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public ListQuotaResponseBody setMessage(String message) {

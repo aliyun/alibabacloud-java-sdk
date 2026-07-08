@@ -10,9 +10,6 @@ public class E2BTemplate extends TeaModel {
     @NameInMap("buildStatus")
     public String buildStatus;
 
-    @NameInMap("builds")
-    public E2BTemplateBuild builds;
-
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
@@ -34,14 +31,23 @@ public class E2BTemplate extends TeaModel {
     @NameInMap("public")
     public Boolean _public;
 
+    @NameInMap("resourceGroupID")
+    public String resourceGroupID;
+
     @NameInMap("spawnCount")
-    public String spawnCount;
+    public Integer spawnCount;
 
     @NameInMap("statusReason")
     public String statusReason;
 
     @NameInMap("tags")
     public java.util.List<E2BTemplateTag> tags;
+
+    @NameInMap("teamID")
+    public String teamID;
+
+    @NameInMap("teamName")
+    public String teamName;
 
     @NameInMap("templateID")
     public String templateID;
@@ -71,14 +77,6 @@ public class E2BTemplate extends TeaModel {
     }
     public String getBuildStatus() {
         return this.buildStatus;
-    }
-
-    public E2BTemplate setBuilds(E2BTemplateBuild builds) {
-        this.builds = builds;
-        return this;
-    }
-    public E2BTemplateBuild getBuilds() {
-        return this.builds;
     }
 
     public E2BTemplate setCpuCount(Integer cpuCount) {
@@ -137,11 +135,19 @@ public class E2BTemplate extends TeaModel {
         return this._public;
     }
 
-    public E2BTemplate setSpawnCount(String spawnCount) {
+    public E2BTemplate setResourceGroupID(String resourceGroupID) {
+        this.resourceGroupID = resourceGroupID;
+        return this;
+    }
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    public E2BTemplate setSpawnCount(Integer spawnCount) {
         this.spawnCount = spawnCount;
         return this;
     }
-    public String getSpawnCount() {
+    public Integer getSpawnCount() {
         return this.spawnCount;
     }
 
@@ -159,6 +165,22 @@ public class E2BTemplate extends TeaModel {
     }
     public java.util.List<E2BTemplateTag> getTags() {
         return this.tags;
+    }
+
+    public E2BTemplate setTeamID(String teamID) {
+        this.teamID = teamID;
+        return this;
+    }
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    public E2BTemplate setTeamName(String teamName) {
+        this.teamName = teamName;
+        return this;
+    }
+    public String getTeamName() {
+        return this.teamName;
     }
 
     public E2BTemplate setTemplateID(String templateID) {

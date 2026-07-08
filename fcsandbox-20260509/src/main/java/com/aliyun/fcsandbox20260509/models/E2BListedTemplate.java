@@ -10,11 +10,17 @@ public class E2BListedTemplate extends TeaModel {
     @NameInMap("buildStatus")
     public String buildStatus;
 
+    @NameInMap("category")
+    public String category;
+
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
     @NameInMap("createdAt")
     public String createdAt;
+
+    @NameInMap("functionName")
+    public String functionName;
 
     @NameInMap("lastSpawnedAt")
     public String lastSpawnedAt;
@@ -31,8 +37,11 @@ public class E2BListedTemplate extends TeaModel {
     @NameInMap("public")
     public Boolean _public;
 
+    @NameInMap("resourceGroupID")
+    public String resourceGroupID;
+
     @NameInMap("spawnCount")
-    public String spawnCount;
+    public Integer spawnCount;
 
     @NameInMap("statusReason")
     public String statusReason;
@@ -40,11 +49,20 @@ public class E2BListedTemplate extends TeaModel {
     @NameInMap("tags")
     public java.util.List<E2BTemplateTag> tags;
 
+    @NameInMap("teamID")
+    public String teamID;
+
+    @NameInMap("teamName")
+    public String teamName;
+
     @NameInMap("templateID")
     public String templateID;
 
     @NameInMap("updatedAt")
     public String updatedAt;
+
+    @NameInMap("userID")
+    public String userID;
 
     public static E2BListedTemplate build(java.util.Map<String, ?> map) throws Exception {
         E2BListedTemplate self = new E2BListedTemplate();
@@ -67,6 +85,14 @@ public class E2BListedTemplate extends TeaModel {
         return this.buildStatus;
     }
 
+    public E2BListedTemplate setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
     public E2BListedTemplate setCpuCount(Integer cpuCount) {
         this.cpuCount = cpuCount;
         return this;
@@ -81,6 +107,14 @@ public class E2BListedTemplate extends TeaModel {
     }
     public String getCreatedAt() {
         return this.createdAt;
+    }
+
+    public E2BListedTemplate setFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
+    public String getFunctionName() {
+        return this.functionName;
     }
 
     public E2BListedTemplate setLastSpawnedAt(String lastSpawnedAt) {
@@ -123,11 +157,19 @@ public class E2BListedTemplate extends TeaModel {
         return this._public;
     }
 
-    public E2BListedTemplate setSpawnCount(String spawnCount) {
+    public E2BListedTemplate setResourceGroupID(String resourceGroupID) {
+        this.resourceGroupID = resourceGroupID;
+        return this;
+    }
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    public E2BListedTemplate setSpawnCount(Integer spawnCount) {
         this.spawnCount = spawnCount;
         return this;
     }
-    public String getSpawnCount() {
+    public Integer getSpawnCount() {
         return this.spawnCount;
     }
 
@@ -147,6 +189,22 @@ public class E2BListedTemplate extends TeaModel {
         return this.tags;
     }
 
+    public E2BListedTemplate setTeamID(String teamID) {
+        this.teamID = teamID;
+        return this;
+    }
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    public E2BListedTemplate setTeamName(String teamName) {
+        this.teamName = teamName;
+        return this;
+    }
+    public String getTeamName() {
+        return this.teamName;
+    }
+
     public E2BListedTemplate setTemplateID(String templateID) {
         this.templateID = templateID;
         return this;
@@ -161,6 +219,14 @@ public class E2BListedTemplate extends TeaModel {
     }
     public String getUpdatedAt() {
         return this.updatedAt;
+    }
+
+    public E2BListedTemplate setUserID(String userID) {
+        this.userID = userID;
+        return this;
+    }
+    public String getUserID() {
+        return this.userID;
     }
 
 }

@@ -7,6 +7,9 @@ public class UpdateTemplateInput extends TeaModel {
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
+    @NameInMap("networkConfiguration")
+    public NetworkConfiguration networkConfiguration;
+
     public static UpdateTemplateInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateInput self = new UpdateTemplateInput();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class UpdateTemplateInput extends TeaModel {
     }
     public LogConfiguration getLogConfiguration() {
         return this.logConfiguration;
+    }
+
+    public UpdateTemplateInput setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+        return this;
+    }
+    public NetworkConfiguration getNetworkConfiguration() {
+        return this.networkConfiguration;
     }
 
 }

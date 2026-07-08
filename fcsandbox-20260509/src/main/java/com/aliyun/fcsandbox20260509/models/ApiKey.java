@@ -25,6 +25,18 @@ public class ApiKey extends TeaModel {
     @NameInMap("lastUsedTime")
     public String lastUsedTime;
 
+    @NameInMap("resourceGroupID")
+    public String resourceGroupID;
+
+    @NameInMap("status")
+    public String status;
+
+    @NameInMap("teamID")
+    public String teamID;
+
+    @NameInMap("teamName")
+    public String teamName;
+
     @NameInMap("userID")
     public String userID;
 
@@ -90,6 +102,38 @@ public class ApiKey extends TeaModel {
     }
     public String getLastUsedTime() {
         return this.lastUsedTime;
+    }
+
+    public ApiKey setResourceGroupID(String resourceGroupID) {
+        this.resourceGroupID = resourceGroupID;
+        return this;
+    }
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
+    public ApiKey setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ApiKey setTeamID(String teamID) {
+        this.teamID = teamID;
+        return this;
+    }
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    public ApiKey setTeamName(String teamName) {
+        this.teamName = teamName;
+        return this;
+    }
+    public String getTeamName() {
+        return this.teamName;
     }
 
     public ApiKey setUserID(String userID) {

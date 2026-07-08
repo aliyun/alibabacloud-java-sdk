@@ -4,6 +4,9 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BSandbox extends TeaModel {
+    @NameInMap("accessEndpoint")
+    public String accessEndpoint;
+
     @NameInMap("alias")
     public String alias;
 
@@ -52,6 +55,9 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("network")
     public E2BNetwork network;
 
+    @NameInMap("resourceGroupID")
+    public String resourceGroupID;
+
     @NameInMap("sandboxID")
     public String sandboxID;
 
@@ -61,11 +67,20 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("state")
     public String state;
 
-    @NameInMap("templateId")
-    public String templateId;
+    @NameInMap("teamID")
+    public String teamID;
+
+    @NameInMap("teamName")
+    public String teamName;
+
+    @NameInMap("templateID")
+    public String templateID;
 
     @NameInMap("templateName")
     public String templateName;
+
+    @NameInMap("userID")
+    public String userID;
 
     @NameInMap("volumeMounts")
     public java.util.List<E2BVolumeMount> volumeMounts;
@@ -73,6 +88,14 @@ public class E2BSandbox extends TeaModel {
     public static E2BSandbox build(java.util.Map<String, ?> map) throws Exception {
         E2BSandbox self = new E2BSandbox();
         return TeaModel.build(map, self);
+    }
+
+    public E2BSandbox setAccessEndpoint(String accessEndpoint) {
+        this.accessEndpoint = accessEndpoint;
+        return this;
+    }
+    public String getAccessEndpoint() {
+        return this.accessEndpoint;
     }
 
     public E2BSandbox setAlias(String alias) {
@@ -203,6 +226,14 @@ public class E2BSandbox extends TeaModel {
         return this.network;
     }
 
+    public E2BSandbox setResourceGroupID(String resourceGroupID) {
+        this.resourceGroupID = resourceGroupID;
+        return this;
+    }
+    public String getResourceGroupID() {
+        return this.resourceGroupID;
+    }
+
     public E2BSandbox setSandboxID(String sandboxID) {
         this.sandboxID = sandboxID;
         return this;
@@ -227,12 +258,28 @@ public class E2BSandbox extends TeaModel {
         return this.state;
     }
 
-    public E2BSandbox setTemplateId(String templateId) {
-        this.templateId = templateId;
+    public E2BSandbox setTeamID(String teamID) {
+        this.teamID = teamID;
         return this;
     }
-    public String getTemplateId() {
-        return this.templateId;
+    public String getTeamID() {
+        return this.teamID;
+    }
+
+    public E2BSandbox setTeamName(String teamName) {
+        this.teamName = teamName;
+        return this;
+    }
+    public String getTeamName() {
+        return this.teamName;
+    }
+
+    public E2BSandbox setTemplateID(String templateID) {
+        this.templateID = templateID;
+        return this;
+    }
+    public String getTemplateID() {
+        return this.templateID;
     }
 
     public E2BSandbox setTemplateName(String templateName) {
@@ -241,6 +288,14 @@ public class E2BSandbox extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public E2BSandbox setUserID(String userID) {
+        this.userID = userID;
+        return this;
+    }
+    public String getUserID() {
+        return this.userID;
     }
 
     public E2BSandbox setVolumeMounts(java.util.List<E2BVolumeMount> volumeMounts) {

@@ -10,6 +10,9 @@ public class CreateApiKeyInput extends TeaModel {
     @NameInMap("expireTime")
     public String expireTime;
 
+    @NameInMap("teamID")
+    public String teamID;
+
     public static CreateApiKeyInput build(java.util.Map<String, ?> map) throws Exception {
         CreateApiKeyInput self = new CreateApiKeyInput();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateApiKeyInput extends TeaModel {
     }
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    public CreateApiKeyInput setTeamID(String teamID) {
+        this.teamID = teamID;
+        return this;
+    }
+    public String getTeamID() {
+        return this.teamID;
     }
 
 }
