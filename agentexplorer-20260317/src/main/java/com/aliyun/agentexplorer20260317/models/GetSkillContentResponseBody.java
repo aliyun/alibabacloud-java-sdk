@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSkillContentResponseBody extends TeaModel {
     /**
+     * <p>SKILL.md file content</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      * <h2>name: alibabacloud-find-skills

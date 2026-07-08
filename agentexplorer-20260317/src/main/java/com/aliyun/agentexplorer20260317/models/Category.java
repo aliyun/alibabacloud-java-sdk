@@ -4,16 +4,27 @@ package com.aliyun.agentexplorer20260317.models;
 import com.aliyun.tea.*;
 
 public class Category extends TeaModel {
+    /**
+     * <p>Sub-categories</p>
+     */
     @NameInMap("children")
     public java.util.List<CategoryChildren> children;
 
     /**
+     * <p>Level 1 Category Code</p>
+     * 
      * <strong>example:</strong>
      * <p>compute</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Level 1 Category Name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>计算</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -48,12 +59,20 @@ public class Category extends TeaModel {
 
     public static class CategoryChildren extends TeaModel {
         /**
+         * <p>Level 2 Category Code</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Level 2 Category Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>弹性计算</p>
+         */
         @NameInMap("name")
         public String name;
 

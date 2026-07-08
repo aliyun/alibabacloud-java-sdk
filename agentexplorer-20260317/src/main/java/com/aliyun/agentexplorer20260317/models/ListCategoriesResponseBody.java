@@ -4,10 +4,15 @@ package com.aliyun.agentexplorer20260317.models;
 import com.aliyun.tea.*;
 
 public class ListCategoriesResponseBody extends TeaModel {
+    /**
+     * <p>The returned category list</p>
+     */
     @NameInMap("data")
     public java.util.List<Category> data;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class ListCategoriesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>099A671E-FA21-5A36-8A73-918572DDEF53</p>
      */

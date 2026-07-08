@@ -8,7 +8,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("public", "agentexplorer.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "agentexplorer.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("agentexplorer", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取阿里云 Agent Skill 内容</p>
+     * <p>Get the SKILL.md file content of the specified Agent Skill</p>
      * 
      * @param request GetSkillContentRequest
      * @param headers map
@@ -56,7 +60,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取阿里云 Agent Skill 内容</p>
+     * <p>Get the SKILL.md file content of the specified Agent Skill</p>
      * 
      * @param request GetSkillContentRequest
      * @return GetSkillContentResponse
@@ -69,7 +73,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举所有的阿里云 Skills 类目</p>
+     * <p>List all Alibaba Cloud Skills categories.</p>
      * 
      * @param request ListCategoriesRequest
      * @param headers map
@@ -97,7 +101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举所有的阿里云 Skills 类目</p>
+     * <p>List all Alibaba Cloud Skills categories.</p>
      * 
      * @param request ListCategoriesRequest
      * @return ListCategoriesResponse
@@ -110,7 +114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过关键词、类目搜索阿里云 Agent Skills</p>
+     * <p>Searches for Alibaba Cloud Agent Skills by keyword or category.</p>
      * 
      * @param request SearchSkillsRequest
      * @param headers map
@@ -134,6 +138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchMode)) {
+            query.put("searchMode", request.searchMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
@@ -160,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通过关键词、类目搜索阿里云 Agent Skills</p>
+     * <p>Searches for Alibaba Cloud Agent Skills by keyword or category.</p>
      * 
      * @param request SearchSkillsRequest
      * @return SearchSkillsResponse

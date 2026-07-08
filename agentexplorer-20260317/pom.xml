@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>agentexplorer20260317</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>agentexplorer20260317</name>
   <description>Alibaba Cloud AgentExplorer (20260317) SDK for Java

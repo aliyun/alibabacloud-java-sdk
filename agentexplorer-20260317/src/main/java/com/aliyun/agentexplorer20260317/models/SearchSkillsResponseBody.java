@@ -4,10 +4,15 @@ package com.aliyun.agentexplorer20260317.models;
 import com.aliyun.tea.*;
 
 public class SearchSkillsResponseBody extends TeaModel {
+    /**
+     * <p>The list of skills returned.</p>
+     */
     @NameInMap("data")
     public java.util.List<Skill> data;
 
     /**
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class SearchSkillsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The NextToken value, which is used to retrieve more results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAZjtYxxxxxxxx</p>
      */
@@ -31,6 +38,8 @@ public class SearchSkillsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>22</p>
      */
