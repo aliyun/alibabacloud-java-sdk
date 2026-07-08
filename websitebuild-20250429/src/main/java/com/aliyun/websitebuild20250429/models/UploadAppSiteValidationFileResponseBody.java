@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     /**
-     * <p>access denied details</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>application name. Query the application with this name.</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -32,7 +32,7 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic code, currently unused. Ignore it.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -50,13 +50,13 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>indicates whether the deletion succeeded</p>
+     * <p>Indicates whether the deletion was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class UploadAppSiteValidationFileResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

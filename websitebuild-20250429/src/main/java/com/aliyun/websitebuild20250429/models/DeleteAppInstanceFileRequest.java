@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppInstanceFileRequest extends TeaModel {
     /**
-     * <p>Session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
@@ -14,7 +14,7 @@ public class DeleteAppInstanceFileRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>File Path</p>
+     * <p>The file path.</p>
      * 
      * <strong>example:</strong>
      * <p>sdms-test/static/</p>

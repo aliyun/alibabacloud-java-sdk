@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateAppTemplateLikeResponseBody extends TeaModel {
     /**
-     * <p>Permission denied information</p>
+     * <p>The access denied detail.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,9 +14,9 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.  </li>
+     * <li>false: Retry is not allowed.</li>
      * <li>true: Retry is allowed.</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name. It can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and must be no more than 36 characters in length.</p>
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -36,7 +36,7 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,7 +45,7 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -54,13 +54,13 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -78,7 +78,7 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -87,7 +87,7 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -96,7 +96,7 @@ public class OperateAppTemplateLikeResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppSupabaseSecretRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
@@ -14,7 +14,7 @@ public class UpdateAppSupabaseSecretRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Key value</p>
+     * <p>The secret key.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -23,7 +23,7 @@ public class UpdateAppSupabaseSecretRequest extends TeaModel {
     public String secretKey;
 
     /**
-     * <p>Key name</p>
+     * <p>The secret name.</p>
      * 
      * <strong>example:</strong>
      * <p>277356_pre_auth</p>
@@ -32,7 +32,7 @@ public class UpdateAppSupabaseSecretRequest extends TeaModel {
     public String secretName;
 
     /**
-     * <p>Key Type</p>
+     * <p>The secret type.</p>
      * 
      * <strong>example:</strong>
      * <p>Opaque</p>
@@ -41,7 +41,7 @@ public class UpdateAppSupabaseSecretRequest extends TeaModel {
     public String secretType;
 
     /**
-     * <p>Key Value</p>
+     * <p>The secret value.</p>
      * 
      * <strong>example:</strong>
      * <p>1231</p>

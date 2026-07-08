@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access is denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether retries are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message, used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error arguments.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Task object</p>
+     * <p>The task object.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
@@ -86,7 +86,7 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -95,7 +95,7 @@ public class SaveAppSupabaseSecretsResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Is processed synchronously</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMiniAppBindingResponseBody extends TeaModel {
     /**
-     * <p>Request result.</p>
+     * <p>The request result.</p>
      */
     @NameInMap("Data")
     public GetMiniAppBindingResponseBodyData data;
@@ -42,7 +42,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
 
     public static class GetMiniAppBindingResponseBodyData extends TeaModel {
         /**
-         * <p>Authorization status</p>
+         * <p>The authorization status.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -51,7 +51,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public String authStatus;
 
         /**
-         * <p>Business ID</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WS20260206134402000001</p>
@@ -60,7 +60,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>ICP filing status</p>
+         * <p>The ICP filing status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,7 +69,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public Boolean icpFiled;
 
         /**
-         * <p>Miniapp ID</p>
+         * <p>The mini program ID.</p>
          * 
          * <strong>example:</strong>
          * <p>wx7f122a7d23fdxxxx</p>
@@ -78,7 +78,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public String platformAppid;
 
         /**
-         * <p>Preview QR code</p>
+         * <p>The preview QR code URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx">http://xxxx</a></p>
@@ -87,7 +87,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public String previewQrCodeUrl;
 
         /**
-         * <p>Production QR code</p>
+         * <p>The production QR code URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxx">http://xxxx</a></p>
@@ -96,7 +96,7 @@ public class GetMiniAppBindingResponseBody extends TeaModel {
         public String productionQrCodeUrl;
 
         /**
-         * <p>Extension information</p>
+         * <p>The extension information.</p>
          */
         @NameInMap("SettingValues")
         public java.util.Map<String, String> settingValues;

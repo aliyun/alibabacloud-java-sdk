@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     /**
-     * <p>access denied details</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -32,7 +32,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic code, currently unused. Please ignore.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic message.</p>
+     * <p>The dynamic message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public GetAppInstanceTempShortUrlResponseBodyModule module;
@@ -71,7 +71,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
 
     public static class GetAppInstanceTempShortUrlResponseBodyModule extends TeaModel {
         /**
-         * <p>time-to-live (TTL)</p>
+         * <p>The expiration time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
         public String expireAtTime;
 
         /**
-         * <p>temporary short URL</p>
+         * <p>The temporary short URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -211,7 +211,7 @@ public class GetAppInstanceTempShortUrlResponseBody extends TeaModel {
         public String tempShortUrl;
 
         /**
-         * <p>full URL</p>
+         * <p>The full URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://bj.download.cycore.cn/zhkt-student-cystore-https/2025/9/31/10/12/9b48342f-e595-4c60-8032-dccd355e7552.jpg">https://bj.download.cycore.cn/zhkt-student-cystore-https/2025/9/31/10/12/9b48342f-e595-4c60-8032-dccd355e7552.jpg</a></p>

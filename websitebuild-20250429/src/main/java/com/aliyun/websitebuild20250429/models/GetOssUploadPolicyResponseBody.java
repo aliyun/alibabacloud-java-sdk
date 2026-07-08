@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOssUploadPolicyResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access is denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether a retry is allowed. Valid values:</p>
+     * <ul>
+     * <li>false: No retry is allowed.</li>
+     * <li>true: A retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
      */
@@ -26,6 +36,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,19 +45,29 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters returned.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>The task object.</p>
+     */
     @NameInMap("Module")
     public GetOssUploadPolicyResponseBodyModule module;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -53,6 +75,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -60,6 +84,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The exception message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -67,6 +93,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request is synchronously processed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -168,6 +196,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
 
     public static class GetOssUploadPolicyResponseBodyModule extends TeaModel {
         /**
+         * <p>The upload directory path.</p>
+         * 
          * <strong>example:</strong>
          * <p>pano_src/100070-2679478/images/</p>
          */
@@ -175,6 +205,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String dir;
 
         /**
+         * <p>The OSS bucket host address.</p>
+         * 
          * <strong>example:</strong>
          * <p>*.com</p>
          */
@@ -182,6 +214,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String host;
 
         /**
+         * <p>The Base64-encoded policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>Accept</p>
          */
@@ -189,6 +223,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>The Security Token Service (STS) token. This parameter is null in non-STS scenarios.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -196,6 +232,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String securityToken;
 
         /**
+         * <p>The calculated signature.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -203,6 +241,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String signature;
 
         /**
+         * <p>The signature version, such as OSS4-HMAC-SHA256.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-04-02</p>
          */
@@ -210,6 +250,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String version;
 
         /**
+         * <p>x-oss-credential</p>
+         * 
          * <strong>example:</strong>
          * <p>123123</p>
          */
@@ -217,6 +259,8 @@ public class GetOssUploadPolicyResponseBody extends TeaModel {
         public String xossCredential;
 
         /**
+         * <p>x-oss-date</p>
+         * 
          * <strong>example:</strong>
          * <p>20260101</p>
          */

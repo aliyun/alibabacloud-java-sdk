@@ -87,7 +87,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The exception message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -199,7 +199,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
 
     public static class GetLlmProxyConfigForAdminResponseBodyModule extends TeaModel {
         /**
-         * <p>The list of allowed models.</p>
+         * <p>The list of supported models.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3.5-plus</p>
@@ -226,7 +226,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public String blockedModels;
 
         /**
-         * <p>The specific permissions granted to processes in the container. Only NET_ADMIN and NET_RAW are supported.</p>
+         * <p>Grants specific permissions to processes in the container. Only NET_ADMIN and NET_RAW are supported.</p>
          * <blockquote>
          * <p>NET_RAW is not supported by default. Submit a ticket to apply for this permission.</p>
          * </blockquote>
@@ -256,7 +256,7 @@ public class GetLlmProxyConfigForAdminResponseBody extends TeaModel {
         public Long dailyTokenLimit;
 
         /**
-         * <p>Specifies whether scheduled delivery of resource snapshots is enabled.</p>
+         * <p>Indicates whether scheduled delivery of resource snapshots is enabled.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>

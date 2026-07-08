@@ -232,7 +232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
      * <p>Verifies a verification code.</p>
@@ -279,7 +279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the configuration information of the code generation plug-in.</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
      * <p>Verifies a verification code.</p>
@@ -536,10 +536,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the code generation plug-in configuration information.</p>
      * 
      * <b>summary</b> : 
-     * <p>复制插件配置</p>
+     * <p>Copies the plug-in configuration.</p>
      * 
      * @param request CopyAppPluginConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -575,10 +575,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the code generation plug-in configuration information.</p>
      * 
      * <b>summary</b> : 
-     * <p>复制插件配置</p>
+     * <p>Copies the plug-in configuration.</p>
      * 
      * @param request CopyAppPluginConfigRequest
      * @return CopyAppPluginConfigResponse
@@ -661,7 +661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI session for WanXiaoZhi 2.0.</p>
+     * <p>Creates an AI session for Wan Xiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI employee session.</p>
@@ -696,7 +696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an AI session for WanXiaoZhi 2.0.</p>
+     * <p>Creates an AI session for Wan Xiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI employee session.</p>
@@ -1525,10 +1525,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除文件</p>
+     * <p>Deletes a file.</p>
      * 
      * @param request DeleteAppFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1564,10 +1564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除文件</p>
+     * <p>Deletes a file.</p>
      * 
      * @param request DeleteAppFileRequest
      * @return DeleteAppFileResponse
@@ -1579,10 +1579,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete file</p>
+     * <p>Deletes a file.</p>
      * 
      * @param request DeleteAppInstanceFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1618,10 +1618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete file</p>
+     * <p>Deletes a file.</p>
      * 
      * @param request DeleteAppInstanceFileRequest
      * @return DeleteAppInstanceFileResponse
@@ -1687,10 +1687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation resource corresponds to the supabase instance information</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete Supabase key</p>
+     * <p>Deletes a Supabase key.</p>
      * 
      * @param request DeleteAppSupabaseSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1726,10 +1726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation resource corresponds to the supabase instance information</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete Supabase key</p>
+     * <p>Deletes a Supabase key.</p>
      * 
      * @param request DeleteAppSupabaseSecretsRequest
      * @return DeleteAppSupabaseSecretsResponse
@@ -2169,10 +2169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * <p>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve conversation details</p>
+     * <p>Retrieves the details of a conversation.</p>
      * 
      * @param request GetAppConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2208,10 +2208,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 API for creating an AI session</p>
+     * <p>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve conversation details</p>
+     * <p>Retrieves the details of a conversation.</p>
      * 
      * @param request GetAppConversationRequest
      * @return GetAppConversationResponse
@@ -2327,10 +2327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>读取文件及修改时间</p>
+     * <p>Retrieves file content and modification time.</p>
      * 
      * @param request GetAppFileContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2366,10 +2366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>读取文件及修改时间</p>
+     * <p>Retrieves file content and modification time.</p>
      * 
      * @param request GetAppFileContentRequest
      * @return GetAppFileContentResponse
@@ -2425,10 +2425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries the entitlement information of an application instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetAppInstanceEntitlement</p>
+     * <p>Queries the entitlement information of an application instance.</p>
      * 
      * @param request GetAppInstanceEntitlementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2460,10 +2460,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries the entitlement information of an application instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>GetAppInstanceEntitlement</p>
+     * <p>Queries the entitlement information of an application instance.</p>
      * 
      * @param request GetAppInstanceEntitlementRequest
      * @return GetAppInstanceEntitlementResponse
@@ -2579,10 +2579,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain a temporary short URL for the application</p>
+     * <p>Retrieves a temporary short URL for an application.</p>
      * 
      * @param request GetAppInstanceTempShortUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2614,10 +2614,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtain a temporary short URL for the application</p>
+     * <p>Retrieves a temporary short URL for an application.</p>
      * 
      * @param request GetAppInstanceTempShortUrlRequest
      * @return GetAppInstanceTempShortUrlResponse
@@ -2683,10 +2683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query publishing status</p>
+     * <p>Queries the publish status.</p>
      * 
      * @param request GetAppPublishStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2726,10 +2726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query publishing status</p>
+     * <p>Queries the publish status.</p>
      * 
      * @param request GetAppPublishStatusRequest
      * @return GetAppPublishStatusResponse
@@ -2907,10 +2907,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query SEO index status</p>
+     * <p>Queries the SEO index status.</p>
      * 
      * @param request GetAppSeoStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2950,10 +2950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query SEO index status</p>
+     * <p>Queries the SEO index status.</p>
      * 
      * @param request GetAppSeoStatusRequest
      * @return GetAppSeoStatusResponse
@@ -2965,10 +2965,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>SEO Index Chart</p>
+     * <p>SEO index chart.</p>
      * 
      * @param request GetAppSeoTrendsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3008,10 +3008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>SEO Index Chart</p>
+     * <p>SEO index chart.</p>
      * 
      * @param request GetAppSeoTrendsRequest
      * @return GetAppSeoTrendsResponse
@@ -3023,10 +3023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve QR code plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve site map</p>
+     * <p>Retrieves the sitemap.</p>
      * 
      * @param request GetAppSitemapRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3066,10 +3066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve QR code plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve site map</p>
+     * <p>Retrieves the sitemap.</p>
      * 
      * @param request GetAppSitemapRequest
      * @return GetAppSitemapResponse
@@ -3081,10 +3081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource.</p>
+     * <p>Queries the Supabase instance authentication configuration information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Supabase authentication settings</p>
+     * <p>Queries the Supabase authentication settings.</p>
      * 
      * @param request GetAppSupabaseAuthConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3120,10 +3120,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the auth configuration information of the Supabase instance corresponding to the resource.</p>
+     * <p>Queries the Supabase instance authentication configuration information for a specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Supabase authentication settings</p>
+     * <p>Queries the Supabase authentication settings.</p>
      * 
      * @param request GetAppSupabaseAuthConfigRequest
      * @return GetAppSupabaseAuthConfigResponse
@@ -3185,10 +3185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The supabase instance information corresponding to the operated resource</p>
+     * <p>Queries the Supabase instance information corresponding to the specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Supabase keys</p>
+     * <p>Queries Supabase keys.</p>
      * 
      * @param request GetAppSupabaseSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3224,10 +3224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The supabase instance information corresponding to the operated resource</p>
+     * <p>Queries the Supabase instance information corresponding to the specified resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Supabase keys</p>
+     * <p>Queries Supabase keys.</p>
      * 
      * @param request GetAppSupabaseSecretsRequest
      * @return GetAppSupabaseSecretsResponse
@@ -3530,7 +3530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
+     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the LLM Proxy configuration.</p>
@@ -3569,7 +3569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the Supabase instance configuration information for a specified resource.</p>
+     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the LLM Proxy configuration.</p>
@@ -3584,7 +3584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain miniapp authorization link</p>
+     * <p>Retrieves the authorization URL for a mini program.</p>
      * 
      * @param request GetMiniAppAuthUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3624,7 +3624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtain miniapp authorization link</p>
+     * <p>Retrieves the authorization URL for a mini program.</p>
      * 
      * @param request GetMiniAppAuthUrlRequest
      * @return GetMiniAppAuthUrlResponse
@@ -3636,10 +3636,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the QR code plugin configuration information</p>
+     * <p>Retrieves the configuration information of the QR code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the miniapp attached to a site</p>
+     * <p>Queries the mini programs associated with a site.</p>
      * 
      * @param tmpReq GetMiniAppBindingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3685,10 +3685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the QR code plugin configuration information</p>
+     * <p>Retrieves the configuration information of the QR code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the miniapp attached to a site</p>
+     * <p>Queries the mini programs associated with a site.</p>
      * 
      * @param request GetMiniAppBindingRequest
      * @return GetMiniAppBindingResponse
@@ -3700,7 +3700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the miniapp attached to an application instance based on conditions</p>
+     * <p>Performs a conditional query for mini programs attached to an application instance.</p>
      * 
      * @param request GetMiniAppBindingForAdminRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3740,7 +3740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the miniapp attached to an application instance based on conditions</p>
+     * <p>Performs a conditional query for mini programs attached to an application instance.</p>
      * 
      * @param request GetMiniAppBindingForAdminRequest
      * @return GetMiniAppBindingForAdminResponse
@@ -3752,10 +3752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>生成文件上传策略</p>
+     * <p>Generates a file upload policy.</p>
      * 
      * @param request GetOssUploadPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3787,10 +3787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>生成文件上传策略</p>
+     * <p>Generates a file upload policy.</p>
      * 
      * @param request GetOssUploadPolicyRequest
      * @return GetOssUploadPolicyResponse
@@ -4260,10 +4260,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 - AI session history information query API</p>
+     * <p>Wanxiaozhi 2.0 - API for querying AI conversation history.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the message list of a specified chat</p>
+     * <p>Queries the message list of a specified chat.</p>
      * 
      * @param request ListAppChatMessagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4311,10 +4311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 - AI session history information query API</p>
+     * <p>Wanxiaozhi 2.0 - API for querying AI conversation history.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the message list of a specified chat</p>
+     * <p>Queries the message list of a specified chat.</p>
      * 
      * @param request ListAppChatMessagesRequest
      * @return ListAppChatMessagesResponse
@@ -4497,10 +4497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 Create AI Session API</p>
+     * <p>Creates an AI session by using Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Search session list</p>
+     * <p>Searches the conversation list.</p>
      * 
      * @param request ListAppConversationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4560,10 +4560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 Create AI Session API</p>
+     * <p>Creates an AI session by using Wanxiaozhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>Search session list</p>
+     * <p>Searches the conversation list.</p>
      * 
      * @param request ListAppConversationsRequest
      * @return ListAppConversationsResponse
@@ -4859,10 +4859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain configuration information of code generation plugins</p>
+     * <p>Retrieves the configuration information of code generation plug-ins.</p>
      * 
      * <b>summary</b> : 
-     * <p>List of code generation plugins</p>
+     * <p>Queries the list of code generation plug-ins.</p>
      * 
      * @param request ListAppPluginsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4910,10 +4910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain configuration information of code generation plugins</p>
+     * <p>Retrieves the configuration information of code generation plug-ins.</p>
      * 
      * <b>summary</b> : 
-     * <p>List of code generation plugins</p>
+     * <p>Queries the list of code generation plug-ins.</p>
      * 
      * @param request ListAppPluginsRequest
      * @return ListAppPluginsResponse
@@ -5959,10 +5959,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switch template like statistics</p>
+     * <p>Switches the like statistics for a template.</p>
      * 
      * @param request OperateAppTemplateLikeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5998,10 +5998,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Switch template like statistics</p>
+     * <p>Switches the like statistics for a template.</p>
      * 
      * @param request OperateAppTemplateLikeRequest
      * @return OperateAppTemplateLikeResponse
@@ -6013,7 +6013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Supabase instance information corresponding to the operated resource.</p>
+     * <p>The Supabase instance information corresponding to the resource to operate on.</p>
      * 
      * <b>summary</b> : 
      * <p>Operates on the Supabase instance information corresponding to a resource.</p>
@@ -6092,7 +6092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The Supabase instance information corresponding to the operated resource.</p>
+     * <p>The Supabase instance information corresponding to the resource to operate on.</p>
      * 
      * <b>summary</b> : 
      * <p>Operates on the Supabase instance information corresponding to a resource.</p>
@@ -6333,10 +6333,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Inspiration Balance Overview</p>
+     * <p>Queries the overview of inspiration point balance.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryInspirationBalanceResponse
@@ -6359,10 +6359,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query the Supabase instance information corresponding to the resource.</p>
+     * <p>Queries the Supabase instance information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Inspiration Balance Overview</p>
+     * <p>Queries the overview of inspiration point balance.</p>
      * @return QueryInspirationBalanceResponse
      */
     public QueryInspirationBalanceResponse queryInspirationBalance() throws Exception {
@@ -7428,10 +7428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Roll back application instance deployment</p>
+     * <p>Rolls back the release of an application instance.</p>
      * 
      * @param request RollbackAppInstancePublishRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7475,10 +7475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Roll back application instance deployment</p>
+     * <p>Rolls back the release of an application instance.</p>
      * 
      * @param request RollbackAppInstancePublishRequest
      * @return RollbackAppInstancePublishResponse
@@ -7546,10 +7546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The supabase instance information corresponding to the operation resource</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Save Supabase key</p>
+     * <p>Saves Supabase secrets.</p>
      * 
      * @param request SaveAppSupabaseSecretsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7585,10 +7585,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The supabase instance information corresponding to the operation resource</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Save Supabase key</p>
+     * <p>Saves Supabase secrets.</p>
      * 
      * @param request SaveAppSupabaseSecretsRequest
      * @return SaveAppSupabaseSecretsResponse
@@ -7770,10 +7770,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交SEO索引</p>
+     * <p>Submits an SEO index.</p>
      * 
      * @param request SubmitAppSeoIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7817,10 +7817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>提交SEO索引</p>
+     * <p>Submits an SEO index.</p>
      * 
      * @param request SubmitAppSeoIndexRequest
      * @return SubmitAppSeoIndexResponse
@@ -7880,10 +7880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>万小智2.0创建AI会话接口</p>
+     * <p>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>切换到指定对话</p>
+     * <p>Switches to a specified conversation.</p>
      * 
      * @param request SwitchAppConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7923,10 +7923,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>万小智2.0创建AI会话接口</p>
+     * <p>Creates an AI conversation through the Wanxiaozhi 2.0 interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>切换到指定对话</p>
+     * <p>Switches to a specified conversation.</p>
      * 
      * @param request SwitchAppConversationRequest
      * @return SwitchAppConversationResponse
@@ -8052,10 +8052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 - AI session history query API</p>
+     * <p>Wanxiaozhi 2.0 - API for querying AI conversation history.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update message content</p>
+     * <p>Updates message content.</p>
      * 
      * @param request UpdateAppChatMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8099,10 +8099,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Wan Xiaozhi 2.0 - AI session history query API</p>
+     * <p>Wanxiaozhi 2.0 - API for querying AI conversation history.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update message content</p>
+     * <p>Updates message content.</p>
      * 
      * @param request UpdateAppChatMessageRequest
      * @return UpdateAppChatMessageResponse
@@ -8114,10 +8114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Edit JSX Code</p>
+     * <p>Edits JSX code.</p>
      * 
      * @param request UpdateAppCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8153,10 +8153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Edit JSX Code</p>
+     * <p>Edits JSX code.</p>
      * 
      * @param request UpdateAppCodeRequest
      * @return UpdateAppCodeResponse
@@ -8226,10 +8226,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries the information of an application instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrade/Downgrade website instance.</p>
+     * <p>Changes the specifications of a website building instance.</p>
      * 
      * @param tmpReq UpdateAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8317,10 +8317,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Query application instance information</p>
+     * <p>Queries the information of an application instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrade/Downgrade website instance.</p>
+     * <p>Changes the specifications of a website building instance.</p>
      * 
      * @param request UpdateAppInstanceRequest
      * @return UpdateAppInstanceResponse
@@ -8332,10 +8332,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>WanXiaoZhi 2.0 AI Conversation</p>
+     * <p>Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update SEO Index Status</p>
+     * <p>Updates the SEO index status.</p>
      * 
      * @param request UpdateAppSeoStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8379,10 +8379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>WanXiaoZhi 2.0 AI Conversation</p>
+     * <p>Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update SEO Index Status</p>
+     * <p>Updates the SEO index status.</p>
      * 
      * @param request UpdateAppSeoStatusRequest
      * @return UpdateAppSeoStatusResponse
@@ -8448,10 +8448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation resource corresponds to the supabase instance information</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update Supabase key</p>
+     * <p>Updates a Supabase key.</p>
      * 
      * @param request UpdateAppSupabaseSecretRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8499,10 +8499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Operation resource corresponds to the supabase instance information</p>
+     * <p>The Supabase instance information corresponding to the operated resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>Update Supabase key</p>
+     * <p>Updates a Supabase key.</p>
      * 
      * @param request UpdateAppSupabaseSecretRequest
      * @return UpdateAppSupabaseSecretResponse
@@ -8570,10 +8570,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upload to the site root directory</p>
+     * <p>Uploads a file to the root directory of a site.</p>
      * 
      * @param request UploadAppSiteValidationFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8625,10 +8625,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain the configuration information of the code generation plugin</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upload to the site root directory</p>
+     * <p>Uploads a file to the root directory of a site.</p>
      * 
      * @param request UploadAppSiteValidationFileRequest
      * @return UploadAppSiteValidationFileResponse

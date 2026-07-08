@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class OperateAppTemplateLikeRequest extends TeaModel {
     /**
-     * <p>Indicates whether the item is collected</p>
+     * <p>Specifies whether the template is favorited.</p>
      */
     @NameInMap("Liked")
     public Boolean liked;
 
     /**
-     * <p>Template ID</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>K191WHV12URYQN06</p>

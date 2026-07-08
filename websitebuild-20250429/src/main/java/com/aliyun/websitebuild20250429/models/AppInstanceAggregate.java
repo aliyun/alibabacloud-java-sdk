@@ -86,7 +86,7 @@ public class AppInstanceAggregate extends TeaModel {
     public String startTime;
 
     /**
-     * <p>trial,draft,live,refunded,expired,released</p>
+     * <p>Valid values: trial, draft, live, refunded, expired, released.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -96,6 +96,9 @@ public class AppInstanceAggregate extends TeaModel {
 
     @NameInMap("Tags")
     public java.util.List<AppInstanceAggregateTags> tags;
+
+    @NameInMap("TemplateRecord")
+    public TemplateRecord templateRecord;
 
     @NameInMap("ThumbnailUrl")
     public String thumbnailUrl;
@@ -349,6 +352,14 @@ public class AppInstanceAggregate extends TeaModel {
     }
     public java.util.List<AppInstanceAggregateTags> getTags() {
         return this.tags;
+    }
+
+    public AppInstanceAggregate setTemplateRecord(TemplateRecord templateRecord) {
+        this.templateRecord = templateRecord;
+        return this;
+    }
+    public TemplateRecord getTemplateRecord() {
+        return this.templateRecord;
     }
 
     public AppInstanceAggregate setThumbnailUrl(String thumbnailUrl) {

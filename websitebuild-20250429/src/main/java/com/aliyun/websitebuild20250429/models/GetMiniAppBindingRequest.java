@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMiniAppBindingRequest extends TeaModel {
     /**
-     * <p>Site ID</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250814102215000001</p>
@@ -14,7 +14,7 @@ public class GetMiniAppBindingRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>WECHAT</p>
@@ -23,7 +23,7 @@ public class GetMiniAppBindingRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>List of extension information keys</p>
+     * <p>The list of extension information keys.</p>
      * 
      * <strong>example:</strong>
      * <p>SERVER_DOMAIN</p>

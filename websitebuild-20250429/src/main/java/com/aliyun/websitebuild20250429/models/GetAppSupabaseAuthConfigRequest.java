@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSupabaseAuthConfigRequest extends TeaModel {
     /**
-     * <p>Authentication type</p>
+     * <p>The authentication type.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_AUTH_FLAG</p>
@@ -14,7 +14,7 @@ public class GetAppSupabaseAuthConfigRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250801152639000005</p>

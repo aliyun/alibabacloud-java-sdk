@@ -16,8 +16,8 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether a retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: A retry is not allowed.</li>
-     * <li>true: A retry is allowed.</li>
+     * <li>false: Not allowed.</li>
+     * <li>true: Allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -205,7 +205,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String acquisitionTime;
 
         /**
-         * <p>The remaining balance (InitQuota minus used).</p>
+         * <p>The remaining balance (initQuota - used).</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -217,7 +217,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String balanceStr;
 
         /**
-         * <p>The expiration time of the quota.</p>
+         * <p>The time when the quota expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-11 10:26:27 +0800</p>
@@ -226,7 +226,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>Indicates whether the quota has expired (EndDate is earlier than the current time). The frontend grays out expired entries based on this value.</p>
+         * <p>Indicates whether the quota has expired (endDate is earlier than the current time). The frontend uses this flag to gray out expired entries.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -235,7 +235,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
-         * <p>The acquired quantity (initial quota).</p>
+         * <p>The quantity acquired (initial quota).</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -247,7 +247,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String initQuotaStr;
 
         /**
-         * <p>The source type code. Valid values: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
+         * <p>The source type code, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</p>
          * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
@@ -365,7 +365,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String acquisitionTime;
 
         /**
-         * <p>The remaining balance (InitQuota minus used).</p>
+         * <p>The remaining balance (initQuota - used).</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -377,7 +377,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String balanceStr;
 
         /**
-         * <p>The expiration time of the quota.</p>
+         * <p>The time when the quota expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-25 10:11:25</p>
@@ -386,7 +386,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>Indicates whether the quota has expired (EndDate is earlier than the current time). The frontend grays out expired entries based on this value.</p>
+         * <p>Indicates whether the quota has expired (endDate is earlier than the current time). The frontend uses this flag to gray out expired entries.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -395,7 +395,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
-         * <p>The acquired quantity (initial quota).</p>
+         * <p>The quantity acquired (initial quota).</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -407,7 +407,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public String initQuotaStr;
 
         /**
-         * <p>The source type code. Valid values: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
+         * <p>The source type code, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</p>
          * 
          * <strong>example:</strong>
          * <p>MARKET_CLOUD_DREAM</p>
@@ -553,7 +553,7 @@ public class QueryInspirationAccountDetailsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>Apart from pagination limits, the server processes up to 1000 recent records for the current query. If the results exceed 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>Indicates whether the result set exceeds the server-side limit of 1,000 records (excluding pagination). If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. If the results do not exceed 1,000 records, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;

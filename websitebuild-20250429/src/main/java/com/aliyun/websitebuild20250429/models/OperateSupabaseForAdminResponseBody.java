@@ -14,10 +14,10 @@ public class OperateSupabaseForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed. Valid values:</p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: A retry is not allowed.</li>
-     * <li>true: A retry is allowed.</li>
+     * <li>false: Retry is not allowed.</li>
+     * <li>true: Retry is allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

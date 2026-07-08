@@ -228,7 +228,7 @@ public class CreateAIStaffConversationResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>

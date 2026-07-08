@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppSupabaseSecretsRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
@@ -14,7 +14,7 @@ public class DeleteAppSupabaseSecretsRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>JSON list of keys to be deleted</p>
+     * <p>The JSON list of keys to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;:&quot;key&quot;}</p>

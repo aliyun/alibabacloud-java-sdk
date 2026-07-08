@@ -25,8 +25,8 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>ASC: ascending order.</li>
-     * <li>DESC: descending order.</li>
+     * <li>ASC: ascending order</li>
+     * <li>DESC: descending order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class QueryInspirationAccountDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The source type used to filter results. Valid values: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</p>
+     * <p>The source type used to filter results, such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, or PURCHASED.</p>
      * 
      * <strong>example:</strong>
      * <p>MARKET_CLOUD_DREAM</p>

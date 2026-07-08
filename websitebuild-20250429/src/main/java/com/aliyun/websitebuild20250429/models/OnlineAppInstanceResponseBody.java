@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OnlineAppInstanceResponseBody extends TeaModel {
     /**
-     * <p>The authentication failure details.</p>
+     * <p>The details of the authentication failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -92,7 +92,7 @@ public class OnlineAppInstanceResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is processed synchronously.</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

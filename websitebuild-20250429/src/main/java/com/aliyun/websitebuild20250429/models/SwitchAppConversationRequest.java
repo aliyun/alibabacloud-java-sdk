@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SwitchAppConversationRequest extends TeaModel {
     /**
+     * <p>The business ID of the agent task.</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250814102215000001</p>
      */
@@ -12,6 +14,8 @@ public class SwitchAppConversationRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The bot ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>Zero2</p>
      */
@@ -19,6 +23,8 @@ public class SwitchAppConversationRequest extends TeaModel {
     public String botId;
 
     /**
+     * <p>The type of the agent task.</p>
+     * 
      * <strong>example:</strong>
      * <p>IMAGE_LOGO</p>
      */

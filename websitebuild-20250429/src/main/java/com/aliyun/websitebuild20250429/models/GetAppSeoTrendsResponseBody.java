@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSeoTrendsResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -32,7 +32,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message.</p>
+     * <p>The dynamic error message.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public GetAppSeoTrendsResponseBodyModule module;
@@ -71,7 +71,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -80,7 +80,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -89,7 +89,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Backup parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -192,7 +192,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
 
     public static class GetAppSeoTrendsResponseBodyModule extends TeaModel {
         /**
-         * <p>Baidu</p>
+         * <p>The Baidu index trends.</p>
          * 
          * <strong>example:</strong>
          * <p>baiduIndexTrends</p>
@@ -201,7 +201,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
         public String baiduIndexTrends;
 
         /**
-         * <p>Bing</p>
+         * <p>The Bing index trends.</p>
          * 
          * <strong>example:</strong>
          * <p>bingIndexTrends</p>
@@ -210,7 +210,7 @@ public class GetAppSeoTrendsResponseBody extends TeaModel {
         public String bingIndexTrends;
 
         /**
-         * <p>Google</p>
+         * <p>The Google index trends.</p>
          * 
          * <strong>example:</strong>
          * <p>googleIndexTrends</p>

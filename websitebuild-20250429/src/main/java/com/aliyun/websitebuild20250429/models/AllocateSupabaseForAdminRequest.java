@@ -27,7 +27,11 @@ public class AllocateSupabaseForAdminRequest extends TeaModel {
     public String orderColumn;
 
     /**
-     * <p>The sort order. Valid values: ASC and DESC.</p>
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>ASC: ascending order</li>
+     * <li>DESC: descending order</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>

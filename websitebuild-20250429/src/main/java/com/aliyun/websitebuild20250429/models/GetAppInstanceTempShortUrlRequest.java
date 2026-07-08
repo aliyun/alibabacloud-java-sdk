@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceTempShortUrlRequest extends TeaModel {
     /**
-     * <p>Application business ID</p>
+     * <p>The business ID of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>

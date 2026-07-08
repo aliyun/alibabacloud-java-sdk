@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     /**
-     * <p>Permission denied information</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -32,7 +32,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message, used to replace <code>%s</code> in the <strong>ErrMessage</strong> error message.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error arguments.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public GetAppInstanceEntitlementResponseBodyModule module;
@@ -74,7 +74,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,13 +195,13 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
 
     public static class GetAppInstanceEntitlementResponseBodyModuleItems extends TeaModel {
         /**
-         * <p>Indicates whether an instance has been assigned</p>
+         * <p>Indicates whether an instance is allocated.</p>
          */
         @NameInMap("Allocated")
         public Boolean allocated;
 
         /**
-         * <p>Is this item currently active?</p>
+         * <p>Indicates whether this entitlement item is currently available.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -210,7 +210,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public Boolean available;
 
         /**
-         * <p>Authorization item identity</p>
+         * <p>The code of the entitlement item.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -219,7 +219,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Indicates whether configuration has been completed</p>
+         * <p>Indicates whether the configuration is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -228,13 +228,13 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public Boolean configured;
 
         /**
-         * <p>Is this item entitled in the version?</p>
+         * <p>Indicates whether the edition grants this entitlement item.</p>
          */
         @NameInMap("Entitled")
         public Boolean entitled;
 
         /**
-         * <p>Feature source type (PLUGIN/SKILL/CHANNEL/SYSTEM)</p>
+         * <p>The feature source type. Valid values: PLUGIN, SKILL, CHANNEL, and SYSTEM.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -243,7 +243,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String featureType;
 
         /**
-         * <p>Runtime instance ID</p>
+         * <p>The runtime instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_v2intl_public_intl-sg-i5c43rcpw04</p>
@@ -252,7 +252,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Authorization item Name</p>
+         * <p>The name of the entitlement item.</p>
          * 
          * <strong>example:</strong>
          * <p>4e46d24b56bfa944b5e6f2305715bc4e.jpg</p>
@@ -261,7 +261,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Plugin ID</p>
+         * <p>The plug-in ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alipay-isv</p>
@@ -270,7 +270,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String pluginId;
 
         /**
-         * <p>Total quota</p>
+         * <p>The total quota.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -279,7 +279,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public Long quota;
 
         /**
-         * <p>Remaining quantity</p>
+         * <p>The remaining amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -288,7 +288,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public Long remaining;
 
         /**
-         * <p>Resource domain association identity</p>
+         * <p>The association code of the resource domain.</p>
          * 
          * <strong>example:</strong>
          * <p>SmsCount</p>
@@ -297,7 +297,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String resourceCode;
 
         /**
-         * <p>Resource type (QUOTA/LIMIT)</p>
+         * <p>The resource type. Valid values: QUOTA and LIMIT.</p>
          * 
          * <strong>example:</strong>
          * <p>filesystem</p>
@@ -306,7 +306,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>Is it running?</p>
+         * <p>Indicates whether the instance is running.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -315,7 +315,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public Boolean running;
 
         /**
-         * <p>Authorization Type (FEATURE / RESOURCE / RUNTIME)</p>
+         * <p>The entitlement type. Valid values: FEATURE, RESOURCE, and RUNTIME.</p>
          * 
          * <strong>example:</strong>
          * <p>question</p>
@@ -324,7 +324,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Usage percentage</p>
+         * <p>The usage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -333,7 +333,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public Integer usagePercent;
 
         /**
-         * <p>Usage</p>
+         * <p>The used amount.</p>
          * 
          * <strong>example:</strong>
          * <p>3295422523872</p>
@@ -486,7 +486,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
 
     public static class GetAppInstanceEntitlementResponseBodyModule extends TeaModel {
         /**
-         * <p>BizId of the associated application instance</p>
+         * <p>The business ID of the application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
@@ -495,7 +495,7 @@ public class GetAppInstanceEntitlementResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>All entitlements</p>
+         * <p>The list of all entitlement items.</p>
          */
         @NameInMap("Items")
         public java.util.List<GetAppInstanceEntitlementResponseBodyModuleItems> items;

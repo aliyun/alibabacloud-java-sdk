@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppSeoStatusRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
@@ -14,7 +14,7 @@ public class UpdateAppSeoStatusRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Domain Name</p>
+     * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>yjdw.bpu.edu.cn-waf</p>
@@ -30,7 +30,7 @@ public class UpdateAppSeoStatusRequest extends TeaModel {
     public String seAuthInfo;
 
     /**
-     * <p>Search Engine Type</p>
+     * <p>The search engine type.</p>
      * 
      * <strong>example:</strong>
      * <p>type</p>

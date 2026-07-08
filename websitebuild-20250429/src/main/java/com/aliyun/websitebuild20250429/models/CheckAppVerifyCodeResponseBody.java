@@ -41,7 +41,7 @@ public class CheckAppVerifyCodeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %s variable in the ErrMessage response element.</p>
+     * <p>The dynamic error message, which is used to replace the %s variable in the ErrMessage response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>

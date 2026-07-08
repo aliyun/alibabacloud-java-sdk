@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCreateLogoTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error code list in this topic.</p>
+     * <p>The error code. Valid values: If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -104,11 +104,11 @@ public class GetCreateLogoTaskResponseBody extends TeaModel {
         /**
          * <p>The current status of the task. Valid values:</p>
          * <ul>
-         * <li>pending: pending execution</li>
-         * <li>configuring: being configured</li>
-         * <li>success: succeeded</li>
-         * <li>failed: failed</li>
-         * <li>partialFailed: partially failed.</li>
+         * <li>pending: Pending execution.</li>
+         * <li>configuring: Being configured.</li>
+         * <li>success: Succeeded.</li>
+         * <li>failed: Failed.</li>
+         * <li>partialFailed: Partially failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

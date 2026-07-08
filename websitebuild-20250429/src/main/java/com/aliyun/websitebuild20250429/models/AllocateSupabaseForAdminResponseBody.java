@@ -14,7 +14,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -89,7 +89,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the request is synchronously processed.</p>
+     * <p>Indicates whether the request is processed synchronously.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -264,7 +264,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public String instanceCreateFinishedTime;
 
         /**
-         * <p>The instance creation status.</p>
+         * <p>The creation status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1111</p>
@@ -282,7 +282,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
         public Integer isDeleted;
 
         /**
-         * <p>The password for accessing the ApsaraDB RDS database.</p>
+         * <p>The password used to access the ApsaraDB RDS database.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -303,7 +303,7 @@ public class AllocateSupabaseForAdminResponseBody extends TeaModel {
          * <p>The instance status. Valid values:</p>
          * <ul>
          * <li>0: paused</li>
-         * <li>1: running.</li>
+         * <li>1: running</li>
          * </ul>
          * 
          * <strong>example:</strong>

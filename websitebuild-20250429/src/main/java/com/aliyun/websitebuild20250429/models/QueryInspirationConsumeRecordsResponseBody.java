@@ -14,7 +14,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -228,7 +228,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String recordKey;
 
         /**
-         * <p>The name of the consumption scenario, such as AI Application Development, AI Creative Illustration, AI Video Creation, or AI Content Creation.</p>
+         * <p>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</p>
          * 
          * <strong>example:</strong>
          * <p>家装</p>
@@ -334,7 +334,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>The name of the consumption scenario, such as AI Application Development, AI Creative Illustration, AI Video Creation, or AI Content Creation.</p>
+         * <p>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</p>
          * 
          * <strong>example:</strong>
          * <p>家装</p>
@@ -447,7 +447,7 @@ public class QueryInspirationConsumeRecordsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>Apart from pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. In this case, narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;

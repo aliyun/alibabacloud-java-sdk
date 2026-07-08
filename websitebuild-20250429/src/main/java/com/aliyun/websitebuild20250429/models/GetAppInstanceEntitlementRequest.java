@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInstanceEntitlementRequest extends TeaModel {
     /**
-     * <p>Application instance business ID</p>
+     * <p>The business ID of the application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250814102215000001</p>

@@ -23,7 +23,7 @@ public class GetAppInstanceForAdminResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>The application name that was queried.</p>
+     * <p>The application name to query.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>

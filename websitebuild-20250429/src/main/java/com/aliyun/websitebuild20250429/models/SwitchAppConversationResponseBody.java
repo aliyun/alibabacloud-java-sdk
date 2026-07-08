@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SwitchAppConversationResponseBody extends TeaModel {
     /**
+     * <p>The access denied details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>watermark</p>
      */
@@ -26,6 +32,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,19 +41,29 @@ public class SwitchAppConversationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Module")
     public SwitchAppConversationResponseBodyModule module;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -53,6 +71,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -60,6 +80,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The root error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -67,6 +89,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>The reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -168,6 +192,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
 
     public static class SwitchAppConversationResponseBodyModule extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12343131221311</p>
          */
@@ -175,6 +201,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String aliyunPk;
 
         /**
+         * <p>The bot ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>Zero2</p>
          */
@@ -182,6 +210,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String botId;
 
         /**
+         * <p>The chat records.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -189,6 +219,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public Integer chatNum;
 
         /**
+         * <p>The conversation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8642d886-0322-43a9-b12f-6629b067978c</p>
          */
@@ -196,6 +228,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String conversationId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1740479834</p>
          */
@@ -203,6 +237,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-08-28T02:25:41Z</p>
          */
@@ -210,6 +246,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The extended information in JSON string format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;WS20260504134737000001\&quot;,\&quot;inputTokens\&quot;:1395,\&quot;outputTokens\&quot;:38}</p>
          */
@@ -217,6 +255,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String metaData;
 
         /**
+         * <p>The section ID of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -224,6 +264,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String sectionId;
 
         /**
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
          */
@@ -231,6 +273,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String siteId;
 
         /**
+         * <p>The current viewpoint, equivalent to the news title.</p>
+         * 
          * <strong>example:</strong>
          * <p>Feel Like Makin\&quot; Love</p>
          */
@@ -238,6 +282,8 @@ public class SwitchAppConversationResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

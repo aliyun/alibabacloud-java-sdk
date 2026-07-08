@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,9 +14,9 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether retry is allowed. Valid values:  </p>
+     * <p>Indicates whether retry is allowed. Valid values:</p>
      * <ul>
-     * <li>false: Retry is not allowed.  </li>
+     * <li>false: Retry is not allowed.</li>
      * <li>true: Retry is allowed.</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
@@ -36,7 +36,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -45,9 +45,9 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the provided request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,19 +57,19 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Returned object.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Module")
     public GetAppSupabaseSecretsResponseBodyModule module;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
@@ -78,7 +78,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
@@ -87,7 +87,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -96,7 +96,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Indicates whether the operation is processed synchronously.</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -199,7 +199,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
 
     public static class GetAppSupabaseSecretsResponseBodyModuleSecrets extends TeaModel {
         /**
-         * <p>Tag key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>curl GCEA6fET.popscan.xaliyun.com</p>
@@ -208,7 +208,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Application name</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>LOGO3.png</p>
@@ -217,13 +217,13 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The credential type. Valid values:  </p>
+         * <p>The credential type. Valid values:</p>
          * <ul>
-         * <li>Generic: generic secret.  </li>
-         * <li>Rds: RDS credential.  </li>
-         * <li>Redis: Redis/Tair credential.  </li>
+         * <li>Generic: generic credential.  </li>
+         * <li>Rds: ApsaraDB RDS credential.  </li>
+         * <li>Redis: Redis/Tair credential.</li>
          * <li>RAMCredentials: RAM credential.  </li>
-         * <li>ECS: ECS credential.  </li>
+         * <li>ECS: ECS credential.</li>
          * <li>PolarDB: PolarDB credential.</li>
          * </ul>
          * 
@@ -234,7 +234,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
         public String secretType;
 
         /**
-         * <p>Record value</p>
+         * <p>The record value.</p>
          * 
          * <strong>example:</strong>
          * <p>58.16.60.28</p>
@@ -283,7 +283,7 @@ public class GetAppSupabaseSecretsResponseBody extends TeaModel {
 
     public static class GetAppSupabaseSecretsResponseBodyModule extends TeaModel {
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("Secrets")
         public java.util.List<GetAppSupabaseSecretsResponseBodyModuleSecrets> secrets;

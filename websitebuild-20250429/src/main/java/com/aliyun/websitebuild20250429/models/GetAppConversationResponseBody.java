@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppConversationResponseBody extends TeaModel {
     /**
-     * <p>access denied details</p>
+     * <p>The details of the permission verification failure.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether a retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>dewuApp</p>
@@ -32,7 +32,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic error message, used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>returned error parameters</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>response Data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public GetAppConversationResponseBodyModule module;
@@ -74,7 +74,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class GetAppConversationResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>is processed synchronously</p>
+     * <p>Indicates whether the request is synchronously processed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,7 +195,7 @@ public class GetAppConversationResponseBody extends TeaModel {
 
     public static class GetAppConversationResponseBodyModule extends TeaModel {
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12343131221311</p>
@@ -204,7 +204,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String aliyunPk;
 
         /**
-         * <p>bot ID</p>
+         * <p>The bot ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Zero2</p>
@@ -213,7 +213,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String botId;
 
         /**
-         * <p>Chat record</p>
+         * <p>The chat records.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -222,7 +222,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public Integer chatNum;
 
         /**
-         * <p>session id</p>
+         * <p>The conversation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>872be9bc-3097-433d-b462-596202455102</p>
@@ -231,7 +231,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String conversationId;
 
         /**
-         * <p>Creation Time.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>Update Time.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>Extension information (in JSON string format)</p>
+         * <p>The extended information in JSON string format.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;appId\&quot;:\&quot;WS20260507200853000001\&quot;,\&quot;inputTokens\&quot;:1411,\&quot;outputTokens\&quot;:51}</p>
@@ -260,7 +260,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String metaData;
 
         /**
-         * <p>Section ID of the checklist item.</p>
+         * <p>The section ID of the check item.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -269,7 +269,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String sectionId;
 
         /**
-         * <p>site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>865181640657408</p>
@@ -278,7 +278,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String siteId;
 
         /**
-         * <p>Current point, equivalent to news title</p>
+         * <p>The current viewpoint, which is equivalent to the news title.</p>
          * 
          * <strong>example:</strong>
          * <p>Feel Like Makin\&quot; Love</p>
@@ -287,7 +287,7 @@ public class GetAppConversationResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>用户id</p>

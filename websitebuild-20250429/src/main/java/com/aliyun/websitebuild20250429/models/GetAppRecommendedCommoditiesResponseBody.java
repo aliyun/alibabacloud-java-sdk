@@ -41,9 +41,9 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,11 +61,11 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
     /**
      * <p>The data table module. Valid values:</p>
      * <ul>
-     * <li><p>ABTest: the experiment data table.</p>
+     * <li><p>ABTest: experiment data table</p>
      * </li>
-     * <li><p>ExperimentTool: the experiment tool table.</p>
+     * <li><p>ExperimentTool: experiment tool table</p>
      * </li>
-     * <li><p>DataDiagnosis: data modeling diagnostics.</p>
+     * <li><p>DataDiagnosis: data modeling diagnostics</p>
      * </li>
      * </ul>
      */
@@ -206,7 +206,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String actionType;
 
         /**
-         * <p>The commodity code. This code applies to both resource plans and promotional commodities.</p>
+         * <p>The commodity code. Applicable to both resource plans and marketing commodities.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -218,7 +218,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The extension field, such as unsupportedReason.</p>
+         * <p>The extension fields, such as unsupportedReason.</p>
          */
         @NameInMap("Extend")
         public java.util.Map<String, String> extend;
@@ -237,7 +237,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String orderType;
 
         /**
-         * <p>The sorting priority. A smaller value indicates a higher priority.</p>
+         * <p>The sort priority. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -246,7 +246,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The promotional commodity ID. This parameter is returned only for new purchases.</p>
+         * <p>The marketing commodity ID. Returned only for new purchases.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -258,7 +258,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
         public String recommendType;
 
         /**
-         * <p>The redirect URL. This parameter is returned when a redirect is required, such as during an upgrade.</p>
+         * <p>The redirect URL. Returned when redirection is required, such as for upgrades.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh">https://ecs-workbench-disposable.aliyun.com/account/disposable/login/sst/1291612921555690/edvo2gevfh</a></p>
@@ -375,7 +375,7 @@ public class GetAppRecommendedCommoditiesResponseBody extends TeaModel {
 
     public static class GetAppRecommendedCommoditiesResponseBodyModule extends TeaModel {
         /**
-         * <p>The list of promotional commodities.</p>
+         * <p>The list of marketing commodities.</p>
          */
         @NameInMap("Commodities")
         public java.util.List<GetAppRecommendedCommoditiesResponseBodyModuleCommodities> commodities;

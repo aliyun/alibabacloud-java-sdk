@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>Indicates whether a retry is allowed.</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -65,13 +65,13 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The error arguments returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries per query.</p>
+     * <p>The maximum number of results per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public Boolean nextPage;
 
     /**
-     * <p>The token for the next query. This parameter is empty if no more results are available.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>dw+qdTi1EjVSWX/INJdYNw==</p>
@@ -126,7 +126,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>In addition to pagination limits, the server processes up to 1,000 recent records per query. If the result exceeds 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+     * <p>In addition to pagination limits, the server processes a maximum of 1,000 recent records per query. If the results exceed 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>, and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -144,7 +144,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppChatMessageRequest extends TeaModel {
     /**
-     * <p>Appended message metadata (JSON format)</p>
+     * <p>The appended message metadata in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -14,7 +14,7 @@ public class UpdateAppChatMessageRequest extends TeaModel {
     public String addedMetaData;
 
     /**
-     * <p>Message content</p>
+     * <p>The message content.</p>
      * 
      * <strong>example:</strong>
      * <p>FormatVersion: OOS-2019-06-01nTasks:n  - Name: runCommandn    Action: \&quot;ACS::ECS::RunCommand\&quot;n    Properties:n      commandContent: \&quot; echo Hksqj@@883289</p>
@@ -23,7 +23,7 @@ public class UpdateAppChatMessageRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>Session ID</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
@@ -32,7 +32,7 @@ public class UpdateAppChatMessageRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>Message ID</p>
+     * <p>The message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7baf7d67-1897-42ed-a380-f6ae825d6907</p>

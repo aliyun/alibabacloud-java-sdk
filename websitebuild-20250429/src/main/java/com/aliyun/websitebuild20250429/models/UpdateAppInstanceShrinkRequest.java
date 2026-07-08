@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>Application type</p>
+     * <p>The application type.</p>
      * 
      * <strong>example:</strong>
      * <p>Application</p>
@@ -14,7 +14,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String applicationType;
 
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -23,7 +23,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Ensures the idempotence of the request. Generate a unique value from your client for this parameter to guarantee uniqueness across different requests. ClientToken supports only ASCII characters and must not exceed 64 characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Deployment area</p>
+     * <p>The deployment region.</p>
      * 
      * <strong>example:</strong>
      * <p>ChineseMainland</p>
@@ -41,7 +41,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String deployArea;
 
     /**
-     * <p>Application description</p>
+     * <p>The application description.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -50,7 +50,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Extension information</p>
+     * <p>The extended information.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</p>
@@ -59,7 +59,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>Application icon</p>
+     * <p>The application icon URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png</a></p>
@@ -68,7 +68,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String iconUrl;
 
     /**
-     * <p>Application name</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>大角鹿</p>
@@ -77,7 +77,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Payment type</p>
+     * <p>The payment type.</p>
      * 
      * <strong>example:</strong>
      * <p>AUTO_PAY</p>
@@ -95,7 +95,7 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Website version</p>
+     * <p>The website version.</p>
      * 
      * <strong>example:</strong>
      * <p>Basic_Edition</p>
@@ -104,13 +104,13 @@ public class UpdateAppInstanceShrinkRequest extends TeaModel {
     public String siteVersion;
 
     /**
-     * <p>Tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>Application thumbnail</p>
+     * <p>The application thumbnail URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>

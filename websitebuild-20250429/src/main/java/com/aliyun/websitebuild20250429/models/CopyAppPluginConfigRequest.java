@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CopyAppPluginConfigRequest extends TeaModel {
     /**
+     * <p>The source business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31104757</p>
      */
@@ -12,6 +14,8 @@ public class CopyAppPluginConfigRequest extends TeaModel {
     public String sourceBizId;
 
     /**
+     * <p>The target business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>31104758</p>
      */

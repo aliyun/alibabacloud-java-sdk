@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOssUploadPolicyRequest extends TeaModel {
     /**
+     * <p>The scenario, such as knowledge.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */

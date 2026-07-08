@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>App Name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,9 +41,9 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic error message used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the ErrMessage parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If ErrMessage returns <strong>The Value of Input Parameter %s is not valid</strong> and DynamicMessage returns <strong>DtsJobId</strong>, the DtsJobId request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Error arguments returned.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Task object</p>
+     * <p>The task object.</p>
      */
     @NameInMap("Module")
     public GetAppSupabaseAuthConfigResponseBodyModule module;
@@ -74,7 +74,7 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
@@ -83,7 +83,7 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -195,15 +195,22 @@ public class GetAppSupabaseAuthConfigResponseBody extends TeaModel {
 
     public static class GetAppSupabaseAuthConfigResponseBodyModule extends TeaModel {
         /**
-         * <p>Configuration value. Valid values:  </p>
+         * <p>The configuration value. Valid values:</p>
          * <ul>
-         * <li>cc_rule: CC rule.  </li>
-         * <li>ddos_dispatch: DDoS filter interaction scheduling.  </li>
-         * <li>edge_safe: Edge application security.  </li>
-         * <li>blocked_regions: Geo-blocking.  </li>
-         * <li>http_acl_policy: Precise ACL rule.  </li>
-         * <li>bot_manager: Bot traffic management.  </li>
-         * <li>ip_reputation: IP reputation investigation.</li>
+         * <li><p>cc_rule: HTTP flood protection rule.</p>
+         * </li>
+         * <li><p>ddos_dispatch: DDoS mitigation interaction scheduling.</p>
+         * </li>
+         * <li><p>edge_safe: edge application security.</p>
+         * </li>
+         * <li><p>blocked_regions: location blacklist.</p>
+         * </li>
+         * <li><p>http_acl_policy: accurate access control.</p>
+         * </li>
+         * <li><p>bot_manager: bot traffic management.</p>
+         * </li>
+         * <li><p>ip_reputation: IP reputation library.</p>
+         * </li>
          * </ul>
          */
         @NameInMap("Configs")

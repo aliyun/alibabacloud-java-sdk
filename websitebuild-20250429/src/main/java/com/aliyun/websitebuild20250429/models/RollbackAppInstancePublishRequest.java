@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackAppInstancePublishRequest extends TeaModel {
     /**
-     * <p>Business ID</p>
+     * <p>The business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
@@ -14,7 +14,7 @@ public class RollbackAppInstancePublishRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Deployment channel</p>
+     * <p>The deployment channel.</p>
      * 
      * <strong>example:</strong>
      * <p>PC</p>
@@ -23,7 +23,7 @@ public class RollbackAppInstancePublishRequest extends TeaModel {
     public String deployChannel;
 
     /**
-     * <p>Publish number</p>
+     * <p>The publish number.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class RollbackAppInstancePublishRequest extends TeaModel {
     public String publishNumber;
 
     /**
-     * <p>Quick rollback.</p>
+     * <p>Specifies whether to perform a quick rollback.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

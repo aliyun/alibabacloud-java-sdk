@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppCodeResponseBody extends TeaModel {
     /**
-     * <p>permission denied information</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>is retry allowed</p>
+     * <p>Indicates whether retry is allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>application Name; query the application with this Name</p>
+     * <p>The application name. The application with this name is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
@@ -32,7 +32,7 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>dynamic code; currently unused, please ignore</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>dynamic error message used to replace the %s placeholder in the ErrMessage error message in the response.</p>
+     * <p>The dynamic error message. This message is used to replace the %s variable in the ErrMessage response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>returned error parameters</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>response data</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -74,7 +74,7 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -83,7 +83,7 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>abnormal message</p>
+     * <p>The root error message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -92,7 +92,7 @@ public class UpdateAppCodeResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

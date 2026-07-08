@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitAppSeoIndexRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class SubmitAppSeoIndexRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>yjdw.bpu.edu.cn-waf</p>
      */
@@ -19,12 +23,17 @@ public class SubmitAppSeoIndexRequest extends TeaModel {
     public String domain;
 
     /**
+     * <p>The search engine type.</p>
+     * 
      * <strong>example:</strong>
      * <p>type</p>
      */
     @NameInMap("SeType")
     public String seType;
 
+    /**
+     * <p>Specifies whether to delay the submission.</p>
+     */
     @NameInMap("SubmitLater")
     public Boolean submitLater;
 

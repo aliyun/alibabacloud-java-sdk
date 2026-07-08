@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppCodeRequest extends TeaModel {
     /**
-     * <p>Edit operation Content (JSON)</p>
+     * <p>The edit operation content in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>verify_6554d8cc0de584306d16506dd119cbfc</p>
@@ -14,7 +14,7 @@ public class UpdateAppCodeRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>

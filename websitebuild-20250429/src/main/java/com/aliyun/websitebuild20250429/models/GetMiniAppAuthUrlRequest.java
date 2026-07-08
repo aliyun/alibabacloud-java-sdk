@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMiniAppAuthUrlRequest extends TeaModel {
     /**
-     * <p>Site ID</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
@@ -14,7 +14,7 @@ public class GetMiniAppAuthUrlRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Channel information</p>
+     * <p>The channel information.</p>
      * 
      * <strong>example:</strong>
      * <p>WECHAT</p>
@@ -23,7 +23,7 @@ public class GetMiniAppAuthUrlRequest extends TeaModel {
     public String channel;
 
     /**
-     * <p>Hyperlink URL</p>
+     * <p>The redirect URL.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

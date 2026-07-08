@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInspirationRequest extends TeaModel {
     /**
-     * <p>The resource plan specification.</p>
+     * <p>The specification of the resource plan.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -50,12 +50,12 @@ public class CreateInspirationRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>The unit of the subscription cycle. Valid values:</p>
      * <ul>
-     * <li>Year: year.</li>
-     * <li>Month: month.</li>
-     * <li>Day: day.</li>
-     * <li>Hour: hour.</li>
+     * <li>Year: year</li>
+     * <li>Month: month</li>
+     * <li>Day: day</li>
+     * <li>Hour: hour</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class CreateInspirationRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The number of instances to purchase.</p>
+     * <p>The number of instances to subscribe to.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
