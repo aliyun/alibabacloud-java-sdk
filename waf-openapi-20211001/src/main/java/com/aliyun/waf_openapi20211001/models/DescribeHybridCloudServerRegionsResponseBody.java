@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
     /**
-     * <p>The information about the regions.</p>
+     * <p>The regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeHybridCloudServerRegionsResponseBodyRegions> regions;

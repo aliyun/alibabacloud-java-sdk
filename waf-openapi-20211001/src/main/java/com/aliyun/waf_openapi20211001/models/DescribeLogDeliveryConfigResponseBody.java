@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLogDeliveryConfigResponseBody extends TeaModel {
     /**
-     * <p>The information about the log delivery configuration.</p>
+     * <p>The log delivery configuration.</p>
      */
     @NameInMap("DeliveryConfig")
     public DescribeLogDeliveryConfigResponseBodyDeliveryConfig deliveryConfig;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-CC6E-4F3E-80A6-******</p>
@@ -42,10 +42,22 @@ public class DescribeLogDeliveryConfigResponseBody extends TeaModel {
 
     public static class DescribeLogDeliveryConfigResponseBodyDeliveryConfig extends TeaModel {
         /**
-         * <p>The content of the log delivery configuration. The value is a JSON string that contains multiple parameters.</p>
+         * <p>The details of the log delivery configuration, in JSON format.</p>
          * <blockquote>
-         * <p> This parameter is the same as the <strong>DeliveryDetail</strong> parameter of the <strong>CreateLogDeliveryConfig</strong> operation. For more information, see <strong>Parameter description for log delivery configuration</strong> of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
+         * <p>This parameter is the same as the <strong>DeliveryDetail</strong> parameter of the <strong>CreateLogDeliveryConfig</strong> operation. For more information, see <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a>.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;rfcVersion&quot;: &quot;rfc3164&quot;,
+         *   &quot;protocol&quot;: &quot;tcp&quot;,
+         *   &quot;servers&quot;: [
+         *     {
+         *       &quot;address&quot;: &quot;1.1.1.1&quot;,
+         *       &quot;port&quot;: 20
+         *     }
+         *   ]
+         * }</p>
          */
         @NameInMap("DeliveryDetail")
         public String deliveryDetail;
@@ -62,8 +74,10 @@ public class DescribeLogDeliveryConfigResponseBody extends TeaModel {
         /**
          * <p>The type of the log delivery configuration. Valid values:</p>
          * <ul>
-         * <li><strong>syslog</strong>: Logs are delivered to a syslog service.</li>
-         * <li><strong>kafka</strong>: Logs are delivered to a Kafka service.</li>
+         * <li><p><strong>syslog</strong>: The logs are delivered to a syslog service.</p>
+         * </li>
+         * <li><p><strong>kafka</strong>: The logs are delivered to a Kafka service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

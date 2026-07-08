@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveDetectionResultRequest extends TeaModel {
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The hybrid cloud cluster ID.</p>
      * <blockquote>
-     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSensitiveDetectionResultRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1725966000</p>
@@ -28,7 +28,7 @@ public class DescribeSensitiveDetectionResultRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,10 +39,12 @@ public class DescribeSensitiveDetectionResultRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +54,7 @@ public class DescribeSensitiveDetectionResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -61,7 +63,7 @@ public class DescribeSensitiveDetectionResultRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1672502400</p>

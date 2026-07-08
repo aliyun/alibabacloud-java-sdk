@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     /**
+     * <p>The log delivery type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>sls</strong>: Alibaba Cloud Simple Log Service.</p>
+     * </li>
+     * <li><p><strong>kafka</strong>: Delivers logs to an external Kafka cluster.</p>
+     * </li>
+     * <li><p><strong>syslog</strong>: Delivers logs to an external syslog server.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +23,11 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String deliveryType;
 
     /**
+     * <p>The extension configuration for log delivery. This is a JSON object converted to a string.</p>
+     * <blockquote>
+     * <p>For more information, see the description of the <strong>ExtendConfig</strong> parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;request_header\&quot;:\&quot;Ali-Cdn-Real-Ip\&quot;}</p>
      */
@@ -21,6 +35,15 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String extendConfig;
 
     /**
+     * <p>The list of log fields to deliver. Use the \<code>a,b,c,...\\</code> format.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p>Include all required log fields. Call <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> to view the log fields that WAF Simple Log Service supports.</p>
+     * </li>
+     * <li><p>If the log fields include <strong>request_header</strong>, use the <strong>ExtendConfig</strong> parameter to specify the request headers to deliver.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +53,10 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String fieldList;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +66,11 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The log delivery policies. Multiple policies are supported. This is a JSON array of policy objects converted to a string.</p>
+     * <blockquote>
+     * <p>For more information, see the description of the <strong>LogDeliveryStrategy</strong> parameter.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;logType\&quot;:\&quot;blockLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;normalRequestLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;checkLog\&quot;,\&quot;rate\&quot;:100}]</p>
      */
@@ -46,6 +78,14 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String logDeliveryStrategy;
 
     /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -53,6 +93,7 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The protected object to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +103,8 @@ public class ModifyResourceLogFieldConfigRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

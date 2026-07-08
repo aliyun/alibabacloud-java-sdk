@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
+     * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the end time is the current query time.</p>
      * 
      * <strong>example:</strong>
      * <p>1665386280</p>
@@ -16,7 +16,7 @@ public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The time interval. Unit: seconds. The value must be an integral multiple of 60.</p>
+     * <p>The time interval. Unit: seconds. The value must be an integer multiple of 60.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,10 +37,12 @@ public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The ID of the region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +52,7 @@ public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The protected object.</p>
+     * <p>The protected object to query.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -59,7 +61,7 @@ public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -78,10 +80,10 @@ public class DescribeResponseCodeTrendGraphRequest extends TeaModel {
     public String startTimestamp;
 
     /**
-     * <p>The type of the error codes. Valid values:</p>
+     * <p>The type of response codes. Valid values:</p>
      * <ul>
-     * <li><strong>waf:</strong> error codes that are returned to clients from WAF.</li>
-     * <li><strong>upstream:</strong> error codes that are returned to WAF from the origin server.</li>
+     * <li><strong>waf</strong>: response codes returned by WAF to clients.</li>
+     * <li><strong>upstream</strong>: response codes returned by origin servers to WAF.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

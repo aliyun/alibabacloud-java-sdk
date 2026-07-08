@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeUserTrafficResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EC10C9EA-A367-52D5-<em><strong>-</strong></em></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of user traffic data.</p>
+     */
     @NameInMap("UserTraffic")
     public java.util.List<DescribeUserTrafficResponseBodyUserTraffic> userTraffic;
 
@@ -37,6 +42,8 @@ public class DescribeUserTrafficResponseBody extends TeaModel {
 
     public static class DescribeUserTrafficResponseBodyUserTraffic extends TeaModel {
         /**
+         * <p>The sequence number sorted in chronological order.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -44,6 +51,8 @@ public class DescribeUserTrafficResponseBody extends TeaModel {
         public Long index;
 
         /**
+         * <p>The usage.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecEventDomainStatisticResponseBodyData> data;
 
     /**
-     * <p>Id of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>66A98669-*******-80A6-3014697B11AE</p>
@@ -77,7 +77,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The number of high-risk security events.</p>
+         * <p>The number of high-risk events.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -86,7 +86,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         public Long high;
 
         /**
-         * <p>The number of low-risk security events.</p>
+         * <p>The number of low-risk events.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -95,7 +95,7 @@ public class DescribeApisecEventDomainStatisticResponseBody extends TeaModel {
         public Long low;
 
         /**
-         * <p>The number of medium-risk security events.</p>
+         * <p>The number of medium-risk events.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

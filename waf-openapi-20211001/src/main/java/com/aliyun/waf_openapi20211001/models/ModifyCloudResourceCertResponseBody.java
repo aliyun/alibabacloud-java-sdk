@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudResourceCertResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A47D2DC0-7151-51EF-BFB7-***</p>

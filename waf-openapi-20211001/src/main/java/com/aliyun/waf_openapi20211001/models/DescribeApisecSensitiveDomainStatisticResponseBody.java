@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecSensitiveDomainStatisticResponseBodyData> data;
@@ -59,7 +59,7 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
 
     public static class DescribeApisecSensitiveDomainStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The number of APIs that are involved.</p>
+         * <p>The number of involved APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -68,7 +68,7 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public Long apiCount;
 
         /**
-         * <p>The number of sites that are involved.</p>
+         * <p>The number of involved domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -77,9 +77,9 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public Long domainCount;
 
         /**
-         * <p>The code of the sensitive data.</p>
+         * <p>The code of the sensitive data type.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -89,24 +89,24 @@ public class DescribeApisecSensitiveDomainStatisticResponseBody extends TeaModel
         public String sensitiveCode;
 
         /**
-         * <p>The sensitivity level of the sensitive data.Valid values:</p>
+         * <p>The sensitivity level of the API. Valid values:</p>
          * <ul>
          * <li><strong>S1</strong>: low sensitivity.</li>
-         * <li><strong>S2</strong>: moderate sensitivity.</li>
+         * <li><strong>S2</strong>: medium sensitivity.</li>
          * <li><strong>S3</strong>: high sensitivity.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>L3</p>
+         * <p>S3</p>
          */
         @NameInMap("SensitiveLevel")
         public String sensitiveLevel;
 
         /**
-         * <p>The name of the sensitive data.</p>
+         * <p>The name of the sensitive data type.</p>
          * 
          * <strong>example:</strong>
-         * <p>1002</p>
+         * <p>自定义敏感类型。</p>
          */
         @NameInMap("SensitiveName")
         public String sensitiveName;

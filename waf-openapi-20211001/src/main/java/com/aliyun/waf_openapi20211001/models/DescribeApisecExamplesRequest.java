@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecExamplesRequest extends TeaModel {
     /**
+     * <p>The type of API security threat.</p>
+     * 
      * <strong>example:</strong>
      * <p>LackOfSpeedLimit</p>
      */
@@ -12,6 +14,7 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public String abnormalTag;
 
     /**
+     * <p>The ID of the API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,11 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public String apiId;
 
     /**
+     * <p>The ID of the Hybrid Cloud WAF cluster.</p>
+     * <blockquote>
+     * <p>This parameter is available only in hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about Hybrid Cloud WAF clusters.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>176</p>
      */
@@ -28,6 +36,14 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The type of the example. Valid values:</p>
+     * <ul>
+     * <li><p><strong>sensitive</strong>: sensitive data.</p>
+     * </li>
+     * <li><p><strong>risk</strong>: threat.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>sensitive</p>
      */
@@ -35,6 +51,10 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public String exampleType;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +64,8 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 5. Default value: 5.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -51,6 +73,8 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
      */
@@ -58,16 +82,29 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of sensitive data types in requests.</p>
+     */
     @NameInMap("RequestSensitiveTypeList")
     public java.util.List<String> requestSensitiveTypeList;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -75,8 +112,7 @@ public class DescribeApisecExamplesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <strong>example:</strong>
-     * <p>LackOfSpeedLimit</p>
+     * <p>The list of sensitive data types in responses.</p>
      */
     @NameInMap("ResponseSensitiveTypeList")
     public java.util.List<String> responseSensitiveTypeList;

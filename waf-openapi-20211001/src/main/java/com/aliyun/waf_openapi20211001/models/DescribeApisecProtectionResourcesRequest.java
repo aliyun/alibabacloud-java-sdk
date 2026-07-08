@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecProtectionResourcesRequest extends TeaModel {
     /**
-     * <p>The switch of the API security module.</p>
+     * <p>The global switch for API security.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,9 +14,9 @@ public class DescribeApisecProtectionResourcesRequest extends TeaModel {
     public Integer apisecStatus;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class DescribeApisecProtectionResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return when you perform a paged query. Default value: <strong>1</strong>, which indicates the first page. For more information about paging, see the API reference.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeApisecProtectionResourcesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page when you perform a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page. For more information about paging, see the API reference.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -45,10 +45,12 @@ public class DescribeApisecProtectionResourcesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

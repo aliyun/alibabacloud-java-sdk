@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHybridCloudGroupRequest extends TeaModel {
     /**
-     * <p>The region in which the node resides. Specify the parameter in the Carrier code-Continent code-City code format.</p>
+     * <p>The back-to-origin mark of the node group. The value is in the format of Carrier-Continent-City, which is used to identify the origin of back-to-origin requests.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun-asiapacific-beijing</p>
@@ -14,7 +14,7 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     public String backSourceMark;
 
     /**
-     * <p>The ID of the hybrid cloud cluster.</p>
+     * <p>The ID of the Hybrid Cloud WAF cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>demoGroupName</p>
+     * <p>test</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -36,10 +36,14 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     /**
      * <p>The type of the node group. Valid values:</p>
      * <ul>
-     * <li><strong>protect</strong></li>
-     * <li><strong>control</strong></li>
-     * <li><strong>storage</strong></li>
-     * <li><strong>controlStorage</strong></li>
+     * <li><p><strong>protect</strong>: a protection node group that processes traffic filtering.</p>
+     * </li>
+     * <li><p><strong>control</strong>: a control node group that manages cluster configurations.</p>
+     * </li>
+     * <li><p><strong>storage</strong>: a storage node group that stores logs and data.</p>
+     * </li>
+     * <li><p><strong>controlStorage</strong>: a node group that serves as both control and storage.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +56,7 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +67,7 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address of the server used for load balancing.</p>
+     * <p>The IP address of the load balancer that is associated with the node group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +77,7 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     public String loadBalanceIp;
 
     /**
-     * <p>The region in which the node resides. Specify the parameter in the Carrier code-Continent code-City code format.</p>
+     * <p>The location code of the region where the node group resides. The value is in the format of Carrier-Continent-City.</p>
      * 
      * <strong>example:</strong>
      * <p>0-410-0</p>
@@ -82,10 +86,12 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     public String locationCode;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,16 +101,16 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remarks.</p>
+     * <p>The remarks on the node group. You can use this parameter to add a brief description for the node group.</p>
      * 
      * <strong>example:</strong>
-     * <p>demoRamark</p>
+     * <p>test</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

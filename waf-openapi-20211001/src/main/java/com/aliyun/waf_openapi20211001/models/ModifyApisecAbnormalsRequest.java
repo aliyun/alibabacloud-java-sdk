@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApisecAbnormalsRequest extends TeaModel {
     /**
-     * <p>The risk IDs.</p>
+     * <p>A list of API security risk IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AbnormalIds")
@@ -14,7 +14,7 @@ public class ModifyApisecAbnormalsRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</p>
+     * <p>This parameter is available only for hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyApisecAbnormalsRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class ModifyApisecAbnormalsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The description.</p>
+     * <p>The remarks for the status change.</p>
      * 
      * <strong>example:</strong>
      * <p>already fixed.</p>
@@ -46,10 +46,12 @@ public class ModifyApisecAbnormalsRequest extends TeaModel {
     public String note;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: a region outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,13 +70,18 @@ public class ModifyApisecAbnormalsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The risk status. Valid values:</p>
+     * <p>The status of the security risk. Valid values:</p>
      * <ul>
-     * <li><strong>toBeConfirmed</strong></li>
-     * <li><strong>confirmed</strong></li>
-     * <li><strong>toBeFixed</strong></li>
-     * <li><strong>fixed</strong></li>
-     * <li><strong>ignored</strong></li>
+     * <li><p><strong>toBeConfirmed</strong>: The security risk is to be confirmed.</p>
+     * </li>
+     * <li><p><strong>confirmed</strong>: The security risk is confirmed.</p>
+     * </li>
+     * <li><p><strong>toBeFixed</strong>: The security risk is to be fixed.</p>
+     * </li>
+     * <li><p><strong>fixed</strong>: The security risk is fixed.</p>
+     * </li>
+     * <li><p><strong>ignored</strong>: The security risk is ignored.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
     /**
+     * <p>The name of the log delivery configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
@@ -12,6 +14,14 @@ public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
     public String deliveryName;
 
     /**
+     * <p>The type of log delivery destination for the protected object. Valid values:</p>
+     * <ul>
+     * <li><p><strong>syslog</strong>: logs are delivered to a syslog server.</p>
+     * </li>
+     * <li><p><strong>kafka</strong>: logs are delivered to a Kafka cluster.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>sls</p>
      */
@@ -19,6 +29,8 @@ public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
     public String deliveryType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19******</p>
      */
@@ -26,6 +38,14 @@ public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether log delivery is enabled for the protected object. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Log delivery is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Log delivery is disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

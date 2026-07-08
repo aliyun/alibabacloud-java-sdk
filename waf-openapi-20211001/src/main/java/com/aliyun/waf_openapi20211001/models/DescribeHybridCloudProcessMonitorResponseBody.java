@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
     /**
-     * <p>The status of the applications.</p>
+     * <p>The list of application statuses.</p>
      */
     @NameInMap("ProcessMonitors")
     public java.util.List<DescribeHybridCloudProcessMonitorResponseBodyProcessMonitors> processMonitors;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DBF79169-B6A0-5C8E-86B2-CFE3****496E</p>
@@ -19,6 +19,14 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is deprecated and no longer returns a valid value.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -52,35 +60,59 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridCloudProcessMonitorResponseBodyProcessMonitors extends TeaModel {
+        /**
+         * <p>The severity level of the application status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>normal</strong>: normal.</p>
+         * </li>
+         * <li><p><strong>critical</strong>: abnormal.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Levle")
         public String levle;
 
         /**
-         * <p>The service that the application provides. Valid values:</p>
+         * <p>The name of the application running on the cluster node. Valid values:</p>
          * <ul>
-         * <li><strong>tianqingproxy</strong>: centralized management service.</li>
-         * <li><strong>redis</strong>: storage service.</li>
-         * <li><strong>scc</strong>: traffic calculation service.</li>
-         * <li><strong>keeper</strong>: threat intelligence service.</li>
-         * <li><strong>node_exporter</strong>: application log upload service.</li>
-         * <li><strong>xagent</strong>: traffic detection service.</li>
-         * <li><strong>noproxy</strong>: traffic forwarding service.</li>
-         * <li><strong>xloge</strong>: attack log upload service.</li>
-         * <li><strong>ilogtail</strong>: log collection service.</li>
-         * <li><strong>xlogd</strong>: log analysis service.</li>
+         * <li><p><strong>tianqingproxy</strong>: the central management service</p>
+         * </li>
+         * <li><p><strong>redis</strong>: the storage service</p>
+         * </li>
+         * <li><p><strong>scc</strong>: the traffic metering service</p>
+         * </li>
+         * <li><p><strong>keeper</strong>: the threat intelligence service</p>
+         * </li>
+         * <li><p><strong>node_exporter</strong>: the application log upload service</p>
+         * </li>
+         * <li><p><strong>xagent</strong>: the traffic detection service</p>
+         * </li>
+         * <li><p><strong>noproxy</strong>: the traffic forwarding service</p>
+         * </li>
+         * <li><p><strong>xloge</strong>: the attack log upload service</p>
+         * </li>
+         * <li><p><strong>ilogtail</strong>: the log collection service</p>
+         * </li>
+         * <li><p><strong>xlogd</strong>: the log analysis service</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>tianqingproxy</p>
+         * <p>keeper</p>
          */
         @NameInMap("ProcessName")
         public String processName;
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The running status of the application. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: abnormal.</li>
-         * <li><strong>1</strong>: normal.</li>
+         * <li><p><strong>0</strong>: abnormal.</p>
+         * </li>
+         * <li><p><strong>1</strong>: normal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

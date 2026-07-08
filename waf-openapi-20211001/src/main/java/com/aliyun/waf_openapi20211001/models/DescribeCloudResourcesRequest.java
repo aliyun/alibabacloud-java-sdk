@@ -7,7 +7,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * <p>The UID of the account to which the resource belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>11769793******</p>
@@ -45,10 +45,12 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +60,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The domain name. You can use this parameter if you set ResourceProduct to fc or sae.</p>
+     * <p>The domain name of the resource. This parameter is available when you query FC or SAE resources.</p>
      * 
      * <strong>example:</strong>
      * <p>fc-domain-test</p>
@@ -67,7 +69,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceDomain;
 
     /**
-     * <p>The function name. You can use this parameter if you set ResourceProduct to fc.</p>
+     * <p>The name of the function. This parameter is available when you query FC resources.</p>
      * 
      * <strong>example:</strong>
      * <p>fc-test</p>
@@ -76,7 +78,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceFunction;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The ID of the resource instance.</p>
      * 
      * <strong>example:</strong>
      * <p>alb-43glijk0fr****gths</p>
@@ -94,7 +96,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceInstanceName;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm4gh****wela</p>
@@ -103,7 +105,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The name of the resource.</p>
+     * <p>The name of the resource instance.</p>
      * 
      * <strong>example:</strong>
      * <p>alb-name</p>
@@ -113,19 +115,27 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The cloud service to which the resource belongs. If you do not specify this parameter, the system automatically returns the Application Load Balancer (ALB), Microservices Engine (MSE), Function Compute, and Serverless App Engine (SAE) resources that are added to WAF. Valid values:</p>
+     * <p>The cloud service to which the resource belongs. By default, instances of Application Load Balancer (ALB), Microservices Engine (MSE), Function Compute (FC), and Serverless App Engine (SAE) are returned. Valid values:</p>
      * <ul>
-     * <li><strong>alb</strong>: ALB.</li>
-     * <li><strong>mse</strong>: MSE.</li>
-     * <li><strong>fc</strong>: Function Compute.</li>
-     * <li><strong>sae</strong>: SAE.</li>
-     * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
-     * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
-     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
-     * <li><strong>nlb</strong>: Network Load Balancer (NLB).</li>
+     * <li><p><strong>alb</strong>: ALB</p>
+     * </li>
+     * <li><p><strong>mse</strong>: MSE</p>
+     * </li>
+     * <li><p><strong>fc</strong>: FC</p>
+     * </li>
+     * <li><p><strong>sae</strong>: SAE</p>
+     * </li>
+     * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS)</p>
+     * </li>
+     * <li><p><strong>clb4</strong>: Classic Load Balancer (CLB) that uses TCP</p>
+     * </li>
+     * <li><p><strong>clb7</strong>: CLB that uses HTTP or HTTPS</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: Network Load Balancer (NLB)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+     * <p>Each cloud service supports different regions. If you specify this parameter, make sure the region you specify for the ResourceRegionId parameter supports this service. Otherwise, the query may fail.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -135,9 +145,9 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceProduct;
 
     /**
-     * <p>The region ID of the resource. For information about region IDs, see the following table.</p>
+     * <p>The ID of the region where the resource resides. For more information, see the &quot;Regions and supported products&quot; section in this topic.</p>
      * <blockquote>
-     * <p> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</p>
+     * <p>Each cloud service supports different regions. If you specify the ResourceProduct parameter, make sure the region you specify for this parameter supports that service. Otherwise, the query may fail.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -147,7 +157,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
-     * <p>The route name. You can use this parameter if you set ResourceProduct to mse.</p>
+     * <p>The name of the route. This parameter is available when you query MSE resources.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-default-traffic</p>

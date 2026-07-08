@@ -16,8 +16,10 @@ public class ModifyResourceLogStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The feature is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The feature is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

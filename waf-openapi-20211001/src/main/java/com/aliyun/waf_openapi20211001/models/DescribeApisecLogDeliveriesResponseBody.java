@@ -11,7 +11,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
     public java.util.List<DescribeApisecLogDeliveriesResponseBodyDeliveryConfigs> deliveryConfigs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2EFCFE18-78F8-5079-B312-07***48B</p>
@@ -44,9 +44,12 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         /**
          * <p>The type of the log subscription. Valid values:</p>
          * <ul>
-         * <li><strong>risk</strong>: risk information.</li>
-         * <li><strong>event</strong>: attack event information.</li>
-         * <li><strong>asset</strong>: asset information.</li>
+         * <li><p><strong>risk</strong>: risk information.</p>
+         * </li>
+         * <li><p><strong>event</strong>: attack event information.</p>
+         * </li>
+         * <li><p><strong>asset</strong>: asset information.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,8 +88,10 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         /**
          * <p>The status of API security log subscription. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enabled.</li>
-         * <li><strong>false</strong>: disabled.</li>
+         * <li><p><strong>true</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -14,9 +14,9 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String endTimestamp;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,10 +27,10 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether protected objects that trigger protection rules are returned in the response. Valid values</p>
+     * <p>Specifies whether to aggregate rule hits by protected object.</p>
      * <ul>
-     * <li><strong>true</strong>: returns only the number of times each protection rule is triggered. If you set IsGroupResource to true, Resource is left empty.</li>
-     * <li><strong>false</strong>: returns the number of times each protection rule is triggered by each protected object.</li>
+     * <li><strong>true (default)</strong>: Aggregates rule hits by protected object. In this case, rule hits are counted based on individual rules only, and the Resource value in the response is empty.</li>
+     * <li><strong>false</strong>: Does not aggregate rule hits by protected object. In this case, rule hits are counted based on both protected objects and rules.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,10 +40,12 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String isGroupResource;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +64,7 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String resource;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -71,13 +73,18 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</p>
+     * <p>The type of rule hit by the protected object. By default, this parameter is not specified, which indicates that all rules are displayed.</p>
      * <ul>
-     * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
-     * <li><strong>custom:</strong> custom rules.</li>
-     * <li><strong>antiscan:</strong> scan protection rules.</li>
-     * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
-     * <li><strong>region_block:</strong> region blacklist rules.</li>
+     * <li><p><strong>blacklist</strong>: IP blacklist.</p>
+     * </li>
+     * <li><p><strong>custom</strong>: Custom rule.</p>
+     * </li>
+     * <li><p><strong>antiscan</strong>: Scan protection rule.</p>
+     * </li>
+     * <li><p><strong>cc_system</strong>: HTTP flood mitigation rule.</p>
+     * </li>
+     * <li><p><strong>region_block</strong>: Location blacklist.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudSupportRegionsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>256959D5-3B45-54CD-A66D-F75F11E8E754</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of regions that are supported for hybrid cloud access.</p>
+     */
     @NameInMap("SupportRegions")
     public java.util.List<String> supportRegions;
 

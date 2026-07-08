@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecApiResourcesResponseBody extends TeaModel {
     /**
-     * <p>The API assets.</p>
+     * <p>The list of API assets.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecApiResourcesResponseBodyData> data;
@@ -59,7 +59,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
 
     public static class DescribeApisecApiResourcesResponseBodyData extends TeaModel {
         /**
-         * <p>The number of API-related risks.</p>
+         * <p>The number of risks associated with the API.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -68,6 +68,8 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long abnormalNum;
 
         /**
+         * <p>The number of account security events associated with the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -75,16 +77,16 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long accountEventNum;
 
         /**
-         * <p>The total number of calls to this API in the previous 30 days.</p>
+         * <p>The total access volume in the last 30 days.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>1683388800</p>
          */
         @NameInMap("AllCnt")
         public Long allCnt;
 
         /**
-         * <p>The API.</p>
+         * <p>The API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1/etl/finddatabyvid</p>
@@ -96,22 +98,25 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
          * <p>The ID of the API.</p>
          * 
          * <strong>example:</strong>
-         * <p>867ade***24ee6e205b8da82b8f84</p>
+         * <p>197b52abcd81d6a8bd4***e477</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
-         * <p>The API-related information. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</p>
+         * <p>The API information, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</p>
          * <ul>
-         * <li><strong>param_num</strong>: the number of API parameters</li>
-         * <li><strong>request_method</strong>: the request method</li>
-         * <li><strong>protocol</strong>: the request protocol</li>
-         * <li><strong>api_url</strong>: the request URL</li>
-         * <li><strong>poc_payload</strong>: the request</li>
-         * <li><strong>request</strong>: the sample request</li>
-         * <li><strong>response</strong>: the sample response</li>
-         * <li><strong>param</strong>: the request parameters</li>
+         * <li><strong>param_num</strong>: the number of API parameters.</li>
+         * <li><strong>request_method</strong>: the request method.</li>
+         * <li><strong>protocol</strong>: the request protocol.</li>
+         * <li><strong>api_url</strong>: the request URL.</li>
+         * <li><strong>poc_payload</strong>: the request.</li>
+         * <li><strong>request</strong>: the request sample.</li>
+         * <li><strong>response</strong>: the response sample.</li>
+         * <li><strong>param</strong>: the request parameters.<blockquote>
+         * <p>This field is returned only when the <strong>ApiId</strong> parameter is specified.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          */
         @NameInMap("ApiInfo")
@@ -120,14 +125,14 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * <p>The request method of the API. Valid values:</p>
          * <ul>
-         * <li><strong>GET</strong></li>
-         * <li><strong>POST</strong></li>
-         * <li><strong>HEAD</strong></li>
-         * <li><strong>PUT</strong></li>
-         * <li><strong>DELETE</strong></li>
-         * <li><strong>CONNECT</strong></li>
-         * <li><strong>PATCH</strong></li>
-         * <li><strong>OPTIONS</strong></li>
+         * <li><strong>GET</strong>: GET request.</li>
+         * <li><strong>POST</strong>: POST request.</li>
+         * <li><strong>HEAD</strong>: HEAD request.</li>
+         * <li><strong>PUT</strong>: PUT request.</li>
+         * <li><strong>DELETE</strong>: DELETE request.</li>
+         * <li><strong>CONNECT</strong>: CONNECT request.</li>
+         * <li><strong>PATCH</strong>: PATCH request.</li>
+         * <li><strong>OPTIONS</strong>: OPTIONS request.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,12 +142,12 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiMethod;
 
         /**
-         * <p>The API-related sensitive information. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</p>
+         * <p>The sensitive information involved in the API, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</p>
          * <ul>
-         * <li><strong>request_sensitive_list</strong>: the sensitive data type in the request</li>
-         * <li><strong>response_sensitive_list</strong>: the sensitive data type in the response</li>
-         * <li><strong>sensitive_list</strong>: sensitive data types</li>
-         * <li><strong>sensitive_level</strong>: sensitivity level</li>
+         * <li><strong>request_sensitive_list</strong>: the list of sensitive data types in the request.</li>
+         * <li><strong>response_sensitive_list</strong>: the list of sensitive data types in the response.</li>
+         * <li><strong>sensitive_list</strong>: the list of sensitive data types.</li>
+         * <li><strong>sensitive_level</strong>: the sensitivity level.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,7 +162,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiSensitive;
 
         /**
-         * <p>The sensitive data type in the request.</p>
+         * <p>The sensitive data in the API request.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;1002&quot;,&quot;1005&quot;]</p>
@@ -166,7 +171,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiSensitiveRequest;
 
         /**
-         * <p>The sensitive data type in the response.</p>
+         * <p>The sensitive data in the API response.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;1002&quot;,&quot;1005&quot;]</p>
@@ -175,11 +180,11 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiSensitiveResponse;
 
         /**
-         * <p>The API status. Valid values:</p>
+         * <p>The status of the API. Valid values:</p>
          * <ul>
-         * <li><strong>NewbornInterface</strong>: The API is newly added.</li>
-         * <li><strong>OfflineInterface</strong>: The API is inactive.</li>
-         * <li><strong>normal</strong>: The API is normal.</li>
+         * <li><strong>NewbornInterface</strong>: newly added.</li>
+         * <li><strong>OfflineInterface</strong>: inactive.</li>
+         * <li><strong>normal</strong>: normal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -191,7 +196,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * <p>The business purpose of the API.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,9 +208,9 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * <p>The service object. Valid values:</p>
          * <ul>
-         * <li><strong>PublicAPI</strong>: public services</li>
-         * <li><strong>ThirdpartAPI</strong>: cooperation with third-party partners</li>
-         * <li><strong>InternalAPI</strong>: internal office</li>
+         * <li><strong>PublicAPI</strong>: public service.</li>
+         * <li><strong>ThirdpartAPI</strong>: third-party collaboration.</li>
+         * <li><strong>InternalAPI</strong>: internal office.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,10 +220,10 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String apiType;
 
         /**
-         * <p>Indicates whether authentication is required. Valid values:</p>
+         * <p>Specifies whether the API has an authentication field. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Authentication is required.</li>
-         * <li><strong>1</strong>: Authentication is not required.</li>
+         * <li><strong>0</strong>: has authentication.</li>
+         * <li><strong>1</strong>: does not have authentication.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,7 +233,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public String authFlag;
 
         /**
-         * <p>The number of bot-initiated requests in the previous 30 days.</p>
+         * <p>The bot access volume in the last 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -237,7 +242,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long botCnt;
 
         /**
-         * <p>The number of the cross-border requests in the previous 30 days.</p>
+         * <p>The cross-border access volume in the last 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -246,7 +251,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long crossBorderCnt;
 
         /**
-         * <p>The number of API-related security events.</p>
+         * <p>The number of security events associated with the API.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -255,14 +260,14 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long eventNum;
 
         /**
-         * <p>The sample APIs.</p>
+         * <p>The list of API samples.</p>
          */
         @NameInMap("Examples")
         @Deprecated
         public java.util.List<String> examples;
 
         /**
-         * <p>The time when the API asset was first detected. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+         * <p>The time when the API asset was first discovered, in UNIX timestamp (UTC) format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683388800</p>
@@ -271,10 +276,10 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long farthestTs;
 
         /**
-         * <p>Specifies whether to follow the API. Valid values:</p>
+         * <p>Specifies whether the API is followed. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: follows the API.</li>
-         * <li><strong>0</strong>: does not follow the API.</li>
+         * <li><strong>1</strong>: followed.</li>
+         * <li><strong>0</strong>: not followed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -284,7 +289,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Integer follow;
 
         /**
-         * <p>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The most recent access time of the API asset, in UNIX timestamp (UTC) format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683388800</p>
@@ -293,7 +298,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Long lastestTs;
 
         /**
-         * <p>The domain name or IP address of the API.</p>
+         * <p>The domain name or IP address to which the API operation belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>a.aliyun.com</p>
@@ -305,13 +310,13 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
          * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
-         * <p>Password changed</p>
+         * <p>loginApi</p>
          */
         @NameInMap("Note")
         public String note;
 
         /**
-         * <p>The list of protection objects corresponding to this asset.</p>
+         * <p>The list of protected objects corresponding to the asset.</p>
          */
         @NameInMap("Resources")
         public java.util.List<String> resources;

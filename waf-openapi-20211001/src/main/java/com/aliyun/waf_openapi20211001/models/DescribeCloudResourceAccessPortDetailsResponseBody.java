@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel {
     /**
-     * <p>The details of the ports of cloud services that are added to WAF.</p>
+     * <p>The details of the ports for the cloud service instance that is added to WAF.</p>
      */
     @NameInMap("AccessPortDetails")
     public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails> accessPortDetails;
@@ -59,10 +59,12 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
 
     public static class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsCertificates extends TeaModel {
         /**
-         * <p>The type of the HTTPS certificate. Valid values:</p>
+         * <p>The type of the certificate for the HTTPS protocol. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: default certificate.</li>
-         * <li><strong>extension</strong>: additional certificate.</li>
+         * <li><p><strong>default</strong>: the default certificate.</p>
+         * </li>
+         * <li><p><strong>extension</strong>: the additional certificate.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +74,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public String appliedType;
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The ID of the added certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>123-cn-hangzhou</p>
@@ -122,7 +124,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
 
     public static class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsLogHeaders extends TeaModel {
         /**
-         * <p>The key of the custom header field.</p>
+         * <p>The custom request header field.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -131,7 +133,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public String key;
 
         /**
-         * <p>The value of the custom header field.</p>
+         * <p>The value of the custom request header field.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>
@@ -163,30 +165,100 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
     }
 
     public static class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails extends TeaModel {
+        /**
+         * <p>The type of the certificate for the HTTPS protocol. Valid values:</p>
+         * <ul>
+         * <li><p><strong>default</strong>: the default certificate.</p>
+         * </li>
+         * <li><p><strong>extension</strong>: the additional certificate.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("AppliedType")
         public String appliedType;
 
+        /**
+         * <p>The ID of the certificate in Certificates Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-cn-hangzhou</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
+        /**
+         * <p>The name of the certificate in Certificates Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-name</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The common name (CN).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.aliyun.com</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The domain name that is bound to the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.aliyun.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The expiration time of the certificate. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1746328456000</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <p>The ID of the certificate that is saved for the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("ProductCertId")
         public String productCertId;
 
+        /**
+         * <p>The name of the certificate that is saved for the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-name</p>
+         */
         @NameInMap("ProductCertName")
         public String productCertName;
 
+        /**
+         * <p>The reason for the abnormal protection status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>UserUploadCert</strong>: The certificate is manually uploaded.</p>
+         * </li>
+         * <li><p><strong>CertNotExistInCertCenter</strong>: The certificate does not exist in Certificates Management Service.</p>
+         * </li>
+         * <li><p><strong>CertExpired</strong>: The certificate has expired.</p>
+         * </li>
+         * <li><p><strong>EmptyCertCN</strong>: The CN of the certificate is empty.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CertNotExistInCertCenter</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
@@ -271,17 +343,20 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
 
     public static class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails extends TeaModel {
         /**
-         * <p>The certificates that are associated with the ports of cloud services.</p>
+         * <p>The list of certificates for the port of the cloud service instance.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsCertificates> certificates;
 
         /**
-         * <p>The type of the cipher suites. Valid values:</p>
+         * <p>The type of the cipher suite. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: all cipher suites.</li>
-         * <li><strong>2</strong>: strong cipher suites.</li>
-         * <li><strong>99</strong>: custom cipher suites.</li>
+         * <li><p><strong>1</strong>: all cipher suites.</p>
+         * </li>
+         * <li><p><strong>2</strong>: strong cipher suites.</p>
+         * </li>
+         * <li><p><strong>99</strong>: custom cipher suites.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,20 +365,28 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         @NameInMap("CipherSuite")
         public Integer cipherSuite;
 
+        /**
+         * <p>The ID of the resource that is added to WAF. The ID is automatically generated by WAF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1**************7ey-80-ecs</p>
+         */
         @NameInMap("CloudResourceId")
         public String cloudResourceId;
 
         /**
-         * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
+         * <p>The custom cipher suites. This parameter is returned only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
          */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
 
         /**
-         * <p>Indicates whether to support TLS 1.3. Valid values:</p>
+         * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,10 +396,12 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Boolean enableTLSv3;
 
         /**
-         * <p>Indicates whether to enable HTTP/2. Valid values:</p>
+         * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: HTTP/2 is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: HTTP/2 is not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,10 +411,12 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Boolean http2Enabled;
 
         /**
-         * <p>Indicates whether to enable the persistent connection feature. Valid values:</p>
+         * <p>Indicates whether to enable persistent connections. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false:</strong></li>
+         * <li><p><strong>true</strong>: Enables persistent connections. This is the default value.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disables persistent connections.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,9 +426,9 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Boolean keepalive;
 
         /**
-         * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
+         * <p>The number of requests that can be reused in a persistent connection. Valid values: 60 to 1000.</p>
          * <blockquote>
-         * <p> This parameter specifies the number of requests that reuse persistent connections after you enable the persistent connection feature.</p>
+         * <p>This parameter specifies the number of requests that can be reused after a persistent connection is established.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -351,9 +438,9 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer keepaliveRequests;
 
         /**
-         * <p>The timeout period for idle persistent connections. Valid values: 10 to 3600. Default value: 15. Unit: seconds.</p>
+         * <p>The timeout period for an idle persistent connection. Valid values: 10 to 3600. Default value: 15. Unit: seconds.</p>
          * <blockquote>
-         * <p> If no new requests are initiated over the idle persistent connection within the specified timeout period, the connection is closed.</p>
+         * <p>This parameter specifies the period of time after which an idle persistent connection is released.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -363,15 +450,17 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer keepaliveTimeout;
 
         /**
-         * <p>The custom header field that you want to use to label requests that are processed by WAF.</p>
+         * <p>The key-value pair that is used to tag the traffic that is processed by WAF.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the traffic marking feature is enabled for the domain name.</p>
+         * <p>This parameter is returned only when the traffic tagging feature is enabled for the domain name.</p>
          * </blockquote>
          */
         @NameInMap("LogHeaders")
         public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsLogHeaders> logHeaders;
 
         /**
+         * <p>The maximum size of a request body. Valid values: 2 to 10. Default value: 2. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -379,7 +468,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer maxBodySize;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the cloud service belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -397,10 +486,12 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer port;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li><strong>http</strong></li>
-         * <li><strong>https</strong></li>
+         * <li><p><strong>http</strong>: HTTP.</p>
+         * </li>
+         * <li><p><strong>https</strong>: HTTPS.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -410,7 +501,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public String protocol;
 
         /**
-         * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The read timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -421,10 +512,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         /**
          * <p>The status of the domain name. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: indicates that the port is available.</li>
-         * <li><strong>2</strong>: indicates that the port is being created.</li>
-         * <li><strong>3</strong>: indicates that the port is being modified.</li>
-         * <li><strong>4</strong>: indicates that the port is being released.</li>
+         * <li><p><strong>1</strong>: The port is in the Normal state.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The port is being created.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The port is being modified.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The port is being released.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -433,18 +528,38 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The abnormal protection status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>InvalidCert</strong>: The certificate is invalid.</p>
+         * </li>
+         * <li><p><strong>ClientCertOpend</strong>: Mutual authentication is enabled.</p>
+         * </li>
+         * <li><p><strong>NetworkConfigLost</strong>: The network configuration of the cloud service is abnormal.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidCert</p>
+         */
         @NameInMap("SubStatus")
         public String subStatus;
 
+        /**
+         * <p>The details of the abnormal protection status. This parameter is returned only when <strong>SubStatus</strong> is set to InvalidCert.</p>
+         */
         @NameInMap("SubStatusDetails")
         public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails> subStatusDetails;
 
         /**
          * <p>The version of the Transport Layer Security (TLS) protocol. Valid values:</p>
          * <ul>
-         * <li><strong>tlsv1</strong></li>
-         * <li><strong>tlsv1.1</strong></li>
-         * <li><strong>tlsv1.2</strong></li>
+         * <li><p><strong>tlsv1</strong></p>
+         * </li>
+         * <li><p><strong>tlsv1.1</strong></p>
+         * </li>
+         * <li><p><strong>tlsv1.2</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -454,7 +569,7 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public String TLSVersion;
 
         /**
-         * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The write timeout period. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -463,11 +578,14 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer writeTimeout;
 
         /**
-         * <p>The method that WAF uses to obtain the originating IP address of a client. Valid values:</p>
+         * <p>The mode that WAF uses to obtain the real IP address of a client. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No Layer 7 proxies are deployed in front of WAF.</li>
-         * <li><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the originating IP address of the client.</li>
-         * <li><strong>2</strong>: WAF reads the value of a custom header field as the originating IP address of the client.</li>
+         * <li><p><strong>0</strong>: WAF is the first Layer 7 proxy before client traffic is forwarded to the origin server.</p>
+         * </li>
+         * <li><p><strong>1</strong>: WAF reads the first IP address from the X-Forwarded-For (XFF) header as the client IP address.</p>
+         * </li>
+         * <li><p><strong>2</strong>: WAF reads the value of a custom header as the client IP address.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,19 +595,21 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         public Integer xffHeaderMode;
 
         /**
-         * <p>The custom header field that is used to obtain the originating IP address of a client. Specify the value in the [&quot;header1&quot;,&quot;header2&quot;,...] format.</p>
+         * <p>The custom header fields that are used to obtain the client IP address. The value is a string in the <code>[&quot;header1&quot;,&quot;header2&quot;,...]</code> format.</p>
          * <blockquote>
-         * <p> This parameter is required only if you set <strong>XffHeaderMode</strong> to 2.</p>
+         * <p>This parameter is returned only when <strong>XffHeaderMode</strong> is set to 2.</p>
          * </blockquote>
          */
         @NameInMap("XffHeaders")
         public java.util.List<String> xffHeaders;
 
         /**
-         * <p>Indicates whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+         * <p>Indicates whether to use the X-Forwarded-For-Proto header to identify the protocol used by WAF. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default)</li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Identifies the protocol used by WAF. This is the default value.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Does not identify the protocol used by WAF.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

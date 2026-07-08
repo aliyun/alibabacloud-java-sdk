@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number of the paginated results Default value: <strong>1</strong>.</p>
+     * <p>The page number to return when paging is used. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of results per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page when paging is used. Default value: <strong>10</strong>, which indicates that 10 entries are returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,9 +35,9 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The query conditions. Specify the value of this parameter as a string in the JSON format.</p>
+     * <p>The query conditions. The value is a JSON string.</p>
      * <blockquote>
-     * <p> The results vary based on the query condition. For more information, see the &quot;<strong>Query parameters</strong>&quot; section in this topic.</p>
+     * <p>The query results vary based on the query conditions. For more information, see <strong>Query parameter description</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,12 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +71,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tag of the resource. You can specify up to 20 tags.</p>
+     * <p>The list of resource tags. A maximum of 20 tags can be specified.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDefenseResourcesRequestTag> tag;

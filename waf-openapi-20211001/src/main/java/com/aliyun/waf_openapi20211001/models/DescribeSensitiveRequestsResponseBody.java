@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSensitiveRequestsResponseBody extends TeaModel {
     /**
-     * <p>The tracing results of the data.</p>
+     * <p>The list of data tracing results.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSensitiveRequestsResponseBodyData> data;
@@ -59,7 +59,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
 
     public static class DescribeSensitiveRequestsResponseBodyDataInfoCount extends TeaModel {
         /**
-         * <p>The type of the sensitive data.</p>
+         * <p>The type of sensitive data.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -101,7 +101,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
 
     public static class DescribeSensitiveRequestsResponseBodyData extends TeaModel {
         /**
-         * <p>The number of risks in the previous 30 days.</p>
+         * <p>The number of risks in the last 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>23</p>
@@ -110,7 +110,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         public Long abnormalCount;
 
         /**
-         * <p>The API.</p>
+         * <p>The API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>/api/users/login</p>
@@ -137,10 +137,10 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         public String clientIP;
 
         /**
-         * <p>The evaluation result. Valid values:</p>
+         * <p>The assessment result. Valid values:</p>
          * <ul>
-         * <li><strong>leak</strong>: Data leaks may occur.</li>
-         * <li><strong>none</strong>: No data leak can occur.</li>
+         * <li><strong>leak</strong>: a leak risk exists.</li>
+         * <li><strong>none</strong>: no leak risk exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         public String detectionResult;
 
         /**
-         * <p>The number of events in the previous 30 days.</p>
+         * <p>The number of events in the last 30 days.</p>
          * 
          * <strong>example:</strong>
          * <p>679</p>
@@ -159,13 +159,13 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         public Long eventCount;
 
         /**
-         * <p>The statistics of the sensitive data.</p>
+         * <p>The list of sensitive data statistics.</p>
          */
         @NameInMap("InfoCount")
         public java.util.List<DescribeSensitiveRequestsResponseBodyDataInfoCount> infoCount;
 
         /**
-         * <p>The domain name of the API.</p>
+         * <p>The domain name to which the API operation belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>a.****.com</p>
@@ -174,7 +174,7 @@ public class DescribeSensitiveRequestsResponseBody extends TeaModel {
         public String matchedHost;
 
         /**
-         * <p>The sensitive data.</p>
+         * <p>The list of sensitive data.</p>
          */
         @NameInMap("SensitiveList")
         public java.util.List<String> sensitiveList;

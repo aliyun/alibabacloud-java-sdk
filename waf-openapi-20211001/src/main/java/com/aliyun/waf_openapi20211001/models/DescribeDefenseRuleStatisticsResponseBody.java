@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics results.</p>
+     */
     @NameInMap("StatisticsInfos")
     public java.util.List<DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos> statisticsInfos;
 
@@ -37,6 +42,8 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
 
     public static class DescribeDefenseRuleStatisticsResponseBodyStatisticsInfos extends TeaModel {
         /**
+         * <p>The number of rules that meet all the query conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>27</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The value corresponding to the quaternary query condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>action</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public String fourthValue;
 
         /**
+         * <p>The value corresponding to the primary query condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>sytem</p>
          */
@@ -58,6 +69,8 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public String primaryValue;
 
         /**
+         * <p>The value corresponding to the secondary query condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>block</p>
          */
@@ -65,6 +78,8 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         public String secondaryValue;
 
         /**
+         * <p>The value corresponding to the tertiary query condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The top 10 protection modules that are matched.</p>
+     * <p>The top 10 protection rule types that were hit.</p>
      */
     @NameInMap("RuleHitsTopTuleType")
     public java.util.List<DescribeRuleHitsTopTuleTypeResponseBodyRuleHitsTopTuleType> ruleHitsTopTuleType;
@@ -42,7 +42,7 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
 
     public static class DescribeRuleHitsTopTuleTypeResponseBodyRuleHitsTopTuleType extends TeaModel {
         /**
-         * <p>The number of requests that match protection rules.</p>
+         * <p>The number of requests that hit the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>698455</p>
@@ -51,20 +51,28 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.</p>
+         * <p>The type of rule that was hit. This parameter is not returned by default, which indicates that data for all rule types is returned.</p>
          * <ul>
-         * <li><strong>waf:</strong> basic protection rules.</li>
-         * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
-         * <li><strong>custom:</strong> custom rules.</li>
-         * <li><strong>antiscan:</strong> scan protection rules.</li>
-         * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
-         * <li><strong>region_block:</strong> region blacklist rules.</li>
-         * <li><strong>scene:</strong> bot management rules.</li>
-         * <li><strong>dlp:</strong> data leakage prevention rules.</li>
+         * <li><p><strong>waf</strong>: basic protection rules.</p>
+         * </li>
+         * <li><p><strong>blacklist</strong>: IP address blacklist.</p>
+         * </li>
+         * <li><p><strong>custom</strong>: custom rules.</p>
+         * </li>
+         * <li><p><strong>antiscan</strong>: scan protection rules.</p>
+         * </li>
+         * <li><p><strong>cc_system</strong>: HTTP flood protection rules.</p>
+         * </li>
+         * <li><p><strong>region_block</strong>: location blacklist.</p>
+         * </li>
+         * <li><p><strong>scene</strong>: bot management.</p>
+         * </li>
+         * <li><p><strong>dlp</strong>: data leak prevention.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cc_system</p>
+         * <p>blacklist</p>
          */
         @NameInMap("RuleType")
         public String ruleType;

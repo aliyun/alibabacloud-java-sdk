@@ -4,10 +4,18 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class CreateDefenseResourceRequest extends TeaModel {
+    /**
+     * <p>The custom header fields used to obtain the actual client IP address when XFF proxy is enabled.</p>
+     * <blockquote>
+     * <p>If XffStatus is set to 1, WAF uses the first IP address from the specified header field as the client IP address to prevent XFF forgery. If you specify multiple header fields, WAF reads them in order. If no valid client IP address is found in the specified header fields, WAF falls back to the first IP address in the X-Forwarded-For header field.</p>
+     * </blockquote>
+     */
     @NameInMap("CustomHeaders")
     public java.util.List<String> customHeaders;
 
     /**
+     * <p>The description of the protected object.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +23,10 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The configuration details of the protected object, in JSON format.</p>
+     * <blockquote>
+     * <p>The required parameters vary based on the values of <strong>Product</strong> and <strong>Pattern</strong>. For more information, see the <strong>Description of the Detail parameter</strong> section.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +36,10 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String detail;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +49,8 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the protected object belongs. This parameter is required only in multi-account scenarios. By default, the protected object belongs to the WAF administrator account.</p>
+     * 
      * <strong>example:</strong>
      * <p>123221XXX</p>
      */
@@ -40,6 +58,13 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String ownerUserId;
 
     /**
+     * <p>The type of the protected object. Valid values:</p>
+     * <ul>
+     * <li><p><strong>domain</strong>: domain name.</p>
+     * </li>
+     * <li><p><strong>multi_service</strong>: hybrid cloud deployment.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +74,21 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String pattern;
 
     /**
+     * <p>The name of the Alibaba Cloud service. Valid values:</p>
+     * <ul>
+     * <li><p><strong>alb</strong>: Application Load Balancer (ALB).</p>
+     * </li>
+     * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS).</p>
+     * </li>
+     * <li><p><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</p>
+     * </li>
+     * <li><p><strong>clb7</strong>: Layer 7 CLB.</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+     * </li>
+     * <li><p><strong>waf</strong>: Web Application Firewall (WAF).</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +98,14 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -65,16 +113,31 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the protected object.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Only protected objects of hybrid cloud deployments support custom names.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>abctest.com</p>
      */
     @NameInMap("Resource")
     public String resource;
 
+    /**
+     * <p>The name of the protection group to which the protected object is added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testGroup</p>
+     */
     @NameInMap("ResourceGroup")
     public String resourceGroup;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -82,6 +145,10 @@ public class CreateDefenseResourceRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
+     * <p>The origin type of the protected object. Valid values:</p>
+     * <ul>
+     * <li><strong>custom</strong>: a user-defined protected object.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,10 +157,21 @@ public class CreateDefenseResourceRequest extends TeaModel {
     @NameInMap("ResourceOrigin")
     public String resourceOrigin;
 
+    /**
+     * <p>A list of tags. You can add up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateDefenseResourceRequestTag> tag;
 
     /**
+     * <p>Indicates whether the X-Forwarded-For (XFF) proxy feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong> (default): disabled.</p>
+     * </li>
+     * <li><p><strong>1</strong>: enabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -219,6 +297,8 @@ public class CreateDefenseResourceRequest extends TeaModel {
 
     public static class CreateDefenseResourceRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>demoTagKey</p>
          */
@@ -226,6 +306,8 @@ public class CreateDefenseResourceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>TagValue1</p>
          */

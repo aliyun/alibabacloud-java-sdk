@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCertDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the certificate.</p>
+     * <p>The certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class DescribeCertDetailRequest extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,10 +28,12 @@ public class DescribeCertDetailRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +43,7 @@ public class DescribeCertDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>

@@ -4,10 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddressesResponseBody extends TeaModel {
+    /**
+     * <p>The list of addresses.</p>
+     */
     @NameInMap("AddressList")
     public java.util.List<DescribeAddressesResponseBodyAddressList> addressList;
 
     /**
+     * <p>The number of entries per page for paging. Valid values: 1 to 500. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,11 @@ public class DescribeAddressesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next page. If a next page exists, this field contains a value.</p>
+     * <blockquote>
+     * <p>If this parameter has a return value, a next page exists. You can pass the returned <strong>NextToken</strong> as a request parameter to retrieve the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
      */
@@ -22,6 +32,8 @@ public class DescribeAddressesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8D8EBFB7-E1EB-5236-952A-092EDC72***</p>
      */
@@ -29,6 +41,8 @@ public class DescribeAddressesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +96,8 @@ public class DescribeAddressesResponseBody extends TeaModel {
 
     public static class DescribeAddressesResponseBodyAddressList extends TeaModel {
         /**
+         * <p>The address.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.1.1.1</p>
          */
@@ -89,6 +105,8 @@ public class DescribeAddressesResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>The most recent modification time of the address. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1760408233000</p>
          */
@@ -96,6 +114,8 @@ public class DescribeAddressesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The address book ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345678</p>
          */

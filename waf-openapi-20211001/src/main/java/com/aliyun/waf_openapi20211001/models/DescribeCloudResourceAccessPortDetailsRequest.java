@@ -7,7 +7,7 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,10 +45,12 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The type of the protocol. Valid values:</p>
+     * <p>The protocol. Valid values:</p>
      * <ul>
-     * <li><strong>http</strong></li>
-     * <li><strong>https</strong></li>
+     * <li><p><strong>http</strong>: HTTP.</p>
+     * </li>
+     * <li><p><strong>https</strong>: HTTPS.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +60,12 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +75,7 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance ID of the resource.</p>
+     * <p>The ID of the resource instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +85,7 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends TeaModel {
     public String resourceInstanceId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -90,11 +94,16 @@ public class DescribeCloudResourceAccessPortDetailsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The cloud service. Valid values:</p>
+     * <p>The type of the cloud service. Valid values:</p>
      * <ul>
-     * <li><strong>clb4</strong>: Layer 4 CLB.</li>
-     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
-     * <li><strong>ecs</strong>: ECS.</li>
+     * <li><p><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</p>
+     * </li>
+     * <li><p><strong>clb7</strong>: Layer 7 CLB.</p>
+     * </li>
+     * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS).</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

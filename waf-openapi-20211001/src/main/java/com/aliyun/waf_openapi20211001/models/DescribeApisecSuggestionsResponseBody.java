@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecSuggestionsResponseBody extends TeaModel {
     /**
-     * <p>The protection suggestions.</p>
+     * <p>The list of protection suggestions.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeApisecSuggestionsResponseBodyData> data;
@@ -42,7 +42,7 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
 
     public static class DescribeApisecSuggestionsResponseBodyData extends TeaModel {
         /**
-         * <p>The API.</p>
+         * <p>The API operation.</p>
          * 
          * <strong>example:</strong>
          * <p>/apisec/v1/saveinfo</p>
@@ -51,7 +51,7 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
         public String apiFormat;
 
         /**
-         * <p>The domain name or IP address of the API.</p>
+         * <p>The domain name or IP address to which the API operation belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>a.aliyun.com</p>
@@ -60,7 +60,7 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
         public String matchedHost;
 
         /**
-         * <p>The rule ID of the protection suggestion.</p>
+         * <p>The ID of the protection suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>15060a1f8fed40130b7c4a7bf8d8733b</p>
@@ -69,16 +69,16 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
         public String suggestId;
 
         /**
-         * <p>The rule content of the protection suggestion. The value is a string that consists of multiple parameters in the JSON format. Valid values:</p>
+         * <p>The content of the protection suggestion rule, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</p>
          * <ul>
-         * <li><strong>event_tags</strong>: event type</li>
-         * <li><strong>black_iplist</strong>: IP address blacklist</li>
-         * <li><strong>ip_baseline</strong>: IP address</li>
-         * <li><strong>freq_baseline</strong>: throttling frequency</li>
-         * <li><strong>client_id_baseline</strong>: client information</li>
-         * <li><strong>country_baseline</strong>: country information</li>
-         * <li><strong>province_baseline</strong>: province information</li>
-         * <li><strong>sensitive_type</strong>: sensitive information</li>
+         * <li><strong>event_tags</strong>: the event type.</li>
+         * <li><strong>black_iplist</strong>: the IP blacklist.</li>
+         * <li><strong>ip_baseline</strong>: the IP list.</li>
+         * <li><strong>freq_baseline</strong>: the throttling frequency information.</li>
+         * <li><strong>client_id_baseline</strong>: the client information.</li>
+         * <li><strong>country_baseline</strong>: the country information.</li>
+         * <li><strong>province_baseline</strong>: the region information.</li>
+         * <li><strong>sensitive_type</strong>: the sensitive information type.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,16 +91,16 @@ public class DescribeApisecSuggestionsResponseBody extends TeaModel {
         public String suggestRule;
 
         /**
-         * <p>The rule type of the protection suggestion. Valid values:</p>
+         * <p>The type of the protection suggestion. Valid values: </p>
          * <ul>
-         * <li><strong>BotRule</strong>: bot management rules</li>
-         * <li><strong>BlackIPRule</strong>: IP address blacklist rules</li>
-         * <li><strong>WhiteIPRule</strong>: IP address whitelist rules</li>
-         * <li><strong>RateLimitRule</strong>: throttling rules</li>
-         * <li><strong>ClientRule</strong>: client rules</li>
-         * <li><strong>GeoRule</strong>: region-related rules</li>
-         * <li><strong>SensitiveRule</strong>: sensitive information rules</li>
-         * <li><strong>UnauthRule</strong>: authentication rules</li>
+         * <li><strong>BotRule</strong>: bot rule.</li>
+         * <li><strong>BlackIPRule</strong>: IP blacklist rule.</li>
+         * <li><strong>WhiteIPRule</strong>: IP whitelist rule.</li>
+         * <li><strong>RateLimitRule</strong>: throttling rule.</li>
+         * <li><strong>ClientRule</strong>: client rule.</li>
+         * <li><strong>GeoRule</strong>: geo-blocking rule.</li>
+         * <li><strong>SensitiveRule</strong>: sensitive information rule.</li>
+         * <li><strong>UnauthRule</strong>: authentication rule.</li>
          * </ul>
          * 
          * <strong>example:</strong>

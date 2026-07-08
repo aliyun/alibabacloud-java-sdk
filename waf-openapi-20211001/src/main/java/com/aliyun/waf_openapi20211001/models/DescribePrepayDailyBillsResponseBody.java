@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayDailyBillsResponseBody extends TeaModel {
     /**
-     * <p>The bills of the burstable QPS (pay-as-you-go) feature.</p>
+     * <p>The list of WAF elastic billing records.</p>
      */
     @NameInMap("Bills")
     public java.util.List<DescribePrepayDailyBillsResponseBodyBills> bills;
@@ -59,7 +59,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
 
     public static class DescribePrepayDailyBillsResponseBodyBills extends TeaModel {
         /**
-         * <p>The burstable QPS of the WAF instance.</p>
+         * <p>The burstable QPS specification of the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -68,7 +68,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long elasticQpsSetValue;
 
         /**
-         * <p>The billing end time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time of the billing period. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687591200</p>
@@ -77,11 +77,11 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The status of QPS usage within the current period of time. Valid values:</p>
+         * <p>The overuse status of the current period. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: normal.</li>
-         * <li><strong>1</strong>: excess.</li>
-         * <li><strong>2</strong>: sandbox.</li>
+         * <li><strong>0</strong>: Normal.</li>
+         * <li><strong>1</strong>: Overused.</li>
+         * <li><strong>2</strong>: Sandboxed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,8 +90,14 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         @NameInMap("ExceedStatus")
         public Integer exceedStatus;
 
+        @NameInMap("ExtensionPlugin")
+        public Boolean extensionPlugin;
+
+        @NameInMap("ExtensionPluginRequest")
+        public Long extensionPluginRequest;
+
         /**
-         * <p>The peak QPS within the current period of time.</p>
+         * <p>The maximum QPS during the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -100,7 +106,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long maxQps;
 
         /**
-         * <p>The unit price in the bill. The price is measured in CNY for bills at the China site (aliyun.com) and in USD for bills at the international site (alibabacloud.com).</p>
+         * <p>The unit price for elastic billing. Unit: CNY for the China site and USD for the international site.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -109,7 +115,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Float price;
 
         /**
-         * <p>The extended QPS of the WAF instance.</p>
+         * <p>The QPS extension specification of the WAF instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -118,7 +124,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long qps;
 
         /**
-         * <p>The default QPS of the WAF instance.</p>
+         * <p>The QPS specification included in the WAF instance edition.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -129,8 +135,8 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether risk identification is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Risk identification is enabled.</li>
+         * <li><strong>false</strong>: Risk identification is not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +146,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Boolean riskControl;
 
         /**
-         * <p>The number of times that risk identification is performed.</p>
+         * <p>The number of times risk identification is used.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -149,7 +155,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long riskTraffic;
 
         /**
-         * <p>The billing start time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the billing period. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687822980</p>
@@ -158,7 +164,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The actual QPS in total.</p>
+         * <p>The total QPS that is billed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -167,7 +173,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         public Long total;
 
         /**
-         * <p>The billing types.</p>
+         * <p>The elastic billing type.</p>
          */
         @NameInMap("Type")
         public java.util.List<String> type;
@@ -199,6 +205,22 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         }
         public Integer getExceedStatus() {
             return this.exceedStatus;
+        }
+
+        public DescribePrepayDailyBillsResponseBodyBills setExtensionPlugin(Boolean extensionPlugin) {
+            this.extensionPlugin = extensionPlugin;
+            return this;
+        }
+        public Boolean getExtensionPlugin() {
+            return this.extensionPlugin;
+        }
+
+        public DescribePrepayDailyBillsResponseBodyBills setExtensionPluginRequest(Long extensionPluginRequest) {
+            this.extensionPluginRequest = extensionPluginRequest;
+            return this;
+        }
+        public Long getExtensionPluginRequest() {
+            return this.extensionPluginRequest;
         }
 
         public DescribePrepayDailyBillsResponseBodyBills setMaxQps(Long maxQps) {

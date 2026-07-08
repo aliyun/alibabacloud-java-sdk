@@ -7,7 +7,7 @@ public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListTagKeysRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -27,10 +27,12 @@ public class ListTagKeysRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

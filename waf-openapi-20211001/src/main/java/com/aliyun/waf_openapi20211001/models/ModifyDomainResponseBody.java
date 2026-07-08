@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDomainResponseBody extends TeaModel {
     /**
-     * <p>The information about the domain name.</p>
+     * <p>The information about the modified domain name.</p>
      */
     @NameInMap("DomainInfo")
     public ModifyDomainResponseBodyDomainInfo domainInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
+     * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,7 +51,7 @@ public class ModifyDomainResponseBody extends TeaModel {
         public String cname;
 
         /**
-         * <p>The domain name whose access configurations you modified.</p>
+         * <p>The domain name whose configurations are modified.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>

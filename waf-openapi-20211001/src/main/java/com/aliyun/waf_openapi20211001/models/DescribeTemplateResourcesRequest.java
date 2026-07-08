@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplateResourcesRequest extends TeaModel {
     /**
+     * <p>The API of the protected asset for the fuzzy query.</p>
+     * 
      * <strong>example:</strong>
      * <p>abc.com</p>
      */
@@ -12,9 +14,9 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
     public String assetApi;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -24,17 +26,31 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries to return on each page for a paged query. Valid values: 1 to 500. Default value: 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results. This is the value of the <strong>NextToken</strong> parameter returned from the last API call. You do not need to specify this parameter for the first query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAJ7ob7*******MhJJ1ELRE=</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,6 +59,12 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the protected object or protected object group for the fuzzy query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc.test.com-waf</p>
+     */
     @NameInMap("Resource")
     public String resource;
 
@@ -58,8 +80,12 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
     /**
      * <p>The type of the protected resource. Valid values:</p>
      * <ul>
-     * <li><strong>single:</strong> protected object.</li>
-     * <li><strong>group:</strong> protected object group.</li>
+     * <li><p><strong>single</strong>: a protected object.</p>
+     * </li>
+     * <li><p><strong>group</strong>: a protected object group.</p>
+     * </li>
+     * <li><p><strong>asset</strong>: a protected asset.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -70,7 +96,7 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The ID of the protection rule template.</p>
+     * <p>The ID of the protection template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

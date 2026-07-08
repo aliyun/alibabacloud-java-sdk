@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
     /**
-     * <p>An array of filter conditions. Multiple filter parameters use AND logic.</p>
+     * <p>The filter conditions for the query. If you specify multiple filter conditions, all conditions must be met (logical AND).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
     public DescribeNetworkFlowTopNMetricRequestFilter filter;
 
     /**
-     * <p>The Web Application Firewall (WAF) instance ID.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to retrieve the WAF instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Returns up to 10 data entries, sorted in descending order.</p>
+     * <p>The maximum number of entries to return. Results are sorted in descending order. Maximum value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,17 +35,22 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>Specifies the data type to be returned. Valid values:</p>
+     * <p>The metric by which to query and rank data. Valid values:</p>
      * <ul>
-     * <li>real_client_ip: The top N requests, sorted in descending order by source IP address, aggregated from all the current user\&quot;s WAF requests.</li>
-     * <li>request_path: The top N requests, sorted in descending order by user-agent, aggregated from all the current user\&quot;s WAF requests.</li>
-     * <li>request_path: The top N requests, sorted in descending order by request URL, aggregated from all the current user\&quot;s WAF requests.</li>
-     * <li>matched_host_by_total_requests: The top N protected objects and their request counts for the current user.</li>
-     * <li>matched_host_by_qps: The top N protected objects and their queries per second (QPS) values.</li>
-     * <li>matched_host_by_status: When using it, you must specify status in the Conditions field of the Filter parameter. If the HTTP response code returned by WAF matches the status specified in the Conditions, then the top N data is returned, sorted in descending order by protected objects. The format for specifying the status is as follows:\
-     * {&quot;Key&quot;:&quot;status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}</li>
-     * <li>matched_host_by_upstream_status: When using it, you must specify upstream_status in the Conditions field of the Filter parameter. If the HTTP response code returned by the origin server matches the upstream_status specified, the top N data is returned, sorted in descending order by protected objects. The format for specifying the upstream_status is as follows:\
-     * {&quot;Key&quot;:&quot;upstream_status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}</li>
+     * <li><p>real_client_ip: Returns the top N source IP addresses of requests that are sent to WAF. The data is aggregated by source IP address and sorted in descending order.</p>
+     * </li>
+     * <li><p>http_user_agent: Returns the top N user agents of requests that are sent to WAF. The data is aggregated by user agent and sorted in descending order.</p>
+     * </li>
+     * <li><p>request_path: Returns the top N request URLs. The data is aggregated by URL and sorted in descending order.</p>
+     * </li>
+     * <li><p>matched_host_by_total_requests: Returns the top N protected objects by total number of requests received.</p>
+     * </li>
+     * <li><p>matched_host_by_qps: Returns the top N protected objects by queries per second (QPS).</p>
+     * </li>
+     * <li><p>matched_host_by_status: Returns the top N protected objects based on a specific WAF-returned HTTP status code. The data is aggregated by protected object and sorted in descending order. If you set Metric to this value, you must specify the status field in the Conditions parameter of Filter. The format is as follows:<br> {&quot;Key&quot;:&quot;status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}<br></p>
+     * </li>
+     * <li><p>matched_host_by_upstream_status: Returns the top N protected objects based on a specific origin server-returned HTTP status code. The data is aggregated by protected object and sorted in descending order. If you set Metric to this value, you must specify the upstream_status field in the Conditions parameter of Filter. The format is as follows:<br> {&quot;Key&quot;:&quot;upstream_status&quot;,&quot;OpValue&quot;:&quot;eq&quot;,&quot;Values&quot;:&quot;200&quot;}<br></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,20 +61,22 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region in which the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ap-southeast-1</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -132,12 +139,13 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
 
     public static class DescribeNetworkFlowTopNMetricRequestFilterConditions extends TeaModel {
         /**
-         * <p>The filter fields. Valid values:</p>
+         * <p>The field name to use for filtering. Valid values:</p>
          * <ul>
-         * <li>matched_host</li>
-         * <li>cluster</li>
+         * <li><p>matched_host</p>
+         * </li>
+         * <li><p>cluster</p>
+         * </li>
          * </ul>
-         * <p>For details, see the <strong>Filter fields (Key)</strong> section below.</p>
          * 
          * <strong>example:</strong>
          * <p>matched_host</p>
@@ -146,8 +154,7 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter operator.
-         * For details, see the <strong>Filter operators (OpValue)</strong> section below.</p>
+         * <p>The operator that is used for the filter condition. For more information about supported operators, see the <strong>Additional information about request parameters</strong> section.</p>
          * 
          * <strong>example:</strong>
          * <p>eq</p>
@@ -156,7 +163,7 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
         public String opValue;
 
         /**
-         * <p>The filter content.</p>
+         * <p>The value to use for the filter condition. The value format depends on the Key and OpValue that you specify.</p>
          * 
          * <strong>example:</strong>
          * <p>test.waf-top</p>
@@ -197,7 +204,7 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
 
     public static class DescribeNetworkFlowTopNMetricRequestFilterDateRange extends TeaModel {
         /**
-         * <p>End time of the query range (Unix timestamp, seconds).</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +214,10 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>Start time of the query range (Unix timestamp, seconds).</p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds. The time range cannot exceed the last 30 days.</p>
+         * <blockquote>
+         * <p>The start time must be later than 30 days before the current time.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,13 +251,13 @@ public class DescribeNetworkFlowTopNMetricRequest extends TeaModel {
 
     public static class DescribeNetworkFlowTopNMetricRequestFilter extends TeaModel {
         /**
-         * <p>The list of filter conditions. Each node describes a filter condition.</p>
+         * <p>The list of filter conditions.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeNetworkFlowTopNMetricRequestFilterConditions> conditions;
 
         /**
-         * <p>Specifies the date range for the query.</p>
+         * <p>The time range to query.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DateRange")

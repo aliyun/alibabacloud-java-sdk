@@ -7,7 +7,7 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp (UTC) in seconds.</p>
      * <blockquote>
-     * <p> You can query only data of the previous month, previous 3 months, previous 6 months, previous 12 months, and data generated since January 1 of last year for compliance check. You must specify a valid time range.</p>
+     * <p>Compliance review currently supports querying data only for the last 1 month, last 3 months, last 6 months, last 12 months, or from January 1 of the previous year to the present. Make sure the time range is valid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The domain name or IP address of the API.</p>
+     * <p>The domain name or IP address to which the API operation belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>a.***.com</p>
@@ -51,7 +51,7 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     public String matchedHost;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -69,10 +69,12 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,9 +93,9 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp (UTC) in seconds.</p>
      * <blockquote>
-     * <p> You can query only data of the previous month, previous 3 months, previous 6 months, previous 12 months, and data generated since January 1 of last year for compliance check. You must specify a valid time range.</p>
+     * <p>Compliance review currently supports querying data only for the last 1 month, last 3 months, last 6 months, last 12 months, or from January 1 of the previous year to the present. Make sure the time range is valid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,6 +104,21 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The dimension for statistics. Valid values:</p>
+     * <ul>
+     * <li><p><strong>matchedHost</strong> (default): statistics by domain name.</p>
+     * </li>
+     * <li><p><strong>apiFormat</strong>: statistics by API operation.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>When the <strong>apiFormat</strong> dimension is used, specify the corresponding domain name in the <strong>MatchedHost</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>matchedHost</p>
+     */
     @NameInMap("Type")
     public String type;
 

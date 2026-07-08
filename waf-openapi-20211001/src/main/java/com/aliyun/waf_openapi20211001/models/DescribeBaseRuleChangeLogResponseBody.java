@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6FBF08CB-8691-5B65-BBF8-***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of rule change records.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeBaseRuleChangeLogResponseBodyRules> rules;
 
     /**
+     * <p>The total number of rule change records.</p>
+     * 
      * <strong>example:</strong>
      * <p>63</p>
      */
@@ -52,6 +59,8 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
 
     public static class DescribeBaseRuleChangeLogResponseBodyRules extends TeaModel {
         /**
+         * <p>The CVE ID of the vulnerability associated with the system rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>CVE-2021-34538</p>
          */
@@ -59,6 +68,14 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String cveId;
 
         /**
+         * <p>The type of change. Valid values:</p>
+         * <ul>
+         * <li><p><strong>add</strong>: The rule was added.</p>
+         * </li>
+         * <li><p><strong>modify</strong>: The rule was modified.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>add</p>
          */
@@ -66,6 +83,8 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String operation;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>42755</p>
          */
@@ -73,6 +92,8 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public Long ruleId;
 
         /**
+         * <p>The rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Header XSS Scanner Behavior</p>
          */
@@ -80,6 +101,8 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>The time when the rule was updated, in UNIX timestamp format. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1665460629000</p>
          */

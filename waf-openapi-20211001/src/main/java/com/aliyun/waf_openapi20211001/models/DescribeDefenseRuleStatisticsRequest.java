@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     /**
+     * <p>The quaternary query condition. The value cannot be the same as the primary, secondary, or tertiary query condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>riskLevel</p>
      */
@@ -12,6 +14,10 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public String fourthKey;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,7 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The primary query condition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +37,14 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public String primaryKey;
 
     /**
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -37,6 +52,8 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -44,6 +61,8 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
+     * <p>The secondary query condition. The value cannot be the same as the primary query condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>action</p>
      */
@@ -51,6 +70,7 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public String secondaryKey;
 
     /**
+     * <p>The ID of the protection template to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +80,8 @@ public class DescribeDefenseRuleStatisticsRequest extends TeaModel {
     public Long templateId;
 
     /**
+     * <p>The tertiary query condition. The value cannot be the same as the primary or secondary query condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>status</p>
      */

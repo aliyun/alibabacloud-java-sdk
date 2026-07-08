@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9F0F9AD6-62E2-50BB-A3E5-30FFB9410262</p>
@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of the top 10 IP addresses from which attacks are initiated.</p>
+     * <p>The top 10 source IP addresses that initiated the most attacks.</p>
      */
     @NameInMap("RuleHitsTopClientIp")
     public java.util.List<DescribeRuleHitsTopClientIpResponseBodyRuleHitsTopClientIp> ruleHitsTopClientIp;
@@ -42,7 +42,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
 
     public static class DescribeRuleHitsTopClientIpResponseBodyRuleHitsTopClientIp extends TeaModel {
         /**
-         * <p>The IP address of the service client.</p>
+         * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>3.3.XX.XX</p>
@@ -51,7 +51,7 @@ public class DescribeRuleHitsTopClientIpResponseBody extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>The number of attacks that are initiated from the IP address.</p>
+         * <p>The number of attack requests.</p>
          * 
          * <strong>example:</strong>
          * <p>531</p>

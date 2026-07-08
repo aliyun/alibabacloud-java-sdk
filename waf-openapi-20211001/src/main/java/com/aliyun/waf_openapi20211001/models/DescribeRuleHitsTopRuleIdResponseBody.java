@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F6334274-8870-5D2F-A1AD-D6EF885AC1ED</p>
@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of the IDs of the top 10 rules that are matched by requests.</p>
+     * <p>The top 10 rule IDs by rule hits.</p>
      */
     @NameInMap("RuleHitsTopRuleId")
     public java.util.List<DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId> ruleHitsTopRuleId;
@@ -42,7 +42,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
 
     public static class DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId extends TeaModel {
         /**
-         * <p>The number of requests that match the rule.</p>
+         * <p>The number of requests that hit the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>181174784</p>
@@ -51,7 +51,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The protected object.</p>
+         * <p>The protected object. This parameter is returned when the IsGroupResource request parameter is set to false.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -60,7 +60,7 @@ public class DescribeRuleHitsTopRuleIdResponseBody extends TeaModel {
         public String resource;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5465465</p>

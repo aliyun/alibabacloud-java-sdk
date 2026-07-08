@@ -7,7 +7,7 @@ public class ModifyHybridCloudSdkPullinStatusRequest extends TeaModel {
     /**
      * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to view the current WAF instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,10 +28,12 @@ public class ModifyHybridCloudSdkPullinStatusRequest extends TeaModel {
     public String mid;
 
     /**
-     * <p>The status of traffic redirection. Valid values:</p>
+     * <p>The status of traffic redirection. Valid values of the parameter:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><p><strong>on</strong>: Enable</p>
+     * </li>
+     * <li><p><strong>off</strong>: Disable</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

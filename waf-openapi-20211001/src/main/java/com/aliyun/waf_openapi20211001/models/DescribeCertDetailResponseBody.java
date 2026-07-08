@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCertDetailResponseBody extends TeaModel {
     /**
-     * <p>The details of the certificate.</p>
+     * <p>The SSL certificate details.</p>
      */
     @NameInMap("CertDetail")
     public DescribeCertDetailResponseBodyCertDetail certDetail;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3C115DBE-8E53-5A12-9CAF-FD3F****CDF6</p>
@@ -42,7 +42,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
 
     public static class DescribeCertDetailResponseBodyCertDetail extends TeaModel {
         /**
-         * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The expiration date of the CA certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1976256736582</p>
@@ -51,7 +51,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         public Long afterDate;
 
         /**
-         * <p>The time when the certificate was issued. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The issuance time of the certificate. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1976256736582</p>
@@ -60,7 +60,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         public Long beforeDate;
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123-cn-hangzhou</p>
@@ -69,7 +69,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         public String certIdentifier;
 
         /**
-         * <p>The name of the certificate.</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>testCertName</p>
@@ -78,7 +78,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         public String certName;
 
         /**
-         * <p>The primary domain name, which is a common name.</p>
+         * <p>The common name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>*.xxxaliyun.com</p>
@@ -87,7 +87,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The domain name that is associated with the certificate.</p>
+         * <p>The domain name associated with the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>demo.xxxaliyun.com</p>
@@ -96,7 +96,7 @@ public class DescribeCertDetailResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The other domain names that are associated with the certificate.</p>
+         * <p>The list of other domain names associated with the certificate.</p>
          */
         @NameInMap("Sans")
         public java.util.List<String> sans;

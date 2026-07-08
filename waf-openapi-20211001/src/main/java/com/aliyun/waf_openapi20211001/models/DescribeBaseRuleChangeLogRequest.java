@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the instance ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,14 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The language of the rule names in the response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -21,6 +33,8 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +42,8 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +51,14 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region of the WAF instance. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -42,6 +66,8 @@ public class DescribeBaseRuleChangeLogRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

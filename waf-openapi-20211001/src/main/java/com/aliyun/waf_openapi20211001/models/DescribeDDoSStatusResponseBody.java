@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDDoSStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether DDoS attacks occur on specific domain names.</p>
+     * <p>The current DDoS status.</p>
      */
     @NameInMap("DDoSStatus")
     public java.util.List<DescribeDDoSStatusResponseBodyDDoSStatus> DDoSStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-***</p>
@@ -42,10 +42,10 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
 
     public static class DescribeDDoSStatusResponseBodyDDoSStatus extends TeaModel {
         /**
-         * <p>The type of events that are triggered by DDoS attacks. Valid values:</p>
+         * <p>The event type. Valid values:</p>
          * <ul>
-         * <li>defense: traffic scrubbing events.</li>
-         * <li>blackhole: blackhole filtering events.</li>
+         * <li>defense: DDoS scrubbing events.</li>
+         * <li>blackhole: DDoS blackhole filtering events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,9 +55,9 @@ public class DescribeDDoSStatusResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>Indicates whether DDoS attacks occur on specific domain names. Valid value:</p>
+         * <p>The DDoS status. Valid values:</p>
          * <ul>
-         * <li><strong>doing</strong>: DDoS attacks occur on specific domain names.</li>
+         * <li><strong>doing</strong>: under DDoS attack.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -7,7 +7,7 @@ public class DescribeUserAssetRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,16 +17,16 @@ public class DescribeUserAssetRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The type of the statistics. Valid values:</p>
+     * <p>The type of statistics. Valid values:</p>
      * <ul>
-     * <li><strong>asset_num</strong>: total number of APIs</li>
-     * <li><strong>asset_active</strong>: number of active APIs</li>
-     * <li><strong>asset_newborn</strong>: number of new APIs</li>
-     * <li><strong>asset_offline</strong>: number of deactivated APIs</li>
-     * <li><strong>asset_bot</strong>: number of APIs that are called by bots</li>
-     * <li><strong>asset_cross_border</strong>: number of APIs that are called for cross-border data transfer</li>
-     * <li><strong>sensitive_api</strong>: number of response-sensitive APIs</li>
-     * <li><strong>sensitive_domain</strong>: number of response-sensitive domain names</li>
+     * <li><strong>asset_num</strong>: total number of API assets.</li>
+     * <li><strong>asset_active</strong>: number of active APIs.</li>
+     * <li><strong>asset_newborn</strong>: number of APIs added today.</li>
+     * <li><strong>asset_offline</strong>: number of inactive APIs.</li>
+     * <li><strong>asset_bot</strong>: number of APIs with bot requests.</li>
+     * <li><strong>asset_cross_border</strong>: number of APIs with cross-border data transfer.</li>
+     * <li><strong>sensitive_api</strong>: number of APIs with sensitive data in responses.</li>
+     * <li><strong>sensitive_domain</strong>: number of sites with sensitive data in responses.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,9 +37,9 @@ public class DescribeUserAssetRequest extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+     * <p>The query time in UNIX timestamp format (UTC). Unit: seconds.</p>
      * <blockquote>
-     * <p>Notice: The parameter has been deprecated.</p>
+     * <p>Notice: This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,9 +50,9 @@ public class DescribeUserAssetRequest extends TeaModel {
     public String days;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,10 +63,12 @@ public class DescribeUserAssetRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDefenseRuleCacheResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>A0F2B994-8645-5270-A05D-9DAD8C****B6</p>
+     * <p>A0F2B994-8645-5270-A05D-9DAD8C35****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

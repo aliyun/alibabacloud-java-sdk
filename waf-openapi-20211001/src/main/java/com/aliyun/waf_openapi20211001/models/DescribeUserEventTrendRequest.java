@@ -7,7 +7,7 @@ public class DescribeUserEventTrendRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,6 +17,12 @@ public class DescribeUserEventTrendRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The dimension of security events. Valid values:</p>
+     * <ul>
+     * <li><strong>ip</strong> (default): IP security events.</li>
+     * <li><strong>account</strong>: account security events.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ip</p>
      */
@@ -24,9 +30,9 @@ public class DescribeUserEventTrendRequest extends TeaModel {
     public String eventScope;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,10 +43,12 @@ public class DescribeUserEventTrendRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

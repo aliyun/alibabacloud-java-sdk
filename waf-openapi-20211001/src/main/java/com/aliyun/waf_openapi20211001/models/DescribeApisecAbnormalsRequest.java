@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecAbnormalsRequest extends TeaModel {
     /**
-     * <p>The ID of the risk.</p>
+     * <p>The risk ID.</p>
      * 
      * <strong>example:</strong>
      * <p>29c6401****99a2bad3943e26d8</p>
@@ -14,11 +14,11 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String abnormalId;
 
     /**
-     * <p>The level of the risk. Valid values:</p>
+     * <p>The risk level. Valid values:</p>
      * <ul>
-     * <li><strong>high</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>low</strong></li>
+     * <li><strong>high</strong>: high risk.</li>
+     * <li><strong>medium</strong>: medium risk.</li>
+     * <li><strong>low</strong>: low risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,9 +28,9 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String abnormalLevel;
 
     /**
-     * <p>The type of the risk.</p>
+     * <p>The risk type.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of risks.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported risk types.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String abnormalTag;
 
     /**
-     * <p>The risk-related API.</p>
+     * <p>The API operation associated with the risk.</p>
      * 
      * <strong>example:</strong>
      * <p>/api/users/login</p>
@@ -49,7 +49,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String apiFormat;
 
     /**
-     * <p>The ID of the risk-related API.</p>
+     * <p>The ID of the API associated with the risk.</p>
      * 
      * <strong>example:</strong>
      * <p>bd9efb8ad******d9ca6</p>
@@ -60,7 +60,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     /**
      * <p>The business purpose of the API.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported business purposes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</p>
+     * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1684382100</p>
@@ -91,9 +91,9 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the WAF instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -104,7 +104,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The domain name or IP address of the API.</p>
+     * <p>The domain name or IP address to which the API operation belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>a.aliyun.com</p>
@@ -113,24 +113,24 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String matchedHost;
 
     /**
-     * <p>The name of the sorting field. Valid values:</p>
+     * <p>The name of the field used for sorting. Valid values:</p>
      * <ul>
-     * <li><strong>discoverTime</strong> (default): indicates the time when a risk was first detected.</li>
-     * <li><strong>abnormalLevel</strong>: indicates the level of a risk.</li>
-     * <li><strong>latestDiscoverTime</strong>: indicates the time when a risk was last detected.</li>
+     * <li><strong>discoverTime</strong>: the time when the risk was first detected. This is the default value.</li>
+     * <li><strong>abnormalLevel</strong>: the risk level.</li>
+     * <li><strong>latestDiscoverTime</strong>: the time when the risk was most recently detected.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>allCnt</p>
+     * <p>firstTime</p>
      */
     @NameInMap("OrderKey")
     public String orderKey;
 
     /**
-     * <p>The sorting method. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><strong>desc (default)</strong>: in descending order</li>
-     * <li><strong>asc</strong>: in ascending order</li>
+     * <li><strong>desc</strong>: descending order. This is the default value.</li>
+     * <li><strong>asc</strong>: ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -142,8 +142,8 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     /**
      * <p>The source of the risk type. Valid values:</p>
      * <ul>
-     * <li><strong>custom</strong></li>
-     * <li><strong>default</strong></li>
+     * <li><strong>custom</strong>: custom.</li>
+     * <li><strong>default</strong>: built-in.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String origin;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -162,7 +162,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -171,20 +171,22 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>cn-qingdao</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -193,7 +195,7 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1684252800</p>
@@ -202,13 +204,16 @@ public class DescribeApisecAbnormalsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the risk. Valid values:</p>
+     * <p>The risk status. Valid values:</p>
      * <ul>
-     * <li><strong>toBeConfirmed</strong></li>
-     * <li><strong>confirmed</strong></li>
-     * <li><strong>toBeFixed</strong></li>
-     * <li><strong>fixed</strong></li>
-     * <li><strong>ignored</strong></li>
+     * <li><strong>toBeConfirmed</strong>: to be confirmed.</li>
+     * <li><strong>confirmed</strong>: confirmed.</li>
+     * <li><strong>toBeFixed</strong>: to be fixed.</li>
+     * <li><strong>fixed</strong>: fixed (manually verified).</li>
+     * <li><strong>ignored</strong>: ignored.</li>
+     * <li><strong>toBeVerified</strong>: to be verified by the system.</li>
+     * <li><strong>notFixed</strong>: not fixed after verification.</li>
+     * <li><strong>systemFixed</strong>: fixed (verified by the system).</li>
      * </ul>
      * 
      * <strong>example:</strong>

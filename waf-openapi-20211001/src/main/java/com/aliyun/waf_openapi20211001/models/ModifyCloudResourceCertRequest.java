@@ -5,15 +5,32 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudResourceCertRequest extends TeaModel {
     /**
+     * <p>The list of certificates.</p>
+     * <blockquote>
+     * <p>Enter all certificate IDs. This includes the default certificate and all additional certificates. After you submit the request, WAF compares the submitted IDs with the existing ones. WAF adds new certificates and deletes certificates that are not in your list. Deleting a certificate may affect related services.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Certificates")
     public java.util.List<ModifyCloudResourceCertRequestCertificates> certificates;
 
+    /**
+     * <p>The ID of the resource that is added to WAF. WAF automatically generates this ID when you add the resource in cloud native mode.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to add a resource. Then, view the resource ID in the response.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-bp*********k5uj2p-443-clb7</p>
+     */
     @NameInMap("CloudResourceId")
     public String cloudResourceId;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +40,8 @@ public class ModifyCloudResourceCertRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The port of the cloud product that is added to WAF.</p>
+     * 
      * <strong>example:</strong>
      * <p>443</p>
      */
@@ -31,6 +50,13 @@ public class ModifyCloudResourceCertRequest extends TeaModel {
     public Integer port;
 
     /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +66,8 @@ public class ModifyCloudResourceCertRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the cloud product instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>lb-bp1*****jqnnqk5uj2p</p>
      */
@@ -48,6 +76,16 @@ public class ModifyCloudResourceCertRequest extends TeaModel {
     public String resourceInstanceId;
 
     /**
+     * <p>The type of the cloud product. Valid values:</p>
+     * <ul>
+     * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS).</p>
+     * </li>
+     * <li><p><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</p>
+     * </li>
+     * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>clb4</p>
      */
@@ -121,6 +159,13 @@ public class ModifyCloudResourceCertRequest extends TeaModel {
 
     public static class ModifyCloudResourceCertRequestCertificates extends TeaModel {
         /**
+         * <p>The type of the certificate for the HTTPS protocol. Valid values:</p>
+         * <ul>
+         * <li><p><strong>default</strong>: the default certificate.</p>
+         * </li>
+         * <li><p><strong>extension</strong>: the additional certificate.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +175,7 @@ public class ModifyCloudResourceCertRequest extends TeaModel {
         public String appliedType;
 
         /**
+         * <p>The ID of the certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

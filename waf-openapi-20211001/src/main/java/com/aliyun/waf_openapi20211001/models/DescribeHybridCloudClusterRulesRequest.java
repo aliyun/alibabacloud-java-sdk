@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     /**
+     * <p>The ID of the hybrid cloud cluster.</p>
+     * <blockquote>
+     * <p>This parameter is available only for hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about hybrid cloud clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public Long clusterId;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,8 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +40,8 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -37,6 +49,14 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -44,6 +64,8 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -51,6 +73,8 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
+     * <p>The prefix of the rule value to match.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
      */
@@ -58,6 +82,14 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public String ruleContent;
 
     /**
+     * <p>The matching logic. Valid values:</p>
+     * <ul>
+     * <li><p>exact: exact match</p>
+     * </li>
+     * <li><p>regex: regular expression match</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>exact</p>
      */
@@ -65,6 +97,10 @@ public class DescribeHybridCloudClusterRulesRequest extends TeaModel {
     public String ruleMatchType;
 
     /**
+     * <p>The type of the rule. Valid value:</p>
+     * <ul>
+     * <li><strong>pullin</strong>: traffic redirection</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

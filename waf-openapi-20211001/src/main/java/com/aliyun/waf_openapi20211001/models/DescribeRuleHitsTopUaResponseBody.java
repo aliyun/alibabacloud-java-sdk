@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8E5C7ED7-503A-5986-A005-36F2511EB89F</p>
@@ -14,7 +14,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The array of the top 10 user agents that are used to initiate attacks.</p>
+     * <p>The top 10 User-Agents ranked by attack count.</p>
      */
     @NameInMap("RuleHitsTopUa")
     public java.util.List<DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa> ruleHitsTopUa;
@@ -42,7 +42,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
 
     public static class DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa extends TeaModel {
         /**
-         * <p>The number of attacks that are initiated from the IP address.</p>
+         * <p>The number of attack requests.</p>
          * 
          * <strong>example:</strong>
          * <p>531</p>
@@ -51,7 +51,7 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The user agent.</p>
+         * <p>The User-Agent name.</p>
          * 
          * <strong>example:</strong>
          * <p>android</p>

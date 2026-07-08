@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     /**
-     * <p>The type of the log subscription. Valid values:</p>
+     * <p>The log subscription type. Valid values:</p>
      * <ul>
      * <li><strong>risk</strong>: risk information.</li>
      * <li><strong>event</strong>: attack event information.</li>
@@ -20,9 +20,9 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     public String assertKey;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>Instance ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,10 +33,12 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,10 +57,12 @@ public class ModifyApisecLogDeliveryStatusRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The status of API security log subscription. Valid values:</p>
+     * <p>The enabling status of API security log subscribe. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled.</li>
-     * <li><strong>false</strong>: disabled.</li>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: shutdown.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

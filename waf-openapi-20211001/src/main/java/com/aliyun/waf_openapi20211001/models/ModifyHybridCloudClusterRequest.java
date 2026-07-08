@@ -5,23 +5,50 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudClusterRequest extends TeaModel {
     /**
+     * <p>The network access mode of the hybrid cloud cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>internet</strong>: access over the Internet.</p>
+     * </li>
+     * <li><p><strong>vpc</strong>: access over a leased line through a virtual private cloud (VPC).</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
 
+    /**
+     * <p>The region in which the leased line resides. This parameter is required when AccessMode is set to vpc. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cn-hangzhou</strong>: Hangzhou.</p>
+     * </li>
+     * <li><p><strong>cn-beijing</strong>: Beijing.</p>
+     * </li>
+     * <li><p><strong>cn-shanghai</strong>: Shanghai.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("AccessRegion")
     public String accessRegion;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The name of the hybrid cloud cluster.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>waf-example-***</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The HTTP ports that are supported. Set this parameter to a string. Specify multiple ports in the <strong>port1,port2,port3</strong> format.</p>
+     * <p>The list of HTTP ports supported by the hybrid cloud cluster. Separate multiple ports with commas (,). Format: <strong>port1,port2,port3</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +58,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String httpPorts;
 
     /**
-     * <p>The HTTPS ports that are supported. Set this parameter to a string. Specify multiple ports in the <strong>port1,port2,port3</strong> format.</p>
+     * <p>The list of HTTPS ports supported by the hybrid cloud cluster. Separate multiple ports with commas (,). Format: <strong>port1,port2,port3</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +68,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String httpsPorts;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the hybrid cloud cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +80,7 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,11 +90,17 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The log fields that are excluded from the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>log_example</p>
+     */
     @NameInMap("LogFieldsNotReturned")
     public String logFieldsNotReturned;
 
     /**
-     * <p>The number of protection nodes that can be added to the cluster.</p>
+     * <p>The maximum number of protection nodes that can be added to the hybrid cloud cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,17 +109,43 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     @NameInMap("ProtectionServerCount")
     public Integer protectionServerCount;
 
+    /**
+     * <p>Indicates whether the proxy gateway is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>on</strong>: The proxy gateway is enabled.</p>
+     * </li>
+     * <li><p><strong>off</strong>: The proxy gateway is disabled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("ProxyStatus")
     public String proxyStatus;
 
+    /**
+     * <p>The type of the hybrid cloud cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>cname</strong>: a reverse proxy cluster.</p>
+     * </li>
+     * <li><p><strong>service</strong>: a service cluster.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>service</p>
+     */
     @NameInMap("ProxyType")
     public String proxyType;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,24 +155,68 @@ public class ModifyHybridCloudClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remarks about the cluster.</p>
+     * <p>The remarks of the hybrid cloud cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>remarkExample</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group to which the WAF instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The rule configuration in JSON format. This includes settings such as the circuit breaker, request body length limit, and timeout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;enable&quot;: true,
+     *       &quot;param&quot;: {
+     *             &quot;breaker&quot;: {
+     *                   &quot;duration&quot;: 1,
+     *                   &quot;failed&quot;: 1,
+     *                   &quot;recent_failed&quot;: 1
+     *             },
+     *             &quot;disable_protect&quot;: false,
+     *             &quot;max_request_body_len&quot;: 1,
+     *             &quot;timeout&quot;: 1
+     *       }
+     * }</p>
+     */
     @NameInMap("RuleConfig")
     public String ruleConfig;
 
+    /**
+     * <p>Indicates whether the rule is enabled. Valid values:</p>
+     * <ul>
+     * <li><p><strong>on</strong>: The rule is enabled.</p>
+     * </li>
+     * <li><p><strong>off</strong>: The rule is disabled.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("RuleStatus")
     public String ruleStatus;
 
+    /**
+     * <p>The rule type. Valid values:</p>
+     * <ul>
+     * <li><strong>bypass</strong>: WAF bypasses security checks.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>bypass</p>
+     */
     @NameInMap("RuleType")
     public String ruleType;
 

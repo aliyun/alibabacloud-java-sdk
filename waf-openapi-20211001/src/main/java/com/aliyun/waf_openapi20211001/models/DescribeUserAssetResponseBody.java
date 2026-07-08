@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserAssetResponseBody extends TeaModel {
     /**
-     * <p>The API statistics.</p>
+     * <p>The list of asset statistics.</p>
      */
     @NameInMap("Assets")
     public java.util.List<DescribeUserAssetResponseBodyAssets> assets;
@@ -42,7 +42,7 @@ public class DescribeUserAssetResponseBody extends TeaModel {
 
     public static class DescribeUserAssetResponseBodyAssets extends TeaModel {
         /**
-         * <p>The number of APIs returned.</p>
+         * <p>The number of statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>134</p>
@@ -51,7 +51,7 @@ public class DescribeUserAssetResponseBody extends TeaModel {
         public Long assetNum;
 
         /**
-         * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The time of the statistics in UNIX timestamp format (UTC). Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1723435200</p>

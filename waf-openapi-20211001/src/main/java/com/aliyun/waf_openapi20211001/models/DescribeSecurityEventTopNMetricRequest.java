@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
     /**
-     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
+     * <p>The query filter conditions. Multiple filter conditions are evaluated using a logical AND.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
     public DescribeSecurityEventTopNMetricRequestFilter filter;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,7 +25,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of data entries that can be returned. Data entries are sorted in descending order before they are returned. Maximum value: 10.</p>
+     * <p>The number of data entries to return after the statistics are sorted in descending order. Maximum value: 10.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,26 +35,26 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The metric whose top N data entries you want to return. The following metrics are supported:</p>
+     * <p>Specifies the type of data to return. Different Metric values correspond to different data content. The following Metric values are supported by this API operation:</p>
      * <blockquote>
-     * <p> For more information about attack requests, see the &quot;Operation description&quot; section of this topic.</p>
+     * <p>The definition of &quot;attack request&quot; is described in the API operation description. The following descriptions reference this concept.</p>
      * </blockquote>
      * <ul>
-     * <li>real_client_ip: The system aggregates the source IP addresses of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>http_user_agent: The system aggregates the User-Agent header field of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>matched_host: The system aggregates the protected objects that are matched by attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>remote_region_id: The system aggregates the countries to which the source IP addresses of attack requests belong to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>request_path: The system aggregates the URLs of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries. The URLs exclude query strings.</li>
-     * <li>block_defense_scene: The system aggregates the protection modules that block attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries. The requests match protection rules whose actions are not set to Monitor.</li>
-     * <li>defense_scene: The system aggregates the protection modules that are matched by attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
-     * <li>defense_scene_rule_id: The system returns the IDs of top N protection rules that are matched by attack requests and also the related protection modules. Only protection rules whose actions are not set to Monitor are counted. The system returns the value in the following format:\
-     * <code>{ &quot;Attribute&quot;: &quot;waf_base&quot;, &quot;Value&quot;: 140, &quot;Name&quot;: &quot;111034&quot; }</code></li>
-     * <li>defense_scene_with_rule_id: The system returns the IDs of top N protection rules that are matched by attack requests and also the related protection modules. The IDs and protection modules are connected by using hyphens (-). Protection rules whose actions are set to Monitor and Block are counted. The system returns the value in the following format:\
-     * <code>{ &quot;Attribute&quot;: &quot;&quot;, &quot;Value&quot;: 1, &quot;Name&quot;: &quot;120075-waf_base&quot; }</code></li>
-     * <li>defense_scene_top_rule_id: The system returns top N matched protection rules of a specific protection module. You can specify Conditions in Filter to configure filter conditions. For example, you can use the following condition to query top N matched protection rules of the custom rule module:\
-     * <code>{ &quot;Key&quot;: &quot;defense_scene_map&quot;, &quot;OpValue&quot;: &quot;contain&quot;, &quot;Values&quot;: &quot;custom_acl&quot; }</code></li>
-     * <li>defense_scene_rule_type: The system returns top N matched protection rules of the core web protection module. This metric is supported only by the core web protection module because only this module supports subtypes of protection rules. You must specify Conditions in Filter to configure filter conditions. Example:\
-     * <code>{ &quot;Key&quot;: &quot;defense_scene&quot;, &quot;OpValue&quot;: &quot;eq&quot;, &quot;Values&quot;: &quot;waf_base&quot; }</code></li>
+     * <li>real_client_ip: performs aggregation and sorting of the source IP addresses of attack requests in descending order, and returns the top N entries.</li>
+     * <li>http_user_agent: performs aggregation and sorting of the User-Agent values of attack requests in descending order, and returns the top N entries.</li>
+     * <li>matched_host: performs aggregation and sorting of the protected objects hit by attack requests in descending order, and returns the top N entries.</li>
+     * <li>remote_region_id: performs aggregation and sorting of the countries to which the source IP addresses of attack requests belong in descending order, and returns the top N entries.</li>
+     * <li>request_path: performs aggregation and sorting of the URLs (excluding query strings) of attack requests in descending order, and returns the top N entries.</li>
+     * <li>block_defense_scene: performs aggregation and sorting of the final action modules of blocked requests (whose action is not &quot;monitor&quot;) in descending order, and returns the top N entries.</li>
+     * <li>defense_scene: performs aggregation and sorting of all protection modules hit by attack requests in descending order, and returns the top N entries.</li>
+     * <li>defense_scene_rule_id: queries the top rule IDs of hit non-monitor rules and the protection modules to which the rules belong. This query returns statistics only for non-monitor mode rules. The returned data format is as follows:<br>
+     *  <code>{ &quot;Attribute&quot;: &quot;waf_base&quot;, &quot;Value&quot;: 140, &quot;Name&quot;: &quot;111034&quot; }</code></li>
+     * <li>defense_scene_with_rule_id: returns the top N rule IDs ranked by the number of hit requests and the protection modules to which the rules belong, connected by &quot;-&quot;. This query does not distinguish between rule actions and includes both monitor rules and block rules. The returned format is as follows:<br>
+     *  <code>{ &quot;Attribute&quot;: &quot;&quot;,  &quot;Value&quot;: 1,  &quot;Name&quot;: &quot;120075-waf_base&quot; }</code></li>
+     * <li>defense_scene_top_rule_id: queries the top rule hits of a specific protection module. Specify filter conditions in the Conditions field of Filter. For example, to query the top rule hits of the &quot;custom ACL&quot; module, set the Conditions field as follows:<br>
+     *  <code>{ &quot;Key&quot;: &quot;defense_scene_map&quot;, &quot;OpValue&quot;: &quot;contain&quot;, &quot;Values&quot;: &quot;custom_acl&quot; }</code></li>
+     * <li>defense_scene_rule_type: queries the top hit rule types of the web core protection module. Only the web core protection module supports this query because only web core protection has rule child classes. Specify filter conditions in the Conditions field of Filter. The format is as follows:<br>
+     * <code>    { &quot;Key&quot;: &quot;defense_scene&quot;, &quot;OpValue&quot;: &quot;eq&quot;, &quot;Values&quot;: &quot;waf_base&quot; }</code></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,20 +65,20 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ap-southeast-1</p>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * <p>The Alibaba Cloud resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -141,7 +141,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricRequestFilterConditions extends TeaModel {
         /**
-         * <p>The field name. This operation supports all fields. For more information, see the <strong>Supported field names</strong> section below.</p>
+         * <p>The field name on which the filter operation is performed. This operation supports all fields.</p>
          * 
          * <strong>example:</strong>
          * <p>matched_host</p>
@@ -150,7 +150,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The operator. For more information, see the <strong>Supported operators</strong> section below.</p>
+         * <p>The operator.</p>
          * 
          * <strong>example:</strong>
          * <p>eq</p>
@@ -159,7 +159,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
         public String opValue;
 
         /**
-         * <p>The field content.</p>
+         * <p>The filter values.</p>
          * 
          * <strong>example:</strong>
          * <p>test.waf-top</p>
@@ -200,7 +200,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricRequestFilterDateRange extends TeaModel {
         /**
-         * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
+         * <p>The end time used for querying data, expressed as a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,10 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
+         * <p>The query data range cannot exceed the past 30 days. The start time used for querying data, expressed as a UNIX timestamp. Unit: seconds.</p>
+         * <blockquote>
+         * <h2>The start time must be later than the current time minus 30 days.</h2>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,13 +247,13 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. Each object describes a filter condition.</p>
+         * <p>The list of filter conditions. Each node describes a filter condition.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSecurityEventTopNMetricRequestFilterConditions> conditions;
 
         /**
-         * <p>The time range for the query.</p>
+         * <p>The query time range.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("DateRange")

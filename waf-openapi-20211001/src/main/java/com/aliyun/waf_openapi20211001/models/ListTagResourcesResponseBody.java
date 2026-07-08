@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of resources.</p>
+     * <p>The resource list.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -68,7 +68,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource. ALIYUN::WAF::DEFENSERESOURCE is returned.</p>
+         * <p>The resource type. ALIYUN::WAF::DEFENSERESOURCE is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
@@ -77,7 +77,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The key of tag N that is added to the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey1</p>
@@ -86,7 +86,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of tag N that is added to the resource.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TayValue1</p>
