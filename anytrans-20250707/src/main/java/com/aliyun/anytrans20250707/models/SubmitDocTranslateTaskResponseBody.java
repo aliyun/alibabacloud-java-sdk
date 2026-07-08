@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitDocTranslateTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public SubmitDocTranslateTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitDocTranslateTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class SubmitDocTranslateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, used to trace the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>377A48D7-7CFA-53F9-8CA2-14FE3F2774B6</p>
      */
@@ -36,8 +47,10 @@ public class SubmitDocTranslateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
-     * <p>True</p>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -97,6 +110,8 @@ public class SubmitDocTranslateTaskResponseBody extends TeaModel {
 
     public static class SubmitDocTranslateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>ready</p>
          */
@@ -104,12 +119,20 @@ public class SubmitDocTranslateTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The document translation task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3a2397bc2c14ab4a2e40a4f5b46241b</p>
          */
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <p>User-defined passthrough data. The translation service returns this data without processing it. This is useful for analytics tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;traceId&quot;:&quot;trace_123456&quot;}</p>
+         */
         @NameInMap("trackingData")
         public String trackingData;
 

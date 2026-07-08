@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BatchTranslateResponseBody extends TeaModel {
     /**
+     * <p>The status code for the overall API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response payload that contains the translation results.</p>
+     */
     @NameInMap("data")
     public BatchTranslateResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class BatchTranslateResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class BatchTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier for the request. Use this ID for tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>3BE338D3-16B1-513F-8DD2-57C8528DEAAA</p>
      */
@@ -36,6 +47,8 @@ public class BatchTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,22 +110,28 @@ public class BatchTranslateResponseBody extends TeaModel {
 
     public static class BatchTranslateResponseBodyDataTranslationListUsage extends TeaModel {
         /**
+         * <p>The number of tokens in the source text.</p>
+         * 
          * <strong>example:</strong>
-         * <p>480</p>
+         * <p>53</p>
          */
         @NameInMap("inputTokens")
         public Long inputTokens;
 
         /**
+         * <p>The number of tokens in the generated translation.</p>
+         * 
          * <strong>example:</strong>
-         * <p>520</p>
+         * <p>8</p>
          */
         @NameInMap("outputTokens")
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens processed for the translation (the sum of <code>inputTokens</code> and <code>outputTokens</code>).</p>
+         * 
          * <strong>example:</strong>
-         * <p>1000</p>
+         * <p>61</p>
          */
         @NameInMap("totalTokens")
         public Long totalTokens;
@@ -150,16 +169,23 @@ public class BatchTranslateResponseBody extends TeaModel {
 
     public static class BatchTranslateResponseBodyDataTranslationList extends TeaModel {
         /**
+         * <p>The status code for the individual translation within the batch.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         @NameInMap("code")
         public Long code;
 
+        /**
+         * <p>The language code of the detected source language.</p>
+         */
         @NameInMap("detectedLang")
         public String detectedLang;
 
         /**
+         * <p>The zero-based index of this result, which corresponds to the order of the source text in the original request.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -167,19 +193,26 @@ public class BatchTranslateResponseBody extends TeaModel {
         public String index;
 
         /**
+         * <p>The status message for the individual translation.</p>
+         * 
          * <strong>example:</strong>
-         * <p>ok</p>
+         * <p>OK</p>
          */
         @NameInMap("message")
         public String message;
 
         /**
+         * <p>The translated text.</p>
+         * 
          * <strong>example:</strong>
-         * <p>Featured Double Color Ball experts: Liu Ke and A Wang both hit the second prize, winning 1.43 million!</p>
+         * <p>What will the weather be like tomorrow?</p>
          */
         @NameInMap("translation")
         public String translation;
 
+        /**
+         * <p>An object detailing the token usage for this translation.</p>
+         */
         @NameInMap("usage")
         public BatchTranslateResponseBodyDataTranslationListUsage usage;
 
@@ -239,6 +272,9 @@ public class BatchTranslateResponseBody extends TeaModel {
     }
 
     public static class BatchTranslateResponseBodyData extends TeaModel {
+        /**
+         * <p>An array of translation results, one for each text provided in the request.</p>
+         */
         @NameInMap("translationList")
         public java.util.List<BatchTranslateResponseBodyDataTranslationList> translationList;
 

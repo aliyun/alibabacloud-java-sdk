@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TermEditRequest extends TeaModel {
     /**
+     * <p>The action type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class TermEditRequest extends TeaModel {
     public String action;
 
     /**
+     * <p>The extended parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ext")
     public TermEditRequestExt ext;
 
     /**
+     * <p>The model type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class TermEditRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language. The value must be a valid BCP-47 language code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +42,7 @@ public class TermEditRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language. The value must be a valid BCP-47 language code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +52,7 @@ public class TermEditRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>The ID of the Model Studio workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,12 +116,18 @@ public class TermEditRequest extends TeaModel {
 
     public static class TermEditRequestExtTerms extends TeaModel {
         /**
+         * <p>The source text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>大模型</p>
          */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>The intervention term ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>92669964</p>
          */
@@ -123,6 +135,7 @@ public class TermEditRequest extends TeaModel {
         public String termId;
 
         /**
+         * <p>The post-intervention translation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,10 +176,17 @@ public class TermEditRequest extends TeaModel {
     }
 
     public static class TermEditRequestExt extends TeaModel {
+        /**
+         * <p>The extended parameter configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bizUserld&quot;:&quot;123456&quot;,&quot;bizType&quot;:session&quot;}</p>
+         */
         @NameInMap("paramMap")
         public Object paramMap;
 
         /**
+         * <p>The intervention term list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("terms")

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocTranslateTaskRequest extends TeaModel {
     /**
+     * <p>The document translation task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetDocTranslateTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The ID of the Model Studio workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

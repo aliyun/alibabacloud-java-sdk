@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetHtmlTranslateTaskResponseBody extends TeaModel {
     /**
+     * <p>The operation status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetHtmlTranslateTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code returned by the server.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetHtmlTranslateTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,13 +38,17 @@ public class GetHtmlTranslateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request. Use this ID to trace the request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>64191A87-C480-53AD-AEA2-2E847D4DFA66</p>
+     * <p>04B53310-CB1A-14B4-AC85-26C154D8366A</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,22 +110,28 @@ public class GetHtmlTranslateTaskResponseBody extends TeaModel {
 
     public static class GetHtmlTranslateTaskResponseBodyDataUsage extends TeaModel {
         /**
+         * <p>The number of tokens in the input.</p>
+         * 
          * <strong>example:</strong>
-         * <p>495</p>
+         * <p>22</p>
          */
         @NameInMap("inputTokens")
         public Long inputTokens;
 
         /**
+         * <p>The number of tokens in the output.</p>
+         * 
          * <strong>example:</strong>
-         * <p>444</p>
+         * <p>19</p>
          */
         @NameInMap("outputTokens")
         public Long outputTokens;
 
         /**
+         * <p>The total number of tokens for the request.</p>
+         * 
          * <strong>example:</strong>
-         * <p>939</p>
+         * <p>41</p>
          */
         @NameInMap("totalTokens")
         public Long totalTokens;
@@ -150,6 +169,8 @@ public class GetHtmlTranslateTaskResponseBody extends TeaModel {
 
     public static class GetHtmlTranslateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>Translation Result</p>
+         * 
          * <strong>example:</strong>
          * <!DOCTYPE html>
          * 
@@ -170,6 +191,9 @@ public class GetHtmlTranslateTaskResponseBody extends TeaModel {
         @NameInMap("translation")
         public String translation;
 
+        /**
+         * <p>Details about token usage.</p>
+         */
         @NameInMap("usage")
         public GetHtmlTranslateTaskResponseBodyDataUsage usage;
 

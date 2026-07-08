@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
     /**
+     * <p>The result code of the API call.</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The object that contains the returned data.</p>
+     */
     @NameInMap("data")
     public SubmitLongTextTranslateTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>A message that corresponds to the code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,15 +38,17 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID for the API request, used for tracing.</p>
      * 
      * <strong>example:</strong>
-     * <p>400392FF-2F47-549A-A7FF-60FA4121D19E</p>
+     * <p>C2D45266-3135-1A06-AD7F-69E782ED596F</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
 
     public static class SubmitLongTextTranslateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The status of the translation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -106,12 +119,20 @@ public class SubmitLongTextTranslateTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the long-text translation task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>2746f4be-cff2-465e-a2c6-12bff30ce0f9</p>
+         * <p>a8f25f25-0b36-4349-857f-e19a43f69e51</p>
          */
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <p>A custom string passed from the request to the response unmodified. This is useful for tracking or correlating API calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;traceId&quot;:&quot;trace_123456&quot;}</p>
+         */
         @NameInMap("trackingData")
         public String trackingData;
 

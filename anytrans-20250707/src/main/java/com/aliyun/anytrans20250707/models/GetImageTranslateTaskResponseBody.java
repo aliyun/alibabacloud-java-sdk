@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetImageTranslateTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>A JSON object that contains the returned data.</p>
+     */
     @NameInMap("data")
     public GetImageTranslateTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, used to trace the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>377A48D7-7CFA-53F9-8CA2-14FE3F2774B6</p>
      */
@@ -36,6 +47,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>Indicates whether the request is synchronous.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,15 +127,19 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesDownLeft extends TeaModel {
         /**
+         * <p>The x-coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>9</p>
          */
         @NameInMap("x")
         public Long x;
 
         /**
+         * <p>The y-coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>694</p>
+         * <p>145</p>
          */
         @NameInMap("y")
         public Long y;
@@ -150,15 +169,19 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesDownRight extends TeaModel {
         /**
+         * <p>The x-coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>97</p>
+         * <p>327</p>
          */
         @NameInMap("x")
         public Long x;
 
         /**
+         * <p>The y-coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>694</p>
+         * <p>148</p>
          */
         @NameInMap("y")
         public Long y;
@@ -188,6 +211,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesUpLeft extends TeaModel {
         /**
+         * <p>The x-coordinate.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -195,8 +220,10 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long x;
 
         /**
+         * <p>The y-coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>669</p>
+         * <p>66</p>
          */
         @NameInMap("y")
         public Long y;
@@ -226,15 +253,19 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesUpRight extends TeaModel {
         /**
+         * <p>The x-coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>11</p>
+         * <p>328</p>
          */
         @NameInMap("x")
         public Long x;
 
         /**
+         * <p>The y-coordinate.</p>
+         * 
          * <strong>example:</strong>
-         * <p>22</p>
+         * <p>69</p>
          */
         @NameInMap("y")
         public Long y;
@@ -264,26 +295,38 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxes extends TeaModel {
         /**
+         * <p>The confidence score for the recognized text. The value ranges from 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>0.99</p>
          */
         @NameInMap("confidence")
         public Float confidence;
 
         /**
+         * <p>The text direction. Valid values: <code>0</code> (horizontal) and <code>1</code> (vertical).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("direction")
         public Long direction;
 
+        /**
+         * <p>The coordinates of the lower-left corner of the bounding box.</p>
+         */
         @NameInMap("downLeft")
         public GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesDownLeft downLeft;
 
+        /**
+         * <p>The coordinates of the lower-right corner of the bounding box.</p>
+         */
         @NameInMap("downRight")
         public GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesDownRight downRight;
 
         /**
+         * <p>The cell ID of the bounding box. If the bounding box is not part of a table, the value is <code>-1</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -291,27 +334,41 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long tableCellId;
 
         /**
+         * <p>The ID of the table that contains the bounding box. If the bounding box is not part of a table, the value is <code>-1</code>.</p>
+         * 
          * <strong>example:</strong>
-         * <p>tbl-1dd15f7e-e373-4da9-858e-8785db1a2954</p>
+         * <p>1</p>
          */
         @NameInMap("tableId")
         public Long tableId;
 
+        /**
+         * <p>The source-language text within the bounding box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>修护头皮</p>
+         */
         @NameInMap("text")
         public String text;
 
         /**
+         * <p>An object containing the translated text, keyed by the target language code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{
-         *           &quot;en&quot;: &quot;Promotional price:&quot;
-         *         }</p>
+         * <p>{ &quot;en&quot;: &quot;Restore Scalp Health&quot; }</p>
          */
         @NameInMap("translation")
         public java.util.Map<String, ?> translation;
 
+        /**
+         * <p>The coordinates of the upper-left corner of the bounding box.</p>
+         */
         @NameInMap("upLeft")
         public GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesUpLeft upLeft;
 
+        /**
+         * <p>The coordinates of the upper-right corner of the bounding box.</p>
+         */
         @NameInMap("upRight")
         public GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxesUpRight upRight;
 
@@ -404,6 +461,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationTableInfosCellInfosPos extends TeaModel {
         /**
+         * <p>The x-coordinate.</p>
+         * 
          * <strong>example:</strong>
          * <p>33</p>
          */
@@ -411,6 +470,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long x;
 
         /**
+         * <p>The y-coordinate.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -441,20 +502,33 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     }
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationTableInfosCellInfos extends TeaModel {
+        /**
+         * <p>An array of coordinates defining the cell\&quot;s bounding box.</p>
+         */
         @NameInMap("pos")
         public java.util.List<GetImageTranslateTaskResponseBodyDataTranslationTableInfosCellInfosPos> pos;
 
         /**
+         * <p>The cell ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("tableCellId")
         public Long tableCellId;
 
+        /**
+         * <p>The text content of the cell.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>活动价</p>
+         */
         @NameInMap("text")
         public String text;
 
         /**
+         * <p>The ending column index of the cell. The index starts from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -462,6 +536,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long xec;
 
         /**
+         * <p>The starting column index of the cell. The index starts from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -469,6 +545,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long xsc;
 
         /**
+         * <p>The ending row index of the cell. The index starts from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -476,6 +554,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long yec;
 
         /**
+         * <p>The starting row index of the cell. The index starts from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -546,17 +626,24 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     }
 
     public static class GetImageTranslateTaskResponseBodyDataTranslationTableInfos extends TeaModel {
+        /**
+         * <p>Information about the cells within the table.</p>
+         */
         @NameInMap("cellInfos")
         public java.util.List<GetImageTranslateTaskResponseBodyDataTranslationTableInfosCellInfos> cellInfos;
 
         /**
+         * <p>The ID of the table.</p>
+         * 
          * <strong>example:</strong>
-         * <p>tbl-f16944be-5955-466c-aa6c-940e4ed99a09</p>
+         * <p>1</p>
          */
         @NameInMap("tableId")
         public Long tableId;
 
         /**
+         * <p>The number of columns in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -564,6 +651,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long xCellSize;
 
         /**
+         * <p>The number of rows in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -611,23 +700,32 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyDataTranslation extends TeaModel {
         /**
+         * <p>The rotation angle of the image in degrees.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("angle")
         public Long angle;
 
+        /**
+         * <p>An array of detected bounding boxes.</p>
+         */
         @NameInMap("boundingBoxes")
         public java.util.List<GetImageTranslateTaskResponseBodyDataTranslationBoundingBoxes> boundingBoxes;
 
         /**
+         * <p>The number of detected bounding boxes.</p>
+         * 
          * <strong>example:</strong>
-         * <p>5</p>
+         * <p>13</p>
          */
         @NameInMap("boxesCount")
         public Long boxesCount;
 
         /**
+         * <p>The height of the image after rotation, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -635,6 +733,8 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long height;
 
         /**
+         * <p>The height of the original image, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -642,16 +742,23 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
         public Long orgHeight;
 
         /**
+         * <p>The width of the original image, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
         @NameInMap("orgWidth")
         public Long orgWidth;
 
+        /**
+         * <p>Information about tables detected in the image.</p>
+         */
         @NameInMap("tableInfos")
         public java.util.List<GetImageTranslateTaskResponseBodyDataTranslationTableInfos> tableInfos;
 
         /**
+         * <p>The width of the image after rotation, in pixels.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -731,12 +838,17 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
 
     public static class GetImageTranslateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The trace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>213e391517328463424251152ec9fb</p>
          */
         @NameInMap("traceId")
         public String traceId;
 
+        /**
+         * <p>An object containing the translation result.</p>
+         */
         @NameInMap("translation")
         public GetImageTranslateTaskResponseBodyDataTranslation translation;
 

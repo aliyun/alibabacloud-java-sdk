@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocTranslateTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>Extension parameters that control translation features.</p>
+     */
     @NameInMap("ext")
     public String extShrink;
 
     /**
+     * <p>The format for the translation.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -15,15 +20,17 @@ public class SubmitDocTranslateTaskShrinkRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>The translation model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>spoke-llm</p>
+     * <p>mt-turbo</p>
      */
     @NameInMap("scene")
     public String scene;
 
     /**
+     * <p>The source language code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,8 @@ public class SubmitDocTranslateTaskShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language code.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -40,6 +49,7 @@ public class SubmitDocTranslateTaskShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>The URL of the document to translate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +59,7 @@ public class SubmitDocTranslateTaskShrinkRequest extends TeaModel {
     public String text;
 
     /**
+     * <p>The ID of the Model Studio workspace for the current request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

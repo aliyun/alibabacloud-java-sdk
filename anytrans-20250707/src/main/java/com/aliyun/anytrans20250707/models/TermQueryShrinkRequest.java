@@ -4,10 +4,14 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class TermQueryShrinkRequest extends TeaModel {
+    /**
+     * <p>Extended parameters.</p>
+     */
     @NameInMap("ext")
     public String extShrink;
 
     /**
+     * <p>The translation model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class TermQueryShrinkRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,7 @@ public class TermQueryShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +40,17 @@ public class TermQueryShrinkRequest extends TeaModel {
     @NameInMap("targetLanguage")
     public String targetLanguage;
 
+    /**
+     * <p>The source text to search for intervention terms.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>今天的天气非常不错，我准备去跟我的好朋友去学习一些大模型相关和应用接口的知识。</p>
+     */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>The ID of the Model Studio workspace used for the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

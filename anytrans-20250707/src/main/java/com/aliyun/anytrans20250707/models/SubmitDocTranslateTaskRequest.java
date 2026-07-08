@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocTranslateTaskRequest extends TeaModel {
+    /**
+     * <p>Extension parameters that control translation features.</p>
+     */
     @NameInMap("ext")
     public SubmitDocTranslateTaskRequestExt ext;
 
     /**
+     * <p>The format for the translation.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -15,15 +20,17 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>The translation model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>spoke-llm</p>
+     * <p>mt-turbo</p>
      */
     @NameInMap("scene")
     public String scene;
 
     /**
+     * <p>The source language code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,8 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language code.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -40,6 +49,7 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>The URL of the document to translate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +59,7 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     public String text;
 
     /**
+     * <p>The ID of the Model Studio workspace for the current request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,9 +130,21 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitDocTranslateTaskRequestExtConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to generate a bilingual document containing both the source and target text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isBilingual")
         public Boolean isBilingual;
 
+        /**
+         * <p>Specifies whether to translate images in PDF documents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("skipImgTrans")
         public Boolean skipImgTrans;
 
@@ -149,12 +172,20 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitDocTranslateTaskRequestExtTerminologies extends TeaModel {
+        /**
+         * <p>The source text that the custom translation will replace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>机器学习</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>The custom translation for the corresponding source term.</p>
+         * 
          * <strong>example:</strong>
-         * <p>llm</p>
+         * <p>ML</p>
          */
         @NameInMap("tgt")
         public String tgt;
@@ -183,22 +214,42 @@ public class SubmitDocTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitDocTranslateTaskRequestExt extends TeaModel {
+        /**
+         * <p>Configuration settings for the translation job.</p>
+         */
         @NameInMap("config")
         public SubmitDocTranslateTaskRequestExtConfig config;
 
         /**
+         * <p>A prompt that tailors the translation style to a specific domain.</p>
+         * 
          * <strong>example:</strong>
          * <p>This text comes from a rigorous academic paper. Please provide a translation that complies with academic standards.</p>
          */
         @NameInMap("domainHint")
         public String domainHint;
 
+        /**
+         * <p>A map for advanced configuration. Use <code>bizUserId</code> to apply terminologies on a per-user basis and <code>bizType</code> to apply them on a per-scenario basis. This prevents terminology conflicts between different users or scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bizUserld&quot;:&quot;123456&quot;,&quot;bizType&quot;:session&quot;}</p>
+         */
         @NameInMap("paramMap")
         public Object paramMap;
 
+        /**
+         * <p>The glossary to apply to the translation.</p>
+         */
         @NameInMap("terminologies")
         public java.util.List<SubmitDocTranslateTaskRequestExtTerminologies> terminologies;
 
+        /**
+         * <p>User-defined pass-through data. The service does not process this data and returns it as-is in the response. This is useful for scenarios such as tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;traceId&quot;:&quot;trace_123456&quot;}</p>
+         */
         @NameInMap("trackingData")
         public String trackingData;
 

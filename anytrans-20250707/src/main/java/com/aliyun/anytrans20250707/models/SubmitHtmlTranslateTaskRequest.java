@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class SubmitHtmlTranslateTaskRequest extends TeaModel {
+    /**
+     * <p>Extended parameters to control translation behavior.</p>
+     */
     @NameInMap("ext")
     public SubmitHtmlTranslateTaskRequestExt ext;
 
     /**
+     * <p>The format of the input text.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -15,6 +20,8 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>The translation model.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-turbo</p>
      */
@@ -22,6 +29,8 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -29,16 +38,38 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
     @NameInMap("targetLanguage")
     public String targetLanguage;
 
+    /**
+     * <p>The HTML content to be translated.</p>
+     * 
+     * <strong>example:</strong>
+     * <!DOCTYPE html>
+     * <html lang="zh-CN">
+     * <head>
+     *     <meta charset="UTF-8">
+     *     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     *     <title>我的第一个网页</title>
+     * </head>
+     * <body>
+     *     <h1>欢迎来到我的网页！</h1>
+     *     <p>这是一个简单的 HTML 页面。</p>
+     *     <p>学习 HTML 是进入网页开发的第一步。</p>
+     *     <a href="https://www.example.com">点击这里访问示例网站</a>
+     * </body>
+     * </html>
+     */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>The ID of the Model Studio workspace used for this request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,9 +140,18 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitHtmlTranslateTaskRequestExtConfig extends TeaModel {
+        /**
+         * <p>The callback URL for receiving translation results.</p>
+         */
         @NameInMap("callbackUrl")
         public String callbackUrl;
 
+        /**
+         * <p>Specifies whether to skip the Content Moderation check. To skip this check, you must first complete the Content Moderation disablement process before calling the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("skipCsiCheck")
         public Boolean skipCsiCheck;
 
@@ -139,10 +179,18 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitHtmlTranslateTaskRequestExtExamples extends TeaModel {
+        /**
+         * <p>The source text in the example.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>The target text in the example.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -173,10 +221,18 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitHtmlTranslateTaskRequestExtTerminologies extends TeaModel {
+        /**
+         * <p>The source text for the terminology pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>机器学习</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>The target text for the terminology pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>ML</p>
          */
@@ -208,6 +264,8 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
 
     public static class SubmitHtmlTranslateTaskRequestExtTextTransform extends TeaModel {
         /**
+         * <p>Converts the entire translated text to lowercase.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -215,6 +273,8 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
         public Boolean toLower;
 
         /**
+         * <p>Converts the translated text to title case.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -222,6 +282,8 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
         public Boolean toTitle;
 
         /**
+         * <p>Converts the entire translated text to uppercase.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -260,31 +322,60 @@ public class SubmitHtmlTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitHtmlTranslateTaskRequestExt extends TeaModel {
+        /**
+         * <p>Provides specific configuration settings for the translation task.</p>
+         */
         @NameInMap("config")
         public SubmitHtmlTranslateTaskRequestExtConfig config;
 
         /**
+         * <p>A natural language prompt in English to guide the model\&quot;s translation style.</p>
+         * 
          * <strong>example:</strong>
-         * <p>technology</p>
+         * <p>his sentence from an e-commerce product image, please provide a translation that is both highly concise and no more than 1.2 times the length of the original.</p>
          */
         @NameInMap("domainHint")
         public String domainHint;
 
+        /**
+         * <p>A list of translation examples.</p>
+         */
         @NameInMap("examples")
         public java.util.List<SubmitHtmlTranslateTaskRequestExtExamples> examples;
 
+        /**
+         * <p>Provides extended parameter configuration. The <code>bizUserId</code> key specifies the business user ID to isolate custom terminology enforcement by user. The <code>bizType</code> key specifies the business scenario type to isolate custom terminology enforcement by scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bizUserld&quot;:&quot;123456&quot;,&quot;bizType&quot;:session&quot;}</p>
+         */
         @NameInMap("paramMap")
         public Object paramMap;
 
+        /**
+         * <p>A list of sensitive words to filter from the translation.</p>
+         */
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
+        /**
+         * <p>A list of custom terminology pairs to apply to the translation.</p>
+         */
         @NameInMap("terminologies")
         public java.util.List<SubmitHtmlTranslateTaskRequestExtTerminologies> terminologies;
 
+        /**
+         * <p>Specifies case transformations for the translated text.</p>
+         */
         @NameInMap("textTransform")
         public SubmitHtmlTranslateTaskRequestExtTextTransform textTransform;
 
+        /**
+         * <p>Custom passthrough data that the service returns unprocessed in the response. Useful for tasks such as event tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;traceId&quot;:&quot;trace_123456&quot;}</p>
+         */
         @NameInMap("trackingData")
         public String trackingData;
 

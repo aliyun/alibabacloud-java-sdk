@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class SubmitImageTranslateTaskRequest extends TeaModel {
+    /**
+     * <p>Extended parameters to control translation features.</p>
+     */
     @NameInMap("ext")
     public SubmitImageTranslateTaskRequestExt ext;
 
     /**
+     * <p>The translation format.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -15,6 +20,7 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>Specifies the translation model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,7 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,18 +40,24 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>A list of target languages.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("targetLanguage")
     public java.util.List<String> targetLanguage;
 
     /**
+     * <p>The URL of the image to translate.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/imgextra/i3/2214557014466/O1CN0174Thmb1irTsyTXYFO_!!4611686018427386306-0-item_pic.jpg">https://img.alicdn.com/imgextra/i3/2214557014466/O1CN0174Thmb1irTsyTXYFO_!!4611686018427386306-0-item_pic.jpg</a></p>
      */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>The ID of the Model Studio workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,10 +128,18 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitImageTranslateTaskRequestExtExamples extends TeaModel {
+        /**
+         * <p>The source text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>The target text.</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -149,10 +170,18 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
     }
 
     public static class SubmitImageTranslateTaskRequestExtTerminologies extends TeaModel {
+        /**
+         * <p>The source text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>机器学习</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>The custom translation for the source text.</p>
+         * 
          * <strong>example:</strong>
          * <p>ML</p>
          */
@@ -184,6 +213,8 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
 
     public static class SubmitImageTranslateTaskRequestExtTextTransform extends TeaModel {
         /**
+         * <p>Set to <code>true</code> to convert the entire translated text to lowercase.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -191,6 +222,8 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
         public Boolean toLower;
 
         /**
+         * <p>Set to <code>true</code> to convert the entire translated text to title case.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -198,6 +231,8 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
         public Boolean toTitle;
 
         /**
+         * <p>Set to <code>true</code> to convert the entire translated text to uppercase.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -237,27 +272,53 @@ public class SubmitImageTranslateTaskRequest extends TeaModel {
 
     public static class SubmitImageTranslateTaskRequestExt extends TeaModel {
         /**
+         * <p>An English string that guides the translation style of the large language model (LLM).</p>
+         * 
          * <strong>example:</strong>
-         * <p>technology</p>
+         * <p>this sentence from an e-commerce product image, please provide a translation that is both highly concise and no more than 1.2 times the length of the original.</p>
          */
         @NameInMap("domainHint")
         public String domainHint;
 
+        /**
+         * <p>A list of translation examples.</p>
+         */
         @NameInMap("examples")
         public java.util.List<SubmitImageTranslateTaskRequestExtExamples> examples;
 
+        /**
+         * <p>Parameters for isolating terminology to prevent interference between different users or business scenarios. Use <code>bizUserId</code> for user-level isolation and <code>bizType</code> for scenario-level isolation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bizUserld&quot;:&quot;123456&quot;,&quot;bizType&quot;:session&quot;}</p>
+         */
         @NameInMap("paramMap")
         public Object paramMap;
 
+        /**
+         * <p>A list of sensitive words.</p>
+         */
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
+        /**
+         * <p>A list of custom term pairs to apply to the translation.</p>
+         */
         @NameInMap("terminologies")
         public java.util.List<SubmitImageTranslateTaskRequestExtTerminologies> terminologies;
 
+        /**
+         * <p>Specifies case conversion for the translated text.</p>
+         */
         @NameInMap("textTransform")
         public SubmitImageTranslateTaskRequestExtTextTransform textTransform;
 
+        /**
+         * <p>User-defined pass-through data that the service returns unmodified in the response. This is typically used for analytics tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;traceId&quot;:&quot;trace_123456&quot;}</p>
+         */
         @NameInMap("trackingData")
         public String trackingData;
 

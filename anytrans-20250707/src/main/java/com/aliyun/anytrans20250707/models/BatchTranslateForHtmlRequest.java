@@ -4,44 +4,26 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class BatchTranslateForHtmlRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>baidufanyi</p>
-     */
     @NameInMap("appName")
     public String appName;
 
     @NameInMap("ext")
     public BatchTranslateForHtmlRequestExt ext;
 
-    /**
-     * <strong>example:</strong>
-     * <p>text</p>
-     */
     @NameInMap("format")
     public String format;
 
-    /**
-     * <strong>example:</strong>
-     * <p>mt-turbo</p>
-     */
     @NameInMap("scene")
     public String scene;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>zh</p>
      */
     @NameInMap("sourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>en</p>
      */
     @NameInMap("targetLanguage")
     public String targetLanguage;
@@ -54,9 +36,6 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-kqtrcpdee4xm29xx</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;
@@ -131,10 +110,6 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
     }
 
     public static class BatchTranslateForHtmlRequestExtConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>fasle</p>
-         */
         @NameInMap("skipCsiCheck")
         public Boolean skipCsiCheck;
 
@@ -157,10 +132,6 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
         @NameInMap("src")
         public String src;
 
-        /**
-         * <strong>example:</strong>
-         * <p>hello</p>
-         */
         @NameInMap("tgt")
         public String tgt;
 
@@ -191,10 +162,6 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
         @NameInMap("src")
         public String src;
 
-        /**
-         * <strong>example:</strong>
-         * <p>API</p>
-         */
         @NameInMap("tgt")
         public String tgt;
 
@@ -222,24 +189,12 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
     }
 
     public static class BatchTranslateForHtmlRequestExtTextTransform extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("toLower")
         public Boolean toLower;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("toTitle")
         public Boolean toTitle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("toUpper")
         public Boolean toUpper;
 
@@ -278,10 +233,6 @@ public class BatchTranslateForHtmlRequest extends TeaModel {
         @NameInMap("config")
         public BatchTranslateForHtmlRequestExtConfig config;
 
-        /**
-         * <strong>example:</strong>
-         * <p>this sentence from an e-commerce product image, please provide a translation that is both highly concise and no more than 1.2 times the length of the original.</p>
-         */
         @NameInMap("domainHint")
         public String domainHint;
 

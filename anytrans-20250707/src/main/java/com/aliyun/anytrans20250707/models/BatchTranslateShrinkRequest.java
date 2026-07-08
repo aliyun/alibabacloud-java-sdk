@@ -4,13 +4,24 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class BatchTranslateShrinkRequest extends TeaModel {
+    /**
+     * <p>The name of the calling application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>baidufanyi</p>
+     */
     @NameInMap("appName")
     public String appName;
 
+    /**
+     * <p>The extended parameters that control translation features.</p>
+     */
     @NameInMap("ext")
     public String extShrink;
 
     /**
+     * <p>The translation format.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -18,6 +29,8 @@ public class BatchTranslateShrinkRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>The translation model.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-turbo</p>
      */
@@ -25,6 +38,7 @@ public class BatchTranslateShrinkRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +48,7 @@ public class BatchTranslateShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,12 +58,17 @@ public class BatchTranslateShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>A map of texts to translate, in which the key is a custom identifier and the value is the source text.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;0&quot;:&quot;明天天气怎么样？&quot;,&quot;1&quot;:&quot;你中午吃饭了吗&quot;}</p>
      */
     @NameInMap("text")
     public String textShrink;
 
     /**
+     * <p>The ID of the Model Studio workspace used for this request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

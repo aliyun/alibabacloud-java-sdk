@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class TextTranslateRequest extends TeaModel {
+    /**
+     * <p>Extended parameters to control translation behavior</p>
+     */
     @NameInMap("ext")
     public TextTranslateRequestExt ext;
 
     /**
+     * <p>text format</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -15,6 +20,8 @@ public class TextTranslateRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>Model type</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-turbo</p>
      */
@@ -22,6 +29,7 @@ public class TextTranslateRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>Source language code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,7 @@ public class TextTranslateRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>Target Language Code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,12 +49,17 @@ public class TextTranslateRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>Text to be translated</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>今天天气怎么样</p>
      */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>Workspace ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,6 +130,12 @@ public class TextTranslateRequest extends TeaModel {
     }
 
     public static class TextTranslateRequestExtConfig extends TeaModel {
+        /**
+         * <p>Whether to skip the Green Web check. (To use this option, you must first complete the process to disable Green Web before making the API call.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fasle</p>
+         */
         @NameInMap("skipCsiCheck")
         public Boolean skipCsiCheck;
 
@@ -135,10 +155,18 @@ public class TextTranslateRequest extends TeaModel {
     }
 
     public static class TextTranslateRequestExtExamples extends TeaModel {
+        /**
+         * <p>Source text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>Target text</p>
+         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -169,10 +197,18 @@ public class TextTranslateRequest extends TeaModel {
     }
 
     public static class TextTranslateRequestExtTerminologies extends TeaModel {
+        /**
+         * <p>Source text</p>
+         * 
+         * <strong>example:</strong>
+         * <p>机器学习</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>Target text</p>
+         * 
          * <strong>example:</strong>
          * <p>ML</p>
          */
@@ -204,6 +240,8 @@ public class TextTranslateRequest extends TeaModel {
 
     public static class TextTranslateRequestExtTextTransform extends TeaModel {
         /**
+         * <p>Convert to lowercase</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -211,6 +249,8 @@ public class TextTranslateRequest extends TeaModel {
         public Boolean toLower;
 
         /**
+         * <p>First letter capitalized</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -218,6 +258,8 @@ public class TextTranslateRequest extends TeaModel {
         public Boolean toTitle;
 
         /**
+         * <p>Convert to uppercase</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -256,37 +298,72 @@ public class TextTranslateRequest extends TeaModel {
     }
 
     public static class TextTranslateRequestExt extends TeaModel {
+        /**
+         * <p>Expert agent</p>
+         * 
+         * <strong>example:</strong>
+         * <p>game</p>
+         */
         @NameInMap("agent")
         public String agent;
 
+        /**
+         * <p>Translation Behavior Control</p>
+         */
         @NameInMap("config")
         public TextTranslateRequestExtConfig config;
 
         /**
+         * <p>Domain hint</p>
+         * 
          * <strong>example:</strong>
          * <p>technology</p>
          */
         @NameInMap("domainHint")
         public String domainHint;
 
+        /**
+         * <p>List of Translation Examples</p>
+         */
         @NameInMap("examples")
         public java.util.List<TextTranslateRequestExtExamples> examples;
 
         @NameInMap("langDetect")
         public Boolean langDetect;
 
+        /**
+         * <p>Extended parameter configuration (bizUserld: A business-level user ID that distinguishes between different business users. It implements &quot;user-based isolation&quot; for terminology intervention so that interventions for one user do not affect others. bizType: A business scenario type or identifier that distinguishes between different scenarios. It implements &quot;scenario-based isolation&quot; for terminology intervention so that interventions for one scenario do not affect others.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bizUserld&quot;:&quot;123456&quot;,&quot;bizType&quot;:session&quot;}</p>
+         */
         @NameInMap("paramMap")
         public Object paramMap;
 
+        /**
+         * <p>Prefix Configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Today\&quot;s weather</p>
+         */
         @NameInMap("prefix")
         public String prefix;
 
+        /**
+         * <p>Sensitive word list</p>
+         */
         @NameInMap("sensitives")
         public java.util.List<String> sensitives;
 
+        /**
+         * <p>Translation terminology</p>
+         */
         @NameInMap("terminologies")
         public java.util.List<TextTranslateRequestExtTerminologies> terminologies;
 
+        /**
+         * <p>Translated Text Conversion</p>
+         */
         @NameInMap("textTransform")
         public TextTranslateRequestExtTextTransform textTransform;
 

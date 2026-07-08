@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitImageTranslateTaskResponseBody extends TeaModel {
     /**
+     * <p>The response error code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public SubmitImageTranslateTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitImageTranslateTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class SubmitImageTranslateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID, used for tracing API calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>42FF90E5-5D40-5797-AAF6-8A4D837CCCD5</p>
      */
@@ -36,6 +47,8 @@ public class SubmitImageTranslateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class SubmitImageTranslateTaskResponseBody extends TeaModel {
 
     public static class SubmitImageTranslateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The status of the translation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -104,12 +119,20 @@ public class SubmitImageTranslateTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the image translation task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2746f4be-cff2-465e-a2c6-12bff30ce0f9</p>
          */
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <p>User-defined passthrough data returned unmodified in the response, which is useful for tracking purposes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;traceId&quot;:&quot;trace_123456&quot;}</p>
+         */
         @NameInMap("trackingData")
         public String trackingData;
 

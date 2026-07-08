@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class TextTranslateResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The data object returned by the request.</p>
+     */
     @NameInMap("data")
     public TextTranslateResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class TextTranslateResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>A message that provides details about the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,7 +38,7 @@ public class TextTranslateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>299C57B2-EBB4-57E2-A6FE-723B874ACB74</p>
@@ -38,6 +47,8 @@ public class TextTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class TextTranslateResponseBody extends TeaModel {
 
     public static class TextTranslateResponseBodyDataUsage extends TeaModel {
         /**
+         * <p>The number of Tokens in the input text.</p>
+         * 
          * <strong>example:</strong>
          * <p>491</p>
          */
@@ -106,6 +119,8 @@ public class TextTranslateResponseBody extends TeaModel {
         public Long inputTokens;
 
         /**
+         * <p>The number of Tokens in the output text.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */
@@ -113,6 +128,8 @@ public class TextTranslateResponseBody extends TeaModel {
         public Long outputTokens;
 
         /**
+         * <p>The total number of Tokens consumed by the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>891</p>
          */
@@ -151,16 +168,24 @@ public class TextTranslateResponseBody extends TeaModel {
     }
 
     public static class TextTranslateResponseBodyData extends TeaModel {
+        /**
+         * <p>The detected source language.</p>
+         */
         @NameInMap("detectedLang")
         public String detectedLang;
 
         /**
+         * <p>The translated text.</p>
+         * 
          * <strong>example:</strong>
          * <p>How does Mogujie solve the data annotation challenge by building a platform?</p>
          */
         @NameInMap("translation")
         public String translation;
 
+        /**
+         * <p>Details about the Tokens consumed by the request.</p>
+         */
         @NameInMap("usage")
         public TextTranslateResponseBodyDataUsage usage;
 

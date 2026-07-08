@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class TermEditShrinkRequest extends TeaModel {
     /**
+     * <p>The action type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,14 @@ public class TermEditShrinkRequest extends TeaModel {
     public String action;
 
     /**
+     * <p>The extended parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ext")
     public String extShrink;
 
     /**
+     * <p>The model type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,7 @@ public class TermEditShrinkRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language. The value must be a valid BCP-47 language code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +42,7 @@ public class TermEditShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language. The value must be a valid BCP-47 language code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +52,7 @@ public class TermEditShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>The ID of the Model Studio workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

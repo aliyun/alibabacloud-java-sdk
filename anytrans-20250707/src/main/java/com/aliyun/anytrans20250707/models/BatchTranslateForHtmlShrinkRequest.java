@@ -4,44 +4,26 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class BatchTranslateForHtmlShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>baidufanyi</p>
-     */
     @NameInMap("appName")
     public String appName;
 
     @NameInMap("ext")
     public String extShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>text</p>
-     */
     @NameInMap("format")
     public String format;
 
-    /**
-     * <strong>example:</strong>
-     * <p>mt-turbo</p>
-     */
     @NameInMap("scene")
     public String scene;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>zh</p>
      */
     @NameInMap("sourceLanguage")
     public String sourceLanguage;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>en</p>
      */
     @NameInMap("targetLanguage")
     public String targetLanguage;
@@ -54,9 +36,6 @@ public class BatchTranslateForHtmlShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>llm-kqtrcpdee4xm29xx</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;

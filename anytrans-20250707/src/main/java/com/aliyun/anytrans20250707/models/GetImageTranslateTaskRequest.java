@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetImageTranslateTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the image translation task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetImageTranslateTaskRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

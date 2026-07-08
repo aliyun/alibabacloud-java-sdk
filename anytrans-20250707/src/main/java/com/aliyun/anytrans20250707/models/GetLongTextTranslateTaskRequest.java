@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetLongTextTranslateTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the long-text translation task.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2746f4be-cff2-465e-a2c6-12bff30ce0f9</p>
+     * <p>a8f25f25-0b36-4349-857f-e19a43f69e51</p>
      */
     @NameInMap("taskId")
     public String taskId;
 
     /**
+     * <p>The ID of the Model Studio workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

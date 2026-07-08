@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class TermQueryResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>&quot;success&quot;</p>
+     * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public TermQueryResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,13 +29,17 @@ public class TermQueryResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>&quot;success&quot;</p>
+     * <p>success</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C3C70C8F-E026-17D8-854E-7F8EF2F5C909</p>
      */
@@ -36,6 +47,8 @@ public class TermQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the API call succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -96,10 +109,18 @@ public class TermQueryResponseBody extends TeaModel {
     }
 
     public static class TermQueryResponseBodyDataTerms extends TeaModel {
+        /**
+         * <p>The term in the source language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>大模型</p>
+         */
         @NameInMap("src")
         public String src;
 
         /**
+         * <p>The ID of the intervention term.</p>
+         * 
          * <strong>example:</strong>
          * <p>92669963</p>
          */
@@ -107,6 +128,8 @@ public class TermQueryResponseBody extends TeaModel {
         public String termId;
 
         /**
+         * <p>The translated term in the target language.</p>
+         * 
          * <strong>example:</strong>
          * <p>LLM</p>
          */
@@ -146,12 +169,17 @@ public class TermQueryResponseBody extends TeaModel {
 
     public static class TermQueryResponseBodyData extends TeaModel {
         /**
+         * <p>The number of items that failed processing.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("failCount")
         public Long failCount;
 
+        /**
+         * <p>A list of identified intervention terms.</p>
+         */
         @NameInMap("terms")
         public java.util.List<TermQueryResponseBodyDataTerms> terms;
 

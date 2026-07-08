@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetHtmlTranslateTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the HTML translation task.</p>
+     * 
      * <strong>example:</strong>
-     * <p>2746f4be-cff2-465e-a2c6-12bff30ce0f9</p>
+     * <p>868c2fdd-96c2-4546-96d2-a259b8f35252</p>
      */
     @NameInMap("taskId")
     public String taskId;
 
     /**
+     * <p>The ID of the Model Studio workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

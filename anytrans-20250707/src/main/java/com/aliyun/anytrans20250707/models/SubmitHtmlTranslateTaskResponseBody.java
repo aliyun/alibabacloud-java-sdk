@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public SubmitHtmlTranslateTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. Use it to trace the API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>72E4FDA1-5474-5DC1-8DFF-968BEEA65C49</p>
      */
@@ -36,6 +47,8 @@ public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
 
     public static class SubmitHtmlTranslateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The translation task status.</p>
+         * 
          * <strong>example:</strong>
          * <p>in_process</p>
          */
@@ -104,12 +119,20 @@ public class SubmitHtmlTranslateTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The HTML translation task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2746f4be-cff2-465e-a2c6-12bff30ce0f9</p>
          */
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <p>User-defined tracking data that the service returns as-is. Use this parameter for data tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;traceId&quot;:&quot;trace_123456&quot;}</p>
+         */
         @NameInMap("trackingData")
         public String trackingData;
 

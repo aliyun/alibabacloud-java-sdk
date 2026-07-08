@@ -4,41 +4,21 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class BatchTranslateForHtmlResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public BatchTranslateForHtmlResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>success</p>
-     */
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3BE338D3-16B1-513F-8DD2-57C8528DEAAA</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -96,24 +76,12 @@ public class BatchTranslateForHtmlResponseBody extends TeaModel {
     }
 
     public static class BatchTranslateForHtmlResponseBodyDataTranslationListUsage extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>53</p>
-         */
         @NameInMap("inputTokens")
         public Long inputTokens;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("outputTokens")
         public Long outputTokens;
 
-        /**
-         * <strong>example:</strong>
-         * <p>61</p>
-         */
         @NameInMap("totalTokens")
         public Long totalTokens;
 
@@ -149,34 +117,18 @@ public class BatchTranslateForHtmlResponseBody extends TeaModel {
     }
 
     public static class BatchTranslateForHtmlResponseBodyDataTranslationList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("code")
         public Long code;
 
         @NameInMap("detectedLang")
         public String detectedLang;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("index")
         public String index;
 
-        /**
-         * <strong>example:</strong>
-         * <p>OK</p>
-         */
         @NameInMap("message")
         public String message;
 
-        /**
-         * <strong>example:</strong>
-         * <p>What will the weather be like tomorrow?</p>
-         */
         @NameInMap("translation")
         public String translation;
 

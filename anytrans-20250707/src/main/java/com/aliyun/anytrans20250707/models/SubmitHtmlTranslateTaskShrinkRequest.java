@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class SubmitHtmlTranslateTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>Extended parameters to control translation behavior.</p>
+     */
     @NameInMap("ext")
     public String extShrink;
 
     /**
+     * <p>The format of the input text.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -15,6 +20,8 @@ public class SubmitHtmlTranslateTaskShrinkRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>The translation model.</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-turbo</p>
      */
@@ -22,6 +29,8 @@ public class SubmitHtmlTranslateTaskShrinkRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -29,16 +38,38 @@ public class SubmitHtmlTranslateTaskShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>The target language.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
     @NameInMap("targetLanguage")
     public String targetLanguage;
 
+    /**
+     * <p>The HTML content to be translated.</p>
+     * 
+     * <strong>example:</strong>
+     * <!DOCTYPE html>
+     * <html lang="zh-CN">
+     * <head>
+     *     <meta charset="UTF-8">
+     *     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     *     <title>我的第一个网页</title>
+     * </head>
+     * <body>
+     *     <h1>欢迎来到我的网页！</h1>
+     *     <p>这是一个简单的 HTML 页面。</p>
+     *     <p>学习 HTML 是进入网页开发的第一步。</p>
+     *     <a href="https://www.example.com">点击这里访问示例网站</a>
+     * </body>
+     * </html>
+     */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>The ID of the Model Studio workspace used for this request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-beijing", "anytrans.cn-beijing.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("anytrans", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +31,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译批量翻译</p>
+     * <p>Tongyi Multimodal Translation: Batch Translation</p>
      * 
      * @param tmpReq BatchTranslateRequest
      * @param headers map
@@ -100,7 +103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译批量翻译</p>
+     * <p>Tongyi Multimodal Translation: Batch Translation</p>
      * 
      * @param request BatchTranslateRequest
      * @return BatchTranslateResponse
@@ -197,8 +200,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Gets the results of a document translation task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通义多模态翻译获文档翻译任务</p>
+     * <p>Gets the results of a document translation task from Tongyi Multimodal Translation.</p>
      * 
      * @param request GetDocTranslateTaskRequest
      * @param headers map
@@ -235,8 +241,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Gets the results of a document translation task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>通义多模态翻译获文档翻译任务</p>
+     * <p>Gets the results of a document translation task from Tongyi Multimodal Translation.</p>
      * 
      * @param request GetDocTranslateTaskRequest
      * @return GetDocTranslateTaskResponse
@@ -249,7 +258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译获取html翻译结果</p>
+     * <p>Retrieves the result of an HTML translation task from Tongyi Multimodal Translation.</p>
      * 
      * @param request GetHtmlTranslateTaskRequest
      * @param headers map
@@ -287,7 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译获取html翻译结果</p>
+     * <p>Retrieves the result of an HTML translation task from Tongyi Multimodal Translation.</p>
      * 
      * @param request GetHtmlTranslateTaskRequest
      * @return GetHtmlTranslateTaskResponse
@@ -300,7 +309,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译获取图片翻译任务</p>
+     * <p>Tongyi Multimodal Translation: Getting image translation results</p>
      * 
      * @param request GetImageTranslateTaskRequest
      * @param headers map
@@ -338,7 +347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译获取图片翻译任务</p>
+     * <p>Tongyi Multimodal Translation: Getting image translation results</p>
      * 
      * @param request GetImageTranslateTaskRequest
      * @return GetImageTranslateTaskResponse
@@ -351,7 +360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译获取长文翻译结果</p>
+     * <p>Get document translations from Tongyi Multimodal Translation.</p>
      * 
      * @param request GetLongTextTranslateTaskRequest
      * @param headers map
@@ -389,7 +398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译获取长文翻译结果</p>
+     * <p>Get document translations from Tongyi Multimodal Translation.</p>
      * 
      * @param request GetLongTextTranslateTaskRequest
      * @return GetLongTextTranslateTaskResponse
@@ -402,7 +411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交文档翻译任务</p>
+     * <p>Submit a document translation task to Tongyi Multimodal Translation.</p>
      * 
      * @param tmpReq SubmitDocTranslateTaskRequest
      * @param headers map
@@ -466,7 +475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交文档翻译任务</p>
+     * <p>Submit a document translation task to Tongyi Multimodal Translation.</p>
      * 
      * @param request SubmitDocTranslateTaskRequest
      * @return SubmitDocTranslateTaskResponse
@@ -479,7 +488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交html翻译任务</p>
+     * <p>Submitting an HTML translation task with Tongyi Multimodal Translation</p>
      * 
      * @param tmpReq SubmitHtmlTranslateTaskRequest
      * @param headers map
@@ -543,7 +552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交html翻译任务</p>
+     * <p>Submitting an HTML translation task with Tongyi Multimodal Translation</p>
      * 
      * @param request SubmitHtmlTranslateTaskRequest
      * @return SubmitHtmlTranslateTaskResponse
@@ -556,7 +565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交图片翻译任务</p>
+     * <p>Use Tongyi multimodal translation to submit an image for translation.</p>
      * 
      * @param tmpReq SubmitImageTranslateTaskRequest
      * @param headers map
@@ -624,7 +633,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交图片翻译任务</p>
+     * <p>Use Tongyi multimodal translation to submit an image for translation.</p>
      * 
      * @param request SubmitImageTranslateTaskRequest
      * @return SubmitImageTranslateTaskResponse
@@ -637,7 +646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交长文翻译任务</p>
+     * <p>Submitting a long text translation task using Translate Multimodal.</p>
      * 
      * @param tmpReq SubmitLongTextTranslateTaskRequest
      * @param headers map
@@ -701,7 +710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译提交长文翻译任务</p>
+     * <p>Submitting a long text translation task using Translate Multimodal.</p>
      * 
      * @param request SubmitLongTextTranslateTaskRequest
      * @return SubmitLongTextTranslateTaskResponse
@@ -714,7 +723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译术语编辑</p>
+     * <p>Editing the Tongyi Multimodal Translation termbase</p>
      * 
      * @param tmpReq TermEditRequest
      * @param headers map
@@ -774,7 +783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译术语编辑</p>
+     * <p>Editing the Tongyi Multimodal Translation termbase</p>
      * 
      * @param request TermEditRequest
      * @return TermEditResponse
@@ -787,7 +796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译术语查询</p>
+     * <p>Queries the Tongyi Multimodal Translation termbase for intervention terms.</p>
      * 
      * @param tmpReq TermQueryRequest
      * @param headers map
@@ -847,7 +856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译术语查询</p>
+     * <p>Queries the Tongyi Multimodal Translation termbase for intervention terms.</p>
      * 
      * @param request TermQueryRequest
      * @return TermQueryResponse
@@ -860,7 +869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译文本翻译</p>
+     * <p>Tongyi Multimodal Translation: Text Translation</p>
      * 
      * @param tmpReq TextTranslateRequest
      * @param headers map
@@ -924,7 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>通义多模态翻译文本翻译</p>
+     * <p>Tongyi Multimodal Translation: Text Translation</p>
      * 
      * @param request TextTranslateRequest
      * @return TextTranslateResponse

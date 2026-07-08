@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDocTranslateTaskResponseBody extends TeaModel {
     /**
+     * <p>The response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public GetDocTranslateTaskResponseBodyData data;
 
     /**
+     * <p>The HTTP response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AC642EEB-C29D-54DF-8F52-622565BBB78A</p>
      */
@@ -36,6 +47,8 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
 
     public static class GetDocTranslateTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The character count.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -104,6 +119,8 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
         public Integer charactersCount;
 
         /**
+         * <p>The page count.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -111,6 +128,8 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
         public Integer pageCount;
 
         /**
+         * <p>The translation status. Valid values:</p>
+         * 
          * <strong>example:</strong>
          * <p>translated</p>
          */
@@ -118,6 +137,8 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The document translation task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d3a2397bc2c14ab4a2e40a4f5b46241b</p>
          */
@@ -125,8 +146,10 @@ public class GetDocTranslateTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The translation result URL.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="http://translate-ai-data-dev.oss-cn-hangzhou.aliyuncs.com/tongyiTranslate/123456789/a7630164ce894c799cca0f0822c36f84_merge.md?Expires=1756700753&OSSAccessKeyId=LTAI5tRmTwxU5YoHUyrF93Jv&Signature=qB03ldVmRa%2FRwWgJ2wSi7ylayMA%3D">http://translate-ai-data-dev.oss-cn-hangzhou.aliyuncs.com/tongyiTranslate/123456789/a7630164ce894c799cca0f0822c36f84_merge.md?Expires=1756700753&amp;OSSAccessKeyId=LTAI5tRmTwxU5YoHUyrF93Jv&amp;Signature=qB03ldVmRa%2FRwWgJ2wSi7ylayMA%3D</a></p>
+         * <p><a href="http://translate-ai-data-dev.oss-cn-hangzhou.aliyuncs.com/tongyiTranslate/123456789/a7630164ce894c799cca0f0822c36f84_merge.md">http://translate-ai-data-dev.oss-cn-hangzhou.aliyuncs.com/tongyiTranslate/123456789/a7630164ce894c799cca0f0822c36f84_merge.md</a></p>
          */
         @NameInMap("translateFileUrl")
         public String translateFileUrl;

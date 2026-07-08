@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class SubmitImageTranslateTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>Extended parameters to control translation features.</p>
+     */
     @NameInMap("ext")
     public String extShrink;
 
     /**
+     * <p>The translation format.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -15,6 +20,7 @@ public class SubmitImageTranslateTaskShrinkRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>Specifies the translation model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,7 @@ public class SubmitImageTranslateTaskShrinkRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The source language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,18 +40,24 @@ public class SubmitImageTranslateTaskShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>A list of target languages.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("targetLanguage")
     public String targetLanguageShrink;
 
     /**
+     * <p>The URL of the image to translate.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/imgextra/i3/2214557014466/O1CN0174Thmb1irTsyTXYFO_!!4611686018427386306-0-item_pic.jpg">https://img.alicdn.com/imgextra/i3/2214557014466/O1CN0174Thmb1irTsyTXYFO_!!4611686018427386306-0-item_pic.jpg</a></p>
      */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>The ID of the Model Studio workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

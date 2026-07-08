@@ -4,10 +4,15 @@ package com.aliyun.anytrans20250707.models;
 import com.aliyun.tea.*;
 
 public class TextTranslateShrinkRequest extends TeaModel {
+    /**
+     * <p>Extended parameters to control translation behavior</p>
+     */
     @NameInMap("ext")
     public String extShrink;
 
     /**
+     * <p>text format</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -15,6 +20,8 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String format;
 
     /**
+     * <p>Model type</p>
+     * 
      * <strong>example:</strong>
      * <p>mt-turbo</p>
      */
@@ -22,6 +29,7 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>Source language code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,7 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
+     * <p>Target Language Code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,12 +49,17 @@ public class TextTranslateShrinkRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>Text to be translated</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>今天天气怎么样</p>
      */
     @NameInMap("text")
     public String text;
 
     /**
+     * <p>Workspace ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
