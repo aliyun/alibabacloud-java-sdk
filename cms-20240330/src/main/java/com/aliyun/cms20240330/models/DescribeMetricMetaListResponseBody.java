@@ -145,11 +145,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>The metadata source. Valid values:</p>
-         * <ul>
-         * <li>CMS: CloudMonitor Basic monitoring metrics.</li>
-         * <li>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</li>
-         * </ul>
+         * <p>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor basic monitoring metrics.</p>
          * <p>Sample value:
          * CMS
          * Valid values:

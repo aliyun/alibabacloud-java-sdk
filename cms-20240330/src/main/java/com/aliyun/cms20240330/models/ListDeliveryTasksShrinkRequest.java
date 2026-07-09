@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryTasksShrinkRequest extends TeaModel {
     /**
-     * <p>The keyword used to perform a fuzzy match by task name or task ID.</p>
+     * <p>Fuzzy search by task name or task ID (LIKE semantics).</p>
      * 
      * <strong>example:</strong>
      * <p>test-task</p>
@@ -23,7 +23,7 @@ public class ListDeliveryTasksShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
@@ -41,7 +41,7 @@ public class ListDeliveryTasksShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("tag")
     public String tagShrink;

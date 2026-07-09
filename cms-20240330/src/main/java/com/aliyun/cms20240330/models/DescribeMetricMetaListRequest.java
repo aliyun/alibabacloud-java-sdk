@@ -14,7 +14,7 @@ public class DescribeMetricMetaListRequest extends TeaModel {
     public String keywords;
 
     /**
-     * <p>Filters resources by label. The following labels are supported:</p>
+     * <p>Filters resources by label. The following labels are available:</p>
      * <ul>
      * <li>metricCategory: the metric category description.</li>
      * <li>alertEnable: specifies whether alerting is required.</li>
@@ -31,7 +31,7 @@ public class DescribeMetricMetaListRequest extends TeaModel {
      * <p>The metadata source. Valid values:</p>
      * <ul>
      * <li>CMS: CloudMonitor Basic monitoring metrics.</li>
-     * <li>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</li>
+     * <li>PROM_BASIC: Prometheus CloudMonitor basic monitoring metrics.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDeliveryTaskResponseBody extends TeaModel {
     /**
-     * <p>The details of the delivery task.</p>
+     * <p>The delivery task details.</p>
      */
     @NameInMap("deliveryTask")
     public GetDeliveryTaskResponseBodyDeliveryTask deliveryTask;
@@ -42,7 +42,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
 
     public static class GetDeliveryTaskResponseBodyDeliveryTaskExtraInfo extends TeaModel {
         /**
-         * <p>The list of EventBridge tasks.</p>
+         * <p>The EventBridge task list.</p>
          */
         @NameInMap("taskNameList")
         public java.util.List<String> taskNameList;
@@ -64,13 +64,13 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
 
     public static class GetDeliveryTaskResponseBodyDeliveryTaskSinkList extends TeaModel {
         /**
-         * <p>The detailed configuration of the delivery target. The meaning of key/value pairs varies depending on the sinkType. For more information, see <a href="~~CreateDeliveryTask~~">CreateDeliveryTask</a>.</p>
+         * <p>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType. For more information, see CreateDeliveryTask.</p>
          */
         @NameInMap("sinkConfigs")
         public java.util.Map<String, String> sinkConfigs;
 
         /**
-         * <p>The type of the delivery target.</p>
+         * <p>The delivery target type.</p>
          * 
          * <strong>example:</strong>
          * <p>Prometheus</p>
@@ -103,7 +103,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
 
     public static class GetDeliveryTaskResponseBodyDeliveryTaskTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>sourcetype</p>
@@ -112,7 +112,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>production</p>
@@ -145,7 +145,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
 
     public static class GetDeliveryTaskResponseBodyDeliveryTask extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -209,13 +209,13 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
          * <p>The current status of the task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Pending2Running</p>
+         * <p>Enable</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The resource tags.</p>
+         * <p>The resource group tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetDeliveryTaskResponseBodyDeliveryTaskTags> tags;
@@ -248,7 +248,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The time when the task was last updated.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

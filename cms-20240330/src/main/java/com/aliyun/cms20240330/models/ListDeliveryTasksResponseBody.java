@@ -115,7 +115,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
 
     public static class ListDeliveryTasksResponseBodyDeliveryTasksSinkList extends TeaModel {
         /**
-         * <p>The detailed configuration of the delivery target. The meanings of the key/value pairs vary depending on the sinkType.</p>
+         * <p>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType.</p>
          */
         @NameInMap("sinkConfigs")
         public java.util.Map<String, String> sinkConfigs;
@@ -196,7 +196,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
 
     public static class ListDeliveryTasksResponseBodyDeliveryTasks extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The time when the task was last updated.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

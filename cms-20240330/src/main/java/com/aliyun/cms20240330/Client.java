@@ -1506,6 +1506,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</p>
+     * 
+     * @param request CreateServiceRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceRecordResponse
+     */
+    public CreateServiceRecordResponse createServiceRecordWithOptions(String workspace, String serviceId, CreateServiceRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordContent)) {
+            body.put("recordContent", request.recordContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordType)) {
+            body.put("recordType", request.recordType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceRecord"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/service/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/record"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</p>
+     * 
+     * @param request CreateServiceRecordRequest
+     * @return CreateServiceRecordResponse
+     */
+    public CreateServiceRecordResponse createServiceRecord(String workspace, String serviceId, CreateServiceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</p>
      * 
      * @param request CreateTicketRequest
@@ -2535,6 +2586,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteServiceWithOptions(workspace, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a created service association entry.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a service association entry.</p>
+     * 
+     * @param request DeleteServiceRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServiceRecordResponse
+     */
+    public DeleteServiceRecordResponse deleteServiceRecordWithOptions(String workspace, String serviceId, DeleteServiceRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordType)) {
+            query.put("recordType", request.recordType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServiceRecord"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/service/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/record"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceRecordResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a created service association entry.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a service association entry.</p>
+     * 
+     * @param request DeleteServiceRecordRequest
+     * @return DeleteServiceRecordResponse
+     */
+    public DeleteServiceRecordResponse deleteServiceRecord(String workspace, String serviceId, DeleteServiceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
     }
 
     /**
@@ -4254,6 +4358,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Retrieves a service-linked entry.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a service-linked entry.</p>
+     * 
+     * @param request GetServiceRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceRecordResponse
+     */
+    public GetServiceRecordResponse getServiceRecordWithOptions(String workspace, String serviceId, GetServiceRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordType)) {
+            query.put("recordType", request.recordType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetServiceRecord"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/service/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/record"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceRecordResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves a service-linked entry.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a service-linked entry.</p>
+     * 
+     * @param request GetServiceRecordRequest
+     * @return GetServiceRecordResponse
+     */
+    public GetServiceRecordResponse getServiceRecord(String workspace, String serviceId, GetServiceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Retrieves the configuration of a Umodel.</p>
      * 
      * <b>summary</b> : 
@@ -5241,8 +5398,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified site monitoring task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of data delivery tasks.</p>
+     * <p>Retrieves the list of data delivery tasks.</p>
      * 
      * @param tmpReq ListDeliveryTasksRequest
      * @param headers map
@@ -5297,8 +5457,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified site monitoring task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of data delivery tasks.</p>
+     * <p>Retrieves the list of data delivery tasks.</p>
      * 
      * @param request ListDeliveryTasksRequest
      * @return ListDeliveryTasksResponse
@@ -6231,6 +6394,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listPrometheusVirtualInstancesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a paginated list of service-linked entries.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists service-linked entries.</p>
+     * 
+     * @param request ListServiceRecordsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServiceRecordsResponse
+     */
+    public ListServiceRecordsResponse listServiceRecordsWithOptions(String workspace, ListServiceRecordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordType)) {
+            query.put("recordType", request.recordType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.search)) {
+            query.put("search", request.search);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServiceRecords"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/service-records"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceRecordsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries a paginated list of service-linked entries.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists service-linked entries.</p>
+     * 
+     * @param request ListServiceRecordsRequest
+     * @return ListServiceRecordsResponse
+     */
+    public ListServiceRecordsResponse listServiceRecords(String workspace, ListServiceRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listServiceRecordsWithOptions(workspace, request, headers, runtime);
     }
 
     /**
@@ -8115,6 +8343,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateServiceWithOptions(workspace, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates an existing service-linked entry.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a service-linked entry.</p>
+     * 
+     * @param request UpdateServiceRecordRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateServiceRecordResponse
+     */
+    public UpdateServiceRecordResponse updateServiceRecordWithOptions(String workspace, String serviceId, UpdateServiceRecordRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordContent)) {
+            body.put("recordContent", request.recordContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordType)) {
+            body.put("recordType", request.recordType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateServiceRecord"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspace) + "/service/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + "/record"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceRecordResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates an existing service-linked entry.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a service-linked entry.</p>
+     * 
+     * @param request UpdateServiceRecordRequest
+     * @return UpdateServiceRecordResponse
+     */
+    public UpdateServiceRecordResponse updateServiceRecord(String workspace, String serviceId, UpdateServiceRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
     }
 
     /**
