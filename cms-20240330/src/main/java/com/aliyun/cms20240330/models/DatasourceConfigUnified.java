@@ -11,6 +11,24 @@ public class DatasourceConfigUnified extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The raw string value of the legacy configuration, used for backward compatibility.</p>
+     */
+    @NameInMap("legacyRaw")
+    public String legacyRaw;
+
+    /**
+     * <p>The legacy type of the data source, used for backward compatibility.</p>
+     */
+    @NameInMap("legacyType")
+    public String legacyType;
+
+    /**
+     * <p>The product category of the data source.</p>
+     */
+    @NameInMap("productCategory")
+    public String productCategory;
+
+    /**
      * <p>The region ID.</p>
      */
     @NameInMap("regionId")
@@ -34,6 +52,30 @@ public class DatasourceConfigUnified extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DatasourceConfigUnified setLegacyRaw(String legacyRaw) {
+        this.legacyRaw = legacyRaw;
+        return this;
+    }
+    public String getLegacyRaw() {
+        return this.legacyRaw;
+    }
+
+    public DatasourceConfigUnified setLegacyType(String legacyType) {
+        this.legacyType = legacyType;
+        return this;
+    }
+    public String getLegacyType() {
+        return this.legacyType;
+    }
+
+    public DatasourceConfigUnified setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
+        return this;
+    }
+    public String getProductCategory() {
+        return this.productCategory;
     }
 
     public DatasourceConfigUnified setRegionId(String regionId) {

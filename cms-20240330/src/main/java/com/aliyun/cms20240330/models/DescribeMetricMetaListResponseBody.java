@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListResponseBody extends TeaModel {
     /**
-     * <p>The page number. The default value is <code>1</code>.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
@@ -23,7 +23,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -32,7 +32,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configurations of the metrics in the resource.</p>
+     * <p>The metric configuration information of the resources.</p>
      */
     @NameInMap("resources")
     public java.util.List<DescribeMetricMetaListResponseBodyResources> resources;
@@ -93,7 +93,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
 
     public static class DescribeMetricMetaListResponseBodyResourcesDimensionDescription extends TeaModel {
         /**
-         * <p>The name of the dimension.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>user_id</p>
@@ -127,25 +127,37 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The descriptions of the dimensions.</p>
+         * <p>The dimension description.</p>
          */
         @NameInMap("dimensionDescription")
         public java.util.List<DescribeMetricMetaListResponseBodyResourcesDimensionDescription> dimensionDescription;
 
         /**
-         * <p>The dimensions for filtering resources in CloudMonitor.</p>
+         * <p>The resource filtering dimensions of CloudMonitor Basic.</p>
          */
         @NameInMap("dimensions")
         public java.util.List<String> dimensions;
 
         /**
-         * <p>The CloudMonitor labels. This parameter is returned only when <code>metaFormat</code> is set to <code>CMS</code>.</p>
+         * <p>The CloudMonitor labels. This parameter is returned only when metaFormat is set to CMS.</p>
          */
         @NameInMap("labels")
         public java.util.Map<String, String> labels;
 
         /**
-         * <p>The metadata format.</p>
+         * <p>The metadata source. Valid values:</p>
+         * <ul>
+         * <li>CMS: CloudMonitor Basic monitoring metrics.</li>
+         * <li>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</li>
+         * </ul>
+         * <p>Sample value:
+         * CMS
+         * Valid values:
+         * CMS
+         * PROM_BASIC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROM_BASIC</p>
          */
         @NameInMap("metaFormat")
         public String metaFormat;
@@ -169,7 +181,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The aggregation period.</p>
+         * <p>The period.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -178,14 +190,11 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         public String periods;
 
         /**
-         * <p>The statistic of the metric. Examples:</p>
+         * <p>The statistical method of the metric. Example values:</p>
          * <ul>
-         * <li><p><code>Maximum</code>: the maximum value.</p>
-         * </li>
-         * <li><p><code>Minimum</code>: the minimum value.</p>
-         * </li>
-         * <li><p><code>Average</code>: the average value.</p>
-         * </li>
+         * <li>Maximum: the maximum value.</li>
+         * <li>Minimum: the minimum value.</li>
+         * <li>Average: the average value.</li>
          * </ul>
          * 
          * <strong>example:</strong>

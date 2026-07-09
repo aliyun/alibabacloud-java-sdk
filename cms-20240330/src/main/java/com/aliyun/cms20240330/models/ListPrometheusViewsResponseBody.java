@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records returned.</p>
+     * <p>The maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
     public java.util.List<ListPrometheusViewsResponseBodyPrometheusViews> prometheusViews;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -96,7 +96,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
 
     public static class ListPrometheusViewsResponseBodyPrometheusViews extends TeaModel {
         /**
-         * <p>The time when the instance was created. The time is in UTC and in the \<code>yyyy-MM-ddTHH:mmZ\\</code> format.</p>
+         * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-12T02:18:36Z</p>
@@ -105,7 +105,9 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The instance type. Valid values are \<code>prom-view\\</code> for a new-version aggregation view and \<code>global-view\\</code> for an old-version aggregation view.</p>
+         * <p>The instance type:
+         * prom-view: aggregated view of the new version.
+         * global-view: aggregated view of the legacy version.</p>
          * 
          * <strong>example:</strong>
          * <p>prom-view</p>
@@ -114,7 +116,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The billing method. The value is fixed to \<code>FREE\\</code>.</p>
+         * <p>The billing type. Currently, the fixed value is FREE.</p>
          * 
          * <strong>example:</strong>
          * <p>FREE</p>
@@ -123,7 +125,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String paymentType;
 
         /**
-         * <p>The product to which the Prometheus instance belongs. Valid values: \<code>arms\\</code> and \<code>cms\\</code>.</p>
+         * <p>The product to which the Prometheus instance belongs (arms or cms).</p>
          * 
          * <strong>example:</strong>
          * <p>cms</p>
@@ -132,7 +134,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String product;
 
         /**
-         * <p>The number of Prometheus instances in the view.</p>
+         * <p>The number of Prometheus instances included in the view.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -150,7 +152,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String prometheusViewId;
 
         /**
-         * <p>The name of the Prometheus view.</p>
+         * <p>The Prometheus view name.</p>
          * 
          * <strong>example:</strong>
          * <p>view1</p>
@@ -168,7 +170,16 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource type. The value is fixed to \<code>PrometheusView\\</code>.</p>
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm3gn5i6bigbi</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The fixed value: PrometheusView.</p>
          * 
          * <strong>example:</strong>
          * <p>PrometheusView</p>
@@ -177,7 +188,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status of the backend data storage.</p>
+         * <p>The backend data storage status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -279,6 +290,14 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListPrometheusViewsResponseBodyPrometheusViews setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListPrometheusViewsResponseBodyPrometheusViews setResourceType(String resourceType) {

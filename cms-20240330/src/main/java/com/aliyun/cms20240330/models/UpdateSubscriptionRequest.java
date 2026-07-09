@@ -11,7 +11,7 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public SubscriptionForModify body;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

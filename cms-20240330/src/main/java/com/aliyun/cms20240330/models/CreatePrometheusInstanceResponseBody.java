@@ -14,7 +14,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
     public String prometheusInstanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</p>

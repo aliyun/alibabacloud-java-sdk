@@ -8,7 +8,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "metrics.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "metrics.us-east-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "metrics.na-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "metrics.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "metrics.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "metrics.eu-west-2.aliyuncs.com"),
+            new TeaPair("eu-west-1", "metrics.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "metrics.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "metrics.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "metrics.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "metrics.ap-south-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("cms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -310,7 +355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an aggregation task group.</p>
+     * <p>Create an aggregation task group.</p>
      * 
      * @param request CreateAggTaskGroupRequest
      * @param headers map
@@ -410,7 +455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an aggregation task group.</p>
+     * <p>Create an aggregation task group.</p>
      * 
      * @param request CreateAggTaskGroupRequest
      * @return CreateAggTaskGroupResponse
@@ -1100,7 +1145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Prometheus instance for monitoring.</p>
+     * <p>Creates a Managed Service for Prometheus instance.</p>
      * 
      * @param request CreatePrometheusInstanceRequest
      * @param headers map
@@ -1142,6 +1187,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("prometheusInstanceName", request.prometheusInstanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             body.put("status", request.status);
         }
@@ -1178,7 +1227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Prometheus instance for monitoring.</p>
+     * <p>Creates a Managed Service for Prometheus instance.</p>
      * 
      * @param request CreatePrometheusInstanceRequest
      * @return CreatePrometheusInstanceResponse
@@ -1191,7 +1240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>用于创建一个站点监控任务</p>
+     * <p>Creates a site monitoring task.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Prometheus view.</p>
@@ -1264,7 +1313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>用于创建一个站点监控任务</p>
+     * <p>Creates a site monitoring task.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a Prometheus view.</p>
@@ -2686,10 +2735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of CloudMonitor metric metadata.</p>
+     * <p>Queries the details of CloudMonitor monitoring metrics metadata.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query metadata</p>
+     * <p>Queries metric metadata.</p>
      * 
      * @param tmpReq DescribeMetricMetaListRequest
      * @param headers map
@@ -2753,10 +2802,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of CloudMonitor metric metadata.</p>
+     * <p>Queries the details of CloudMonitor monitoring metrics metadata.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query metadata</p>
+     * <p>Queries metric metadata.</p>
      * 
      * @param request DescribeMetricMetaListRequest
      * @return DescribeMetricMetaListResponse
@@ -3205,8 +3254,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation queries all entities of a specific cloud service within a specified time range.</li>
+     * <li>The <code>from</code> and <code>to</code> parameters specify the time range of the query in seconds-level timestamps.</li>
+     * <li>The <code>spl</code> parameter supports entityStore query statements to filter or select the required entities and their properties.</li>
+     * <li>If you need only specific fields, use the <code>project</code> clause in <code>spl</code> to filter them.</li>
+     * <li>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries data from the Cloud Resource Center.</p>
+     * <p>Queries all entity information of a specific cloud service within a specified time range.</p>
      * 
      * @param request GetCloudResourceDataRequest
      * @param headers map
@@ -3247,8 +3306,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation queries all entities of a specific cloud service within a specified time range.</li>
+     * <li>The <code>from</code> and <code>to</code> parameters specify the time range of the query in seconds-level timestamps.</li>
+     * <li>The <code>spl</code> parameter supports entityStore query statements to filter or select the required entities and their properties.</li>
+     * <li>If you need only specific fields, use the <code>project</code> clause in <code>spl</code> to filter them.</li>
+     * <li>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries data from the Cloud Resource Center.</p>
+     * <p>Queries all entity information of a specific cloud service within a specified time range.</p>
      * 
      * @param request GetCloudResourceDataRequest
      * @return GetCloudResourceDataResponse
@@ -3446,8 +3515,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified site monitoring task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>View data delivery task details</p>
+     * <p>Retrieves the details of a data delivery task.</p>
      * 
      * @param request GetDeliveryTaskRequest
      * @param headers map
@@ -3474,8 +3546,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified site monitoring task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>View data delivery task details</p>
+     * <p>Retrieves the details of a data delivery task.</p>
      * 
      * @param request GetDeliveryTaskRequest
      * @return GetDeliveryTaskResponse
@@ -3593,7 +3668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an Integration Center policy.</p>
+     * <p>Query integration center policy information.</p>
      * 
      * @param request GetIntegrationPolicyRequest
      * @param headers map
@@ -3621,7 +3696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an Integration Center policy.</p>
+     * <p>Query integration center policy information.</p>
      * 
      * @param request GetIntegrationPolicyRequest
      * @return GetIntegrationPolicyResponse
@@ -3843,8 +3918,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</p>
+     * <h2>Request type</h2>
+     * <p>POST|GET.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query a memory store.</p>
+     * <p>Queries a memory store.</p>
      * 
      * @param request GetMemoryStoreRequest
      * @param headers map
@@ -3871,8 +3951,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</p>
+     * <h2>Request type</h2>
+     * <p>POST|GET.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query a memory store.</p>
+     * <p>Queries a memory store.</p>
      * 
      * @param request GetMemoryStoreRequest
      * @return GetMemoryStoreResponse
@@ -3926,10 +4011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Gets the details of a Prometheus instance.</p>
+     * <p>Retrieves the details of a Managed Service for Prometheus instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific Prometheus instance.</p>
+     * <p>Queries the details of a specified Managed Service for Prometheus instance.</p>
      * 
      * @param request GetPrometheusInstanceRequest
      * @param headers map
@@ -3967,10 +4052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Gets the details of a Prometheus instance.</p>
+     * <p>Retrieves the details of a Managed Service for Prometheus instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific Prometheus instance.</p>
+     * <p>Queries the details of a specified Managed Service for Prometheus instance.</p>
      * 
      * @param request GetPrometheusInstanceRequest
      * @return GetPrometheusInstanceResponse
@@ -4030,10 +4115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a specified Prometheus view instance.</p>
+     * <p>Queries a specified Prometheus view instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified Prometheus view instance.</p>
+     * <p>Queries the details of a specified Prometheus view instance.</p>
      * 
      * @param request GetPrometheusViewRequest
      * @param headers map
@@ -4071,10 +4156,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the details of a specified Prometheus view instance.</p>
+     * <p>Queries a specified Prometheus view instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified Prometheus view instance.</p>
+     * <p>Queries the details of a specified Prometheus view instance.</p>
      * 
      * @param request GetPrometheusViewRequest
      * @return GetPrometheusViewResponse
@@ -4487,7 +4572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of aggregation task groups.</p>
+     * <p>Queries the list of aggregation task groups.</p>
      * 
      * @param tmpReq ListAggTaskGroupsRequest
      * @param headers map
@@ -4555,7 +4640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of aggregation task groups.</p>
+     * <p>Queries the list of aggregation task groups.</p>
      * 
      * @param request ListAggTaskGroupsRequest
      * @return ListAggTaskGroupsResponse
@@ -4637,7 +4722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of alert webhooks.</p>
+     * <p>Queries alert chatbots.</p>
      * 
      * @param tmpReq ListAlertRobotsRequest
      * @param headers map
@@ -4701,7 +4786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of alert webhooks.</p>
+     * <p>Queries alert chatbots.</p>
      * 
      * @param request ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -5226,10 +5311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of integrations.</p>
+     * <p>Queries the integration list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of policies in the Integration Center.</p>
+     * <p>Queries the list of access center policies.</p>
      * 
      * @param tmpReq ListIntegrationPoliciesRequest
      * @param headers map
@@ -5321,10 +5406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of integrations.</p>
+     * <p>Queries the integration list.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of policies in the Integration Center.</p>
+     * <p>Queries the list of access center policies.</p>
      * 
      * @param request ListIntegrationPoliciesRequest
      * @return ListIntegrationPoliciesResponse
@@ -5789,7 +5874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of pipelines in a workspace.</p>
+     * <p>Lists pipelines.</p>
      * 
      * @param request ListPipelinesRequest
      * @param headers map
@@ -5831,7 +5916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of pipelines in a workspace.</p>
+     * <p>Lists pipelines.</p>
      * 
      * @param request ListPipelinesRequest
      * @return ListPipelinesResponse
@@ -5901,10 +5986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists Prometheus instances.</p>
+     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists Prometheus instances.</p>
+     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
      * 
      * @param tmpReq ListPrometheusInstancesRequest
      * @param headers map
@@ -5980,10 +6065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists Prometheus instances.</p>
+     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists Prometheus instances.</p>
+     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
      * 
      * @param request ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
@@ -5996,10 +6081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the Prometheus view instances.</p>
+     * <p>Queries the list of Prometheus view instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the Prometheus view instances.</p>
+     * <p>Queries the list of Prometheus view instances.</p>
      * 
      * @param tmpReq ListPrometheusViewsRequest
      * @param headers map
@@ -6075,10 +6160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Lists the Prometheus view instances.</p>
+     * <p>Queries the list of Prometheus view instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the Prometheus view instances.</p>
+     * <p>Queries the list of Prometheus view instances.</p>
      * 
      * @param request ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
@@ -6418,7 +6503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</p>
+     * <p>Activates CloudMonitor services, including Hybrid Cloud Monitoring, Managed Service for Prometheus, and Simple Log Service (SLS).</p>
      * 
      * @param request OpenCmsServiceRequest
      * @param headers map
@@ -6446,7 +6531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</p>
+     * <p>Activates CloudMonitor services, including Hybrid Cloud Monitoring, Managed Service for Prometheus, and Simple Log Service (SLS).</p>
      * 
      * @param request OpenCmsServiceRequest
      * @return OpenCmsServiceResponse
@@ -6514,10 +6599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of alert rules.</p>
+     * <p>Queries alert rules.</p>
      * 
      * @param tmpReq QueryAlertRulesRequest
      * @param headers map
@@ -6571,10 +6656,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of alert rules.</p>
+     * <p>Queries alert rules.</p>
      * 
      * @param request QueryAlertRulesRequest
      * @return QueryAlertRulesResponse
@@ -6653,8 +6738,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <code>acs_ecs_dashboard</code> instance <code>i-uf6j91r34rnwawoo****</code>. The alert contact group of the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the retry count for the Critical level is <code>3</code>.</p>
+     * <blockquote>
+     * <p>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Search memories using query conditions and filters.</p>
+     * <p>Searches for memories based on query conditions and filters.</p>
      * 
      * @param request SearchMemoriesRequest
      * @param headers map
@@ -6727,8 +6818,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <code>acs_ecs_dashboard</code> instance <code>i-uf6j91r34rnwawoo****</code>. The alert contact group of the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the retry count for the Critical level is <code>3</code>.</p>
+     * <blockquote>
+     * <p>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Search memories using query conditions and filters.</p>
+     * <p>Searches for memories based on query conditions and filters.</p>
      * 
      * @param request SearchMemoriesRequest
      * @return SearchMemoriesResponse
@@ -7266,8 +7363,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
+     * This topic provides an example of how to create a one-time detection task. The detection task is named <code>task1</code>, the detection address is <code>http://www.aliyun.com</code>, the detection type is <code>HTTP</code>, and the number of detection points is <code>1</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a context store.</p>
+     * <p>Modifies the configuration of a context store.</p>
      * 
      * @param request UpdateContextStoreRequest
      * @param headers map
@@ -7312,8 +7413,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
+     * This topic provides an example of how to create a one-time detection task. The detection task is named <code>task1</code>, the detection address is <code>http://www.aliyun.com</code>, the detection type is <code>HTTP</code>, and the number of detection points is <code>1</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a context store.</p>
+     * <p>Modifies the configuration of a context store.</p>
      * 
      * @param request UpdateContextStoreRequest
      * @return UpdateContextStoreResponse
@@ -7372,8 +7477,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified site monitoring task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</p>
+     * <p>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</p>
      * 
      * @param request UpdateDeliveryTaskRequest
      * @param headers map
@@ -7438,8 +7546,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified site monitoring task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</p>
+     * <p>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</p>
      * 
      * @param request UpdateDeliveryTaskRequest
      * @return UpdateDeliveryTaskResponse
@@ -7732,10 +7843,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to update a Prometheus instance.</p>
+     * <p>Updates the information of a Managed Service for Prometheus instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information of a Prometheus instance.</p>
+     * <p>Updates the information of a Managed Service for Prometheus instance.</p>
      * 
      * @param request UpdatePrometheusInstanceRequest
      * @param headers map
@@ -7809,10 +7920,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes how to update a Prometheus instance.</p>
+     * <p>Updates the information of a Managed Service for Prometheus instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the information of a Prometheus instance.</p>
+     * <p>Updates the information of a Managed Service for Prometheus instance.</p>
      * 
      * @param request UpdatePrometheusInstanceRequest
      * @return UpdatePrometheusInstanceResponse

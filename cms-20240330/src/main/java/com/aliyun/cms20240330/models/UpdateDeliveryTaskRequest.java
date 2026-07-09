@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDeliveryTaskRequest extends TeaModel {
     /**
-     * <p>The data source ID (Prometheus instance ID).</p>
+     * <p>The data source ID, which is the Managed Service for Prometheus instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-5f2b4sc7es4d66</p>
@@ -14,13 +14,13 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
     public String dataSourceId;
 
     /**
-     * <p>Additional labels to attach to all delivered metrics, specified as key-value pairs.</p>
+     * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
      */
     @NameInMap("externalLabels")
     public java.util.Map<String, String> externalLabels;
 
     /**
-     * <p>The labels for filtering metrics. This operation replaces the entire existing filter; incremental updates are not supported.</p>
+     * <p>The metric filter conditions. The entire value is replaced rather than incrementally merged.</p>
      */
     @NameInMap("labelFilters")
     public java.util.Map<String, String> labelFilters;
@@ -44,13 +44,13 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of sinks.</p>
+     * <p>The list of delivery targets.</p>
      */
     @NameInMap("sinkList")
     public java.util.List<UpdateDeliveryTaskRequestSinkList> sinkList;
 
     /**
-     * <p>The status of the delivery task.</p>
+     * <p>The task status. This parameter is used to enable or disable the task.</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>
@@ -68,7 +68,7 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
     public String taskDescription;
 
     /**
-     * <p>The name of the delivery task. The name can include Chinese characters, English letters, underscores (_), and hyphens (-).</p>
+     * <p>The task name. The name can contain letters, digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>new-task-name</p>
@@ -155,13 +155,13 @@ public class UpdateDeliveryTaskRequest extends TeaModel {
 
     public static class UpdateDeliveryTaskRequestSinkList extends TeaModel {
         /**
-         * <p>The detailed configuration of the sink. The meaning of the key-value pairs depends on the specified sinkType.</p>
+         * <p>The detailed configuration of the delivery target. The meanings of keys and values vary depending on the sinkType.</p>
          */
         @NameInMap("sinkConfigs")
         public java.util.Map<String, String> sinkConfigs;
 
         /**
-         * <p>The sink type.</p>
+         * <p>The delivery target type.</p>
          * 
          * <strong>example:</strong>
          * <p>Prometheus</p>

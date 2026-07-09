@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAlertRulesFilter extends TeaModel {
     @NameInMap("datasourceType")
-    public String datasourceType;
+    public DatasourceTypeFilter datasourceType;
 
     /**
      * <p>Filters alert rules by display name.</p>
@@ -25,21 +25,31 @@ public class QueryAlertRulesFilter extends TeaModel {
     @NameInMap("labels")
     public LabelsFilter labels;
 
+    @NameInMap("notifyStrategyId")
+    public NotifyStrategyIdFilter notifyStrategyId;
+
     @NameInMap("observeResourceGlobalScope")
-    public Boolean observeResourceGlobalScope;
+    public ObserveResourceGlobalScopeFilter observeResourceGlobalScope;
 
     /**
      * <strong>example:</strong>
      * <p>i-bp1abcxxxxxxxx</p>
      */
     @NameInMap("observeResourceInstanceId")
+    @Deprecated
     public String observeResourceInstanceId;
 
+    @NameInMap("observeResourceList")
+    public ObserveResourceListFilter observeResourceList;
+
     @NameInMap("observeResourceType")
-    public String observeResourceType;
+    public ObserveResourceTypeFilter observeResourceType;
+
+    @NameInMap("partitionKey")
+    public PartitionKeyFilter partitionKey;
 
     @NameInMap("severityLevels")
-    public String severityLevels;
+    public SeverityLevelsFilter severityLevels;
 
     /**
      * <p>Filters alert rules by status.</p>
@@ -58,11 +68,11 @@ public class QueryAlertRulesFilter extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QueryAlertRulesFilter setDatasourceType(String datasourceType) {
+    public QueryAlertRulesFilter setDatasourceType(DatasourceTypeFilter datasourceType) {
         this.datasourceType = datasourceType;
         return this;
     }
-    public String getDatasourceType() {
+    public DatasourceTypeFilter getDatasourceType() {
         return this.datasourceType;
     }
 
@@ -90,14 +100,23 @@ public class QueryAlertRulesFilter extends TeaModel {
         return this.labels;
     }
 
-    public QueryAlertRulesFilter setObserveResourceGlobalScope(Boolean observeResourceGlobalScope) {
+    public QueryAlertRulesFilter setNotifyStrategyId(NotifyStrategyIdFilter notifyStrategyId) {
+        this.notifyStrategyId = notifyStrategyId;
+        return this;
+    }
+    public NotifyStrategyIdFilter getNotifyStrategyId() {
+        return this.notifyStrategyId;
+    }
+
+    public QueryAlertRulesFilter setObserveResourceGlobalScope(ObserveResourceGlobalScopeFilter observeResourceGlobalScope) {
         this.observeResourceGlobalScope = observeResourceGlobalScope;
         return this;
     }
-    public Boolean getObserveResourceGlobalScope() {
+    public ObserveResourceGlobalScopeFilter getObserveResourceGlobalScope() {
         return this.observeResourceGlobalScope;
     }
 
+    @Deprecated
     public QueryAlertRulesFilter setObserveResourceInstanceId(String observeResourceInstanceId) {
         this.observeResourceInstanceId = observeResourceInstanceId;
         return this;
@@ -106,19 +125,35 @@ public class QueryAlertRulesFilter extends TeaModel {
         return this.observeResourceInstanceId;
     }
 
-    public QueryAlertRulesFilter setObserveResourceType(String observeResourceType) {
+    public QueryAlertRulesFilter setObserveResourceList(ObserveResourceListFilter observeResourceList) {
+        this.observeResourceList = observeResourceList;
+        return this;
+    }
+    public ObserveResourceListFilter getObserveResourceList() {
+        return this.observeResourceList;
+    }
+
+    public QueryAlertRulesFilter setObserveResourceType(ObserveResourceTypeFilter observeResourceType) {
         this.observeResourceType = observeResourceType;
         return this;
     }
-    public String getObserveResourceType() {
+    public ObserveResourceTypeFilter getObserveResourceType() {
         return this.observeResourceType;
     }
 
-    public QueryAlertRulesFilter setSeverityLevels(String severityLevels) {
+    public QueryAlertRulesFilter setPartitionKey(PartitionKeyFilter partitionKey) {
+        this.partitionKey = partitionKey;
+        return this;
+    }
+    public PartitionKeyFilter getPartitionKey() {
+        return this.partitionKey;
+    }
+
+    public QueryAlertRulesFilter setSeverityLevels(SeverityLevelsFilter severityLevels) {
         this.severityLevels = severityLevels;
         return this;
     }
-    public String getSeverityLevels() {
+    public SeverityLevelsFilter getSeverityLevels() {
         return this.severityLevels;
     }
 

@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>The number of days to store archived data after the storage duration expires. A value of 0 disables archiving. For V1 instances, the valid values are 1 to 365. This is supported only for the pay-by-data-write billing method. For V2 instances, the valid values are 1 to 3650. A value of 3650 indicates permanent storage.</p>
+     * <p>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving. Valid values for archiving days:
+     * V1: 1 to 365 days. Supported only for billing by metric write volume.
+     * V2: 1 to 3650 days (3650 indicates permanent retention).</p>
      * 
      * <strong>example:</strong>
      * <p>365</p>
@@ -17,7 +19,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
-     * <p>The policy for password-free read access. The policy supports IP address segments and VPC IDs.</p>
+     * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -35,7 +37,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
-     * <p>The policy for password-free write access. The policy supports IP address segments and VPC IDs.</p>
+     * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -53,7 +55,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String authFreeWritePolicy;
 
     /**
-     * <p>Specifies whether to enable password-free read access.</p>
+     * <p>Specifies whether to enable authentication-free read.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -62,7 +64,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
-     * <p>Specifies whether to enable password-free write access.</p>
+     * <p>Specifies whether to enable authentication-free write.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -71,7 +73,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeWrite;
 
     /**
-     * <p>Specifies whether to enable authentication with an access token.</p>
+     * <p>Specifies whether to enable access token authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -80,7 +82,11 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>The billing method. You can change the billing method only once during the instance lifecycle. Valid values: \<code>POSTPAY\\</code> (pay-as-you-go based on reported metrics) and \<code>POSTPAY_GB\\</code> (pay-as-you-go based on data writes).</p>
+     * <p>The billing method. This parameter can be modified only once during the instance lifetime. Valid values:</p>
+     * <ul>
+     * <li>POSTPAY: pay-as-you-go by metric reporting volume.</li>
+     * <li>POSTPAY_GB: pay-as-you-go by metric write volume.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY_GB</p>
@@ -89,7 +95,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-prom-name</p>
@@ -98,7 +104,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String prometheusInstanceName;
 
     /**
-     * <p>The status of the instance storage database. Only RUNNING is supported. If this parameter is left empty, the status of the storage database is not changed.</p>
+     * <p>Instance storage database status of the instance. Only RUNNING is supported. If this parameter is left empty, instance storage database status remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
@@ -107,7 +113,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage duration in days. If the instance is billed by data writes, valid values are 90 and 180. If the instance is billed by reported metrics, valid values are 15, 30, 60, 90, and 180.</p>
+     * <p>The storage duration (days):
+     * By write volume: 90 or 180.
+     * By metric reporting volume: 15, 30, 60, 90, or 180.</p>
      * 
      * <strong>example:</strong>
      * <p>90</p>

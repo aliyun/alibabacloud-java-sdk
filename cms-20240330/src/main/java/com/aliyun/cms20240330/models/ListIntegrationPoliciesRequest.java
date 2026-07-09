@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPoliciesRequest extends TeaModel {
     /**
-     * <p>The add-on name.</p>
+     * <p>The addon name.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-default</p>
@@ -14,7 +14,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String addonName;
 
     /**
-     * <p>The ID of the attached resource.</p>
+     * <p>The ID of the bound resource.</p>
      * 
      * <strong>example:</strong>
      * <p>622d27c2e87d49debceeebc7c642610e</p>
@@ -23,7 +23,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String bindResourceId;
 
     /**
-     * <p>The IDs of the entity groups to filter by. Separate multiple IDs with commas.</p>
+     * <p>The entity IDs used for filtering, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>eg-1,eg-2,eg-3</p>
@@ -32,7 +32,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String entityGroupIds;
 
     /**
-     * <p>The IDs of the regions to query. Separate multiple region IDs with commas.</p>
+     * <p>The region IDs used for filtering, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing,cn-hangzhou</p>
@@ -41,7 +41,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
-     * <p>The maximum number of entries to return on each page. The default value is 30. The maximum value is 100.</p>
+     * <p>The maximum number of results to return. Default value: 30. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -50,7 +50,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. You can obtain the token from the response to the previous request.</p>
+     * <p>The token used to retrieve more results. You do not need to specify this parameter for the first request. Use the token returned from the previous query for subsequent requests.</p>
      * 
      * <strong>example:</strong>
      * <p>mvnX6zqg3P</p>
@@ -68,7 +68,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The policy name.</p>
+     * <p>The rule name.</p>
      * 
      * <strong>example:</strong>
      * <p>prod-database</p>
@@ -95,7 +95,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String prometheusInstanceId;
 
     /**
-     * <p>A general-purpose query string.</p>
+     * <p>The keyword used for general queries.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -113,7 +113,7 @@ public class ListIntegrationPoliciesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("tag")
     public java.util.List<ListIntegrationPoliciesRequestTag> tag;

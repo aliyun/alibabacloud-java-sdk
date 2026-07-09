@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSubscriptionResponseBody extends TeaModel {
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-******</p>

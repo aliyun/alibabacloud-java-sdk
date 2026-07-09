@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelinesResponseBody extends TeaModel {
     /**
-     * <p>The number of results returned on the current page.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListPipelinesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. If this parameter is not empty, use it in a subsequent request to get the next page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>3f0d6785770d5fb308f0605d718d422a227c38f96117633678f029842acd19039329e8281583b3da7bc598dfc4c1973e</p>
@@ -23,13 +23,13 @@ public class ListPipelinesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A list of pipelines.</p>
+     * <p>The pipelines.</p>
      */
     @NameInMap("pipelines")
     public java.util.List<ListPipelinesResponseBodyPipelines> pipelines;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
@@ -86,7 +86,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the pipeline.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test pipeline</p>
@@ -95,7 +95,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The pipeline name.</p>
+         * <p>The name of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>pipeline-name-1</p>

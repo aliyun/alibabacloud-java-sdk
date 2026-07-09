@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesRequest extends TeaModel {
     /**
-     * <p>A list of region IDs to filter by, separated by commas.</p>
+     * <p>The region IDs for filtering, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
@@ -41,7 +41,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A list of instance IDs, separated by commas.</p>
+     * <p>The instance IDs, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-00001,rw-00002,rw-00003</p>
@@ -53,7 +53,7 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String prometheusInstanceIds;
 
     /**
-     * <p>The instance name. Partial match is supported.</p>
+     * <p>The instance name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -86,13 +86,17 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("tag")
     public java.util.List<ListPrometheusInstancesRequestTag> tag;
 
     /**
-     * <p>The instance version. Valid values: V1 and V2.</p>
+     * <p>The instance version. Valid values:</p>
+     * <ul>
+     * <li>V1: V1 version.</li>
+     * <li>V2: V2 version.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -104,6 +108,11 @@ public class ListPrometheusInstancesRequest extends TeaModel {
     public String version;
 
     /**
+     * <p>The workspace to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workspace-test</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */

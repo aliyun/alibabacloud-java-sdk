@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContextStoreRequest extends TeaModel {
     /**
-     * <p>The configuration.</p>
+     * <p>The configuration information.</p>
      */
     @NameInMap("config")
     public UpdateContextStoreRequestConfig config;
@@ -20,7 +20,7 @@ public class UpdateContextStoreRequest extends TeaModel {
     public String contextType;
 
     /**
-     * <p>The dataset.</p>
+     * <p>The dataset information.</p>
      */
     @NameInMap("dataset")
     public UpdateContextStoreRequestDataset dataset;
@@ -73,7 +73,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestConfigSource extends TeaModel {
         /**
-         * <p>The Log Service Logstore name.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>sls-test-logstore</p>
@@ -82,7 +82,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The Log Service Project name.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>sls-test-project</p>
@@ -138,7 +138,7 @@ public class UpdateContextStoreRequest extends TeaModel {
         public java.util.Map<String, String> metadataField;
 
         /**
-         * <p>The data source.</p>
+         * <p>The reference path.</p>
          */
         @NameInMap("source")
         public UpdateContextStoreRequestConfigSource source;
@@ -168,7 +168,7 @@ public class UpdateContextStoreRequest extends TeaModel {
 
     public static class UpdateContextStoreRequestDataset extends TeaModel {
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>test_dataset</p>

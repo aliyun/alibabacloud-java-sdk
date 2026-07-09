@@ -34,9 +34,6 @@ public class AlertRuleV2 extends TeaModel {
     @NameInMap("contentTemplate")
     public String contentTemplate;
 
-    @NameInMap("coveredSeverityLevels")
-    public String coveredSeverityLevels;
-
     /**
      * <p>The time the alert rule was created.</p>
      */
@@ -80,6 +77,12 @@ public class AlertRuleV2 extends TeaModel {
     public NotifyConfigUnified notifyConfig;
 
     /**
+     * <p>The ID of the notification strategy to use for this alert rule.</p>
+     */
+    @NameInMap("notifyStrategyId")
+    public String notifyStrategyId;
+
+    /**
      * <p>Indicates whether the alert rule monitors all resources of the specified type. If <code>true</code>, the rule applies globally within the workspace.</p>
      */
     @NameInMap("observeResourceGlobalScope")
@@ -89,13 +92,19 @@ public class AlertRuleV2 extends TeaModel {
      * <p>A list of specific resource IDs to monitor, used only when <code>observeResourceGlobalScope</code> is <code>false</code>.</p>
      */
     @NameInMap("observeResourceList")
-    public String observeResourceList;
+    public java.util.List<String> observeResourceList;
 
     /**
      * <p>The type of resource that the alert rule monitors.</p>
      */
     @NameInMap("observeResourceType")
     public String observeResourceType;
+
+    /**
+     * <p>The partition key used to group alerts. Alerts with the same partition key are treated as a single incident.</p>
+     */
+    @NameInMap("partitionKey")
+    public String partitionKey;
 
     /**
      * <p>The configuration for querying and processing data from the data source.</p>
@@ -108,6 +117,12 @@ public class AlertRuleV2 extends TeaModel {
      */
     @NameInMap("scheduleConfig")
     public ScheduleConfigUnified scheduleConfig;
+
+    /**
+     * <p>The severity level of the alert. Examples: <code>critical</code>, <code>warning</code>.</p>
+     */
+    @NameInMap("severityLevels")
+    public String severityLevels;
 
     /**
      * <p>The current status of the alert rule. Examples: <code>RUNNING</code>, <code>STOPPED</code>.</p>
@@ -178,14 +193,6 @@ public class AlertRuleV2 extends TeaModel {
         return this.contentTemplate;
     }
 
-    public AlertRuleV2 setCoveredSeverityLevels(String coveredSeverityLevels) {
-        this.coveredSeverityLevels = coveredSeverityLevels;
-        return this;
-    }
-    public String getCoveredSeverityLevels() {
-        return this.coveredSeverityLevels;
-    }
-
     public AlertRuleV2 setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -242,6 +249,14 @@ public class AlertRuleV2 extends TeaModel {
         return this.notifyConfig;
     }
 
+    public AlertRuleV2 setNotifyStrategyId(String notifyStrategyId) {
+        this.notifyStrategyId = notifyStrategyId;
+        return this;
+    }
+    public String getNotifyStrategyId() {
+        return this.notifyStrategyId;
+    }
+
     public AlertRuleV2 setObserveResourceGlobalScope(Boolean observeResourceGlobalScope) {
         this.observeResourceGlobalScope = observeResourceGlobalScope;
         return this;
@@ -250,11 +265,11 @@ public class AlertRuleV2 extends TeaModel {
         return this.observeResourceGlobalScope;
     }
 
-    public AlertRuleV2 setObserveResourceList(String observeResourceList) {
+    public AlertRuleV2 setObserveResourceList(java.util.List<String> observeResourceList) {
         this.observeResourceList = observeResourceList;
         return this;
     }
-    public String getObserveResourceList() {
+    public java.util.List<String> getObserveResourceList() {
         return this.observeResourceList;
     }
 
@@ -264,6 +279,14 @@ public class AlertRuleV2 extends TeaModel {
     }
     public String getObserveResourceType() {
         return this.observeResourceType;
+    }
+
+    public AlertRuleV2 setPartitionKey(String partitionKey) {
+        this.partitionKey = partitionKey;
+        return this;
+    }
+    public String getPartitionKey() {
+        return this.partitionKey;
     }
 
     public AlertRuleV2 setQueryConfig(QueryConfigUnified queryConfig) {
@@ -280,6 +303,14 @@ public class AlertRuleV2 extends TeaModel {
     }
     public ScheduleConfigUnified getScheduleConfig() {
         return this.scheduleConfig;
+    }
+
+    public AlertRuleV2 setSeverityLevels(String severityLevels) {
+        this.severityLevels = severityLevels;
+        return this;
+    }
+    public String getSeverityLevels() {
+        return this.severityLevels;
     }
 
     public AlertRuleV2 setStatus(String status) {

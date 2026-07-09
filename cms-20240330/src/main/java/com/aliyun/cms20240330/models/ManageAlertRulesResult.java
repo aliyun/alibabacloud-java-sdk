@@ -22,6 +22,18 @@ public class ManageAlertRulesResult extends TeaModel {
     @NameInMap("deletedUuidList")
     public java.util.List<String> deletedUuidList;
 
+    /**
+     * <p>The number of updated alert rules.</p>
+     */
+    @NameInMap("updatedCount")
+    public Integer updatedCount;
+
+    /**
+     * <p>A list of UUIDs of updated alert rules.</p>
+     */
+    @NameInMap("updatedUuidList")
+    public java.util.List<String> updatedUuidList;
+
     public static ManageAlertRulesResult build(java.util.Map<String, ?> map) throws Exception {
         ManageAlertRulesResult self = new ManageAlertRulesResult();
         return TeaModel.build(map, self);
@@ -49,6 +61,22 @@ public class ManageAlertRulesResult extends TeaModel {
     }
     public java.util.List<String> getDeletedUuidList() {
         return this.deletedUuidList;
+    }
+
+    public ManageAlertRulesResult setUpdatedCount(Integer updatedCount) {
+        this.updatedCount = updatedCount;
+        return this;
+    }
+    public Integer getUpdatedCount() {
+        return this.updatedCount;
+    }
+
+    public ManageAlertRulesResult setUpdatedUuidList(java.util.List<String> updatedUuidList) {
+        this.updatedUuidList = updatedUuidList;
+        return this;
+    }
+    public java.util.List<String> getUpdatedUuidList() {
+        return this.updatedUuidList;
     }
 
 }

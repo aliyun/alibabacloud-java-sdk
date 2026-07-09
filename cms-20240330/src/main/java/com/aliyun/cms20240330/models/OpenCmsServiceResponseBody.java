@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenCmsServiceResponseBody extends TeaModel {
     /**
-     * <p>Whether the specified monitoring services are enabled.</p>
+     * <p>Indicates whether the service or commodity is activated.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class OpenCmsServiceResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>

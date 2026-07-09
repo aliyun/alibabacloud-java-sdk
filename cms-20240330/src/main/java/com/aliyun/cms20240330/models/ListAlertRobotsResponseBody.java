@@ -32,13 +32,13 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the robot.</p>
+     * <p>The chatbot ID.</p>
      */
     @NameInMap("robots")
     public java.util.List<ListAlertRobotsResponseBodyRobots> robots;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -105,7 +105,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The name of the robot.</p>
+         * <p>The chatbot name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -114,7 +114,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The unique robot ID.</p>
+         * <p>The unique ID of the chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -122,8 +122,11 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         @NameInMap("robotId")
         public String robotId;
 
+        @NameInMap("robotSignKey")
+        public String robotSignKey;
+
         /**
-         * <p>The robot type.</p>
+         * <p>The chatbot type.</p>
          * 
          * <strong>example:</strong>
          * <p>DING</p>
@@ -132,7 +135,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The webhook URL.</p>
+         * <p>The webhook URL of the chatbot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</p>
@@ -178,6 +181,14 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
         public String getRobotId() {
             return this.robotId;
+        }
+
+        public ListAlertRobotsResponseBodyRobots setRobotSignKey(String robotSignKey) {
+            this.robotSignKey = robotSignKey;
+            return this;
+        }
+        public String getRobotSignKey() {
+            return this.robotSignKey;
         }
 
         public ListAlertRobotsResponseBodyRobots setType(String type) {

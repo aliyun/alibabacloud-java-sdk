@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstancesResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records returned.</p>
+     * <p>The maximum number of records to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
     public java.util.List<ListPrometheusInstancesResponseBodyPrometheusInstances> prometheusInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -96,7 +96,12 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
 
     public static class ListPrometheusInstancesResponseBodyPrometheusInstances extends TeaModel {
         /**
-         * <p>The permission type. Valid values: readWrite, readOnly, and httpReadOnly.</p>
+         * <p>The access type. Valid values:</p>
+         * <ul>
+         * <li>readWrite</li>
+         * <li>readOnly</li>
+         * <li>httpReadOnly</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>readWrite</p>
@@ -105,7 +110,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The time when the instance was created. The time is in UTC and the format is yyyy-MM-ddTHH:mmZ.</p>
+         * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-10T02:07:53Z</p>
@@ -123,10 +128,13 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>POSTPAY: Pay-as-you-go, billed by metrics.
-         * POSTPAY_GB: Pay-as-you-go, billed by data written.
-         * PREPAY: Subscription.
-         * FREE: Free.</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POSTPAY: pay-as-you-go by metric volume.</li>
+         * <li>POSTPAY_GB: pay-as-you-go by write volume.</li>
+         * <li>PREPAY: subscription.</li>
+         * <li>FREE: free.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY_GB</p>
@@ -171,6 +179,15 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bhocin5e2na</p>
+         */
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +197,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The status of the backend data storage.</p>
+         * <p>The backend data storage status.</p>
          * 
          * <strong>example:</strong>
          * <p>Pending2Running</p>
@@ -290,6 +307,14 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListPrometheusInstancesResponseBodyPrometheusInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListPrometheusInstancesResponseBodyPrometheusInstances setResourceType(String resourceType) {

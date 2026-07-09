@@ -4,94 +4,104 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class QueryConfigUnified extends TeaModel {
-    /**
-     * <p>Specifies whether to check for data completeness. A value of <code>true</code> enables the check.</p>
-     */
+    @NameInMap("aggregate")
+    public String aggregate;
+
+    @NameInMap("dimensions")
+    public java.util.List<java.util.Map<String, String>> dimensions;
+
     @NameInMap("enableDataCompleteCheck")
     public Boolean enableDataCompleteCheck;
 
-    /**
-     * <p>Specifies the domain of the entity, such as <code>acs</code> for Alibaba Cloud services.</p>
-     */
     @NameInMap("entityDomain")
     public String entityDomain;
 
-    /**
-     * <p>A list of entity fields to include in the response.</p>
-     */
     @NameInMap("entityFields")
     public java.util.List<UmodelEntityField> entityFields;
 
-    /**
-     * <p>A list of filters for selecting specific entities.</p>
-     */
     @NameInMap("entityFilters")
     public java.util.List<UmodelEntityFilter> entityFilters;
 
-    /**
-     * <p>Specifies the type of the entity, such as <code>EcsInstance</code>.</p>
-     */
     @NameInMap("entityType")
     public String entityType;
 
-    /**
-     * <p>Specifies the expression to post-process query results.</p>
-     */
     @NameInMap("expr")
     public String expr;
 
-    /**
-     * <p>A list of Application Performance Monitoring (APM) filter configurations.</p>
-     */
     @NameInMap("filterList")
     public java.util.List<ApmFilterConfig> filterList;
 
-    /**
-     * <p>A list of filters that match labels.</p>
-     */
+    @NameInMap("groupId")
+    public String groupId;
+
     @NameInMap("labelFilters")
     public java.util.List<UmodelLabelFilter> labelFilters;
 
-    /**
-     * <p>A list of APM measure configurations.</p>
-     */
+    @NameInMap("legacyRaw")
+    public String legacyRaw;
+
+    @NameInMap("legacyType")
+    public String legacyType;
+
+    @NameInMap("logSet")
+    public String logSet;
+
     @NameInMap("measureList")
     public java.util.List<ApmMeasureConfig> measureList;
 
-    /**
-     * <p>Specifies the name of the metric to query.</p>
-     */
     @NameInMap("metric")
     public String metric;
 
-    /**
-     * <p>Specifies the metric set that contains the metric.</p>
-     */
     @NameInMap("metricSet")
     public String metricSet;
 
-    /**
-     * <p>Specifies the query string in Prometheus Query Language (PromQL).</p>
-     */
+    @NameInMap("namespace")
+    public String namespace;
+
+    @NameInMap("offsetSecs")
+    public Long offsetSecs;
+
     @NameInMap("promQl")
+    @Deprecated
     public String promQl;
 
-    /**
-     * <p>A list of service IDs to query.</p>
-     */
+    @NameInMap("queries")
+    public java.util.List<MetricSetNamedQueryEntry> queries;
+
+    @NameInMap("relationType")
+    public String relationType;
+
     @NameInMap("serviceIdList")
     public java.util.List<String> serviceIdList;
 
     /**
-     * <p>The query type.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")
     public String type;
 
+    @NameInMap("windowSecs")
+    public Long windowSecs;
+
     public static QueryConfigUnified build(java.util.Map<String, ?> map) throws Exception {
         QueryConfigUnified self = new QueryConfigUnified();
         return TeaModel.build(map, self);
+    }
+
+    public QueryConfigUnified setAggregate(String aggregate) {
+        this.aggregate = aggregate;
+        return this;
+    }
+    public String getAggregate() {
+        return this.aggregate;
+    }
+
+    public QueryConfigUnified setDimensions(java.util.List<java.util.Map<String, String>> dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, String>> getDimensions() {
+        return this.dimensions;
     }
 
     public QueryConfigUnified setEnableDataCompleteCheck(Boolean enableDataCompleteCheck) {
@@ -150,12 +160,44 @@ public class QueryConfigUnified extends TeaModel {
         return this.filterList;
     }
 
+    public QueryConfigUnified setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
     public QueryConfigUnified setLabelFilters(java.util.List<UmodelLabelFilter> labelFilters) {
         this.labelFilters = labelFilters;
         return this;
     }
     public java.util.List<UmodelLabelFilter> getLabelFilters() {
         return this.labelFilters;
+    }
+
+    public QueryConfigUnified setLegacyRaw(String legacyRaw) {
+        this.legacyRaw = legacyRaw;
+        return this;
+    }
+    public String getLegacyRaw() {
+        return this.legacyRaw;
+    }
+
+    public QueryConfigUnified setLegacyType(String legacyType) {
+        this.legacyType = legacyType;
+        return this;
+    }
+    public String getLegacyType() {
+        return this.legacyType;
+    }
+
+    public QueryConfigUnified setLogSet(String logSet) {
+        this.logSet = logSet;
+        return this;
+    }
+    public String getLogSet() {
+        return this.logSet;
     }
 
     public QueryConfigUnified setMeasureList(java.util.List<ApmMeasureConfig> measureList) {
@@ -182,12 +224,45 @@ public class QueryConfigUnified extends TeaModel {
         return this.metricSet;
     }
 
+    public QueryConfigUnified setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public QueryConfigUnified setOffsetSecs(Long offsetSecs) {
+        this.offsetSecs = offsetSecs;
+        return this;
+    }
+    public Long getOffsetSecs() {
+        return this.offsetSecs;
+    }
+
+    @Deprecated
     public QueryConfigUnified setPromQl(String promQl) {
         this.promQl = promQl;
         return this;
     }
     public String getPromQl() {
         return this.promQl;
+    }
+
+    public QueryConfigUnified setQueries(java.util.List<MetricSetNamedQueryEntry> queries) {
+        this.queries = queries;
+        return this;
+    }
+    public java.util.List<MetricSetNamedQueryEntry> getQueries() {
+        return this.queries;
+    }
+
+    public QueryConfigUnified setRelationType(String relationType) {
+        this.relationType = relationType;
+        return this;
+    }
+    public String getRelationType() {
+        return this.relationType;
     }
 
     public QueryConfigUnified setServiceIdList(java.util.List<String> serviceIdList) {
@@ -204,6 +279,14 @@ public class QueryConfigUnified extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public QueryConfigUnified setWindowSecs(Long windowSecs) {
+        this.windowSecs = windowSecs;
+        return this;
+    }
+    public Long getWindowSecs() {
+        return this.windowSecs;
     }
 
 }

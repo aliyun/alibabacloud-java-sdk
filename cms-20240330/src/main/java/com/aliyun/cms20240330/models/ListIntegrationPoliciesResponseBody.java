@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Default value: 50 Maximum value: 50</p>
+     * <p>The page size.
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,13 +27,13 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A list of integration policies.</p>
+     * <p>The list of access policies.</p>
      */
     @NameInMap("policies")
     public java.util.List<ListIntegrationPoliciesResponseBodyPolicies> policies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
@@ -111,7 +115,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>The CIDR block of the VPC.</p>
+         * <p>The VPC CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>100.100.0.1/16</p>
@@ -120,7 +124,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String vpcCidr;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf664nyle5khp5d4d7hdo</p>
@@ -234,7 +238,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>The content of the field. Separate multiple values with commas.</p>
+         * <p>The field values. Multiple values are separated by commas.</p>
          */
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
@@ -281,7 +285,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
     public static class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule extends TeaModel {
         /**
-         * <p>The IP address CIDR block.</p>
+         * <p>The IP CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>100.100.1.0/16</p>
@@ -290,7 +294,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String ipCidr;
 
         /**
-         * <p>The key of the IP address field.</p>
+         * <p>The key of the IP field.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -441,7 +445,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public java.util.List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesAnnotations> annotations;
 
         /**
-         * <p>A list of entity types.</p>
+         * <p>The list of entity types.</p>
          */
         @NameInMap("entityTypes")
         public java.util.List<String> entityTypes;
@@ -459,7 +463,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The IP address matching rule.</p>
+         * <p>The IP match rule.</p>
          */
         @NameInMap("ipMatchRule")
         public ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule ipMatchRule;
@@ -471,7 +475,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public java.util.List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesLabels> labels;
 
         /**
-         * <p>A list of region IDs.</p>
+         * <p>The list of region IDs.</p>
          */
         @NameInMap("regionIds")
         public java.util.List<String> regionIds;
@@ -486,7 +490,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tag information of the instance.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesTags> tags;
@@ -605,7 +609,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRules entityRules;
 
         /**
-         * <p>The search keyword. You can search by entity group name and description.</p>
+         * <p>The search keyword. Document library names and descriptions are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Haval</p>
@@ -713,7 +717,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
     public static class ListIntegrationPoliciesResponseBodyPoliciesManagedInfo extends TeaModel {
         /**
-         * <p>The ID of the elastic network interface (ENI) for the managed probe. For example, eni-xxxx.</p>
+         * <p>The ENI ID of the managed probe. Example: eni-xxxx.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-12345678</p>
@@ -781,7 +785,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public Integer ready;
 
         /**
-         * <p>The number of rules.</p>
+         * <p>The total number of rules.</p>
          * 
          * <strong>example:</strong>
          * <p>278</p>
@@ -814,13 +818,13 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
     public static class ListIntegrationPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The information about the attached resource.</p>
+         * <p>The bound resource information.</p>
          */
         @NameInMap("bindResource")
         public ListIntegrationPoliciesResponseBodyPoliciesBindResource bindResource;
 
         /**
-         * <p>The installation status of umodel in the container environment.</p>
+         * <p>The umodel installation status in the container environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -844,7 +848,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String feePackage;
 
         /**
-         * <p>The network management information of the policy.</p>
+         * <p>The policy network management information.</p>
          */
         @NameInMap("managedInfo")
         public ListIntegrationPoliciesResponseBodyPoliciesManagedInfo managedInfo;
@@ -859,7 +863,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The policy name.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>6f5HSsg3AP</p>
@@ -868,7 +872,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The type of the Integration Center policy.</p>
+         * <p>The access center policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>

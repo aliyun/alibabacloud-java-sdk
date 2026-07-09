@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceRequest extends TeaModel {
     /**
-     * <p>The number of days that data is automatically archived after the storage duration expires. A value of 0 indicates that data is not archived. Valid values:</p>
+     * <p>The number of days that data is automatically archived after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive duration:</p>
      * <ul>
-     * <li><p>V1 instances: 60 to 365.</p>
-     * </li>
-     * <li><p>V2 instances: 60 to 3650. A value of 3650 indicates that the data is permanently stored.</p>
-     * </li>
+     * <li>V1: 60 to 365 days.</li>
+     * <li>V2: 60 to 3650 days (3650 indicates permanent retention).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +21,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Integer archiveDuration;
 
     /**
-     * <p>The policy for password-free read access. IP address ranges and VPC IDs are supported.</p>
+     * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -41,7 +39,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String authFreeReadPolicy;
 
     /**
-     * <p>The policy for password-free write access.</p>
+     * <p>The authentication-free write policy.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -59,7 +57,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String authFreeWritePolicy;
 
     /**
-     * <p>Specifies whether to enable password-free read access. This feature is supported only for V2 instances.</p>
+     * <p>Specifies whether to enable authentication-free read. This parameter is supported only for V2 instances.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +66,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeRead;
 
     /**
-     * <p>Specifies whether to enable password-free write access. This feature is supported only for V2 instances.</p>
+     * <p>Specifies whether to enable authentication-free write. This parameter is supported only for V2 instances.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +75,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthFreeWrite;
 
     /**
-     * <p>Specifies whether to enable an authorization token. This feature is supported only for V1 instances.</p>
+     * <p>Specifies whether to enable the authorization token. This parameter is supported only for V1 instances.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -86,12 +84,11 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public Boolean enableAuthToken;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billable methods. Valid values:</p>
      * <ul>
-     * <li><p>POSTPAY: pay-as-you-go based on the volume of reported metrics.</p>
-     * </li>
-     * <li><p>Note: If you leave this parameter empty, the default billing method is used. If a default billing method is not configured, POSTPAY is used.</p>
-     * </li>
+     * <li>POSTPAY: pay-as-you-go by metric reporting volume.</li>
+     * <li>POSTPAY_GB: pay-as-you-go by metric write volume.
+     * If this parameter is left empty, the default billing method configured by the user is used. If the user has not configured a default billing method, the system uses pay-as-you-go by metric reporting volume.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +98,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +106,15 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
      */
     @NameInMap("prometheusInstanceName")
     public String prometheusInstanceName;
+
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz5qqvjyatgoy</p>
+     */
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The instance status.</p>
@@ -120,12 +126,10 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The storage duration of the instance in days. The valid values depend on the billing method:</p>
+     * <p>The storage duration (in days):</p>
      * <ul>
-     * <li><p>For instances billed based on data written: 90 and 180.</p>
-     * </li>
-     * <li><p>For instances billed based on reported metrics: 15, 30, 60, 90, and 180.</p>
-     * </li>
+     * <li>By write volume: 90 or 180.</li>
+     * <li>By metric reporting volume: 15, 30, 60, 90, or 180.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,7 +145,7 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     public java.util.List<CreatePrometheusInstanceRequestTags> tags;
 
     /**
-     * <p>The workspace to which the instance belongs. The default value is default-cms-{userId}-{regionId}.</p>
+     * <p>The workspace to which the instance belongs. Default value: default-cms-{userId}-{regionId}.</p>
      * 
      * <strong>example:</strong>
      * <p>wokspace1</p>
@@ -216,6 +220,14 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     }
     public String getPrometheusInstanceName() {
         return this.prometheusInstanceName;
+    }
+
+    public CreatePrometheusInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreatePrometheusInstanceRequest setStatus(String status) {

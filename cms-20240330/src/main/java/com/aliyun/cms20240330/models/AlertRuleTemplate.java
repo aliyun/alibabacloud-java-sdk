@@ -4,87 +4,60 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleTemplate extends TeaModel {
-    /**
-     * <p>The type of the alert.</p>
-     */
     @NameInMap("alertType")
     public String alertType;
 
-    /**
-     * <p>The number of alert rules created from this template.</p>
-     */
     @NameInMap("applyCount")
     public Long applyCount;
 
-    /**
-     * <p>The description of the template.</p>
-     */
+    @NameInMap("bizType")
+    public String bizType;
+
+    @NameInMap("datasource")
+    public String datasource;
+
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>The creation time of the template, as a UNIX timestamp.</p>
-     */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
 
-    /**
-     * <p>The time the template was last modified, as a UNIX timestamp.</p>
-     */
     @NameInMap("gmtModified")
     public Long gmtModified;
 
-    /**
-     * <p>The ID of the alert rule template.</p>
-     */
     @NameInMap("id")
     public Long id;
 
-    /**
-     * <p>Indicates whether the template is system-defined. Valid values: <code>0</code> (user-defined) and <code>1</code> (system-defined).</p>
-     */
     @NameInMap("isSystem")
     public Integer isSystem;
 
-    /**
-     * <p>The labels associated with the template, formatted as a JSON string.</p>
-     */
     @NameInMap("labels")
     public String labels;
 
-    /**
-     * <p>The rule configuration, formatted as a JSON string.</p>
-     */
     @NameInMap("ruleConfigs")
     public String ruleConfigs;
 
-    /**
-     * <p>The status of the template.</p>
-     */
+    @NameInMap("scenes")
+    public String scenes;
+
+    @NameInMap("schemaVersion")
+    public String schemaVersion;
+
+    @NameInMap("sourceType")
+    public String sourceType;
+
     @NameInMap("status")
     public Integer status;
 
-    /**
-     * <p>The subtype of the alert.</p>
-     */
     @NameInMap("subType")
     public String subType;
 
-    /**
-     * <p>The name of the alert rule template.</p>
-     */
     @NameInMap("templateName")
     public String templateName;
 
-    /**
-     * <p>The ID of the user who owns the template.</p>
-     */
     @NameInMap("userId")
     public String userId;
 
-    /**
-     * <p>The universally unique identifier (UUID) of the template.</p>
-     */
     @NameInMap("uuid")
     public String uuid;
 
@@ -107,6 +80,22 @@ public class AlertRuleTemplate extends TeaModel {
     }
     public Long getApplyCount() {
         return this.applyCount;
+    }
+
+    public AlertRuleTemplate setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
+    }
+
+    public AlertRuleTemplate setDatasource(String datasource) {
+        this.datasource = datasource;
+        return this;
+    }
+    public String getDatasource() {
+        return this.datasource;
     }
 
     public AlertRuleTemplate setDescription(String description) {
@@ -163,6 +152,30 @@ public class AlertRuleTemplate extends TeaModel {
     }
     public String getRuleConfigs() {
         return this.ruleConfigs;
+    }
+
+    public AlertRuleTemplate setScenes(String scenes) {
+        this.scenes = scenes;
+        return this;
+    }
+    public String getScenes() {
+        return this.scenes;
+    }
+
+    public AlertRuleTemplate setSchemaVersion(String schemaVersion) {
+        this.schemaVersion = schemaVersion;
+        return this;
+    }
+    public String getSchemaVersion() {
+        return this.schemaVersion;
+    }
+
+    public AlertRuleTemplate setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public AlertRuleTemplate setStatus(Integer status) {

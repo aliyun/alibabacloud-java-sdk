@@ -8,7 +8,7 @@ public class SubscriptionForModify extends TeaModel {
     public SubscriptionForModifyAgentConfig agentConfig;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -17,13 +17,13 @@ public class SubscriptionForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>Filter settings.</p>
+     * <p>The filter settings.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>Notification policy UUID.</p>
+     * <p>The UUID of the notification policy.</p>
      * 
      * <strong>example:</strong>
      * <p>123123</p>
@@ -32,13 +32,23 @@ public class SubscriptionForModify extends TeaModel {
     public String notifyStrategyId;
 
     /**
-     * <p>Push settings.</p>
+     * <p>The push settings.</p>
      */
     @NameInMap("pushingSetting")
     public SubscriptionForModifyPushingSetting pushingSetting;
 
     /**
-     * <p>Name.</p>
+     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
+     * <ul>
+     * <li>true: Subscribe.</li>
+     * <li>false or null: Do not subscribe.</li>
+     * </ul>
+     */
+    @NameInMap("subscribeLegacyEvent")
+    public Boolean subscribeLegacyEvent;
+
+    /**
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,6 +105,14 @@ public class SubscriptionForModify extends TeaModel {
         return this.pushingSetting;
     }
 
+    public SubscriptionForModify setSubscribeLegacyEvent(Boolean subscribeLegacyEvent) {
+        this.subscribeLegacyEvent = subscribeLegacyEvent;
+        return this;
+    }
+    public Boolean getSubscribeLegacyEvent() {
+        return this.subscribeLegacyEvent;
+    }
+
     public SubscriptionForModify setSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -143,13 +161,13 @@ public class SubscriptionForModify extends TeaModel {
 
     public static class SubscriptionForModifyPushingSetting extends TeaModel {
         /**
-         * <p>A list of alert push action plan IDs.</p>
+         * <p>The list of action plan IDs for alert pushing.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
 
         /**
-         * <p>Action plan ID.</p>
+         * <p>The action plan ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123123123</p>
@@ -158,13 +176,13 @@ public class SubscriptionForModify extends TeaModel {
         public String responsePlanId;
 
         /**
-         * <p>A list of action integration plan IDs.</p>
+         * <p>The list of action integration plan IDs for recovery pushing.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
         /**
-         * <p>Template UUID.</p>
+         * <p>The UUID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>123123123</p>

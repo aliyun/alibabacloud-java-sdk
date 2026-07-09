@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsShrinkRequest extends TeaModel {
     /**
-     * <p>The region IDs by which to filter the results.</p>
+     * <p>Filters by region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou,cn-beijing</p>
@@ -38,7 +38,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The IDs of the Prometheus view instances.</p>
+     * <p>The list of Prometheus view instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>view-xxx</p>
@@ -47,7 +47,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String prometheusViewIds;
 
     /**
-     * <p>The name of the Prometheus view.</p>
+     * <p>The Prometheus view name.</p>
      * 
      * <strong>example:</strong>
      * <p>view1</p>
@@ -80,7 +80,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String tagShrink;
 
     /**
-     * <p>The instance version. Valid values: V1 and V2.</p>
+     * <p>The instance version: V1 or V2.</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -89,7 +89,7 @@ public class ListPrometheusViewsShrinkRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

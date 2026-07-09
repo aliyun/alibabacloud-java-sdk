@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCloudResourceDataRequest extends TeaModel {
     /**
-     * <p>The start of the time range to query.</p>
-     * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+     * <p>The start of the query time range.</p>
+     * <p>The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class GetCloudResourceDataRequest extends TeaModel {
     public Integer from;
 
     /**
-     * <p>The search statement.</p>
+     * <p>The query statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class GetCloudResourceDataRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The end of the time range to query.</p>
-     * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+     * <p>The end of the query time range.</p>
+     * <p>The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

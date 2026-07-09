@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryAlertRulesShrinkRequest extends TeaModel {
     /**
-     * <p>The request parameters for querying alert rules.</p>
+     * <p>The request body for querying alert rules.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>The client token used to ensure the idempotency of the request.</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxx-xxxx</p>
@@ -20,7 +20,7 @@ public class QueryAlertRulesShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of results to return per page.</p>
+     * <p>The maximum number of data records to read in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class QueryAlertRulesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to retrieve the next page of results. If you do not specify this parameter, the query starts from the beginning.</p>
+     * <p>The token that marks the position from which you want to start reading data. If you leave this parameter empty, data is read from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

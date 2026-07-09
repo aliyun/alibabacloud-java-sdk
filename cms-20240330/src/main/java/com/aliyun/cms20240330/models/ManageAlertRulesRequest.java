@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManageAlertRulesRequest extends TeaModel {
     /**
-     * <p>A unified request body for managing alert rules with the CREATE, UPDATE, PATCH, and BATCH_DELETE actions. The required fields depend on the specified action.</p>
+     * <p>The request body for managing alert rules. This body is shared by CREATE, UPDATE, PATCH, and BATCH_DELETE operations. Specify fields based on the action.</p>
      */
     @NameInMap("body")
     public ManageAlertRulesUnifiedActionInput body;

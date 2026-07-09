@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetCloudResourceDataResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The total list of returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.List<String>> data;
 
     /**
-     * <p>The list of column headers.</p>
+     * <p>The list of headers.</p>
      */
     @NameInMap("header")
     public java.util.List<String> header;
@@ -25,6 +25,9 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result status.</p>
+     */
     @NameInMap("responseStatus")
     public GetCloudResourceDataResponseBodyResponseStatus responseStatus;
 
@@ -66,15 +69,39 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
     }
 
     public static class GetCloudResourceDataResponseBodyResponseStatusStatusItem extends TeaModel {
+        /**
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success,ExecuteTimeout,UModelNotExist</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The status level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Info,Warn,Error</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <p>The suggestion when an execution error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Try to reduce the query scope or increase timeout limit, then retry</p>
+         */
         @NameInMap("suggestion")
         public String suggestion;
 
@@ -118,18 +145,45 @@ public class GetCloudResourceDataResponseBody extends TeaModel {
     }
 
     public static class GetCloudResourceDataResponseBodyResponseStatus extends TeaModel {
+        /**
+         * <p>The information during execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("executionStates")
         public String executionStates;
 
+        /**
+         * <p>The status level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Info,Warn,Error</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>The execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success,PartialSuccess,Error</p>
+         */
         @NameInMap("result")
         public String result;
 
+        /**
+         * <p>The retry policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None,Once,Continuous</p>
+         */
         @NameInMap("retryPolicy")
         public String retryPolicy;
 
+        /**
+         * <p>The detailed status information.</p>
+         */
         @NameInMap("statusItem")
         public java.util.List<GetCloudResourceDataResponseBodyResponseStatusStatusItem> statusItem;
 

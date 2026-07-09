@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertRobotsRequest extends TeaModel {
     /**
-     * <p>The name of the robot. Fuzzy search by prefix is supported.</p>
+     * <p>The chatbot name. Prefix fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class ListAlertRobotsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAlertRobotsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 100.</p>
+     * <p>The number of entries per page. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class ListAlertRobotsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The robot IDs.</p>
+     * <p>The chatbot ID.</p>
      */
     @NameInMap("robotIds")
     public java.util.List<String> robotIds;
 
     /**
-     * <p>The robot types.</p>
+     * <p>The chatbot type.</p>
      */
     @NameInMap("types")
     public java.util.List<String> types;

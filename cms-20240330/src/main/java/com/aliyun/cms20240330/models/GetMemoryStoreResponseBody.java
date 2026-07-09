@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMemoryStoreResponseBody extends TeaModel {
     /**
-     * <p>The Unix timestamp (in milliseconds) when the memory store was created.</p>
+     * <p>The creation time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>A list of custom extraction strategies.</p>
+     * <p>The custom extraction strategies.</p>
      */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
-     * <p>The description of the memory store.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -30,13 +30,13 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The built-in extraction strategies. Valid values are <code>Episodic</code>, <code>Summary</code>, and <code>Fact</code>.</p>
+     * <p>The extraction strategies. Valid values: Episodic, Summary, and Fact.</p>
      */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
-     * <p>The name of the memory store.</p>
+     * <p>The memory store name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-memory-store</p>
@@ -63,13 +63,13 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configuration for short-term memory storage.</p>
+     * <p>The short-term memory storage.</p>
      */
     @NameInMap("shortTermStorage")
     public GetMemoryStoreResponseBodyShortTermStorage shortTermStorage;
 
     /**
-     * <p>The short-term memory retention time, in seconds.</p>
+     * <p>The retention period of short-term memory.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -87,13 +87,13 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The configuration for the trace source. This parameter is returned only when <code>sourceType</code> is set to <code>Trace</code>.</p>
+     * <p>The configuration used when sourceType is set to Trace.</p>
      */
     @NameInMap("traceSourceConfig")
     public GetMemoryStoreResponseBodyTraceSourceConfig traceSourceConfig;
 
     /**
-     * <p>The Unix timestamp (in milliseconds) when the memory store was last updated.</p>
+     * <p>The update time.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-xxxxxx-cn-beijing</p>
@@ -222,7 +222,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
 
     public static class GetMemoryStoreResponseBodyShortTermStorage extends TeaModel {
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore name.</p>
          * 
          * <strong>example:</strong>
          * <p>memory-store</p>
@@ -231,7 +231,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the Simple Log Service Project.</p>
+         * <p>The Simple Log Service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>wk_cms_data_warehouse</p>
@@ -264,13 +264,13 @@ public class GetMemoryStoreResponseBody extends TeaModel {
 
     public static class GetMemoryStoreResponseBodyTraceSourceConfig extends TeaModel {
         /**
-         * <p>Indicates whether to include Large Language Model (LLM) output in the memory extraction.</p>
+         * <p>Specifies whether to include LLM output in memory extraction.</p>
          */
         @NameInMap("includeOutput")
         public Boolean includeOutput;
 
         /**
-         * <p>The query to filter traces from Simple Log Service.</p>
+         * <p>The Simple Log Service query statement used to filter traces.</p>
          * 
          * <strong>example:</strong>
          * <p>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</p>
@@ -279,7 +279,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The workspace where the trace is located.</p>
+         * <p>The workspace where the trace resides.</p>
          * 
          * <strong>example:</strong>
          * <p>test-workspace</p>

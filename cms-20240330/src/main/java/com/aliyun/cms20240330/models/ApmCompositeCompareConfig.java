@@ -25,6 +25,18 @@ public class ApmCompositeCompareConfig extends TeaModel {
     @NameInMap("threshold")
     public Float threshold;
 
+    /**
+     * <p>The time unit for the year-over-year (YoY) comparison. Use this parameter with <code>yoyTimeValue</code> to define the comparison period. Valid values are <code>day</code> and <code>week</code>.</p>
+     */
+    @NameInMap("yoyTimeUnit")
+    public String yoyTimeUnit;
+
+    /**
+     * <p>The time value for the YoY comparison. For example, if <code>yoyTimeUnit</code> is <code>day</code> and <code>yoyTimeValue</code> is <code>7</code>, the system compares current data with data from 7 days ago.</p>
+     */
+    @NameInMap("yoyTimeValue")
+    public Integer yoyTimeValue;
+
     public static ApmCompositeCompareConfig build(java.util.Map<String, ?> map) throws Exception {
         ApmCompositeCompareConfig self = new ApmCompositeCompareConfig();
         return TeaModel.build(map, self);
@@ -52,6 +64,22 @@ public class ApmCompositeCompareConfig extends TeaModel {
     }
     public Float getThreshold() {
         return this.threshold;
+    }
+
+    public ApmCompositeCompareConfig setYoyTimeUnit(String yoyTimeUnit) {
+        this.yoyTimeUnit = yoyTimeUnit;
+        return this;
+    }
+    public String getYoyTimeUnit() {
+        return this.yoyTimeUnit;
+    }
+
+    public ApmCompositeCompareConfig setYoyTimeValue(Integer yoyTimeValue) {
+        this.yoyTimeValue = yoyTimeValue;
+        return this;
+    }
+    public Integer getYoyTimeValue() {
+        return this.yoyTimeValue;
     }
 
 }

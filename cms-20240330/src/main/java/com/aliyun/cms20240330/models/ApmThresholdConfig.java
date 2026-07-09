@@ -4,23 +4,40 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ApmThresholdConfig extends TeaModel {
+    @NameInMap("max")
+    public Double max;
+
+    @NameInMap("min")
+    public Double min;
+
     /**
-     * <p>The severity of the alert.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("severity")
     public String severity;
 
-    /**
-     * <p>The metric value that triggers the alert.</p>
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("threshold")
     public Float threshold;
 
     public static ApmThresholdConfig build(java.util.Map<String, ?> map) throws Exception {
         ApmThresholdConfig self = new ApmThresholdConfig();
         return TeaModel.build(map, self);
+    }
+
+    public ApmThresholdConfig setMax(Double max) {
+        this.max = max;
+        return this;
+    }
+    public Double getMax() {
+        return this.max;
+    }
+
+    public ApmThresholdConfig setMin(Double min) {
+        this.min = min;
+        return this;
+    }
+    public Double getMin() {
+        return this.min;
     }
 
     public ApmThresholdConfig setSeverity(String severity) {

@@ -56,7 +56,17 @@ public class SubscriptionForView extends TeaModel {
     public SubscriptionForViewPushingSetting pushingSetting;
 
     /**
-     * <p>The UUID.</p>
+     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
+     * <ul>
+     * <li>true: Subscribe.</li>
+     * <li>false or null: Do not subscribe.</li>
+     * </ul>
+     */
+    @NameInMap("subscribeLegacyEvent")
+    public Boolean subscribeLegacyEvent;
+
+    /**
+     * <p>UUID</p>
      * 
      * <strong>example:</strong>
      * <p>123123123123</p>
@@ -109,7 +119,7 @@ public class SubscriptionForView extends TeaModel {
     public String userId;
 
     /**
-     * <p>Specifies the workspace.</p>
+     * <p>workspace</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -179,6 +189,14 @@ public class SubscriptionForView extends TeaModel {
     }
     public SubscriptionForViewPushingSetting getPushingSetting() {
         return this.pushingSetting;
+    }
+
+    public SubscriptionForView setSubscribeLegacyEvent(Boolean subscribeLegacyEvent) {
+        this.subscribeLegacyEvent = subscribeLegacyEvent;
+        return this;
+    }
+    public Boolean getSubscribeLegacyEvent() {
+        return this.subscribeLegacyEvent;
     }
 
     public SubscriptionForView setSubscriptionId(String subscriptionId) {
@@ -277,7 +295,7 @@ public class SubscriptionForView extends TeaModel {
 
     public static class SubscriptionForViewPushingSetting extends TeaModel {
         /**
-         * <p>A list of action integration IDs for alert pushes.</p>
+         * <p>The list of action integration IDs for alert pushing.</p>
          */
         @NameInMap("alertActionIds")
         public java.util.List<String> alertActionIds;
@@ -292,13 +310,13 @@ public class SubscriptionForView extends TeaModel {
         public String responsePlanId;
 
         /**
-         * <p>A list of action integration IDs for recovery pushes.</p>
+         * <p>The list of action integration IDs for recovery pushing.</p>
          */
         @NameInMap("restoreActionIds")
         public java.util.List<String> restoreActionIds;
 
         /**
-         * <p>The template UUID.</p>
+         * <p>The UUID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>123123123</p>

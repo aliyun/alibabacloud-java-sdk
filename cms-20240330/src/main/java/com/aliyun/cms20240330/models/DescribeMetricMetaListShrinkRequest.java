@@ -4,31 +4,35 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListShrinkRequest extends TeaModel {
+    /**
+     * <p>The keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>实例理论</p>
+     */
     @NameInMap("keywords")
     public String keywords;
 
     /**
-     * <p>The labels used to filter resources. The following labels are supported:</p>
+     * <p>Filters resources by label. The following labels are supported:</p>
      * <ul>
-     * <li><p><code>metricCategory</code>: The metric category.</p>
-     * </li>
-     * <li><p><code>alertEnable</code>: Indicates whether to enable alerts.</p>
-     * </li>
-     * <li><p><code>alertUnit</code>: The recommended unit for alerts.</p>
-     * </li>
-     * <li><p><code>unitFactor</code>: The unit conversion factor.</p>
-     * </li>
-     * <li><p><code>minAlertPeriod</code>: The minimum alert period.</p>
-     * </li>
-     * <li><p><code>productCategory</code>: The product category.</p>
-     * </li>
+     * <li>metricCategory: the metric category description.</li>
+     * <li>alertEnable: specifies whether alerting is required.</li>
+     * <li>alertUnit: the recommended alert unit.</li>
+     * <li>unitFactor: the unit conversion factor.</li>
+     * <li>minAlertPeriod: the minimum alert period.</li>
+     * <li>productCategory: the service type category.</li>
      * </ul>
      */
     @NameInMap("labels")
     public String labelsShrink;
 
     /**
-     * <p>The source of the metadata. Valid values: <code>CMS</code> for CloudMonitor metrics and <code>PROM_BASIC</code> for basic Prometheus metrics.</p>
+     * <p>The metadata source. Valid values:</p>
+     * <ul>
+     * <li>CMS: CloudMonitor Basic monitoring metrics.</li>
+     * <li>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CMS</p>
@@ -37,7 +41,7 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
     public String metaFormat;
 
     /**
-     * <p>The name of the metric.</p>
+     * <p>The metric name.</p>
      * 
      * <strong>example:</strong>
      * <p>CPUUtilization</p>
@@ -46,7 +50,7 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the product.</p>
+     * <p>The namespace, which is used to distinguish between services.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
@@ -55,7 +59,7 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The number of the page to return. Default value: <code>1</code>.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +68,7 @@ public class DescribeMetricMetaListShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <code>2000</code>.</p>
+     * <p>The number of entries per page. Default value: 2000.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>
