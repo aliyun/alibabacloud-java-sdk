@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPipelineResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>1735660800</p>
+     */
+    @NameInMap("committedWatermark")
+    public Long committedWatermark;
+
+    /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +29,13 @@ public class GetPipelineResponseBody extends TeaModel {
 
     @NameInMap("executePolicy")
     public GetPipelineResponseBodyExecutePolicy executePolicy;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1735661100</p>
+     */
+    @NameInMap("nextTriggerTime")
+    public Long nextTriggerTime;
 
     @NameInMap("pipeline")
     public GetPipelineResponseBodyPipeline pipeline;
@@ -46,6 +60,13 @@ public class GetPipelineResponseBody extends TeaModel {
      */
     @NameInMap("requestId")
     public String requestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
+    @NameInMap("scheduleStatus")
+    public String scheduleStatus;
 
     @NameInMap("sink")
     public GetPipelineResponseBodySink sink;
@@ -74,6 +95,14 @@ public class GetPipelineResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetPipelineResponseBody setCommittedWatermark(Long committedWatermark) {
+        this.committedWatermark = committedWatermark;
+        return this;
+    }
+    public Long getCommittedWatermark() {
+        return this.committedWatermark;
+    }
+
     public GetPipelineResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -96,6 +125,14 @@ public class GetPipelineResponseBody extends TeaModel {
     }
     public GetPipelineResponseBodyExecutePolicy getExecutePolicy() {
         return this.executePolicy;
+    }
+
+    public GetPipelineResponseBody setNextTriggerTime(Long nextTriggerTime) {
+        this.nextTriggerTime = nextTriggerTime;
+        return this;
+    }
+    public Long getNextTriggerTime() {
+        return this.nextTriggerTime;
     }
 
     public GetPipelineResponseBody setPipeline(GetPipelineResponseBodyPipeline pipeline) {
@@ -128,6 +165,14 @@ public class GetPipelineResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetPipelineResponseBody setScheduleStatus(String scheduleStatus) {
+        this.scheduleStatus = scheduleStatus;
+        return this;
+    }
+    public String getScheduleStatus() {
+        return this.scheduleStatus;
     }
 
     public GetPipelineResponseBody setSink(GetPipelineResponseBodySink sink) {

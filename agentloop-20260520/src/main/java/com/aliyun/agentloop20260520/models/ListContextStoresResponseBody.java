@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextStoresResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries per page that was specified in the request. This value is echoed back.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListContextStoresResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next page. An empty string indicates that the current page is the last page.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg5MA==</p>
      */
@@ -19,16 +23,23 @@ public class ListContextStoresResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of context stores.</p>
+     */
     @NameInMap("results")
     public java.util.List<ListContextStoresResponseBodyResults> results;
 
     /**
+     * <p>The total number of context stores that match the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,6 +93,8 @@ public class ListContextStoresResponseBody extends TeaModel {
 
     public static class ListContextStoresResponseBodyResults extends TeaModel {
         /**
+         * <p>The name of the AgentSpace to which the context store belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
          */
@@ -89,6 +102,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String agentSpace;
 
         /**
+         * <p>The name of the context store.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-context-store</p>
          */
@@ -96,6 +111,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String contextStoreName;
 
         /**
+         * <p>The type of the context store, such as experience or memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>experience</p>
          */
@@ -103,6 +120,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String contextType;
 
         /**
+         * <p>The time when the context store was created, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -112,6 +130,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the context store.</p>
+         * 
          * <strong>example:</strong>
          * <p>我的上下文库</p>
          */
@@ -119,6 +139,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The region ID of the context store.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -126,6 +148,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The list of service names. This parameter has a value only for context stores of the experience type. The service names are used together with the data source AgentSpace to locate trace data sources.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;order-service&quot;,&quot;payment-service&quot;]</p>
          */
@@ -133,6 +157,8 @@ public class ListContextStoresResponseBody extends TeaModel {
         public java.util.List<String> serviceNames;
 
         /**
+         * <p>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
@@ -140,6 +166,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the context store was last updated, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

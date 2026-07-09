@@ -28,6 +28,13 @@ public class ListPipelinesResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("totalCount")
+    public Integer totalCount;
+
     public static ListPipelinesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPipelinesResponseBody self = new ListPipelinesResponseBody();
         return TeaModel.build(map, self);
@@ -65,6 +72,135 @@ public class ListPipelinesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListPipelinesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static class ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1735660800000</p>
+         */
+        @NameInMap("fromTime")
+        public Long fromTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1735747200000</p>
+         */
+        @NameInMap("toTime")
+        public Long toTime;
+
+        public static ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce self = new ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce setFromTime(Long fromTime) {
+            this.fromTime = fromTime;
+            return this;
+        }
+        public Long getFromTime() {
+            return this.fromTime;
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce setToTime(Long toTime) {
+            this.toTime = toTime;
+            return this;
+        }
+        public Long getToTime() {
+            return this.toTime;
+        }
+
+    }
+
+    public static class ListPipelinesResponseBodyPipelinesExecutePolicyScheduled extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1735660800000</p>
+         */
+        @NameInMap("fromTime")
+        public Long fromTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1h</p>
+         */
+        @NameInMap("interval")
+        public String interval;
+
+        public static ListPipelinesResponseBodyPipelinesExecutePolicyScheduled build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesExecutePolicyScheduled self = new ListPipelinesResponseBodyPipelinesExecutePolicyScheduled();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled setFromTime(Long fromTime) {
+            this.fromTime = fromTime;
+            return this;
+        }
+        public Long getFromTime() {
+            return this.fromTime;
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled setInterval(String interval) {
+            this.interval = interval;
+            return this;
+        }
+        public String getInterval() {
+            return this.interval;
+        }
+
+    }
+
+    public static class ListPipelinesResponseBodyPipelinesExecutePolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>RunOnce</p>
+         */
+        @NameInMap("mode")
+        public String mode;
+
+        @NameInMap("runOnce")
+        public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce runOnce;
+
+        @NameInMap("scheduled")
+        public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled scheduled;
+
+        public static ListPipelinesResponseBodyPipelinesExecutePolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelinesResponseBodyPipelinesExecutePolicy self = new ListPipelinesResponseBodyPipelinesExecutePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicy setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicy setRunOnce(ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce runOnce) {
+            this.runOnce = runOnce;
+            return this;
+        }
+        public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce getRunOnce() {
+            return this.runOnce;
+        }
+
+        public ListPipelinesResponseBodyPipelinesExecutePolicy setScheduled(ListPipelinesResponseBodyPipelinesExecutePolicyScheduled scheduled) {
+            this.scheduled = scheduled;
+            return this;
+        }
+        public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled getScheduled() {
+            return this.scheduled;
+        }
+
+    }
+
     public static class ListPipelinesResponseBodyPipelines extends TeaModel {
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
@@ -82,6 +218,9 @@ public class ListPipelinesResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("executePolicy")
+        public ListPipelinesResponseBodyPipelinesExecutePolicy executePolicy;
+
         /**
          * <strong>example:</strong>
          * <p>my-pipeline</p>
@@ -95,6 +234,20 @@ public class ListPipelinesResponseBody extends TeaModel {
          */
         @NameInMap("regionId")
         public String regionId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        @NameInMap("scheduleStatus")
+        public String scheduleStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>RunOnce</p>
+         */
+        @NameInMap("scheduleType")
+        public String scheduleType;
 
         /**
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
@@ -133,6 +286,14 @@ public class ListPipelinesResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListPipelinesResponseBodyPipelines setExecutePolicy(ListPipelinesResponseBodyPipelinesExecutePolicy executePolicy) {
+            this.executePolicy = executePolicy;
+            return this;
+        }
+        public ListPipelinesResponseBodyPipelinesExecutePolicy getExecutePolicy() {
+            return this.executePolicy;
+        }
+
         public ListPipelinesResponseBodyPipelines setPipelineName(String pipelineName) {
             this.pipelineName = pipelineName;
             return this;
@@ -147,6 +308,22 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListPipelinesResponseBodyPipelines setScheduleStatus(String scheduleStatus) {
+            this.scheduleStatus = scheduleStatus;
+            return this;
+        }
+        public String getScheduleStatus() {
+            return this.scheduleStatus;
+        }
+
+        public ListPipelinesResponseBodyPipelines setScheduleType(String scheduleType) {
+            this.scheduleType = scheduleType;
+            return this;
+        }
+        public String getScheduleType() {
+            return this.scheduleType;
         }
 
         public ListPipelinesResponseBodyPipelines setUpdateTime(String updateTime) {

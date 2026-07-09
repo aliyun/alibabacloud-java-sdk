@@ -5,21 +5,35 @@ import com.aliyun.tea.*;
 
 public class UpdatePipelineRequest extends TeaModel {
     /**
+     * <p>The description of the pipeline, which helps users understand its purpose.</p>
+     * 
      * <strong>example:</strong>
      * <p>我的流水线</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The execution policy. If specified, the existing execution policy is entirely overwritten.</p>
+     */
     @NameInMap("executePolicy")
     public UpdatePipelineRequestExecutePolicy executePolicy;
 
+    /**
+     * <p>The pipeline configuration (node orchestration). If specified, the existing pipeline configuration is entirely overwritten.</p>
+     */
     @NameInMap("pipeline")
     public UpdatePipelineRequestPipeline pipeline;
 
+    /**
+     * <p>The pipeline sink (data write destination). If specified, the existing sink configuration is entirely overwritten.</p>
+     */
     @NameInMap("sink")
     public UpdatePipelineRequestSink sink;
 
+    /**
+     * <p>The pipeline data source. If specified, the existing source configuration is entirely overwritten.</p>
+     */
     @NameInMap("source")
     public UpdatePipelineRequestSource source;
 
@@ -85,6 +99,8 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestExecutePolicyRunOnce extends TeaModel {
         /**
+         * <p>The data processing start time, in UNIX millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
          */
@@ -92,6 +108,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The data processing end time, in UNIX millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735747200000</p>
          */
@@ -123,6 +141,8 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestExecutePolicyScheduled extends TeaModel {
         /**
+         * <p>The scheduling start time, in UNIX millisecond timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1735660800000</p>
          */
@@ -130,6 +150,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public Long fromTime;
 
         /**
+         * <p>The scheduling interval, such as 1h.</p>
+         * 
          * <strong>example:</strong>
          * <p>1h</p>
          */
@@ -161,15 +183,23 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestExecutePolicy extends TeaModel {
         /**
+         * <p>The scheduling mode, such as Scheduled (timed scheduling) or RunOnce (one-time execution).</p>
+         * 
          * <strong>example:</strong>
          * <p>Scheduled</p>
          */
         @NameInMap("mode")
         public String mode;
 
+        /**
+         * <p>The configuration for one-time execution.</p>
+         */
         @NameInMap("runOnce")
         public UpdatePipelineRequestExecutePolicyRunOnce runOnce;
 
+        /**
+         * <p>The timed scheduling configuration.</p>
+         */
         @NameInMap("scheduled")
         public UpdatePipelineRequestExecutePolicyScheduled scheduled;
 
@@ -206,16 +236,23 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestPipelineNodes extends TeaModel {
         /**
+         * <p>The node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>node-1</p>
          */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The node parameters in key-value format. The parameters vary by node type.</p>
+         */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
 
         /**
+         * <p>The node type.</p>
+         * 
          * <strong>example:</strong>
          * <p>transform</p>
          */
@@ -254,6 +291,9 @@ public class UpdatePipelineRequest extends TeaModel {
     }
 
     public static class UpdatePipelineRequestPipeline extends TeaModel {
+        /**
+         * <p>The list of nodes.</p>
+         */
         @NameInMap("nodes")
         public java.util.List<UpdatePipelineRequestPipelineNodes> nodes;
 
@@ -281,6 +321,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public String agentSpace;
 
         /**
+         * <p>The name of the destination dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-dataset</p>
          */
@@ -311,10 +353,15 @@ public class UpdatePipelineRequest extends TeaModel {
     }
 
     public static class UpdatePipelineRequestSink extends TeaModel {
+        /**
+         * <p>The destination dataset configuration.</p>
+         */
         @NameInMap("dataset")
         public UpdatePipelineRequestSinkDataset dataset;
 
         /**
+         * <p>The sink type, such as Dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>Dataset</p>
          */
@@ -346,6 +393,8 @@ public class UpdatePipelineRequest extends TeaModel {
 
     public static class UpdatePipelineRequestSourceLogstore extends TeaModel {
         /**
+         * <p>The name of the SLS Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-sls-logstore</p>
          */
@@ -353,6 +402,8 @@ public class UpdatePipelineRequest extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The data filtered query statement in SLS query/analysis syntax.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li>| SELECT *</li>
@@ -385,10 +436,15 @@ public class UpdatePipelineRequest extends TeaModel {
     }
 
     public static class UpdatePipelineRequestSource extends TeaModel {
+        /**
+         * <p>The SLS Logstore datasource config.</p>
+         */
         @NameInMap("logstore")
         public UpdatePipelineRequestSourceLogstore logstore;
 
         /**
+         * <p>The data source type, such as SLS.</p>
+         * 
          * <strong>example:</strong>
          * <p>SLS</p>
          */

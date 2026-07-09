@@ -4,15 +4,36 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned per request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. If no more pages are available, this parameter is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ydx438PDAW1lYRJZbBn9</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The region information.</p>
+     */
     @NameInMap("regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FDD8668-516C-5183-9BCF-4CAD8E3CF327</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -54,15 +75,39 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentloop.cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("internetEndpoint")
         public String internetEndpoint;
 
+        /**
+         * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华东1（杭州）</p>
+         */
         @NameInMap("localName")
         public String localName;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentloop.cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("vpcEndpoint")
         public String vpcEndpoint;
 

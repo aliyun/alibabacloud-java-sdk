@@ -4,9 +4,6 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class ExperimentRecord extends TeaModel {
-    @NameInMap("batchId")
-    public String batchId;
-
     @NameInMap("completedAt")
     public Long completedAt;
 
@@ -25,6 +22,9 @@ public class ExperimentRecord extends TeaModel {
     @NameInMap("errorMessage")
     public String errorMessage;
 
+    @NameInMap("evaluationTaskId")
+    public String evaluationTaskId;
+
     @NameInMap("evaluators")
     public java.util.List<Evaluator> evaluators;
 
@@ -32,10 +32,10 @@ public class ExperimentRecord extends TeaModel {
     public Long executedAt;
 
     @NameInMap("experimentConfig")
-    public ExperimentConfig experimentConfig;
+    public java.util.List<ExperimentConfig> experimentConfig;
 
-    @NameInMap("experimentName")
-    public String experimentName;
+    @NameInMap("experimentPlanId")
+    public String experimentPlanId;
 
     @NameInMap("failedTasks")
     public Integer failedTasks;
@@ -43,11 +43,8 @@ public class ExperimentRecord extends TeaModel {
     @NameInMap("input")
     public java.util.Map<String, ?> input;
 
-    @NameInMap("modelName")
-    public String modelName;
-
-    @NameInMap("planId")
-    public String planId;
+    @NameInMap("modelNames")
+    public java.util.List<String> modelNames;
 
     @NameInMap("planName")
     public String planName;
@@ -55,8 +52,14 @@ public class ExperimentRecord extends TeaModel {
     @NameInMap("progress")
     public Float progress;
 
+    @NameInMap("querySql")
+    public String querySql;
+
     @NameInMap("recordId")
     public String recordId;
+
+    @NameInMap("recordName")
+    public String recordName;
 
     @NameInMap("selectedItemIds")
     public java.util.List<String> selectedItemIds;
@@ -70,14 +73,6 @@ public class ExperimentRecord extends TeaModel {
     public static ExperimentRecord build(java.util.Map<String, ?> map) throws Exception {
         ExperimentRecord self = new ExperimentRecord();
         return TeaModel.build(map, self);
-    }
-
-    public ExperimentRecord setBatchId(String batchId) {
-        this.batchId = batchId;
-        return this;
-    }
-    public String getBatchId() {
-        return this.batchId;
     }
 
     public ExperimentRecord setCompletedAt(Long completedAt) {
@@ -128,6 +123,14 @@ public class ExperimentRecord extends TeaModel {
         return this.errorMessage;
     }
 
+    public ExperimentRecord setEvaluationTaskId(String evaluationTaskId) {
+        this.evaluationTaskId = evaluationTaskId;
+        return this;
+    }
+    public String getEvaluationTaskId() {
+        return this.evaluationTaskId;
+    }
+
     public ExperimentRecord setEvaluators(java.util.List<Evaluator> evaluators) {
         this.evaluators = evaluators;
         return this;
@@ -144,20 +147,20 @@ public class ExperimentRecord extends TeaModel {
         return this.executedAt;
     }
 
-    public ExperimentRecord setExperimentConfig(ExperimentConfig experimentConfig) {
+    public ExperimentRecord setExperimentConfig(java.util.List<ExperimentConfig> experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
     }
-    public ExperimentConfig getExperimentConfig() {
+    public java.util.List<ExperimentConfig> getExperimentConfig() {
         return this.experimentConfig;
     }
 
-    public ExperimentRecord setExperimentName(String experimentName) {
-        this.experimentName = experimentName;
+    public ExperimentRecord setExperimentPlanId(String experimentPlanId) {
+        this.experimentPlanId = experimentPlanId;
         return this;
     }
-    public String getExperimentName() {
-        return this.experimentName;
+    public String getExperimentPlanId() {
+        return this.experimentPlanId;
     }
 
     public ExperimentRecord setFailedTasks(Integer failedTasks) {
@@ -176,20 +179,12 @@ public class ExperimentRecord extends TeaModel {
         return this.input;
     }
 
-    public ExperimentRecord setModelName(String modelName) {
-        this.modelName = modelName;
+    public ExperimentRecord setModelNames(java.util.List<String> modelNames) {
+        this.modelNames = modelNames;
         return this;
     }
-    public String getModelName() {
-        return this.modelName;
-    }
-
-    public ExperimentRecord setPlanId(String planId) {
-        this.planId = planId;
-        return this;
-    }
-    public String getPlanId() {
-        return this.planId;
+    public java.util.List<String> getModelNames() {
+        return this.modelNames;
     }
 
     public ExperimentRecord setPlanName(String planName) {
@@ -208,12 +203,28 @@ public class ExperimentRecord extends TeaModel {
         return this.progress;
     }
 
+    public ExperimentRecord setQuerySql(String querySql) {
+        this.querySql = querySql;
+        return this;
+    }
+    public String getQuerySql() {
+        return this.querySql;
+    }
+
     public ExperimentRecord setRecordId(String recordId) {
         this.recordId = recordId;
         return this;
     }
     public String getRecordId() {
         return this.recordId;
+    }
+
+    public ExperimentRecord setRecordName(String recordName) {
+        this.recordName = recordName;
+        return this;
+    }
+    public String getRecordName() {
+        return this.recordName;
     }
 
     public ExperimentRecord setSelectedItemIds(java.util.List<String> selectedItemIds) {

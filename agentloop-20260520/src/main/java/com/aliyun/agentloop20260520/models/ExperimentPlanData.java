@@ -16,11 +16,17 @@ public class ExperimentPlanData extends TeaModel {
     @NameInMap("experimentCount")
     public Integer experimentCount;
 
+    @NameInMap("experimentType")
+    public String experimentType;
+
     @NameInMap("planId")
     public String planId;
 
     @NameInMap("planName")
     public String planName;
+
+    @NameInMap("querySql")
+    public String querySql;
 
     @NameInMap("status")
     public String status;
@@ -65,6 +71,14 @@ public class ExperimentPlanData extends TeaModel {
         return this.experimentCount;
     }
 
+    public ExperimentPlanData setExperimentType(String experimentType) {
+        this.experimentType = experimentType;
+        return this;
+    }
+    public String getExperimentType() {
+        return this.experimentType;
+    }
+
     public ExperimentPlanData setPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -79,6 +93,14 @@ public class ExperimentPlanData extends TeaModel {
     }
     public String getPlanName() {
         return this.planName;
+    }
+
+    public ExperimentPlanData setQuerySql(String querySql) {
+        this.querySql = querySql;
+        return this;
+    }
+    public String getQuerySql() {
+        return this.querySql;
     }
 
     public ExperimentPlanData setStatus(String status) {

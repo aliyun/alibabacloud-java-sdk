@@ -4,6 +4,12 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC5B6F62-6FA2-57FC-8285-99753BD34B6D</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

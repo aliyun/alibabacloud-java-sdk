@@ -4,12 +4,30 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
+    /**
+     * <p>The name of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>product_faq_dataset</p>
+     */
     @NameInMap("datasetName")
     public String datasetName;
 
+    /**
+     * <p>The maximum number of results to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. You do not need to set this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RsfoUqpOJd5nd0F1e4OquY/7dKNGp1JMgsKtvCagmtY=</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetContextStoreAPIKeyResponseBody extends TeaModel {
     /**
+     * <p>The name of the AgentSpace to which the API key belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-agent-space</p>
      */
@@ -12,6 +14,8 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
     public String agentSpace;
 
     /**
+     * <p>The masked prefix of the API key (for example, sk-abcd****). For security purposes, the full plaintext is not returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-abcd****</p>
      */
@@ -19,6 +23,8 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The name of the context store to which the API key belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-context-store</p>
      */
@@ -26,6 +32,7 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
     public String contextStoreName;
 
     /**
+     * <p>The creation time of the API key, in ISO 8601 UTC format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The display name of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-api-key</p>
      */
@@ -42,6 +51,8 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The region ID of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -49,6 +60,8 @@ public class GetContextStoreAPIKeyResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */

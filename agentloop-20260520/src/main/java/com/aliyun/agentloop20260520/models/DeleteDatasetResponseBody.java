@@ -4,6 +4,12 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatasetResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3FE4CD1E-FF41-56BE-B590-7A021D9C1524</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

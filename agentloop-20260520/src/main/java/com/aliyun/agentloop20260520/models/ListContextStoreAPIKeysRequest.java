@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextStoreAPIKeysRequest extends TeaModel {
     /**
+     * <p>The maximum number of API keys to return. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListContextStoreAPIKeysRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. Set this parameter to the nextToken value returned in the previous response to retrieve the next page. Do not specify this parameter for the first request.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTIzNDU2Nzg5MA==</p>
      */

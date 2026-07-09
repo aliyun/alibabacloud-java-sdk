@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
     /**
+     * <p>The complete API key value.</p>
+     * 
      * <strong>example:</strong>
      * <p>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>The name of the API key.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-api-key</p>
      */
@@ -19,6 +23,8 @@ public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */

@@ -4,12 +4,30 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class DeleteAgentSpaceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete the associated Hybrid Cloud Monitoring workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("deleteCmsWorkspace")
     public Boolean deleteCmsWorkspace;
 
+    /**
+     * <p>Specifies whether to delete the associated MSE namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("deleteMseNamespace")
     public Boolean deleteMseNamespace;
 
+    /**
+     * <p>Specifies whether to delete the associated SLS project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("deleteSlsProject")
     public Boolean deleteSlsProject;
 

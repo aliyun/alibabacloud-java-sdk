@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SearchContextResponseBody extends TeaModel {
     /**
+     * <p>The request ID. You can use this ID to locate and troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of retrieval results, sorted by similarity in descending order.</p>
+     */
     @NameInMap("results")
     public java.util.List<java.util.Map<String, ?>> results;
 

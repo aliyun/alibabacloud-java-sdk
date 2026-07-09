@@ -5,14 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("language")
     public String language;
 
+    /**
+     * <p>The maximum number of entries to return in a single request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dXkC1NeQkVKHWkVfOvIVEp4dD+2BRJj42DLT6GrZysw=</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

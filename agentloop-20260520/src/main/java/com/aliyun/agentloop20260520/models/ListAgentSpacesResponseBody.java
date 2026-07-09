@@ -4,18 +4,45 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class ListAgentSpacesResponseBody extends TeaModel {
+    /**
+     * <p>The AgentSpaces information.</p>
+     */
     @NameInMap("agentSpaces")
     public java.util.List<ListAgentSpacesResponseBodyAgentSpaces> agentSpaces;
 
+    /**
+     * <p>The maximum number of results returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b5754ef15c784abc8696d82790d2985c</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E4AC775-2358-5B52-B6FB-171459D7B14B</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("total")
     public Integer total;
 
@@ -65,9 +92,21 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     }
 
     public static class ListAgentSpacesResponseBodyAgentSpacesMseNamespace extends TeaModel {
+        /**
+         * <p>The MSE namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>phoenixcloud-raw-logs</p>
+         */
         @NameInMap("namespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The MSE namespace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terraform-alicloud-modules</p>
+         */
         @NameInMap("namespaceName")
         public String namespaceName;
 
@@ -95,32 +134,73 @@ public class ListAgentSpacesResponseBody extends TeaModel {
     }
 
     public static class ListAgentSpacesResponseBodyAgentSpaces extends TeaModel {
+        /**
+         * <p>The AgentSpace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-agent-space</p>
+         */
         @NameInMap("agentSpace")
         public String agentSpace;
 
+        /**
+         * <p>The CMS workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-cms-workspace</p>
+         */
         @NameInMap("cmsWorkspace")
         public String cmsWorkspace;
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-23T04:06:06Z</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The MSE namespace.</p>
+         */
         @NameInMap("mseNamespace")
         public ListAgentSpacesResponseBodyAgentSpacesMseNamespace mseNamespace;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The Simple Log Service project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1152309027070167-cn-beijing</p>
+         */
         @NameInMap("slsProject")
         public String slsProject;
 
         /**
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-11T08:40:23Z</p>
          */
         @NameInMap("updateTime")
         public String updateTime;

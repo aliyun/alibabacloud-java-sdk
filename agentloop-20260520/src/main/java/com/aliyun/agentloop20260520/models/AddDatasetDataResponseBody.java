@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddDatasetDataResponseBody extends TeaModel {
     /**
+     * <p>The number of log rows scanned or processed.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class AddDatasetDataResponseBody extends TeaModel {
     public Integer affectedRows;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>D0173835-9E0F-508F-8BFA-9F556E59C302</p>
      */

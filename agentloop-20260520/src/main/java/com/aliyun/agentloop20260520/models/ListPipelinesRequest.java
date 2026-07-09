@@ -25,6 +25,20 @@ public class ListPipelinesRequest extends TeaModel {
     @NameInMap("pipelineName")
     public String pipelineName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Active</p>
+     */
+    @NameInMap("scheduleStatus")
+    public String scheduleStatus;
+
+    /**
+     * <strong>example:</strong>
+     * <p>RunOnce</p>
+     */
+    @NameInMap("scheduleType")
+    public String scheduleType;
+
     public static ListPipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPipelinesRequest self = new ListPipelinesRequest();
         return TeaModel.build(map, self);
@@ -52,6 +66,22 @@ public class ListPipelinesRequest extends TeaModel {
     }
     public String getPipelineName() {
         return this.pipelineName;
+    }
+
+    public ListPipelinesRequest setScheduleStatus(String scheduleStatus) {
+        this.scheduleStatus = scheduleStatus;
+        return this;
+    }
+    public String getScheduleStatus() {
+        return this.scheduleStatus;
+    }
+
+    public ListPipelinesRequest setScheduleType(String scheduleType) {
+        this.scheduleType = scheduleType;
+        return this;
+    }
+    public String getScheduleType() {
+        return this.scheduleType;
     }
 
 }

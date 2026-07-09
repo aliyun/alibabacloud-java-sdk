@@ -4,6 +4,12 @@ package com.aliyun.agentloop20260520.models;
 import com.aliyun.tea.*;
 
 public class UpdateAgentSpaceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA689779-61AB-5077-BD91-9F7EA1205D68</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
