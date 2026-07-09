@@ -10,8 +10,11 @@ public class GetAuthCodeRequest extends TeaModel {
     @NameInMap("AdDomain")
     public String adDomain;
 
+    @NameInMap("AdPassword")
+    public String adPassword;
+
     /**
-     * <p>Specifies whether to synchronously create an EndUserId based on <code>ExternalUserId</code>. This parameter takes effect only when <code>EndUserId</code> is empty.</p>
+     * <p>Specifies whether to synchronously create an EndUserId based on ExternalUserId. This parameter takes effect only when EndUserId is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -20,7 +23,7 @@ public class GetAuthCodeRequest extends TeaModel {
     public Boolean autoCreateUser;
 
     /**
-     * <p>The username of the China Desktop Service (China Desktop Service) convenience account, which is unique within an Alibaba Cloud account. This parameter and <code>ExternalUserId</code> cannot both be empty.</p>
+     * <p>The username of the China Desktop Service (China Desktop Service) convenience account. The username must be unique within an Alibaba Cloud account. This parameter and ExternalUserId cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -29,7 +32,7 @@ public class GetAuthCodeRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The external user ID. This ID is defined by the caller and must be unique within an Alibaba Cloud account. This parameter and <code>EndUserId</code> cannot both be empty.</p>
+     * <p>The external user ID. This ID is defined by the caller and must be unique within an Alibaba Cloud account. This parameter and EndUserId cannot both be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -38,7 +41,7 @@ public class GetAuthCodeRequest extends TeaModel {
     public String externalUserId;
 
     /**
-     * <p>The access policy that restricts the access permissions of the authorization code. An empty value indicates no restrictions.</p>
+     * <p>The access policy that restricts the access permissions of the authorization code. If this parameter is left empty, no restrictions are applied.</p>
      * <p>Syntax:</p>
      * <pre><code class="language-json">{
      *       &quot;Version&quot;: &quot;1&quot;,
@@ -89,6 +92,14 @@ public class GetAuthCodeRequest extends TeaModel {
     }
     public String getAdDomain() {
         return this.adDomain;
+    }
+
+    public GetAuthCodeRequest setAdPassword(String adPassword) {
+        this.adPassword = adPassword;
+        return this;
+    }
+    public String getAdPassword() {
+        return this.adPassword;
     }
 
     public GetAuthCodeRequest setAutoCreateUser(Boolean autoCreateUser) {

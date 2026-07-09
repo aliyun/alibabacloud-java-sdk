@@ -110,6 +110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AdDomain", request.adDomain);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.adPassword)) {
+            body.put("AdPassword", request.adPassword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoCreateUser)) {
             body.put("AutoCreateUser", request.autoCreateUser);
         }
