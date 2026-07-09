@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOrdersRequest extends TeaModel {
     /**
+     * <p>The end of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2016-05-23T12:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class GetOrdersRequest extends TeaModel {
     public String createTimeEnd;
 
     /**
+     * <p>The start of the order creation time range. If not specified, orders created within the most recent hour are queried. Format: YYYY-MM-ddTHH:mm:ssZ. Time zone: UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2016-05-23T13:00:00Z</p>
      */
@@ -19,6 +23,8 @@ public class GetOrdersRequest extends TeaModel {
     public String createTimeStart;
 
     /**
+     * <p>The UID of a member account in an enterprise with multiple member accounts. Leave this parameter empty if this scenario does not apply.</p>
+     * 
      * <strong>example:</strong>
      * <p>1779628988149763</p>
      */
@@ -26,6 +32,22 @@ public class GetOrdersRequest extends TeaModel {
     public Long memberUid;
 
     /**
+     * <p>The order type. Valid values:</p>
+     * <ul>
+     * <li>New: new purchase.</li>
+     * <li>Renew: renewal.</li>
+     * <li>Upgrade: upgrade.</li>
+     * <li>TempUpgrade: temporary upgrade.</li>
+     * <li>Downgrade: downgrade.</li>
+     * <li>Refund: refund.</li>
+     * <li>Convert: billing method conversion.</li>
+     * <li>ResizeDisk: cloud disk resizing.</li>
+     * <li>CompensatoryRenew: compensatory renewal.</li>
+     * <li>IncreaseUpgrade: bandwidth upgrade.</li>
+     * <li>Exchange: exchange.</li>
+     * <li>ChangeOperatingSystem: operating system change.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>New</p>
      */
@@ -36,6 +58,8 @@ public class GetOrdersRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -43,6 +67,8 @@ public class GetOrdersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -50,6 +76,16 @@ public class GetOrdersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The payment status. For non-refund orders, valid values:</p>
+     * <ul>
+     * <li>Unpaid: unpaid.</li>
+     * <li>Paid: paid.</li>
+     * <li>Cancelled: canceled.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For refund orders, set this parameter to NULL.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Paid</p>
      */
@@ -57,6 +93,8 @@ public class GetOrdersRequest extends TeaModel {
     public String paymentStatus;
 
     /**
+     * <p>The product code.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
@@ -64,6 +102,8 @@ public class GetOrdersRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The product type.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds</p>
      */
@@ -71,6 +111,12 @@ public class GetOrdersRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The subscription type. Valid values:</p>
+     * <ul>
+     * <li>Subscription: upfront.</li>
+     * <li>PayAsYouGo: pay-as-you-go.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Subscription</p>
      */

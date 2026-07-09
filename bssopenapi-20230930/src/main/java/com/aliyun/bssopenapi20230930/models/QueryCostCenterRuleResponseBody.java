@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryCostCenterRuleResponseBody extends TeaModel {
     /**
+     * <p>The cost center ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>597745</p>
      */
     @NameInMap("CostCenterId")
     public Long costCenterId;
 
+    /**
+     * <p>The rule expression.</p>
+     */
     @NameInMap("FilterExpression")
     public QueryCostCenterRuleResponseBodyFilterExpression filterExpression;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>Tue Nov 12 14:49:43 CST 2024</p>
      */
@@ -22,6 +29,8 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>Wed Oct 16 10:15:37 CST 2024</p>
      */
@@ -29,6 +38,8 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The ID of the cost center auto-allocation rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>32048</p>
      */
@@ -36,6 +47,12 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The deletion status. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: active.</li>
+     * <li><strong>1</strong>: inactive.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +60,8 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Integer isDeleted;
 
     /**
+     * <p>Response structure metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -50,6 +69,8 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The owner user of the cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>1977800748053695</p>
      */
@@ -57,7 +78,7 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Long ownerAccountId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>UUID</p>
@@ -66,6 +87,8 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The root cost center ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -73,6 +96,12 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
     public Long rootCostCenterId;
 
     /**
+     * <p>The status. Valid values:</p>
+     * <ul>
+     * <li>on: active.</li>
+     * <li>off: inactive.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -174,22 +203,39 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
 
     public static class QueryCostCenterRuleResponseBodyFilterExpressionFilterValues extends TeaModel {
         /**
+         * <p>The condition filter key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TAG-test-xxx-key</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The condition filter key name (deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CodeName")
         public String codeName;
 
         /**
+         * <p>The association between code and value.</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>The attribute value types corresponding to the module code. Valid values:</p>
+         * <ul>
+         * <li>single_float: single value type.</li>
+         * <li>range_float: range value type.</li>
+         * </ul>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -234,22 +280,38 @@ public class QueryCostCenterRuleResponseBody extends TeaModel {
 
     public static class QueryCostCenterRuleResponseBodyFilterExpression extends TeaModel {
         /**
+         * <p>The operation type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NARY</p>
          */
         @NameInMap("ExpressionType")
         public String expressionType;
 
+        /**
+         * <p>The sub-condition filter.</p>
+         */
         @NameInMap("FilterValues")
         public QueryCostCenterRuleResponseBodyFilterExpressionFilterValues filterValues;
 
+        /**
+         * <p>The filter condition (deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Operand")
         public Object operand;
 
+        /**
+         * <p>The condition expression.</p>
+         */
         @NameInMap("Operands")
         public java.util.List<?> operands;
 
         /**
+         * <p>The relational expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */

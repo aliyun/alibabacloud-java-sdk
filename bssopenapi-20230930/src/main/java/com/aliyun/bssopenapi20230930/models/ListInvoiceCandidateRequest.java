@@ -4,33 +4,51 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class ListInvoiceCandidateRequest extends TeaModel {
+    /**
+     * <p>List of billing cycles.</p>
+     */
     @NameInMap("BillingCycles")
     public java.util.List<Integer> billingCycles;
 
+    /**
+     * <p>List of business document numbers.</p>
+     */
     @NameInMap("BusinessIds")
     public java.util.List<String> businessIds;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>List of enterprises and accounts. If empty, the current account itself is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<ListInvoiceCandidateRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>The end time. Format: yyyy-mm-dd hh:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-07-01 00:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>List of invoice issuers.</p>
+     */
     @NameInMap("InvoiceIssuers")
     public java.util.List<String> invoiceIssuers;
 
     /**
+     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -38,6 +56,8 @@ public class ListInvoiceCandidateRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -45,15 +65,23 @@ public class ListInvoiceCandidateRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time. Format: yyyy-mm-dd hh:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-06-01 00:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>List of invoice candidate statuses.</p>
+     */
     @NameInMap("Status")
     public java.util.List<Integer> status;
 
+    /**
+     * <p>List of invoice candidate types.</p>
+     */
     @NameInMap("Types")
     public java.util.List<Integer> types;
 
@@ -151,10 +179,15 @@ public class ListInvoiceCandidateRequest extends TeaModel {
     }
 
     public static class ListInvoiceCandidateRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>Enterprise entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */

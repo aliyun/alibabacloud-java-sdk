@@ -8,6 +8,8 @@ public class UpdateBudgetResponseBody extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>03A59CD4-6C6B-1A62-B64C-F1F2AF7830F3</p>
      */

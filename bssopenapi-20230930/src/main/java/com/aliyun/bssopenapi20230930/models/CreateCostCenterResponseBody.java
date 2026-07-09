@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCostCenterResponseBody extends TeaModel {
+    /**
+     * <p>Data list</p>
+     */
     @NameInMap("CostCenterDtoList")
     public java.util.List<CreateCostCenterResponseBodyCostCenterDtoList> costCenterDtoList;
 
     /**
+     * <p>Response metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +20,8 @@ public class CreateCostCenterResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>C1BD134E-D914-6AE0-1901-AEB2A99FA205</p>
      */
@@ -52,16 +59,26 @@ public class CreateCostCenterResponseBody extends TeaModel {
 
     public static class CreateCostCenterResponseBodyCostCenterDtoList extends TeaModel {
         /**
+         * <p>Cost center ID</p>
+         * 
          * <strong>example:</strong>
          * <p>485938</p>
          */
         @NameInMap("CostCenterId")
         public Long costCenterId;
 
+        /**
+         * <p>Cost center name (must be unique within the same account)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>资源组</p>
+         */
         @NameInMap("CostCenterName")
         public String costCenterName;
 
         /**
+         * <p>Owner user ID of the cost center</p>
+         * 
          * <strong>example:</strong>
          * <p>1314839403940987</p>
          */
@@ -69,6 +86,8 @@ public class CreateCostCenterResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
+         * <p>Parent cost center ID</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */

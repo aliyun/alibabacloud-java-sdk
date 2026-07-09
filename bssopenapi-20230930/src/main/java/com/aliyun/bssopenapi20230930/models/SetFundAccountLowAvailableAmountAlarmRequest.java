@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetFundAccountLowAvailableAmountAlarmRequest extends TeaModel {
     /**
+     * <p>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>12321213</p>
      */
@@ -12,6 +14,7 @@ public class SetFundAccountLowAvailableAmountAlarmRequest extends TeaModel {
     public Long fundAccountId;
 
     /**
+     * <p>Low balance alert threshold.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetOrdersResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetOrdersResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -22,6 +29,8 @@ public class GetOrdersResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -29,6 +38,8 @@ public class GetOrdersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -296,6 +307,8 @@ public class GetOrdersResponseBody extends TeaModel {
 
     public static class GetOrdersResponseBodyData extends TeaModel {
         /**
+         * <p>The hostname.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -306,6 +319,8 @@ public class GetOrdersResponseBody extends TeaModel {
         public GetOrdersResponseBodyDataOrderList orderList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -313,6 +328,8 @@ public class GetOrdersResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page. A maximum of 20 entries per page is recommended. A larger number may cause a timeout.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -320,6 +337,8 @@ public class GetOrdersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

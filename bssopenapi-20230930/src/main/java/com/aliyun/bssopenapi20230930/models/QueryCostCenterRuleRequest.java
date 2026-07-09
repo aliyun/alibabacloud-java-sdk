@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryCostCenterRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>597745</p>
      */
     @NameInMap("CostCenterId")
     public Long costCenterId;
 
+    /**
+     * <p>List of enterprises and accounts. If empty, queries the current account itself.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryCostCenterRuleRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -51,10 +58,14 @@ public class QueryCostCenterRuleRequest extends TeaModel {
     }
 
     public static class QueryCostCenterRuleRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>Enterprise entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class QueryCostCenterShareRuleResponseBody extends TeaModel {
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryCostCenterShareRuleResponseBodyData> data;
 
     /**
+     * <p>Reserved field.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The response metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +29,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Reserved field.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6NH0=</p>
      */
@@ -29,6 +38,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
@@ -36,6 +47,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -97,6 +110,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
     public static class QueryCostCenterShareRuleResponseBodyDataFromCostCenterShareRuleDetails extends TeaModel {
         /**
+         * <p>The cost center code.</p>
+         * 
          * <strong>example:</strong>
          * <p>970354711219#</p>
          */
@@ -104,16 +119,26 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String costCenterCode;
 
         /**
+         * <p>The cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>637127</p>
          */
         @NameInMap("CostCenterId")
         public Long costCenterId;
 
+        /**
+         * <p>The cost center name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成本计划</p>
+         */
         @NameInMap("CostCenterName")
         public String costCenterName;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16 13:49:59</p>
          */
@@ -121,6 +146,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16 13:49:59</p>
          */
@@ -128,6 +155,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The owner account ID of the cost center.</p>
+         * 
          * <strong>example:</strong>
          * <p>1529600453335198</p>
          */
@@ -135,6 +164,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
+         * <p>The parent cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>637537</p>
          */
@@ -142,6 +173,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long parentCostCenterId;
 
         /**
+         * <p>The previous cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>583059</p>
          */
@@ -149,6 +182,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long prevCostCenterId;
 
         /**
+         * <p>The root cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>583050</p>
          */
@@ -236,6 +271,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
 
     public static class QueryCostCenterShareRuleResponseBodyDataToCostCenterShareRuleDetails extends TeaModel {
         /**
+         * <p>The cost center code.</p>
+         * 
          * <strong>example:</strong>
          * <p>970354711215#</p>
          */
@@ -243,16 +280,26 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String costCenterCode;
 
         /**
+         * <p>The cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>637127</p>
          */
         @NameInMap("CostCenterId")
         public Long costCenterId;
 
+        /**
+         * <p>The cost center name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成本分摊</p>
+         */
         @NameInMap("CostCenterName")
         public String costCenterName;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16 13:49:59</p>
          */
@@ -260,6 +307,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-16 13:49:59</p>
          */
@@ -267,6 +316,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The owner account ID of the cost center.</p>
+         * 
          * <strong>example:</strong>
          * <p>1529600453335198</p>
          */
@@ -274,6 +325,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
+         * <p>The parent cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>637537</p>
          */
@@ -281,6 +334,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long parentCostCenterId;
 
         /**
+         * <p>The previous cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>583055</p>
          */
@@ -288,6 +343,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long prevCostCenterId;
 
         /**
+         * <p>The root cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>583050</p>
          */
@@ -295,6 +352,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long rootCostCenterId;
 
         /**
+         * <p>The sharing ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.2</p>
          */
@@ -389,6 +448,9 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
     }
 
     public static class QueryCostCenterShareRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>The source cost center rule details.</p>
+         */
         @NameInMap("FromCostCenterShareRuleDetails")
         public java.util.List<QueryCostCenterShareRuleResponseBodyDataFromCostCenterShareRuleDetails> fromCostCenterShareRuleDetails;
 
@@ -400,6 +462,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The owner account ID of the cost center.</p>
+         * 
          * <strong>example:</strong>
          * <p>1529600453335198</p>
          */
@@ -407,6 +471,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
+         * <p>The sharing rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1826</p>
          */
@@ -414,6 +480,8 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public Long shareRuleId;
 
         /**
+         * <p>The sharing rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -421,12 +489,17 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         public String shareRuleName;
 
         /**
+         * <p>The sharing rule type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AVERAGE</p>
          */
         @NameInMap("ShareRuleType")
         public String shareRuleType;
 
+        /**
+         * <p>The target cost center rule details.</p>
+         */
         @NameInMap("ToCostCenterShareRuleDetails")
         public java.util.List<QueryCostCenterShareRuleResponseBodyDataToCostCenterShareRuleDetails> toCostCenterShareRuleDetails;
 

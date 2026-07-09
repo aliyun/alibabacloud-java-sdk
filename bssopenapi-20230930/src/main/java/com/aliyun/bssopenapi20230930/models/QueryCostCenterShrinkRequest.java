@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCostCenterShrinkRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public String ecIdAccountIdsShrink;
 
     /**
+     * <p>The ID of the primary sales channel. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -24,6 +30,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The ID of the user who owns the financial unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public Long ownerAccountId;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +50,7 @@ public class QueryCostCenterShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class QueryCostCenterResourceResponseBody extends TeaModel {
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("CostCenterResourceDtoList")
     public java.util.List<QueryCostCenterResourceResponseBodyCostCenterResourceDtoList> costCenterResourceDtoList;
 
     /**
+     * <p>The maximum number of records per query.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The metadata of the response structure.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +29,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The token for the next query. An empty NextToken indicates that there are no more results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +39,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
@@ -38,6 +48,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000</p>
      */
@@ -120,6 +132,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public Long applicablePeriodNum;
 
         /**
+         * <p>The apportionment item code of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -127,6 +141,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String apportionItemCode;
 
         /**
+         * <p>The apportionment item name of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -134,16 +150,26 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String apportionItemName;
 
         /**
+         * <p>The commodity code of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>otsbag</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The commodity name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云数据库</p>
+         */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
+         * <p>The cost center code.</p>
+         * 
          * <strong>example:</strong>
          * <p>code</p>
          */
@@ -151,6 +177,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String costCenterCode;
 
         /**
+         * <p>The creation time of the cost center.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-18 12:12:25</p>
          */
@@ -158,6 +186,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String costCenterCreateTime;
 
         /**
+         * <p>The cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -165,6 +195,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public Long costCenterId;
 
         /**
+         * <p>The cost center name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -172,6 +204,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String costCenterName;
 
         /**
+         * <p>The last update time of the cost center.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-18 16:12:25</p>
          */
@@ -185,6 +219,12 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         @NameInMap("FinanceUnitRuleVersion")
         public Long financeUnitRuleVersion;
 
+        /**
+         * <p>The billing granularity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou;standard</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -203,6 +243,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String masterInstanceId;
 
         /**
+         * <p>The customer ID to which the cost center belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567812345678</p>
          */
@@ -210,13 +252,17 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
+         * <p>The customer name to which the cost center belongs.</p>
+         * 
          * <strong>example:</strong>
-         * <p>XXX公司</p>
+         * <p>客户A</p>
          */
         @NameInMap("OwnerAccountName")
         public String ownerAccountName;
 
         /**
+         * <p>The parent cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -224,12 +270,20 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public Long parentCostCenterId;
 
         /**
+         * <p>The product code, which is the same as the product code in Cost Center bills.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */
         @NameInMap("PipCode")
         public String pipCode;
 
+        /**
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云数据库</p>
+         */
         @NameInMap("PipName")
         public String pipName;
 
@@ -254,10 +308,18 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         @NameInMap("RegionNo")
         public String regionNo;
 
+        /**
+         * <p>The resource group to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认资源组</p>
+         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSSBAG-cn-v0h1s4hma018</p>
          */
@@ -265,6 +327,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The custom alias of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>testResource</p>
          */
@@ -272,6 +336,12 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String resourceNick;
 
         /**
+         * <p>The resource source. Valid values:</p>
+         * <ul>
+         * <li>AUTO_ALLOCATE: automatically allocated.</li>
+         * <li>MANUAL_ALLOCATE: manually allocated.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MANUAL_ALLOCATE</p>
          */
@@ -279,6 +349,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String resourceSource;
 
         /**
+         * <p>The tag of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag</p>
          */
@@ -286,6 +358,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String resourceTag;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>FPT_ossbag_absolute_Storage_bj</p>
          */
@@ -293,6 +367,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The last update time of the cost center. This is a reserved field and is currently unavailable.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-18 16:12:25</p>
          */
@@ -300,6 +376,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String resourceUpdateTime;
 
         /**
+         * <p>The owner user ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567812345678</p>
          */
@@ -307,6 +385,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public Long resourceUserId;
 
         /**
+         * <p>The owner username of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyun.com">test@test.aliyun.com</a></p>
          */
@@ -314,6 +394,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         public String resourceUserName;
 
         /**
+         * <p>The root cost center ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */

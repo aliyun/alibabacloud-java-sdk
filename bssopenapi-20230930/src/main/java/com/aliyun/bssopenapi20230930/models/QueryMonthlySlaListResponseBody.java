@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryMonthlySlaListResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryMonthlySlaListResponseBodyData> data;
 
     /**
+     * <p>The response metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +29,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -36,6 +47,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -97,6 +110,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
 
     public static class QueryMonthlySlaListResponseBodyData extends TeaModel {
         /**
+         * <p>The service availability.</p>
+         * 
          * <strong>example:</strong>
          * <p>99.9155</p>
          */
@@ -104,6 +119,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Double availableRate;
 
         /**
+         * <p>The unique identifier of the damage record, which is used for targeted compensation application.</p>
+         * 
          * <strong>example:</strong>
          * <p>9b7***9413</p>
          */
@@ -111,6 +128,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public String damagedId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSSBAG-cn-0xl0n****003</p>
          */
@@ -118,6 +137,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The month in yyyyMM format.</p>
+         * 
          * <strong>example:</strong>
          * <p>202603</p>
          */
@@ -125,6 +146,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Integer month;
 
         /**
+         * <p>The monthly service charge.</p>
+         * 
          * <strong>example:</strong>
          * <p>365.00</p>
          */
@@ -132,13 +155,17 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Double monthlyServiceCharge;
 
         /**
+         * <p>The compensation description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>SLApei f</p>
+         * <p>SLA赔付</p>
          */
         @NameInMap("PayDescription")
         public String payDescription;
 
         /**
+         * <p>The compensation ratio. Unit: %.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -146,6 +173,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Double payRate;
 
         /**
+         * <p>The compensation status. Valid values: 0 (uncompensated) and 1 (compensated).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +182,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public Integer payStatus;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -160,6 +191,8 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The compensation amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>36.5</p>
          */

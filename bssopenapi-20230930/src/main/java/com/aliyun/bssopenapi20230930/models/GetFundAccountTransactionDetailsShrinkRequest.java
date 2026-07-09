@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     /**
+     * <p>Transaction order number</p>
+     * 
      * <strong>example:</strong>
      * <p>2023212312321</p>
      */
@@ -12,6 +14,8 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public String billNumber;
 
     /**
+     * <p>Transaction channel serial number</p>
+     * 
      * <strong>example:</strong>
      * <p>20250312334312322</p>
      */
@@ -19,6 +23,8 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public String channelTransactionNumber;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Query end timestamp (milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1735664561000</p>
      */
@@ -33,6 +41,8 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>123221232</p>
      */
@@ -40,6 +50,8 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public Long fundAccountId;
 
     /**
+     * <p>Page size (maximum 200)</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -47,16 +59,31 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query start timestamp (milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1735664461000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>Transaction channel. If specified, the query filters by transaction channel. If not specified, all channels are queried by default.</p>
+     * <p>User balance: ACCT_CASH.</p>
+     * <p>Alipay: ALIPAY.</p>
+     * <p>Alipay Zhifutong: ALIPAY_ZHIFUTONG.</p>
+     * <p>Offline remittance: OFFLINE_REMIT.</p>
+     * <p>Credit control quota refund: REFUND.</p>
+     * <p>Online banking: UNION_PAY_BANK.</p>
+     * <p>Credit card: CREDIT_CARD. (International site only)</p>
+     * <p>PayPal: PAYPAL. (International site only)</p>
+     */
     @NameInMap("TransactionChannelList")
     public String transactionChannelListShrink;
 
     /**
+     * <p>Transaction direction: in/out (fund inflow/outflow)</p>
+     * 
      * <strong>example:</strong>
      * <p>IN</p>
      */
@@ -64,6 +91,8 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public String transactionDirection;
 
     /**
+     * <p>Transaction serial number</p>
+     * 
      * <strong>example:</strong>
      * <p>543231231</p>
      */
@@ -71,12 +100,24 @@ public class GetFundAccountTransactionDetailsShrinkRequest extends TeaModel {
     public Long transactionNumber;
 
     /**
+     * <p>Transaction type. If a transaction type is specified, only results of that type are returned. If the specified type does not exist, the result is empty. If not specified, all types are returned by default.</p>
+     * <p>Top-up: CHARGE.</p>
+     * <p>Withdrawal: WITHDRAW.</p>
+     * <p>Refund: REFUND.</p>
+     * <p>Payment: PAY.</p>
+     * <p>Transfer: TRANSFER.</p>
+     * <p>Adjustment: ADJUST.</p>
+     * <p>Order expiration refund: PAY_FAILED.</p>
+     * 
      * <strong>example:</strong>
      * <p>CHARGE</p>
      */
     @NameInMap("TransactionType")
     public String transactionType;
 
+    /**
+     * <p>Transaction type list. Supports querying with multiple parameters.</p>
+     */
     @NameInMap("TransactionTypeList")
     public String transactionTypeListShrink;
 

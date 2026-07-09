@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class AllocateCostCenterResourceRequest extends TeaModel {
     /**
+     * <p>The ID of the source cost center. This parameter is required.</p>
+     * <ul>
+     * <li>0 indicates that the cost center is unallocated.</li>
+     * <li>A value greater than 0 indicates an allocated cost center ID.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>637180</p>
      */
@@ -12,6 +18,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
     public Long fromCostCenterId;
 
     /**
+     * <p>The ID of the owner of the source cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>1529600453335198</p>
      */
@@ -19,6 +27,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
     public Long fromOwnerAccountId;
 
     /**
+     * <p>The primary sales channel ID. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -26,12 +36,19 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The list of resource instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceInstanceList")
     public java.util.List<AllocateCostCenterResourceRequestResourceInstanceList> resourceInstanceList;
 
     /**
+     * <p>The ID of the destination cost center. Valid values:</p>
+     * <ul>
+     * <li>-1: moves the allocated resource to the unallocated state.</li>
+     * <li>A value greater than 0: allocates the resource to the specified cost center.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>638288</p>
      */
@@ -85,6 +102,12 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
 
     public static class AllocateCostCenterResourceRequestResourceInstanceList extends TeaModel {
         /**
+         * <p>The attached resource type of the attached-resource instance. This parameter is required only for attached-resource product instances.</p>
+         * <ul>
+         * <li>Currently, eight commodities support attached resources. The commodity codes are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</li>
+         * <li>You can call the QueryCostUnitResource operation to obtain all billing instances (including attached-resource instances with their attached resources) under a specific cost center (including the unallocated cost center) of a user.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>qwer1-cn-beijing</p>
          */
@@ -92,6 +115,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String apportionCode;
 
         /**
+         * <p>The attached resource name.</p>
+         * 
          * <strong>example:</strong>
          * <p>split-item-test1</p>
          */
@@ -99,6 +124,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String apportionName;
 
         /**
+         * <p>The commodity code of the billing instance. This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -106,16 +133,26 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The commodity name of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>RESOURCE_UDR</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
+        /**
+         * <p>The billing granularity ID. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou;standard</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
+         * <p>The product code, which is the same as the product code in User Center bills.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
@@ -123,6 +160,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String pipCode;
 
         /**
+         * <p>The resources related to the resource instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>related-resource</p>
          */
@@ -130,6 +169,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String relatedResources;
 
         /**
+         * <p>The resource group.</p>
+         * 
          * <strong>example:</strong>
          * <p>xihe_mpp</p>
          */
@@ -137,13 +178,17 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String resourceGroup;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou;standard</p>
+         * <p>cn-hangzhou;standard:app</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
+         * <p>The custom nickname of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs-test-1</p>
          */
@@ -151,6 +196,12 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String resourceNick;
 
         /**
+         * <p>The resource source. Valid values:</p>
+         * <ul>
+         * <li>AUTO_ALLOCATE: automatic allocation.</li>
+         * <li>MANUAL_ALLOCATE: manual allocation.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AUTO_ALLOCATE</p>
          */
@@ -158,6 +209,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String resourceSource;
 
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -165,6 +218,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String resourceStatus;
 
         /**
+         * <p>The tag of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag-test1</p>
          */
@@ -172,6 +227,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String resourceTag;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SCU</p>
          */
@@ -179,6 +236,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The ID of the owner of the billing instance. This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>273394581313325532</p>
          */
@@ -186,6 +245,8 @@ public class AllocateCostCenterResourceRequest extends TeaModel {
         public Long resourceUserId;
 
         /**
+         * <p>The resource ownership username.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

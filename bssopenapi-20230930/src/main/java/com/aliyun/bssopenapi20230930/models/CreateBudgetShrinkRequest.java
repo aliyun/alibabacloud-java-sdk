@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBudgetShrinkRequest extends TeaModel {
     /**
+     * <p>The budget name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>The budget type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,17 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     @NameInMap("BudgetType")
     public String budgetType;
 
+    /**
+     * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The end cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +43,14 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     @NameInMap("CycleEndPeriod")
     public String cycleEndPeriod;
 
+    /**
+     * <p>The per-cycle specified quota. This parameter is required when QuotaType is set to <code>SPECIFY</code>.</p>
+     */
     @NameInMap("CycleQuota")
     public String cycleQuotaShrink;
 
     /**
+     * <p>The start cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +60,7 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     public String cycleStartPeriod;
 
     /**
+     * <p>The cycle type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,10 +69,14 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     @NameInMap("CycleType")
     public String cycleType;
 
+    /**
+     * <p>The list of enterprises and accounts. An empty value indicates the current account.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public String ecIdAccountIdsShrink;
 
     /**
+     * <p>The budget metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,13 +85,24 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     @NameInMap("Metric")
     public String metric;
 
+    /**
+     * <p>The level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26842</p>
+     */
     @NameInMap("Nbid")
     public String nbid;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("QueryFilter")
     public String queryFilterShrink;
 
     /**
+     * <p>The fixed quota value. If the type is quota, the unit is percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -81,6 +110,7 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     public String quota;
 
     /**
+     * <p>The quota type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +119,9 @@ public class CreateBudgetShrinkRequest extends TeaModel {
     @NameInMap("QuotaType")
     public String quotaType;
 
+    /**
+     * <p>The alert configurations.</p>
+     */
     @NameInMap("WarnConfs")
     public String warnConfsShrink;
 

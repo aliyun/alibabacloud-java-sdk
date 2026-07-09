@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateFundAccountTransferResponseBody extends TeaModel {
     /**
+     * <p>The metadata of the response struct.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class CreateFundAccountTransferResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1BB79-5B23-3EA-BB4F-352F93E</p>
      */

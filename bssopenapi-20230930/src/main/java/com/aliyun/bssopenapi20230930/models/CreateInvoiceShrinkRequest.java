@@ -5,22 +5,38 @@ import com.aliyun.tea.*;
 
 public class CreateInvoiceShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies the invoice amount. Supports up to two decimal places.</p>
+     * <ul>
+     * <li>If not specified, the invoice will be issued for the total invoiceable amount of all invoiceCandidateIds.</li>
+     * <li>If specified, the invoice will be issued for the specified amount. The specified amount cannot exceed the total invoiceable amount of all invoiceCandidateIds.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0.01</p>
      */
     @NameInMap("Amount")
     public String amount;
 
+    /**
+     * <p>Enterprise and account list. If empty, the current account is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public String ecIdAccountIdsShrink;
 
     /**
+     * <p>List of invoice candidate IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InvoiceCandidateIds")
     public String invoiceCandidateIdsShrink;
 
     /**
+     * <p>Invoice mode.</p>
+     * <ul>
+     * <li>0: Independent invoicing. Expenses of multiple accounts under the enterprise are invoiced separately for each account.</li>
+     * <li>1: Consolidated invoicing. Expenses of multiple accounts under the enterprise are consolidated and invoiced under the invoicing entity.
+     * If only one account is passed in the AccountIds parameter, independent invoicing is applied.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,10 +45,20 @@ public class CreateInvoiceShrinkRequest extends TeaModel {
     @NameInMap("InvoiceMode")
     public Integer invoiceMode;
 
+    /**
+     * <p>Invoice remark.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>备注信息</p>
+     */
     @NameInMap("InvoiceRemark")
     public String invoiceRemark;
 
     /**
+     * <p>Invoice title ID.</p>
+     * <ul>
+     * <li>The ID parameter returned by the ListInvoiceTitle API for the current logged-in account.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +68,7 @@ public class CreateInvoiceShrinkRequest extends TeaModel {
     public String invoiceTitleId;
 
     /**
+     * <p>Invoice type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +78,8 @@ public class CreateInvoiceShrinkRequest extends TeaModel {
     public Integer invoiceType;
 
     /**
+     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -58,6 +87,7 @@ public class CreateInvoiceShrinkRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>List of email addresses to receive the invoice. A maximum of 3 can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecipientEmails")

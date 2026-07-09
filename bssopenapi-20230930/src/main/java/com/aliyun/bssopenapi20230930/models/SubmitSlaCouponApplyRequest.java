@@ -4,13 +4,20 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class SubmitSlaCouponApplyRequest extends TeaModel {
+    /**
+     * <p>Optional. Damaged record IDs.</p>
+     */
     @NameInMap("DamagedIds")
     public java.util.List<String> damagedIds;
 
+    /**
+     * <p>Enterprise and account list. If empty, the current account itself is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<SubmitSlaCouponApplyRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>Required. Application month in the yyyyMM format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +27,8 @@ public class SubmitSlaCouponApplyRequest extends TeaModel {
     public Integer month;
 
     /**
+     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2084210001</p>
      */
@@ -64,10 +73,15 @@ public class SubmitSlaCouponApplyRequest extends TeaModel {
     }
 
     public static class SubmitSlaCouponApplyRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>List of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>Enterprise entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1501603440974415</p>
          */

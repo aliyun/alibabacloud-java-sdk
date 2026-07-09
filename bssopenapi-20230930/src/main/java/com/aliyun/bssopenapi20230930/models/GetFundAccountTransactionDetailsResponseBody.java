@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Data list</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetFundAccountTransactionDetailsResponseBodyData> data;
 
     /**
+     * <p>Response structure metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +29,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
      */
@@ -36,6 +47,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of records</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -97,6 +110,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
 
     public static class GetFundAccountTransactionDetailsResponseBodyData extends TeaModel {
         /**
+         * <p>Balance after the operation</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -104,6 +119,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String balance;
 
         /**
+         * <p>Order number or bill number</p>
+         * 
          * <strong>example:</strong>
          * <p>2323203243</p>
          */
@@ -111,6 +128,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String billNumber;
 
         /**
+         * <p>External transaction serial number</p>
+         * 
          * <strong>example:</strong>
          * <p>20244389232</p>
          */
@@ -118,6 +137,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String channelTransactionNumber;
 
         /**
+         * <p>Transaction amount currency</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -125,6 +146,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>Enterprise entity ID</p>
+         * 
          * <strong>example:</strong>
          * <p>23473943</p>
          */
@@ -132,6 +155,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String fundAccountEcid;
 
         /**
+         * <p>Account ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1232121</p>
          */
@@ -139,6 +164,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public Long fundAccountId;
 
         /**
+         * <p>Account name</p>
+         * 
          * <strong>example:</strong>
          * <p>云某的名称</p>
          */
@@ -146,6 +173,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String fundAccountName;
 
         /**
+         * <p>Alibaba Cloud account ID of the account owner</p>
+         * 
          * <strong>example:</strong>
          * <p>32343231</p>
          */
@@ -153,6 +182,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public Long fundAccountOwnerAccountId;
 
         /**
+         * <p>Fund type</p>
+         * 
          * <strong>example:</strong>
          * <p>ACCT_BOOK</p>
          */
@@ -160,6 +191,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String fundType;
 
         /**
+         * <p>Primary marketplace</p>
+         * 
          * <strong>example:</strong>
          * <p>2684210001</p>
          */
@@ -167,6 +200,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String nbid;
 
         /**
+         * <p>Remarks</p>
+         * 
          * <strong>example:</strong>
          * <p>订单备注</p>
          */
@@ -174,6 +209,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String remark;
 
         /**
+         * <p>Site</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
@@ -181,6 +218,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String site;
 
         /**
+         * <p>Corresponding transaction account, such as the Alipay top-up account or the counterparty account for transfers.</p>
+         * 
          * <strong>example:</strong>
          * <p>186****3975</p>
          */
@@ -188,6 +227,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String transactionAccount;
 
         /**
+         * <p>Transaction amount</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -195,6 +236,16 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String transactionAmount;
 
         /**
+         * <p>Transaction channel. If specified, the query filters by transaction channel. If not specified, all channels are queried by default.</p>
+         * <p>User balance: ACCT_CASH.</p>
+         * <p>Alipay: ALIPAY.</p>
+         * <p>Alipay Zhifutong: ALIPAY_ZHIFUTONG.</p>
+         * <p>Offline remittance: OFFLINE_REMIT.</p>
+         * <p>Credit control quota refund: REFUND.</p>
+         * <p>Online banking: UNION_PAY_BANK.</p>
+         * <p>Credit card: CREDIT_CARD. (International site only)</p>
+         * <p>PayPal: PAYPAL. (International site only)</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIPAY</p>
          */
@@ -202,6 +253,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String transactionChannel;
 
         /**
+         * <p>Transaction direction: in/out (income/expenditure)</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
@@ -209,6 +262,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String transactionDirection;
 
         /**
+         * <p>Transaction serial number</p>
+         * 
          * <strong>example:</strong>
          * <p>5423121</p>
          */
@@ -216,6 +271,8 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public Long transactionNumber;
 
         /**
+         * <p>Formatted transaction time string</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-01 12:00:00</p>
          */
@@ -223,6 +280,15 @@ public class GetFundAccountTransactionDetailsResponseBody extends TeaModel {
         public String transactionTime;
 
         /**
+         * <p>Transaction type. If a transaction type is specified, only results of that type are returned. If the specified type does not exist, the result is empty. If not specified, all types are returned by default.</p>
+         * <p>Top-up: CHARGE.</p>
+         * <p>Withdrawal: WITHDRAW.</p>
+         * <p>Refund: REFUND.</p>
+         * <p>Payment: PAY.</p>
+         * <p>Transfer: TRANSFER.</p>
+         * <p>Adjustment: ADJUST.</p>
+         * <p>Order expiration refund: PAY_FAILED.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHARGE</p>
          */

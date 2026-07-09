@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateReportDefinitionRequest extends TeaModel {
     /**
+     * <p>The start billing cycle for push. After the subscription succeeds, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions, and historical data will not be re-pushed. You can push data within the last year.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-05</p>
      */
     @NameInMap("BeginBillingCycle")
     public String beginBillingCycle;
 
+    /**
+     * <p>The email subscription configuration that specifies whether to include multi-account members of the organization in bills.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeMembers")
     public String includeMembers;
 
     /**
+     * <p>The name of the MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>project</p>
      */
@@ -22,6 +32,8 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String mcProject;
 
     /**
+     * <p>The name of the MaxCompute subscription table.</p>
+     * 
      * <strong>example:</strong>
      * <p>table</p>
      */
@@ -29,16 +41,26 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String mcTableName;
 
     /**
+     * <p>The first-level site ID. If this parameter is left empty, the site ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
     @NameInMap("Nbid")
     public String nbid;
 
+    /**
+     * <p>The email subscription configuration that specifies whether to skip sending emails when no bills are available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NotSendOnNoData")
     public String notSendOnNoData;
 
     /**
+     * <p>The name of the OSS bucket for file storage.</p>
+     * 
      * <strong>example:</strong>
      * <p>sh-bill</p>
      */
@@ -46,6 +68,8 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>The UID of the OSS bucket owner that stores the files. If this is a Bid/Reseller subscription and you need to push data to a sub-account\&quot;s OSS, specify this parameter. The account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The default value is the calling account.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567812345678</p>
      */
@@ -53,6 +77,8 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public Long ossBucketOwnerAccountId;
 
     /**
+     * <p>The storage path of the OSS bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>bill/</p>
      */
@@ -60,6 +86,8 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String ossBucketPath;
 
     /**
+     * <p>The subscription source. Valid values: OSS, MC, and MSC_EMAIL.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -67,17 +95,37 @@ public class CreateReportDefinitionRequest extends TeaModel {
     public String reportSourceType;
 
     /**
+     * <p>The subscription type. Valid values:</p>
+     * <ul>
+     * <li>consumeDetailBillV2: consumption details. This value is supported only by OSS/MC subscriptions.</li>
+     * <li>splitDetailBillV2: split details. This value is supported only by OSS/MC subscriptions.</li>
+     * <li>costDetailBillV2: cost details. This value is supported only by OSS/MC subscriptions.</li>
+     * <li>monthBillOverview: monthly bill overview. This value is supported only by OSS/MSC_EMAIL subscriptions.</li>
+     * <li>focus: FOCUS bill. This value is supported only by OSS/MC subscriptions.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>BillingItemDetailForBillingPeriod</p>
+     * <p>consumeDetailBillV2</p>
      */
     @NameInMap("ReportType")
     public String reportType;
 
+    /**
+     * <p>The email subscription configuration that specifies whether to send emails with bill attachments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SendWithAttach")
     public String sendWithAttach;
 
+    /**
+     * <p>The email subscription configuration that specifies whether to split attachments by user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SplitFileOnUserId")
     public String splitFileOnUserId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFundAccountPayRelationRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class ListFundAccountPayRelationRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Fund account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListFundAccountPayRelationRequest extends TeaModel {
     public String fundAccountId;
 
     /**
+     * <p>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -28,6 +33,8 @@ public class ListFundAccountPayRelationRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,6 +42,10 @@ public class ListFundAccountPayRelationRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The relationship status.
+     * valid: valid.
+     * expired: invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>valid</p>
      */

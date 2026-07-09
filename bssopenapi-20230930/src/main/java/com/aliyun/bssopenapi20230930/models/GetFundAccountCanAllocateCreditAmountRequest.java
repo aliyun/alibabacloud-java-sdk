@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountCanAllocateCreditAmountRequest extends TeaModel {
     /**
+     * <p>Fund account ID. If not specified, the account owned by the current account is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>1233231</p>
      */

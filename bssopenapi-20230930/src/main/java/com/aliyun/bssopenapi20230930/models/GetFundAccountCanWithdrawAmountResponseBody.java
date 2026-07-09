@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     /**
+     * <p>Amount withdrawable via original payment method</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */
@@ -12,6 +14,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String canOriginalWithdrawAmount;
 
     /**
+     * <p>Withdrawable amount = Cash balance - Transfer ledger amount - (Outstanding invoice amount + Historical months unsettled amount + Current month unsettled amount - Transfer ledger amount) - Pay-as-you-go reserved amount</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -19,6 +23,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String canWithdrawAmount;
 
     /**
+     * <p>Amount not withdrawable via original payment method</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String cannotOriginalWithdrawAmount;
 
     /**
+     * <p>Cash balance</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -33,6 +41,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String cashAmount;
 
     /**
+     * <p>Outstanding invoice amount</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -40,6 +50,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String creditMemoAmount;
 
     /**
+     * <p>Current month unsettled amount</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -47,6 +59,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String currentMonthUnclearedAmount;
 
     /**
+     * <p>Historical months unsettled amount</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -54,6 +68,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String historyMonthUnclearedAmount;
 
     /**
+     * <p>Response structure metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -61,6 +77,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Pay-as-you-go reserved amount</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -68,6 +86,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String payAsYouGoReversedAmount;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
      */
@@ -75,6 +95,8 @@ public class GetFundAccountCanWithdrawAmountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Transfer amount</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

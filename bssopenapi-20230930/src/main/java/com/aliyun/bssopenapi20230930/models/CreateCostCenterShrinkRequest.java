@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateCostCenterShrinkRequest extends TeaModel {
     /**
+     * <p>Cost center entity list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CostCenterEntityList")
     public String costCenterEntityListShrink;
 
     /**
+     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2084210001</p>
      */

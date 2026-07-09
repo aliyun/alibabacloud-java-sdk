@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBudgetsRequest extends TeaModel {
     /**
+     * <p>The budget name. Fuzzy search is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>department1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeBudgetsRequest extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>The budget type.</p>
+     * 
      * <strong>example:</strong>
      * <p>CONSUME</p>
      */
@@ -19,16 +23,26 @@ public class DescribeBudgetsRequest extends TeaModel {
     public String budgetType;
 
     /**
+     * <p>The expiration status.</p>
+     * 
      * <strong>example:</strong>
      * <p>NOT_EXPIRED</p>
      */
     @NameInMap("ExpireStatus")
     public String expireStatus;
 
+    /**
+     * <p>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2688801000001</p>
+     */
     @NameInMap("Nbid")
     public String nbid;
 
     /**
+     * <p>Page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +50,8 @@ public class DescribeBudgetsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

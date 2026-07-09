@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
     public Boolean data;
 
     /**
+     * <p>The metadata of the response struct.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class CancelFundAccountLowAvailableAmountAlarmResponseBody extends TeaMod
     public Object metadata;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DFC1F7F9-3BA9-BA4D-2F2E653</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckBudgetNameExistsResponseBody extends TeaModel {
     /**
+     * <p>The budget name.</p>
+     * 
      * <strong>example:</strong>
      * <p>department1</p>
      */
@@ -12,6 +14,8 @@ public class CheckBudgetNameExistsResponseBody extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>Indicates whether the budget name already exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class CheckBudgetNameExistsResponseBody extends TeaModel {
     public Boolean exists;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F1E2D3C4-B5A6-7890-1234-567890ABCDEF</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckBudgetNameExistsRequest extends TeaModel {
     /**
+     * <p>The budget name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,12 @@ public class CheckBudgetNameExistsRequest extends TeaModel {
     @NameInMap("BudgetName")
     public String budgetName;
 
+    /**
+     * <p>The primary sales channel ID. If this parameter is left empty, the channel ID of the current user is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2688801000001</p>
+     */
     @NameInMap("Nbid")
     public String nbid;
 

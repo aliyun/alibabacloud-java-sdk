@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class DeleteCostCenterRuleRequest extends TeaModel {
     /**
+     * <p>Financial unit ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>637127</p>
      */
     @NameInMap("CostCenterId")
     public Long costCenterId;
 
+    /**
+     * <p>Rule expression.
+     * <strong>This field does not need to be entered during the delete operation.</strong></p>
+     */
     @NameInMap("FilterExpression")
     public DeleteCostCenterRuleRequestFilterExpression filterExpression;
 
     /**
+     * <p>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -52,22 +60,35 @@ public class DeleteCostCenterRuleRequest extends TeaModel {
 
     public static class DeleteCostCenterRuleRequestFilterExpressionFilterValues extends TeaModel {
         /**
+         * <p>The condition filter key.</p>
+         * 
          * <strong>example:</strong>
          * <p>TAG-test-xxx-key</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The condition filter key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CodeName")
         public String codeName;
 
         /**
+         * <p>The association between Code and value.</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>The condition filter values.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -112,22 +133,38 @@ public class DeleteCostCenterRuleRequest extends TeaModel {
 
     public static class DeleteCostCenterRuleRequestFilterExpression extends TeaModel {
         /**
+         * <p>The operation type.</p>
+         * 
          * <strong>example:</strong>
          * <p>NARY</p>
          */
         @NameInMap("ExpressionType")
         public String expressionType;
 
+        /**
+         * <p>The sub-expression filter conditions.</p>
+         */
         @NameInMap("FilterValues")
         public DeleteCostCenterRuleRequestFilterExpressionFilterValues filterValues;
 
+        /**
+         * <p>The filter condition (no longer used).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Operand")
         public Object operand;
 
+        /**
+         * <p>The conditional expressions.</p>
+         */
         @NameInMap("Operands")
         public java.util.List<?> operands;
 
         /**
+         * <p>The relational expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */

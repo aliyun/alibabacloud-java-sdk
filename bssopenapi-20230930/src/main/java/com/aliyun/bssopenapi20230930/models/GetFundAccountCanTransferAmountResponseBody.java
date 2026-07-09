@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     /**
+     * <p>Available amount</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String availableAmount;
 
     /**
+     * <p>Cash ledger balance</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -19,6 +23,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String cashAmount;
 
     /**
+     * <p>Currency</p>
+     * 
      * <strong>example:</strong>
      * <p>CNY</p>
      */
@@ -26,6 +32,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String currency;
 
     /**
+     * <p>Enterprise entity ID of the account owner</p>
+     * 
      * <strong>example:</strong>
      * <p>2032121324</p>
      */
@@ -33,6 +41,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String fundAccountEcid;
 
     /**
+     * <p>Account ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12332112</p>
      */
@@ -40,6 +50,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public Long fundAccountId;
 
     /**
+     * <p>Account name</p>
+     * 
      * <strong>example:</strong>
      * <p>云某的账户</p>
      */
@@ -47,6 +59,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String fundAccountName;
 
     /**
+     * <p>Alibaba Cloud account ID of the fund account owner</p>
+     * 
      * <strong>example:</strong>
      * <p>154738212323</p>
      */
@@ -54,6 +68,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public Long fundAccountOwnerAccountId;
 
     /**
+     * <p>Transferable amount</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -61,6 +77,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String maxTransferableAmount;
 
     /**
+     * <p>Response metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -68,6 +86,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Primary marketplace</p>
+     * 
      * <strong>example:</strong>
      * <p>2684210001</p>
      */
@@ -75,6 +95,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String nbid;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -82,6 +104,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Site</p>
+     * 
      * <strong>example:</strong>
      * <p>26842</p>
      */
@@ -89,6 +113,8 @@ public class GetFundAccountCanTransferAmountResponseBody extends TeaModel {
     public String site;
 
     /**
+     * <p>Transfer ledger balance</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

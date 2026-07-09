@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBudgetRequest extends TeaModel {
     /**
+     * <p>The budget name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DeleteBudgetRequest extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>The ID of the primary marketplace. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */

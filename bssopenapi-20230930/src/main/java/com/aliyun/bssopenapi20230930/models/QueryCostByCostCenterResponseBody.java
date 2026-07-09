@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class QueryCostByCostCenterResponseBody extends TeaModel {
+    /**
+     * <p>Cost center consumption amount details list</p>
+     */
     @NameInMap("ConsumeAmountList")
     public java.util.List<QueryCostByCostCenterResponseBodyConsumeAmountList> consumeAmountList;
 
     /**
+     * <p>Response structure metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +20,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
@@ -22,6 +29,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Sum of totalAllocatedAmount across all cost centers</p>
+     * 
      * <strong>example:</strong>
      * <p>130296.64</p>
      */
@@ -67,6 +76,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
 
     public static class QueryCostByCostCenterResponseBodyConsumeAmountList extends TeaModel {
         /**
+         * <p>Shared allocation amount</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -74,6 +85,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         public String allocatedAmount;
 
         /**
+         * <p>Cost center code</p>
+         * 
          * <strong>example:</strong>
          * <p>15945703968#</p>
          */
@@ -81,16 +94,26 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         public String costCenterCode;
 
         /**
+         * <p>Cost center ID</p>
+         * 
          * <strong>example:</strong>
          * <p>530658</p>
          */
         @NameInMap("CostCenterId")
         public Long costCenterId;
 
+        /**
+         * <p>Cost center name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>项目组A</p>
+         */
         @NameInMap("CostCenterName")
         public String costCenterName;
 
         /**
+         * <p>Cost type amount</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -98,6 +121,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         public String directAmount;
 
         /**
+         * <p>Level</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -105,16 +130,26 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         public Integer level;
 
         /**
+         * <p>Account ID that owns the resource</p>
+         * 
          * <strong>example:</strong>
          * <p>1857464601594004</p>
          */
         @NameInMap("OwnerAccountId")
         public Long ownerAccountId;
 
+        /**
+         * <p>Account name that owns the resource</p>
+         * 
+         * <strong>example:</strong>
+         * <p>研发团队测试账号</p>
+         */
         @NameInMap("OwnerAccountName")
         public String ownerAccountName;
 
         /**
+         * <p>Parent cost center ID</p>
+         * 
          * <strong>example:</strong>
          * <p>637537</p>
          */
@@ -122,6 +157,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         public Long parentCostCenterId;
 
         /**
+         * <p>Previous cost center ID</p>
+         * 
          * <strong>example:</strong>
          * <p>6375371</p>
          */
@@ -129,6 +166,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         public Long preCostCenterId;
 
         /**
+         * <p>Total (sum of cost type amount and shared allocation amount)</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -136,6 +175,8 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         public String totalAllocatedAmount;
 
         /**
+         * <p>Cost type amount percentage</p>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */

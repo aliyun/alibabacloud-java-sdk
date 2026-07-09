@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class QueryCostCenterResponseBody extends TeaModel {
+    /**
+     * <p>The list of financial unit data.</p>
+     */
     @NameInMap("CostCenterDtoList")
     public java.util.List<QueryCostCenterResponseBodyCostCenterDtoList> costCenterDtoList;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class QueryCostCenterResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The metadata of the response struct.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +29,8 @@ public class QueryCostCenterResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -38,6 +47,8 @@ public class QueryCostCenterResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -99,6 +110,8 @@ public class QueryCostCenterResponseBody extends TeaModel {
 
     public static class QueryCostCenterResponseBodyCostCenterDtoList extends TeaModel {
         /**
+         * <p>The code of the financial unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>15945703968#</p>
          */
@@ -106,16 +119,26 @@ public class QueryCostCenterResponseBody extends TeaModel {
         public String costCenterCode;
 
         /**
+         * <p>The ID of the financial unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>485938</p>
          */
         @NameInMap("CostCenterId")
         public Long costCenterId;
 
+        /**
+         * <p>The name of the financial unit. The name must be unique within the same account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>资源组</p>
+         */
         @NameInMap("CostCenterName")
         public String costCenterName;
 
         /**
+         * <p>The level of the financial unit node.</p>
+         * 
          * <strong>example:</strong>
          * <p>loose</p>
          */
@@ -123,6 +146,8 @@ public class QueryCostCenterResponseBody extends TeaModel {
         public Integer level;
 
         /**
+         * <p>The ID of the user who owns the financial unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>1314839403940987</p>
          */
@@ -130,6 +155,8 @@ public class QueryCostCenterResponseBody extends TeaModel {
         public Long ownerAccountId;
 
         /**
+         * <p>The ID of the parent financial unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -137,11 +164,16 @@ public class QueryCostCenterResponseBody extends TeaModel {
         public Long parentCostCenterId;
 
         /**
+         * <p>The ID of the previous financial unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>485996</p>
          */
         @NameInMap("PrevCostCenterId")
         public Long prevCostCenterId;
+
+        @NameInMap("Priority")
+        public Integer priority;
 
         public static QueryCostCenterResponseBodyCostCenterDtoList build(java.util.Map<String, ?> map) throws Exception {
             QueryCostCenterResponseBodyCostCenterDtoList self = new QueryCostCenterResponseBodyCostCenterDtoList();
@@ -202,6 +234,14 @@ public class QueryCostCenterResponseBody extends TeaModel {
         }
         public Long getPrevCostCenterId() {
             return this.prevCostCenterId;
+        }
+
+        public QueryCostCenterResponseBodyCostCenterDtoList setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
     }

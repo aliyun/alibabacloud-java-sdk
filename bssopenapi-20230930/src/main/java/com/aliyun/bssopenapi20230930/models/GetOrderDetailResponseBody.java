@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetOrderDetailResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetOrderDetailResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Successful!</p>
      */
@@ -22,6 +29,8 @@ public class GetOrderDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
      */
@@ -29,6 +38,8 @@ public class GetOrderDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -690,6 +701,8 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
     public static class GetOrderDetailResponseBodyData extends TeaModel {
         /**
+         * <p>The hostname.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -700,6 +713,8 @@ public class GetOrderDetailResponseBody extends TeaModel {
         public GetOrderDetailResponseBodyDataOrderList orderList;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -707,6 +722,8 @@ public class GetOrderDetailResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -714,6 +731,8 @@ public class GetOrderDetailResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>400</p>
          */

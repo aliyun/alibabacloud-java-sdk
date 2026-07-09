@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     /**
+     * <p>Response structure metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Unique request identifier used to tag a request for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
@@ -19,6 +23,8 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total claimed amount.</p>
+     * 
      * <strong>example:</strong>
      * <p>6.4</p>
      */
@@ -26,6 +32,8 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     public Double sumCoupon;
 
     /**
+     * <p>End time.</p>
+     * 
      * <strong>example:</strong>
      * <p>Mon Apr 27 00:00:00 CST 2026</p>
      */
@@ -33,6 +41,8 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
     public String validEndTime;
 
     /**
+     * <p>Start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>Tue Oct 27 13:15:58 CST 2026</p>
      */

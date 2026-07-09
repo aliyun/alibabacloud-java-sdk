@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetFundAccountCreditAmountRequest extends TeaModel {
     /**
+     * <p>Credit limit</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SetFundAccountCreditAmountRequest extends TeaModel {
     public String creditAmount;
 
     /**
+     * <p>Currency for the credit control limit. Currently, only CNY is supported in mainland China, and only USD is supported for international use.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class SetFundAccountCreditAmountRequest extends TeaModel {
     public String currency;
 
     /**
+     * <p>Fund account ID. If not specified, the account owned by the current account (owner) is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>1232312</p>
      */

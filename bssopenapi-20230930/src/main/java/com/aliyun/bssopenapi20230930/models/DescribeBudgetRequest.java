@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBudgetRequest extends TeaModel {
     /**
+     * <p>Budget name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,6 +14,12 @@ public class DescribeBudgetRequest extends TeaModel {
     @NameInMap("BudgetName")
     public String budgetName;
 
+    /**
+     * <p>Primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2684201000001</p>
+     */
     @NameInMap("Nbid")
     public String nbid;
 

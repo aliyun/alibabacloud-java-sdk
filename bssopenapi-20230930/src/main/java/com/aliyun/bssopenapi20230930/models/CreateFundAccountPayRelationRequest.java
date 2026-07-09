@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateFundAccountPayRelationRequest extends TeaModel {
     /**
+     * <p>List of enterprises and accounts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EcIdAccountIds")
     public java.util.List<CreateFundAccountPayRelationRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>Fund account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class CreateFundAccountPayRelationRequest extends TeaModel {
     public String fundAccountId;
 
     /**
+     * <p>Primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -57,12 +61,15 @@ public class CreateFundAccountPayRelationRequest extends TeaModel {
 
     public static class CreateFundAccountPayRelationRequestEcIdAccountIds extends TeaModel {
         /**
+         * <p>List of Alibaba Cloud accounts for delegated payment.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>Enterprise entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1501603440974415</p>
          */

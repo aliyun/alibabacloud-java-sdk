@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountAvailableAmountRequest extends TeaModel {
     /**
+     * <p>Account ID. If not specified, the account ID owned by the current account (owner) is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>12332112</p>
      */

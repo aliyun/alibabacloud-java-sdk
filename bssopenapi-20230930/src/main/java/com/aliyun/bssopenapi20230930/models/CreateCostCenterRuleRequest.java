@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateCostCenterRuleRequest extends TeaModel {
     /**
+     * <p>Financial unit ID</p>
+     * 
      * <strong>example:</strong>
      * <p>485938</p>
      */
     @NameInMap("CostCenterId")
     public Long costCenterId;
 
+    /**
+     * <p>Rule expression</p>
+     */
     @NameInMap("FilterExpression")
     public CreateCostCenterRuleRequestFilterExpression filterExpression;
 
     /**
+     * <p>First-level marketplace ID. If left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2084210001</p>
      */
@@ -52,22 +59,35 @@ public class CreateCostCenterRuleRequest extends TeaModel {
 
     public static class CreateCostCenterRuleRequestFilterExpressionFilterValues extends TeaModel {
         /**
+         * <p>Condition filter key</p>
+         * 
          * <strong>example:</strong>
          * <p>TAG-test-xxx-key</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Condition filter key name (deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CodeName")
         public String codeName;
 
         /**
+         * <p>Association relationship between code and value</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>Condition filter value list</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -112,22 +132,38 @@ public class CreateCostCenterRuleRequest extends TeaModel {
 
     public static class CreateCostCenterRuleRequestFilterExpression extends TeaModel {
         /**
+         * <p>Operation type</p>
+         * 
          * <strong>example:</strong>
          * <p>NARY</p>
          */
         @NameInMap("ExpressionType")
         public String expressionType;
 
+        /**
+         * <p>Sub-condition filter</p>
+         */
         @NameInMap("FilterValues")
         public CreateCostCenterRuleRequestFilterExpressionFilterValues filterValues;
 
+        /**
+         * <p>Filter condition (deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Operand")
         public Object operand;
 
+        /**
+         * <p>Condition expression</p>
+         */
         @NameInMap("Operands")
         public java.util.List<?> operands;
 
         /**
+         * <p>Relational expression</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */

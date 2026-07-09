@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class ModifyCostCenterResponseBody extends TeaModel {
+    /**
+     * <p>The list of data entries.</p>
+     */
     @NameInMap("CostCenterOperateDto")
     public java.util.List<ModifyCostCenterResponseBodyCostCenterOperateDto> costCenterOperateDto;
 
     /**
+     * <p>The metadata of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +20,8 @@ public class ModifyCostCenterResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -52,6 +59,8 @@ public class ModifyCostCenterResponseBody extends TeaModel {
 
     public static class ModifyCostCenterResponseBodyCostCenterOperateDto extends TeaModel {
         /**
+         * <p>The ID of the cost center.</p>
+         * 
          * <strong>example:</strong>
          * <p>485938</p>
          */
@@ -59,6 +68,8 @@ public class ModifyCostCenterResponseBody extends TeaModel {
         public Long costCenterId;
 
         /**
+         * <p>Indicates whether the operation is successful.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -66,6 +77,8 @@ public class ModifyCostCenterResponseBody extends TeaModel {
         public Boolean isSuccess;
 
         /**
+         * <p>The ID of the owner to which the cost center belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1314839403940987</p>
          */

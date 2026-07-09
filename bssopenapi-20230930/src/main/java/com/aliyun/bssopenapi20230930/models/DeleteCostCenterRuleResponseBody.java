@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCostCenterRuleResponseBody extends TeaModel {
     /**
+     * <p>The ID of the financial unit allocation rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>37404</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCostCenterRuleResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The response metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class DeleteCostCenterRuleResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>UUID</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCouponRequest extends TeaModel {
     /**
+     * <p>The coupon ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>351430260343</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCouponRequest extends TeaModel {
     public Long couponId;
 
     /**
+     * <p>The coupon code.</p>
+     * 
      * <strong>example:</strong>
      * <p>554863270150</p>
      */
@@ -22,6 +26,8 @@ public class DescribeCouponRequest extends TeaModel {
     public java.util.List<Long> couponTemplateIdList;
 
     /**
+     * <p>The coupon type.</p>
+     * 
      * <strong>example:</strong>
      * <p>CERTAIN</p>
      */
@@ -29,6 +35,7 @@ public class DescribeCouponRequest extends TeaModel {
     public String couponType;
 
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,10 +44,15 @@ public class DescribeCouponRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The enterprise and account list. If this parameter is left empty, the current account is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<DescribeCouponRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>The effective end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1708423156000</p>
      */
@@ -48,6 +60,8 @@ public class DescribeCouponRequest extends TeaModel {
     public Long effectiveEndTime;
 
     /**
+     * <p>The effective start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1684750028000</p>
      */
@@ -55,6 +69,8 @@ public class DescribeCouponRequest extends TeaModel {
     public Long effectiveStartTime;
 
     /**
+     * <p>The expiration end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1708423156000</p>
      */
@@ -62,6 +78,8 @@ public class DescribeCouponRequest extends TeaModel {
     public Long expireEndDate;
 
     /**
+     * <p>The expiration start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1684750028000</p>
      */
@@ -75,6 +93,8 @@ public class DescribeCouponRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The primary campaign information.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -85,6 +105,7 @@ public class DescribeCouponRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,6 +118,8 @@ public class DescribeCouponRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The status.</p>
+     * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
      */
@@ -245,11 +268,14 @@ public class DescribeCouponRequest extends TeaModel {
     }
 
     public static class DescribeCouponRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>The enterprise entity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1501603440974415</p>

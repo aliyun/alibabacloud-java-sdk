@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class QueryCostCenterShareRuleRequest extends TeaModel {
+    /**
+     * <p>The list of enterprises and accounts. If empty, the current account is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryCostCenterShareRuleRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>Reserved field.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -22,6 +29,8 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>Reserved field.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nYCisJwqt18pP5E9yb47iu</p>
      */
@@ -29,6 +38,8 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The owner account ID of the cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>1529600453335198</p>
      */
@@ -81,10 +92,14 @@ public class QueryCostCenterShareRuleRequest extends TeaModel {
     }
 
     public static class QueryCostCenterShareRuleRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>The list of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>The enterprise entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

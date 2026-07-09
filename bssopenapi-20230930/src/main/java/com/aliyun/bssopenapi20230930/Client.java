@@ -154,7 +154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>财务单元实例重分配</p>
+     * <p>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</p>
      * 
      * @param tmpReq AllocateCostCenterResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -210,7 +210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>财务单元实例重分配</p>
+     * <p>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</p>
      * 
      * @param request AllocateCostCenterResourceRequest
      * @return AllocateCostCenterResourceResponse
@@ -221,8 +221,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cancels the low balance alert for a fund account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消资金账户低额预警</p>
+     * <p>Cancels the low balance alert for a fund account.</p>
      * 
      * @param request CancelFundAccountLowAvailableAmountAlarmRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -253,8 +256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Cancels the low balance alert for a fund account.</p>
+     * 
      * <b>summary</b> : 
-     * <p>取消资金账户低额预警</p>
+     * <p>Cancels the low balance alert for a fund account.</p>
      * 
      * @param request CancelFundAccountLowAvailableAmountAlarmRequest
      * @return CancelFundAccountLowAvailableAmountAlarmResponse
@@ -324,7 +330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check whether budgetName exists</p>
+     * <p>Checks whether a specified budgetName exists.</p>
      * 
      * @param request CheckBudgetNameExistsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -362,7 +368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check whether budgetName exists</p>
+     * <p>Checks whether a specified budgetName exists.</p>
      * 
      * @param request CheckBudgetNameExistsRequest
      * @return CheckBudgetNameExistsResponse
@@ -374,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Budget</p>
+     * <p>Creates a budget.</p>
      * 
      * @param tmpReq CreateBudgetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -478,7 +484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Budget</p>
+     * <p>Creates a budget.</p>
      * 
      * @param request CreateBudgetRequest
      * @return CreateBudgetResponse
@@ -489,8 +495,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates one or more cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建财务单元</p>
+     * <p>Create Cost Center</p>
      * 
      * @param tmpReq CreateCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -531,8 +540,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates one or more cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建财务单元</p>
+     * <p>Create Cost Center</p>
      * 
      * @param request CreateCostCenterRequest
      * @return CreateCostCenterResponse
@@ -544,7 +556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建财务单元规则</p>
+     * <p>Create a financial unit auto-allocation rule</p>
      * 
      * @param tmpReq CreateCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -592,7 +604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新建财务单元规则</p>
+     * <p>Create a financial unit auto-allocation rule</p>
      * 
      * @param request CreateCostCenterRuleRequest
      * @return CreateCostCenterRuleResponse
@@ -604,7 +616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资金账户付款关系</p>
+     * <p>Create payment relationships for a fund account</p>
      * 
      * @param tmpReq CreateFundAccountPayRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -652,7 +664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资金账户付款关系</p>
+     * <p>Create payment relationships for a fund account</p>
      * 
      * @param request CreateFundAccountPayRelationRequest
      * @return CreateFundAccountPayRelationResponse
@@ -664,7 +676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资金账户划拨/回收</p>
+     * <p>Creates an account transfer or revocation.</p>
      * 
      * @param request CreateFundAccountTransferRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -720,7 +732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建资金账户划拨/回收</p>
+     * <p>Creates an account transfer or revocation.</p>
      * 
      * @param request CreateFundAccountTransferRequest
      * @return CreateFundAccountTransferResponse
@@ -732,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请发票</p>
+     * <p>Apply for Invoice</p>
      * 
      * @param tmpReq CreateInvoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -810,7 +822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请发票</p>
+     * <p>Apply for Invoice</p>
      * 
      * @param request CreateInvoiceRequest
      * @return CreateInvoiceResponse
@@ -821,6 +833,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this API operation, note the following information:</p>
+     * <ul>
+     * <li>You can subscribe to one type of billing file at a time.</li>
+     * <li>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</li>
+     * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
+     * <li>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></p>
+     * </blockquote>
+     * </li>
+     * <li>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</li>
+     * <li>When subscribing to a directory under a bucket, follow the directory naming conventions:<ul>
+     * <li>Emojis are not allowed. Use compliant UTF-8 characters.</li>
+     * <li>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</li>
+     * <li>Subdirectories named .. are not allowed.</li>
+     * <li>The total length must be 1 to 254 characters.</li>
+     * </ul>
+     * </li>
+     * <li>File names:<ul>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * </li>
+     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Creates a billing report subscription.</p>
      * 
@@ -903,6 +947,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this API operation, note the following information:</p>
+     * <ul>
+     * <li>You can subscribe to one type of billing file at a time.</li>
+     * <li>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</li>
+     * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
+     * <li>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></p>
+     * </blockquote>
+     * </li>
+     * <li>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</li>
+     * <li>When subscribing to a directory under a bucket, follow the directory naming conventions:<ul>
+     * <li>Emojis are not allowed. Use compliant UTF-8 characters.</li>
+     * <li>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</li>
+     * <li>Subdirectories named .. are not allowed.</li>
+     * <li>The total length must be 1 to 254 characters.</li>
+     * </ul>
+     * </li>
+     * <li>File names:<ul>
+     * <li><p>Example: <strong>consumeDetailBillV2</strong> (billing item details)</p>
+     * <ul>
+     * <li><p>Daily push file name format: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_20190312</code>.</p>
+     * </li>
+     * <li><p>Full file name format at the beginning of the next month: <code>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</code>, for example: <code>169**_2688801000001_consumeDetailBillV2_201903</code>.</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Creates a billing report subscription.</p>
      * 
@@ -916,7 +992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除预算</p>
+     * <p>Deletes a budget.</p>
      * 
      * @param request DeleteBudgetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -954,7 +1030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除预算</p>
+     * <p>Deletes a budget.</p>
      * 
      * @param request DeleteBudgetRequest
      * @return DeleteBudgetResponse
@@ -965,8 +1041,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除财务单元</p>
+     * <p>Delete Cost Center</p>
      * 
      * @param request DeleteCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1005,8 +1084,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除财务单元</p>
+     * <p>Delete Cost Center</p>
      * 
      * @param request DeleteCostCenterRequest
      * @return DeleteCostCenterResponse
@@ -1017,8 +1099,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除财务单元规则</p>
+     * <p>Delete financial unit automatic allocation rule</p>
      * 
      * @param tmpReq DeleteCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1065,8 +1150,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除财务单元规则</p>
+     * <p>Delete financial unit automatic allocation rule</p>
      * 
      * @param request DeleteCostCenterRuleRequest
      * @return DeleteCostCenterRuleResponse
@@ -1144,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消账单订阅</p>
+     * <p>Deletes a bill report export subscription.</p>
      * 
      * @param request DeleteReportDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1180,7 +1268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消账单订阅</p>
+     * <p>Deletes a bill report export subscription.</p>
      * 
      * @param request DeleteReportDefinitionRequest
      * @return DeleteReportDefinitionResponse
@@ -1308,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of coupons.</p>
+     * <p>Queries a list of coupons.</p>
      * 
      * @param tmpReq DescribeCouponRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1414,7 +1502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of coupons.</p>
+     * <p>Queries a list of coupons.</p>
      * 
      * @param request DescribeCouponRequest
      * @return DescribeCouponResponse
@@ -1426,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of products for which a coupon is applicable.</p>
+     * <p>Queries the list of products available for a coupon.</p>
      * 
      * @param tmpReq DescribeCouponItemListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1484,7 +1572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of products for which a coupon is applicable.</p>
+     * <p>Queries the list of products available for a coupon.</p>
      * 
      * @param request DescribeCouponItemListRequest
      * @return DescribeCouponItemListResponse
@@ -1492,6 +1580,226 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCouponItemListResponse describeCouponItemList(DescribeCouponItemListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCouponItemListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries resource plan deduction records.</p>
+     * 
+     * @param tmpReq DescribeDeductLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDeductLogsResponse
+     */
+    public DescribeDeductLogsResponse describeDeductLogsWithOptions(DescribeDeductLogsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeDeductLogsShrinkRequest request = new DescribeDeductLogsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relationAccountIds)) {
+            request.relationAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relationAccountIds, "RelationAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billInstanceId)) {
+            query.put("BillInstanceId", request.billInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billingCommodityCode)) {
+            body.put("BillingCommodityCode", request.billingCommodityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billingEndTime)) {
+            body.put("BillingEndTime", request.billingEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billingStartTime)) {
+            body.put("BillingStartTime", request.billingStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
+            body.put("CommodityCode", request.commodityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            body.put("Group", request.group);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            body.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationAccountIdsShrink)) {
+            body.put("RelationAccountIds", request.relationAccountIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDeductLogs"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDeductLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries resource plan deduction records.</p>
+     * 
+     * @param request DescribeDeductLogsRequest
+     * @return DescribeDeductLogsResponse
+     */
+    public DescribeDeductLogsResponse describeDeductLogs(DescribeDeductLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDeductLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries resource plan instances.</p>
+     * 
+     * @param tmpReq DescribeFrInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFrInstancesResponse
+     */
+    public DescribeFrInstancesResponse describeFrInstancesWithOptions(DescribeFrInstancesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeFrInstancesShrinkRequest request = new DescribeFrInstancesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTag)) {
+            query.put("InstanceTag", request.instanceTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.capacityType)) {
+            body.put("CapacityType", request.capacityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
+            body.put("CommodityCode", request.commodityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cycleType)) {
+            body.put("CycleType", request.cycleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            body.put("Group", request.group);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            body.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortField)) {
+            body.put("SortField", request.sortField);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortRule)) {
+            body.put("SortRule", request.sortRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spec)) {
+            body.put("Spec", request.spec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            body.put("TemplateCode", request.templateCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFrInstances"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFrInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries resource plan instances.</p>
+     * 
+     * @param request DescribeFrInstancesRequest
+     * @return DescribeFrInstancesResponse
+     */
+    public DescribeFrInstancesResponse describeFrInstances(DescribeFrInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFrInstancesWithOptions(request, runtime);
     }
 
     /**
@@ -1550,7 +1858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可用金</p>
+     * <p>Query available balance of fund account</p>
      * 
      * @param request GetFundAccountAvailableAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1582,7 +1890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可用金</p>
+     * <p>Query available balance of fund account</p>
      * 
      * @param request GetFundAccountAvailableAmountRequest
      * @return GetFundAccountAvailableAmountResponse
@@ -1594,7 +1902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可分配信控额度</p>
+     * <p>Query allocatable credit limit of a fund account</p>
      * 
      * @param request GetFundAccountCanAllocateCreditAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1626,7 +1934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可分配信控额度</p>
+     * <p>Query allocatable credit limit of a fund account</p>
      * 
      * @param request GetFundAccountCanAllocateCreditAmountRequest
      * @return GetFundAccountCanAllocateCreditAmountResponse
@@ -1638,7 +1946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可回收金额</p>
+     * <p>Queries the reclaimable amount of a fund account.</p>
      * 
      * @param request GetFundAccountCanRecycleAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1674,7 +1982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可回收金额</p>
+     * <p>Queries the reclaimable amount of a fund account.</p>
      * 
      * @param request GetFundAccountCanRecycleAmountRequest
      * @return GetFundAccountCanRecycleAmountResponse
@@ -1686,7 +1994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户的可转出金额</p>
+     * <p>Query the transferable amount of a fund account</p>
      * 
      * @param request GetFundAccountCanTransferAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1722,7 +2030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户的可转出金额</p>
+     * <p>Query the transferable amount of a fund account</p>
      * 
      * @param request GetFundAccountCanTransferAmountRequest
      * @return GetFundAccountCanTransferAmountResponse
@@ -1734,7 +2042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可提现金额</p>
+     * <p>Query Withdrawable Amount of Fund Account</p>
      * 
      * @param request GetFundAccountCanWithdrawAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1766,7 +2074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户可提现金额</p>
+     * <p>Query Withdrawable Amount of Fund Account</p>
      * 
      * @param request GetFundAccountCanWithdrawAmountRequest
      * @return GetFundAccountCanWithdrawAmountResponse
@@ -1778,7 +2086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户低额预警</p>
+     * <p>Query Fund Account Low Balance Alert</p>
      * 
      * @param request GetFundAccountLowAvailableAmountAlarmRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1810,7 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户低额预警</p>
+     * <p>Query Fund Account Low Balance Alert</p>
      * 
      * @param request GetFundAccountLowAvailableAmountAlarmRequest
      * @return GetFundAccountLowAvailableAmountAlarmResponse
@@ -1822,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户收支明细</p>
+     * <p>Query fund account transaction details</p>
      * 
      * @param tmpReq GetFundAccountTransactionDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1910,7 +2218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户收支明细</p>
+     * <p>Query fund account transaction details</p>
      * 
      * @param request GetFundAccountTransactionDetailsRequest
      * @return GetFundAccountTransactionDetailsResponse
@@ -1922,7 +2230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订单详情查询</p>
+     * <p>Queries the details of a specific order for a user or a reseller\&quot;s customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1962,7 +2270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订单详情查询</p>
+     * <p>Queries the details of a specific order for a user or a reseller\&quot;s customer.</p>
      * 
      * @param request GetOrderDetailRequest
      * @return GetOrderDetailResponse
@@ -1974,7 +2282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订单列表查询</p>
+     * <p>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request GetOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2046,7 +2354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>订单列表查询</p>
+     * <p>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</p>
      * 
      * @param request GetOrdersRequest
      * @return GetOrdersResponse
@@ -2302,7 +2610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户列表</p>
+     * <p>Query fund account list</p>
      * 
      * @param request ListFundAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2344,7 +2652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户列表</p>
+     * <p>Query fund account list</p>
      * 
      * @param request ListFundAccountRequest
      * @return ListFundAccountResponse
@@ -2356,7 +2664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户的付款关系</p>
+     * <p>Query payment relationships of an account</p>
      * 
      * @param request ListFundAccountPayRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2406,7 +2714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资金账户的付款关系</p>
+     * <p>Query payment relationships of an account</p>
      * 
      * @param request ListFundAccountPayRelationRequest
      * @return ListFundAccountPayRelationResponse
@@ -2418,7 +2726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对客OpenAPI开票对象查询</p>
+     * <p>Query invoice candidate data, which can be used for invoicing.</p>
      * 
      * @param tmpReq ListInvoiceCandidateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2516,7 +2824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对客OpenAPI开票对象查询</p>
+     * <p>Query invoice candidate data, which can be used for invoicing.</p>
      * 
      * @param request ListInvoiceCandidateRequest
      * @return ListInvoiceCandidateResponse
@@ -2528,7 +2836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发票抬头查询服务</p>
+     * <p>Query the list of available invoice titles</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListInvoiceTitleResponse
@@ -2551,7 +2859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发票抬头查询服务</p>
+     * <p>Query the list of available invoice titles</p>
      * @return ListInvoiceTitleResponse
      */
     public ListInvoiceTitleResponse listInvoiceTitle() throws Exception {
@@ -2561,7 +2869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看已订阅的报告列表</p>
+     * <p>Queries the list of subscribed reports.</p>
      * 
      * @param request ListReportDefinitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2593,7 +2901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看已订阅的报告列表</p>
+     * <p>Queries the list of subscribed reports.</p>
      * 
      * @param request ListReportDefinitionsRequest
      * @return ListReportDefinitionsResponse
@@ -2604,8 +2912,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies one or more cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改财务单元</p>
+     * <p>Modify cost centers</p>
      * 
      * @param tmpReq ModifyCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2646,8 +2957,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modifies one or more cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改财务单元</p>
+     * <p>Modify cost centers</p>
      * 
      * @param request ModifyCostCenterRequest
      * @return ModifyCostCenterResponse
@@ -2658,8 +2972,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modify one or more financial units</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改财务单元规则</p>
+     * <p>Modify financial unit rules</p>
      * 
      * @param tmpReq ModifyCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2710,8 +3027,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Modify one or more financial units</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改财务单元规则</p>
+     * <p>Modify financial unit rules</p>
      * 
      * @param request ModifyCostCenterRuleRequest
      * @return ModifyCostCenterRuleResponse
@@ -2790,8 +3110,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query cost center expense overview results for a specified billing period</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query Cost Overview of a Cost Center</p>
+     * <p>Query cost center expense overview</p>
      * 
      * @param request QueryCostByCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2838,8 +3161,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query cost center expense overview results for a specified billing period</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query Cost Overview of a Cost Center</p>
+     * <p>Query cost center expense overview</p>
      * 
      * @param request QueryCostByCostCenterRequest
      * @return QueryCostByCostCenterResponse
@@ -2850,8 +3176,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a parent financial unit and its child financial units.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询财务单元</p>
+     * <p>Queries financial units.</p>
      * 
      * @param tmpReq QueryCostCenterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2908,8 +3237,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a parent financial unit and its child financial units.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询财务单元</p>
+     * <p>Queries financial units.</p>
      * 
      * @param request QueryCostCenterRequest
      * @return QueryCostCenterResponse
@@ -2921,7 +3253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询财务单元下资源信息</p>
+     * <p>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</p>
      * 
      * @param request QueryCostCenterResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2975,7 +3307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询财务单元下资源信息</p>
+     * <p>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</p>
      * 
      * @param request QueryCostCenterResourceRequest
      * @return QueryCostCenterResourceResponse
@@ -2986,8 +3318,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query parent cost center and its child cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询财务单元规则</p>
+     * <p>Query cost center rules</p>
      * 
      * @param request QueryCostCenterRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3028,8 +3363,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query parent cost center and its child cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询财务单元规则</p>
+     * <p>Query cost center rules</p>
      * 
      * @param request QueryCostCenterRuleRequest
      * @return QueryCostCenterRuleResponse
@@ -3040,8 +3378,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the sharing rules of user cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询财务单元分摊规则</p>
+     * <p>Query cost center sharing rules</p>
      * 
      * @param request QueryCostCenterShareRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3088,8 +3429,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the sharing rules of user cost centers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询财务单元分摊规则</p>
+     * <p>Query cost center sharing rules</p>
      * 
      * @param request QueryCostCenterShareRuleRequest
      * @return QueryCostCenterShareRuleResponse
@@ -3100,8 +3444,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the SLA compensation details list of a user. Only data from the last two months is available.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SLA优惠券</p>
+     * <p>Queries the SLA compensation list of a user.</p>
      * 
      * @param request QueryMonthlySlaListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3162,8 +3509,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the SLA compensation details list of a user. Only data from the last two months is available.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询SLA优惠券</p>
+     * <p>Queries the SLA compensation list of a user.</p>
      * 
      * @param request QueryMonthlySlaListRequest
      * @return QueryMonthlySlaListResponse
@@ -3175,7 +3525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</p>
+     * <p>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</p>
      * 
      * @param tmpReq SaveCostCenterShareRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3237,7 +3587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</p>
+     * <p>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</p>
      * 
      * @param request SaveCostCenterShareRuleRequest
      * @return SaveCostCenterShareRuleResponse
@@ -3249,7 +3599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置资金账户的信控限额</p>
+     * <p>Set the credit control limit for a fund account</p>
      * 
      * @param request SetFundAccountCreditAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3289,7 +3639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置资金账户的信控限额</p>
+     * <p>Set the credit control limit for a fund account</p>
      * 
      * @param request SetFundAccountCreditAmountRequest
      * @return SetFundAccountCreditAmountResponse
@@ -3301,7 +3651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置资金账户低额预警</p>
+     * <p>Set Fund Account Low Balance Alert</p>
      * 
      * @param request SetFundAccountLowAvailableAmountAlarmRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3337,7 +3687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置资金账户低额预警</p>
+     * <p>Set Fund Account Low Balance Alert</p>
      * 
      * @param request SetFundAccountLowAvailableAmountAlarmRequest
      * @return SetFundAccountLowAvailableAmountAlarmResponse
@@ -3416,8 +3766,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
+     * <li>Claim by month or by record.
+     * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>SLA优惠券申领</p>
+     * <p>User claims coupons for the last two months.</p>
      * 
      * @param request SubmitSlaCouponApplyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3462,8 +3819,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
+     * <li>Claim by month or by record.
+     * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>SLA优惠券申领</p>
+     * <p>User claims coupons for the last two months.</p>
      * 
      * @param request SubmitSlaCouponApplyRequest
      * @return SubmitSlaCouponApplyResponse
@@ -3475,7 +3839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新预算</p>
+     * <p>Updates a budget.</p>
      * 
      * @param tmpReq UpdateBudgetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3583,7 +3947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新预算</p>
+     * <p>Updates a budget.</p>
      * 
      * @param request UpdateBudgetRequest
      * @return UpdateBudgetResponse

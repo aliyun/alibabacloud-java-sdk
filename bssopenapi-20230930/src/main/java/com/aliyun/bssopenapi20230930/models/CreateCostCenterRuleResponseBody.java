@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCostCenterRuleResponseBody extends TeaModel {
     /**
+     * <p>Financial unit allocation rule ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1111</p>
      */
@@ -12,6 +14,8 @@ public class CreateCostCenterRuleResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>Response structure metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -19,6 +23,8 @@ public class CreateCostCenterRuleResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */

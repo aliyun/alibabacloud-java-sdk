@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteReportDefinitionRequest extends TeaModel {
     /**
+     * <p>The ID of the primary sales channel. If this parameter is left empty, the ID of the sales channel to which the current user belongs is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -12,6 +14,7 @@ public class DeleteReportDefinitionRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The ID of the bill subscription task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

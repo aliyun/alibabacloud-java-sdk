@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeCouponResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeCouponResponseBodyData> data;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCouponResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C880B065-A781-4F19-B6DD-3E0E3B715C64</p>
      */
@@ -29,6 +38,8 @@ public class DescribeCouponResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,12 +93,20 @@ public class DescribeCouponResponseBody extends TeaModel {
 
     public static class DescribeCouponResponseBodyDataShareUidList extends TeaModel {
         /**
+         * <p>The Alibaba Cloud UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1902671110151254</p>
          */
         @NameInMap("Uid")
         public String uid;
 
+        /**
+         * <p>The Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云计算有限公司</p>
+         */
         @NameInMap("UserNick")
         public String userNick;
 
@@ -116,6 +135,8 @@ public class DescribeCouponResponseBody extends TeaModel {
 
     public static class DescribeCouponResponseBodyData extends TeaModel {
         /**
+         * <p>The face value.</p>
+         * 
          * <strong>example:</strong>
          * <p>9929.750000</p>
          */
@@ -126,6 +147,8 @@ public class DescribeCouponResponseBody extends TeaModel {
         public String certainAmount;
 
         /**
+         * <p>The coupon ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>59243658</p>
          */
@@ -133,6 +156,8 @@ public class DescribeCouponResponseBody extends TeaModel {
         public Long couponId;
 
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>731074910070</p>
          */
@@ -140,16 +165,26 @@ public class DescribeCouponResponseBody extends TeaModel {
         public String couponNo;
 
         /**
+         * <p>The coupon type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CERTAIN</p>
          */
         @NameInMap("CouponType")
         public String couponType;
 
+        /**
+         * <p>The coupon type name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>满减券</p>
+         */
         @NameInMap("CouponTypeName")
         public String couponTypeName;
 
         /**
+         * <p>The currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -157,45 +192,80 @@ public class DescribeCouponResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-06T15:12Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>Indicates whether there is a first purchase restriction.</p>
+         */
         @NameInMap("FirstBuy")
         public Boolean firstBuy;
 
         /**
+         * <p>The coupon issuance time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The product code list.</p>
+         */
         @NameInMap("ItemNames")
         public java.util.List<String> itemNames;
 
+        /**
+         * <p>The amount limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无订单金额限制</p>
+         */
         @NameInMap("MoneyLimit")
         public String moneyLimit;
 
+        /**
+         * <p>The order duration limit rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>预付费规则：购买订单时长大于3600s才能使用</p>
+         */
         @NameInMap("OrderTimeRule")
         public String orderTimeRule;
 
         /**
+         * <p>The remaining amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
         @NameInMap("RemainAmount")
         public String remainAmount;
 
+        /**
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>新买28号</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The shared account list.</p>
+         */
         @NameInMap("ShareUidList")
         public java.util.List<DescribeCouponResponseBodyDataShareUidList> shareUidList;
 
         /**
+         * <p>Indicates whether to display the tag deduction button.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -203,16 +273,26 @@ public class DescribeCouponResponseBody extends TeaModel {
         public Boolean showSetDeductTagButton;
 
         /**
+         * <p>The site.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHINA</p>
          */
         @NameInMap("Site")
         public String site;
 
+        /**
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>官网自营</p>
+         */
         @NameInMap("SiteName")
         public String siteName;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
          */
@@ -220,6 +300,8 @@ public class DescribeCouponResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -227,6 +309,8 @@ public class DescribeCouponResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The applicable account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1902671110151254</p>
          */
@@ -234,6 +318,8 @@ public class DescribeCouponResponseBody extends TeaModel {
         public String suitAccount;
 
         /**
+         * <p>The applicable product type. Valid values: all, which indicates that the coupon is applicable to all products. white, which indicates that the coupon is applicable to specified products. black, which indicates that the coupon is not applicable to specified products.</p>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
@@ -241,12 +327,17 @@ public class DescribeCouponResponseBody extends TeaModel {
         public String suitItemType;
 
         /**
+         * <p>The coupon applicable scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>UNIVERSAL</p>
          */
         @NameInMap("UniversalType")
         public String universalType;
 
+        /**
+         * <p>The list of order types applicable to the coupon.</p>
+         */
         @NameInMap("YhOrderTypes")
         public java.util.List<String> yhOrderTypes;
 

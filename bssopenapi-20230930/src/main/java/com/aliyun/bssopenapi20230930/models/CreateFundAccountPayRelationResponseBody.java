@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateFundAccountPayRelationResponseBody extends TeaModel {
+    /**
+     * <p>Data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<CreateFundAccountPayRelationResponseBodyData> data;
 
     /**
+     * <p>Response metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +20,8 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999</p>
      */
@@ -52,6 +59,8 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
 
     public static class CreateFundAccountPayRelationResponseBodyData extends TeaModel {
         /**
+         * <p>AccountId of the user who pays with the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1501603440974415</p>
          */
@@ -59,6 +68,8 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>Name of the user who pays with the account.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
@@ -66,6 +77,8 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>Account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12332112</p>
          */
@@ -73,6 +86,8 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
         public String fundAccountId;
 
         /**
+         * <p>Result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -80,6 +95,8 @@ public class CreateFundAccountPayRelationResponseBody extends TeaModel {
         public String resultCode;
 
         /**
+         * <p>Result message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Successful</p>
          */

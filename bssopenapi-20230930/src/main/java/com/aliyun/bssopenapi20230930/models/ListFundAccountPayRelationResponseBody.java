@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListFundAccountPayRelationResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFundAccountPayRelationResponseBodyData> data;
 
     /**
+     * <p>The response metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +29,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
@@ -36,6 +47,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -97,6 +110,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
 
     public static class ListFundAccountPayRelationResponseBodyData extends TeaModel {
         /**
+         * <p>The account ID of the user associated with the payment relationship, that is, the account that uses this account for payment.</p>
+         * 
          * <strong>example:</strong>
          * <p>32812132121</p>
          */
@@ -104,6 +119,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>The user name.</p>
+         * 
          * <strong>example:</strong>
          * <p>云某的名称</p>
          */
@@ -111,6 +128,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The enterprise entity ID of the user associated with the payment relationship.</p>
+         * 
          * <strong>example:</strong>
          * <p>213231232</p>
          */
@@ -118,6 +137,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String ecid;
 
         /**
+         * <p>The time when the payment relationship takes effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-01 12:00:10</p>
          */
@@ -125,6 +146,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123231213</p>
          */
@@ -132,6 +155,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String fundAccountId;
 
         /**
+         * <p>The Alibaba Cloud account ID of the account owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>312328912</p>
          */
@@ -139,6 +164,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String fundAccountOwnerAccountId;
 
         /**
+         * <p>The time when the payment relationship expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01 12:12:12</p>
          */
@@ -146,6 +173,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String ineffectiveTime;
 
         /**
+         * <p>The primary marketplace.</p>
+         * 
          * <strong>example:</strong>
          * <p>2684210001</p>
          */
@@ -153,6 +182,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String nbid;
 
         /**
+         * <p>The operator name.
+         * When the operator type is aliyun_pk, the operator name is the Alibaba Cloud nickname.
+         * When the operator type is system, the operator name is &quot;Alibaba Cloud assistant&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>云某的名称</p>
          */
@@ -160,6 +193,9 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String operatorName;
 
         /**
+         * <p>The authorized operator.
+         * When the operator type is aliyun_pk, operatorNo is the Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1232343423</p>
          */
@@ -167,6 +203,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String operatorNo;
 
         /**
+         * <p>The type of the authorized operator.
+         * aliyun_pk: user.
+         * system: Alibaba Cloud system.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun_pk</p>
          */
@@ -174,6 +214,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String operatorType;
 
         /**
+         * <p>The relationship type, which can be collection relationship or payment relationship.</p>
+         * 
          * <strong>example:</strong>
          * <p>PAYMENT</p>
          */
@@ -181,6 +223,8 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String relationType;
 
         /**
+         * <p>The site.</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
@@ -188,6 +232,10 @@ public class ListFundAccountPayRelationResponseBody extends TeaModel {
         public String site;
 
         /**
+         * <p>The relationship status.
+         * valid: valid.
+         * expired: invalid.</p>
+         * 
          * <strong>example:</strong>
          * <p>valid</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBudgetRequest extends TeaModel {
     /**
+     * <p>The budget name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateBudgetRequest extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>The budget type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,17 @@ public class CreateBudgetRequest extends TeaModel {
     @NameInMap("BudgetType")
     public String budgetType;
 
+    /**
+     * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>The end cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,10 +43,14 @@ public class CreateBudgetRequest extends TeaModel {
     @NameInMap("CycleEndPeriod")
     public String cycleEndPeriod;
 
+    /**
+     * <p>The per-cycle specified quota. This parameter is required when QuotaType is set to <code>SPECIFY</code>.</p>
+     */
     @NameInMap("CycleQuota")
     public java.util.List<CreateBudgetRequestCycleQuota> cycleQuota;
 
     /**
+     * <p>The start cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +60,7 @@ public class CreateBudgetRequest extends TeaModel {
     public String cycleStartPeriod;
 
     /**
+     * <p>The cycle type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,10 +69,14 @@ public class CreateBudgetRequest extends TeaModel {
     @NameInMap("CycleType")
     public String cycleType;
 
+    /**
+     * <p>The list of enterprises and accounts. An empty value indicates the current account.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<CreateBudgetRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>The budget metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,13 +85,24 @@ public class CreateBudgetRequest extends TeaModel {
     @NameInMap("Metric")
     public String metric;
 
+    /**
+     * <p>The level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26842</p>
+     */
     @NameInMap("Nbid")
     public String nbid;
 
+    /**
+     * <p>The filter conditions.</p>
+     */
     @NameInMap("QueryFilter")
     public java.util.List<CreateBudgetRequestQueryFilter> queryFilter;
 
     /**
+     * <p>The fixed quota value. If the type is quota, the unit is percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -81,6 +110,7 @@ public class CreateBudgetRequest extends TeaModel {
     public String quota;
 
     /**
+     * <p>The quota type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +119,9 @@ public class CreateBudgetRequest extends TeaModel {
     @NameInMap("QuotaType")
     public String quotaType;
 
+    /**
+     * <p>The alert configurations.</p>
+     */
     @NameInMap("WarnConfs")
     public java.util.List<CreateBudgetRequestWarnConfs> warnConfs;
 
@@ -210,9 +243,21 @@ public class CreateBudgetRequest extends TeaModel {
     }
 
     public static class CreateBudgetRequestCycleQuota extends TeaModel {
+        /**
+         * <p>The cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01</p>
+         */
         @NameInMap("CyclePeriod")
         public String cyclePeriod;
 
+        /**
+         * <p>The quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Quota")
         public String quota;
 
@@ -240,9 +285,18 @@ public class CreateBudgetRequest extends TeaModel {
     }
 
     public static class CreateBudgetRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>The list of accounts to access. An empty value indicates all accounts under the current entity ID.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
+        /**
+         * <p>The enterprise entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EcId")
         public String ecId;
 
@@ -271,6 +325,8 @@ public class CreateBudgetRequest extends TeaModel {
 
     public static class CreateBudgetRequestQueryFilter extends TeaModel {
         /**
+         * <p>The parameter code.</p>
+         * 
          * <strong>example:</strong>
          * <p>RESOURCE_OWNER_ACCOUNT</p>
          */
@@ -278,12 +334,17 @@ public class CreateBudgetRequest extends TeaModel {
         public String code;
 
         /**
+         * <p>The selection mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>The list of filter values.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -319,23 +380,39 @@ public class CreateBudgetRequest extends TeaModel {
     }
 
     public static class CreateBudgetRequestWarnConfs extends TeaModel {
+        /**
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>Specifies whether to enable EventBridge.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("EventBridge")
         public Boolean eventBridge;
 
+        /**
+         * <p>The list of Message Center notification channels.</p>
+         */
         @NameInMap("MscChannels")
         public java.util.List<String> mscChannels;
 
+        /**
+         * <p>The list of Message Center contacts.</p>
+         */
         @NameInMap("MscContacts")
         public java.util.List<String> mscContacts;
 
         /**
+         * <p>The alert name. This is a user-defined optional field. If not specified, the backend automatically generates a name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alter-1</p>
          */
@@ -343,6 +420,8 @@ public class CreateBudgetRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The threshold type.</p>
+         * 
          * <strong>example:</strong>
          * <p>FIXED</p>
          */
@@ -350,6 +429,8 @@ public class CreateBudgetRequest extends TeaModel {
         public String thresholdType;
 
         /**
+         * <p>The threshold value.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -357,6 +438,8 @@ public class CreateBudgetRequest extends TeaModel {
         public String thresholdValue;
 
         /**
+         * <p>The alert target.</p>
+         * 
          * <strong>example:</strong>
          * <p>FORECAST</p>
          */

@@ -4,13 +4,21 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class SaveCostCenterShareRuleRequest extends TeaModel {
+    /**
+     * <p>The list of sharing rules to create.</p>
+     */
     @NameInMap("CreateShareRuleList")
     public java.util.List<SaveCostCenterShareRuleRequestCreateShareRuleList> createShareRuleList;
 
+    /**
+     * <p>The list of sharing rules to modify.</p>
+     */
     @NameInMap("ModifyShareRuleList")
     public java.util.List<SaveCostCenterShareRuleRequestModifyShareRuleList> modifyShareRuleList;
 
     /**
+     * <p>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -18,12 +26,17 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The user ID of the cost center owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1977800748053695</p>
      */
     @NameInMap("OwnerAccountId")
     public Long ownerAccountId;
 
+    /**
+     * <p>The list of sharing rules to delete.</p>
+     */
     @NameInMap("RemoveShareRuleList")
     public java.util.List<Long> removeShareRuleList;
 
@@ -73,13 +86,21 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
     }
 
     public static class SaveCostCenterShareRuleRequestCreateShareRuleList extends TeaModel {
+        /**
+         * <p>The list of source cost centers.</p>
+         */
         @NameInMap("FromCostCenterList")
         public java.util.List<Long> fromCostCenterList;
 
+        /**
+         * <p>The list of sharing ratios.</p>
+         */
         @NameInMap("ShareRatioList")
         public java.util.List<Double> shareRatioList;
 
         /**
+         * <p>The name of the sharing rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -87,6 +108,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public String shareRuleName;
 
         /**
+         * <p>The type of the sharing rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,6 +117,9 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The list of target cost centers.</p>
+         */
         @NameInMap("ToCostCenterList")
         public java.util.List<Long> toCostCenterList;
 
@@ -146,13 +171,20 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
     }
 
     public static class SaveCostCenterShareRuleRequestModifyShareRuleList extends TeaModel {
+        /**
+         * <p>The list of source cost centers.</p>
+         */
         @NameInMap("FromCostCenterList")
         public java.util.List<Long> fromCostCenterList;
 
+        /**
+         * <p>The list of sharing ratios.</p>
+         */
         @NameInMap("ShareRatioList")
         public java.util.List<Double> shareRatioList;
 
         /**
+         * <p>The ID of the sharing rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +194,8 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public Long shareRuleId;
 
         /**
+         * <p>The name of the sharing rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -169,6 +203,7 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         public String shareRuleName;
 
         /**
+         * <p>The type of the sharing rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,6 +212,9 @@ public class SaveCostCenterShareRuleRequest extends TeaModel {
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The list of target cost centers.</p>
+         */
         @NameInMap("ToCostCenterList")
         public java.util.List<Long> toCostCenterList;
 

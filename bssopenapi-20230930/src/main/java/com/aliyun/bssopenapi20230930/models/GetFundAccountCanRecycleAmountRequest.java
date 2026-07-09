@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountCanRecycleAmountRequest extends TeaModel {
     /**
+     * <p>The currency.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetFundAccountCanRecycleAmountRequest extends TeaModel {
     public String currency;
 
     /**
+     * <p>The ID of the source account (payer account) from which funds are reclaimed. If not specified, the account ID owned by the current account is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>122321223</p>
      */

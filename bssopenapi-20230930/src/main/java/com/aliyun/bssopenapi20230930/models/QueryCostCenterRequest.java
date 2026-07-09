@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCostCenterRequest extends TeaModel {
     /**
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class QueryCostCenterRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of enterprises and accounts. If this parameter is left empty, the current account is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryCostCenterRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>The ID of the primary sales channel. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -24,6 +30,7 @@ public class QueryCostCenterRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The ID of the user who owns the financial unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +40,7 @@ public class QueryCostCenterRequest extends TeaModel {
     public Long ownerAccountId;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +50,7 @@ public class QueryCostCenterRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the parent financial unit. A value of -1 indicates the root financial unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,10 +113,14 @@ public class QueryCostCenterRequest extends TeaModel {
     }
 
     public static class QueryCostCenterRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>The ID of the enterprise entity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
     /**
+     * <p>The available balance of the account from which funds are reclaimed.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -12,6 +14,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
     public String availableAmount;
 
     /**
+     * <p>The currency.</p>
+     * 
      * <strong>example:</strong>
      * <p>CNY</p>
      */
@@ -19,6 +23,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
     public String currency;
 
     /**
+     * <p>The metadata of the response struct.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -26,16 +32,23 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The ID of the source account from which funds are reclaimed.</p>
+     * 
      * <strong>example:</strong>
      * <p>1232122132</p>
      */
     @NameInMap("RecycleFromFundAccountId")
     public String recycleFromFundAccountId;
 
+    /**
+     * <p>The list of accounts to which funds can be reclaimed.</p>
+     */
     @NameInMap("RecycleToFundAccountList")
     public java.util.List<GetFundAccountCanRecycleAmountResponseBodyRecycleToFundAccountList> recycleToFundAccountList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -43,6 +56,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The transfer ledger balance.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -112,6 +127,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
 
     public static class GetFundAccountCanRecycleAmountResponseBodyRecycleToFundAccountList extends TeaModel {
         /**
+         * <p>The ID of the target account to which funds can be reclaimed.</p>
+         * 
          * <strong>example:</strong>
          * <p>122323121</p>
          */
@@ -119,6 +136,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         public String fundAccountId;
 
         /**
+         * <p>The name of the target account to which funds can be reclaimed.</p>
+         * 
          * <strong>example:</strong>
          * <p>云某的账户</p>
          */
@@ -126,6 +145,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         public String fundAccountName;
 
         /**
+         * <p>The account ID that owns the target account to which funds can be reclaimed.</p>
+         * 
          * <strong>example:</strong>
          * <p>183221321</p>
          */
@@ -133,6 +154,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         public String fundAccountOwnerAccountId;
 
         /**
+         * <p>The maximum reclaimable amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
@@ -140,6 +163,8 @@ public class GetFundAccountCanRecycleAmountResponseBody extends TeaModel {
         public String maxRecyclableAmount;
 
         /**
+         * <p>The remaining transfer amount that can be reclaimed through the original transfer path.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */

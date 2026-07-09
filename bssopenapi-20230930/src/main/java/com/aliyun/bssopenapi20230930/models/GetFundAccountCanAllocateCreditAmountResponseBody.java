@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel {
     /**
+     * <p>The enterprise entity ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2032123221</p>
      */
@@ -12,6 +14,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String ecid;
 
     /**
+     * <p>The allocated credit limit of the enterprise.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -19,6 +23,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String ecidAllocatedCreditAmount;
 
     /**
+     * <p>The enterprise credit quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -26,6 +32,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String ecidCreditAmount;
 
     /**
+     * <p>The account ECID.</p>
+     * 
      * <strong>example:</strong>
      * <p>202321232</p>
      */
@@ -33,6 +41,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String fundAccountEcid;
 
     /**
+     * <p>The account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12332112</p>
      */
@@ -40,6 +50,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public Long fundAccountId;
 
     /**
+     * <p>The account name.</p>
+     * 
      * <strong>example:</strong>
      * <p>云某的名称</p>
      */
@@ -47,6 +59,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String fundAccountName;
 
     /**
+     * <p>The Alibaba Cloud account ID of the account owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>123433121</p>
      */
@@ -54,6 +68,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public Long fundAccountOwnerAccountId;
 
     /**
+     * <p>The maximum allocatable credit limit of the current account.</p>
+     * 
      * <strong>example:</strong>
      * <p>1500</p>
      */
@@ -61,6 +77,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String maxCanAllocateCreditAmount;
 
     /**
+     * <p>Response structure metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -68,6 +86,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public Object metadata;
 
     /**
+     * <p>The minimum allocatable credit limit of the current account.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -75,6 +95,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String minCanAllocateCreditAmount;
 
     /**
+     * <p>The primary marketplace.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684210001</p>
      */
@@ -82,6 +104,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String nbid;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CC706AAC-75A6-55B5-9AB7-7D171C6C7655</p>
      */
@@ -89,6 +113,8 @@ public class GetFundAccountCanAllocateCreditAmountResponseBody extends TeaModel 
     public String requestId;
 
     /**
+     * <p>The site.</p>
+     * 
      * <strong>example:</strong>
      * <p>26842</p>
      */

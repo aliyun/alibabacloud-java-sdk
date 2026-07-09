@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInvoiceCandidateResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of data entries.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListInvoiceCandidateResponseBodyData> data;
 
     /**
+     * <p>The metadata of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -22,6 +29,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -29,6 +38,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -36,6 +47,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -97,6 +110,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
 
     public static class ListInvoiceCandidateResponseBodyData extends TeaModel {
         /**
+         * <p>The accepted offset amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */
@@ -104,16 +119,26 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String acceptedOffsetAmount;
 
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1990699401005016</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试账号</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
+         * <p>The billing cycle.</p>
+         * 
          * <strong>example:</strong>
          * <p>202506</p>
          */
@@ -121,6 +146,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public Integer billingCycle;
 
         /**
+         * <p>The business document number.</p>
+         * 
          * <strong>example:</strong>
          * <p>202506</p>
          */
@@ -128,6 +155,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String businessId;
 
         /**
+         * <p>The time when the business event occurred.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-01 00:00:00</p>
          */
@@ -135,16 +164,26 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String businessTime;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>pts</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The commodity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>性能测试</p>
+         */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-91 00:00:00</p>
          */
@@ -152,6 +191,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the invoice candidate.</p>
+         * 
          * <strong>example:</strong>
          * <p>12345</p>
          */
@@ -159,6 +200,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The invoice issuer.</p>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN_SERVICE</p>
          */
@@ -166,6 +209,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String invoiceIssuer;
 
         /**
+         * <p>The invoiceable amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */
@@ -173,6 +218,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String invoiceableAmount;
 
         /**
+         * <p>The invoiced amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -180,6 +227,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String invoicedAmount;
 
         /**
+         * <p>The offset amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -187,26 +236,44 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String offsetAmount;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>pts</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>性能测试</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
         /**
+         * <p>The ID of the resource owner account.</p>
+         * 
          * <strong>example:</strong>
          * <p>1990699401005016</p>
          */
         @NameInMap("ResourceOwnerAccountId")
         public Long resourceOwnerAccountId;
 
+        /**
+         * <p>The name of the resource owner account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试账号</p>
+         */
         @NameInMap("ResourceOwnerAccountName")
         public String resourceOwnerAccountName;
 
         /**
+         * <p>The status of the invoice candidate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -214,6 +281,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The total amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.01</p>
          */
@@ -221,6 +290,8 @@ public class ListInvoiceCandidateResponseBody extends TeaModel {
         public String totalAmount;
 
         /**
+         * <p>The type of the invoice candidate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -4,10 +4,15 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class ListFundAccountResponseBody extends TeaModel {
+    /**
+     * <p>Data list</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListFundAccountResponseBodyData> data;
 
     /**
+     * <p>Response metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +20,8 @@ public class ListFundAccountResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
@@ -52,6 +59,8 @@ public class ListFundAccountResponseBody extends TeaModel {
 
     public static class ListFundAccountResponseBodyData extends TeaModel {
         /**
+         * <p>Account creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-30 12:00:00</p>
          */
@@ -59,6 +68,8 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String createDate;
 
         /**
+         * <p>Account ID of the MA user associated with the account</p>
+         * 
          * <strong>example:</strong>
          * <p>1232121</p>
          */
@@ -66,6 +77,8 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountAdminAccountId;
 
         /**
+         * <p>Name of the MA user associated with the account</p>
+         * 
          * <strong>example:</strong>
          * <p>云某的账户</p>
          */
@@ -73,6 +86,8 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountAdminAccountName;
 
         /**
+         * <p>Account ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1022231</p>
          */
@@ -80,6 +95,8 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountId;
 
         /**
+         * <p>Account name</p>
+         * 
          * <strong>example:</strong>
          * <p>云某的账户</p>
          */
@@ -87,6 +104,8 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountName;
 
         /**
+         * <p>Account ID of the fund account owner</p>
+         * 
          * <strong>example:</strong>
          * <p>132123211</p>
          */
@@ -94,6 +113,11 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountOwnerAccountId;
 
         /**
+         * <p>Account status.
+         * VALID: valid.
+         * FROZEN: frozen.
+         * CLOSED: closed.</p>
+         * 
          * <strong>example:</strong>
          * <p>VALID</p>
          */
@@ -101,6 +125,10 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountStatus;
 
         /**
+         * <p>Account type.
+         * DIRECT_USER: Alibaba Cloud direct customer account.
+         * RESELLER_QUOTA: ecosystem account.</p>
+         * 
          * <strong>example:</strong>
          * <p>DIRECT_USER</p>
          */
@@ -108,16 +136,26 @@ public class ListFundAccountResponseBody extends TeaModel {
         public String fundAccountType;
 
         /**
+         * <p>Level-1 marketplace</p>
+         * 
          * <strong>example:</strong>
          * <p>2684210001</p>
          */
         @NameInMap("Nbid")
         public String nbid;
 
+        /**
+         * <p>Set of account permissions that the user has.
+         * using: use.
+         * manage: manage.
+         * owner: own.</p>
+         */
         @NameInMap("Permissions")
         public java.util.List<String> permissions;
 
         /**
+         * <p>Site</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */

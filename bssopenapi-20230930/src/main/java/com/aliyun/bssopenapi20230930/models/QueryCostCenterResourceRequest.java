@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryCostCenterResourceRequest extends TeaModel {
     /**
+     * <p>The ID of the cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
     @NameInMap("CostCenterId")
     public Long costCenterId;
 
+    /**
+     * <p>The list of enterprises and accounts. An empty value indicates querying the current account.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryCostCenterResourceRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>The maximum number of records per query.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The first-level marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -29,6 +38,8 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The token for the next query. An empty NextToken indicates that there are no more results.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAESEgoQCg4KCmd</p>
      */
@@ -36,6 +47,8 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The owner user ID of the cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567812345678</p>
      */
@@ -96,10 +109,14 @@ public class QueryCostCenterResourceRequest extends TeaModel {
     }
 
     public static class QueryCostCenterResourceRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>The list of accessed accounts. An empty value indicates that all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>The enterprise entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -4,13 +4,21 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class ListReportDefinitionsResponseBody extends TeaModel {
+    /**
+     * <p>The metadata of the response struct.</p>
+     */
     @NameInMap("Metadata")
     public Object metadata;
 
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("ReportDefinitions")
     public java.util.List<ListReportDefinitionsResponseBodyReportDefinitions> reportDefinitions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
@@ -48,6 +56,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
 
     public static class ListReportDefinitionsResponseBodyReportDefinitions extends TeaModel {
         /**
+         * <p>The start billing cycle for push. After the subscription is created, the system automatically pushes data from the start billing cycle to the current time. This parameter does not take effect for monthly bill PDF subscriptions, and historical data is not re-pushed. Data within the last year can be pushed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05</p>
          */
@@ -55,6 +65,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String beginBillingCycle;
 
         /**
+         * <p>The name of the OSS bucket that stores the files.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-bill</p>
          */
@@ -62,6 +74,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String ossBucketName;
 
         /**
+         * <p>The UID of the OSS bucket owner that stores the files. Specify this parameter when a Bid/Reseller subscription needs to push data to the OSS bucket of a sub-account. The specified account must be a sub-account of the calling account and must be granted the AliyunConsumeDump2OSSRole permission. Regular users do not need to specify this parameter. The calling account is used by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567812345678</p>
          */
@@ -69,6 +83,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public Long ossBucketOwnerAccountId;
 
         /**
+         * <p>The storage path of the OSS bucket.</p>
+         * 
          * <strong>example:</strong>
          * <p>bill/</p>
          */
@@ -76,6 +92,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String ossBucketPath;
 
         /**
+         * <p>The subscription source name.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -83,6 +101,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String reportSourceName;
 
         /**
+         * <p>The subscription source. Valid values: OSS and MC.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -90,6 +110,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String reportSourceType;
 
         /**
+         * <p>The bill subscription task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123321</p>
          */
@@ -97,6 +119,13 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public Long reportTaskId;
 
         /**
+         * <p>The subscription type. Valid values:</p>
+         * <ul>
+         * <li>BillingItemDetailForBillingPeriod: billable item consumption details.</li>
+         * <li>InstanceDetailForBillingPeriod: instance consumption details.</li>
+         * <li>BillingItemDetailMonthly: billable item consumption summary by billing cycle.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BillingItemDetailForBillingPeriod</p>
          */
@@ -104,6 +133,8 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         public String reportType;
 
         /**
+         * <p>The time when the subscription was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-05-21 10:36:31</p>
          */

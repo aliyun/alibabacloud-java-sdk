@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateCostCenterRequest extends TeaModel {
     /**
+     * <p>Cost center entity list</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CostCenterEntityList")
     public java.util.List<CreateCostCenterRequestCostCenterEntityList> costCenterEntityList;
 
     /**
+     * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2084210001</p>
      */
@@ -40,12 +43,17 @@ public class CreateCostCenterRequest extends TeaModel {
 
     public static class CreateCostCenterRequestCostCenterEntityList extends TeaModel {
         /**
+         * <p>Cost center name (must be unique within the same account)</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>资源组</p>
          */
         @NameInMap("CostCenterName")
         public String costCenterName;
 
         /**
+         * <p>Owner user ID of the new cost center</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -55,6 +63,7 @@ public class CreateCostCenterRequest extends TeaModel {
         public Long ownerAccountId;
 
         /**
+         * <p>Parent cost center ID. A value of -1 indicates the root cost center.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

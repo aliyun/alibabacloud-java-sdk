@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryMonthlySlaListRequest extends TeaModel {
     /**
+     * <p>The current page number. Default value: 1, which indicates the first page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</p>
+     */
     @NameInMap("EcIdAccountIds")
     public java.util.List<QueryMonthlySlaListRequestEcIdAccountIds> ecIdAccountIds;
 
     /**
+     * <p>Optional. Filter by instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;instance_1&quot;,&quot;instance_2&quot;]</p>
      */
@@ -22,6 +29,8 @@ public class QueryMonthlySlaListRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>Optional. Month list in yyyyMM format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[202602,202603]</p>
      */
@@ -29,6 +38,8 @@ public class QueryMonthlySlaListRequest extends TeaModel {
     public java.util.List<Integer> months;
 
     /**
+     * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -36,16 +47,23 @@ public class QueryMonthlySlaListRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Optional. Filter by compensation status. Valid values: 0 and 1.</p>
+     */
     @NameInMap("PayStatuses")
     public java.util.List<Integer> payStatuses;
 
     /**
+     * <p>Optional. Filter by product code.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;ecs&quot;,&quot;oss&quot;]</p>
      */
@@ -122,10 +140,15 @@ public class QueryMonthlySlaListRequest extends TeaModel {
     }
 
     public static class QueryMonthlySlaListRequestEcIdAccountIds extends TeaModel {
+        /**
+         * <p>The list of accounts to query. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
         /**
+         * <p>The enterprise entity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1501603440974415</p>
          */

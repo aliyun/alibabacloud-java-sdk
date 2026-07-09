@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     /**
+     * <p>Available amount</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String availableAmount;
 
     /**
+     * <p>Available credit amount</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +23,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String availableCreditAmount;
 
     /**
+     * <p>Bank acceptance bill amount</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String bankAcceptanceAmount;
 
     /**
+     * <p>Cash balance</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -33,6 +41,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String cashAmount;
 
     /**
+     * <p>Credit quota</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -40,16 +50,23 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String creditAmount;
 
     /**
+     * <p>Credit refund balance</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("CreditRefundAmount")
     public String creditRefundAmount;
 
+    /**
+     * <p>Indicates whether credit control is enabled</p>
+     */
     @NameInMap("CreditUser")
     public Boolean creditUser;
 
     /**
+     * <p>Currency</p>
+     * 
      * <strong>example:</strong>
      * <p>CNY</p>
      */
@@ -57,16 +74,23 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String currency;
 
     /**
+     * <p>Current month uncleared amount</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("CurrentMonthUnclearedAmount")
     public String currentMonthUnclearedAmount;
 
+    /**
+     * <p>Extended ledger list</p>
+     */
     @NameInMap("ExtendLedgerList")
     public java.util.List<GetFundAccountAvailableAmountResponseBodyExtendLedgerList> extendLedgerList;
 
     /**
+     * <p>Account ID</p>
+     * 
      * <strong>example:</strong>
      * <p>12332112</p>
      */
@@ -74,6 +98,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String fundAccountId;
 
     /**
+     * <p>Account ID of the fund account owner</p>
+     * 
      * <strong>example:</strong>
      * <p>1344312434</p>
      */
@@ -81,6 +107,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String fundAccountOwnerAccountId;
 
     /**
+     * <p>Account status</p>
+     * 
      * <strong>example:</strong>
      * <p>valid</p>
      */
@@ -88,6 +116,10 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String fundAccountStatus;
 
     /**
+     * <p>Fund account type. Valid values:
+     * DIRECT_USER: Alibaba Cloud direct customer account.
+     * RESELLER_QUOTA: ecosystem account.</p>
+     * 
      * <strong>example:</strong>
      * <p>REDIRECT_USER</p>
      */
@@ -95,6 +127,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String fundAccountType;
 
     /**
+     * <p>Historical months uncleared amount</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -102,6 +136,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String historyMonthUnclearedAmount;
 
     /**
+     * <p>Response metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -109,16 +145,23 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Negative bill amount</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("NegativeBillAmount")
     public String negativeBillAmount;
 
+    /**
+     * <p>Original cash ledger list. International site users may have cash ledgers in multiple currencies.</p>
+     */
     @NameInMap("OriginalCashAmountList")
     public java.util.List<GetFundAccountAvailableAmountResponseBodyOriginalCashAmountList> originalCashAmountList;
 
     /**
+     * <p>Ecosystem end customer quota</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -126,6 +169,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String quotaAmount;
 
     /**
+     * <p>Consumed quota of ecosystem end customer</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -133,6 +178,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String quotaConsumedAmount;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>F96A2D13-7509-5DF9-A60E-E7E3A3CB68E8</p>
      */
@@ -140,6 +187,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Uncleared amount (current month uncleared + historical months uncleared)</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -329,6 +378,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
 
     public static class GetFundAccountAvailableAmountResponseBodyExtendLedgerList extends TeaModel {
         /**
+         * <p>Currency of the ledger amount, such as CNY and USD.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -336,6 +387,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>Ledger name</p>
+         * 
          * <strong>example:</strong>
          * <p>应付对冲账本</p>
          */
@@ -343,6 +396,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         public String ledgerName;
 
         /**
+         * <p>Ledger balance</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -382,6 +437,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
 
     public static class GetFundAccountAvailableAmountResponseBodyOriginalCashAmountList extends TeaModel {
         /**
+         * <p>Amount</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -389,6 +446,8 @@ public class GetFundAccountAvailableAmountResponseBody extends TeaModel {
         public String amount;
 
         /**
+         * <p>Currency</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */

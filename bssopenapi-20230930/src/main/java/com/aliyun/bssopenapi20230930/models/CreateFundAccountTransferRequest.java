@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFundAccountTransferRequest extends TeaModel {
     /**
+     * <p>The transfer amount.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateFundAccountTransferRequest extends TeaModel {
     public String amount;
 
     /**
+     * <p>The currency.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,10 @@ public class CreateFundAccountTransferRequest extends TeaModel {
     public String currency;
 
     /**
+     * <p>The asset type. Currently, only cash is supported. Valid values:</p>
+     * <ul>
+     * <li>cash: cash.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,7 @@ public class CreateFundAccountTransferRequest extends TeaModel {
     public String financeType;
 
     /**
+     * <p>The ID of the source account (payer account ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +48,7 @@ public class CreateFundAccountTransferRequest extends TeaModel {
     public Long fromFundAccountId;
 
     /**
+     * <p>The remarks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +58,7 @@ public class CreateFundAccountTransferRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The ID of the destination account (payee account ID).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +68,11 @@ public class CreateFundAccountTransferRequest extends TeaModel {
     public Long toFundAccountId;
 
     /**
+     * <p>The transfer type. Valid values:</p>
+     * <ul>
+     * <li>grant: transfer.</li>
+     * <li>recycle: revocation.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

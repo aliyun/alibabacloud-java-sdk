@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBudgetResponseBody extends TeaModel {
     /**
+     * <p>The budget name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Department_dev_budget</p>
      */
@@ -12,6 +14,8 @@ public class CreateBudgetResponseBody extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>39EDD65E-68C5-1B17-8440-C729C7591D74</p>
      */

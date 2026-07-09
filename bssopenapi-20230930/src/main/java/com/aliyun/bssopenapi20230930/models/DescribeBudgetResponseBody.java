@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBudgetResponseBody extends TeaModel {
     /**
+     * <p>Budget name.</p>
+     * 
      * <strong>example:</strong>
      * <p>department1</p>
      */
@@ -12,26 +14,41 @@ public class DescribeBudgetResponseBody extends TeaModel {
     public String budgetName;
 
     /**
+     * <p>Budget type.</p>
+     * 
      * <strong>example:</strong>
      * <p>CONSUME</p>
      */
     @NameInMap("BudgetType")
     public String budgetType;
 
+    /**
+     * <p>Remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
+     * <p>End cycle period.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-12</p>
      */
     @NameInMap("CycleEndPeriod")
     public String cycleEndPeriod;
 
+    /**
+     * <p>Quota specified per cycle.</p>
+     */
     @NameInMap("CycleQuota")
     public java.util.List<DescribeBudgetResponseBodyCycleQuota> cycleQuota;
 
     /**
+     * <p>Start cycle period.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-10</p>
      */
@@ -39,29 +56,47 @@ public class DescribeBudgetResponseBody extends TeaModel {
     public String cycleStartPeriod;
 
     /**
+     * <p>Cycle type.</p>
+     * 
      * <strong>example:</strong>
      * <p>MONTHLY</p>
      */
     @NameInMap("CycleType")
     public String cycleType;
 
+    /**
+     * <p>Enterprise multi-account filter conditions.</p>
+     */
     @NameInMap("EcIdAccountIdsFilter")
     public DescribeBudgetResponseBodyEcIdAccountIdsFilter ecIdAccountIdsFilter;
 
+    /**
+     * <p>Response structure metadata.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Metadata")
     public Object metadata;
 
     /**
+     * <p>Budget metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>REQUIRE_AMOUNT</p>
      */
     @NameInMap("Metric")
     public String metric;
 
+    /**
+     * <p>Filter conditions.</p>
+     */
     @NameInMap("QueryFilter")
     public java.util.List<DescribeBudgetResponseBodyQueryFilter> queryFilter;
 
     /**
+     * <p>Fixed quota value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -69,6 +104,8 @@ public class DescribeBudgetResponseBody extends TeaModel {
     public String quota;
 
     /**
+     * <p>Quota type.</p>
+     * 
      * <strong>example:</strong>
      * <p>FIXED</p>
      */
@@ -76,12 +113,17 @@ public class DescribeBudgetResponseBody extends TeaModel {
     public String quotaType;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Alert configurations.</p>
+     */
     @NameInMap("WarnConfs")
     public java.util.List<DescribeBudgetResponseBodyWarnConfs> warnConfs;
 
@@ -211,9 +253,21 @@ public class DescribeBudgetResponseBody extends TeaModel {
     }
 
     public static class DescribeBudgetResponseBodyCycleQuota extends TeaModel {
+        /**
+         * <p>Cycle period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202601</p>
+         */
         @NameInMap("CyclePeriod")
         public String cyclePeriod;
 
+        /**
+         * <p>Quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Quota")
         public String quota;
 
@@ -241,9 +295,18 @@ public class DescribeBudgetResponseBody extends TeaModel {
     }
 
     public static class DescribeBudgetResponseBodyEcIdAccountIdsFilter extends TeaModel {
+        /**
+         * <p>Member account IDs.</p>
+         */
         @NameInMap("AccountIds")
         public java.util.List<Long> accountIds;
 
+        /**
+         * <p>Enterprise entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2024112210463400001</p>
+         */
         @NameInMap("EcId")
         public String ecId;
 
@@ -271,12 +334,27 @@ public class DescribeBudgetResponseBody extends TeaModel {
     }
 
     public static class DescribeBudgetResponseBodyQueryFilter extends TeaModel {
+        /**
+         * <p>Parameter code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RESOURCE_OWNER_ACCOUNT</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Selection mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IN</p>
+         */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>Filter value list.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -312,30 +390,75 @@ public class DescribeBudgetResponseBody extends TeaModel {
     }
 
     public static class DescribeBudgetResponseBodyWarnConfs extends TeaModel {
+        /**
+         * <p>Remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>Specifies whether to enable EventBridge.</p>
+         */
         @NameInMap("EventBridge")
         public Boolean eventBridge;
 
+        /**
+         * <p>Message center notification channel list.</p>
+         */
         @NameInMap("MscChannels")
         public java.util.List<String> mscChannels;
 
+        /**
+         * <p>Message center contact list.</p>
+         */
         @NameInMap("MscContacts")
         public java.util.List<String> mscContacts;
 
+        /**
+         * <p>Alert name. User-defined and optional. If not specified, the backend automatically generates a name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alter-1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Sequence number. Only present in responses. Alerts are numbered in ascending order of alert ID, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Sequence")
         public Integer sequence;
 
+        /**
+         * <p>Threshold type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FIXED</p>
+         */
         @NameInMap("ThresholdType")
         public String thresholdType;
 
+        /**
+         * <p>Threshold value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ThresholdValue")
         public String thresholdValue;
 
+        /**
+         * <p>Alert target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTUAL</p>
+         */
         @NameInMap("WarnTarget")
         public String warnTarget;
 

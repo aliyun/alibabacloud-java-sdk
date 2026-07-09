@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyCostCenterRuleRequest extends TeaModel {
     /**
+     * <p>Financial unit ID</p>
+     * 
      * <strong>example:</strong>
      * <p>485938</p>
      */
     @NameInMap("CostCenterId")
     public Long costCenterId;
 
+    /**
+     * <p>Rule expression</p>
+     */
     @NameInMap("FilterExpression")
     public ModifyCostCenterRuleRequestFilterExpression filterExpression;
 
     /**
+     * <p>Level-1 marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -22,6 +29,8 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>Owner of the financial unit (deprecated)</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567812345678</p>
      */
@@ -67,22 +76,35 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
 
     public static class ModifyCostCenterRuleRequestFilterExpressionFilterValues extends TeaModel {
         /**
+         * <p>Condition filter key</p>
+         * 
          * <strong>example:</strong>
          * <p>TAG-test-xxx-key</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>Condition filter key name (deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("CodeName")
         public String codeName;
 
         /**
+         * <p>Association between code and value</p>
+         * 
          * <strong>example:</strong>
          * <p>IN</p>
          */
         @NameInMap("SelectType")
         public String selectType;
 
+        /**
+         * <p>Condition filter value list</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -127,22 +149,38 @@ public class ModifyCostCenterRuleRequest extends TeaModel {
 
     public static class ModifyCostCenterRuleRequestFilterExpression extends TeaModel {
         /**
+         * <p>Operation type</p>
+         * 
          * <strong>example:</strong>
          * <p>NARY</p>
          */
         @NameInMap("ExpressionType")
         public String expressionType;
 
+        /**
+         * <p>Sub-condition filter</p>
+         */
         @NameInMap("FilterValues")
         public ModifyCostCenterRuleRequestFilterExpressionFilterValues filterValues;
 
+        /**
+         * <p>Filter condition (deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("Operand")
         public Object operand;
 
+        /**
+         * <p>Condition expression</p>
+         */
         @NameInMap("Operands")
         public java.util.List<?> operands;
 
         /**
+         * <p>Relational expression</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */

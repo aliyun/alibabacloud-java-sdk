@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetFundAccountCreditAmountResponseBody extends TeaModel {
     /**
+     * <p>Response metadata</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class SetFundAccountCreditAmountResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */

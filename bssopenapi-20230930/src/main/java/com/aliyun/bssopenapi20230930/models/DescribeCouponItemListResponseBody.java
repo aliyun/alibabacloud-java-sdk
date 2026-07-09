@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeCouponItemListResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeCouponItemListResponseBodyData> data;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
      */
@@ -29,6 +38,8 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -82,12 +93,20 @@ public class DescribeCouponItemListResponseBody extends TeaModel {
 
     public static class DescribeCouponItemListResponseBodyData extends TeaModel {
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>vm</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The product name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云服务器ECS</p>
+         */
         @NameInMap("Name")
         public String name;
 

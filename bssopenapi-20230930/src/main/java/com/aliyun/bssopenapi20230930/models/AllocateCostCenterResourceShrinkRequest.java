@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class AllocateCostCenterResourceShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the source cost center. This parameter is required.</p>
+     * <ul>
+     * <li>0 indicates that the cost center is unallocated.</li>
+     * <li>A value greater than 0 indicates an allocated cost center ID.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>637180</p>
      */
@@ -12,6 +18,8 @@ public class AllocateCostCenterResourceShrinkRequest extends TeaModel {
     public Long fromCostCenterId;
 
     /**
+     * <p>The ID of the owner of the source cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>1529600453335198</p>
      */
@@ -19,6 +27,8 @@ public class AllocateCostCenterResourceShrinkRequest extends TeaModel {
     public Long fromOwnerAccountId;
 
     /**
+     * <p>The primary sales channel ID. If this parameter is left empty, the sales channel ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -26,12 +36,19 @@ public class AllocateCostCenterResourceShrinkRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The list of resource instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceInstanceList")
     public String resourceInstanceListShrink;
 
     /**
+     * <p>The ID of the destination cost center. Valid values:</p>
+     * <ul>
+     * <li>-1: moves the allocated resource to the unallocated state.</li>
+     * <li>A value greater than 0: allocates the resource to the specified cost center.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>638288</p>
      */

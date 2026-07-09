@@ -4,13 +4,21 @@ package com.aliyun.bssopenapi20230930.models;
 import com.aliyun.tea.*;
 
 public class SaveCostCenterShareRuleShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of sharing rules to create.</p>
+     */
     @NameInMap("CreateShareRuleList")
     public String createShareRuleListShrink;
 
+    /**
+     * <p>The list of sharing rules to modify.</p>
+     */
     @NameInMap("ModifyShareRuleList")
     public String modifyShareRuleListShrink;
 
     /**
+     * <p>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>2684201000001</p>
      */
@@ -18,12 +26,17 @@ public class SaveCostCenterShareRuleShrinkRequest extends TeaModel {
     public String nbid;
 
     /**
+     * <p>The user ID of the cost center owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>1977800748053695</p>
      */
     @NameInMap("OwnerAccountId")
     public Long ownerAccountId;
 
+    /**
+     * <p>The list of sharing rules to delete.</p>
+     */
     @NameInMap("RemoveShareRuleList")
     public String removeShareRuleListShrink;
 

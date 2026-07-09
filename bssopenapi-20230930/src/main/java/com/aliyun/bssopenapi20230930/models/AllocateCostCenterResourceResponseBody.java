@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AllocateCostCenterResourceResponseBody extends TeaModel {
     /**
+     * <p>The cost center ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>640403</p>
      */
@@ -12,6 +14,8 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
     public Long costCenterId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The metadata of the response struct.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -26,6 +32,8 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
     public Object metadata;
 
     /**
+     * <p>The owner of the cost center.</p>
+     * 
      * <strong>example:</strong>
      * <p>1529600453335198</p>
      */
@@ -33,6 +41,8 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
     public Long ownerAccountId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>UUID</p>
      */
