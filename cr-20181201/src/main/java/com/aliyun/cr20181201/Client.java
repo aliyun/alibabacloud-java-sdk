@@ -843,6 +843,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a custom domain name for an instance.</p>
+     * 
+     * @param request CreateInstanceCustomizedDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstanceCustomizedDomainResponse
+     */
+    public CreateInstanceCustomizedDomainResponse createInstanceCustomizedDomainWithOptions(CreateInstanceCustomizedDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
+            query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certRegionId)) {
+            query.put("CertRegionId", request.certRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.moduleName)) {
+            query.put("ModuleName", request.moduleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateInstanceCustomizedDomain"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceCustomizedDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom domain name for an instance.</p>
+     * 
+     * @param request CreateInstanceCustomizedDomainRequest
+     * @return CreateInstanceCustomizedDomainResponse
+     */
+    public CreateInstanceCustomizedDomainResponse createInstanceCustomizedDomain(CreateInstanceCustomizedDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createInstanceCustomizedDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a whitelist policy for an instance access endpoint (public network only).</p>
      * 
      * @param tmpReq CreateInstanceEndpointAclPolicyRequest
@@ -2191,6 +2251,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除实例自定义域名</p>
+     * 
+     * @param request DeleteInstanceCustomizedDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstanceCustomizedDomainResponse
+     */
+    public DeleteInstanceCustomizedDomainResponse deleteInstanceCustomizedDomainWithOptions(DeleteInstanceCustomizedDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.moduleName)) {
+            query.put("ModuleName", request.moduleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInstanceCustomizedDomain"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceCustomizedDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例自定义域名</p>
+     * 
+     * @param request DeleteInstanceCustomizedDomainRequest
+     * @return DeleteInstanceCustomizedDomainResponse
+     */
+    public DeleteInstanceCustomizedDomainResponse deleteInstanceCustomizedDomain(DeleteInstanceCustomizedDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteInstanceCustomizedDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a whitelist policy from the public access endpoint of an instance.</p>
      * 
      * @param tmpReq DeleteInstanceEndpointAclPolicyRequest
@@ -3266,6 +3378,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInstanceCountResponse getInstanceCount() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceCountWithOptions(runtime);
+    }
+
+    /**
+     * @param request GetInstanceCustomizedDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceCustomizedDomainResponse
+     */
+    public GetInstanceCustomizedDomainResponse getInstanceCustomizedDomainWithOptions(GetInstanceCustomizedDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.moduleName)) {
+            query.put("ModuleName", request.moduleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceCustomizedDomain"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceCustomizedDomainResponse());
+    }
+
+    /**
+     * @param request GetInstanceCustomizedDomainRequest
+     * @return GetInstanceCustomizedDomainResponse
+     */
+    public GetInstanceCustomizedDomainResponse getInstanceCustomizedDomain(GetInstanceCustomizedDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInstanceCustomizedDomainWithOptions(request, runtime);
     }
 
     /**
@@ -6132,6 +6290,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEventCenterRuleResponse updateEventCenterRule(UpdateEventCenterRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEventCenterRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例自定义域名</p>
+     * 
+     * @param request UpdateInstanceCustomizedDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceCustomizedDomainResponse
+     */
+    public UpdateInstanceCustomizedDomainResponse updateInstanceCustomizedDomainWithOptions(UpdateInstanceCustomizedDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certId)) {
+            query.put("CertId", request.certId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certRegionId)) {
+            query.put("CertRegionId", request.certRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.moduleName)) {
+            query.put("ModuleName", request.moduleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInstanceCustomizedDomain"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceCustomizedDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例自定义域名</p>
+     * 
+     * @param request UpdateInstanceCustomizedDomainRequest
+     * @return UpdateInstanceCustomizedDomainResponse
+     */
+    public UpdateInstanceCustomizedDomainResponse updateInstanceCustomizedDomain(UpdateInstanceCustomizedDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateInstanceCustomizedDomainWithOptions(request, runtime);
     }
 
     /**
