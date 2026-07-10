@@ -105,6 +105,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Grants proxy-based O&amp;M permissions for an application instance.</p>
+     * 
+     * @param request AuthorizeAppProxyOpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AuthorizeAppProxyOpsResponse
+     */
+    public AuthorizeAppProxyOpsResponse authorizeAppProxyOpsWithOptions(AuthorizeAppProxyOpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
+            body.put("ConversationId", request.conversationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuthorizeAppProxyOps"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AuthorizeAppProxyOpsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Grants proxy-based O&amp;M permissions for an application instance.</p>
+     * 
+     * @param request AuthorizeAppProxyOpsRequest
+     * @return AuthorizeAppProxyOpsResponse
+     */
+    public AuthorizeAppProxyOpsResponse authorizeAppProxyOps(AuthorizeAppProxyOpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.authorizeAppProxyOpsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>The Supabase instance information corresponding to the operated resources.</p>
      * 
@@ -5077,10 +5121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query template list</p>
+     * <p>Queries the list of website templates.</p>
      * 
      * @param request ListAppTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5148,10 +5192,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Obtain barcode generation plugin configuration information</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query template list</p>
+     * <p>Queries the list of website templates.</p>
      * 
      * @param request ListAppTemplatesRequest
      * @return ListAppTemplatesResponse

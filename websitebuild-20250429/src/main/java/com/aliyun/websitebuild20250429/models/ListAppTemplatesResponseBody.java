@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Detailed reason for access denial.</p>
+     * <p>The detailed reason why access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -23,7 +23,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
-     * <p>Application name.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -32,7 +32,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public String appName;
 
     /**
-     * <p>Dynamic error code.</p>
+     * <p>The dynamic error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
@@ -41,7 +41,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>Dynamic message. Not currently used. Ignore it.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
@@ -50,13 +50,13 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>Faulty parameters</p>
+     * <p>The error arguments.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>Number of results returned per query.  </p>
+     * <p>The number of entries per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -66,13 +66,13 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Module")
     public ListAppTemplatesResponseBodyModule module;
 
     /**
-     * <p>Token for starting the next query. It is empty if there is no next query.</p>
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
@@ -90,7 +90,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
@@ -99,7 +99,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
-     * <p>Abnormal message</p>
+     * <p>The exception message.</p>
      * 
      * <strong>example:</strong>
      * <p>系统异常</p>
@@ -108,7 +108,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -227,7 +227,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
 
     public static class ListAppTemplatesResponseBodyModuleData extends TeaModel {
         /**
-         * <p>application Type</p>
+         * <p>The application type.</p>
          * 
          * <strong>example:</strong>
          * <p>supabase</p>
@@ -236,7 +236,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>application instance ID</p>
+         * <p>The application instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>WD20250703155602000001</p>
@@ -245,7 +245,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>Color</p>
+         * <p>The color.</p>
          * 
          * <strong>example:</strong>
          * <p>Red</p>
@@ -254,7 +254,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String colorScheme;
 
         /**
-         * <p>Color name</p>
+         * <p>The color name.</p>
          * 
          * <strong>example:</strong>
          * <p>red</p>
@@ -263,7 +263,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String colorSchemeName;
 
         /**
-         * <p>The actual data volume of the original table copied during DMS lockless change.</p>
+         * <p>The actual amount of data copied from the original table during a DMS lock-free schema change.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -272,7 +272,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer copyCount;
 
         /**
-         * <p>Creator ID.</p>
+         * <p>The creator ID.</p>
          * 
          * <strong>example:</strong>
          * <p>SOAR</p>
@@ -281,7 +281,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>Updated At</p>
+         * <p>The modification time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>primary key</p>
+         * <p>The primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>9953352</p>
@@ -310,10 +310,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Industry of the file to be analyzed. Default value: <strong>common</strong> (general industry). Select an appropriate industry to enable the backend to match an algorithm combination suitable for that industry. Valid values:  </p>
+         * <p>The industry of the file to be analyzed. Default value: <strong>common</strong> (general industry). Select an appropriate industry so that the backend matches the applicable algorithm combination. Valid values: </p>
          * <ul>
-         * <li><strong>microVideo</strong>: Short video industry.  </li>
-         * <li><strong>common</strong>: General industry.</li>
+         * <li><strong>microVideo</strong>: short video industry.</li>
+         * <li><strong>common</strong>: general industry.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String industry;
 
         /**
-         * <p>Industry Name</p>
+         * <p>The industry name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -332,7 +332,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String industryName;
 
         /**
-         * <p>Editor ID</p>
+         * <p>The ID of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -341,7 +341,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>Number of likes.</p>
+         * <p>The number of likes.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -350,13 +350,13 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer likeCount;
 
         /**
-         * <p>Whether the current user has liked it</p>
+         * <p>Indicates whether the current user has liked this template.</p>
          */
         @NameInMap("Liked")
         public Boolean liked;
 
         /**
-         * <p>Remediation action.</p>
+         * <p>The remediation action.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;memFrom\&quot;: \&quot;text\&quot;, \&quot;uid\&quot;: \&quot;text\&quot;, \&quot;labels\&quot;: \&quot;jsonb\&quot;, \&quot;content\&quot;: \&quot;text\&quot;, \&quot;fromId\&quot;: \&quot;text\&quot;, \&quot;uuid\&quot;: \&quot;text\&quot;}</p>
@@ -365,7 +365,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>Preview URL</p>
+         * <p>The preview URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://preview-lyj.aliyuncs.com/preview/b2c5a245c44946b99cf5435210bbb8b8?subSceneIds=728166">https://preview-lyj.aliyuncs.com/preview/b2c5a245c44946b99cf5435210bbb8b8?subSceneIds=728166</a></p>
@@ -374,10 +374,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String previewUrl;
 
         /**
-         * <p>Edition. Valid values:  </p>
+         * <p>The product version. Valid values:</p>
          * <ul>
-         * <li><strong>BasicVersion</strong>: Basic Edition.  </li>
-         * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
+         * <li><strong>BasicVersion</strong>: Basic edition.</li>
+         * <li><strong>EnterpriseVersion</strong>: Enterprise edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String productVersion;
 
         /**
-         * <p>Edition name.</p>
+         * <p>The Edition name.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.1</p>
@@ -396,7 +396,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String productVersionName;
 
         /**
-         * <p>Share Count</p>
+         * <p>The number of shares.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -405,7 +405,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer shareCount;
 
         /**
-         * <p>File Status</p>
+         * <p>The file status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -414,7 +414,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Template ID</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>de10bf7d782392a70f293a3b1f7bb8fc</p>
@@ -423,9 +423,9 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>Template Name.  </p>
+         * <p>The template name.</p>
          * <ul>
-         * <li>Maximum length: 128 characters.</li>
+         * <li>Maximum length: 128.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -435,7 +435,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>Application thumbnail</p>
+         * <p>The application thumbnail URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -444,7 +444,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String thumbnailUrl;
 
         /**
-         * <p>View Count.</p>
+         * <p>The number of views.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -453,7 +453,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer viewCount;
 
         /**
-         * <p>weight</p>
+         * <p>The weight.</p>
          * 
          * <strong>example:</strong>
          * <p>255</p>
@@ -670,7 +670,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
 
     public static class ListAppTemplatesResponseBodyModuleNext extends TeaModel {
         /**
-         * <p>Application Type</p>
+         * <p>The application type.</p>
          * 
          * <strong>example:</strong>
          * <p>memory</p>
@@ -679,7 +679,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String appType;
 
         /**
-         * <p>bizId of the associated application instance</p>
+         * <p>The BizId of the associated application instance.</p>
          * 
          * <strong>example:</strong>
          * <p>WS20260502160409000001</p>
@@ -688,7 +688,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String bizId;
 
         /**
-         * <p>Color</p>
+         * <p>The color.</p>
          * 
          * <strong>example:</strong>
          * <p>red</p>
@@ -697,7 +697,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String colorScheme;
 
         /**
-         * <p>Color scheme name</p>
+         * <p>The color name.</p>
          * 
          * <strong>example:</strong>
          * <p>red</p>
@@ -706,7 +706,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String colorSchemeName;
 
         /**
-         * <p>The actual data volume of the original table copied during DMS lockless change.</p>
+         * <p>The actual amount of data copied from the original table during a DMS lock-free schema change.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -715,7 +715,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer copyCount;
 
         /**
-         * <p>Tenant User Information</p>
+         * <p>The tenant user information.</p>
          * 
          * <strong>example:</strong>
          * <p>208116853206125255</p>
@@ -724,7 +724,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Creation Time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-17 20:43:21</p>
@@ -733,7 +733,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Updated At</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-18T10:03:56+08:00</p>
@@ -742,7 +742,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Primary key</p>
+         * <p>The primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>1000039405002</p>
@@ -751,11 +751,11 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Industry. Default value: <strong>common</strong> (General Industry). Valid values:  </p>
+         * <p>The industry. Default value: <strong>common</strong> (general industry). Valid values:</p>
          * <ul>
-         * <li><p><strong>microVideo</strong>: Short Video Industry.  </p>
+         * <li><p><strong>microVideo</strong>: short video industry.</p>
          * </li>
-         * <li><p><strong>common</strong>: General Industry.</p>
+         * <li><p><strong>common</strong>: general industry.</p>
          * </li>
          * </ul>
          * 
@@ -766,7 +766,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String industry;
 
         /**
-         * <p>Industry Name</p>
+         * <p>The industry name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -775,7 +775,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String industryName;
 
         /**
-         * <p>ID of the last modifier</p>
+         * <p>The ID of the last modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -784,7 +784,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>Like count.</p>
+         * <p>The number of likes.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -793,13 +793,13 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer likeCount;
 
         /**
-         * <p>Whether the current user has liked the item.</p>
+         * <p>Indicates whether the current user has liked this template.</p>
          */
         @NameInMap("Liked")
         public Boolean liked;
 
         /**
-         * <p>Fix Content.</p>
+         * <p>The remediation content.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;knowledge_point\&quot;:\&quot;text\&quot;,\&quot;trunk_id\&quot;:\&quot;text\&quot;,\&quot;doc_name\&quot;:\&quot;text\&quot;,\&quot;knowledge_point_id\&quot;:\&quot;text\&quot;,\&quot;doc_id\&quot;:\&quot;text\&quot;,\&quot;trunk_content\&quot;:\&quot;text\&quot;}</p>
@@ -808,7 +808,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>Preview URL</p>
+         * <p>The preview URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://preview-lyj.aliyuncs.com/preview/b989c9ac526e4fb48e018805f43d5fb1?subSceneIds=816576">https://preview-lyj.aliyuncs.com/preview/b989c9ac526e4fb48e018805f43d5fb1?subSceneIds=816576</a></p>
@@ -817,10 +817,10 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String previewUrl;
 
         /**
-         * <p>Edition. Valid values:  </p>
+         * <p>The product version. Valid values:</p>
          * <ul>
-         * <li><strong>BasicVersion</strong>: Basic Edition.  </li>
-         * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.  <blockquote>
+         * <li><strong>BasicVersion</strong>: Basic edition.</li>
+         * <li><strong>EnterpriseVersion</strong>: Enterprise edition.<blockquote>
          * <p>This parameter is required only when ProductForm is set to IntegrationForm.</p>
          * </blockquote>
          * </li>
@@ -833,7 +833,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String productVersion;
 
         /**
-         * <p>Edition name.</p>
+         * <p>The Edition name.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.2</p>
@@ -842,7 +842,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String productVersionName;
 
         /**
-         * <p>Share Count</p>
+         * <p>The number of shares.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -851,7 +851,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer shareCount;
 
         /**
-         * <p>Possible values: unknown, init, testing, online</p>
+         * <p>Valid values: unknown, init, testing, online.</p>
          * 
          * <strong>example:</strong>
          * <p>Succeeded</p>
@@ -860,7 +860,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Template ID</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3802aefc8cb0003b71286c47afc83624</p>
@@ -869,7 +869,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>Template Name</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>iem</p>
@@ -878,7 +878,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>Application thumbnail</p>
+         * <p>The application thumbnail URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
@@ -887,7 +887,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public String thumbnailUrl;
 
         /**
-         * <p>View count.</p>
+         * <p>The number of views.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -896,7 +896,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer viewCount;
 
         /**
-         * <p>Weight</p>
+         * <p>The weight.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1113,7 +1113,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
 
     public static class ListAppTemplatesResponseBodyModule extends TeaModel {
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1122,19 +1122,19 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>Request Result.</p>
+         * <p>The request result.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListAppTemplatesResponseBodyModuleData> data;
 
         /**
-         * <p>Decision weight</p>
+         * <p>The decision weight.</p>
          */
         @NameInMap("Next")
         public ListAppTemplatesResponseBodyModuleNext next;
 
         /**
-         * <p>Whether there is a next page.</p>
+         * <p>Indicates whether a next page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -1143,7 +1143,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1152,7 +1152,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Indicates whether there is a previous page.</p>
+         * <p>Indicates whether a previous page exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -1161,7 +1161,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>For the current query, aside from paging limits, the server-side processes at most the latest 1000 records. If the result exceeds 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>; you should narrow the Time Range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to the pagination limit, the server processes a maximum of 1000 recent records per query. If the results exceed 1000 records, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -1170,7 +1170,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Boolean resultLimit;
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1179,7 +1179,7 @@ public class ListAppTemplatesResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
