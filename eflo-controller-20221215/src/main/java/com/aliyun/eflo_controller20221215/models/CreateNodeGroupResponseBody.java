@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node group.</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ng-ec3c96ff0aa4c60d</p>
@@ -14,7 +14,7 @@ public class CreateNodeGroupResponseBody extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The name of the node group.</p>
+     * <p>The node group name.</p>
      * 
      * <strong>example:</strong>
      * <p>emr-default</p>
@@ -23,7 +23,7 @@ public class CreateNodeGroupResponseBody extends TeaModel {
     public String nodeGroupName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>

@@ -3,7 +3,7 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateNodeGroupRequest extends TeaModel {
+public class UpdateNodeGroupShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether file storage mounting is supported.</p>
      * 
@@ -69,7 +69,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
     public String ramRoleName;
 
     @NameInMap("SystemDisk")
-    public UpdateNodeGroupRequestSystemDisk systemDisk;
+    public String systemDiskShrink;
 
     /**
      * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
@@ -80,12 +80,12 @@ public class UpdateNodeGroupRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
-    public static UpdateNodeGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateNodeGroupRequest self = new UpdateNodeGroupRequest();
+    public static UpdateNodeGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateNodeGroupShrinkRequest self = new UpdateNodeGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateNodeGroupRequest setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+    public UpdateNodeGroupShrinkRequest setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
         this.fileSystemMountEnabled = fileSystemMountEnabled;
         return this;
     }
@@ -93,7 +93,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
         return this.fileSystemMountEnabled;
     }
 
-    public UpdateNodeGroupRequest setImageId(String imageId) {
+    public UpdateNodeGroupShrinkRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -101,7 +101,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
         return this.imageId;
     }
 
-    public UpdateNodeGroupRequest setKeyPairName(String keyPairName) {
+    public UpdateNodeGroupShrinkRequest setKeyPairName(String keyPairName) {
         this.keyPairName = keyPairName;
         return this;
     }
@@ -109,7 +109,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
         return this.keyPairName;
     }
 
-    public UpdateNodeGroupRequest setLoginPassword(String loginPassword) {
+    public UpdateNodeGroupShrinkRequest setLoginPassword(String loginPassword) {
         this.loginPassword = loginPassword;
         return this;
     }
@@ -117,7 +117,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
         return this.loginPassword;
     }
 
-    public UpdateNodeGroupRequest setNewNodeGroupName(String newNodeGroupName) {
+    public UpdateNodeGroupShrinkRequest setNewNodeGroupName(String newNodeGroupName) {
         this.newNodeGroupName = newNodeGroupName;
         return this;
     }
@@ -125,7 +125,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
         return this.newNodeGroupName;
     }
 
-    public UpdateNodeGroupRequest setNodeGroupId(String nodeGroupId) {
+    public UpdateNodeGroupShrinkRequest setNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
     }
@@ -133,7 +133,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
         return this.nodeGroupId;
     }
 
-    public UpdateNodeGroupRequest setRamRoleName(String ramRoleName) {
+    public UpdateNodeGroupShrinkRequest setRamRoleName(String ramRoleName) {
         this.ramRoleName = ramRoleName;
         return this;
     }
@@ -141,39 +141,20 @@ public class UpdateNodeGroupRequest extends TeaModel {
         return this.ramRoleName;
     }
 
-    public UpdateNodeGroupRequest setSystemDisk(UpdateNodeGroupRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
+    public UpdateNodeGroupShrinkRequest setSystemDiskShrink(String systemDiskShrink) {
+        this.systemDiskShrink = systemDiskShrink;
         return this;
     }
-    public UpdateNodeGroupRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
+    public String getSystemDiskShrink() {
+        return this.systemDiskShrink;
     }
 
-    public UpdateNodeGroupRequest setUserData(String userData) {
+    public UpdateNodeGroupShrinkRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public static class UpdateNodeGroupRequestSystemDisk extends TeaModel {
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
-        public static UpdateNodeGroupRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
-            UpdateNodeGroupRequestSystemDisk self = new UpdateNodeGroupRequestSystemDisk();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateNodeGroupRequestSystemDisk setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
     }
 
 }

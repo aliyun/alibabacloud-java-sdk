@@ -14,7 +14,7 @@ public class ReimageNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to skip failed nodes. The default value is False.</p>
+     * <p>Specifies whether to skip failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -29,11 +29,10 @@ public class ReimageNodesRequest extends TeaModel {
     public java.util.List<ReimageNodesRequestNodes> nodes;
 
     /**
-     * <p>The custom data.</p>
+     * <p>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
      * 
      * <strong>example:</strong>
-     * <p>#!/bin/sh
-     * echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</p>
+     * <p>ZWNobyBoZWxsbyBlY3Mh</p>
      */
     @NameInMap("UserData")
     public String userData;
@@ -86,7 +85,7 @@ public class ReimageNodesRequest extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The OS image ID.</p>
+         * <p>The system image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-8vbf8rpv2nn14y7oybjy</p>

@@ -326,10 +326,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>关闭远程会话的接口。</p>
+     * <p>Closes a remote session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new LINGJUN Cluster.</p>
+     * <p>Creates a Lingjun AI Computing Service cluster.</p>
      * 
      * @param tmpReq CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -425,10 +425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>关闭远程会话的接口。</p>
+     * <p>Closes a remote session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new LINGJUN Cluster.</p>
+     * <p>Creates a Lingjun AI Computing Service cluster.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -592,10 +592,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a node group in a cluster.</p>
+     * <p>Creates a node group in a cluster.</p>
      * 
      * @param tmpReq CreateNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -645,10 +645,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a node group in a cluster.</p>
+     * <p>Creates a node group in a cluster.</p>
      * 
      * @param request CreateNodeGroupRequest
      * @return CreateNodeGroupResponse
@@ -1635,7 +1635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Closes a remote session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Extends a cluster.</p>
+     * <p>Scales out a cluster.</p>
      * 
      * @param tmpReq ExtendClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1704,7 +1704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Closes a remote session.</p>
      * 
      * <b>summary</b> : 
-     * <p>Extends a cluster.</p>
+     * <p>Scales out a cluster.</p>
      * 
      * @param request ExtendClusterRequest
      * @return ExtendClusterResponse
@@ -2771,7 +2771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reimages the specified nodes.</p>
+     * <p>Reinstalls machines.</p>
      * 
      * @param tmpReq ReimageNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2821,7 +2821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reimages the specified nodes.</p>
+     * <p>Reinstalls machines.</p>
      * 
      * @param request ReimageNodesRequest
      * @return ReimageNodesResponse
@@ -3395,17 +3395,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a node group.</p>
      * 
-     * @param request UpdateNodeGroupRequest
+     * @param tmpReq UpdateNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateNodeGroupResponse
      */
-    public UpdateNodeGroupResponse updateNodeGroupWithOptions(UpdateNodeGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateNodeGroupResponse updateNodeGroupWithOptions(UpdateNodeGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateNodeGroupShrinkRequest request = new UpdateNodeGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.systemDisk)) {
+            request.systemDiskShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.systemDisk, "SystemDisk", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemMountEnabled)) {
             body.put("FileSystemMountEnabled", request.fileSystemMountEnabled);
@@ -3435,6 +3441,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RamRoleName", request.ramRoleName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskShrink)) {
+            body.put("SystemDisk", request.systemDiskShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
             body.put("UserData", request.userData);
         }
@@ -3458,7 +3468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</p>
+     * <p>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates a node group.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster to which the node group belongs.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class CreateNodeGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The configurations of the node group.</p>
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroup")
     public CreateNodeGroupRequestNodeGroup nodeGroup;
 
     /**
-     * <p>The configuration of the node unit.</p>
+     * <p>The node information.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;NodeUnitId\&quot;:\&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f\&quot;,\&quot;ResourceGroupId\&quot;:\&quot;\&quot;,\&quot;MaxNodes\&quot;:0,\&quot;NodeUnitName\&quot;:\&quot;asi_cn-serverless-sale_e01-lingjun-psale\&quot;}</p>
@@ -61,9 +61,9 @@ public class CreateNodeGroupRequest extends TeaModel {
 
     public static class CreateNodeGroupRequestNodeGroupSystemDisk extends TeaModel {
         /**
-         * <p>The type of the system disk. Valid values:</p>
+         * <p>The cloud disk type. Valid values:</p>
          * <ul>
-         * <li><code>cloud_essd</code>: ESSD.</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD) cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,12 +73,10 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level of the ESSD system disk. Valid values:</p>
+         * <p>The performance level (PL) of the ESSD cloud disk used as the system disk. Valid values:</p>
          * <ul>
-         * <li><p><code>PL0</code>: A single disk delivers up to 10,000 random read/write IOPS.</p>
-         * </li>
-         * <li><p><code>PL1</code>: A single disk delivers up to 50,000 random read/write IOPS.</p>
-         * </li>
+         * <li>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</li>
+         * <li>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,7 +86,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the system disk, in GB.</p>
+         * <p>The disk size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -129,7 +127,7 @@ public class CreateNodeGroupRequest extends TeaModel {
 
     public static class CreateNodeGroupRequestNodeGroup extends TeaModel {
         /**
-         * <p>The availability zone of the node group.</p>
+         * <p>The zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +137,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String az;
 
         /**
-         * <p>Specifies whether to enable file system mounting.</p>
+         * <p>Specifies whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -148,7 +146,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public Boolean fileSystemMountEnabled;
 
         /**
-         * <p>The image ID for the nodes.</p>
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +156,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The name of the key pair for SSH login.</p>
+         * <p>The key pair name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-keypair</p>
@@ -167,7 +165,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String keyPairName;
 
         /**
-         * <p>The password to log in to the nodes.</p>
+         * <p>The logon password.</p>
          * 
          * <strong>example:</strong>
          * <p>test-LoginPassword</p>
@@ -176,7 +174,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>The machine type for the nodes.</p>
+         * <p>The machine type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,16 +184,16 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String machineType;
 
         /**
-         * <p>The description of the node group.</p>
+         * <p>The node group description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Node group description</p>
+         * <p>节点分组描述</p>
          */
         @NameInMap("NodeGroupDescription")
         public String nodeGroupDescription;
 
         /**
-         * <p>The name of the node group.</p>
+         * <p>The node group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +203,10 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String nodeGroupName;
 
         /**
-         * <p>The name of the RAM role to attach to the nodes. You can call the RAM API <code>ListRoles</code> operation to query the RAM roles that you have created. The trust entity of the specified role must be Intelligent Computing Lingjun.<br><strong>Note:</strong> You cannot detach an existing role by clearing this parameter.<br></p>
+         * <p>The RAM role name of the node. You can call the RAM API ListRoles to query the RAM roles you have created. The trusted entity of the role must be set to Lingjun AI Computing Service.</p>
+         * <blockquote>
+         * <p>Note: Clearing an existing role is not currently supported.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>xianwen-test-ram-role</p>
@@ -214,24 +215,22 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>The system disk configuration for the nodes.</p>
+         * <p>The system disk configuration of the node.</p>
          */
         @NameInMap("SystemDisk")
         public CreateNodeGroupRequestNodeGroupSystemDisk systemDisk;
 
         /**
-         * <p>The user data passed to the nodes at launch.</p>
+         * <p>A custom executable shell script that must be Base64-encoded. The maximum size of the raw data is 16 KB.</p>
          * 
          * <strong>example:</strong>
-         * <p>#!/bin/bash
-         * uptime
-         * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
          */
         @NameInMap("UserData")
         public String userData;
 
         /**
-         * <p>Specifies whether to enable GPU virtualization.</p>
+         * <p>Specifies whether GPU virtualization splitting is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

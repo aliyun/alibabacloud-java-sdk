@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateClusterShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the cluster.</p>
+     * <p>The cluster description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Standard cluster test</p>
+     * <p>标准集群测试</p>
      */
     @NameInMap("ClusterDescription")
     public String clusterDescription;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
@@ -23,7 +23,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The type of the cluster.</p>
+     * <p>The cluster type.</p>
      * 
      * <strong>example:</strong>
      * <p>Lite</p>
@@ -47,7 +47,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String hpnZone;
 
     /**
-     * <p>Specifies whether to skip failed nodes. The default value is False.</p>
+     * <p>Specifies whether to skip failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -62,7 +62,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String networksShrink;
 
     /**
-     * <p>The vSwitches for the node.</p>
+     * <p>The node vSwitches.</p>
      */
     @NameInMap("NimizVSwitches")
     public String nimizVSwitchesShrink;
@@ -200,7 +200,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
 
     public static class CreateClusterShrinkRequestTag extends TeaModel {
         /**
-         * <p>The key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env-name</p>
@@ -209,7 +209,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
