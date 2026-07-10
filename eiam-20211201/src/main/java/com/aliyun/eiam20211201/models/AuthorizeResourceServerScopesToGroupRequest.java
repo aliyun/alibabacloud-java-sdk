@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeResourceServerScopesToGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the ResourceServer application.</p>
+     * <p>The application ID of the ResourceServer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AuthorizeResourceServerScopesToGroupRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>A client-generated token that you must make unique among different requests to ensure idempotence. ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class AuthorizeResourceServerScopesToGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of Scope permission IDs under the ResourceServer.</p>
+     * <p>The list of Scope permission IDs under the ResourceServer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

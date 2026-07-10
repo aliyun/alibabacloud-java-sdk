@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationFederatedCredentialRequest extends TeaModel {
     /**
-     * <p>The ID of the application\&quot;s federated credential.</p>
+     * <p>The application federated identity credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

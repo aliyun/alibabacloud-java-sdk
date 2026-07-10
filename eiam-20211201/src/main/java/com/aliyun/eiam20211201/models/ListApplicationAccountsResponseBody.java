@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationAccountsResponseBody extends TeaModel {
     /**
-     * <p>The list of account information.</p>
+     * <p>The list of application accounts.</p>
      */
     @NameInMap("ApplicationAccounts")
     public java.util.List<ListApplicationAccountsResponseBodyApplicationAccounts> applicationAccounts;
@@ -20,7 +20,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -77,7 +77,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The name of the application account.</p>
+         * <p>The application account name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -86,7 +86,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         public String applicationUsername;
 
         /**
-         * <p>The time when the account was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1737510353000</p>
@@ -95,7 +95,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the IDaaS EIAM instance.</p>
+         * <p>The IDaaS EIAM instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_eznwtkkaucljizh6qqu7ptxxxx</p>

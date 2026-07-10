@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainCredentialResponseBody extends TeaModel {
     /**
-     * <p>The credential details.</p>
+     * <p>The credential information.</p>
      */
     @NameInMap("Credential")
     public ObtainCredentialResponseBodyCredential credential;
@@ -42,7 +42,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>The API key content.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklncmwizncxxxx</p>
@@ -67,7 +67,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContentOAuthClientContent extends TeaModel {
         /**
-         * <p>The client ID.</p>
+         * <p>The client_id of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>dmvncmxersdxxxxxx</p>
@@ -76,7 +76,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The client secret.</p>
+         * <p>The client_secret of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklnertyt5ddwizncxxxx</p>
@@ -109,13 +109,13 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredentialCredentialContent extends TeaModel {
         /**
-         * <p>The details of the API key credential.</p>
+         * <p>The credential content of the API key credential type.</p>
          */
         @NameInMap("ApiKeyContent")
         public ObtainCredentialResponseBodyCredentialCredentialContentApiKeyContent apiKeyContent;
 
         /**
-         * <p>The details of the OAuth 2.0 client credential.</p>
+         * <p>The credential content of the OAuth client authentication credential type.</p>
          */
         @NameInMap("OAuthClientContent")
         public ObtainCredentialResponseBodyCredentialCredentialContentOAuthClientContent OAuthClientContent;
@@ -145,7 +145,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
 
     public static class ObtainCredentialResponseBodyCredential extends TeaModel {
         /**
-         * <p>The time when the credential was created. This value is a Unix timestamp in milliseconds.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -160,12 +160,10 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public ObtainCredentialResponseBodyCredentialCredentialContent credentialContent;
 
         /**
-         * <p>The credential creation type. Valid values:</p>
+         * <p>The creation type of the credential. Valid values:</p>
          * <ul>
-         * <li><p><code>system_init</code>: The system created the credential.</p>
-         * </li>
-         * <li><p><code>user_custom</code>: A user created the credential.</p>
-         * </li>
+         * <li>system_init: Created by the system.</li>
+         * <li>user_custom: Created by the user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,12 +203,10 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialName;
 
         /**
-         * <p>The credential scenario label. Valid values:</p>
+         * <p>The scenarios label of the credential. Valid values:</p>
          * <ul>
-         * <li><p><code>llm</code>: The credential is used for an LLM.</p>
-         * </li>
-         * <li><p><code>saas</code>: The credential is used for a SaaS application.</p>
-         * </li>
+         * <li>llm: large language model.</li>
+         * <li>saas: third-party SaaS service.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +219,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialSharingScope;
 
         /**
-         * <p>The credential subject ID.</p>
+         * <p>The ID of the subject to which the credential belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -232,9 +228,9 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialSubjectId;
 
         /**
-         * <p>The credential subject type. Valid value:</p>
+         * <p>The type of the subject to which the credential belongs. Valid values:</p>
          * <ul>
-         * <li><code>authentication_token_provider</code>: The credential subject is an authentication token provider.</li>
+         * <li>authentication_token_provider: authentication token provider.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,10 +242,8 @@ public class ObtainCredentialResponseBody extends TeaModel {
         /**
          * <p>The credential type. Valid values:</p>
          * <ul>
-         * <li><p><code>api_key</code>: An API key.</p>
-         * </li>
-         * <li><p><code>oauth_client</code>: An OAuth 2.0 client credential.</p>
-         * </li>
+         * <li>api_key: API key authentication credential.</li>
+         * <li>oauth_client: OAuth client authentication credential.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +253,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String credentialType;
 
         /**
-         * <p>The description.</p>
+         * <p>The credential description.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_description</p>
@@ -280,12 +274,10 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status. Valid values:</p>
+         * <p>The credential status. Valid values:</p>
          * <ul>
-         * <li><p><code>enabled</code>: The credential can be used.</p>
-         * </li>
-         * <li><p><code>disabled</code>: The credential cannot be used.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,7 +287,7 @@ public class ObtainCredentialResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the credential was last updated. This value is a Unix timestamp in milliseconds.</p>
+         * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>

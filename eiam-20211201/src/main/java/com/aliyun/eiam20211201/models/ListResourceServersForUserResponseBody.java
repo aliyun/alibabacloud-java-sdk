@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceServersForUserResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -93,7 +93,11 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
 
     public static class ListResourceServersForUserResponseBodyResourceServersResourceServerScopes extends TeaModel {
         /**
-         * <p>Indicates whether a direct authorization exists.</p>
+         * <p>Indicates whether direct authorization exists. Valid values:</p>
+         * <ul>
+         * <li>true: Direct authorization exists.</li>
+         * <li>false: Direct authorization does not exist.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,7 +106,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         public Boolean hasDirectAuthorization;
 
         /**
-         * <p>Indicates whether an inherited permission exists.</p>
+         * <p>Indicates whether inherited authorization exists.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -111,7 +115,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         public Boolean hasInheritAuthorization;
 
         /**
-         * <p>The ID of the Scope permission.</p>
+         * <p>The Scope permission ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -120,7 +124,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         public String resourceServerScopeId;
 
         /**
-         * <p>The name of the Scope permission.</p>
+         * <p>The Scope permission name.</p>
          * 
          * <strong>example:</strong>
          * <p>Read All User</p>
@@ -169,7 +173,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
 
     public static class ListResourceServersForUserResponseBodyResourceServers extends TeaModel {
         /**
-         * <p>The ID of the ResourceServer application.</p>
+         * <p>The ResourceServer application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_nbsomva32b6utec3hgi7scxxxx</p>
@@ -196,7 +200,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         public String resourceServerIdentifier;
 
         /**
-         * <p>The list of granted Scope permissions.</p>
+         * <p>The list of authorized Scope permissions.</p>
          */
         @NameInMap("ResourceServerScopes")
         public java.util.List<ListResourceServersForUserResponseBodyResourceServersResourceServerScopes> resourceServerScopes;

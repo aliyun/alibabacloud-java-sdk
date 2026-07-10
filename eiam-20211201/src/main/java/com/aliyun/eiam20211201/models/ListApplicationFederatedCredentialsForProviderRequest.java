@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationFederatedCredentialsForProviderRequest extends TeaModel {
     /**
-     * <p>The federated credential provider ID.</p>
+     * <p>The federated trust source ID.</p>
      * 
      * <strong>example:</strong>
      * <p>fcp_adasd12dxxxxx</p>
@@ -24,7 +24,7 @@ public class ListApplicationFederatedCredentialsForProviderRequest extends TeaMo
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return per page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,7 +33,7 @@ public class ListApplicationFederatedCredentialsForProviderRequest extends TeaMo
     public Integer maxResults;
 
     /**
-     * <p>The token for the query.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -42,7 +42,7 @@ public class ListApplicationFederatedCredentialsForProviderRequest extends TeaMo
     public String nextToken;
 
     /**
-     * <p>The token for the previous page of results.</p>
+     * <p>The token used to retrieve the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

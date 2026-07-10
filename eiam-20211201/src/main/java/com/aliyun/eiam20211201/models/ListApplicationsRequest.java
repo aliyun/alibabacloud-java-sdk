@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsRequest extends TeaModel {
     /**
-     * <p>The application creation type. If unspecified, only user-created (<code>user_custom</code>) applications are returned. To query applications of all types, set this parameter to <code>all</code>.</p>
+     * <p>The application creation type. If this parameter is left empty, applications of the user_custom type are queried by default. To query applications of all types, set this parameter to all.</p>
      * 
      * <strong>example:</strong>
      * <p>system_init</p>
@@ -14,7 +14,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String applicationCreationType;
 
     /**
-     * <p>The application identity type. If unspecified, only applications of the <code>application</code> type are returned. To query all identity types, set this parameter to <code>all</code>.</p>
+     * <p>The application identity type. If this parameter is left empty, applications of the application type are queried by default. To query applications of all identity types, set this parameter to all.</p>
      * 
      * <strong>example:</strong>
      * <p>application</p>
@@ -23,7 +23,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String applicationIdentityType;
 
     /**
-     * <p>A list of application IDs.</p>
+     * <p>The list of application IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>Ram Account SSO</p>
@@ -32,7 +32,7 @@ public class ListApplicationsRequest extends TeaModel {
     public java.util.List<String> applicationIds;
 
     /**
-     * <p>The application name. Only prefix matching is supported.</p>
+     * <p>The application name. Only left fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Ram Account SSO</p>
@@ -41,12 +41,10 @@ public class ListApplicationsRequest extends TeaModel {
     public String applicationName;
 
     /**
-     * <p>The authorization type for application access. Valid values:</p>
+     * <p>The application access authorization type. Valid values:</p>
      * <ul>
-     * <li><p><code>authorize_required</code>: Access requires explicit authorization.</p>
-     * </li>
-     * <li><p><code>default_all</code>: All members have access by default.</p>
-     * </li>
+     * <li>authorize_required: Explicit authorization is required for access.</li>
+     * <li>default_all: All members have access permissions by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String authorizationType;
 
     /**
-     * <p>A list of custom fields.</p>
+     * <p>The list of custom fields.</p>
      */
     @NameInMap("CustomFields")
     public java.util.List<ListApplicationsRequestCustomFields> customFields;
@@ -72,13 +70,16 @@ public class ListApplicationsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The status of the M2M client identity.</p>
+     * <p>Specifies whether the M2M Client identity is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
     @NameInMap("M2MClientStatus")
     public String m2MClientStatus;
+
+    @NameInMap("ManagedServiceCode")
+    public String managedServiceCode;
 
     /**
      * <p>The page number.</p>
@@ -99,7 +100,7 @@ public class ListApplicationsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The status of the resource server capability.</p>
+     * <p>Specifies whether the ResourceServer capability is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>enabled</p>
@@ -107,8 +108,11 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("ResourceServerStatus")
     public String resourceServerStatus;
 
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
     /**
-     * <p>A filter for the Single Sign-On (SSO) type. You can specify multiple types, separated by a comma. Example: <code>oauth2/m2m,oidc+oauth2/m2m</code>.</p>
+     * <p>The SSO type filter condition. Multiple types can be separated by commas, such as oauth2/m2m,oidc+oauth2/m2m.</p>
      * 
      * <strong>example:</strong>
      * <p>oauth2/m2m</p>
@@ -119,10 +123,8 @@ public class ListApplicationsRequest extends TeaModel {
     /**
      * <p>The application status. Valid values:</p>
      * <ul>
-     * <li><p><code>enabled</code>: Enabled.</p>
-     * </li>
-     * <li><p><code>disabled</code>: Disabled.</p>
-     * </li>
+     * <li>enabled: Enabled.</li>
+     * <li>disabled: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -200,6 +202,14 @@ public class ListApplicationsRequest extends TeaModel {
         return this.m2MClientStatus;
     }
 
+    public ListApplicationsRequest setManagedServiceCode(String managedServiceCode) {
+        this.managedServiceCode = managedServiceCode;
+        return this;
+    }
+    public String getManagedServiceCode() {
+        return this.managedServiceCode;
+    }
+
     public ListApplicationsRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -224,6 +234,14 @@ public class ListApplicationsRequest extends TeaModel {
         return this.resourceServerStatus;
     }
 
+    public ListApplicationsRequest setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
     public ListApplicationsRequest setSsoType(String ssoType) {
         this.ssoType = ssoType;
         return this;
@@ -244,7 +262,7 @@ public class ListApplicationsRequest extends TeaModel {
         /**
          * <p>The custom field identifier. Valid values:</p>
          * <ul>
-         * <li><code>agent_type</code>: The agent type.</li>
+         * <li>agent_type: the agent type.</li>
          * </ul>
          * 
          * <strong>example:</strong>

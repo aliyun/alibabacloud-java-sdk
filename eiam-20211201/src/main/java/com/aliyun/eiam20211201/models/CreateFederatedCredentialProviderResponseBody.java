@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFederatedCredentialProviderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the federated credential provider.</p>
+     * <p>The ID of the federated trust source.</p>
      * 
      * <strong>example:</strong>
      * <p>fcp_sada123XXXX</p>

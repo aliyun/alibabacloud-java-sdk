@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetCredentialProviderResponseBody extends TeaModel {
     /**
-     * <p>Credential provider.</p>
+     * <p>The credential provider.</p>
      */
     @NameInMap("CredentialProvider")
     public GetCredentialProviderResponseBodyCredentialProvider credentialProvider;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,13 +42,13 @@ public class GetCredentialProviderResponseBody extends TeaModel {
 
     public static class GetCredentialProviderResponseBodyCredentialProviderCredentialProviderConfigJwtProviderConfig extends TeaModel {
         /**
-         * <p>List of allowed JWT issuers.</p>
+         * <p>The list of allowed JWT issuers.</p>
          */
         @NameInMap("AllowedTokenIssuers")
         public java.util.List<String> allowedTokenIssuers;
 
         /**
-         * <p>Enable JWT derived short token.</p>
+         * <p>Indicates whether the JWT derived short token feature is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -57,7 +57,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public Boolean derivedShortTokenEnabled;
 
         /**
-         * <p>Validity period of the JWT. Unit: seconds.</p>
+         * <p>The validity period of the JWT, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -66,7 +66,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public Integer expiration;
 
         /**
-         * <p>Enable JWT expiration cleanup.</p>
+         * <p>Indicates whether JWT expiration cleanup is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -75,7 +75,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public Boolean expirationCleanupEnabled;
 
         /**
-         * <p>JWT issuer.</p>
+         * <p>JWT issuer。</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://test.issuer.com">https://test.issuer.com</a></p>
@@ -84,7 +84,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>JWKs endpoint URL.</p>
+         * <p>The JWKs endpoint URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks">https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks</a></p>
@@ -149,7 +149,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
 
     public static class GetCredentialProviderResponseBodyCredentialProviderCredentialProviderConfigOAuthProviderConfig extends TeaModel {
         /**
-         * <p>Client ID, corresponding to client_id in the OAuth protocol.</p>
+         * <p>The client_id in the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>client_id_example_xxx</p>
@@ -158,14 +158,13 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>Scope, corresponding to scope in the OAuth protocol.</p>
+         * <p>The scope in the OAuth protocol.</p>
          * <blockquote>
-         * <p>The Scope value configured for the OAuth credential provider serves as the default. If you do not specify the scope parameter when calling the Developer API to obtain an OAuth access token, the system uses this default Scope value.</p>
+         * <p>The scope configuration of the OAuth credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth access token, the scope configuration of the credential provider is used for issuance.</p>
          * </blockquote>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice: Multiple scope values are separated by spaces.</p>
          * </blockquote>
-         * <p>Separate multiple Scope values with spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>example:test_01 example:test_02</p>
@@ -174,7 +173,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>Token endpoint, corresponding to the OAuth protocol.</p>
+         * <p>The token endpoint of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/token">https://example.com/token</a></p>
@@ -215,21 +214,21 @@ public class GetCredentialProviderResponseBody extends TeaModel {
 
     public static class GetCredentialProviderResponseBodyCredentialProviderCredentialProviderConfig extends TeaModel {
         /**
-         * <p>Configuration for a JWT credential provider.</p>
+         * <p>The configuration of the JWT credential provider.</p>
          */
         @NameInMap("JwtProviderConfig")
         public GetCredentialProviderResponseBodyCredentialProviderCredentialProviderConfigJwtProviderConfig jwtProviderConfig;
 
         /**
-         * <p>Configuration for an OAuth credential provider.</p>
+         * <p>The configuration of the OAuth credential provider.</p>
          */
         @NameInMap("OAuthProviderConfig")
         public GetCredentialProviderResponseBodyCredentialProviderCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig;
 
         /**
-         * <p>List of credential IDs for sensitive configurations of the credential provider.</p>
+         * <p>The list of credential IDs corresponding to the sensitive configurations of the credential provider.</p>
          * <blockquote>
-         * <p>The system securely stores sensitive configuration information as credentials.</p>
+         * <p>The system securely stores the sensitive configuration information of the credential provider in the form of credentials.</p>
          * </blockquote>
          */
         @NameInMap("ProviderCredentialIds")
@@ -268,7 +267,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
 
     public static class GetCredentialProviderResponseBodyCredentialProvider extends TeaModel {
         /**
-         * <p>Creation time of the credential provider, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The creation time of the credential provider. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>
@@ -277,18 +276,16 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Credential provider configuration.</p>
+         * <p>The credential provider configuration.</p>
          */
         @NameInMap("CredentialProviderConfig")
         public GetCredentialProviderResponseBodyCredentialProviderCredentialProviderConfig credentialProviderConfig;
 
         /**
-         * <p>Credential provider creation type. Valid values:</p>
+         * <p>The credential provider creation type. Valid values:</p>
          * <ul>
-         * <li><p>system_init: Created by the system</p>
-         * </li>
-         * <li><p>user_custom: Created by a user</p>
-         * </li>
+         * <li>system_init: Created by the system.</li>
+         * <li>user_custom: Created by the user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,7 +295,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String credentialProviderCreationType;
 
         /**
-         * <p>Credential provider ID.</p>
+         * <p>The credential provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
@@ -307,7 +304,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String credentialProviderId;
 
         /**
-         * <p>Credential provider identifier.</p>
+         * <p>The credential provider identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>test_example_identifier</p>
@@ -316,7 +313,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String credentialProviderIdentifier;
 
         /**
-         * <p>Credential provider name.</p>
+         * <p>The credential provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_example_name</p>
@@ -325,12 +322,10 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String credentialProviderName;
 
         /**
-         * <p>Credential provider type. Valid values:</p>
+         * <p>The credential provider type. Valid values:</p>
          * <ul>
-         * <li><p>oauth: OAuth credential provider</p>
-         * </li>
-         * <li><p>jwt: JWT credential provider</p>
-         * </li>
+         * <li>oauth: OAuth credential provider.</li>
+         * <li>jwt: JWT credential provider.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,7 +335,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>This is an example description</p>
@@ -349,7 +344,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -358,12 +353,10 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Credential provider status. Valid values:</p>
+         * <p>The credential provider status. Valid values:</p>
          * <ul>
-         * <li><p>enabled: Enabled</p>
-         * </li>
-         * <li><p>disabled: Disabled</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +366,7 @@ public class GetCredentialProviderResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Update time of the credential provider, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The update time of the credential provider. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830225000</p>

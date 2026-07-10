@@ -15,7 +15,7 @@ public class EnableClientPublicKeyRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the ClientPublicKey for the application.</p>
+     * <p>The ID of the application ClientPublicKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class EnableClientPublicKeyRequest extends TeaModel {
     public String clientPublicKeyId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The value can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationFederatedCredentialResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application federated credential.</p>
+     * <p>The application federated identity credential ID.</p>
      * 
      * <strong>example:</strong>
      * <p>afc_asd123daxxxx</p>

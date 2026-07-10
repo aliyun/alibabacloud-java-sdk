@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCredentialRequest extends TeaModel {
     /**
-     * <p>A client-generated token that ensures the idempotence of the request. This token must be a unique value that contains only ASCII characters and is no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,12 +45,10 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialName;
 
     /**
-     * <p>The use case label of the credential. Valid values:</p>
+     * <p>The Scenarios label of the credential. Valid values:</p>
      * <ul>
-     * <li><p><code>llm</code>: large language model.</p>
-     * </li>
-     * <li><p><code>saas</code>: third-party SaaS.</p>
-     * </li>
+     * <li>llm: large language model.</li>
+     * <li>saas: third-party SaaS service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +61,7 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialSharingScope;
 
     /**
-     * <p>The ID of the credential\&quot;s subject.</p>
+     * <p>The subject ID of the credential.</p>
      * 
      * <strong>example:</strong>
      * <p>apt_werthgfdsasffxxxxx</p>
@@ -72,9 +70,9 @@ public class CreateCredentialRequest extends TeaModel {
     public String credentialSubjectId;
 
     /**
-     * <p>The subject type of the credential. Valid value:</p>
+     * <p>The subject type of the credential. Valid values:</p>
      * <ul>
-     * <li><code>authentication_token_provider</code>: an authentication token provider.</li>
+     * <li>authentication_token_provider: authentication token provider.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,10 +84,8 @@ public class CreateCredentialRequest extends TeaModel {
     /**
      * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li><p><code>api_key</code>: an API key.</p>
-     * </li>
-     * <li><p><code>oauth_client</code>: an OAuth client.</p>
-     * </li>
+     * <li>api_key: API key authentication credential.</li>
+     * <li>oauth_client: OAuth client authentication credential.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -232,7 +228,7 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestCredentialContentApiKeyContent extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>The API key content.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklnertyt5ddwizncxxxx</p>
@@ -257,7 +253,7 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestCredentialContentOAuthClientContent extends TeaModel {
         /**
-         * <p>The <code>client_id</code> of the OAuth protocol.</p>
+         * <p>The client_id of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>dmvncmxersdxxxxxx</p>
@@ -266,7 +262,7 @@ public class CreateCredentialRequest extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The <code>client_secret</code> of the OAuth protocol.</p>
+         * <p>The client_secret of the OAuth protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>nsklncmwizncxxxx</p>
@@ -299,13 +295,13 @@ public class CreateCredentialRequest extends TeaModel {
 
     public static class CreateCredentialRequestCredentialContent extends TeaModel {
         /**
-         * <p>The credential content of the API key type.</p>
+         * <p>The credential content of the API key credential type.</p>
          */
         @NameInMap("ApiKeyContent")
         public CreateCredentialRequestCredentialContentApiKeyContent apiKeyContent;
 
         /**
-         * <p>The credential content of the OAuth client type.</p>
+         * <p>The credential content of the OAuth client authentication credential type.</p>
          */
         @NameInMap("OAuthClientContent")
         public CreateCredentialRequestCredentialContentOAuthClientContent OAuthClientContent;

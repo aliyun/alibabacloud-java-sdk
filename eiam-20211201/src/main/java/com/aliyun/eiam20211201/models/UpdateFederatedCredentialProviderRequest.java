@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     /**
-     * <p>The ID of the federated credential provider.</p>
+     * <p>The federated trust source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public String federatedCredentialProviderId;
 
     /**
-     * <p>The name of the federated credential provider.</p>
+     * <p>The federated trust source name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the network access endpoint.</p>
+     * <p>The network access endpoint ID.</p>
      * 
      * <strong>example:</strong>
      * <p>nae_public</p>
@@ -44,7 +44,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>The OpenID Connect (OIDC) configuration.</p>
+     * <p>The OIDC configuration.</p>
      */
     @NameInMap("OidcProviderConfig")
     public UpdateFederatedCredentialProviderRequestOidcProviderConfig oidcProviderConfig;
@@ -56,7 +56,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
     public UpdateFederatedCredentialProviderRequestPkcs7ProviderConfig pkcs7ProviderConfig;
 
     /**
-     * <p>The configuration of the private certificate authority (CA).</p>
+     * <p>The private CA configuration.</p>
      */
     @NameInMap("PrivateCaProviderConfig")
     public UpdateFederatedCredentialProviderRequestPrivateCaProviderConfig privateCaProviderConfig;
@@ -130,7 +130,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public java.util.List<String> audiences;
 
         /**
-         * <p>The source of the JSON Web Key Set (JWKS).</p>
+         * <p>The JWKS source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String jwksSource;
 
         /**
-         * <p>JWKS endpoint</p>
+         * <p>The JWKS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/jwks">https://example.com/jwks</a></p>
@@ -149,7 +149,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String jwksUri;
 
         /**
-         * <p>The statically obtained JWKS.</p>
+         * <p>The statically retrieved JWKS.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -258,7 +258,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public java.util.List<UpdateFederatedCredentialProviderRequestPkcs7ProviderConfigCertificates> certificates;
 
         /**
-         * <p>The Cryptographic Message Syntax (CMS) verification mode.</p>
+         * <p>The CMS verification mode.</p>
          * 
          * <strong>example:</strong>
          * <p>cert</p>
@@ -276,7 +276,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public Long signatureEffectiveTime;
 
         /**
-         * <p>The expression to obtain the signing time.</p>
+         * <p>The expression used to retrieve the signing time.</p>
          * 
          * <strong>example:</strong>
          * <p>pkcs7.signingTime</p>
@@ -393,7 +393,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public java.util.List<UpdateFederatedCredentialProviderRequestPrivateCaProviderConfigCertificates> certificates;
 
         /**
-         * <p>The method to obtain the root certificate.</p>
+         * <p>The method used to retrieve the root certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class UpdateFederatedCredentialProviderRequest extends TeaModel {
         public String trustAnchorSource;
 
         /**
-         * <p>The trust condition for the root certificate.</p>
+         * <p>The trust condition of the root certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>

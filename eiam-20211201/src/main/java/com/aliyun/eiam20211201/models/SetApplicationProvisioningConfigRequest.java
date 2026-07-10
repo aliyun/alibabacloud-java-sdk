@@ -40,12 +40,10 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     public String networkAccessEndpointId;
 
     /**
-     * <p>Indicates whether to synchronize passwords for IDaaS user event callbacks. Valid values:</p>
+     * <p>Specifies whether IDaaS user event callbacks synchronize passwords. Valid values:</p>
      * <ul>
-     * <li><p>true: Synchronize passwords.</p>
-     * </li>
-     * <li><p>false: Do not synchronize passwords.</p>
-     * </li>
+     * <li>true: Passwords are synchronized.</li>
+     * <li>false: Passwords are not synchronized.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,12 +53,10 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     public Boolean provisionPassword;
 
     /**
-     * <p>The account synchronization protocol. Valid values:</p>
+     * <p>The account synchronization protocol type. Valid values:</p>
      * <ul>
-     * <li><p>idaas_callback: IDaaS custom event callback for account synchronization.</p>
-     * </li>
-     * <li><p>scim2: System for Cross-domain Identity Management (SCIM) protocol for synchronization.</p>
-     * </li>
+     * <li>idaas_callback: IDaaS custom event callback-based account synchronization.</li>
+     * <li>scim2: System for Cross-domain Identity Management protocol-based synchronization.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -71,7 +67,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     public String provisionProtocolType;
 
     /**
-     * <p>The IDaaS SCIM protocol synchronization configuration parameters. This parameter is required when ProvisionProtocolType is set to scim2.</p>
+     * <p>The IDaaS System for Cross-domain Identity Management protocol synchronization configuration parameters. This parameter is required when ProvisionProtocolType is set to scim2.</p>
      */
     @NameInMap("ScimProvisioningConfig")
     public SetApplicationProvisioningConfigRequestScimProvisioningConfig scimProvisioningConfig;
@@ -139,7 +135,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestCallbackProvisioningConfig extends TeaModel {
         /**
-         * <p>The destination address where the application accepts IDaaS event callbacks.</p>
+         * <p>The destination URL where the application receives IDaaS event callbacks.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/event/callback">https://example.com/event/callback</a></p>
@@ -148,7 +144,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String callbackUrl;
 
         /**
-         * <p>The symmetric key for encrypting and decrypting IDaaS event callbacks. The key uses the AES-256 algorithm and is in hexadecimal format.</p>
+         * <p>The symmetric encryption and decryption key for IDaaS event callbacks. The key uses the AES256 algorithm and is in hexadecimal encoding format.</p>
          * 
          * <strong>example:</strong>
          * <p>ad3b248**************************b3561a73d7</p>
@@ -157,12 +153,10 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>Indicates whether to encrypt IDaaS event callback messages. Valid values:</p>
+         * <p>Specifies whether IDaaS event callback messages are encrypted. Valid values:</p>
          * <ul>
-         * <li><p>true: Encrypt the messages.</p>
-         * </li>
-         * <li><p>false: Do not encrypt the messages. The messages are transmitted in plaintext.</p>
-         * </li>
+         * <li>true: Encrypted.</li>
+         * <li>false: Not encrypted. Messages are transmitted in plaintext.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +166,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public Boolean encryptRequired;
 
         /**
-         * <p>The list of message types for the IDaaS event callback listener.</p>
+         * <p>The list of IDaaS event callback message types to listen for.</p>
          */
         @NameInMap("ListenEventScopes")
         public java.util.List<String> listenEventScopes;
@@ -218,7 +212,7 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam extends TeaModel {
         /**
-         * <p>The access token. You can update this field when the grant type is bearer_token.</p>
+         * <p>The access token. This field can be updated when GrantType is set to bearer_token.</p>
          * 
          * <strong>example:</strong>
          * <p>k52x2ru63rlkflina5utgkxxxx</p>
@@ -227,12 +221,10 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String accessToken;
 
         /**
-         * <p>The authentication method for the SCIM protocol. Valid values:</p>
+         * <p>The System for Cross-domain Identity Management protocol authentication pattern. Valid values:</p>
          * <ul>
-         * <li><p>client_secret_basic: The key is passed in the request header.</p>
-         * </li>
-         * <li><p>client_secret_post: The key is passed in the request body.</p>
-         * </li>
+         * <li>client_secret_basic: Passes the secret through the request header.</li>
+         * <li>client_secret_post: Passes the secret through the request body.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -317,9 +309,9 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration extends TeaModel {
         /**
-         * <p>The authorization mode for the SCIM protocol interface. Valid values:</p>
+         * <p>The authorization pattern for the System for Cross-domain Identity Management protocol API. Valid values:</p>
          * <ul>
-         * <li>oauth2: OAuth2 mode.</li>
+         * <li>oauth2: OAuth2 pattern.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,24 +321,20 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
         public String authnMode;
 
         /**
-         * <p>The authorization configuration parameters. The usage is as follows:</p>
+         * <p>The authorization configuration parameters. Usage:</p>
          * <ul>
-         * <li><p>If GrantType is set to client_credentials, you can update ClientId, ClientSecret, and AuthnMethod.</p>
-         * </li>
-         * <li><p>If GrantType is set to bearer_token, you can update AccessToken.</p>
-         * </li>
+         * <li>If GrantType is set to client_credentials, you can update ClientId, ClientSecret, and AuthnMethod.</li>
+         * <li>If GrantType is set to bearer_token, you can update AccessToken.</li>
          * </ul>
          */
         @NameInMap("AuthnParam")
         public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam authnParam;
 
         /**
-         * <p>The authorization grant type for the SCIM protocol. Valid values:</p>
+         * <p>The System for Cross-domain Identity Management protocol authorization pattern. Valid values:</p>
          * <ul>
-         * <li><p>client_credentials: Client credentials mode.</p>
-         * </li>
-         * <li><p>bearer_token: Bearer token mode.</p>
-         * </li>
+         * <li>client_credentials: Client credentials pattern.</li>
+         * <li>bearer_token: Bearer token pattern.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -388,36 +376,33 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
 
     public static class SetApplicationProvisioningConfigRequestScimProvisioningConfig extends TeaModel {
         /**
-         * <p>The configuration parameters for SCIM protocol synchronization.</p>
+         * <p>The System for Cross-domain Identity Management protocol synchronization configuration parameters.</p>
          */
         @NameInMap("AuthnConfiguration")
         public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration authnConfiguration;
 
         /**
-         * <p>The scope of a full push for the SCIM protocol. Valid values:</p>
+         * <p>The System for Cross-domain Identity Management protocol full push scope. Valid values:</p>
          * <ul>
-         * <li>urn:alibaba:idaas:app:scim:User:PUSH: Full synchronization of users.</li>
+         * <li>urn:alibaba:idaas:app:scim:User:PUSH: Full user synchronization.</li>
          * </ul>
          */
         @NameInMap("FullPushScopes")
         public java.util.List<String> fullPushScopes;
 
         /**
-         * <p>The operations on the target resource for the SCIM protocol. Valid values:</p>
+         * <p>The System for Cross-domain Identity Management protocol target resource operation actions. Valid values:</p>
          * <ul>
-         * <li><p>urn:alibaba:idaas:app:scim:User:CREATE: Create an account.</p>
-         * </li>
-         * <li><p>urn:alibaba:idaas:app:scim:User:UPDATE: Update an account.</p>
-         * </li>
-         * <li><p>urn:alibaba:idaas:app:scim:User:DELETE: Delete an account.</p>
-         * </li>
+         * <li>urn:alibaba:idaas:app:scim:User:CREATE: Account creation.</li>
+         * <li>urn:alibaba:idaas:app:scim:User:UPDATE: Account update.</li>
+         * <li>urn:alibaba:idaas:app:scim:User:DELETE: Account deletion.</li>
          * </ul>
          */
         @NameInMap("ProvisioningActions")
         public java.util.List<String> provisioningActions;
 
         /**
-         * <p>The base URL where the application accepts IDaaS SCIM protocol synchronization.</p>
+         * <p>The base URL where the application accepts IDaaS synchronization requests based on the System for Cross-domain Identity Management protocol.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/scim">https://example.com/scim</a></p>

@@ -15,7 +15,7 @@ public class AuthorizeApplicationToUsersRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色ID。</p>
+     * <p>The application role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -34,7 +34,7 @@ public class AuthorizeApplicationToUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IDs of the users. A single request can contain up to 100 user IDs.</p>
+     * <p>The list of account IDs. You can specify up to 100 account IDs in a single request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

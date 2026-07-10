@@ -15,7 +15,7 @@ public class CreateApplicationRoleRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The name of the application role.</p>
+     * <p>The application role name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateApplicationRoleRequest extends TeaModel {
     public String applicationRoleName;
 
     /**
-     * <p>The value of the application role.</p>
+     * <p>The application role value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateApplicationRoleRequest extends TeaModel {
     public String applicationRoleValue;
 
     /**
-     * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

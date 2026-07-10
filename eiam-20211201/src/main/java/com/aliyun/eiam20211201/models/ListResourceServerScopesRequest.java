@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceServerScopesRequest extends TeaModel {
     /**
-     * <p>Application ID.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>Authorization type.</p>
+     * <p>The authorization type.</p>
      * 
      * <strong>example:</strong>
      * <p>authorize_required</p>
@@ -24,7 +24,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String authorizationType;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Number of rows per page in paginated queries.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,7 +43,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Token for the next page query. Set this to the NextToken value returned by the previous API call. Leave empty for the first query.</p>
+     * <p>The pagination token (NextToken) used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -52,7 +52,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Token for the previous page query. Set this to the PreviousToken value returned by the previous API call.</p>
+     * <p>The pagination token for the previous page. Set this parameter to the PreviousToken value returned in the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>
@@ -61,13 +61,13 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String previousToken;
 
     /**
-     * <p>List of Scope permission IDs.</p>
+     * <p>The list of scope permission IDs.</p>
      */
     @NameInMap("ResourceServerScopeIds")
     public java.util.List<String> resourceServerScopeIds;
 
     /**
-     * <p>Scope permission name.</p>
+     * <p>The scope permission name.</p>
      * 
      * <strong>example:</strong>
      * <p>读取全部用户</p>
@@ -76,7 +76,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String resourceServerScopeName;
 
     /**
-     * <p>Scope permission type.</p>
+     * <p>The scope permission type.</p>
      * 
      * <strong>example:</strong>
      * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
@@ -85,7 +85,7 @@ public class ListResourceServerScopesRequest extends TeaModel {
     public String resourceServerScopeType;
 
     /**
-     * <p>Scope permission value.</p>
+     * <p>The scope permission value.</p>
      * 
      * <strong>example:</strong>
      * <p>User:Write:ALL</p>

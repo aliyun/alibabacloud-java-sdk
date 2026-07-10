@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListCredentialProvidersRequest extends TeaModel {
     /**
-     * <p>List of credential provider IDs.</p>
+     * <p>The list of credential provider IDs.</p>
      */
     @NameInMap("CredentialProviderIds")
     public java.util.List<String> credentialProviderIds;
 
     /**
-     * <p>List of credential provider types.</p>
+     * <p>The list of credential provider types.</p>
      */
     @NameInMap("CredentialProviderTypes")
     public java.util.List<String> credentialProviderTypes;
 
     /**
-     * <p>List of filter conditions.</p>
+     * <p>The list of filter conditions.</p>
      */
     @NameInMap("Filter")
     public java.util.List<ListCredentialProvidersRequestFilter> filter;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Page size for paged queries.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Query token.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -51,7 +51,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>List of credential provider statuses.</p>
+     * <p>The list of credential provider statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
@@ -119,12 +119,10 @@ public class ListCredentialProvidersRequest extends TeaModel {
 
     public static class ListCredentialProvidersRequestFilter extends TeaModel {
         /**
-         * <p>Filter condition name. Valid values:</p>
+         * <p>The filter condition name. Valid values:</p>
          * <ul>
-         * <li><p>CredentialProviderName: Credential provider name.</p>
-         * </li>
-         * <li><p>CredentialProviderIdentifier: Credential provider identifier.</p>
-         * </li>
+         * <li>CredentialProviderName: the credential provider name.</li>
+         * <li>CredentialProviderIdentifier: the credential provider identifier.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +132,7 @@ public class ListCredentialProvidersRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>List of filter condition values.</p>
+         * <p>The list of filter condition values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

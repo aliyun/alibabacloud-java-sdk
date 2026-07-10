@@ -8,7 +8,7 @@ public class ListCredentialsRequest extends TeaModel {
     public java.util.List<String> credentialExternalIds;
 
     /**
-     * <p>The credential IDs.</p>
+     * <p>The list of credential IDs.</p>
      */
     @NameInMap("CredentialIds")
     public java.util.List<String> credentialIds;
@@ -36,12 +36,10 @@ public class ListCredentialsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li><p>Default value: 20.</p>
-     * </li>
-     * <li><p>Maximum value: 100.</p>
-     * </li>
+     * <li>Default value: 20.</li>
+     * <li>Maximum value: 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +49,7 @@ public class ListCredentialsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -60,7 +58,7 @@ public class ListCredentialsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The credential statuses.</p>
+     * <p>The list of credential statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
@@ -144,9 +142,9 @@ public class ListCredentialsRequest extends TeaModel {
 
     public static class ListCredentialsRequestFilter extends TeaModel {
         /**
-         * <p>The field to filter on. Valid value:</p>
+         * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li><code>CredentialIdentifier</code>: the credential identifier.</li>
+         * <li>CredentialIdentifier: the credential identifier.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +154,7 @@ public class ListCredentialsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The values for the specified filter field.</p>
+         * <p>The list of filter field values.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

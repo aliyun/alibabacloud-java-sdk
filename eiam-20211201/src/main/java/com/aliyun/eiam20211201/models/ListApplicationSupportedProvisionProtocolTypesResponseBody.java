@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends TeaModel {
     /**
-     * <p>The supported synchronization protocols for the application.</p>
+     * <p>The list of synchronization types supported by the application.</p>
      */
     @NameInMap("ApplicationSupportedProvisionProtocolType")
     public ListApplicationSupportedProvisionProtocolTypesResponseBodyApplicationSupportedProvisionProtocolType applicationSupportedProvisionProtocolType;
@@ -42,12 +42,10 @@ public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends 
 
     public static class ListApplicationSupportedProvisionProtocolTypesResponseBodyApplicationSupportedProvisionProtocolType extends TeaModel {
         /**
-         * <p>The account synchronization protocols that the application supports. Valid values:</p>
+         * <p>The account synchronization type supported by the application. Valid values:</p>
          * <ul>
-         * <li><p>idaas_callback: event callback.</p>
-         * </li>
-         * <li><p>scim2: System for Cross-domain Identity Management (SCIM) protocol.</p>
-         * </li>
+         * <li>idaas_callback: Event callback type.</li>
+         * <li>scim2: System for Cross-domain Identity Management protocol type.</li>
          * </ul>
          */
         @NameInMap("ProvisionProtocolType")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information about the application.</p>
+     * <p>The returned application information.</p>
      */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
@@ -41,15 +41,9 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationApplicationOwner extends TeaModel {
-        /**
-         * <p>The group IDs of the application owners.</p>
-         */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
 
-        /**
-         * <p>The user IDs of the application owners.</p>
-         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 
@@ -77,15 +71,9 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationCustomFields extends TeaModel {
-        /**
-         * <p>The custom field name.</p>
-         */
         @NameInMap("FieldName")
         public String fieldName;
 
-        /**
-         * <p>The custom field value.</p>
-         */
         @NameInMap("FieldValue")
         public String fieldValue;
 
@@ -116,10 +104,8 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * <p>The status of the Developer API feature for the application. Valid values:</p>
          * <ul>
-         * <li><p>enabled</p>
-         * </li>
-         * <li><p>disabled</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,12 +133,10 @@ public class GetApplicationResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The identity type of the application. Valid values:</p>
+         * <p>The application identity type. Valid values:</p>
          * <ul>
-         * <li><p>application: application.</p>
-         * </li>
-         * <li><p>agent: agent.</p>
-         * </li>
+         * <li>application: Application.</li>
+         * <li>agent: Agent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,19 +154,14 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ApplicationName")
         public String applicationName;
 
-        /**
-         * <p>The application owners.</p>
-         */
         @NameInMap("ApplicationOwner")
         public GetApplicationResponseBodyApplicationApplicationOwner applicationOwner;
 
         /**
          * <p>The source from which the application was created. Valid values:</p>
          * <ul>
-         * <li><p>urn:alibaba:idaas:app:source:template: The application was created from a template.</p>
-         * </li>
-         * <li><p>urn:alibaba:idaas:app:source:standard: The application was created based on a standard protocol.</p>
-         * </li>
+         * <li>urn:alibaba:idaas:app:source:template: Application template.</li>
+         * <li>urn:alibaba:idaas:app:source:standard: Standard protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,7 +171,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String applicationSourceType;
 
         /**
-         * <p>The ID of the application template that is associated with the application. This parameter is returned only if the application was created from a template.</p>
+         * <p>The ID of the application template associated during creation. This value is returned only when the application was created from an application template.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_rpa_tdsxxx</p>
@@ -201,18 +180,16 @@ public class GetApplicationResponseBody extends TeaModel {
         public String applicationTemplateId;
 
         /**
-         * <p>The visibility of the application.</p>
+         * <p>The application visibility.</p>
          */
         @NameInMap("ApplicationVisibility")
         public java.util.List<String> applicationVisibility;
 
         /**
-         * <p>The authorization type for application access. Valid values:</p>
+         * <p>The access authorization type of the application. Valid values:</p>
          * <ul>
-         * <li><p>authorize_required: Explicit authorization is required for access.</p>
-         * </li>
-         * <li><p>default_all: All members have access by default.</p>
-         * </li>
+         * <li>authorize_required: Explicit authorization is required for access.</li>
+         * <li>default_all: All members have access permissions by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +208,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The time when the application was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the application was created. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -239,14 +216,11 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
-        /**
-         * <p>The custom fields of the application.</p>
-         */
         @NameInMap("CustomFields")
         public java.util.List<GetApplicationResponseBodyApplicationCustomFields> customFields;
 
         /**
-         * <p>Indicates whether to customize the Subject field in the token. If this feature is enabled, the issued access token changes from \<clientId> to \<clientId>:\&lt;client.activeSubjectUrn&gt;. The client.activeSubjectUrn is set in the attribute mapping of the application\&quot;s federated identity provider.</p>
+         * <p>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from \&lt;clientId\&gt; to \&lt;clientId\&gt;:\&lt;client.activeSubjectUrn\&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -255,7 +229,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String customSubjectStatus;
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The application description.</p>
          * 
          * <strong>example:</strong>
          * <p>An application for test environment</p>
@@ -264,14 +238,11 @@ public class GetApplicationResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The features that the application supports. This parameter is returned as a JSON array string. Valid values:</p>
+         * <p>The features supported by the application, returned as a JSON array string. Valid values:</p>
          * <ul>
-         * <li><p>sso: single sign-on (SSO).</p>
-         * </li>
-         * <li><p>provision: account synchronization.</p>
-         * </li>
-         * <li><p>api_invoke: API calling.</p>
-         * </li>
+         * <li>sso: Single sign-on.</li>
+         * <li>provision: Account synchronization.</li>
+         * <li>api_invoke: API access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,7 +261,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The URL of the application icon.</p>
+         * <p>The URL of the application logo.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg">https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg</a></p>
@@ -299,7 +270,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String logoUrl;
 
         /**
-         * <p>The status of the M2M client.</p>
+         * <p>The M2MClient status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -308,7 +279,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String m2MClientStatus;
 
         /**
-         * <p>The service code of the cloud product that hosts the application template.</p>
+         * <p>The ServiceCode of the cloud service that manages the application template.</p>
          * 
          * <strong>example:</strong>
          * <p>rpa</p>
@@ -317,7 +288,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String managedServiceCode;
 
         /**
-         * <p>The unique identifier of the resource server. This corresponds to the audience of the resource server.</p>
+         * <p>The unique identifier of the ResourceServer, which corresponds to the ResourceServer audience.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -326,7 +297,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String resourceServerIdentifier;
 
         /**
-         * <p>The source type of the resource server.</p>
+         * <p>The resource server source type.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:cloud:idaas:resourceserver:source:custom</p>
@@ -335,7 +306,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String resourceServerSourceType;
 
         /**
-         * <p>The status of the resource server.</p>
+         * <p>The ResourceServer status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -344,7 +315,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String resourceServerStatus;
 
         /**
-         * <p>Indicates whether the application template is hosted by a cloud service.</p>
+         * <p>Indicates whether the application template is managed by a cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -356,16 +327,12 @@ public class GetApplicationResponseBody extends TeaModel {
         public java.util.List<String> smartConfigCapabilities;
 
         /**
-         * <p>The single sign-on (SSO) protocol. Valid values:</p>
+         * <p>The single sign-on protocol. Valid values:</p>
          * <ul>
-         * <li><p>saml2: SAML 2.0.</p>
-         * </li>
-         * <li><p>oidc: OpenID Connect.</p>
-         * </li>
-         * <li><p>oauth2/m2m: OAuth 2.0.</p>
-         * </li>
-         * <li><p>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0.</p>
-         * </li>
+         * <li>saml2: SAML 2.0 protocol.</li>
+         * <li>oidc: OpenID Connect protocol.</li>
+         * <li>oauth2/m2m: OAuth 2.0 protocol.</li>
+         * <li>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,10 +344,8 @@ public class GetApplicationResponseBody extends TeaModel {
         /**
          * <p>The application status. Valid values:</p>
          * <ul>
-         * <li><p>enabled</p>
-         * </li>
-         * <li><p>disabled</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,7 +355,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the application was last updated. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the application was last updated. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>

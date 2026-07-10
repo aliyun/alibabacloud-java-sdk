@@ -15,7 +15,7 @@ public class AddApplicationAccountToUserRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The name of the application account.</p>
+     * <p>The application account name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

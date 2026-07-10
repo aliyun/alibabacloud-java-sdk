@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAccountRolesRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The cloud account ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of records to return on each page.</p>
+     * <p>The maximum number of records per page.</p>
      * <ul>
-     * <li><p>The default value is 20.</p>
+     * <li><p>If this parameter is not specified, the default value is 20.</p>
      * </li>
      * <li><p>The maximum value is 100.</p>
      * </li>
@@ -46,7 +46,7 @@ public class ListCloudAccountRolesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that specifies the start of the next page of results.</p>
+     * <p>The token that identifies the start position of the next page.</p>
      * <ul>
      * <li>If this parameter is not specified, the query starts from the first page.</li>
      * </ul>
@@ -106,14 +106,10 @@ public class ListCloudAccountRolesRequest extends TeaModel {
         /**
          * <p>The name of the filter field. Valid values:</p>
          * <ul>
-         * <li><p>CloudAccountRoleId: The ID of the cloud role.</p>
-         * </li>
-         * <li><p>CloudAccountRoleName: The name of the cloud role.</p>
-         * </li>
-         * <li><p>CloudAccountRoleExternalId: The external ID of the cloud role.</p>
-         * </li>
-         * <li><p>CloudAccountRoleUsageType: The usage type of the cloud role.</p>
-         * </li>
+         * <li>CloudAccountRoleId: the cloud role ID.</li>
+         * <li>CloudAccountRoleName: the cloud role name.</li>
+         * <li>CloudAccountRoleExternalId: the external identifier of the cloud role.</li>
+         * <li>CloudAccountRoleUsageType: the usage type of the cloud role.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +119,7 @@ public class ListCloudAccountRolesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of values for the filter field.</p>
+         * <p>The values of the filter field.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;

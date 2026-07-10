@@ -11,7 +11,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
     public java.util.List<ListCloudAccountRolesResponseBodyCloudAccountRoles> cloudAccountRoles;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of rows per page in the paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>The pagination token returned in this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -38,7 +38,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -102,7 +102,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error description.</p>
          * 
          * <strong>example:</strong>
          * <p>There is no permission.</p>
@@ -135,13 +135,13 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
 
     public static class ListCloudAccountRolesResponseBodyCloudAccountRolesCloudAccountRoleHealthCheckResult extends TeaModel {
         /**
-         * <p>The reason for the error. This parameter is returned when the health check status is unhealthy.</p>
+         * <p>The error reason. This field is returned when the health check status is unhealthy.</p>
          */
         @NameInMap("ErrorReason")
         public ListCloudAccountRolesResponseBodyCloudAccountRolesCloudAccountRoleHealthCheckResultErrorReason errorReason;
 
         /**
-         * <p>The time of the last health check. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The last check time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -150,12 +150,10 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public Long lastCheckTime;
 
         /**
-         * <p>The result of the health check. Valid values:</p>
+         * <p>The health check result of the cloud role. Valid values:</p>
          * <ul>
-         * <li><p>success: The health check was successful.</p>
-         * </li>
-         * <li><p>failed: The health check failed.</p>
-         * </li>
+         * <li>success: succeeded.</li>
+         * <li>failed: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +195,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
 
     public static class ListCloudAccountRolesResponseBodyCloudAccountRoles extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -206,7 +204,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String cloudAccountId;
 
         /**
-         * <p>The external ID for the cloud role.</p>
+         * <p>The cloud role identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::xxx:role/role-test</p>
@@ -217,12 +215,9 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         /**
          * <p>The health status of the cloud role. Valid values:</p>
          * <ul>
-         * <li><p>healthy: The role is healthy.</p>
-         * </li>
-         * <li><p>unhealthy: The role is unhealthy.</p>
-         * </li>
-         * <li><p>unknown: The health status is unknown.</p>
-         * </li>
+         * <li>healthy: healthy.</li>
+         * <li>unhealthy: unhealthy.</li>
+         * <li>unknown: unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,13 +227,13 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String cloudAccountRoleHealth;
 
         /**
-         * <p>The result of the health check for the cloud role.</p>
+         * <p>The health check result of the cloud role.</p>
          */
         @NameInMap("CloudAccountRoleHealthCheckResult")
         public ListCloudAccountRolesResponseBodyCloudAccountRolesCloudAccountRoleHealthCheckResult cloudAccountRoleHealthCheckResult;
 
         /**
-         * <p>The ID of the cloud role.</p>
+         * <p>The cloud role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>carole_01kmek49aqxxxx</p>
@@ -247,7 +242,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String cloudAccountRoleId;
 
         /**
-         * <p>The name of the cloud role.</p>
+         * <p>The cloud role name.</p>
          * 
          * <strong>example:</strong>
          * <p>role-test</p>
@@ -256,9 +251,9 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String cloudAccountRoleName;
 
         /**
-         * <p>The type of the cloud role. The format of the role type varies based on the type of the cloud account. The following value is supported:</p>
+         * <p>The cloud role type. The specific format depends on the cloud account type. Valid values:</p>
          * <ul>
-         * <li>role: This value applies to Alibaba Cloud accounts.</li>
+         * <li>role: applicable to Alibaba Cloud accounts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,10 +265,8 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         /**
          * <p>The usage type of the cloud role. Valid values:</p>
          * <ul>
-         * <li><p>system: The role is used by the system.</p>
-         * </li>
-         * <li><p>user: The role is used by a user.</p>
-         * </li>
+         * <li>system: system.</li>
+         * <li>user: user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +276,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String cloudAccountRoleUsageType;
 
         /**
-         * <p>The time when the role was created. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719320115000</p>
@@ -292,7 +285,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the cloud role.</p>
+         * <p>The cloud role description.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_account_role_description</p>
@@ -310,12 +303,10 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the cloud role. Valid values:</p>
+         * <p>The cloud role status. Valid values:</p>
          * <ul>
-         * <li><p>enabled: The role is enabled.</p>
-         * </li>
-         * <li><p>disabled: The role is disabled.</p>
-         * </li>
+         * <li>enabled: enabled.</li>
+         * <li>disable: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +316,7 @@ public class ListCloudAccountRolesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the role was last updated. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The last update time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719320117000</p>

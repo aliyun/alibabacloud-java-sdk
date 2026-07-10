@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends TeaModel {
     /**
-     * <p>The ID of the resource server application.</p>
+     * <p>The application ID of the ResourceServer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends Te
     public String applicationId;
 
     /**
-     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client. This token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends Te
     public String instanceId;
 
     /**
-     * <p>The organization ID.</p>
+     * <p>The organizational unit ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class AuthorizeResourceServerScopesToOrganizationalUnitRequest extends Te
     public String organizationalUnitId;
 
     /**
-     * <p>A list of scope permission IDs for the resource server.</p>
+     * <p>The list of scope permission IDs under the ResourceServer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

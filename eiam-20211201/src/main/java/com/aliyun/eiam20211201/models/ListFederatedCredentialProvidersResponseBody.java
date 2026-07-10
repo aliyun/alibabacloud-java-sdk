@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
     /**
-     * <p>The list of federated credential providers.</p>
+     * <p>The list of federated trust sources.</p>
      */
     @NameInMap("FederatedCredentialProviders")
     public java.util.List<ListFederatedCredentialProvidersResponseBodyFederatedCredentialProviders> federatedCredentialProviders;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. This parameter is empty if all results have been returned.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -29,7 +29,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token for the previous page of results.</p>
+     * <p>The pagination token returned by this call.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxexample</p>
@@ -47,7 +47,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -154,7 +154,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String dynamicJwks;
 
         /**
-         * <p>The issuer.</p>
+         * <p>Issuer</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -163,7 +163,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The timestamp of the last JWKS retrieval.</p>
+         * <p>The time when the JWKS was last obtained.</p>
          * 
          * <strong>example:</strong>
          * <p>1729061324000</p>
@@ -181,7 +181,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String jwksSource;
 
         /**
-         * <p>The JSON Web Key Set (JWKS) endpoint.</p>
+         * <p>The JWKS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -290,7 +290,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificatesCertificateMetadata extends TeaModel {
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the certificate expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1729061324000</p>
@@ -299,7 +299,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public Long notAfter;
 
         /**
-         * <p>The validity start time.</p>
+         * <p>The effective period of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1729061324000</p>
@@ -332,13 +332,13 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificates extends TeaModel {
         /**
-         * <p>The metadata of the certificate.</p>
+         * <p>The certificate metadata.</p>
          */
         @NameInMap("CertificateMetadata")
         public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificatesCertificateMetadata certificateMetadata;
 
         /**
-         * <p>The content of the certificate.</p>
+         * <p>The certificate content.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -390,13 +390,13 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfig extends TeaModel {
         /**
-         * <p>A list of PKCS7 certificates.</p>
+         * <p>The list of PKCS7 certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificates> certificates;
 
         /**
-         * <p>The Cryptographic Message Syntax (CMS) verification mode.</p>
+         * <p>The CMS verification mode.</p>
          * 
          * <strong>example:</strong>
          * <p>cert</p>
@@ -405,7 +405,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String cmsVerificationMode;
 
         /**
-         * <p>The validity period of the signature.</p>
+         * <p>The signature effective time.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -414,7 +414,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public Long signatureEffectiveTime;
 
         /**
-         * <p>The expression used to obtain the signing time.</p>
+         * <p>The expression used to retrieve the signing time.</p>
          * 
          * <strong>example:</strong>
          * <p>pkcs7.payload.jsonData.audience.signingTime</p>
@@ -423,7 +423,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String signingTimeValueExpression;
 
         /**
-         * <p>The source of the certificate trust anchor.</p>
+         * <p>The certificate trust anchor source.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba_cloud</p>
@@ -497,7 +497,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificatesCertificateMetadata extends TeaModel {
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the certificate expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1729061324000</p>
@@ -506,7 +506,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public Long notAfter;
 
         /**
-         * <p>The validity start time.</p>
+         * <p>The effective period of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1729061324000</p>
@@ -539,13 +539,13 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificates extends TeaModel {
         /**
-         * <p>The metadata of the certificate.</p>
+         * <p>The certificate metadata.</p>
          */
         @NameInMap("CertificateMetadata")
         public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificatesCertificateMetadata certificateMetadata;
 
         /**
-         * <p>The content of the root certificate.</p>
+         * <p>The root certificate content.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----
@@ -556,7 +556,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The fingerprint of the root certificate.</p>
+         * <p>The root certificate fingerprint.</p>
          * 
          * <strong>example:</strong>
          * <p>2b18947a6a9fc7764fd8b5fb18a863b0c6daxxx</p>
@@ -597,13 +597,13 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
 
     public static class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfig extends TeaModel {
         /**
-         * <p>A list of root certificates.</p>
+         * <p>The root certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificates> certificates;
 
         /**
-         * <p>The method for obtaining the root certificate.</p>
+         * <p>The method used to retrieve the root certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -656,7 +656,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersCloudIdPProviderConfig cloudIdPProviderConfig;
 
         /**
-         * <p>The provider\&quot;s creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1729061324000</p>
@@ -665,7 +665,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The provider\&quot;s description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -674,7 +674,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the federated credential provider.</p>
+         * <p>The federated trust source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fcp_asda123XXX</p>
@@ -683,7 +683,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String federatedCredentialProviderId;
 
         /**
-         * <p>The name of the federated credential provider.</p>
+         * <p>The name of the federated trust source.</p>
          * 
          * <strong>example:</strong>
          * <p>pkcs7test</p>
@@ -692,7 +692,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String federatedCredentialProviderName;
 
         /**
-         * <p>The type of the federated credential provider.</p>
+         * <p>The type of the federated trust source.</p>
          * 
          * <strong>example:</strong>
          * <p>pkcs7</p>
@@ -710,7 +710,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the network access endpoint.</p>
+         * <p>The network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>inae_public</p>
@@ -719,7 +719,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>The OpenID Connect (OIDC) configuration.</p>
+         * <p>The OIDC configuration.</p>
          */
         @NameInMap("OidcProviderConfig")
         public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersOidcProviderConfig oidcProviderConfig;
@@ -737,7 +737,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfig privateCaProviderConfig;
 
         /**
-         * <p>The provider\&quot;s status.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -746,7 +746,7 @@ public class ListFederatedCredentialProvidersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The provider\&quot;s last update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1729061324000</p>

@@ -15,7 +15,7 @@ public class DisableApplicationTokenRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the application token.</p>
+     * <p>The application token ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

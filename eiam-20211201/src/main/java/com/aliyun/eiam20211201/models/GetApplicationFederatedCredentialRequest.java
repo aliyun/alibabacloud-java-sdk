@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationFederatedCredentialRequest extends TeaModel {
     /**
-     * <p>The ID of the application\&quot;s federated credential.</p>
+     * <p>The application federated credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

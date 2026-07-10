@@ -324,7 +324,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The most recent update time. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830227000</p>

@@ -15,7 +15,7 @@ public class RevokeApplicationFromUsersRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色ID。</p>
+     * <p>The application role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -34,7 +34,7 @@ public class RevokeApplicationFromUsersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of account IDs. A single operation supports up to 100 account IDs.</p>
+     * <p>The list of account IDs. A maximum of 100 account IDs are supported in a single operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

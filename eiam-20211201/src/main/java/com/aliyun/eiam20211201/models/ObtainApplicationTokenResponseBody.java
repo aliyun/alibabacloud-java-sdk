@@ -69,7 +69,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         public String applicationTokenId;
 
         /**
-         * <p>The type of the application token.</p>
+         * <p>The application token type.</p>
          * 
          * <strong>example:</strong>
          * <p>bearer_token</p>
@@ -96,7 +96,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
-         * <p>The ID of the IDaaS EIAM instance.</p>
+         * <p>The IDaaS EIAM instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ki6hd7ihir4ybawogqk6kqxxxx</p>
@@ -105,7 +105,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the token was last used.</p>
+         * <p>The last used time.</p>
          * 
          * <strong>example:</strong>
          * <p>1735610930000</p>
@@ -114,7 +114,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>The status.</p>
+         * <p>The enabling status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

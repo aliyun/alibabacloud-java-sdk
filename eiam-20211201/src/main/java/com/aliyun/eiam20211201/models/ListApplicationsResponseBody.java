@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The list of applications.</p>
+     * <p>The list of application information.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsResponseBodyApplications> applications;
@@ -59,7 +59,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyApplications extends TeaModel {
         /**
-         * <p>Indicates how the application was created.</p>
+         * <p>The application creation type.</p>
          * 
          * <strong>example:</strong>
          * <p>user_custom</p>
@@ -77,7 +77,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The identity type of the application.</p>
+         * <p>The application identity type.</p>
          * 
          * <strong>example:</strong>
          * <p>application</p>
@@ -86,7 +86,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationIdentityType;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>SAML Application</p>
@@ -95,12 +95,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The source used to create the application. Valid values:</p>
+         * <p>The application creation source. Valid values:</p>
          * <ul>
-         * <li><p><code>urn:alibaba:idaas:app:source:template</code>: Application template.</p>
-         * </li>
-         * <li><p><code>urn:alibaba:idaas:app:source:standard</code>: Standard protocol.</p>
-         * </li>
+         * <li>urn:alibaba:idaas:app:source:template: Application template.</li>
+         * <li>urn:alibaba:idaas:app:source:standard: Standard protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +108,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationSourceType;
 
         /**
-         * <p>The ID of the application template.</p>
+         * <p>The application template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_xxx_xxx</p>
@@ -128,7 +126,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The time the application was created, as a Unix timestamp in milliseconds.</p>
+         * <p>The time when the application was created, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -137,7 +135,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The application description.</p>
          * 
          * <strong>example:</strong>
          * <p>A test application</p>
@@ -146,22 +144,15 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>A string containing a JSON array of features supported by the application. Valid values:</p>
+         * <p>The features supported by the application, returned as a JSON array string. Valid values:</p>
          * <ul>
-         * <li><p><code>sso</code>: SSO.</p>
-         * </li>
-         * <li><p><code>slo</code>: SLO.</p>
-         * </li>
-         * <li><p><code>provision</code>: Provisioning.</p>
-         * </li>
-         * <li><p><code>api_invoke</code>: API invocation.</p>
-         * </li>
-         * <li><p><code>m2m_client</code>: M2M client.</p>
-         * </li>
-         * <li><p><code>resource_server</code>: Resource server.</p>
-         * </li>
-         * <li><p><code>other</code>: Other.</p>
-         * </li>
+         * <li>sso: Single sign-on.</li>
+         * <li>slo: Single logout.</li>
+         * <li>provision: Account synchronization.</li>
+         * <li>api_invoke: API access. </li>
+         * <li>m2m_client: M2M Client capability.</li>
+         * <li>resource_server: API service capability.</li>
+         * <li>other: Fallback.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +180,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String logoUrl;
 
         /**
-         * <p>The service code of the cloud service that manages the application template.</p>
+         * <p>The ServiceCode of the Alibaba Cloud service that manages the application template.</p>
          * 
          * <strong>example:</strong>
          * <p>rpa</p>
@@ -198,7 +189,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String managedServiceCode;
 
         /**
-         * <p>The unique identifier of the resource server.</p>
+         * <p>The unique identifier of the ResourceServer.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com">https://example.com</a></p>
@@ -207,7 +198,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String resourceServerIdentifier;
 
         /**
-         * <p>The source type of the resource server.</p>
+         * <p>The resource server source type.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:cloud:idaas:resourceserver:source:custom</p>
@@ -216,7 +207,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String resourceServerSourceType;
 
         /**
-         * <p>The status of the resource server.</p>
+         * <p>The resource server status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -225,7 +216,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String resourceServerStatus;
 
         /**
-         * <p>Indicates whether the application template is managed by a cloud service.</p>
+         * <p>Indicates whether the application template is managed by an Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -234,16 +225,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The SSO protocol. Valid values:</p>
+         * <p>The single sign-on (SSO) logon protocol. Valid values:</p>
          * <ul>
-         * <li><p><code>saml2</code>: SAML 2.0</p>
-         * </li>
-         * <li><p><code>oidc</code>: OpenID Connect (OIDC)</p>
-         * </li>
-         * <li><p><code>oauth2/m2m</code>: OAuth 2.0</p>
-         * </li>
-         * <li><p><code>oidc+oauth2/m2m</code>: OIDC and OAuth 2.0</p>
-         * </li>
+         * <li>saml2: SAML 2.0 protocol.</li>
+         * <li>oidc: OpenID Connect protocol.</li>
+         * <li>oauth2/m2m: OAuth 2.0 protocol.</li>
+         * <li>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,14 +240,11 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String ssoType;
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The application status. Valid values:</p>
          * <ul>
-         * <li><p><code>enabled</code>: The application is enabled.</p>
-         * </li>
-         * <li><p><code>disabled</code>: The application is disabled.</p>
-         * </li>
-         * <li><p><code>deleted</code>: The application is soft-deleted.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
+         * <li>deleted: Soft deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +254,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time the application was last updated, as a Unix timestamp in milliseconds.</p>
+         * <p>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>

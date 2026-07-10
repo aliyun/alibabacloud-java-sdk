@@ -27,13 +27,13 @@ public class UpdateApplicationInfoRequest extends TeaModel {
     public UpdateApplicationInfoRequestApplicationOwner applicationOwner;
 
     /**
-     * <p>The collection of application visibility settings.</p>
+     * <p>The application visibility settings.</p>
      */
     @NameInMap("ApplicationVisibility")
     public java.util.List<String> applicationVisibility;
 
     /**
-     * <p>The idempotent token.</p>
+     * <p>The idempotence token.</p>
      * 
      * <strong>example:</strong>
      * <p>client-token-example</p>

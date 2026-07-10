@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableApplicationFederatedCredentialRequest extends TeaModel {
     /**
-     * <p>The ID of the federated credential for the application.</p>
+     * <p>The application federated identity credential ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -42,7 +42,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
 
     public static class ListApplicationTokensResponseBodyApplicationTokens extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account ID.</p>
+         * <p>aliUid。</p>
          * 
          * <strong>example:</strong>
          * <p>1973166921975xxxx</p>
@@ -60,7 +60,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The application token.</p>
+         * <p>The application tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYktxxxx</p>
@@ -69,7 +69,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String applicationToken;
 
         /**
-         * <p>The ID of the application token.</p>
+         * <p>The application token ID.</p>
          * 
          * <strong>example:</strong>
          * <p>token_ndfxxigahelfne2y2hodehrxxxx</p>
@@ -78,7 +78,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public String applicationTokenId;
 
         /**
-         * <p>The type of the application token.</p>
+         * <p>The application token type.</p>
          * 
          * <strong>example:</strong>
          * <p>bearer_token</p>
@@ -96,7 +96,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the application token.</p>
+         * <p>The application token description.</p>
          * 
          * <strong>example:</strong>
          * <p>jwqtts-0430</p>
@@ -114,7 +114,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
-         * <p>The ID of the IDaaS EIAM instance.</p>
+         * <p>The IDaaS EIAM instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ki6hd7ihir4ybawogqk6kqxxxx</p>
@@ -132,7 +132,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>The status.</p>
+         * <p>The enabling status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>

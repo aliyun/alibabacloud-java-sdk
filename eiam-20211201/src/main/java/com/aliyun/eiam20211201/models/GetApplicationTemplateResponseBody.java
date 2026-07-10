@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationTemplateResponseBody extends TeaModel {
     /**
-     * <p>The details of the application template.</p>
+     * <p>The application template information.</p>
      */
     @NameInMap("ApplicationTemplate")
     public GetApplicationTemplateResponseBodyApplicationTemplate applicationTemplate;
@@ -42,7 +42,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
 
     public static class GetApplicationTemplateResponseBodyApplicationTemplateSaleInfo extends TeaModel {
         /**
-         * <p>Indicates whether the application template is permanently free.</p>
+         * <p>Indicates whether the application template is always free.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -67,7 +67,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
 
     public static class GetApplicationTemplateResponseBodyApplicationTemplate extends TeaModel {
         /**
-         * <p>The ID of the application template.</p>
+         * <p>The application template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_ramintlrole_ixxxxx</p>
@@ -76,7 +76,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public String applicationTemplateId;
 
         /**
-         * <p>The name of the application template.</p>
+         * <p>The application template name.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud</p>
@@ -94,7 +94,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the application template.</p>
+         * <p>The application template description.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud SSO</p>
@@ -103,7 +103,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The URL of the help document for the application template.</p>
+         * <p>The help document URL of the application template.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/document_detail/409xxx.html">https://example.com/document_detail/409xxx.html</a></p>
@@ -112,7 +112,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public String helpDocumentUrl;
 
         /**
-         * <p>The URL of the logo for the application template.</p>
+         * <p>The logo URL of the application template.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png">https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png</a></p>
@@ -130,13 +130,13 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public String managedServiceCode;
 
         /**
-         * <p>The sales information about the application template.</p>
+         * <p>The sale information of the application template.</p>
          */
         @NameInMap("SaleInfo")
         public GetApplicationTemplateResponseBodyApplicationTemplateSaleInfo saleInfo;
 
         /**
-         * <p>The URL of the console for the Alibaba Cloud service that manages the application template.</p>
+         * <p>The console URL of the Alibaba Cloud service that manages the application template.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/?p=bastion">https://example.com/?p=bastion</a></p>
@@ -154,7 +154,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The supported Single Sign-On (SSO) protocols.</p>
+         * <p>The supported SSO protocols.</p>
          */
         @NameInMap("SsoTypes")
         public java.util.List<String> ssoTypes;

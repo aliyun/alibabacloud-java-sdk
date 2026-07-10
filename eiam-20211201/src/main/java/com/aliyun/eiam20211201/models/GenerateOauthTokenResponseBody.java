@@ -42,7 +42,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
 
     public static class GenerateOauthTokenResponseBodyTokenResponse extends TeaModel {
         /**
-         * <p>The access token.</p>
+         * <p>Access Token。</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -51,7 +51,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         public String accessToken;
 
         /**
-         * <p>The expiration time, in Unix timestamp format (seconds since epoch).</p>
+         * <p>The expiration time, in UNIX timestamp format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1770186372</p>
@@ -69,7 +69,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         public Long expiresIn;
 
         /**
-         * <p>The token type. Only Bearer is supported.</p>
+         * <p>The token type. Currently, only Bearer is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Bearer</p>

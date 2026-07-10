@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApplicationRoleResponseBody extends TeaModel {
     /**
-     * <p>The details of the application role.</p>
+     * <p>The application role information.</p>
      */
     @NameInMap("ApplicationRole")
     public GetApplicationRoleResponseBodyApplicationRole applicationRole;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -42,7 +42,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
 
     public static class GetApplicationRoleResponseBodyApplicationRole extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -51,7 +51,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The ID of the application role.</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>approle_01kh2vuo8v9splv8maak1d22rxxxx</p>
@@ -60,7 +60,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
         public String applicationRoleId;
 
         /**
-         * <p>The name of the application role.</p>
+         * <p>The application role name.</p>
          * 
          * <strong>example:</strong>
          * <p>Admin Role</p>
@@ -69,7 +69,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
         public String applicationRoleName;
 
         /**
-         * <p>The value of the application role.</p>
+         * <p>The application role value.</p>
          * 
          * <strong>example:</strong>
          * <p>admin_role</p>
@@ -78,7 +78,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
         public String applicationRoleValue;
 
         /**
-         * <p>The description of the application role.</p>
+         * <p>The application role description.</p>
          * 
          * <strong>example:</strong>
          * <p>Admin Role Description</p>
@@ -87,7 +87,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxx</p>

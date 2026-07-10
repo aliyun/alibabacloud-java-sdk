@@ -15,7 +15,7 @@ public class AuthorizeApplicationToGroupsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>应用角色ID。</p>
+     * <p>The application role ID.</p>
      * 
      * <strong>example:</strong>
      * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -24,7 +24,7 @@ public class AuthorizeApplicationToGroupsRequest extends TeaModel {
     public String applicationRoleId;
 
     /**
-     * <p>The list of group IDs. You can specify up to 100 group IDs.</p>
+     * <p>The list of group IDs. You can specify up to 100 group IDs in a single request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

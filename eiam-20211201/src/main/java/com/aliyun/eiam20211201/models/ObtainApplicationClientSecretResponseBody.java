@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObtainApplicationClientSecretResponseBody extends TeaModel {
     /**
-     * <p>The secret information.</p>
+     * <p>The client secret information.</p>
      */
     @NameInMap("ApplicationClientSecret")
     public ObtainApplicationClientSecretResponseBodyApplicationClientSecret applicationClientSecret;
@@ -69,7 +69,7 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
         public String clientSecret;
 
         /**
-         * <p>The expiration time of the client secret. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The expiration time of the client secret. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1749830226000</p>
@@ -87,7 +87,7 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The last time the client secret was used. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the client secret was last used. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -107,10 +107,8 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
         /**
          * <p>The status of the client secret. Valid values:</p>
          * <ul>
-         * <li><p>enabled: The secret is enabled.</p>
-         * </li>
-         * <li><p>disabled: The secret is disabled.</p>
-         * </li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

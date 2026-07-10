@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeResourceServerToClientRequest extends TeaModel {
     /**
-     * <p>The unique ID of the client application.</p>
+     * <p>The unique identifier of the Client application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AuthorizeResourceServerToClientRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the resource server application.</p>
+     * <p>The ID of the ResourceServer application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

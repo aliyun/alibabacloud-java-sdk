@@ -25,7 +25,7 @@ public class CreateClientPublicKeyRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>A client token used to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The ClientToken value can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class CreateClientPublicKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The public key in the Subject Public Key Info (SPKI) type of the Privacy-Enhanced Mail (PEM) format. The key must start with -----BEGIN PUBLIC KEY----- and end with -----END PUBLIC KEY-----.</p>
+     * <p>The public key in PEM format. The key must be of the SPKI type, starting with &quot;-----BEGIN PUBLIC KEY-----&quot; and ending with &quot;-----END PUBLIC KEY-----&quot;.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

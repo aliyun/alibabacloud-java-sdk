@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFederatedCredentialProvidersRequest extends TeaModel {
     /**
-     * <p>The name of the federated credential provider.</p>
+     * <p>The name of the federated trust source.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class ListFederatedCredentialProvidersRequest extends TeaModel {
     public String federatedCredentialProviderName;
 
     /**
-     * <p>The type of the federated credential provider.</p>
+     * <p>The type of the federated trust source.</p>
      * 
      * <strong>example:</strong>
      * <p>pkcs7</p>
@@ -33,7 +33,7 @@ public class ListFederatedCredentialProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class ListFederatedCredentialProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxxxexample</p>
@@ -51,7 +51,7 @@ public class ListFederatedCredentialProvidersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The token to retrieve the previous page of results.</p>
+     * <p>The token used to query the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>PTxxxxxexample</p>

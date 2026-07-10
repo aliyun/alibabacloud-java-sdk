@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFederatedCredentialProviderDescriptionRequest extends TeaModel {
     /**
-     * <p>The description of the federated credential provider.</p>
+     * <p>The description of the federated trust source.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class UpdateFederatedCredentialProviderDescriptionRequest extends TeaMode
     public String description;
 
     /**
-     * <p>The federated credential provider ID.</p>
+     * <p>The federated trust source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

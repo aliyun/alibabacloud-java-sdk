@@ -15,7 +15,7 @@ public class GetClientPublicKeyRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The ID of the application\&quot;s ClientPublicKey.</p>
+     * <p>The ID of the application ClientPublicKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

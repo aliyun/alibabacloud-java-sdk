@@ -15,7 +15,7 @@ public class ListApplicationTokensRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The type of the application token.</p>
+     * <p>The application token type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

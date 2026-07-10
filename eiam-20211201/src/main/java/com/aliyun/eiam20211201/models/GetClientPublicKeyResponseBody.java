@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClientPublicKeyResponseBody extends TeaModel {
     /**
-     * <p>Information about the application\&quot;s ClientPublicKey.</p>
+     * <p>The application ClientPublicKey information.</p>
      */
     @NameInMap("ClientPublicKey")
     public GetClientPublicKeyResponseBodyClientPublicKey clientPublicKey;
@@ -60,7 +60,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The ID of the application\&quot;s ClientPublicKey.</p>
+         * <p>The ID of the application ClientPublicKey.</p>
          * 
          * <strong>example:</strong>
          * <p>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</p>
@@ -69,7 +69,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String clientPublicKeyId;
 
         /**
-         * <p>The time when the public key was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1731305755000</p>
@@ -87,7 +87,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the key was last used.</p>
+         * <p>The last time the key pair was used.</p>
          * 
          * <strong>example:</strong>
          * <p>1771305755000</p>
@@ -96,7 +96,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>Indicates whether this is the primary key.</p>
+         * <p>Indicates whether the key pair is used with priority.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

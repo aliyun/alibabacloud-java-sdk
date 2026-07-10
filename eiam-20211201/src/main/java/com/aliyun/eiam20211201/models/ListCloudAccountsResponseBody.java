@@ -11,7 +11,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public java.util.List<ListCloudAccountsResponseBodyCloudAccounts> cloudAccounts;
 
     /**
-     * <p>The number of rows per page for paging.</p>
+     * <p>The number of rows per page when paging is used.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token returned for the current call.</p>
+     * <p>The token returned for the current call to indicate the starting position of the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>NTxxxexample</p>
@@ -152,8 +152,8 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         /**
          * <p>The health check result of the cloud account. Valid values:</p>
          * <ul>
-         * <li>success: Succeeded.</li>
-         * <li>failed: Failed.</li>
+         * <li>success: The health check succeeded.</li>
+         * <li>failed: The health check failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

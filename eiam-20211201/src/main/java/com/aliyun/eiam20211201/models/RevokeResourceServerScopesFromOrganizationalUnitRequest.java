@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevokeResourceServerScopesFromOrganizationalUnitRequest extends TeaModel {
     /**
-     * <p>The ID of the ResourceServer application.</p>
+     * <p>The ResourceServer application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RevokeResourceServerScopesFromOrganizationalUnitRequest extends Tea
     public String instanceId;
 
     /**
-     * <p>The organization ID.</p>
+     * <p>The organizational unit ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class RevokeResourceServerScopesFromOrganizationalUnitRequest extends Tea
     public String organizationalUnitId;
 
     /**
-     * <p>A list of scope permission IDs for the resource server.</p>
+     * <p>The list of Scope permission IDs under the ResourceServer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

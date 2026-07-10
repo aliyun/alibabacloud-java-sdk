@@ -82,9 +82,274 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig extends TeaModel {
+        @NameInMap("PrincipalId")
+        public String principalId;
+
+        @NameInMap("ResourceGroupName")
+        public String resourceGroupName;
+
+        @NameInMap("SubscriptionId")
+        public String subscriptionId;
+
+        @NameInMap("VmNames")
+        public java.util.List<String> vmNames;
+
+        public static GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig self = new GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig setPrincipalId(String principalId) {
+            this.principalId = principalId;
+            return this;
+        }
+        public String getPrincipalId() {
+            return this.principalId;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig setResourceGroupName(String resourceGroupName) {
+            this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+        public String getResourceGroupName() {
+            return this.resourceGroupName;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig setSubscriptionId(String subscriptionId) {
+            this.subscriptionId = subscriptionId;
+            return this;
+        }
+        public String getSubscriptionId() {
+            return this.subscriptionId;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig setVmNames(java.util.List<String> vmNames) {
+            this.vmNames = vmNames;
+            return this;
+        }
+        public java.util.List<String> getVmNames() {
+            return this.vmNames;
+        }
+
+    }
+
+    public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig extends TeaModel {
+        /**
+         * <p>The list of VM instance IDs. A maximum of 10 instance IDs are supported.</p>
+         */
+        @NameInMap("InstanceIds")
+        public java.util.List<String> instanceIds;
+
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        /**
+         * <p>The service account ID that corresponds to the sub claim.</p>
+         */
+        @NameInMap("ServiceAccountId")
+        public String serviceAccountId;
+
+        public static GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig self = new GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig setInstanceIds(java.util.List<String> instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig setServiceAccountId(String serviceAccountId) {
+            this.serviceAccountId = serviceAccountId;
+            return this;
+        }
+        public String getServiceAccountId() {
+            return this.serviceAccountId;
+        }
+
+    }
+
+    public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig extends TeaModel {
+        @NameInMap("Subject")
+        public String subject;
+
+        public static GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig self = new GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig setSubject(String subject) {
+            this.subject = subject;
+            return this;
+        }
+        public String getSubject() {
+            return this.subject;
+        }
+
+    }
+
+    public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig extends TeaModel {
+        /**
+         * <p>The Kubernetes namespace.</p>
+         */
+        @NameInMap("Namespace")
+        public String namespace;
+
+        /**
+         * <p>The pod name prefix.</p>
+         */
+        @NameInMap("PodNamePrefix")
+        public String podNamePrefix;
+
+        /**
+         * <p>The Kubernetes service account name.</p>
+         */
+        @NameInMap("ServiceAccountName")
+        public String serviceAccountName;
+
+        public static GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig self = new GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig setPodNamePrefix(String podNamePrefix) {
+            this.podNamePrefix = podNamePrefix;
+            return this;
+        }
+        public String getPodNamePrefix() {
+            return this.podNamePrefix;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig setServiceAccountName(String serviceAccountName) {
+            this.serviceAccountName = serviceAccountName;
+            return this;
+        }
+        public String getServiceAccountName() {
+            return this.serviceAccountName;
+        }
+
+    }
+
+    public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig extends TeaModel {
+        /**
+         * <p>The Azure VM scenario configuration.</p>
+         */
+        @NameInMap("AzureVmConfig")
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig azureVmConfig;
+
+        /**
+         * <p>The GCP VM scenario configuration.</p>
+         */
+        @NameInMap("GcpVmConfig")
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig gcpVmConfig;
+
+        @NameInMap("GenericConfig")
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig genericConfig;
+
+        /**
+         * <p>The Kubernetes scenario configuration.</p>
+         */
+        @NameInMap("KubernetesConfig")
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig kubernetesConfig;
+
+        /**
+         * <p>The OIDC scenario profile. Valid values: generic, kubernetes, gcp_vm, and azure_vm.</p>
+         */
+        @NameInMap("Profile")
+        public String profile;
+
+        public static GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig self = new GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig setAzureVmConfig(GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig azureVmConfig) {
+            this.azureVmConfig = azureVmConfig;
+            return this;
+        }
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigAzureVmConfig getAzureVmConfig() {
+            return this.azureVmConfig;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig setGcpVmConfig(GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig gcpVmConfig) {
+            this.gcpVmConfig = gcpVmConfig;
+            return this;
+        }
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGcpVmConfig getGcpVmConfig() {
+            return this.gcpVmConfig;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig setGenericConfig(GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig genericConfig) {
+            this.genericConfig = genericConfig;
+            return this;
+        }
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigGenericConfig getGenericConfig() {
+            return this.genericConfig;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig setKubernetesConfig(GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig kubernetesConfig) {
+            this.kubernetesConfig = kubernetesConfig;
+            return this;
+        }
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfigKubernetesConfig getKubernetesConfig() {
+            return this.kubernetesConfig;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+    }
+
+    public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig extends TeaModel {
+        /**
+         * <p>The list of allowed instance IDs. A maximum of 10 instance IDs are supported.</p>
+         */
+        @NameInMap("InstanceIds")
+        public java.util.List<String> instanceIds;
+
+        public static GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig self = new GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig setInstanceIds(java.util.List<String> instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public java.util.List<String> getInstanceIds() {
+            return this.instanceIds;
+        }
+
+    }
+
     public static class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential extends TeaModel {
         /**
-         * <p>The ID of the application\&quot;s federated credential.</p>
+         * <p>The application federated credential ID.</p>
          * 
          * <strong>example:</strong>
          * <p>afc_aaaaa1111</p>
@@ -93,7 +358,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String applicationFederatedCredentialId;
 
         /**
-         * <p>The name of the application\&quot;s federated credential.</p>
+         * <p>The application federated credential name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -102,7 +367,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String applicationFederatedCredentialName;
 
         /**
-         * <p>The type of the application\&quot;s federated credential.</p>
+         * <p>The application federated credential type.</p>
          * 
          * <strong>example:</strong>
          * <p>oidc</p>
@@ -135,7 +400,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the application\&quot;s federated credential.</p>
+         * <p>The application federated credential description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -144,7 +409,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the federated credential provider.</p>
+         * <p>The federated trust source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>fcp_asda1dasdxxxx</p>
@@ -171,7 +436,19 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         public Long lastUsedTime;
 
         /**
-         * <p>The status of the application\&quot;s federated credential.</p>
+         * <p>The OIDC structured configuration. This parameter applies when the verification mode is structured and the credential type is oidc.</p>
+         */
+        @NameInMap("OidcVerificationConfig")
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig oidcVerificationConfig;
+
+        /**
+         * <p>The PKCS#7 structured configuration. This parameter applies when the verification mode is structured and the credential type is pkcs7.</p>
+         */
+        @NameInMap("Pkcs7VerificationConfig")
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig pkcs7VerificationConfig;
+
+        /**
+         * <p>The application federated credential status.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -196,6 +473,12 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
          */
         @NameInMap("VerificationCondition")
         public String verificationCondition;
+
+        /**
+         * <p>The verification mode. Valid values: freedom and structured.</p>
+         */
+        @NameInMap("VerificationMode")
+        public String verificationMode;
 
         public static GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential self = new GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential();
@@ -282,6 +565,22 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             return this.lastUsedTime;
         }
 
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential setOidcVerificationConfig(GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig oidcVerificationConfig) {
+            this.oidcVerificationConfig = oidcVerificationConfig;
+            return this;
+        }
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialOidcVerificationConfig getOidcVerificationConfig() {
+            return this.oidcVerificationConfig;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential setPkcs7VerificationConfig(GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig pkcs7VerificationConfig) {
+            this.pkcs7VerificationConfig = pkcs7VerificationConfig;
+            return this;
+        }
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialPkcs7VerificationConfig getPkcs7VerificationConfig() {
+            return this.pkcs7VerificationConfig;
+        }
+
         public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential setStatus(String status) {
             this.status = status;
             return this;
@@ -304,6 +603,14 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         }
         public String getVerificationCondition() {
             return this.verificationCondition;
+        }
+
+        public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential setVerificationMode(String verificationMode) {
+            this.verificationMode = verificationMode;
+            return this;
+        }
+        public String getVerificationMode() {
+            return this.verificationMode;
         }
 
     }

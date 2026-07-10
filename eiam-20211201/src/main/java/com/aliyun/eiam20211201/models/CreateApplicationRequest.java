@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>The identity type of the application. The default value is application. Valid values:</p>
+     * <p>The application identity type. Default value: application. Valid values:</p>
      * <ul>
-     * <li><p>application: A standard application.</p>
-     * </li>
-     * <li><p>agent: An automated agent.</p>
-     * </li>
+     * <li>application: application.</li>
+     * <li>agent: agent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,12 +31,10 @@ public class CreateApplicationRequest extends TeaModel {
     public CreateApplicationRequestApplicationOwner applicationOwner;
 
     /**
-     * <p>Specifies how the application is created. Valid values:</p>
+     * <p>The source from which the application is created. Valid values:</p>
      * <ul>
-     * <li><p>urn:alibaba:idaas:app:source:template: Creates the application from an application template.</p>
-     * </li>
-     * <li><p>urn:alibaba:idaas:app:source:standard: Creates the application from a standard protocol.</p>
-     * </li>
+     * <li>urn:alibaba:idaas:app:source:template: application template.</li>
+     * <li>urn:alibaba:idaas:app:source:standard: standard protocol.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +45,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String applicationSourceType;
 
     /**
-     * <p>The ID of the application template. This parameter is required if ApplicationSourceType is urn:alibaba:idaas:app:source:template.</p>
+     * <p>The application template ID. This parameter is required when ApplicationSourceType is set to urn:alibaba:idaas:app:source:template.</p>
      * 
      * <strong>example:</strong>
      * <p>apt_ramuser_mjqrsi</p>
@@ -89,12 +85,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String logoUrl;
 
     /**
-     * <p>The single sign-on (SSO) protocol. Valid values:</p>
+     * <p>The single sign-on protocol. Valid values:</p>
      * <ul>
-     * <li><p>saml2: SAML 2.0</p>
-     * </li>
-     * <li><p>oidc: OpenID Connect</p>
-     * </li>
+     * <li>saml2: SAML 2.0 protocol.</li>
+     * <li>oidc: OpenID Connect protocol.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
