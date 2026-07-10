@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RecognizeOrderRequest extends TeaModel {
     /**
+     * <p>Callback URL for this task. If not provided, the registered default address is used.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/callback">https://example.com/callback</a></p>
      */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <p>List of candidate items. It is recommended to pass platform_item_id.</p>
+     */
     @NameInMap("CandidateItems")
     public java.util.List<String> candidateItems;
 
     /**
+     * <p>Device ID</p>
+     * 
      * <strong>example:</strong>
      * <p>DEVICE_001</p>
      */
@@ -22,6 +29,8 @@ public class RecognizeOrderRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Unique idempotent ID of the business party, unique within the same business party</p>
+     * 
      * <strong>example:</strong>
      * <p>ORDER_001</p>
      */
@@ -29,6 +38,8 @@ public class RecognizeOrderRequest extends TeaModel {
     public String orderUniqueId;
 
     /**
+     * <p>List of shopping video OSS addresses (currently only one is supported)</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://oss.example.com/video1.mp4%22%5D">https://oss.example.com/video1.mp4&quot;]</a></p>
      */

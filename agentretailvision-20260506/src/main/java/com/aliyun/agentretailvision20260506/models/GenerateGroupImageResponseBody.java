@@ -3,21 +3,21 @@ package com.aliyun.agentretailvision20260506.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateProductResponseBody extends TeaModel {
+public class GenerateGroupImageResponseBody extends TeaModel {
     /**
      * <p>The error code. This parameter is not returned if the call is successful.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>202</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The item information.</p>
+     * <p>The composite image generation result.</p>
      */
     @NameInMap("Data")
-    public UpdateProductResponseBodyData data;
+    public GenerateGroupImageResponseBodyData data;
 
     /**
      * <p>The error message. This parameter is not returned if the call is successful.</p>
@@ -50,12 +50,12 @@ public class UpdateProductResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateProductResponseBody self = new UpdateProductResponseBody();
+    public static GenerateGroupImageResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GenerateGroupImageResponseBody self = new GenerateGroupImageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateProductResponseBody setCode(String code) {
+    public GenerateGroupImageResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -63,15 +63,15 @@ public class UpdateProductResponseBody extends TeaModel {
         return this.code;
     }
 
-    public UpdateProductResponseBody setData(UpdateProductResponseBodyData data) {
+    public GenerateGroupImageResponseBody setData(GenerateGroupImageResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public UpdateProductResponseBodyData getData() {
+    public GenerateGroupImageResponseBodyData getData() {
         return this.data;
     }
 
-    public UpdateProductResponseBody setMessage(String message) {
+    public GenerateGroupImageResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -79,7 +79,7 @@ public class UpdateProductResponseBody extends TeaModel {
         return this.message;
     }
 
-    public UpdateProductResponseBody setRequestId(String requestId) {
+    public GenerateGroupImageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -87,7 +87,7 @@ public class UpdateProductResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateProductResponseBody setSuccess(Boolean success) {
+    public GenerateGroupImageResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -95,44 +95,27 @@ public class UpdateProductResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class UpdateProductResponseBodyData extends TeaModel {
+    public static class GenerateGroupImageResponseBodyData extends TeaModel {
         /**
-         * <p>The business-side item ID, which is unique within the same business party.</p>
+         * <p>The composite image request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ITEM_001</p>
+         * <p>a5561c14-b5cd-49a4-ab79-01a63b10d99c</p>
          */
-        @NameInMap("ItemUniqueId")
-        public String itemUniqueId;
+        @NameInMap("GroupId")
+        public String groupId;
 
-        /**
-         * <p>The platform item ID, which is globally unique.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PLAT_001</p>
-         */
-        @NameInMap("PlatformItemId")
-        public String platformItemId;
-
-        public static UpdateProductResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            UpdateProductResponseBodyData self = new UpdateProductResponseBodyData();
+        public static GenerateGroupImageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GenerateGroupImageResponseBodyData self = new GenerateGroupImageResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public UpdateProductResponseBodyData setItemUniqueId(String itemUniqueId) {
-            this.itemUniqueId = itemUniqueId;
+        public GenerateGroupImageResponseBodyData setGroupId(String groupId) {
+            this.groupId = groupId;
             return this;
         }
-        public String getItemUniqueId() {
-            return this.itemUniqueId;
-        }
-
-        public UpdateProductResponseBodyData setPlatformItemId(String platformItemId) {
-            this.platformItemId = platformItemId;
-            return this;
-        }
-        public String getPlatformItemId() {
-            return this.platformItemId;
+        public String getGroupId() {
+            return this.groupId;
         }
 
     }

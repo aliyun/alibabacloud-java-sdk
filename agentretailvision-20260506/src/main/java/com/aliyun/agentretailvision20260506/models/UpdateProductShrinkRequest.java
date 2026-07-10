@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateProductShrinkRequest extends TeaModel {
     /**
+     * <p>The device ID, which is used to establish the vector association between the device and the item.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEVICE_001</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>The list of additional image URLs that can be provided.</p>
+     */
     @NameInMap("ExtraImages")
     public String extraImagesShrink;
 
     /**
+     * <p>The title of the item.</p>
+     * 
      * <strong>example:</strong>
      * <p>可口可乐330ml</p>
      */
@@ -22,6 +29,8 @@ public class UpdateProductShrinkRequest extends TeaModel {
     public String imageTitle;
 
     /**
+     * <p>The business-side item ID, which is unique within the same business party.</p>
+     * 
      * <strong>example:</strong>
      * <p>ITEM_001</p>
      */
@@ -29,16 +38,23 @@ public class UpdateProductShrinkRequest extends TeaModel {
     public String itemUniqueId;
 
     /**
+     * <p>The list of main image URLs for the item. At least one image is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://img.example.com/item1.jpg%22%5D">https://img.example.com/item1.jpg&quot;]</a></p>
      */
     @NameInMap("MainImage")
     public String mainImageShrink;
 
+    /**
+     * <p>The list of multi-angle images for the item.</p>
+     */
     @NameInMap("MultiViewImages")
     public String multiViewImagesShrink;
 
     /**
+     * <p>The platform item ID, which is globally unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>PLAT_001</p>
      */

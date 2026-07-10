@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterWebhookRequest extends TeaModel {
     /**
+     * <p>The key used for callback signature verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>your_secret_key</p>
      */
@@ -12,6 +14,8 @@ public class RegisterWebhookRequest extends TeaModel {
     public String callbackSecret;
 
     /**
+     * <p>The default callback URL. A public HTTPS URL is required.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://example.com/callback">https://example.com/callback</a></p>
      */

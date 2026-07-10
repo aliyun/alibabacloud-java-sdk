@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateProductRequest extends TeaModel {
     /**
+     * <p>The device ID, which is used to establish the vector association between the device and the item.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEVICE_001</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>The list of additional image URLs that can be provided.</p>
+     */
     @NameInMap("ExtraImages")
     public java.util.List<String> extraImages;
 
     /**
+     * <p>The title of the item.</p>
+     * 
      * <strong>example:</strong>
      * <p>可口可乐330ml</p>
      */
@@ -22,6 +29,8 @@ public class UpdateProductRequest extends TeaModel {
     public String imageTitle;
 
     /**
+     * <p>The business-side item ID, which is unique within the same business party.</p>
+     * 
      * <strong>example:</strong>
      * <p>ITEM_001</p>
      */
@@ -29,16 +38,23 @@ public class UpdateProductRequest extends TeaModel {
     public String itemUniqueId;
 
     /**
+     * <p>The list of main image URLs for the item. At least one image is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://img.example.com/item1.jpg%22%5D">https://img.example.com/item1.jpg&quot;]</a></p>
      */
     @NameInMap("MainImage")
     public java.util.List<String> mainImage;
 
+    /**
+     * <p>The list of multi-angle images for the item.</p>
+     */
     @NameInMap("MultiViewImages")
     public java.util.List<UpdateProductRequestMultiViewImages> multiViewImages;
 
     /**
+     * <p>The platform item ID, which is globally unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>PLAT_001</p>
      */
@@ -108,6 +124,14 @@ public class UpdateProductRequest extends TeaModel {
 
     public static class UpdateProductRequestMultiViewImages extends TeaModel {
         /**
+         * <p>The angle of the digital human.</p>
+         * <ul>
+         * <li>0: front view, the default angle</li>
+         * <li>1: 30 degrees from the left</li>
+         * <li>2: 30 degrees from the right</li>
+         * </ul>
+         * <p>For a preview of each angle, refer to <a href="https://help.aliyun.com/document_detail/447834.html#a989eb5075t9y">3D Digital Human Video Synthesis User Guide</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -115,6 +139,8 @@ public class UpdateProductRequest extends TeaModel {
         public String angle;
 
         /**
+         * <p>The URL of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://nova-tems.oss-cn-shanghai.aliyuncs.com/crop/33dfc602-c9a4-11f0-ac99-ee21a901d6ec.png?OSSAccessKeyId=****&Expires=1764058353&Signature=">https://nova-tems.oss-cn-shanghai.aliyuncs.com/crop/33dfc602-c9a4-11f0-ac99-ee21a901d6ec.png?OSSAccessKeyId=****&amp;Expires=1764058353&amp;Signature=</a>****</p>
          */

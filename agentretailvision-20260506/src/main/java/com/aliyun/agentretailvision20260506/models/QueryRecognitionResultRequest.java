@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryRecognitionResultRequest extends TeaModel {
     /**
+     * <p>Business idempotent request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ORDER_001</p>
      */
@@ -12,6 +14,8 @@ public class QueryRecognitionResultRequest extends TeaModel {
     public String orderUniqueId;
 
     /**
+     * <p>Platform Task ID</p>
+     * 
      * <strong>example:</strong>
      * <p>TASK_001</p>
      */

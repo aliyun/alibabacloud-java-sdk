@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ImportProductsResponseBody extends TeaModel {
     /**
+     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The product information.</p>
+     */
     @NameInMap("Data")
     public ImportProductsResponseBodyData data;
 
     /**
+     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -31,6 +38,12 @@ public class ImportProductsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -84,6 +97,8 @@ public class ImportProductsResponseBody extends TeaModel {
 
     public static class ImportProductsResponseBodyData extends TeaModel {
         /**
+         * <p>The product ID assigned by the business party. This ID must be unique within the same business party.</p>
+         * 
          * <strong>example:</strong>
          * <p>ITEM_001</p>
          */
@@ -91,6 +106,8 @@ public class ImportProductsResponseBody extends TeaModel {
         public String itemUniqueId;
 
         /**
+         * <p>The platform product ID, which is globally unique.</p>
+         * 
          * <strong>example:</strong>
          * <p>PLAT_001</p>
          */

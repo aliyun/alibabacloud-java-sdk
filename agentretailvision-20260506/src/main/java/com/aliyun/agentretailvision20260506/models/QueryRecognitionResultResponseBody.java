@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryRecognitionResultResponseBody extends TeaModel {
     /**
+     * <p>Error code. This parameter is not returned for a successful call.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Task details</p>
+     */
     @NameInMap("Data")
     public QueryRecognitionResultResponseBodyData data;
 
     /**
+     * <p>Error message. This parameter is not returned for a successful call.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -31,6 +38,8 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. true: The call was successful. false: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -84,6 +93,8 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
 
     public static class QueryRecognitionResultResponseBodyDataResultCheckoutInfo extends TeaModel {
         /**
+         * <p>Checkout status</p>
+         * 
          * <strong>example:</strong>
          * <p>TRUSTED</p>
          */
@@ -107,6 +118,8 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
 
     public static class QueryRecognitionResultResponseBodyDataResultItems extends TeaModel {
         /**
+         * <p>Business Item ID</p>
+         * 
          * <strong>example:</strong>
          * <p>690234524880781</p>
          */
@@ -114,6 +127,8 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
         public String itemUniqueId;
 
         /**
+         * <p>Platform Item ID</p>
+         * 
          * <strong>example:</strong>
          * <p>535c3daaee3b4b5382db4913413419bc2d</p>
          */
@@ -121,6 +136,8 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
         public String platformItemId;
 
         /**
+         * <p>Item quantity</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,9 +176,15 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
     }
 
     public static class QueryRecognitionResultResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>Checkout information</p>
+         */
         @NameInMap("CheckoutInfo")
         public QueryRecognitionResultResponseBodyDataResultCheckoutInfo checkoutInfo;
 
+        /**
+         * <p>List of recognized items</p>
+         */
         @NameInMap("Items")
         public java.util.List<QueryRecognitionResultResponseBodyDataResultItems> items;
 
@@ -190,16 +213,23 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
 
     public static class QueryRecognitionResultResponseBodyData extends TeaModel {
         /**
+         * <p>Business unique idempotent ID</p>
+         * 
          * <strong>example:</strong>
          * <p>ORDER_001</p>
          */
         @NameInMap("OrderUniqueId")
         public String orderUniqueId;
 
+        /**
+         * <p>Recognition result</p>
+         */
         @NameInMap("Result")
         public QueryRecognitionResultResponseBodyDataResult result;
 
         /**
+         * <p>Platform Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>TASK_001</p>
          */
@@ -207,6 +237,8 @@ public class QueryRecognitionResultResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task status</p>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */

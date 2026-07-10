@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class RecognizeOrderResponseBody extends TeaModel {
     /**
+     * <p>Error code. This parameter is not returned during a normal call.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Recognition task information</p>
+     */
     @NameInMap("Data")
     public RecognizeOrderResponseBodyData data;
 
     /**
+     * <p>Error message. This parameter is not returned during a normal call.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -31,6 +38,8 @@ public class RecognizeOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. true: The call is successful. false: The call has failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -84,6 +93,8 @@ public class RecognizeOrderResponseBody extends TeaModel {
 
     public static class RecognizeOrderResponseBodyData extends TeaModel {
         /**
+         * <p>Unique idempotent ID of the business party</p>
+         * 
          * <strong>example:</strong>
          * <p>ORDER_001</p>
          */
@@ -91,6 +102,8 @@ public class RecognizeOrderResponseBody extends TeaModel {
         public String orderUniqueId;
 
         /**
+         * <p>Platform task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>TASK_001</p>
          */
@@ -98,6 +111,8 @@ public class RecognizeOrderResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task status</p>
+         * 
          * <strong>example:</strong>
          * <p>PROCESSING</p>
          */

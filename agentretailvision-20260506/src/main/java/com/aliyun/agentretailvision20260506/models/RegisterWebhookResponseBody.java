@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegisterWebhookResponseBody extends TeaModel {
     /**
+     * <p>The error code. This parameter is not returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class RegisterWebhookResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -28,6 +32,12 @@ public class RegisterWebhookResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

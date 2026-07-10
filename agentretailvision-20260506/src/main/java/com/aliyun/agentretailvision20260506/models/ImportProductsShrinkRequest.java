@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ImportProductsShrinkRequest extends TeaModel {
     /**
+     * <p>The device ID. This ID is used to establish an association between the device and product vectors.</p>
+     * 
      * <strong>example:</strong>
      * <p>DEVICE_001</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>The list of additional image URLs that can be provided.</p>
+     */
     @NameInMap("ExtraImages")
     public String extraImagesShrink;
 
     /**
+     * <p>The product title.</p>
+     * 
      * <strong>example:</strong>
      * <p>可口可乐330ml</p>
      */
@@ -22,6 +29,8 @@ public class ImportProductsShrinkRequest extends TeaModel {
     public String imageTitle;
 
     /**
+     * <p>The product ID assigned by the business party. This ID must be unique within the same business party.</p>
+     * 
      * <strong>example:</strong>
      * <p>ITEM_001</p>
      */
@@ -29,12 +38,17 @@ public class ImportProductsShrinkRequest extends TeaModel {
     public String itemUniqueId;
 
     /**
+     * <p>The list of main product image URLs. At least one URL is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://img.example.com/item1.jpg%22%5D">https://img.example.com/item1.jpg&quot;]</a></p>
      */
     @NameInMap("MainImage")
     public String mainImageShrink;
 
+    /**
+     * <p>The list of multi-angle product images.</p>
+     */
     @NameInMap("MultiViewImages")
     public String multiViewImagesShrink;
 
