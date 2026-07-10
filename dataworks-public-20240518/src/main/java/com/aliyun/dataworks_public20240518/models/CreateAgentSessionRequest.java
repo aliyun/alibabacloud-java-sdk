@@ -161,6 +161,20 @@ public class CreateAgentSessionRequest extends TeaModel {
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Serverless_res_group_123123123_564657857</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>skill-name-1,skill-name2,skill-name-3</p>
+         */
+        @NameInMap("Skills")
+        public String skills;
+
         public static CreateAgentSessionRequestParamsMetaInitialConfigOptions build(java.util.Map<String, ?> map) throws Exception {
             CreateAgentSessionRequestParamsMetaInitialConfigOptions self = new CreateAgentSessionRequestParamsMetaInitialConfigOptions();
             return TeaModel.build(map, self);
@@ -180,6 +194,22 @@ public class CreateAgentSessionRequest extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public CreateAgentSessionRequestParamsMetaInitialConfigOptions setSkills(String skills) {
+            this.skills = skills;
+            return this;
+        }
+        public String getSkills() {
+            return this.skills;
         }
 
     }

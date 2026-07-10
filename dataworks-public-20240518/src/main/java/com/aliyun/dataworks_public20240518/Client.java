@@ -12685,10 +12685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about DataWorks data assets to which tags are added by page.</p>
+     * <p>Queries DataWorks data assets that are associated with tags by paging.</p>
      * 
      * @param tmpReq ListDataAssetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12726,10 +12726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</p>
+     * <p>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about DataWorks data assets to which tags are added by page.</p>
+     * <p>Queries DataWorks data assets that are associated with tags by paging.</p>
      * 
      * @param request ListDataAssetsRequest
      * @return ListDataAssetsResponse
@@ -21887,7 +21887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</p>
+     * <p>Updates a specified node. The modifications are synchronized to DataStudio, where a new saved version is created.</p>
      * 
      * @param tmpReq UpdateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22025,7 +22025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</p>
+     * <p>Updates a specified node. The modifications are synchronized to DataStudio, where a new saved version is created.</p>
      * 
      * @param request UpdateTaskRequest
      * @return UpdateTaskResponse
@@ -22185,10 +22185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a specified workflow in full update mode.</p>
+     * <p>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to DataStudio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</p>
      * 
      * @param tmpReq UpdateWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22290,10 +22290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks Basic Edition or higher is required.</p>
+     * <p>DataWorks Basic Edition or a more advanced edition is required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a specified workflow in full update mode.</p>
+     * <p>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to DataStudio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</p>
      * 
      * @param request UpdateWorkflowRequest
      * @return UpdateWorkflowResponse

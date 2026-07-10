@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID, used for locating logs and troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
@@ -14,7 +14,7 @@ public class UpdateTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -11,7 +11,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
     public ListDataAssetsResponseBodyPagingInfo pagingInfo;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1ec92159376</p>
@@ -40,9 +40,62 @@ public class ListDataAssetsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("AssetDomainId")
+        public String assetDomainId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cate-xxxxxx</p>
+         */
+        @NameInMap("Id")
+        public String id;
+
+        /**
+         * <strong>example:</strong>
+         * <p>资产域名称</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories build(java.util.Map<String, ?> map) throws Exception {
+            ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories self = new ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories setAssetDomainId(String assetDomainId) {
+            this.assetDomainId = assetDomainId;
+            return this;
+        }
+        public String getAssetDomainId() {
+            return this.assetDomainId;
+        }
+
+        public ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ListDataAssetsResponseBodyPagingInfoDataAssetsDataAssetTagMappings extends TeaModel {
         /**
-         * <p>Indicates whether the lineage-based automatic backtrack feature is enabled for the mapping.</p>
+         * <p>Indicates whether automatic lineage tracing is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -78,12 +131,10 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The way in which the mapping between the data asset and the tag is created. Valid values:</p>
+         * <p>The source of the mapping between the data asset and the tag. Valid values:</p>
          * <ul>
-         * <li><p>System</p>
-         * </li>
-         * <li><p>UserDefined</p>
-         * </li>
+         * <li>System: The mapping is created by the data asset governance system.</li>
+         * <li>UserDefined: The mapping is manually created by a user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,19 +208,20 @@ public class ListDataAssetsResponseBody extends TeaModel {
     }
 
     public static class ListDataAssetsResponseBodyPagingInfoDataAssets extends TeaModel {
+        @NameInMap("AssetCategories")
+        public java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories> assetCategories;
+
         /**
-         * <p>The mappings between data assets and tags.</p>
+         * <p>The list of tags associated with the data asset.</p>
          */
         @NameInMap("DataAssetTagMappings")
         public java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssetsDataAssetTagMappings> dataAssetTagMappings;
 
         /**
-         * <p>The environment of the workspace to which the data asset belongs. Valid values:</p>
+         * <p>The workspace environment to which the data asset belongs. Valid values:</p>
          * <ul>
-         * <li><p>Dev: development environment</p>
-         * </li>
-         * <li><p>Prod: production environment</p>
-         * </li>
+         * <li>Dev: development environment.</li>
+         * <li>Prod: production environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,11 +258,11 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The type of the data asset. Valid values:</p>
+         * <p>The Asset Type of the data asset. Valid values:</p>
          * <ul>
-         * <li><p>ACS::DataWorks::Table</p>
+         * <li><p>ACS::DataWorks::Table: table.</p>
          * </li>
-         * <li><p>ACS::DataWorks::Task</p>
+         * <li><p>ACS::DataWorks::Task: scheduling node.</p>
          * </li>
          * </ul>
          * 
@@ -223,6 +275,14 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public static ListDataAssetsResponseBodyPagingInfoDataAssets build(java.util.Map<String, ?> map) throws Exception {
             ListDataAssetsResponseBodyPagingInfoDataAssets self = new ListDataAssetsResponseBodyPagingInfoDataAssets();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataAssetsResponseBodyPagingInfoDataAssets setAssetCategories(java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories> assetCategories) {
+            this.assetCategories = assetCategories;
+            return this;
+        }
+        public java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories> getAssetCategories() {
+            return this.assetCategories;
         }
 
         public ListDataAssetsResponseBodyPagingInfoDataAssets setDataAssetTagMappings(java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssetsDataAssetTagMappings> dataAssetTagMappings) {
@@ -277,7 +337,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
 
     public static class ListDataAssetsResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The data assets.</p>
+         * <p>The list of data assets.</p>
          */
         @NameInMap("DataAssets")
         public java.util.List<ListDataAssetsResponseBodyPagingInfoDataAssets> dataAssets;
@@ -301,7 +361,7 @@ public class ListDataAssetsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
