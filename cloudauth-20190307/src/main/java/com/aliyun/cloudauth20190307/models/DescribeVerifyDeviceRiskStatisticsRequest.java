@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyDeviceRiskStatisticsRequest extends TeaModel {
     /**
-     * <p>End time.</p>
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>Cloud product code.</p>
+     * <p>The code of the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_PRO</p>
@@ -24,7 +24,7 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Scene ID.</p>
+     * <p>The scene ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100000xxxx</p>
@@ -33,11 +33,11 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>Service type:</p>
+     * <p>The service type. Valid values:</p>
      * <ul>
-     * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-     * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
-     * <li><strong>cloudauth</strong> (discontinued): Real-person authentication.</li>
+     * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+     * <li><strong>cloudauthst</strong> (discontinued): ID Verification - Enhanced Edition.</li>
+     * <li><strong>cloudauth</strong> (discontinued): ID Verification.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,7 +48,7 @@ public class DescribeVerifyDeviceRiskStatisticsRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Start time of the query, in Unix timestamp format, in milliseconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

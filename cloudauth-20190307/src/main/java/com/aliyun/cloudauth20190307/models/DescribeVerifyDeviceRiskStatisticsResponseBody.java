@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B3193814-AE54-50C5-9070-68B69C07287D</p>
@@ -14,7 +14,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Authentication result.</p>
+     * <p>The verification result.</p>
      */
     @NameInMap("ResultObject")
     public DescribeVerifyDeviceRiskStatisticsResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyDeviceRiskStatisticsResponseBodyResultObjectItems extends TeaModel {
         /**
-         * <p>Daily call count.</p>
+         * <p>The number of daily transactions.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public Long dailyCallCount;
 
         /**
-         * <p>Date.</p>
+         * <p>The date.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-10</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public String date;
 
         /**
-         * <p>Abnormal device risk ratio.</p>
+         * <p>The abnormal device risk ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -69,7 +69,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public String deviceRiskRate;
 
         /**
-         * <p>Abnormal identity risk ratio.</p>
+         * <p>The abnormal identity risk ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -118,7 +118,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyDeviceRiskStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Suspected fake face percentage: total number of suspected fake faces / total number of risks.</p>
+         * <p>The suspected fake face percentage: total number of suspected fake faces / total number of risks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -127,7 +127,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public String faceAttackRate;
 
         /**
-         * <p>Total number of suspected fake identities.</p>
+         * <p>The total number of suspected fake identities.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -136,13 +136,13 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public String idFakeRate;
 
         /**
-         * <p>Data items in the response.</p>
+         * <p>The data items in the response.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyDeviceRiskStatisticsResponseBodyResultObjectItems> items;
 
         /**
-         * <p>Number of risks.</p>
+         * <p>The number of risks.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -151,7 +151,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
-         * <p>Root percentage: total number of root / total number of risks.</p>
+         * <p>The root percentage: total number of rooted devices / total number of risks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -160,7 +160,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public String rootRate;
 
         /**
-         * <p>Simulator percentage: total number of simulators / total number of risks.</p>
+         * <p>The emulator percentage: total number of emulators / total number of risks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -169,7 +169,7 @@ public class DescribeVerifyDeviceRiskStatisticsResponseBody extends TeaModel {
         public String simulatorRate;
 
         /**
-         * <p>Virtual video percentage: total number of virtual videos / total number of risks.</p>
+         * <p>The virtual video percentage: total number of virtual videos / total number of risks.</p>
          * 
          * <strong>example:</strong>
          * <p>23.2</p>

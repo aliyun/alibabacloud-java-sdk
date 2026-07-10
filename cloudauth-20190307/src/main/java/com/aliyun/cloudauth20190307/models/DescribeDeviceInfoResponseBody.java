@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDeviceInfoResponseBody extends TeaModel {
     /**
-     * <p>The current page number being queried.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     public DescribeDeviceInfoResponseBodyDeviceInfoList deviceInfoList;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,7 +26,7 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -35,7 +35,7 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

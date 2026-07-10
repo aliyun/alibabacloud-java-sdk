@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifySDKResponseBody extends TeaModel {
     /**
-     * <p>The ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -14,7 +14,7 @@ public class DescribeVerifySDKResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The SDK download URL. When not empty, it indicates that the generation is complete.</p>
+     * <p>The download URL of the SDK. A non-empty value indicates that the SDK has been generated.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxx.com">https://www.xxx.com</a></p>

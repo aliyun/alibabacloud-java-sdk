@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWhitelistSettingResponseBody extends TeaModel {
     /**
-     * <p>The ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CF4979D3-060F-5336-BD9F-0D46ECB66B22</p>
@@ -14,10 +14,10 @@ public class CreateWhitelistSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result, whether the creation was successful:</p>
+     * <p>The returned result that indicates whether the whitelist is created. Valid values:</p>
      * <ul>
-     * <li>true: Success</li>
-     * <li>false: Failure</li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

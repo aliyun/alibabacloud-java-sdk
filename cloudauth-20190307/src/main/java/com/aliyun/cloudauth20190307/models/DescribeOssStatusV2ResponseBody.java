@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOssStatusV2ResponseBody extends TeaModel {
     /**
-     * <p>Return code</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
@@ -41,13 +41,13 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public DescribeOssStatusV2ResponseBodyResultObject resultObject;
 
     /**
-     * <p>Whether the response was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
 
     public static class DescribeOssStatusV2ResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Bucket name.</p>
+         * <p>The bucket name.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-aliyun-cloudauth-20250516xxxxxx</p>
@@ -119,7 +119,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>Region.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -128,7 +128,7 @@ public class DescribeOssStatusV2ResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>User activation status, <strong>SUCCESS</strong> indicates activated.</p>
+         * <p>The activation status of the user. A value of <strong>SUCCESS</strong> indicates that the service is activated.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>

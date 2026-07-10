@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     /**
-     * <p>Response code, <strong>200</strong> indicates a successful response.</p>
+     * <p>The response code. <strong>200</strong> indicates a successful response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,13 +23,13 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>List of returned data.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Items")
     public java.util.List<QueryVerifyInvokeSatisticResponseBodyItems> items;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>2FA2C773-47DB-4156-B1EE-5B047321A939</p>
@@ -47,7 +47,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the response was successful.</p>
+     * <p>Indicates whether the response is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -56,7 +56,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +65,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -144,7 +144,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
 
     public static class QueryVerifyInvokeSatisticResponseBodyItemsData extends TeaModel {
         /**
-         * <p>Number of occurrences of the statistic.</p>
+         * <p>The count of the statistical value.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -153,7 +153,7 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
         public String statisticsCount;
 
         /**
-         * <p>ProductCode。</p>
+         * <p>The product code.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PRO</p>
@@ -186,13 +186,13 @@ public class QueryVerifyInvokeSatisticResponseBody extends TeaModel {
 
     public static class QueryVerifyInvokeSatisticResponseBodyItems extends TeaModel {
         /**
-         * <p>List of statistical data.</p>
+         * <p>The list of statistics data.</p>
          */
         @NameInMap("Data")
         public java.util.List<QueryVerifyInvokeSatisticResponseBodyItemsData> data;
 
         /**
-         * <p>Statistics date.</p>
+         * <p>The statistics date.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16</p>

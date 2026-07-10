@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudauthstSceneListRequest extends TeaModel {
     /**
-     * <p>Product Code</p>
+     * <p>The commodity code.</p>
      * 
      * <strong>example:</strong>
      * <p>SMART_CARD</p>

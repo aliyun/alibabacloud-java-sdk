@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 indicates success, others indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     public Integer data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Return message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
@@ -50,7 +50,7 @@ public class DeleteAllCustomizeFlowStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the response was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

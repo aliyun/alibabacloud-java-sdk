@@ -5,6 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaStatisticsPageListRequest extends TeaModel {
     /**
+     * <p>Product API:</p>
+     * <ul>
+     * <li><strong>ID_CARD_2_META</strong>: ID Card Two-Element Verification</li>
+     * <li><strong>ID_PERIOD</strong>: ID Card Validity Verification Period</li>
+     * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile Online Duration</li>
+     * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile Online Status</li>
+     * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile Number Three-Element Verification (Simple)</li>
+     * <li><strong>MOBILE_3_META</strong>: Mobile Number Three-Element Verification (Detailed)</li>
+     * <li><strong>MOBILE_2_META</strong>: Mobile Number Two-Element Verification</li>
+     * <li><strong>BANK_CARD_N_META</strong>: Bank Card Verification (Detailed)</li>
+     * <li><strong>MOBILE_DETECT</strong>: Number Detection</li>
+     * <li><strong>VEHICLE_N_META</strong>: Vehicle Element Verification (Enhanced)</li>
+     * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle Five-Element Information Recognition</li>
+     * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle Information Recognition</li>
+     * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle Insurance Date Query</li>
+     * <li><strong>VEHICLE_CHECK</strong>: Vehicle Element Verification</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +31,7 @@ public class DescribeMetaStatisticsPageListRequest extends TeaModel {
     public String api;
 
     /**
+     * <p>Current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +41,7 @@ public class DescribeMetaStatisticsPageListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Query end time. Unix timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +51,7 @@ public class DescribeMetaStatisticsPageListRequest extends TeaModel {
     public Long endDate;
 
     /**
+     * <p>Number of data entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +61,7 @@ public class DescribeMetaStatisticsPageListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query start time. The timestamp is in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

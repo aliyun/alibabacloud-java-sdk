@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyBlackListStrategyShrinkRequest extends TeaModel {
     /**
-     * <p>Blacklist rule.</p>
+     * <p>The blacklist rule.</p>
      */
     @NameInMap("BlackListStrategy")
     public String blackListStrategyShrink;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

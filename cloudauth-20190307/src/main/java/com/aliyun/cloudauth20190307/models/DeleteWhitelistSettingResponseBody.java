@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWhitelistSettingResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -14,7 +14,7 @@ public class DeleteWhitelistSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

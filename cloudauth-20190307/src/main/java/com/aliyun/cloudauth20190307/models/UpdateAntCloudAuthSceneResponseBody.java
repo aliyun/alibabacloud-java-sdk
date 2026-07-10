@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAntCloudAuthSceneResponseBody extends TeaModel {
     /**
-     * <p>Content of the uploaded verification file.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A07D5838-2BE0-5D2E-B864-D05ADAA5EDE3</p>

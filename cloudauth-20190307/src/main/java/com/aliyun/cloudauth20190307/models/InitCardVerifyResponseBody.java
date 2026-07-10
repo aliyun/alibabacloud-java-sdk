@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class InitCardVerifyResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.
-     * Important</p>
-     * <ul>
-     * <li>This parameter indicates whether the interface was called correctly. For detailed return code descriptions, see the error codes.</li>
-     * <li>Business results should be viewed through the fields in ResultObject.</li>
-     * </ul>
+     * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <blockquote>
+     * <p><strong>Important</strong> This parameter indicates whether the operation is called correctly. For more information about return codes, see error codes. Check the fields in ResultObject for the business result.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -19,7 +17,7 @@ public class InitCardVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -28,7 +26,7 @@ public class InitCardVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -37,7 +35,7 @@ public class InitCardVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("ResultObject")
     public InitCardVerifyResponseBodyResultObject resultObject;
@@ -81,11 +79,11 @@ public class InitCardVerifyResponseBody extends TeaModel {
 
     public static class InitCardVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Verification request ID, a unique identifier for the verification service\&quot;s authentication request.</p>
+         * <p>The verification request ID, which is the unique identifier of the verification service authentication request.</p>
          * <ul>
-         * <li><p>When querying the authentication result, the authentication request ID must be provided.</p>
+         * <li><p>You must specify the authentication request ID when you query the authentication result.</p>
          * </li>
-         * <li><p>The CertifyId field is a billing statistics field. To facilitate subsequent bill reconciliation, please retain this field information locally. The CertifyId returned by the initialization interface is valid for 30 minutes and can only be submitted once for authentication. Please apply it within the validity period to avoid reuse.</p>
+         * <li><p>The CertifyId field is used for billing statistics. Save this field locally for future bill reconciliation. The CertifyId returned by the initialization operation is valid for 30 minutes and can be submitted for authentication only once. Use it within the validity period and do not reuse it.</p>
          * </li>
          * </ul>
          * 

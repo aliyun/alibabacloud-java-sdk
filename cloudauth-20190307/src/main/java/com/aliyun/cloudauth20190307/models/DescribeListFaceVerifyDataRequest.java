@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeListFaceVerifyDataRequest extends TeaModel {
     /**
-     * <p>End time of the query.</p>
+     * <p>The query end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1760630399999</p>
@@ -14,7 +14,7 @@ public class DescribeListFaceVerifyDataRequest extends TeaModel {
     public Long gmtEnd;
 
     /**
-     * <p>Start time of the query.</p>
+     * <p>The query start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1760025600000</p>
@@ -23,7 +23,7 @@ public class DescribeListFaceVerifyDataRequest extends TeaModel {
     public Long gmtStart;
 
     /**
-     * <p>Product Code, currently deprecated.</p>
+     * <p>The product code. This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>Liveness</p>
@@ -32,7 +32,7 @@ public class DescribeListFaceVerifyDataRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Scene ID.</p>
+     * <p>The scene ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000339</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyControlStrategyShrinkRequest extends TeaModel {
     /**
-     * <p>List of security alarm rules.</p>
+     * <p>The list of security alert rules.</p>
      */
     @NameInMap("ControlStrategyList")
     public String controlStrategyListShrink;
 
     /**
-     * <p>Product type, currently only supports <strong>ANT_CLOUD_AUTH</strong> (Financial-grade Real Person), all others are phased out.</p>
+     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
      * 
      * <strong>example:</strong>
      * <p>ANT_CLOUD_AUTH</p>
@@ -20,7 +20,7 @@ public class ModifyControlStrategyShrinkRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>Region ID of the intelligent access gateway instance.</p>
+     * <p>The region ID of the Smart Access Gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

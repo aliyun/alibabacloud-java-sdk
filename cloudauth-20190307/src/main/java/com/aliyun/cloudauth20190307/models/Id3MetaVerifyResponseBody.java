@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class Id3MetaVerifyResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 indicates success, others indicate failure.
-     * <strong>Important</strong></p>
+     * <p>The response code. A value of 200 indicates success. Other values indicate failure.</p>
+     * <p><strong>Important</strong></p>
      * <ul>
-     * <li>This parameter indicates whether the interface was called correctly. For detailed return code explanations, please refer to the error codes.</li>
-     * <li>Check the business verification result through the fields in <code>ResultObject</code>.</li>
+     * <li>This parameter indicates only whether the API call is successful. For more information about return codes, see error codes.</li>
+     * <li>Check the fields in ResultObject for the business verification result.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,9 +19,9 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Interface call return message.</p>
+     * <p>The response message of the API call.</p>
      * <p><strong>Important</strong></p>
-     * <p>This parameter only indicates whether there was an exception with the interface.</p>
+     * <p>This parameter indicates only whether the API call is abnormal.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -30,7 +30,7 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>130A2C10-B9EE-4D84-88E3-5384FF03****</p>
@@ -39,7 +39,7 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result object.</p>
+     * <p>The result object.</p>
      */
     @NameInMap("ResultObject")
     public Id3MetaVerifyResponseBodyResultObject resultObject;
@@ -83,11 +83,11 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
 
     public static class Id3MetaVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Identity verification result:</p>
+         * <p>The identity verification result. Valid values:</p>
          * <ul>
-         * <li>1: Consistent</li>
-         * <li>2: Inconsistent</li>
-         * <li>3: No record found</li>
+         * <li>1: Consistent.</li>
+         * <li>2: Inconsistent.</li>
+         * <li>3: No record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Image comparison score.</p>
+         * <p>The face comparison score.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -106,6 +106,13 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
          */
         @NameInMap("FaceDetail")
         public String faceDetail;
+
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
+        @NameInMap("SubCode")
+        public String subCode;
 
         public static Id3MetaVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             Id3MetaVerifyResponseBodyResultObject self = new Id3MetaVerifyResponseBodyResultObject();
@@ -126,6 +133,14 @@ public class Id3MetaVerifyResponseBody extends TeaModel {
         }
         public String getFaceDetail() {
             return this.faceDetail;
+        }
+
+        public Id3MetaVerifyResponseBodyResultObject setSubCode(String subCode) {
+            this.subCode = subCode;
+            return this;
+        }
+        public String getSubCode() {
+            return this.subCode;
         }
 
     }

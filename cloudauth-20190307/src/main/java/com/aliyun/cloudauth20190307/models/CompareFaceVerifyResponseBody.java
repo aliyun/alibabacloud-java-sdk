@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompareFaceVerifyResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, other values indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -32,7 +32,7 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Face comparison result information.</p>
+     * <p>The face comparison result.</p>
      */
     @NameInMap("ResultObject")
     public CompareFaceVerifyResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
 
     public static class CompareFaceVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Unique identifier for the real-person authentication request.</p>
+         * <p>The unique identifier of the ID Verification request.</p>
          * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
@@ -85,7 +85,7 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>Whether the verification passed, T for pass, F for fail.</p>
+         * <p>Indicates whether the verification passed. A value of T indicates passed. A value of F indicates not passed.</p>
          * 
          * <strong>example:</strong>
          * <p>T</p>
@@ -94,7 +94,7 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>Face comparison score.</p>
+         * <p>The face comparison score.</p>
          * 
          * <strong>example:</strong>
          * <p>99.60875</p>

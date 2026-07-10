@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContrastFaceVerifyRequest extends TeaModel {
     /**
-     * <p>Real name.</p>
+     * <p>The real name.</p>
      * 
      * <strong>example:</strong>
      * <p>张三</p>
@@ -14,7 +14,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String certName;
 
     /**
-     * <p>ID number</p>
+     * <p>The certificate number.</p>
      * 
      * <strong>example:</strong>
      * <p>330103xxxxxxxxxxxx</p>
@@ -23,7 +23,8 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>Type of identification. Currently, only IDENTITY_CARD is supported and must be provided.</p>
+     * <p>The certificate type.
+     * Currently only ID cards are supported. You must set this parameter to IDENTITY_CARD.</p>
      * 
      * <strong>example:</strong>
      * <p>IDENTITY_CARD</p>
@@ -32,9 +33,9 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The CertifyId of a previously passed real-person authentication, with the photo taken during that authentication used as the comparison photo. </p>
+     * <p>The CertifyId from a previous successful ID Verification. The photo from that verification is used as the comparison photo.</p>
      * <blockquote>
-     * <p>Among the four ways to input images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to provide.</p>
+     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,10 +45,12 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String certifyId;
 
     /**
-     * <p>Allow face image cropping:</p>
+     * <p>Specifies whether to allow cropping of the face image. Valid values:</p>
      * <ul>
-     * <li><strong>T</strong> – Cropping is allowed.</li>
-     * <li><strong>F</strong> (default) – Cropping is not allowed.</li>
+     * <li><p>T: Allowed.</p>
+     * </li>
+     * <li><p>F (default): Not allowed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +60,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String crop;
 
     /**
-     * <p>Risk Identification - Device Token</p>
+     * <p>The device token for risk identification.</p>
      * 
      * <strong>example:</strong>
      * <p>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</p>
@@ -66,9 +69,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String deviceToken;
 
     /**
-     * <p>Encryption type. Leave it empty if no encryption is required.</p>
-     * <p>If you enable encrypted transmission, you must specify the encryption algorithm; currently, only the SM2 (Chinese national standard) algorithm is supported.</p>
-     * <p>When an encryption algorithm is specified, encrypt both <strong>CertName</strong> and <strong>CertNo</strong> and submit the resulting ciphertext. For more details on parameter encryption, see the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/description-of-parameter-encryption?spm=a2c4g.11186623.0.0.49541a8554cELI#task-2229332">Parameter Encryption documentation</a>.</p>
+     * <p>The encryption type. An empty value indicates no encryption.</p>
      * 
      * <strong>example:</strong>
      * <p>SM2</p>
@@ -77,18 +78,16 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String encryptType;
 
     /**
-     * <p>Local video file.</p>
+     * <p>The local video file.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>无</p>
      */
     @NameInMap("FaceContrastFile")
     public String faceContrastFile;
 
     /**
-     * <p>Base64 encoded photo</p>
+     * <p>The Base64-encoded photo.</p>
      * 
      * <strong>example:</strong>
      * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
@@ -97,9 +96,9 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String faceContrastPicture;
 
     /**
-     * <p>OSS photo URL, currently only supports authorized OSS photo URLs.</p>
+     * <p>The OSS photo URL. Currently only authorized OSS photo URLs are supported.</p>
      * <blockquote>
-     * <p>Among the four ways to input images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to input.</p>
+     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +108,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String faceContrastPictureUrl;
 
     /**
-     * <p>User IP.</p>
+     * <p>The IP address of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>114.xxx.xxx.xxx</p>
@@ -118,7 +117,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>User\&quot;s phone number.</p>
+     * <p>The mobile phone number of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>130xxxxxxxx</p>
@@ -127,10 +126,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>Liveness detection type. Possible values:</p>
-     * <p>• <strong>NO_LIVENESS</strong> – Liveness detection is disabled.</p>
-     * <p>• <strong>FRONT_CAMERA_LIVENESS</strong> (default) – Liveness detection on face images captured with the mobile device’s front camera.</p>
-     * <p>• <strong>REAR_CAMERA_LIVENESS</strong> – Liveness detection on face images captured in other scenarios (e.g., via the rear camera).</p>
+     * <p>The liveness detection type.</p>
      * 
      * <strong>example:</strong>
      * <p>FRONT_CAMERA_LIVENESS</p>
@@ -139,7 +135,10 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Authorized OSS space Bucket name. In the methods of passing images, including FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS, choose one to pass in.</p>
+     * <p>The bucket name of the authorized OSS space.</p>
+     * <blockquote>
+     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
@@ -148,9 +147,9 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>Filename of the authorized OSS space.</p>
+     * <p>The file name in the authorized OSS space.</p>
      * <blockquote>
-     * <p>Among the four ways to input images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to input.</p>
+     * <p>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -160,7 +159,8 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String ossObjectName;
 
     /**
-     * <p>A unique identifier for the merchant\&quot;s request. It is a 32-character alphanumeric combination. The first few characters are a custom abbreviation defined by the merchant, followed by a period, and the latter part can be a random or incrementing sequence.</p>
+     * <p>The unique identifier of the merchant request.
+     * The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can be a time segment, and the last part can be a random or incremental sequence.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -178,7 +178,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Authentication scenario ID.</p>
+     * <p>The verification scenario ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000006</p>
@@ -187,7 +187,7 @@ public class ContrastFaceVerifyRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>Custom user ID defined by the customer\&quot;s business.</p>
+     * <p>The custom user ID defined by the business.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>

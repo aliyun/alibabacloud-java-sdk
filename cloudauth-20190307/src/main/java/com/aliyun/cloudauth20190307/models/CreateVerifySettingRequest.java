@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVerifySettingRequest extends TeaModel {
     /**
-     * <p>Verification scenario name, supporting Chinese, English, numbers, and hyphens (-), with a maximum of 20 characters.</p>
+     * <p>The name of the verification scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateVerifySettingRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>Verification scenario identifier, supporting English letters, numbers, and hyphens (-), with a maximum of 20 characters.</p>
+     * <p>The identifier of the verification scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateVerifySettingRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Whether to use the system\&quot;s default guide page.</p>
+     * <p>Specifies whether to use the default system guide page.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,7 +34,7 @@ public class CreateVerifySettingRequest extends TeaModel {
     public Boolean guideStep;
 
     /**
-     * <p>Whether to use the system\&quot;s default authorization page.</p>
+     * <p>Specifies whether to use the default system authorization page.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,7 +43,7 @@ public class CreateVerifySettingRequest extends TeaModel {
     public Boolean privacyStep;
 
     /**
-     * <p>Whether to use the system\&quot;s default result page.</p>
+     * <p>Specifies whether to use the default system result page.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -52,7 +52,7 @@ public class CreateVerifySettingRequest extends TeaModel {
     public Boolean resultStep;
 
     /**
-     * <p>The name of the authentication solution to use, such as <strong>RPBasic</strong>, <strong>RPBioOnly</strong>, etc. For all supported authentication solutions, see <a href="https://help.aliyun.com/document_detail/127521.html">Authentication Solutions</a>.</p>
+     * <p>The name of the verification solution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

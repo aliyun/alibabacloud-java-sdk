@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Id3MetaVerifyWithOCRResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 indicates success, any other value indicates failure. <strong>Important</strong></p>
+     * <p>The response code. 200 indicates success. Other values indicate failure. <strong>Important</strong></p>
      * <ul>
-     * <li>This parameter indicates whether the interface was called correctly. For a detailed explanation of return codes, please refer to the error codes.</li>
-     * <li>The business verification result can be viewed through the fields in ResultObject.</li>
+     * <li>This parameter indicates only whether the API call was made correctly. For more information about return codes, see error codes.</li>
+     * <li>Check the fields in ResultObject for the business verification result.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class Id3MetaVerifyWithOCRResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Interface call return message. <strong>Important</strong> This parameter only indicates whether there was an exception with the interface.</p>
+     * <p>The response message of the API call. This parameter indicates only whether an exception occurred during the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -27,7 +27,7 @@ public class Id3MetaVerifyWithOCRResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>130A2C10-B9EE-4D84-88E3-5384FF03****</p>
@@ -36,7 +36,7 @@ public class Id3MetaVerifyWithOCRResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Result object.</p>
+     * <p>The result object.</p>
      */
     @NameInMap("ResultObject")
     public Id3MetaVerifyWithOCRResponseBodyResultObject resultObject;
@@ -80,11 +80,11 @@ public class Id3MetaVerifyWithOCRResponseBody extends TeaModel {
 
     public static class Id3MetaVerifyWithOCRResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Identity verification result:</p>
+         * <p>The identity verification result. Valid values:</p>
          * <ul>
-         * <li>1: Consistent</li>
-         * <li>2: Inconsistent</li>
-         * <li>3: No record found</li>
+         * <li>1: consistent.</li>
+         * <li>2: inconsistent.</li>
+         * <li>3: no record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,16 +94,16 @@ public class Id3MetaVerifyWithOCRResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Card ocr result.</p>
+         * <p>{&quot;address&quot;:&quot;浙江省杭州市余*****&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;address&quot;:&quot;浙江省杭州市余*****&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</p>
+         * <p>OCR读取的身份证信息。</p>
          */
         @NameInMap("CardInfo")
         public String cardInfo;
 
         /**
-         * <p>Face comparison score.</p>
+         * <p>The face comparison score.</p>
          * 
          * <strong>example:</strong>
          * <p>{

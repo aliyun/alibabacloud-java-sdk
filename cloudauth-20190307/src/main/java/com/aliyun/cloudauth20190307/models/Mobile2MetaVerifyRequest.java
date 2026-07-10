@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Mobile2MetaVerifyRequest extends TeaModel {
     /**
-     * <p>Phone number:</p>
+     * <p>The mobile phone number. Valid values:</p>
      * <ul>
-     * <li>When paramType is normal: input the plaintext phone number.</li>
-     * <li>When paramType is md5: input the encrypted phone number.</li>
+     * <li>If ParamType is set to normal, pass in the mobile phone number in plaintext.</li>
+     * <li>If ParamType is set to md5, pass in the MD5-encrypted mobile phone number.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,10 +21,10 @@ public class Mobile2MetaVerifyRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>Encryption method:</p>
+     * <p>The encryption method. Valid values:</p>
      * <ul>
      * <li>normal: plaintext without encryption</li>
-     * <li>md5: MD5 encryption</li>
+     * <li>md5: MD5 encryption.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,10 +35,10 @@ public class Mobile2MetaVerifyRequest extends TeaModel {
     public String paramType;
 
     /**
-     * <p>Name:</p>
+     * <p>The name. Valid values:</p>
      * <ul>
-     * <li>When paramType is normal: input the plaintext name.</li>
-     * <li>When paramType is md5: input the encrypted name.</li>
+     * <li>If ParamType is set to normal, pass in the name in plaintext.</li>
+     * <li>If ParamType is set to md5, pass in the MD5-encrypted name.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

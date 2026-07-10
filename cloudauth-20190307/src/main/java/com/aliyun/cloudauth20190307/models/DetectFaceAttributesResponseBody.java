@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetectFaceAttributesResponseBody extends TeaModel {
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DetectFaceAttributesResponseBodyData data;
 
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Error.InternalError</p>
@@ -29,7 +29,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -38,7 +38,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the response was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -364,7 +364,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public DetectFaceAttributesResponseBodyDataFaceInfos faceInfos;
 
         /**
-         * <p>Original image height, in pixels.</p>
+         * <p>The height of the original image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -373,7 +373,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         public Integer imgHeight;
 
         /**
-         * <p>Original image width, in pixels.</p>
+         * <p>The width of the original image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>

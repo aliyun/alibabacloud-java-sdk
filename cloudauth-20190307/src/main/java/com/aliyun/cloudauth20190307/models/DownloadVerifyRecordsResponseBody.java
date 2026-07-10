@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadVerifyRecordsResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -14,7 +14,7 @@ public class DownloadVerifyRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>OSS link for file download.</p>
+     * <p>The OSS download link for the file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/invoke_download/0E30CD55-DCD4-5363-AA98-XXXXXXX">https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/invoke_download/0E30CD55-DCD4-5363-AA98-XXXXXXX</a></p>

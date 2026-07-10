@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFaceVerifyResultResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.</p>
+     * <p>Return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -32,7 +32,7 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("ResultObject")
     public DeleteFaceVerifyResultResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
 
     public static class DeleteFaceVerifyResultResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Unique identifier for real-person authentication.</p>
+         * <p>The unique identifier for real-person authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>sha58aeae7ea2f5ed069530f58df4e6d</p>
@@ -85,7 +85,7 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>Deletion result. Possible values are as follows:</p>
+         * <p>The deletion result. Valid values:</p>
          * <ul>
          * <li>Y: Deletion successful.</li>
          * <li>N: Deletion failed.</li>
@@ -98,10 +98,10 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         public String deleteResult;
 
         /**
-         * <p>Reason for deletion failure</p>
+         * <p>The reason for deletion failure.</p>
          * <ul>
-         * <li>NOT_DELETE_REPEATEDLY: Cannot be deleted repeatedly</li>
-         * <li>NEED_QUERY_VERIFY_RESULT: Need to query the verification result first, then delete</li>
+         * <li>NOT_DELETE_REPEATEDLY: The data cannot be deleted repeatedly.</li>
+         * <li>NEED_QUERY_VERIFY_RESULT: You must query the authentication result before deleting.</li>
          * </ul>
          * 
          * <strong>example:</strong>

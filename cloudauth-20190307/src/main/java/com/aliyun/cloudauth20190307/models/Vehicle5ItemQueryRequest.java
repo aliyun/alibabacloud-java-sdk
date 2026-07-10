@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Vehicle5ItemQueryRequest extends TeaModel {
     /**
-     * <p>Parameter type:</p>
+     * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li><strong>normal</strong>: Unencrypted.</li>
-     * <li><strong>md5</strong>: MD5 encrypted.</li>
+     * <li><strong>normal</strong>: Not encrypted.</li>
+     * <li><strong>md5</strong>: MD5-encrypted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class Vehicle5ItemQueryRequest extends TeaModel {
     public String paramType;
 
     /**
-     * <p>License plate number</p>
+     * <p>The license plate number.</p>
      * <blockquote>
      * <ul>
-     * <li>When paramType is set to normal, enter the plain text.</li>
-     * <li>When paramType is set to md5, enter the plain text of all but the last two characters of the license plate + MD5 encryption (32-bit lowercase MD5) of the last two characters.</li>
+     * <li>If ParamType is set to normal, enter the plaintext value.</li>
+     * <li>If ParamType is set to md5, enter the plaintext of the license plate number excluding the last two characters, concatenated with the MD5-encrypted last two characters (32-bit lowercase MD5).</li>
      * </ul>
      * </blockquote>
      * 
@@ -33,11 +33,11 @@ public class Vehicle5ItemQueryRequest extends TeaModel {
     public String vehicleNum;
 
     /**
-     * <p>Vehicle type</p>
+     * <p>The vehicle type.</p>
      * <blockquote>
      * <ul>
-     * <li>02: Ordinary passenger car</li>
-     * <li>52: New energy passenger car</li>
+     * <li>02: standard passenger car</li>
+     * <li>52: new energy passenger car.</li>
      * </ul>
      * </blockquote>
      * 

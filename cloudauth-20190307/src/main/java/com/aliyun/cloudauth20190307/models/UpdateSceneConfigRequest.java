@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSceneConfigRequest extends TeaModel {
     /**
-     * <p>Scene configuration information, in JSON format. For the specific structure definition, please refer to more information about the configuration.</p>
+     * <p>The scenario configuration in JSON format. For the specific structure definition, refer to the additional information about configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateSceneConfigRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>Willingness configuration ID.</p>
+     * <p>The ID of the intent configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateSceneConfigRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Selected authentication scene.</p>
+     * <p>The selected verification scenario.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

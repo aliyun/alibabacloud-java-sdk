@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeListAntCloudAuthScenesRequest extends TeaModel {
     /**
-     * <p>Scenario ID.</p>
+     * <p>The scene ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100000xxxx</p>

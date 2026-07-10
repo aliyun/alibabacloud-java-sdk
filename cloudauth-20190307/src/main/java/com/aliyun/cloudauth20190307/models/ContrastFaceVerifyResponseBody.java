@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContrastFaceVerifyResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>130A2C10-B9EE-4D84-88E3-5384FF039795</p>
@@ -32,7 +32,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Request result</p>
+     * <p>The request result.</p>
      */
     @NameInMap("ResultObject")
     public ContrastFaceVerifyResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
 
     public static class ContrastFaceVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Unique identifier for the real-person verification request.</p>
+         * <p>The unique identifier of the ID Verification request.</p>
          * 
          * <strong>example:</strong>
          * <p>91707dc296d469ad38e4c5efa6a0****</p>
@@ -85,7 +85,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>Information about the authenticated entity, which is usually empty in general authentication scenarios.</p>
+         * <p>The subject information of the verification. This is returned as empty in common verification scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -94,7 +94,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String identityInfo;
 
         /**
-         * <p>Attachment information of the authenticated entity, mainly image materials, in JSON format, as follows.</p>
+         * <p>The supplementary material information of the verification subject, primarily image-based materials, in JSON format as follows.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;verifyScore&quot;: 50.28594166529785}}</p>
@@ -103,7 +103,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String materialInfo;
 
         /**
-         * <p>Whether it passed, T for pass, F for fail.</p>
+         * <p>Indicates whether the verification is passed. A value of T indicates passed. A value of F indicates not passed.</p>
          * 
          * <strong>example:</strong>
          * <p>T</p>
@@ -112,7 +112,7 @@ public class ContrastFaceVerifyResponseBody extends TeaModel {
         public String passed;
 
         /**
-         * <p>Description of the authentication result. For details, see the SubCode explanation below.</p>
+         * <p>The verification result description. For more information, see the SubCode description below.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

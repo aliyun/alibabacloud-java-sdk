@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyV2ResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -32,7 +32,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public CredentialVerifyV2ResponseBodyResultObject resultObject;
@@ -76,31 +76,23 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
 
     public static class CredentialVerifyV2ResponseBodyResultObjectVlResult extends TeaModel {
         /**
-         * <p>Qwen interpretation success indicator</p>
-         * <p>true: Success</p>
-         * <p>false: Failure</p>
+         * <p>This feature is offline. This parameter no longer takes effect.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("Success")
         public Boolean success;
 
         /**
-         * <p>Image understanding result:</p>
-         * <ul>
-         * <li><p>When PromptModel is DEFAULT, the output format refers to the example on the right.</p>
-         * </li>
-         * <li><p>When PromptModel is CUSTOM, the output format follows the agreed format of the Prompt.</p>
-         * </li>
-         * </ul>
+         * <p>This feature is offline. This parameter no longer takes effect.</p>
          * 
          * <strong>example:</strong>
-         * <p>{
-         *  &quot;CHK_DOOR_PHOTO&quot;:1, -- 是否门头照 1：是 0：否
-         *  &quot;CHK_INTERIOR_PHOTO&quot;:0, -- 是否内景照 1：是 0：否
-         *  &quot;CHK_COUNTER_PHOTO&quot;:0 -- 是否柜台照 1：是 0：否
-         * }</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("VlContent")
         public String vlContent;
@@ -130,7 +122,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
 
     public static class CredentialVerifyV2ResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Additional information in JSON format.</p>
+         * <p>The additional information in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{</p>
@@ -146,7 +138,10 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String materialInfo;
 
         /**
-         * <p>OCR recognition result.</p>
+         * <p>The OCR recognition result.</p>
+         * <blockquote>
+         * <p>Danger: Deprecated.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -165,11 +160,11 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String ocrInfo;
 
         /**
-         * <p>Risk result</p>
+         * <p>The risk result. Valid values:</p>
          * <ul>
-         * <li>0: Low risk</li>
-         * <li>1: High risk</li>
-         * <li>2: Suspicious</li>
+         * <li>0: Low risk.</li>
+         * <li>1: High risk.</li>
+         * <li>2: Suspicious.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,20 +174,20 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>Risk score map.</p>
+         * <p>The risk score map.</p>
          */
         @NameInMap("RiskScore")
         public java.util.Map<String, String> riskScore;
 
         /**
-         * <p>Risk tags, separated by commas (,), including:</p>
+         * <p>The risk tags, separated by commas (,). Valid values:</p>
          * <ul>
-         * <li>PS: Image manipulation.</li>
-         * <li>SCREEN_PHOTO: Screen recapture.</li>
-         * <li>SCREENSHOT: Screenshot.</li>
-         * <li>WATERMARK: Watermark.</li>
-         * <li>SAME_BACKGROUND: Similar background.</li>
-         * <li>ORIGINAL_PHOTO: Not the original image</li>
+         * <li>PS: image manipulation.</li>
+         * <li>SCREEN_PHOTO: screen recapture.</li>
+         * <li>SCREENSHOT: screenshot.</li>
+         * <li>WATERMARK: watermark.</li>
+         * <li>SAME_BACKGROUND: similar background.</li>
+         * <li>ORIGINAL_PHOTO: non-original image.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +197,10 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String riskTag;
 
         /**
-         * <p>Authority verification details.</p>
+         * <p>The authoritative verification details.</p>
+         * <blockquote>
+         * <p>Danger: Deprecated.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>**</p>
@@ -211,7 +209,10 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String verifyDetail;
 
         /**
-         * <p>Authority verification result</p>
+         * <p>The authoritative verification result.</p>
+         * <blockquote>
+         * <p>Danger: Deprecated.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -222,7 +223,7 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String verifyResult;
 
         /**
-         * <p>Qwen interpretation.</p>
+         * <p>This feature is offline. This parameter no longer takes effect.</p>
          */
         @NameInMap("VlResult")
         public CredentialVerifyV2ResponseBodyResultObjectVlResult vlResult;

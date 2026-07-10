@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePageSettingResponseBody extends TeaModel {
     /**
-     * <p>Failure reasons.</p>
+     * <p>The failure reasons.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -27,7 +27,7 @@ public class DescribePageSettingResponseBody extends TeaModel {
     public java.util.Map<String, ?> failReasons;
 
     /**
-     * <p>The ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C58A8581-6A5B-55F1-B2EF-1CEAC97DA181</p>

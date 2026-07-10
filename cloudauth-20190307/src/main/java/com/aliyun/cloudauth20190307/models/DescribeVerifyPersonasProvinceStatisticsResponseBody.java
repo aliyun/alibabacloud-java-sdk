@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D9821F95-CC18-5439-BB1C-21A0FF0C2003</p>
@@ -14,7 +14,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
     public String requestId;
 
     /**
-     * <p>Query result.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("ResultObject")
     public DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
 
     public static class DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObjectItems extends TeaModel {
         /**
-         * <p>Total number of devices in the province.</p>
+         * <p>The total number of devices in the province.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
         public Long provinceCnt;
 
         /**
-         * <p>Province name.</p>
+         * <p>The province name.</p>
          * 
          * <strong>example:</strong>
          * <p>浙江</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
         public String provinceName;
 
         /**
-         * <p>Percentage of the total for this province.</p>
+         * <p>The percentage of the province relative to the total.</p>
          * 
          * <strong>example:</strong>
          * <p>35.71</p>
@@ -101,7 +101,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
 
     public static class DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Total number of devices.</p>
+         * <p>The total number of devices.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -110,7 +110,7 @@ public class DescribeVerifyPersonasProvinceStatisticsResponseBody extends TeaMod
         public Long allUserCnt;
 
         /**
-         * <p>Data items.</p>
+         * <p>The data items.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObjectItems> items;

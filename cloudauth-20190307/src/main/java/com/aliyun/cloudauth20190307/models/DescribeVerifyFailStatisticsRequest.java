@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyFailStatisticsRequest extends TeaModel {
     /**
-     * <p>Age greater than 14 years old:</p>
+     * <p>Specifies whether the age is greater than 14. Valid values:</p>
      * <ul>
-     * <li><strong>T</strong>: Greater than</li>
-     * <li><strong>F</strong>: Less than</li>
+     * <li><strong>T</strong>: greater than 14.</li>
+     * <li><strong>F</strong>: less than 14.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class DescribeVerifyFailStatisticsRequest extends TeaModel {
     public String ageGt;
 
     /**
-     * <p>API code:</p>
+     * <p>The API code. Valid values:</p>
      * <ul>
-     * <li><strong>INIT_SERVICE</strong>: Server-side initialization failure</li>
-     * <li><strong>INIT_DEVICE</strong>: Client-side failure</li>
-     * <li><strong>VERIFY_DEVICE</strong>: Authentication failed</li>
+     * <li><strong>INIT_SERVICE</strong>: server-side initialization failure.</li>
+     * <li><strong>INIT_DEVICE</strong>: client-side failure.</li>
+     * <li><strong>VERIFY_DEVICE</strong>: authentication not passed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -33,11 +33,11 @@ public class DescribeVerifyFailStatisticsRequest extends TeaModel {
     public String api;
 
     /**
-     * <p>Device type.</p>
+     * <p>The device type. Valid values:</p>
      * <ul>
      * <li>ios</li>
      * <li>android</li>
-     * <li>websdk</li>
+     * <li>websdk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeVerifyFailStatisticsRequest extends TeaModel {
     public String deviceType;
 
     /**
-     * <p>End time of the query.</p>
+     * <p>The end time of the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeVerifyFailStatisticsRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>Product code.</p>
+     * <p>The product code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,11 +67,11 @@ public class DescribeVerifyFailStatisticsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Service type:</p>
+     * <p>The service type. Valid values:</p>
      * <ul>
-     * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-     * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
-     * <li><strong>cloudauth</strong> (discontinued): Real-person authentication.</li>
+     * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+     * <li><strong>cloudauthst</strong> (discontinued): ID Verification Enhanced Edition.</li>
+     * <li><strong>cloudauth</strong> (discontinued): ID Verification.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -82,7 +82,7 @@ public class DescribeVerifyFailStatisticsRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Start time of the query.</p>
+     * <p>The start time of the query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

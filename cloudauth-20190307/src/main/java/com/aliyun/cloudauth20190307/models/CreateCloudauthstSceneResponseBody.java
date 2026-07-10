@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudauthstSceneResponseBody extends TeaModel {
     /**
-     * <p>ID of this request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -14,7 +14,7 @@ public class CreateCloudauthstSceneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result, indicating whether the operation was successful.</p>
+     * <p>The returned result that indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

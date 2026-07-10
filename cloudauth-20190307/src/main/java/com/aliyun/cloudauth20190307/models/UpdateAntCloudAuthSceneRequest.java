@@ -5,7 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     /**
-     * <p>Update Ant Blockchain Transaction Scenario</p>
+     * <p>Specifies whether to bind a mini program. Valid values:</p>
+     * <ul>
+     * <li><strong>Y</strong>: enabled.</li>
+     * <li><strong>N (default)</strong>: disabled.<blockquote>
+     * <p>Notice: If you enable mini program binding, make sure that you specify all parameters related to the mini program binding..</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -14,14 +21,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String bindMiniProgram;
 
     /**
-     * <p>Whether to enable binding with a mini program:</p>
-     * <ul>
-     * <li><strong>Y</strong>: Enable</li>
-     * <li><strong>N (default)</strong>: Disable<blockquote>
-     * <p>Notice: If you enable binding with a mini program, please ensure that all parameters for the mini program are passed.</p>
-     * </blockquote>
-     * </li>
-     * </ul>
+     * <p>The content of the uploaded verification file.</p>
      * 
      * <strong>example:</strong>
      * <p>774c4aab45981ff4a86cde9255a11xxx</p>
@@ -30,20 +30,20 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String checkFileBody;
 
     /**
-     * <p>Scenario name.</p>
+     * <p>The name of the uploaded verification file.</p>
      * 
      * <strong>example:</strong>
-     * <p>Whether to enable storing the authentication files generated during the authentication process to the user\&quot;s OSS:</p>
-     * <ul>
-     * <li><strong>Y</strong>: Enable</li>
-     * <li><strong>N (default)</strong>: Disable</li>
-     * </ul>
+     * <p>测试.txt</p>
      */
     @NameInMap("CheckFileName")
     public String checkFileName;
 
     /**
-     * <p>Name of the uploaded verification file.</p>
+     * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
+     * <ul>
+     * <li><strong>Y</strong>: enabled.</li>
+     * <li><strong>N</strong>: disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -52,16 +52,21 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String deviceRiskPlus;
 
     /**
-     * <p>System-defined parameter. Value: <strong>UpdateAntCloudAuthScene</strong>.</p>
+     * <p>The name of the mini program.</p>
      * 
      * <strong>example:</strong>
-     * <p>Scenario ID.</p>
+     * <p>测试APP</p>
      */
     @NameInMap("MiniProgramName")
     public String miniProgramName;
 
     /**
-     * <p>Currently meaningless, can be omitted.</p>
+     * <p>The mini program platform. Valid values:</p>
+     * <ul>
+     * <li><strong>WECHAT</strong>: WeChat</li>
+     * <li><strong>ALIPAY</strong>: Alipay</li>
+     * <li><strong>TIKTOK</strong>: TikTok.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>IOS</p>
@@ -70,7 +75,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>Mini program name.</p>
+     * <p>The number of returned photos (1 to 5). This parameter takes effect only after StoreImage is enabled for certification file retention.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -79,12 +84,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public Long returnPicCount;
 
     /**
-     * <p>Platform for binding the mini program:</p>
-     * <ul>
-     * <li><strong>WECHAT</strong>: WeChat</li>
-     * <li><strong>ALIPAY</strong>: Alipay</li>
-     * <li><strong>TIKTOK</strong>: TikTok</li>
-     * </ul>
+     * <p>The duration of the returned video (1 to 2 seconds). This parameter takes effect only after StoreImage is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,7 +93,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public Long returnVideoLength;
 
     /**
-     * <p>Update Financial-Level Authentication Scenario</p>
+     * <p>The scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,11 +103,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
-     * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
-     * <li>Request method: HTTPS POST.</li>
-     * </ul>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -116,7 +112,7 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public String sceneName;
 
     /**
-     * <p>Update Ant Blockchain Transaction Scenario</p>
+     * <p>This parameter is not used. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -127,10 +123,10 @@ public class UpdateAntCloudAuthSceneRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Update the information of a financial-level authentication scenario based on the scenario ID.</p>
+     * <p>Specifies whether to deliver certification files generated during the certification process to the user\&quot;s OSS bucket. Valid values:</p>
      * <ul>
-     * <li>Service address: cloudauth.aliyuncs.com.</li>
-     * <li>Request method: HTTPS POST.</li>
+     * <li><strong>Y</strong>: enabled.</li>
+     * <li><strong>N (default)</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

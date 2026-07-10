@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
     /**
-     * <p>List of face verification records.</p>
+     * <p>The list of facial recognition authentication records.</p>
      */
     @NameInMap("FaceVerifyInfos")
     public java.util.List<DescribeListFaceVerifyInfosResponseBodyFaceVerifyInfos> faceVerifyInfos;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The specified page number returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
     public Integer itemsPerPage;
 
     /**
-     * <p>Pagination parameter: current page number.</p>
+     * <p>The current page number for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>ID of the current request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CC27D8E-24BF-5056-B14E-9F26719C9A8D</p>
@@ -38,7 +38,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of verifications.</p>
+     * <p>The total number of authentication records.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -47,7 +47,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -110,7 +110,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
 
     public static class DescribeListFaceVerifyInfosResponseBodyFaceVerifyInfos extends TeaModel {
         /**
-         * <p>Business code.</p>
+         * <p>The business code.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_FACE</p>
@@ -119,7 +119,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>赵四</p>
@@ -128,7 +128,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
         public String certName;
 
         /**
-         * <p>ID number.</p>
+         * <p>The certificate number.</p>
          * 
          * <strong>example:</strong>
          * <p>500382199805086199</p>
@@ -137,7 +137,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
         public String certNo;
 
         /**
-         * <p>ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sha8ff58e964152c4c4d21005fb98ecb</p>
@@ -146,7 +146,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
         public String certifyId;
 
         /**
-         * <p>Creation time of the face recognition record.</p>
+         * <p>The creation time of the facial recognition record.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-02T11:16:06Z</p>
@@ -155,7 +155,7 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Scene ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1000010145</p>
@@ -164,10 +164,10 @@ public class DescribeListFaceVerifyInfosResponseBody extends TeaModel {
         public Long sceneId;
 
         /**
-         * <p>Verification status:</p>
+         * <p>The authentication status. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Verification passed.</li>
-         * <li><strong>2</strong>: Verification failed.</li>
+         * <li><strong>1</strong>: Authentication passed.</li>
+         * <li><strong>2</strong>: Authentication failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

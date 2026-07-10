@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.</p>
+     * <p>Response code: 200 indicates success, other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>Response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("ResultObject")
     public Mobile3MetaSimpleVerifyResponseBodyResultObject resultObject;
@@ -90,7 +90,7 @@ public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>ISP name:</p>
+         * <p>Carrier name:</p>
          * <ul>
          * <li><strong>CMCC</strong>: China Mobile.</li>
          * <li><strong>CUCC</strong>: China Unicom.</li>

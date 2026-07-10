@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryBlackListStrategyResponseBody extends TeaModel {
     /**
-     * <p>Return code, <strong>200</strong> indicates successful API response.</p>
+     * <p>The return code. <strong>200</strong> indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>ID of the request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
@@ -32,7 +32,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("ResultObject")
     public java.util.List<QueryBlackListStrategyResponseBodyResultObject> resultObject;
@@ -76,7 +76,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
 
     public static class QueryBlackListStrategyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Blacklist string, separated by <strong>commas</strong>.</p>
+         * <p>The blacklist string. Multiple blacklist entries are separated by <strong>commas</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1,127.0.0.2</p>
@@ -85,12 +85,12 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         public String bizContent;
 
         /**
-         * <p>List type:</p>
+         * <p>The blacklist type. Valid values:</p>
          * <ul>
-         * <li>mobile: Phone number blacklist</li>
+         * <li>mobile: phone number blacklist</li>
          * <li>ip: IP blacklist</li>
-         * <li>identifyNum: ID number blacklist</li>
-         * <li>bankCard: Bank card blacklist</li>
+         * <li>identifyNum: ID card blacklist</li>
+         * <li>bankCard: bank card blacklist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         public String bizKey;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1711533786000</p>
@@ -109,7 +109,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>Rule ID.</p>
+         * <p>The rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>234822</p>
@@ -118,11 +118,11 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>Product name:</p>
+         * <p>The product name. Valid values:</p>
          * <ul>
-         * <li>id2meta: ID number two-factor verification</li>
-         * <li>mobile3Meta: Phone number factor verification</li>
-         * <li>bankcardMeta: Bank card factor verification</li>
+         * <li>id2meta: ID card two-factor verification.</li>
+         * <li>mobile3Meta: Phone number factor verification.</li>
+         * <li>bankcardMeta: Bank card factor verification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +132,10 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>Status:</p>
+         * <p>The status. Valid values:</p>
          * <ul>
-         * <li><strong>disabled</strong>: Disabled</li>
-         * <li><strong>normal</strong>: Enabled</li>
+         * <li><strong>disabled</strong>: Disabled.</li>
+         * <li><strong>normal</strong>: Enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class QueryBlackListStrategyResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>User ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12600512xxxxxxxx</p>

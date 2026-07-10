@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAuthVerifyRequest extends TeaModel {
     /**
+     * <p>The unique identifier for ID Verification.
+     * Obtain this value by calling InitAuthVerify to initiate an OCR request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +16,7 @@ public class DescribeAuthVerifyRequest extends TeaModel {
     public String certifyId;
 
     /**
+     * <p>The authentication scenario ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

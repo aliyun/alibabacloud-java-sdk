@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCustomizeFlowStrategyRequest extends TeaModel {
     /**
-     * <p>Product type, currently only supports <strong>ANT_CLOUD_AUTH</strong> (Financial-grade Real Person), all others have been phased out.</p>
+     * <p>The product type. Currently, only <strong>ANT_CLOUD_AUTH</strong> (financial-grade ID Verification) is supported. All other types have been discontinued.</p>
      * 
      * <strong>example:</strong>
      * <p>ANT_CLOUD_AUTH</p>
@@ -14,7 +14,7 @@ public class QueryCustomizeFlowStrategyRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>regionId</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -23,7 +23,7 @@ public class QueryCustomizeFlowStrategyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>User ID</p>
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

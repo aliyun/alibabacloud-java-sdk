@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaSimpleStandardVerifyRequest extends TeaModel {
     /**
-     * <p>ID number:</p>
+     * <p>The ID card number. Valid values:</p>
      * <ul>
-     * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the ID number.</li>
-     * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted ID number.</li>
+     * <li>If ParamType is set to normal, pass in the ID card number in plaintext.</li>
+     * <li>If ParamType is set to md5, pass in the MD5-encrypted ID card number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class Mobile3MetaSimpleStandardVerifyRequest extends TeaModel {
     public String identifyNum;
 
     /**
-     * <p>Phone number:</p>
+     * <p>The phone number. Valid values:</p>
      * <ul>
-     * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the phone number.</li>
-     * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted phone number.</li>
+     * <li>If ParamType is set to normal, pass in the phone number in plaintext.</li>
+     * <li>If ParamType is set to md5, pass in the MD5-encrypted phone number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class Mobile3MetaSimpleStandardVerifyRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>Parameter type:</p>
+     * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li>normal: Unencrypted.</li>
-     * <li>md5: MD5 encrypted.</li>
+     * <li>normal: not encrypted.</li>
+     * <li>md5: MD5-encrypted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,10 @@ public class Mobile3MetaSimpleStandardVerifyRequest extends TeaModel {
     public String paramType;
 
     /**
-     * <p>Name:</p>
+     * <p>The name. Valid values:</p>
      * <ul>
-     * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the name.</li>
-     * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted name.</li>
+     * <li>If ParamType is set to normal, pass in the name in plaintext.</li>
+     * <li>If ParamType is set to md5, pass in the MD5-encrypted name.</li>
      * </ul>
      * 
      * <strong>example:</strong>

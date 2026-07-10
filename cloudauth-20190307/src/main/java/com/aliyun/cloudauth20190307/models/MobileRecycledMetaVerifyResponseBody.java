@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
     /**
+     * <p>The response code. A value of 200 indicates success. Any other value indicates failure.</p>
+     * <blockquote>
+     * <p><strong>Important</strong></p>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter indicates whether the API operation is called correctly. For more information about return codes, see error codes.</li>
+     * <li>Check the business verification result in the fields of ResultObject.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +21,8 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -27,6 +38,9 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("ResultObject")
     public MobileRecycledMetaVerifyResponseBodyResultObject resultObject;
 
@@ -69,6 +83,12 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
 
     public static class MobileRecycledMetaVerifyResponseBodyResultObject extends TeaModel {
         /**
+         * <p>The query result. Valid values:</p>
+         * <ul>
+         * <li>1: A query result is found.</li>
+         * <li>3: No query result is found.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -76,6 +96,8 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
+         * <p>The carrier name. China Mobile: CMCC. China Unicom: CUCC. China Telecom: CTCC.</p>
+         * 
          * <strong>example:</strong>
          * <p>CMCC</p>
          */
@@ -83,6 +105,14 @@ public class MobileRecycledMetaVerifyResponseBody extends TeaModel {
         public String ispName;
 
         /**
+         * <p>The detailed verification result. Valid values:</p>
+         * <ul>
+         * <li>101: The registration date is equal to or later than the phone number activation date.</li>
+         * <li>102: The registration date is earlier than the phone number activation date.</li>
+         * <li>103: The new subscriber has not been synchronized yet.</li>
+         * <li>301: Data exception or the subscriber has been deactivated.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */

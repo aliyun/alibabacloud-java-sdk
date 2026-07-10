@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class VehicleInsureQueryRequest extends TeaModel {
     /**
-     * <p>Parameter type:</p>
+     * <p>The parameter type. Valid values:</p>
      * <ul>
-     * <li><strong>normal</strong>: Unencrypted.</li>
-     * <li><strong>md5</strong>: MD5 encrypted.</li>
+     * <li><strong>normal</strong>: not encrypted.</li>
+     * <li><strong>md5</strong>: MD5-encrypted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class VehicleInsureQueryRequest extends TeaModel {
     public String paramType;
 
     /**
-     * <p>License plate number</p>
+     * <p>The license plate number.</p>
      * <blockquote>
      * <ul>
-     * <li>When <code>paramType</code> is set to <code>normal</code>, enter the plain text.</li>
-     * <li>When <code>paramType</code> is set to <code>md5</code>, enter the plain text of all but the last two characters of the license plate + the MD5 encryption (32 lowercase characters) of the last two characters of the license plate.</li>
+     * <li>If ParamType is set to normal, enter the plaintext value.</li>
+     * <li>If ParamType is set to md5, enter the plaintext of the license plate number excluding the last two characters, concatenated with the MD5-encrypted value of the last two characters (32-bit lowercase MD5).</li>
      * </ul>
      * </blockquote>
      * 
@@ -33,7 +33,7 @@ public class VehicleInsureQueryRequest extends TeaModel {
     public String vehicleNum;
 
     /**
-     * <p>Driver\&quot;s license vehicle type.</p>
+     * <p>The vehicle type on the driving license.</p>
      * 
      * <strong>example:</strong>
      * <p>02</p>
@@ -42,11 +42,11 @@ public class VehicleInsureQueryRequest extends TeaModel {
     public String vehicleType;
 
     /**
-     * <p>Vehicle identification code, i.e., the vehicle VIN</p>
+     * <p>The vehicle identification number (VIN).</p>
      * <blockquote>
      * <ul>
-     * <li>When <code>paramType</code> is set to <code>normal</code>, enter the plain text.</li>
-     * <li>When <code>paramType</code> is set to <code>md5</code>, enter the plain text of all but the last four characters of the VIN + the MD5 encryption (32 lowercase characters) of the last four characters of the VIN.</li>
+     * <li>If ParamType is set to normal, enter the plaintext value.</li>
+     * <li>If ParamType is set to md5, enter the plaintext of the VIN excluding the last 4 characters, concatenated with the MD5-encrypted value of the last 4 characters (32-bit lowercase MD5).</li>
      * </ul>
      * </blockquote>
      * 

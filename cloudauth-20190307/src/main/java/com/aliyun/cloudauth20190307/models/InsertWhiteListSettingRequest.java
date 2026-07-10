@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InsertWhiteListSettingRequest extends TeaModel {
     /**
-     * <p>ID number.</p>
+     * <p>The certificate number.</p>
      * 
      * <strong>example:</strong>
      * <p>330103xxxxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class InsertWhiteListSettingRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>Unique identifier for real person authentication.</p>
+     * <p>The unique identifier of the ID Verification request.</p>
      * 
      * <strong>example:</strong>
      * <p>shsf57a4e0d9981c3bd66dc754f3d3cd</p>
@@ -23,7 +23,7 @@ public class InsertWhiteListSettingRequest extends TeaModel {
     public String certifyId;
 
     /**
-     * <p>Remark, with a length less than 32 characters.</p>
+     * <p>The remarks. The maximum length is 32 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -32,7 +32,7 @@ public class InsertWhiteListSettingRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For instructions on how to create an authentication scene, see Adding an Authentication Scene.</p>
+     * <p>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For information about how to create a verification scenario, see Add a verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>100000xxxx</p>
@@ -41,7 +41,7 @@ public class InsertWhiteListSettingRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>ServiceCode for the real person cloud product, value: <strong>antcloudauth</strong>.</p>
+     * <p>The ServiceCode of the ID Verification cloud service. Set this parameter to <strong>antcloudauth</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>antcloudauth</p>
@@ -50,7 +50,7 @@ public class InsertWhiteListSettingRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Whitelist validity period in days (only supports 3, 7, 30).</p>
+     * <p>The number of days the whitelist entry is valid. Valid values: 3, 7, and 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

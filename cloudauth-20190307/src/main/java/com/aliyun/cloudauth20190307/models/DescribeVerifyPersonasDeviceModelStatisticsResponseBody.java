@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>026828A3-CC7E-5D85-85B6-08DF245C5A53</p>
@@ -14,7 +14,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
     public String requestId;
 
     /**
-     * <p>Query result.</p>
+     * <p>The query result.</p>
      */
     @NameInMap("ResultObject")
     public DescribeVerifyPersonasDeviceModelStatisticsResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
 
     public static class DescribeVerifyPersonasDeviceModelStatisticsResponseBodyResultObjectItems extends TeaModel {
         /**
-         * <p>Number of devices.</p>
+         * <p>The number of devices.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
         public Long deviceCnt;
 
         /**
-         * <p>Device model</p>
+         * <p>The device model.</p>
          * 
          * <strong>example:</strong>
          * <p>iPhone15,2</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
         public String deviceModel;
 
         /**
-         * <p>The ratio of this device model to the total number of devices.</p>
+         * <p>The ratio of devices of this model to the total number of devices.</p>
          * 
          * <strong>example:</strong>
          * <p>16.13</p>
@@ -101,7 +101,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
 
     public static class DescribeVerifyPersonasDeviceModelStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Total number of devices.</p>
+         * <p>The total number of devices.</p>
          * 
          * <strong>example:</strong>
          * <p>31</p>
@@ -110,7 +110,7 @@ public class DescribeVerifyPersonasDeviceModelStatisticsResponseBody extends Tea
         public Long allDeviceCnt;
 
         /**
-         * <p>List of data for different phone models.</p>
+         * <p>The list of data for different phone models.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyPersonasDeviceModelStatisticsResponseBodyResultObjectItems> items;

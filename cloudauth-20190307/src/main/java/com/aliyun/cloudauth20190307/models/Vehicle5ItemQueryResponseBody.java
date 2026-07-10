@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Vehicle5ItemQueryResponseBody extends TeaModel {
     /**
-     * <p>Return code</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D******</p>
@@ -32,7 +32,7 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public Vehicle5ItemQueryResponseBodyResultObject resultObject;
@@ -76,10 +76,10 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
 
     public static class Vehicle5ItemQueryResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Verification result code:</p>
+         * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Found (charged)</li>
-         * <li><strong>3</strong>: No record found (not charged)</li>
+         * <li><strong>1</strong>: Match found (billable).</li>
+         * <li><strong>3</strong>: No record found (not billable).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Vehicle information</p>
+         * <p>The vehicle information.</p>
          * 
          * <strong>example:</strong>
          * <p>{

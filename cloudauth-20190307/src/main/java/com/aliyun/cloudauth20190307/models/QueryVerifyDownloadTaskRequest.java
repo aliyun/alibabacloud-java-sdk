@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryVerifyDownloadTaskRequest extends TeaModel {
     /**
-     * <p>Download task ID.</p>
+     * <p>The download task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>202411194002618</p>

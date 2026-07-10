@@ -4,10 +4,15 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetaStatisticsListResponseBody extends TeaModel {
+    /**
+     * <p>The list of statistics information.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeMetaStatisticsListResponseBodyItems> items;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3F860B3F-76B7-5555-A907-2F4433BF8868</p>
      */
@@ -37,16 +42,42 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
 
     public static class DescribeMetaStatisticsListResponseBodyItems extends TeaModel {
         /**
+         * <p>The commodity (product) code.</p>
+         * 
          * <strong>example:</strong>
          * <p>MOBILE_ONLINE_LENGTH</p>
          */
         @NameInMap("Api")
         public String api;
 
+        /**
+         * <p>The name corresponding to the API. Valid values:</p>
+         * <ul>
+         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification</li>
+         * <li><strong>ID_PERIOD</strong>: ID card validity period verification</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition)</li>
+         * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition)</li>
+         * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification</li>
+         * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition)</li>
+         * <li><strong>MOBILE_DETECT</strong>: phone number detection</li>
+         * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition)</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query</li>
+         * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>身份证二要素</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
+         * <p>The number of successful queries (billable).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -54,6 +85,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public Long billCount;
 
         /**
+         * <p>The query hit rate (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -61,6 +94,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public String billRate;
 
         /**
+         * <p>The number of successful phone number queries (exclusive to phone number detection).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -68,6 +103,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public Long chargeCount;
 
         /**
+         * <p>The date.</p>
+         * 
          * <strong>example:</strong>
          * <p>11/8</p>
          */
@@ -75,6 +112,13 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>The name of the telecommunications service provider. Valid values:</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile</li>
+         * <li><strong>CUCC</strong>: China Unicom</li>
+         * <li><strong>CTCC</strong>: China Telecom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CUCC</p>
          */
@@ -82,6 +126,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public String ispName;
 
         /**
+         * <p>The number of calls with no education information found.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -89,6 +135,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public Long noRecordCount;
 
         /**
+         * <p>The number of authentication-passed transactions.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -96,6 +144,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public Long passedCount;
 
         /**
+         * <p>The authentication pass rate (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -103,6 +153,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public String passedRate;
 
         /**
+         * <p>The number of successful calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +162,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public Long successCount;
 
         /**
+         * <p>The call success rate (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -117,6 +171,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public String successRate;
 
         /**
+         * <p>The total number of calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -124,6 +180,8 @@ public class DescribeMetaStatisticsListResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
+         * <p>The number of authentication-failed transactions.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

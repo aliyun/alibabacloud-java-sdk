@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySceneConfigsRequest extends TeaModel {
     /**
-     * <p>Scene type.</p>
+     * <p>The scenario type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

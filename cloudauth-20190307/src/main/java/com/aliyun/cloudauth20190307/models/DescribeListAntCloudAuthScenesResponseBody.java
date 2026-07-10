@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CC1AB3F5-22A2-589F-ABDD-B766694AA671</p>
@@ -14,7 +14,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of scenarios.</p>
+     * <p>The list of scenes.</p>
      */
     @NameInMap("Scenes")
     public java.util.List<DescribeListAntCloudAuthScenesResponseBodyScenes> scenes;
@@ -42,7 +42,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
 
     public static class DescribeListAntCloudAuthScenesResponseBodyScenes extends TeaModel {
         /**
-         * <p>Application ID.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2a3a13b6-ee85-457e-bd15-b48115cb396e</p>
@@ -51,10 +51,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Long appId;
 
         /**
-         * <p>Whether to enable binding to a mini program:</p>
+         * <p>Specifies whether to enable mini program binding. Valid values:</p>
          * <ul>
-         * <li><strong>Y</strong>: Enabled</li>
-         * <li><strong>N (default)</strong>: Not enabled</li>
+         * <li><strong>Y</strong>: Enabled.</li>
+         * <li><strong>N (default)</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String bindMiniProgram;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1260051251634779</p>
@@ -73,7 +73,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Creator.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>189884094677xxxx</p>
@@ -82,7 +82,11 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>Enhanced device detection capability: - <strong>Y</strong>: Enable - <strong>N</strong>: Disable</p>
+         * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
+         * <ul>
+         * <li><strong>Y</strong>: Enabled.</li>
+         * <li><strong>N</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>N</p>
@@ -91,7 +95,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String deviceRiskPlus;
 
         /**
-         * <p>Bound domain.</p>
+         * <p>The bound domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.ddos.com">www.ddos.com</a></p>
@@ -100,7 +104,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>Mini program name.</p>
+         * <p>The mini program name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试APP</p>
@@ -109,7 +113,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String miniProgramName;
 
         /**
-         * <p>Modifier.</p>
+         * <p>The modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>189884094677xxxx</p>
@@ -118,11 +122,11 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>Bound mini program platform:</p>
+         * <p>The mini program platform. Valid values:</p>
          * <ul>
          * <li><strong>WECHAT</strong>: WeChat</li>
          * <li><strong>ALIPAY</strong>: Alipay</li>
-         * <li><strong>TIKTOK</strong>: TikTok</li>
+         * <li><strong>TIKTOK</strong>: TikTok.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>Number of face photos stored (1-5).</p>
+         * <p>The number of evidence face photos (1 to 5).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +145,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Long returnPicCount;
 
         /**
-         * <p>Duration of the stored video (in seconds).</p>
+         * <p>The duration of the evidence video, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +154,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Long returnVideoLength;
 
         /**
-         * <p>Scenario ID.</p>
+         * <p>The scene ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100001xxxx</p>
@@ -159,7 +163,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Long sceneId;
 
         /**
-         * <p>Scenario name.</p>
+         * <p>The scene name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试场景</p>
@@ -168,7 +172,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String sceneName;
 
         /**
-         * <p>Whether it is enabled, with a value of 1 indicating enabled.</p>
+         * <p>Indicates whether the scene is enabled. The value 1 indicates enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -177,10 +181,10 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Whether to deliver the files generated from the authentication to the customer\&quot;s OSS:</p>
+         * <p>Specifies whether to deliver files generated during authentication to the customer\&quot;s OSS. Valid values:</p>
          * <ul>
-         * <li><strong>Y</strong>: Enabled</li>
-         * <li><strong>N</strong>: Disabled</li>
+         * <li><strong>Y</strong>: Enabled.</li>
+         * <li><strong>N</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,7 @@ public class DescribeListAntCloudAuthScenesResponseBody extends TeaModel {
         public String storeImage;
 
         /**
-         * <p>The last update time of the instance.</p>
+         * <p>The time when the instance was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1260051251634779</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDeviceInfoResponseBody extends TeaModel {
     /**
-     * <p>If the Duration in the request parameters is not empty, this field represents the start time of the authorization after the device validity period has been extended. One year of Duration is calculated as 365 days. Example: 20180101.</p>
+     * <p>If the Duration request parameter is not empty, this field indicates the authorization start time after the device validity period is extended. One year in Duration is calculated as 365 days. Example: 20180101.</p>
      * 
      * <strong>example:</strong>
      * <p>20190401</p>
@@ -14,7 +14,7 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
     public String beginDay;
 
     /**
-     * <p>Corresponds to the BizType in the request parameters.</p>
+     * <p>The value corresponds to the BizType in the request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>FACE_TEST</p>
@@ -23,7 +23,7 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Corresponds to the DeviceId in the request parameters.</p>
+     * <p>The value corresponds to the DeviceId in the request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</p>
@@ -32,7 +32,7 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
     public String deviceId;
 
     /**
-     * <p>If the Duration in the request parameters is not empty, this field represents the expiration time of the authorization after the device validity period has been extended. One year of Duration is calculated as 365 days. Example: 20180101.</p>
+     * <p>If the Duration request parameter is not empty, this field indicates the authorization expiration time after the device validity period is extended. One year in Duration is calculated as 365 days. Example: 20180101.</p>
      * 
      * <strong>example:</strong>
      * <p>20200330</p>
@@ -50,7 +50,7 @@ public class ModifyDeviceInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Corresponds to the UserDeviceId in the request parameters.</p>
+     * <p>The value corresponds to the UserDeviceId in the request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>3iJ1AY$oHcu7mC69</p>

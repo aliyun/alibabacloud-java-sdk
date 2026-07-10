@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAuthKeyRequest extends TeaModel {
     /**
-     * <p>When the Test flag is false or empty, AuthYears is required, in years, with a range of [1,100]. A value of 100 indicates permanent authorization.</p>
+     * <p>The authorization duration. This parameter is required when the Test parameter is set to false or is left empty. Unit: years. Valid values: 1 to 100. A value of 100 indicates permanent authorization.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateAuthKeyRequest extends TeaModel {
     public Integer authYears;
 
     /**
-     * <p>Business type. No more than 64 characters. Can be used to note specific business, such as different face usage scenarios of the access party or the customer identifier to be delivered. It is recommended to pass this parameter.</p>
+     * <p>The business type. The value can be up to 64 characters in length. You can use this parameter to add remarks for a specific business, such as different facial recognition scenarios of the requester or the customer identifier to be delivered. We recommend that you specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>FACE_TEST</p>
@@ -23,7 +23,11 @@ public class CreateAuthKeyRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Test flag. If true, it indicates using test authorization with a default duration of 30 days; if false, the authorization duration will be based on AuthYears.</p>
+     * <p>The test identifier. Valid values:</p>
+     * <ul>
+     * <li>true: Uses test authorization. The authorization duration is 30 days by default.</li>
+     * <li>false: The authorization duration is determined by the AuthYears parameter.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +36,7 @@ public class CreateAuthKeyRequest extends TeaModel {
     public Boolean test;
 
     /**
-     * <p>User device ID. No more than 64 characters. Can be used to identify a specific device, and it is suggested to use the physical number of the device. It is recommended to pass this parameter.</p>
+     * <p>The user device ID. The value can be up to 64 characters in length. You can use this parameter to identify a specific device. We recommend that you use the physical device number. We recommend that you specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>3iJ1AY$oHcu7mC69</p>

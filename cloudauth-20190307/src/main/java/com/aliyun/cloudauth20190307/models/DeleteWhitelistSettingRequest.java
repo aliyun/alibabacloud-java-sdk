@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWhitelistSettingRequest extends TeaModel {
     /**
-     * <p>List of rule IDs to be deleted.</p>
+     * <p>The list of rule IDs to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class DeleteWhitelistSettingRequest extends TeaModel {
     public String ids;
 
     /**
-     * <p>Specify the language of the user information to be deleted. Values: -<strong>zh</strong>: Chinese. -<strong>en</strong>: English.</p>
+     * <p>The language of the user information to delete. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -24,7 +28,7 @@ public class DeleteWhitelistSettingRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>ServiceCode for the real-person cloud product, only takes the value: <strong>antcloudauth</strong>.</p>
+     * <p>The service code of the ID Verification product. Set the value to <strong>antcloudauth</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +38,7 @@ public class DeleteWhitelistSettingRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Set the source IP address of the visitor. Supports IP addresses in CIDR and IPv4 formats. Example: 10.0.3.0/24.</p>
+     * <p>The source IP address of the visitor. CIDR format and IPv4 format are supported. Example: 10.0.3.0/24.</p>
      * 
      * <strong>example:</strong>
      * <p>120.25.41.25</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyPersonasOsStatisticsRequest extends TeaModel {
     /**
-     * <p>Product code.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>ID_PRO</p>
@@ -14,7 +14,7 @@ public class DescribeVerifyPersonasOsStatisticsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Scene ID.</p>
+     * <p>The scene ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000002995</p>
@@ -23,10 +23,10 @@ public class DescribeVerifyPersonasOsStatisticsRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>Service type:</p>
+     * <p>The service type. Valid values:</p>
      * <ul>
-     * <li><strong>antcloudauth</strong>: Financial-grade real-person authentication.</li>
-     * <li><strong>cloudauthst</strong> (discontinued): Enhanced real-person authentication.</li>
+     * <li><strong>antcloudauth</strong>: financial-grade ID Verification.</li>
+     * <li><strong>cloudauthst</strong> (discontinued): enhanced ID Verification.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class DescribeVerifyPersonasOsStatisticsRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Time range for the query, indicating how many days ago.</p>
+     * <p>The time range for the query, which specifies the number of preceding days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

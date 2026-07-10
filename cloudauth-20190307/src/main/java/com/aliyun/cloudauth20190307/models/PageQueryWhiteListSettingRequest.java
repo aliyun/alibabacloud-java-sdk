@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PageQueryWhiteListSettingRequest extends TeaModel {
     /**
-     * <p>ID number.</p>
+     * <p>The certificate number.</p>
      * 
      * <strong>example:</strong>
      * <p>330103xxxxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>Unique identifier for real person authentication.</p>
+     * <p>The unique identifier of the ID Verification request.</p>
      * 
      * <strong>example:</strong>
      * <p>sha75b4e19a1ddda059b920757b0e12b</p>
@@ -23,7 +23,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String certifyId;
 
     /**
-     * <p>Current page number, default is 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Number of items per page, default is 10</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</p>
+     * <p>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, refer to Add a verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000xxx</p>
@@ -50,7 +50,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>ServiceCode of the real person cloud product, value: <strong>antcloudauth</strong>.</p>
+     * <p>The ServiceCode of the ID Verification cloud service. Value: <strong>antcloudauth</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>antcloudauth</p>
@@ -59,11 +59,11 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Status:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li>DELETE: Deleted</li>
-     * <li>VALID: Not deleted and within the validity period, valid</li>
-     * <li>INVALID: Not deleted but outside the validity period, invalid</li>
+     * <li>DELETE: Deleted.</li>
+     * <li>VALID: Not deleted and within the validity period (valid).</li>
+     * <li>INVALID: Not deleted but outside the validity period (invalid).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>End date of validity (timestamp in milliseconds)</p>
+     * <p>The end date of the validity period (timestamp in milliseconds).</p>
      * 
      * <strong>example:</strong>
      * <p>1725379200000</p>
@@ -82,7 +82,7 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String validEndDate;
 
     /**
-     * <p>Start date of validity (timestamp in milliseconds)</p>
+     * <p>The start date of the validity period (timestamp in milliseconds).</p>
      * 
      * <strong>example:</strong>
      * <p>1725120000000</p>

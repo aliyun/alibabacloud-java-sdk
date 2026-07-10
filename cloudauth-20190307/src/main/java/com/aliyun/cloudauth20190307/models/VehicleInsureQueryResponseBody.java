@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class VehicleInsureQueryResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 indicates success, others indicate failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response message for the request information.</p>
+     * <p>The response message of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5A6229C0-E156-48E4-B6EC-0F52********</p>
@@ -32,7 +32,7 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information.</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public VehicleInsureQueryResponseBodyResultObject resultObject;
@@ -76,11 +76,11 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
 
     public static class VehicleInsureQueryResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Verification result code:</p>
+         * <p>The verification result code. Valid values:</p>
          * <blockquote>
          * <ul>
-         * <li>1: Found (charged)</li>
-         * <li>3: No record found (not charged)</li>
+         * <li>1: record found (billable).</li>
+         * <li>3: no record found (not billable).</li>
          * </ul>
          * </blockquote>
          * 
@@ -91,7 +91,7 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Insurance date information</p>
+         * <p>The insurance date information.</p>
          * 
          * <strong>example:</strong>
          * <p>{

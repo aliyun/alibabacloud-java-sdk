@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InitAuthVerifyResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class InitAuthVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class InitAuthVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B506328A-D84B-4750-82C7-6A207C585CF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result.</p>
+     */
     @NameInMap("Result")
     public InitAuthVerifyResponseBodyResult result;
 
@@ -67,6 +76,9 @@ public class InitAuthVerifyResponseBody extends TeaModel {
 
     public static class InitAuthVerifyResponseBodyResult extends TeaModel {
         /**
+         * <p>The verification request ID, which is the unique identifier of the verification service authentication request.
+         * You must pass in the verification request ID when querying the authentication result.</p>
+         * 
          * <strong>example:</strong>
          * <p>shif9d1a185b8dde7cd07bf0943a448b</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeListFaceVerifyInfosRequest extends TeaModel {
     /**
-     * <p>Verification ID.</p>
+     * <p>The authentication ID.</p>
      * 
      * <strong>example:</strong>
      * <p>shs414a8b392a3a338abe0504c75c056</p>
@@ -14,7 +14,7 @@ public class DescribeListFaceVerifyInfosRequest extends TeaModel {
     public String certifyId;
 
     /**
-     * <p>Query the end time of the verification.</p>
+     * <p>The end time of the authentication query.</p>
      * 
      * <strong>example:</strong>
      * <p>1760716800000</p>
@@ -23,7 +23,7 @@ public class DescribeListFaceVerifyInfosRequest extends TeaModel {
     public Long gmtEnd;
 
     /**
-     * <p>Query the start time of the verification.</p>
+     * <p>The start time of the authentication query.</p>
      * 
      * <strong>example:</strong>
      * <p>1760112000000</p>
@@ -32,7 +32,7 @@ public class DescribeListFaceVerifyInfosRequest extends TeaModel {
     public Long gmtStart;
 
     /**
-     * <p>Pagination parameter: current page number.</p>
+     * <p>The current page number for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeListFaceVerifyInfosRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items per page for paginated queries. Maximum value: 100, default value: 10.</p>
+     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class DescribeListFaceVerifyInfosRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Scene ID.</p>
+     * <p>The scene ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000009699</p>
@@ -59,10 +59,10 @@ public class DescribeListFaceVerifyInfosRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>Verification status:</p>
+     * <p>The authentication status. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Verification passed.</li>
-     * <li><strong>2</strong>: Verification failed.</li>
+     * <li><strong>1</strong>: Authentication passed.</li>
+     * <li><strong>2</strong>: Authentication failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

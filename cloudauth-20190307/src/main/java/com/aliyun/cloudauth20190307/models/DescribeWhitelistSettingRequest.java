@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWhitelistSettingRequest extends TeaModel {
     /**
-     * <p>ID Number</p>
+     * <p>The ID card number.</p>
      * 
      * <strong>example:</strong>
      * <p>320321XXXXXXXX701X</p>
@@ -14,7 +14,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String certNo;
 
     /**
-     * <p>Certification ID</p>
+     * <p>The certification ID.</p>
      * 
      * <strong>example:</strong>
      * <p>shsf57a4e0d9981c3bd66dc754f3d3cd</p>
@@ -23,7 +23,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String certifyId;
 
     /**
-     * <p>Pagination parameter: current page number, default value is 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,10 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specify the language to query. Values:</p>
+     * <p>The language of the query result. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Number of items per page for pagination.</p>
+     * <p>The number of entries per page in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Scene ID.</p>
+     * <p>The scene ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1000004530</p>
@@ -65,10 +65,10 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public Long sceneId;
 
     /**
-     * <p>Service Code:</p>
+     * <p>The service code. Valid values:</p>
      * <ul>
-     * <li><strong>Enhanced Financial Grade</strong>: cloudauthst</li>
-     * <li><strong>Financial Grade</strong>: antcloudauth</li>
+     * <li><strong>cloudauthst</strong>: enhanced financial-grade edition.</li>
+     * <li><strong>antcloudauth</strong>: financial-grade edition.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -79,7 +79,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Visitor\&quot;s source IP address.</p>
+     * <p>The source IP address of the visitor.</p>
      * 
      * <strong>example:</strong>
      * <p>113.140.85.74</p>
@@ -88,11 +88,11 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>Whitelist status:</p>
+     * <p>The whitelist status. Valid values:</p>
      * <ul>
-     * <li><strong>VALID</strong>: Valid</li>
-     * <li><strong>INVALID</strong>: Invalid</li>
-     * <li><strong>DELETED</strong>: Deleted</li>
+     * <li><strong>VALID</strong>: valid.</li>
+     * <li><strong>INVALID</strong>: invalid.</li>
+     * <li><strong>DELETED</strong>: deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Expiration date.</p>
+     * <p>The end time of the validity period.</p>
      * 
      * <strong>example:</strong>
      * <p>1730304000000</p>
@@ -111,13 +111,20 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     public Long validEndDate;
 
     /**
-     * <p>Effective start time (in seconds timestamp).</p>
+     * <p>The start time of the validity period. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1759939200000</p>
      */
     @NameInMap("ValidStartDate")
     public Long validStartDate;
+
+    /**
+     * <strong>example:</strong>
+     * <p>SUPER</p>
+     */
+    @NameInMap("WhitelistType")
+    public String whitelistType;
 
     public static DescribeWhitelistSettingRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeWhitelistSettingRequest self = new DescribeWhitelistSettingRequest();
@@ -210,6 +217,14 @@ public class DescribeWhitelistSettingRequest extends TeaModel {
     }
     public Long getValidStartDate() {
         return this.validStartDate;
+    }
+
+    public DescribeWhitelistSettingRequest setWhitelistType(String whitelistType) {
+        this.whitelistType = whitelistType;
+        return this;
+    }
+    public String getWhitelistType() {
+        return this.whitelistType;
     }
 
 }

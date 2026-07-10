@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyStatisticsResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4E27D502-1287-526A-910C-881A3F023914</p>
@@ -14,7 +14,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Statistical results</p>
+     * <p>The statistics result.</p>
      */
     @NameInMap("ResultObject")
     public DescribeVerifyStatisticsResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyStatisticsResponseBodyResultObjectItems extends TeaModel {
         /**
-         * <p>Date.</p>
+         * <p>The date.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-11</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public String date;
 
         /**
-         * <p>Client initialization pass rate.</p>
+         * <p>The client-side initialization pass rate.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public String initDevicePassRate;
 
         /**
-         * <p>Number of server initializations.</p>
+         * <p>The number of server-side initializations.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -69,7 +69,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initService;
 
         /**
-         * <p>Server initialization conversion rate.</p>
+         * <p>The server-side initialization conversion rate.</p>
          * 
          * <strong>example:</strong>
          * <p>26.67</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public String initServiceConversionRate;
 
         /**
-         * <p>Server initialization pass rate.</p>
+         * <p>The server-side initialization pass rate.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -87,7 +87,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public String initServicePassRate;
 
         /**
-         * <p>Pass rate.</p>
+         * <p>The pass rate.</p>
          * 
          * <strong>example:</strong>
          * <p>75</p>
@@ -152,7 +152,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Number of client initializations.</p>
+         * <p>The number of client-side initializations.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>
@@ -161,7 +161,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDevice;
 
         /**
-         * <p>Number of identity deduplication client initializations.</p>
+         * <p>The number of client-side initializations for identity deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -170,7 +170,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDeviceId;
 
         /**
-         * <p>Number of successful identity deduplication client initializations.</p>
+         * <p>The number of successful client-side initializations for identity deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -179,7 +179,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDeviceIdSuccess;
 
         /**
-         * <p>Number of client initialization calls.</p>
+         * <p>The number of successful client-side initialization calls.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>
@@ -188,7 +188,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initDeviceSuccess;
 
         /**
-         * <p>Number of service-side initializations.</p>
+         * <p>The number of server-side initializations.</p>
          * 
          * <strong>example:</strong>
          * <p>73</p>
@@ -197,7 +197,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initService;
 
         /**
-         * <p>Total number of identity deduplication server initialization requests.</p>
+         * <p>The total number of server-side initialization requests for identity deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -206,7 +206,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initServiceId;
 
         /**
-         * <p>Number of successful identity deduplication server initializations.</p>
+         * <p>The number of successful server-side initializations for identity deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -215,7 +215,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initServiceIdSuccess;
 
         /**
-         * <p>Number of successful service-side initialization authentications.</p>
+         * <p>The number of successful server-side initialization authentications.</p>
          * 
          * <strong>example:</strong>
          * <p>134</p>
@@ -224,13 +224,13 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long initServiceSuccess;
 
         /**
-         * <p>Daily pass/conversion rate (PV).</p>
+         * <p>The daily pass/conversion rates (PV).</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyStatisticsResponseBodyResultObjectItems> items;
 
         /**
-         * <p>Number of client verifications.</p>
+         * <p>The number of client-side verifications.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -239,7 +239,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDevice;
 
         /**
-         * <p>Number of identity deduplication client authentications.</p>
+         * <p>The number of client-side authentication attempts for identity deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -248,7 +248,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDeviceId;
 
         /**
-         * <p>Number of successful identity deduplication client verifications.</p>
+         * <p>The number of successful client-side verifications for identity deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -257,7 +257,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDeviceIdSuccess;
 
         /**
-         * <p>Number of successful identity deduplication client authentications.</p>
+         * <p>The number of successful client-side authentications for identity deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -266,7 +266,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDeviceIdSuccessPassed;
 
         /**
-         * <p>Number of successful client authentications.</p>
+         * <p>The number of successful client-side authentications.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -275,7 +275,7 @@ public class DescribeVerifyStatisticsResponseBody extends TeaModel {
         public Long verifyDeviceSuccess;
 
         /**
-         * <p>Number of successful client authentications.</p>
+         * <p>The number of successful client-side authentications.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

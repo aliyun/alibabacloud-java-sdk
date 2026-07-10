@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFaceVerifyRequest extends TeaModel {
     /**
-     * <p>Unique identifier for real-person authentication.</p>
+     * <p>The unique identifier of the ID Verification request.</p>
      * 
      * <strong>example:</strong>
      * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
@@ -14,7 +14,7 @@ public class DescribeFaceVerifyRequest extends TeaModel {
     public String certifyId;
 
     /**
-     * <p>Image return type.</p>
+     * <p>The image return type.</p>
      * 
      * <strong>example:</strong>
      * <p>JPG</p>
@@ -23,7 +23,7 @@ public class DescribeFaceVerifyRequest extends TeaModel {
     public String pictureReturnType;
 
     /**
-     * <p>Authentication scene ID.</p>
+     * <p>The ID of the verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000006</p>

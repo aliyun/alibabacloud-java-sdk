@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,23 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The list of results.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeInfoCheckExportRecordResponseBodyItems> items;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -45,6 +56,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +65,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -59,6 +74,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -144,6 +161,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
 
     public static class DescribeInfoCheckExportRecordResponseBodyItems extends TeaModel {
         /**
+         * <p>The download date.</p>
+         * 
          * <strong>example:</strong>
          * <p>1758250979000</p>
          */
@@ -151,6 +170,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         public String downloadDate;
 
         /**
+         * <p>The ID of the download task.</p>
+         * 
          * <strong>example:</strong>
          * <p>202510189017278</p>
          */
@@ -158,6 +179,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         public String downloadTaskId;
 
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -166,20 +189,57 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>手机号二要素统计202509013975081.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
         /**
+         * <p>The file type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CSV</p>
          */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The product type name. Valid values:</p>
+         * <ul>
+         * <li><strong>ID_CARD_2_META</strong>: ID card two-element verification.</li>
+         * <li><strong>ID_PERIOD</strong>: ID card validity period verification.</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: mobile number online duration.</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: mobile number online status.</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: mobile number three-element verification (simple edition).</li>
+         * <li><strong>MOBILE_3_META</strong>: mobile number three-element verification (detailed edition).</li>
+         * <li><strong>MOBILE_2_META</strong>: mobile number two-element verification.</li>
+         * <li><strong>BANK_CARD_N_META</strong>: bank card verification (detailed edition).</li>
+         * <li><strong>MOBILE_DETECT</strong>: phone number detection.</li>
+         * <li><strong>VEHICLE_N_META</strong>: vehicle element verification (enhanced edition).</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: vehicle five-element information recognition.</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: vehicle information recognition.</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: vehicle insurance date query.</li>
+         * <li><strong>VEHICLE_CHECK</strong>: vehicle element verification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>身份证二要素</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
         /**
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The file is being generated.</li>
+         * <li><strong>2</strong>: The file has been generated.</li>
+         * <li><strong>3</strong>: The file failed to be generated.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -187,6 +247,8 @@ public class DescribeInfoCheckExportRecordResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The task URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/console/xxxxxxxx.xlsx">https://cn-shanghai-aliyun-cloudauth.oss-cn-shanghai.aliyuncs.com/console/xxxxxxxx.xlsx</a></p>
          */

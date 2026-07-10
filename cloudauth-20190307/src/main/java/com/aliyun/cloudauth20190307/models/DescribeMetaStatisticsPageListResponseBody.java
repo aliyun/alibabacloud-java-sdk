@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Paginated list data.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeMetaStatisticsPageListResponseBodyItems> items;
 
     /**
+     * <p>Number of data entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C379C9E4-4DA0-5D0B-821B-25E2B8693D48</p>
      */
@@ -29,6 +38,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -36,6 +47,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,7 +110,7 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
 
     public static class DescribeMetaStatisticsPageListResponseBodyItems extends TeaModel {
         /**
-         * <p>Api。</p>
+         * <p>API.</p>
          * 
          * <strong>example:</strong>
          * <p>ID_PERIOD</p>
@@ -105,10 +118,34 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         @NameInMap("Api")
         public String api;
 
+        /**
+         * <p>Name corresponding to the API:</p>
+         * <ul>
+         * <li><strong>ID_CARD_2_META</strong>: ID Card Two-Element Verification</li>
+         * <li><strong>ID_PERIOD</strong>: ID Card Validity Verification Period</li>
+         * <li><strong>MOBILE_ONLINE_LENGTH</strong>: Mobile Online Duration</li>
+         * <li><strong>MOBILE_ONLINE_STATUS</strong>: Mobile Online Status</li>
+         * <li><strong>MOBILE_3_META_SIMPLE</strong>: Mobile Number Three-Element Verification (Simple)</li>
+         * <li><strong>MOBILE_3_META</strong>: Mobile Number Three-Element Verification (Detailed)</li>
+         * <li><strong>MOBILE_2_META</strong>: Mobile Number Two-Element Verification</li>
+         * <li><strong>BANK_CARD_N_META</strong>: Bank Card Verification (Detailed)</li>
+         * <li><strong>MOBILE_DETECT</strong>: Number Detection
+         *  -<strong>VEHICLE_N_META</strong>: Vehicle Element Verification (Enhanced)</li>
+         * <li><strong>VEHICLE_PENTA_INFO</strong>: Vehicle Five-Element Information Recognition</li>
+         * <li><strong>VEHICLE_LICENSE_INFO</strong>: Vehicle Information Recognition</li>
+         * <li><strong>VEHICLE_INSURE_DATE</strong>: Vehicle Insurance Date Query</li>
+         * <li><strong>VEHICLE_CHECK</strong>: Vehicle Element Verification</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>车辆要素核验增强版</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
+         * <p>Number of hits (billed).</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -116,6 +153,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public Long billCount;
 
         /**
+         * <p>Hit rate (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -123,6 +162,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public String billRate;
 
         /**
+         * <p>Number of successful mobile number queries (exclusive to Number Detection).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -130,6 +171,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public Long chargeCount;
 
         /**
+         * <p>Date.</p>
+         * 
          * <strong>example:</strong>
          * <p>11/8</p>
          */
@@ -137,6 +180,13 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public String date;
 
         /**
+         * <p>Carrier name:</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile</li>
+         * <li><strong>CUCC</strong>: China Unicom</li>
+         * <li><strong>CTCC</strong>: China Telecom</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CMCC</p>
          */
@@ -144,6 +194,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public String ispName;
 
         /**
+         * <p>Number of calls with no record information.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -151,6 +203,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public Long noRecordCount;
 
         /**
+         * <p>Number of passed authentications.</p>
+         * 
          * <strong>example:</strong>
          * <p>21</p>
          */
@@ -158,6 +212,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public Long passedCount;
 
         /**
+         * <p>Authentication pass rate (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -165,6 +221,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public String passedRate;
 
         /**
+         * <p>Number of successful requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -172,6 +230,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public Long successCount;
 
         /**
+         * <p>Call success rate (%).</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -179,6 +239,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public String successRate;
 
         /**
+         * <p>Total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -186,6 +248,8 @@ public class DescribeMetaStatisticsPageListResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
+         * <p>Number of failed calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

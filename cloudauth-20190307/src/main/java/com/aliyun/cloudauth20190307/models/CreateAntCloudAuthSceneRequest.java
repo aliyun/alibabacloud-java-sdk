@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAntCloudAuthSceneRequest extends TeaModel {
     /**
-     * <p>Whether to enable binding of the mini program:</p>
+     * <p>Specifies whether to enable mini program binding. Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: Enable</li>
-     * <li><strong>N (default)</strong>: Not enabled</li>
+     * <li><strong>Y</strong>: enabled</li>
+     * <li><strong>N (default)</strong>: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     public String bindMiniProgram;
 
     /**
-     * <p>Content of the uploaded verification file.</p>
+     * <p>The content of the uploaded verification file.</p>
      * 
      * <strong>example:</strong>
      * <p>774c4aab45981ff4a86cde9255a11xxx</p>
@@ -27,7 +27,7 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     public String checkFileBody;
 
     /**
-     * <p>Name of the uploaded verification file.</p>
+     * <p>The name of the uploaded verification file.</p>
      * 
      * <strong>example:</strong>
      * <p>测试.txt</p>
@@ -35,11 +35,21 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     @NameInMap("CheckFileName")
     public String checkFileName;
 
+    /**
+     * <p>Specifies whether to enable enhanced device risk detection. Valid values:</p>
+     * <ul>
+     * <li><strong>Y</strong>: enabled</li>
+     * <li><strong>N</strong>: disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>N</p>
+     */
     @NameInMap("DeviceRiskPlus")
     public String deviceRiskPlus;
 
     /**
-     * <p>Mini program name.</p>
+     * <p>The mini program name.</p>
      * 
      * <strong>example:</strong>
      * <p>测试APP</p>
@@ -48,11 +58,11 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     public String miniProgramName;
 
     /**
-     * <p>Binding platform for the mini program:</p>
+     * <p>The mini program platform to bind. Valid values:</p>
      * <ul>
      * <li><strong>WECHAT</strong>: WeChat</li>
      * <li><strong>ALIPAY</strong>: Alipay</li>
-     * <li><strong>TIKTOK</strong>: TikTok</li>
+     * <li><strong>TIKTOK</strong>: TikTok.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,14 +71,26 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>The number of face photos for evidence storage (1-5).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReturnPicCount")
     public Long returnPicCount;
 
+    /**
+     * <p>The duration of the evidence storage video, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReturnVideoLength")
     public Long returnVideoLength;
 
     /**
-     * <p>Scene name.</p>
+     * <p>The scenario name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,10 +100,10 @@ public class CreateAntCloudAuthSceneRequest extends TeaModel {
     public String sceneName;
 
     /**
-     * <p>Whether to deliver the files generated from the authentication to the customer\&quot;s OSS:</p>
+     * <p>Specifies whether to deliver the files generated during authentication to the customer\&quot;s OSS. Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: Yes</li>
-     * <li><strong>N</strong>: No</li>
+     * <li><strong>Y</strong>: Yes.</li>
+     * <li><strong>N</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>

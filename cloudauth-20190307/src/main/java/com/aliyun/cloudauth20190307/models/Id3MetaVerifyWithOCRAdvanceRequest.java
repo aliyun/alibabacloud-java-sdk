@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Id3MetaVerifyWithOCRAdvanceRequest extends TeaModel {
     /**
-     * <p>Input stream for the portrait side of the ID card image. Choose either CertUrl or CertFile.</p>
+     * <p>The input stream of the portrait side image of the ID card. Specify either CertUrl or CertFile.</p>
      * 
      * <strong>example:</strong>
      * <p>无</p>
@@ -14,7 +14,7 @@ public class Id3MetaVerifyWithOCRAdvanceRequest extends TeaModel {
     public java.io.InputStream certFileObject;
 
     /**
-     * <p>URL for the national emblem side of the ID card image. Choose either CertNationalUrl or CertNationalFile, or omit both.</p>
+     * <p>The image of the national emblem side of the ID card. Specify either CertNationalUrl or CertNationalFile, or leave both empty.</p>
      * 
      * <strong>example:</strong>
      * <p>无</p>
@@ -23,7 +23,7 @@ public class Id3MetaVerifyWithOCRAdvanceRequest extends TeaModel {
     public java.io.InputStream certNationalFileObject;
 
     /**
-     * <p>National emblem side of the ID card image URL. A publicly accessible HTTP or HTTPS link. You can choose either CertNationalUrl or CertNationalFile, or omit both.</p>
+     * <p>The URL of the national emblem side image of the ID card. Specify a publicly accessible HTTP or HTTPS URL. Specify either CertNationalUrl or CertNationalFile, or leave both empty.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></p>
@@ -32,7 +32,7 @@ public class Id3MetaVerifyWithOCRAdvanceRequest extends TeaModel {
     public String certNationalUrl;
 
     /**
-     * <p>Portrait side of the ID card image. A publicly accessible HTTP or HTTPS link. Choose either CertUrl or CertFile.</p>
+     * <p>The image of the portrait side of the ID card. Specify a publicly accessible HTTP or HTTPS URL. Specify either CertUrl or CertFile.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></p>

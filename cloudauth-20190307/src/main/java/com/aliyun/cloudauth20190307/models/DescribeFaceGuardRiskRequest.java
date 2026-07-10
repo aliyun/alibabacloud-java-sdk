@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFaceGuardRiskRequest extends TeaModel {
     /**
-     * <p>Authentication ID</p>
+     * <p>The authentication ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aba9830f471a4335af4612c8adaa91b0</p>
@@ -14,7 +14,7 @@ public class DescribeFaceGuardRiskRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>Risk identification - device token.</p>
+     * <p>The device token for risk identification.</p>
      * 
      * <strong>example:</strong>
      * <p>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</p>
@@ -23,8 +23,8 @@ public class DescribeFaceGuardRiskRequest extends TeaModel {
     public String deviceToken;
 
     /**
-     * <p>This identifier is used for subsequent troubleshooting, and you need to ensure that this value is unique in your business.</p>
-     * <p>Supports the use of English letters (including uppercase and lowercase) and numbers, with a maximum length of 32 characters.</p>
+     * <p>The identifier used for subsequent troubleshooting. Ensure that this value is unique within your business.</p>
+     * <p>The value can contain letters (both uppercase and lowercase) and digits, with a maximum length of 32 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c35xxxx</p>
@@ -33,7 +33,7 @@ public class DescribeFaceGuardRiskRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>Product code, fixed value: FACE_GUARD</p>
+     * <p>The product code. Set this to FACE_GUARD.</p>
      * 
      * <strong>example:</strong>
      * <p>FACE_GUARD</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVerifySettingResponseBody extends TeaModel {
     /**
-     * <p>Verification scenario name.</p>
+     * <p>The name of the verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>用户注册</p>
@@ -14,7 +14,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
     public String bizName;
 
     /**
-     * <p>Verification scenario identifier.</p>
+     * <p>The identifier of the verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>UserRegister</p>
@@ -23,7 +23,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
     public String bizType;
 
     /**
-     * <p>ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -32,7 +32,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Authentication solution name.</p>
+     * <p>The name of the verification solution.</p>
      * 
      * <strong>example:</strong>
      * <p>RPBasic</p>
@@ -41,7 +41,7 @@ public class CreateVerifySettingResponseBody extends TeaModel {
     public String solution;
 
     /**
-     * <p>Authentication steps</p>
+     * <p>The verification steps. guide indicates the guide step, and privacy indicates the authorization step.</p>
      */
     @NameInMap("StepList")
     public java.util.List<String> stepList;

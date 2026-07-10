@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOssUploadTokenResponseBody extends TeaModel {
     /**
-     * <p>Information about the OSS upload Token.</p>
+     * <p>The OSS upload token information.</p>
      */
     @NameInMap("OssUploadToken")
     public DescribeOssUploadTokenResponseBodyOssUploadToken ossUploadToken;
 
     /**
-     * <p>The ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2FA2C773-47DB-4156-B1EE-5B047321A939</p>
@@ -42,7 +42,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
 
     public static class DescribeOssUploadTokenResponseBodyOssUploadToken extends TeaModel {
         /**
-         * <p>OSS bucket for file storage.</p>
+         * <p>The OSS bucket for file storage.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudauth-zhangjiakou-external</p>
@@ -51,7 +51,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>Access endpoint.</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cn-zhangjiakou.aliyuncs.com">https://oss-cn-zhangjiakou.aliyuncs.com</a></p>
@@ -60,7 +60,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public String endPoint;
 
         /**
-         * <p>Expiration time.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1582636610000</p>
@@ -69,7 +69,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public Long expired;
 
         /**
-         * <p>The Key required for file upload.</p>
+         * <p>The key required for file upload.</p>
          * 
          * <strong>example:</strong>
          * <p>STS.NU8rUBj****</p>
@@ -78,7 +78,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>File storage path.</p>
+         * <p>The file storage path.</p>
          * 
          * <strong>example:</strong>
          * <p>prod/RdNLC@Ox2n-1s7NMt</p>
@@ -87,7 +87,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The Secret required for file upload.</p>
+         * <p>The secret required for file upload.</p>
          * 
          * <strong>example:</strong>
          * <p>FwmnyoqT8dHj7nJLuM67T****</p>
@@ -96,7 +96,7 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
         public String secret;
 
         /**
-         * <p>The Token required for file upload.</p>
+         * <p>The token required for file upload.</p>
          * 
          * <strong>example:</strong>
          * <p>uWia500nTS5knZaDzq4/KqpvhcLnO****</p>

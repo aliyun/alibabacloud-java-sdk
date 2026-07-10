@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123906BE-752B-51E3-A8FF-52F53B659CE6</p>
@@ -14,7 +14,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Processing result.</p>
+     * <p>The processing result.</p>
      */
     @NameInMap("ResultObject")
     public DescribeVerifyPersonasOsStatisticsResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyPersonasOsStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Total number of authenticated devices.</p>
+         * <p>The total number of devices used for ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
         public Long allDeviceCnt;
 
         /**
-         * <p>Number of authenticated Android devices.</p>
+         * <p>The number of Android devices used for ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
         public Long deviceAndroidCnt;
 
         /**
-         * <p>Proportion of Android devices.</p>
+         * <p>The proportion of Android devices.</p>
          * 
          * <strong>example:</strong>
          * <p>58.33</p>
@@ -69,7 +69,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
         public String deviceAndroidRate;
 
         /**
-         * <p>Number of authenticated iOS devices.</p>
+         * <p>The number of iOS devices used for ID Verification.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -78,7 +78,7 @@ public class DescribeVerifyPersonasOsStatisticsResponseBody extends TeaModel {
         public Long deviceIosCnt;
 
         /**
-         * <p>Proportion of iOS devices.</p>
+         * <p>The proportion of iOS devices.</p>
          * 
          * <strong>example:</strong>
          * <p>41.67</p>

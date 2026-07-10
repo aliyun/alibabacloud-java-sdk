@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MobileDetectResponseBody extends TeaModel {
     /**
-     * <p>Return code: 200 for success, others for failure.</p>
+     * <p>The return code. A value of 200 indicates success. Other values indicate failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class MobileDetectResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class MobileDetectResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>969434DF-926B-4997-9881-4DE94E39F805</p>
@@ -32,7 +32,7 @@ public class MobileDetectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public MobileDetectResponseBodyResultObject resultObject;
@@ -76,7 +76,7 @@ public class MobileDetectResponseBody extends TeaModel {
 
     public static class MobileDetectResponseBodyResultObjectItems extends TeaModel {
         /**
-         * <p>Phone number\&quot;s area (only for plaintext phone numbers)</p>
+         * <p>The location to which the phone number belongs. This field is available only for plaintext phone numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>安徽-马**</p>
@@ -85,11 +85,11 @@ public class MobileDetectResponseBody extends TeaModel {
         public String area;
 
         /**
-         * <p>Verification result</p>
+         * <p>The verification result. Valid values:</p>
          * <ul>
-         * <li>1: Available online </li>
-         * <li>2: Not available online</li>
-         * <li>3: No query result</li>
+         * <li>1: Active and available. </li>
+         * <li>2: Not in active and available status.</li>
+         * <li>3: No query results.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,11 +99,11 @@ public class MobileDetectResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>Operator name</p>
+         * <p>The carrier name. Valid values:</p>
          * <ul>
          * <li>CMCC: China Mobile </li>
          * <li>CUCC: China Unicom </li>
-         * <li>CTCC: China Telecom</li>
+         * <li>CTCC: China Telecom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class MobileDetectResponseBody extends TeaModel {
         public String ispName;
 
         /**
-         * <p>Phone number</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>131********</p>
@@ -122,14 +122,14 @@ public class MobileDetectResponseBody extends TeaModel {
         public String mobile;
 
         /**
-         * <p>Verification details</p>
+         * <p>The verification details. Valid values:</p>
          * <ul>
-         * <li>101: Available number</li>
-         * <li>102: Empty number</li>
-         * <li>103: Suspended </li>
-         * <li>104: Silent number (inactive small number, new number, non-smartphone user within the last six months) </li>
-         * <li>105: Risky number (long-term shutdown or no voice service activated and prone to complaints)</li>
-         * <li>301: No record found</li>
+         * <li>101: Available number.</li>
+         * <li>102: Empty number.</li>
+         * <li>103: Suspended. </li>
+         * <li>104: Silent number (inactive secondary number in the past six months, new number, or non-smartphone user). </li>
+         * <li>105: Risky number (user with prolonged shutdown, voice service not activated, or prone to complaints).</li>
+         * <li>301: No record found.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class MobileDetectResponseBody extends TeaModel {
 
     public static class MobileDetectResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Billing count, the total billing count in one request</p>
+         * <p>The total number of billing counts in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -196,7 +196,7 @@ public class MobileDetectResponseBody extends TeaModel {
         public String chargeCount;
 
         /**
-         * <p>Verification results set</p>
+         * <p>The verification result set.</p>
          */
         @NameInMap("Items")
         public java.util.List<MobileDetectResponseBodyResultObjectItems> items;

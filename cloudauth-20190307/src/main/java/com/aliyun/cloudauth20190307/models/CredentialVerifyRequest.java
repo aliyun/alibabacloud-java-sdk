@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyRequest extends TeaModel {
     /**
-     * <p>Relevant certificate number.</p>
+     * <p>The certificate number.</p>
      * 
      * <strong>example:</strong>
      * <p>4601*****</p>
@@ -14,22 +14,23 @@ public class CredentialVerifyRequest extends TeaModel {
     public String certNum;
 
     /**
+     * <p>The credential name. Valid values:</p>
      * <ul>
-     * <li>01: Personal ID cards<ul>
-     * <li><strong>0101</strong>: ID card</li>
-     * <li><strong>0102</strong>: Bank card</li>
-     * <li><strong>0104</strong>: Teacher qualification certificate</li>
-     * <li><strong>0107</strong>: Student ID card</li>
+     * <li>01: personal card and certificate<ul>
+     * <li>0101: ID card</li>
+     * <li>0102: bank card</li>
+     * <li>0104: teacher qualification certificate</li>
+     * <li>0107: student ID card</li>
      * </ul>
      * </li>
-     * <li>02: Business scenario<ul>
-     * <li><strong>0201</strong>: Storefront photo</li>
-     * <li><strong>0202</strong>: Counter photo</li>
-     * <li><strong>0203</strong>: Scene photo</li>
+     * <li>02: business scenario<ul>
+     * <li>0201: storefront photo</li>
+     * <li>0202: counter photo</li>
+     * <li>0203: scene photo</li>
      * </ul>
      * </li>
-     * <li>03: Corporate qualifications<ul>
-     * <li><strong>0301</strong>: Business license</li>
+     * <li>03: enterprise qualification<ul>
+     * <li>0301: business license.</li>
      * </ul>
      * </li>
      * </ul>
@@ -41,11 +42,11 @@ public class CredentialVerifyRequest extends TeaModel {
     public String credName;
 
     /**
-     * <p>Credential type:</p>
+     * <p>The credential type. Valid values:</p>
      * <ul>
-     * <li>01: Personal ID cards</li>
-     * <li>02: Business scenario</li>
-     * <li>03: Corporate qualifications</li>
+     * <li>01: personal card and certificate</li>
+     * <li>02: business scenario</li>
+     * <li>03: enterprise qualification.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,15 +56,7 @@ public class CredentialVerifyRequest extends TeaModel {
     public String credType;
 
     /**
-     * <p>ID number:</p>
-     * <p>Note
-     * Only supports the ID numbers of second-generation resident IDs and Hong Kong, Macao, and Taiwan residence permits.</p>
-     * <ul>
-     * <li><p>When paramType is normal: enter the plaintext ID number.</p>
-     * </li>
-     * <li><p>When paramType is md5: first 6 digits of the ID number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID number (plaintext).</p>
-     * </li>
-     * </ul>
+     * <p>The ID card number.</p>
      * 
      * <strong>example:</strong>
      * <p>429001********8211</p>
@@ -72,7 +65,7 @@ public class CredentialVerifyRequest extends TeaModel {
     public String identifyNum;
 
     /**
-     * <p>Base64 encoded image, choose one from <code>imageUrl</code>, <code>imageFile</code>, or <code>imageContext</code>.</p>
+     * <p>The Base64-encoded image. Specify either imageUrl or imageContext.</p>
      * 
      * <strong>example:</strong>
      * <p>base64</p>
@@ -81,7 +74,7 @@ public class CredentialVerifyRequest extends TeaModel {
     public String imageContext;
 
     /**
-     * <p>Image URL, choose one from <code>imageUrl</code>, <code>imageFile</code>, or <code>imageContext</code>.</p>
+     * <p>The image URL. Specify either imageUrl or imageContext.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg">http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg</a></p>
@@ -90,10 +83,10 @@ public class CredentialVerifyRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Whether to enable authoritative authentication</p>
+     * <p>Specifies whether to enable authoritative verification. Valid values:</p>
      * <ul>
-     * <li><strong><strong>0</strong></strong>: No</li>
-     * <li><strong>1</strong>: Yes</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,14 +96,12 @@ public class CredentialVerifyRequest extends TeaModel {
     public String isCheck;
 
     /**
-     * <p>Whether to enable OCR recognition.</p>
+     * <p>Specifies whether to enable optical character recognition (OCR). Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: No</li>
-     * <li><strong>1</strong>: Yes</li>
+     * <li><strong>0</strong>: Disabled.</li>
+     * <li><strong>1</strong>: Enabled.</li>
      * </ul>
-     * <blockquote>
-     * <p>IsOCR can be set to 1 only when <strong>CredType</strong> is 01.</p>
-     * </blockquote>
+     * <p>You can set <strong>isOCR</strong> to <strong>1</strong> only when <strong>CredType</strong> is set to <strong>01</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,40 +110,32 @@ public class CredentialVerifyRequest extends TeaModel {
     public String isOCR;
 
     /**
-     * <p>Merchant details:</p>
-     * <blockquote>
-     * <p>This field is required when PromptModel is set to DEFAULT.</p>
-     * </blockquote>
+     * <p>This parameter is required when PromptModel is set to DEFAULT.</p>
      */
     @NameInMap("MerchantDetail")
     public java.util.List<CredentialVerifyRequestMerchantDetail> merchantDetail;
 
     /**
-     * <p>Merchant ID. </p>
-     * <blockquote>
-     * <p>This field is required when <strong><strong>CredName</strong></strong> is set to <strong>02</strong>.</p>
-     * </blockquote>
+     * <p>The merchant ID. This parameter is required when <strong>CredName</strong> is set to <strong>02</strong>.</p>
      * 
      * <strong>example:</strong>
-     * <p>913100********KW8P</p>
+     * <p>无。</p>
      */
     @NameInMap("MerchantId")
     public String merchantId;
 
     /**
-     * <p>Invocation mode:</p>
+     * <p>The call mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>ANTI_FAKE_CHECK</strong>: Image anti-forgery check</p>
+     * <li><p>ANTI_FAKE_CHECK: image anti-forgery detection.</p>
      * </li>
-     * <li><p><strong>ANTI_FAKE_VL</strong>: Image anti-forgery check and semantic understanding</p>
+     * <li><p>ANTI_FAKE_VL: image anti-forgery detection and semantic understanding.</p>
      * </li>
-     * <li><p><strong>IMAGE_VL_COG</strong>: Image semantic understanding</p>
+     * <li><p>IMAGE_VL_COG: image semantic understanding.</p>
      * </li>
      * </ul>
-     * <p>Default value: ANTI_FAKE_CHECK</p>
-     * <blockquote>
-     * <p>When <strong>CredType</strong> is set to 02, <strong>ProductCode</strong> can only be ANTI_FAKE_VL or IMAGE_VL_COG.</p>
-     * </blockquote>
+     * <p>Default value: ANTI_FAKE_CHECK.</p>
+     * <p>ProductCode can be set to ANTI_FAKE_VL or IMAGE_VL_COG only when CredType is set to 02.</p>
      * 
      * <strong>example:</strong>
      * <p>ANTI_FAKE_CHECK</p>
@@ -161,30 +144,24 @@ public class CredentialVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Customer-defined prompt content for image semantic understanding.</p>
-     * <blockquote>
-     * <p>This field is required when PromptModel is set to CUSTOM.</p>
-     * </blockquote>
+     * <p>The custom prompt content for image semantic understanding.</p>
+     * <p>This parameter is required when PromptModel is set to CUSTOM.</p>
      * 
      * <strong>example:</strong>
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>无</p>
      */
     @NameInMap("Prompt")
     public String prompt;
 
     /**
-     * <p>Prompt acquisition method for image semantic understanding:</p>
+     * <p>The method to obtain the prompt for image semantic understanding. Valid values:</p>
      * <ul>
-     * <li><p><strong>DEFAULT</strong>: System default</p>
+     * <li><p>DEFAULT: system default.</p>
      * </li>
-     * <li><p><strong>CUSTOM</strong>: Customer-defined</p>
+     * <li><p>CUSTOM: custom.</p>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>When <strong>ProductCode</strong> is set to <strong>ANTI_FAKE_VL</strong> or <strong>IMAGE_VL_COG</strong>, this parameter must be provided.</p>
-     * </blockquote>
+     * <p>Note: This parameter is required when ProductCode is set to ANTI_FAKE_VL or IMAGE_VL_COG.</p>
      * 
      * <strong>example:</strong>
      * <p>DEFAULT</p>
@@ -193,7 +170,7 @@ public class CredentialVerifyRequest extends TeaModel {
     public String promptModel;
 
     /**
-     * <p>UserName</p>
+     * <p>The name.</p>
      * 
      * <strong>example:</strong>
      * <p>张*</p>
@@ -320,10 +297,7 @@ public class CredentialVerifyRequest extends TeaModel {
 
     public static class CredentialVerifyRequestMerchantDetail extends TeaModel {
         /**
-         * <p>The private key of the certificate.</p>
-         * <blockquote>
-         * <p> If this parameter is specified, you must also specify <strong>CertName</strong> and <strong>Cert</strong>. If <strong>CertName</strong>, <strong>Cert</strong>, and <strong>Key</strong> are specified, you do not need to specify <strong>CertId</strong>.</p>
-         * </blockquote>
+         * <p>The replacement keyword key.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -332,12 +306,10 @@ public class CredentialVerifyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Keyword value.</p>
+         * <p>The replacement keyword value.</p>
          * 
          * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>关键字</p>
          */
         @NameInMap("Value")
         public String value;

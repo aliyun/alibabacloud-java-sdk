@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSmartStatisticsPageListRequest extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeSmartStatisticsPageListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>End time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeSmartStatisticsPageListRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Number of items per page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeSmartStatisticsPageListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>Scene ID.</p>
+     * <p>The scene ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class DescribeSmartStatisticsPageListRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>ServiceCode for the real person cloud product, only value: <strong>cloudauthst</strong>.</p>
+     * <p>The ServiceCode of the ID Verification product. The value can only be <strong>cloudauthst</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>cloudauthst</p>
@@ -54,7 +54,7 @@ public class DescribeSmartStatisticsPageListRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Start time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

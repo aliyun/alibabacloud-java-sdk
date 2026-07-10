@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
     /**
-     * <p>Return code, <strong>200</strong> indicates a successful API response.</p>
+     * <p>The return code. <strong>200</strong> indicates a successful response.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
@@ -32,7 +32,7 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned result information</p>
+     * <p>The result information.</p>
      */
     @NameInMap("ResultObject")
     public Mobile3MetaDetailStandardVerifyResponseBodyResultObject resultObject;
@@ -76,10 +76,10 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
 
     public static class Mobile3MetaDetailStandardVerifyResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Verification result code:</p>
+         * <p>The verification result code. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: Verification matches.</li>
-         * <li><strong>2</strong>: Verification does not match.</li>
+         * <li><strong>1</strong>: Verification is consistent.</li>
+         * <li><strong>2</strong>: Verification is inconsistent.</li>
          * <li><strong>3</strong>: No record found.</li>
          * </ul>
          * 
@@ -90,12 +90,12 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
-         * <p>ISP name:</p>
+         * <p>The carrier name. Valid values:</p>
          * <ul>
          * <li><strong>CMCC</strong>: China Mobile.</li>
          * <li><strong>CUCC</strong>: China Unicom.</li>
          * <li><strong>CTCC</strong>: China Telecom.</li>
-         * <li><strong>CBCC</strong>: China Broadcasting Network.</li>
+         * <li><strong>CBCC</strong>: China Broadnet.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,13 +105,13 @@ public class Mobile3MetaDetailStandardVerifyResponseBody extends TeaModel {
         public String ispName;
 
         /**
-         * <p>Detailed verification results:</p>
+         * <p>The detailed verification result. Valid values:</p>
          * <ul>
-         * <li>101: Passed, three elements are consistent.</li>
-         * <li>201: The phone number does not match the name and ID number.</li>
-         * <li>202: The phone number matches the name but does not match the ID number.</li>
-         * <li>203: The phone number does not match the name but matches the ID number.</li>
-         * <li>204: Other inconsistencies.</li>
+         * <li>101: Verification passed. All three elements are consistent.</li>
+         * <li>201: The phone number is inconsistent with both the name and the ID card number.</li>
+         * <li>202: The phone number is consistent with the name but inconsistent with the ID card number.</li>
+         * <li>203: The phone number is inconsistent with the name but consistent with the ID card number.</li>
+         * <li>204: Other inconsistency.</li>
          * <li>301: No record found.</li>
          * </ul>
          * 

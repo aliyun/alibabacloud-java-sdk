@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AIGCFaceVerifyRequest extends TeaModel {
     /**
-     * <p>Base64 encoded photo.</p>
+     * <p>The Base64-encoded photo.</p>
      * <blockquote>
-     * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String faceContrastPicture;
 
     /**
-     * <p>Portrait address, accessible via public HTTP or HTTPS link.</p>
+     * <p>The URL of the face image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
      * <blockquote>
-     * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String faceContrastPictureUrl;
 
     /**
-     * <p>Authorized OSS bucket name.</p>
+     * <p>The name of the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>Authorized OSS file name.</p>
+     * <p>The file name in the authorized OSS bucket.</p>
      * <blockquote>
-     * <p>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
+     * <p>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String ossObjectName;
 
     /**
-     * <p>A unique business identifier defined by the client side, used for subsequent troubleshooting. The value should be a combination of letters and numbers with a maximum length of 32 characters, please ensure its uniqueness.</p>
+     * <p>The custom business unique identifier on the client side, used for subsequent troubleshooting. The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -62,7 +62,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
-     * <p>Product solution</p>
+     * <p>The product plan.</p>
      * 
      * <strong>example:</strong>
      * <p>LR_FR_AIGC</p>
@@ -71,7 +71,7 @@ public class AIGCFaceVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</p>
+     * <p>The ID of the verification scenario. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, refer to Add a verification scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>100000xxxx</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
     /**
-     * <p>ID of this request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C2C596D1-B14B-5D79-9672-61D7686912B2</p>
@@ -14,7 +14,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Authentication result.</p>
+     * <p>The authentication result.</p>
      */
     @NameInMap("ResultObject")
     public DescribeVerifyFailStatisticsResponseBodyResultObject resultObject;
@@ -42,7 +42,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyFailStatisticsResponseBodyResultObjectColumnItems extends TeaModel {
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -51,7 +51,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Failure count.</p>
+         * <p>The number of failures.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>Date: Date</p>
+         * <p>Date: the date.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16</p>
@@ -101,13 +101,13 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyFailStatisticsResponseBodyResultObjectColumn extends TeaModel {
         /**
-         * <p>Column information.</p>
+         * <p>The column information.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyFailStatisticsResponseBodyResultObjectColumnItems> items;
 
         /**
-         * <p>Total count.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -140,7 +140,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyFailStatisticsResponseBodyResultObjectLineItemsData extends TeaModel {
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -149,7 +149,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Count.</p>
+         * <p>The count.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -158,7 +158,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>Date.</p>
+         * <p>The date.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-10-16</p>
@@ -199,7 +199,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyFailStatisticsResponseBodyResultObjectLineItems extends TeaModel {
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -208,7 +208,7 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Returned quantity data.</p>
+         * <p>The returned count data.</p>
          */
         @NameInMap("Data")
         public java.util.List<DescribeVerifyFailStatisticsResponseBodyResultObjectLineItemsData> data;
@@ -238,13 +238,13 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyFailStatisticsResponseBodyResultObjectLine extends TeaModel {
         /**
-         * <p>Column information.</p>
+         * <p>The column information.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeVerifyFailStatisticsResponseBodyResultObjectLineItems> items;
 
         /**
-         * <p>Total count.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -277,13 +277,13 @@ public class DescribeVerifyFailStatisticsResponseBody extends TeaModel {
 
     public static class DescribeVerifyFailStatisticsResponseBodyResultObject extends TeaModel {
         /**
-         * <p>Line chart of failure reasons.</p>
+         * <p>The line chart of failure reasons.</p>
          */
         @NameInMap("Column")
         public DescribeVerifyFailStatisticsResponseBodyResultObjectColumn column;
 
         /**
-         * <p>Bar chart of failure reasons.</p>
+         * <p>The bar chart of failure reasons.</p>
          */
         @NameInMap("Line")
         public DescribeVerifyFailStatisticsResponseBodyResultObjectLine line;
