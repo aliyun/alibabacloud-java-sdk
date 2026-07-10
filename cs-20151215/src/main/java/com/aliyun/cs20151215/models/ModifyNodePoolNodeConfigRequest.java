@@ -11,19 +11,19 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public ContainerdConfig containerdConfig;
 
     /**
-     * <p>The kubelet parameter configuration.</p>
+     * <p>The kubelet parameter settings.</p>
      */
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
 
     /**
-     * <p>The list of specified nodes to upgrade.</p>
+     * <p>The list of nodes to upgrade.</p>
      */
     @NameInMap("node_names")
     public java.util.List<String> nodeNames;
 
     /**
-     * <p>The operating system parameter configuration.</p>
+     * <p>The operating system parameter settings.</p>
      */
     @NameInMap("os_config")
     public ModifyNodePoolNodeConfigRequestOsConfig osConfig;
@@ -81,13 +81,13 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
 
     public static class ModifyNodePoolNodeConfigRequestOsConfig extends TeaModel {
         /**
-         * <p>The Hugepage configuration.</p>
+         * <p>The hugepage configuration.</p>
          */
         @NameInMap("hugepage")
         public Hugepage hugepage;
 
         /**
-         * <p>The custom sysctl parameter configuration.</p>
+         * <p>The custom sysctl parameter settings.</p>
          */
         @NameInMap("sysctl")
         public java.util.Map<String, ?> sysctl;

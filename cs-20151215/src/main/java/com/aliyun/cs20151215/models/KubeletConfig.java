@@ -233,14 +233,6 @@ public class KubeletConfig extends TeaModel {
     public Boolean serializeImagePulls;
 
     /**
-     * <p>启用 kubelet 服务端证书的自动签发与轮换功能。启用时，需同时在 kubelet 的 featureGates 中配置 &quot;RotateKubeletServerCertificate&quot;: true</p>
-     * <blockquote>
-     * <ul>
-     * <li>仅 1.30 及以上版本的集群可用。</li>
-     * <li>1.30 至 v1.33 版本的集群需提交工单申请。</li>
-     * </ul>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

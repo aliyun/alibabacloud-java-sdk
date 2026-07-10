@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolResponseBody extends TeaModel {
     /**
-     * <p>Node pool ID.</p>
+     * <p>The node pool ID.</p>
      * 
      * <strong>example:</strong>
      * <p>np31da1b38983f4511b490fc62108a****</p>
@@ -14,7 +14,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0527ac9a-c899-4341-a21a-****</p>
@@ -23,7 +23,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>T-613b19bbd160ad492800****</p>
