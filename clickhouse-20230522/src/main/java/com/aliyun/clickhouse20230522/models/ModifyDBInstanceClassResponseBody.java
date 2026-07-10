@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ModifyDBInstanceClassResponseBodyData data;
@@ -41,6 +41,12 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     }
 
     public static class ModifyDBInstanceClassResponseBodyData extends TeaModel {
+        /**
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-gs5j3sua77*******-clickhouse</p>
+         */
         @NameInMap("ComputingGroupId")
         public String computingGroupId;
 
@@ -48,7 +54,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-xxxxxxx</p>
+         * <p>cc-gs5j3sua77*******</p>
          */
         @NameInMap("DBInstanceID")
         public Long DBInstanceID;
@@ -57,13 +63,13 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-xxxxxxx</p>
+         * <p>cc-gs5j3sua77*******</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The maximum capacity for elastic scaling.</p>
+         * <p>The maximum capacity for serverless autoscaling.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -72,7 +78,7 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public Long scaleMax;
 
         /**
-         * <p>The minimum capacity for elastic scaling.</p>
+         * <p>The minimum capacity for serverless autoscaling.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

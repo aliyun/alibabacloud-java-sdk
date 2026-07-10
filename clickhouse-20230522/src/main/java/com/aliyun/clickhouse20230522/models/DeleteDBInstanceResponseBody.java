@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DeleteDBInstanceResponseBodyData data;

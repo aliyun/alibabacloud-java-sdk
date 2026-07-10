@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DeleteWhitelistTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The data returned from the call.</p>
+     */
     @NameInMap("Data")
     public DeleteWhitelistTemplateResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
@@ -37,6 +42,8 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
 
     public static class DeleteWhitelistTemplateResponseBodyDataTemplatesDbInstances extends TeaModel {
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>asdfwef</p>
          */
@@ -59,10 +66,15 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
     }
 
     public static class DeleteWhitelistTemplateResponseBodyDataTemplates extends TeaModel {
+        /**
+         * <p>The instances associated with the template.</p>
+         */
         @NameInMap("DbInstances")
         public java.util.List<DeleteWhitelistTemplateResponseBodyDataTemplatesDbInstances> dbInstances;
 
         /**
+         * <p>The IP whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>
          */
@@ -70,6 +82,8 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The whitelist template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-asdfwem</p>
          */
@@ -108,6 +122,9 @@ public class DeleteWhitelistTemplateResponseBody extends TeaModel {
     }
 
     public static class DeleteWhitelistTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The whitelist templates.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<DeleteWhitelistTemplateResponseBodyDataTemplates> templates;
 

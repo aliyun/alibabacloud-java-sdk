@@ -53,7 +53,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("me-east-1", "clickhouse.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "clickhouse.aliyuncs.com"),
             new TeaPair("us-east-1", "clickhouse.aliyuncs.com"),
-            new TeaPair("us-west-1", "clickhouse.aliyuncs.com")
+            new TeaPair("us-west-1", "clickhouse.aliyuncs.com"),
+            new TeaPair("me-central-1", "clickhouse.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "clickhouse.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "clickhouse.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "clickhouse.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("clickhouse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -74,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>白名单模板关联实例</p>
+     * <p>Attaches a whitelist template to instances.</p>
      * 
      * @param request AttachWhitelistTemplateToInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -114,7 +126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>白名单模板关联实例</p>
+     * <p>Attaches a whitelist template to instances.</p>
      * 
      * @param request AttachWhitelistTemplateToInstanceRequest
      * @return AttachWhitelistTemplateToInstanceResponse
@@ -126,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Changes the resource group of a ClickHouse Enterprise instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -170,7 +182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Changes the resource group of a ClickHouse Enterprise instance.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -260,7 +272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup policy for a specified ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request CreateBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -308,7 +320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup policy for a specified ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request CreateBackupPolicyRequest
      * @return CreateBackupPolicyResponse
@@ -320,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for ClickHouse database.</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -364,7 +376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for ClickHouse database.</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDBRequest
      * @return CreateDBResponse
@@ -376,7 +388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>To create a ClickHouse Enterprise Edition cluster, call the <code>CreateDBInstance</code> API.</p>
      * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -502,7 +514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>To create a ClickHouse Enterprise Edition cluster, call the <code>CreateDBInstance</code> API.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -514,7 +526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a public endpoint.</p>
+     * <p>Creates a public endpoint that provides a public address to access a cluster.</p>
      * 
      * @param request CreateEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -562,7 +574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for a public endpoint.</p>
+     * <p>Creates a public endpoint that provides a public address to access a cluster.</p>
      * 
      * @param request CreateEndpointRequest
      * @return CreateEndpointResponse
@@ -574,7 +586,247 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增白名单模板</p>
+     * <p>Creates a Langfuse organization.</p>
+     * 
+     * @param request CreateLangfuseOrgRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLangfuseOrgResponse
+     */
+    public CreateLangfuseOrgResponse createLangfuseOrgWithOptions(CreateLangfuseOrgRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerEmail)) {
+            query.put("OwnerEmail", request.ownerEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLangfuseOrg"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLangfuseOrgResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Langfuse organization.</p>
+     * 
+     * @param request CreateLangfuseOrgRequest
+     * @return CreateLangfuseOrgResponse
+     */
+    public CreateLangfuseOrgResponse createLangfuseOrg(CreateLangfuseOrgRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLangfuseOrgWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds a user to a Langfuse organization.</p>
+     * 
+     * @param request CreateLangfuseOrgMemberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLangfuseOrgMemberResponse
+     */
+    public CreateLangfuseOrgMemberResponse createLangfuseOrgMemberWithOptions(CreateLangfuseOrgMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLangfuseOrgMember"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLangfuseOrgMemberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds a user to a Langfuse organization.</p>
+     * 
+     * @param request CreateLangfuseOrgMemberRequest
+     * @return CreateLangfuseOrgMemberResponse
+     */
+    public CreateLangfuseOrgMemberResponse createLangfuseOrgMember(CreateLangfuseOrgMemberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLangfuseOrgMemberWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Langfuse project.</p>
+     * 
+     * @param request CreateLangfuseProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLangfuseProjectResponse
+     */
+    public CreateLangfuseProjectResponse createLangfuseProjectWithOptions(CreateLangfuseProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLangfuseProject"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLangfuseProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Langfuse project.</p>
+     * 
+     * @param request CreateLangfuseProjectRequest
+     * @return CreateLangfuseProjectResponse
+     */
+    public CreateLangfuseProjectResponse createLangfuseProject(CreateLangfuseProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLangfuseProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Langfuse user.</p>
+     * 
+     * @param request CreateLangfuseUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLangfuseUserResponse
+     */
+    public CreateLangfuseUserResponse createLangfuseUserWithOptions(CreateLangfuseUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgRole)) {
+            query.put("OrgRole", request.orgRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLangfuseUser"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLangfuseUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a Langfuse user.</p>
+     * 
+     * @param request CreateLangfuseUserRequest
+     * @return CreateLangfuseUserResponse
+     */
+    public CreateLangfuseUserResponse createLangfuseUser(CreateLangfuseUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLangfuseUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a whitelist template.</p>
      * 
      * @param request CreateWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -616,7 +868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增白名单模板</p>
+     * <p>Creates a whitelist template.</p>
      * 
      * @param request CreateWhitelistTemplateRequest
      * @return CreateWhitelistTemplateResponse
@@ -684,7 +936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -720,7 +972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteBackupPolicyRequest
      * @return DeleteBackupPolicyResponse
@@ -732,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ApsaraDB for ClickHouse database.</p>
+     * <p>Call this operation to delete a database.</p>
      * 
      * @param request DeleteDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -772,7 +1024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an ApsaraDB for ClickHouse database.</p>
+     * <p>Call this operation to delete a database.</p>
      * 
      * @param request DeleteDBRequest
      * @return DeleteDBResponse
@@ -784,7 +1036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -820,7 +1072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -832,7 +1084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a public endpoint.</p>
+     * <p>Deletes a public endpoint.</p>
      * 
      * @param request DeleteEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -880,7 +1132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a public endpoint.</p>
+     * <p>Deletes a public endpoint.</p>
      * 
      * @param request DeleteEndpointRequest
      * @return DeleteEndpointResponse
@@ -892,7 +1144,271 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除白名单模板</p>
+     * <p>Releases a Langfuse instance.</p>
+     * 
+     * @param request DeleteLangfuseInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLangfuseInstanceResponse
+     */
+    public DeleteLangfuseInstanceResponse deleteLangfuseInstanceWithOptions(DeleteLangfuseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLangfuseInstance"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLangfuseInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Releases a Langfuse instance.</p>
+     * 
+     * @param request DeleteLangfuseInstanceRequest
+     * @return DeleteLangfuseInstanceResponse
+     */
+    public DeleteLangfuseInstanceResponse deleteLangfuseInstance(DeleteLangfuseInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLangfuseInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Langfuse organization.</p>
+     * 
+     * @param request DeleteLangfuseOrgRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLangfuseOrgResponse
+     */
+    public DeleteLangfuseOrgResponse deleteLangfuseOrgWithOptions(DeleteLangfuseOrgRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLangfuseOrg"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLangfuseOrgResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Langfuse organization.</p>
+     * 
+     * @param request DeleteLangfuseOrgRequest
+     * @return DeleteLangfuseOrgResponse
+     */
+    public DeleteLangfuseOrgResponse deleteLangfuseOrg(DeleteLangfuseOrgRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLangfuseOrgWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes a user from a Langfuse organization.</p>
+     * 
+     * @param request DeleteLangfuseOrgMembershipRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLangfuseOrgMembershipResponse
+     */
+    public DeleteLangfuseOrgMembershipResponse deleteLangfuseOrgMembershipWithOptions(DeleteLangfuseOrgMembershipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLangfuseOrgMembership"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLangfuseOrgMembershipResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes a user from a Langfuse organization.</p>
+     * 
+     * @param request DeleteLangfuseOrgMembershipRequest
+     * @return DeleteLangfuseOrgMembershipResponse
+     */
+    public DeleteLangfuseOrgMembershipResponse deleteLangfuseOrgMembership(DeleteLangfuseOrgMembershipRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLangfuseOrgMembershipWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Langfuse project.</p>
+     * 
+     * @param request DeleteLangfuseProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLangfuseProjectResponse
+     */
+    public DeleteLangfuseProjectResponse deleteLangfuseProjectWithOptions(DeleteLangfuseProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLangfuseProject"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLangfuseProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Langfuse project.</p>
+     * 
+     * @param request DeleteLangfuseProjectRequest
+     * @return DeleteLangfuseProjectResponse
+     */
+    public DeleteLangfuseProjectResponse deleteLangfuseProject(DeleteLangfuseProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLangfuseProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Langfuse user.</p>
+     * 
+     * @param request DeleteLangfuseUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLangfuseUserResponse
+     */
+    public DeleteLangfuseUserResponse deleteLangfuseUserWithOptions(DeleteLangfuseUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLangfuseUser"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLangfuseUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a Langfuse user.</p>
+     * 
+     * @param request DeleteLangfuseUserRequest
+     * @return DeleteLangfuseUserResponse
+     */
+    public DeleteLangfuseUserResponse deleteLangfuseUser(DeleteLangfuseUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLangfuseUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a whitelist template.</p>
      * 
      * @param request DeleteWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -932,7 +1448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除白名单模板</p>
+     * <p>Deletes a whitelist template.</p>
      * 
      * @param request DeleteWhitelistTemplateRequest
      * @return DeleteWhitelistTemplateResponse
@@ -944,7 +1460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the permissions of a database account.</p>
+     * <p>Call the DescribeAccountAuthority operation to query the permissions of an account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -984,7 +1500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the permissions of a database account.</p>
+     * <p>Call the DescribeAccountAuthority operation to query the permissions of an account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @return DescribeAccountAuthorityResponse
@@ -1056,7 +1572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Queries the backup policy of a ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1092,7 +1608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Queries the backup policy of a ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -1104,7 +1620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1160,7 +1676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -1172,7 +1688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1208,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -1220,7 +1736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例参数配置</p>
+     * <p>Queries the parameter configuration of an instance</p>
      * 
      * @param request DescribeDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1248,7 +1764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例参数配置</p>
+     * <p>Queries the parameter configuration of an instance</p>
      * 
      * @param request DescribeDBInstanceConfigRequest
      * @return DescribeDBInstanceConfigResponse
@@ -1260,7 +1776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例参数配置记录</p>
+     * <p>Queries the parameter configuration records of an instance</p>
      * 
      * @param request DescribeDBInstanceConfigChangeLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1288,7 +1804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例参数配置记录</p>
+     * <p>Queries the parameter configuration records of an instance</p>
      * 
      * @param request DescribeDBInstanceConfigChangeLogRequest
      * @return DescribeDBInstanceConfigChangeLogResponse
@@ -1356,7 +1872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of ApsaraDB for ClickHouse clusters.</p>
+     * <p>Call the DescribeDBInstances API to query a list of DB instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1420,7 +1936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of ApsaraDB for ClickHouse clusters.</p>
+     * <p>Call the DescribeDBInstances API to query a list of DB instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -1432,7 +1948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>To retrieve the cluster endpoints, call DescribeEndpoints.</p>
      * 
      * @param request DescribeEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1472,7 +1988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>To retrieve the cluster endpoints, call DescribeEndpoints.</p>
      * 
      * @param request DescribeEndpointsRequest
      * @return DescribeEndpointsResponse
@@ -1484,7 +2000,451 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views running queries.</p>
+     * <p>Queries the access endpoint of a Langfuse instance.</p>
+     * 
+     * @param request DescribeLangfuseEndpointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseEndpointsResponse
+     */
+    public DescribeLangfuseEndpointsResponse describeLangfuseEndpointsWithOptions(DescribeLangfuseEndpointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseEndpoints"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseEndpointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the access endpoint of a Langfuse instance.</p>
+     * 
+     * @param request DescribeLangfuseEndpointsRequest
+     * @return DescribeLangfuseEndpointsResponse
+     */
+    public DescribeLangfuseEndpointsResponse describeLangfuseEndpoints(DescribeLangfuseEndpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseEndpointsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the member information of a Langfuse organization.</p>
+     * 
+     * @param request DescribeLangfuseOrgMembershipsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseOrgMembershipsResponse
+     */
+    public DescribeLangfuseOrgMembershipsResponse describeLangfuseOrgMembershipsWithOptions(DescribeLangfuseOrgMembershipsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseOrgMemberships"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseOrgMembershipsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the member information of a Langfuse organization.</p>
+     * 
+     * @param request DescribeLangfuseOrgMembershipsRequest
+     * @return DescribeLangfuseOrgMembershipsResponse
+     */
+    public DescribeLangfuseOrgMembershipsResponse describeLangfuseOrgMemberships(DescribeLangfuseOrgMembershipsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseOrgMembershipsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Langfuse实例组织列表</p>
+     * 
+     * @param request DescribeLangfuseOrgsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseOrgsResponse
+     */
+    public DescribeLangfuseOrgsResponse describeLangfuseOrgsWithOptions(DescribeLangfuseOrgsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseOrgs"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseOrgsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Langfuse实例组织列表</p>
+     * 
+     * @param request DescribeLangfuseOrgsRequest
+     * @return DescribeLangfuseOrgsResponse
+     */
+    public DescribeLangfuseOrgsResponse describeLangfuseOrgs(DescribeLangfuseOrgsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseOrgsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries user roles in a Langfuse project.</p>
+     * 
+     * @param request DescribeLangfuseProjectMembershipsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseProjectMembershipsResponse
+     */
+    public DescribeLangfuseProjectMembershipsResponse describeLangfuseProjectMembershipsWithOptions(DescribeLangfuseProjectMembershipsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseProjectMemberships"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseProjectMembershipsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries user roles in a Langfuse project.</p>
+     * 
+     * @param request DescribeLangfuseProjectMembershipsRequest
+     * @return DescribeLangfuseProjectMembershipsResponse
+     */
+    public DescribeLangfuseProjectMembershipsResponse describeLangfuseProjectMemberships(DescribeLangfuseProjectMembershipsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseProjectMembershipsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Langfuse projects.</p>
+     * 
+     * @param request DescribeLangfuseProjectsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseProjectsResponse
+     */
+    public DescribeLangfuseProjectsResponse describeLangfuseProjectsWithOptions(DescribeLangfuseProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseProjects"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseProjectsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Langfuse projects.</p>
+     * 
+     * @param request DescribeLangfuseProjectsRequest
+     * @return DescribeLangfuseProjectsResponse
+     */
+    public DescribeLangfuseProjectsResponse describeLangfuseProjects(DescribeLangfuseProjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Langfuse whitelist.</p>
+     * 
+     * @param request DescribeLangfuseSecurityIPListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseSecurityIPListResponse
+     */
+    public DescribeLangfuseSecurityIPListResponse describeLangfuseSecurityIPListWithOptions(DescribeLangfuseSecurityIPListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseSecurityIPList"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseSecurityIPListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Langfuse whitelist.</p>
+     * 
+     * @param request DescribeLangfuseSecurityIPListRequest
+     * @return DescribeLangfuseSecurityIPListResponse
+     */
+    public DescribeLangfuseSecurityIPListResponse describeLangfuseSecurityIPList(DescribeLangfuseSecurityIPListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseSecurityIPListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a Langfuse user.</p>
+     * 
+     * @param request DescribeLangfuseUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseUserResponse
+     */
+    public DescribeLangfuseUserResponse describeLangfuseUserWithOptions(DescribeLangfuseUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseUser"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseUserResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a Langfuse user.</p>
+     * 
+     * @param request DescribeLangfuseUserRequest
+     * @return DescribeLangfuseUserResponse
+     */
+    public DescribeLangfuseUserResponse describeLangfuseUser(DescribeLangfuseUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Langfuse users.</p>
+     * 
+     * @param request DescribeLangfuseUsersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLangfuseUsersResponse
+     */
+    public DescribeLangfuseUsersResponse describeLangfuseUsersWithOptions(DescribeLangfuseUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLangfuseUsers"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLangfuseUsersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Langfuse users.</p>
+     * 
+     * @param request DescribeLangfuseUsersRequest
+     * @return DescribeLangfuseUsersResponse
+     */
+    public DescribeLangfuseUsersResponse describeLangfuseUsers(DescribeLangfuseUsersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLangfuseUsersWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Describes currently running queries.</p>
      * 
      * @param request DescribeProcessListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1552,7 +2512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views running queries.</p>
+     * <p>Describes currently running queries.</p>
      * 
      * @param request DescribeProcessListRequest
      * @return DescribeProcessListResponse
@@ -1564,7 +2524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云数据库ClickHouse所有地域和可用区的信息</p>
+     * <p>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -1587,7 +2547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询云数据库ClickHouse所有地域和可用区的信息</p>
+     * <p>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -1597,7 +2557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the whitelist of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries a whitelist.</p>
      * 
      * @param request DescribeSecurityIPListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1633,7 +2593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the whitelist of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries a whitelist.</p>
      * 
      * @param request DescribeSecurityIPListRequest
      * @return DescribeSecurityIPListResponse
@@ -1645,7 +2605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of slow query logs.</p>
+     * <p>Call DescribeSlowLogRecords to query slow log records.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1705,7 +2665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of slow query logs.</p>
+     * <p>Call DescribeSlowLogRecords to query slow log records.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -1717,7 +2677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of slow query logs.</p>
+     * <p>Queries the slow log trend.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1773,7 +2733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of slow query logs.</p>
+     * <p>Queries the slow log trend.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @return DescribeSlowLogTrendResponse
@@ -1785,7 +2745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消白名单模板和实例关联关系</p>
+     * <p>Disassociate a whitelist template from an instance.</p>
      * 
      * @param request DetachWhitelistTemplateToInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1825,7 +2785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消白名单模板和实例关联关系</p>
+     * <p>Disassociate a whitelist template from an instance.</p>
      * 
      * @param request DetachWhitelistTemplateToInstanceRequest
      * @return DetachWhitelistTemplateToInstanceResponse
@@ -1837,7 +2797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询白名单模板详情</p>
+     * <p>Queries the details of a whitelist template.</p>
      * 
      * @param request GetWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1873,7 +2833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询白名单模板详情</p>
+     * <p>Queries the details of a whitelist template.</p>
      * 
      * @param request GetWhitelistTemplateRequest
      * @return GetWhitelistTemplateResponse
@@ -1885,7 +2845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates an ongoing query.</p>
+     * <p>Terminates a running task.</p>
      * 
      * @param request KillProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1929,7 +2889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Terminates an ongoing query.</p>
+     * <p>Terminates a running task.</p>
      * 
      * @param request KillProcessRequest
      * @return KillProcessResponse
@@ -1941,7 +2901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举ClickHouse时区参数枚举值</p>
+     * <p>Lists the available time zones for ClickHouse.</p>
      * 
      * @param request ListClickHouseDBTimezonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1977,7 +2937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举ClickHouse时区参数枚举值</p>
+     * <p>Lists the available time zones for ClickHouse.</p>
      * 
      * @param request ListClickHouseDBTimezonesRequest
      * @return ListClickHouseDBTimezonesResponse
@@ -1989,7 +2949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例关联的白名单模板清单</p>
+     * <p>Lists the IP address whitelist templates linked to an instance.</p>
      * 
      * @param request ListInstanceLinkedWhitelistTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2025,7 +2985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例关联的白名单模板清单</p>
+     * <p>Lists the IP address whitelist templates linked to an instance.</p>
      * 
      * @param request ListInstanceLinkedWhitelistTemplatesRequest
      * @return ListInstanceLinkedWhitelistTemplatesResponse
@@ -2037,7 +2997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询白名单模板清单</p>
+     * <p>Queries the whitelist templates associated with an instance.</p>
      * 
      * @param request ListWhitelistTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2081,7 +3041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询白名单模板清单</p>
+     * <p>Queries the whitelist templates associated with an instance.</p>
      * 
      * @param request ListWhitelistTemplatesRequest
      * @return ListWhitelistTemplatesResponse
@@ -2210,8 +3170,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2258,8 +3223,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
+     * <p>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
@@ -2271,7 +3241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2319,7 +3289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @return ModifyDBInstanceAttributeResponse
@@ -2330,8 +3300,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Use <code>ModifyDBInstanceClass</code> to modify the scaling configuration of a cluster.</p>
      * 
      * @param tmpReq ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2408,8 +3381,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Use <code>ModifyDBInstanceClass</code> to modify the scaling configuration of a cluster.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
@@ -2421,7 +3397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例参数配置</p>
+     * <p>Modifies the parameter settings for a DB instance.</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2461,7 +3437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例参数配置</p>
+     * <p>Modifies the parameter settings for a DB instance.</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @return ModifyDBInstanceConfigResponse
@@ -2473,7 +3449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the connection string of a cluster.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2529,7 +3505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Modifies the connection string of a cluster.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
@@ -2537,6 +3513,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBInstanceConnectionStringResponse modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBInstanceConnectionStringWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the permissions of a user in a Langfuse organization.</p>
+     * 
+     * @param request ModifyLangfuseOrgMembershipRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyLangfuseOrgMembershipResponse
+     */
+    public ModifyLangfuseOrgMembershipResponse modifyLangfuseOrgMembershipWithOptions(ModifyLangfuseOrgMembershipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyLangfuseOrgMembership"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyLangfuseOrgMembershipResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the permissions of a user in a Langfuse organization.</p>
+     * 
+     * @param request ModifyLangfuseOrgMembershipRequest
+     * @return ModifyLangfuseOrgMembershipResponse
+     */
+    public ModifyLangfuseOrgMembershipResponse modifyLangfuseOrgMembership(ModifyLangfuseOrgMembershipRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyLangfuseOrgMembershipWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the permissions of a user in a Langfuse project.</p>
+     * 
+     * @param request ModifyLangfuseProjectMembershipRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyLangfuseProjectMembershipResponse
+     */
+    public ModifyLangfuseProjectMembershipResponse modifyLangfuseProjectMembershipWithOptions(ModifyLangfuseProjectMembershipRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationId)) {
+            query.put("OrganizationId", request.organizationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyLangfuseProjectMembership"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyLangfuseProjectMembershipResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the permissions of a user in a Langfuse project.</p>
+     * 
+     * @param request ModifyLangfuseProjectMembershipRequest
+     * @return ModifyLangfuseProjectMembershipResponse
+     */
+    public ModifyLangfuseProjectMembershipResponse modifyLangfuseProjectMembership(ModifyLangfuseProjectMembershipRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyLangfuseProjectMembershipWithOptions(request, runtime);
     }
 
     /**
@@ -2657,6 +3757,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetAccountPasswordResponse resetAccountPassword(ResetAccountPasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetAccountPasswordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Resets the password of a Langfuse user.</p>
+     * 
+     * @param request ResetLangfuseUserPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetLangfuseUserPasswordResponse
+     */
+    public ResetLangfuseUserPasswordResponse resetLangfuseUserPasswordWithOptions(ResetLangfuseUserPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newPassword)) {
+            query.put("NewPassword", request.newPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetLangfuseUserPassword"),
+            new TeaPair("version", "2023-05-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetLangfuseUserPasswordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Resets the password of a Langfuse user.</p>
+     * 
+     * @param request ResetLangfuseUserPasswordRequest
+     * @return ResetLangfuseUserPasswordResponse
+     */
+    public ResetLangfuseUserPasswordResponse resetLangfuseUserPassword(ResetLangfuseUserPasswordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetLangfuseUserPasswordWithOptions(request, runtime);
     }
 
     /**
@@ -2805,7 +3961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新白名单模板</p>
+     * <p>Updates a whitelist template.</p>
      * 
      * @param request UpdateWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2849,7 +4005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新白名单模板</p>
+     * <p>Updates a whitelist template.</p>
      * 
      * @param request UpdateWhitelistTemplateRequest
      * @return UpdateWhitelistTemplateResponse

@@ -42,7 +42,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
     public static class DescribeSecurityIPListResponseBodyDataGroupItems extends TeaModel {
         /**
-         * <p>The name of the whitelist.</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -51,7 +51,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The tag of the whitelist.</p>
+         * <p>The group tag.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -60,7 +60,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+         * <p>The IP addresses in the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.XX.XX</p>
@@ -147,13 +147,13 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestCluster</p>
+         * <p>Cluster test</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The details about the whitelists.</p>
+         * <p>The whitelist groups.</p>
          */
         @NameInMap("GroupItems")
         public java.util.List<DescribeSecurityIPListResponseBodyDataGroupItems> groupItems;

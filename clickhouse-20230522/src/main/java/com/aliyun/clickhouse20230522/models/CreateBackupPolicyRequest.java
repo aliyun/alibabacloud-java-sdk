@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The number of days for which you can retain the backup data.</p>
+     * <p>The number of days to retain backups.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -24,7 +24,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The backup cycle, which indicates the day of the week when the system regularly backs up data. Separate multiple dates with commas (<code>,</code>).</p>
+     * <p>The backup cycle. Specify the days of the week for backups. Separate multiple days with commas (<code>,</code>).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
-     * <p>The backup time window within which the backup task is performed. The time is displayed in <code>UTC</code>. For example, <code>12:00Z-13:00Z</code> indicates that the backup time window ranges from <code>12:00</code> (UTC) to <code>13:00</code> <code>(UTC)</code>.</p>
+     * <p>The UTC time range to perform the backup. For example, <code>12:00Z-13:00Z</code> means that the backup starts between 12:00 and 13:00 UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEndpointsResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeEndpointsResponseBodyData data;
@@ -42,11 +42,14 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     public static class DescribeEndpointsResponseBodyDataEndpointsPorts extends TeaModel {
         /**
-         * <p>The port used to connect to the cluster. Valid values:</p>
+         * <p>The port number. The value varies based on the protocol type. For example:</p>
          * <ul>
-         * <li>8123: This value is returned when the value of Protocol is HttpPort.</li>
-         * <li>8443: This value is returned when the value of Protocol is HttpsPort.</li>
-         * <li>9000: This value is returned when the value of Protocol is TcpPort.</li>
+         * <li><p>HttpPort: 8123</p>
+         * </li>
+         * <li><p>HttpsPort: 8443</p>
+         * </li>
+         * <li><p>TcpPort: 9000</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -58,9 +61,12 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li>HttpPort</li>
-         * <li>HttpsPort</li>
-         * <li>TcpPort</li>
+         * <li><p>HttpPort: HTTP port.</p>
+         * </li>
+         * <li><p>HttpsPort: HTTPS port.</p>
+         * </li>
+         * <li><p>TcpPort: TCP port.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,6 +100,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     public static class DescribeEndpointsResponseBodyDataEndpoints extends TeaModel {
         /**
+         * <p>The computing group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-ad321**-clickhouse</p>
          */
@@ -101,7 +109,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String computingGroupId;
 
         /**
-         * <p>The endpoint of the cluster.</p>
+         * <p>The instance connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-****-clickhouse.clickhouseserver.pre.rds.aliyuncs.com</p>
@@ -110,6 +118,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>The endpoint name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-*****-clickhouse</p>
          */
@@ -128,8 +138,10 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         /**
          * <p>The network type of the endpoint. Valid values:</p>
          * <ul>
-         * <li>VPC</li>
-         * <li>PUBLIC</li>
+         * <li><p>VPC</p>
+         * </li>
+         * <li><p>PUBLIC: Internet.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -139,13 +151,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String netType;
 
         /**
-         * <p>The details of the ports.</p>
+         * <p>The ports.</p>
          */
         @NameInMap("Ports")
         public java.util.List<DescribeEndpointsResponseBodyDataEndpointsPorts> ports;
 
         /**
-         * <p>The state of the cluster.</p>
+         * <p>The status of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -163,7 +175,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf61z****</p>
@@ -172,7 +184,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf61z****</p>
@@ -269,16 +281,18 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     public static class DescribeEndpointsResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the endpoints.</p>
+         * <p>The endpoints.</p>
          */
         @NameInMap("Endpoints")
         public java.util.List<DescribeEndpointsResponseBodyDataEndpoints> endpoints;
 
         /**
-         * <p>The network type of the cluster. Valid values:</p>
+         * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>PUBLIC</strong></li>
+         * <li><p><strong>VPC</strong></p>
+         * </li>
+         * <li><p><strong>PUBLIC</strong>: Internet.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

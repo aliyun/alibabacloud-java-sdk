@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWhitelistTemplateRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteWhitelistTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The whitelist template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteWhitelistTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The name of the whitelist template.</p>
+     * 
      * <strong>example:</strong>
      * <p>98a6d3db05984dca</p>
      */

@@ -54,7 +54,7 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
          * <p>The description of the database account.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used for test</p>
+         * <p>Test</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -71,8 +71,10 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

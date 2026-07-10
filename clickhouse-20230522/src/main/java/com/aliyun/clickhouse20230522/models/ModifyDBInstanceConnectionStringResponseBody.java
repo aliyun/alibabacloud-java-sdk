@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ModifyDBInstanceConnectionStringResponseBodyData data;
@@ -42,7 +42,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
 
     public static class ModifyDBInstanceConnectionStringResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoint of the cluster.</p>
+         * <p>The connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>

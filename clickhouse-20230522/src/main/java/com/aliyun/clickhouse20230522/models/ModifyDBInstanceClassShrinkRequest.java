@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     /**
+     * <p>The autoscaling configuration for the compute group.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("AutoScaleConfig")
     public String autoScaleConfigShrink;
 
+    /**
+     * <p>The compute group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-gs5j3sua77*******-clickhouse</p>
+     */
     @NameInMap("ComputingGroupId")
     public String computingGroupId;
 
@@ -19,12 +27,14 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>cc-xxxxxxx</p>
+     * <p>cc-gs5j3sua77*******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The number of nodes. Valid values: 2 to 16.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -32,6 +42,8 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Integer nodeCount;
 
     /**
+     * <p>The maximum capacity per node for serverless autoscaling. Valid values: 4 to 32. This value must be greater than the minimum value.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -39,6 +51,8 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Integer nodeScaleMax;
 
     /**
+     * <p>The minimum capacity per node for serverless autoscaling. Valid values: 4 to 32.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -55,7 +69,7 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The maximum capacity for elastic scaling.</p>
+     * <p>The maximum capacity for serverless autoscaling.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -64,15 +78,17 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Long scaleMax;
 
     /**
-     * <p>The minimum capacity for elastic scaling.</p>
+     * <p>The minimum capacity for serverless autoscaling.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>8</p>
      */
     @NameInMap("ScaleMin")
     public Long scaleMin;
 
     /**
+     * <p>The pre-purchased storage capacity in GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -80,6 +96,8 @@ public class ModifyDBInstanceClassShrinkRequest extends TeaModel {
     public Long storageQuota;
 
     /**
+     * <p>The storage type.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */

@@ -13,11 +13,20 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("BackupSetId")
     public String backupSetId;
 
+    /**
+     * <p>The edition of the instance. Valid value:</p>
+     * <ul>
+     * <li><code>enterprise</code>: Enterprise Edition</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enterprise</p>
+     */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-provided token to ensure request idempotence. It must be unique across requests, contain only ASCII characters, and not exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>AB</p>
@@ -26,19 +35,25 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The cluster description.</p>
+     * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Used for test</p>
+     * <p>Cluster test</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <p>The time zone of the database, which must be an IANA time zone identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
     @NameInMap("DBTimeZone")
     public String DBTimeZone;
 
     /**
-     * <p>The deployment status of the cluster.</p>
+     * <p>The deployment mode of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>multi_az</p>
@@ -65,12 +80,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The configurations of multi-zone deployment.</p>
+     * <p>The multi-zone configuration.</p>
      */
     @NameInMap("MultiZone")
     public java.util.List<CreateDBInstanceRequestMultiZone> multiZone;
 
     /**
+     * <p>The number of nodes. Valid values: 2 to 16. This parameter is required when you configure an elastic scaling range by using the <code>NodeScaleMin</code> and <code>NodeScaleMax</code> parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -78,6 +95,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer nodeCount;
 
     /**
+     * <p>The maximum number of nodes for serverless elastic scaling. Valid values: 4 to 32. The value must be greater than the <code>NodeScaleMin</code> parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -85,6 +104,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer nodeScaleMax;
 
     /**
+     * <p>The minimum number of nodes for serverless elastic scaling. Valid values: 4 to 32.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -92,7 +113,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer nodeScaleMin;
 
     /**
-     * <p>The region ID</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,6 +123,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-*****</p>
      */
@@ -109,7 +132,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The maximum capacity for auto scaling.</p>
+     * <p>This parameter is deprecated. Use the <code>NodeCount</code>, <code>NodeScaleMin</code>, and <code>NodeScaleMax</code> parameters to configure elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -118,7 +141,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String scaleMax;
 
     /**
-     * <p>The minimum capacity for auto scaling.</p>
+     * <p>This parameter is deprecated. Use the <code>NodeCount</code>, <code>NodeScaleMin</code>, and <code>NodeScaleMax</code> parameters to configure elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -127,7 +150,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String scaleMin;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the source instance. This parameter is required when restoring from a backup.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-2ze1*********</p>
@@ -149,11 +172,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The tags to add to the instance.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateDBInstanceRequestTags> tags;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-uf6xmupdn7v6ui9f****</p>
@@ -409,6 +435,8 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     public static class CreateDBInstanceRequestTags extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_123</p>
          */
@@ -416,8 +444,10 @@ public class CreateDBInstanceRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例字符串</p>
+         * <p>example string</p>
          */
         @NameInMap("Value")
         public String value;

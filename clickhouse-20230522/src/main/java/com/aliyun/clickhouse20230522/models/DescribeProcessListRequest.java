@@ -4,6 +4,12 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListRequest extends TeaModel {
+    /**
+     * <p>The computing group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-gs5j3sua77******-clickhouse</p>
+     */
     @NameInMap("ComputingGroupId")
     public String computingGroupId;
 
@@ -27,7 +33,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public String initialQueryId;
 
     /**
-     * <p>The user who executes the query statement.</p>
+     * <p>The query user.</p>
      * 
      * <strong>example:</strong>
      * <p>testuser</p>
@@ -36,7 +42,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public String initialUser;
 
     /**
-     * <p>The keyword of the query statement.</p>
+     * <p>The keyword in the query statement.</p>
      * 
      * <strong>example:</strong>
      * <p>SELECT</p>
@@ -54,7 +60,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -63,7 +69,7 @@ public class DescribeProcessListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The execution duration of slow SQL queries. Minimum value: 1000. Unit: milliseconds.</p>
+     * <p>The minimum query execution duration, in milliseconds (ms). Only queries that run for this duration or longer are returned. The minimum value is 1,000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -72,15 +78,18 @@ public class DescribeProcessListRequest extends TeaModel {
     public String queryDurationMs;
 
     /**
-     * <p>Specifies the columns by which the query results are sorted in descending order.</p>
+     * <p>The criteria by which to sort the results. The results are sorted in descending order. Valid values:</p>
      * <ul>
-     * <li>0: The query results are sorted by the query_duration_ms column.</li>
-     * <li>1: The query results are sorted by the query_duration_ms and query_start_time columns.</li>
-     * <li>2: The query results are sorted by the query_duration_ms, query_start_time, and user columns.</li>
+     * <li><p>0: Sorts by <code>query_duration_ms</code>.</p>
+     * </li>
+     * <li><p>1: Sorts by <code>query_duration_ms</code> and <code>query_start_time</code>.</p>
+     * </li>
+     * <li><p>2: Sorts by <code>query_duration_ms</code>, <code>query_start_time</code>, and <code>user</code>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>id</p>
+     * <p>0</p>
      */
     @NameInMap("QueryOrder")
     public Long queryOrder;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
     /**
-     * <p>The cluster IDs. Separate multiple cluster IDs with commas (,).</p>
+     * <p>A comma-separated list of instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-xxxxx,cx-xxxx</p>
@@ -14,7 +14,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceIds;
 
     /**
-     * <p>The cluster status.</p>
+     * <p>The instance status.</p>
      * 
      * <strong>example:</strong>
      * <p>active</p>
@@ -23,7 +23,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceStatus;
 
     /**
-     * <p>The cluster description.</p>
+     * <p>The instance description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -67,10 +67,18 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags for filtering instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DescribeDBInstances</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeDBInstancesRequestTags> tags;
 
     /**
+     * <p>A comma-separated list of VPC IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</p>
      */
@@ -156,6 +164,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     public static class DescribeDBInstancesRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_123</p>
          */
@@ -163,8 +173,10 @@ public class DescribeDBInstancesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>example value</p>
          */
         @NameInMap("Value")
         public String value;

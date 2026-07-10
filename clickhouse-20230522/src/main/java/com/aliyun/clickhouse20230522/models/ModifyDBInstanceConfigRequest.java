@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConfigRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The API data parameter settings in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;max_concurrent_queries&quot;:&quot;100&quot;}</p>
      */
@@ -21,6 +24,7 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String parameters;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

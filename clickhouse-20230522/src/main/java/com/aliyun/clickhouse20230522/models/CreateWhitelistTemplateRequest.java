@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWhitelistTemplateRequest extends TeaModel {
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class CreateWhitelistTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IP addresses in the whitelist. Separate multiple IP addresses with commas (,). You can add up to 100 IP addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +25,7 @@ public class CreateWhitelistTemplateRequest extends TeaModel {
     public String securityIPList;
 
     /**
+     * <p>The name of the whitelist template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

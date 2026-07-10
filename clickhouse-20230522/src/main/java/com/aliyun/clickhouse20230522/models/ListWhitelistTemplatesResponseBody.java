@@ -4,11 +4,14 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ListWhitelistTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The query results.</p>
+     */
     @NameInMap("Data")
     public ListWhitelistTemplatesResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -39,6 +42,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
 
     public static class ListWhitelistTemplatesResponseBodyDataTemplatesDbInstances extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-asdfwef</p>
          */
@@ -61,10 +66,15 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListWhitelistTemplatesResponseBodyDataTemplates extends TeaModel {
+        /**
+         * <p>The list of associated instances.</p>
+         */
         @NameInMap("DbInstances")
         public java.util.List<ListWhitelistTemplatesResponseBodyDataTemplatesDbInstances> dbInstances;
 
         /**
+         * <p>The IP address whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>
          */
@@ -72,6 +82,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The whitelist template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-asdfwem</p>
          */
@@ -79,6 +91,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The whitelist template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-asdfwem</p>
          */
@@ -126,6 +140,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
 
     public static class ListWhitelistTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +149,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         public Integer currPageNumbers;
 
         /**
+         * <p>Whether a next page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -140,6 +158,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         public Boolean hasNext;
 
         /**
+         * <p>Whether a previous page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -147,16 +167,23 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         public Boolean hasPrev;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of whitelist templates.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<ListWhitelistTemplatesResponseBodyDataTemplates> templates;
 
         /**
+         * <p>The total number of templates.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -164,6 +191,8 @@ public class ListWhitelistTemplatesResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

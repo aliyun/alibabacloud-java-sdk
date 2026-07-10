@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DescribeDBInstancesResponseBodyData data;
@@ -84,7 +84,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDataDBInstances extends TeaModel {
         /**
-         * <p>The user ID.</p>
+         * <p>The account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1294****</p>
@@ -102,10 +102,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String bid;
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method for the instance. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription</li>
-         * <li>PostPaid: pay-as-you-go</li>
+         * <li><p><code>PrePaid</code>: subscription.</p>
+         * </li>
+         * <li><p><code>PostPaid</code>: pay-as-you-go.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +117,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The time when the cluster was created.</p>
+         * <p>The instance creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-04 21:16:15</p>
@@ -124,7 +126,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cc-xxxxxxx</p>
@@ -133,7 +135,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>Indicates whether the release protection feature is enabled for the cluster.</p>
+         * <p>Indicates whether deletion protection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -142,7 +144,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String deletionProtection;
 
         /**
-         * <p>The cluster description.</p>
+         * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>test_desc</p>
@@ -151,7 +153,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The engine type.</p>
+         * <p>The engine.</p>
          * 
          * <strong>example:</strong>
          * <p>clickhouse</p>
@@ -169,7 +171,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The time when the cluster expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-16 11:51:06</p>
@@ -187,7 +189,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The reason why the cluster was locked.</p>
+         * <p>The reason for the lock.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -196,7 +198,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The end time of the maintenance window.</p>
+         * <p>The maintenance window end time.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>
@@ -205,7 +207,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the maintenance window.</p>
+         * <p>The maintenance window start time.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00Z</p>
@@ -232,7 +234,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The maximum capacity for elastic scaling.</p>
+         * <p>The maximum compute capacity for serverless elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>
@@ -241,7 +243,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer scaleMax;
 
         /**
-         * <p>The minimum capacity for elastic scaling.</p>
+         * <p>The minimum compute capacity for serverless elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -250,7 +252,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer scaleMin;
 
         /**
-         * <p>The cluster status.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -259,6 +261,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The instance storage type.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -266,7 +270,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags attached to the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeDBInstancesResponseBodyDataDBInstancesTags> tags;
@@ -281,7 +285,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6kg****</p>
@@ -499,7 +503,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The clusters.</p>
+         * <p>The list of instance details.</p>
          */
         @NameInMap("DBInstances")
         public java.util.List<DescribeDBInstancesResponseBodyDataDBInstances> DBInstances;
@@ -523,7 +527,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

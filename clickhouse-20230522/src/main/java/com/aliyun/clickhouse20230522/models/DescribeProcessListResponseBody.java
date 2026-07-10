@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The data object.</p>
      */
     @NameInMap("Data")
     public DescribeProcessListResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     public static class DescribeProcessListResponseBodyDataResultSet extends TeaModel {
         /**
-         * <p>The address to which the query statement is sent.</p>
+         * <p>The address from which the query was initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>0:0:0:0:0:ffff:1edd65ea</p>
@@ -60,7 +60,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String initialQueryId;
 
         /**
-         * <p>The user who executes the query statement.</p>
+         * <p>The user who initiated the query.</p>
          * 
          * <strong>example:</strong>
          * <p>bany</p>
@@ -69,7 +69,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String initialUser;
 
         /**
-         * <p>The query statement that is running.</p>
+         * <p>The query statement.</p>
          * 
          * <strong>example:</strong>
          * <p>select * from test</p>
@@ -78,7 +78,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+         * <p>The execution duration of the query, in milliseconds (ms).</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -87,7 +87,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public Long queryDurationMs;
 
         /**
-         * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the query. The time is in UTC and follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-23T10:13:23Z</p>
@@ -164,19 +164,19 @@ public class DescribeProcessListResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>For testing</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The result sets.</p>
+         * <p>The result set.</p>
          */
         @NameInMap("ResultSet")
         public java.util.List<DescribeProcessListResponseBodyDataResultSet> resultSet;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries that match the filter criteria.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

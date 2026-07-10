@@ -4,11 +4,14 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public AttachWhitelistTemplateToInstanceResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -39,6 +42,8 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyDataAttachFailList extends TeaModel {
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-database</p>
          */
@@ -46,6 +51,8 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The reason for the attachment failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>处理异常</p>
          */
@@ -77,6 +84,8 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplatesDbInstances extends TeaModel {
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>asdfwef</p>
          */
@@ -99,10 +108,15 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     }
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplates extends TeaModel {
+        /**
+         * <p>The list of attached instances.</p>
+         */
         @NameInMap("DbInstances")
         public java.util.List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplatesDbInstances> dbInstances;
 
         /**
+         * <p>The IP address whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>
          */
@@ -110,6 +124,8 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The ID of the whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-asdfwem</p>
          */
@@ -117,6 +133,8 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The name of the whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo_template</p>
          */
@@ -164,12 +182,17 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedList extends TeaModel {
         /**
+         * <p>The name of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-database</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The list of whitelist templates.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedListTemplates> templates;
 
@@ -197,13 +220,21 @@ public class AttachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     }
 
     public static class AttachWhitelistTemplateToInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>Instances that failed to be attached.</p>
+         */
         @NameInMap("AttachFailList")
         public java.util.List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachFailList> attachFailList;
 
+        /**
+         * <p>Instances to which the template was successfully attached.</p>
+         */
         @NameInMap("AttachSuccessedList")
         public java.util.List<AttachWhitelistTemplateToInstanceResponseBodyDataAttachSuccessedList> attachSuccessedList;
 
         /**
+         * <p>The status of the operation. A value of <code>ok</code> indicates success.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */

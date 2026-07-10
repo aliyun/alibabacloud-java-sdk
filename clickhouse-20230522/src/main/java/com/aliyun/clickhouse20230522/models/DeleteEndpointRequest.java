@@ -4,11 +4,17 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DeleteEndpointRequest extends TeaModel {
+    /**
+     * <p>The ID of the computing group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-2ze34****-clickhouse</p>
+     */
     @NameInMap("ComputingGroupId")
     public String computingGroupId;
 
     /**
-     * <p>The prefix of the endpoint, which indicates the prefix of the value of the ConnectionString parameter.</p>
+     * <p>The connection string of the public endpoint to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
@@ -17,7 +23,7 @@ public class DeleteEndpointRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,11 +32,23 @@ public class DeleteEndpointRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The network type of the endpoint. Valid values:</p>
+     * <ul>
+     * <li><p>VPC: a virtual private cloud (VPC) network.</p>
+     * </li>
+     * <li><p>Public: a public network.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

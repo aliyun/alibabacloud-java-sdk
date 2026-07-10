@@ -4,11 +4,14 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public ListInstanceLinkedWhitelistTemplatesResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -39,6 +42,8 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
 
     public static class ListInstanceLinkedWhitelistTemplatesResponseBodyDataTemplates extends TeaModel {
         /**
+         * <p>The comma-separated IP addresses in the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>
          */
@@ -46,6 +51,8 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The IP address whitelist template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-asdfwem</p>
          */
@@ -53,6 +60,8 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The IP address whitelist template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo_template</p>
          */
@@ -91,6 +100,9 @@ public class ListInstanceLinkedWhitelistTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceLinkedWhitelistTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of IP address whitelist templates.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<ListInstanceLinkedWhitelistTemplatesResponseBodyDataTemplates> templates;
 

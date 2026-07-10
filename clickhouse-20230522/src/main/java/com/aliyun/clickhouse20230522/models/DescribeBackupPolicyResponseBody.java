@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
     /**
+     * <p>The number of days for which the backup files are retained.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -12,6 +14,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
+     * <p>The size of the backup file. Unit: MB.</p>
+     * 
      * <strong>example:</strong>
      * <p>123124</p>
      */
@@ -19,6 +23,17 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String backupSize;
 
     /**
+     * <p>The backup cycle. Valid values:</p>
+     * <ul>
+     * <li><strong>Monday</strong></li>
+     * <li><strong>Tuesday</strong></li>
+     * <li><strong>Wednesday</strong></li>
+     * <li><strong>Thursday</strong></li>
+     * <li><strong>Friday</strong></li>
+     * <li><strong>Saturday</strong></li>
+     * <li><strong>Sunday</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Monday</p>
      */
@@ -26,6 +41,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
+     * <p>The backup time. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>15:00Z-16:00Z</p>
      */
@@ -33,6 +50,8 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String preferredBackupTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
@@ -40,6 +59,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the backup feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The backup feature is enabled.</li>
+     * <li><strong>false</strong>: The backup feature is disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

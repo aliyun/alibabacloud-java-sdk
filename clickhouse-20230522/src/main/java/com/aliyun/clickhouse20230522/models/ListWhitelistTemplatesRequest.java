@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWhitelistTemplatesRequest extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListWhitelistTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
@@ -19,7 +23,7 @@ public class ListWhitelistTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +33,8 @@ public class ListWhitelistTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The whitelist template name. Fuzzy search is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */

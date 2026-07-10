@@ -4,6 +4,12 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
+    /**
+     * <p>The computing group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-gs5j3sua77******-clickhouse</p>
+     */
     @NameInMap("ComputingGroupId")
     public String computingGroupId;
 

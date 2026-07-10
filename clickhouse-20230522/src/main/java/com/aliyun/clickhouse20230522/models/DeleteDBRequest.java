@@ -15,7 +15,7 @@ public class DeleteDBRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the destination database.</p>
+     * <p>The name of the target database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

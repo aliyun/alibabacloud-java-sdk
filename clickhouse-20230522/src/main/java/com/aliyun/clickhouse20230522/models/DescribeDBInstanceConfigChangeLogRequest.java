@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The end time of the query. Format: yyyy-MM-dd hh:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +34,13 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -37,6 +48,7 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +58,7 @@ public class DescribeDBInstanceConfigChangeLogRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start time of the query. Format: yyyy-MM-dd hh:mm:ss.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

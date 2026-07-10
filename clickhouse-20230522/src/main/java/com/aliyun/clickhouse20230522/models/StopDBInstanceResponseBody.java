@@ -54,7 +54,7 @@ public class StopDBInstanceResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test1</p>
+         * <p>Enterprise edition cluster test</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

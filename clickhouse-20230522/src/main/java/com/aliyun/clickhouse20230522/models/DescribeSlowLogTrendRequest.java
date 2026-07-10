@@ -4,6 +4,12 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendRequest extends TeaModel {
+    /**
+     * <p>The computing group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-bp100p4q1g9z3****-clickhouse</p>
+     */
     @NameInMap("ComputingGroupId")
     public String computingGroupId;
 
@@ -18,7 +24,7 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-07 10:03:00</p>
@@ -27,7 +33,7 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The code of the cloud service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
@@ -36,7 +42,7 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String product;
 
     /**
-     * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+     * <p>The minimum execution duration of a slow SQL query, in milliseconds. The minimum value is <strong>1000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>
@@ -54,7 +60,7 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+     * <p>The start of the time range to query. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-13 17:48:00</p>

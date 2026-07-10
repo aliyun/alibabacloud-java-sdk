@@ -4,11 +4,14 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class GetWhitelistTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The whitelist template details.</p>
+     */
     @NameInMap("Data")
     public GetWhitelistTemplateResponseBodyData data;
 
     /**
-     * <p>Request ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -39,6 +42,8 @@ public class GetWhitelistTemplateResponseBody extends TeaModel {
 
     public static class GetWhitelistTemplateResponseBodyDataTemplatesDbInstances extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-asdfwef</p>
          */
@@ -61,10 +66,15 @@ public class GetWhitelistTemplateResponseBody extends TeaModel {
     }
 
     public static class GetWhitelistTemplateResponseBodyDataTemplates extends TeaModel {
+        /**
+         * <p>The list of associated instances.</p>
+         */
         @NameInMap("DbInstances")
         public java.util.List<GetWhitelistTemplateResponseBodyDataTemplatesDbInstances> dbInstances;
 
         /**
+         * <p>The IP whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>
          */
@@ -72,6 +82,8 @@ public class GetWhitelistTemplateResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The ID of the whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-asdfwem</p>
          */
@@ -79,6 +91,8 @@ public class GetWhitelistTemplateResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The name of the whitelist template.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo_template</p>
          */
@@ -125,6 +139,9 @@ public class GetWhitelistTemplateResponseBody extends TeaModel {
     }
 
     public static class GetWhitelistTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of whitelist templates.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<GetWhitelistTemplateResponseBodyDataTemplates> templates;
 

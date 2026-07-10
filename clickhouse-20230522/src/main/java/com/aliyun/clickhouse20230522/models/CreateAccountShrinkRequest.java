@@ -17,8 +17,10 @@ public class CreateAccountShrinkRequest extends TeaModel {
     /**
      * <p>The type of the database account. Valid values:</p>
      * <ul>
-     * <li><strong>NormalAccount</strong>: standard account</li>
-     * <li><strong>SuperAccount</strong>: privileged account</li>
+     * <li><p><strong>NormalAccount</strong>: standard account</p>
+     * </li>
+     * <li><p><strong>SuperAccount</strong>: privileged account</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +44,7 @@ public class CreateAccountShrinkRequest extends TeaModel {
      * <p>The description of the account.</p>
      * 
      * <strong>example:</strong>
-     * <p>Used for account</p>
+     * <p>For testing</p>
      */
     @NameInMap("Description")
     public String description;
@@ -56,9 +58,12 @@ public class CreateAccountShrinkRequest extends TeaModel {
     /**
      * <p>The password of the database account. The password must meet the following requirements:</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>The following special characters are supported: ! @ # $ % ^ &amp; * ( ) _ + - =</li>
-     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * </li>
+     * <li><p>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =</p>
+     * </li>
+     * <li><p>The password must be 8 to 32 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeEndpointsRequest extends TeaModel {
     /**
+     * <p>The computing group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-*****-clickhouse</p>
      */

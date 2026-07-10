@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     /**
+     * <p>The IDs of the ClickHouse instances, separated by commas. You can specify up to 20 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The whitelist template ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

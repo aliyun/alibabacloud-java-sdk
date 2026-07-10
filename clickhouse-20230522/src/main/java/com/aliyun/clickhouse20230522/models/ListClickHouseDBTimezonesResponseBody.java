@@ -13,6 +13,9 @@ public class ListClickHouseDBTimezonesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of time zones that ClickHouse supports.</p>
+     */
     @NameInMap("TimeZones")
     public java.util.List<ListClickHouseDBTimezonesResponseBodyTimeZones> timeZones;
 
@@ -39,6 +42,8 @@ public class ListClickHouseDBTimezonesResponseBody extends TeaModel {
 
     public static class ListClickHouseDBTimezonesResponseBodyTimeZones extends TeaModel {
         /**
+         * <p>The enumeration value for the time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */

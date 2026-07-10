@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
+     * <p>The number of days to retain backups.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -12,6 +14,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String backupRetentionPeriod;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The backup cycle.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupPeriod;
 
     /**
+     * <p>The backup time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String preferredBackupTime;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

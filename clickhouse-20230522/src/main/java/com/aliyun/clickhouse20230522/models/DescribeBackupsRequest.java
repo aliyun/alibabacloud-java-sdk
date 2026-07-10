@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
+     * <p>The backup record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>117403****</p>
      */
@@ -12,6 +14,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupId;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The end of the time range to query. The time is in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +43,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -44,6 +52,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The beginning of the time range to query. The time is in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceConfigRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeDBInstanceConfigRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

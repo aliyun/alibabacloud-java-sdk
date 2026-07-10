@@ -8,6 +8,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */

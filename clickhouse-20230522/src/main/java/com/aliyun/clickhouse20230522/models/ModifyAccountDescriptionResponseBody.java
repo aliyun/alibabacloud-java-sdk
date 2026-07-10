@@ -14,7 +14,7 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx-xxx-xxx</p>
+     * <p>7FFC9EBE-5023-5D5D-A5F0-1607E0F2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,7 +54,7 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
          * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cc-xxxxx</p>
+         * <p>cc-bp1anv7jo84t****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;

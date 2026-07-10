@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class KillProcessResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public KillProcessResponseBodyData data;
@@ -42,7 +42,7 @@ public class KillProcessResponseBody extends TeaModel {
 
     public static class KillProcessResponseBodyData extends TeaModel {
         /**
-         * <p>The number of queries that are terminated.</p>
+         * <p>The number of terminated tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

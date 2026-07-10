@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeAccountAuthorityResponseBodyData data;
@@ -14,7 +14,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
+     * <p>F5178C10-1407-4987-9133-DE4DC911****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,13 +51,13 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>The databases on which permissions are granted.</p>
+         * <p>A list of authorized databases.</p>
          */
         @NameInMap("AllowDatabases")
         public java.util.List<String> allowDatabases;
 
         /**
-         * <p>The dictionaries on which permissions are granted.</p>
+         * <p>A list of authorized dictionaries.</p>
          */
         @NameInMap("AllowDictionaries")
         public java.util.List<String> allowDictionaries;
@@ -72,10 +72,12 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>Indicates whether the DDL permissions are granted to the database account. Valid values:</p>
+         * <p>Indicates whether DDL permissions are granted to the database account. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
-         * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+         * <li><p><strong>true</strong>: DDL operations are allowed.</p>
+         * </li>
+         * <li><p><strong>false</strong>: DDL operations are prohibited.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,11 +87,14 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public Boolean ddlAuthority;
 
         /**
-         * <p>Indicates whether the DML permissions are granted to the database account. Valid values:</p>
+         * <p>The DML permissions that are granted to the database account. Valid values:</p>
          * <ul>
-         * <li>0: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
-         * <li>1: The account only has the permissions to read data from the database.</li>
-         * <li>2: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+         * <li><p>0: Read, write, and change settings queries are allowed.</p>
+         * </li>
+         * <li><p>1: Only read data queries are allowed.</p>
+         * </li>
+         * <li><p>2: Read data and change settings queries are allowed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,7 +104,7 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public Integer dmlAuthority;
 
         /**
-         * <p>All databases.</p>
+         * <p>A list of all databases.</p>
          */
         @NameInMap("TotalDatabases")
         public java.util.List<String> totalDatabases;

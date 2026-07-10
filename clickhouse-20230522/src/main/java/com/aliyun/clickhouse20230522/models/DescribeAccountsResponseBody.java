@@ -53,12 +53,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The type of the database account. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: standard account</li>
-         * <li><strong>6</strong>: privileged account</li>
+         * <li><p><strong>1</strong>: standard account</p>
+         * </li>
+         * <li><p><strong>6</strong>: privileged account</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>NormalAccount</p>
+         * <p>1</p>
          */
         @NameInMap("AccountType")
         public String accountType;
@@ -67,7 +69,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used for test</p>
+         * <p>For testing</p>
          */
         @NameInMap("Description")
         public String description;
@@ -75,9 +77,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The state of the database account. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The database account is being created.</li>
-         * <li><strong>1</strong>: The database account is in use.</li>
-         * <li><strong>3</strong>: The database account is being deleted.</li>
+         * <li><p><strong>0</strong>: The database account is being created.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The database account is in use.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The database account is being deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,9 +149,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><p><strong>30</strong> (default)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

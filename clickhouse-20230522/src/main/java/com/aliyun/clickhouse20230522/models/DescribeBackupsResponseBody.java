@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The list of backup sets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeBackupsResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
@@ -29,6 +38,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of backups.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyItems extends TeaModel {
         /**
+         * <p>The end time of the backup. The time is in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:41Z</p>
          */
@@ -89,6 +102,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupEndTime;
 
         /**
+         * <p>The backup record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>117403****</p>
          */
@@ -96,6 +111,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupId;
 
         /**
+         * <p>The backup method.</p>
+         * 
          * <strong>example:</strong>
          * <p>Physical</p>
          */
@@ -103,13 +120,17 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
+         * <p>The information about the backup set.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;shard_count&quot;：4}</p>
+         * <p>{&quot;shard_count&quot;: 4}</p>
          */
         @NameInMap("BackupSetInfo")
         public String backupSetInfo;
 
         /**
+         * <p>The size of the backup file in MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>131072</p>
          */
@@ -117,6 +138,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long backupSize;
 
         /**
+         * <p>The start time of the backup.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:22Z</p>
          */
@@ -124,6 +147,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupStartTime;
 
         /**
+         * <p>The status of the backup set.</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -131,6 +156,15 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupStatus;
 
         /**
+         * <p>The backup type.
+         * Valid values:</p>
+         * <ul>
+         * <li><p><strong>FullBackup</strong>: full backup.</p>
+         * </li>
+         * <li><p><strong>IncrementalBackup</strong>: incremental backup.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IncrementalBackup</p>
          */
@@ -138,6 +172,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupType;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp179i5956tih2m93</p>
          */
@@ -145,6 +181,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The expiration time of the backup set.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-22T18:28:41Z</p>
          */

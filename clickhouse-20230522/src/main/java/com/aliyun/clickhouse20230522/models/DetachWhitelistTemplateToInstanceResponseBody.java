@@ -4,11 +4,14 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DetachWhitelistTemplateToInstanceResponseBodyData data;
 
     /**
-     * <p>Request ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -39,6 +42,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class DetachWhitelistTemplateToInstanceResponseBodyDataDetachFailList extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-database</p>
          */
@@ -46,6 +51,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The reason the detach operation failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>处理异常</p>
          */
@@ -77,6 +84,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplatesDbInstances extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>asdfwef</p>
          */
@@ -99,10 +108,15 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     }
 
     public static class DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplates extends TeaModel {
+        /**
+         * <p>A list of associated instances.</p>
+         */
         @NameInMap("DbInstances")
         public java.util.List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplatesDbInstances> dbInstances;
 
         /**
+         * <p>The IP whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1,10.0.0.1</p>
          */
@@ -110,6 +124,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The whitelist template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>g-asdfwem</p>
          */
@@ -117,6 +133,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The whitelist template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo_template</p>
          */
@@ -164,12 +182,17 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedList extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-database</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>A list of whitelist templates.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplates> templates;
 
@@ -197,13 +220,21 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     }
 
     public static class DetachWhitelistTemplateToInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of instances that failed to detach.</p>
+         */
         @NameInMap("DetachFailList")
         public java.util.List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachFailList> detachFailList;
 
+        /**
+         * <p>A list of successfully detached instances.</p>
+         */
         @NameInMap("DetachSuccessedList")
         public java.util.List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedList> detachSuccessedList;
 
         /**
+         * <p>The status of the operation. A value of <code>ok</code> indicates success.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */

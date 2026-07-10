@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The result.</p>
      */
     @NameInMap("Data")
     public DescribeSlowLogRecordsResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSlowLogRecordsResponseBodyDataResultSet extends TeaModel {
         /**
-         * <p>The address to which the query statement is sent.</p>
+         * <p>The IP address from which the query was initiated.</p>
          * 
          * <strong>example:</strong>
          * <p>0:0:0:0:0:ffff:1edd65ea</p>
@@ -60,7 +60,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String initialQueryId;
 
         /**
-         * <p>The user who executes the query statement.</p>
+         * <p>The user who initiated the query.</p>
          * 
          * <strong>example:</strong>
          * <p>bany</p>
@@ -78,7 +78,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long memoryUsage;
 
         /**
-         * <p>The query statement that is running.</p>
+         * <p>The statement that was being executed.</p>
          * 
          * <strong>example:</strong>
          * <p>select * from test</p>
@@ -87,7 +87,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+         * <p>The execution duration of the slow query. The minimum value is <strong>1000</strong>. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -96,7 +96,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long queryDurationMs;
 
         /**
-         * <p>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The start time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-11 16:00:00</p>
@@ -105,7 +105,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String queryStartTime;
 
         /**
-         * <p>The size of the data that is scanned. Unit: bytes.</p>
+         * <p>The size of the scanned data. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>4507128020832</p>
@@ -114,7 +114,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long readBytes;
 
         /**
-         * <p>The number of read rows.</p>
+         * <p>The number of rows read.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -132,7 +132,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long resultBytes;
 
         /**
-         * <p>The type of the slow query logs.</p>
+         * <p>The type of the slow query log.</p>
          * 
          * <strong>example:</strong>
          * <p>ExceptionWhileProcessing</p>
@@ -249,19 +249,19 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
          * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestCluster</p>
+         * <p>Cluster test</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The result sets.</p>
+         * <p>The list of slow log records.</p>
          */
         @NameInMap("ResultSet")
         public java.util.List<DescribeSlowLogRecordsResponseBodyDataResultSet> resultSet;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

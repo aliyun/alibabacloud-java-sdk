@@ -4,11 +4,14 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceConfigResponseBody extends TeaModel {
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstanceConfigResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>66428721-xxxx-xxxx-xxxx-3BD1B67837E0</p>
@@ -39,6 +42,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceConfigResponseBodyDataParams extends TeaModel {
         /**
+         * <p>The parameter description.</p>
+         * 
          * <strong>example:</strong>
          * <p>Maximum number of concurrently executed queries. Zero means unlimited.</p>
          */
@@ -46,6 +51,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public String comment;
 
         /**
+         * <p>The default value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -53,6 +60,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>Indicates whether the parameter takes effect dynamically (without requiring a restart).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -60,6 +69,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public Integer isDynamic;
 
         /**
+         * <p>Indicates whether the parameter can be modified by users.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -67,6 +78,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public Integer isUserModifiable;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>max_concurrent_queries</p>
          */
@@ -74,6 +87,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The valid values of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>[0-100]</p>
          */
@@ -81,6 +96,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public String optional;
 
         /**
+         * <p>The parameter dependencies.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -88,6 +105,8 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
         public String paramRelyRule;
 
         /**
+         * <p>The value of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -167,12 +186,17 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The user parameters.</p>
+         */
         @NameInMap("Params")
         public java.util.List<DescribeDBInstanceConfigResponseBodyDataParams> params;
 

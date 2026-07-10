@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConfigResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyDBInstanceConfigResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class ModifyDBInstanceConfigResponseBody extends TeaModel {
 
     public static class ModifyDBInstanceConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-uf6lkzf*****</p>
          */

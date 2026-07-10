@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceLinkedWhitelistTemplatesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class ListInstanceLinkedWhitelistTemplatesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>RegionId</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

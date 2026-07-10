@@ -4,11 +4,17 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
+    /**
+     * <p>The computing group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc-2ze34****-clickhouse</p>
+     */
     @NameInMap("ComputingGroupId")
     public String computingGroupId;
 
     /**
-     * <p>The endpoint of the cluster.</p>
+     * <p>The connection string.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</p>
@@ -17,7 +23,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The prefix of the endpoint that is used to connect to the database.</p>
+     * <p>The connection string prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-****-clickhouse</p>
@@ -35,16 +41,30 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The network type. Valid values:</p>
+     * <ul>
+     * <li><p><code>Vpc</code>: VPC</p>
+     * </li>
+     * <li><p><code>Public</code>: public network</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
+     */
     @NameInMap("DBInstanceNetType")
     public String DBInstanceNetType;
 
     /**
      * <ul>
-     * <li><p>The database ports that you want to disable. Separate multiple ports with commas (,).</p>
+     * <li><p>The database ports to disable. You can specify multiple ports, separated by commas.</p>
      * </li>
-     * <li><p>This parameter is supported only for clusters whose minor engine version is 24.10.1.11098_1 or later.</p>
-     * <p>**</p>
-     * <p><strong>Note</strong> If you create a cluster whose minor engine version is earlier than 24.10.1.11098_1 and you update the minor engine version to 24.10.1.11098_1 or later, the cluster still does not support this parameter.</p>
+     * <li><p>This parameter is supported only for clusters with a kernel version of 24.10.1.11098_1 or later.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>This parameter is not supported for clusters that were upgraded to kernel version 24.10.1.11098_1 or later from an earlier version.</p>
      * </li>
      * </ul>
      * 

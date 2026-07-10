@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupPolicyRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteBackupPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

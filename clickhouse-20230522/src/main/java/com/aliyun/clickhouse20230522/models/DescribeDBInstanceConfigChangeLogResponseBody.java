@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
+    /**
+     * <p>The result set.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstanceConfigChangeLogResponseBodyData data;
 
@@ -38,10 +41,19 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceConfigChangeLogResponseBodyDataParamChangeLogs extends TeaModel {
+        /**
+         * <p>Indicates whether the configuration takes effect:</p>
+         * <ul>
+         * <li>true: The execution plan takes effect.</li>
+         * <li>false: The execution plan does not take effect.</li>
+         * </ul>
+         */
         @NameInMap("Applied")
         public Boolean applied;
 
         /**
+         * <p>The time when the change was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-25 13:46:06</p>
          */
@@ -49,6 +61,8 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the change was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-25 13:46:06</p>
          */
@@ -56,6 +70,8 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The operation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -63,6 +79,8 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         public Long ID;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>max_concurrent_queries</p>
          */
@@ -70,6 +88,8 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The new parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -77,6 +97,8 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
         public String newValue;
 
         /**
+         * <p>The old parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -148,12 +170,17 @@ public class DescribeDBInstanceConfigChangeLogResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceConfigChangeLogResponseBodyData extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        /**
+         * <p>The parameter change records.</p>
+         */
         @NameInMap("ParamChangeLogs")
         public java.util.List<DescribeDBInstanceConfigChangeLogResponseBodyDataParamChangeLogs> paramChangeLogs;
 
