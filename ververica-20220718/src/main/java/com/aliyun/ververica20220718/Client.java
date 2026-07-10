@@ -4105,6 +4105,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Executes an SQL query script task.</p>
+     * 
+     * @param request StartSqlExecutionRequest
+     * @param headers StartSqlExecutionHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartSqlExecutionResponse
+     */
+    public StartSqlExecutionResponse startSqlExecutionWithOptions(String namespace, StartSqlExecutionRequest request, StartSqlExecutionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartSqlExecution"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-execution"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartSqlExecutionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Executes an SQL query script task.</p>
+     * 
+     * @param request StartSqlExecutionRequest
+     * @return StartSqlExecutionResponse
+     */
+    public StartSqlExecutionResponse startSqlExecution(String namespace, StartSqlExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        StartSqlExecutionHeaders headers = new StartSqlExecutionHeaders();
+        return this.startSqlExecutionWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Stops the application of a scheduled plan.</p>
      * 
      * @param headers StopApplyScheduledPlanHeaders

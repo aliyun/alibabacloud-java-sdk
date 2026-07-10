@@ -36,16 +36,7 @@ public class SqlStatementWithContext extends TeaModel {
      *     score BIGINT
      * ) WITH (
      *    \&quot;connector\&quot; = \&quot;datagen\&quot;
-     * );
-     * CREATE TEMPORARY TABLE print_table (
-     *    name VARCHAR,
-     *    score BIGINT
-     * ) WITH (
-     *   \&quot;connector\&quot;=\&quot;print\&quot;,
-     *   \&quot;logger\&quot;=\&quot;true\&quot;
      * );</p>
-     * <p>INSERT INTO print_table
-     * select * from datagen_source;</p>
      */
     @NameInMap("statement")
     public String statement;

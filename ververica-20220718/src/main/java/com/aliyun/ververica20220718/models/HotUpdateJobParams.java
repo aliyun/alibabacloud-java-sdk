@@ -4,15 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class HotUpdateJobParams extends TeaModel {
-    /**
-     * <p>资源动态更新。</p>
-     */
     @NameInMap("rescaleJobParam")
     public RescaleJobParam rescaleJobParam;
 
-    /**
-     * <p>运行参数动态更新。</p>
-     */
     @NameInMap("updateJobConfigParam")
     public UpdateJobConfigParam updateJobConfigParam;
 

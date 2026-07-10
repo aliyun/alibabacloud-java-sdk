@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ResourceSpec extends TeaModel {
     /**
+     * <p>The CPU size.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0</p>
      */
@@ -12,6 +14,8 @@ public class ResourceSpec extends TeaModel {
     public Double cpu;
 
     /**
+     * <p>The memory size.</p>
+     * 
      * <strong>example:</strong>
      * <p>4Gi</p>
      */
