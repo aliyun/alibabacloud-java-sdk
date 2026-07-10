@@ -4,17 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundDetailV2Request extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>cheshiapi</p>
-     */
     @NameInMap("isv_name")
     public String isvName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1002039195025156784</p>
-     */
     @NameInMap("order_id")
     public String orderId;
 
@@ -24,10 +16,6 @@ public class FlightRefundDetailV2Request extends TeaModel {
     @NameInMap("out_refund_apply_id")
     public String outRefundApplyId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1002039195025156700</p>
-     */
     @NameInMap("refund_apply_id")
     public String refundApplyId;
 

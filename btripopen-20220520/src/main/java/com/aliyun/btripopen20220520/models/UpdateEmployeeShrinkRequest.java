@@ -13,10 +13,6 @@ public class UpdateEmployeeShrinkRequest extends TeaModel {
     @NameInMap("attribute")
     public String attribute;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg">https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg</a></p>
-     */
     @NameInMap("avatar")
     public String avatar;
 
@@ -26,10 +22,6 @@ public class UpdateEmployeeShrinkRequest extends TeaModel {
     @NameInMap("base_location_list")
     public String baseLocationListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2000-01-02</p>
-     */
     @NameInMap("birthday")
     public String birthday;
 
@@ -39,87 +31,44 @@ public class UpdateEmployeeShrinkRequest extends TeaModel {
     @NameInMap("custom_role_code_list")
     public String customRoleCodeListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="mailto:123@163.com">123@163.com</a></p>
-     */
     @NameInMap("email")
     public String email;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F</p>
-     */
     @NameInMap("gender")
     public String gender;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("is_admin")
     public Boolean isAdmin;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("is_boss")
     public Boolean isBoss;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("is_dept_leader")
     public Boolean isDeptLeader;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1001</p>
-     */
     @NameInMap("job_no")
     public String jobNo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>user456</p>
-     */
     @NameInMap("manager_user_id")
     public String managerUserId;
 
     @NameInMap("out_dept_id_list")
     public String outDeptIdListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>13111111111</p>
-     */
     @NameInMap("phone")
     public String phone;
 
-    /**
-     * <strong>example:</strong>
-     * <p>M4</p>
-     */
     @NameInMap("position_level")
     public String positionLevel;
 
     @NameInMap("real_name")
     public String realName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>John/Wilson</p>
-     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>user123</p>
      */
     @NameInMap("user_id")
     public String userId;

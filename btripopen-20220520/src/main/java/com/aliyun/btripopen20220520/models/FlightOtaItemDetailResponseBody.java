@@ -4,44 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightOtaItemDetailResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
-    /**
-     * <p>module</p>
-     */
     @NameInMap("module")
     public FlightOtaItemDetailResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>92359A00-85D8-16C4-AED0-249618DEEC17</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>210bc60a16916374201706365d2a16</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -102,17 +79,9 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("desc")
         public String desc;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png">https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png</a></p>
-         */
         @NameInMap("icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png">https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png</a></p>
-         */
         @NameInMap("image")
         public String image;
 
@@ -159,31 +128,15 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizesImageDO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png">https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png</a></p>
-         */
         @NameInMap("image")
         public String image;
 
-        /**
-         * <strong>example:</strong>
-         * <p>55</p>
-         */
         @NameInMap("largest")
         public String largest;
 
-        /**
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("middle")
         public String middle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("smallest")
         public String smallest;
 
@@ -227,16 +180,9 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizes extends TeaModel {
-        /**
-         * <p>baggage_desc</p>
-         */
         @NameInMap("baggage_desc")
         public java.util.List<String> baggageDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("baggage_sub_content_type")
         public Integer baggageSubContentType;
 
@@ -246,10 +192,6 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("image_d_o")
         public FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItemsBaggageSubContentVisualizesImageDO imageDO;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("is_highlight")
         public Boolean isHighlight;
 
@@ -318,17 +260,9 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("extra_content_visualizes")
         public java.util.List<?> extraContentVisualizes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADT</p>
-         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -383,20 +317,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class FlightOtaItemDetailResponseBodyModuleBaggageRuleTips extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png">https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png</a></p>
-         */
         @NameInMap("logo")
         public String logo;
 
         @NameInMap("tips_desc")
         public String tipsDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01rJxjw61f3bXNHAmlk_!!6000000003951-2-tps-1050-675.png">https://gw.alicdn.com/imgextra/i3/O1CN01rJxjw61f3bXNHAmlk_!!6000000003951-2-tps-1050-675.png</a></p>
-         */
         @NameInMap("tips_image")
         public String tipsImage;
 
@@ -435,17 +361,9 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("baggage_sub_items")
         public java.util.List<FlightOtaItemDetailResponseBodyModuleBaggageRuleBaggageSubItems> baggageSubItems;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("index")
         public Integer index;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tableHead</p>
-         */
         @NameInMap("table_head")
         public String tableHead;
 
@@ -455,10 +373,6 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -554,10 +468,6 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("fee_range")
         public String feeRange;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("style")
         public Integer style;
 
@@ -593,17 +503,9 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class FlightOtaItemDetailResponseBodyModuleChangeRuleRefundSubItems extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADT</p>
-         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -656,57 +558,30 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("extra_contents")
         public java.util.List<FlightOtaItemDetailResponseBodyModuleChangeRuleExtraContents> extraContents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HO3925</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("free_baggage")
         public Integer freeBaggage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("index")
         public Integer index;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("level")
         public Integer level;
 
         @NameInMap("refund_sub_items")
         public java.util.List<FlightOtaItemDetailResponseBodyModuleChangeRuleRefundSubItems> refundSubItems;
 
-        /**
-         * <p>subTableHead</p>
-         */
         @NameInMap("sub_table_head")
         public java.util.List<String> subTableHead;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tableHead</p>
-         */
         @NameInMap("table_head")
         public String tableHead;
 
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -834,10 +709,6 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("fee_range")
         public String feeRange;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("style")
         public Integer style;
 
@@ -873,17 +744,9 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class FlightOtaItemDetailResponseBodyModuleRefundRuleRefundSubItems extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADT</p>
-         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -936,57 +799,30 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("extra_contents")
         public java.util.List<FlightOtaItemDetailResponseBodyModuleRefundRuleExtraContents> extraContents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HO3925</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("free_baggage")
         public Integer freeBaggage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("index")
         public Integer index;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("level")
         public Integer level;
 
         @NameInMap("refund_sub_items")
         public java.util.List<FlightOtaItemDetailResponseBodyModuleRefundRuleRefundSubItems> refundSubItems;
 
-        /**
-         * <p>subTableHead</p>
-         */
         @NameInMap("sub_table_head")
         public java.util.List<String> subTableHead;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tableHead</p>
-         */
         @NameInMap("table_head")
         public String tableHead;
 
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -1087,20 +923,12 @@ public class FlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("refund_rule")
         public java.util.List<FlightOtaItemDetailResponseBodyModuleRefundRule> refundRule;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1830</p>
-         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
         @NameInMap("sell_price_list")
         public java.util.List<Integer> sellPriceList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("trip_type")
         public Integer tripType;
 

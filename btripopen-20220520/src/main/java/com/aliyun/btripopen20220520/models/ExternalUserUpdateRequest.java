@@ -4,37 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ExternalUserUpdateRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2000-01-02</p>
-     */
     @NameInMap("birthday")
     public String birthday;
 
     @NameInMap("cert_request_list")
     public java.util.List<ExternalUserUpdateRequestCertRequestList> certRequestList;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="mailto:zhangsan@alibaba-inc.com">zhangsan@alibaba-inc.com</a></p>
-     */
     @NameInMap("email")
     public String email;
 
-    /**
-     * <strong>example:</strong>
-     * <p>13438009765</p>
-     */
     @NameInMap("phone")
     public String phone;
 
     @NameInMap("real_name")
     public String realName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>zhang/san</p>
-     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
@@ -92,42 +76,24 @@ public class ExternalUserUpdateRequest extends TeaModel {
     }
 
     public static class ExternalUserUpdateRequestCertRequestList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2034-10-01</p>
-         */
         @NameInMap("cert_expired_time")
         public String certExpiredTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("cert_nation")
         public String certNation;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>330101199010010213</p>
          */
         @NameInMap("cert_no")
         public String certNo;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         @NameInMap("cert_type")
         public Integer certType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("nationality")
         public String nationality;
 

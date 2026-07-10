@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ApplyInvoiceTaskShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2022-12-01</p>
      */
     @NameInMap("bill_date")
     public String billDate;

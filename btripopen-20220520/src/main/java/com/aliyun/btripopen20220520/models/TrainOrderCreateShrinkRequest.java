@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainOrderCreateShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("accept_no_seat")
     public String acceptNoSeat;
 
@@ -19,9 +15,6 @@ public class TrainOrderCreateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>12344321</p>
      */
     @NameInMap("btrip_user_id")
     public String btripUserId;
@@ -41,25 +34,14 @@ public class TrainOrderCreateShrinkRequest extends TeaModel {
     @NameInMap("contact_info")
     public String contactInfoShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("force_match")
     public String forceMatch;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("is_pay_now")
     public Boolean isPayNow;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123456</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;

@@ -13,12 +13,6 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     @NameInMap("segment_price_list")
     public java.util.List<ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceList> segmentPriceList;
 
-    /**
-     * <p>id</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ADT07df0bd9-f803-4a50-8449-f4bd675d9939</p>
-     */
     @NameInMap("id")
     public String id;
 
@@ -82,17 +76,9 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     }
 
     public static class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
@@ -205,17 +191,9 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         @NameInMap("discount_info")
         public String discountInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.8</p>
-         */
         @NameInMap("discount_num")
         public Double discountNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("show_ticket_price")
         public Boolean showTicketPrice;
 
@@ -251,72 +229,36 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     }
 
     public static class ModuleFlightItemListBestPriceItemShoppingItemMapValueSearchPrice extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>17400</p>
-         */
         @NameInMap("floor_price")
         public Integer floorPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>121000</p>
-         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>17400</p>
-         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>17400</p>
-         */
         @NameInMap("original_sell_price")
         public Integer originalSellPrice;
 
         @NameInMap("base_total_price")
         public Integer baseTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>17400</p>
-         */
         @NameInMap("before_control_price")
         public Integer beforeControlPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11000</p>
-         */
         @NameInMap("tax")
         public Integer tax;
 
         @NameInMap("supply_price")
         public Integer supplyPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>242000</p>
-         */
         @NameInMap("basic_cabin_price")
         public Integer basicCabinPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5000</p>
-         */
         @NameInMap("build_price")
         public Integer buildPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6000</p>
-         */
         @NameInMap("oil_price")
         public Integer oilPrice;
 
@@ -326,19 +268,9 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         @NameInMap("business_standard_price")
         public Integer businessStandardPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>242000</p>
-         */
         @NameInMap("common_standard_price")
         public Integer commonStandardPrice;
 
-        /**
-         * <p>fdPrice</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fdPrice</p>
-         */
         @NameInMap("inter_ticket_price")
         public Integer interTicketPrice;
 
@@ -363,10 +295,6 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         @NameInMap("competition_promotion_price")
         public Integer competitionPromotionPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>17400</p>
-         */
         @NameInMap("min_before_control_price_of_normal")
         public Integer minBeforeControlPriceOfNormal;
 
@@ -573,17 +501,9 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     }
 
     public static class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSegmentPosition extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
@@ -611,24 +531,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
     }
 
     public static class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>120000</p>
-         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>120000</p>
-         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6000</p>
-         */
         @NameInMap("tax")
         public Integer tax;
 

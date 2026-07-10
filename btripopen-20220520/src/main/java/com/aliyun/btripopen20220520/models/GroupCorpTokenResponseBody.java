@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class GroupCorpTokenResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,24 +13,12 @@ public class GroupCorpTokenResponseBody extends TeaModel {
     @NameInMap("module")
     public GroupCorpTokenResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("success")
     public String success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>210f079e16603757182131635d866a</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -92,24 +76,12 @@ public class GroupCorpTokenResponseBody extends TeaModel {
     }
 
     public static class GroupCorpTokenResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>70000</p>
-         */
         @NameInMap("expire")
         public Long expire;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1652410740914</p>
-         */
         @NameInMap("start")
         public Long start;
 
-        /**
-         * <strong>example:</strong>
-         * <p><em>0</em>37j76df</p>
-         */
         @NameInMap("token")
         public String token;
 

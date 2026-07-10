@@ -4,10 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class VasBillSettlementQueryRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>20250501</p>
-     */
+    @NameInMap("apply_id")
+    public String applyId;
+
     @NameInMap("bill_batch")
     public String billBatch;
 
@@ -17,69 +16,47 @@ public class VasBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_record_time_start")
     public String billRecordTimeStart;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cooperator_alibtrip</p>
-     */
     @NameInMap("cooperator_id")
     public String cooperatorId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12345</p>
-     */
     @NameInMap("order_id")
     public Long orderId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("page_no")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>30</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2022-07-01</p>
-     */
     @NameInMap("period_end")
     public String periodEnd;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2021-10-01</p>
-     */
     @NameInMap("period_start")
     public String periodStart;
 
-    /**
-     * <strong>example:</strong>
-     * <p>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4MDAwMDAwMDA3MjdkMzgw</p>
-     */
     @NameInMap("scroll_id")
     public String scrollId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("scroll_mod")
     public Boolean scrollMod;
 
     public static VasBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         VasBillSettlementQueryRequest self = new VasBillSettlementQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public VasBillSettlementQueryRequest setApplyId(String applyId) {
+        this.applyId = applyId;
+        return this;
+    }
+    public String getApplyId() {
+        return this.applyId;
     }
 
     public VasBillSettlementQueryRequest setBillBatch(String billBatch) {

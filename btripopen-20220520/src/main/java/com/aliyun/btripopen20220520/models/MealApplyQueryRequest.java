@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class MealApplyQueryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1234</p>
      */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;

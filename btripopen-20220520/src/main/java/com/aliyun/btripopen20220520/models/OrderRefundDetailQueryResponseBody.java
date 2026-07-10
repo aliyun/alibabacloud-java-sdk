@@ -4,34 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class OrderRefundDetailQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>8CA36096-1FEE-5756-86DD-D195FEDE080E</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public OrderRefundDetailQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -81,45 +65,21 @@ public class OrderRefundDetailQueryResponseBody extends TeaModel {
     }
 
     public static class OrderRefundDetailQueryResponseBodyModuleRefundDetails extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ALIPAY</p>
-         */
         @NameInMap("person_pay_channel")
         public String personPayChannel;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025010223001423691442474885</p>
-         */
         @NameInMap("person_refund_id")
         public String personRefundId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5000</p>
-         */
         @NameInMap("refund_amount")
         public Long refundAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4800</p>
-         */
         @NameInMap("refund_amount_corp")
         public Long refundAmountCorp;
 
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("refund_amount_person")
         public Long refundAmountPerson;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ZLJD12241231000002</p>
-         */
         @NameInMap("supplier_refund_id")
         public String supplierRefundId;
 
@@ -179,20 +139,12 @@ public class OrderRefundDetailQueryResponseBody extends TeaModel {
     }
 
     public static class OrderRefundDetailQueryResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1017002195370467138</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
         @NameInMap("refund_details")
         public java.util.List<OrderRefundDetailQueryResponseBodyModuleRefundDetails> refundDetails;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10000</p>
-         */
         @NameInMap("total_amount")
         public Long totalAmount;
 

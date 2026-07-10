@@ -7,10 +7,6 @@ public class TrainOrderQueryV2Headers extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>112dcasca</p>
-     */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 

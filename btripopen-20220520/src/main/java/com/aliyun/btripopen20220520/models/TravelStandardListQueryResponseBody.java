@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TravelStandardListQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("code")
     public Integer code;
 
@@ -17,26 +13,12 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public TravelStandardListQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>05F9C201-1B53-5905-94AB-0D7444D8466A</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21041aa317070996148671005d0a0b</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -97,20 +79,12 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         @NameInMap("open_service_type_list")
         public java.util.List<String> openServiceTypeList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2006516571</p>
-         */
         @NameInMap("rule_code")
         public Long ruleCode;
 
         @NameInMap("rule_desc")
         public String ruleDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6516571</p>
-         */
         @NameInMap("rule_id")
         public Long ruleId;
 
@@ -201,10 +175,6 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>flight</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -246,10 +216,6 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         @NameInMap("reserve_rule_desc")
         public java.util.List<TravelStandardListQueryResponseBodyModuleItemsReserveRuleDesc> reserveRuleDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("scope")
         public Integer scope;
 
@@ -288,10 +254,6 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<TravelStandardListQueryResponseBodyModuleItems> items;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("total_size")
         public Integer totalSize;
 

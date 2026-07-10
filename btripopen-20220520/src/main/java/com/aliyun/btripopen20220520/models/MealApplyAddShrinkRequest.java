@@ -10,20 +10,12 @@ public class MealApplyAddShrinkRequest extends TeaModel {
     @NameInMap("apply_user")
     public String applyUserShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>23</p>
-     */
     @NameInMap("cost_center_id")
     public Long costCenterId;
 
     @NameInMap("extend_field")
     public String extendField;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
     @NameInMap("invoice_id")
     public Long invoiceId;
 
@@ -33,10 +25,6 @@ public class MealApplyAddShrinkRequest extends TeaModel {
     @NameInMap("itinerary_list")
     public String itineraryListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("meal_amount")
     public Long mealAmount;
 
@@ -46,10 +34,6 @@ public class MealApplyAddShrinkRequest extends TeaModel {
     @NameInMap("meal_cause")
     public String mealCause;
 
-    /**
-     * <strong>example:</strong>
-     * <p>project123</p>
-     */
     @NameInMap("project_code")
     public String projectCode;
 
@@ -58,33 +42,19 @@ public class MealApplyAddShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
      */
     @NameInMap("status")
     public Integer status;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1234</p>
      */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1200F00010</p>
-     */
     @NameInMap("third_part_cost_center_id")
     public String thirdPartCostCenterId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>GA15131</p>
-     */
     @NameInMap("third_part_invoice_id")
     public String thirdPartInvoiceId;
 

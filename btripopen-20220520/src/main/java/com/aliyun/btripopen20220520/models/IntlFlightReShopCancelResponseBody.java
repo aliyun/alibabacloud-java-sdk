@@ -96,10 +96,6 @@ public class IntlFlightReShopCancelResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopCancelResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2023-08-10 17:45:32</p>
-         */
         @NameInMap("cancel_time")
         public String cancelTime;
 

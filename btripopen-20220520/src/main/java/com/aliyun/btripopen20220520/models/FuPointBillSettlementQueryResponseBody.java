@@ -4,49 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FuPointBillSettlementQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public Integer code;
 
-    /**
-     * <p>module。</p>
-     */
     @NameInMap("module")
     public FuPointBillSettlementQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("more_page")
     public Boolean morePage;
 
-    /**
-     * <strong>example:</strong>
-     * <p>210bc22017109867047728291dd406</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result_msg")
     public String resultMsg;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>trace_id</p>
-     * 
-     * <strong>example:</strong>
-     * <p>213e382517240341253056547e41fc</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -115,34 +90,18 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("adjust_time")
         public String adjustTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123aaa</p>
-         */
         @NameInMap("alipay_id")
         public String alipayId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>124</p>
-         */
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CD</p>
-         */
         @NameInMap("apply_arr_city_code")
         public String applyArrCityCode;
 
         @NameInMap("apply_arr_city_name")
         public String applyArrCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("apply_dep_city_code")
         public String applyDepCityCode;
 
@@ -152,48 +111,24 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1424041616244499302</p>
-         */
         @NameInMap("apply_id")
         public String applyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="mailto:123@qq.com">123@qq.com</a></p>
-         */
         @NameInMap("approver_email")
         public String approverEmail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("approver_id")
         public String approverId;
 
         @NameInMap("approver_name")
         public String approverName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10.5</p>
-         */
         @NameInMap("award_num")
         public Double awardNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.12</p>
-         */
         @NameInMap("basis_amount")
         public String basisAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
@@ -203,24 +138,12 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("book_mode")
         public String bookMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("book_time")
         public String bookTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("booker_id")
         public String bookerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>zs123</p>
-         */
         @NameInMap("booker_job_no")
         public String bookerJobNo;
 
@@ -236,40 +159,24 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("category_desc")
         public String categoryDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.32</p>
-         */
         @NameInMap("category_order_settle_price")
         public String categoryOrderSettlePrice;
 
         @NameInMap("cost_center")
         public String costCenter;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cs1</p>
-         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
         @NameInMap("cost_department")
         public String costDepartment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.11</p>
-         */
         @NameInMap("deductible_tax")
         public Double deductibleTax;
 
         @NameInMap("department")
         public String department;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1112</p>
-         */
         @NameInMap("department_id")
         public String departmentId;
 
@@ -282,26 +189,15 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("foreigners_tag")
         public String foreignersTag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("grant_num")
         public Double grantNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("index")
         public String index;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
-        /**
-         * <p>Location</p>
-         */
         @NameInMap("location")
         public String location;
 
@@ -311,10 +207,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("mapping_company_code")
         public String mappingCompanyCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4801105714092</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
@@ -324,71 +216,39 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("origin_category")
         public String originCategory;
 
-        /**
-         * <strong>example:</strong>
-         * <p>111234</p>
-         */
         @NameInMap("origin_order_id")
         public String originOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("over_apply_id")
         public String overApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("payment_department_id")
         public String paymentDepartmentId;
 
         @NameInMap("payment_department_name")
         public String paymentDepartmentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>93746933</p>
-         */
         @NameInMap("primary_id")
         public Long primaryId;
 
         @NameInMap("processor_oa_code")
         public String processorOaCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_name")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>111224324</p>
-         */
         @NameInMap("purchase_order_id")
         public String purchaseOrderId;
 
         @NameInMap("remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10.45</p>
-         */
         @NameInMap("save_amount")
         public Double saveAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("scene_id")
         public String sceneId;
 
@@ -398,81 +258,39 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settle_type_desc")
         public String settleTypeDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>110.0</p>
-         */
         @NameInMap("settlement_fee")
         public Double settlementFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("settlement_grant_fee")
         public Double settlementGrantFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("settlement_time")
         public String settlementTime;
 
         @NameInMap("settlement_type")
         public String settlementType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>166564408</p>
-         */
         @NameInMap("show_sub_order_id")
         public String showSubOrderId;
 
-        /**
-         * <p>SIO</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SIO</p>
-         */
         @NameInMap("sio")
         public String sio;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1019199938284381</p>
-         */
         @NameInMap("sub_order_id")
         public String subOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>9%</p>
-         */
         @NameInMap("tax_rate")
         public String taxRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cs2</p>
-         */
         @NameInMap("third_invoice_id")
         public String thirdInvoiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("third_itinerary_id")
         public String thirdItineraryId;
 
@@ -482,24 +300,12 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("trade_reason")
         public String tradeReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="mailto:123@qq.com">123@qq.com</a></p>
-         */
         @NameInMap("traveler_email")
         public String travelerEmail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("traveler_id")
         public String travelerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A1234</p>
-         */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
@@ -512,10 +318,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_name")
         public String travelerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("voucher_type")
         public Integer voucherType;
 
@@ -1162,48 +964,24 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class FuPointBillSettlementQueryResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("category")
         public Integer category;
 
-        /**
-         * <strong>example:</strong>
-         * <p>corpid</p>
-         */
         @NameInMap("corp_id")
         public String corpId;
 
         @NameInMap("items")
         public java.util.List<FuPointBillSettlementQueryResponseBodyModuleItems> items;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-07-02</p>
-         */
         @NameInMap("period_end")
         public String periodEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-13</p>
-         */
         @NameInMap("period_start")
         public String periodStart;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1qwe</p>
-         */
         @NameInMap("scroll_id")
         public String scrollId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("total_size")
         public Long totalSize;
 

@@ -4,31 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelSuggestV2Request extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2024-05-15</p>
-     */
     @NameInMap("check_in")
     public String checkIn;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2024-06-04</p>
-     */
     @NameInMap("check_out")
     public String checkOut;
 
-    /**
-     * <strong>example:</strong>
-     * <p>330100</p>
-     */
     @NameInMap("city_code")
     public String cityCode;
 
@@ -37,9 +21,6 @@ public class HotelSuggestV2Request extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("search_type")
     public Integer searchType;

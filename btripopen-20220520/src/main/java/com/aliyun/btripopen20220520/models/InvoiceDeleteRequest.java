@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class InvoiceDeleteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>340049</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;

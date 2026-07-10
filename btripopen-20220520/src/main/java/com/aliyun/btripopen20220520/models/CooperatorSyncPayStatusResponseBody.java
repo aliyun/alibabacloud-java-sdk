@@ -4,27 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CooperatorSyncPayStatusResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>System.Error</p>
-     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("success")
     public Boolean success;
 

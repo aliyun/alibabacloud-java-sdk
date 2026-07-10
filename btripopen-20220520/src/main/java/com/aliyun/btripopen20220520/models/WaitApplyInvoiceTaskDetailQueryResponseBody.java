@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,28 +13,12 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<WaitApplyInvoiceTaskDetailQueryResponseBodyModule> module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>210f079e16603757182131635d866a</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -102,51 +82,27 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("flight_invoice_fee")
         public String flightInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3.12</p>
-         */
         @NameInMap("fu_point_invoice_fee")
         public String fuPointInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("hotel_normal_invoice_fee")
         public String hotelNormalInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("hotel_special_invoice_fee")
         public String hotelSpecialInvoiceFee;
 
         @NameInMap("ie_vehicle_normal_invoice_fee")
         public String ieVehicleNormalInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("international_flight_invoice_fee")
         public String internationalFlightInvoiceFee;
 
         @NameInMap("international_hotel_invoice_fee")
         public String internationalHotelInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("invoice_third_part_id")
         public String invoiceThirdPartId;
 
@@ -171,37 +127,21 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @NameInMap("meal_tc7_normal_invoice_fee")
         public String mealTc7NormalInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("penalty_fee")
         public String penaltyFee;
 
         @NameInMap("remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1.02</p>
-         */
         @NameInMap("service_fee")
         public String serviceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1234567890</p>
-         */
         @NameInMap("telephone")
         public String telephone;
 
         @NameInMap("train_acceleration_package_invoice_fee")
         public String trainAccelerationPackageInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("train_invoice_fee")
         public String trainInvoiceFee;
 
@@ -211,10 +151,6 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @NameInMap("vas_mall_special_invoice_fee")
         public String vasMallSpecialInvoiceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("vehicle_invoice_fee")
         public String vehicleInvoiceFee;
 

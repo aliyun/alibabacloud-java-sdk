@@ -13,10 +13,6 @@ public class MonthBillConfirmRequest extends TeaModel {
     @NameInMap("mail_bill_date")
     public Integer mailBillDate;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12345</p>
-     */
     @NameInMap("user_id")
     public String userId;
 

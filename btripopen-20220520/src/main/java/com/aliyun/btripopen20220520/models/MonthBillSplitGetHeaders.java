@@ -7,10 +7,6 @@ public class MonthBillSplitGetHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>feth****wls</p>
-     */
     @NameInMap("x-acs-btrip-so-corp-token")
     public String xAcsBtripSoCorpToken;
 

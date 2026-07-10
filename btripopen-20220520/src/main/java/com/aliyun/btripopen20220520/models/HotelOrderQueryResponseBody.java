@@ -4,44 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
-    /**
-     * <p>module。</p>
-     */
     @NameInMap("module")
     public HotelOrderQueryResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -108,17 +85,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("brand_name")
         public String brandName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1669344020</p>
-         */
         @NameInMap("check_in")
         public Long checkIn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1669344020</p>
-         */
         @NameInMap("check_out")
         public Long checkOut;
 
@@ -143,24 +112,12 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("hotel_phone")
         public String hotelPhone;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("hotel_support_vat_invoice_type")
         public Integer hotelSupportVatInvoiceType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("night")
         public Integer night;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("room_num")
         public Integer roomNum;
 
@@ -314,10 +271,6 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModuleInvoiceInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("id")
         public Long id;
 
@@ -348,10 +301,6 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModuleOrderBaseInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("apply_id")
         public String applyId;
 
@@ -361,20 +310,12 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("category")
         public Integer category;
 
-        /**
-         * <strong>example:</strong>
-         * <p>iscorpId</p>
-         */
         @NameInMap("corp_id")
         public String corpId;
 
         @NameInMap("corp_name")
         public String corpName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("depart_id")
         public String departId;
 
@@ -387,79 +328,39 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("extend_field")
         public String extendField;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1669344020</p>
-         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1669344020</p>
-         */
         @NameInMap("gmt_modified")
         public Long gmtModified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1002145190081005400</p>
-         */
         @NameInMap("id")
         public Long id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("order_type")
         public Integer orderType;
 
         @NameInMap("supplier")
         public String supplier;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
         @NameInMap("thirdpart_business_id")
         public String thirdpartBusinessId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("thirdpart_depart_id")
         public String thirdpartDepartId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -653,20 +554,12 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
         @NameInMap("cost_center_name")
         public String costCenterName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
@@ -679,10 +572,6 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("project_code")
         public String projectCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("project_id")
         public Long projectId;
 
@@ -692,34 +581,18 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("thirdpart_project_id")
         public String thirdpartProjectId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
         @NameInMap("user_name")
         public String userName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -851,45 +724,21 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModulePriceInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("category_code")
         public Integer categoryCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1669344020</p>
-         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("pay_type")
         public Integer payType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("price")
         public Double price;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12345678910987654321</p>
-         */
         @NameInMap("trade_id")
         public String tradeId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("type")
         public Integer type;
 

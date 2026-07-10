@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class FlightPayOrderRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("corp_pay_price")
     public Long corpPayPrice;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
@@ -27,18 +21,12 @@ public class FlightPayOrderRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("personal_pay_price")
     public Long personalPayPrice;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("total_pay_price")
     public Long totalPayPrice;

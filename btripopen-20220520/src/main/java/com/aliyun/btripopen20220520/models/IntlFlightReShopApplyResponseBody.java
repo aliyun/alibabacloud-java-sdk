@@ -21,10 +21,6 @@ public class IntlFlightReShopApplyResponseBody extends TeaModel {
     @NameInMap("module")
     public IntlFlightReShopApplyResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>88BA5020-561C-51F5-8E73-6659729913F0</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -96,24 +92,12 @@ public class IntlFlightReShopApplyResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopApplyResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>asyncKey_2390u230slgw023</p>
-         */
         @NameInMap("async_apply_key")
         public String asyncApplyKey;
 
-        /**
-         * <strong>example:</strong>
-         * <p>JPM20241024354</p>
-         */
         @NameInMap("out_re_shop_apply_id")
         public String outReShopApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1009035199432</p>
-         */
         @NameInMap("re_shop_apply_id")
         public String reShopApplyId;
 

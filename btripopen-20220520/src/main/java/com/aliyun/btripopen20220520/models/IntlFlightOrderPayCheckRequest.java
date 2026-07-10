@@ -18,26 +18,15 @@ public class IntlFlightOrderPayCheckRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>TRAVEL</p>
-     */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1002094194679957528</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F11374007131319304192</p>
-     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

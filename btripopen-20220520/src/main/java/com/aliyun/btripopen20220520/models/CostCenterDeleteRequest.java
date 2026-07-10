@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class CostCenterDeleteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>340049</p>
      */
     @NameInMap("thirdpart_id")
     public String thirdpartId;

@@ -4,36 +4,23 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundApplyShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("corp_refund_price")
     public Long corpRefundPrice;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>refu123</p>
      */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("display_refund_money")
     public String displayRefundMoney;
@@ -43,18 +30,12 @@ public class FlightRefundApplyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
      */
     @NameInMap("is_voluntary")
     public Integer isVoluntary;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>FlightItem_9966772382</p>
      */
     @NameInMap("item_unit_ids")
     public String itemUnitIds;
@@ -62,10 +43,6 @@ public class FlightRefundApplyShrinkRequest extends TeaModel {
     @NameInMap("passenger_segment_info_list")
     public String passengerSegmentInfoListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("personal_refund_price")
     public Long personalRefundPrice;
 
@@ -74,9 +51,6 @@ public class FlightRefundApplyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("reason_type")
     public Integer reasonType;
@@ -86,17 +60,10 @@ public class FlightRefundApplyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0f9418cd2ce34af49ab0de16fea166d1</p>
      */
     @NameInMap("session_id")
     public String sessionId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
     @NameInMap("total_refund_price")
     public Long totalRefundPrice;
 

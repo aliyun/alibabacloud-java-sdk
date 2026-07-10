@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TravelStandardRelateDeleteShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>false</p>
-     */
     @NameInMap("from_group")
     public Boolean fromGroup;
 
@@ -16,9 +12,6 @@ public class TravelStandardRelateDeleteShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>6523763</p>
      */
     @NameInMap("rule_id")
     public Long ruleId;

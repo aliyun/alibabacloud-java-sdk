@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,26 +13,12 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public CooperatorFlightBillSettlementQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2103ad1216872266815642815d7e03</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>trace_id</p>
-     * 
-     * <strong>example:</strong>
-     * <p>213e20c816937929648732715e16f1</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -97,51 +79,27 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("adjust_time")
         public String adjustTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("advance_day")
         public Integer advanceDay;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AB</p>
-         */
         @NameInMap("airline_corp_code")
         public String airlineCorpCode;
 
         @NameInMap("airline_corp_name")
         public String airlineCorpName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123aaa</p>
-         */
         @NameInMap("alipay_id")
         public String alipayId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>a123</p>
-         */
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CD</p>
-         */
         @NameInMap("apply_arr_city_code")
         public String applyArrCityCode;
 
         @NameInMap("apply_arr_city_name")
         public String applyArrCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>AB</p>
-         */
         @NameInMap("apply_dep_city_code")
         public String applyDepCityCode;
 
@@ -151,10 +109,6 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1004430880</p>
-         */
         @NameInMap("apply_id")
         public String applyId;
 
@@ -167,37 +121,21 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("approver_name")
         public String approverName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CKG</p>
-         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
         @NameInMap("arr_city")
         public String arrCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01</p>
-         */
         @NameInMap("arr_date")
         public String arrDate;
 
         @NameInMap("arr_station")
         public String arrStation;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12:00:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
@@ -207,10 +145,6 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("before_ticket_no")
         public String beforeTicketNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
@@ -220,58 +154,30 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("book_mode")
         public String bookMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("book_time")
         public String bookTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1234</p>
-         */
         @NameInMap("booker_id")
         public String bookerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A1234</p>
-         */
         @NameInMap("booker_job_no")
         public String bookerJobNo;
 
         @NameInMap("booker_name")
         public String bookerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("btrip_coupon_fee")
         public Double btripCouponFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50.0</p>
-         */
         @NameInMap("build_fee")
         public Double buildFee;
 
         @NameInMap("business_trip_result")
         public String businessTripResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>YS</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
@@ -287,118 +193,66 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("category_desc")
         public String categoryDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("change_fee")
         public Double changeFee;
 
         @NameInMap("change_result")
         public String changeResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>IN240102113438277278</p>
-         */
         @NameInMap("cooperator_bill_code")
         public String cooperatorBillCode;
 
         @NameInMap("cooperator_name")
         public String cooperatorName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>DF24020163776907739</p>
-         */
         @NameInMap("cooperator_order_id")
         public String cooperatorOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("corp_pay_order_fee")
         public Double corpPayOrderFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("corp_settle_price")
         public Double corpSettlePrice;
 
         @NameInMap("cost_center")
         public String costCenter;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cs1</p>
-         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
         @NameInMap("cost_department")
         public String costDepartment;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("coupon")
         public Double coupon;
 
         @NameInMap("custom_content")
         public String customContent;
 
-        /**
-         * <strong>example:</strong>
-         * <p>JHG</p>
-         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TAO</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         @NameInMap("department")
         public String department;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1112</p>
-         */
         @NameInMap("department_id")
         public String departmentId;
 
         @NameInMap("dept_city")
         public String deptCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01</p>
-         */
         @NameInMap("dept_date")
         public String deptDate;
 
         @NameInMap("dept_station")
         public String deptStation;
 
-        /**
-         * <strong>example:</strong>
-         * <p>09:30:00</p>
-         */
         @NameInMap("dept_time")
         public String deptTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("discount")
         public String discount;
 
@@ -411,10 +265,6 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fee_type_desc")
         public String feeTypeDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CZ3590</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -424,31 +274,15 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("foreigners_tag")
         public String foreignersTag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("index")
         public String index;
 
-        /**
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("ins_order_id")
         public String insOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("insurance_fee")
         public Double insuranceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1234A</p>
-         */
         @NameInMap("insurance_number")
         public String insuranceNumber;
 
@@ -458,17 +292,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("item_type")
         public String itemType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6666666666</p>
-         */
         @NameInMap("itinerary_num")
         public String itineraryNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("itinerary_price")
         public Double itineraryPrice;
 
@@ -478,69 +304,33 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("mapping_company_code")
         public String mappingCompanyCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("mileage")
         public Integer mileage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("most_difference_dept_time")
         public String mostDifferenceDeptTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("most_difference_discount")
         public String mostDifferenceDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("most_difference_flight_no")
         public String mostDifferenceFlightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("most_difference_price")
         public Double mostDifferencePrice;
 
         @NameInMap("most_difference_reason")
         public String mostDifferenceReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("most_price")
         public Double mostPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("negotiation_coupon_fee")
         public Double negotiationCouponFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30.0</p>
-         */
         @NameInMap("oil_fee")
         public Double oilFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3137168772101111000</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
@@ -550,27 +340,15 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("order_ticket_no")
         public String orderTicketNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("over_apply_id")
         public String overApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("payment_department_id")
         public String paymentDepartmentId;
 
         @NameInMap("payment_department_name")
         public String paymentDepartmentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("person_settle_price")
         public Double personSettlePrice;
 
@@ -583,40 +361,24 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("pre_book_tip")
         public String preBookTip;
 
-        /**
-         * <strong>example:</strong>
-         * <p>60399513</p>
-         */
         @NameInMap("primary_id")
         public Long primaryId;
 
         @NameInMap("processor_oa_code")
         public String processorOaCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_name")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("refund_fee")
         public Double refundFee;
 
         @NameInMap("refund_result")
         public String refundResult;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20.0</p>
-         */
         @NameInMap("refund_upgrade_cost")
         public Double refundUpgradeCost;
 
@@ -626,44 +388,24 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("repeat_refund")
         public String repeatRefund;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("seal_price")
         public Double sealPrice;
 
         @NameInMap("segment_list")
         public String segmentList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("service_fee")
         public Double serviceFee;
 
         @NameInMap("settle_type_desc")
         public String settleTypeDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>200.0</p>
-         */
         @NameInMap("settlement_fee")
         public Double settlementFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("settlement_grant_fee")
         public Double settlementGrantFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("settlement_time")
         public String settlementTime;
 
@@ -673,55 +415,27 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("sio")
         public String sio;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>169551103</p>
-         */
         @NameInMap("sub_order_id")
         public String subOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>9%</p>
-         */
         @NameInMap("tax_rate")
         public String taxRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cs2</p>
-         */
         @NameInMap("third_invoice_id")
         public String thirdInvoiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("third_itinerary_id")
         public String thirdItineraryId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123-2345</p>
-         */
         @NameInMap("ticket_id")
         public String ticketId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("trade")
         public String trade;
 
@@ -731,17 +445,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_email")
         public String travelerEmail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A1234</p>
-         */
         @NameInMap("traveler_id")
         public String travelerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A1234</p>
-         */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
@@ -754,17 +460,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_name")
         public String travelerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("upgrade_cost")
         public Double upgradeCost;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("voucher_type")
         public Integer voucherType;
 
@@ -1838,44 +1536,24 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class CooperatorFlightBillSettlementQueryResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("category")
         public Integer category;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("corp_id")
         public String corpId;
 
         @NameInMap("items")
         public java.util.List<CooperatorFlightBillSettlementQueryResponseBodyModuleItems> items;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-11-02</p>
-         */
         @NameInMap("period_end")
         public String periodEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-13</p>
-         */
         @NameInMap("period_start")
         public String periodStart;
 
         @NameInMap("scroll_id")
         public String scrollId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("total_size")
         public Long totalSize;
 

@@ -4,41 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelSuggestV2ResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>None</p>
-     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelSuggestV2ResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -99,10 +79,6 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         @NameInMap("address")
         public String address;
 
-        /**
-         * <strong>example:</strong>
-         * <p>300100</p>
-         */
         @NameInMap("city_code")
         public Integer cityCode;
 
@@ -112,41 +88,21 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         @NameInMap("display_name")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>53853318</p>
-         */
         @NameInMap("hotel_id")
         public String hotelId;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
-         */
         @NameInMap("icon")
         public String icon;
 
         @NameInMap("point")
         public String point;
 
-        /**
-         * <strong>example:</strong>
-         * <p>524</p>
-         */
         @NameInMap("price")
         public String price;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("region")
         public Integer region;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -252,10 +208,6 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         @NameInMap("address")
         public String address;
 
-        /**
-         * <strong>example:</strong>
-         * <p>300100</p>
-         */
         @NameInMap("city_code")
         public Integer cityCode;
 
@@ -265,41 +217,21 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         @NameInMap("display_name")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>57140953</p>
-         */
         @NameInMap("hotel_id")
         public String hotelId;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
-         */
         @NameInMap("icon")
         public String icon;
 
         @NameInMap("point")
         public String point;
 
-        /**
-         * <strong>example:</strong>
-         * <p>524</p>
-         */
         @NameInMap("price")
         public String price;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("region")
         public Integer region;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -408,10 +340,6 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         @NameInMap("business_area_with_city")
         public java.util.List<HotelSuggestV2ResponseBodyModuleKeywordSuggestInfosBusinessAreaWithCity> businessAreaWithCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>300100</p>
-         */
         @NameInMap("city_code")
         public Integer cityCode;
 
@@ -421,41 +349,21 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         @NameInMap("display_name")
         public String displayName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>53853318</p>
-         */
         @NameInMap("hotel_id")
         public String hotelId;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
-         */
         @NameInMap("icon")
         public String icon;
 
         @NameInMap("point")
         public String point;
 
-        /**
-         * <strong>example:</strong>
-         * <p>524</p>
-         */
         @NameInMap("price")
         public String price;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("region")
         public Integer region;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -585,10 +493,6 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
     }
 
     public static class HotelSuggestV2ResponseBodyModulePopularSuggestInfos extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i1/O1CN01x0q19E1QZSqLHVVNh_!!6000000001990-2-tps-54-54.png">https://gw.alicdn.com/imgextra/i1/O1CN01x0q19E1QZSqLHVVNh_!!6000000001990-2-tps-54-54.png</a></p>
-         */
         @NameInMap("icon")
         public String icon;
 

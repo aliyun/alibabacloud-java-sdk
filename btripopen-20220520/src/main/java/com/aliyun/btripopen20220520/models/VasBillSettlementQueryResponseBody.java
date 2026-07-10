@@ -4,43 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class VasBillSettlementQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>ok</p>
-     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public VasBillSettlementQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>trace_id</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3b52152017470153218107062d0096</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -98,41 +76,21 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class VasBillSettlementQueryResponseBodyModuleItems extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 00:00:00</p>
-         */
         @NameInMap("adjust_time")
         public String adjustTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123aaa</p>
-         */
         @NameInMap("alipay_id")
         public String alipayId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>124</p>
-         */
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("apply_arr_city_code")
         public String applyArrCityCode;
 
         @NameInMap("apply_arr_city_name")
         public String applyArrCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("apply_dep_city_code")
         public String applyDepCityCode;
 
@@ -142,20 +100,12 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1424070910031252025</p>
-         */
         @NameInMap("apply_id")
         public String applyId;
 
         @NameInMap("belong_business")
         public String belongBusiness;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
@@ -165,24 +115,12 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("book_mode")
         public String bookMode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("book_time")
         public String bookTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("booker_id")
         public String bookerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>zs123</p>
-         */
         @NameInMap("booker_job_no")
         public String bookerJobNo;
 
@@ -201,27 +139,15 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center")
         public String costCenter;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cs1</p>
-         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
-        /**
-         * <strong>example:</strong>
-         * <p>code1</p>
-         */
         @NameInMap("cost_department")
         public String costDepartment;
 
         @NameInMap("department")
         public String department;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1112</p>
-         */
         @NameInMap("department_id")
         public String departmentId;
 
@@ -231,109 +157,57 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fee_type_desc")
         public String feeTypeDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("index")
         public String index;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>q1</p>
-         */
         @NameInMap("mapping_company_code")
         public String mappingCompanyCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1007025201876066223</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100.0</p>
-         */
         @NameInMap("order_price")
         public Double orderPrice;
 
         @NameInMap("order_status_desc")
         public String orderStatusDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("over_apply_id")
         public String overApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("payment_department_id")
         public String paymentDepartmentId;
 
         @NameInMap("payment_department_name")
         public String paymentDepartmentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>87687788</p>
-         */
         @NameInMap("primary_id")
         public Long primaryId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>www123</p>
-         */
         @NameInMap("processor_oa_code")
         public String processorOaCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("product_count")
         public Integer productCount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>111</p>
-         */
         @NameInMap("product_id")
         public String productId;
 
         @NameInMap("product_name")
         public String productName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>acs</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_name")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("promotion_fee")
         public Double promotionFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>111224324</p>
-         */
         @NameInMap("purchase_order_id")
         public String purchaseOrderId;
 
@@ -343,24 +217,12 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settle_type_desc")
         public String settleTypeDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>110.0</p>
-         */
         @NameInMap("settlement_fee")
         public Double settlementFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0.0</p>
-         */
         @NameInMap("settlement_grant_fee")
         public Double settlementGrantFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-01-01 00:00:00</p>
-         */
         @NameInMap("settlement_time")
         public String settlementTime;
 
@@ -370,41 +232,21 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("specification")
         public String specification;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>185025497</p>
-         */
         @NameInMap("sub_order_id")
         public String subOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>9%</p>
-         */
         @NameInMap("tax_rate")
         public String taxRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cs2</p>
-         */
         @NameInMap("third_invoice_id")
         public String thirdInvoiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("third_itinerary_id")
         public String thirdItineraryId;
 
@@ -414,17 +256,9 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("trade_remark")
         public String tradeRemark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>254</p>
-         */
         @NameInMap("traveler_id")
         public String travelerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A1234</p>
-         */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
@@ -437,10 +271,6 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_name")
         public String travelerName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("voucher_type")
         public Integer voucherType;
 
@@ -991,10 +821,6 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class VasBillSettlementQueryResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>21</p>
-         */
         @NameInMap("category")
         public Integer category;
 
@@ -1004,31 +830,15 @@ public class VasBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<VasBillSettlementQueryResponseBodyModuleItems> items;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-07-02</p>
-         */
         @NameInMap("period_end")
         public String periodEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-07-01</p>
-         */
         @NameInMap("period_start")
         public String periodStart;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4MDAwMDAwMDA2ZTFjZTNi</p>
-         */
         @NameInMap("scroll_id")
         public String scrollId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("total_size")
         public Long totalSize;
 

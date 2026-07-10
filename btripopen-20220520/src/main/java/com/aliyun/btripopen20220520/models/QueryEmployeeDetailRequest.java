@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class QueryEmployeeDetailRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>abc12138</p>
      */
     @NameInMap("out_employee_id")
     public String outEmployeeId;

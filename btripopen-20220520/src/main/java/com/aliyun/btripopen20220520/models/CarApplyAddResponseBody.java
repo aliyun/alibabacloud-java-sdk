@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class CarApplyAddResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
+     * <p>The internal approval form ID in the business travel system.</p>
+     * 
      * <strong>example:</strong>
      * <p>1002923002</p>
      */
@@ -22,6 +32,8 @@ public class CarApplyAddResponseBody extends TeaModel {
     public Long module;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
      */
@@ -29,6 +41,8 @@ public class CarApplyAddResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +50,8 @@ public class CarApplyAddResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The log trace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21041ce316577904808056433edbb2</p>
      */

@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class ElectronicItineraryGetApplyResultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0c7d5944608943479a9a4d40c1eec618</p>
      */
     @NameInMap("batch_apply_no")
     public String batchApplyNo;

@@ -7,10 +7,6 @@ public class TrainNoInfoSearchHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
-    /**
-     * <strong>example:</strong>
-     * <p>feth00jqwis</p>
-     */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 

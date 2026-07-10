@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class AccessTokenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ggZADkghsadgogeDxdaD</p>
      */
     @NameInMap("app_secret")
     public String appSecret;

@@ -7,33 +7,15 @@ public class TravelStandardScopeSaveResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>05F9C201-1B53-5905-94AB-0D7444D8466A</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("resultCode")
     public Integer resultCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21041aa317070996148671005d0a0b</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 

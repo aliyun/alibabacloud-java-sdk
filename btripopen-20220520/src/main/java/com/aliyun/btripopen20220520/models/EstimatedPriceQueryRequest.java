@@ -27,9 +27,6 @@ public class EstimatedPriceQueryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1670601600000</p>
      */
     @NameInMap("end_time")
     public Long endTime;
@@ -43,25 +40,15 @@ public class EstimatedPriceQueryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1670428800000</p>
      */
     @NameInMap("start_time")
     public Long startTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>btrip123</p>
-     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>12345678910</p>
      */
     @NameInMap("user_id")
     public String userId;

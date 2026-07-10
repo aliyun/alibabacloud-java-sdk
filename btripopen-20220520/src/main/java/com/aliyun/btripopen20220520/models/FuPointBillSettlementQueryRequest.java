@@ -4,10 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FuPointBillSettlementQueryRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>20240101</p>
-     */
+    @NameInMap("apply_id")
+    public String applyId;
+
     @NameInMap("bill_batch")
     public String billBatch;
 
@@ -17,10 +16,6 @@ public class FuPointBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_record_time_start")
     public String billRecordTimeStart;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cooperator_alibtrip</p>
-     */
     @NameInMap("cooperator_id")
     public String cooperatorId;
 
@@ -29,53 +24,39 @@ public class FuPointBillSettlementQueryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("page_no")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2021-10-02</p>
-     */
     @NameInMap("period_end")
     public String periodEnd;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2021-10-01</p>
-     */
     @NameInMap("period_start")
     public String periodStart;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1qwe</p>
-     */
     @NameInMap("scroll_id")
     public String scrollId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("scroll_mod")
     public Boolean scrollMod;
 
     public static FuPointBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         FuPointBillSettlementQueryRequest self = new FuPointBillSettlementQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FuPointBillSettlementQueryRequest setApplyId(String applyId) {
+        this.applyId = applyId;
+        return this;
+    }
+    public String getApplyId() {
+        return this.applyId;
     }
 
     public FuPointBillSettlementQueryRequest setBillBatch(String billBatch) {

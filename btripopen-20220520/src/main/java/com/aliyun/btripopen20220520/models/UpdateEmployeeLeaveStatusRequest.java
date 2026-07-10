@@ -6,18 +6,12 @@ import com.aliyun.tea.*;
 public class UpdateEmployeeLeaveStatusRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
      */
     @NameInMap("is_leave")
     public Boolean isLeave;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>user123</p>
      */
     @NameInMap("user_id")
     public String userId;

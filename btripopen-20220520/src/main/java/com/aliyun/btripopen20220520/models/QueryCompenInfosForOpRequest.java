@@ -6,25 +6,15 @@ import com.aliyun.tea.*;
 public class QueryCompenInfosForOpRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("category")
     public Integer category;
 
-    /**
-     * <strong>example:</strong>
-     * <p>82508250249123456</p>
-     */
     @NameInMap("compen_id")
     public String compenId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1002086203277812345</p>
      */
     @NameInMap("order_id")
     public String orderId;

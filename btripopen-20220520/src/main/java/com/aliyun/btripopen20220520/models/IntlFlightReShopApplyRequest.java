@@ -4,57 +4,32 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightReShopApplyRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>asyncKey_2390u230slgw023</p>
-     */
     @NameInMap("async_apply_key")
     public String asyncApplyKey;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("async_apply_mode")
     public Boolean asyncApplyMode;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1017035199907040165</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>D1736316966048SC4877</p>
-     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>JPM20241024354</p>
-     */
     @NameInMap("out_re_shop_apply_id")
     public String outReShopApplyId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>edcac4f4c79d40ccb141ddb6da567e65</p>
      */
     @NameInMap("passenger_journey_group_key")
     public String passengerJourneyGroupKey;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
      */
     @NameInMap("re_shop_reason_code")
     public String reShopReasonCode;
@@ -162,27 +137,18 @@ public class IntlFlightReShopApplyRequest extends TeaModel {
     public static class IntlFlightReShopApplyRequestSelectedJourneysSelectedFlights extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HKG</p>
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>BJS</p>
          */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>KN6728HGHPKX0725</p>
          */
         @NameInMap("segment_key")
         public String segmentKey;
@@ -221,27 +187,18 @@ public class IntlFlightReShopApplyRequest extends TeaModel {
     public static class IntlFlightReShopApplyRequestSelectedJourneys extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DLC</p>
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TSN</p>
          */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-10-10</p>
          */
         @NameInMap("intent_date")
         public String intentDate;
@@ -292,18 +249,11 @@ public class IntlFlightReShopApplyRequest extends TeaModel {
     }
 
     public static class IntlFlightReShopApplyRequestSelectedPassengers extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ZHANG/SAN</p>
-         */
         @NameInMap("full_name")
         public String fullName;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100001</p>
          */
         @NameInMap("passenger_id")
         public Long passengerId;

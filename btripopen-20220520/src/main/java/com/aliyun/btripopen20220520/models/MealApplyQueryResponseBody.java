@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealApplyQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,26 +13,12 @@ public class MealApplyQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public MealApplyQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>210f07f316603757445272547d959f</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -94,10 +76,6 @@ public class MealApplyQueryResponseBody extends TeaModel {
     }
 
     public static class MealApplyQueryResponseBodyModuleApplyUser extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2123</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -213,27 +191,15 @@ public class MealApplyQueryResponseBody extends TeaModel {
         @NameInMap("apply_user")
         public MealApplyQueryResponseBodyModuleApplyUser applyUser;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11376</p>
-         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
         @NameInMap("extend_field")
         public String extendField;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-07-04T16:13Z</p>
-         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11876</p>
-         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
@@ -246,45 +212,21 @@ public class MealApplyQueryResponseBody extends TeaModel {
         @NameInMap("meal_cause")
         public String mealCause;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11546</p>
-         */
         @NameInMap("project_id")
         public Long projectId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024073128454753</p>
-         */
         @NameInMap("third_part_apply_id")
         public String thirdPartApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>330000303010292572</p>
-         */
         @NameInMap("third_part_cost_center_id")
         public String thirdPartCostCenterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>405009</p>
-         */
         @NameInMap("third_part_invoice_id")
         public String thirdPartInvoiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CS-PROJECT</p>
-         */
         @NameInMap("third_part_project_id")
         public String thirdPartProjectId;
 

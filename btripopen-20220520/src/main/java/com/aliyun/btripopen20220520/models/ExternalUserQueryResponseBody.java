@@ -4,17 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ExternalUserQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
@@ -24,26 +16,12 @@ public class ExternalUserQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public ExternalUserQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>210e847f16611516748613869de4f6</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -109,65 +87,33 @@ public class ExternalUserQueryResponseBody extends TeaModel {
     }
 
     public static class ExternalUserQueryResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2000-01-02</p>
-         */
         @NameInMap("birthday")
         public String birthday;
 
-        /**
-         * <strong>example:</strong>
-         * <p>btrip123456</p>
-         */
         @NameInMap("corp_id")
         public String corpId;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="mailto:zhangsan@alibaba-inc.com">zhangsan@alibaba-inc.com</a></p>
-         */
         @NameInMap("email")
         public String email;
 
-        /**
-         * <strong>example:</strong>
-         * <p>000001</p>
-         */
         @NameInMap("external_user_id")
         public String externalUserId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>13438009765</p>
-         */
         @NameInMap("phone")
         public String phone;
 
         @NameInMap("real_name")
         public String realName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>zhang/san</p>
-         */
         @NameInMap("real_name_en")
         public String realNameEn;
 
-        /**
-         * <strong>example:</strong>
-         * <p>e1$12345678</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
         @NameInMap("user_nick")
         public String userNick;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("user_type")
         public Integer userType;
 

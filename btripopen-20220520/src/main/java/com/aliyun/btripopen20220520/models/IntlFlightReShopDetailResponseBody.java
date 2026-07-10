@@ -115,10 +115,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosAirlineInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>NS</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -160,10 +156,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosArrAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>DLC</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -173,10 +165,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -220,10 +208,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosDepAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PEK</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -233,10 +217,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -280,10 +260,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightShareInfoOperatingAirlineInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>CA</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -328,10 +304,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("operating_airline_info")
         public IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA1234</p>
-         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
@@ -359,58 +331,30 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightStopInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PEK</p>
-         */
         @NameInMap("stop_airport")
         public String stopAirport;
 
         @NameInMap("stop_airport_name")
         public String stopAirportName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T3</p>
-         */
         @NameInMap("stop_arr_term")
         public String stopArrTerm;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-01-01 05:00</p>
-         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
         @NameInMap("stop_city_name")
         public String stopCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T2</p>
-         */
         @NameInMap("stop_dep_term")
         public String stopDepTerm;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-01-01 07:00</p>
-         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>120</p>
-         */
         @NameInMap("stop_time")
         public String stopTime;
 
@@ -494,17 +438,9 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosLuggageDirectInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("dep_city_luggage_direct")
         public Integer depCityLuggageDirect;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("stop_city_luggage_direct")
         public Integer stopCityLuggageDirect;
 
@@ -535,10 +471,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("dep_city_visa_remark")
         public String depCityVisaRemark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("dep_city_visa_type")
         public Integer depCityVisaType;
 
@@ -594,54 +526,30 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosArrAirportInfo arrAirportInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         @NameInMap("arr_city_name")
         public String arrCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 02:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
         @NameInMap("dep_airport_info")
         public IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosDepAirportInfo depAirportInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         @NameInMap("dep_city_name")
         public String depCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 01:00</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>130</p>
-         */
         @NameInMap("duration")
         public Integer duration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NS8210</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -654,17 +562,9 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("flight_stop_info_list")
         public java.util.List<IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosFlightStopInfoList> flightStopInfoList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>737</p>
-         */
         @NameInMap("flight_type")
         public String flightType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
@@ -677,53 +577,27 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("meal_desc")
         public String mealDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("one_more")
         public Integer oneMore;
 
-        /**
-         * <strong>example:</strong>
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
         @NameInMap("one_more_show")
         public String oneMoreShow;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NS8210XIYHGH0501</p>
-         */
         @NameInMap("segment_key")
         public String segmentKey;
 
         @NameInMap("segment_visa_remark")
         public IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfosSegmentVisaRemark segmentVisaRemark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("share")
         public Boolean share;
 
         @NameInMap("short_flight_size")
         public String shortFlightSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("stop")
         public Boolean stop;
 
@@ -962,61 +836,33 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleJourneyList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         @NameInMap("arr_city_name")
         public String arrCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 02:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         @NameInMap("dep_city_name")
         public String depCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 01:00</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("duration")
         public Integer duration;
 
         @NameInMap("flight_segment_infos")
         public java.util.List<IntlFlightReShopDetailResponseBodyModuleJourneyListFlightSegmentInfos> flightSegmentInfos;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("transfer_time")
         public Integer transferTime;
 
@@ -1108,10 +954,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosAirlineInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>CA</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -1153,10 +995,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosArrAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -1166,10 +1004,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T3</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -1213,10 +1047,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosDepAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PEK</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -1226,10 +1056,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -1273,10 +1099,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosFlightShareInfoOperatingAirlineInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>MU</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -1321,10 +1143,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("operating_airline_info")
         public IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosFlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA0001</p>
-         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
@@ -1352,58 +1170,30 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosFlightStopInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("stop_airport")
         public String stopAirport;
 
         @NameInMap("stop_airport_name")
         public String stopAirportName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("stop_arr_term")
         public String stopArrTerm;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-08-13 07:25</p>
-         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
         @NameInMap("stop_city_name")
         public String stopCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("stop_dep_term")
         public String stopDepTerm;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-08-13 09:25</p>
-         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("stop_time")
         public String stopTime;
 
@@ -1487,17 +1277,9 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosLuggageDirectInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("dep_city_luggage_direct")
         public Integer depCityLuggageDirect;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("stop_city_luggage_direct")
         public Integer stopCityLuggageDirect;
 
@@ -1528,10 +1310,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("dep_city_visa_remark")
         public String depCityVisaRemark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("dep_city_visa_type")
         public Integer depCityVisaType;
 
@@ -1587,54 +1365,30 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosArrAirportInfo arrAirportInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         @NameInMap("arr_city_name")
         public String arrCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-08-13 09:25</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
         @NameInMap("dep_airport_info")
         public IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosDepAirportInfo depAirportInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         @NameInMap("dep_city_name")
         public String depCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-08-13 07:25</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>120</p>
-         */
         @NameInMap("duration")
         public Integer duration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NS8210</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -1647,17 +1401,9 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("flight_stop_info_list")
         public java.util.List<IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosFlightStopInfoList> flightStopInfoList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>738</p>
-         */
         @NameInMap("flight_type")
         public String flightType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
@@ -1670,47 +1416,27 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("meal_desc")
         public String mealDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("one_more")
         public Integer oneMore;
 
         @NameInMap("one_more_show")
         public String oneMoreShow;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>NS8210XIYHGH0501</p>
-         */
         @NameInMap("segment_key")
         public String segmentKey;
 
         @NameInMap("segment_visa_remark")
         public IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfosSegmentVisaRemark segmentVisaRemark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("share")
         public Boolean share;
 
         @NameInMap("short_flight_size")
         public String shortFlightSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("stop")
         public Boolean stop;
 
@@ -1949,61 +1675,33 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModuleOriginJourneyList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         @NameInMap("arr_city_name")
         public String arrCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 02:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         @NameInMap("dep_city_name")
         public String depCityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 01:00</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("duration")
         public Integer duration;
 
         @NameInMap("flight_segment_infos")
         public java.util.List<IntlFlightReShopDetailResponseBodyModuleOriginJourneyListFlightSegmentInfos> flightSegmentInfos;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("transfer_time")
         public Integer transferTime;
 
@@ -2095,62 +1793,30 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModulePassengerList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>ZHANG/SAN</p>
-         */
         @NameInMap("full_name")
         public String fullName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("gender")
         public Integer gender;
 
-        /**
-         * <strong>example:</strong>
-         * <p>76230022</p>
-         */
         @NameInMap("job_no")
         public String jobNo;
 
         @NameInMap("nationality")
         public String nationality;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("nationality_code")
         public String nationalityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8432002</p>
-         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("type")
         public Integer type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>btrip8432002</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -2234,31 +1900,15 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModulePassengerPriceInfoListPriceInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>4000</p>
-         */
         @NameInMap("handling_amount")
         public Long handlingAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("tax_diff_amount")
         public Long taxDiffAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>125000</p>
-         */
         @NameInMap("total_amount")
         public Long totalAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("upgrade_amount")
         public Long upgradeAmount;
 
@@ -2302,10 +1952,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModulePassengerPriceInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100001</p>
-         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
@@ -2336,45 +1982,21 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModulePassengerTicketListTicketListTicketSegmentList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>G</p>
-         */
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("modified")
         public Boolean modified;
 
-        /**
-         * <strong>example:</strong>
-         * <p>OPEN_FOR_USE</p>
-         */
         @NameInMap("open_ticket_status")
         public String openTicketStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("refunded")
         public Boolean refunded;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HX236HKGPVG0509</p>
-         */
         @NameInMap("segment_key")
         public String segmentKey;
 
@@ -2434,27 +2056,15 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModulePassengerTicketListTicketList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2025-01-01 00:00:09</p>
-         */
         @NameInMap("issue_time")
         public String issueTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>P123456</p>
-         */
         @NameInMap("pnr_no")
         public String pnrNo;
 
         @NameInMap("segment_key_list")
         public java.util.List<String> segmentKeyList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>781-9574833593</p>
-         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -2509,10 +2119,6 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModulePassengerTicketList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2345678</p>
-         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
@@ -2543,31 +2149,15 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopDetailResponseBodyModulePriceInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>4000</p>
-         */
         @NameInMap("handling_amount")
         public Long handlingAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("tax_diff_amount")
         public Long taxDiffAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>125000</p>
-         */
         @NameInMap("total_amount")
         public Long totalAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("upgrade_amount")
         public Long upgradeAmount;
 
@@ -2636,44 +2226,24 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("close_reason")
         public String closeReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-03-06 15:00:35</p>
-         */
         @NameInMap("close_time")
         public String closeTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("close_type")
         public Integer closeType;
 
         @NameInMap("journey_list")
         public java.util.List<IntlFlightReShopDetailResponseBodyModuleJourneyList> journeyList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1017124195788186048</p>
-         */
         @NameInMap("order_id")
         public Long orderId;
 
         @NameInMap("origin_journey_list")
         public java.util.List<IntlFlightReShopDetailResponseBodyModuleOriginJourneyList> originJourneyList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>F11552194294228713472</p>
-         */
         @NameInMap("out_order_id")
         public String outOrderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>JPM20241024354</p>
-         */
         @NameInMap("out_re_shop_apply_id")
         public String outReShopApplyId;
 
@@ -2686,34 +2256,18 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("passenger_ticket_list")
         public java.util.List<IntlFlightReShopDetailResponseBodyModulePassengerTicketList> passengerTicketList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-03-06 15:35:00</p>
-         */
         @NameInMap("pay_latest_time")
         public String payLatestTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("pay_status")
         public Integer payStatus;
 
         @NameInMap("price_info")
         public IntlFlightReShopDetailResponseBodyModulePriceInfo priceInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1017035199374643191</p>
-         */
         @NameInMap("re_shop_apply_id")
         public Long reShopApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("re_shop_reason_code")
         public String reShopReasonCode;
 
@@ -2723,17 +2277,9 @@ public class IntlFlightReShopDetailResponseBody extends TeaModel {
         @NameInMap("refund_change_rule")
         public IntlFlightReShopDetailResponseBodyModuleRefundChangeRule refundChangeRule;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("status")
         public Integer status;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-03-06 15:01:35</p>
-         */
         @NameInMap("success_time")
         public String successTime;
 

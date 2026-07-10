@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>btripopen20220520</artifactId>
-  <version>5.1.0</version>
+  <version>5.2.0</version>
   <packaging>jar</packaging>
   <name>btripopen20220520</name>
   <description>Alibaba Cloud btripOpen (20220520) SDK for Java
@@ -174,7 +174,7 @@
       <plugin>
         <groupId>org.sonatype.central</groupId>
         <artifactId>central-publishing-maven-plugin</artifactId>
-        <version>0.9.0</version>
+        <version>0.10.0</version>
         <extensions>true</extensions>
         <configuration>
           <publishingServerId>central</publishingServerId>

@@ -7,26 +7,15 @@ public class FlightOtaSearchV2ShrinkRequest extends TeaModel {
     @NameInMap("cabin_type_list")
     public String cabinTypeListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("direct_only")
     public Boolean directOnly;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cheshi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
@@ -38,18 +27,12 @@ public class FlightOtaSearchV2ShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0</p>
      */
     @NameInMap("search_mode")
     public Integer searchMode;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;

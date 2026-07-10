@@ -4,17 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyModifyRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>4000</p>
-     */
     @NameInMap("budget")
     public Long budget;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("budget_merge")
     public Integer budgetMerge;
 
@@ -27,22 +19,12 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("default_standard")
     public ApplyModifyRequestDefaultStandard defaultStandard;
 
-    /**
-     * <strong>example:</strong>
-     * <p>001</p>
-     */
     @NameInMap("depart_id")
     public String departId;
 
     @NameInMap("depart_name")
     public String departName;
 
-    /**
-     * <p>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;cost_center&quot;:&quot;成本中心&quot;}</p>
-     */
     @NameInMap("extend_field")
     public String extendField;
 
@@ -52,17 +34,9 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("external_traveler_standard")
     public ApplyModifyRequestExternalTravelerStandard externalTravelerStandard;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("flight_budget")
     public Long flightBudget;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("hotel_budget")
     public Long hotelBudget;
 
@@ -75,27 +49,15 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("intl_hotel_budget")
     public Long intlHotelBudget;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("itinerary_list")
     public java.util.List<ApplyModifyRequestItineraryList> itineraryList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("itinerary_rule")
     public Integer itineraryRule;
 
     @NameInMap("itinerary_set_list")
     public java.util.List<ApplyModifyRequestItinerarySetList> itinerarySetList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
 
@@ -108,52 +70,27 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("payment_department_name")
     public String paymentDepartmentName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("status")
     public Integer status;
 
-    /**
-     * <p>子企业Id</p>
-     * 
-     * <strong>example:</strong>
-     * <p>btrip123</p>
-     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0001A1100000007EX08O</p>
      */
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>202201413141</p>
-     */
     @NameInMap("thirdpart_business_id")
     public String thirdpartBusinessId;
 
     @NameInMap("thirdpart_depart_id")
     public String thirdpartDepartId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("together_book_rule")
     public Integer togetherBookRule;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("train_budget")
     public Long trainBudget;
 
@@ -169,10 +106,6 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("trip_cause")
     public String tripCause;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("trip_day")
     public Integer tripDay;
 
@@ -182,18 +115,11 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("trip_title")
     public String tripTitle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>union51415</p>
-     */
     @NameInMap("union_no")
     public String unionNo;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>thirdpart12138</p>
      */
     @NameInMap("user_id")
     public String userId;
@@ -201,10 +127,6 @@ public class ApplyModifyRequest extends TeaModel {
     @NameInMap("user_name")
     public String userName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("vehicle_budget")
     public Long vehicleBudget;
 
@@ -660,6 +582,9 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("hotel_rule_code")
         public Long hotelRuleCode;
 
+        @NameInMap("international_flight_cabins")
+        public String internationalFlightCabins;
+
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
@@ -755,6 +680,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public Long getHotelRuleCode() {
             return this.hotelRuleCode;
+        }
+
+        public ApplyModifyRequestDefaultStandard setInternationalFlightCabins(String internationalFlightCabins) {
+            this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
         }
 
         public ApplyModifyRequestDefaultStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
@@ -943,20 +876,12 @@ public class ApplyModifyRequest extends TeaModel {
     }
 
     public static class ApplyModifyRequestExternalTravelerStandardHotelCitys extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("city_name")
         public String cityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1001</p>
-         */
         @NameInMap("fee")
         public Long fee;
 
@@ -1033,31 +958,15 @@ public class ApplyModifyRequest extends TeaModel {
     }
 
     public static class ApplyModifyRequestExternalTravelerStandard extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("first_discount")
         public Integer firstDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("flight_cabins")
         public String flightCabins;
 
@@ -1079,29 +988,18 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("hotel_rule_code")
         public Long hotelRuleCode;
 
-        /**
-         * <p>超级经济舱折扣。1到10的整数</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
+        @NameInMap("international_flight_cabins")
+        public String internationalFlightCabins;
+
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("reserve_type")
         public Integer reserveType;
 
         @NameInMap("train_rule_code")
         public Long trainRuleCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("train_seats")
         public String trainSeats;
 
@@ -1190,6 +1088,14 @@ public class ApplyModifyRequest extends TeaModel {
             return this.hotelRuleCode;
         }
 
+        public ApplyModifyRequestExternalTravelerStandard setInternationalFlightCabins(String internationalFlightCabins) {
+            this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
+        }
+
         public ApplyModifyRequestExternalTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
             this.premiumEconomyDiscount = premiumEconomyDiscount;
             return this;
@@ -1225,17 +1131,9 @@ public class ApplyModifyRequest extends TeaModel {
     }
 
     public static class ApplyModifyRequestHotelShare extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>70</p>
-         */
         @NameInMap("param")
         public String param;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -1288,18 +1186,11 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-12 00:00:00</p>
          */
         @NameInMap("arr_date")
         public String arrDate;
@@ -1307,10 +1198,6 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("attribute")
         public String attribute;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021413</p>
-         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
@@ -1320,34 +1207,20 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("dep_city")
         public String depCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2022-07-12 00:00:00</p>
          */
         @NameInMap("dep_date")
         public String depDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>614141</p>
-         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2000131</p>
          */
         @NameInMap("itinerary_id")
         public String itineraryId;
@@ -1355,24 +1228,12 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("itinerary_travel_standard")
         public ApplyModifyRequestItineraryListItineraryTravelStandard itineraryTravelStandard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("need_hotel")
         public Boolean needHotel;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("need_traffic")
         public Boolean needTraffic;
 
-        /**
-         * <strong>example:</strong>
-         * <p>projectone</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
@@ -1382,34 +1243,20 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("province_travel_city_adcodes")
         public java.util.List<String> provinceTravelCityAdcodes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ZG14131</p>
-         */
         @NameInMap("third_part_invoice_id")
         public String thirdPartInvoiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>thirdpart5151</p>
-         */
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         @NameInMap("trip_way")
         public Integer tripWay;
@@ -1611,20 +1458,12 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("attribute")
         public String attribute;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS,SHA</p>
-         */
         @NameInMap("city_code_set")
         public String cityCodeSet;
 
         @NameInMap("city_set")
         public String citySet;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123455</p>
-         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
@@ -1635,27 +1474,15 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("dep_date")
         public String depDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12344</p>
-         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20220722001</p>
-         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
         @NameInMap("itinerary_travel_standard")
         public ApplyModifyRequestItinerarySetListItineraryTravelStandard itineraryTravelStandard;
 
-        /**
-         * <strong>example:</strong>
-         * <p>projecttow</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
@@ -1665,24 +1492,12 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("province_travel_city_adcodes")
         public java.util.List<String> provinceTravelCityAdcodes;
 
-        /**
-         * <strong>example:</strong>
-         * <p>thridpart12138</p>
-         */
         @NameInMap("third_part_invoice_id")
         public String thirdPartInvoiceId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>thridpart12138</p>
-         */
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
@@ -1844,10 +1659,6 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("thirdpart_depart_id")
         public String thirdpartDepartId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>GS641312</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -1993,21 +1804,658 @@ public class ApplyModifyRequest extends TeaModel {
 
     }
 
-    public static class ApplyModifyRequestTravelerStandardHotelCitys extends TeaModel {
+    public static class ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo extends TeaModel {
         /**
-         * <strong>example:</strong>
-         * <p>0</p>
+         * <p>This parameter is required.</p>
          */
+        @NameInMap("book_allow")
+        public Boolean bookAllow;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo self = new ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo setBookAllow(Boolean bookAllow) {
+            this.bookAllow = bookAllow;
+            return this;
+        }
+        public Boolean getBookAllow() {
+            return this.bookAllow;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardCarHelper extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("car_helper_type")
+        public String carHelperType;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardCarHelper build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardCarHelper self = new ApplyModifyRequestTravelerStandardCarStandardCarHelper();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCarHelper setCarHelperType(String carHelperType) {
+            this.carHelperType = carHelperType;
+            return this;
+        }
+        public String getCarHelperType() {
+            return this.carHelperType;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("end_time")
+        public String endTime;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("start_time")
+        public String startTime;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit self = new ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardCarTimeControl extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("time_limit")
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit> timeLimit;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("time_switch")
+        public Boolean timeSwitch;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardCarTimeControl build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardCarTimeControl self = new ApplyModifyRequestTravelerStandardCarStandardCarTimeControl();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCarTimeControl setTimeLimit(java.util.List<ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit> timeLimit) {
+            this.timeLimit = timeLimit;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardCarTimeControlTimeLimit> getTimeLimit() {
+            return this.timeLimit;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCarTimeControl setTimeSwitch(Boolean timeSwitch) {
+            this.timeSwitch = timeSwitch;
+            return this;
+        }
+        public Boolean getTimeSwitch() {
+            return this.timeSwitch;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("adcode")
+        public String adcode;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("city_code")
+        public String cityCode;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("city_name")
+        public String cityName;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos self = new ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos setAdcode(String adcode) {
+            this.adcode = adcode;
+            return this;
+        }
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+            return this;
+        }
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos setCityName(String cityName) {
+            this.cityName = cityName;
+            return this;
+        }
+        public String getCityName() {
+            return this.cityName;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardCityControlInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("city_control_type")
+        public Integer cityControlType;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("city_infos")
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos> cityInfos;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardCityControlInfo build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardCityControlInfo self = new ApplyModifyRequestTravelerStandardCarStandardCityControlInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCityControlInfo setCityControlType(Integer cityControlType) {
+            this.cityControlType = cityControlType;
+            return this;
+        }
+        public Integer getCityControlType() {
+            return this.cityControlType;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCityControlInfo setCityInfos(java.util.List<ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos> cityInfos) {
+            this.cityInfos = cityInfos;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardCityControlInfoCityInfos> getCityInfos() {
+            return this.cityInfos;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("from_adcode")
+        public String fromAdcode;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("from_city_code")
+        public String fromCityCode;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("from_city_name")
+        public String fromCityName;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("to_adcode")
+        public String toAdcode;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("to_city_code")
+        public String toCityCode;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("to_city_name")
+        public String toCityName;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList self = new ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList setFromAdcode(String fromAdcode) {
+            this.fromAdcode = fromAdcode;
+            return this;
+        }
+        public String getFromAdcode() {
+            return this.fromAdcode;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList setFromCityCode(String fromCityCode) {
+            this.fromCityCode = fromCityCode;
+            return this;
+        }
+        public String getFromCityCode() {
+            return this.fromCityCode;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList setFromCityName(String fromCityName) {
+            this.fromCityName = fromCityName;
+            return this;
+        }
+        public String getFromCityName() {
+            return this.fromCityName;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList setToAdcode(String toAdcode) {
+            this.toAdcode = toAdcode;
+            return this;
+        }
+        public String getToAdcode() {
+            return this.toAdcode;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList setToCityCode(String toCityCode) {
+            this.toCityCode = toCityCode;
+            return this;
+        }
+        public String getToCityCode() {
+            return this.toCityCode;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList setToCityName(String toCityName) {
+            this.toCityName = toCityName;
+            return this;
+        }
+        public String getToCityName() {
+            return this.toCityName;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo extends TeaModel {
+        @NameInMap("cross_city_list")
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList> crossCityList;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("cross_city_type")
+        public Integer crossCityType;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo self = new ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo setCrossCityList(java.util.List<ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList> crossCityList) {
+            this.crossCityList = crossCityList;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardCrossCityInfoCrossCityList> getCrossCityList() {
+            return this.crossCityList;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo setCrossCityType(Integer crossCityType) {
+            this.crossCityType = crossCityType;
+            return this;
+        }
+        public Integer getCrossCityType() {
+            return this.crossCityType;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("address")
+        public String address;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("latitude")
+        public String latitude;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("longitude")
+        public String longitude;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("radius")
+        public Integer radius;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom self = new ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom setLatitude(String latitude) {
+            this.latitude = latitude;
+            return this;
+        }
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom setLongitude(String longitude) {
+            this.longitude = longitude;
+            return this;
+        }
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom setRadius(Integer radius) {
+            this.radius = radius;
+            return this;
+        }
+        public Integer getRadius() {
+            return this.radius;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("address")
+        public String address;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("latitude")
+        public String latitude;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("longitude")
+        public String longitude;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("radius")
+        public Integer radius;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo self = new ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo setLatitude(String latitude) {
+            this.latitude = latitude;
+            return this;
+        }
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo setLongitude(String longitude) {
+            this.longitude = longitude;
+            return this;
+        }
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo setRadius(Integer radius) {
+            this.radius = radius;
+            return this;
+        }
+        public Integer getRadius() {
+            return this.radius;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("electronic_fence_locations_from")
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom> electronicFenceLocationsFrom;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("electronic_fence_locations_to")
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo> electronicFenceLocationsTo;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("electronic_fence_type")
+        public Integer electronicFenceType;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo self = new ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo setElectronicFenceLocationsFrom(java.util.List<ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom> electronicFenceLocationsFrom) {
+            this.electronicFenceLocationsFrom = electronicFenceLocationsFrom;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom> getElectronicFenceLocationsFrom() {
+            return this.electronicFenceLocationsFrom;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo setElectronicFenceLocationsTo(java.util.List<ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo> electronicFenceLocationsTo) {
+            this.electronicFenceLocationsTo = electronicFenceLocationsTo;
+            return this;
+        }
+        public java.util.List<ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo> getElectronicFenceLocationsTo() {
+            return this.electronicFenceLocationsTo;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo setElectronicFenceType(Integer electronicFenceType) {
+            this.electronicFenceType = electronicFenceType;
+            return this;
+        }
+        public Integer getElectronicFenceType() {
+            return this.electronicFenceType;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("modify_destination")
+        public Boolean modifyDestination;
+
+        public static ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo self = new ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo setModifyDestination(Boolean modifyDestination) {
+            this.modifyDestination = modifyDestination;
+            return this;
+        }
+        public Boolean getModifyDestination() {
+            return this.modifyDestination;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardCarStandard extends TeaModel {
+        @NameInMap("book_allow_info")
+        public ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo bookAllowInfo;
+
+        @NameInMap("car_helper")
+        public ApplyModifyRequestTravelerStandardCarStandardCarHelper carHelper;
+
+        @NameInMap("car_time_control")
+        public ApplyModifyRequestTravelerStandardCarStandardCarTimeControl carTimeControl;
+
+        @NameInMap("city_control_info")
+        public ApplyModifyRequestTravelerStandardCarStandardCityControlInfo cityControlInfo;
+
+        @NameInMap("cross_city_info")
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo crossCityInfo;
+
+        @NameInMap("electronic_fence_info")
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo electronicFenceInfo;
+
+        @NameInMap("level_codes")
+        public String levelCodes;
+
+        @NameInMap("modify_destination_info")
+        public ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo modifyDestinationInfo;
+
+        @NameInMap("times_total")
+        public Integer timesTotal;
+
+        @NameInMap("times_type")
+        public Integer timesType;
+
+        public static ApplyModifyRequestTravelerStandardCarStandard build(java.util.Map<String, ?> map) throws Exception {
+            ApplyModifyRequestTravelerStandardCarStandard self = new ApplyModifyRequestTravelerStandardCarStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setBookAllowInfo(ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo bookAllowInfo) {
+            this.bookAllowInfo = bookAllowInfo;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandardBookAllowInfo getBookAllowInfo() {
+            return this.bookAllowInfo;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setCarHelper(ApplyModifyRequestTravelerStandardCarStandardCarHelper carHelper) {
+            this.carHelper = carHelper;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandardCarHelper getCarHelper() {
+            return this.carHelper;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setCarTimeControl(ApplyModifyRequestTravelerStandardCarStandardCarTimeControl carTimeControl) {
+            this.carTimeControl = carTimeControl;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandardCarTimeControl getCarTimeControl() {
+            return this.carTimeControl;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setCityControlInfo(ApplyModifyRequestTravelerStandardCarStandardCityControlInfo cityControlInfo) {
+            this.cityControlInfo = cityControlInfo;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandardCityControlInfo getCityControlInfo() {
+            return this.cityControlInfo;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setCrossCityInfo(ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo crossCityInfo) {
+            this.crossCityInfo = crossCityInfo;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandardCrossCityInfo getCrossCityInfo() {
+            return this.crossCityInfo;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setElectronicFenceInfo(ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo electronicFenceInfo) {
+            this.electronicFenceInfo = electronicFenceInfo;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandardElectronicFenceInfo getElectronicFenceInfo() {
+            return this.electronicFenceInfo;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setLevelCodes(String levelCodes) {
+            this.levelCodes = levelCodes;
+            return this;
+        }
+        public String getLevelCodes() {
+            return this.levelCodes;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setModifyDestinationInfo(ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo modifyDestinationInfo) {
+            this.modifyDestinationInfo = modifyDestinationInfo;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandardModifyDestinationInfo getModifyDestinationInfo() {
+            return this.modifyDestinationInfo;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setTimesTotal(Integer timesTotal) {
+            this.timesTotal = timesTotal;
+            return this;
+        }
+        public Integer getTimesTotal() {
+            return this.timesTotal;
+        }
+
+        public ApplyModifyRequestTravelerStandardCarStandard setTimesType(Integer timesType) {
+            this.timesType = timesType;
+            return this;
+        }
+        public Integer getTimesType() {
+            return this.timesType;
+        }
+
+    }
+
+    public static class ApplyModifyRequestTravelerStandardHotelCitys extends TeaModel {
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("city_name")
         public String cityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1014</p>
-         */
         @NameInMap("fee")
         public Long fee;
 
@@ -2084,34 +2532,21 @@ public class ApplyModifyRequest extends TeaModel {
     }
 
     public static class ApplyModifyRequestTravelerStandard extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("business_discount")
         public Integer businessDiscount;
 
         @NameInMap("car_city_set")
         public java.util.List<ApplyModifyRequestTravelerStandardCarCitySet> carCitySet;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
+        @NameInMap("car_standard")
+        public ApplyModifyRequestTravelerStandardCarStandard carStandard;
+
         @NameInMap("economy_discount")
         public Integer economyDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("first_discount")
         public Integer firstDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("flight_cabins")
         public String flightCabins;
 
@@ -2133,36 +2568,21 @@ public class ApplyModifyRequest extends TeaModel {
         @NameInMap("hotel_rule_code")
         public Long hotelRuleCode;
 
-        /**
-         * <p>超级经济舱折扣。1到10的整数</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
+        @NameInMap("international_flight_cabins")
+        public String internationalFlightCabins;
+
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("reserve_type")
         public Integer reserveType;
 
         @NameInMap("train_rule_code")
         public Long trainRuleCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("train_seats")
         public String trainSeats;
 
-        /**
-         * <strong>example:</strong>
-         * <p>thirdpart12138</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -2185,6 +2605,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public java.util.List<ApplyModifyRequestTravelerStandardCarCitySet> getCarCitySet() {
             return this.carCitySet;
+        }
+
+        public ApplyModifyRequestTravelerStandard setCarStandard(ApplyModifyRequestTravelerStandardCarStandard carStandard) {
+            this.carStandard = carStandard;
+            return this;
+        }
+        public ApplyModifyRequestTravelerStandardCarStandard getCarStandard() {
+            return this.carStandard;
         }
 
         public ApplyModifyRequestTravelerStandard setEconomyDiscount(Integer economyDiscount) {
@@ -2257,6 +2685,14 @@ public class ApplyModifyRequest extends TeaModel {
         }
         public Long getHotelRuleCode() {
             return this.hotelRuleCode;
+        }
+
+        public ApplyModifyRequestTravelerStandard setInternationalFlightCabins(String internationalFlightCabins) {
+            this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
         }
 
         public ApplyModifyRequestTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {

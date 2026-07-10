@@ -10,10 +10,6 @@ public class ElectronicItineraryBatchApplyShrinkRequest extends TeaModel {
     @NameInMap("apply_itinerary_list")
     public String applyItineraryListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("can_reprint")
     public Boolean canReprint;
 

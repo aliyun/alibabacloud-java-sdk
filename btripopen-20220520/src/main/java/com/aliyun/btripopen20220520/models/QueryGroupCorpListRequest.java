@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class QueryGroupCorpListRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
     @NameInMap("user_id")
     public String userId;
 

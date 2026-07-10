@@ -18,20 +18,12 @@ public class IntlFlightReShopConsultResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("module")
     public IntlFlightReShopConsultResponseBodyModule module;
 
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 

@@ -7,41 +7,21 @@ public class CarApplyQueryResponseBody extends TeaModel {
     @NameInMap("apply_list")
     public java.util.List<CarApplyQueryResponseBodyApplyList> applyList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>6</p>
-     */
     @NameInMap("total")
     public Integer total;
 
-    /**
-     * <strong>example:</strong>
-     * <p>210bcc3a16583004579056128d33d7</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -110,34 +90,18 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("note")
         public String note;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-03-18T20:26Z</p>
-         */
         @NameInMap("operate_time")
         public String operateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("order")
         public Integer order;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user1</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -211,24 +175,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-03-18T20:26Z</p>
-         */
         @NameInMap("arr_date")
         public String arrDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
@@ -238,51 +190,27 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("dep_city")
         public String depCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-03-18T20:26Z</p>
-         */
         @NameInMap("dep_date")
         public String depDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
         @NameInMap("invoice_name")
         public String invoiceName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>xm1</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_title")
         public String projectTitle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("traffic_type")
         public Integer trafficType;
 
@@ -472,27 +400,15 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("business_type")
         public String businessType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>depart1</p>
-         */
         @NameInMap("depart_id")
         public String departId;
 
         @NameInMap("depart_name")
         public String departName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-03-18T20:26Z</p>
-         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-03-18T20:26Z</p>
-         */
         @NameInMap("gmt_modified")
         public String gmtModified;
 
@@ -505,20 +421,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("related_third_apply_id")
         public String relatedThirdApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("thirdpart_id")
         public String thirdpartId;
 
@@ -531,10 +439,6 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @NameInMap("trip_title")
         public String tripTitle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>user1</p>
-         */
         @NameInMap("user_id")
         public String userId;
 

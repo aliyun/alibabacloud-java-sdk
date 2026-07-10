@@ -6,9 +6,6 @@ import com.aliyun.tea.*;
 public class FlightCancelOrderRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;

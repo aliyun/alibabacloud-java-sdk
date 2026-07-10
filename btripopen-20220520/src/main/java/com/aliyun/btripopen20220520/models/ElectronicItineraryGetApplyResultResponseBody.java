@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public Integer code;
 
@@ -17,28 +13,12 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
     @NameInMap("module")
     public ElectronicItineraryGetApplyResultResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -96,10 +76,6 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
     }
 
     public static class ElectronicItineraryGetApplyResultResponseBodyModuleApplyTicketList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>5001</p>
-         */
         @NameInMap("failed_code")
         public Integer failedCode;
 
@@ -112,10 +88,6 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
-        /**
-         * <strong>example:</strong>
-         * <p>781-6605285563</p>
-         */
         @NameInMap("ticket_no")
         public String ticketNo;
 

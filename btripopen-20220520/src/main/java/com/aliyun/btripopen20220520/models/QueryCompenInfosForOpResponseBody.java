@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class QueryCompenInfosForOpResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,24 +13,12 @@ public class QueryCompenInfosForOpResponseBody extends TeaModel {
     @NameInMap("module")
     public java.util.List<QueryCompenInfosForOpResponseBodyModule> module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>210f079e16603757182131635d866a</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -92,59 +76,27 @@ public class QueryCompenInfosForOpResponseBody extends TeaModel {
     }
 
     public static class QueryCompenInfosForOpResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>500</p>
-         */
         @NameInMap("amount")
         public Long amount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("category")
         public Integer category;
 
-        /**
-         * <strong>example:</strong>
-         * <p>82508250249123456</p>
-         */
         @NameInMap("compen_id")
         public String compenId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("compensation_type")
         public String compensationType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1002086203277812345</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-09-22 20:13:58</p>
-         */
         @NameInMap("settle_time")
         public String settleTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("settle_type")
         public Integer settleType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>999-12345678</p>
-         */
         @NameInMap("ticket_no")
         public String ticketNo;
 

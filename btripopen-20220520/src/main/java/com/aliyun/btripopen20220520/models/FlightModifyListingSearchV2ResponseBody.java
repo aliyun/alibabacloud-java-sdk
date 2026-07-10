@@ -4,44 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("message")
     public String message;
 
-    /**
-     * <p>module</p>
-     */
     @NameInMap("module")
     public FlightModifyListingSearchV2ResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2136019116915615924561621e06ee</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -105,24 +82,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>//gw.alicdn.com/tfs/TB12fJAFHr1gK0jSZR0XXbP8XXa-450-450.png_80x80.jpg</p>
-         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -174,10 +139,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListArrAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>XIL</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -187,10 +148,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T3</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -234,10 +191,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListDepAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PEK</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
@@ -247,10 +200,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("airport_short_name")
         public String airportShortName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T2</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -306,10 +255,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("airline_icon")
         public String airlineIcon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -488,10 +433,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("airline_icon")
         public String airlineIcon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -561,17 +502,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("transfer_flight_size")
         public String transferFlightSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("transfer_share")
         public Boolean transferShare;
 
-        /**
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("transfer_stop_time")
         public Integer transferStopTime;
 
@@ -647,66 +580,30 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListPriceInfoDTOReShopPriceInfoDTO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_adult_change_fee")
         public Integer reShopAdultChangeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_adult_price")
         public Integer reShopAdultPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_adult_price_gap")
         public Integer reShopAdultPriceGap;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_child_change_fee")
         public Integer reShopChildChangeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_child_price")
         public Integer reShopChildPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_child_price_gap")
         public Integer reShopChildPriceGap;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_inf_change_fee")
         public Integer reShopInfChangeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_inf_price")
         public Integer reShopInfPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_inf_price_gap")
         public Integer reShopInfPriceGap;
 
@@ -790,87 +687,39 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListPriceInfoDTO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>126000</p>
-         */
         @NameInMap("adult_price")
         public Integer adultPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11000</p>
-         */
         @NameInMap("adult_tax")
         public Integer adultTax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>137000</p>
-         */
         @NameInMap("adult_total_price")
         public Integer adultTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>126000</p>
-         */
         @NameInMap("before_control_price")
         public Integer beforeControlPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>64000</p>
-         */
         @NameInMap("child_price")
         public Integer childPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("child_tax")
         public Integer childTax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>66000</p>
-         */
         @NameInMap("child_total_price")
         public Integer childTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12000</p>
-         */
         @NameInMap("infant_price")
         public Integer infantPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("infant_tax")
         public Integer infantTax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12000</p>
-         */
         @NameInMap("infant_total_price")
         public Integer infantTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1300</p>
-         */
         @NameInMap("original_adult_price")
         public Integer originalAdultPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12300</p>
-         */
         @NameInMap("original_adult_total_price")
         public Integer originalAdultTotalPrice;
 
@@ -995,17 +844,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListArrAirportInfo arrAirportInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-09-18 10:25:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
@@ -1018,31 +859,15 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("dep_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListDepAirportInfo depAirportInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>XIL</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-09-18 09:10:00</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>240</p>
-         */
         @NameInMap("duration")
         public Integer duration;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA1110</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -1058,24 +883,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("flight_transfer_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightTransferInfo flightTransferInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ARJ</p>
-         */
         @NameInMap("flight_type")
         public String flightType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_seq")
         public Integer journeySeq;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("left_num")
         public String leftNum;
 
@@ -1088,17 +901,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("price_info_d_t_o")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListPriceInfoDTO priceInfoDTO;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_seq")
         public Integer segmentSeq;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("share")
         public Boolean share;
 
@@ -1108,17 +913,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("span_day")
         public String spanDay;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("stop")
         public Boolean stop;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("transfer")
         public Boolean transfer;
 
@@ -1525,10 +1322,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("airline_icon")
         public String airlineIcon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -1707,10 +1500,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("airline_icon")
         public String airlineIcon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -1780,17 +1569,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("transfer_flight_size")
         public String transferFlightSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("transfer_share")
         public Boolean transferShare;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("transfer_stop_time")
         public Integer transferStopTime;
 
@@ -1866,66 +1647,30 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListPriceInfoDTOReShopPriceInfoDTO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_adult_change_fee")
         public Integer reShopAdultChangeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_adult_price")
         public Integer reShopAdultPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_adult_price_gap")
         public Integer reShopAdultPriceGap;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_child_change_fee")
         public Integer reShopChildChangeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_child_price")
         public Integer reShopChildPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_child_price_gap")
         public Integer reShopChildPriceGap;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_inf_change_fee")
         public Integer reShopInfChangeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_inf_price")
         public Integer reShopInfPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>-1</p>
-         */
         @NameInMap("re_shop_inf_price_gap")
         public Integer reShopInfPriceGap;
 
@@ -2009,87 +1754,39 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListPriceInfoDTO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("adult_price")
         public Integer adultPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("adult_tax")
         public Integer adultTax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("adult_total_price")
         public Integer adultTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("before_control_price")
         public Integer beforeControlPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("child_price")
         public Integer childPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("child_tax")
         public Integer childTax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("child_total_price")
         public Integer childTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("infant_price")
         public Integer infantPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("infant_tax")
         public Integer infantTax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("infant_total_price")
         public Integer infantTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("original_adult_price")
         public Integer originalAdultPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("original_adult_total_price")
         public Integer originalAdultTotalPrice;
 
@@ -2235,10 +1932,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>240</p>
-         */
         @NameInMap("duration")
         public Integer duration;
 
@@ -2260,17 +1953,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("flight_type")
         public String flightType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_seq")
         public Integer journeySeq;
 
-        /**
-         * <strong>example:</strong>
-         * <p>7</p>
-         */
         @NameInMap("left_num")
         public String leftNum;
 
@@ -2283,17 +1968,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("price_info_d_t_o")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListPriceInfoDTO priceInfoDTO;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_seq")
         public Integer segmentSeq;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("share")
         public Boolean share;
 
@@ -2303,17 +1980,9 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("span_day")
         public String spanDay;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("stop")
         public Boolean stop;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("transfer")
         public Boolean transfer;
 
@@ -2553,10 +2222,6 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("search_retry_token")
         public String searchRetryToken;
 
-        /**
-         * <strong>example:</strong>
-         * <p>a2ffebfe733742aab5c491d960ba3d59</p>
-         */
         @NameInMap("session_id")
         public String sessionId;
 

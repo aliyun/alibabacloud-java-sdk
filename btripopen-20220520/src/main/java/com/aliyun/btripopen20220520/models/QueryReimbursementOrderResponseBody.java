@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class QueryReimbursementOrderResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>PARAM_ERROR</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,28 +13,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
     @NameInMap("module")
     public QueryReimbursementOrderResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -277,10 +257,6 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
     }
 
     public static class QueryReimbursementOrderResponseBodyModuleExpenses extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("amount")
         public String amount;
 
@@ -293,20 +269,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("expense_compositions")
         public java.util.List<QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions> expenseCompositions;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-05-15T22:27Z</p>
-         */
         @NameInMap("expense_time")
         public String expenseTime;
 
         @NameInMap("expense_type")
         public String expenseType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>code</p>
-         */
         @NameInMap("expense_type_code")
         public String expenseTypeCode;
 
@@ -421,24 +389,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-05-15T22:27Z</p>
-         */
         @NameInMap("arr_date")
         public String arrDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CTU</p>
-         */
         @NameInMap("dep_city")
         public String depCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-05-15T22:27Z</p>
-         */
         @NameInMap("dep_date")
         public String depDate;
 
@@ -504,20 +460,15 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
     }
 
     public static class QueryReimbursementOrderResponseBodyModulePaymentInfos extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>20.00</p>
-         */
         @NameInMap("amount")
         public String amount;
+
+        @NameInMap("cnaps_code")
+        public String cnapsCode;
 
         @NameInMap("payee_account_number")
         public String payeeAccountNumber;
 
-        /**
-         * <strong>example:</strong>
-         * <p>userId</p>
-         */
         @NameInMap("payee_user_id")
         public String payeeUserId;
 
@@ -532,6 +483,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getAmount() {
             return this.amount;
+        }
+
+        public QueryReimbursementOrderResponseBodyModulePaymentInfos setCnapsCode(String cnapsCode) {
+            this.cnapsCode = cnapsCode;
+            return this;
+        }
+        public String getCnapsCode() {
+            return this.cnapsCode;
         }
 
         public QueryReimbursementOrderResponseBodyModulePaymentInfos setPayeeAccountNumber(String payeeAccountNumber) {
@@ -553,24 +512,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
     }
 
     public static class QueryReimbursementOrderResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>10.00</p>
-         */
         @NameInMap("company_amount")
         public String companyAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20.00</p>
-         */
         @NameInMap("company_pay_amount")
         public String companyPayAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>dinga809ed71b9201f35</p>
-         */
         @NameInMap("corp_id")
         public String corpId;
 
@@ -592,17 +539,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("expenses_cover_invoice_title")
         public String expensesCoverInvoiceTitle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-05-15T22:27Z</p>
-         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-07-20T10:40Z</p>
-         */
         @NameInMap("gmt_modified")
         public String gmtModified;
 
@@ -618,10 +557,6 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("payment_infos")
         public java.util.List<QueryReimbursementOrderResponseBodyModulePaymentInfos> paymentInfos;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10.00</p>
-         */
         @NameInMap("personal_amount")
         public String personalAmount;
 
@@ -637,10 +572,6 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("reason")
         public String reason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>RT203956</p>
-         */
         @NameInMap("reimbursement_no")
         public String reimbursementNo;
 
@@ -653,10 +584,6 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("travel_third_apply_id")
         public String travelThirdApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>userId</p>
-         */
         @NameInMap("user_id")
         public String userId;
 

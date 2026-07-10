@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelBillSettlementQueryRequest extends TeaModel {
+    @NameInMap("apply_id")
+    public String applyId;
+
     @NameInMap("bill_batch")
     public String billBatch;
 
@@ -18,33 +21,19 @@ public class HotelBillSettlementQueryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("page_no")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2021-10-02</p>
-     */
     @NameInMap("period_end")
     public String periodEnd;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2021-10-01</p>
-     */
     @NameInMap("period_start")
     public String periodStart;
 
@@ -57,6 +46,14 @@ public class HotelBillSettlementQueryRequest extends TeaModel {
     public static HotelBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         HotelBillSettlementQueryRequest self = new HotelBillSettlementQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public HotelBillSettlementQueryRequest setApplyId(String applyId) {
+        this.applyId = applyId;
+        return this;
+    }
+    public String getApplyId() {
+        return this.applyId;
     }
 
     public HotelBillSettlementQueryRequest setBillBatch(String billBatch) {

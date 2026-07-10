@@ -6,17 +6,10 @@ import com.aliyun.tea.*;
 public class IntlFlightReShopConsultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1003038202430742196</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>JP2024072600000006</p>
-     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

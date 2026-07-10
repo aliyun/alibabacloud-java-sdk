@@ -7,10 +7,6 @@ public class MonthBillGetRequest extends TeaModel {
     @NameInMap("bill_batch")
     public String billBatch;
 
-    /**
-     * <strong>example:</strong>
-     * <p>202207</p>
-     */
     @NameInMap("bill_month")
     public String billMonth;
 

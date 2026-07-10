@@ -7,10 +7,6 @@ public class QueryCorpDetailInfoRequest extends TeaModel {
     @NameInMap("account_id")
     public String accountId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>btripxxxxxx</p>
-     */
     @NameInMap("target_corp_id")
     public String targetCorpId;
 

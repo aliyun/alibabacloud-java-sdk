@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelBillSettlementQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,24 +13,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public HotelBillSettlementQueryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -98,10 +82,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("agreement_promotion_fee")
         public Double agreementPromotionFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>234432432</p>
-         */
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
@@ -117,16 +97,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_dep_city_name")
         public String applyDepCityName;
 
-        /**
-         * <p>审批扩展自定义字段</p>
-         */
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
-        /**
-         * <strong>example:</strong>
-         * <p>103208648</p>
-         */
         @NameInMap("apply_id")
         public String applyId;
 
@@ -145,10 +118,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("base_location")
         public String baseLocation;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-07-20T10:40Z</p>
-         */
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
@@ -164,10 +133,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("book_reason")
         public String bookReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-12 23:58:48</p>
-         */
         @NameInMap("book_time")
         public String bookTime;
 
@@ -186,6 +151,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("brand_name")
         public String brandName;
 
+        @NameInMap("budget_number")
+        public String budgetNumber;
+
+        @NameInMap("business_reason")
+        public String businessReason;
+
         @NameInMap("business_trip_result")
         public String businessTripResult;
 
@@ -195,10 +166,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cancel_or_modify_scene")
         public String cancelOrModifyScene;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("capital_direction")
         public String capitalDirection;
 
@@ -208,27 +175,15 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("category_desc")
         public String categoryDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-14 00:00:00</p>
-         */
         @NameInMap("check_in_date")
         public String checkInDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-16 00:00:00</p>
-         */
         @NameInMap("checkout_date")
         public String checkoutDate;
 
         @NameInMap("city")
         public String city;
 
-        /**
-         * <strong>example:</strong>
-         * <p>110100</p>
-         */
         @NameInMap("city_code")
         public String cityCode;
 
@@ -238,32 +193,23 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("city_county_code")
         public String cityCountyCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("corp_refund_fee")
         public Double corpRefundFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("corp_total_fee")
         public Double corpTotalFee;
 
         @NameInMap("cost_center")
         public String costCenter;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8b7f3cd-24324-097</p>
-         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
         @NameInMap("cost_department")
         public String costDepartment;
+
+        @NameInMap("custom_apply_id")
+        public String customApplyId;
 
         @NameInMap("custom_content")
         public String customContent;
@@ -280,20 +226,15 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("exceed_reason")
         public String exceedReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20101</p>
-         */
+        @NameInMap("external_person_type")
+        public String externalPersonType;
+
         @NameInMap("fee_type")
         public String feeType;
 
         @NameInMap("fee_type_desc")
         public String feeTypeDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("fees")
         public Double fees;
 
@@ -303,20 +244,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("foreigners_tag")
         public String foreignersTag;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12</p>
-         */
         @NameInMap("fu_point_fee")
         public Double fuPointFee;
 
         @NameInMap("hotel_name")
         public String hotelName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5038018</p>
-         */
         @NameInMap("index")
         public String index;
 
@@ -350,27 +283,15 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("mapping_company_code")
         public String mappingCompanyCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("nights")
         public Integer nights;
 
         @NameInMap("no_advance_booking_reason")
         public String noAdvanceBookingReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>223423423432422</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1088.96</p>
-         */
         @NameInMap("order_price")
         public Double orderPrice;
 
@@ -380,10 +301,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("original_reserve_rule")
         public String originalReserveRule;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4234324</p>
-         */
         @NameInMap("over_apply_id")
         public String overApplyId;
 
@@ -393,17 +310,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("payment_department_name")
         public String paymentDepartmentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>34</p>
-         */
         @NameInMap("person_refund_fee")
         public Double personRefundFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>88.96</p>
-         */
         @NameInMap("person_settle_price")
         public Double personSettlePrice;
 
@@ -413,30 +322,18 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("position_level")
         public String positionLevel;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5038018</p>
-         */
         @NameInMap("primary_id")
         public Long primaryId;
 
         @NameInMap("processor_oa_code")
         public String processorOaCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>223423432</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_name")
         public String projectName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>113.02</p>
-         */
         @NameInMap("promotion_fee")
         public Double promotionFee;
 
@@ -452,17 +349,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("room_no")
         public String roomNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("room_number")
         public Integer roomNumber;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1201.98</p>
-         */
         @NameInMap("room_price")
         public Double roomPrice;
 
@@ -475,41 +364,21 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("scene_name")
         public String sceneName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("service_fee")
         public Double serviceFee;
 
         @NameInMap("settle_type_desc")
         public String settleTypeDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("settlement_fee")
         public Double settlementFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5.68</p>
-         */
         @NameInMap("settlement_grant_fee")
         public Double settlementGrantFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-12 23:58:56</p>
-         */
         @NameInMap("settlement_time")
         public String settlementTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4</p>
-         */
         @NameInMap("settlement_type")
         public String settlementType;
 
@@ -519,32 +388,18 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("star")
         public String star;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("status")
         public Integer status;
 
         @NameInMap("status_desc")
         public String statusDesc;
 
-        /**
-         * <p>税率</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6%</p>
-         */
         @NameInMap("tax_rate")
         public String taxRate;
 
         @NameInMap("third_itinerary_id")
         public String thirdItineraryId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("total_nights")
         public Integer totalNights;
 
@@ -557,10 +412,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_id")
         public String travelerId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>326246</p>
-         */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
@@ -576,10 +427,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("unbooked_lowest_price_reason")
         public String unbookedLowestPriceReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>11</p>
-         */
         @NameInMap("voucher_type")
         public Integer voucherType;
 
@@ -791,6 +638,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.brandName;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBudgetNumber(String budgetNumber) {
+            this.budgetNumber = budgetNumber;
+            return this;
+        }
+        public String getBudgetNumber() {
+            return this.budgetNumber;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBusinessReason(String businessReason) {
+            this.businessReason = businessReason;
+            return this;
+        }
+        public String getBusinessReason() {
+            return this.businessReason;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setBusinessTripResult(String businessTripResult) {
             this.businessTripResult = businessTripResult;
             return this;
@@ -927,6 +790,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.costDepartment;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCustomApplyId(String customApplyId) {
+            this.customApplyId = customApplyId;
+            return this;
+        }
+        public String getCustomApplyId() {
+            return this.customApplyId;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setCustomContent(String customContent) {
             this.customContent = customContent;
             return this;
@@ -965,6 +836,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getExceedReason() {
             return this.exceedReason;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setExternalPersonType(String externalPersonType) {
+            this.externalPersonType = externalPersonType;
+            return this;
+        }
+        public String getExternalPersonType() {
+            return this.externalPersonType;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setFeeType(String feeType) {
@@ -1514,10 +1393,6 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class HotelBillSettlementQueryResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("category")
         public Integer category;
 
@@ -1527,27 +1402,15 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("data_list")
         public java.util.List<HotelBillSettlementQueryResponseBodyModuleDataList> dataList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-14</p>
-         */
         @NameInMap("period_end")
         public String periodEnd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2021-10-13</p>
-         */
         @NameInMap("period_start")
         public String periodStart;
 
         @NameInMap("scroll_id")
         public String scrollId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1402</p>
-         */
         @NameInMap("total_num")
         public Long totalNum;
 

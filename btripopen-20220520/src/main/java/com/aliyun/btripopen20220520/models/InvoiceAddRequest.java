@@ -4,45 +4,26 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceAddRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>xxx</p>
-     */
     @NameInMap("address")
     public String address;
 
     @NameInMap("bank_name")
     public String bankName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123456</p>
-     */
     @NameInMap("bank_no")
     public String bankNo;
 
     @NameInMap("mail_third_part_id")
     public String mailThirdPartId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12345</p>
-     */
     @NameInMap("tax_no")
     public String taxNo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>123</p>
-     */
     @NameInMap("tel")
     public String tel;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>340049</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;
@@ -55,9 +36,6 @@ public class InvoiceAddRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("type")
     public Integer type;

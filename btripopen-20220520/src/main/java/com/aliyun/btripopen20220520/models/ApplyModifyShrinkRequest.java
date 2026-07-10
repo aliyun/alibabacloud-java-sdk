@@ -4,17 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ApplyModifyShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>4000</p>
-     */
     @NameInMap("budget")
     public Long budget;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("budget_merge")
     public Integer budgetMerge;
 
@@ -27,22 +19,12 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("default_standard")
     public String defaultStandardShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>001</p>
-     */
     @NameInMap("depart_id")
     public String departId;
 
     @NameInMap("depart_name")
     public String departName;
 
-    /**
-     * <p>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;cost_center&quot;:&quot;成本中心&quot;}</p>
-     */
     @NameInMap("extend_field")
     public String extendField;
 
@@ -52,17 +34,9 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("external_traveler_standard")
     public String externalTravelerStandardShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("flight_budget")
     public Long flightBudget;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("hotel_budget")
     public Long hotelBudget;
 
@@ -75,27 +49,15 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("intl_hotel_budget")
     public Long intlHotelBudget;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("itinerary_list")
     public String itineraryListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("itinerary_rule")
     public Integer itineraryRule;
 
     @NameInMap("itinerary_set_list")
     public String itinerarySetListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
 
@@ -108,52 +70,27 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("payment_department_name")
     public String paymentDepartmentName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("status")
     public Integer status;
 
-    /**
-     * <p>子企业Id</p>
-     * 
-     * <strong>example:</strong>
-     * <p>btrip123</p>
-     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0001A1100000007EX08O</p>
      */
     @NameInMap("thirdpart_apply_id")
     public String thirdpartApplyId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>202201413141</p>
-     */
     @NameInMap("thirdpart_business_id")
     public String thirdpartBusinessId;
 
     @NameInMap("thirdpart_depart_id")
     public String thirdpartDepartId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("together_book_rule")
     public Integer togetherBookRule;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("train_budget")
     public Long trainBudget;
 
@@ -169,10 +106,6 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("trip_cause")
     public String tripCause;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("trip_day")
     public Integer tripDay;
 
@@ -182,18 +115,11 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("trip_title")
     public String tripTitle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>union51415</p>
-     */
     @NameInMap("union_no")
     public String unionNo;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>thirdpart12138</p>
      */
     @NameInMap("user_id")
     public String userId;
@@ -201,10 +127,6 @@ public class ApplyModifyShrinkRequest extends TeaModel {
     @NameInMap("user_name")
     public String userName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1000</p>
-     */
     @NameInMap("vehicle_budget")
     public Long vehicleBudget;
 

@@ -24,10 +24,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
@@ -821,10 +817,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOrderDetailResponseBodyModuleJourneyList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
@@ -834,10 +826,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("arr_time")
         public String arrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>SHA</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
@@ -853,17 +841,9 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("flight_segment_infos")
         public java.util.List<IntlFlightOrderDetailResponseBodyModuleJourneyListFlightSegmentInfos> flightSegmentInfos;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("transfer_time")
         public Integer transferTime;
 
@@ -961,10 +941,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("offer_baggage_info_map")
         public java.util.Map<String, java.util.List<ModuleOrderItemListBaggageRuleOfferBaggageInfoMapValue>> offerBaggageInfoMap;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("structured_baggage")
         public Boolean structuredBaggage;
 
@@ -1007,24 +983,12 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("passenger_type")
         public Integer passengerType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>21300</p>
-         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>19300</p>
-         */
         @NameInMap("tax")
         public Integer tax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2000</p>
-         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
@@ -1068,17 +1032,9 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOrderDetailResponseBodyModuleOrderItemListRefundChangeRule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("cancel_fee_ind")
         public Boolean cancelFeeInd;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("change_fee_ind")
         public Boolean changeFeeInd;
 
@@ -1094,10 +1050,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("refund_rule_desc")
         public String refundRuleDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("structured_refund")
         public Boolean structuredRefund;
 
@@ -1224,34 +1176,18 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("full_name")
         public String fullName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("gender")
         public Integer gender;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1001101</p>
-         */
         @NameInMap("job_no")
         public String jobNo;
 
         @NameInMap("nationality")
         public String nationality;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
         @NameInMap("nationality_code")
         public String nationalityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8432002</p>
-         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
@@ -1262,17 +1198,9 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("type")
         public Integer type;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12292812036903456</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -1584,10 +1512,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("close_reason")
         public String closeReason;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1709708165000</p>
-         */
         @NameInMap("close_time")
         public String closeTime;
 
@@ -1597,10 +1521,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("journey_list")
         public java.util.List<IntlFlightOrderDetailResponseBodyModuleJourneyList> journeyList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1012000000000000</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
@@ -1610,10 +1530,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("order_status")
         public Integer orderStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>F11374007131319304192</p>
-         */
         @NameInMap("out_order_id")
         public String outOrderId;
 
@@ -1626,34 +1542,18 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("pay_latest_time")
         public String payLatestTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("pay_status")
         public Integer payStatus;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-03-06 15:00:35</p>
-         */
         @NameInMap("pay_time")
         public String payTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>8</p>
-         */
         @NameInMap("pay_type")
         public Integer payType;
 
         @NameInMap("success_time")
         public String successTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>21300</p>
-         */
         @NameInMap("total_price")
         public Long totalPrice;
 
@@ -1663,10 +1563,6 @@ public class IntlFlightOrderDetailResponseBody extends TeaModel {
         @NameInMap("total_ticket_price")
         public Long totalTicketPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("trip_type")
         public Integer tripType;
 

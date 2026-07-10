@@ -4,31 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderChangeDetailRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>123455</p>
-     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>21351235134</p>
-     */
     @NameInMap("change_order_id")
     public String changeOrderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>dis123</p>
-     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1402002197440511306</p>
-     */
     @NameInMap("sale_order_id")
     public String saleOrderId;
 

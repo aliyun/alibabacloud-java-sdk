@@ -4,54 +4,32 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ExternalUserAddShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>2000-01-02</p>
-     */
     @NameInMap("birthday")
     public String birthday;
 
     @NameInMap("cert_request_list")
     public String certRequestListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p><a href="mailto:zhangsan@alibaba-inc.com">zhangsan@alibaba-inc.com</a></p>
-     */
     @NameInMap("email")
     public String email;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>0012</p>
      */
     @NameInMap("external_user_id")
     public String externalUserId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>13438009765</p>
-     */
     @NameInMap("phone")
     public String phone;
 
     @NameInMap("real_name")
     public String realName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>zhang/san</p>
-     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2</p>
      */
     @NameInMap("user_type")
     public Integer userType;

@@ -4,27 +4,15 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOtaSearchRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>10023</p>
-     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     @NameInMap("buyer_name")
     public String buyerName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>open12igetbis4o07v10B1TlOWcM00</p>
-     */
     @NameInMap("isv_name")
     public String isvName;
 
@@ -39,9 +27,6 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;
@@ -108,60 +93,36 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     }
 
     public static class IntlFlightOtaSearchRequestSearchJourneysSelectedFlights extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NNG</p>
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>KOW</p>
-         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CTU</p>
          */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-08-15 12:00:00</p>
          */
         @NameInMap("flight_time")
         public String flightTime;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>KA5809</p>
          */
         @NameInMap("market_flight_no")
         public String marketFlightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CX601</p>
-         */
         @NameInMap("operate_flight_no")
         public String operateFlightNo;
 
@@ -231,27 +192,18 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     public static class IntlFlightOtaSearchRequestSearchJourneys extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ZQZ</p>
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>HGH</p>
          */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-08-15</p>
          */
         @NameInMap("dep_date")
         public String depDate;
@@ -304,36 +256,24 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     public static class IntlFlightOtaSearchRequestSearchPassengerList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13412341234</p>
          */
         @NameInMap("cert_no")
         public String certNo;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         @NameInMap("cert_type")
         public Integer certType;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ZHANGSAN</p>
          */
         @NameInMap("full_name")
         public String fullName;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         @NameInMap("type")
         public Integer type;

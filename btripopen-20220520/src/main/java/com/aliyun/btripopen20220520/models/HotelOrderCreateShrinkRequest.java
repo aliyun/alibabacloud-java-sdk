@@ -4,37 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderCreateShrinkRequest extends TeaModel {
+    @NameInMap("arrival_time")
+    public String arrivalTime;
+
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123122</p>
      */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2020-10-20</p>
      */
     @NameInMap("check_in")
     public String checkIn;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2020-10-20</p>
      */
     @NameInMap("check_out")
     public String checkOut;
 
-    /**
-     * <strong>example:</strong>
-     * <p>demo</p>
-     */
     @NameInMap("contract_email")
     public String contractEmail;
 
@@ -43,27 +33,18 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>19281772123</p>
      */
     @NameInMap("contract_phone")
     public String contractPhone;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("corp_pay_price")
     public Long corpPayPrice;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
@@ -76,21 +57,18 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>671570615157</p>
      */
     @NameInMap("item_id")
     public Long itemId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>fb5e1abf33924b6c912bd6d80deec0eb-1</p>
      */
     @NameInMap("itinerary_no")
     public String itineraryNo;
+
+    @NameInMap("leave_time")
+    public String leaveTime;
 
     @NameInMap("member_info")
     public String memberInfoShrink;
@@ -103,9 +81,6 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1000</p>
      */
     @NameInMap("person_pay_price")
     public Long personPayPrice;
@@ -115,63 +90,45 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1399417428510</p>
      */
     @NameInMap("rate_plan_id")
     public Long ratePlanId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>187211</p>
      */
     @NameInMap("room_id")
     public Long roomId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("room_num")
     public Integer roomNum;
 
+    @NameInMap("rp_type")
+    public Integer rpType;
+
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2088441675613762</p>
      */
     @NameInMap("seller_id")
     public Long sellerId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2198781</p>
      */
     @NameInMap("shid")
     public Long shid;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("total_order_price")
     public Long totalOrderPrice;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>nonUltron_1673575241156_d91ea8ad16735752359161037bf6cf_c54d3768312a4b249b719f126377bf82</p>
      */
     @NameInMap("validate_res_key")
     public String validateResKey;
@@ -179,6 +136,14 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     public static HotelOrderCreateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         HotelOrderCreateShrinkRequest self = new HotelOrderCreateShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public HotelOrderCreateShrinkRequest setArrivalTime(String arrivalTime) {
+        this.arrivalTime = arrivalTime;
+        return this;
+    }
+    public String getArrivalTime() {
+        return this.arrivalTime;
     }
 
     public HotelOrderCreateShrinkRequest setBtripUserId(String btripUserId) {
@@ -277,6 +242,14 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
         return this.itineraryNo;
     }
 
+    public HotelOrderCreateShrinkRequest setLeaveTime(String leaveTime) {
+        this.leaveTime = leaveTime;
+        return this;
+    }
+    public String getLeaveTime() {
+        return this.leaveTime;
+    }
+
     public HotelOrderCreateShrinkRequest setMemberInfoShrink(String memberInfoShrink) {
         this.memberInfoShrink = memberInfoShrink;
         return this;
@@ -331,6 +304,14 @@ public class HotelOrderCreateShrinkRequest extends TeaModel {
     }
     public Integer getRoomNum() {
         return this.roomNum;
+    }
+
+    public HotelOrderCreateShrinkRequest setRpType(Integer rpType) {
+        this.rpType = rpType;
+        return this;
+    }
+    public Integer getRpType() {
+        return this.rpType;
     }
 
     public HotelOrderCreateShrinkRequest setSellerId(Long sellerId) {

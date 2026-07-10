@@ -96,17 +96,9 @@ public class IntlFlightReShopPayResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopPayResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>100000</p>
-         */
         @NameInMap("actual_pay_price")
         public Long actualPayPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("pay_status")
         public Integer payStatus;
 

@@ -21,18 +21,12 @@ public class IsvRuleSaveShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("status")
     public Integer status;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123</p>
      */
     @NameInMap("user_id")
     public String userId;

@@ -4,33 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelIndexInfoRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>330000</p>
-     */
     @NameInMap("city_code")
     public String cityCode;
 
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("hotel_status")
     public Integer hotelStatus;
 
+    @NameInMap("internation")
+    public Boolean internation;
+
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1038882</p>
-     */
     @NameInMap("page_token")
     public String pageToken;
 
@@ -53,6 +41,14 @@ public class HotelIndexInfoRequest extends TeaModel {
     }
     public Integer getHotelStatus() {
         return this.hotelStatus;
+    }
+
+    public HotelIndexInfoRequest setInternation(Boolean internation) {
+        this.internation = internation;
+        return this;
+    }
+    public Boolean getInternation() {
+        return this.internation;
     }
 
     public HotelIndexInfoRequest setPageSize(Integer pageSize) {

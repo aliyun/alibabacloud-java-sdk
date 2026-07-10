@@ -13,9 +13,6 @@ public class BaseCityInfoSearchRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
-     * <strong>example:</strong>
-     * <p>0</p>
-     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */

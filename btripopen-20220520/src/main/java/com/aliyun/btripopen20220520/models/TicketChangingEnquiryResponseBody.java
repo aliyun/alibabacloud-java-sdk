@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingEnquiryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,24 +13,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     @NameInMap("module")
     public TicketChangingEnquiryResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -92,10 +76,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListAirlineInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>CA</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -137,30 +117,18 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListArrAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
         @NameInMap("airport_name")
         public String airportName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("city_name")
         public String cityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T4</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -215,17 +183,9 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("desc")
         public String desc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("image")
         public String image;
 
@@ -272,31 +232,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png">https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png</a></p>
-         */
         @NameInMap("image")
         public String image;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("largest")
         public String largest;
 
-        /**
-         * <strong>example:</strong>
-         * <p>40</p>
-         */
         @NameInMap("middle")
         public String middle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("smallest")
         public String smallest;
 
@@ -343,10 +287,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("baggage_desc")
         public java.util.List<String> baggageDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("baggage_sub_content_type")
         public Integer baggageSubContentType;
 
@@ -356,10 +296,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("imageDO")
         public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContentVisualizesImageDO imageDO;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("is_highlight")
         public Boolean isHighlight;
 
@@ -428,10 +364,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("icon")
         public String icon;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("style")
         public Integer style;
 
@@ -478,9 +410,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems extends TeaModel {
-        /**
-         * <p>attributes</p>
-         */
         @NameInMap("attributes")
         public java.util.Map<String, ?> attributes;
 
@@ -490,24 +419,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("baggage_sub_contents")
         public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItemsBaggageSubContents> baggageSubContents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADT</p>
-         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -578,20 +495,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsTips extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png">https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png</a></p>
-         */
         @NameInMap("logo")
         public String logo;
 
         @NameInMap("tips_desc")
         public String tipsDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01rJxjw61f3bXNHAmlk_!!6000000003951-2-tps-1050-675.png">https://gw.alicdn.com/imgextra/i3/O1CN01rJxjw61f3bXNHAmlk_!!6000000003951-2-tps-1050-675.png</a></p>
-         */
         @NameInMap("tips_image")
         public String tipsImage;
 
@@ -630,10 +539,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("baggage_sub_items")
         public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqBaggageDetailsBaggageSubItems> baggageSubItems;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("index")
         public Integer index;
 
@@ -646,10 +551,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -709,10 +610,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("content")
         public String content;
 
@@ -760,10 +657,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("fee_range")
         public String feeRange;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("style")
         public String style;
 
@@ -799,24 +692,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsRefundSubItems extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADT</p>
-         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -877,10 +758,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("extra_contents")
         public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqChangeDetailsExtraContents> extraContents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("index")
         public Integer index;
 
@@ -893,10 +770,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -956,10 +829,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
         @NameInMap("content")
         public String content;
 
@@ -1007,10 +876,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("fee_range")
         public String feeRange;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("style")
         public String style;
 
@@ -1046,24 +911,12 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsRefundSubItems extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>demo</p>
-         */
         @NameInMap("content")
         public String content;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("is_struct")
         public Boolean isStruct;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ADT</p>
-         */
         @NameInMap("ptc")
         public String ptc;
 
@@ -1124,10 +977,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("extra_contents")
         public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRqRefundDetailsExtraContents> extraContents;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("index")
         public Integer index;
 
@@ -1140,10 +989,6 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("title")
         public String title;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("type")
         public Integer type;
 
@@ -1244,31 +1089,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListModifyPriceList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("upgrade_fee")
         public Integer upgradeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("upgrade_price")
         public Integer upgradePrice;
 
@@ -1312,54 +1141,30 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>G</p>
-         */
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
         @NameInMap("cabin_desc")
         public String cabinDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>80</p>
-         */
         @NameInMap("cabin_discount")
         public Integer cabinDiscount;
 
         @NameInMap("change_ota_item_rule_rq")
         public TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListChangeOtaItemRuleRq changeOtaItemRuleRq;
 
-        /**
-         * <strong>example:</strong>
-         * <p>G</p>
-         */
         @NameInMap("child_cabin")
         public String childCabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("left_num")
         public String leftNum;
 
         @NameInMap("modify_price_list")
         public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinListModifyPriceList> modifyPriceList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>360379a11ee84e9aa011baa41b758fe6</p>
-         */
         @NameInMap("ota_itemid")
         public String otaItemid;
 
@@ -1443,30 +1248,18 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListDepAirportInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>PEK</p>
-         */
         @NameInMap("airport_code")
         public String airportCode;
 
         @NameInMap("airport_name")
         public String airportName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("city_name")
         public String cityName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T3</p>
-         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -1518,31 +1311,15 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
     }
 
     public static class TicketChangingEnquiryResponseBodyModuleFlightInfoListLowestCabinPrice extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("upgrade_fee")
         public Integer upgradeFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("upgrade_price")
         public Integer upgradePrice;
 
@@ -1595,96 +1372,48 @@ public class TicketChangingEnquiryResponseBody extends TeaModel {
         @NameInMap("cabin_list")
         public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListCabinList> cabinList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA1704</p>
-         */
         @NameInMap("carrier_airline")
         public String carrierAirline;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA1704</p>
-         */
         @NameInMap("carrier_no")
         public String carrierNo;
 
         @NameInMap("dep_airport_info")
         public TicketChangingEnquiryResponseBodyModuleFlightInfoListDepAirportInfo depAirportInfo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA1351</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
         @NameInMap("is_share")
         public Boolean isShare;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("lowest_cabin")
         public String lowestCabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("lowest_cabin_class")
         public String lowestCabinClass;
 
         @NameInMap("lowest_cabin_desc")
         public String lowestCabinDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("lowest_cabin_num")
         public String lowestCabinNum;
 
         @NameInMap("lowest_cabin_price")
         public java.util.List<TicketChangingEnquiryResponseBodyModuleFlightInfoListLowestCabinPrice> lowestCabinPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2000-00-00 00:00:00</p>
-         */
         @NameInMap("modify_flight_arr_time")
         public String modifyFlightArrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2000-00-00 00:00:00</p>
-         */
         @NameInMap("modify_flight_dep_date")
         public String modifyFlightDepDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2000-00-00 00:00:00</p>
-         */
         @NameInMap("modify_flight_dep_time")
         public String modifyFlightDepTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>d1fb9e0a794f45e1b762d36ff1d17zz</p>
-         */
         @NameInMap("session_id")
         public String sessionId;
 

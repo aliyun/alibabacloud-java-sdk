@@ -4,6 +4,9 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
+    @NameInMap("apply_id")
+    public String applyId;
+
     @NameInMap("bill_batch")
     public String billBatch;
 
@@ -13,10 +16,6 @@ public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_record_time_start")
     public String billRecordTimeStart;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cooperator_alibtrip</p>
-     */
     @NameInMap("cooperator_id")
     public String cooperatorId;
 
@@ -25,33 +24,19 @@ public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("page_no")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>100</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2021-10-02</p>
-     */
     @NameInMap("period_end")
     public String periodEnd;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2021-10-01</p>
-     */
     @NameInMap("period_start")
     public String periodStart;
 
@@ -64,6 +49,14 @@ public class CooperatorHotelBillSettlementQueryRequest extends TeaModel {
     public static CooperatorHotelBillSettlementQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         CooperatorHotelBillSettlementQueryRequest self = new CooperatorHotelBillSettlementQueryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CooperatorHotelBillSettlementQueryRequest setApplyId(String applyId) {
+        this.applyId = applyId;
+        return this;
+    }
+    public String getApplyId() {
+        return this.applyId;
     }
 
     public CooperatorHotelBillSettlementQueryRequest setBillBatch(String billBatch) {

@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IFlightOrderListQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>SUCCESS</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -20,24 +16,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     @NameInMap("pageInfo")
     public IFlightOrderListQueryResponseBodyPageInfo pageInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>C61ECFF6-<strong><strong>-</strong></strong>-****-D77369043A5F</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>21041ce********056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -103,10 +87,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightModifyOrderListFlightModifySegmentList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>MU</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -116,41 +96,21 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_apt")
         public String arrApt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("arr_apt_code")
         public String arrAptCode;
 
         @NameInMap("arr_city")
         public String arrCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T2</p>
-         */
         @NameInMap("arr_terminal")
         public String arrTerminal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-28 14:26:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA</p>
-         */
         @NameInMap("carrier_airline_code")
         public String carrierAirlineCode;
 
@@ -160,89 +120,45 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("dep_apt")
         public String depApt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_apt_code")
         public String depAptCode;
 
         @NameInMap("dep_city")
         public String depCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("dep_terminal")
         public String depTerminal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-25 12:25:00</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MU7384</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
         @NameInMap("share")
         public Boolean share;
 
-        /**
-         * <strong>example:</strong>
-         * <p>KIX</p>
-         */
         @NameInMap("stop_apt_code")
         public String stopAptCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-26 11:25:00</p>
-         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
         @NameInMap("stop_city")
         public String stopCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>OSA</p>
-         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-27 11:26:00</p>
-         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
@@ -454,24 +370,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightModifyOrderListFlightOrderModifyTicketListCabinClass extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>V</p>
-         */
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MU5236</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -510,24 +414,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("cabin_class")
         public java.util.List<IFlightOrderListQueryResponseBodyModuleFlightModifyOrderListFlightOrderModifyTicketListCabinClass> cabinClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MU5236</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>781-6605714721</p>
-         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>01332</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -580,10 +472,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("tax_gap")
         public Long taxGap;
 
-        /**
-         * <strong>example:</strong>
-         * <p>01332</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -636,10 +524,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("flight_order_modify_ticket_list")
         public java.util.List<IFlightOrderListQueryResponseBodyModuleFlightModifyOrderListFlightOrderModifyTicketList> flightOrderModifyTicketList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1005200138736000</p>
-         */
         @NameInMap("modify_apply_id")
         public Long modifyApplyId;
 
@@ -652,10 +536,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("person_pay_price")
         public Integer personPayPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1005200138736028</p>
-         */
         @NameInMap("relate_modify_apply_id")
         public Long relateModifyApplyId;
 
@@ -753,24 +633,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightRefundOrderListFlightOrderRefundTicketListCabinClass extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>V</p>
-         */
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BK3162</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -809,24 +677,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("cabin_class")
         public java.util.List<IFlightOrderListQueryResponseBodyModuleFlightRefundOrderListFlightOrderRefundTicketListCabinClass> cabinClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BK3162</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>999-6605133193</p>
-         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>01332</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -870,10 +726,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightRefundOrderListFlightRefundSegmentList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>MU</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -883,41 +735,21 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_apt")
         public String arrApt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_apt_code")
         public String arrAptCode;
 
         @NameInMap("arr_city")
         public String arrCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("arr_terminal")
         public String arrTerminal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-28 14:26:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA</p>
-         */
         @NameInMap("carrier_airline_code")
         public String carrierAirlineCode;
 
@@ -927,89 +759,45 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("dep_apt")
         public String depApt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_apt_code")
         public String depAptCode;
 
         @NameInMap("dep_city")
         public String depCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("dep_terminal")
         public String depTerminal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-25 11:24:00</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MU5334</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
         @NameInMap("share")
         public Boolean share;
 
-        /**
-         * <strong>example:</strong>
-         * <p>KIX</p>
-         */
         @NameInMap("stop_apt_code")
         public String stopAptCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-26 11:25:00</p>
-         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
         @NameInMap("stop_city")
         public String stopCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>OSA</p>
-         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-27 11:26:00</p>
-         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
@@ -1245,10 +1033,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("refund_tax_hand_fee")
         public Long refundTaxHandFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>01332</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -1353,10 +1137,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("refund_Amount")
         public Integer refundAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1006200138737069</p>
-         */
         @NameInMap("refund_apply_id")
         public Long refundApplyId;
 
@@ -1454,10 +1234,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightSaleOrderBookerInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>01323</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -1488,10 +1264,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightSaleOrderFlightOrderInsureList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>17060573244016310</p>
-         */
         @NameInMap("ins_order_id")
         public String insOrderId;
 
@@ -1501,10 +1273,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("ins_total_price")
         public Integer insTotalPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("trade_action")
         public String tradeAction;
 
@@ -1548,24 +1316,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightSaleOrderFlightOrderTicketListCabinClass extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>V</p>
-         */
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MF8765</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
@@ -1607,20 +1363,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("tax")
         public Integer tax;
 
-        /**
-         * <strong>example:</strong>
-         * <p>018-6605785754</p>
-         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>01323</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -1672,10 +1420,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightSaleOrderFlightSegmentList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>MU</p>
-         */
         @NameInMap("airline_code")
         public String airlineCode;
 
@@ -1685,41 +1429,21 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_apt")
         public String arrApt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_apt_code")
         public String arrAptCode;
 
         @NameInMap("arr_city")
         public String arrCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HKG</p>
-         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T2</p>
-         */
         @NameInMap("arr_terminal")
         public String arrTerminal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-25 15:26:00</p>
-         */
         @NameInMap("arr_time")
         public String arrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CA</p>
-         */
         @NameInMap("carrier_airline_code")
         public String carrierAirlineCode;
 
@@ -1729,89 +1453,45 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("dep_apt")
         public String depApt;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_apt_code")
         public String depAptCode;
 
         @NameInMap("dep_city")
         public String depCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T1</p>
-         */
         @NameInMap("dep_terminal")
         public String depTerminal;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-24 15:26:00</p>
-         */
         @NameInMap("dep_time")
         public String depTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>MU5925</p>
-         */
         @NameInMap("flight_no")
         public String flightNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
         @NameInMap("share")
         public Boolean share;
 
-        /**
-         * <strong>example:</strong>
-         * <p>KIX</p>
-         */
         @NameInMap("stop_apt_code")
         public String stopAptCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-26 11:25:00</p>
-         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
         @NameInMap("stop_city")
         public String stopCity;
 
-        /**
-         * <strong>example:</strong>
-         * <p>OSA</p>
-         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2024-10-27 11:26:00</p>
-         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
@@ -2023,64 +1703,36 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightSaleOrderPassengerList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>0111</p>
-         */
         @NameInMap("cost_center_id")
         public String costCenterId;
 
         @NameInMap("cost_center_name")
         public String costCenterName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1002</p>
-         */
         @NameInMap("department_id")
         public String departmentId;
 
         @NameInMap("department_name")
         public String departmentName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>01112</p>
-         */
         @NameInMap("invoice_id")
         public String invoiceId;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100757</p>
-         */
         @NameInMap("job_no")
         public String jobNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1111</p>
-         */
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_title")
         public String projectTitle;
 
-        /**
-         * <strong>example:</strong>
-         * <p>01323</p>
-         */
         @NameInMap("user_id")
         public String userId;
 
@@ -2191,17 +1843,9 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
     }
 
     public static class IFlightOrderListQueryResponseBodyModuleFlightSaleOrder extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>82587500</p>
-         */
         @NameInMap("apply_id")
         public Long applyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("book_type")
         public Integer bookType;
 
@@ -2211,10 +1855,6 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("corp_pay_price")
         public Long corpPayPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>123</p>
-         */
         @NameInMap("exceed_apply_id")
         public String exceedApplyId;
 
@@ -2227,57 +1867,36 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("flight_segment_list")
         public java.util.List<IFlightOrderListQueryResponseBodyModuleFlightSaleOrderFlightSegmentList> flightSegmentList;
 
+        @NameInMap("itinerary_id")
+        public String itineraryId;
+
         @NameInMap("mix_pay")
         public Boolean mixPay;
 
-        /**
-         * <strong>example:</strong>
-         * <p>yyyy-MM-dd HH:mm:ss</p>
-         */
         @NameInMap("order_create_time")
         public String orderCreateTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1003038200110661039</p>
-         */
         @NameInMap("order_id")
         public String orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>yyyy-MM-dd HH:mm:ss</p>
-         */
         @NameInMap("order_pay_time")
         public String orderPayTime;
 
         @NameInMap("order_reserve_price")
         public Long orderReservePrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>5</p>
-         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
         @NameInMap("order_status_desc")
         public String orderStatusDesc;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("order_type")
         public Integer orderType;
 
         @NameInMap("passenger_list")
         public java.util.List<IFlightOrderListQueryResponseBodyModuleFlightSaleOrderPassengerList> passengerList;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("pay_type")
         public Integer payType;
 
@@ -2287,17 +1906,12 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("service_fee")
         public Long serviceFee;
 
-        /**
-         * <strong>example:</strong>
-         * <p>business_trip_api_000001</p>
-         */
         @NameInMap("third_part_apply_id")
         public String thirdPartApplyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
+        @NameInMap("thirdpart_itinerary_id")
+        public String thirdpartItineraryId;
+
         @NameInMap("trip_type")
         public Integer tripType;
 
@@ -2368,6 +1982,14 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         }
         public java.util.List<IFlightOrderListQueryResponseBodyModuleFlightSaleOrderFlightSegmentList> getFlightSegmentList() {
             return this.flightSegmentList;
+        }
+
+        public IFlightOrderListQueryResponseBodyModuleFlightSaleOrder setItineraryId(String itineraryId) {
+            this.itineraryId = itineraryId;
+            return this;
+        }
+        public String getItineraryId() {
+            return this.itineraryId;
         }
 
         public IFlightOrderListQueryResponseBodyModuleFlightSaleOrder setMixPay(Boolean mixPay) {
@@ -2474,6 +2096,14 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
             return this.thirdPartApplyId;
         }
 
+        public IFlightOrderListQueryResponseBodyModuleFlightSaleOrder setThirdpartItineraryId(String thirdpartItineraryId) {
+            this.thirdpartItineraryId = thirdpartItineraryId;
+            return this;
+        }
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
+        }
+
         public IFlightOrderListQueryResponseBodyModuleFlightSaleOrder setTripType(Integer tripType) {
             this.tripType = tripType;
             return this;
@@ -2529,17 +2159,9 @@ public class IFlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("number")
         public Integer number;
 
-        /**
-         * <strong>example:</strong>
-         * <p>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4ZGViODFlYmM3MYzM4</p>
-         */
         @NameInMap("scroll_id")
         public String scrollId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("total_number")
         public Integer totalNumber;
 

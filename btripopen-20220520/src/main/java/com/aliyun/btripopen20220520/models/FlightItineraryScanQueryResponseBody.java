@@ -4,10 +4,6 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightItineraryScanQueryResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("code")
     public String code;
 
@@ -17,28 +13,12 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
     @NameInMap("module")
     public FlightItineraryScanQueryResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     * 
-     * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -96,102 +76,39 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
     }
 
     public static class FlightItineraryScanQueryResponseBodyModuleItemsFlights extends TeaModel {
-        /**
-         * <p>航班至</p>
-         */
         @NameInMap("arrival_station")
         public String arrivalStation;
 
-        /**
-         * <p>座位等级</p>
-         * 
-         * <strong>example:</strong>
-         * <p>M</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
-        /**
-         * <p>承运人</p>
-         */
         @NameInMap("carrier")
         public String carrier;
 
-        /**
-         * <p>航班从</p>
-         */
         @NameInMap("departure_station")
         public String departureStation;
 
-        /**
-         * <p>日期</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2018-11-18</p>
-         */
         @NameInMap("flight_date")
         public String flightDate;
 
-        /**
-         * <p>航班号</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MU2271</p>
-         */
         @NameInMap("flight_number")
         public String flightNumber;
 
-        /**
-         * <p>时间</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18:25</p>
-         */
         @NameInMap("flight_time")
         public String flightTime;
 
-        /**
-         * <p>免费行李</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20K</p>
-         */
         @NameInMap("free_baggage_allowance")
         public String freeBaggageAllowance;
 
-        /**
-         * <p>行号</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("index")
         public String index;
 
-        /**
-         * <p>客票级别</p>
-         * 
-         * <strong>example:</strong>
-         * <p>M</p>
-         */
         @NameInMap("seat_class")
         public String seatClass;
 
-        /**
-         * <p>客票生效日期</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-01-01</p>
-         */
         @NameInMap("valid_from_date")
         public String validFromDate;
 
-        /**
-         * <p>有效截止日期</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2023-01-01</p>
-         */
         @NameInMap("valid_to_date")
         public String validToDate;
 
@@ -299,32 +216,18 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
     }
 
     public static class FlightItineraryScanQueryResponseBodyModuleItems extends TeaModel {
-        /**
-         * <p>销售单位代号</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SIA25608336893</p>
-         */
         @NameInMap("agent_code")
         public String agentCode;
 
         @NameInMap("apply_id")
         public String applyId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-12-01</p>
-         */
         @NameInMap("bill_date")
         public String billDate;
 
         @NameInMap("blue_or_red")
         public Integer blueOrRed;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("build")
         public String build;
 
@@ -334,32 +237,15 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         public String department;
 
-        /**
-         * <p>机票行程明细</p>
-         */
         @NameInMap("flights")
         public java.util.List<FlightItineraryScanQueryResponseBodyModuleItemsFlights> flights;
 
-        /**
-         * <strong>example:</strong>
-         * <p>120</p>
-         */
         @NameInMap("fuel_surcharge")
         public String fuelSurcharge;
 
-        /**
-         * <p>UK</p>
-         * 
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("id")
         public String id;
 
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
         @NameInMap("insurance")
         public String insurance;
 
@@ -369,42 +255,21 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_type")
         public Integer invoiceType;
 
-        /**
-         * <p>填开单位</p>
-         */
         @NameInMap("issue_company")
         public String issueCompany;
 
-        /**
-         * <p>填开日期</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2019-02-28</p>
-         */
         @NameInMap("issue_date")
         public String issueDate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>6666666666</p>
-         */
         @NameInMap("itinerary_num")
         public String itineraryNum;
 
         @NameInMap("ofd_oss_url")
         public String ofdOssUrl;
 
-        /**
-         * <strong>example:</strong>
-         * <p>4801105714092</p>
-         */
         @NameInMap("order_id")
         public Long orderId;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
-         */
         @NameInMap("oss_url")
         public String ossUrl;
 
@@ -420,9 +285,6 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("project")
         public String project;
 
-        /**
-         * <p>提示信息</p>
-         */
         @NameInMap("prompt_message")
         public String promptMessage;
 
@@ -435,47 +297,21 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("purchaser_type")
         public Integer purchaserType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>108.17</p>
-         */
         @NameInMap("tax_amount")
         public String taxAmount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>9%</p>
-         */
         @NameInMap("tax_rate")
         public String taxRate;
 
-        /**
-         * <strong>example:</strong>
-         * <p>784-1111111111</p>
-         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1190</p>
-         */
         @NameInMap("ticket_price")
         public String ticketPrice;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1360</p>
-         */
         @NameInMap("total_price")
         public String totalPrice;
 
-        /**
-         * <p>验证码</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9817</p>
-         */
         @NameInMap("validation_code")
         public String validationCode;
 
@@ -765,31 +601,15 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<FlightItineraryScanQueryResponseBodyModuleItems> items;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("page_no")
         public Integer pageNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("page_size")
         public Integer pageSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
         @NameInMap("total_page")
         public Integer totalPage;
 
-        /**
-         * <strong>example:</strong>
-         * <p>30</p>
-         */
         @NameInMap("total_size")
         public Integer totalSize;
 

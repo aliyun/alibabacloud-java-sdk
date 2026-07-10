@@ -12,9 +12,6 @@ public class InvoiceRuleAddShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4854821</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;

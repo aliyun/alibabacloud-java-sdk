@@ -10,10 +10,6 @@ public class ElectronicItineraryBatchApplyRequest extends TeaModel {
     @NameInMap("apply_itinerary_list")
     public java.util.List<ElectronicItineraryBatchApplyRequestApplyItineraryList> applyItineraryList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("can_reprint")
     public Boolean canReprint;
 
@@ -42,27 +38,17 @@ public class ElectronicItineraryBatchApplyRequest extends TeaModel {
         @NameInMap("purchaser_name")
         public String purchaserName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>tax3213132131</p>
-         */
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         @NameInMap("purchaser_type")
         public Integer purchaserType;
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>781-2205431917</p>
          */
         @NameInMap("ticket_no")
         public String ticketNo;

@@ -12,9 +12,6 @@ public class AddInvoiceEntityRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4854821</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;
@@ -43,9 +40,6 @@ public class AddInvoiceEntityRequest extends TeaModel {
     public static class AddInvoiceEntityRequestEntities extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>12345</p>
          */
         @NameInMap("entity_id")
         public String entityId;
@@ -58,9 +52,6 @@ public class AddInvoiceEntityRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         @NameInMap("entity_type")
         public String entityType;

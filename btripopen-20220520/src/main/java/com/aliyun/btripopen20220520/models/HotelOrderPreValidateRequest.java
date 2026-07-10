@@ -6,27 +6,18 @@ import com.aliyun.tea.*;
 public class HotelOrderPreValidateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>23141</p>
      */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2022-05-15</p>
      */
     @NameInMap("check_in")
     public String checkIn;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2022-05-15</p>
      */
     @NameInMap("check_out")
     public String checkOut;
@@ -39,17 +30,10 @@ public class HotelOrderPreValidateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>612673015638</p>
      */
     @NameInMap("item_id")
     public Long itemId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("number_of_adults_per_room")
     public Integer numberOfAdultsPerRoom;
 
@@ -61,54 +45,39 @@ public class HotelOrderPreValidateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>239872781</p>
      */
     @NameInMap("rate_plan_id")
     public Long ratePlanId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>71652158</p>
      */
     @NameInMap("room_id")
     public Long roomId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1</p>
      */
     @NameInMap("room_num")
     public Integer roomNum;
 
+    @NameInMap("rp_type")
+    public Integer rpType;
+
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1000</p>
      */
     @NameInMap("search_room_price")
     public Long searchRoomPrice;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2088441675613762</p>
      */
     @NameInMap("seller_id")
     public Long sellerId;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>52302073</p>
      */
     @NameInMap("shid")
     public Long shid;
@@ -206,6 +175,14 @@ public class HotelOrderPreValidateRequest extends TeaModel {
         return this.roomNum;
     }
 
+    public HotelOrderPreValidateRequest setRpType(Integer rpType) {
+        this.rpType = rpType;
+        return this;
+    }
+    public Integer getRpType() {
+        return this.rpType;
+    }
+
     public HotelOrderPreValidateRequest setSearchRoomPrice(Long searchRoomPrice) {
         this.searchRoomPrice = searchRoomPrice;
         return this;
@@ -231,31 +208,15 @@ public class HotelOrderPreValidateRequest extends TeaModel {
     }
 
     public static class HotelOrderPreValidateRequestDailyList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("board")
         public String board;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("price")
         public Long price;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2022-05-15</p>
-         */
         @NameInMap("rate_start_time")
         public String rateStartTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
         @NameInMap("room_count")
         public Integer roomCount;
 
@@ -299,41 +260,21 @@ public class HotelOrderPreValidateRequest extends TeaModel {
     }
 
     public static class HotelOrderPreValidateRequestOccupantInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>232871871822</p>
-         */
         @NameInMap("card_no")
         public String cardNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("card_type")
         public Integer cardType;
 
         @NameInMap("name")
         public String name;
 
-        /**
-         * <strong>example:</strong>
-         * <p>12392827121</p>
-         */
         @NameInMap("phone")
         public String phone;
 
-        /**
-         * <strong>example:</strong>
-         * <p>128918</p>
-         */
         @NameInMap("staff_no")
         public String staffNo;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("user_type")
         public Integer userType;
 

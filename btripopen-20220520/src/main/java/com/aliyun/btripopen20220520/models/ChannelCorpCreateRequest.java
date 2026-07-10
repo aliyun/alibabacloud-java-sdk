@@ -4,20 +4,23 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ChannelCorpCreateRequest extends TeaModel {
+    @NameInMap("administrator_email")
+    public String administratorEmail;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("administrator_name")
     public String administratorName;
 
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>18378889782</p>
-     */
     @NameInMap("administrator_phone")
     public String administratorPhone;
+
+    @NameInMap("base_currency")
+    public String baseCurrency;
+
+    @NameInMap("btrip_region")
+    public String btripRegion;
 
     @NameInMap("city")
     public String city;
@@ -28,21 +31,20 @@ public class ChannelCorpCreateRequest extends TeaModel {
     @NameInMap("corp_name")
     public String corpName;
 
+    @NameInMap("corp_name_en")
+    public String corpNameEn;
+
+    @NameInMap("extend_field")
+    public String extendField;
+
     @NameInMap("province")
     public String province;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("scope")
     public Integer scope;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>00001</p>
      */
     @NameInMap("third_corp_id")
     public String thirdCorpId;
@@ -53,6 +55,14 @@ public class ChannelCorpCreateRequest extends TeaModel {
     public static ChannelCorpCreateRequest build(java.util.Map<String, ?> map) throws Exception {
         ChannelCorpCreateRequest self = new ChannelCorpCreateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChannelCorpCreateRequest setAdministratorEmail(String administratorEmail) {
+        this.administratorEmail = administratorEmail;
+        return this;
+    }
+    public String getAdministratorEmail() {
+        return this.administratorEmail;
     }
 
     public ChannelCorpCreateRequest setAdministratorName(String administratorName) {
@@ -71,6 +81,22 @@ public class ChannelCorpCreateRequest extends TeaModel {
         return this.administratorPhone;
     }
 
+    public ChannelCorpCreateRequest setBaseCurrency(String baseCurrency) {
+        this.baseCurrency = baseCurrency;
+        return this;
+    }
+    public String getBaseCurrency() {
+        return this.baseCurrency;
+    }
+
+    public ChannelCorpCreateRequest setBtripRegion(String btripRegion) {
+        this.btripRegion = btripRegion;
+        return this;
+    }
+    public String getBtripRegion() {
+        return this.btripRegion;
+    }
+
     public ChannelCorpCreateRequest setCity(String city) {
         this.city = city;
         return this;
@@ -85,6 +111,22 @@ public class ChannelCorpCreateRequest extends TeaModel {
     }
     public String getCorpName() {
         return this.corpName;
+    }
+
+    public ChannelCorpCreateRequest setCorpNameEn(String corpNameEn) {
+        this.corpNameEn = corpNameEn;
+        return this;
+    }
+    public String getCorpNameEn() {
+        return this.corpNameEn;
+    }
+
+    public ChannelCorpCreateRequest setExtendField(String extendField) {
+        this.extendField = extendField;
+        return this;
+    }
+    public String getExtendField() {
+        return this.extendField;
     }
 
     public ChannelCorpCreateRequest setProvince(String province) {
