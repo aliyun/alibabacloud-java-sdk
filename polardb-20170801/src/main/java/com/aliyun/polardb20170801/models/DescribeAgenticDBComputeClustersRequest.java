@@ -12,6 +12,7 @@ public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     public String computeClusterId;
 
     /**
+     * <p>The AgenticDB cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +22,8 @@ public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +31,8 @@ public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -35,6 +40,7 @@ public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +50,8 @@ public class DescribeAgenticDBComputeClustersRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The status filter. Valid values: Running, Stopped, and Waiting.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

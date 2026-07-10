@@ -14,7 +14,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The engine version.</p>
+     * <p>The database engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -29,7 +29,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
     public java.util.List<DescribeAvailableModelsResponseBodyItems> items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>3AA69096-757C-4647-B36C-29EBC2******</p>
@@ -76,7 +76,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
 
     public static class DescribeAvailableModelsResponseBodyItemsGpuRequired extends TeaModel {
         /**
-         * <p>The minimum number of GPUs required.</p>
+         * <p>The minimum number of GPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -118,13 +118,13 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
 
     public static class DescribeAvailableModelsResponseBodyItems extends TeaModel {
         /**
-         * <p>The required GPU configurations.</p>
+         * <p>The supported GPU types.</p>
          */
         @NameInMap("GpuRequired")
         public java.util.List<DescribeAvailableModelsResponseBodyItemsGpuRequired> gpuRequired;
 
         /**
-         * <p>The minimum number of CPU cores required.</p>
+         * <p>The minimum number of CPUs.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -133,7 +133,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         public Long minimumCpu;
 
         /**
-         * <p>The minimum memory required, in MiB.</p>
+         * <p>The minimum memory size.</p>
          * 
          * <strong>example:</strong>
          * <p>16384</p>
@@ -164,6 +164,9 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
          */
         @NameInMap("SupportedGpuModels")
         public java.util.List<String> supportedGpuModels;
+
+        @NameInMap("TuneArch")
+        public String tuneArch;
 
         public static DescribeAvailableModelsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableModelsResponseBodyItems self = new DescribeAvailableModelsResponseBodyItems();
@@ -216,6 +219,14 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
         public java.util.List<String> getSupportedGpuModels() {
             return this.supportedGpuModels;
+        }
+
+        public DescribeAvailableModelsResponseBodyItems setTuneArch(String tuneArch) {
+            this.tuneArch = tuneArch;
+            return this;
+        }
+        public String getTuneArch() {
+            return this.tuneArch;
         }
 
     }

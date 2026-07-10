@@ -14,7 +14,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String accelerateType;
 
     /**
-     * <p>The acceleration storage space, in GB.</p>
+     * <p>The acceleration storage space. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -23,10 +23,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double acceleratedStorageSpace;
 
     /**
-     * <p>Indicates whether the acceleration cache is enabled. Valid values:</p>
+     * <p>Specifies whether the acceleration cache is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong>: enabled.</li>
-     * <li><strong>OFF</strong>: disabled.</li>
+     * <li><strong>ON</strong>: Enabled.</li>
+     * <li><strong>OFF</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String acceleratingEnable;
 
     /**
-     * <p>The bandwidth, in MB/s.</p>
+     * <p>The bandwidth. Unit: MB/s.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -45,7 +45,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double bandwidth;
 
     /**
-     * <p>The bandwidth baseline, in MB/s/TiB.</p>
+     * <p>The bandwidth baseline. Unit: MB/s/TiB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -54,7 +54,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double bandwidthBaseLine;
 
     /**
-     * <p>The storage bucket ID.</p>
+     * <p>The bucket ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -112,11 +112,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("CustomBucketPathList")
     public java.util.List<DescribePolarFsAttributeResponseBodyCustomBucketPathList> customBucketPathList;
 
+    @NameInMap("DBEndpointId")
+    public String DBEndpointId;
+
     /**
      * <p>The database ecosystem type. Valid values: </p>
      * <ul>
      * <li><strong>MySQL</strong></li>
-     * <li><strong>PostgreSQL</strong>.</li>
+     * <li><strong>PostgreSQL</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,10 +128,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("DBType")
     public String DBType;
 
+    @NameInMap("EndpointItems")
+    public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItems> endpointItems;
+
     /**
      * <p>The expiration time of the cluster.</p>
      * <blockquote>
-     * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+     * <p>This parameter is returned only for clusters that use the <strong>Prepaid</strong> (subscription) billing method. An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -140,7 +146,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster has expired.</p>
      * <blockquote>
-     * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription).</p>
+     * <p>This parameter is returned only for clusters that use the <strong>Prepaid</strong> (subscription) billing method.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -161,9 +167,9 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>The lock mode. Valid values: </p>
      * <ul>
-     * <li><strong>Unlock</strong>: not locked.</li>
-     * <li><strong>ManualLock</strong>: manually locked. </li>
-     * <li><strong>LockByExpiration</strong>: automatically locked due to cluster expiration.</li>
+     * <li><strong>Unlock</strong>: Not locked.</li>
+     * <li><strong>ManualLock</strong>: Manually locked. </li>
+     * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -172,6 +178,12 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("LockMode")
     public String lockMode;
 
+    @NameInMap("MaxscaleEndpointId")
+    public String maxscaleEndpointId;
+
+    @NameInMap("MetaConnString")
+    public String metaConnString;
+
     /**
      * <strong>example:</strong>
      * <p>pc-xxxxxxxxxxxxxxxxx</p>
@@ -179,8 +191,11 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     @NameInMap("MetaInstanceName")
     public String metaInstanceName;
 
+    @NameInMap("MetaMxsConnString")
+    public String metaMxsConnString;
+
     /**
-     * <p>The metadata URL for Fuse mounting (encrypted).</p>
+     * <p>The encrypted metadata URL for Fuse mounting.</p>
      * 
      * <strong>example:</strong>
      * <p>e6cc1d2e2a6fa292038d999fda6501*****</p>
@@ -246,7 +261,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     /**
      * <p>The instance version. Valid values:</p>
      * <ul>
-     * <li><strong>PolarFS 2.0</strong>: 2.0</li>
+     * <li><strong>PolarFS 2.0</strong>: 2.0.</li>
      * <li><strong>PolarFS 1.0</strong>: 1.0.</li>
      * </ul>
      * 
@@ -311,7 +326,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The storage space, in GB.</p>
+     * <p>The storage space. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -320,12 +335,12 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public Double storageSpace;
 
     /**
-     * <p>Valid values for the High-performance Edition storage type:</p>
+     * <p>The storage type for the High-performance Edition. Valid values:</p>
      * <ul>
      * <li><strong>ESSDPL1</strong></li>
      * <li><strong>ESSDPL0</strong></li>
      * </ul>
-     * <p>Valid values for the Basic Edition storage type:</p>
+     * <p>The storage type for the Basic Edition. Valid values:</p>
      * <ul>
      * <li><strong>city_redundancy</strong>: zone-redundant storage.</li>
      * </ul>
@@ -337,13 +352,27 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The used storage space, in bytes.</p>
+     * <p>The used storage space. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>3012558848</p>
      */
     @NameInMap("StorageUsed")
     public Double storageUsed;
+
+    /**
+     * <strong>example:</strong>
+     * <p>lakebase_acc</p>
+     */
+    @NameInMap("UserDefaultAccName")
+    public String userDefaultAccName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>EncryptedSecretKey==</p>
+     */
+    @NameInMap("UserDefaultAccSk")
+    public String userDefaultAccSk;
 
     /**
      * <p>The VPC ID.</p>
@@ -465,12 +494,28 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         return this.customBucketPathList;
     }
 
+    public DescribePolarFsAttributeResponseBody setDBEndpointId(String DBEndpointId) {
+        this.DBEndpointId = DBEndpointId;
+        return this;
+    }
+    public String getDBEndpointId() {
+        return this.DBEndpointId;
+    }
+
     public DescribePolarFsAttributeResponseBody setDBType(String DBType) {
         this.DBType = DBType;
         return this;
     }
     public String getDBType() {
         return this.DBType;
+    }
+
+    public DescribePolarFsAttributeResponseBody setEndpointItems(java.util.List<DescribePolarFsAttributeResponseBodyEndpointItems> endpointItems) {
+        this.endpointItems = endpointItems;
+        return this;
+    }
+    public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItems> getEndpointItems() {
+        return this.endpointItems;
     }
 
     public DescribePolarFsAttributeResponseBody setExpireTime(String expireTime) {
@@ -505,12 +550,36 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         return this.lockMode;
     }
 
+    public DescribePolarFsAttributeResponseBody setMaxscaleEndpointId(String maxscaleEndpointId) {
+        this.maxscaleEndpointId = maxscaleEndpointId;
+        return this;
+    }
+    public String getMaxscaleEndpointId() {
+        return this.maxscaleEndpointId;
+    }
+
+    public DescribePolarFsAttributeResponseBody setMetaConnString(String metaConnString) {
+        this.metaConnString = metaConnString;
+        return this;
+    }
+    public String getMetaConnString() {
+        return this.metaConnString;
+    }
+
     public DescribePolarFsAttributeResponseBody setMetaInstanceName(String metaInstanceName) {
         this.metaInstanceName = metaInstanceName;
         return this;
     }
     public String getMetaInstanceName() {
         return this.metaInstanceName;
+    }
+
+    public DescribePolarFsAttributeResponseBody setMetaMxsConnString(String metaMxsConnString) {
+        this.metaMxsConnString = metaMxsConnString;
+        return this;
+    }
+    public String getMetaMxsConnString() {
+        return this.metaMxsConnString;
     }
 
     public DescribePolarFsAttributeResponseBody setMetaUrl(String metaUrl) {
@@ -649,6 +718,22 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         return this.storageUsed;
     }
 
+    public DescribePolarFsAttributeResponseBody setUserDefaultAccName(String userDefaultAccName) {
+        this.userDefaultAccName = userDefaultAccName;
+        return this;
+    }
+    public String getUserDefaultAccName() {
+        return this.userDefaultAccName;
+    }
+
+    public DescribePolarFsAttributeResponseBody setUserDefaultAccSk(String userDefaultAccSk) {
+        this.userDefaultAccSk = userDefaultAccSk;
+        return this;
+    }
+    public String getUserDefaultAccSk() {
+        return this.userDefaultAccSk;
+    }
+
     public DescribePolarFsAttributeResponseBody setVPCId(String VPCId) {
         this.VPCId = VPCId;
         return this;
@@ -711,6 +796,129 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
         public String getPath() {
             return this.path;
+        }
+
+    }
+
+    public static class DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems extends TeaModel {
+        @NameInMap("ConnectionString")
+        public String connectionString;
+
+        @NameInMap("IPAddress")
+        public String IPAddress;
+
+        @NameInMap("NetType")
+        public String netType;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("VPCId")
+        public String VPCId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        public static DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems self = new DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems setIPAddress(String IPAddress) {
+            this.IPAddress = IPAddress;
+            return this;
+        }
+        public String getIPAddress() {
+            return this.IPAddress;
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems setNetType(String netType) {
+            this.netType = netType;
+            return this;
+        }
+        public String getNetType() {
+            return this.netType;
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems setVPCId(String VPCId) {
+            this.VPCId = VPCId;
+            return this;
+        }
+        public String getVPCId() {
+            return this.VPCId;
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+    }
+
+    public static class DescribePolarFsAttributeResponseBodyEndpointItems extends TeaModel {
+        @NameInMap("AddressItems")
+        public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems> addressItems;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ep-xxxxxxxxx</p>
+         */
+        @NameInMap("DBEndpointId")
+        public String DBEndpointId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>S3Gateway</p>
+         */
+        @NameInMap("EndpointType")
+        public String endpointType;
+
+        public static DescribePolarFsAttributeResponseBodyEndpointItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolarFsAttributeResponseBodyEndpointItems self = new DescribePolarFsAttributeResponseBodyEndpointItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItems setAddressItems(java.util.List<DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems> addressItems) {
+            this.addressItems = addressItems;
+            return this;
+        }
+        public java.util.List<DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems> getAddressItems() {
+            return this.addressItems;
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItems setDBEndpointId(String DBEndpointId) {
+            this.DBEndpointId = DBEndpointId;
+            return this;
+        }
+        public String getDBEndpointId() {
+            return this.DBEndpointId;
+        }
+
+        public DescribePolarFsAttributeResponseBodyEndpointItems setEndpointType(String endpointType) {
+            this.endpointType = endpointType;
+            return this;
+        }
+        public String getEndpointType() {
+            return this.endpointType;
         }
 
     }

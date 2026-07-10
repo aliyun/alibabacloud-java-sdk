@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConsumersRequest extends TeaModel {
     /**
-     * <p>The consumer group ID.</p>
+     * <p>The user group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-xxxxxxxx</p>
@@ -14,13 +14,19 @@ public class DescribeConsumersRequest extends TeaModel {
     public String consumerGroupId;
 
     /**
-     * <p>The consumer ID.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c-mqveroemc***</p>
      */
     @NameInMap("ConsumerId")
     public String consumerId;
+
+    @NameInMap("ConsumerName")
+    public String consumerName;
+
+    @NameInMap("ConsumerNameList")
+    public String consumerNameList;
 
     /**
      * <p>The gateway instance ID.</p>
@@ -33,7 +39,7 @@ public class DescribeConsumersRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,14 +48,12 @@ public class DescribeConsumersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values are:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong>. The default is <strong>30</strong>.</p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong>
+     * Default value: <strong>30</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,6 +90,22 @@ public class DescribeConsumersRequest extends TeaModel {
     }
     public String getConsumerId() {
         return this.consumerId;
+    }
+
+    public DescribeConsumersRequest setConsumerName(String consumerName) {
+        this.consumerName = consumerName;
+        return this;
+    }
+    public String getConsumerName() {
+        return this.consumerName;
+    }
+
+    public DescribeConsumersRequest setConsumerNameList(String consumerNameList) {
+        this.consumerNameList = consumerNameList;
+        return this;
+    }
+    public String getConsumerNameList() {
+        return this.consumerNameList;
     }
 
     public DescribeConsumersRequest setGwClusterId(String gwClusterId) {

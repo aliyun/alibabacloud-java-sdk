@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTaskAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pm-2ze99***</p>
@@ -14,9 +14,9 @@ public class DescribeAIDBClusterTaskAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The query mode. Valid value:</p>
+     * <p>The query mode. Valid values:</p>
      * <ul>
-     * <li><strong>RelatedAITask</strong>: Returns the task details.</li>
+     * <li><strong>RelatedAITask</strong>: queries task details.</li>
      * </ul>
      * 
      * <strong>example:</strong>

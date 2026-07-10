@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableModelsRequest extends TeaModel {
     /**
-     * <p>The service type. The value must be set to <code>aideploy</code>.</p>
+     * <p>aideploy</p>
      * 
      * <strong>example:</strong>
      * <p>aideploy</p>

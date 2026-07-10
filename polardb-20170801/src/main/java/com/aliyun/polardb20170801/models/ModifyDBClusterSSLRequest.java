@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
+    /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -15,15 +22,12 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the endpoint.</p>
+     * <p>The endpoint ID.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is required for PolarDB for MySQL clusters.</p>
-     * </li>
-     * <li><p>This parameter is not required for PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) clusters. By default, SSL encryption is enabled for all endpoints of the clusters.</p>
-     * </li>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to view the details of the endpoint.</p>
-     * </li>
+     * <li>If the cluster is a PolarDB for MySQL cluster, this parameter is required.</li>
+     * <li>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. SSL encryption is enabled for all endpoints by default.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to query endpoint details.</li>
      * </ul>
      * </blockquote>
      * 
@@ -34,21 +38,16 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String DBEndpointId;
 
     /**
-     * <p>The network type of the endpoint. The value must be the same as the network type of the endpoint specified by the <strong>DBEndpointId</strong> parameter. Valid values:</p>
+     * <p>The network type of the endpoint. The value must be the same as the network type of the endpoint specified by <strong>DBEndpointId</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>Public</strong></p>
-     * </li>
-     * <li><p><strong>Private</strong></p>
-     * </li>
-     * <li><p><strong>Inner</strong></p>
-     * </li>
+     * <li><strong>Public</strong>: public network</li>
+     * <li><strong>Private</strong>: private network</li>
+     * <li><strong>Inner</strong>: private network (classic network)</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter is required for PolarDB for MySQL clusters.</p>
-     * </li>
-     * <li><p>This parameter is not required for PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) clusters. By default, SSL encryption is enabled for all endpoints of the clusters.</p>
-     * </li>
+     * <li>If the cluster is a PolarDB for MySQL cluster, this parameter is required.</li>
+     * <li>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. SSL encryption is enabled for all endpoints by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -64,6 +63,13 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pfs-xxx</p>
+     */
+    @NameInMap("PfsInstanceId")
+    public String pfsInstanceId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -71,11 +77,11 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether automatic rotation of SSL certificates is enabled.</p>
+     * <p>Specifies whether to enable automatic SSL certificate rotation. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enable</strong></p>
+     * <li><p><strong>Enable</strong>: enables automatic SSL certificate rotation.</p>
      * </li>
-     * <li><p><strong>Disable</strong></p>
+     * <li><p><strong>Disable</strong>: disables automatic SSL certificate rotation.</p>
      * </li>
      * </ul>
      * 
@@ -86,17 +92,14 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String SSLAutoRotate;
 
     /**
-     * <p>The SSL encryption status. Valid values:</p>
+     * <p>The SSL status. Valid values:</p>
      * <ul>
-     * <li><p><strong>Disabled</strong></p>
-     * </li>
-     * <li><p><strong>Enabled</strong></p>
-     * </li>
-     * <li><p><strong>Update</strong>: The SSL certificate is updated.</p>
-     * </li>
+     * <li><strong>Disable</strong>: shutdown SSL encryption.</li>
+     * <li><strong>Enable</strong>: enables SSL encryption.</li>
+     * <li><strong>Update</strong>: updates the CA certificate.</li>
      * </ul>
      * <blockquote>
-     * <p>After you enable SSL encryption or update the SSL certificate, you must download and configure the certificate. See <a href="https://help.aliyun.com/document_detail/153182.html">Configure SSL encryption</a>.</p>
+     * <p>After you enable SSL encryption or update the CA certificate, you must download and configure the certificate. For details, see <a href="https://help.aliyun.com/document_detail/153182.html">Settings for SSL encryption</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -108,6 +111,14 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public static ModifyDBClusterSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterSSLRequest self = new ModifyDBClusterSSLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterSSLRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
     public ModifyDBClusterSSLRequest setDBClusterId(String DBClusterId) {
@@ -148,6 +159,14 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyDBClusterSSLRequest setPfsInstanceId(String pfsInstanceId) {
+        this.pfsInstanceId = pfsInstanceId;
+        return this;
+    }
+    public String getPfsInstanceId() {
+        return this.pfsInstanceId;
     }
 
     public ModifyDBClusterSSLRequest setResourceOwnerAccount(String resourceOwnerAccount) {

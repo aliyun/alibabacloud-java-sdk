@@ -7,10 +7,8 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The description of the account. The description must meet the following requirements:</p>
      * <ul>
-     * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>It must be 2 to 256 characters in length.</p>
-     * </li>
+     * <li>Cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>Is 2 to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +18,12 @@ public class CreateAccountRequest extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The name of the database account. The name must meet the following requirements:</p>
+     * <p>The account name. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must start with a lowercase letter and end with a letter or a digit.</p>
-     * </li>
-     * <li><p>It can contain lowercase letters, digits, and underscores (_).</p>
-     * </li>
-     * <li><p>It must be 2 to 16 characters in length.</p>
-     * </li>
-     * <li><p>It cannot be a reserved keyword, such as root or admin.</p>
-     * </li>
+     * <li>Starts with a lowercase letter and ends with a letter or digit.</li>
+     * <li>Contains only lowercase letters, digits, or underscores (_).</li>
+     * <li>Is 2 to 16 characters in length.</li>
+     * <li>Cannot use certain reserved usernames such as root or admin.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,14 +34,11 @@ public class CreateAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the database account. The password must meet the following requirements:</p>
+     * <p>The account password. The password must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * </li>
-     * <li><p>It must be 8 to 32 characters in length.</p>
-     * </li>
-     * <li><p>The special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
-     * </li>
+     * <li>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Is 8 to 32 characters in length.</li>
+     * <li>Special characters include <code>!@#$%^&amp;*()_+-=</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,27 +49,19 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>The privilege level to grant on the specified databases. Valid values:</p>
+     * <p>The permissions of the account. Valid values: </p>
      * <ul>
-     * <li><p><strong>ReadWrite</strong>: read and write permissions</p>
-     * </li>
-     * <li><p><strong>ReadOnly</strong>: read-only permissions</p>
-     * </li>
-     * <li><p><strong>DMLOnly</strong>: DML permissions only</p>
-     * </li>
-     * <li><p><strong>DDLOnly</strong>: DDL permissions only</p>
-     * </li>
-     * <li><p><strong>ReadIndex</strong>: read-only and index permissions</p>
-     * </li>
+     * <li><strong>ReadWrite</strong>: read and write</li>
+     * <li><strong>ReadOnly</strong>: read-only</li>
+     * <li><strong>DMLOnly</strong>: DML only</li>
+     * <li><strong>DDLOnly</strong>: DDL only</li>
+     * <li><strong>ReadIndex</strong>: read-only and index</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only when you specify the <code>DBName</code> parameter.</p>
-     * </li>
-     * <li><p>If you specify multiple databases in <code>DBName</code>, you must specify a corresponding permission for each in <code>AccountPrivilege</code>, separated by commas. The <code>AccountPrivilege</code> string cannot exceed 900 characters. For example, to grant read and write permissions to database DB1 and read-only permissions to database DB2, set <code>DBName</code> to <code>DB1,DB2</code> and set <code>AccountPrivilege</code> to <code>ReadWrite,ReadOnly</code>.</p>
-     * </li>
-     * <li><p>This parameter applies only to standard accounts on PolarDB for MySQL clusters.</p>
-     * </li>
+     * <li>The DBName parameter must be specified for AccountPrivilege to take effect.</li>
+     * <li>If you specify multiple database names for the DBName parameter, you must grant the corresponding permissions to each database. Separate multiple permissions with commas (,) and make sure that the total length of the AccountPrivilege string does not exceed 900 characters. For example, to grant read and write permissions on database DB1 and read-only permissions on database DB2, set DBName to <code>DB1,DB2</code> and set AccountPrivilege to <code>ReadWrite,ReadOnly</code>.</li>
+     * <li>This parameter is supported only for standard accounts of PolarDB for MySQL clusters.</li>
      * </ul>
      * </blockquote>
      * 
@@ -89,21 +72,18 @@ public class CreateAccountRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The type of the account. Valid values:</p>
+     * <p>The account type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Normal</strong>: a standard account.</p>
-     * </li>
-     * <li><p><strong>Super</strong>: a privileged account.</p>
-     * </li>
+     * <li><strong>Normal</strong>: standard account. </li>
+     * <li><strong>Super</strong>: privileged account. </li>
+     * <li><strong>DynamoDB</strong>: DynamoDB account.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>If you do not specify this parameter, the system creates a <strong>Super</strong> account by default.</p>
-     * </li>
-     * <li><p>You can create multiple privileged accounts on PolarDB for PostgreSQL (Oracle-Compatible) and PolarDB for PostgreSQL clusters. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create database accounts</a>.</p>
-     * </li>
-     * <li><p>For a PolarDB for MySQL cluster, you can create only one privileged account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create database accounts</a>.</p>
-     * </li>
+     * <li>If this parameter is left empty, a <strong>Super</strong> account is created by default.</li>
+     * <li>If the cluster is a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster, you can create multiple privileged accounts for each cluster. Privileged accounts have more permissions than standard accounts. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</li>
+     * <li>If the cluster is a PolarDB for MySQL cluster, you can create at most one privileged account for each cluster. Privileged accounts have more permissions than standard accounts. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</li>
+     * <li>DynamoDB accounts are dedicated accounts created for the DynamoDB compatibility feature of PolarDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/2979941.html">DynamoDB usage instructions</a>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -114,7 +94,7 @@ public class CreateAccountRequest extends TeaModel {
     public String accountType;
 
     /**
-     * <p>A client-generated token to ensure request idempotency. The token must be unique across requests. It is case-sensitive and can be up to 64 ASCII characters long.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -133,9 +113,9 @@ public class CreateAccountRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the database that the account can access. To specify multiple databases, separate the database names with a comma (,).</p>
+     * <p>The name of the database that the account is authorized to access. You can specify multiple database names separated by commas (,).</p>
      * <blockquote>
-     * <p>This parameter applies only to standard accounts on PolarDB for MySQL clusters.</p>
+     * <p>This parameter is supported only for standard accounts of PolarDB for MySQL clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -145,9 +125,9 @@ public class CreateAccountRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The type of the node. Valid values:</p>
+     * <p>The node type. Valid values:</p>
      * <ul>
-     * <li><strong>Search</strong>: For creating an account on a PolarDB Search node.</li>
+     * <li>Search: required when creating an account for a PolarDB Search node</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -163,21 +143,19 @@ public class CreateAccountRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to grant the account permissions on all current and future databases in the cluster. Valid values:</p>
+     * <p>Specifies whether to grant permissions on all existing databases and all new databases in the current cluster. Valid values:</p>
      * <ul>
-     * <li><p><strong>0 or do not specify</strong>: The specified permissions are not granted to all databases.</p>
+     * <li><p><strong>0 or empty</strong>: does not grant permissions.</p>
      * </li>
-     * <li><p><strong>1</strong>: Grants the specified permissions to all current and future databases.</p>
-     * </li>
-     * </ul>
+     * <li><p><strong>1</strong>: grants permissions.</p>
      * <blockquote>
      * <ul>
-     * <li><p>This parameter takes effect only when you specify the <code>AccountPrivilege</code> parameter.</p>
-     * </li>
-     * <li><p>If you set this parameter to <code>1</code>, the permissions specified in <code>AccountPrivilege</code> are granted to all databases.</p>
-     * </li>
+     * <li>The AccountPrivilege parameter must be specified for this parameter to take effect.</li>
+     * <li>If this parameter is set to <code>1</code>, the permissions specified by AccountPrivilege are granted on all databases.</li>
      * </ul>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>

@@ -35,15 +35,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total size of level-2 backups in the specified region, in bytes.</p>
+     * <p>The total size of level-2 backups in the specified region. Unit: bytes.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Supported only for storage classes PSL4 and PSL5.</p>
-     * </li>
-     * <li><p>Supported only for clusters with the level-2 backup feature enabled.</p>
-     * </li>
-     * <li><p>If this field is not returned, the level-2 backup size is 0.</p>
-     * </li>
+     * <li>Only PSL4 and PSL5 storage types are supported.</li>
+     * <li>Only clusters with the level-2 backup feature enabled are supported.</li>
+     * <li>If this parameter is not returned, the level-2 backup size is 0.</li>
      * </ul>
      * </blockquote>
      * 
@@ -143,6 +140,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupsLevel")
         public String backupsLevel;
 
+        @NameInMap("Comment")
+        public String comment;
+
         @NameInMap("ConsistentTime")
         public String consistentTime;
 
@@ -236,6 +236,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupsLevel() {
             return this.backupsLevel;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setConsistentTime(String consistentTime) {

@@ -20,6 +20,13 @@ public class DescribeDBClusterAccessWhitelistRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pfs-xxx</p>
+     */
+    @NameInMap("PfsInstanceId")
+    public String pfsInstanceId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -53,6 +60,14 @@ public class DescribeDBClusterAccessWhitelistRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBClusterAccessWhitelistRequest setPfsInstanceId(String pfsInstanceId) {
+        this.pfsInstanceId = pfsInstanceId;
+        return this;
+    }
+    public String getPfsInstanceId() {
+        return this.pfsInstanceId;
     }
 
     public DescribeDBClusterAccessWhitelistRequest setResourceOwnerAccount(String resourceOwnerAccount) {

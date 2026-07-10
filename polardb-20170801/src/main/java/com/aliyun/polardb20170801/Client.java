@@ -2166,7 +2166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model operator instance.</p>
+     * <p>Creates a model creation operator instance.</p>
      * 
      * @param request CreateAIDBClusterTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2239,6 +2239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TaskName", request.taskName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tuneArch)) {
+            query.put("TuneArch", request.tuneArch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
             query.put("VPCId", request.VPCId);
         }
@@ -2270,7 +2274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a model operator instance.</p>
+     * <p>Creates a model creation operator instance.</p>
      * 
      * @param request CreateAIDBClusterTaskRequest
      * @return CreateAIDBClusterTaskResponse
@@ -2330,7 +2334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a database account for a PolarDB cluster.</p>
+     * <p>Creates a PolarDB database account.</p>
      * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2414,7 +2418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a database account for a PolarDB cluster.</p>
+     * <p>Creates a PolarDB database account.</p>
      * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
@@ -3118,12 +3122,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>Each cluster can have up to three manually created backups at a time.</p>
-     * </li>
-     * <li><p>If you receive the error message <code>Exceeding the daily backup times of this DB cluster</code>, this indicates that three manual backups already exist for your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation again.</p>
-     * </li>
-     * <li><p>After you call this operation, a backup job is created in the background. The job may take a long time to complete if the data volume is large.</p>
-     * </li>
+     * <li>Each cluster can have up to three manually created backups at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
      * </ul>
      * </blockquote>
      * 
@@ -3139,6 +3140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
@@ -3182,12 +3187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li><p>Each cluster can have up to three manually created backups at a time.</p>
-     * </li>
-     * <li><p>If you receive the error message <code>Exceeding the daily backup times of this DB cluster</code>, this indicates that three manual backups already exist for your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation again.</p>
-     * </li>
-     * <li><p>After you call this operation, a backup job is created in the background. The job may take a long time to complete if the data volume is large.</p>
-     * </li>
+     * <li>Each cluster can have up to three manually created backups at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
      * </ul>
      * </blockquote>
      * 
@@ -9344,7 +9346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get task instance details</p>
+     * <p>Retrieves the details of a task instance.</p>
      * 
      * @param request DescribeAIDBClusterTaskAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9400,7 +9402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get task instance details</p>
+     * <p>Retrieves the details of a task instance.</p>
      * 
      * @param request DescribeAIDBClusterTaskAttributeRequest
      * @return DescribeAIDBClusterTaskAttributeResponse
@@ -9566,14 +9568,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>This API returns a list of model operators filtered by the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
-     * <li>Note: Ensure the provided <code>RelativeDBClusterId</code> matches the ID of an existing PolarDB database instance. Otherwise, no data will be returned.</li>
+     * <li>This operation supports filtering and returning the list of model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of model operators for a specified PolarDB instance.</p>
+     * <p>Retrieves the list of model operators for a specified PolarDB database instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9629,14 +9631,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>This API returns a list of model operators filtered by the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
-     * <li>Note: Ensure the provided <code>RelativeDBClusterId</code> matches the ID of an existing PolarDB database instance. Otherwise, no data will be returned.</li>
+     * <li>This operation supports filtering and returning the list of model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of model operators for a specified PolarDB instance.</p>
+     * <p>Retrieves the list of model operators for a specified PolarDB database instance.</p>
      * 
      * @param request DescribeAIDBClusterTasksRequest
      * @return DescribeAIDBClusterTasksResponse
@@ -10606,7 +10608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 AgenticDB 计算实例列表</p>
+     * <p>Queries the list of AgenticDB compute instances.</p>
      * 
      * @param request DescribeAgenticDBComputeClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10658,7 +10660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 AgenticDB 计算实例列表</p>
+     * <p>Queries the list of AgenticDB compute instances.</p>
      * 
      * @param request DescribeAgenticDBComputeClustersRequest
      * @return DescribeAgenticDBComputeClustersResponse
@@ -10960,7 +10962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI Application Log Details</p>
+     * <p>Queries the log details of an AI application.</p>
      * 
      * @param request DescribeApplicationLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11044,7 +11046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>AI Application Log Details</p>
+     * <p>Queries the log details of an AI application.</p>
      * 
      * @param request DescribeApplicationLogsRequest
      * @return DescribeApplicationLogsResponse
@@ -11486,7 +11488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the available models in an AI cluster.</p>
+     * <p>Retrieves the list of AI cluster models.</p>
      * 
      * @param request DescribeAvailableModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11522,7 +11524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the available models in an AI cluster.</p>
+     * <p>Retrieves the list of AI cluster models.</p>
      * 
      * @param request DescribeAvailableModelsRequest
      * @return DescribeAvailableModelsResponse
@@ -11802,7 +11804,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries backup information for a PolarDB cluster.</p>
+     * <p>Queries the backup information of a PolarDB cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11882,7 +11884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries backup information for a PolarDB cluster.</p>
+     * <p>Queries the backup information of a PolarDB cluster.</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -12008,7 +12010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying budget policies</p>
+     * <p>Queries cost budget policies.</p>
      * 
      * @param request DescribeBudgetPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12045,6 +12047,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeRefName)) {
+            query.put("ScopeRefName", request.scopeRefName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }
@@ -12068,7 +12074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Querying budget policies</p>
+     * <p>Queries cost budget policies.</p>
      * 
      * @param request DescribeBudgetPoliciesRequest
      * @return DescribeBudgetPoliciesResponse
@@ -12380,7 +12386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of consumers.</p>
+     * <p>Queries the list of consumers.</p>
      * 
      * @param request DescribeConsumersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12395,6 +12401,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.consumerId)) {
             query.put("ConsumerId", request.consumerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerName)) {
+            query.put("ConsumerName", request.consumerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerNameList)) {
+            query.put("ConsumerNameList", request.consumerNameList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gwClusterId)) {
@@ -12432,7 +12446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of consumers.</p>
+     * <p>Queries the list of consumers.</p>
      * 
      * @param request DescribeConsumersRequest
      * @return DescribeConsumersResponse
@@ -12744,7 +12758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP whitelists and security groups that are allowed to access a database cluster.</p>
+     * <p>Queries the IP whitelist and security groups that are allowed to access a database cluster.</p>
      * 
      * @param request DescribeDBClusterAccessWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12763,6 +12777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -12792,7 +12810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the IP whitelists and security groups that are allowed to access a database cluster.</p>
+     * <p>Queries the IP whitelist and security groups that are allowed to access a database cluster.</p>
      * 
      * @param request DescribeDBClusterAccessWhitelistRequest
      * @return DescribeDBClusterAccessWhitelistResponse
@@ -13656,6 +13674,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries the price of a cluster.</p>
+     * 
+     * @param tmpReq DescribeDBClusterPriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBClusterPriceResponse
+     */
+    public DescribeDBClusterPriceResponse describeDBClusterPriceWithOptions(DescribeDBClusterPriceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeDBClusterPriceShrinkRequest request = new DescribeDBClusterPriceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.DBNodes)) {
+            request.DBNodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.DBNodes, "DBNodes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creationCategory)) {
+            query.put("CreationCategory", request.creationCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeClass)) {
+            query.put("DBNodeClass", request.DBNodeClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeIds)) {
+            query.put("DBNodeIds", request.DBNodeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeNum)) {
+            query.put("DBNodeNum", request.DBNodeNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodesShrink)) {
+            query.put("DBNodes", request.DBNodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBType)) {
+            query.put("DBType", request.DBType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBVersion)) {
+            query.put("DBVersion", request.DBVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotStandbyCluster)) {
+            query.put("HotStandbyCluster", request.hotStandbyCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
+            query.put("ModifyType", request.modifyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedIops)) {
+            query.put("ProvisionedIops", request.provisionedIops);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessType)) {
+            query.put("ServerlessType", request.serverlessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageChargeType)) {
+            query.put("StorageChargeType", request.storageChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSpace)) {
+            query.put("StorageSpace", request.storageSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBClusterPrice"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterPriceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the price of a cluster.</p>
+     * 
+     * @param request DescribeDBClusterPriceRequest
+     * @return DescribeDBClusterPriceResponse
+     */
+    public DescribeDBClusterPriceResponse describeDBClusterPrice(DescribeDBClusterPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBClusterPriceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries a database cluster proxy.</p>
      * 
      * @param request DescribeDBClusterProxyRequest
@@ -13743,6 +13891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -18278,6 +18430,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolarClawTaskResponse describePolarClawTask(DescribePolarClawTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolarClawTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries PolarFS information.</p>
+     * 
+     * @param request DescribePolarFsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePolarFsResponse
+     */
+    public DescribePolarFsResponse describePolarFsWithOptions(DescribePolarFsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceDescription)) {
+            query.put("PolarFsInstanceDescription", request.polarFsInstanceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceIds)) {
+            query.put("PolarFsInstanceIds", request.polarFsInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsType)) {
+            query.put("PolarFsType", request.polarFsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relativeDbClusterId)) {
+            query.put("RelativeDbClusterId", request.relativeDbClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePolarFs"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePolarFsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries PolarFS information.</p>
+     * 
+     * @param request DescribePolarFsRequest
+     * @return DescribePolarFsResponse
+     */
+    public DescribePolarFsResponse describePolarFs(DescribePolarFsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePolarFsWithOptions(request, runtime);
     }
 
     /**
@@ -23593,7 +23821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies the access whitelist for a cluster. The whitelist can be an IP address whitelist or a security group.</p>
+     * <p>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</p>
      * 
      * @param request ModifyDBClusterAccessWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23624,6 +23852,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -23665,7 +23897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates or modifies the access whitelist for a cluster. The whitelist can be an IP address whitelist or a security group.</p>
+     * <p>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</p>
      * 
      * @param request ModifyDBClusterAccessWhitelistRequest
      * @return ModifyDBClusterAccessWhitelistResponse
@@ -24891,7 +25123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables SSL encryption for a PolarDB cluster, or updates its CA certificate.</p>
+     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24900,6 +25132,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBClusterSSLResponse modifyDBClusterSSLWithOptions(ModifyDBClusterSSLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionString)) {
+            query.put("ConnectionString", request.connectionString);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
         }
@@ -24918,6 +25154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pfsInstanceId)) {
+            query.put("PfsInstanceId", request.pfsInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -24955,7 +25195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables SSL encryption for a PolarDB cluster, or updates its CA certificate.</p>
+     * <p>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</p>
      * 
      * @param request ModifyDBClusterSSLRequest
      * @return ModifyDBClusterSSLResponse
@@ -30577,7 +30817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验 AgenticDB 租户 API Key</p>
+     * <p>Validates an AgenticDB tenant API key.</p>
      * 
      * @param request VerifyAgenticDBTenantApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30613,7 +30853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验 AgenticDB 租户 API Key</p>
+     * <p>Validates an AgenticDB tenant API key.</p>
      * 
      * @param request VerifyAgenticDBTenantApiKeyRequest
      * @return VerifyAgenticDBTenantApiKeyResponse

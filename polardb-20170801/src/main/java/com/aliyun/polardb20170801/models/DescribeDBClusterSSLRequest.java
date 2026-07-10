@@ -7,7 +7,7 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view detailed information about all clusters under your account, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -22,6 +22,13 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>pfs-xxx</p>
+     */
+    @NameInMap("PfsInstanceId")
+    public String pfsInstanceId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -56,6 +63,14 @@ public class DescribeDBClusterSSLRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeDBClusterSSLRequest setPfsInstanceId(String pfsInstanceId) {
+        this.pfsInstanceId = pfsInstanceId;
+        return this;
+    }
+    public String getPfsInstanceId() {
+        return this.pfsInstanceId;
     }
 
     public DescribeDBClusterSSLRequest setResourceOwnerAccount(String resourceOwnerAccount) {

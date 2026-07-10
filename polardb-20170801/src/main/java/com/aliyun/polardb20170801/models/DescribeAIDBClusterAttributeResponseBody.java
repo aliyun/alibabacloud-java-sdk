@@ -7,9 +7,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The node type. Valid values:</p>
      * <ul>
-     * <li>vnode: managed by ACK</li>
-     * <li>container: logon-enabled container</li>
-     * <li>maas: model service.</li>
+     * <li>vnode: ACK-managed</li>
+     * <li>container: loginable container</li>
+     * <li>maas: model service</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      * <li><strong>DBNodeCreating</strong>: adding a node</li>
      * <li><strong>DBNodeDeleting</strong>: deleting a node</li>
      * <li><strong>ClassChanging</strong>: changing node specifications </li>
-     * <li><strong>Deleted</strong>: released.</li>
+     * <li><strong>Deleted</strong>: released</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      * <p>The cluster version. Valid values:</p>
      * <p><strong>1.0</strong></p>
      * <p><strong>2.0</strong></p>
-     * <p><strong>3.0</strong>.</p>
+     * <p><strong>3.0</strong></p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -108,7 +108,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     /**
      * <p>The cluster expiration time.</p>
      * <blockquote>
-     * <p>This parameter is returned only for <strong>Prepaid</strong> (subscription) clusters. An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+     * <p>This parameter returns a value only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      * <ul>
      * <li><p><strong>true</strong></p>
      * </li>
-     * <li><p><strong>false</strong>.</p>
+     * <li><p><strong>false</strong></p>
      * </li>
      * </ul>
      * 
@@ -163,7 +163,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String kubeClusterId;
 
     /**
-     * <p>The instance lock mode. The value <strong>lock</strong> indicates that the instance is automatically locked due to expiration or overdue payment.</p>
+     * <p>The instance lock mode. The value <strong>lock</strong> indicates that the instance is automatically expired or has an overdue payment.</p>
      * 
      * <strong>example:</strong>
      * <p>Unlock</p>
@@ -242,7 +242,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      * <p>The architecture type. Valid values:</p>
      * <ul>
      * <li>container: AI container</li>
-     * <li>ainode: AI node.</li>
+     * <li>ainode: AI node</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -252,18 +252,18 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String runType;
 
     /**
-     * <p>Valid values for PolarDB Enterprise Edition:</p>
+     * <p>Valid values for Enterprise Edition storage type:</p>
      * <ul>
      * <li><strong>PSL5</strong></li>
      * <li><strong>PSL4</strong></li>
      * </ul>
-     * <p>Valid values for PolarDB for MySQL Standard Edition:</p>
+     * <p>Valid values for Standard Edition storage type:</p>
      * <ul>
      * <li><strong>ESSDPL0</strong></li>
      * <li><strong>ESSDPL1</strong></li>
      * <li><strong>ESSDPL2</strong></li>
      * <li><strong>ESSDPL3</strong></li>
-     * <li><strong>ESSDAUTOPL</strong>.</li>
+     * <li><strong>ESSDAUTOPL</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -271,6 +271,12 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
      */
     @NameInMap("StorageType")
     public String storageType;
+
+    @NameInMap("TimeSlicesInfo")
+    public DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo timeSlicesInfo;
+
+    @NameInMap("TimeSlicesType")
+    public String timeSlicesType;
 
     /**
      * <p>The VPC ID specified for the zone switchover.</p>
@@ -293,6 +299,9 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VnodeKubernetesConfig")
+    public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig vnodeKubernetesConfig;
+
     /**
      * <p>The list of data cloud disks.</p>
      */
@@ -309,7 +318,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i,cn-hangzhou-g</p>
@@ -530,6 +539,22 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
         return this.storageType;
     }
 
+    public DescribeAIDBClusterAttributeResponseBody setTimeSlicesInfo(DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo timeSlicesInfo) {
+        this.timeSlicesInfo = timeSlicesInfo;
+        return this;
+    }
+    public DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo getTimeSlicesInfo() {
+        return this.timeSlicesInfo;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setTimeSlicesType(String timeSlicesType) {
+        this.timeSlicesType = timeSlicesType;
+        return this;
+    }
+    public String getTimeSlicesType() {
+        return this.timeSlicesType;
+    }
+
     public DescribeAIDBClusterAttributeResponseBody setVPCId(String VPCId) {
         this.VPCId = VPCId;
         return this;
@@ -544,6 +569,14 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public DescribeAIDBClusterAttributeResponseBody setVnodeKubernetesConfig(DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig vnodeKubernetesConfig) {
+        this.vnodeKubernetesConfig = vnodeKubernetesConfig;
+        return this;
+    }
+    public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig getVnodeKubernetesConfig() {
+        return this.vnodeKubernetesConfig;
     }
 
     public DescribeAIDBClusterAttributeResponseBody setVolumes(java.util.List<DescribeAIDBClusterAttributeResponseBodyVolumes> volumes) {
@@ -721,13 +754,13 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          * <li><strong>Creating</strong>: being created </li>
          * <li><strong>Running</strong>: running </li>
          * <li><strong>Deleting</strong>: being deleted  </li>
-         * <li><strong>Rebooting</strong>: restarting  </li>
+         * <li><strong>Rebooting</strong>: being restarted  </li>
          * <li><strong>DBNodeCreating</strong>: adding a node  </li>
          * <li><strong>DBNodeDeleting</strong>: deleting a node </li>
          * <li><strong>ClassChanging</strong>: changing node specifications  </li>
-         * <li><strong>MinorVersionUpgrading</strong>: upgrading the minor engine version</li>
+         * <li><strong>MinorVersionUpgrading</strong>: upgrading the minor version</li>
          * <li><strong>Maintaining</strong>: under maintenance  </li>
-         * <li><strong>Switching</strong>: switching.</li>
+         * <li><strong>Switching</strong>: being switched</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -950,7 +983,7 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Public</strong>: public endpoint</li>
          * <li><strong>Private</strong>: private endpoint</li>
-         * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+         * <li><strong>Inner</strong>: private endpoint (classic network)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1021,9 +1054,159 @@ public class DescribeAIDBClusterAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices extends TeaModel {
+        @NameInMap("BeginTime")
+        public String beginTime;
+
+        @NameInMap("EndTime")
+        public String endTime;
+
+        public static DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices self = new DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices setBeginTime(String beginTime) {
+            this.beginTime = beginTime;
+            return this;
+        }
+        public String getBeginTime() {
+            return this.beginTime;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+    }
+
+    public static class DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo extends TeaModel {
+        @NameInMap("TimeSlices")
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices> timeSlices;
+
+        public static DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo self = new DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfo setTimeSlices(java.util.List<DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices> timeSlices) {
+            this.timeSlices = timeSlices;
+            return this;
+        }
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyTimeSlicesInfoTimeSlices> getTimeSlices() {
+            return this.timeSlices;
+        }
+
+    }
+
+    public static class DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels self = new DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints extends TeaModel {
+        @NameInMap("Effect")
+        public String effect;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints self = new DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints setEffect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+        public String getEffect() {
+            return this.effect;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig extends TeaModel {
+        @NameInMap("Labels")
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels> labels;
+
+        @NameInMap("Taints")
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints> taints;
+
+        public static DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig self = new DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig setLabels(java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigLabels> getLabels() {
+            return this.labels;
+        }
+
+        public DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfig setTaints(java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints> taints) {
+            this.taints = taints;
+            return this;
+        }
+        public java.util.List<DescribeAIDBClusterAttributeResponseBodyVnodeKubernetesConfigTaints> getTaints() {
+            return this.taints;
+        }
+
+    }
+
     public static class DescribeAIDBClusterAttributeResponseBodyVolumes extends TeaModel {
         /**
-         * <p>The mount path in the container.</p>
+         * <p>The mount path inside the container.</p>
          * 
          * <strong>example:</strong>
          * <p>/var/run/secrets/kubernetes.io/serviceaccount</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBudgetPoliciesRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group or user. This parameter is required if BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
+     * <p>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-p3gk2oh55c**</p>
@@ -16,10 +16,8 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     /**
      * <p>The policy type. Valid values:</p>
      * <ul>
-     * <li><p><strong>ConsumerGroup</strong>: The policy applies to a consumer group.</p>
-     * </li>
-     * <li><p><strong>Consumer</strong>: The policy applies to a user.</p>
-     * </li>
+     * <li><strong>ConsumerGroup</strong>: total budget for a user group</li>
+     * <li><strong>Consumer</strong>: total budget for a user</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,16 +55,13 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values: </p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
-     * <p>The default value is <strong>30</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -83,13 +78,14 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ScopeRefName")
+    public String scopeRefName;
+
     /**
      * <p>The policy status. Valid values:</p>
      * <ul>
-     * <li><p><strong>Enabled</strong></p>
-     * </li>
-     * <li><p><strong>Disabled</strong></p>
-     * </li>
+     * <li><strong>Enabled</strong>: enabled</li>
+     * <li><strong>Disenabled</strong>: disabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,6 +153,14 @@ public class DescribeBudgetPoliciesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeBudgetPoliciesRequest setScopeRefName(String scopeRefName) {
+        this.scopeRefName = scopeRefName;
+        return this;
+    }
+    public String getScopeRefName() {
+        return this.scopeRefName;
     }
 
     public DescribeBudgetPoliciesRequest setStatus(String status) {

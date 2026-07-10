@@ -13,9 +13,6 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
-    /**
-     * <p>A container for the log data.</p>
-     */
     @NameInMap("Items")
     public DescribeApplicationLogsResponseBodyItems items;
 
@@ -29,7 +26,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -47,7 +44,7 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>

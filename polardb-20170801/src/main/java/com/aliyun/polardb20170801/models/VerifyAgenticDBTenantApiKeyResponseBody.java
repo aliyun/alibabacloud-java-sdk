@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The key ID. This parameter is empty if the API key is invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>ak-71304e39c7e841a1</p>
      */
@@ -12,6 +14,8 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String apiKeyId;
 
     /**
+     * <p>The ID of the associated AgenticDB cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>pagc-bp1abcdef1234567</p>
      */
@@ -19,12 +23,17 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The expiration time of the API key. This parameter is empty if the API key is permanently valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>2027-01-01T00:00:00Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>The reason why the validation failed. Valid values: NotFound, Expired, and Revoked. This parameter is empty if the API key is valid.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
@@ -36,6 +45,8 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D4E5F6A7-B8C9-0123-DEFA-234567890123</p>
      */
@@ -43,6 +54,8 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the tenant to which the API key belongs. This parameter is empty if the API key is invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-4b83e0da66674951</p>
      */
@@ -50,6 +63,8 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String tenantId;
 
     /**
+     * <p>The name of the tenant to which the API key belongs. This parameter is empty if the API key is invalid.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-saas-app</p>
      */
@@ -57,6 +72,8 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
     public String tenantName;
 
     /**
+     * <p>Indicates whether the API key is valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

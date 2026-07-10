@@ -15,7 +15,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The component instance ID.</p>
+     * <p>The subcomponent instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pac-xxx</p>
@@ -33,17 +33,17 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String containerName;
 
     /**
-     * <p>The end time for the query. Specify the time in <code>YYYY-MM-DDTHH:mmZ</code> format (UTC).</p>
+     * <p>The end of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2026-03-25T02:11:00Z</p>
+     * <p>2026-03-25T02:11Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The keyword to search for. This parameter applies only to polarclaw instances.</p>
+     * <p>The search keyword. This parameter is used for PolarClaw instances.</p>
      * 
      * <strong>example:</strong>
      * <p>Config</p>
@@ -52,7 +52,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The log level. This parameter applies only to polarclaw instances.</p>
+     * <p>The log level. This parameter is used for PolarClaw instances.</p>
      * 
      * <strong>example:</strong>
      * <p>WARN</p>
@@ -67,7 +67,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -76,7 +76,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>30</strong>. Valid values: 30 to 100.</p>
+     * <p>The number of entries per page. Default value: <strong>30</strong>. Valid values: 30 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -98,17 +98,17 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The start time for the query. Specify the time in <code>YYYY-MM-DDTHH:mmZ</code> format (UTC).</p>
+     * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2026-03-25T01:57:00Z</p>
+     * <p>2026-03-25T01:57Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The log type. This parameter applies only to polarclaw instances. Currently, only <code>gateway</code> is supported.</p>
+     * <p>The log type. This parameter is used for PolarClaw instances. Currently, only gateway is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>gateway</p>

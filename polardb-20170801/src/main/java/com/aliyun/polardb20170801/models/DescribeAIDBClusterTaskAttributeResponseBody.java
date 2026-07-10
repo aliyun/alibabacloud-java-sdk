@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     /**
-     * <p>The access information for the model in a test deployment.</p>
+     * <p>The access information of the model in the test deployment scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;networkInterfaceId\&quot;:\&quot;eni-2zea***\&quot;,\&quot;port\&quot;:\&quot;8000\&quot;,\&quot;host\&quot;:\&quot;192.<strong>.</strong>.**\&quot;}</p>
@@ -14,7 +14,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String accessInfo;
 
     /**
-     * <p>The cluster network type.</p>
+     * <p>The network type of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -23,7 +23,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String clusterNetworkType;
 
     /**
-     * <p>The task creation time.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-12T03:45:13Z</p>
@@ -32,7 +32,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The cluster description.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>task01</p>
@@ -41,7 +41,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String DBClusterDescription;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pm-2ze99***</p>
@@ -52,12 +52,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     /**
      * <p>The training status. Valid values:</p>
      * <ul>
-     * <li><p><strong>ACTIVATION</strong>: Training in progress.</p>
-     * </li>
-     * <li><p><strong>COMPLETED</strong>: Training successful.</p>
-     * </li>
-     * <li><p><strong>FAILED</strong>: Training failed.</p>
-     * </li>
+     * <li><strong>ACTIVATION</strong>: Training in progress.</li>
+     * <li><strong>COMPLETED</strong>: Training succeeded.</li>
+     * <li><strong>FAILED</strong>: Training failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,14 +64,11 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String DBClusterStatus;
 
     /**
-     * <p>The training status description. Valid values:</p>
+     * <p>The training status. Valid values:</p>
      * <ul>
-     * <li><p><strong>ACTIVATION</strong>: Training in progress.</p>
-     * </li>
-     * <li><p><strong>COMPLETED</strong>: Training successful.</p>
-     * </li>
-     * <li><p><strong>FAILED</strong>: Training failed.</p>
-     * </li>
+     * <li><strong>ACTIVATION</strong>: Training in progress.</li>
+     * <li><strong>COMPLETED</strong>: Training succeeded.</li>
+     * <li><strong>FAILED</strong>: Training failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,9 +87,9 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String DBType;
 
     /**
-     * <p>The version. Valid value:</p>
+     * <p>The version. Valid values:</p>
      * <ul>
-     * <li><strong>3.1</strong>: Model operator tuning.</li>
+     * <li><strong>3.1</strong>: model operator tuning.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,19 +99,19 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String DBVersion;
 
     /**
-     * <p>The datasets used for the task.</p>
+     * <p>The datasets.</p>
      */
     @NameInMap("DataSets")
     public java.util.List<DescribeAIDBClusterTaskAttributeResponseBodyDataSets> dataSets;
 
     /**
-     * <p>A list of objects containing additional information about the task.</p>
+     * <p>The additional information, including runtime parameters.</p>
      */
     @NameInMap("ExtraInfo")
     public java.util.List<java.util.Map<String, ?>> extraInfo;
 
     /**
-     * <p>The instance type. Valid value:</p>
+     * <p>The type of the instance. Valid values:</p>
      * <ul>
      * <li><strong>18</strong>.</li>
      * </ul>
@@ -131,10 +125,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     /**
      * <p>The lock mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Locked.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Unlocked.</p>
-     * </li>
+     * <li><strong>0</strong>: Locked.</li>
+     * <li><strong>1</strong>: Unlocked.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,13 +154,13 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String maintainStartTime;
 
     /**
-     * <p>A comma-separated list of output model paths from the model fine-tuning task.</p>
+     * <p>The list of output model paths in the model fine-tuning scenario.</p>
      */
     @NameInMap("ModelPath")
     public String modelPath;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>45D24263-7E3A-4140-9472-************</p>
@@ -177,13 +169,16 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of objects containing information about each training task.</p>
+     * <p>The task information.</p>
      */
     @NameInMap("TaskInfo")
     public java.util.List<DescribeAIDBClusterTaskAttributeResponseBodyTaskInfo> taskInfo;
 
+    @NameInMap("TuneArch")
+    public String tuneArch;
+
     /**
-     * <p>The VPC ID.</p>
+     * <p>The virtual private cloud (VPC) ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-**********</p>
@@ -349,6 +344,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         return this.taskInfo;
     }
 
+    public DescribeAIDBClusterTaskAttributeResponseBody setTuneArch(String tuneArch) {
+        this.tuneArch = tuneArch;
+        return this;
+    }
+    public String getTuneArch() {
+        return this.tuneArch;
+    }
+
     public DescribeAIDBClusterTaskAttributeResponseBody setVPCId(String VPCId) {
         this.VPCId = VPCId;
         return this;
@@ -385,7 +388,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The proportion of the training set reserved for validation.</p>
+         * <p>The ratio of data split from the training set.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -394,12 +397,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         public String splitDatasetRatio;
 
         /**
-         * <p>The type of the dataset. Valid values:</p>
+         * <p>The type. Valid values:</p>
          * <ul>
-         * <li><p><strong>train</strong>: The training set.</p>
-         * </li>
-         * <li><p><strong>eval</strong>: The validation set.</p>
-         * </li>
+         * <li><strong>train</strong>: training set.</li>
+         * <li><strong>eval</strong>: validation set.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +459,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         public String completedTime;
 
         /**
-         * <p>The base model.</p>
+         * <p>The foundation model.</p>
          * 
          * <strong>example:</strong>
          * <p>Qwen-1.7B</p>
@@ -467,7 +468,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The path to the custom model.</p>
+         * <p>The path of the custom model.</p>
          * 
          * <strong>example:</strong>
          * <p>Qwen-1.7B</p>
@@ -476,12 +477,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         public String modelPath;
 
         /**
-         * <p>The source of the model. Valid values:</p>
+         * <p>The model source. Valid values:</p>
          * <ul>
-         * <li><p><strong>public</strong>: A pre-built model.</p>
-         * </li>
-         * <li><p><strong>custom</strong>: A custom model.</p>
-         * </li>
+         * <li><strong>public</strong>: pre-trained model.</li>
+         * <li><strong>custom</strong>: custom model.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -511,10 +510,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p><strong>sft</strong>: Supervised Fine-tuning.</p>
-         * </li>
-         * <li><p><strong>grpo</strong>: Reinforcement learning.</p>
-         * </li>
+         * <li><strong>sft</strong>: SFT-efficient training.</li>
+         * <li><strong>grpo</strong>: GRPO-reinforcement learning.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -526,10 +523,8 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         /**
          * <p>The training method. Valid values:</p>
          * <ul>
-         * <li><p><strong>lora</strong>: Low-Rank Adaptation (LoRA) training.</p>
-         * </li>
-         * <li><p><strong>full</strong>: Full training.</p>
-         * </li>
+         * <li><strong>lora</strong></li>
+         * <li><strong>full</strong>: full-parameter training.</li>
          * </ul>
          * 
          * <strong>example:</strong>

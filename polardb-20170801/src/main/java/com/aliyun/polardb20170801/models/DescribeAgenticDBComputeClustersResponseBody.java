@@ -4,10 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
+    /**
+     * <p>The list of compute instances.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAgenticDBComputeClustersResponseBodyItems> items;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F6A7B8C9-D0E1-2345-FABC-678901234FAB</p>
      */
@@ -29,6 +38,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -82,6 +93,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
 
     public static class DescribeAgenticDBComputeClustersResponseBodyItems extends TeaModel {
         /**
+         * <p>The ID of the associated branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>br-7g8h9i0j1k2l</p>
          */
@@ -89,6 +102,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String branchId;
 
         /**
+         * <p>The name of the associated branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>feature-analytics</p>
          */
@@ -96,6 +111,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String branchName;
 
         /**
+         * <p>The compute instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-g0lsayq8c5qe</p>
          */
@@ -103,6 +120,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String computeClusterId;
 
         /**
+         * <p>The number of compute nodes. The value is fixed to 1 in the first phase.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +129,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public Integer computeNodeCount;
 
         /**
+         * <p>The time when the compute instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-10T11:00:00Z</p>
          */
@@ -117,6 +138,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the compute instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Compute cluster for analytics</p>
          */
@@ -131,6 +154,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public Boolean isDefaultBranch;
 
         /**
+         * <p>The time when the compute instance was last activated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-10T12:30:00Z</p>
          */
@@ -138,6 +163,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String lastActivatedAt;
 
         /**
+         * <p>The maximum compute unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -145,6 +172,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String maxCU;
 
         /**
+         * <p>The minimum compute unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.25</p>
          */
@@ -152,6 +181,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String minCU;
 
         /**
+         * <p>The operator type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Neon</p>
          */
@@ -165,6 +196,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String parentBranchName;
 
         /**
+         * <p>The ID of the associated project.</p>
+         * 
          * <strong>example:</strong>
          * <p>proj-a1b2c3d4e5f6</p>
          */
@@ -172,6 +205,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The name of the associated project.</p>
+         * 
          * <strong>example:</strong>
          * <p>analytics-prod</p>
          */
@@ -179,6 +214,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The status of the compute instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -186,6 +223,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The amount of used data, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1073741824</p>
          */
@@ -193,6 +232,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public Long storageSize;
 
         /**
+         * <p>The ID of the associated tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-4b83e0da66674951</p>
          */
@@ -200,6 +241,8 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The name of the associated tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>my-saas-app</p>
          */

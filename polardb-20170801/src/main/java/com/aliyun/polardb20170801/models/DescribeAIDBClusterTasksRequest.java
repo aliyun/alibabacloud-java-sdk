@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIDBClusterTasksRequest extends TeaModel {
     /**
-     * <p>The model operator type.</p>
+     * <p>The template operator type.</p>
      * 
      * <strong>example:</strong>
      * <p>aitrain</p>
@@ -29,7 +29,7 @@ public class DescribeAIDBClusterTasksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the PolarDB instance.</p>
+     * <p>The instance ID of the PolarDB instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze88***</p>
