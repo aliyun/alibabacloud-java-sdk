@@ -38,7 +38,7 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal period. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
+     * <p>The auto-renewal duration. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
      * <ul>
      * <li><p>When <code>PeriodUnit=Month</code>, the default value is 1.</p>
      * </li>
@@ -72,7 +72,7 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The renewal period. The unit of the renewal period is determined by the <code>PeriodUnit</code> parameter. Valid values:</p>
+     * <p>The renewal duration. The unit of the duration is determined by the <code>PeriodUnit</code> parameter. Valid values:</p>
      * <ul>
      * <li><p>When <code>PeriodUnit</code> is set to <code>Weekly</code>: 1, 2, and 3.</p>
      * </li>
@@ -90,7 +90,7 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the renewal period. Valid values:</p>
+     * <p>The unit of the renewal duration. Valid values:</p>
      * <ul>
      * <li><p>Weekly: week</p>
      * </li>

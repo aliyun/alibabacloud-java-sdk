@@ -6,23 +6,21 @@ import com.aliyun.tea.*;
 public class CloneDisksRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>This parameter is not yet available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      */
     @NameInMap("Arn")
     public java.util.List<CloneDisksRequestArn> arn;
 
     /**
-     * <p>Specifies whether to enable performance bursting for the new disk. Valid values:</p>
+     * <p>Specifies whether to enable the performance burst feature for the new disk. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables performance bursting.</p>
-     * </li>
-     * <li><p><code>false</code>: Disables performance bursting.</p>
+     * <li>true: enables the performance burst feature.</li>
+     * <li>false: does not enable the performance burst feature.<blockquote>
+     * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a>.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is valid only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/zh/ecs/user-guide/essd-autopl-disks">ESSD AutoPL cloud disks</a>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -31,7 +29,7 @@ public class CloneDisksRequest extends TeaModel {
     public Boolean burstingEnabled;
 
     /**
-     * <p>A client-generated token that, when provided, ensures the idempotence of the request. The token must be unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -40,24 +38,18 @@ public class CloneDisksRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The type of the new disk. Valid values:</p>
+     * <p>The category of the new disk. Valid values:</p>
      * <ul>
-     * <li><p><code>cloud_essd</code>: ESSD cloud disk.</p>
-     * </li>
-     * <li><p><code>cloud_auto</code>: ESSD AutoPL cloud disk.</p>
-     * </li>
-     * <li><p><code>cloud_essd_entry</code>: ESSD Entry cloud disk.</p>
-     * </li>
-     * <li><p><code>cloud_regional_disk_auto</code>: regional disk.</p>
-     * </li>
+     * <li>cloud_essd: standard SSD.</li>
+     * <li>cloud_auto: ESSD AutoPL disk.</li>
+     * <li>cloud_essd_entry: ESSD Entry disk.</li>
+     * <li>cloud_regional_disk_auto: regional Standard SSD (ESSD).</li>
      * </ul>
      * <blockquote>
-     * <p>Disk type limits for cloning</p>
+     * <p>Disk category restrictions for disk cloning:</p>
      * <ul>
-     * <li><p>A non-regional disk can be cloned only as a non-regional disk.</p>
-     * </li>
-     * <li><p>A regional disk can be cloned only as a regional disk.</p>
-     * </li>
+     * <li>Non-regional disks can only be cloned to non-regional disk types.</li>
+     * <li>Regional disks can only be cloned to regional disk types.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -69,8 +61,8 @@ public class CloneDisksRequest extends TeaModel {
     public String diskCategory;
 
     /**
-     * <p>The name of the new disk. The name must be 2 to 128 characters in length. It must start with a letter and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <p>Default value: none.</p>
+     * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The name must start with a letter.</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>MyDiskName</p>
@@ -79,12 +71,10 @@ public class CloneDisksRequest extends TeaModel {
     public String diskName;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Performs a dry run to check the request without cloning the disk. The system checks whether your AccessKey is valid, whether the RAM user is authorized, and whether the required parameters are specified. If the request fails the check, the system returns the corresponding error message. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</p>
-     * </li>
-     * <li><p><code>false</code> (default): Sends a normal request. If the request passes the check, the system returns a 2xx HTTP status code and clones the disk.</p>
-     * </li>
+     * <li>true: sends a check request without querying the filing status. The system checks whether your AccessKey pair is valid, whether RAM user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</li>
+     * <li>false (default): sends a normal request. After the check passes, a 2XX HTTP status code is returned and the filing status is queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,12 +84,10 @@ public class CloneDisksRequest extends TeaModel {
     public String dryRun;
 
     /**
-     * <p>Specifies whether to encrypt the new disk. Valid values:</p>
+     * <p>Specifies whether the new disk is encrypted. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The disk is encrypted.</p>
-     * </li>
-     * <li><p><code>false</code>: The disk is not encrypted.</p>
-     * </li>
+     * <li>true: The new disk is encrypted.</li>
+     * <li>false: The new disk is not encrypted.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -110,7 +98,7 @@ public class CloneDisksRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the KMS key to use for the new disk.</p>
+     * <p>The key ID of the KMS key used by the new disk.</p>
      * 
      * <strong>example:</strong>
      * <p>key-szz67b2f696f4wh9yeg5d</p>
@@ -119,12 +107,10 @@ public class CloneDisksRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>Specifies whether to enable the multi-attach feature for the new disk. Valid values:</p>
+     * <p>Specifies whether to enable the multi-attach attribute for the new disk. Settings for this parameter. Valid values:</p>
      * <ul>
-     * <li><p><code>Disabled</code>: Disables the multi-attach feature.</p>
-     * </li>
-     * <li><p><code>Enabled</code>: Enables the multi-attach feature. You can set this parameter to <code>Enabled</code> only for ESSD cloud disks.</p>
-     * </li>
+     * <li>Disabled: disables the multi-attach attribute.</li>
+     * <li>Enabled: enables the multi-attach attribute. Only standard SSDs support the value <code>Enabled</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -138,21 +124,17 @@ public class CloneDisksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level of the new ESSD cloud disk. Valid values:</p>
+     * <p>The performance level (PL) of the enterprise SSD to create. Settings for this parameter vary based on the standard SSD type. Valid values:</p>
      * <ul>
-     * <li><p><code>PL0</code>: A single disk can deliver up to 10,000 random read/write IOPS.</p>
-     * </li>
-     * <li><p><code>PL1</code>: A single disk can deliver up to 50,000 random read/write IOPS.</p>
-     * </li>
-     * <li><p><code>PL2</code>: A single disk can deliver up to 100,000 random read/write IOPS.</p>
-     * </li>
-     * <li><p><code>PL3</code>: A single disk can deliver up to 1,000,000 random read/write IOPS.</p>
-     * </li>
+     * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
+     * <li>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</li>
+     * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
+     * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when <code>DiskCategory</code> is set to <code>cloud_essd</code>.</p>
+     * <p>If DiskCategory is set to cloud_essd, PerformanceLevel is required.</p>
      * </blockquote>
-     * <p>For more information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
+     * <p>For more information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>PL1</p>
@@ -161,16 +143,14 @@ public class CloneDisksRequest extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values:</p>
+     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values:</p>
      * <ul>
-     * <li><p>You cannot set this parameter for disks that are 3 GiB or smaller in size.</p>
-     * </li>
-     * <li><p>For disks that are 4 GiB or larger in size, the value must be in the range of <code>[0, min(1000 * Size - baseline performance, 50000)]</code>.</p>
-     * </li>
+     * <li>Capacity (GiB) &lt;= 3: provisioned performance is not supported.</li>
+     * <li>Capacity (GiB) &gt;= 4: [0, min{(1,000 IOPS/GiB × Capacity - Baseline IOPS), 50,000}]</li>
      * </ul>
-     * <p>baseline performance = <code>max(min(1800 + 50 * Size, 50000), 3000)</code>.</p>
+     * <p>Baseline performance = max{min{1,800 + 50 × Capacity, 50,000}, 3,000}.</p>
      * <blockquote>
-     * <p>This parameter is valid only when <code>DiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/zh/ecs/user-guide/essd-autopl-disks">ESSD AutoPL cloud disks</a>.</p>
+     * <p>This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -180,7 +160,7 @@ public class CloneDisksRequest extends TeaModel {
     public Long provisionedIops;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/zh/ecs/api-regions-describeregions">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</p>
+     * <p>The region ID. You can call <a href="https://www.alibabacloud.com/help/en/ecs/api-regions-describeregions">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -190,7 +170,7 @@ public class CloneDisksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group for the new disk.</p>
+     * <p>The ID of the resource group to which the disk belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp199lyny9b3****</p>
@@ -202,26 +182,18 @@ public class CloneDisksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The size of the new disk, in GiB. The value must be greater than or equal to the size of the source disk. The value range varies based on the <code>DiskCategory</code> value:</p>
+     * <p>The capacity of the new disk. Unit: GiB. You must specify a value for this parameter. Valid values:</p>
      * <ul>
-     * <li><p><code>cloud_essd</code>: The value range depends on the <code>PerformanceLevel</code> value.</p>
-     * <ul>
-     * <li><p><code>PL0</code>: 1 to 65,536</p>
-     * </li>
-     * <li><p><code>PL1</code>: 20 to 65,536</p>
-     * </li>
-     * <li><p><code>PL2</code>: 461 to 65,536</p>
-     * </li>
-     * <li><p><code>PL3</code>: 1,261 to 65,536</p>
-     * </li>
+     * <li>cloud_essd: the valid value range varies based on the performance level.<ul>
+     * <li>PL0: 1 to 65,536.</li>
+     * <li>PL1: 20 to 65,536.</li>
+     * <li>PL2: 461 to 65,536.</li>
+     * <li>PL3: 1,261 to 65,536.</li>
      * </ul>
      * </li>
-     * <li><p><code>cloud_auto</code>: 1 to 65,536</p>
-     * </li>
-     * <li><p><code>cloud_essd_entry</code>: 10 to 32,768</p>
-     * </li>
-     * <li><p><code>cloud_regional_disk_auto</code>: 10 to 65,536</p>
-     * </li>
+     * <li>cloud_auto: 1 to 65,536.</li>
+     * <li>cloud_essd_entry: 10 to 32,768.</li>
+     * <li>cloud_regional_disk_auto: 10 to 65,536.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -242,7 +214,7 @@ public class CloneDisksRequest extends TeaModel {
     public String sourceDiskId;
 
     /**
-     * <p>The tags to add to the new disk.</p>
+     * <p>The list of tags for the disk.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CloneDisksRequestTag> tag;
@@ -399,7 +371,7 @@ public class CloneDisksRequest extends TeaModel {
     public static class CloneDisksRequestArn extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -410,7 +382,7 @@ public class CloneDisksRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -421,7 +393,7 @@ public class CloneDisksRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This parameter is not yet available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -463,7 +435,7 @@ public class CloneDisksRequest extends TeaModel {
 
     public static class CloneDisksRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the new disk. Valid values of N: 1 to 20. The tag key must be 1 to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the disk. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -472,7 +444,7 @@ public class CloneDisksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the new disk. Valid values of N: 1 to 20. The tag value can be an empty string or up to 128 characters in length, and it cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

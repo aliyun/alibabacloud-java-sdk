@@ -57,7 +57,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The collection of alternative instance families from which alternative instance types are selected. You can set up to 10 instance families in this parameter.</p>
+     * <p>Settings for the collection of alternative instance families from which alternative instance types are selected. You can specify up to 10 instance families.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.hfg6</p>
@@ -108,7 +108,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <p>The network type of the ECS instance. Valid values:</p>
      * <ul>
      * <li>vpc: virtual private cloud (VPC).</li>
-     * <li>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</li>
+     * <li>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Discontinuation notice</a>.</li>
      * </ul>
      * <p>Default value: vpc.</p>
      * <p>This parameter is required.</p>
@@ -126,7 +126,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority recommendation strategy. Valid values:</p>
+     * <p>The priority-based recommendation strategy. Valid values:</p>
      * <ul>
      * <li>InventoryFirst: inventory first.</li>
      * <li>PriceFirst: price first. Instance types are sorted by the hourly vCPU unit price in ascending order.</li>
@@ -178,7 +178,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <li>SpotAsPriceGo: a spot instance for which the system automatically bids at up to the pay-as-you-go price.</li>
      * </ul>
      * <blockquote>
-     * <p>When you use SpotStrategy, set InstanceChargeType to PostPaid.</p>
+     * <p>When you use SpotStrategy, set InstanceChargerType to PostPaid.</p>
      * </blockquote>
      * <p>Default value: NoSpot.</p>
      * 

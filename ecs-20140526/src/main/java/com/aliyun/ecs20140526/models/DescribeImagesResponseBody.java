@@ -8,7 +8,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public DescribeImagesResponseBodyImages images;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of entries on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID to which the image belongs.</p>
+     * <p>The region ID of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -35,7 +35,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>66189103-EDB2-43E2-BB60-BFF2B62F4EB8</p>
@@ -44,7 +44,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of images.</p>
+     * <p>The total number of images.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
