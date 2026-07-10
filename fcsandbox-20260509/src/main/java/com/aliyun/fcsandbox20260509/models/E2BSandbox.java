@@ -7,15 +7,6 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("accessEndpoint")
     public String accessEndpoint;
 
-    @NameInMap("alias")
-    public String alias;
-
-    @NameInMap("allowInternetAccess")
-    public Boolean allowInternetAccess;
-
-    @NameInMap("clientID")
-    public String clientID;
-
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
@@ -28,12 +19,6 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("endAt")
     public String endAt;
 
-    @NameInMap("envdAccessToken")
-    public String envdAccessToken;
-
-    @NameInMap("envdVersion")
-    public String envdVersion;
-
     @NameInMap("fcFunctionName")
     public String fcFunctionName;
 
@@ -43,17 +28,11 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("fcSessionID")
     public String fcSessionID;
 
-    @NameInMap("lifecycle")
-    public E2BLifecycle lifecycle;
-
     @NameInMap("memoryMB")
     public Integer memoryMB;
 
     @NameInMap("metadata")
     public java.util.Map<String, String> metadata;
-
-    @NameInMap("network")
-    public E2BNetwork network;
 
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
@@ -82,9 +61,6 @@ public class E2BSandbox extends TeaModel {
     @NameInMap("userID")
     public String userID;
 
-    @NameInMap("volumeMounts")
-    public java.util.List<E2BVolumeMount> volumeMounts;
-
     public static E2BSandbox build(java.util.Map<String, ?> map) throws Exception {
         E2BSandbox self = new E2BSandbox();
         return TeaModel.build(map, self);
@@ -96,30 +72,6 @@ public class E2BSandbox extends TeaModel {
     }
     public String getAccessEndpoint() {
         return this.accessEndpoint;
-    }
-
-    public E2BSandbox setAlias(String alias) {
-        this.alias = alias;
-        return this;
-    }
-    public String getAlias() {
-        return this.alias;
-    }
-
-    public E2BSandbox setAllowInternetAccess(Boolean allowInternetAccess) {
-        this.allowInternetAccess = allowInternetAccess;
-        return this;
-    }
-    public Boolean getAllowInternetAccess() {
-        return this.allowInternetAccess;
-    }
-
-    public E2BSandbox setClientID(String clientID) {
-        this.clientID = clientID;
-        return this;
-    }
-    public String getClientID() {
-        return this.clientID;
     }
 
     public E2BSandbox setCpuCount(Integer cpuCount) {
@@ -154,22 +106,6 @@ public class E2BSandbox extends TeaModel {
         return this.endAt;
     }
 
-    public E2BSandbox setEnvdAccessToken(String envdAccessToken) {
-        this.envdAccessToken = envdAccessToken;
-        return this;
-    }
-    public String getEnvdAccessToken() {
-        return this.envdAccessToken;
-    }
-
-    public E2BSandbox setEnvdVersion(String envdVersion) {
-        this.envdVersion = envdVersion;
-        return this;
-    }
-    public String getEnvdVersion() {
-        return this.envdVersion;
-    }
-
     public E2BSandbox setFcFunctionName(String fcFunctionName) {
         this.fcFunctionName = fcFunctionName;
         return this;
@@ -194,14 +130,6 @@ public class E2BSandbox extends TeaModel {
         return this.fcSessionID;
     }
 
-    public E2BSandbox setLifecycle(E2BLifecycle lifecycle) {
-        this.lifecycle = lifecycle;
-        return this;
-    }
-    public E2BLifecycle getLifecycle() {
-        return this.lifecycle;
-    }
-
     public E2BSandbox setMemoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
         return this;
@@ -216,14 +144,6 @@ public class E2BSandbox extends TeaModel {
     }
     public java.util.Map<String, String> getMetadata() {
         return this.metadata;
-    }
-
-    public E2BSandbox setNetwork(E2BNetwork network) {
-        this.network = network;
-        return this;
-    }
-    public E2BNetwork getNetwork() {
-        return this.network;
     }
 
     public E2BSandbox setResourceGroupID(String resourceGroupID) {
@@ -296,14 +216,6 @@ public class E2BSandbox extends TeaModel {
     }
     public String getUserID() {
         return this.userID;
-    }
-
-    public E2BSandbox setVolumeMounts(java.util.List<E2BVolumeMount> volumeMounts) {
-        this.volumeMounts = volumeMounts;
-        return this;
-    }
-    public java.util.List<E2BVolumeMount> getVolumeMounts() {
-        return this.volumeMounts;
     }
 
 }

@@ -4,20 +4,17 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BTemplate extends TeaModel {
-    @NameInMap("aliases")
-    public java.util.List<String> aliases;
-
     @NameInMap("buildStatus")
     public String buildStatus;
+
+    @NameInMap("category")
+    public String category;
 
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
     @NameInMap("createdAt")
     public String createdAt;
-
-    @NameInMap("lastSpawnedAt")
-    public String lastSpawnedAt;
 
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
@@ -28,14 +25,14 @@ public class E2BTemplate extends TeaModel {
     @NameInMap("names")
     public java.util.List<String> names;
 
+    @NameInMap("networkConfiguration")
+    public NetworkConfiguration networkConfiguration;
+
     @NameInMap("public")
     public Boolean _public;
 
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
-
-    @NameInMap("spawnCount")
-    public Integer spawnCount;
 
     @NameInMap("statusReason")
     public String statusReason;
@@ -63,20 +60,20 @@ public class E2BTemplate extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public E2BTemplate setAliases(java.util.List<String> aliases) {
-        this.aliases = aliases;
-        return this;
-    }
-    public java.util.List<String> getAliases() {
-        return this.aliases;
-    }
-
     public E2BTemplate setBuildStatus(String buildStatus) {
         this.buildStatus = buildStatus;
         return this;
     }
     public String getBuildStatus() {
         return this.buildStatus;
+    }
+
+    public E2BTemplate setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public E2BTemplate setCpuCount(Integer cpuCount) {
@@ -93,14 +90,6 @@ public class E2BTemplate extends TeaModel {
     }
     public String getCreatedAt() {
         return this.createdAt;
-    }
-
-    public E2BTemplate setLastSpawnedAt(String lastSpawnedAt) {
-        this.lastSpawnedAt = lastSpawnedAt;
-        return this;
-    }
-    public String getLastSpawnedAt() {
-        return this.lastSpawnedAt;
     }
 
     public E2BTemplate setLogConfiguration(LogConfiguration logConfiguration) {
@@ -127,6 +116,14 @@ public class E2BTemplate extends TeaModel {
         return this.names;
     }
 
+    public E2BTemplate setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+        return this;
+    }
+    public NetworkConfiguration getNetworkConfiguration() {
+        return this.networkConfiguration;
+    }
+
     public E2BTemplate set_public(Boolean _public) {
         this._public = _public;
         return this;
@@ -141,14 +138,6 @@ public class E2BTemplate extends TeaModel {
     }
     public String getResourceGroupID() {
         return this.resourceGroupID;
-    }
-
-    public E2BTemplate setSpawnCount(Integer spawnCount) {
-        this.spawnCount = spawnCount;
-        return this;
-    }
-    public Integer getSpawnCount() {
-        return this.spawnCount;
     }
 
     public E2BTemplate setStatusReason(String statusReason) {

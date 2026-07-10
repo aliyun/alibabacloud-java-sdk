@@ -4,9 +4,6 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BListedTemplate extends TeaModel {
-    @NameInMap("aliases")
-    public java.util.List<String> aliases;
-
     @NameInMap("buildStatus")
     public String buildStatus;
 
@@ -22,9 +19,6 @@ public class E2BListedTemplate extends TeaModel {
     @NameInMap("functionName")
     public String functionName;
 
-    @NameInMap("lastSpawnedAt")
-    public String lastSpawnedAt;
-
     @NameInMap("logConfiguration")
     public LogConfiguration logConfiguration;
 
@@ -39,9 +33,6 @@ public class E2BListedTemplate extends TeaModel {
 
     @NameInMap("resourceGroupID")
     public String resourceGroupID;
-
-    @NameInMap("spawnCount")
-    public Integer spawnCount;
 
     @NameInMap("statusReason")
     public String statusReason;
@@ -67,14 +58,6 @@ public class E2BListedTemplate extends TeaModel {
     public static E2BListedTemplate build(java.util.Map<String, ?> map) throws Exception {
         E2BListedTemplate self = new E2BListedTemplate();
         return TeaModel.build(map, self);
-    }
-
-    public E2BListedTemplate setAliases(java.util.List<String> aliases) {
-        this.aliases = aliases;
-        return this;
-    }
-    public java.util.List<String> getAliases() {
-        return this.aliases;
     }
 
     public E2BListedTemplate setBuildStatus(String buildStatus) {
@@ -117,14 +100,6 @@ public class E2BListedTemplate extends TeaModel {
         return this.functionName;
     }
 
-    public E2BListedTemplate setLastSpawnedAt(String lastSpawnedAt) {
-        this.lastSpawnedAt = lastSpawnedAt;
-        return this;
-    }
-    public String getLastSpawnedAt() {
-        return this.lastSpawnedAt;
-    }
-
     public E2BListedTemplate setLogConfiguration(LogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -163,14 +138,6 @@ public class E2BListedTemplate extends TeaModel {
     }
     public String getResourceGroupID() {
         return this.resourceGroupID;
-    }
-
-    public E2BListedTemplate setSpawnCount(Integer spawnCount) {
-        this.spawnCount = spawnCount;
-        return this;
-    }
-    public Integer getSpawnCount() {
-        return this.spawnCount;
     }
 
     public E2BListedTemplate setStatusReason(String statusReason) {

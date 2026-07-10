@@ -4,12 +4,6 @@ package com.aliyun.fcsandbox20260509.models;
 import com.aliyun.tea.*;
 
 public class E2BListedSandbox extends TeaModel {
-    @NameInMap("alias")
-    public String alias;
-
-    @NameInMap("clientID")
-    public String clientID;
-
     @NameInMap("cpuCount")
     public Integer cpuCount;
 
@@ -18,9 +12,6 @@ public class E2BListedSandbox extends TeaModel {
 
     @NameInMap("endAt")
     public String endAt;
-
-    @NameInMap("envdVersion")
-    public String envdVersion;
 
     @NameInMap("memoryMB")
     public Integer memoryMB;
@@ -55,28 +46,9 @@ public class E2BListedSandbox extends TeaModel {
     @NameInMap("userID")
     public String userID;
 
-    @NameInMap("volumeMounts")
-    public java.util.List<E2BVolumeMount> volumeMounts;
-
     public static E2BListedSandbox build(java.util.Map<String, ?> map) throws Exception {
         E2BListedSandbox self = new E2BListedSandbox();
         return TeaModel.build(map, self);
-    }
-
-    public E2BListedSandbox setAlias(String alias) {
-        this.alias = alias;
-        return this;
-    }
-    public String getAlias() {
-        return this.alias;
-    }
-
-    public E2BListedSandbox setClientID(String clientID) {
-        this.clientID = clientID;
-        return this;
-    }
-    public String getClientID() {
-        return this.clientID;
     }
 
     public E2BListedSandbox setCpuCount(Integer cpuCount) {
@@ -101,14 +73,6 @@ public class E2BListedSandbox extends TeaModel {
     }
     public String getEndAt() {
         return this.endAt;
-    }
-
-    public E2BListedSandbox setEnvdVersion(String envdVersion) {
-        this.envdVersion = envdVersion;
-        return this;
-    }
-    public String getEnvdVersion() {
-        return this.envdVersion;
     }
 
     public E2BListedSandbox setMemoryMB(Integer memoryMB) {
@@ -197,14 +161,6 @@ public class E2BListedSandbox extends TeaModel {
     }
     public String getUserID() {
         return this.userID;
-    }
-
-    public E2BListedSandbox setVolumeMounts(java.util.List<E2BVolumeMount> volumeMounts) {
-        this.volumeMounts = volumeMounts;
-        return this;
-    }
-    public java.util.List<E2BVolumeMount> getVolumeMounts() {
-        return this.volumeMounts;
     }
 
 }
