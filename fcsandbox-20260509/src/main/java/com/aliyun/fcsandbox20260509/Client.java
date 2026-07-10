@@ -592,6 +592,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新 ApiKey</p>
+     * 
+     * @param request UpdateApiKeyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateApiKeyResponse
+     */
+    public UpdateApiKeyResponse updateApiKeyWithOptions(String apiKeyID, UpdateApiKeyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateApiKey"),
+            new TeaPair("version", "2026-05-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/2026-05-09/api-keys/" + com.aliyun.openapiutil.Client.getEncodeParam(apiKeyID) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApiKeyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新 ApiKey</p>
+     * 
+     * @param request UpdateApiKeyRequest
+     * @return UpdateApiKeyResponse
+     */
+    public UpdateApiKeyResponse updateApiKey(String apiKeyID, UpdateApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateApiKeyWithOptions(apiKeyID, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更新 quota 配置</p>
      * 
      * @param request UpdateQuotaRequest
