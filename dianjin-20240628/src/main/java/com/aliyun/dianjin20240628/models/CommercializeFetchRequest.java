@@ -16,6 +16,9 @@ public class CommercializeFetchRequest extends TeaModel {
     @NameInMap("data")
     public String data;
 
+    @NameInMap("env")
+    public String env;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -59,6 +62,14 @@ public class CommercializeFetchRequest extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public CommercializeFetchRequest setEnv(String env) {
+        this.env = env;
+        return this;
+    }
+    public String getEnv() {
+        return this.env;
     }
 
     public CommercializeFetchRequest setProductId(String productId) {
