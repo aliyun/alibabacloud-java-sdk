@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeployApplicationResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code. Values:</p>
+     * <p>The API status or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: Success.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: Redirection.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: Request error.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: Server error.</p>
-     * </li>
+     * <li><strong>2xx</strong>: success.</li>
+     * <li><strong>3xx</strong>: redirection.</li>
+     * <li><strong>4xx</strong>: request error.</li>
+     * <li><strong>5xx</strong>: server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,18 +20,16 @@ public class DeployApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DeployApplicationResponseBodyData data;
 
     /**
-     * <p>The error code. Values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>On success: This field is not returned.</p>
-     * </li>
-     * <li><p>On failure: This field is returned. For details, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,12 +39,10 @@ public class DeployApplicationResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Additional information. Values:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>On success, returns <strong>success</strong>.</p>
-     * </li>
-     * <li><p>On failure, returns a specific error code.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request fails, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,12 +61,10 @@ public class DeployApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the deployment succeeded. Values:</p>
+     * <p>Indicates whether the application deployment is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Deployment succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Deployment failed.</p>
-     * </li>
+     * <li><strong>true</strong>: the deployment is successful.</li>
+     * <li><strong>false</strong>: the deployment failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +74,7 @@ public class DeployApplicationResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID for precise query of call information.</p>
+     * <p>The trace ID, which is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -164,7 +154,7 @@ public class DeployApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The returned change order ID. Use it to query task execution status.</p>
+         * <p>The returned change order ID, which is used to query the task execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
@@ -173,12 +163,10 @@ public class DeployApplicationResponseBody extends TeaModel {
         public String changeOrderId;
 
         /**
-         * <p>Whether RAM users need approval to deploy changes. Values:</p>
+         * <p>Indicates whether the change published by a Resource Access Management (RAM) user requires approval. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Approval required.</p>
-         * </li>
-         * <li><p><strong>false</strong>: No approval required.</p>
-         * </li>
+         * <li><strong>true</strong>: approval is required.</li>
+         * <li><strong>false</strong>: approval is not required.</li>
          * </ul>
          * 
          * <strong>example:</strong>

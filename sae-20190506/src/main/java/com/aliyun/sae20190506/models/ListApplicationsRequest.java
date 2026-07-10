@@ -14,14 +14,11 @@ public class ListApplicationsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The type of the SAE application.</p>
+     * <p>The Serverless App Engine (SAE) application type.</p>
      * <ul>
-     * <li><p><strong>micro_service</strong></p>
-     * </li>
-     * <li><p><strong>web</strong></p>
-     * </li>
-     * <li><p><strong>job</strong></p>
-     * </li>
+     * <li><strong>micro_service.</strong></li>
+     * <li><strong>web.</strong></li>
+     * <li><strong>job.</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,16 +37,12 @@ public class ListApplicationsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The field to filter applications by. Valid values:</p>
+     * <p>The dimension by which to filter applications. Valid values:</p>
      * <ul>
-     * <li><p><strong>appName</strong>: The application name.</p>
-     * </li>
-     * <li><p><strong>appIds</strong>: The application ID.</p>
-     * </li>
-     * <li><p><strong>slbIps</strong>: The SLB IP address.</p>
-     * </li>
-     * <li><p><strong>instanceIps</strong>: The instance IP address.</p>
-     * </li>
+     * <li><strong>appName</strong>: application name.</li>
+     * <li><strong>appIds</strong>: application ID.</li>
+     * <li><strong>slbIps</strong>: SLB IP address.</li>
+     * <li><strong>instanceIps</strong>: instance IP address.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +52,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String fieldType;
 
     /**
-     * <p>The value for the field specified by <code>FieldType</code>. This can be an application name, application ID, SLB IP address, or instance IP address.</p>
+     * <p>The application name, application ID, SLB IP address, or instance IP address of the target application.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-app</p>
@@ -68,7 +61,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>Filters applications by whether they are stateful. Set this parameter to <code>true</code> to return only stateful applications, or to <code>false</code> to return only stateless applications.</p>
+     * <p>Specifies whether the application is stateful.</p>
      */
     @NameInMap("IsStateful")
     public String isStateful;
@@ -83,26 +76,21 @@ public class ListApplicationsRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The edition of the application:</p>
+     * <p>The application version. Valid values:</p>
      * <ul>
-     * <li><p><code>lite</code>: Lite</p>
-     * </li>
-     * <li><p><code>std</code>: Standard</p>
-     * </li>
-     * <li><p><code>pro</code>: Pro</p>
-     * </li>
+     * <li>lite: Lite Edition</li>
+     * <li>std: Standard Edition</li>
+     * <li>pro: Professional Edition</li>
      * </ul>
      */
     @NameInMap("NewSaeVersion")
     public String newSaeVersion;
 
     /**
-     * <p>The field to sort the applications by. Valid values:</p>
+     * <p>The field by which to sort applications. Valid values:</p>
      * <ul>
-     * <li><p><strong>runnings</strong>: Sorts the applications by the current instance count.</p>
-     * </li>
-     * <li><p><strong>instances</strong>: Sorts the applications by the target instance count.</p>
-     * </li>
+     * <li><strong>runnings</strong>: sorts by the current number target instances.</li>
+     * <li><strong>instances</strong>: sorts by the target number target instances.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +100,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of entries to return per page. Valid values: 0 to 10000.</p>
+     * <p>The number of entries per page in a paging query. Valid values: [0,10000].</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -120,37 +108,28 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ProgrammingLanguage")
+    public String programmingLanguage;
+
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>Specifies whether to sort application instances by running status. If instances have the same status, they are sorted by instance ID. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Sorts the results in ascending order.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Sorts the results in descending order.</p>
-     * </li>
+     * <li><strong>true</strong>: sorts in ascending order. Instances are arranged based on the startup sequence. For example, to reach the running state, an instance must go through steps such as starting the container, pulling the image, and initializing the instance.</li>
+     * <li><strong>false</strong>: sorts in descending order.</li>
      * </ul>
+     * <p>The ascending order of instances is as follows:</p>
      * <ol>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
-     * <li><hr>
-     * </li>
+     * <li><strong>Error</strong>: an error occurred during instance startup.</li>
+     * <li><strong>CrashLoopBackOff</strong>: the container failed to start, encountered an error during startup, and encountered an error again after restart.</li>
+     * <li><strong>ErrImagePull</strong>: an error occurred while pulling the container image for the instance.</li>
+     * <li><strong>ImagePullBackOff</strong>: the container image cannot be obtained.</li>
+     * <li><strong>Pending</strong>: the instance is waiting to be scheduled.</li>
+     * <li><strong>Unknown</strong>: an unknown exception occurred.</li>
+     * <li><strong>Terminating</strong>: the instance is being terminated.</li>
+     * <li><strong>NotFound</strong>: the instance cannot be found.</li>
+     * <li><strong>PodInitializing</strong>: the instance is being initialized.</li>
+     * <li><strong>Init:0/1</strong>: the instance is initializing.</li>
+     * <li><strong>Running</strong>: the instance is running.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -160,15 +139,13 @@ public class ListApplicationsRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>Filters applications by tags. The tags are specified as a JSON string that contains an array of key-value pairs.</p>
+     * <p>The tag key-value pairs. Valid values:</p>
      * <ul>
-     * <li><p><strong>key</strong>: The tag key, which can be 1 to 128 characters in length.</p>
-     * </li>
-     * <li><p><strong>value</strong>: The tag value, which can be 1 to 128 characters in length.</p>
-     * </li>
+     * <li><strong>key</strong>: the tag key. The length must be in the range of [1,128].</li>
+     * <li><strong>value</strong>: the tag value. The length must be in the range of [1,128].</li>
      * </ul>
-     * <p>This parameter is case-sensitive. An application is returned only if it matches all specified tags. On a resource, a tag key can have only one tag value.</p>
-     * <p>The tag key and tag value cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>Tags are case-sensitive. If you specify multiple tags, all specified tags are created and attached to the resource. Each tag key on the same resource can have only one tag value. If you add a tag key that already exists, the corresponding tag value is updated to the new value.</p>
+     * <p>Tags cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;:&quot;key&quot;,&quot;value&quot;:&quot;value&quot;}]</p>
@@ -259,6 +236,14 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListApplicationsRequest setProgrammingLanguage(String programmingLanguage) {
+        this.programmingLanguage = programmingLanguage;
+        return this;
+    }
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     public ListApplicationsRequest setReverse(Boolean reverse) {

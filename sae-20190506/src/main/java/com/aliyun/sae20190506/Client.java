@@ -489,7 +489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an application.</p>
+     * <p>Creates an application.</p>
      * 
      * @param tmpReq CreateApplicationRequest
      * @param headers map
@@ -506,6 +506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.labels)) {
             request.labelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labels, "Labels", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.raspConfig)) {
+            request.raspConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.raspConfig, "RaspConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
@@ -737,6 +741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PythonModules", request.pythonModules);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.raspConfigShrink)) {
+            query.put("RaspConfig", request.raspConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.readiness)) {
             query.put("Readiness", request.readiness);
         }
@@ -883,7 +891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an application.</p>
+     * <p>Creates an application.</p>
      * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -2641,7 +2649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploy an application.</p>
+     * <p>Deploys an application.</p>
      * 
      * @param tmpReq DeployApplicationRequest
      * @param headers map
@@ -2658,6 +2666,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.labels)) {
             request.labelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labels, "Labels", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.raspConfig)) {
+            request.raspConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.raspConfig, "RaspConfig", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
@@ -2889,6 +2901,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PythonModules", request.pythonModules);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.raspConfigShrink)) {
+            query.put("RaspConfig", request.raspConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.readiness)) {
             query.put("Readiness", request.readiness);
         }
@@ -3027,7 +3043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploy an application.</p>
+     * <p>Deploys an application.</p>
      * 
      * @param request DeployApplicationRequest
      * @return DeployApplicationResponse
@@ -3111,7 +3127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration of an application.</p>
+     * <p>Retrieves the configuration information of an application.</p>
      * 
      * @param request DescribeApplicationConfigRequest
      * @param headers map
@@ -3149,7 +3165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration of an application.</p>
+     * <p>Retrieves the configuration information of an application.</p>
      * 
      * @param request DescribeApplicationConfigRequest
      * @return DescribeApplicationConfigResponse
@@ -6188,7 +6204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a list of applications.</p>
+     * <p>Retrieves a list of applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @param headers map
@@ -6238,6 +6254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.programmingLanguage)) {
+            query.put("ProgrammingLanguage", request.programmingLanguage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.reverse)) {
             query.put("Reverse", request.reverse);
         }
@@ -6266,7 +6286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a list of applications.</p>
+     * <p>Retrieves a list of applications.</p>
      * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
