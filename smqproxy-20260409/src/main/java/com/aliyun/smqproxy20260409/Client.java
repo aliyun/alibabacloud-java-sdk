@@ -12,9 +12,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.gateway.mns.Client gatewayClient = new com.aliyun.gateway.mns.Client();
         this._spi = gatewayClient;
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-hangzhou", "mns.cn-hangzhou.aliyuncs.com")
-        );
     }
 
 
@@ -168,16 +165,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>一次 Batch 请求的消息总大小不得超过 64 KB。</li>
-     * <li><code>BatchSendMessage</code> 与 <code>SendMessage</code> 使用相同的 URL 路径，通过 Body 结构区分：包含 <code>Messages</code> 数组即为批量发送，否则为单条发送。</li>
-     * <li>批量操作的返回结果可能同时包含成功和失败的子消息。</li>
-     * <li>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 参数来指定消息分组 ID。</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>批量发送消息</p>
      * 
@@ -212,16 +199,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>一次 Batch 请求的消息总大小不得超过 64 KB。</li>
-     * <li><code>BatchSendMessage</code> 与 <code>SendMessage</code> 使用相同的 URL 路径，通过 Body 结构区分：包含 <code>Messages</code> 数组即为批量发送，否则为单条发送。</li>
-     * <li>批量操作的返回结果可能同时包含成功和失败的子消息。</li>
-     * <li>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 参数来指定消息分组 ID。</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>批量发送消息</p>
      * 
@@ -380,15 +357,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</li>
-     * <li>推送到 Queue 和 HTTP Endpoint 时不需要设置 <code>MessageAttributes</code>。</li>
-     * <li>推送到邮件、短信或移动推送时需要设置对应的 <code>MessageAttributes</code> 子属性。</li>
-     * <li>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>发布消息</p>
      * 
@@ -406,6 +374,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageBody)) {
             body.put("MessageBody", request.messageBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageGroupId)) {
+            body.put("MessageGroupId", request.messageGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageTag)) {
@@ -431,15 +403,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</li>
-     * <li>推送到 Queue 和 HTTP Endpoint 时不需要设置 <code>MessageAttributes</code>。</li>
-     * <li>推送到邮件、短信或移动推送时需要设置对应的 <code>MessageAttributes</code> 子属性。</li>
-     * <li>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>发布消息</p>
      * 
@@ -500,17 +463,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li><strong>SendMessage</strong> 接口用于将消息发送至指定队列。</li>
-     * <li>消息可以立即被消费或通过设置 <code>DelaySeconds</code> 参数来延迟消费。</li>
-     * <li>发送的消息可以指定优先级，数值越小表示优先级越高。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 来保证同一分组内消息的顺序投递。</li>
-     * <li>用户还可以自定义属性 <code>UserProperties</code>，以 JSON 格式字符串形式提供额外信息。</li>
-     * <li>当 <code>DelaySeconds</code> 大于 0 时，API 返回的 <code>ReceiptHandle</code> 可用来在消息变为 Active 状态前删除该延迟消息。</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>发送消息</p>
      * 
@@ -561,17 +513,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li><strong>SendMessage</strong> 接口用于将消息发送至指定队列。</li>
-     * <li>消息可以立即被消费或通过设置 <code>DelaySeconds</code> 参数来延迟消费。</li>
-     * <li>发送的消息可以指定优先级，数值越小表示优先级越高。</li>
-     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 来保证同一分组内消息的顺序投递。</li>
-     * <li>用户还可以自定义属性 <code>UserProperties</code>，以 JSON 格式字符串形式提供额外信息。</li>
-     * <li>当 <code>DelaySeconds</code> 大于 0 时，API 返回的 <code>ReceiptHandle</code> 可用来在消息变为 Active 状态前删除该延迟消息。</li>
-     * </ul>
-     * 
      * <b>summary</b> : 
      * <p>发送消息</p>
      * 

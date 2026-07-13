@@ -7,17 +7,12 @@ public class PublishMessageRequest extends TeaModel {
     @NameInMap("MessageAttributes")
     public PublishMessageRequestMessageAttributes messageAttributes;
 
-    /**
-     * <strong>example:</strong>
-     * <p>hello topic</p>
-     */
     @NameInMap("MessageBody")
     public String messageBody;
 
-    /**
-     * <strong>example:</strong>
-     * <p>order-event</p>
-     */
+    @NameInMap("MessageGroupId")
+    public String messageGroupId;
+
     @NameInMap("MessageTag")
     public String messageTag;
 
@@ -42,6 +37,14 @@ public class PublishMessageRequest extends TeaModel {
         return this.messageBody;
     }
 
+    public PublishMessageRequest setMessageGroupId(String messageGroupId) {
+        this.messageGroupId = messageGroupId;
+        return this;
+    }
+    public String getMessageGroupId() {
+        return this.messageGroupId;
+    }
+
     public PublishMessageRequest setMessageTag(String messageTag) {
         this.messageTag = messageTag;
         return this;
@@ -51,24 +54,12 @@ public class PublishMessageRequest extends TeaModel {
     }
 
     public static class PublishMessageRequestMessageAttributes extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>详见 <a href="https://help.aliyun.com/zh/direct-mail/singlesendmail">https://help.aliyun.com/zh/direct-mail/singlesendmail</a></p>
-         */
         @NameInMap("DirectMail")
         public String directMail;
 
-        /**
-         * <strong>example:</strong>
-         * <p>{&quot;FreeSignName&quot;:&quot;阿里云&quot;,&quot;TemplateCode&quot;:&quot;SMS_123456&quot;,&quot;Type&quot;:&quot;singleContent&quot;,&quot;Receiver&quot;:&quot;13800000000&quot;,&quot;SmsParams&quot;:&quot;{\&quot;code\&quot;:\&quot;1234\&quot;}&quot;}</p>
-         */
         @NameInMap("DirectSMS")
         public String directSMS;
 
-        /**
-         * <strong>example:</strong>
-         * <p>移动推送属性示例值</p>
-         */
         @NameInMap("Push")
         public String push;
 

@@ -4,40 +4,20 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class SendMessageRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
     @NameInMap("DelaySeconds")
     public Integer delaySeconds;
 
-    /**
-     * <strong>example:</strong>
-     * <p>&quot;Hello MNS&quot;</p>
-     */
     @NameInMap("MessageBody")
     public String messageBody;
 
-    /**
-     * <strong>example:</strong>
-     * <p>group-123</p>
-     */
     @NameInMap("MessageGroupId")
     public String messageGroupId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2</p>
-     */
     @NameInMap("Priority")
     public Integer priority;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}</p>
-     */
     @NameInMap("UserProperties")
-    public String userProperties;
+    public java.util.Map<String, UserPropertiesValue> userProperties;
 
     public static SendMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         SendMessageRequest self = new SendMessageRequest();
@@ -76,11 +56,11 @@ public class SendMessageRequest extends TeaModel {
         return this.priority;
     }
 
-    public SendMessageRequest setUserProperties(String userProperties) {
+    public SendMessageRequest setUserProperties(java.util.Map<String, UserPropertiesValue> userProperties) {
         this.userProperties = userProperties;
         return this;
     }
-    public String getUserProperties() {
+    public java.util.Map<String, UserPropertiesValue> getUserProperties() {
         return this.userProperties;
     }
 

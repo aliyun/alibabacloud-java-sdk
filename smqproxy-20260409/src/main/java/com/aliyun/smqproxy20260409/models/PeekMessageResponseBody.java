@@ -29,7 +29,7 @@ public class PeekMessageResponseBody extends TeaModel {
     public Long priority;
 
     @NameInMap("UserProperties")
-    public String userProperties;
+    public java.util.Map<String, UserPropertiesValue> userProperties;
 
     public static PeekMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PeekMessageResponseBody self = new PeekMessageResponseBody();
@@ -100,11 +100,11 @@ public class PeekMessageResponseBody extends TeaModel {
         return this.priority;
     }
 
-    public PeekMessageResponseBody setUserProperties(String userProperties) {
+    public PeekMessageResponseBody setUserProperties(java.util.Map<String, UserPropertiesValue> userProperties) {
         this.userProperties = userProperties;
         return this;
     }
-    public String getUserProperties() {
+    public java.util.Map<String, UserPropertiesValue> getUserProperties() {
         return this.userProperties;
     }
 

@@ -21,33 +21,20 @@ public class BatchSendMessageRequest extends TeaModel {
     }
 
     public static class BatchSendMessageRequestMessages extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>60</p>
-         */
         @NameInMap("DelaySeconds")
         public Integer delaySeconds;
 
-        /**
-         * <strong>example:</strong>
-         * <p>This is test message 1.</p>
-         */
         @NameInMap("MessageBody")
         public String messageBody;
 
-        /**
-         * <strong>example:</strong>
-         * <p>group1</p>
-         */
         @NameInMap("MessageGroupId")
         public String messageGroupId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Priority")
         public Integer priority;
+
+        @NameInMap("UserProperties")
+        public java.util.Map<String, MessagesUserPropertiesValue> userProperties;
 
         public static BatchSendMessageRequestMessages build(java.util.Map<String, ?> map) throws Exception {
             BatchSendMessageRequestMessages self = new BatchSendMessageRequestMessages();
@@ -84,6 +71,14 @@ public class BatchSendMessageRequest extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+        public BatchSendMessageRequestMessages setUserProperties(java.util.Map<String, MessagesUserPropertiesValue> userProperties) {
+            this.userProperties = userProperties;
+            return this;
+        }
+        public java.util.Map<String, MessagesUserPropertiesValue> getUserProperties() {
+            return this.userProperties;
         }
 
     }

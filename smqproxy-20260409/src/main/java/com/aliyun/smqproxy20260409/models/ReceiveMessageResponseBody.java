@@ -35,7 +35,7 @@ public class ReceiveMessageResponseBody extends TeaModel {
     public String receiptHandle;
 
     @NameInMap("UserProperties")
-    public String userProperties;
+    public java.util.Map<String, UserPropertiesValue> userProperties;
 
     public static ReceiveMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReceiveMessageResponseBody self = new ReceiveMessageResponseBody();
@@ -122,11 +122,11 @@ public class ReceiveMessageResponseBody extends TeaModel {
         return this.receiptHandle;
     }
 
-    public ReceiveMessageResponseBody setUserProperties(String userProperties) {
+    public ReceiveMessageResponseBody setUserProperties(java.util.Map<String, UserPropertiesValue> userProperties) {
         this.userProperties = userProperties;
         return this;
     }
-    public String getUserProperties() {
+    public java.util.Map<String, UserPropertiesValue> getUserProperties() {
         return this.userProperties;
     }
 

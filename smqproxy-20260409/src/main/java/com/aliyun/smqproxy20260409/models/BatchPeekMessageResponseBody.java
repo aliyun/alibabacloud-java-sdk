@@ -46,7 +46,7 @@ public class BatchPeekMessageResponseBody extends TeaModel {
         public Long priority;
 
         @NameInMap("UserProperties")
-        public String userProperties;
+        public java.util.Map<String, MessagesUserPropertiesValue> userProperties;
 
         public static BatchPeekMessageResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
             BatchPeekMessageResponseBodyMessages self = new BatchPeekMessageResponseBodyMessages();
@@ -117,11 +117,11 @@ public class BatchPeekMessageResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public BatchPeekMessageResponseBodyMessages setUserProperties(String userProperties) {
+        public BatchPeekMessageResponseBodyMessages setUserProperties(java.util.Map<String, MessagesUserPropertiesValue> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public String getUserProperties() {
+        public java.util.Map<String, MessagesUserPropertiesValue> getUserProperties() {
             return this.userProperties;
         }
 

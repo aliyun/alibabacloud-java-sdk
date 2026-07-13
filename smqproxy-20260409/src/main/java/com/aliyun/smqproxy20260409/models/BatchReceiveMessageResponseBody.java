@@ -52,7 +52,7 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
         public String receiptHandle;
 
         @NameInMap("UserProperties")
-        public String userProperties;
+        public java.util.Map<String, MessagesUserPropertiesValue> userProperties;
 
         public static BatchReceiveMessageResponseBodyMessages build(java.util.Map<String, ?> map) throws Exception {
             BatchReceiveMessageResponseBodyMessages self = new BatchReceiveMessageResponseBodyMessages();
@@ -139,11 +139,11 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
             return this.receiptHandle;
         }
 
-        public BatchReceiveMessageResponseBodyMessages setUserProperties(String userProperties) {
+        public BatchReceiveMessageResponseBodyMessages setUserProperties(java.util.Map<String, MessagesUserPropertiesValue> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
-        public String getUserProperties() {
+        public java.util.Map<String, MessagesUserPropertiesValue> getUserProperties() {
             return this.userProperties;
         }
 
