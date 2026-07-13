@@ -4,50 +4,24 @@ package com.aliyun.thirdswaicall20251127.models;
 import com.aliyun.tea.*;
 
 public class QueryTaskConcurrencyResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QueryTaskConcurrencyResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>successful</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>202BFA44-28D8-571E-B992-BA70F2E92FB0</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743387963</p>
-     */
     @NameInMap("Timestamp")
     public String timestamp;
 
-    /**
-     * <p>Trace ID。</p>
-     * 
-     * <strong>example:</strong>
-     * <p>F47D4976-FC5A-5687-A890-B7923D3B429B</p>
-     */
     @NameInMap("TraceId")
     public String traceId;
 

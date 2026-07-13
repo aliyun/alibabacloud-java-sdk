@@ -6,6 +6,34 @@ import com.aliyun.tea.*;
 public class ReadOutboundTaskCallListRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>1735689600000</p>
+     */
+    @NameInMap("CallEndTimeBegin")
+    public Long callEndTimeBegin;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1767225600000</p>
+     */
+    @NameInMap("CallEndTimeEnd")
+    public Long callEndTimeEnd;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1735689600000</p>
+     */
+    @NameInMap("CallStartTimeBegin")
+    public Long callStartTimeBegin;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1767225600000</p>
+     */
+    @NameInMap("CallStartTimeEnd")
+    public Long callStartTimeEnd;
+
+    /**
+     * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Current")
@@ -40,8 +68,6 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
-     * 
      * <strong>example:</strong>
      * <p>51CC272E-D879-1B23-B98E-FCFB072D362B</p>
      */
@@ -72,6 +98,38 @@ public class ReadOutboundTaskCallListRequest extends TeaModel {
     public static ReadOutboundTaskCallListRequest build(java.util.Map<String, ?> map) throws Exception {
         ReadOutboundTaskCallListRequest self = new ReadOutboundTaskCallListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReadOutboundTaskCallListRequest setCallEndTimeBegin(Long callEndTimeBegin) {
+        this.callEndTimeBegin = callEndTimeBegin;
+        return this;
+    }
+    public Long getCallEndTimeBegin() {
+        return this.callEndTimeBegin;
+    }
+
+    public ReadOutboundTaskCallListRequest setCallEndTimeEnd(Long callEndTimeEnd) {
+        this.callEndTimeEnd = callEndTimeEnd;
+        return this;
+    }
+    public Long getCallEndTimeEnd() {
+        return this.callEndTimeEnd;
+    }
+
+    public ReadOutboundTaskCallListRequest setCallStartTimeBegin(Long callStartTimeBegin) {
+        this.callStartTimeBegin = callStartTimeBegin;
+        return this;
+    }
+    public Long getCallStartTimeBegin() {
+        return this.callStartTimeBegin;
+    }
+
+    public ReadOutboundTaskCallListRequest setCallStartTimeEnd(Long callStartTimeEnd) {
+        this.callStartTimeEnd = callStartTimeEnd;
+        return this;
+    }
+    public Long getCallStartTimeEnd() {
+        return this.callStartTimeEnd;
     }
 
     public ReadOutboundTaskCallListRequest setCurrent(Integer current) {

@@ -37,6 +37,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryTaskConcurrencyResponse queryTaskConcurrencyWithOptions(QueryTaskConcurrencyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationCode)) {
+            body.put("ApplicationCode", request.applicationCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
         }
@@ -91,6 +95,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callEndTimeBegin)) {
+            body.put("CallEndTimeBegin", request.callEndTimeBegin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callEndTimeEnd)) {
+            body.put("CallEndTimeEnd", request.callEndTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callStartTimeBegin)) {
+            body.put("CallStartTimeBegin", request.callStartTimeBegin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callStartTimeEnd)) {
+            body.put("CallStartTimeEnd", request.callStartTimeEnd);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.current)) {
             body.put("Current", request.current);
         }

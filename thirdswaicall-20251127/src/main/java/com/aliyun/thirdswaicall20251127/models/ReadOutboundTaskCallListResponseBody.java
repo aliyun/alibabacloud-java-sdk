@@ -4,69 +4,33 @@ package com.aliyun.thirdswaicall20251127.models;
 import com.aliyun.tea.*;
 
 public class ReadOutboundTaskCallListResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public String code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("Current")
     public Integer current;
 
-    /**
-     * <strong>example:</strong>
-     * <p>successful</p>
-     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Records")
     public java.util.List<ReadOutboundTaskCallListResponseBodyRecords> records;
 
-    /**
-     * <strong>example:</strong>
-     * <p>202BFA44-28D8-571E-B992-BA70F2E92FB0</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
     @NameInMap("Size")
     public Integer size;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1743387963</p>
-     */
     @NameInMap("Timestamp")
     public String timestamp;
 
-    /**
-     * <strong>example:</strong>
-     * <p>3</p>
-     */
     @NameInMap("Total")
     public Long total;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F47D4976-FC5A-5687-A890-B7923D3B429B</p>
-     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -224,6 +188,9 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
     }
 
     public static class ReadOutboundTaskCallListResponseBodyRecords extends TeaModel {
+        @NameInMap("BillingDuration")
+        public Long billingDuration;
+
         /**
          * <strong>example:</strong>
          * <p>2025-09-23 19:38:44</p>
@@ -359,6 +326,13 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>客户待跟进</p>
+         */
+        @NameInMap("Remark")
+        public String remark;
+
+        /**
+         * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("RetryCount")
@@ -416,6 +390,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         public static ReadOutboundTaskCallListResponseBodyRecords build(java.util.Map<String, ?> map) throws Exception {
             ReadOutboundTaskCallListResponseBodyRecords self = new ReadOutboundTaskCallListResponseBodyRecords();
             return TeaModel.build(map, self);
+        }
+
+        public ReadOutboundTaskCallListResponseBodyRecords setBillingDuration(Long billingDuration) {
+            this.billingDuration = billingDuration;
+            return this;
+        }
+        public Long getBillingDuration() {
+            return this.billingDuration;
         }
 
         public ReadOutboundTaskCallListResponseBodyRecords setCallEndTime(String callEndTime) {
@@ -568,6 +550,14 @@ public class ReadOutboundTaskCallListResponseBody extends TeaModel {
         }
         public String getRecordUrl() {
             return this.recordUrl;
+        }
+
+        public ReadOutboundTaskCallListResponseBodyRecords setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public ReadOutboundTaskCallListResponseBodyRecords setRetryCount(Integer retryCount) {

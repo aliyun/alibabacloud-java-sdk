@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryTaskConcurrencyRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
+     * <strong>example:</strong>
+     * <p>B9191F0E57</p>
+     */
+    @NameInMap("ApplicationCode")
+    public String applicationCode;
+
+    /**
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -16,6 +21,14 @@ public class QueryTaskConcurrencyRequest extends TeaModel {
     public static QueryTaskConcurrencyRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTaskConcurrencyRequest self = new QueryTaskConcurrencyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTaskConcurrencyRequest setApplicationCode(String applicationCode) {
+        this.applicationCode = applicationCode;
+        return this;
+    }
+    public String getApplicationCode() {
+        return this.applicationCode;
     }
 
     public QueryTaskConcurrencyRequest setTaskId(Long taskId) {
