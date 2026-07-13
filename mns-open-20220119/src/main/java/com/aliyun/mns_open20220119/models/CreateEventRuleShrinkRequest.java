@@ -30,18 +30,12 @@ public class CreateEventRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>oss</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rule-xsXDW</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

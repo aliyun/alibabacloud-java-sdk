@@ -30,18 +30,12 @@ public class CreateEventRuleRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>oss</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rule-xsXDW</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -146,17 +140,9 @@ public class CreateEventRuleRequest extends TeaModel {
     }
 
     public static class CreateEventRuleRequestEndpoints extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>http</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test-xxx-queue</p>
-         */
         @NameInMap("EndpointValue")
         public String endpointValue;
 

@@ -4,41 +4,21 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class ListEventRulesResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public ListEventRulesResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>operation success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>06273500-249F-5863-121D-74D51123E62C</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,17 +76,9 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyDataPageDataEndpoint extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>topic</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test-topic</p>
-         */
         @NameInMap("EndpointValue")
         public String endpointValue;
 
@@ -134,17 +106,9 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyDataPageDataSubscriptions extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>queue</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>wyx-vp-complete-queue</p>
-         */
         @NameInMap("EndpointValue")
         public String endpointValue;
 
@@ -172,10 +136,6 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyDataPageData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>--</p>
-         */
         @NameInMap("DeliveryMode")
         public String deliveryMode;
 
@@ -188,20 +148,12 @@ public class ListEventRulesResponseBody extends TeaModel {
         @NameInMap("MatchRules")
         public java.util.List<java.util.List<EventMatchRule>> matchRules;
 
-        /**
-         * <strong>example:</strong>
-         * <p>rule-xsXDW</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
         @NameInMap("Subscriptions")
         public java.util.List<ListEventRulesResponseBodyDataPageDataSubscriptions> subscriptions;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo-topic</p>
-         */
         @NameInMap("TopicName")
         public String topicName;
 
@@ -269,55 +221,27 @@ public class ListEventRulesResponseBody extends TeaModel {
     }
 
     public static class ListEventRulesResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
-        /**
-         * <strong>example:</strong>
-         * <p>a88f58d504b8b4c4e0b5e8707e68181f</p>
-         */
         @NameInMap("NextToken")
         public String nextToken;
 
         @NameInMap("PageData")
         public java.util.List<ListEventRulesResponseBodyDataPageData> pageData;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("PageNum")
         public Long pageNum;
 
-        /**
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("PageSize")
         public Long pageSize;
 
-        /**
-         * <strong>example:</strong>
-         * <p>3</p>
-         */
         @NameInMap("Pages")
         public Long pages;
 
-        /**
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Size")
         public Long size;
 
-        /**
-         * <strong>example:</strong>
-         * <p>130</p>
-         */
         @NameInMap("Total")
         public Long total;
 

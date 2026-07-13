@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableEndpointRequest extends TeaModel {
     /**
-     * <p>The type of the endpoint. Value:</p>
-     * <ul>
-     * <li><strong>public</strong>: indicates an public endpoint. (Only the public endpoint is supported.)</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>public</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;

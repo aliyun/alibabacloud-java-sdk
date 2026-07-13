@@ -4,62 +4,30 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class ListEventRulesShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <strong>example:</strong>
-     * <p>cd7NlPlX4kgKCdsCWMiMR/+HnVzPLQ4/XLvjR64jZ7F9AQ+Mr3T59J6IVkuXeV3w</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("PageNum")
     public Long pageNum;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>oss</p>
-     */
     @NameInMap("ProductName")
     public String productName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test-bucket</p>
-     */
     @NameInMap("ResourceName")
     public String resourceName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rule-xsXDW</p>
-     */
     @NameInMap("RuleName")
     public String ruleName;
 
     @NameInMap("Subscription")
     public String subscriptionShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>test-topic</p>
-     */
     @NameInMap("TopicName")
     public String topicName;
 

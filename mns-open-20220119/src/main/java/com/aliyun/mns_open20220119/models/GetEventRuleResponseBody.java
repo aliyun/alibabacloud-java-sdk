@@ -4,41 +4,21 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class GetEventRuleResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public Long code;
 
     @NameInMap("Data")
     public GetEventRuleResponseBodyData data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>operation success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>06273500-249F-5863-121D-74D51123****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -96,17 +76,9 @@ public class GetEventRuleResponseBody extends TeaModel {
     }
 
     public static class GetEventRuleResponseBodyDataEndpoint extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>queue</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>retry-queue</p>
-         */
         @NameInMap("EndpointValue")
         public String endpointValue;
 
@@ -134,17 +106,9 @@ public class GetEventRuleResponseBody extends TeaModel {
     }
 
     public static class GetEventRuleResponseBodyDataSubscriptions extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>queue</p>
-         */
         @NameInMap("EndpointType")
         public String endpointType;
 
-        /**
-         * <strong>example:</strong>
-         * <p>retry-queue</p>
-         */
         @NameInMap("EndpointValue")
         public String endpointValue;
 
@@ -172,10 +136,6 @@ public class GetEventRuleResponseBody extends TeaModel {
     }
 
     public static class GetEventRuleResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>--</p>
-         */
         @NameInMap("DeliveryMode")
         public String deliveryMode;
 
@@ -188,20 +148,12 @@ public class GetEventRuleResponseBody extends TeaModel {
         @NameInMap("MatchRules")
         public java.util.List<java.util.List<EventMatchRule>> matchRules;
 
-        /**
-         * <strong>example:</strong>
-         * <p>event-recorder</p>
-         */
         @NameInMap("RuleName")
         public String ruleName;
 
         @NameInMap("Subscriptions")
         public java.util.List<GetEventRuleResponseBodyDataSubscriptions> subscriptions;
 
-        /**
-         * <strong>example:</strong>
-         * <p>demo-topic</p>
-         */
         @NameInMap("TopicName")
         public String topicName;
 

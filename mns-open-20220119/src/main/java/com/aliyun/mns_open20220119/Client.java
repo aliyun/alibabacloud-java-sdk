@@ -9,6 +9,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "mns-open.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "mns-open.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "mns-open.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "mns-open.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "mns-open.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "mns-open.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "mns-open.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "mns-open.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "mns-open.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "mns-open.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "mns-open.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "mns-open.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "mns-open.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "mns-open.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "mns-open.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "mns-open.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "mns-open.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "mns-open.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "mns-open.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "mns-open.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "mns-open.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "mns-open.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "mns-open.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "mns-open.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "mns-open.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "mns-open.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "mns-open.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "mns-open.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "mns-open.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("mns-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +59,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
+     * <p>AuthorizeEndpointAcl</p>
      * 
      * @param tmpReq AuthorizeEndpointAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -74,7 +105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
+     * <p>AuthorizeEndpointAcl</p>
      * 
      * @param request AuthorizeEndpointAclRequest
      * @return AuthorizeEndpointAclResponse
@@ -176,7 +207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a queue.</p>
+     * <p>CreateQueue</p>
      * 
      * @param tmpReq CreateQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -207,6 +238,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableLogging", request.enableLogging);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSSE)) {
+            query.put("EnableSSE", request.enableSSE);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            query.put("KmsKeyId", request.kmsKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maximumMessageSize)) {
             query.put("MaximumMessageSize", request.maximumMessageSize);
         }
@@ -225,6 +264,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueType)) {
             query.put("QueueType", request.queueType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseAlgorithm)) {
+            query.put("SseAlgorithm", request.sseAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseType)) {
+            query.put("SseType", request.sseType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -258,7 +305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a queue.</p>
+     * <p>CreateQueue</p>
      * 
      * @param request CreateQueueRequest
      * @return CreateQueueResponse
@@ -270,7 +317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a topic.</p>
+     * <p>CreateTopic</p>
      * 
      * @param request CreateTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -292,8 +339,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EnableLogging", request.enableLogging);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSSE)) {
+            body.put("EnableSSE", request.enableSSE);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            body.put("KmsKeyId", request.kmsKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxMessageSize)) {
             body.put("MaxMessageSize", request.maxMessageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseAlgorithm)) {
+            body.put("SseAlgorithm", request.sseAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseType)) {
+            body.put("SseType", request.sseType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
@@ -320,7 +383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a topic.</p>
+     * <p>CreateTopic</p>
      * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
@@ -380,7 +443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a queue.</p>
+     * <p>DeleteQueue</p>
      * 
      * @param request DeleteQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -412,7 +475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a queue.</p>
+     * <p>DeleteQueue</p>
      * 
      * @param request DeleteQueueRequest
      * @return DeleteQueueResponse
@@ -424,7 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a topic.</p>
+     * <p>删除订阅主题</p>
      * 
      * @param request DeleteTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -456,7 +519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a topic.</p>
+     * <p>删除订阅主题</p>
      * 
      * @param request DeleteTopicRequest
      * @return DeleteTopicResponse
@@ -468,7 +531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</p>
+     * <p>DisableEndpoint</p>
      * 
      * @param request DisableEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -500,7 +563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</p>
+     * <p>DisableEndpoint</p>
      * 
      * @param request DisableEndpointRequest
      * @return DisableEndpointResponse
@@ -512,7 +575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
+     * <p>EnableEndpoint</p>
      * 
      * @param request EnableEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -544,7 +607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
+     * <p>EnableEndpoint</p>
      * 
      * @param request EnableEndpointRequest
      * @return EnableEndpointResponse
@@ -648,7 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of an existing queue.</p>
+     * <p>GetQueueAttributes</p>
      * 
      * @param request GetQueueAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -684,7 +747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of an existing queue.</p>
+     * <p>GetQueueAttributes</p>
      * 
      * @param request GetQueueAttributesRequest
      * @return GetQueueAttributesResponse
@@ -696,7 +759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a subscription.</p>
+     * <p>GetSubscription</p>
      * 
      * @param request GetSubscriptionAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -732,7 +795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a subscription.</p>
+     * <p>GetSubscription</p>
      * 
      * @param request GetSubscriptionAttributesRequest
      * @return GetSubscriptionAttributesResponse
@@ -744,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a topic.</p>
+     * <p>查询主题</p>
      * 
      * @param request GetTopicAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -780,7 +843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attributes of a topic.</p>
+     * <p>查询主题</p>
      * 
      * @param request GetTopicAttributesRequest
      * @return GetTopicAttributesResponse
@@ -874,7 +937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</p>
+     * <p>ListQueue</p>
      * 
      * @param request ListQueueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -922,7 +985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</p>
+     * <p>ListQueue</p>
      * 
      * @param request ListQueueRequest
      * @return ListQueueResponse
@@ -934,7 +997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all subscriptions to a topic. The subscriptions are displayed by page.</p>
+     * <p>ListSubscription</p>
      * 
      * @param request ListSubscriptionByTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -986,7 +1049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all subscriptions to a topic. The subscriptions are displayed by page.</p>
+     * <p>ListSubscription</p>
      * 
      * @param request ListSubscriptionByTopicRequest
      * @return ListSubscriptionByTopicResponse
@@ -998,7 +1061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</p>
+     * <p>ListTopic</p>
      * 
      * @param request ListTopicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1046,7 +1109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</p>
+     * <p>ListTopic</p>
      * 
      * @param request ListTopicRequest
      * @return ListTopicResponse
@@ -1058,7 +1121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
+     * <p>RevokeEndpointAcl</p>
      * 
      * @param tmpReq RevokeEndpointAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1104,7 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
+     * <p>RevokeEndpointAcl</p>
      * 
      * @param request RevokeEndpointAclRequest
      * @return RevokeEndpointAclResponse
@@ -1116,7 +1179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a queue.</p>
+     * <p>SetQueueAttributes</p>
      * 
      * @param tmpReq SetQueueAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1147,6 +1210,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableLogging", request.enableLogging);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSSE)) {
+            query.put("EnableSSE", request.enableSSE);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            query.put("KmsKeyId", request.kmsKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maximumMessageSize)) {
             query.put("MaximumMessageSize", request.maximumMessageSize);
         }
@@ -1161,6 +1232,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
             query.put("QueueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseAlgorithm)) {
+            query.put("SseAlgorithm", request.sseAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseType)) {
+            query.put("SseType", request.sseType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tenantRateLimitPolicyShrink)) {
@@ -1190,7 +1269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a queue.</p>
+     * <p>SetQueueAttributes</p>
      * 
      * @param request SetQueueAttributesRequest
      * @return SetQueueAttributesResponse
@@ -1202,7 +1281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a subscription.</p>
+     * <p>ModifySubscription</p>
      * 
      * @param tmpReq SetSubscriptionAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1264,7 +1343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a subscription.</p>
+     * <p>ModifySubscription</p>
      * 
      * @param request SetSubscriptionAttributesRequest
      * @return SetSubscriptionAttributesResponse
@@ -1276,7 +1355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a topic.</p>
+     * <p>编辑订阅主题</p>
      * 
      * @param request SetTopicAttributesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1289,8 +1368,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableLogging", request.enableLogging);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSSE)) {
+            query.put("EnableSSE", request.enableSSE);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            query.put("KmsKeyId", request.kmsKeyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxMessageSize)) {
             query.put("MaxMessageSize", request.maxMessageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseAlgorithm)) {
+            query.put("SseAlgorithm", request.sseAlgorithm);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sseType)) {
+            query.put("SseType", request.sseType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
@@ -1316,7 +1411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the attributes of a topic.</p>
+     * <p>编辑订阅主题</p>
      * 
      * @param request SetTopicAttributesRequest
      * @return SetTopicAttributesResponse
@@ -1328,7 +1423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a subscription to a topic.</p>
+     * <p>CreateSubscription</p>
      * 
      * @param tmpReq SubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1430,7 +1525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a subscription to a topic.</p>
+     * <p>CreateSubscription</p>
      * 
      * @param request SubscribeRequest
      * @return SubscribeResponse
@@ -1442,7 +1537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a subscription.</p>
+     * <p>DeleteSubscription</p>
      * 
      * @param request UnsubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1478,7 +1573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a subscription.</p>
+     * <p>DeleteSubscription</p>
      * 
      * @param request UnsubscribeRequest
      * @return UnsubscribeResponse

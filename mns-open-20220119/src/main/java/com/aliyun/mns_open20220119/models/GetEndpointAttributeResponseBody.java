@@ -4,54 +4,21 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class GetEndpointAttributeResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public Long code;
 
-    /**
-     * <p>The response data.</p>
-     */
     @NameInMap("Data")
     public GetEndpointAttributeResponseBodyData data;
 
-    /**
-     * <p>The returned message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>operation success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>06273500-249F-5863-121D-74D51123****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The response status.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,33 +76,12 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
     }
 
     public static class GetEndpointAttributeResponseBodyDataCidrList extends TeaModel {
-        /**
-         * <p>The ACL policy. Valid values:</p>
-         * <ul>
-         * <li><strong>allow</strong>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported.)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>allow</p>
-         */
         @NameInMap("AclStrategy")
         public String aclStrategy;
 
-        /**
-         * <p>The CIDR block.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>172.18.0.0/24</p>
-         */
         @NameInMap("Cidr")
         public String cidr;
 
-        /**
-         * <p>The creation time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1701951224000</p>
-         */
         @NameInMap("CreateTime")
         public Long createTime;
 
@@ -171,18 +117,9 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
     }
 
     public static class GetEndpointAttributeResponseBodyData extends TeaModel {
-        /**
-         * <p>The list of CIDR block.</p>
-         */
         @NameInMap("CidrList")
         public java.util.List<GetEndpointAttributeResponseBodyDataCidrList> cidrList;
 
-        /**
-         * <p>Specifies whether the endpoint is enabled.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("EndpointEnabled")
         public Boolean endpointEnabled;
 

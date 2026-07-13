@@ -4,48 +4,18 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeEndpointAclResponseBody extends TeaModel {
-    /**
-     * <p>The HTTP status code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public Long code;
 
-    /**
-     * <p>The returned message.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>operation success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <p>The ID of the request.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>06273500-249F-5863-121D-74D51123****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The response status.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 

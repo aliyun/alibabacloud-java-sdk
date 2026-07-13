@@ -4,45 +4,21 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class CreateEventRuleResponseBody extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>200</p>
-     */
     @NameInMap("Code")
     public Long code;
 
-    /**
-     * <strong>example:</strong>
-     * <p>rule-xsXDW</p>
-     */
     @NameInMap("Data")
     public String data;
 
-    /**
-     * <strong>example:</strong>
-     * <p>operation success</p>
-     */
     @NameInMap("Message")
     public String message;
 
-    /**
-     * <strong>example:</strong>
-     * <p>06273500-249F-5863-121D-74D51123****</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>Success</p>
-     */
     @NameInMap("Status")
     public String status;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
