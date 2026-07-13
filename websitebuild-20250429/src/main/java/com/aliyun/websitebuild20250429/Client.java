@@ -1043,7 +1043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a login-free ticket for a website builder instance.</p>
+     * <p>Creates a passwordless login ticket.</p>
      * 
      * @param request CreateAppInstanceTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1058,6 +1058,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1079,7 +1083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a login-free ticket for a website builder instance.</p>
+     * <p>Creates a passwordless login ticket.</p>
      * 
      * @param request CreateAppInstanceTicketRequest
      * @return CreateAppInstanceTicketResponse
@@ -8398,6 +8402,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.seAuthInfo)) {
             query.put("SeAuthInfo", request.seAuthInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.seIndexStatus)) {
+            query.put("SeIndexStatus", request.seIndexStatus);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.seType)) {

@@ -29,6 +29,9 @@ public class UpdateAppSeoStatusRequest extends TeaModel {
     @NameInMap("SeAuthInfo")
     public String seAuthInfo;
 
+    @NameInMap("SeIndexStatus")
+    public Integer seIndexStatus;
+
     /**
      * <p>The search engine type.</p>
      * 
@@ -65,6 +68,14 @@ public class UpdateAppSeoStatusRequest extends TeaModel {
     }
     public String getSeAuthInfo() {
         return this.seAuthInfo;
+    }
+
+    public UpdateAppSeoStatusRequest setSeIndexStatus(Integer seIndexStatus) {
+        this.seIndexStatus = seIndexStatus;
+        return this;
+    }
+    public Integer getSeIndexStatus() {
+        return this.seIndexStatus;
     }
 
     public UpdateAppSeoStatusRequest setSeType(String seType) {

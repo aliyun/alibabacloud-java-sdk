@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppInstanceTicketRequest extends TeaModel {
     /**
-     * <p>The business ID of the customer.</p>
+     * <p>The customer business ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WS20250801154628000001</p>
@@ -14,13 +14,16 @@ public class CreateAppInstanceTicketRequest extends TeaModel {
     public String bizId;
 
     /**
-     * <p>The client ID of the device whose access credentials need to be revoked.</p>
+     * <p>The Client ID of the device for which you want to revoke the access credential.</p>
      * 
      * <strong>example:</strong>
      * <p>d566aaf2-7c88-40a4-982f-6abef0be13c9</p>
      */
     @NameInMap("ClientId")
     public String clientId;
+
+    @NameInMap("Role")
+    public String role;
 
     public static CreateAppInstanceTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppInstanceTicketRequest self = new CreateAppInstanceTicketRequest();
@@ -41,6 +44,14 @@ public class CreateAppInstanceTicketRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public CreateAppInstanceTicketRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
     }
 
 }

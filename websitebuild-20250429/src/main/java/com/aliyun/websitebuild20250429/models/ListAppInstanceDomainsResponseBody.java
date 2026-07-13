@@ -41,9 +41,9 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which replaces the <code>%s</code> placeholder in the <strong>ErrMessage</strong> return parameter.</p>
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> in the <strong>ErrMessage</strong> return parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,13 +53,13 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error parameters.</p>
+     * <p>The error parameters returned.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
-     * <p>The number of entries per query.</p>
+     * <p>The maximum number of entries per query.</p>
      * <p>Valid values: 10 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
-     * <p>The reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -230,7 +230,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataCertificate extends TeaModel {
         /**
-         * <p>The certificate name.</p>
+         * <p>The name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2024</p>
@@ -239,7 +239,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateName;
 
         /**
-         * <p>The certificate status.</p>
+         * <p>The status of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -248,7 +248,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
-         * <p>The certificate type.</p>
+         * <p>The type of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>self-signed</p>
@@ -257,7 +257,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateType;
 
         /**
-         * <p>The certificate expiration date.</p>
+         * <p>The expiration date of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>4885718400000</p>
@@ -723,7 +723,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleDataVerification extends TeaModel {
         /**
-         * <p>The DNS record configuration guide for the user.</p>
+         * <p>The DNS record that the user needs to configure.</p>
          */
         @NameInMap("DnsRecord")
         public ListAppInstanceDomainsResponseBodyModuleDataVerificationDnsRecord dnsRecord;
@@ -747,7 +747,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String verificationStatus;
 
         /**
-         * <p>The ownership verification status.</p>
+         * <p>The ownership verification status code.</p>
          * 
          * <strong>example:</strong>
          * <p>NoAliyunServiceRoleForWebsiteBuildPublishAuth</p>
@@ -802,7 +802,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public ListAppInstanceDomainsResponseBodyModuleDataCertificate certificate;
 
         /**
-         * <p>The instance creation time. This parameter is required. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>1683256054000</p>
@@ -947,7 +947,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextCertificate extends TeaModel {
         /**
-         * <p>The certificate name.</p>
+         * <p>The name of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>jfztkg202502</p>
@@ -956,7 +956,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateName;
 
         /**
-         * <p>The certificate status.</p>
+         * <p>The status of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -965,7 +965,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateStatus;
 
         /**
-         * <p>The certificate type.</p>
+         * <p>The type of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>Server</p>
@@ -974,7 +974,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public String certificateType;
 
         /**
-         * <p>The certificate expiration date.</p>
+         * <p>The expiration date of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-15T02:04:00Z</p>
@@ -1423,7 +1423,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
 
     public static class ListAppInstanceDomainsResponseBodyModuleNextVerification extends TeaModel {
         /**
-         * <p>The DNS record configuration guide for the user.</p>
+         * <p>The DNS record that the user needs to configure.</p>
          */
         @NameInMap("DnsRecord")
         public ListAppInstanceDomainsResponseBodyModuleNextVerificationDnsRecord dnsRecord;
@@ -1496,7 +1496,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public ListAppInstanceDomainsResponseBodyModuleNextCertificate certificate;
 
         /**
-         * <p>The instance creation time. This parameter is required. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The instance creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>1741572465000</p>
@@ -1650,7 +1650,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public Integer currentPageNum;
 
         /**
-         * <p>The request result.</p>
+         * <p>The request results.</p>
          */
         @NameInMap("Data")
         public java.util.List<ListAppInstanceDomainsResponseBodyModuleData> data;
@@ -1683,7 +1683,7 @@ public class ListAppInstanceDomainsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
-         * <p>In addition to pagination limits, the server processes up to 1,000 recent records per query. If the result exceeds 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>, and you need to narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * <p>In addition to pagination limits, the server processes a maximum of 1000 recent records per query. If the results exceed 1000 entries, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
          */
         @NameInMap("ResultLimit")
         public Boolean resultLimit;
