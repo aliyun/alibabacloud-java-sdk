@@ -4,10 +4,15 @@ package com.aliyun.bdrc20230808.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeTasksResponseBodyData data;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AE43C4CB-8074-5EBD-9806-8CA6D12800B1</p>
      */
@@ -37,6 +42,8 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     public static class DescribeTasksResponseBodyDataContent extends TeaModel {
         /**
+         * <p>The task\&quot;s completion time, represented as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724983927</p>
          */
@@ -44,6 +51,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public Long completeTime;
 
         /**
+         * <p>The error message returned if the task fails.</p>
+         * 
          * <strong>example:</strong>
          * <p>device not online</p>
          */
@@ -51,6 +60,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
+         * <p>The execution ID. This parameter is currently unused and returns an empty string.</p>
+         * 
          * <strong>example:</strong>
          * <p>empty</p>
          */
@@ -58,6 +69,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String executionId;
 
         /**
+         * <p>The task\&quot;s expiration time, represented as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724983927</p>
          */
@@ -65,6 +78,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
+         * <p>The progress of the task, ranging from 0 to 10,000.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -72,6 +87,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public Integer progress;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>AE43C4CB-8074-5EBD-9806-8CA6D12800B1</p>
          */
@@ -79,6 +96,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The task\&quot;s start time, represented as a Unix timestamp in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724983927</p>
          */
@@ -86,6 +105,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The task description.</p>
+         * 
          * <strong>example:</strong>
          * <p>empty</p>
          */
@@ -93,6 +114,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskDescription;
 
         /**
+         * <p>The task details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;resourceTypes&quot;:[&quot;ACS::ECS::Instance&quot;,&quot;ACS::OSS::Bucket&quot;,&quot;ACS::OTS::Instance&quot;,&quot;ACS::NAS::FileSystem&quot;]}</p>
          */
@@ -100,6 +123,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskDetail;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-0000e4w0u1v592zdf6s7</p>
          */
@@ -107,6 +132,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The task name.</p>
+         * 
          * <strong>example:</strong>
          * <p>empty</p>
          */
@@ -114,6 +141,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
+         * <p>The task priority. Valid values: <code>HIGH</code> (high-priority, for user-initiated tasks) and <code>LOW</code> (low-priority, for background tasks).</p>
+         * 
          * <strong>example:</strong>
          * <p>HIGH</p>
          */
@@ -121,6 +150,17 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskPriority;
 
         /**
+         * <p>The result of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;resourceCounts&quot;:[{&quot;resourceType&quot;:&quot;ACS::OSS::Bucket&quot;,&quot;count&quot;:2},{&quot;resourceType&quot;:&quot;ACS::NAS::FileSystem&quot;,&quot;count&quot;:3}]}</p>
+         */
+        @NameInMap("TaskResult")
+        public String taskResult;
+
+        /**
+         * <p>The task status. Valid values: <code>CREATED</code>, <code>RUNNING</code>, <code>COMPLETE</code>, <code>FAILED</code>, <code>EXPIRED</code>, and <code>CANCELED</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -128,6 +168,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>The task type. Valid values: <code>TEST</code>, <code>UPDATE_RESOURCES</code>, and <code>CHECK_RULES</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>UPDATE_RESOURCES</p>
          */
@@ -235,6 +277,14 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.taskPriority;
         }
 
+        public DescribeTasksResponseBodyDataContent setTaskResult(String taskResult) {
+            this.taskResult = taskResult;
+            return this;
+        }
+        public String getTaskResult() {
+            return this.taskResult;
+        }
+
         public DescribeTasksResponseBodyDataContent setTaskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
             return this;
@@ -254,10 +304,15 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of tasks.</p>
+         */
         @NameInMap("Content")
         public java.util.List<DescribeTasksResponseBodyDataContent> content;
 
         /**
+         * <p>The maximum number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -265,6 +320,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The pagination token used to retrieve the next page of results. If this parameter is empty, no more results are available.</p>
+         * 
          * <strong>example:</strong>
          * <p>f4b8c2504545a3b41af5e75147d17d12e3818a0b9b2ff9a2</p>
          */
@@ -272,6 +329,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of entries matching the request criteria. This parameter is optional and is not returned by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

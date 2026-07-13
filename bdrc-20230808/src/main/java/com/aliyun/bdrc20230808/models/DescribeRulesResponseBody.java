@@ -4,10 +4,15 @@ package com.aliyun.bdrc20230808.models;
 import com.aliyun.tea.*;
 
 public class DescribeRulesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeRulesResponseBodyData data;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>86DEBAC9-AB6A-59AB-9E5C-A540E579ECC9</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     public static class DescribeRulesResponseBodyDataContent extends TeaModel {
         /**
+         * <p>The number of resources for which the check failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long checkFailedResourceCount;
 
         /**
+         * <p>The check status. Valid values: NOT_CHECKED (Not checked), PASSED (Passed), FAILED (Failed), CHECKING (Checking), and CHECK_FAILED (Check failed).</p>
+         * 
          * <strong>example:</strong>
          * <p>PASSED</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
+         * <p>The UNIX timestamp that indicates when the check was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1704157635</p>
          */
@@ -58,6 +69,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long checkTime;
 
         /**
+         * <p>The product type to which the rule applies.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
@@ -65,6 +78,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The resource type to which the rule applies.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
          */
@@ -72,6 +87,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The number of at-risk resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -79,6 +96,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Long riskyResourceCount;
 
         /**
+         * <p>The unique ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule-bp11ggd8wr762</p>
          */
@@ -86,6 +105,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs-backup</p>
          */
@@ -93,6 +114,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String ruleTemplate;
 
         /**
+         * <p>The total number of resources that were checked.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -179,10 +202,15 @@ public class DescribeRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of returned records.</p>
+         */
         @NameInMap("Content")
         public java.util.List<DescribeRulesResponseBodyDataContent> content;
 
         /**
+         * <p>The maximum number of entries returned on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -190,6 +218,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>0975951c75d7b41464c8d08ae17043ca</p>
          */
@@ -197,6 +227,8 @@ public class DescribeRulesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of entries that meet the filter criteria. This parameter is optional and is not returned by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>42</p>
          */

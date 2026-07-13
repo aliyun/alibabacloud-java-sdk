@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableCheckProductRequest extends TeaModel {
     /**
+     * <p>The product type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

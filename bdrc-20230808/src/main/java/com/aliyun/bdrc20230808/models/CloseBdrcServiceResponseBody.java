@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloseBdrcServiceResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>663D8898-E0B5-5964-BF28-A191CE6A1825</p>
      */

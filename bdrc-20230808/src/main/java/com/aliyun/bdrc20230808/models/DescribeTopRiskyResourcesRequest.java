@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeTopRiskyResourcesRequest extends TeaModel {
     /**
+     * <p>The ID of the resource category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-000***123</p>
+     */
+    @NameInMap("ResourceCategoryId")
+    public String resourceCategoryId;
+
+    @NameInMap("ResourceOwnerIds")
+    public java.util.List<Long> resourceOwnerIds;
+
+    /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
      */
@@ -14,6 +28,22 @@ public class DescribeTopRiskyResourcesRequest extends TeaModel {
     public static DescribeTopRiskyResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTopRiskyResourcesRequest self = new DescribeTopRiskyResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTopRiskyResourcesRequest setResourceCategoryId(String resourceCategoryId) {
+        this.resourceCategoryId = resourceCategoryId;
+        return this;
+    }
+    public String getResourceCategoryId() {
+        return this.resourceCategoryId;
+    }
+
+    public DescribeTopRiskyResourcesRequest setResourceOwnerIds(java.util.List<Long> resourceOwnerIds) {
+        this.resourceOwnerIds = resourceOwnerIds;
+        return this;
+    }
+    public java.util.List<Long> getResourceOwnerIds() {
+        return this.resourceOwnerIds;
     }
 
     public DescribeTopRiskyResourcesRequest setResourceType(String resourceType) {

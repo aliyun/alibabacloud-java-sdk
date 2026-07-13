@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisableCheckResourceRequest extends TeaModel {
     /**
+     * <p>Unique resource identity</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

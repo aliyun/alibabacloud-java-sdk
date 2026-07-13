@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateResourcesRequest extends TeaModel {
     /**
+     * <p>The resource type. If this parameter is not specified, all types of resources are updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACS::ECS::Instance</p>
      */

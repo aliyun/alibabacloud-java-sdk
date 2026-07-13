@@ -4,10 +4,15 @@ package com.aliyun.bdrc20230808.models;
 import com.aliyun.tea.*;
 
 public class DescribeCheckDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeCheckDetailsResponseBodyData data;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>92793A50-0B97-59F1-BAEA-EAED83BA1998</p>
      */
@@ -37,6 +42,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
 
     public static class DescribeCheckDetailsResponseBodyDataContent extends TeaModel {
         /**
+         * <p>The check status. Valid values: NOT_CHECKED, PASSED, FAILED, CHECKING, and CHECK_FAILED.</p>
+         * 
          * <strong>example:</strong>
          * <p>PASSED</p>
          */
@@ -44,6 +51,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String checkStatus;
 
         /**
+         * <p>The time when the check was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>1701725715</p>
          */
@@ -51,6 +60,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public Long checkTime;
 
         /**
+         * <p>The check details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;ecsAutoSnapshotPolicyIds&quot;:[],&quot;hbrBackupPlans&quot;:[{&quot;planId&quot;:&quot;po-xxxxxxxx&quot;,&quot;sourceType&quot;:&quot;UDM_ECS&quot;}]}</p>
          */
@@ -58,6 +69,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String detail;
 
         /**
+         * <p>The type of the cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
@@ -65,6 +78,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The globally unique Alibaba Cloud Resource Name (ARN) of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:ecs:123<em><strong>890:cn-shanghai:instance/i-001</strong></em>90</p>
          */
@@ -72,6 +87,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String resourceArn;
 
         /**
+         * <p>The unique ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-xxxxxxxx</p>
          */
@@ -79,6 +96,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The name of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>test server</p>
          */
@@ -86,6 +105,17 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The ID of the resource owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***7890</p>
+         */
+        @NameInMap("ResourceOwnerId")
+        public Long resourceOwnerId;
+
+        /**
+         * <p>The type of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
          */
@@ -93,6 +123,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The unique ID of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule-xxxxxxxx</p>
          */
@@ -100,6 +132,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String ruleId;
 
         /**
+         * <p>The rule template.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs-backup</p>
          */
@@ -167,6 +201,14 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
             return this.resourceName;
         }
 
+        public DescribeCheckDetailsResponseBodyDataContent setResourceOwnerId(Long resourceOwnerId) {
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+        public Long getResourceOwnerId() {
+            return this.resourceOwnerId;
+        }
+
         public DescribeCheckDetailsResponseBodyDataContent setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
@@ -194,10 +236,15 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeCheckDetailsResponseBodyData extends TeaModel {
+        /**
+         * <p>The collection of records returned by this request.</p>
+         */
         @NameInMap("Content")
         public java.util.List<DescribeCheckDetailsResponseBodyDataContent> content;
 
         /**
+         * <p>The maximum number of entries returned in this response.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -205,6 +252,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The token that is used to retrieve the next page of results. If this parameter is empty, it indicates that all data has been retrieved.</p>
+         * 
          * <strong>example:</strong>
          * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAOTzWWYAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM4NzA3NTcwMzY2MjMwNzY2ODcyMzAzMTY2Nzg3ODY5MzY=</p>
          */
@@ -212,6 +261,8 @@ public class DescribeCheckDetailsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of entries that meet the query conditions. This parameter is optional and is not returned by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

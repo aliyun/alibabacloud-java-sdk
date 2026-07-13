@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableCheckResourceResponseBody extends TeaModel {
     /**
+     * <p>Unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E583A0FF-803C-51C4-9AC9-E029471ACD6A</p>
      */

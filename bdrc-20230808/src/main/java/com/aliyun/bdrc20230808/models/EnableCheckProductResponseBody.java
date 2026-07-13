@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableCheckProductResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8724BC18-904D-5A0D-BFF4-F0554F0037E7</p>
      */

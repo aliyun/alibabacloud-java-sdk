@@ -4,10 +4,15 @@ package com.aliyun.bdrc20230808.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public DescribeResourcesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>700683DE-0154-56D4-8D76-3B7A2C2C7DF9</p>
      */
@@ -37,6 +42,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
 
     public static class DescribeResourcesResponseBodyDataContent extends TeaModel {
         /**
+         * <p>The amount of data in the Archive storage class.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -44,6 +51,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long archiveDataSize;
 
         /**
+         * <p>The number of failed check items.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +60,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long checkFailedCount;
 
         /**
+         * <p>The amount of data in the Cold Archive storage class.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -58,16 +69,26 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long coldArchiveDataSize;
 
         /**
+         * <p>The UNIX timestamp that indicates when the resource was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1697798340</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The data redundancy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LRS</p>
+         */
         @NameInMap("DataRedundancyType")
         public String dataRedundancyType;
 
         /**
+         * <p>Indicates whether data protection scoring is enabled for the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -75,6 +96,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Boolean enableCheck;
 
         /**
+         * <p>The amount of data in the Infrequent Access (IA) storage class.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -82,6 +105,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long iaDataSize;
 
         /**
+         * <p>The type of the cloud service.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs</p>
          */
@@ -89,6 +114,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The data protection score of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -96,6 +123,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Integer protectionScore;
 
         /**
+         * <p>The UNIX timestamp that indicates when the score was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -103,6 +132,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long protectionScoreUpdatedTime;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -110,6 +141,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The unique resource ARN.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:ecs:cn-hangzhou:xxxxxxxx:instance/xxxxx</p>
          */
@@ -117,6 +150,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String resourceArn;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-xxxxxxxx</p>
          */
@@ -124,6 +159,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The name of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>test server</p>
          */
@@ -131,6 +168,17 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The resource owner ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***7890</p>
+         */
+        @NameInMap("ResourceOwnerId")
+        public Long resourceOwnerId;
+
+        /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS::ECS::Instance</p>
          */
@@ -138,6 +186,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The number of check items with potential risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -145,6 +195,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long riskCount;
 
         /**
+         * <p>The amount of data in the Standard storage class.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -152,16 +204,26 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long standardDataSize;
 
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage class of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
+         * <p>The total amount of data.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -169,7 +231,7 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Long totalDataSize;
 
         /**
-         * <p>vSwitch ID</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxxxxxxx</p>
@@ -178,7 +240,7 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>vpc ID</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxxxxxxx</p>
@@ -187,6 +249,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -310,6 +374,14 @@ public class DescribeResourcesResponseBody extends TeaModel {
             return this.resourceName;
         }
 
+        public DescribeResourcesResponseBodyDataContent setResourceOwnerId(Long resourceOwnerId) {
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+        public Long getResourceOwnerId() {
+            return this.resourceOwnerId;
+        }
+
         public DescribeResourcesResponseBodyDataContent setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
@@ -385,10 +457,15 @@ public class DescribeResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of returned resources.</p>
+         */
         @NameInMap("Content")
         public java.util.List<DescribeResourcesResponseBodyDataContent> content;
 
         /**
+         * <p>The maximum number of resources to return on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -396,6 +473,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The pagination token to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>fb836242f4225fa0f0e0257362dfc6dd</p>
          */
@@ -403,6 +482,8 @@ public class DescribeResourcesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The total number of resources that match the query criteria. This parameter is optional and is not returned by default.</p>
+         * 
          * <strong>example:</strong>
          * <p>149</p>
          */

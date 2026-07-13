@@ -4,10 +4,15 @@ package com.aliyun.bdrc20230808.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateResourcesResponseBodyData data;
 
     /**
+     * <p>The unique identity of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>5B2F09BF-CEBD-5A7E-AC01-E7F86169A5E5</p>
      */
@@ -37,6 +42,8 @@ public class UpdateResourcesResponseBody extends TeaModel {
 
     public static class UpdateResourcesResponseBodyData extends TeaModel {
         /**
+         * <p>The unique identity of the asynchronous task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-bp1ewftyzmeg3bl4dtd2</p>
          */

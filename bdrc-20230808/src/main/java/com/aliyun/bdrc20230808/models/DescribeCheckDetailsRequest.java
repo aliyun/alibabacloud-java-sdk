@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckDetailsRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return on each page. The default value is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCheckDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken that is returned from the last API call. For more information about how to set this parameter, see the API description.</p>
+     * 
      * <strong>example:</strong>
      * <p>cae**********699</p>
      */
@@ -19,6 +23,7 @@ public class DescribeCheckDetailsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique identifier of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeCheckDetailsRequest extends TeaModel {
     public String resourceArn;
 
     /**
+     * <p>The unique ID of the data protection rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule-000***dav</p>
      */

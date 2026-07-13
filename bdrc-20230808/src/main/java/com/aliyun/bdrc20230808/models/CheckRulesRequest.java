@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckRulesRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CheckRulesRequest extends TeaModel {
     public String resourceArn;
 
     /**
+     * <p>The ID of the rule to update. If you do not specify this parameter, all rules are updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule-000***dav</p>
      */

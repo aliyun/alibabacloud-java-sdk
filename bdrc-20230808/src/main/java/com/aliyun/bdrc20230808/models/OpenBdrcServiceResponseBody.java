@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OpenBdrcServiceResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>86DEBAC9-AB6A-59AB-9E5C-A540E579ECC9</p>
      */

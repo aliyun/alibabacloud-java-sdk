@@ -4,10 +4,15 @@ package com.aliyun.bdrc20230808.models;
 import com.aliyun.tea.*;
 
 public class GetBdrcServiceResponseBody extends TeaModel {
+    /**
+     * <p>The data that is returned if the call is successful.</p>
+     */
     @NameInMap("Data")
     public GetBdrcServiceResponseBodyData data;
 
     /**
+     * <p>The unique identity of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>5748C531-80B1-5C31-8421-63A1830B9E48</p>
      */
@@ -37,6 +42,8 @@ public class GetBdrcServiceResponseBody extends TeaModel {
 
     public static class GetBdrcServiceResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the service was enabled (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1726169608</p>
          */
@@ -44,6 +51,8 @@ public class GetBdrcServiceResponseBody extends TeaModel {
         public Long openTime;
 
         /**
+         * <p>The time when the data protection score was updated (UNIX timestamp).</p>
+         * 
          * <strong>example:</strong>
          * <p>1726169608</p>
          */
@@ -51,6 +60,8 @@ public class GetBdrcServiceResponseBody extends TeaModel {
         public Long protectionScoreUpdatedTime;
 
         /**
+         * <p>The initialization status of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -58,6 +69,8 @@ public class GetBdrcServiceResponseBody extends TeaModel {
         public String serviceInitializeStatus;
 
         /**
+         * <p>The enabling status of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>OPENED</p>
          */
