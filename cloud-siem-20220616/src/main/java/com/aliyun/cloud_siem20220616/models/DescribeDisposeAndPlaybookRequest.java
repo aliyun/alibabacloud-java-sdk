@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     /**
-     * <p>列表当前页号， 大于等于 1。</p>
+     * <p>The page number. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,12 +16,9 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     /**
      * <p>The entity type. Valid values:</p>
      * <ul>
-     * <li><p><code>ip</code>: IP address</p>
-     * </li>
-     * <li><p><code>process</code>: process</p>
-     * </li>
-     * <li><p><code>file</code>: file</p>
-     * </li>
+     * <li>ip: IP address</li>
+     * <li>process: process</li>
+     * <li>file: file</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +28,7 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>实体 uuid。</p>
+     * <p>The entity UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -40,7 +37,7 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     public String entityUuid;
 
     /**
-     * <p>The incident UUID.</p>
+     * <p>The event UUID.</p>
      * 
      * <strong>example:</strong>
      * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -49,7 +46,7 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     public String incidentUuid;
 
     /**
-     * <p>列表每页条数， 最大不超过 100。</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,12 +55,10 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>威胁分析的数据管理中心所在地。您需要根据资产所在地域，选择管理中心所在地。取值：</p>
+     * <p>The region in which the data management center of the threat analysis feature resides. Select the data management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li><p>cn-hangzhou：资产属于中国内地与中国香港</p>
-     * </li>
-     * <li><p>ap-southeast-1：资产属于海外地域</p>
-     * </li>
+     * <li>cn-hangzhou: Your assets reside in the Chinese mainland or Hong Kong (China).</li>
+     * <li>ap-southeast-1: Your assets reside in regions outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,7 +68,7 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>管理员切换成其他成员视角的用户 ID。</p>
+     * <p>The user ID of the member to which the administrator switches the view.</p>
      * 
      * <strong>example:</strong>
      * <p>113091674488****</p>
@@ -82,12 +77,10 @@ public class DescribeDisposeAndPlaybookRequest extends TeaModel {
     public Long roleFor;
 
     /**
-     * <p>视图类型。</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
-     * <li><p>0：当前阿里云账号视图。</p>
-     * </li>
-     * <li><p>1：企业下所有账号的视图。</p>
-     * </li>
+     * <li>0: the view of the current Alibaba Cloud account.</li>
+     * <li>1: the view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>

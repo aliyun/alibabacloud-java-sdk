@@ -2148,7 +2148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves entities to be remediated and a list of playbooks.</p>
+     * <p>Retrieves the list of entities that require disposition and the list of playbooks.</p>
      * 
      * @param request DescribeDisposeAndPlaybookRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2208,7 +2208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves entities to be remediated and a list of playbooks.</p>
+     * <p>Retrieves the list of entities that require disposition and the list of playbooks.</p>
      * 
      * @param request DescribeDisposeAndPlaybookRequest
      * @return DescribeDisposeAndPlaybookResponse
@@ -3272,6 +3272,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCapacityResponse getCapacity(GetCapacityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCapacityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of user data storage on the Log Management page.</p>
+     * 
+     * @param request GetDataStorageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDataStorageResponse
+     */
+    public GetDataStorageResponse getDataStorageWithOptions(GetDataStorageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDataStorage"),
+            new TeaPair("version", "2022-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataStorageResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the details of user data storage on the Log Management page.</p>
+     * 
+     * @param request GetDataStorageRequest
+     * @return GetDataStorageResponse
+     */
+    public GetDataStorageResponse getDataStorage(GetDataStorageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDataStorageWithOptions(request, runtime);
     }
 
     /**
