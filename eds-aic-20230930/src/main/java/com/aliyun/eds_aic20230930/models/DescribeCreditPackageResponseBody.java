@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditPackageResponseBody extends TeaModel {
     /**
-     * <p>An array of credit package details.</p>
+     * <p>The credit booster package information.</p>
      */
     @NameInMap("CreditsPackageInfos")
     public java.util.List<DescribeCreditPackageResponseBodyCreditsPackageInfos> creditsPackageInfos;
 
     /**
-     * <p>Indicates whether this is your first purchase.</p>
+     * <p>Indicates whether this is the first purchase.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,7 +20,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
     public Boolean isFirstPurchase;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
@@ -47,7 +47,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of exhausted credits.</p>
+     * <p>The total number of consumed credits.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -110,7 +110,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
 
     public static class DescribeCreditPackageResponseBodyCreditsPackageInfos extends TeaModel {
         /**
-         * <p>The number of available credits in the credit package.</p>
+         * <p>The number of available credits in the current credit booster package.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -118,8 +118,11 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         @NameInMap("AvailableCredits")
         public String availableCredits;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
         /**
-         * <p>The ID of the credit package.</p>
+         * <p>The ID of the credit booster package.</p>
          * 
          * <strong>example:</strong>
          * <p>crp-xagydbhfkah****</p>
@@ -128,7 +131,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String creditPackageId;
 
         /**
-         * <p>The status of the credit package.</p>
+         * <p>The status of the credit booster package.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -137,7 +140,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String creditPackageStatus;
 
         /**
-         * <p>The time when the credit package becomes effective.</p>
+         * <p>The effective period of the credit booster package.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-30 00:00:00</p>
@@ -146,7 +149,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The number of exhausted credits in the credit package.</p>
+         * <p>The number of consumed credits in the current credit booster package.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -155,7 +158,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String exhaustedCredits;
 
         /**
-         * <p>The time when the credit package expires.</p>
+         * <p>The expiration time of the credit booster package.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-30 00:00:00</p>
@@ -164,7 +167,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The total number of credits in the credit package.</p>
+         * <p>The total number of credits in the current credit booster package.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -183,6 +186,14 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         }
         public String getAvailableCredits() {
             return this.availableCredits;
+        }
+
+        public DescribeCreditPackageResponseBodyCreditsPackageInfos setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeCreditPackageResponseBodyCreditsPackageInfos setCreditPackageId(String creditPackageId) {

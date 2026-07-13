@@ -32,7 +32,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of tasks.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<ResumeAgentTaskResponseBodyTasks> tasks;
@@ -77,13 +77,15 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
     public static class ResumeAgentTaskResponseBodyTasks extends TeaModel {
         /**
          * <p>The current status of the task. Valid values:</p>
-         * <p><code>PENDING</code>: The task is being created.</p>
-         * <p><code>RUNNING</code>: The task is running.</p>
-         * <p><code>COMPLETED</code>: The task has completed.</p>
-         * <p><code>FAILED</code>: The task has failed.</p>
-         * <p><code>TIMEOUT</code>: The task has timed out.</p>
-         * <p><code>PAUSING</code>: The task is pausing.</p>
-         * <p><code>PAUSED</code>: The task is paused.</p>
+         * <ul>
+         * <li>PENDING: The task is being created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>COMPLETED: The task is completed.</li>
+         * <li>FAILED: The task has failed.</li>
+         * <li>TIMEOUT: The task has timed out.</li>
+         * <li>PAUSING: The task is being paused.</li>
+         * <li>PAUSED: The task is paused.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -101,7 +103,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String failedReason;
 
         /**
-         * <p>The ID of the mobile instance.</p>
+         * <p>The Mobile node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>
@@ -110,7 +112,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the task was resumed, in ISO 8601 format.</p>
+         * <p>The time when the task is resumed, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
@@ -119,7 +121,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String resumingAt;
 
         /**
-         * <p>The globally unique ID of the task.</p>
+         * <p>The task ID, which is globally unique.</p>
          * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>

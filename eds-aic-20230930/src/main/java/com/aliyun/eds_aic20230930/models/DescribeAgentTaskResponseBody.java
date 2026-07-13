@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgentTaskResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>For example, &quot;200&quot; indicates success.</p>
@@ -14,7 +14,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The task count.</p>
+     * <p>The number of tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -41,7 +41,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of tasks.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<DescribeAgentTaskResponseBodyTasks> tasks;
@@ -93,12 +93,12 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
 
     public static class DescribeAgentTaskResponseBodyTasks extends TeaModel {
         /**
-         * <p>The task\&quot;s current status. Valid values:</p>
-         * <p><code>PENDING</code>: The task is being created.</p>
-         * <p><code>RUNNING</code>: The task is running.</p>
-         * <p><code>COMPLETED</code>: The task has completed.</p>
-         * <p><code>FAILED</code>: The task failed.</p>
-         * <p><code>TIMEOUT</code>: The task timed out.</p>
+         * <p>The current status of the task. Valid values:</p>
+         * <p>PENDING: The task is being created.</p>
+         * <p>RUNNING: The task is running.</p>
+         * <p>COMPLETED: The task is completed.</p>
+         * <p>FAILED: The task failed.</p>
+         * <p>TIMEOUT: The task execution timed out.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -106,8 +106,11 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
+        @NameInMap("DigestSource")
+        public String digestSource;
+
         /**
-         * <p>The mobile node ID.</p>
+         * <p>The Mobile node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-anzzuho371azi44xr</p>
@@ -115,8 +118,11 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("Reason")
+        public String reason;
+
         /**
-         * <p>The task\&quot;s creation time, in ISO 8601 format.</p>
+         * <p>The time when the task was created, in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-13T17:42:19Z</p>
@@ -133,8 +139,11 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         @NameInMap("Steps")
         public String steps;
 
+        @NameInMap("TaskDigest")
+        public String taskDigest;
+
         /**
-         * <p>The task duration. This field is returned only when <code>CurrentStatus</code> is <code>FAILED</code> or <code>COMPLETED</code>.</p>
+         * <p>The task duration. This field is returned only when CurrentStatus is FAILED or COMPLETED.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -143,7 +152,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public String taskDuration;
 
         /**
-         * <p>The globally unique task ID.</p>
+         * <p>The task ID, which is globally unique.</p>
          * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
@@ -152,7 +161,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task result. This field is returned only when <code>CurrentStatus</code> is <code>COMPLETED</code> or <code>FAILED</code>.</p>
+         * <p>The task result in the desired state. This field is returned only when CurrentStatus is COMPLETED or FAILED.</p>
          * 
          * <strong>example:</strong>
          * <p>Download DingTalk succeeded.</p>
@@ -161,7 +170,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         public String taskResult;
 
         /**
-         * <p>The user prompt that the Agent uses to perform the task.</p>
+         * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
          * 
          * <strong>example:</strong>
          * <p>Download DingTalk from App Store</p>
@@ -182,12 +191,28 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             return this.currentStatus;
         }
 
+        public DescribeAgentTaskResponseBodyTasks setDigestSource(String digestSource) {
+            this.digestSource = digestSource;
+            return this;
+        }
+        public String getDigestSource() {
+            return this.digestSource;
+        }
+
         public DescribeAgentTaskResponseBodyTasks setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeAgentTaskResponseBodyTasks setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public DescribeAgentTaskResponseBodyTasks setRunningAt(String runningAt) {
@@ -204,6 +229,14 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         }
         public String getSteps() {
             return this.steps;
+        }
+
+        public DescribeAgentTaskResponseBodyTasks setTaskDigest(String taskDigest) {
+            this.taskDigest = taskDigest;
+            return this;
+        }
+        public String getTaskDigest() {
+            return this.taskDigest;
         }
 
         public DescribeAgentTaskResponseBodyTasks setTaskDuration(String taskDuration) {

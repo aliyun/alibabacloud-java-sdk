@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCloudPhoneNodeResponseBody extends TeaModel {
     /**
-     * <p>Details of the bandwidth package order.</p>
+     * <p>The bandwidth plan order information.</p>
      */
     @NameInMap("NetworkPackageOrderModel")
     public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel networkPackageOrderModel;
 
     /**
-     * <p>A list of Cloud Phone matrices.</p>
+     * <p>The cloud phone matrix information.</p>
      */
     @NameInMap("NodeInfos")
     public java.util.List<CreateCloudPhoneNodeResponseBodyNodeInfos> nodeInfos;
@@ -82,7 +82,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         public String bandwidthPackageId;
 
         /**
-         * <p>The order ID of the bandwidth package.</p>
+         * <p>The bandwidth plan order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25954415983*****</p>
@@ -115,13 +115,13 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
 
     public static class CreateCloudPhoneNodeResponseBodyNodeInfos extends TeaModel {
         /**
-         * <p>A list of Cloud Phone instance IDs.</p>
+         * <p>The list of cloud phone instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The ID of the Cloud Phone matrix.</p>
+         * <p>The cloud phone matrix ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cpn-e5kxgjyt8s1mb****</p>

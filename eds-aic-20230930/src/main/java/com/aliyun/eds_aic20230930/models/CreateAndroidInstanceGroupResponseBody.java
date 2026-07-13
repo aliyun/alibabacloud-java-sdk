@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     /**
-     * <p>The instance group IDs.</p>
+     * <p>The list of instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
     /**
-     * <p>The created instance groups.</p>
+     * <p>The instance group information.</p>
      */
     @NameInMap("InstanceGroupInfos")
     public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> instanceGroupInfos;
@@ -93,7 +93,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         public String instanceGroupId;
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;

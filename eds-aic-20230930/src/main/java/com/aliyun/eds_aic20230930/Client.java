@@ -720,16 +720,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
-     * Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before creating a cloud phone instance group, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">verify your identity - Individual account</a>.
+     * When you create a cloud phone instance group, note that creating an instance group incurs resource charges. Familiarize yourself with the <a href="https://help.aliyun.com/document_detail/2807121.html">billable methods</a> of cloud phone instance groups in advance.</p>
      * <ul>
-     * <li>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</li>
-     * <li>To enable automatic payments, set AutoPay to true.</li>
+     * <li>If the billing method of the instance group is subscription (PrePaid), the default value of AutoPay is false. After you invoke this operation, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually pay for the order.</li>
+     * <li>If you want to enable automatic payment, set AutoPay to true.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</p>
+     * <p>Creates pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can organize instances with the same functional purpose into the same instance group for unified management.</p>
      * 
      * @param tmpReq CreateAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -766,6 +765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
             query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCookie)) {
+            query.put("ChannelCookie", request.channelCookie);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
@@ -879,16 +882,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
-     * Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before creating a cloud phone instance group, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">verify your identity - Individual account</a>.
+     * When you create a cloud phone instance group, note that creating an instance group incurs resource charges. Familiarize yourself with the <a href="https://help.aliyun.com/document_detail/2807121.html">billable methods</a> of cloud phone instance groups in advance.</p>
      * <ul>
-     * <li>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</li>
-     * <li>To enable automatic payments, set AutoPay to true.</li>
+     * <li>If the billing method of the instance group is subscription (PrePaid), the default value of AutoPay is false. After you invoke this operation, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually pay for the order.</li>
+     * <li>If you want to enable automatic payment, set AutoPay to true.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</p>
+     * <p>Creates pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can organize instances with the same functional purpose into the same instance group for unified management.</p>
      * 
      * @param request CreateAndroidInstanceGroupRequest
      * @return CreateAndroidInstanceGroupResponse
@@ -1032,7 +1034,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</p>
+     * <p>Creates a cloud phone matrix.
+     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</p>
      * 
      * @param tmpReq CreateCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1069,6 +1072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
             query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCookie)) {
+            query.put("ChannelCookie", request.channelCookie);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
@@ -1200,7 +1207,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</p>
+     * <p>Creates a cloud phone matrix.
+     * In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</p>
      * 
      * @param request CreateCloudPhoneNodeRequest
      * @return CreateCloudPhoneNodeResponse
@@ -1212,10 +1220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an order for a credit package.</p>
+     * <p>Purchases a credit booster pack.</p>
      * 
      * @param request CreateCreditPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1228,8 +1236,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoPay", request.autoPay);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCookie)) {
+            query.put("ChannelCookie", request.channelCookie);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.creditAmount)) {
             query.put("CreditAmount", request.creditAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageAmount)) {
+            query.put("PackageAmount", request.packageAmount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -1263,10 +1279,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an order for a credit package.</p>
+     * <p>Purchases a credit booster pack.</p>
      * 
      * @param request CreateCreditPackageRequest
      * @return CreateCreditPackageResponse
@@ -1468,10 +1484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Places an order for a package.</p>
+     * <p>Purchases a resource plan.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1494,6 +1510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
             query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCookie)) {
+            query.put("ChannelCookie", request.channelCookie);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.creditAmount)) {
@@ -1555,10 +1575,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</p>
+     * <p>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</p>
      * 
      * <b>summary</b> : 
-     * <p>Places an order for a package.</p>
+     * <p>Purchases a resource plan.</p>
      * 
      * @param request CreateMobileAgentPackageRequest
      * @return CreateMobileAgentPackageResponse
@@ -2234,7 +2254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details of specified Agent Tasks.</p>
+     * <p>Queries information about Agent Tasks.</p>
      * 
      * @param request DescribeAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2266,7 +2286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details of specified Agent Tasks.</p>
+     * <p>Queries information about Agent Tasks.</p>
      * 
      * @param request DescribeAgentTaskRequest
      * @return DescribeAgentTaskResponse
@@ -2876,7 +2896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of one or more credit packages.</p>
+     * <p>Queries credit booster packages.</p>
      * 
      * @param request DescribeCreditPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2912,7 +2932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of one or more credit packages.</p>
+     * <p>Queries credit booster packages.</p>
      * 
      * @param request DescribeCreditPackageRequest
      * @return DescribeCreditPackageResponse
@@ -6292,7 +6312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes paused agent automation tasks on a mobile instance.</p>
+     * <p>Resumes an automated Agent task that is running on a Mobile node.</p>
      * 
      * @param request ResumeAgentTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6305,8 +6325,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AdditionalPrompt", request.additionalPrompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clarificationAnswers)) {
+            query.put("ClarificationAnswers", request.clarificationAnswers);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskIds)) {
             query.put("TaskIds", request.taskIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolCallId)) {
+            query.put("ToolCallId", request.toolCallId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6328,7 +6356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resumes paused agent automation tasks on a mobile instance.</p>
+     * <p>Resumes an automated Agent task that is running on a Mobile node.</p>
      * 
      * @param request ResumeAgentTaskRequest
      * @return ResumeAgentTaskResponse

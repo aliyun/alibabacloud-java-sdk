@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMobileAgentPackageRequest extends TeaModel {
     /**
-     * <p>The number of packages.</p>
+     * <p>The number of resource plans.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,15 +14,13 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String amount;
 
     /**
-     * <p>Specifies whether to enable auto-payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables auto-payment. You must ensure that your account balance is sufficient.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): An unpaid order is generated. Your account is not charged.</p>
-     * </li>
+     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>false</strong> (default): generates an order without charging the account.</li>
      * </ul>
      * <blockquote>
-     * <p>If your account balance is insufficient, you can set this parameter to <code>false</code> to generate an unpaid order. Then, you can log in to the Wuying Cloud Phone management console to pay for the order.</p>
+     * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can log on to the CloudPhone console to complete the payment.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,10 +32,8 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enables auto-renewal.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Disables auto-renewal.</p>
-     * </li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong> (default): disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +43,7 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The region where the instance is located. Currently, only <code>cn-hangzhou</code> is supported.</p>
+     * <p>The region in which the instance resides. Currently, only cn-hangzhou is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -55,8 +51,11 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("ChannelCookie")
+    public String channelCookie;
+
     /**
-     * <p>The credit amount.</p>
+     * <p>The credit quota.</p>
      * 
      * <strong>example:</strong>
      * <p>10000.0</p>
@@ -77,7 +76,7 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the node instance.</p>
      * 
      * <strong>example:</strong>
      * <p>CloudPhone</p>
@@ -86,7 +85,7 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The package specification.</p>
+     * <p>The resource plan specification.</p>
      * 
      * <strong>example:</strong>
      * <p>advanced</p>
@@ -98,7 +97,7 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Long packageSpecId;
 
     /**
-     * <p>The callback URL to which the user is redirected after a successful payment.</p>
+     * <p>The redirect URL after a successful payment.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
@@ -107,7 +106,7 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String paidCallbackUrl;
 
     /**
-     * <p>The subscription period. The unit of the period is specified by the <code>PeriodUnit</code> parameter.</p>
+     * <p>The duration for which you want to purchase the resource. The unit is specified by <code>PeriodUnit</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,13 +115,11 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period.
-     * Valid values:</p>
+     * <p>The unit of the duration for which you want to purchase the resource.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong>Month</strong></p>
-     * </li>
-     * <li><p><strong>Year</strong></p>
-     * </li>
+     * <li><strong>Month</strong>: month.</li>
+     * <li><strong>Year</strong>: year.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +129,7 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The ID of the promotional campaign.</p>
      * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
@@ -175,6 +172,14 @@ public class CreateMobileAgentPackageRequest extends TeaModel {
     }
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    public CreateMobileAgentPackageRequest setChannelCookie(String channelCookie) {
+        this.channelCookie = channelCookie;
+        return this;
+    }
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     public CreateMobileAgentPackageRequest setCreditAmount(String creditAmount) {

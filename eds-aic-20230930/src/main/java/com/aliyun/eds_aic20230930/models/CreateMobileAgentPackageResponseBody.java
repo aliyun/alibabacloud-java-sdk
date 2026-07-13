@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMobileAgentPackageResponseBody extends TeaModel {
     /**
-     * <p>A list of package IDs.</p>
+     * <p>The list of resource plan IDs.</p>
      */
     @NameInMap("MobileAgentPackageIds")
     public java.util.List<String> mobileAgentPackageIds;

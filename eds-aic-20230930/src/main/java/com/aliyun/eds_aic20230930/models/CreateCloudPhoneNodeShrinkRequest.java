@@ -23,7 +23,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the Shared Bandwidth instance.</p>
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cbwp-uf6g3hgg*******8s3lxiob3</p>
@@ -50,8 +50,11 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    @NameInMap("ChannelCookie")
+    public String channelCookie;
+
     /**
-     * <p>The billing method. Only the subscription billing method is supported.</p>
+     * <p>The billing type. Only subscription is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -60,7 +63,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The number of Cloud Phone matrices to purchase.</p>
+     * <p>The number of cloud phone matrices to purchase.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,7 +78,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String displayConfigShrink;
 
     /**
-     * <p>The downstream bandwidth limit, in Mbit/s.</p>
+     * <p>The downstream bandwidth throttling. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -117,7 +120,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The network settings for the instance.</p>
+     * <p>The network mapping information of the instance.</p>
      */
     @NameInMap("NetworkInfo")
     public String networkInfoShrink;
@@ -132,7 +135,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The name of the Cloud Phone matrix.</p>
+     * <p>The name of the cloud phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>node_name</p>
@@ -144,12 +147,10 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String paidCallBackUrl;
 
     /**
-     * <p>The subscription duration. The unit is specified by the <code>PeriodUnit</code> parameter.</p>
+     * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is set to <strong>Year</strong>, this parameter can only be set to 1.</p>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <strong>Month</strong>, valid values are 1, 2, 3, and 6.</p>
-     * </li>
+     * <li>If PeriodUnit is set to <strong>year</strong>, the value can only be 1.</li>
+     * <li>If PeriodUnit is set to <strong>month</strong>, valid values are 1, 2, 3, and 6.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -168,7 +169,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The number of Cloud Phone instances to create in a single Cloud Phone matrix.</p>
+     * <p>The number of cloud phone instances to create in a single matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>25</p>
@@ -177,7 +178,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer phoneCount;
 
     /**
-     * <p>The size of the independent internal storage, in GiB.</p>
+     * <p>The size of the independent device storage. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -189,7 +190,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The vertical resolution, in pixels.</p>
+     * <p>The height of the resolution. Unit: pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -198,7 +199,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer resolutionHeight;
 
     /**
-     * <p>The horizontal resolution, in pixels.</p>
+     * <p>The width of the resolution. Unit: pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -207,9 +208,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer resolutionWidth;
 
     /**
-     * <p>The size of the shared internal storage, in GiB.</p>
+     * <p>The size of the shared device storage. Unit: GiB.</p>
      * <blockquote>
-     * <p>The size must exceed 10 GiB per instance in the matrix.</p>
+     * <p>The minimum value of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -219,7 +220,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer serverShareDataVolume;
 
     /**
-     * <p>The server type.</p>
+     * <p>The specifications of the cloud phone matrix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -229,7 +230,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String serverType;
 
     /**
-     * <p>The streaming mode for instances in the Cloud Phone matrix. Defaults to preemption mode.</p>
+     * <p>The streaming mode for instances in the cloud phone matrix. If this parameter is not specified, the default value is preemptive mode.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -241,13 +242,13 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer swapSize;
 
     /**
-     * <p>The resource tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag;
 
     /**
-     * <p>The upstream bandwidth limit, in Mbit/s.</p>
+     * <p>The upstream bandwidth throttling. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -256,7 +257,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer upBandwidthLimit;
 
     /**
-     * <p>The template for instance creation. Set this parameter to <code>Random</code> to use a random template, or specify a template ID to use a specific template.</p>
+     * <p>Specifies whether to use a template during creation. Set this parameter to <code>Random</code> to use a random template from the template list. Alternatively, specify a template ID to use that template.</p>
      * 
      * <strong>example:</strong>
      * <p>Random</p>
@@ -265,7 +266,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String useTemplate;
 
     /**
-     * <p>The VSwitch ID.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zeekryyc1q3sm72l****</p>
@@ -316,6 +317,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public String getBizRegionId() {
         return this.bizRegionId;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setChannelCookie(String channelCookie) {
+        this.channelCookie = channelCookie;
+        return this;
+    }
+    public String getChannelCookie() {
+        return this.channelCookie;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setChargeType(String chargeType) {
