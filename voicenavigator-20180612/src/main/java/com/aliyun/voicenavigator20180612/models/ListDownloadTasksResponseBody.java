@@ -119,7 +119,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The progress of the file download.</p>
+         * <p>The completion progress of the download task.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -128,7 +128,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer progress;
 
         /**
-         * <p>The status of the file.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -137,7 +137,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The title of the file.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>CBU阿里通信反馈-声音延迟</p>
@@ -186,7 +186,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     public static class ListDownloadTasksResponseBodyDownloadTasksList extends TeaModel {
         /**
-         * <p>A list of download task files.</p>
+         * <p>The list of download task files.</p>
          */
         @NameInMap("DownloadTaskFiles")
         public java.util.List<ListDownloadTasksResponseBodyDownloadTasksListDownloadTaskFiles> downloadTaskFiles;
@@ -201,7 +201,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Long expireTime;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>Expired</p>
@@ -219,7 +219,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The title of the task.</p>
+         * <p>The title.</p>
          * 
          * <strong>example:</strong>
          * <p>批量高阶内存整理_2022_02_17_10</p>
@@ -276,7 +276,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     public static class ListDownloadTasksResponseBodyDownloadTasks extends TeaModel {
         /**
-         * <p>A list of download tasks.</p>
+         * <p>The list of download tasks.</p>
          */
         @NameInMap("List")
         public java.util.List<ListDownloadTasksResponseBodyDownloadTasksList> list;
@@ -291,7 +291,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -300,7 +300,7 @@ public class ListDownloadTasksResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

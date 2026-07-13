@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DebugDialogueRequest extends TeaModel {
     /**
-     * <p>The context of the conversation.</p>
+     * <p>The conversation context.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -14,7 +14,7 @@ public class DebugDialogueRequest extends TeaModel {
     public String additionalContext;
 
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The user utterance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DebugDialogueRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The user\&quot;s utterance.</p>
+     * <p>The user utterance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

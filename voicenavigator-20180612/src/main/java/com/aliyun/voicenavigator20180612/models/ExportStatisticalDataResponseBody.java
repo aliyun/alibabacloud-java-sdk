@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportStatisticalDataResponseBody extends TeaModel {
     /**
-     * <p>The ID of the asynchronous export task.</p>
+     * <p>The asynchronous export task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6be5a9f1-406e-424e-a17b-b6fb86ee3cc9</p>

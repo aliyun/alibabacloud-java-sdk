@@ -4,20 +4,44 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class AuditTTSVoiceRequest extends TeaModel {
+    /**
+     * <p>The AccessKey ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b4331******a4640ce1f88e27ac8df0</p>
+     */
     @NameInMap("AccessKey")
     public String accessKey;
 
+    /**
+     * <p>The AppKey of the third-party voice configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>be******</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>The TTS engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ali</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The extended parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtParams")
     public String extParams;
 
     /**
-     * <p>The instance ID of the navigation instance.</p>
+     * <p>The navigation instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,9 +50,19 @@ public class AuditTTSVoiceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PitchRate")
     public String pitchRate;
 
+    /**
+     * <p>The AccessKey secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZDc3********DAzM2E0YjM5NTFkMDQ1</p>
+     */
     @NameInMap("SecretKey")
     public String secretKey;
 
@@ -43,7 +77,7 @@ public class AuditTTSVoiceRequest extends TeaModel {
     public String speechRate;
 
     /**
-     * <p>The text to preview.</p>
+     * <p>The preview text.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

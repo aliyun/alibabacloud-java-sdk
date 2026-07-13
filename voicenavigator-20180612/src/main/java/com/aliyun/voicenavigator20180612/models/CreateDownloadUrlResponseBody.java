@@ -32,7 +32,7 @@ public class CreateDownloadUrlResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>get upload tool url success</p>

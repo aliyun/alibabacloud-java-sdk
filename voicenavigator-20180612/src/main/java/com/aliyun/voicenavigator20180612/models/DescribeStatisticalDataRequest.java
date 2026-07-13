@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStatisticalDataRequest extends TeaModel {
     /**
-     * <p>The start of the query time range, specified as a Unix timestamp in milliseconds.</p>
+     * <p>The left boundary of the start time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1582283640000</p>
@@ -14,7 +14,7 @@ public class DescribeStatisticalDataRequest extends TeaModel {
     public Long beginTimeLeftRange;
 
     /**
-     * <p>The end of the query time range, specified as a Unix timestamp in milliseconds.</p>
+     * <p>The right boundary of the start time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1582298040000</p>
@@ -33,7 +33,7 @@ public class DescribeStatisticalDataRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The time unit. Valid values: <code>Day</code> and <code>Hour</code>.</p>
+     * <p>The date unit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,8 +4,11 @@ package com.aliyun.voicenavigator20180612.models;
 import com.aliyun.tea.*;
 
 public class ListConversationsRequest extends TeaModel {
+    @NameInMap("AbTestId")
+    public String abTestId;
+
     /**
-     * <p>The start of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The left boundary of the start time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1638288000000</p>
@@ -14,7 +17,7 @@ public class ListConversationsRequest extends TeaModel {
     public Long beginTimeLeftRange;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The right boundary of the start time range.</p>
      * 
      * <strong>example:</strong>
      * <p>1637547875311</p>
@@ -35,7 +38,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer debugConversation;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +48,7 @@ public class ListConversationsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether the conversation is in a sandbox environment. Valid values: <code>true</code> and <code>false</code>.</p>
+     * <p>Specifies whether the session is in a sandbox environment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -64,7 +67,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +77,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search query for filtering conversations.</p>
+     * <p>The query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>13788914724</p>
@@ -83,7 +86,7 @@ public class ListConversationsRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The result of the conversation.</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -92,7 +95,7 @@ public class ListConversationsRequest extends TeaModel {
     public Long result;
 
     /**
-     * <p>The minimum number of rounds in the conversation.</p>
+     * <p>The left boundary of the rounds query range.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,7 +104,7 @@ public class ListConversationsRequest extends TeaModel {
     public Integer roundsLeftRange;
 
     /**
-     * <p>The maximum number of rounds in the conversation.</p>
+     * <p>The right boundary of the rounds query range.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -112,6 +115,14 @@ public class ListConversationsRequest extends TeaModel {
     public static ListConversationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListConversationsRequest self = new ListConversationsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListConversationsRequest setAbTestId(String abTestId) {
+        this.abTestId = abTestId;
+        return this;
+    }
+    public String getAbTestId() {
+        return this.abTestId;
     }
 
     public ListConversationsRequest setBeginTimeLeftRange(Long beginTimeLeftRange) {

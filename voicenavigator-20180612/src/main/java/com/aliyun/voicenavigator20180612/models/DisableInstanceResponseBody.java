@@ -14,7 +14,7 @@ public class DisableInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the operation. A value of \&quot;true\&quot; indicates that the operation was successful.</p>
+     * <p>The deletion status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

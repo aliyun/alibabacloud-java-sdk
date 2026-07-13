@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The list of instances.</p>
+     * <p>The array of instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -20,7 +20,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A8AED3C8-F57B-5D71-9A34-4A170287533F</p>
@@ -38,7 +38,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,13 +93,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>A list of applicable operations.</p>
+         * <p>The list of applicable operations for the instance.</p>
          */
         @NameInMap("ApplicableOperations")
         public java.util.List<String> applicableOperations;
 
         /**
-         * <p>The maximum number of concurrent calls.</p>
+         * <p>The concurrency.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -108,7 +108,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long concurrency;
 
         /**
-         * <p>The time when the instance was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1658202465000</p>
@@ -117,7 +117,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>测试的实例</p>
@@ -135,7 +135,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The time when the instance was last modified. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1582266750353</p>
@@ -144,7 +144,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The user who last modified the instance.</p>
+         * <p>The operator who performed the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -153,7 +153,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String modifyUserName;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试实例</p>
@@ -162,7 +162,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The parameters of the NLU service in the JSON format.</p>
+         * <p>The large language model service parameters in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;agentId&quot;:&quot;1213503&quot;,&quot;isCCCAgent&quot;:&quot;true&quot;,&quot;agentKey&quot;:&quot;107e04a7519243eb83c9b549ea3b6829_p_ccc_public&quot;}</p>
@@ -177,7 +177,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public java.util.List<String> numbers;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -186,9 +186,9 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The instance ID from the source system.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p>If UnionSource is CCC, this parameter indicates the instance ID of the Cloud Communication Center instance.</p>
+         * <p>When UnionSource is set to CCC, UnionInstanceId is set to the instance ID of Cloud Call Center.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -198,9 +198,9 @@ public class ListInstancesResponseBody extends TeaModel {
         public String unionInstanceId;
 
         /**
-         * <p>The source of the instance.</p>
+         * <p>The source.</p>
          * <ul>
-         * <li><code>CCC</code>: Cloud Communication Center</li>
+         * <li>CCC: Cloud Call Center.</li>
          * </ul>
          * 
          * <strong>example:</strong>

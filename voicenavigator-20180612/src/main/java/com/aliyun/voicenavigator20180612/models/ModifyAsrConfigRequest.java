@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAsrConfigRequest extends TeaModel {
     /**
-     * <p>The AppKey for the engine.</p>
+     * <p>The AppKey of the engine.</p>
      * 
      * <strong>example:</strong>
      * <p>your_app_key</p>
@@ -14,7 +14,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>The ID of the ASR acoustic model.</p>
+     * <p>The ASR acoustic model ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -23,7 +23,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String asrAcousticModelId;
 
     /**
-     * <p>The ID of the ASR class-based vocabulary.</p>
+     * <p>The ASR hotword ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -32,7 +32,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String asrClassVocabularyId;
 
     /**
-     * <p>The ID of the dataset.</p>
+     * <p>The dataset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -44,7 +44,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String asrOverrides;
 
     /**
-     * <p>The ID of the hotword. You can find this ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management</a> page.</p>
+     * <p>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -53,7 +53,12 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String asrVocabularyId;
 
     /**
-     * <p>The policy level. Valid values: <code>0</code> (system), <code>1</code> (tenant), and <code>2</code> (instance).</p>
+     * <p>The policy level. Valid values:</p>
+     * <ul>
+     * <li>0: system.</li>
+     * <li>1: tenant.</li>
+     * <li>2: instance.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -65,7 +70,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The entity ID for the specified <code>ConfigLevel</code>.</p>
+     * <p>The entity ID corresponding to config_level.</p>
      * 
      * <strong>example:</strong>
      * <p>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</p>
@@ -74,7 +79,7 @@ public class ModifyAsrConfigRequest extends TeaModel {
     public String entryId;
 
     /**
-     * <p>The service type of Intelligent Speech Interaction.</p>
+     * <p>NluServiceType</p>
      * 
      * <strong>example:</strong>
      * <p>语音识别</p>

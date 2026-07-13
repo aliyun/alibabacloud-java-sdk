@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExportProgressResponseBody extends TeaModel {
     /**
-     * <p>The URL of the file.</p>
+     * <p>The file URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://ssml-test.oss-cn-shanghai.aliyuncs.com/key">http://ssml-test.oss-cn-shanghai.aliyuncs.com/key</a></p>
@@ -14,7 +14,7 @@ public class DescribeExportProgressResponseBody extends TeaModel {
     public String fileHttpUrl;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b19af5ce5314ac08108d1b33fe20e15</p>
@@ -23,7 +23,7 @@ public class DescribeExportProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the export task.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>FINISHED</p>

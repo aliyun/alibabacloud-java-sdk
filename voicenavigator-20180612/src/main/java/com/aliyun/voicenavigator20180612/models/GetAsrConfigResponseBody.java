@@ -110,7 +110,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
 
     public static class GetAsrConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The application key.</p>
+         * <p>The engine.</p>
          * 
          * <strong>example:</strong>
          * <p>your-app-key</p>
@@ -119,7 +119,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>The acoustic model ID.</p>
+         * <p>The ASR acoustic model ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
@@ -128,7 +128,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrAcousticModelId;
 
         /**
-         * <p>The ASR class vocabulary ID.</p>
+         * <p>The ASR hotword ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
@@ -137,7 +137,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrClassVocabularyId;
 
         /**
-         * <p>The customization ID.</p>
+         * <p>The ASR dataset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
@@ -149,7 +149,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String asrOverrides;
 
         /**
-         * <p>The vocabulary ID. You can view the ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Vocabulary Management page</a>.</p>
+         * <p>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>
@@ -167,7 +167,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>Parameters for the iFLYTEK engine.</p>
+         * <p>The iFLYTEK engine parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>EngineXufei</p>
@@ -176,7 +176,7 @@ public class GetAsrConfigResponseBody extends TeaModel {
         public String engineXufei;
 
         /**
-         * <p>The NLS service type.</p>
+         * <p>NluServiceType</p>
          * 
          * <strong>example:</strong>
          * <p>Authorized</p>

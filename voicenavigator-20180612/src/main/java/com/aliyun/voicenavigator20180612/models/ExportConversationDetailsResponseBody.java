@@ -14,7 +14,7 @@ public class ExportConversationDetailsResponseBody extends TeaModel {
     public String exportTaskId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75BAAB9B-40B2-5FF5-A59A-7BCF8154C6EE</p>

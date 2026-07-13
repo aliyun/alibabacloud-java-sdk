@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExportProgressRequest extends TeaModel {
     /**
-     * <p>The ID of the export task.</p>
+     * <p>The export task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeExportProgressRequest extends TeaModel {
     public String exportTaskId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

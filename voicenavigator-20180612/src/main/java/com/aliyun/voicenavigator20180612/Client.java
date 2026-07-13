@@ -32,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a chatbot with a navigation instance.</p>
+     * <p>Associates a Chatbot instance.</p>
      * 
      * @param request AssociateChatbotInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -84,7 +84,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a chatbot with a navigation instance.</p>
+     * <p>Associates a Chatbot instance.</p>
      * 
      * @param request AssociateChatbotInstanceRequest
      * @return AssociateChatbotInstanceResponse
@@ -96,7 +96,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Previews a text-to-speech (TTS) voice.</p>
+     * <p>Previews a TTS voice.</p>
      * 
      * @param request AuditTTSVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -168,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Previews a text-to-speech (TTS) voice.</p>
+     * <p>Previews a TTS voice.</p>
      * 
      * @param request AuditTTSVoiceRequest
      * @return AuditTTSVoiceResponse
@@ -304,7 +304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a temporary URL to download a file.</p>
+     * <p>Creates a download URL for a file.</p>
      * 
      * @param request CreateDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -332,7 +332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a temporary URL to download a file.</p>
+     * <p>Creates a download URL for a file.</p>
      * 
      * @param request CreateDownloadUrlRequest
      * @return CreateDownloadUrlResponse
@@ -524,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sends a user utterance to the dialogue engine to debug a conversation flow.</p>
+     * <p>Debugs a conversation in the debug environment.</p>
      * 
      * @param request DebugDialogueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -568,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sends a user utterance to the dialogue engine to debug a conversation flow.</p>
+     * <p>Debugs a conversation in the debug environment.</p>
      * 
      * @param request DebugDialogueRequest
      * @return DebugDialogueResponse
@@ -624,7 +624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a conversation.</p>
+     * <p>Queries conversation information.</p>
      * 
      * @param request DescribeConversationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -652,7 +652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a conversation.</p>
+     * <p>Queries conversation information.</p>
      * 
      * @param request DescribeConversationRequest
      * @return DescribeConversationResponse
@@ -744,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified instance.</p>
+     * <p>Queries instance information.</p>
      * 
      * @param request DescribeInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -772,7 +772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified instance.</p>
+     * <p>Queries instance information.</p>
      * 
      * @param request DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -824,7 +824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a conversation recording.</p>
+     * <p>Retrieves the recording of a conversation.</p>
      * 
      * @param request DescribeRecordingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -852,7 +852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a conversation recording.</p>
+     * <p>Retrieves the recording of a conversation.</p>
      * 
      * @param request DescribeRecordingRequest
      * @return DescribeRecordingResponse
@@ -864,7 +864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the current instance\&quot;s statistics.</p>
+     * <p>Queries the statistics of the current instance.</p>
      * 
      * @param request DescribeStatisticalDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -892,7 +892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View the current instance\&quot;s statistics.</p>
+     * <p>Queries the statistics of the current instance.</p>
      * 
      * @param request DescribeStatisticalDataRequest
      * @return DescribeStatisticalDataResponse
@@ -1016,7 +1016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a Voice Navigator instance.</p>
+     * <p>Deletes an intelligent navigation instance.</p>
      * 
      * @param request DisableInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1048,7 +1048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a Voice Navigator instance.</p>
+     * <p>Deletes an intelligent navigation instance.</p>
      * 
      * @param request DisableInstanceRequest
      * @return DisableInstanceResponse
@@ -1060,7 +1060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a Voice Navigator instance.</p>
+     * <p>Starts an instance.</p>
      * 
      * @param request EnableInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a Voice Navigator instance.</p>
+     * <p>Starts an instance.</p>
      * 
      * @param request EnableInstanceRequest
      * @return EnableInstanceResponse
@@ -1160,7 +1160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports conversation details.</p>
+     * <p>Exports session details.</p>
      * 
      * @param request ExportConversationDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1169,6 +1169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExportConversationDetailsResponse exportConversationDetailsWithOptions(ExportConversationDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.abTestId)) {
+            query.put("AbTestId", request.abTestId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.beginTimeLeftRange)) {
             query.put("BeginTimeLeftRange", request.beginTimeLeftRange);
         }
@@ -1224,7 +1228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports conversation details.</p>
+     * <p>Exports session details.</p>
      * 
      * @param request ExportConversationDetailsRequest
      * @return ExportConversationDetailsResponse
@@ -1236,7 +1240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports statistical data.</p>
+     * <p>Exports statistics.</p>
      * 
      * @param request ExportStatisticalDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1284,7 +1288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports statistical data.</p>
+     * <p>Exports statistics.</p>
      * 
      * @param request ExportStatisticalDataRequest
      * @return ExportStatisticalDataResponse
@@ -1384,7 +1388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of chatbot instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListChatbotInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1412,7 +1416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a paginated list of chatbot instances.</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListChatbotInstancesRequest
      * @return ListChatbotInstancesResponse
@@ -1464,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the session list.</p>
+     * <p>Queries a list of sessions.</p>
      * 
      * @param request ListConversationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1492,7 +1496,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the session list.</p>
+     * <p>Queries a list of sessions.</p>
      * 
      * @param request ListConversationsRequest
      * @return ListConversationsResponse
@@ -1504,7 +1508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download list</p>
+     * <p>Queries the list of download tasks.</p>
      * 
      * @param request ListDownloadTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1540,7 +1544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Download list</p>
+     * <p>Queries the list of download tasks.</p>
      * 
      * @param request ListDownloadTasksRequest
      * @return ListDownloadTasksResponse
@@ -1592,7 +1596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an ASR configuration.</p>
+     * <p>Modifies the ASR configuration.</p>
      * 
      * @param request ModifyAsrConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1660,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an ASR configuration.</p>
+     * <p>Modifies the ASR configuration.</p>
      * 
      * @param request ModifyAsrConfigRequest
      * @return ModifyAsrConfigResponse

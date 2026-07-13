@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConversationResponseBody extends TeaModel {
     /**
-     * <p>The time when the conversation started. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1582103260434</p>
@@ -23,7 +23,7 @@ public class DescribeConversationResponseBody extends TeaModel {
     public String callingNumber;
 
     /**
-     * <p>The ID of the conversation.</p>
+     * <p>The conversation ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2d5aa451-661f-4f08-b0c4-28eec78decc4</p>
@@ -32,7 +32,7 @@ public class DescribeConversationResponseBody extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>The number of effective answers.</p>
+     * <p>The number of effective Q&amp;A pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -41,7 +41,7 @@ public class DescribeConversationResponseBody extends TeaModel {
     public Integer effectiveAnswerCount;
 
     /**
-     * <p>The time when the conversation ended. This value is a UNIX timestamp in milliseconds.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>1582103299434</p>
@@ -50,7 +50,7 @@ public class DescribeConversationResponseBody extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
@@ -59,7 +59,7 @@ public class DescribeConversationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the skill group.</p>
+     * <p>The skill group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABABCBAC</p>
@@ -68,7 +68,7 @@ public class DescribeConversationResponseBody extends TeaModel {
     public String skillGroupId;
 
     /**
-     * <p>Indicates whether an agent transfer occurred.</p>
+     * <p>Indicates whether the conversation was transferred to a human agent.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConversationsResponseBody extends TeaModel {
     /**
-     * <p>The list of conversation objects.</p>
+     * <p>The list of sessions.</p>
      */
     @NameInMap("Conversations")
     public java.util.List<ListConversationsResponseBodyConversations> conversations;
@@ -38,7 +38,7 @@ public class ListConversationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of conversations.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -92,6 +92,9 @@ public class ListConversationsResponseBody extends TeaModel {
     }
 
     public static class ListConversationsResponseBodyConversations extends TeaModel {
+        @NameInMap("AbTestName")
+        public String abTestName;
+
         /**
          * <p>The called number.</p>
          * 
@@ -111,7 +114,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public String callingNumber;
 
         /**
-         * <p>The unique ID of the conversation.</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>82b2eaae-ce5c-45f8-8231-f15b6b27e55c</p>
@@ -126,7 +129,18 @@ public class ListConversationsResponseBody extends TeaModel {
         public java.util.List<String> dsReportTitles;
 
         /**
-         * <p>The reason that the conversation ended. Valid values:<br>1: The conversation completed normally.<br>2: The bot hung up after a recognition failure.<br>3: The call was disconnected due to a silence timeout.<br>4: The user hung up after a recognition failure.<br>5: The user hung up for an unknown reason.<br>6: The call was transferred to an agent because an intent was matched.<br>7: The call was transferred to an agent due to a recognition failure.<br>8: No interaction from the user.<br>9: The call was interrupted by a system error.<br>10: The call was transferred to an IVR system because an intent was matched.<br>11: The call was transferred to an IVR system due to a recognition failure.<br><br><br><br><br><br><br><br><br><br><br></p>
+         * <p>The reason for hanging up. Valid values:
+         *      1: Normal completion.
+         *      2: Bot hung up after unrecognized input.
+         *      3: Hung up due to silence timeout.
+         *      4: User hung up after unrecognized input.
+         *      5: User hung up without reason.
+         *      6: Transferred to human agent due to intent match.
+         *      7: Transferred to human agent due to unrecognized input.
+         *      8: No interaction from the user side.
+         *      9: System exception interruption.
+         *      10: Transferred to IVR due to intent match.
+         *      11: Transferred to IVR due to unrecognized input.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -135,7 +149,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Integer endReason;
 
         /**
-         * <p>The end time of the conversation, represented as a Unix timestamp in milliseconds.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1582266750353</p>
@@ -144,7 +158,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>Indicates whether the final audio playback was completed before the call was disconnected.</p>
+         * <p>Indicates whether the last playback was completed when the session ended.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -153,7 +167,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Boolean hasLastPlaybackCompleted;
 
         /**
-         * <p>Indicates whether the conversation was transferred to an agent.</p>
+         * <p>Indicates whether the session was transferred to a human agent.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -162,7 +176,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Boolean hasToAgent;
 
         /**
-         * <p>The number of rounds in the conversation.</p>
+         * <p>The number of conversation rounds.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -171,7 +185,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Integer rounds;
 
         /**
-         * <p>Indicates whether the conversation was run in a sandbox environment.</p>
+         * <p>Indicates whether the session is in a sandbox environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,7 +194,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public Boolean sandBox;
 
         /**
-         * <p>The ID of the skill group.</p>
+         * <p>The skill group.</p>
          * 
          * <strong>example:</strong>
          * <p>skg-123</p>
@@ -189,7 +203,7 @@ public class ListConversationsResponseBody extends TeaModel {
         public String skillGroup;
 
         /**
-         * <p>The start time of the conversation, represented as a Unix timestamp in milliseconds.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1641625694286</p>
@@ -200,6 +214,14 @@ public class ListConversationsResponseBody extends TeaModel {
         public static ListConversationsResponseBodyConversations build(java.util.Map<String, ?> map) throws Exception {
             ListConversationsResponseBodyConversations self = new ListConversationsResponseBodyConversations();
             return TeaModel.build(map, self);
+        }
+
+        public ListConversationsResponseBodyConversations setAbTestName(String abTestName) {
+            this.abTestName = abTestName;
+            return this;
+        }
+        public String getAbTestName() {
+            return this.abTestName;
         }
 
         public ListConversationsResponseBodyConversations setCalledNumber(String calledNumber) {

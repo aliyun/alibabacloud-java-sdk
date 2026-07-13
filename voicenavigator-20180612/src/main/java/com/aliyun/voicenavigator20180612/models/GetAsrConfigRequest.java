@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetAsrConfigRequest extends TeaModel {
     /**
-     * <p>The configuration level. Valid values: <code>0</code> (system), <code>1</code> (tenant), and <code>2</code> (instance).</p>
+     * <p>The policy level. Valid values:</p>
+     * <ul>
+     * <li>0: system</li>
+     * <li>1: tenant</li>
+     * <li>2: instance</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +19,7 @@ public class GetAsrConfigRequest extends TeaModel {
     public Integer configLevel;
 
     /**
-     * <p>The ID of the entry at the level specified by <code>ConfigLevel</code>.</p>
+     * <p>The entity ID corresponding to config_level.</p>
      * 
      * <strong>example:</strong>
      * <p>3b1d3031-8b6e-460a-8640-d330f2ca50b8</p>

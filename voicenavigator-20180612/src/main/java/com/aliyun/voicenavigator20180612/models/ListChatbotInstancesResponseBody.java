@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatbotInstancesResponseBody extends TeaModel {
     /**
-     * <p>The list of chatbot instances.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("Bots")
     public java.util.List<ListChatbotInstancesResponseBodyBots> bots;
@@ -20,7 +20,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of chatbot instances.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,7 +93,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
 
     public static class ListChatbotInstancesResponseBodyBots extends TeaModel {
         /**
-         * <p>The avatar of the chatbot instance.</p>
+         * <p>The icon of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dss0.ali.com/70cFuHS.jpg">https://dss0.ali.com/70cFuHS.jpg</a></p>
@@ -102,7 +102,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         public String avatar;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1582266750353</p>
@@ -120,8 +120,6 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The description of the chatbot instance.</p>
-         * 
          * <strong>example:</strong>
          * <p>‘’</p>
          */
@@ -138,7 +136,7 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
         public String languageCode;
 
         /**
-         * <p>The name of the chatbot instance.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>测试机器人</p>

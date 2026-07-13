@@ -15,7 +15,7 @@ public class CreateDownloadUrlRequest extends TeaModel {
     public String downloadTaskId;
 
     /**
-     * <p>The file ID. Call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain it.</p>
+     * <p>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

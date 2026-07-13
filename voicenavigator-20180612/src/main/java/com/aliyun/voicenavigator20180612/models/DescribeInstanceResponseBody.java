@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
     /**
-     * <p>The capability type of the instance.<br>
-     * DEFAULT: Full capabilities.<br>
-     * VOICE_ONLY: Voice-only capabilities, which do not include conversation intervention.<br><br></p>
+     * <p>The instance ability type.<br>
+     * DEFAULT: full abilities.<br>
+     * VOICE_ONLY: only voice abilities, without dialog intervention.</p>
      * 
      * <strong>example:</strong>
      * <p>VOICE_ONLY</p>
@@ -16,13 +16,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String abilityType;
 
     /**
-     * <p>Applicable operations.</p>
+     * <p>The list of applicable operations.</p>
      */
     @NameInMap("ApplicableOperations")
     public java.util.List<String> applicableOperations;
 
     /**
-     * <p>The concurrency of the instance.</p>
+     * <p>The instance concurrency.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -31,7 +31,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Long concurrency;
 
     /**
-     * <p>The description of the instance.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>导航测试实例描述信息</p>
@@ -49,7 +49,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The last modification time of the instance.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1683216000000</p>
@@ -58,7 +58,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public Long modifyTime;
 
     /**
-     * <p>The user who last modified the instance.</p>
+     * <p>The user who last updated the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2508711*******</p>
@@ -88,7 +88,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the instance.</p>
+     * <p>The status.</p>
      * 
      * <strong>example:</strong>
      * <p>Published</p>

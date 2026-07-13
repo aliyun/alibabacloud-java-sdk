@@ -14,7 +14,7 @@ public class EnableInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the operation.</p>
+     * <p>The result status.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

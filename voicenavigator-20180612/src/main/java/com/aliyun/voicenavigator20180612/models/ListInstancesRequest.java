@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>A JSON-formatted string that contains a list of digital worker instance IDs.</p>
+     * <p>The list of digital employee scenario IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;e4bebxxxxxxxxxxx&quot;]</p>
@@ -14,7 +14,7 @@ public class ListInstancesRequest extends TeaModel {
     public String instanceIdListJsonString;
 
     /**
-     * <p>The instance name. This parameter is used for filtering.</p>
+     * <p>The scenario name used as a filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>测试</p>
@@ -23,23 +23,23 @@ public class ListInstancesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The NLU service type. This parameter is used to filter instances by the source of their conversational AI capabilities. If you do not set this parameter, instances of all types are returned.</p>
+     * <p>The NLU type used to filter by dialog capability source. If this parameter is not specified, all types are selected.</p>
      * <ul>
-     * <li><p><code>MANAGED</code>: managed. This value is deprecated.</p>
+     * <li><p>MANAGED: managed (deprecated).</p>
      * </li>
-     * <li><p><code>AUTHORIZED</code>: authorized. In the public cloud, this indicates the Chatbot service.</p>
+     * <li><p>AUTHORIZED: authorized. In the public cloud, this refers to Chatbot service.</p>
      * </li>
-     * <li><p><code>PROVIDED</code>: private. This service is configured in the console with parameters such as <code>as</code>, <code>sk</code>, and <code>chatEndpoint</code>.</p>
+     * <li><p>PROVIDED: private. Configured by specifying the AccessKey ID, AccessKey Secret, and chatEndpoint in the O&amp;M console.</p>
      * </li>
-     * <li><p><code>CCC_AUTHORIZED</code>: a chatbot authorized by Cloud Connect Center (CCC).</p>
+     * <li><p>CCC_AUTHORIZED: uses a Chatbot authorized by Cloud Call Center.</p>
      * </li>
-     * <li><p><code>CCC_FUNCTION</code>: Alibaba Cloud Function Compute.</p>
+     * <li><p>CCC_FUNCTION: uses Alibaba Cloud Function Compute.</p>
      * </li>
-     * <li><p><code>SSE_FUNCTION</code>: a streaming function service. This refers to a Function Compute instance that supports Server-Sent Events (SSE) for integration with third-party large language model (LLM) chatbots.</p>
+     * <li><p>SSE_FUNCTION: uses a streaming function service. Function Compute that supports SSE, used to connect to third-party large language model chatbots.</p>
      * </li>
-     * <li><p><code>PROMPTS</code>: integration with foundational models such as Qwen.</p>
+     * <li><p>PROMPTS: connects to Qwen foundation models.</p>
      * </li>
-     * <li><p><code>LOCAL</code>: a private cloud instance of Chatbot.</p>
+     * <li><p>LOCAL: private cloud, local Chatbot.</p>
      * </li>
      * </ul>
      * 
@@ -50,7 +50,7 @@ public class ListInstancesRequest extends TeaModel {
     public String nluServiceTypeListJsonString;
 
     /**
-     * <p>The inbound number. This parameter is used for filtering.</p>
+     * <p>The inbound number used as a filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>021xxxxxxx</p>
@@ -59,7 +59,7 @@ public class ListInstancesRequest extends TeaModel {
     public String number;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,12 +79,10 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The instance status. This parameter is used for filtering. If you do not set this parameter, instances in all statuses are returned.</p>
+     * <p>The scenario status used as a filter condition. If this parameter is not specified, all statuses are selected.</p>
      * <ul>
-     * <li><p><code>DISABLED</code>: disabled</p>
-     * </li>
-     * <li><p><code>PUBLISHED</code>: published</p>
-     * </li>
+     * <li>DISABLED: offline.</li>
+     * <li>PUBLISHED: published.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +94,7 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>If you set <code>UnionSource</code> to <code>CCC</code>, set this parameter to the ID of your CCC instance.</p>
+     * <p>When UnionSource is set to CCC, set UnionInstanceId to the instance ID of Cloud Call Center.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -108,7 +106,7 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The source.</p>
      * <ul>
-     * <li><code>CCC</code>: Cloud Connect Center</li>
+     * <li>CCC: Cloud Call Center.</li>
      * </ul>
      * 
      * <strong>example:</strong>

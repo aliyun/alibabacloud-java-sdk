@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeStatisticalDataResponseBody extends TeaModel {
     /**
-     * <p>The total number of conversations.</p>
+     * <p>The total number of sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     public Long conversationTotalNum;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
@@ -32,13 +32,13 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
     public Long resolvedQuestionTotalNum;
 
     /**
-     * <p>The array of statistical data over time.</p>
+     * <p>The array of statistics grouped by time dimension.</p>
      */
     @NameInMap("StatisticalDataReports")
     public java.util.List<DescribeStatisticalDataResponseBodyStatisticalDataReports> statisticalDataReports;
 
     /**
-     * <p>The total pass rate of multi-turn dialogues.</p>
+     * <p>The total multi-turn session pass rate.</p>
      * 
      * <strong>example:</strong>
      * <p>80.00%</p>
@@ -144,7 +144,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
 
     public static class DescribeStatisticalDataResponseBodyStatisticalDataReports extends TeaModel {
         /**
-         * <p>The pass rate of multi-turn dialogues.</p>
+         * <p>The multi-turn session pass rate.</p>
          * 
          * <strong>example:</strong>
          * <p>80.00%</p>
@@ -180,7 +180,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public Integer resolvedQuestionNum;
 
         /**
-         * <p>The date of the statistics.</p>
+         * <p>The statistical date.</p>
          * 
          * <strong>example:</strong>
          * <p>19:00:00</p>
@@ -189,7 +189,7 @@ public class DescribeStatisticalDataResponseBody extends TeaModel {
         public String statisticalDate;
 
         /**
-         * <p>The total number of conversations.</p>
+         * <p>The total number of sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

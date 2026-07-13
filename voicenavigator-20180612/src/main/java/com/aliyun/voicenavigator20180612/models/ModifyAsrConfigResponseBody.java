@@ -14,7 +14,7 @@ public class ModifyAsrConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of the modification.</p>
+     * <p>The modification result.</p>
      */
     @NameInMap("Data")
     public ModifyAsrConfigResponseBodyData data;
