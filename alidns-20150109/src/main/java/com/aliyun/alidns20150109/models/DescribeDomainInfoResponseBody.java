@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainInfoResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the domain name was registered in Alibaba Cloud.</p>
+     * <p>Indicates whether the domain name was registered with Alibaba Cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,13 +32,17 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      * <p>The ID of the domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
+     * <p>00efd71a-7************</p>
      */
     @NameInMap("DomainId")
     public String domainId;
 
     /**
-     * <p>Indicates whether the DNS traffic analysis feature is enabled. Valid values:</p>
+     * <p>The status of the logging feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLOSE：关闭状态
+     * OPEN：开启状态</p>
      */
     @NameInMap("DomainLoggingSwitchStatus")
     public String domainLoggingSwitchStatus;
@@ -56,7 +60,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      * <p>The ID of the domain name group.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>2***</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -71,7 +75,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>Indicates whether blackhole filtering was triggered.</p>
+     * <p>Indicates whether blackhole filtering is activated for the domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -80,7 +84,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public Boolean inBlackHole;
 
     /**
-     * <p>Indicates whether traffic scrubbing was in progress.</p>
+     * <p>Indicates whether the domain name is being scrubbed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -92,13 +96,13 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      * <p>The ID of the Alibaba Cloud DNS instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-7bg</p>
+     * <p>i-7**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The type of the DNS request line.</p>
+     * <p>The type of the DNS request source line.</p>
      * 
      * <strong>example:</strong>
      * <p>region_province</p>
@@ -107,7 +111,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public String lineType;
 
     /**
-     * <p>The minimum TTL value.</p>
+     * <p>The minimum TTL.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,7 +120,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public Long minTtl;
 
     /**
-     * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     * <p>The Punycode for the Chinese domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -125,7 +129,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public String punyCode;
 
     /**
-     * <p>The tree-structure DNS request lines.</p>
+     * <p>The list of DNS request source lines in a tree structure.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;default&quot;:{},&quot;unicom&quot;:{},&quot;telecom&quot;:{},&quot;mobile&quot;:{},&quot;edu&quot;:{},&quot;oversea&quot;:{},&quot;baidu&quot;:{},&quot;biying&quot;:{},&quot;google&quot;:{}}</p>
@@ -137,7 +141,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public DescribeDomainInfoResponseBodyRecordLines recordLines;
 
     /**
-     * <p>Indicates whether the DNS request lines are regional lines.</p>
+     * <p>Indicates whether the line is a regional line.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -146,7 +150,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public Boolean regionLines;
 
     /**
-     * <p>The description.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>remark</p>
@@ -155,7 +159,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -167,7 +171,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aek3dj3wvclgcxo</p>
+     * <p>rg-aek3dj3******</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -182,10 +186,12 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public Boolean slaveDns;
 
     /**
-     * <p>Indicates whether the queried domain name is a hosted subdomain name. Valid values:</p>
+     * <p>Indicates whether the queried domain is a hosted subdomain. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -195,16 +201,27 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     public Boolean subDomain;
 
     /**
-     * <p>The version ID of Alibaba Cloud DNS.</p>
+     * <p>The edition ID of Alibaba Cloud DNS. Valid values:</p>
+     * <ul>
+     * <li><p>version_enterprise_advanced: Ultimate Edition</p>
+     * </li>
+     * <li><p>version_personal: Personal Edition</p>
+     * </li>
+     * <li><p>mianfei: Free Edition</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>version1</p>
+     * <p>mianfei</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;
 
     /**
-     * <p>The edition of Alibaba Cloud DNS.</p>
+     * <p>The name of the Alibaba Cloud DNS edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>企业旗舰版</p>
      */
     @NameInMap("VersionName")
     public String versionName;

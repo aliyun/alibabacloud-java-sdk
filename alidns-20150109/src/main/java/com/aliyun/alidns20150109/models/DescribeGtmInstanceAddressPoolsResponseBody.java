@@ -8,7 +8,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public DescribeGtmInstanceAddressPoolsResponseBodyAddrPools addrPools;
 
     /**
-     * <p>The number of the page returned.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -35,7 +35,7 @@ public class DescribeGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned on all pages.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

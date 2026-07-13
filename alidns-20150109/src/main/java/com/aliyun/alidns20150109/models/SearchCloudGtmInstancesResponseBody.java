@@ -8,7 +8,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public SearchCloudGtmInstancesResponseBodyInstances instances;
 
     /**
-     * <p>Current page number, starting at <strong>1</strong>, default is <strong>1</strong>.</p>
+     * <p>The number of the returned page. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries returned per page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,7 +26,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -35,7 +35,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of instances found from the search.</p>
+     * <p>The total number of instances found.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +44,7 @@ public class SearchCloudGtmInstancesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDnsGtmAccessStrategyRequest extends TeaModel {
     /**
-     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,11 +14,11 @@ public class DeleteDnsGtmAccessStrategyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the access policy.</p>
+     * <p>The ID of the access policy. Call <a href="https://help.aliyun.com/document_detail/2357191.html">DescribeDnsGtmAccessStrategies</a> to obtain the policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>testStrategyId1</p>
+     * <p>testSt******</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

@@ -7,8 +7,10 @@ public class UpdateCloudGtmGlobalAlertShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p><code>zh-CN</code>: Chinese</p>
+     * </li>
+     * <li><p><code>en-US</code>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,19 +20,19 @@ public class UpdateCloudGtmGlobalAlertShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The alert configurations.</p>
+     * <p>A list of alert configurations.</p>
      */
     @NameInMap("AlertConfig")
     public String alertConfigShrink;
 
     /**
-     * <p>The alert contact groups.</p>
+     * <p>A list of alert notification groups.</p>
      */
     @NameInMap("AlertGroup")
     public String alertGroupShrink;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token to ensure request idempotence. This token must be unique for each request, contain only ASCII characters, and be no more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. Default: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned per page. Maximum value: <strong>100</strong>. Default: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -26,7 +26,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     public PreviewGtmRecoveryPlanResponseBodyPreviews previews;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>853805EA-3D47-47D5-9A1A-A45C24313ABD</p>
@@ -35,7 +35,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned on all pages.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -44,7 +44,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries returned per page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -35,7 +35,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     public DescribeDNSSLBSubDomainsResponseBodySlbSubDomains slbSubDomains;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of subdomains.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

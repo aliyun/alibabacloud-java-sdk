@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateDnsCacheDomainRemarkRequest extends TeaModel {
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name.&lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a> to obtain the domain name.
+     * &lt;props=&quot;intl&quot;&gt;Call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-example.com</p>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
-     * <p>Default: <strong>zh</strong></p>
+     * <p>Default value: <strong>zh</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -29,8 +32,8 @@ public class UpdateDnsCacheDomainRemarkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The remarks. The remarks can be up to 50 characters in length and can contain only letters, digits, periods (.), underscores (_), and hyphens (-).</p>
-     * <p>Delete the original remarks when it is empty.</p>
+     * <p>The remark. The remark can be up to 50 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>Leave this parameter empty to delete the existing remark.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

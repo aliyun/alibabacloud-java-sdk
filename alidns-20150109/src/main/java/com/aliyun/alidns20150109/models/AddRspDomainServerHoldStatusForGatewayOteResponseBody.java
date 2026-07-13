@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaModel {
+    /**
+     * <p>Detailed access-denied information. This field appears only when RAM authentication fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>List of returned data</p>
+     */
     @NameInMap("Data")
     public AddRspDomainServerHoldStatusForGatewayOteResponseBodyData data;
 
     /**
+     * <p>Indicates whether you can retry the request. <code>true</code>: retry allowed. <code>false</code>: retry not allowed</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,6 +26,8 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
     public Boolean recoverableError;
 
     /**
+     * <p>Unique request identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>0629502C-6224-5DC9-A8ED-2ED73A2E3931</p>
      */
@@ -25,6 +35,8 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. <code>true</code>: succeeded. <code>false</code>: failed</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,13 +90,17 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
 
     public static class AddRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>Unauthorized operation attempted</p>
+         * 
          * <strong>example:</strong>
-         * <p>CreateUser</p>
+         * <p>AddRspDomainServerHoldStatusForGatewayOte</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
+         * <p>Display name of the authenticated entity</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -92,6 +108,8 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
         public String authPrincipalDisplayName;
 
         /**
+         * <p>Owner ID of the authenticated entity</p>
+         * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
          */
@@ -99,6 +117,8 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
         public String authPrincipalOwnerId;
 
         /**
+         * <p>Identity type</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -106,6 +126,8 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
         public String authPrincipalType;
 
         /**
+         * <p>Encrypted diagnostic message</p>
+         * 
          * <strong>example:</strong>
          * <p>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</p>
          */
@@ -113,6 +135,14 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>Reason for authentication failure. Valid values:</p>
+         * <ul>
+         * <li><p>ExplicitDeny: explicit deny</p>
+         * </li>
+         * <li><p>ImplicitDeny: implicit deny</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -120,6 +150,8 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
         public String noPermissionType;
 
         /**
+         * <p>Policy type</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -191,6 +223,8 @@ public class AddRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaMo
 
     public static class AddRspDomainServerHoldStatusForGatewayOteResponseBodyData extends TeaModel {
         /**
+         * <p>Domain name</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */

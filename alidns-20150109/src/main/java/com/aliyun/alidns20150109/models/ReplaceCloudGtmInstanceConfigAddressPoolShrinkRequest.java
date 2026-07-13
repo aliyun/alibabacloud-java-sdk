@@ -7,8 +7,10 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolShrinkRequest extends TeaMo
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,35 +20,35 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolShrinkRequest extends TeaMo
     public String acceptLanguage;
 
     /**
-     * <p>The address pools.</p>
+     * <p>A list of address pools.</p>
      */
     @NameInMap("AddressPools")
     public String addressPoolsShrink;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that you use to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
-     * <p>You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the configuration ID of the access domain name.</p>
+     * <p>The ID of the instance configuration. For the same access domain name and GTM instance, you can configure both A and AAAA records. In this case, the GTM instance has two instance configurations. The ConfigId parameter uniquely identifies an instance configuration.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2797349.html">ListCloudGtmInstanceConfigs</a> operation to query the ConfigId of the instance configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Config-000**11</p>
+     * <p>Config-000****</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
-     * <p>The ID of the GTM 3.0 instance for which you want to change address pools.</p>
+     * <p>The ID of the GTM 3.0 instance for which you want to replace address pools.</p>
      * 
      * <strong>example:</strong>
-     * <p>gtm-cn-wwo3a3hbz**</p>
+     * <p>gtm-cn-wwo3a3hb****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

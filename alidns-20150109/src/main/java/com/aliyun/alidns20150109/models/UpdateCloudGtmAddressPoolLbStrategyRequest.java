@@ -7,8 +7,10 @@ public class UpdateCloudGtmAddressPoolLbStrategyRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +20,16 @@ public class UpdateCloudGtmAddressPoolLbStrategyRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Load balancing policy among addresses in the address pool:</p>
+     * <p>The load balancing policy for the addresses in the address pool.</p>
      * <ul>
-     * <li>round_robin: Round-robin, for any source of DNS resolution requests, all addresses are returned. The order of all addresses is rotated each time.</li>
-     * <li>sequence: Sequential, for any source of DNS resolution requests, the address with the smaller sequence number (the sequence number indicates the priority of address returns, with smaller numbers having higher priority) is returned. If the address with the smaller sequence number is unavailable, the next address with a smaller sequence number is returned.</li>
-     * <li>weight: Weighted, supports setting different weight values for each address, realizing the return of addresses according to the weight ratio for resolution queries.</li>
-     * <li>source_nearest: Source-nearest, i.e., intelligent resolution function, where GTM can return different addresses based on the source of different DNS resolution requests, achieving the effect of users accessing nearby.</li>
+     * <li><p>round_robin: Round robin. For each DNS query, all addresses are returned in a rotating order.</p>
+     * </li>
+     * <li><p>sequence: Sequence. The address with the highest priority is returned. Priority is determined by the ordinal number of an address. A smaller ordinal number indicates a higher priority. If an address is unavailable, the address with the next highest priority is returned.</p>
+     * </li>
+     * <li><p>weight: Weight. DNS queries are resolved based on the weight that you set for each address.</p>
+     * </li>
+     * <li><p>source_nearest: Source nearest. This is an intelligent DNS resolution feature. GTM returns an address based on the source of the DNS query. This directs users to the nearest resource.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,28 +39,30 @@ public class UpdateCloudGtmAddressPoolLbStrategyRequest extends TeaModel {
     public String addressLbStrategy;
 
     /**
-     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89528023225442**16</p>
+     * <p>pool-89528023225442****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that is used to ensure the idempotence of the request. The token must be unique for each request and can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The mode used if the address with the smallest sequence number is recovered. This parameter is required only when AddressLbStrategy is set to sequence. Valid values:</p>
+     * <p>The recovery mode when the load balancing policy is \<code>sequence\\</code>.</p>
      * <ul>
-     * <li>preemptive: The address with the smallest sequence number is preferentially used if this address is recovered.</li>
-     * <li>non_preemptive: The current address is still used even if the address with the smallest sequence number is recovered.</li>
+     * <li><p>preemptive: Preemptive mode. If a higher-priority address recovers, it is used preferentially.</p>
+     * </li>
+     * <li><p>non_preemptive: Non-preemptive mode. If a higher-priority address recovers, the current address continues to be used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

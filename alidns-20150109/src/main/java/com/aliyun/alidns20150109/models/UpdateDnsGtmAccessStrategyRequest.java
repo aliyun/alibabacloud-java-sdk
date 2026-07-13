@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     /**
-     * <p>The primary/secondary switchover policy for address pool sets. Valid values:</p>
+     * <p>The switchover policy for the address pool collection:</p>
      * <ul>
-     * <li>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</li>
-     * <li>DEFAULT: the primary address pool set</li>
-     * <li>FAILOVER: the secondary address pool set</li>
+     * <li><p>AUTO: Automatic switchover</p>
+     * </li>
+     * <li><p>DEFAULT: Primary address pool collection</p>
+     * </li>
+     * <li><p>FAILOVER: Failover address pool collection</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,55 +22,62 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public String accessMode;
 
     /**
-     * <p>The address pools in the primary address pool set.</p>
+     * <p>The primary address pool collection.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DefaultAddrPool")
     public java.util.List<UpdateDnsGtmAccessStrategyRequestDefaultAddrPool> defaultAddrPool;
 
     /**
-     * <p>The type of the primary address pool. Valid values:</p>
+     * <p>The type of the primary address pool:</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
-     * <li>DOMAIN</li>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
+     * <li><p>DOMAIN</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ipv4</p>
+     * <p>IPV4</p>
      */
     @NameInMap("DefaultAddrPoolType")
     public String defaultAddrPoolType;
 
     /**
-     * <p>Specifies whether to enable Domain Name System (DNS) resolution with optimal latency for the primary address pool set. Valid values:</p>
+     * <p>Specifies whether to enable latency-based scheduling for the primary address pool collection:</p>
      * <ul>
-     * <li>OPEN</li>
-     * <li>CLOSE</li>
+     * <li><p>OPEN: Enabled</p>
+     * </li>
+     * <li><p>CLOSE: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>open</p>
+     * <p>OPEN</p>
      */
     @NameInMap("DefaultLatencyOptimization")
     public String defaultLatencyOptimization;
 
     /**
-     * <p>The load balancing policy of the primary address pool set. Valid values:</p>
+     * <p>The load balancing policy for the primary address pool collection:</p>
      * <ul>
-     * <li>ALL_RR: returns all addresses.</li>
-     * <li>RATIO: returns addresses by weight.</li>
+     * <li><p>ALL_RR: Returns all addresses.</p>
+     * </li>
+     * <li><p>RATIO: Returns addresses by weight.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>all_rr</p>
+     * <p>ALL_RR</p>
      */
     @NameInMap("DefaultLbaStrategy")
     public String defaultLbaStrategy;
 
     /**
-     * <p>The maximum number of addresses returned from the primary address pool set.</p>
+     * <p>The maximum number of addresses returned from the primary address pool collection.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +86,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public Integer defaultMaxReturnAddrNum;
 
     /**
-     * <p>The minimum number of available addresses in the primary address pool set.</p>
+     * <p>The minimum number of available addresses in the primary address pool collection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,53 +96,60 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public Integer defaultMinAvailableAddrNum;
 
     /**
-     * <p>The address pools in the secondary address pool set. If no address pool exists in the secondary address pool set, set this parameter to EMPTY.</p>
+     * <p>The failover address pool collection. If no failover address pool collection is configured, enter &quot;EMPTY&quot;.</p>
      */
     @NameInMap("FailoverAddrPool")
     public java.util.List<UpdateDnsGtmAccessStrategyRequestFailoverAddrPool> failoverAddrPool;
 
     /**
-     * <p>The type of the secondary address pool. Valid values:</p>
+     * <p>The type of the failover address pool:</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
-     * <li>DOMAIN</li>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
+     * <li><p>DOMAIN</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ipv4</p>
+     * <p>IPV4</p>
      */
     @NameInMap("FailoverAddrPoolType")
     public String failoverAddrPoolType;
 
     /**
-     * <p>Specifies whether to enable DNS resolution with optimal latency for the secondary address pool set. Valid values:</p>
+     * <p>Specifies whether to enable latency-based scheduling for the failover address pool collection:</p>
      * <ul>
-     * <li>OPEN</li>
-     * <li>CLOSE</li>
+     * <li><p>OPEN: Enabled</p>
+     * </li>
+     * <li><p>CLOSE: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>open</p>
+     * <p>OPEN</p>
      */
     @NameInMap("FailoverLatencyOptimization")
     public String failoverLatencyOptimization;
 
     /**
-     * <p>The load balancing policy of the secondary address pool set. Valid values:</p>
+     * <p>The load balancing policy for the failover address pool collection:</p>
      * <ul>
-     * <li>ALL_RR: returns all addresses.</li>
-     * <li>RATIO: returns addresses by weight.</li>
+     * <li><p>ALL_RR: Returns all addresses.</p>
+     * </li>
+     * <li><p>RATIO: Returns addresses by weight.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>all_rr</p>
+     * <p>ALL_RR</p>
      */
     @NameInMap("FailoverLbaStrategy")
     public String failoverLbaStrategy;
 
     /**
-     * <p>The maximum number of addresses returned from the secondary address pool set.</p>
+     * <p>The maximum number of addresses returned from the failover address pool collection.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -141,7 +158,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public Integer failoverMaxReturnAddrNum;
 
     /**
-     * <p>The minimum number of available addresses in the secondary address pool set.</p>
+     * <p>The minimum number of available addresses in the failover address pool collection.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -150,7 +167,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public Integer failoverMinAvailableAddrNum;
 
     /**
-     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -159,7 +176,7 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The line codes of the source regions. Example: <code>[&quot;default&quot;, &quot;drpeng&quot;]</code>, which indicates the global line and Dr. Peng Group line.</p>
+     * <p>The line codes of the access regions. For example, <code>[&quot;default&quot;, &quot;drpeng&quot;]</code> specifies the global line and the Dr. Peng line.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;default&quot;, &quot;drpeng&quot;]</p>
@@ -168,21 +185,21 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public String lines;
 
     /**
-     * <p>The ID of the access policy.</p>
+     * <p>The ID of the policy. To obtain the policy ID, call <a href="https://help.aliyun.com/document_detail/2357191.html">DescribeDnsGtmAccessStrategies</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>StrategyId1</p>
+     * <p>hrb**</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;
 
     /**
-     * <p>The name of the access policy.</p>
+     * <p>The name of the policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>StrategyName1</p>
+     * <p>test</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;
@@ -330,16 +347,16 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
 
     public static class UpdateDnsGtmAccessStrategyRequestDefaultAddrPool extends TeaModel {
         /**
-         * <p>The ID of the address pool in the primary address pool set.</p>
+         * <p>The ID of the address pool in the primary address pool collection.</p>
          * 
          * <strong>example:</strong>
-         * <p>pool1</p>
+         * <p>po***</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The weight of the address pool in the primary address pool set.</p>
+         * <p>The weight of the address pool in the primary address pool collection.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -372,16 +389,16 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
 
     public static class UpdateDnsGtmAccessStrategyRequestFailoverAddrPool extends TeaModel {
         /**
-         * <p>The ID of the address pool in the secondary address pool set.</p>
+         * <p>The ID of the address pool in the failover address pool collection.</p>
          * 
          * <strong>example:</strong>
-         * <p>pool1</p>
+         * <p>po**</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The weight of the address pool in the secondary address pool set.</p>
+         * <p>The weight of the address pool in the failover address pool collection.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

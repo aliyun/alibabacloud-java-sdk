@@ -7,13 +7,17 @@ public class DescribeBatchResultCountRequest extends TeaModel {
     /**
      * <p>The type of the batch operation. Valid values:</p>
      * <ul>
-     * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
-     * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
-     * <li><strong>RR_ADD</strong>: adds Domain Name System (DNS) records in batches.</li>
-     * <li><strong>RR_DEL</strong>: deletes DNS records in batches.</li>
+     * <li><p><strong>DOMAIN_ADD</strong>: Batch add domain names.</p>
+     * </li>
+     * <li><p><strong>DOMAIN_DEL</strong>: Batch delete domain names.</p>
+     * </li>
+     * <li><p><strong>RR_ADD</strong>: Batch add DNS records.</p>
+     * </li>
+     * <li><p><strong>RR_DEL</strong>: Batch delete DNS records.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you do not specify this parameter, filtering is not required.</p>
+     * <p>If you leave this parameter empty, no filter is applied.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,10 +27,12 @@ public class DescribeBatchResultCountRequest extends TeaModel {
     public String batchType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,11 +44,11 @@ public class DescribeBatchResultCountRequest extends TeaModel {
     /**
      * <p>The task ID.</p>
      * <blockquote>
-     * <p> If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.</p>
+     * <p>If you specify a task ID, the results of that task are returned. If you leave this parameter empty, the results of the most recent task are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>1****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

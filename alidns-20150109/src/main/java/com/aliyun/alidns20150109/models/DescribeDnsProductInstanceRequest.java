@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the DNS instance. . You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> operation to obtain the ID.</p>
+     * <p>The instance ID. &lt;props=&quot;china&quot;&gt;You can call <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomainInfo</a> to obtain the instance ID.&lt;props=&quot;intl&quot;&gt;You can call <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,10 +17,12 @@ public class DescribeDnsProductInstanceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en</p>
+     * <p>Default: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -29,7 +31,7 @@ public class DescribeDnsProductInstanceRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.2.0</p>

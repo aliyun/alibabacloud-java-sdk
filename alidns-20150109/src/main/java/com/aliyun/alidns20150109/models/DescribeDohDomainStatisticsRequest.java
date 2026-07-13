@@ -15,8 +15,8 @@ public class DescribeDohDomainStatisticsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
-     * <p>The default value is the day when you perform the operation.</p>
+     * <p>The end date of the query. The format is YYYY-MM-DD.</p>
+     * <p>The default value is the current day.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>
@@ -25,7 +25,7 @@ public class DescribeDohDomainStatisticsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -34,8 +34,8 @@ public class DescribeDohDomainStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
-     * <p>You can query only the DNS records of the latest 90 days. <code>The value of StartDate must be greater than or equal to the difference between the current date and 90</code>.</p>
+     * <p>The start date of the query. The format is YYYY-MM-DD.</p>
+     * <p>You can query data from the last 90 days only. The value of <code>StartDate</code> must be greater than or equal to the current date minus 90 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>

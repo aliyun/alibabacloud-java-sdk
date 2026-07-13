@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSubDomainRecordsRequest extends TeaModel {
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name.&lt;props=&quot;china&quot;&gt;You can call <a href="https://help.aliyun.com/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a> to obtain the domain name.
+     * &lt;props=&quot;intl&quot;&gt;You can call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +16,12 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,8 +31,8 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The hostname field in the DNS record.</p>
-     * <p>For example, if you want to resolve @.example.com, you must set this parameter to an at sign (@) instead of leaving it empty.</p>
+     * <p>The host record.</p>
+     * <p>To resolve @.example.com, set the host record to \&quot;@\&quot; instead of leaving it empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,8 +42,8 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
     public String RR;
 
     /**
-     * <p>The type of DNS records. If you do not specify this parameter, all types of DNS records corresponding to the subdomain are returned.</p>
-     * <p>Valid values: <strong>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</strong>. The value is not case-sensitive.</p>
+     * <p>The type of the DNS record. If you do not specify this parameter, all types of DNS records for the subdomain are deleted.</p>
+     * <p>Valid values (case-insensitive): A, MX, CNAME, TXT, REDIRECT_URL, FORWARD_URL, NS, AAAA, and <strong>SRV</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>A</p>
@@ -52,7 +55,7 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.0.2.0</p>
+     * <p>192.0.2.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteCloudGtmAddressPoolResponseBody extends TeaModel {
     /**
-     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89528023225442**16</p>
+     * <p>pool-89528023225442****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -21,6 +23,14 @@ public class DeleteCloudGtmAddressPoolResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * <ul>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

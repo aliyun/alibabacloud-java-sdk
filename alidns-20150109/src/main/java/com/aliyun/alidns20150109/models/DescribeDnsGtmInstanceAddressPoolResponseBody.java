@@ -17,7 +17,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
      * <p>The ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>testpool1</p>
+     * <p>test*****</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
@@ -35,7 +35,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The timestamp that indicates the time when the address pool was created.</p>
+     * <p>The time when the address pool was created. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -44,14 +44,16 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The load balancing policy for the address pool. Valid values:</p>
+     * <p>The load balancing policy.</p>
      * <ul>
-     * <li>ALL_RR: returns all addresses.</li>
-     * <li>RATIO: returns addresses by weight.</li>
+     * <li><p>ALL_RR: Returns all addresses.</p>
+     * </li>
+     * <li><p>RATIO: Returns addresses by weight.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>all_rr</p>
+     * <p>ALL_RR</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
@@ -66,15 +68,18 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String monitorConfigId;
 
     /**
-     * <p>Indicates the status of the health check. Valid values:</p>
+     * <p>The health check status of the address pool.</p>
      * <ul>
-     * <li>OPEN: The health check is enabled.</li>
-     * <li>CLOSE: The health check is disabled.</li>
-     * <li>UNCONFIGURED: The health check is not configured.</li>
+     * <li><p>OPEN: Enabled</p>
+     * </li>
+     * <li><p>CLOSE: Disabled</p>
+     * </li>
+     * <li><p>UNCONFIGURED: Not configured</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>open</p>
+     * <p>OPEN</p>
      */
     @NameInMap("MonitorStatus")
     public String monitorStatus;
@@ -89,7 +94,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -98,15 +103,18 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The type of the address pool. Valid values:</p>
+     * <p>The type of the address pool.</p>
      * <ul>
-     * <li>IPV4: IPv4 address</li>
-     * <li>IPV6: IPv6 address</li>
-     * <li>DOMAIN: domain name</li>
+     * <li><p>IPV4: IPv4 address</p>
+     * </li>
+     * <li><p>IPV6: IPv6 address</p>
+     * </li>
+     * <li><p>DOMAIN: Domain name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ipv4</p>
+     * <p>IPV4</p>
      */
     @NameInMap("Type")
     public String type;
@@ -121,7 +129,7 @@ public class DescribeDnsGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The timestamp that indicates the time when the address pool was last updated.</p>
+     * <p>The time when the address pool was last updated. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>

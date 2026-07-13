@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class SearchRecursionZonesShrinkRequest extends TeaModel {
     /**
+     * <p>The sort order. Valid values: <code>asc</code>: ascending. <code>desc</code>: descending.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The list of effective scopes.</p>
+     */
     @NameInMap("EffectiveScopes")
     public String effectiveScopesShrink;
 
     /**
+     * <p>The maximum number of entries to return. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -22,6 +29,8 @@ public class SearchRecursionZonesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -29,6 +38,8 @@ public class SearchRecursionZonesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort field. Valid values: <code>UpdateTime</code>: the update time of the zone. <code>RecordCount</code>: the number of DNS records.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -36,6 +47,7 @@ public class SearchRecursionZonesShrinkRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number. Pages start at <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +57,7 @@ public class SearchRecursionZonesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page. Valid values: 1 to 100. Default value: 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +67,8 @@ public class SearchRecursionZonesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The remark for the zone. Fuzzy search is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -61,6 +76,8 @@ public class SearchRecursionZonesShrinkRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The name of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cheng.suow.cc</p>
      */

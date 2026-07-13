@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchRecursionRecordsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of records returned for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -12,6 +14,8 @@ public class SearchRecursionRecordsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -19,6 +23,8 @@ public class SearchRecursionRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class SearchRecursionRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class SearchRecursionRecordsResponseBody extends TeaModel {
     public SearchRecursionRecordsResponseBodyRecords records;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -43,6 +53,8 @@ public class SearchRecursionRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -50,6 +62,8 @@ public class SearchRecursionRecordsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

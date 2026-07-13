@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel {
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries returned per page. The maximum value is <strong>500</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
@@ -32,7 +32,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The statistics.</p>
+     * <p>The list of statistics.</p>
      */
     @NameInMap("Statistics")
     public java.util.List<DescribeRecordResolveStatisticsSummaryResponseBodyStatistics> statistics;
@@ -110,7 +110,7 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
 
     public static class DescribeRecordResolveStatisticsSummaryResponseBodyStatistics extends TeaModel {
         /**
-         * <p>The number of DNS requests.</p>
+         * <p>The number of requests.</p>
          * 
          * <strong>example:</strong>
          * <p>330</p>
@@ -119,19 +119,21 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
         public String count;
 
         /**
-         * <p>The subdomain name.</p>
+         * <p>The subdomain.</p>
          * 
          * <strong>example:</strong>
-         * <p>tes.example.com</p>
+         * <p>test.example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+         * <p>The type of the domain name. This parameter is not case-sensitive. Valid values:</p>
          * <ul>
-         * <li>PUBLIC (default): hosted public domain name</li>
-         * <li>CACHE: cache-accelerated domain name</li>
+         * <li><p>PUBLIC: an authoritative domain name (default)</p>
+         * </li>
+         * <li><p>CACHE: an authoritative proxy domain name</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

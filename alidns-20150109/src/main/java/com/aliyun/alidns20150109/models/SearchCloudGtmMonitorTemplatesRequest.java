@@ -7,21 +7,25 @@ public class SearchCloudGtmMonitorTemplatesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>en-US</p>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The IP address type of health check nodes. An exact search is performed based on the IP address type. Valid values:</p>
+     * <p>The IP version of the detection points. An exact search is performed. Valid values:</p>
      * <ul>
-     * <li>IPv4: applicable when the destination address of health checks is an IPv4 address</li>
-     * <li>IPv6: applicable when the destination address of health checks is an IPv6 address</li>
+     * <li><p>IPv4: This version is applicable when the target address is an IPv4 address.</p>
+     * </li>
+     * <li><p>IPv6: This version is applicable when the target address is an IPv6 address.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,6 +35,8 @@ public class SearchCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String ipVersion;
 
     /**
+     * <p>The name of the health check template. A fuzzy search is performed based on the keyword that you enter.</p>
+     * 
      * <strong>example:</strong>
      * <p>IPv4-Ping</p>
      */
@@ -38,6 +44,7 @@ public class SearchCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The current page number. The value starts from 1. The default value is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +54,7 @@ public class SearchCloudGtmMonitorTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for a paged query. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +64,18 @@ public class SearchCloudGtmMonitorTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The protocol used for detection. An exact search is performed. Valid values:</p>
+     * <ul>
+     * <li><p>ping</p>
+     * </li>
+     * <li><p>tcp</p>
+     * </li>
+     * <li><p>http</p>
+     * </li>
+     * <li><p>https</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ping</p>
      */

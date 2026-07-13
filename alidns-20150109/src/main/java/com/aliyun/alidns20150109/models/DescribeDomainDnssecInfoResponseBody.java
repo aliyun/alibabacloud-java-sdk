@@ -41,16 +41,16 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The delegation signer (DS) record. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The Delegation Signer (DS) record. This parameter is returned if DNSSEC is enabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.com. 3600 IN DS 2371 13 2 C1A0424B97A049F1F9B2EA139CC298533219668164E343BD21203ABC4608C02A</p>
+     * <p>example.com. 3600 IN DS 2371 13 2 C1A0424B97A049F1F9B2EA139CC29853321966816***************</p>
      */
     @NameInMap("DsRecord")
     public String dsRecord;
 
     /**
-     * <p>The flag. This parameter is returned if DNSSEC is enabled.</p>
+     * <p>The flags. This parameter is returned if DNSSEC is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>257 (KSK)</p>
@@ -71,13 +71,13 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
      * <p>The public key. This parameter is returned if DNSSEC is enabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==</p>
+     * <p>mdsswUyr3DPW132m******************</p>
      */
     @NameInMap("PublicKey")
     public String publicKey;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -86,10 +86,12 @@ public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the DNSSEC. Valid values:</p>
+     * <p>The status of DNSSEC. Valid values:</p>
      * <ul>
-     * <li>ON</li>
-     * <li>OFF</li>
+     * <li><p>ON: Enabled</p>
+     * </li>
+     * <li><p>OFF: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

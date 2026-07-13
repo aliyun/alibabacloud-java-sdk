@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAddrAttributeInfoRequest extends TeaModel {
     /**
-     * <p>The addresses.</p>
+     * <p>The list of addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;1.1.1.1&quot;]</p>
+     * <p>[
+     *       &quot;1.1.XX.XX&quot;
+     * ]</p>
      */
     @NameInMap("Addrs")
     public String addrs;
 
     /**
-     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,16 +26,19 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of addresses. Valid values:</p>
+     * <p>The address type:</p>
      * <ul>
-     * <li>IPV4: IPv4 address</li>
-     * <li>IPv6: IPv6 address</li>
-     * <li>DOMAIN: domain name</li>
+     * <li><p>IPV4: IPv4 address</p>
+     * </li>
+     * <li><p>IPV6: IPv6 address</p>
+     * </li>
+     * <li><p>DOMAIN: domain name</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ipv4</p>
+     * <p>IPV4</p>
      */
     @NameInMap("Type")
     public String type;

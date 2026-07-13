@@ -14,10 +14,12 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language of the content within the request and response. Default: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,19 +29,21 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.</p>
+     * <p>The DNS resolution line, such as default, telecom, or mobile.</p>
      * 
      * <strong>example:</strong>
-     * <p>China Mobile.</p>
+     * <p>telecom</p>
      */
     @NameInMap("Line")
     public String line;
 
     /**
-     * <p>Specifies whether to enable or disable weighted round-robin. Valid values:</p>
+     * <p>Specifies whether to enable the weight configuration. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): enables weighted round-robin.</li>
-     * <li><strong>false</strong>: disables weighted round-robin.</li>
+     * <li><p><strong>true</strong> (default): Enable</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disable</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +53,7 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     public Boolean open;
 
     /**
-     * <p>The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.</p>
+     * <p>The subdomain for which to configure weights. A primary domain name, such as example.com, is not valid. Use @.example.com instead.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +63,7 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     public String subDomain;
 
     /**
-     * <p>The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.</p>
+     * <p>The type of the DNS record. Valid values: A and AAAA. Default value: A.</p>
      * 
      * <strong>example:</strong>
      * <p>A</p>
@@ -68,10 +72,10 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The IP address of the user.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.0.2.0</p>
+     * <p>192.0.2.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

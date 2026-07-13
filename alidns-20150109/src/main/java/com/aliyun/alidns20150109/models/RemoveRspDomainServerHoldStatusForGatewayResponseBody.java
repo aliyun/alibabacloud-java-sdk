@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel {
+    /**
+     * <p>Details about the access denial. This field appears only when Resource Access Management (RAM) authentication fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData data;
 
     /**
+     * <p>Indicates whether you can retry the request if it fails. Valid values: <code>true</code> (retry allowed) and <code>false</code> (retry not allowed).</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,6 +26,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
     public Boolean recoverableError;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0629502C-6224-5DC9-A8ED-2ED73A2E3931</p>
      */
@@ -25,6 +35,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. Valid values: <code>true</code> (succeeded) and <code>false</code> (failed).</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,13 +90,17 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
 
     public static class RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
-         * <p>CreateUser</p>
+         * <p>RemoveRspDomainServerHoldStatusForGateway</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
+         * <p>The display name of the authorized entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -92,6 +108,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The ID of the owner of the authorized entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
          */
@@ -99,6 +117,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The identity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -106,6 +126,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         public String authPrincipalType;
 
         /**
+         * <p>The complete diagnostic information after encryption.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
          */
@@ -113,6 +135,14 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The reason why authorization failed. Valid values:</p>
+         * <ul>
+         * <li><p>ExplicitDeny: Access is explicitly denied.</p>
+         * </li>
+         * <li><p>ImplicitDeny: Access is implicitly denied.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -120,6 +150,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -191,12 +223,20 @@ public class RemoveRspDomainServerHoldStatusForGatewayResponseBody extends TeaMo
 
     public static class RemoveRspDomainServerHoldStatusForGatewayResponseBodyData extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The domain\&quot;s serverHold status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("ServerHoldStatus")
         public String serverHoldStatus;
 

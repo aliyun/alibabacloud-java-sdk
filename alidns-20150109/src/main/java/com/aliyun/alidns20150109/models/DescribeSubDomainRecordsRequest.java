@@ -14,10 +14,12 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public String line;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +47,7 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,8 +56,10 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>If you set SubDomain to <code>a.www.example.com</code> and leave</p>
-     * <p>DomainName empty, the system returns the DNS records that contain the hostname <code>a.www</code> for the domain name example.com. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to <a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <code>a</code> for the domain name <a href="http://www.example.com">www.example.com</a>. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to a.<a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <code>@</code> for the domain name a.<a href="http://www.example.com">www.example.com</a>.</p>
+     * <p>For example, if you set SubDomain to a.www\.example.com:</p>
+     * <p>If you do not specify DomainName, the system queries the DNS records for the hostname a.www of the domain name example.com.</p>
+     * <p>If you set DomainName to www\.example.com, the system queries the DNS records for the hostname a of the domain name www\.example.com.</p>
+     * <p>If you set DomainName to &quot;a.www\.example.com&quot;, the system queries the DNS records for the hostname @ of the domain name a.www\.example.com.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,8 +69,8 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public String subDomain;
 
     /**
-     * <p>The type of DNS records. If you do not specify this parameter, all types of DNS records for the subdomain name are returned.</p>
-     * <p>Valid values: <strong>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</strong>.</p>
+     * <p>The type of the DNS record. If you do not specify this parameter, all types of DNS records for the subdomain are returned.</p>
+     * <p>The record types are case-insensitive and include the following: <strong>A, MX, CNAME, TXT, REDIRECT_URL, FORWARD_URL, NS, AAAA, and SRV</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MX</p>
@@ -75,7 +79,7 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.2.0</p>

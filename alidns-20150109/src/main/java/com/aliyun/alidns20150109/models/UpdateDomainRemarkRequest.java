@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainRemarkRequest extends TeaModel {
     /**
-     * <p>The domain name that already exists in Alibaba Cloud Domain Name System (DNS). You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains </a>operation to obtain the domain name.</p>
+     * <p>An existing domain name in Alibaba Cloud DNS.&lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains </a>.
+     * &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains </a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mydomain.com</p>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,10 +18,12 @@ public class UpdateDomainRemarkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en</p>
+     * <p>Default: en</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -29,8 +32,11 @@ public class UpdateDomainRemarkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The description of the domain name.</p>
-     * <p>It can be up to 50 characters in length and can contain digits, letters, and the following special characters: _ - , .</p>
+     * <p>The remarks for the domain name.</p>
+     * <p>The remarks can be up to 50 characters in length. They can contain digits, letters, Chinese characters, and the following special characters: _, -, ,, and .</p>
+     * 
+     * <strong>example:</strong>
+     * <p>这是我在阿里云解析的第一个域名</p>
      */
     @NameInMap("Remark")
     public String remark;

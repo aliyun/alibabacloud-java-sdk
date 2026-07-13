@@ -5,28 +5,33 @@ import com.aliyun.tea.*;
 
 public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     /**
-     * <p>The alert group. Only one alert group is supported.</p>
+     * <p>The alert contact group. Only one alert contact group is supported.</p>
      * <blockquote>
-     * <p> This parameter is required only for the first modification.</p>
+     * <p>This parameter is required when you update the instance for the first time. It is optional for subsequent updates.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;研发组\&quot;]</p>
      */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
     /**
-     * <p>If you set <strong>CnameMode</strong> to <strong>CUSTOM</strong>, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.</p>
+     * <p>This parameter is required when you set <strong>CnameMode</strong> to <strong>CUSTOM</strong>. The value must be the primary domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="http://www.example.com">www.example.com</a></p>
+     * <p>dns-example.top</p>
      */
     @NameInMap("CnameCustomDomainName")
     public String cnameCustomDomainName;
 
     /**
-     * <p>Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:</p>
+     * <p>The connection type. Valid values:</p>
      * <ul>
-     * <li><strong>SYSTEM_ASSIGN</strong>: system-assigned CNAME</li>
-     * <li><strong>CUSTOM</strong>: custom CNAME</li>
+     * <li><p><strong>SYSTEM_ASSIGN</strong>: system-assigned</p>
+     * </li>
+     * <li><p><strong>CUSTOM</strong>: custom</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,16 +45,19 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-cs02xyk4a**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the GTM instance.</p>
+     * <p>The name of the instance.</p>
      * <blockquote>
-     * <p> This parameter is required only for the first modification.</p>
+     * <p>This parameter is required when you update the instance for the first time. It is optional for subsequent updates.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>测试实例</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
@@ -64,13 +72,15 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The balancing policy. Valid values:</p>
+     * <p>The load balancing policy. Valid values:</p>
      * <ul>
-     * <li><strong>ALL_RR</strong>: load balancing</li>
-     * <li><strong>RATIO</strong>: weighted round-robin</li>
+     * <li><p><strong>ALL_RR</strong>: round-robin</p>
+     * </li>
+     * <li><p><strong>RATIO</strong>: weighted round-robin</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is required only for the first modification.</p>
+     * <p>This parameter is required when you update the instance for the first time. It is optional for subsequent updates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,7 +90,7 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     public String lbaStrategy;
 
     /**
-     * <p>The global time-to-live (TTL).</p>
+     * <p>The global Time to Live (TTL).</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -91,11 +101,11 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     /**
      * <p>The primary domain name.</p>
      * <blockquote>
-     * <p> This parameter is required only for the first modification.</p>
+     * <p>This parameter is required when you update the instance for the first time. It is optional for subsequent updates.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p><a href="http://www.example.com">www.example.com</a></p>
+     * <p>dns-example.top</p>
      */
     @NameInMap("UserDomainName")
     public String userDomainName;

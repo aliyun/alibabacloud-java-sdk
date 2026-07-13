@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddRecursionZoneResponseBody extends TeaModel {
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51899B6F-04A5-5B96-977D-340673091ACA</p>
      */
@@ -12,6 +14,14 @@ public class AddRecursionZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,7 +29,7 @@ public class AddRecursionZoneResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Zone ID。</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>173671468000011</p>

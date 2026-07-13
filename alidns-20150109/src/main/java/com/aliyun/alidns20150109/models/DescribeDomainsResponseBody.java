@@ -8,7 +8,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     public DescribeDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -26,7 +26,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>68386699-8B9E-4D5B-BC4C-75A28F6C2A00</p>

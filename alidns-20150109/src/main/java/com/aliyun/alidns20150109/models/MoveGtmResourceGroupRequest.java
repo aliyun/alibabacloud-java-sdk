@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MoveGtmResourceGroupRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values: en, zh, and ja. Default value: en.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -12,6 +14,7 @@ public class MoveGtmResourceGroupRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The ID of the new resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class MoveGtmResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
+     * <p>The resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

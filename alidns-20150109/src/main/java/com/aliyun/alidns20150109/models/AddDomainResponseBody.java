@@ -11,7 +11,7 @@ public class AddDomainResponseBody extends TeaModel {
      * <p>The ID of the domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
+     * <p>xxxxx6615cf240c697f9f7e207xxxxxx</p>
      */
     @NameInMap("DomainId")
     public String domainId;
@@ -20,7 +20,7 @@ public class AddDomainResponseBody extends TeaModel {
      * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-example.top</p>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -29,7 +29,7 @@ public class AddDomainResponseBody extends TeaModel {
      * <p>The ID of the domain name group.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -44,7 +44,7 @@ public class AddDomainResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     * <p>The Punycode for the Chinese domain name. This parameter is returned only for Chinese domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>xn--fsq270a.com</p>
@@ -53,10 +53,10 @@ public class AddDomainResponseBody extends TeaModel {
     public String punyCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     * <p>xxx508EF-00FD-xxx9-95A4-1E10BACxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;

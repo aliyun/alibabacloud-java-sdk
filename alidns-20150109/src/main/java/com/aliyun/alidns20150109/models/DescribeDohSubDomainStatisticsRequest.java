@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDohSubDomainStatisticsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
-     * <p>The default value is the day when you perform the operation.</p>
+     * <p>The end date of the query in YYYY-MM-DD format.</p>
+     * <p>The default value is the current date.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>
@@ -15,7 +15,13 @@ public class DescribeDohSubDomainStatisticsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,8 +30,8 @@ public class DescribeDohSubDomainStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
-     * <p>You can query only the DNS records of the latest 90 days. <code>The value of StartDate must be greater than or equal to the difference between the current date and 90</code>.</p>
+     * <p>The start date of the query in YYYY-MM-DD format.</p>
+     * <p>You can query data from the last 90 days. The <code>StartDate</code> must be greater than or equal to the date 90 days before the current date.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>
@@ -34,7 +40,7 @@ public class DescribeDohSubDomainStatisticsRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The subdomain whose statistics you want to query.</p>
+     * <p>The subdomain for which to query statistics.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

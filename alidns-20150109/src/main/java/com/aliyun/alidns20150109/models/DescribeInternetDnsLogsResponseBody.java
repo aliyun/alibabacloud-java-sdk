@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the log query is precise.</p>
+     * <p>Indicates whether the DNS resolution log query is precise.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public Boolean complete;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public DescribeInternetDnsLogsResponseBodyLogs logs;
 
     /**
-     * <p>Page size for query.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Unique request identifier.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -44,7 +44,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -53,7 +53,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public Integer totalPage;
 
     /**
-     * <p>Total quantity.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>48</p>

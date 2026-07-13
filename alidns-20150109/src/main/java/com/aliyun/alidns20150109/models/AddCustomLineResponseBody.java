@@ -8,7 +8,7 @@ public class AddCustomLineResponseBody extends TeaModel {
      * <p>The code of the custom line.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0yc-597</p>
+     * <p>hra0yc-5******</p>
      */
     @NameInMap("LineCode")
     public String lineCode;
@@ -17,7 +17,7 @@ public class AddCustomLineResponseBody extends TeaModel {
      * <p>The unique ID of the custom line.</p>
      * 
      * <strong>example:</strong>
-     * <p>597</p>
+     * <p>5*****</p>
      */
     @NameInMap("LineId")
     public Long lineId;

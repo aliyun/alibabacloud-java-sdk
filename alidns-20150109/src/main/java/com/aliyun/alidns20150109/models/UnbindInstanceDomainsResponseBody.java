@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindInstanceDomainsResponseBody extends TeaModel {
     /**
-     * <p>The number of domain names that failed to be unbound from the instance.</p>
+     * <p>The number of domain names that failed to be detached.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
     public Integer failedCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -23,7 +23,7 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of domain names that are unbound from the instance.</p>
+     * <p>The number of domain names that were successfully detached.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

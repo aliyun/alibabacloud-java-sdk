@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePdnsRequestStatisticsRequest extends TeaModel {
     /**
-     * <p>The primary domain name whose statistics you want to query.</p>
+     * <p>The primary domain name to query.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -14,20 +14,22 @@ public class DescribePdnsRequestStatisticsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
-     * <p>The default value is the day when you query the data.</p>
+     * <p>The end date of the query. Use the YYYY-MM-DD format.</p>
+     * <p>The default value is the current date.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-07-14 00:00:00</p>
+     * <p>2024-07-14</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +39,7 @@ public class DescribePdnsRequestStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,7 +48,7 @@ public class DescribePdnsRequestStatisticsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -55,17 +57,17 @@ public class DescribePdnsRequestStatisticsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
-     * <p>You can query only records of the last 90 days.</p>
+     * <p>The start date of the query. Use the YYYY-MM-DD format.</p>
+     * <p>You can query data from the last 90 days only.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-06-14 00:00:00</p>
+     * <p>2024-06-14</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The subdomain name whose statistics you want to query.</p>
+     * <p>The subdomain for which to view statistics.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -74,10 +76,12 @@ public class DescribePdnsRequestStatisticsRequest extends TeaModel {
     public String subDomain;
 
     /**
-     * <p>The type of the request statistics that you want to query. Valid values:</p>
+     * <p>The type of request statistics to query. Valid values:</p>
      * <ul>
-     * <li>DOMAIN: queries the request statistics by domain name.</li>
-     * <li>SUB_DOMAIN: queries the request statistics by subdomain name.</li>
+     * <li><p>DOMAIN: queries statistics by domain name.</p>
+     * </li>
+     * <li><p>SUB_DOMAIN: queries statistics by subdomain.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

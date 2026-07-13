@@ -8,7 +8,7 @@ public class UpdateGtmRecoveryPlanResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
+     * <p>575A3E3A-E9FC-5435-9CAD-BD89533E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

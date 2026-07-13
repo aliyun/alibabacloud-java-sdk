@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class OperateBatchDomainRequest extends TeaModel {
     /**
-     * <p>The DNS records. You can submit up to 1,000 DNS records.</p>
+     * <p>The data for the batch operation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DomainRecordInfo")
     public java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The response language. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * <p>Default value: zh</p>
      * 
@@ -26,12 +28,16 @@ public class OperateBatchDomainRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the batch operation. Valid values:</p>
+     * <p>The batch operation type. Valid values:</p>
      * <ul>
-     * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
-     * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
-     * <li><strong>RR_ADD</strong>: adds DNS records in batches.</li>
-     * <li><strong>RR_DEL</strong>: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</li>
+     * <li><p><strong>DOMAIN_ADD</strong>: adds domain names in batches.</p>
+     * </li>
+     * <li><p><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</p>
+     * </li>
+     * <li><p><strong>RR_ADD</strong>: adds DNS records in batches.</p>
+     * </li>
+     * <li><p><strong>RR_DEL</strong>: deletes DNS records in batches. This operation deletes DNS records that match the conditions specified by <code>Rr</code>, <code>Value</code>, or both. If you do not specify <code>Rr</code> and <code>Value</code>, all DNS records for the specified domain name are deleted.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -74,7 +80,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         /**
          * <p>The domain name.</p>
          * <blockquote>
-         * <p> You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</p>
+         * <p>A single request can contain up to 200 entries. Exceeding this limit may cause the request to fail due to the HTTP request header size limit.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -85,7 +91,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>The DNS request source. Default value: default.</p>
+         * <p>The resolution line. Default value: default.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -94,7 +100,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String line;
 
         /**
-         * <p>The new hostname (used only for modification operations, not for external users).</p>
+         * <p>The new host record. This parameter is used only for modification operations and is for internal use only.</p>
          * 
          * <strong>example:</strong>
          * <p>mail</p>
@@ -103,7 +109,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String newRr;
 
         /**
-         * <p>The new type of the DNS record (used only for modification operations, not for external users).</p>
+         * <p>The new record type. This parameter is used only for modification operations and is for internal use only.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAA</p>
@@ -112,7 +118,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String newType;
 
         /**
-         * <p>The new value of the DNS record (used only for modification operations, not for external users).</p>
+         * <p>The new record value. This parameter is used only for modification operations and is for internal use only.</p>
          * 
          * <strong>example:</strong>
          * <p>114.92.XX.XX</p>
@@ -121,8 +127,8 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String newValue;
 
         /**
-         * <p>The priority of the mail exchanger (MX) record.</p>
-         * <p>This parameter is required if the type of the DNS record is MX. Default value: 10.</p>
+         * <p>The MX priority.</p>
+         * <p>This parameter is required if the record type is MX. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -131,9 +137,9 @@ public class OperateBatchDomainRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The hostname.</p>
+         * <p>The host record.</p>
          * <blockquote>
-         * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+         * <p>This parameter is required when <code>Type</code> is <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -143,7 +149,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String rr;
 
         /**
-         * <p>The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: <em><strong>600</strong></em>.</p>
+         * <p>The TTL, in seconds. Default value: <em><strong>600</strong></em>.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -152,9 +158,9 @@ public class OperateBatchDomainRequest extends TeaModel {
         public Integer ttl;
 
         /**
-         * <p>The type of the DNS record. Valid values: A, AAAA, TXT, MX, and CNAME.</p>
+         * <p>The record type. Examples: A, AAAA, TXT, MX, and CNAME.</p>
          * <blockquote>
-         * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+         * <p>This parameter is required when <code>Type</code> is <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -164,9 +170,9 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the DNS record.</p>
+         * <p>The record value.</p>
          * <blockquote>
-         * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
+         * <p>This parameter is required when <code>Type</code> is <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

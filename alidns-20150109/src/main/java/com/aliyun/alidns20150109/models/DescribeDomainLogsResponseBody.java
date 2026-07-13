@@ -8,7 +8,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
     public DescribeDomainLogsResponseBodyDomainLogs domainLogs;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of logs returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -26,7 +26,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -35,7 +35,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of logs.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

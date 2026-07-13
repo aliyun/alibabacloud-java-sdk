@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteRecursionZoneRequest extends TeaModel {
     /**
+     * <p>A client token used to ensure the idempotence of the request.</p>
+     * <p>Generate a unique value from your client for each request. The ClientToken parameter supports only ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>21079fa016944979537637959d09bc</p>
      */
@@ -12,6 +15,8 @@ public class DeleteRecursionZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The unique ID of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>169783221000012</p>
      */

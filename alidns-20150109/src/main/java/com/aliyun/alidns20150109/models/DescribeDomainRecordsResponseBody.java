@@ -8,7 +8,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     public DescribeDomainRecordsResponseBodyDomainRecords domainRecords;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of DNS records returned in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,7 +35,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of DNS records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

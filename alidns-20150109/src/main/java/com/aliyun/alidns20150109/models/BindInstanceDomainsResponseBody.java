@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindInstanceDomainsResponseBody extends TeaModel {
     /**
-     * <p>The number of domain names that failed to be bound to the instance.</p>
+     * <p>The number of domain names that failed to be bound.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
     public Integer failedCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -23,7 +23,7 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of domain names that are bound to the instance.</p>
+     * <p>The number of domain names that were successfully bound.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

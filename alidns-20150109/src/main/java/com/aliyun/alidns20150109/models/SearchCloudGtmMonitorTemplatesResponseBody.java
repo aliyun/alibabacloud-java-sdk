@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The current page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on each page. The maximum value is 100. The default value is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -29,6 +35,8 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public SearchCloudGtmMonitorTemplatesResponseBodyTemplates templates;
 
     /**
+     * <p>The total number of health check templates that are found.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class SearchCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

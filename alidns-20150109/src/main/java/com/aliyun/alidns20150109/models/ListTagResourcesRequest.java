@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>4698691</p>
@@ -27,13 +29,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid value:</p>
      * <ul>
      * <li><strong>DOMAIN</strong>: domain name</li>
      * </ul>
@@ -46,7 +48,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>An array of tag key-value pairs.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -107,7 +109,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The key value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>

@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateRecursionZoneEffectiveScopeRequest extends TeaModel {
     /**
+     * <p>A client-generated token to ensure request idempotence. The token must be unique for each request. It can contain a maximum of 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>21079fa016944979537637959d09bc</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>A list of effective scopes.</p>
+     */
     @NameInMap("EffectiveScopes")
     public java.util.List<UpdateRecursionZoneEffectiveScopeRequestEffectiveScopes> effectiveScopes;
 
     /**
+     * <p>The unique ID of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,12 +60,17 @@ public class UpdateRecursionZoneEffectiveScopeRequest extends TeaModel {
 
     public static class UpdateRecursionZoneEffectiveScopeRequestEffectiveScopes extends TeaModel {
         /**
+         * <p>The type of the effective scope. Valid value: <em>account</em>.</p>
+         * 
          * <strong>example:</strong>
          * <p>account</p>
          */
         @NameInMap("EffectiveType")
         public String effectiveType;
 
+        /**
+         * <p>The values for the scope, which depend on the value of <code>EffectiveType</code>. If <code>EffectiveType</code> is set to <code>account</code>, this parameter is a list of account IDs.</p>
+         */
         @NameInMap("Scope")
         public java.util.List<String> scope;
 

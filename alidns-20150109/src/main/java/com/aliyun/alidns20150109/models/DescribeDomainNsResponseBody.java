@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainNsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether all the name servers are Alibaba Cloud DNS servers.</p>
+     * <p>Indicates whether all name servers are Alibaba Cloud DNS servers.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
     public Boolean allAliDns;
 
     /**
-     * <p>The cause code of the detection failure.</p>
+     * <p>The error code returned if the detection fails.</p>
      * 
      * <strong>example:</strong>
      * <p>DnsCheck.Failed</p>
@@ -29,7 +29,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
     public DescribeDomainNsResponseBodyExpectDnsServers expectDnsServers;
 
     /**
-     * <p>Indicates whether the name servers include Alibaba Cloud DNS servers.</p>
+     * <p>Indicates whether the list of name servers includes Alibaba Cloud DNS servers.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +38,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
     public Boolean includeAliDns;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16C7DC7A-2FA7-4D14-8B12-88A2BB6373DB</p>

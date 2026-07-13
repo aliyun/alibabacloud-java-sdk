@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRecursionZoneProxyPatternResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */

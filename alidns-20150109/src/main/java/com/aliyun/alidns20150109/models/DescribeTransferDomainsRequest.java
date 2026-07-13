@@ -5,25 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeTransferDomainsRequest extends TeaModel {
     /**
-     * <p>Specifies the domain name for which you want to view the transfer record.</p>
+     * <p>The domain name. Use this parameter to query the transfer records of a specific domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>alidns.com</p>
+     * <p>example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The user ID from which the domain name was transferred to the current account.</p>
+     * <p>The ID of the source account. Use this parameter to query the list of domain names transferred from this account to the current account.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>1*******</p>
      */
     @NameInMap("FromUserId")
     public Long fromUserId;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response.</p>
+     * <p>Valid values:</p>
+     * <p>zh: Chinese</p>
+     * <p>en: English</p>
+     * <p>The default value is zh.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -32,7 +36,7 @@ public class DescribeTransferDomainsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +45,7 @@ public class DescribeTransferDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,19 +54,21 @@ public class DescribeTransferDomainsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The user ID to which the domain name was transferred from the current account.</p>
+     * <p>The ID of the destination account. Use this parameter to query the list of domain names transferred from the current account to this account.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>1*******</p>
      */
     @NameInMap("TargetUserId")
     public Long targetUserId;
 
     /**
-     * <p>The transfer type. Valid values:</p>
+     * <p>The type of transfer. Valid values:</p>
      * <ul>
-     * <li>IN: The domain name was transferred to the current account.</li>
-     * <li>OUT: The domain name was transferred from the current account.</li>
+     * <li><p>IN: The list of domain names transferred to the current account.</p>
+     * </li>
+     * <li><p>OUT: The list of domain names transferred from the current account.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

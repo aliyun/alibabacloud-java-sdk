@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGtmAccessStrategyRequest extends TeaModel {
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,7 +14,7 @@ public class DeleteGtmAccessStrategyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the access policy that you want to delete.</p>
+     * <p>The policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hrskc</p>

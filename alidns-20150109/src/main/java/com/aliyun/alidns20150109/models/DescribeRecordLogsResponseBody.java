@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordLogsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of logs returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -35,7 +35,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of logs.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

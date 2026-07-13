@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
     /**
-     * <p>The ID of the GTM instance.</p>
+     * <p>The ID of the instance. To obtain the ID, call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDnsGtmInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-cs02xyk4a**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,10 +24,12 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The access policy type. Valid values:</p>
+     * <p>The access strategy mode. Valid values:</p>
      * <ul>
-     * <li>GEO: geographical location-based</li>
-     * <li>LATENCY: latency-based</li>
+     * <li><p>GEO: Geolocation-based</p>
+     * </li>
+     * <li><p>LATENCY: Latency-based</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

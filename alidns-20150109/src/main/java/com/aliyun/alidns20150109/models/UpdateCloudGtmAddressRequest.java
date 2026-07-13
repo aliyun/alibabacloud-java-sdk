@@ -7,8 +7,10 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The IP address or domain name.</p>
+     * <p>The updated IP address or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -27,41 +29,46 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The ID of the address. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-89518218114368**92</p>
+     * <p>addr-89518218114368****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>Address Attribution information.</p>
+     * <p>The attribution information of the address.</p>
      * 
      * <strong>example:</strong>
-     * <p>This parameter is not supported in the current version and does not need to be input.</p>
+     * <p>当前版本不支持此参数，不需要传入此参数。</p>
      */
     @NameInMap("AttributeInfo")
     public String attributeInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the value is unique among different requests. The value can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The new condition for determining the health state of the address. Valid values:</p>
+     * <p>The updated condition for determining the health status of the address:</p>
      * <ul>
-     * <li>any_ok: The health check results of at least one health check template are normal.</li>
-     * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
-     * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
-     * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
-     * <li>all_ok: The health check results of all health check templates are normal.</li>
+     * <li><p>any_ok: At least one probe is normal for all health check templates.</p>
+     * </li>
+     * <li><p>p30_ok: At least 30% of the probes are normal for all health check templates.</p>
+     * </li>
+     * <li><p>p50_ok: At least 50% of the probes are normal for all health check templates.</p>
+     * </li>
+     * <li><p>p70_ok: At least 70% of the probes are normal for all health check templates.</p>
+     * </li>
+     * <li><p>all_ok: All probes are normal for all health check templates.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,13 +78,13 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
     public String healthJudgement;
 
     /**
-     * <p>The health check tasks.</p>
+     * <p>The list of health check tasks.</p>
      */
     @NameInMap("HealthTasks")
     public java.util.List<UpdateCloudGtmAddressRequestHealthTasks> healthTasks;
 
     /**
-     * <p>The name of the address.</p>
+     * <p>The updated name of the address.</p>
      * 
      * <strong>example:</strong>
      * <p>Address-1</p>
@@ -156,10 +163,12 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
 
     public static class UpdateCloudGtmAddressRequestHealthTasks extends TeaModel {
         /**
-         * <p>The service port of the address on which health check tasks are performed. If the ping protocol is used for health checks, the configuration of the service port is not supported.</p>
+         * <p>The service port of the target address for the health check. You cannot configure a service port if the health check uses the ping protocol.</p>
          * <ul>
-         * <li>If you leave this parameter empty, the existing service port is deleted.</li>
-         * <li>If you specify this parameter, the existing service port is updated based on the value of this parameter.</li>
+         * <li><p>If you leave this parameter empty, the currently configured port is deleted.</p>
+         * </li>
+         * <li><p>If you specify a value for this parameter, the port is updated to the specified value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,14 +178,16 @@ public class UpdateCloudGtmAddressRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the health check template that is associated with the address. This parameter is required if you specify a service port of the address for health check tasks.</p>
+         * <p>The ID of the health check template associated with the address. This parameter is required if you configure a health check port.</p>
          * <ul>
-         * <li>If you leave this parameter empty, the associated health check template is disassociated from the address.</li>
-         * <li>If you specify this parameter, the associated health check template is updated based on the value of this parameter.</li>
+         * <li><p>If you leave this parameter empty, the currently configured health check template is deleted.</p>
+         * </li>
+         * <li><p>If you specify a value for this parameter, the health check template is updated to the specified value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>mtp-89518052425100**80</p>
+         * <p>mtp-89518052425100****</p>
          */
         @NameInMap("TemplateId")
         public String templateId;

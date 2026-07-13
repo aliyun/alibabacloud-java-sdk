@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel {
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,16 +14,16 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries returned on each page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -32,13 +32,13 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The statistics.</p>
+     * <p>The list of statistics.</p>
      */
     @NameInMap("Statistics")
     public java.util.List<DescribeDomainResolveStatisticsSummaryResponseBodyStatistics> statistics;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
 
     public static class DescribeDomainResolveStatisticsSummaryResponseBodyStatistics extends TeaModel {
         /**
-         * <p>The number of DNS requests.</p>
+         * <p>The number of requests.</p>
          * 
          * <strong>example:</strong>
          * <p>35509014</p>
@@ -128,10 +128,12 @@ public class DescribeDomainResolveStatisticsSummaryResponseBody extends TeaModel
         public String domainName;
 
         /**
-         * <p>The type of the domain name. Valid values:</p>
+         * <p>The type of the domain name.</p>
          * <ul>
-         * <li>PUBLIC: hosted public domain name</li>
-         * <li>CACHE: cache-accelerated domain name</li>
+         * <li><p>PUBLIC: Authoritative domain name</p>
+         * </li>
+         * <li><p>CACHE: Authoritative proxy domain name</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

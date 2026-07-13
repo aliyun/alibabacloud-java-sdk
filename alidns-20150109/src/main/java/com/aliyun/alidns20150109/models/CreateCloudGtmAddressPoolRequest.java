@@ -7,8 +7,10 @@ public class CreateCloudGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese.</p>
+     * </li>
+     * <li><p>en-US: English. This is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateCloudGtmAddressPoolRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Address pool name, helping users distinguish the purpose of address pools.</p>
+     * <p>The name of the address pool. The name helps you identify the purpose of the address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>Address pool-1</p>
@@ -29,9 +31,12 @@ public class CreateCloudGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The type of the address pool. Valid values:</p>
      * <ul>
-     * <li>IPv4: IPv4 addresses are returned for Domain Name System (DNS) resolution.</li>
-     * <li>IPv6: IPv6 addresses are returned for DNS resolution.</li>
-     * <li>domain: Domain names are returned for DNS resolution.</li>
+     * <li><p>IPv4: The endpoint is an IPv4 address.</p>
+     * </li>
+     * <li><p>IPv6: The endpoint is an IPv6 address.</p>
+     * </li>
+     * <li><p>domain: The endpoint is a domain name.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,19 +46,21 @@ public class CreateCloudGtmAddressPoolRequest extends TeaModel {
     public String addressPoolType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique token for each request. The token can be up to 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The enabling state of the address pool. Valid values:</p>
+     * <p>The status of the address pool. Valid values:</p>
      * <ul>
-     * <li>enable: The address pool is enabled, and the addresses in the address pool are returned for DNS resolution when the health check results are normal.</li>
-     * <li>disable: The address pool is disabled, and the addresses in the address pool are not returned for DNS resolution regardless of whether the health check results are normal or not.</li>
+     * <li><p>enable: The address pool is enabled and can be used for DNS resolution if it passes health checks.</p>
+     * </li>
+     * <li><p>disable: The address pool is disabled and cannot be used for DNS resolution, regardless of its health check status.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,13 +70,18 @@ public class CreateCloudGtmAddressPoolRequest extends TeaModel {
     public String enableStatus;
 
     /**
-     * <p>The condition for determining the health status of the address pool. Valid values:</p>
+     * <p>The health status condition of the address pool. Valid values:</p>
      * <ul>
-     * <li>any_ok: At least one address in the address pool is available.</li>
-     * <li>p30_ok: At least 30% of the addresses in the address pool are available.</li>
-     * <li>p50_ok: At least 50% of the addresses in the address pool are available.</li>
-     * <li>p70_ok: At least 70% of the addresses in the address pool are available.</li>
-     * <li>all_ok: All addresses in the address pool are available.</li>
+     * <li><p>any_ok: At least one address in the address pool is active.</p>
+     * </li>
+     * <li><p>p30_ok: At least 30% of the addresses in the address pool are active.</p>
+     * </li>
+     * <li><p>p50_ok: At least 50% of the addresses in the address pool are active.</p>
+     * </li>
+     * <li><p>p70_ok: At least 70% of the addresses in the address pool are active.</p>
+     * </li>
+     * <li><p>all_ok: All addresses in the address pool are active.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +91,7 @@ public class CreateCloudGtmAddressPoolRequest extends TeaModel {
     public String healthJudgement;
 
     /**
-     * <p>Remarks for the address pool, helping users distinguish the usage scenarios of different address pools.</p>
+     * <p>Remarks about the address pool. The remarks help you identify the scenario in which the address pool is used.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>

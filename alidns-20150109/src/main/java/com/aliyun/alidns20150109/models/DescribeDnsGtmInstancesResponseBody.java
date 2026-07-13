@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     /**
-     * <p>The Global Traffic Manager (GTM) instances.</p>
+     * <p>The list of Global Traffic Manager (GTM) instances.</p>
      */
     @NameInMap("GtmInstances")
     public java.util.List<DescribeDnsGtmInstancesResponseBodyGtmInstances> gtmInstances;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page returned. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>84314904-D047-4176-A0EC-256D7F68C7F5</p>
@@ -38,7 +38,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -47,7 +47,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -110,10 +110,12 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
 
     public static class DescribeDnsGtmInstancesResponseBodyGtmInstancesConfigAlertConfig extends TeaModel {
         /**
-         * <p>Indicates whether DingTalk alert notifications are configured. Valid values:</p>
+         * <p>Indicates whether DingTalk notifications are configured. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false | null</li>
+         * <li><p>true: configured</p>
+         * </li>
+         * <li><p>false or null: not configured</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,8 +127,10 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether email notifications are configured. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false | null</li>
+         * <li><p>true: configured</p>
+         * </li>
+         * <li><p>false or null: not configured</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -138,11 +142,16 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         /**
          * <p>The type of the alert event. Valid values:</p>
          * <ul>
-         * <li>ADDR_ALERT: The address is unavailable.</li>
-         * <li>ADDR_RESUME: The address becomes available.</li>
-         * <li>ADDR_POOL_GROUP_UNAVAILABLE: The address pool set is unavailable.</li>
-         * <li>ADDR_POOL_GROUP_AVAILABLE: The address pool set becomes available.</li>
-         * <li>ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.</li>
+         * <li><p>ADDR_ALERT: The address is unavailable.</p>
+         * </li>
+         * <li><p>ADDR_RESUME: The address is restored.</p>
+         * </li>
+         * <li><p>ADDR_POOL_GROUP_UNAVAILABLE: The address pool collection is unavailable.</p>
+         * </li>
+         * <li><p>ADDR_POOL_GROUP_AVAILABLE: The address pool collection is restored.</p>
+         * </li>
+         * <li><p>ACCESS_STRATEGY_POOL_GROUP_SWITCH: A switchover occurs between the primary and secondary address pools.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,10 +161,12 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public String noticeType;
 
         /**
-         * <p>Indicates whether SMS notifications are configured. Valid values:</p>
+         * <p>Indicates whether text message notifications are configured. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false | null</li>
+         * <li><p>true: configured</p>
+         * </li>
+         * <li><p>false or null: not configured</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,28 +216,28 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
 
     public static class DescribeDnsGtmInstancesResponseBodyGtmInstancesConfig extends TeaModel {
         /**
-         * <p>The alert notification method.</p>
+         * <p>The alert notification methods.</p>
          */
         @NameInMap("AlertConfig")
         public java.util.List<DescribeDnsGtmInstancesResponseBodyGtmInstancesConfigAlertConfig> alertConfig;
 
         /**
-         * <p>The alert contact groups. The value is in the JSON format.</p>
+         * <p>The alert contact group. The value is a JSON-formatted list of strings.</p>
          * 
          * <strong>example:</strong>
-         * <p>testgroup</p>
+         * <p>[&quot;test1&quot;,&quot;test2&quot;]</p>
          */
         @NameInMap("AlertGroup")
         public String alertGroup;
 
         /**
-         * <p>The type of the CNAME. Valid value:</p>
+         * <p>The type of the CNAME domain name used for access. Valid value:</p>
          * <ul>
-         * <li>PUBLIC</li>
+         * <li>PUBLIC: for Internet access</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>public</p>
+         * <p>PUBLIC</p>
          */
         @NameInMap("CnameType")
         public String cnameType;
@@ -241,20 +252,22 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>Specifies whether to use a custom CNAME or a system-assigned CNAME to access GTM over the Internet. Valid values:</p>
+         * <p>The method to access the instance over the Internet using a CNAME record. Valid values:</p>
          * <ul>
-         * <li>CUSTOM: a custom CNAME</li>
-         * <li>SYSTEM_ASSIGN: a system-assigned CNAME. You cannot set PublicCnameMode to this value.</li>
+         * <li><p>CUSTOM: custom</p>
+         * </li>
+         * <li><p>SYSTEM_ASSIGN: system-assigned (This feature is disabled.)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>custom</p>
+         * <p>CUSTOM</p>
          */
         @NameInMap("PublicCnameMode")
         public String publicCnameMode;
 
         /**
-         * <p>The hostname of the domain name that is used to access GTM over the Internet.</p>
+         * <p>The hostname for Internet access.</p>
          * 
          * <strong>example:</strong>
          * <p>test.rr</p>
@@ -263,41 +276,43 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public String publicRr;
 
         /**
-         * <p>The domain name that is used to access GTM over the Internet.</p>
+         * <p>The user\&quot;s service domain name that is accessible over the Internet.</p>
          * 
          * <strong>example:</strong>
-         * <p>example.com</p>
+         * <p>dns-example.top</p>
          */
         @NameInMap("PublicUserDomainName")
         public String publicUserDomainName;
 
         /**
-         * <p>The canonical name (CNAME) that is used to access GTM over the Internet.</p>
+         * <p>The domain name used for Internet access.</p>
          * 
          * <strong>example:</strong>
-         * <p>test.rr.gtm-003.com</p>
+         * <p>gtm-cn-wwo3a3hbz**.dns-example.top</p>
          */
         @NameInMap("PublicZoneName")
         public String publicZoneName;
 
         /**
-         * <p>The type of the access policy. Valid values:</p>
+         * <p>The mode of the access policy. Valid values:</p>
          * <ul>
-         * <li>LATENCY: latency-based access policy</li>
-         * <li>GEO: geographical location-based access policy</li>
+         * <li><p>LATENCY: latency-based</p>
+         * </li>
+         * <li><p>GEO: geography-based</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>geo</p>
+         * <p>GEO</p>
          */
         @NameInMap("StrategyMode")
         public String strategyMode;
 
         /**
-         * <p>The global time to live (TTL).</p>
+         * <p>The global TTL.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>60</p>
          */
         @NameInMap("Ttl")
         public Integer ttl;
@@ -391,7 +406,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
 
     public static class DescribeDnsGtmInstancesResponseBodyGtmInstancesUsedQuota extends TeaModel {
         /**
-         * <p>The total number of sent DingTalk notifications.</p>
+         * <p>The total number of DingTalk messages that were sent.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -400,7 +415,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public Integer dingtalkUsedCount;
 
         /**
-         * <p>The total number of sent email notifications.</p>
+         * <p>The total number of emails that were sent.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -409,7 +424,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public Integer emailUsedCount;
 
         /**
-         * <p>The total number of sent SMS notifications.</p>
+         * <p>The total number of text messages that were sent.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -418,7 +433,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public Integer smsUsedCount;
 
         /**
-         * <p>The number of created detection tasks.</p>
+         * <p>The number of health check tasks that were created.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -467,13 +482,13 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
 
     public static class DescribeDnsGtmInstancesResponseBodyGtmInstances extends TeaModel {
         /**
-         * <p>The configurations of the instance.</p>
+         * <p>The configuration of the instance.</p>
          */
         @NameInMap("Config")
         public DescribeDnsGtmInstancesResponseBodyGtmInstancesConfig config;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T06:58Z</p>
@@ -482,7 +497,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp that indicates when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1602658709000</p>
@@ -491,7 +506,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-10-14T06:58Z</p>
@@ -500,7 +515,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The time when the instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp that indicates when the instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1602658709000</p>
@@ -509,18 +524,18 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>instance1</p>
+         * <p>gtm-cn-wwo3a3hbz**</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The billing method of the GTM instance. Valid value:</p>
+         * <p>The billing method. Valid value:</p>
          * <ul>
-         * <li>Subscription.</li>
+         * <li>Subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -539,7 +554,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The total number of Short Message Service (SMS) notifications.</p>
+         * <p>The total quota of text message notifications.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -548,7 +563,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
         public Integer smsQuota;
 
         /**
-         * <p>The total number of detection tasks.</p>
+         * <p>The total number of health check tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -566,7 +581,7 @@ public class DescribeDnsGtmInstancesResponseBody extends TeaModel {
          * <p>The version of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>testVersion1</p>
+         * <p>standard</p>
          */
         @NameInMap("VersionCode")
         public String versionCode;

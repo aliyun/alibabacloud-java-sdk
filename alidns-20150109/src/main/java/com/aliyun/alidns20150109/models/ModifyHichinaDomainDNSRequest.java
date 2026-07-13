@@ -9,18 +9,20 @@ public class ModifyHichinaDomainDNSRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.com</p>
+     * <p>dns-example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the return value. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en</p>
+     * <p>Default: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -29,7 +31,7 @@ public class ModifyHichinaDomainDNSRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.2.0</p>

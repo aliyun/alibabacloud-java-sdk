@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecursionZonesRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return for this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ListRecursionZonesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -19,6 +23,7 @@ public class ListRecursionZonesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListRecursionZonesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class ListRecursionZonesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -44,6 +52,8 @@ public class ListRecursionZonesRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The name of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>lisheng999.com</p>
      */

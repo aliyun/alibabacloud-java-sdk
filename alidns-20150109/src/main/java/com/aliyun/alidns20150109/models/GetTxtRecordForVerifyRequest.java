@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTxtRecordForVerifyRequest extends TeaModel {
     /**
-     * <p>The ID of the Domain Name System (DNS) record. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> operation to obtain the ID.</p>
+     * <p>The domain name. The <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a> operation returns a list of domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -14,10 +14,12 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +29,12 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The feature verified by using the TXT record. Valid values:</p>
+     * <p>The purpose of the TXT record verification. Valid values:</p>
      * <ul>
-     * <li>ADD_SUB_DOMAIN: add a subdomain for verification.</li>
-     * <li>RETRIEVAL: add other subdomains for verification</li>
+     * <li><p>ADD_SUB_DOMAIN: Add a subdomain for verification.</p>
+     * </li>
+     * <li><p>RETRIEVAL: Other verifications.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

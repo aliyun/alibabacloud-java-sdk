@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the instance.</p>
+     * <p>The instance configuration.</p>
      */
     @NameInMap("Config")
     public DescribeDnsGtmInstanceResponseBodyConfig config;
@@ -20,7 +20,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The UNIX timestamp that indicates when the instance was created.</p>
+     * <p>The UNIX timestamp when the instance was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1602656937000</p>
@@ -29,7 +29,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The time when the instance expires.</p>
+     * <p>The expiration date.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-10-14T06:58Z</p>
@@ -38,7 +38,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The UNIX timestamp that indicates when the instance expires.</p>
+     * <p>The UNIX timestamp when the instance expires.</p>
      * 
      * <strong>example:</strong>
      * <p>1602656937000</p>
@@ -50,15 +50,15 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
      * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>instanceid1</p>
+     * <p>gtm-cn-wwo3a3hbz**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The billing method. Valid value:</p>
+     * <p>The billing method.</p>
      * <ul>
-     * <li>Subscription: You can pay in advance for the use of resources.</li>
+     * <li>Subscription: subscription</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>84314904-D047-4176-A0EC-256D7F68C7F5</p>
@@ -77,16 +77,16 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>resourcegroupid1</p>
+     * <p>resourc*****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The total number of SMS notifications.</p>
+     * <p>The quota on the number of text message notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -95,7 +95,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     public Integer smsQuota;
 
     /**
-     * <p>The total number of detection tasks.</p>
+     * <p>The quota on the number of health check tasks.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -113,7 +113,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
      * <p>The version of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>versioncode1</p>
+     * <p>standard</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;
@@ -303,22 +303,22 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         public DescribeDnsGtmInstanceResponseBodyConfigAlertConfig alertConfig;
 
         /**
-         * <p>The name of the alert group.</p>
+         * <p>The alert contact group. The value is a \<code>List\\&lt;string&gt;\\</code> in JSON format.</p>
          * 
          * <strong>example:</strong>
-         * <p>alertgroup1</p>
+         * <p>[&quot;test1&quot;,&quot;test2&quot;]</p>
          */
         @NameInMap("AlertGroup")
         public String alertGroup;
 
         /**
-         * <p>The type of the CNAME domain name that is used to access the instance. Valid value:</p>
+         * <p>The type of the CNAME domain name used for access.</p>
          * <ul>
-         * <li>PUBLIC: The CNAME domain name is used to access the instance over the Internet.</li>
+         * <li>PUBLIC: Internet-facing</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>public</p>
+         * <p>PUBLIC</p>
          */
         @NameInMap("CnameType")
         public String cnameType;
@@ -327,35 +327,37 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
          * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>instancetest1</p>
+         * <p>test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The domain name that is used to access the instance over the Internet.</p>
+         * <p>The public access domain name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test.rr.gtm-003.com</p>
+         * <p>gtm-cn-wwo3a3hbz**.example.com</p>
          */
         @NameInMap("PubicZoneName")
         public String pubicZoneName;
 
         /**
-         * <p>Indicates whether a custom CNAME domain name or a CNAME domain name assigned by the system is used to access the instance over the Internet. Valid values:</p>
+         * <p>The access method for the public CNAME.</p>
          * <ul>
-         * <li>CUSTOM: A custom CNAME domain name is used.</li>
-         * <li>SYSTEM_ASSIGN: A CNAME domain name assigned by the system is used.</li>
+         * <li><p>CUSTOM: custom</p>
+         * </li>
+         * <li><p>SYSTEM_ASSIGN: system-assigned. This feature is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>custom</p>
+         * <p>CUSTOM</p>
          */
         @NameInMap("PublicCnameMode")
         public String publicCnameMode;
 
         /**
-         * <p>The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.</p>
+         * <p>The hostname for public access.</p>
          * 
          * <strong>example:</strong>
          * <p>test.rr</p>
@@ -364,7 +366,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         public String publicRr;
 
         /**
-         * <p>The service domain name that is used over the Internet.</p>
+         * <p>The user\&quot;s public service domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -373,10 +375,12 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         public String publicUserDomainName;
 
         /**
-         * <p>The type of the access policy. Valid values:</p>
+         * <p>The access policy mode.</p>
          * <ul>
-         * <li>LATENCY: Latency-based</li>
-         * <li>GEO: Geographical location-based</li>
+         * <li><p>LATENCY: latency-based</p>
+         * </li>
+         * <li><p>GEO: geography-based</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,10 +390,10 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         public String strategyMode;
 
         /**
-         * <p>The global time to live (TTL).</p>
+         * <p>The global TTL.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>60</p>
          */
         @NameInMap("Ttl")
         public Integer ttl;
@@ -482,11 +486,17 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDnsGtmInstanceResponseBodyUsedQuota extends TeaModel {
+        /**
+         * <p>The number of DingTalk notifications that were sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("DingtalkUsedCount")
         public Integer dingtalkUsedCount;
 
         /**
-         * <p>The total number of emails that were sent.</p>
+         * <p>The number of email notifications that were sent.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -495,7 +505,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         public Integer emailUsedCount;
 
         /**
-         * <p>The total number of short messages that were sent.</p>
+         * <p>The number of text messages that were sent.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -504,7 +514,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
         public Integer smsUsedCount;
 
         /**
-         * <p>The number of detection tasks that were created.</p>
+         * <p>The number of health check tasks that were created.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

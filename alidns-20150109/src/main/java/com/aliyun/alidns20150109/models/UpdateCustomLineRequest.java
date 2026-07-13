@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomLineRequest extends TeaModel {
     /**
-     * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
+     * <p>The list of IP ranges. Use a hyphen (-) to separate the start and end IP addresses. Specify one IP segment per line. You can specify 1 to 50 IP ranges. To specify a single IP address, use the format IP1-IP1. The IP ranges cannot overlap.</p>
      */
     @NameInMap("IpSegment")
     public java.util.List<UpdateCustomLineRequestIpSegment> ipSegment;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,17 +26,20 @@ public class UpdateCustomLineRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The unique ID of the custom line. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeCustomLines</a> operation to obtain the unique ID.</p>
+     * <p>The unique ID of the custom line. You can call <a href="https://help.aliyun.com/document_detail/2355671.html">DescribeCustomLines</a> to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1234</p>
+     * <p>1*******</p>
      */
     @NameInMap("LineId")
     public Long lineId;
 
     /**
-     * <p>The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
+     * <p>The name of the custom line. The name must be 1 to 20 characters long and can contain Chinese characters, letters, digits, hyphens (-), and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>望京线路</p>
      */
     @NameInMap("LineName")
     public String lineName;
@@ -78,19 +83,19 @@ public class UpdateCustomLineRequest extends TeaModel {
 
     public static class UpdateCustomLineRequestIpSegment extends TeaModel {
         /**
-         * <p>The end IP address of the CIDR block.</p>
+         * <p>The end IP address of the IP range.</p>
          * 
          * <strong>example:</strong>
-         * <p>2.2.2.2</p>
+         * <p>2.2.XX.XX</p>
          */
         @NameInMap("EndIp")
         public String endIp;
 
         /**
-         * <p>The start IP address of the CIDR block.</p>
+         * <p>The start IP address of the IP range.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.1</p>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("StartIp")
         public String startIp;

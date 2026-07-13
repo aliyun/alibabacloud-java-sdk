@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6AEC7A64-3CB1-4C49-8B35-0B901F1E26BF</p>

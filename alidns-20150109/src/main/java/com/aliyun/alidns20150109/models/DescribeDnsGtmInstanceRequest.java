@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance about which you want to query the information.</p>
+     * <p>The ID of the instance. For more information, see <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDnsGtmInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-wwo3a3hbz**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

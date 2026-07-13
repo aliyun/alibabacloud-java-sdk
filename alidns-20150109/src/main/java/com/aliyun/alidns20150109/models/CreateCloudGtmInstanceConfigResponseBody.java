@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+     * <p>The ID of the domain name instance configuration. A GTM instance can have both an A record and an AAAA record for the same access domain name. In this case, the GTM instance has two domain name instance configurations. The ConfigId uniquely identifies each configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>config-000**1</p>
@@ -14,6 +14,8 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     public Boolean configId;
 
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>gtm-cn-xxxxx</p>
      */
@@ -21,7 +23,7 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -30,10 +32,12 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

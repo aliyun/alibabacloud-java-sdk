@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     /**
-     * <p>The number of addresses in the address pool queried.</p>
+     * <p>The number of addresses in the address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -35,6 +35,8 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The time when the address pool was created. This is a UNIX timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
      */
@@ -42,16 +44,16 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The minimum number of available addresses in the address pool.</p>
+     * <p>The minimum number of available addresses.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("MinAvailableAddrNum")
     public Integer minAvailableAddrNum;
 
     /**
-     * <p>The health check ID of the address pool.</p>
+     * <p>The ID of the monitoring configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>100abc</p>
@@ -60,11 +62,14 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String monitorConfigId;
 
     /**
-     * <p>Indicates whether health check was enabled for the address pool. Valid values:</p>
+     * <p>The monitoring status. Valid values:</p>
      * <ul>
-     * <li><strong>OPEN</strong>: Enabled</li>
-     * <li><strong>CLOSE</strong>: Disabled</li>
-     * <li><strong>UNCONFIGURED</strong>: Not configured</li>
+     * <li><p><strong>OPEN</strong>: Enabled</p>
+     * </li>
+     * <li><p><strong>CLOSE</strong>: Disabled</p>
+     * </li>
+     * <li><p><strong>UNCONFIGURED</strong>: Not configured</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,12 +80,15 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
 
     /**
      * <p>The name of the address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>名称</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -91,8 +99,10 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     /**
      * <p>The availability status of the address pool. Valid values:</p>
      * <ul>
-     * <li><strong>AVAILABLE</strong>: Available</li>
-     * <li><strong>NOT_AVAILABLE</strong>: Unavailable</li>
+     * <li><p><strong>AVAILABLE</strong>: The address pool is available.</p>
+     * </li>
+     * <li><p><strong>NOT_AVAILABLE</strong>: The address pool is unavailable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,8 +114,10 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     /**
      * <p>The type of the address pool. Valid values:</p>
      * <ul>
-     * <li><strong>IP</strong>: IP address</li>
-     * <li><strong>DOMAIN</strong>: Domain name</li>
+     * <li><p><strong>IP</strong>: IP address</p>
+     * </li>
+     * <li><p><strong>DOMAIN</strong>: Domain name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,7 +127,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The last time when the address pool was updated.</p>
+     * <p>The time when the address pool was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-28T13:08Z</p>
@@ -124,7 +136,7 @@ public class DescribeGtmInstanceAddressPoolResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>A timestamp that indicates the last time the address pool was updated.</p>
+     * <p>The time when the address pool was last updated. This is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>

@@ -7,8 +7,10 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p>zh-CN: Chinese.</p>
+     * </li>
+     * <li><p>en-US: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,14 +20,22 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The billing method for the instance configuration:</p>
+     * <ul>
+     * <li><p>prepay: Subscription. This is the default value.</p>
+     * </li>
+     * <li><p>postpay: Pay-as-you-go.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>postpay/prepay</p>
+     * <p>postpay</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value, but you must make sure that the value is unique among different requests. The token can contain up to 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
@@ -34,10 +44,12 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The enabling state of the access domain name. Valid values:</p>
+     * <p>The status of the domain name instance:</p>
      * <ul>
-     * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</li>
-     * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance is unavailable.</li>
+     * <li><p>enable: Enabled. The intelligent scheduling policy of the GTM instance is active.</p>
+     * </li>
+     * <li><p>disable: Disabled. The intelligent scheduling policy of the GTM instance is unavailable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +59,7 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String enableStatus;
 
     /**
-     * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance. This ID uniquely identifies a GTM 3.0 instance.</p>
+     * <p>The unique ID of the GTM 3.0 instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gtm-cn-jmp3qnw**03</p>
@@ -56,7 +68,7 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The description of the access domain name.</p>
+     * <p>The remark.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -65,7 +77,7 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The hostname of the access domain name.</p>
+     * <p>The host record of the GTM access domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>www</p>
@@ -74,11 +86,14 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String scheduleHostname;
 
     /**
-     * <p>The type of the Domain Name System (DNS) record configured for the access domain name. Valid values:</p>
+     * <p>The DNS record type of the access domain name:</p>
      * <ul>
-     * <li>A: IPv4 address</li>
-     * <li>AAAA: IPv6 address</li>
-     * <li>CNAME: domain name</li>
+     * <li><p>A: IPv4 address</p>
+     * </li>
+     * <li><p>AAAA: IPv6 address</p>
+     * </li>
+     * <li><p>CNAME: Canonical name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,10 +103,12 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String scheduleRrType;
 
     /**
-     * <p>The configuration mode of the access domain name. Valid values:</p>
+     * <p>The configuration mode for the access domain name:</p>
      * <ul>
-     * <li>sys_assign: system allocation. This mode is not supported.</li>
-     * <li>custom: custom allocation. You must select a zone within the account to which the instance belongs and enter a hostname to generate an access domain name.</li>
+     * <li><p>sys_assign: The system assigns a domain name. This mode is no longer supported.</p>
+     * </li>
+     * <li><p>custom: Custom mode. Select a domain name under the account that owns the instance and enter a host record to generate the access domain name.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +118,7 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String scheduleZoneMode;
 
     /**
-     * <p>The name of the parent zone for the access domain name configured in GTM. In most cases, the value of this parameter is the name of a zone hosted by Alibaba Cloud DNS. This zone belongs to the account to which the GTM instance belongs. You can specify the name of a zone or subzone.</p>
+     * <p>The zone name, which is the parent zone of the GTM access domain name. This is typically a domain name hosted in the Alibaba Cloud DNS console under the account that owns the GTM instance. Primary domains and subdomains are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -110,7 +127,7 @@ public class CreateCloudGtmInstanceConfigRequest extends TeaModel {
     public String scheduleZoneName;
 
     /**
-     * <p>The global time to live (TTL) period. Unit: seconds. The global TTL period affects how long the DNS records that map the access domain name to the addresses in the address pools are cached in the local DNS servers of Internet service providers (ISPs). You can specify a custom value.</p>
+     * <p>The global Time to Live (TTL) in seconds. This is the TTL for the access domain name that resolves to an address in an address pool. This value affects how long the DNS record is cached on a carrier\&quot;s local DNS server. You can specify a custom TTL.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

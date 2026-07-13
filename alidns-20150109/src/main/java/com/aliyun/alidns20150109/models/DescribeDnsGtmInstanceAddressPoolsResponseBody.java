@@ -8,7 +8,7 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public DescribeDnsGtmInstanceAddressPoolsResponseBodyAddrPools addrPools;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned per page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -35,7 +35,7 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned on all pages.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

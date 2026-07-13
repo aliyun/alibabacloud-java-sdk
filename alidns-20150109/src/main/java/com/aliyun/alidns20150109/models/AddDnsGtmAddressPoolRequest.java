@@ -5,27 +5,28 @@ import com.aliyun.tea.*;
 
 public class AddDnsGtmAddressPoolRequest extends TeaModel {
     /**
-     * <p>The address pools.</p>
+     * <p>The list of addresses in the address pool.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
     public java.util.List<AddDnsGtmAddressPoolRequestAddr> addr;
 
     /**
-     * <p>The number of consecutive failures.</p>
+     * <p>The number of consecutive failed health checks.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID.
+     * &lt;props=&quot;intl&quot;&gt;Call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances">DescribeDnsGtmInstances</a> to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-cs02xyk****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -34,19 +35,19 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
      * <p>The health check interval. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>60</p>
      */
     @NameInMap("Interval")
     public Integer interval;
 
     /**
-     * <p>The nodes for monitoring.</p>
+     * <p>The list of health check nodes. If MonitorStatus is set to OPEN, you must specify at least one valid health check node.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<AddDnsGtmAddressPoolRequestIspCityNode> ispCityNode;
 
     /**
-     * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -55,74 +56,84 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The load balancing policy of the address pool. Valid values:</p>
+     * <p>The load balancing policy. Valid values:</p>
      * <ul>
-     * <li>ALL_RR: returns all addresses.</li>
-     * <li>RATIO: returns addresses by weight.</li>
+     * <li><p>ALL_RR: returns all addresses.</p>
+     * </li>
+     * <li><p>RATIO: returns addresses by weight.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>all_rr</p>
+     * <p>ALL_RR</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
 
     /**
-     * <p>The extended information. The required parameters vary based on the health check protocol.</p>
+     * <p>The extended information. This parameter is a JSON string. The required parameters vary based on the health check protocol:</p>
      * <ul>
-     * <li><p>HTTP or HTTPS:</p>
+     * <li><p>HTTP and HTTPS:</p>
      * <ul>
-     * <li><p>port: the port that you want to check</p>
+     * <li><p>port: The health check port.</p>
      * </li>
-     * <li><p>host: the host settings</p>
+     * <li><p>host: The host settings.</p>
      * </li>
-     * <li><p>path: the URL</p>
+     * <li><p>path: The URL path.</p>
      * </li>
-     * <li><p>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</p>
+     * <li><p>code: The return code. A response with a status code greater than this value is considered abnormal. Valid values: 400 and 500.</p>
      * </li>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>failureRate: The failure rate.</p>
      * </li>
-     * <li><p>sni: specifies whether to enable Server Name Indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
+     * <li><p>sni: Specifies whether to enable Server Name Indication (SNI). This parameter is available only for the HTTPS protocol.</p>
      * <ul>
-     * <li>true: enables SNI.</li>
-     * <li>other: disables SNI.</li>
-     * </ul>
+     * <li><p>true: Enable SNI.</p>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
-     * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
-     * </ul>
+     * <li><p>Other values: Disable SNI.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p>ping:</p>
+     * <li><p>nodeType: The type of the health check node when the address pool type is DOMAIN. Valid values:</p>
      * <ul>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>IPV4</p>
      * </li>
-     * <li><p>packetNum: the number of ping packets</p>
+     * <li><p>IPV6</p>
      * </li>
-     * <li><p>packetLossRate: the loss rate of ping packets</p>
+     * </ul>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
+     * </ul>
+     * </li>
+     * <li><p>PING:</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
+     * <li><p>packetNum: The number of ping packets.</p>
+     * </li>
+     * <li><p>packetLossRate: The packet loss rate.</p>
+     * </li>
+     * <li><p>nodeType: The type of the health check node when the address pool type is DOMAIN. Valid values:</p>
+     * <ul>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * </li>
      * <li><p>TCP:</p>
      * <ul>
-     * <li><p>port: the port that you want to check</p>
+     * <li><p>port: The health check port.</p>
      * </li>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>failureRate: The failure rate.</p>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
+     * <li><p>nodeType: The type of the health check node when the address pool type is DOMAIN. Valid values:</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -130,20 +141,22 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
+     * <p>{&quot;failureRate&quot;:50,&quot;port&quot;:80}</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
     /**
-     * <p>Specifies whether to enable the health check feature. If you set this parameter to OPEN, the system verifies the health check configurations. If you set this parameter to CLOSE, the system discards the health check configurations. Default value: CLOSE. Valid values:</p>
+     * <p>The status of the health check feature. Default value: CLOSE. If you set this parameter to OPEN, the health check configuration is verified. Otherwise, the configuration is ignored.</p>
      * <ul>
-     * <li>OPEN: enables the health check feature.</li>
-     * <li>CLOSE: disables the health check feature.</li>
+     * <li><p>OPEN: enabled</p>
+     * </li>
+     * <li><p>CLOSE: disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>open</p>
+     * <p>OPEN</p>
      */
     @NameInMap("MonitorStatus")
     public String monitorStatus;
@@ -161,14 +174,18 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The health check protocol. Valid values:</p>
      * <ul>
-     * <li>HTTP</li>
-     * <li>HTTPS</li>
-     * <li>PING</li>
-     * <li>TCP</li>
+     * <li><p>HTTP</p>
+     * </li>
+     * <li><p>HTTPS</p>
+     * </li>
+     * <li><p>PING</p>
+     * </li>
+     * <li><p>TCP</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>http</p>
+     * <p>TCP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
@@ -177,7 +194,7 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
      * <p>The timeout period. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2000</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
@@ -185,14 +202,17 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The type of the address pool. Valid values:</p>
      * <ul>
-     * <li>IPV4: IPv4 address</li>
-     * <li>IPV6: IPv6 address</li>
-     * <li>DOMAIN: domain name</li>
+     * <li><p>IPV4: IPv4 address</p>
+     * </li>
+     * <li><p>IPV6: IPv6 address</p>
+     * </li>
+     * <li><p>DOMAIN: domain name</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ipv4</p>
+     * <p>IPV4</p>
      */
     @NameInMap("Type")
     public String type;
@@ -308,38 +328,41 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
 
     public static class AddDnsGtmAddressPoolRequestAddr extends TeaModel {
         /**
-         * <p>The address in the address pool.</p>
+         * <p>The address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.1</p>
+         * <p>223.5.XX.XX</p>
          */
         @NameInMap("Addr")
         public String addr;
 
         /**
-         * <p>The information about the source region of the address. The value of this parameter is a JSON string. Valid values:</p>
+         * <p>The source region of the address. This parameter is a JSON string.</p>
          * <ul>
-         * <li><p>lineCode: the line code of the source region for the address</p>
+         * <li><p>lineCode: The line code of the source region.</p>
          * </li>
-         * <li><p>lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:</p>
+         * <li><p>lineCodeRectifyType: The rectification type for the line code. Default value: AUTO.</p>
          * <ul>
-         * <li>NO_NEED: no need for rectification</li>
-         * <li>RECTIFIED: rectified</li>
-         * <li>AUTO: automatic rectification</li>
+         * <li><p>NO_NEED: No rectification is performed.</p>
+         * </li>
+         * <li><p>RECTIFIED: The line code is rectified.</p>
+         * </li>
+         * <li><p>AUTO: The line code is automatically rectified.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>default</p>
+         * <p>{&quot;lineCodeRectifyType&quot;:&quot;AUTO&quot;, &quot;lineCode&quot;:[]}</p>
          */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
         /**
-         * <p>The weight of the address.</p>
+         * <p>The weight.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -348,22 +371,25 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
         public Integer lbaWeight;
 
         /**
-         * <p>The return mode of the addresses: Valid values:</p>
+         * <p>The mode. Valid values:</p>
          * <ul>
-         * <li>SMART: smart return</li>
-         * <li>ONLINE: always online</li>
-         * <li>OFFLINE: always offline</li>
+         * <li><p>SMART: smart return</p>
+         * </li>
+         * <li><p>ONLINE: always online</p>
+         * </li>
+         * <li><p>OFFLINE: always offline</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>online</p>
+         * <p>SMART</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
-         * <p>The description of the address pool.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -420,8 +446,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
 
     public static class AddDnsGtmAddressPoolRequestIspCityNode extends TeaModel {
         /**
-         * <p>The city code.</p>
-         * <p>Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.</p>
+         * <p>The city code. If MonitorStatus is set to OPEN, CityCode is required.</p>
+         * <p>For information about the valid values, see the response of the DescribeDnsGtmMonitorAvailableConfig operation.</p>
          * 
          * <strong>example:</strong>
          * <p>503</p>
@@ -430,11 +456,8 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
         public String cityCode;
 
         /**
-         * <ul>
-         * <li>The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.</li>
-         * <li>If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.</li>
-         * <li>If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.</li>
-         * </ul>
+         * <p>If MonitorStatus is set to OPEN, IspCode is required.
+         * For information about the valid values, see the response of the DescribeDnsGtmMonitorAvailableConfig operation.</p>
          * 
          * <strong>example:</strong>
          * <p>465</p>

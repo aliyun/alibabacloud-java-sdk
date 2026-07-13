@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanAvailableConfigRequest extends TeaModel {
     /**
-     * <p>The language in which the returned results are displayed. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

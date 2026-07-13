@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddDnsGtmMonitorRequest extends TeaModel {
     /**
-     * <p>The ID of the address pool.</p>
+     * <p>The ID of the address pool. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstanceaddresspools">DescribeDnsGtmInstanceAddressPools</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool1</p>
+     * <p>po**</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
-     * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+     * <p>The number of consecutive health checks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,14 +35,14 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The monitored nodes.</p>
+     * <p>The list of monitoring nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<AddDnsGtmMonitorRequestIspCityNode> ispCityNode;
 
     /**
-     * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -51,69 +51,80 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
+     * <p>The extended information. The parameters vary based on the protocol type.</p>
      * <ul>
      * <li><p>HTTP or HTTPS</p>
      * <ul>
-     * <li><p>port: the port that you want to check</p>
+     * <li><p>port: The health check port.</p>
      * </li>
-     * <li><p>host: the host settings</p>
+     * <li><p>host: The Host header.</p>
      * </li>
-     * <li><p>path: the URL path</p>
+     * <li><p>path: The URL path.</p>
      * </li>
-     * <li><p>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</p>
+     * <li><p>code: The health check is considered abnormal if the returned HTTP status code is greater than this value.</p>
      * </li>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>failureRate: The failure rate.</p>
      * </li>
-     * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
+     * <li><p>sni: Specifies whether to enable Server Name Indication (SNI). This parameter is used only when the health check protocol is HTTPS. Valid values:</p>
      * <ul>
-     * <li>true: enables SNI.</li>
-     * <li>false: disables SNI.</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
+     * <li><p>nodeType: The type of the monitoring node. This parameter is used when the address pool type is DOMAIN. Valid values:</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * </li>
      * <li><p>PING</p>
      * <ul>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>failureRate: The failure rate.</p>
      * </li>
-     * <li><p>packetNum: the number of ping packets</p>
+     * <li><p>packetNum: The number of ping packets.</p>
      * </li>
-     * <li><p>packetLossRate: the loss rate of ping packets</p>
+     * <li><p>packetLossRate: The packet loss rate.</p>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
+     * <li><p>nodeType: The type of the monitoring node. This parameter is used when the address pool type is DOMAIN. Valid values:</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
      * </li>
      * <li><p>TCP</p>
      * <ul>
-     * <li><p>port: the port that you want to check</p>
+     * <li><p>port: The health check port.</p>
      * </li>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>failureRate: The failure rate.</p>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</p>
+     * <li><p>nodeType: The type of the monitoring node. This parameter is used when the address pool type is DOMAIN. Valid values:</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
-     * </ul>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
      * </li>
      * </ul>
      * </li>
      * </ul>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be a JSON string.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</p>
+     * <p>{&quot;failureRate&quot;:50,&quot;port&quot;:80}</p>
      */
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
@@ -121,15 +132,19 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
     /**
      * <p>The health check protocol. Valid values:</p>
      * <ul>
-     * <li>HTTP</li>
-     * <li>HTTPS</li>
-     * <li>PING</li>
-     * <li>TCP</li>
+     * <li><p>HTTP</p>
+     * </li>
+     * <li><p>HTTPS</p>
+     * </li>
+     * <li><p>PING</p>
+     * </li>
+     * <li><p>TCP</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>http</p>
+     * <p>TCP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
@@ -139,7 +154,7 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>30000</p>
+     * <p>3000</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
@@ -215,7 +230,7 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
 
     public static class AddDnsGtmMonitorRequestIspCityNode extends TeaModel {
         /**
-         * <p>The code of the city where the monitored node is deployed.</p>
+         * <p>The city code of the monitoring node.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -224,7 +239,7 @@ public class AddDnsGtmMonitorRequest extends TeaModel {
         public String cityCode;
 
         /**
-         * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
+         * <p>The carrier code of the monitoring node.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

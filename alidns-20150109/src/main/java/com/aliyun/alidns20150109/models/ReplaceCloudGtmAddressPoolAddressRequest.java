@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ReplaceCloudGtmAddressPoolAddressRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The response language. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US (default)</strong>: English</li>
+     * <li><p><strong>zh-CN</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en-US</strong> (Default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,25 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the address pool for which you want to replace addresses. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool to update.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89618921167339**24</p>
+     * <p>pool-89618921167339****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
-     * <p>The addresses.</p>
+     * <p>The list of addresses.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<ReplaceCloudGtmAddressPoolAddressRequestAddresses> addresses;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Ensure the client token is unique for each request. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -80,26 +82,28 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends TeaModel {
 
     public static class ReplaceCloudGtmAddressPoolAddressRequestAddresses extends TeaModel {
         /**
-         * <p>The ID of the new address. This ID uniquely identifies the address.</p>
+         * <p>The unique ID of the address.</p>
          * <ul>
-         * <li>If you specify this parameter, the original addresses in the address pool will be deleted and replaced with new addresses.</li>
-         * <li>If you do not specify this parameter, all addresses in the address pool will be deleted and the address pool will be left empty.</li>
+         * <li><p>If you specify this parameter, all existing addresses in the address pool are deleted and replaced with the specified addresses.</p>
+         * </li>
+         * <li><p>If you leave this parameter empty, all existing addresses in the address pool are deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>addr-89636516932803**44</p>
+         * <p>addr-89636516932803****</p>
          */
         @NameInMap("AddressId")
         public String addressId;
 
         /**
-         * <p>The DNS request sources.</p>
+         * <p>The list of DNS request sources.</p>
          */
         @NameInMap("RequestSource")
         public java.util.List<String> requestSource;
 
         /**
-         * <p>The sequence number that specifies the priority for returning the new address. A smaller sequence number specifies a higher priority. This setting takes effect for new addresses.</p>
+         * <p>The serial number, which determines the priority of the address. A smaller number indicates a higher priority. This setting applies to the updated addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -108,7 +112,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends TeaModel {
         public Integer serialNumber;
 
         /**
-         * <p>The weight value of the new address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for Domain Name System (DNS) requests. A weight value must be an integer that ranges from 1 to 100. This setting takes effect for new addresses.</p>
+         * <p>The weight of the address. Valid values: 1 to 100. You can set a different weight for each address. DNS queries are then resolved based on the weight ratio. This setting applies to the updated addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

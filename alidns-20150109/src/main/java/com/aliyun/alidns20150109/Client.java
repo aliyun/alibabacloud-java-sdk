@@ -8,7 +8,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "central";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("public", "alidns.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("alidns", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,11 +31,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In each CIDR block, the end IP address must be greater than or equal to the start IP address.\
-     * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.</p>
+     * <p>The end IP address of an IP address segment must be greater than or equal to its start IP address.
+     * The IP address ranges of segments cannot overlap across any custom lines for the domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a custom line to the domain name.</p>
+     * <p>Adds a custom line for a domain name.</p>
      * 
      * @param request AddCustomLineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -76,11 +79,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In each CIDR block, the end IP address must be greater than or equal to the start IP address.\
-     * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.</p>
+     * <p>The end IP address of an IP address segment must be greater than or equal to its start IP address.
+     * The IP address ranges of segments cannot overlap across any custom lines for the domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a custom line to the domain name.</p>
+     * <p>Adds a custom line for a domain name.</p>
      * 
      * @param request AddCustomLineRequest
      * @return AddCustomLineResponse
@@ -92,7 +95,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a cache-accelerated domain name based on the specified parameters.</p>
+     * <p>Adds a domain name to the DNS authoritative proxy service.</p>
      * 
      * @param request AddDnsCacheDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -156,7 +159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a cache-accelerated domain name based on the specified parameters.</p>
+     * <p>Adds a domain name to the DNS authoritative proxy service.</p>
      * 
      * @param request AddDnsCacheDomainRequest
      * @return AddDnsCacheDomainResponse
@@ -168,7 +171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access policy.</p>
+     * <p>Adds an access strategy.</p>
      * 
      * @param request AddDnsGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -264,7 +267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an access policy.</p>
+     * <p>Adds an access strategy.</p>
      * 
      * @param request AddDnsGtmAccessStrategyRequest
      * @return AddDnsGtmAccessStrategyResponse
@@ -276,7 +279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address pool.</p>
+     * <p>Adds an address pool.</p>
      * 
      * @param request AddDnsGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -356,7 +359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address pool.</p>
+     * <p>Adds an address pool.</p>
      * 
      * @param request AddDnsGtmAddressPoolRequest
      * @return AddDnsGtmAddressPoolResponse
@@ -371,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>**</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a health check task.</p>
+     * <p>Creates a health check.</p>
      * 
      * @param request AddDnsGtmMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -434,7 +437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>**</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a health check task.</p>
+     * <p>Creates a health check.</p>
      * 
      * @param request AddDnsGtmMonitorRequest
      * @return AddDnsGtmMonitorResponse
@@ -446,11 +449,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to check whether a domain name is valid, see
-     * <a href="https://www.alibabacloud.com/help/zh/doc-detail/67788.htm">Domain name validity</a>.</p>
+     * <p>For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/67788.html">Domain name validity</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/doc-detail/67788.htm">Domain name validity</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name based on the specified parameters.</p>
+     * <p>Adds a domain name.</p>
      * 
      * @param request AddDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -494,11 +496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to check whether a domain name is valid, see
-     * <a href="https://www.alibabacloud.com/help/zh/doc-detail/67788.htm">Domain name validity</a>.</p>
+     * <p>For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/67788.html">Domain name validity</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/doc-detail/67788.htm">Domain name validity</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a domain name based on the specified parameters.</p>
+     * <p>Adds a domain name.</p>
      * 
      * @param request AddDomainRequest
      * @return AddDomainResponse
@@ -510,7 +511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup for the domain name based on the specified domain name and backup cycle.</p>
+     * <p>Creates a backup for a domain based on the specified domain name and backup cycle.</p>
      * 
      * @param request AddDomainBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -550,7 +551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup for the domain name based on the specified domain name and backup cycle.</p>
+     * <p>Creates a backup for a domain based on the specified domain name and backup cycle.</p>
      * 
      * @param request AddDomainBackupRequest
      * @return AddDomainBackupResponse
@@ -562,7 +563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a domain name group based on the specified parameters.</p>
+     * <p>Creates a domain name group.</p>
      * 
      * @param request AddDomainGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -598,7 +599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a domain name group based on the specified parameters.</p>
+     * <p>Creates a domain name group.</p>
      * 
      * @param request AddDomainGroupRequest
      * @return AddDomainGroupResponse
@@ -610,7 +611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Adds a DNS record.</p>
      * 
      * @param request AddDomainRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,7 +675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Adds a DNS record.</p>
      * 
      * @param request AddDomainRecordRequest
      * @return AddDomainRecordResponse
@@ -686,7 +687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to create an access policy for a Global Traffic Manager (GTM) instance.</p>
+     * <p>Creates an access strategy based on the specified parameters.</p>
      * 
      * @param request AddGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -738,7 +739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to create an access policy for a Global Traffic Manager (GTM) instance.</p>
+     * <p>Creates an access strategy based on the specified parameters.</p>
      * 
      * @param request AddGtmAccessStrategyRequest
      * @return AddGtmAccessStrategyResponse
@@ -750,7 +751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address pool.</p>
+     * <p>Adds an address pool.</p>
      * 
      * @param request AddGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -830,7 +831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address pool.</p>
+     * <p>Adds an address pool.</p>
      * 
      * @param request AddGtmAddressPoolRequest
      * @return AddGtmAddressPoolResponse
@@ -842,7 +843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a health check task.</p>
+     * <p>Adds a health check.</p>
      * 
      * @param request AddGtmMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -902,7 +903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a health check task.</p>
+     * <p>Adds a health check.</p>
      * 
      * @param request AddGtmMonitorRequest
      * @return AddGtmMonitorResponse
@@ -914,7 +915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a disaster recovery plan.</p>
+     * <p>Adds a disaster recovery plan.</p>
      * 
      * @param request AddGtmRecoveryPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -958,7 +959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a disaster recovery plan.</p>
+     * <p>Adds a disaster recovery plan.</p>
      * 
      * @param request AddGtmRecoveryPlanRequest
      * @return AddGtmRecoveryPlanResponse
@@ -969,8 +970,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can specify a domain name (DomainName), page number (PageNumber), and page size (PageSize) to retrieve the list of DNS records for that domain name.</li>
+     * <li>To find DNS records that contain a specific keyword, you can specify the keyword for the host record (RRKeyWord), record type (TypeKeyWord), or record value (ValueKeyWord).</li>
+     * <li>By default, the list of DNS records is sorted from newest to oldest.</li>
+     * <li>You can specify a domain group ID (GroupId). The \<code>All Domains\\</code> group includes all domain names. The \<code>Default Group\\</code> includes domain names that are not assigned to a group.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Adds HTTPDNS authoritative DNS resolution records</p>
+     * <p>Adds an authoritative record for recursive resolution.</p>
      * 
      * @param request AddRecursionRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1037,8 +1046,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can specify a domain name (DomainName), page number (PageNumber), and page size (PageSize) to retrieve the list of DNS records for that domain name.</li>
+     * <li>To find DNS records that contain a specific keyword, you can specify the keyword for the host record (RRKeyWord), record type (TypeKeyWord), or record value (ValueKeyWord).</li>
+     * <li>By default, the list of DNS records is sorted from newest to oldest.</li>
+     * <li>You can specify a domain group ID (GroupId). The \<code>All Domains\\</code> group includes all domain names. The \<code>Default Group\\</code> includes domain names that are not assigned to a group.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Adds HTTPDNS authoritative DNS resolution records</p>
+     * <p>Adds an authoritative record for recursive resolution.</p>
      * 
      * @param request AddRecursionRecordRequest
      * @return AddRecursionRecordResponse
@@ -1049,8 +1066,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The end IP address of each IP range must be greater than or equal to the start IP address.
+     * The IP address ranges of all IP ranges in all custom lines for a domain name cannot overlap.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds HTTPDNS zone</p>
+     * <p>Adds a built-in authoritative domain name zone for recursive resolution.</p>
      * 
      * @param request AddRecursionZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1089,8 +1110,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The end IP address of each IP range must be greater than or equal to the start IP address.
+     * The IP address ranges of all IP ranges in all custom lines for a domain name cannot overlap.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds HTTPDNS zone</p>
+     * <p>Adds a built-in authoritative domain name zone for recursive resolution.</p>
      * 
      * @param request AddRecursionZoneRequest
      * @return AddRecursionZoneResponse
@@ -1102,17 +1127,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This API adds the serverHold property to a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于添加特定域名的serverHold状态信息。</p>
+     * <p>Adds the serverHold status to a specified domain name.</p>
      * 
      * @param request AddRspDomainServerHoldStatusForGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1152,17 +1173,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This API adds the serverHold property to a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于添加特定域名的serverHold状态信息。</p>
+     * <p>Adds the serverHold status to a specified domain name.</p>
      * 
      * @param request AddRspDomainServerHoldStatusForGatewayRequest
      * @return AddRspDomainServerHoldStatusForGatewayResponse
@@ -1174,17 +1191,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>Adds the serverHold status for a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>Adds the serverHold status for a specified domain name.</p>
      * 
      * @param request AddRspDomainServerHoldStatusForGatewayOteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1224,17 +1237,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>Adds the serverHold status for a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>Adds the serverHold status for a specified domain name.</p>
      * 
      * @param request AddRspDomainServerHoldStatusForGatewayOteRequest
      * @return AddRspDomainServerHoldStatusForGatewayOteResponse
@@ -1246,11 +1255,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
-     * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
+     * <p>An instance is considered a new instance if its ID starts with \&quot;dns-\&quot;. New instances support multiple domain names. You can call this operation to bind domain names directly to the instance. An error occurs if the number of domain names exceeds the instance\&quot;s limit.
+     * An instance is considered a legacy instance if its ID does not start with \&quot;dns-\&quot;. Legacy instances support only one domain name. If you call this operation on a legacy instance that already has a domain name, the existing domain name is replaced.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds one or more domain names to a paid Alibaba Cloud DNS instance.</p>
+     * <p>Binds paid domain names in Alibaba Cloud DNS to an instance ID.</p>
      * 
      * @param request BindInstanceDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1290,11 +1299,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
-     * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
+     * <p>An instance is considered a new instance if its ID starts with \&quot;dns-\&quot;. New instances support multiple domain names. You can call this operation to bind domain names directly to the instance. An error occurs if the number of domain names exceeds the instance\&quot;s limit.
+     * An instance is considered a legacy instance if its ID does not start with \&quot;dns-\&quot;. Legacy instances support only one domain name. If you call this operation on a legacy instance that already has a domain name, the existing domain name is replaced.</p>
      * 
      * <b>summary</b> : 
-     * <p>Binds one or more domain names to a paid Alibaba Cloud DNS instance.</p>
+     * <p>Binds paid domain names in Alibaba Cloud DNS to an instance ID.</p>
      * 
      * @param request BindInstanceDomainsRequest
      * @return BindInstanceDomainsResponse
@@ -1306,10 +1315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.</p>
+     * <p>You can specify the ID of a domain name group (GroupId). The All Domains group contains all domain names, while the Default group contains domain names that are not assigned to any group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Moves a domain name from the original group to the new group based on the specified parameters.</p>
+     * <p>Moves a domain name to a new group.</p>
      * 
      * @param request ChangeDomainGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1349,10 +1358,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.</p>
+     * <p>You can specify the ID of a domain name group (GroupId). The All Domains group contains all domain names, while the Default group contains domain names that are not assigned to any group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Moves a domain name from the original group to the new group based on the specified parameters.</p>
+     * <p>Moves a domain name to a new group.</p>
      * 
      * @param request ChangeDomainGroupRequest
      * @return ChangeDomainGroupResponse
@@ -1364,13 +1373,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>You can call this operation regardless of whether the Alibaba Cloud DNS instance is bound to a domain name. You can also call this operation to unbind the domain name from the Alibaba Cloud DNS instance by leaving the NewDomain parameter empty.</strong></p>
      * <ul>
-     * <li>**This operation applies to instances of the custom edition. To change the domain name that is bound to an Alibaba Cloud DNS instance of Personal Edition, Enterprise Standard Edition, or Enterprise Ultimate Edition, call the BindInstanceDomains operation.</li>
+     * <li><strong>You can call this operation to change the domain name that is attached to a Cloud DNS product. To detach a domain name, call this operation and leave the NewDomain parameter empty.</strong></li>
+     * <li><strong>This operation applies to instances of earlier versions. If you use a new edition, such as Personal Edition, Enterprise Standard Edition, or Enterprise Ultimate Edition, call the BindInstanceDomains operation instead.</strong></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the domain name that is bound to an Alibaba Cloud DNS instance.</p>
+     * <p>Changes the domain name that is attached to a Cloud DNS product.</p>
      * 
      * @param request ChangeDomainOfDnsProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1418,13 +1427,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>You can call this operation regardless of whether the Alibaba Cloud DNS instance is bound to a domain name. You can also call this operation to unbind the domain name from the Alibaba Cloud DNS instance by leaving the NewDomain parameter empty.</strong></p>
      * <ul>
-     * <li>**This operation applies to instances of the custom edition. To change the domain name that is bound to an Alibaba Cloud DNS instance of Personal Edition, Enterprise Standard Edition, or Enterprise Ultimate Edition, call the BindInstanceDomains operation.</li>
+     * <li><strong>You can call this operation to change the domain name that is attached to a Cloud DNS product. To detach a domain name, call this operation and leave the NewDomain parameter empty.</strong></li>
+     * <li><strong>This operation applies to instances of earlier versions. If you use a new edition, such as Personal Edition, Enterprise Standard Edition, or Enterprise Ultimate Edition, call the BindInstanceDomains operation instead.</strong></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the domain name that is bound to an Alibaba Cloud DNS instance.</p>
+     * <p>Changes the domain name that is attached to a Cloud DNS product.</p>
      * 
      * @param request ChangeDomainOfDnsProductRequest
      * @return ChangeDomainOfDnsProductResponse
@@ -1436,7 +1445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies the configurations of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Copies a Global Traffic Manager (GTM) configuration.</p>
      * 
      * @param request CopyGtmConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1480,7 +1489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies the configurations of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Copies a Global Traffic Manager (GTM) configuration.</p>
      * 
      * @param request CopyGtmConfigRequest
      * @return CopyGtmConfigResponse
@@ -1492,7 +1501,213 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address.</p>
+     * <p>Registers an agent.</p>
+     * 
+     * @param tmpReq CreateAtiAgentRegisterInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAtiAgentRegisterInfoResponse
+     */
+    public CreateAtiAgentRegisterInfoResponse createAtiAgentRegisterInfoWithOptions(CreateAtiAgentRegisterInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAtiAgentRegisterInfoShrinkRequest request = new CreateAtiAgentRegisterInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.endpoints)) {
+            request.endpointsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.endpoints, "Endpoints", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentDescription)) {
+            query.put("AgentDescription", request.agentDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentDisplayName)) {
+            query.put("AgentDisplayName", request.agentDisplayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentHost)) {
+            query.put("AgentHost", request.agentHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {
+            query.put("Endpoints", request.endpointsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrantId)) {
+            query.put("RegistrantId", request.registrantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAtiAgentRegisterInfo"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAtiAgentRegisterInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Registers an agent.</p>
+     * 
+     * @param request CreateAtiAgentRegisterInfoRequest
+     * @return CreateAtiAgentRegisterInfoResponse
+     */
+    public CreateAtiAgentRegisterInfoResponse createAtiAgentRegisterInfo(CreateAtiAgentRegisterInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAtiAgentRegisterInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Registers an agent - Step 2: Generates a DNS record for domain ownership verification.</p>
+     * 
+     * @param request CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse createAtiAgentRegisterInfoAcmeChallengeRecordWithOptions(CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAtiAgentRegisterInfoAcmeChallengeRecord"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Registers an agent - Step 2: Generates a DNS record for domain ownership verification.</p>
+     * 
+     * @param request CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @return CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponse createAtiAgentRegisterInfoAcmeChallengeRecord(CreateAtiAgentRegisterInfoAcmeChallengeRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAtiAgentRegisterInfoAcmeChallengeRecordWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a real-name registrant.</p>
+     * 
+     * @param request CreateAtiRegistrantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAtiRegistrantResponse
+     */
+    public CreateAtiRegistrantResponse createAtiRegistrantWithOptions(CreateAtiRegistrantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cc)) {
+            query.put("Cc", request.cc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentCode)) {
+            query.put("DocumentCode", request.documentCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentImage)) {
+            query.put("DocumentImage", request.documentImage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentType)) {
+            query.put("DocumentType", request.documentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.street)) {
+            query.put("Street", request.street);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAtiRegistrant"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAtiRegistrantResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a real-name registrant.</p>
+     * 
+     * @param request CreateAtiRegistrantRequest
+     * @return CreateAtiRegistrantResponse
+     */
+    public CreateAtiRegistrantResponse createAtiRegistrant(CreateAtiRegistrantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAtiRegistrantWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an address in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param tmpReq CreateCloudGtmAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1574,7 +1789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address.</p>
+     * <p>Creates an address in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param request CreateCloudGtmAddressRequest
      * @return CreateCloudGtmAddressResponse
@@ -1586,7 +1801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address pool.</p>
+     * <p>Creates an address pool based on the specified parameters.</p>
      * 
      * @param request CreateCloudGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1642,7 +1857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an address pool.</p>
+     * <p>Creates an address pool based on the specified parameters.</p>
      * 
      * @param request CreateCloudGtmAddressPoolRequest
      * @return CreateCloudGtmAddressPoolResponse
@@ -1654,7 +1869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建gtm实例配置</p>
+     * <p>Creates a configuration for a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request CreateCloudGtmInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1726,7 +1941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建gtm实例配置</p>
+     * <p>Creates a configuration for a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request CreateCloudGtmInstanceConfigRequest
      * @return CreateCloudGtmInstanceConfigResponse
@@ -1738,7 +1953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a health check template.</p>
+     * <p>Creates a health check template in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param tmpReq CreateCloudGtmMonitorTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1816,7 +2031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a health check template.</p>
+     * <p>Creates a health check template in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param request CreateCloudGtmMonitorTemplateRequest
      * @return CreateCloudGtmMonitorTemplateResponse
@@ -1828,7 +2043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AppKey in Alibaba Cloud Public DNS.</p>
+     * <p>Creates a public DNS AccessKey.</p>
      * 
      * @param request CreatePdnsAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1864,7 +2079,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AppKey in Alibaba Cloud Public DNS.</p>
+     * <p>Creates a public DNS AccessKey.</p>
      * 
      * @param request CreatePdnsAppKeyRequest
      * @return CreatePdnsAppKeyResponse
@@ -1876,7 +2091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建公共DNS Udp Ip地址段</p>
+     * <p>Create Public DNS UDP IP Address Segment</p>
      * 
      * @param request CreatePdnsUdpIpSegmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1920,7 +2135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建公共DNS Udp Ip地址段</p>
+     * <p>Create Public DNS UDP IP Address Segment</p>
      * 
      * @param request CreatePdnsUdpIpSegmentRequest
      * @return CreatePdnsUdpIpSegmentResponse
@@ -1928,6 +2143,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePdnsUdpIpSegmentResponse createPdnsUdpIpSegment(CreatePdnsUdpIpSegmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPdnsUdpIpSegmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes Agent registration information.</p>
+     * 
+     * @param request DeleteAtiAgentRegisterInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAtiAgentRegisterInfoResponse
+     */
+    public DeleteAtiAgentRegisterInfoResponse deleteAtiAgentRegisterInfoWithOptions(DeleteAtiAgentRegisterInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAtiAgentRegisterInfo"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAtiAgentRegisterInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes Agent registration information.</p>
+     * 
+     * @param request DeleteAtiAgentRegisterInfoRequest
+     * @return DeleteAtiAgentRegisterInfoResponse
+     */
+    public DeleteAtiAgentRegisterInfoResponse deleteAtiAgentRegisterInfo(DeleteAtiAgentRegisterInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAtiAgentRegisterInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes a verified registrant.</p>
+     * 
+     * @param request DeleteAtiRegistrantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAtiRegistrantResponse
+     */
+    public DeleteAtiRegistrantResponse deleteAtiRegistrantWithOptions(DeleteAtiRegistrantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrantId)) {
+            query.put("RegistrantId", request.registrantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAtiRegistrant"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAtiRegistrantResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes a verified registrant.</p>
+     * 
+     * @param request DeleteAtiRegistrantRequest
+     * @return DeleteAtiRegistrantResponse
+     */
+    public DeleteAtiRegistrantResponse deleteAtiRegistrant(DeleteAtiRegistrantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAtiRegistrantWithOptions(request, runtime);
     }
 
     /**
@@ -2036,7 +2347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an access domain name that is configured for a Global Traffic Manager (GTM) 3.0 instance.</p>
+     * <p>Deletes an access domain name from the configuration of a Global Traffic Manager (GTM) 3.0 instance.</p>
      * 
      * @param request DeleteCloudGtmInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2080,7 +2391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an access domain name that is configured for a Global Traffic Manager (GTM) 3.0 instance.</p>
+     * <p>Deletes an access domain name from the configuration of a Global Traffic Manager (GTM) 3.0 instance.</p>
      * 
      * @param request DeleteCloudGtmInstanceConfigRequest
      * @return DeleteCloudGtmInstanceConfigResponse
@@ -2144,7 +2455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes custom lines at a time by using the unique IDs.</p>
+     * <p>Deletes a batch of custom lines by specifying their unique IDs.</p>
      * 
      * @param request DeleteCustomLinesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2180,7 +2491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes custom lines at a time by using the unique IDs.</p>
+     * <p>Deletes a batch of custom lines by specifying their unique IDs.</p>
      * 
      * @param request DeleteCustomLinesRequest
      * @return DeleteCustomLinesResponse
@@ -2192,7 +2503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified cache-accelerated domain name.</p>
+     * <p>Deletes a specified domain name from the authoritative DNS proxy.</p>
      * 
      * @param request DeleteDnsCacheDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2228,7 +2539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified cache-accelerated domain name.</p>
+     * <p>Deletes a specified domain name from the authoritative DNS proxy.</p>
      * 
      * @param request DeleteDnsCacheDomainRequest
      * @return DeleteDnsCacheDomainResponse
@@ -2240,7 +2551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an access policy by policy ID.</p>
+     * <p>Deletes an access policy by its ID.</p>
      * 
      * @param request DeleteDnsGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2276,7 +2587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an access policy by policy ID.</p>
+     * <p>Deletes an access policy by its ID.</p>
      * 
      * @param request DeleteDnsGtmAccessStrategyRequest
      * @return DeleteDnsGtmAccessStrategyResponse
@@ -2288,7 +2599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an address pool by address pool ID.</p>
+     * <p>Deletes an address pool by its ID.</p>
      * 
      * @param request DeleteDnsGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2324,7 +2635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an address pool by address pool ID.</p>
+     * <p>Deletes an address pool by its ID.</p>
      * 
      * @param request DeleteDnsGtmAddressPoolRequest
      * @return DeleteDnsGtmAddressPoolResponse
@@ -2336,7 +2647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a domain name based on the specified parameters.</p>
+     * <p>Deletes the specified domain name.</p>
      * 
      * @param request DeleteDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2372,7 +2683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a domain name based on the specified parameters.</p>
+     * <p>Deletes the specified domain name.</p>
      * 
      * @param request DeleteDomainRequest
      * @return DeleteDomainResponse
@@ -2385,11 +2696,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The default group cannot be deleted.</p>
+     * <p>The default group cannot be deleted.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a domain name group. After you delete the domain name group, the domain names in the group are moved to the default group.</p>
+     * <p>Deletes a domain name group and moves its domain names to the default group.</p>
      * 
      * @param request DeleteDomainGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2426,11 +2737,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The default group cannot be deleted.</p>
+     * <p>The default group cannot be deleted.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a domain name group. After you delete the domain name group, the domain names in the group are moved to the default group.</p>
+     * <p>Deletes a domain name group and moves its domain names to the default group.</p>
      * 
      * @param request DeleteDomainGroupRequest
      * @return DeleteDomainGroupResponse
@@ -2442,7 +2753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an Alibaba Cloud DNS (DNS) record based on the specified parameters.</p>
+     * <p>Deletes a DNS record based on the specified request parameters.</p>
      * 
      * @param request DeleteDomainRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2482,7 +2793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an Alibaba Cloud DNS (DNS) record based on the specified parameters.</p>
+     * <p>Deletes a DNS record based on the specified request parameters.</p>
      * 
      * @param request DeleteDomainRecordRequest
      * @return DeleteDomainRecordResponse
@@ -2494,7 +2805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete an access policy of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Deletes an access policy.</p>
      * 
      * @param request DeleteGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2530,7 +2841,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete an access policy of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Deletes an access policy.</p>
      * 
      * @param request DeleteGtmAccessStrategyRequest
      * @return DeleteGtmAccessStrategyResponse
@@ -2542,7 +2853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete an address pool of a Global Traffic Manager (GTM).</p>
+     * <p>Deletes an address pool.</p>
      * 
      * @param request DeleteGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2578,7 +2889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to delete an address pool of a Global Traffic Manager (GTM).</p>
+     * <p>Deletes an address pool.</p>
      * 
      * @param request DeleteGtmAddressPoolRequest
      * @return DeleteGtmAddressPoolResponse
@@ -2638,7 +2949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes HTTPDNS resolution records</p>
+     * <p>Deletes a built-in authoritative DNS record used for recursive resolution.</p>
      * 
      * @param request DeleteRecursionRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2674,7 +2985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes HTTPDNS resolution records</p>
+     * <p>Deletes a built-in authoritative DNS record used for recursive resolution.</p>
      * 
      * @param request DeleteRecursionRecordRequest
      * @return DeleteRecursionRecordResponse
@@ -2685,8 +2996,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If a zone contains locked DNS records, this operation does not delete them.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes HTTPDNS authoritative domain zone</p>
+     * <p>Deletes a built-in authoritative zone used for recursive resolution.</p>
      * 
      * @param request DeleteRecursionZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2721,8 +3035,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If a zone contains locked DNS records, this operation does not delete them.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes HTTPDNS authoritative domain zone</p>
+     * <p>Deletes a built-in authoritative zone used for recursive resolution.</p>
      * 
      * @param request DeleteRecursionZoneRequest
      * @return DeleteRecursionZoneResponse
@@ -2734,10 +3051,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the DNS records to be deleted contain locked DNS records, the locked DNS records will not be deleted.</p>
+     * <p>Locked DNS records will not be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the DNS records that are corresponding to a hostname based on the specified parameters.</p>
+     * <p>Deletes the DNS records for a specified host record.</p>
      * 
      * @param request DeleteSubDomainRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2785,10 +3102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the DNS records to be deleted contain locked DNS records, the locked DNS records will not be deleted.</p>
+     * <p>Locked DNS records will not be deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the DNS records that are corresponding to a hostname based on the specified parameters.</p>
+     * <p>Deletes the DNS records for a specified host record.</p>
      * 
      * @param request DeleteSubDomainRecordsRequest
      * @return DeleteSubDomainRecordsResponse
@@ -2800,7 +3117,195 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution result of a batch operation task based on the task ID. If you do not specify task ID, the execution result of the last batch operation task is returned.</p>
+     * <p>Queries the details of an Agent registration.</p>
+     * 
+     * @param request DescribeAtiAgentRegisterInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAtiAgentRegisterInfoResponse
+     */
+    public DescribeAtiAgentRegisterInfoResponse describeAtiAgentRegisterInfoWithOptions(DescribeAtiAgentRegisterInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAtiAgentRegisterInfo"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAtiAgentRegisterInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an Agent registration.</p>
+     * 
+     * @param request DescribeAtiAgentRegisterInfoRequest
+     * @return DescribeAtiAgentRegisterInfoResponse
+     */
+    public DescribeAtiAgentRegisterInfoResponse describeAtiAgentRegisterInfo(DescribeAtiAgentRegisterInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAtiAgentRegisterInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries alert settings.</p>
+     * 
+     * @param request DescribeAtiAlertSettingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAtiAlertSettingsResponse
+     */
+    public DescribeAtiAlertSettingsResponse describeAtiAlertSettingsWithOptions(DescribeAtiAlertSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAtiAlertSettings"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAtiAlertSettingsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries alert settings.</p>
+     * 
+     * @param request DescribeAtiAlertSettingsRequest
+     * @return DescribeAtiAlertSettingsResponse
+     */
+    public DescribeAtiAlertSettingsResponse describeAtiAlertSettings(DescribeAtiAlertSettingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAtiAlertSettingsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a certificate.</p>
+     * 
+     * @param request DescribeAtiCertificateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAtiCertificateResponse
+     */
+    public DescribeAtiCertificateResponse describeAtiCertificateWithOptions(DescribeAtiCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentCertificateId)) {
+            query.put("AgentCertificateId", request.agentCertificateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAtiCertificate"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAtiCertificateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a certificate.</p>
+     * 
+     * @param request DescribeAtiCertificateRequest
+     * @return DescribeAtiCertificateResponse
+     */
+    public DescribeAtiCertificateResponse describeAtiCertificate(DescribeAtiCertificateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAtiCertificateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a real-name verified registrant.</p>
+     * 
+     * @param request DescribeAtiRegistrantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAtiRegistrantResponse
+     */
+    public DescribeAtiRegistrantResponse describeAtiRegistrantWithOptions(DescribeAtiRegistrantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrantId)) {
+            query.put("RegistrantId", request.registrantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAtiRegistrant"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAtiRegistrantResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a real-name verified registrant.</p>
+     * 
+     * @param request DescribeAtiRegistrantRequest
+     * @return DescribeAtiRegistrantResponse
+     */
+    public DescribeAtiRegistrantResponse describeAtiRegistrant(DescribeAtiRegistrantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAtiRegistrantWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the execution results of a batch operation task using a task ID. If you do not specify a task ID, the results of the most recent batch task are returned.</p>
      * 
      * @param request DescribeBatchResultCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2840,7 +3345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the execution result of a batch operation task based on the task ID. If you do not specify task ID, the execution result of the last batch operation task is returned.</p>
+     * <p>Queries the execution results of a batch operation task using a task ID. If you do not specify a task ID, the results of the most recent batch task are returned.</p>
      * 
      * @param request DescribeBatchResultCountRequest
      * @return DescribeBatchResultCountResponse
@@ -2852,10 +3357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the batch operation task is complete.</p>
+     * <p><em>Prerequisite: You can call this operation after the batch task is complete.</em>*</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed results of a batch operation task.</p>
+     * <p>Retrieves the details of a batch processing result.</p>
      * 
      * @param request DescribeBatchResultDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2907,10 +3412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the batch operation task is complete.</p>
+     * <p><em>Prerequisite: You can call this operation after the batch task is complete.</em>*</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed results of a batch operation task.</p>
+     * <p>Retrieves the details of a batch processing result.</p>
      * 
      * @param request DescribeBatchResultDetailRequest
      * @return DescribeBatchResultDetailResponse
@@ -2922,7 +3427,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an address.</p>
+     * <p>Queries the configuration of an address based on the specified input parameters.</p>
      * 
      * @param request DescribeCloudGtmAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2962,7 +3467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an address.</p>
+     * <p>Queries the configuration of an address based on the specified input parameters.</p>
      * 
      * @param request DescribeCloudGtmAddressRequest
      * @return DescribeCloudGtmAddressResponse
@@ -2974,7 +3479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an address pool.</p>
+     * <p>Retrieves the configuration of a specified address pool.</p>
      * 
      * @param request DescribeCloudGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3014,7 +3519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an address pool.</p>
+     * <p>Retrieves the configuration of a specified address pool.</p>
      * 
      * @param request DescribeCloudGtmAddressPoolRequest
      * @return DescribeCloudGtmAddressPoolResponse
@@ -3026,7 +3531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the access domain names that reference an address pool.</p>
+     * <p>Retrieves information about the instances that reference an address pool.</p>
      * 
      * @param request DescribeCloudGtmAddressPoolReferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3066,7 +3571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the access domain names that reference an address pool.</p>
+     * <p>Retrieves information about the instances that reference an address pool.</p>
      * 
      * @param request DescribeCloudGtmAddressPoolReferenceRequest
      * @return DescribeCloudGtmAddressPoolReferenceResponse
@@ -3078,7 +3583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the address pools and Global Traffic Manager (GTM) 3.0 instances that reference an address.</p>
+     * <p>Queries the address pools and Global Traffic Manager (GTM) 3.0 instances that reference a specified address.</p>
      * 
      * @param request DescribeCloudGtmAddressReferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3118,7 +3623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the address pools and Global Traffic Manager (GTM) 3.0 instances that reference an address.</p>
+     * <p>Queries the address pools and Global Traffic Manager (GTM) 3.0 instances that reference a specified address.</p>
      * 
      * @param request DescribeCloudGtmAddressReferenceRequest
      * @return DescribeCloudGtmAddressReferenceResponse
@@ -3130,7 +3635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局流量管理告警配置</p>
+     * <p>Queries the global alert configuration for Global Traffic Manager (GTM).</p>
      * 
      * @param request DescribeCloudGtmGlobalAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3166,7 +3671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询全局流量管理告警配置</p>
+     * <p>Queries the global alert configuration for Global Traffic Manager (GTM).</p>
      * 
      * @param request DescribeCloudGtmGlobalAlertRequest
      * @return DescribeCloudGtmGlobalAlertResponse
@@ -3177,6 +3682,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the alert configuration for an instance.</p>
+     * 
      * @param request DescribeCloudGtmInstanceConfigAlertRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudGtmInstanceConfigAlertResponse
@@ -3218,6 +3726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the alert configuration for an instance.</p>
+     * 
      * @param request DescribeCloudGtmInstanceConfigAlertRequest
      * @return DescribeCloudGtmInstanceConfigAlertResponse
      */
@@ -3228,7 +3739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the complete configuration information about a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the full configuration of a GTM 3.0 access domain name, including alert settings, address pools, and address details.</p>
      * 
      * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3272,7 +3783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the complete configuration information about a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the full configuration of a GTM 3.0 access domain name, including alert settings, address pools, and address details.</p>
      * 
      * @param request DescribeCloudGtmInstanceConfigFullInfoRequest
      * @return DescribeCloudGtmInstanceConfigFullInfoResponse
@@ -3284,7 +3795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a health check template.</p>
+     * <p>Retrieves the configuration of a specified health check template.</p>
      * 
      * @param request DescribeCloudGtmMonitorTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3320,7 +3831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a health check template.</p>
+     * <p>Retrieves the configuration of a specified health check template.</p>
      * 
      * @param request DescribeCloudGtmMonitorTemplateRequest
      * @return DescribeCloudGtmMonitorTemplateResponse
@@ -3369,6 +3880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the system lines supported by Global Traffic Manager (GTM).</p>
+     * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudGtmSystemLinesResponse
      */
@@ -3389,6 +3903,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the system lines supported by Global Traffic Manager (GTM).</p>
      * @return DescribeCloudGtmSystemLinesResponse
      */
     public DescribeCloudGtmSystemLinesResponse describeCloudGtmSystemLines() throws Exception {
@@ -3398,7 +3914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom line by its unique ID.</p>
+     * <p>Queries a custom line by its unique ID.</p>
      * 
      * @param request DescribeCustomLineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3434,7 +3950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a custom line by its unique ID.</p>
+     * <p>Queries a custom line by its unique ID.</p>
      * 
      * @param request DescribeCustomLineRequest
      * @return DescribeCustomLineResponse
@@ -3446,7 +3962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom lines by domain name.</p>
+     * <p>Queries the custom lines for a domain name.</p>
      * 
      * @param request DescribeCustomLinesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3490,7 +4006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries custom lines by domain name.</p>
+     * <p>Queries the custom lines for a domain name.</p>
      * 
      * @param request DescribeCustomLinesRequest
      * @return DescribeCustomLinesResponse
@@ -3502,7 +4018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the subdomains for which weighted round-robin is enabled based on the specified parameters.</p>
+     * <p>Retrieves a list of subdomains that have weight configurations based on the specified parameters.</p>
      * 
      * @param request DescribeDNSSLBSubDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3554,7 +4070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the subdomains for which weighted round-robin is enabled based on the specified parameters.</p>
+     * <p>Retrieves a list of subdomains that have weight configurations based on the specified parameters.</p>
      * 
      * @param request DescribeDNSSLBSubDomainsRequest
      * @return DescribeDNSSLBSubDomainsResponse
@@ -3566,7 +4082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cache-accelerated domain names within your account based on the specified parameters.</p>
+     * <p>Queries authoritative proxy domain names based on the specified parameters.</p>
      * 
      * @param request DescribeDnsCacheDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3610,7 +4126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cache-accelerated domain names within your account based on the specified parameters.</p>
+     * <p>Queries authoritative proxy domain names based on the specified parameters.</p>
      * 
      * @param request DescribeDnsCacheDomainsRequest
      * @return DescribeDnsCacheDomainsResponse
@@ -3622,7 +4138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the access policies of a GTM instance.</p>
+     * <p>Queries the access strategies for a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeDnsGtmAccessStrategiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3670,7 +4186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the access policies of a GTM instance.</p>
+     * <p>Queries the access strategies for a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeDnsGtmAccessStrategiesRequest
      * @return DescribeDnsGtmAccessStrategiesResponse
@@ -3682,7 +4198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about an access policy.</p>
+     * <p>Retrieves the details of a specified access strategy.</p>
      * 
      * @param request DescribeDnsGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3718,7 +4234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about an access policy.</p>
+     * <p>Retrieves the details of a specified access strategy.</p>
      * 
      * @param request DescribeDnsGtmAccessStrategyRequest
      * @return DescribeDnsGtmAccessStrategyResponse
@@ -3730,7 +4246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for an access policy.</p>
+     * <p>Describes the available configurations for an access policy based on an instance ID.</p>
      * 
      * @param request DescribeDnsGtmAccessStrategyAvailableConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3770,7 +4286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for an access policy.</p>
+     * <p>Describes the available configurations for an access policy based on an instance ID.</p>
      * 
      * @param request DescribeDnsGtmAccessStrategyAvailableConfigRequest
      * @return DescribeDnsGtmAccessStrategyAvailableConfigResponse
@@ -3782,7 +4298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the source regions of addresses.</p>
+     * <p>Queries the region where an address is located.</p>
      * 
      * @param request DescribeDnsGtmAddrAttributeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3822,7 +4338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the source regions of addresses.</p>
+     * <p>Queries the region where an address is located.</p>
      * 
      * @param request DescribeDnsGtmAddrAttributeInfoRequest
      * @return DescribeDnsGtmAddrAttributeInfoResponse
@@ -3834,7 +4350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available configurations of an address pool of a GTM instance.</p>
+     * <p>Queries the available configurations for an address pool in a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeDnsGtmAddressPoolAvailableConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3870,7 +4386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available configurations of an address pool of a GTM instance.</p>
+     * <p>Queries the available configurations for an address pool in a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeDnsGtmAddressPoolAvailableConfigRequest
      * @return DescribeDnsGtmAddressPoolAvailableConfigResponse
@@ -3882,7 +4398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available alert groups of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the available alert contact groups.</p>
      * 
      * @param request DescribeDnsGtmAvailableAlertGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3914,7 +4430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available alert groups of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the available alert contact groups.</p>
      * 
      * @param request DescribeDnsGtmAvailableAlertGroupRequest
      * @return DescribeDnsGtmAvailableAlertGroupResponse
@@ -3926,7 +4442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of an instance based on the ID of the instance.</p>
+     * <p>Queries the details of an instance based on the specified instance ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3962,7 +4478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of an instance based on the ID of the instance.</p>
+     * <p>Queries the details of an instance based on the specified instance ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceRequest
      * @return DescribeDnsGtmInstanceResponse
@@ -3974,7 +4490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about an address pool by address pool ID.</p>
+     * <p>Queries the details of an address pool by its ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4010,7 +4526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries detailed information about an address pool by address pool ID.</p>
+     * <p>Queries the details of an address pool by its ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceAddressPoolRequest
      * @return DescribeDnsGtmInstanceAddressPoolResponse
@@ -4022,7 +4538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries address pools by the IDs of GTM instances.</p>
+     * <p>Retrieves the address pools of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeDnsGtmInstanceAddressPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4066,7 +4582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries address pools by the IDs of GTM instances.</p>
+     * <p>Retrieves the address pools of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeDnsGtmInstanceAddressPoolsRequest
      * @return DescribeDnsGtmInstanceAddressPoolsResponse
@@ -4078,7 +4594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the current status of the instance by instance ID.</p>
+     * <p>Describes the status of an instance based on its ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4114,7 +4630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the current status of the instance by instance ID.</p>
+     * <p>Describes the status of an instance based on its ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceStatusRequest
      * @return DescribeDnsGtmInstanceStatusResponse
@@ -4126,7 +4642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the canonical name (CNAME) assigned by the system for a GTM instance.</p>
+     * <p>Retrieves the system-assigned CNAME based on the specified instance ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceSystemCnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4162,7 +4678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the canonical name (CNAME) assigned by the system for a GTM instance.</p>
+     * <p>Retrieves the system-assigned CNAME based on the specified instance ID.</p>
      * 
      * @param request DescribeDnsGtmInstanceSystemCnameRequest
      * @return DescribeDnsGtmInstanceSystemCnameResponse
@@ -4234,7 +4750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the operation logs by instance ID.</p>
+     * <p>Queries the operation logs for an instance.</p>
      * 
      * @param request DescribeDnsGtmLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4290,7 +4806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the operation logs by instance ID.</p>
+     * <p>Queries the operation logs for an instance.</p>
      * 
      * @param request DescribeDnsGtmLogsRequest
      * @return DescribeDnsGtmLogsResponse
@@ -4302,7 +4818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for a health check task.</p>
+     * <p>Queries the available configurations for DNS health checks.</p>
      * 
      * @param request DescribeDnsGtmMonitorAvailableConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4334,7 +4850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for a health check task.</p>
+     * <p>Queries the available configurations for DNS health checks.</p>
      * 
      * @param request DescribeDnsGtmMonitorAvailableConfigRequest
      * @return DescribeDnsGtmMonitorAvailableConfigResponse
@@ -4346,7 +4862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the health check configuration of an address pool.</p>
+     * <p>Queries the health check configuration for an address pool.</p>
      * 
      * @param request DescribeDnsGtmMonitorConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4382,7 +4898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the health check configuration of an address pool.</p>
+     * <p>Queries the health check configuration for an address pool.</p>
      * 
      * @param request DescribeDnsGtmMonitorConfigRequest
      * @return DescribeDnsGtmMonitorConfigResponse
@@ -4394,7 +4910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a paid Alibaba Cloud DNS instance based on the instance ID.</p>
+     * <p>Retrieves the details of a paid Alibaba Cloud DNS instance by its instance ID.</p>
      * 
      * @param request DescribeDnsProductInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4434,7 +4950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a paid Alibaba Cloud DNS instance based on the instance ID.</p>
+     * <p>Retrieves the details of a paid Alibaba Cloud DNS instance by its instance ID.</p>
      * 
      * @param request DescribeDnsProductInstanceRequest
      * @return DescribeDnsProductInstanceResponse
@@ -4447,11 +4963,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.</p>
+     * <p><strong>If the response does not contain a domain name, the Alibaba Cloud DNS instance is not associated with any domain names.</strong></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeDnsProductInstances operation to query the list of paid Alibaba Cloud DNS instances based on input parameters.</p>
+     * <p>Retrieves a list of paid DNS product instances that match the specified parameters.</p>
      * 
      * @param request DescribeDnsProductInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4512,11 +5028,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.</p>
+     * <p><strong>If the response does not contain a domain name, the Alibaba Cloud DNS instance is not associated with any domain names.</strong></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeDnsProductInstances operation to query the list of paid Alibaba Cloud DNS instances based on input parameters.</p>
+     * <p>Retrieves a list of paid DNS product instances that match the specified parameters.</p>
      * 
      * @param request DescribeDnsProductInstancesRequest
      * @return DescribeDnsProductInstancesResponse
@@ -4528,7 +5044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on DoH-based requests for a domain name.</p>
+     * <p>Queries an overview of request statistics for a DNS over HTTPS (DoH) account.</p>
      * 
      * @param request DescribeDohAccountStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4568,7 +5084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on DoH-based requests for a domain name.</p>
+     * <p>Queries an overview of request statistics for a DNS over HTTPS (DoH) account.</p>
      * 
      * @param request DescribeDohAccountStatisticsRequest
      * @return DescribeDohAccountStatisticsResponse
@@ -4580,7 +5096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The statistics on DoH-based requests for a domain name are queried.</p>
+     * <p>Retrieves an overview of statistics for DNS over HTTPS (DoH) requests for a domain name.</p>
      * 
      * @param request DescribeDohDomainStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4624,7 +5140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The statistics on DoH-based requests for a domain name are queried.</p>
+     * <p>Retrieves an overview of statistics for DNS over HTTPS (DoH) requests for a domain name.</p>
      * 
      * @param request DescribeDohDomainStatisticsRequest
      * @return DescribeDohDomainStatisticsResponse
@@ -4636,7 +5152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on DoH-based requests for domain names.</p>
+     * <p>Queries request statistics for DNS over HTTPS (DoH) domain names.</p>
      * 
      * @param request DescribeDohDomainStatisticsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4688,7 +5204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on DoH-based requests for domain names.</p>
+     * <p>Queries request statistics for DNS over HTTPS (DoH) domain names.</p>
      * 
      * @param request DescribeDohDomainStatisticsSummaryRequest
      * @return DescribeDohDomainStatisticsSummaryResponse
@@ -4700,7 +5216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the statistics on DoH-based requests for a subdomain name.</p>
+     * <p>Queries for statistics on DNS over HTTPS (DoH) requests for a subdomain.</p>
      * 
      * @param request DescribeDohSubDomainStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4744,7 +5260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the statistics on DoH-based requests for a subdomain name.</p>
+     * <p>Queries for statistics on DNS over HTTPS (DoH) requests for a subdomain.</p>
      * 
      * @param request DescribeDohSubDomainStatisticsRequest
      * @return DescribeDohSubDomainStatisticsResponse
@@ -4756,7 +5272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on DoH-based requests for subdomain names.</p>
+     * <p>Queries a summary of request statistics for subdomains using DNS over HTTPS (DoH).</p>
      * 
      * @param request DescribeDohSubDomainStatisticsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4812,7 +5328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on DoH-based requests for subdomain names.</p>
+     * <p>Queries a summary of request statistics for subdomains using DNS over HTTPS (DoH).</p>
      * 
      * @param request DescribeDohSubDomainStatisticsSummaryRequest
      * @return DescribeDohSubDomainStatisticsSummaryResponse
@@ -4824,7 +5340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the numbers of accessed domains and subdomains by using DNS over HTTPS (DoH).</p>
+     * <p>Retrieves the basic information of a DNS over HTTPS (DoH) user.</p>
      * 
      * @param request DescribeDohUserInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4864,7 +5380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the numbers of accessed domains and subdomains by using DNS over HTTPS (DoH).</p>
+     * <p>Retrieves the basic information of a DNS over HTTPS (DoH) user.</p>
      * 
      * @param request DescribeDohUserInfoRequest
      * @return DescribeDohUserInfoResponse
@@ -4876,7 +5392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Domain Name System Security Extensions (DNSSEC) configurations of a domain name based on the specified parameters.</p>
+     * <p>Queries the Domain Name System Security Extensions (DNSSEC) information for a specified domain name.</p>
      * 
      * @param request DescribeDomainDnssecInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4912,7 +5428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Domain Name System Security Extensions (DNSSEC) configurations of a domain name based on the specified parameters.</p>
+     * <p>Queries the Domain Name System Security Extensions (DNSSEC) information for a specified domain name.</p>
      * 
      * @param request DescribeDomainDnssecInfoRequest
      * @return DescribeDomainDnssecInfoResponse
@@ -4924,7 +5440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all domain name groups based on the specified parameters.</p>
+     * <p>Queries domain name groups.</p>
      * 
      * @param request DescribeDomainGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4968,7 +5484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all domain name groups based on the specified parameters.</p>
+     * <p>Queries domain name groups.</p>
      * 
      * @param request DescribeDomainGroupsRequest
      * @return DescribeDomainGroupsResponse
@@ -4980,10 +5496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the domain name is bound to an instance of Alibaba Cloud DNS Enterprise Ultimate Edition. For more information about valid Domain Name System (DNS) request lines, see the return values of the RecordLines parameter.</p>
+     * <p>In this example, the domain name is bound to an instance of Alibaba Cloud DNS Ultimate Edition. For more information about line enumeration, see the RecordLines response parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a domain name based on specified parameters.</p>
+     * <p>Queries information about a specified domain name.</p>
      * 
      * @param request DescribeDomainInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5023,10 +5539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the domain name is bound to an instance of Alibaba Cloud DNS Enterprise Ultimate Edition. For more information about valid Domain Name System (DNS) request lines, see the return values of the RecordLines parameter.</p>
+     * <p>In this example, the domain name is bound to an instance of Alibaba Cloud DNS Ultimate Edition. For more information about line enumeration, see the RecordLines response parameter.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a domain name based on specified parameters.</p>
+     * <p>Queries information about a specified domain name.</p>
      * 
      * @param request DescribeDomainInfoRequest
      * @return DescribeDomainInfoResponse
@@ -5038,7 +5554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operation logs of domain names based on the specified parameters.</p>
+     * <p>Queries the operation logs for a domain name based on the specified parameters.</p>
      * 
      * @param request DescribeDomainLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5098,7 +5614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operation logs of domain names based on the specified parameters.</p>
+     * <p>Queries the operation logs for a domain name based on the specified parameters.</p>
      * 
      * @param request DescribeDomainLogsRequest
      * @return DescribeDomainLogsResponse
@@ -5111,11 +5627,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to query the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.</p>
+     * <p>This operation directly queries the authoritative server of the domain name registry to retrieve the DNS server names for the domain name. An error may be returned if the domain name is inactive. For example, if the domain name has a serverHold or clientHold status, or has not passed identity verification.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the name servers configured for a specified domain name and checks whether all the name servers are Alibaba Cloud Domain Name System (DNS) servers.</p>
+     * <p>Queries the current list of name servers for a domain name and determines whether the servers are managed by Alibaba Cloud DNS.</p>
      * 
      * @param request DescribeDomainNsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5152,11 +5668,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation to query the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.</p>
+     * <p>This operation directly queries the authoritative server of the domain name registry to retrieve the DNS server names for the domain name. An error may be returned if the domain name is inactive. For example, if the domain name has a serverHold or clientHold status, or has not passed identity verification.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the name servers configured for a specified domain name and checks whether all the name servers are Alibaba Cloud Domain Name System (DNS) servers.</p>
+     * <p>Queries the current list of name servers for a domain name and determines whether the servers are managed by Alibaba Cloud DNS.</p>
      * 
      * @param request DescribeDomainNsRequest
      * @return DescribeDomainNsResponse
@@ -5167,12 +5683,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Alidns%5C&api=DescribeDomainRecordInfo%5C&type=RPC%5C&version=2015-01-09">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a Domain Name System (DNS) record by the ID of the DNS record.</p>
+     * <p>Retrieves the details of a DNS record by its ID.</p>
      * 
      * @param request DescribeDomainRecordInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5211,12 +5723,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Alidns%5C&api=DescribeDomainRecordInfo%5C&type=RPC%5C&version=2015-01-09">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a Domain Name System (DNS) record by the ID of the DNS record.</p>
+     * <p>Retrieves the details of a DNS record by its ID.</p>
      * 
      * @param request DescribeDomainRecordInfoRequest
      * @return DescribeDomainRecordInfoResponse
@@ -5228,15 +5736,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify DomainName, PageNumber, and PageSize to query the DNS records of the specified domain names.</p>
      * <ul>
-     * <li>You can also specify RRKeyWord, TypeKeyWord, or ValueKeyWord to query the DNS records that contain the specified keyword.</li>
-     * <li>By default, the DNS records are sorted in reverse chronological order based on the time when they were added.</li>
-     * <li>You can specify GroupId to query the DNS records of the specified domain names based on the group ID. You can query the DNS records of all domain names and the domain names in the default group.</li>
+     * <li>You can specify the domain name (DomainName), page number (PageNumber), and page size (PageSize) to retrieve a list of DNS records.</li>
+     * <li>You can specify a keyword for the host record (RRKeyWord), record type (TypeKeyWord), or record value (ValueKeyWord) to query DNS records that contain the keyword.</li>
+     * <li>By default, DNS records are sorted in descending order by the time they were added.</li>
+     * <li>You can specify a domain group ID (GroupId) to query the DNS records in a specific group.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all Domain Name System (DNS) records of the specified primary domain names based on the specified parameters.</p>
+     * <p>Retrieves the DNS records for a specified root domain based on the input parameters.</p>
      * 
      * @param request DescribeDomainRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5324,15 +5832,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify DomainName, PageNumber, and PageSize to query the DNS records of the specified domain names.</p>
      * <ul>
-     * <li>You can also specify RRKeyWord, TypeKeyWord, or ValueKeyWord to query the DNS records that contain the specified keyword.</li>
-     * <li>By default, the DNS records are sorted in reverse chronological order based on the time when they were added.</li>
-     * <li>You can specify GroupId to query the DNS records of the specified domain names based on the group ID. You can query the DNS records of all domain names and the domain names in the default group.</li>
+     * <li>You can specify the domain name (DomainName), page number (PageNumber), and page size (PageSize) to retrieve a list of DNS records.</li>
+     * <li>You can specify a keyword for the host record (RRKeyWord), record type (TypeKeyWord), or record value (ValueKeyWord) to query DNS records that contain the keyword.</li>
+     * <li>By default, DNS records are sorted in descending order by the time they were added.</li>
+     * <li>You can specify a domain group ID (GroupId) to query the DNS records in a specific group.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all Domain Name System (DNS) records of the specified primary domain names based on the specified parameters.</p>
+     * <p>Retrieves the DNS records for a specified root domain based on the input parameters.</p>
      * 
      * @param request DescribeDomainRecordsRequest
      * @return DescribeDomainRecordsResponse
@@ -5344,7 +5852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resolution requests of all paid domain names within your account.</p>
+     * <p>Queries the request volumes for all paid domain names in your account.</p>
      * 
      * @param request DescribeDomainResolveStatisticsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5408,7 +5916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resolution requests of all paid domain names within your account.</p>
+     * <p>Queries the request volumes for all paid domain names in your account.</p>
      * 
      * @param request DescribeDomainResolveStatisticsSummaryRequest
      * @return DescribeDomainResolveStatisticsSummaryResponse
@@ -5420,10 +5928,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Real-time data is collected per hour.</p>
+     * <p>Real-time data is collected hourly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the real-time statistics on the Domain Name System (DNS) requests for a primary domain name.</p>
+     * <p>Queries the number of real-time requests for a specified primary domain name.</p>
      * 
      * @param request DescribeDomainStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5471,10 +5979,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Real-time data is collected per hour.</p>
+     * <p>Real-time data is collected hourly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the real-time statistics on the Domain Name System (DNS) requests for a primary domain name.</p>
+     * <p>Queries the number of real-time requests for a specified primary domain name.</p>
      * 
      * @param request DescribeDomainStatisticsRequest
      * @return DescribeDomainStatisticsResponse
@@ -5486,7 +5994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDomainStatisticsSummary operation to obtain the query volume of all paid domain names under your account.</p>
+     * <p>Queries the number of requests for all paid domain names in your account.</p>
      * 
      * @param request DescribeDomainStatisticsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5546,7 +6054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeDomainStatisticsSummary operation to obtain the query volume of all paid domain names under your account.</p>
+     * <p>Queries the number of requests for all paid domain names in your account.</p>
      * 
      * @param request DescribeDomainStatisticsSummaryRequest
      * @return DescribeDomainStatisticsSummaryResponse
@@ -5558,15 +6066,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify the PageNumber and PageSize parameters to query domain names.</p>
-     * <ul>
-     * <li>You can specify the KeyWord parameter to query domain names that contain the specified keyword.</li>
-     * <li>By default, the domain names in a list are sorted in descending order of the time they were added.</li>
-     * <li>You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.</li>
-     * </ul>
+     * <ol>
+     * <li>You can specify a page number (PageNumber) and page size (PageSize) to retrieve a paginated list of domain names.</li>
+     * <li>You can specify a keyword (KeyWord) to query for domain names that contain the specified keyword.</li>
+     * <li>By default, domain names are sorted in descending order of their creation time.</li>
+     * <li>You can specify a domain name group ID (GroupId) to query for domain names in a specific group. This lets you retrieve all domain names or only the domain names that are not assigned to a group.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeDomains operation to query domain names of a user based on input parameters.</p>
+     * <p>Queries a list of domain names based on specified parameters.</p>
      * 
      * @param request DescribeDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5626,15 +6134,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can specify the PageNumber and PageSize parameters to query domain names.</p>
-     * <ul>
-     * <li>You can specify the KeyWord parameter to query domain names that contain the specified keyword.</li>
-     * <li>By default, the domain names in a list are sorted in descending order of the time they were added.</li>
-     * <li>You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.</li>
-     * </ul>
+     * <ol>
+     * <li>You can specify a page number (PageNumber) and page size (PageSize) to retrieve a paginated list of domain names.</li>
+     * <li>You can specify a keyword (KeyWord) to query for domain names that contain the specified keyword.</li>
+     * <li>By default, domain names are sorted in descending order of their creation time.</li>
+     * <li>You can specify a domain name group ID (GroupId) to query for domain names in a specific group. This lets you retrieve all domain names or only the domain names that are not assigned to a group.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeDomains operation to query domain names of a user based on input parameters.</p>
+     * <p>Queries a list of domain names based on specified parameters.</p>
      * 
      * @param request DescribeDomainsRequest
      * @return DescribeDomainsResponse
@@ -5646,7 +6154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the access policies of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the access policies for an instance.</p>
      * 
      * @param request DescribeGtmAccessStrategiesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5690,7 +6198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the access policies of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the access policies for an instance.</p>
      * 
      * @param request DescribeGtmAccessStrategiesRequest
      * @return DescribeGtmAccessStrategiesResponse
@@ -5702,7 +6210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the details about an access policy of a Global Traffic Manager (GTM) instance based on the policy ID.</p>
+     * <p>Queries the details of an access policy based on the policy ID.</p>
      * 
      * @param request DescribeGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5738,7 +6246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the details about an access policy of a Global Traffic Manager (GTM) instance based on the policy ID.</p>
+     * <p>Queries the details of an access policy based on the policy ID.</p>
      * 
      * @param request DescribeGtmAccessStrategyRequest
      * @return DescribeGtmAccessStrategyResponse
@@ -5750,7 +6258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for an access policy.</p>
+     * <p>Queries the available configurations for an access policy.</p>
      * 
      * @param request DescribeGtmAccessStrategyAvailableConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5786,7 +6294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for an access policy.</p>
+     * <p>Queries the available configurations for an access policy.</p>
      * 
      * @param request DescribeGtmAccessStrategyAvailableConfigRequest
      * @return DescribeGtmAccessStrategyAvailableConfigResponse
@@ -5798,7 +6306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the available alert groups for a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the list of available alert contact groups for a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeGtmAvailableAlertGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5830,7 +6338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the available alert groups for a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the list of available alert contact groups for a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeGtmAvailableAlertGroupRequest
      * @return DescribeGtmAvailableAlertGroupResponse
@@ -5842,7 +6350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the details of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeGtmInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5882,7 +6390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details about a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the details of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeGtmInstanceRequest
      * @return DescribeGtmInstanceResponse
@@ -5894,7 +6402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the details about an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Describes the details of an address pool.</p>
      * 
      * @param request DescribeGtmInstanceAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5930,7 +6438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the details about an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Describes the details of an address pool.</p>
      * 
      * @param request DescribeGtmInstanceAddressPoolRequest
      * @return DescribeGtmInstanceAddressPoolResponse
@@ -5942,7 +6450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the address pools of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Describes the address pools of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeGtmInstanceAddressPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5986,7 +6494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the address pools of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Describes the address pools of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request DescribeGtmInstanceAddressPoolsRequest
      * @return DescribeGtmInstanceAddressPoolsResponse
@@ -5998,7 +6506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the current status of an instance.</p>
      * 
      * @param request DescribeGtmInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6034,7 +6542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries the current status of an instance.</p>
      * 
      * @param request DescribeGtmInstanceStatusRequest
      * @return DescribeGtmInstanceStatusResponse
@@ -6046,7 +6554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the CNAME record assigned by the system.</p>
+     * <p>Retrieves the system-assigned CNAME domain name.</p>
      * 
      * @param request DescribeGtmInstanceSystemCnameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6082,7 +6590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the CNAME record assigned by the system.</p>
+     * <p>Retrieves the system-assigned CNAME domain name.</p>
      * 
      * @param request DescribeGtmInstanceSystemCnameRequest
      * @return DescribeGtmInstanceSystemCnameResponse
@@ -6094,7 +6602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Global Traffic Manager (GTM) instances under your account.</p>
+     * <p>Queries Global Traffic Manager (GTM) instances.</p>
      * 
      * @param request DescribeGtmInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6146,7 +6654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Global Traffic Manager (GTM) instances under your account.</p>
+     * <p>Queries Global Traffic Manager (GTM) instances.</p>
      * 
      * @param request DescribeGtmInstancesRequest
      * @return DescribeGtmInstancesResponse
@@ -6158,7 +6666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query logs of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries a list of logs.</p>
      * 
      * @param request DescribeGtmLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6214,7 +6722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query logs of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Queries a list of logs.</p>
      * 
      * @param request DescribeGtmLogsRequest
      * @return DescribeGtmLogsResponse
@@ -6226,7 +6734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available monitored nodes.</p>
+     * <p>Retrieves the available configurations for health checks.</p>
      * 
      * @param request DescribeGtmMonitorAvailableConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6258,7 +6766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries available monitored nodes.</p>
+     * <p>Retrieves the available configurations for health checks.</p>
      * 
      * @param request DescribeGtmMonitorAvailableConfigRequest
      * @return DescribeGtmMonitorAvailableConfigResponse
@@ -6270,7 +6778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the health check configuration of an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Retrieves the health check configuration for an address pool.</p>
      * 
      * @param request DescribeGtmMonitorConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6306,7 +6814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the health check configuration of an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Retrieves the health check configuration for an address pool.</p>
      * 
      * @param request DescribeGtmMonitorConfigRequest
      * @return DescribeGtmMonitorConfigResponse
@@ -6318,7 +6826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a disaster recovery plan.</p>
+     * <p>Retrieves the details of a disaster recovery plan.</p>
      * 
      * @param request DescribeGtmRecoveryPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6354,7 +6862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a disaster recovery plan.</p>
+     * <p>Retrieves the details of a disaster recovery plan.</p>
      * 
      * @param request DescribeGtmRecoveryPlanRequest
      * @return DescribeGtmRecoveryPlanResponse
@@ -6366,7 +6874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for a disaster recovery plan.</p>
+     * <p>Describes the available configurations for a disaster recovery plan.</p>
      * 
      * @param request DescribeGtmRecoveryPlanAvailableConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6398,7 +6906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration items that can be set for a disaster recovery plan.</p>
+     * <p>Describes the available configurations for a disaster recovery plan.</p>
      * 
      * @param request DescribeGtmRecoveryPlanAvailableConfigRequest
      * @return DescribeGtmRecoveryPlanAvailableConfigResponse
@@ -6410,7 +6918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries disaster recovery plans.</p>
+     * <p>Queries a list of disaster recovery plans.</p>
      * 
      * @param request DescribeGtmRecoveryPlansRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6454,7 +6962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries disaster recovery plans.</p>
+     * <p>Queries a list of disaster recovery plans.</p>
      * 
      * @param request DescribeGtmRecoveryPlansRequest
      * @return DescribeGtmRecoveryPlansResponse
@@ -6466,7 +6974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain names that are bound to an Alibaba Cloud DNS instance.</p>
+     * <p>Retrieves a list of domain names that are attached to an instance.</p>
      * 
      * @param request DescribeInstanceDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6514,7 +7022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain names that are bound to an Alibaba Cloud DNS instance.</p>
+     * <p>Retrieves a list of domain names that are attached to an instance.</p>
      * 
      * @param request DescribeInstanceDomainsRequest
      * @return DescribeInstanceDomainsResponse
@@ -6525,8 +7033,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data is aggregated hourly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息全局总览</p>
+     * <p>Retrieves a global overview of statistics for public authoritative DNS.</p>
      * 
      * @param request DescribeInterAuthStatisticsGlobalOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6569,8 +7080,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data is aggregated hourly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息全局总览</p>
+     * <p>Retrieves a global overview of statistics for public authoritative DNS.</p>
      * 
      * @param request DescribeInterAuthStatisticsGlobalOverviewRequest
      * @return DescribeInterAuthStatisticsGlobalOverviewResponse
@@ -6581,8 +7095,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data statistics are aggregated hourly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息趋势</p>
+     * <p>Historical statistics for public authoritative DNS resolution</p>
      * 
      * @param request DescribeInterAuthStatisticsHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6637,8 +7154,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data statistics are aggregated hourly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息趋势</p>
+     * <p>Historical statistics for public authoritative DNS resolution</p>
      * 
      * @param request DescribeInterAuthStatisticsHistoryRequest
      * @return DescribeInterAuthStatisticsHistoryResponse
@@ -6649,8 +7169,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data is aggregated by hour.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息摘要列表</p>
+     * <p>Queries the summary list of public authoritative parse statistics.</p>
      * 
      * @param request DescribeInterAuthStatisticsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6733,8 +7256,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data is aggregated by hour.</p>
+     * 
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息摘要列表</p>
+     * <p>Queries the summary list of public authoritative parse statistics.</p>
      * 
      * @param request DescribeInterAuthStatisticsSummaryRequest
      * @return DescribeInterAuthStatisticsSummaryResponse
@@ -6746,7 +7272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息Zone维度总览</p>
+     * <p>Retrieves a zone-level overview of statistics for public authoritative DNS.</p>
      * 
      * @param request DescribeInterAuthStatisticsZoneOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6786,7 +7312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>公网权威解析统计信息Zone维度总览</p>
+     * <p>Retrieves a zone-level overview of statistics for public authoritative DNS.</p>
      * 
      * @param request DescribeInterAuthStatisticsZoneOverviewRequest
      * @return DescribeInterAuthStatisticsZoneOverviewResponse
@@ -6798,7 +7324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询解析日志</p>
+     * <p>Query parsing logs</p>
      * 
      * @param request DescribeInternetDnsLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6870,7 +7396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询解析日志</p>
+     * <p>Query parsing logs</p>
      * 
      * @param request DescribeInternetDnsLogsRequest
      * @return DescribeInternetDnsLogsResponse
@@ -6882,7 +7408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取缓存刷新套餐包列表</p>
+     * <p>Queries the list of cache refresh instances.</p>
      * 
      * @param request DescribeIspFlushCacheInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6942,7 +7468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取缓存刷新套餐包列表</p>
+     * <p>Queries the list of cache refresh instances.</p>
      * 
      * @param request DescribeIspFlushCacheInstancesRequest
      * @return DescribeIspFlushCacheInstancesResponse
@@ -6954,7 +7480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取剩余可缓存刷新次数</p>
+     * <p>Retrieves the remaining number of cache refresh operations available.</p>
      * 
      * @param request DescribeIspFlushCacheRemainQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6986,7 +7512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取剩余可缓存刷新次数</p>
+     * <p>Retrieves the remaining number of cache refresh operations available.</p>
      * 
      * @param request DescribeIspFlushCacheRemainQuotaRequest
      * @return DescribeIspFlushCacheRemainQuotaResponse
@@ -6998,7 +7524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取缓存刷新任务详情</p>
+     * <p>Queries the details of a cache flush task.</p>
      * 
      * @param request DescribeIspFlushCacheTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7034,7 +7560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取缓存刷新任务详情</p>
+     * <p>Queries the details of a cache flush task.</p>
      * 
      * @param request DescribeIspFlushCacheTaskRequest
      * @return DescribeIspFlushCacheTaskResponse
@@ -7046,7 +7572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取缓存刷新任务列表</p>
+     * <p>Queries the list of cache refresh tasks.</p>
      * 
      * @param request DescribeIspFlushCacheTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7106,7 +7632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取缓存刷新任务列表</p>
+     * <p>Queries the list of cache refresh tasks.</p>
      * 
      * @param request DescribeIspFlushCacheTasksRequest
      * @return DescribeIspFlushCacheTasksResponse
@@ -7118,7 +7644,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS用户数据概览</p>
+     * <p>Queries the overview of Public DNS user data.</p>
      * 
      * @param request DescribePdnsAccountSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7158,7 +7684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS用户数据概览</p>
+     * <p>Queries the overview of Public DNS user data.</p>
      * 
      * @param request DescribePdnsAccountSummaryRequest
      * @return DescribePdnsAccountSummaryResponse
@@ -7170,7 +7696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS AppKey 详情</p>
+     * <p>Query the details of a public DNS AppKey</p>
      * 
      * @param request DescribePdnsAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7210,7 +7736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS AppKey 详情</p>
+     * <p>Query the details of a public DNS AppKey</p>
      * 
      * @param request DescribePdnsAppKeyRequest
      * @return DescribePdnsAppKeyResponse
@@ -7222,7 +7748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS AppKey 列表</p>
+     * <p>Queries the list of AppKeys of Public DNS</p>
      * 
      * @param request DescribePdnsAppKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7254,7 +7780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS AppKey 列表</p>
+     * <p>Queries the list of AppKeys of Public DNS</p>
      * 
      * @param request DescribePdnsAppKeysRequest
      * @return DescribePdnsAppKeysResponse
@@ -7266,7 +7792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 操作日志列表</p>
+     * <p>Queries the operation log list of Public DNS.</p>
      * 
      * @param request DescribePdnsOperateLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7326,7 +7852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 操作日志列表</p>
+     * <p>Queries the operation log list of Public DNS.</p>
      * 
      * @param request DescribePdnsOperateLogsRequest
      * @return DescribePdnsOperateLogsResponse
@@ -7338,7 +7864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of requests for public DNS.</p>
+     * <p>Queries the request statistics for Public DNS.</p>
      * 
      * @param request DescribePdnsRequestStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7390,7 +7916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of requests for public DNS.</p>
+     * <p>Queries the request statistics for Public DNS.</p>
      * 
      * @param request DescribePdnsRequestStatisticRequest
      * @return DescribePdnsRequestStatisticResponse
@@ -7402,7 +7928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of statistics on requests for Alibaba Cloud Public DNS.</p>
+     * <p>Queries the request statistics for a specified subdomain.</p>
      * 
      * @param request DescribePdnsRequestStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7462,7 +7988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of statistics on requests for Alibaba Cloud Public DNS.</p>
+     * <p>Queries the request statistics for a specified subdomain.</p>
      * 
      * @param request DescribePdnsRequestStatisticsRequest
      * @return DescribePdnsRequestStatisticsResponse
@@ -7474,7 +8000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 威胁日志列表</p>
+     * <p>Queries the list of Public DNS threat logs.</p>
      * 
      * @param request DescribePdnsThreatLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7538,7 +8064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 威胁日志列表</p>
+     * <p>Queries the list of Public DNS threat logs.</p>
      * 
      * @param request DescribePdnsThreatLogsRequest
      * @return DescribePdnsThreatLogsResponse
@@ -7550,7 +8076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 威胁统计</p>
+     * <p>Retrieves Public DNS threat statistics.</p>
      * 
      * @param request DescribePdnsThreatStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7594,7 +8120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 威胁统计</p>
+     * <p>Retrieves Public DNS threat statistics.</p>
      * 
      * @param request DescribePdnsThreatStatisticRequest
      * @return DescribePdnsThreatStatisticResponse
@@ -7606,7 +8132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 威胁统计列表</p>
+     * <p>Retrieves the public DNS threat statistics list.</p>
      * 
      * @param request DescribePdnsThreatStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7686,7 +8212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS 威胁统计列表</p>
+     * <p>Retrieves the public DNS threat statistics list.</p>
      * 
      * @param request DescribePdnsThreatStatisticsRequest
      * @return DescribePdnsThreatStatisticsResponse
@@ -7698,7 +8224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS Udp IP段列表</p>
+     * <p>Retrieves the list of Public DNS UDP IP address ranges.</p>
      * 
      * @param request DescribePdnsUdpIpSegmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7738,7 +8264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取公共DNS Udp IP段列表</p>
+     * <p>Retrieves the list of Public DNS UDP IP address ranges.</p>
      * 
      * @param request DescribePdnsUdpIpSegmentsRequest
      * @return DescribePdnsUdpIpSegmentsResponse
@@ -7750,7 +8276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about users in Alibaba Cloud Public DNS.</p>
+     * <p>Retrieves user information for Public DNS.</p>
      * 
      * @param request DescribePdnsUserInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7782,7 +8308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about users in Alibaba Cloud Public DNS.</p>
+     * <p>Retrieves user information for Public DNS.</p>
      * 
      * @param request DescribePdnsUserInfoRequest
      * @return DescribePdnsUserInfoResponse
@@ -7794,7 +8320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operation logs of a domain name based on the specified parameters.</p>
+     * <p>Queries the operation logs for the DNS records of a domain name.</p>
      * 
      * @param request DescribeRecordLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7854,7 +8380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the operation logs of a domain name based on the specified parameters.</p>
+     * <p>Queries the operation logs for the DNS records of a domain name.</p>
      * 
      * @param request DescribeRecordLogsRequest
      * @return DescribeRecordLogsResponse
@@ -7866,7 +8392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of resolution requests for all subdomain names of a specified domain name.</p>
+     * <p>Queries statistics on the request volume for all subdomains of a specified domain name.</p>
      * 
      * @param request DescribeRecordResolveStatisticsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7938,7 +8464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of resolution requests for all subdomain names of a specified domain name.</p>
+     * <p>Queries statistics on the request volume for all subdomains of a specified domain name.</p>
      * 
      * @param request DescribeRecordResolveStatisticsSummaryRequest
      * @return DescribeRecordResolveStatisticsSummaryResponse
@@ -7950,10 +8476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Real-time data is collected per hour.</p>
+     * <p>Real-time data is collected hourly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the real-time statistics on the Domain Name System (DNS) requests for a subdomain name.</p>
+     * <p>Queries real-time data about DNS requests for a specified subdomain.</p>
      * 
      * @param request DescribeRecordStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8005,10 +8531,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Real-time data is collected per hour.</p>
+     * <p>Real-time data is collected hourly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the real-time statistics on the Domain Name System (DNS) requests for a subdomain name.</p>
+     * <p>Queries real-time data about DNS requests for a specified subdomain.</p>
      * 
      * @param request DescribeRecordStatisticsRequest
      * @return DescribeRecordStatisticsResponse
@@ -8020,7 +8546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of Domain Name System (DNS) requests for all subdomain names of a specified domain name.</p>
+     * <p>Queries statistics on the request volume for all subdomains of a specified domain name.</p>
      * 
      * @param request DescribeRecordStatisticsSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8088,7 +8614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of Domain Name System (DNS) requests for all subdomain names of a specified domain name.</p>
+     * <p>Queries statistics on the request volume for all subdomains of a specified domain name.</p>
      * 
      * @param request DescribeRecordStatisticsSummaryRequest
      * @return DescribeRecordStatisticsSummaryResponse
@@ -8100,7 +8626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of HTTPDNS resolution records</p>
+     * <p>Describes a built-in authoritative DNS record used for recursive resolution.</p>
      * 
      * @param request DescribeRecursionRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8132,7 +8658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of HTTPDNS resolution records</p>
+     * <p>Describes a built-in authoritative DNS record used for recursive resolution.</p>
      * 
      * @param request DescribeRecursionRecordRequest
      * @return DescribeRecursionRecordResponse
@@ -8143,8 +8669,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data is measured hourly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询递归解析内置权威域名zone详情</p>
+     * <p>Queries the details of an authoritative zone for recursive resolution.</p>
      * 
      * @param request DescribeRecursionZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8175,8 +8704,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Real-time data is measured hourly.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询递归解析内置权威域名zone详情</p>
+     * <p>Queries the details of an authoritative zone for recursive resolution.</p>
      * 
      * @param request DescribeRecursionZoneRequest
      * @return DescribeRecursionZoneResponse
@@ -8188,7 +8720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all Domain Name System (DNS) records of a subdomain name based on the specified parameters.</p>
+     * <p>Retrieves all DNS records for a specific subdomain based on the specified parameters.</p>
      * 
      * @param request DescribeSubDomainRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8248,7 +8780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all Domain Name System (DNS) records of a subdomain name based on the specified parameters.</p>
+     * <p>Retrieves all DNS records for a specific subdomain based on the specified parameters.</p>
      * 
      * @param request DescribeSubDomainRecordsRequest
      * @return DescribeSubDomainRecordsResponse
@@ -8260,7 +8792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all lines that are supported by Alibaba Cloud DNS.</p>
+     * <p>Queries all lines supported by Cloud DNS.</p>
      * 
      * @param request DescribeSupportLinesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8300,7 +8832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all lines that are supported by Alibaba Cloud DNS.</p>
+     * <p>Queries all lines supported by Cloud DNS.</p>
      * 
      * @param request DescribeSupportLinesRequest
      * @return DescribeSupportLinesResponse
@@ -8368,7 +8900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain names that were transferred between the current account and another account based on the specified parameters.</p>
+     * <p>Queries the domain names transferred between accounts based on the specified input parameters.</p>
      * 
      * @param request DescribeTransferDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8424,7 +8956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain names that were transferred between the current account and another account based on the specified parameters.</p>
+     * <p>Queries the domain names transferred between accounts based on the specified input parameters.</p>
      * 
      * @param request DescribeTransferDomainsRequest
      * @return DescribeTransferDomainsResponse
@@ -8484,11 +9016,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the difference between primary domain names and subdomain names, see
-     * <a href="https://www.alibabacloud.com/help/zh/faq-detail/39803.htm">Subdomain levels</a>. For example, if you enter <code>www.abc.com</code>, abc.com is obtained.</p>
+     * <p>For more information about primary and subdomain name levels, see
+     * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/39803.html?spm=a2c4g.2357293.0.0.211f41ffUR1cPb">Domain name levels</a>. For example, if you enter <code>www.abc.com</code>, the output is abc.com.
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/faq-detail/39803.htm">Domain name levels</a>. For example, if you enter <code>www.abc.com</code>, the output is abc.com.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a primary domain name based on the specified parameters.</p>
+     * <p>Retrieves the primary domain name from a specified domain name.</p>
      * 
      * @param request GetMainDomainNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8524,11 +9057,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about the difference between primary domain names and subdomain names, see
-     * <a href="https://www.alibabacloud.com/help/zh/faq-detail/39803.htm">Subdomain levels</a>. For example, if you enter <code>www.abc.com</code>, abc.com is obtained.</p>
+     * <p>For more information about primary and subdomain name levels, see
+     * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/39803.html?spm=a2c4g.2357293.0.0.211f41ffUR1cPb">Domain name levels</a>. For example, if you enter <code>www.abc.com</code>, the output is abc.com.
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/faq-detail/39803.htm">Domain name levels</a>. For example, if you enter <code>www.abc.com</code>, the output is abc.com.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a primary domain name based on the specified parameters.</p>
+     * <p>Retrieves the primary domain name from a specified domain name.</p>
      * 
      * @param request GetMainDomainNameRequest
      * @return GetMainDomainNameResponse
@@ -8540,7 +9074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a text (TXT) record. TXT records are used to retrieve domain names and subdomain names, enable the subdomain name verification feature, and perform batch retrievals.</p>
+     * <p>Generates a TXT record for domain and subdomain verification. This operation supports batch retrieval.</p>
      * 
      * @param request GetTxtRecordForVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8580,7 +9114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a text (TXT) record. TXT records are used to retrieve domain names and subdomain names, enable the subdomain name verification feature, and perform batch retrievals.</p>
+     * <p>Generates a TXT record for domain and subdomain verification. This operation supports batch retrieval.</p>
      * 
      * @param request GetTxtRecordForVerifyRequest
      * @return GetTxtRecordForVerifyResponse
@@ -8592,7 +9126,231 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of address pools.</p>
+     * <p>Queries the list of Agent registration information.</p>
+     * 
+     * @param request ListAtiAgentRegisterInfosRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAtiAgentRegisterInfosResponse
+     */
+    public ListAtiAgentRegisterInfosResponse listAtiAgentRegisterInfosWithOptions(ListAtiAgentRegisterInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentDisplayName)) {
+            query.put("AgentDisplayName", request.agentDisplayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentHost)) {
+            query.put("AgentHost", request.agentHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAtiAgentRegisterInfos"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAtiAgentRegisterInfosResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Agent registration information.</p>
+     * 
+     * @param request ListAtiAgentRegisterInfosRequest
+     * @return ListAtiAgentRegisterInfosResponse
+     */
+    public ListAtiAgentRegisterInfosResponse listAtiAgentRegisterInfos(ListAtiAgentRegisterInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAtiAgentRegisterInfosWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of real-name registered contacts.</p>
+     * 
+     * @param request ListAtiChangeLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAtiChangeLogsResponse
+     */
+    public ListAtiChangeLogsResponse listAtiChangeLogsWithOptions(ListAtiChangeLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTimestamp)) {
+            query.put("EndTimestamp", request.endTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            query.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorAccount)) {
+            query.put("OperatorAccount", request.operatorAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestamp)) {
+            query.put("StartTimestamp", request.startTimestamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("TimeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAtiChangeLogs"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAtiChangeLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of real-name registered contacts.</p>
+     * 
+     * @param request ListAtiChangeLogsRequest
+     * @return ListAtiChangeLogsResponse
+     */
+    public ListAtiChangeLogsResponse listAtiChangeLogs(ListAtiChangeLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAtiChangeLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实名注册人列表</p>
+     * 
+     * @param request ListAtiRegistrantsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAtiRegistrantsResponse
+     */
+    public ListAtiRegistrantsResponse listAtiRegistrantsWithOptions(ListAtiRegistrantsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAtiRegistrants"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAtiRegistrantsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实名注册人列表</p>
+     * 
+     * @param request ListAtiRegistrantsRequest
+     * @return ListAtiRegistrantsResponse
+     */
+    public ListAtiRegistrantsResponse listAtiRegistrants(ListAtiRegistrantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAtiRegistrantsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of address pools in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param request ListCloudGtmAddressPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8652,7 +9410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of address pools.</p>
+     * <p>Queries the list of address pools in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param request ListCloudGtmAddressPoolsRequest
      * @return ListCloudGtmAddressPoolsResponse
@@ -8664,7 +9422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of addresses.</p>
+     * <p>Queries a list of addresses based on the specified parameters.</p>
      * 
      * @param request ListCloudGtmAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8736,7 +9494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of addresses.</p>
+     * <p>Queries a list of addresses based on the specified parameters.</p>
      * 
      * @param request ListCloudGtmAddressesRequest
      * @return ListCloudGtmAddressesResponse
@@ -8747,6 +9505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of alert logs.</p>
+     * 
      * @param request ListCloudGtmAlertLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCloudGtmAlertLogsResponse
@@ -8804,6 +9565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of alert logs.</p>
+     * 
      * @param request ListCloudGtmAlertLogsRequest
      * @return ListCloudGtmAlertLogsResponse
      */
@@ -8852,7 +9616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a Global Traffic Manager (GTM) instance, including the information about access domain names and address pools.</p>
+     * <p>Retrieves a list of instance configurations that contain access domain names and address pool information.</p>
      * 
      * @param request ListCloudGtmInstanceConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8916,7 +9680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of a Global Traffic Manager (GTM) instance, including the information about access domain names and address pools.</p>
+     * <p>Retrieves a list of instance configurations that contain access domain names and address pool information.</p>
      * 
      * @param request ListCloudGtmInstanceConfigsRequest
      * @return ListCloudGtmInstanceConfigsResponse
@@ -8928,7 +9692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the GTM 3.0 instances based on the specified parameters.</p>
+     * <p>Retrieves a list of GTM 3.0 instances based on the specified parameters.</p>
      * 
      * @param request ListCloudGtmInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8984,7 +9748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the GTM 3.0 instances based on the specified parameters.</p>
+     * <p>Retrieves a list of GTM 3.0 instances based on the specified parameters.</p>
      * 
      * @param request ListCloudGtmInstancesRequest
      * @return ListCloudGtmInstancesResponse
@@ -8996,7 +9760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of health check nodes.</p>
+     * <p>Lists the health check monitoring nodes based on the specified input parameters.</p>
      * 
      * @param request ListCloudGtmMonitorNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9032,7 +9796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of health check nodes.</p>
+     * <p>Lists the health check monitoring nodes based on the specified input parameters.</p>
      * 
      * @param request ListCloudGtmMonitorNodesRequest
      * @return ListCloudGtmMonitorNodesResponse
@@ -9044,7 +9808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of health check templates based on specified parameters.</p>
+     * <p>Queries health check templates based on the specified parameters.</p>
      * 
      * @param request ListCloudGtmMonitorTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9096,7 +9860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of health check templates based on specified parameters.</p>
+     * <p>Queries health check templates based on the specified parameters.</p>
      * 
      * @param request ListCloudGtmMonitorTemplatesRequest
      * @return ListCloudGtmMonitorTemplatesResponse
@@ -9108,7 +9872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the record details of HTTPDNS resolution records</p>
+     * <p>Lists the built-in authoritative records for recursive resolution.</p>
      * 
      * @param request ListRecursionRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9184,7 +9948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the record details of HTTPDNS resolution records</p>
+     * <p>Lists the built-in authoritative records for recursive resolution.</p>
      * 
      * @param request ListRecursionRecordsRequest
      * @return ListRecursionRecordsResponse
@@ -9195,8 +9959,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Specify at least ResourceId.N or Tag.N (Tag.N.Key and Tag.N.Value) in your request to identify the resources to retrieve.</li>
+     * <li>Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with the tag key are returned. An error is returned if you specify only Tag.N.Value.</li>
+     * <li>If you specify both Tag.N and ResourceId.N to filter resources, only the resources that are specified by ResourceId.N and match all the specified key-value pairs are returned.</li>
+     * <li>If you specify multiple tag key-value pairs, the resources that match all of them are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries HTTPDNS authoritative zones</p>
+     * <p>Queries the zones that are used for recursive resolution of built-in authoritative domain names.</p>
      * 
      * @param request ListRecursionZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9247,8 +10019,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Specify at least ResourceId.N or Tag.N (Tag.N.Key and Tag.N.Value) in your request to identify the resources to retrieve.</li>
+     * <li>Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with the tag key are returned. An error is returned if you specify only Tag.N.Value.</li>
+     * <li>If you specify both Tag.N and ResourceId.N to filter resources, only the resources that are specified by ResourceId.N and match all the specified key-value pairs are returned.</li>
+     * <li>If you specify multiple tag key-value pairs, the resources that match all of them are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries HTTPDNS authoritative zones</p>
+     * <p>Queries the zones that are used for recursive resolution of built-in authoritative domain names.</p>
      * 
      * @param request ListRecursionZonesRequest
      * @return ListRecursionZonesResponse
@@ -9260,11 +10040,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.</p>
      * <ul>
-     * <li>Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.</li>
-     * <li>If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.</li>
-     * <li>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</li>
+     * <li>To specify the objects to retrieve, your request must contain at least one of the following parameters: <code>ResourceId.N</code> or <code>Tag.N</code> (which consists of Tag.N.Key and Tag.N.Value).</li>
+     * <li>Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with that tag key are returned. An error occurs if you specify only Tag.N.Value.</li>
+     * <li>If you specify both Tag.N and ResourceId.N to filter resources, only the resources that are specified by ResourceId.N and match all the specified tag key-value pairs are returned.</li>
+     * <li>If you specify multiple tag key-value pairs, only the resources that have all the specified key-value pairs are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9316,11 +10096,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.</p>
      * <ul>
-     * <li>Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.</li>
-     * <li>If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.</li>
-     * <li>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</li>
+     * <li>To specify the objects to retrieve, your request must contain at least one of the following parameters: <code>ResourceId.N</code> or <code>Tag.N</code> (which consists of Tag.N.Key and Tag.N.Value).</li>
+     * <li>Tag.N is a resource tag that consists of a key-value pair. If you specify only Tag.N.Key, all tag values associated with that tag key are returned. An error occurs if you specify only Tag.N.Value.</li>
+     * <li>If you specify both Tag.N and ResourceId.N to filter resources, only the resources that are specified by ResourceId.N and match all the specified tag key-value pairs are returned.</li>
+     * <li>If you specify multiple tag key-value pairs, only the resources that have all the specified key-value pairs are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9336,13 +10116,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the operation succeeds, the names of DNS servers change to those of Alibaba Cloud DNS servers (ending with hichina.com).</p>
+     * <p>After the operation is successful, the DNS servers are changed to Alibaba Cloud DNS servers. The names of these new servers end with hichina.com.</p>
      * <blockquote>
-     * <p> **Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS servers in use are not Alibaba Cloud DNS servers.</p>
+     * <p><strong>Prerequisite: This operation applies to domain names that are registered with Alibaba Cloud and currently use third-party DNS servers.</strong></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the names of DNS servers bound to a domain name from DNS server names provided by a third-party service provider to DNS server names provided by Alibaba Cloud DNS.</p>
+     * <p>Changes the DNS servers for a domain name from a third-party provider to Alibaba Cloud DNS.</p>
      * 
      * @param request ModifyHichinaDomainDNSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9382,13 +10162,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the operation succeeds, the names of DNS servers change to those of Alibaba Cloud DNS servers (ending with hichina.com).</p>
+     * <p>After the operation is successful, the DNS servers are changed to Alibaba Cloud DNS servers. The names of these new servers end with hichina.com.</p>
      * <blockquote>
-     * <p> **Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS servers in use are not Alibaba Cloud DNS servers.</p>
+     * <p><strong>Prerequisite: This operation applies to domain names that are registered with Alibaba Cloud and currently use third-party DNS servers.</strong></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the names of DNS servers bound to a domain name from DNS server names provided by a third-party service provider to DNS server names provided by Alibaba Cloud DNS.</p>
+     * <p>Changes the DNS servers for a domain name from a third-party provider to Alibaba Cloud DNS.</p>
      * 
      * @param request ModifyHichinaDomainDNSRequest
      * @return ModifyHichinaDomainDNSResponse
@@ -9400,7 +10180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a domain name to another resource group.</p>
+     * <p>Moves a domain name to a different resource group.</p>
      * 
      * @param request MoveDomainResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9440,7 +10220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves a domain name to another resource group.</p>
+     * <p>Moves a domain name to a different resource group.</p>
      * 
      * @param request MoveDomainResourceGroupRequest
      * @return MoveDomainResourceGroupResponse
@@ -9451,6 +10231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Moves a Global Traffic Manager (GTM) instance to a new resource group.</p>
+     * 
      * @param request MoveGtmResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MoveGtmResourceGroupResponse
@@ -9488,6 +10271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Moves a Global Traffic Manager (GTM) instance to a new resource group.</p>
+     * 
      * @param request MoveGtmResourceGroupRequest
      * @return MoveGtmResourceGroupResponse
      */
@@ -9498,10 +10284,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.</p>
+     * <p>Use this operation for batch DNS tasks that do not require immediate execution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds or deletes domain names and Domain Name System (DNS) records in batches.</p>
+     * <p>Adds or deletes domain names and DNS records in batches.</p>
      * 
      * @param request OperateBatchDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9541,10 +10327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.</p>
+     * <p>Use this operation for batch DNS tasks that do not require immediate execution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds or deletes domain names and Domain Name System (DNS) records in batches.</p>
+     * <p>Adds or deletes domain names and DNS records in batches.</p>
      * 
      * @param request OperateBatchDomainRequest
      * @return OperateBatchDomainResponse
@@ -9556,7 +10342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停公共DNS服务</p>
+     * <p>Pause Public DNS Service</p>
      * 
      * @param request PausePdnsServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9592,7 +10378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停公共DNS服务</p>
+     * <p>Pause Public DNS Service</p>
      * 
      * @param request PausePdnsServiceRequest
      * @return PausePdnsServiceResponse
@@ -9604,7 +10390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views disaster recovery plan.</p>
+     * <p>Previews a disaster recovery plan.</p>
      * 
      * @param request PreviewGtmRecoveryPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9648,7 +10434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Views disaster recovery plan.</p>
+     * <p>Previews a disaster recovery plan.</p>
      * 
      * @param request PreviewGtmRecoveryPlanRequest
      * @return PreviewGtmRecoveryPlanResponse
@@ -9660,7 +10446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除公共DNS AppKey</p>
+     * <p>Delete Public DNS AppKey</p>
      * 
      * @param request RemovePdnsAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9696,7 +10482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除公共DNS AppKey</p>
+     * <p>Delete Public DNS AppKey</p>
      * 
      * @param request RemovePdnsAppKeyRequest
      * @return RemovePdnsAppKeyResponse
@@ -9708,7 +10494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除公共DNS Udp Ip地址段</p>
+     * <p>Remove Public DNS UDP IP Segment</p>
      * 
      * @param request RemovePdnsUdpIpSegmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9744,7 +10530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除公共DNS Udp Ip地址段</p>
+     * <p>Remove Public DNS UDP IP Segment</p>
      * 
      * @param request RemovePdnsUdpIpSegmentRequest
      * @return RemovePdnsUdpIpSegmentResponse
@@ -9756,17 +10542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This operation removes the serverHold status of a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>Removes the serverHold status of a specified domain name.</p>
      * 
      * @param request RemoveRspDomainServerHoldStatusForGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9806,17 +10588,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This operation removes the serverHold status of a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>Removes the serverHold status of a specified domain name.</p>
      * 
      * @param request RemoveRspDomainServerHoldStatusForGatewayRequest
      * @return RemoveRspDomainServerHoldStatusForGatewayResponse
@@ -9828,17 +10606,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This operation removes the serverHold status for a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>Removes the serverHold status for a specified domain name.</p>
      * 
      * @param request RemoveRspDomainServerHoldStatusForGatewayOteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9878,17 +10652,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This operation removes the serverHold status for a specified domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于删除特定域名的serverHold状态信息。</p>
+     * <p>Removes the serverHold status for a specified domain name.</p>
      * 
      * @param request RemoveRspDomainServerHoldStatusForGatewayOteRequest
      * @return RemoveRspDomainServerHoldStatusForGatewayOteResponse
@@ -9900,7 +10670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Replaces the addresses referenced by an address pool.</p>
+     * <p>Replaces the addresses in a specified address pool.</p>
      * 
      * @param tmpReq ReplaceCloudGtmAddressPoolAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9950,7 +10720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Replaces the addresses referenced by an address pool.</p>
+     * <p>Replaces the addresses in a specified address pool.</p>
      * 
      * @param request ReplaceCloudGtmAddressPoolAddressRequest
      * @return ReplaceCloudGtmAddressPoolAddressResponse
@@ -9962,7 +10732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Replaces address pools that are associated with a GTM instance with new address pools.</p>
+     * <p>Replaces the address pools associated with an instance.</p>
      * 
      * @param tmpReq ReplaceCloudGtmInstanceConfigAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10016,7 +10786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Replaces address pools that are associated with a GTM instance with new address pools.</p>
+     * <p>Replaces the address pools associated with an instance.</p>
      * 
      * @param request ReplaceCloudGtmInstanceConfigAddressPoolRequest
      * @return ReplaceCloudGtmInstanceConfigAddressPoolResponse
@@ -10028,7 +10798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复公共DNS服务</p>
+     * <p>Resume Public DNS Service</p>
      * 
      * @param request ResumePdnsServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10064,7 +10834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>恢复公共DNS服务</p>
+     * <p>Resume Public DNS Service</p>
      * 
      * @param request ResumePdnsServiceRequest
      * @return ResumePdnsServiceResponse
@@ -10076,7 +10846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the <a href="https://www.alibabacloud.com/help/en/alibaba-cloud-dns/latest/generating-a-txt-record">GetTxtRecordForVerify</a> operation to generate a TXT record.</p>
+     * <p>Before you can retrieve a domain name, you must verify it using a TXT record. Use this operation in conjunction with the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/145533.html">Generate a TXT record</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record">Generate a TXT record</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a domain name.</p>
@@ -10115,7 +10885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the <a href="https://www.alibabacloud.com/help/en/alibaba-cloud-dns/latest/generating-a-txt-record">GetTxtRecordForVerify</a> operation to generate a TXT record.</p>
+     * <p>Before you can retrieve a domain name, you must verify it using a TXT record. Use this operation in conjunction with the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/145533.html">Generate a TXT record</a> &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record">Generate a TXT record</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a domain name.</p>
@@ -10126,6 +10896,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RetrieveDomainResponse retrieveDomain(RetrieveDomainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retrieveDomainWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes the registration information of an Agent.</p>
+     * 
+     * @param request RevokeAtiAgentRegisterInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeAtiAgentRegisterInfoResponse
+     */
+    public RevokeAtiAgentRegisterInfoResponse revokeAtiAgentRegisterInfoWithOptions(RevokeAtiAgentRegisterInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            query.put("Reason", request.reason);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reasonCode)) {
+            query.put("ReasonCode", request.reasonCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeAtiAgentRegisterInfo"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeAtiAgentRegisterInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes the registration information of an Agent.</p>
+     * 
+     * @param request RevokeAtiAgentRegisterInfoRequest
+     * @return RevokeAtiAgentRegisterInfoResponse
+     */
+    public RevokeAtiAgentRegisterInfoResponse revokeAtiAgentRegisterInfo(RevokeAtiAgentRegisterInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeAtiAgentRegisterInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes a real-name registrant.</p>
+     * 
+     * @param request RevokeAtiRegistrantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeAtiRegistrantResponse
+     */
+    public RevokeAtiRegistrantResponse revokeAtiRegistrantWithOptions(RevokeAtiRegistrantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrantId)) {
+            query.put("RegistrantId", request.registrantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeAtiRegistrant"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeAtiRegistrantResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Revokes a real-name registrant.</p>
+     * 
+     * @param request RevokeAtiRegistrantRequest
+     * @return RevokeAtiRegistrantResponse
+     */
+    public RevokeAtiRegistrantResponse revokeAtiRegistrant(RevokeAtiRegistrantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeAtiRegistrantWithOptions(request, runtime);
     }
 
     /**
@@ -10178,7 +11052,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of address pools.</p>
+     * <p>Searches for agents in the Agent Marketplace.</p>
+     * 
+     * @param request SearchAtiAgentRegisterInfoMarketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchAtiAgentRegisterInfoMarketResponse
+     */
+    public SearchAtiAgentRegisterInfoMarketResponse searchAtiAgentRegisterInfoMarketWithOptions(SearchAtiAgentRegisterInfoMarketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustLevel)) {
+            query.put("TrustLevel", request.trustLevel);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchAtiAgentRegisterInfoMarket"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchAtiAgentRegisterInfoMarketResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Searches for agents in the Agent Marketplace.</p>
+     * 
+     * @param request SearchAtiAgentRegisterInfoMarketRequest
+     * @return SearchAtiAgentRegisterInfoMarketResponse
+     */
+    public SearchAtiAgentRegisterInfoMarketResponse searchAtiAgentRegisterInfoMarket(SearchAtiAgentRegisterInfoMarketRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchAtiAgentRegisterInfoMarketWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Searches for address pools by name, remarks, or other criteria.</p>
      * 
      * @param request SearchCloudGtmAddressPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10246,7 +11196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of address pools.</p>
+     * <p>Searches for address pools by name, remarks, or other criteria.</p>
      * 
      * @param request SearchCloudGtmAddressPoolsRequest
      * @return SearchCloudGtmAddressPoolsResponse
@@ -10258,7 +11208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of addresses based on address names, descriptions, health check templates referenced by the addresses, or address IDs.</p>
+     * <p>Searches for addresses based on criteria such as address name, remarks, referenced health check template, or address ID.</p>
      * 
      * @param request SearchCloudGtmAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10342,7 +11292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of addresses based on address names, descriptions, health check templates referenced by the addresses, or address IDs.</p>
+     * <p>Searches for addresses based on criteria such as address name, remarks, referenced health check template, or address ID.</p>
      * 
      * @param request SearchCloudGtmAddressesRequest
      * @return SearchCloudGtmAddressesResponse
@@ -10354,7 +11304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an access domain name.</p>
+     * <p>Retrieves instance configurations that match the specified parameters.</p>
      * 
      * @param request SearchCloudGtmInstanceConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10426,7 +11376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configurations of an access domain name.</p>
+     * <p>Retrieves instance configurations that match the specified parameters.</p>
      * 
      * @param request SearchCloudGtmInstanceConfigsRequest
      * @return SearchCloudGtmInstanceConfigsResponse
@@ -10438,7 +11388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>This operation searches for instances based on specified parameters.</p>
      * 
      * @param request SearchCloudGtmInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10494,7 +11444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances.</p>
+     * <p>This operation searches for instances based on specified parameters.</p>
      * 
      * @param request SearchCloudGtmInstancesRequest
      * @return SearchCloudGtmInstancesResponse
@@ -10506,7 +11456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of health check templates.</p>
+     * <p>Searches for health check templates.</p>
      * 
      * @param request SearchCloudGtmMonitorTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10558,7 +11508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of health check templates.</p>
+     * <p>Searches for health check templates.</p>
      * 
      * @param request SearchCloudGtmMonitorTemplatesRequest
      * @return SearchCloudGtmMonitorTemplatesResponse
@@ -10570,7 +11520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索递归解析内置权威解析记录</p>
+     * <p>Searches for built-in authoritative DNS records used for recursive resolution.</p>
      * 
      * @param request SearchRecursionRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10658,7 +11608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>搜索递归解析内置权威解析记录</p>
+     * <p>Searches for built-in authoritative DNS records used for recursive resolution.</p>
      * 
      * @param request SearchRecursionRecordsRequest
      * @return SearchRecursionRecordsResponse
@@ -10669,8 +11619,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To retrieve resources, you must specify at least <code>ResourceId.N</code> or <code>Tag.N</code> (<code>Tag.N.Key</code> and <code>Tag.N.Value</code>) in the request.</li>
+     * <li><code>Tag.N</code> is a resource tag that consists of a key-value pair. If you specify only <code>Tag.N.Key</code>, all tag values associated with that key are returned. If you specify only <code>Tag.N.Value</code>, an error is returned.</li>
+     * <li>If you specify both <code>Tag.N</code> and <code>ResourceId.N</code>, the operation returns only the resources that are identified by <code>ResourceId.N</code> and match all the specified tag key-value pairs.</li>
+     * <li>If you specify multiple tag key-value pairs, only resources that match all of them are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>搜索递归解析内置权威域名zone</p>
+     * <p>Searches for zones of built-in authoritative domain names used for recursive resolution.</p>
      * 
      * @param tmpReq SearchRecursionZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10739,8 +11697,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>To retrieve resources, you must specify at least <code>ResourceId.N</code> or <code>Tag.N</code> (<code>Tag.N.Key</code> and <code>Tag.N.Value</code>) in the request.</li>
+     * <li><code>Tag.N</code> is a resource tag that consists of a key-value pair. If you specify only <code>Tag.N.Key</code>, all tag values associated with that key are returned. If you specify only <code>Tag.N.Value</code>, an error is returned.</li>
+     * <li>If you specify both <code>Tag.N</code> and <code>ResourceId.N</code>, the operation returns only the resources that are identified by <code>ResourceId.N</code> and match all the specified tag key-value pairs.</li>
+     * <li>If you specify multiple tag key-value pairs, only resources that match all of them are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>搜索递归解析内置权威域名zone</p>
+     * <p>Searches for zones of built-in authoritative domain names used for recursive resolution.</p>
      * 
      * @param request SearchRecursionZonesRequest
      * @return SearchRecursionZonesResponse
@@ -10752,7 +11718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置全局流量管理实例配置日志开关</p>
+     * <p>Enables or disables the network traffic analysis feature for a Global Traffic Manager (GTM) instance. After this feature is enabled, you can view resolution logs and statistical reports for the domain name. You can also use the intelligent alerting feature based on abnormal metrics, such as resolution success rate and sudden changes in queries per second (QPS). This improves the observability and operations and maintenance (O&amp;M) efficiency of the GTM instance.</p>
      * 
      * @param request SetCloudGtmInstanceConfigLogSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10796,7 +11762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置全局流量管理实例配置日志开关</p>
+     * <p>Enables or disables the network traffic analysis feature for a Global Traffic Manager (GTM) instance. After this feature is enabled, you can view resolution logs and statistical reports for the domain name. You can also use the intelligent alerting feature based on abnormal metrics, such as resolution success rate and sudden changes in queries per second (QPS). This improves the observability and operations and maintenance (O&amp;M) efficiency of the GTM instance.</p>
      * 
      * @param request SetCloudGtmInstanceConfigLogSwitchRequest
      * @return SetCloudGtmInstanceConfigLogSwitchResponse
@@ -10808,7 +11774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables weighted round-robin based on the specified parameters.</p>
+     * <p>Enables or disables the weight configuration.</p>
      * 
      * @param request SetDNSSLBStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10864,7 +11830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables weighted round-robin based on the specified parameters.</p>
+     * <p>Enables or disables the weight configuration.</p>
      * 
      * @param request SetDNSSLBStatusRequest
      * @return SetDNSSLBStatusResponse
@@ -10876,10 +11842,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>**</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the access policy that is available in address pools.</p>
+     * <p>Sets the access mode for an access policy.</p>
      * 
      * @param request SetDnsGtmAccessModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10919,10 +11885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>**</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the access policy that is available in address pools.</p>
+     * <p>Sets the access mode for an access policy.</p>
      * 
      * @param request SetDnsGtmAccessModeRequest
      * @return SetDnsGtmAccessModeResponse
@@ -10934,7 +11900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the health check status of an address pool.</p>
+     * <p>Sets the health check status for an address pool.</p>
      * 
      * @param request SetDnsGtmMonitorStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10974,7 +11940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the health check status of an address pool.</p>
+     * <p>Sets the health check status for an address pool.</p>
      * 
      * @param request SetDnsGtmMonitorStatusRequest
      * @return SetDnsGtmMonitorStatusResponse
@@ -10986,7 +11952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the Domain Name System Security Extensions (DNSSEC) for a domain name. This feature is available only for the users of the paid editions of Alibaba Cloud DNS.</p>
+     * <p>Enables or disables Domain Name System Security Extensions (DNSSEC) for a domain name. This feature is available only to users of paid Alibaba Cloud DNS.</p>
      * 
      * @param request SetDomainDnssecStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11026,7 +11992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or disables the Domain Name System Security Extensions (DNSSEC) for a domain name. This feature is available only for the users of the paid editions of Alibaba Cloud DNS.</p>
+     * <p>Enables or disables Domain Name System Security Extensions (DNSSEC) for a domain name. This feature is available only to users of paid Alibaba Cloud DNS.</p>
      * 
      * @param request SetDomainDnssecStatusRequest
      * @return SetDomainDnssecStatusResponse
@@ -11038,7 +12004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the status of an Alibaba Cloud DNS (DNS) record based on the specified parameters.</p>
+     * <p>Sets the status of a DNS record.</p>
      * 
      * @param request SetDomainRecordStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11082,7 +12048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the status of an Alibaba Cloud DNS (DNS) record based on the specified parameters.</p>
+     * <p>Sets the status of a DNS record.</p>
      * 
      * @param request SetDomainRecordStatusRequest
      * @return SetDomainRecordStatusResponse
@@ -11094,7 +12060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a policy for switchover between address pool sets.</p>
+     * <p>Modifies the address pool switchover policy based on the request parameters.</p>
      * 
      * @param request SetGtmAccessModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11134,7 +12100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a policy for switchover between address pool sets.</p>
+     * <p>Modifies the address pool switchover policy based on the request parameters.</p>
      * 
      * @param request SetGtmAccessModeRequest
      * @return SetGtmAccessModeResponse
@@ -11146,7 +12112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to enable health check for an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Sets the health check status of an address pool.</p>
      * 
      * @param request SetGtmMonitorStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11186,7 +12152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to enable health check for an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Sets the health check status of an address pool.</p>
      * 
      * @param request SetGtmMonitorStatusRequest
      * @return SetGtmMonitorStatusResponse
@@ -11198,7 +12164,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交缓存刷新任务</p>
+     * <p>Submits Agent registration information.</p>
+     * 
+     * @param request SubmitAtiAgentRegisterInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitAtiAgentRegisterInfoResponse
+     */
+    public SubmitAtiAgentRegisterInfoResponse submitAtiAgentRegisterInfoWithOptions(SubmitAtiAgentRegisterInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityCsr)) {
+            query.put("IdentityCsr", request.identityCsr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverCertPem)) {
+            query.put("ServerCertPem", request.serverCertPem);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitAtiAgentRegisterInfo"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitAtiAgentRegisterInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits Agent registration information.</p>
+     * 
+     * @param request SubmitAtiAgentRegisterInfoRequest
+     * @return SubmitAtiAgentRegisterInfoResponse
+     */
+    public SubmitAtiAgentRegisterInfoResponse submitAtiAgentRegisterInfo(SubmitAtiAgentRegisterInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitAtiAgentRegisterInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a cache refresh task.</p>
      * 
      * @param request SubmitIspFlushCacheTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11242,7 +12264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交缓存刷新任务</p>
+     * <p>Submits a cache refresh task.</p>
      * 
      * @param request SubmitIspFlushCacheTaskRequest
      * @return SubmitIspFlushCacheTaskResponse
@@ -11254,7 +12276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the access policy type for a GTM instance.</p>
+     * <p>Switches the access strategy mode of an instance.</p>
      * 
      * @param request SwitchDnsGtmInstanceStrategyModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11294,7 +12316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the access policy type for a GTM instance.</p>
+     * <p>Switches the access strategy mode of an instance.</p>
      * 
      * @param request SwitchDnsGtmInstanceStrategyModeRequest
      * @return SwitchDnsGtmInstanceStrategyModeResponse
@@ -11306,7 +12328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds and modifies a tag for a resource.</p>
+     * <p>Adds or modifies tags for resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11350,7 +12372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds and modifies a tag for a resource.</p>
+     * <p>Adds or modifies tags for resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -11362,7 +12384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transfers multiple domain names from the current account to another account at a time.</p>
+     * <p>Batch transfers DNS permissions for multiple domain names to a specified execution account.</p>
      * 
      * @param request TransferDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11406,7 +12428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transfers multiple domain names from the current account to another account at a time.</p>
+     * <p>Batch transfers DNS permissions for multiple domain names to a specified execution account.</p>
      * 
      * @param request TransferDomainRequest
      * @return TransferDomainResponse
@@ -11418,11 +12440,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
-     * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.</p>
+     * <p>An instance with an ID that starts with \<code>dns-\\</code> is a new version instance. New version instances support attaching multiple domain names. You can call an API operation to attach domain names directly to an instance. An error is returned if the number of domain names exceeds the instance limit.
+     * An instance with an ID that does not start with \<code>dns-\\</code> is a legacy instance. Legacy instances support only one domain name. Therefore, if you call this operation for an instance that already has a domain name attached, the domain name is replaced.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds one or more domain names from a paid Alibaba Cloud DNS instance based on the instance ID.</p>
+     * <p>Detaches domain names from a paid Alibaba Cloud DNS instance.</p>
      * 
      * @param request UnbindInstanceDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11462,11 +12484,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
-     * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.</p>
+     * <p>An instance with an ID that starts with \<code>dns-\\</code> is a new version instance. New version instances support attaching multiple domain names. You can call an API operation to attach domain names directly to an instance. An error is returned if the number of domain names exceeds the instance limit.
+     * An instance with an ID that does not start with \<code>dns-\\</code> is a legacy instance. Legacy instances support only one domain name. Therefore, if you call this operation for an instance that already has a domain name attached, the domain name is replaced.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds one or more domain names from a paid Alibaba Cloud DNS instance based on the instance ID.</p>
+     * <p>Detaches domain names from a paid Alibaba Cloud DNS instance.</p>
      * 
      * @param request UnbindInstanceDomainsRequest
      * @return UnbindInstanceDomainsResponse
@@ -11538,7 +12560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改 AppKey 状态</p>
+     * <p>Modify AppKey State</p>
      * 
      * @param request UpdateAppKeyStateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11578,7 +12600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改 AppKey 状态</p>
+     * <p>Modify AppKey State</p>
      * 
      * @param request UpdateAppKeyStateRequest
      * @return UpdateAppKeyStateResponse
@@ -11590,7 +12612,225 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the condition for determining the health status of a specified address.</p>
+     * <p>Updates the registration information of an Agent.</p>
+     * 
+     * @param tmpReq UpdateAtiAgentRegisterInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAtiAgentRegisterInfoResponse
+     */
+    public UpdateAtiAgentRegisterInfoResponse updateAtiAgentRegisterInfoWithOptions(UpdateAtiAgentRegisterInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAtiAgentRegisterInfoShrinkRequest request = new UpdateAtiAgentRegisterInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.endpoints)) {
+            request.endpointsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.endpoints, "Endpoints", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentDescription)) {
+            query.put("AgentDescription", request.agentDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentDisplayName)) {
+            query.put("AgentDisplayName", request.agentDisplayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentHost)) {
+            query.put("AgentHost", request.agentHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {
+            query.put("Endpoints", request.endpointsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrantId)) {
+            query.put("RegistrantId", request.registrantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAtiAgentRegisterInfo"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAtiAgentRegisterInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the registration information of an Agent.</p>
+     * 
+     * @param request UpdateAtiAgentRegisterInfoRequest
+     * @return UpdateAtiAgentRegisterInfoResponse
+     */
+    public UpdateAtiAgentRegisterInfoResponse updateAtiAgentRegisterInfo(UpdateAtiAgentRegisterInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAtiAgentRegisterInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新告警设置</p>
+     * 
+     * @param request UpdateAtiAlertSettingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAtiAlertSettingsResponse
+     */
+    public UpdateAtiAlertSettingsResponse updateAtiAlertSettingsWithOptions(UpdateAtiAlertSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertConfig)) {
+            query.put("AlertConfig", request.alertConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertGroup)) {
+            query.put("AlertGroup", request.alertGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAtiAlertSettings"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAtiAlertSettingsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新告警设置</p>
+     * 
+     * @param request UpdateAtiAlertSettingsRequest
+     * @return UpdateAtiAlertSettingsResponse
+     */
+    public UpdateAtiAlertSettingsResponse updateAtiAlertSettings(UpdateAtiAlertSettingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAtiAlertSettingsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a registrant profile.</p>
+     * 
+     * @param request UpdateAtiRegistrantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAtiRegistrantResponse
+     */
+    public UpdateAtiRegistrantResponse updateAtiRegistrantWithOptions(UpdateAtiRegistrantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cc)) {
+            query.put("Cc", request.cc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentCode)) {
+            query.put("DocumentCode", request.documentCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentImage)) {
+            query.put("DocumentImage", request.documentImage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentType)) {
+            query.put("DocumentType", request.documentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registrantId)) {
+            query.put("RegistrantId", request.registrantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.street)) {
+            query.put("Street", request.street);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAtiRegistrant"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAtiRegistrantResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a registrant profile.</p>
+     * 
+     * @param request UpdateAtiRegistrantRequest
+     * @return UpdateAtiRegistrantResponse
+     */
+    public UpdateAtiRegistrantResponse updateAtiRegistrant(UpdateAtiRegistrantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAtiRegistrantWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the basic configuration of a specified address, such as the address name, type, and value.</p>
      * 
      * @param tmpReq UpdateCloudGtmAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11656,7 +12896,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the condition for determining the health status of a specified address.</p>
+     * <p>Modifies the basic configuration of a specified address, such as the address name, type, and value.</p>
      * 
      * @param request UpdateCloudGtmAddressRequest
      * @return UpdateCloudGtmAddressResponse
@@ -11668,13 +12908,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an address is <strong>enabled</strong> and the health status of the address is <strong>Normal</strong>, the availability status of the address is <strong>Available</strong>.</p>
      * <ul>
-     * <li>If an address is <strong>disabled</strong> or the health status of the address is <strong>Abnormal</strong>, the availability status of the address is <strong>Unavailable</strong>.</li>
+     * <li>The service status of an address is <strong>active</strong> if the address is <strong>enabled</strong> and its health check status is <strong>Normal</strong>.</li>
+     * <li>The service status of an address is <strong>unavailable</strong> if the address is <strong>disabled</strong> or its health check status is <strong>abnormal</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the enabling status of an address.</p>
+     * <p>Updates the enabled status of an address.</p>
      * 
      * @param request UpdateCloudGtmAddressEnableStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11718,13 +12958,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an address is <strong>enabled</strong> and the health status of the address is <strong>Normal</strong>, the availability status of the address is <strong>Available</strong>.</p>
      * <ul>
-     * <li>If an address is <strong>disabled</strong> or the health status of the address is <strong>Abnormal</strong>, the availability status of the address is <strong>Unavailable</strong>.</li>
+     * <li>The service status of an address is <strong>active</strong> if the address is <strong>enabled</strong> and its health check status is <strong>Normal</strong>.</li>
+     * <li>The service status of an address is <strong>unavailable</strong> if the address is <strong>disabled</strong> or its health check status is <strong>abnormal</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the enabling status of an address.</p>
+     * <p>Updates the enabled status of an address.</p>
      * 
      * @param request UpdateCloudGtmAddressEnableStatusRequest
      * @return UpdateCloudGtmAddressEnableStatusResponse
@@ -11736,7 +12976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the failover mode that is used when address exceptions are identified.</p>
+     * <p>Updates the failover method for an address based on the specified parameters.</p>
      * 
      * @param request UpdateCloudGtmAddressManualAvailableStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11784,7 +13024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the failover mode that is used when address exceptions are identified.</p>
+     * <p>Updates the failover method for an address based on the specified parameters.</p>
      * 
      * @param request UpdateCloudGtmAddressManualAvailableStatusRequest
      * @return UpdateCloudGtmAddressManualAvailableStatusResponse
@@ -11796,7 +13036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic configurations of an address pool.</p>
+     * <p>Modifies the basic configuration of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolBasicConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11844,7 +13084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the basic configurations of an address pool.</p>
+     * <p>Modifies the basic configuration of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolBasicConfigRequest
      * @return UpdateCloudGtmAddressPoolBasicConfigResponse
@@ -11856,13 +13096,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an address pool is <strong>enabled</strong> and the health status of the address pool is <strong>Normal</strong>, the availability status of the address pool is <strong>Available</strong>.</p>
      * <ul>
-     * <li>If an address pool is <strong>disabled</strong> or the health status of the address pool is <strong>Abnormal</strong>, the availability status of the address pool is <strong>unavailable</strong>.</li>
+     * <li>An address pool is considered <strong>active</strong> if it is <strong>enabled</strong> and its health check status is <strong>Normal</strong>.</li>
+     * <li>An address pool is considered <strong>unavailable</strong> if it is <strong>disabled</strong> or its health check status is <strong>abnormal</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the enabling status of an address pool.</p>
+     * <p>Updates the enabled status of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolEnableStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11906,13 +13146,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an address pool is <strong>enabled</strong> and the health status of the address pool is <strong>Normal</strong>, the availability status of the address pool is <strong>Available</strong>.</p>
      * <ul>
-     * <li>If an address pool is <strong>disabled</strong> or the health status of the address pool is <strong>Abnormal</strong>, the availability status of the address pool is <strong>unavailable</strong>.</li>
+     * <li>An address pool is considered <strong>active</strong> if it is <strong>enabled</strong> and its health check status is <strong>Normal</strong>.</li>
+     * <li>An address pool is considered <strong>unavailable</strong> if it is <strong>disabled</strong> or its health check status is <strong>abnormal</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the enabling status of an address pool.</p>
+     * <p>Updates the enabled status of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolEnableStatusRequest
      * @return UpdateCloudGtmAddressPoolEnableStatusResponse
@@ -11924,7 +13164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the load balancing policy of an address pool.</p>
+     * <p>Updates the load balancing policy of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolLbStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11972,7 +13212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the load balancing policy of an address pool.</p>
+     * <p>Updates the load balancing policy of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolLbStrategyRequest
      * @return UpdateCloudGtmAddressPoolLbStrategyResponse
@@ -11984,7 +13224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the remarks of an address pool.</p>
+     * <p>Updates the remarks of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12028,7 +13268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the remarks of an address pool.</p>
+     * <p>Updates the remarks of an address pool.</p>
      * 
      * @param request UpdateCloudGtmAddressPoolRemarkRequest
      * @return UpdateCloudGtmAddressPoolRemarkResponse
@@ -12040,7 +13280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the remarks of an address.</p>
+     * <p>Updates the remarks for an address in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param request UpdateCloudGtmAddressRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12084,7 +13324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the remarks of an address.</p>
+     * <p>Updates the remarks for an address in Global Traffic Manager (GTM) 3.0.</p>
      * 
      * @param request UpdateCloudGtmAddressRemarkRequest
      * @return UpdateCloudGtmAddressRemarkResponse
@@ -12234,7 +13474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the global time-to-live (TTL) configuration of a GTM 3.0 instance.</p>
+     * <p>Updates the global TTL configuration of a Global Traffic Manager (GTM) 3.0 instance based on the specified parameters.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigBasicRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12290,7 +13530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the global time-to-live (TTL) configuration of a GTM 3.0 instance.</p>
+     * <p>Updates the global TTL configuration of a Global Traffic Manager (GTM) 3.0 instance based on the specified parameters.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigBasicRequest
      * @return UpdateCloudGtmInstanceConfigBasicResponse
@@ -12302,13 +13542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an access domain name is <strong>enabled</strong> and the health state is <strong>normal</strong>, the access domain name is deemed <strong>available</strong>.</p>
      * <ul>
-     * <li>If an access domain name is <strong>disabled</strong> or the health state is <strong>abnormal</strong>, the access domain name is deemed <strong>unavailable</strong>.</li>
+     * <li>If a domain name is <strong>enabled</strong> and its health status is <strong>Normal</strong>, the service associated with the access domain name is <strong>active</strong>.</li>
+     * <li>If a domain name is <strong>disabled</strong> or its health status is <strong>abnormal</strong>, the service associated with the access domain name is <strong>unavailable</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the enabling status of an access domain name based on the specified parameters.</p>
+     * <p>Updates the enablement status of an instance configuration based on the input parameters.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigEnableStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12356,13 +13596,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If an access domain name is <strong>enabled</strong> and the health state is <strong>normal</strong>, the access domain name is deemed <strong>available</strong>.</p>
      * <ul>
-     * <li>If an access domain name is <strong>disabled</strong> or the health state is <strong>abnormal</strong>, the access domain name is deemed <strong>unavailable</strong>.</li>
+     * <li>If a domain name is <strong>enabled</strong> and its health status is <strong>Normal</strong>, the service associated with the access domain name is <strong>active</strong>.</li>
+     * <li>If a domain name is <strong>disabled</strong> or its health status is <strong>abnormal</strong>, the service associated with the access domain name is <strong>unavailable</strong>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the enabling status of an access domain name based on the specified parameters.</p>
+     * <p>Updates the enablement status of an instance configuration based on the input parameters.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigEnableStatusRequest
      * @return UpdateCloudGtmInstanceConfigEnableStatusResponse
@@ -12374,7 +13614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the load balancing policy of a GTM instance.</p>
+     * <p>Updates the load balancing policy for an instance configuration.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigLbStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12426,7 +13666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the load balancing policy of a GTM instance.</p>
+     * <p>Updates the load balancing policy for an instance configuration.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigLbStrategyRequest
      * @return UpdateCloudGtmInstanceConfigLbStrategyResponse
@@ -12438,7 +13678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of a GTM instance based on the specified parameters.</p>
+     * <p>Updates the remarks for an instance configuration.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12486,7 +13726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the description of a GTM instance based on the specified parameters.</p>
+     * <p>Updates the remarks for an instance configuration.</p>
      * 
      * @param request UpdateCloudGtmInstanceConfigRemarkRequest
      * @return UpdateCloudGtmInstanceConfigRemarkResponse
@@ -12548,7 +13788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a health check template based on specified parameters.</p>
+     * <p>Updates the configuration of a health check template.</p>
      * 
      * @param tmpReq UpdateCloudGtmMonitorTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12622,7 +13862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a health check template based on specified parameters.</p>
+     * <p>Updates the configuration of a health check template.</p>
      * 
      * @param request UpdateCloudGtmMonitorTemplateRequest
      * @return UpdateCloudGtmMonitorTemplateResponse
@@ -12684,11 +13924,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In each CIDR block, the end IP address must be greater than or equal to the start IP address.\
-     * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.</p>
+     * <p>For each IP range, the value of EndIp must be greater than or equal to the value of StartIp.
+     * The IP ranges of IP ranges cannot overlap across all custom lines for a domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a custom line with its unique ID.</p>
+     * <p>Updates a custom line specified by its unique ID.</p>
      * 
      * @param request UpdateCustomLineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12732,11 +13972,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In each CIDR block, the end IP address must be greater than or equal to the start IP address.\
-     * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.</p>
+     * <p>For each IP range, the value of EndIp must be greater than or equal to the value of StartIp.
+     * The IP ranges of IP ranges cannot overlap across all custom lines for a domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a custom line with its unique ID.</p>
+     * <p>Updates a custom line specified by its unique ID.</p>
      * 
      * @param request UpdateCustomLineRequest
      * @return UpdateCustomLineResponse
@@ -12748,7 +13988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the weight of a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Modifies the weight of a DNS record based on the specified parameters.</p>
      * 
      * @param request UpdateDNSSLBWeightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12792,7 +14032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the weight of a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Modifies the weight of a DNS record based on the specified parameters.</p>
      * 
      * @param request UpdateDNSSLBWeightRequest
      * @return UpdateDNSSLBWeightResponse
@@ -12804,7 +14044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the cache-accelerated domain name based on the specified parameters.</p>
+     * <p>Updates a DNS authoritative proxy domain.</p>
      * 
      * @param request UpdateDnsCacheDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12864,7 +14104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the cache-accelerated domain name based on the specified parameters.</p>
+     * <p>Updates a DNS authoritative proxy domain.</p>
      * 
      * @param request UpdateDnsCacheDomainRequest
      * @return UpdateDnsCacheDomainResponse
@@ -12876,7 +14116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the remarks for the cache-accelerated domain name of the destination domain name.</p>
+     * <p>Updates the remark for a domain name in the DNS cache.</p>
      * 
      * @param request UpdateDnsCacheDomainRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12916,7 +14156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the remarks for the cache-accelerated domain name of the destination domain name.</p>
+     * <p>Updates the remark for a domain name in the DNS cache.</p>
      * 
      * @param request UpdateDnsCacheDomainRemarkRequest
      * @return UpdateDnsCacheDomainRemarkResponse
@@ -12928,7 +14168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an access policy.</p>
+     * <p>Updates an existing access policy.</p>
      * 
      * @param request UpdateDnsGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13024,7 +14264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an access policy.</p>
+     * <p>Updates an existing access policy.</p>
      * 
      * @param request UpdateDnsGtmAccessStrategyRequest
      * @return UpdateDnsGtmAccessStrategyResponse
@@ -13036,7 +14276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an address pool based on the specified parameters.</p>
+     * <p>Updates the configuration of an address pool.</p>
      * 
      * @param request UpdateDnsGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13084,7 +14324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an address pool based on the specified parameters.</p>
+     * <p>Updates the configuration of an address pool.</p>
      * 
      * @param request UpdateDnsGtmAddressPoolRequest
      * @return UpdateDnsGtmAddressPoolResponse
@@ -13096,7 +14336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a Global Traffic Manager (GTM) instance by instance ID.</p>
+     * <p>Updates the configuration of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request UpdateDnsGtmInstanceGlobalConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13172,7 +14412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a Global Traffic Manager (GTM) instance by instance ID.</p>
+     * <p>Updates the configuration of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request UpdateDnsGtmInstanceGlobalConfigRequest
      * @return UpdateDnsGtmInstanceGlobalConfigResponse
@@ -13184,7 +14424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a health check task.</p>
+     * <p>Modifies a health check configuration.</p>
      * 
      * @param request UpdateDnsGtmMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13244,7 +14484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a health check task.</p>
+     * <p>Modifies a health check configuration.</p>
      * 
      * @param request UpdateDnsGtmMonitorRequest
      * @return UpdateDnsGtmMonitorResponse
@@ -13256,10 +14496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the name of an existing domain name group.</p>
+     * <p>This operation modifies the name of an existing domain name group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name of a domain name group based on the specified parameters.</p>
+     * <p>Modifies the name of a domain name group.</p>
      * 
      * @param request UpdateDomainGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13299,10 +14539,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Modifies the name of an existing domain name group.</p>
+     * <p>This operation modifies the name of an existing domain name group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name of a domain name group based on the specified parameters.</p>
+     * <p>Modifies the name of a domain name group.</p>
      * 
      * @param request UpdateDomainGroupRequest
      * @return UpdateDomainGroupResponse
@@ -13314,7 +14554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Modifies a DNS record based on the specified parameters.</p>
      * 
      * @param request UpdateDomainRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13378,7 +14618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Modifies a DNS record based on the specified parameters.</p>
      * 
      * @param request UpdateDomainRecordRequest
      * @return UpdateDomainRecordResponse
@@ -13390,7 +14630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Updates the remarks of a DNS record.</p>
      * 
      * @param request UpdateDomainRecordRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13434,7 +14674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a Domain Name System (DNS) record based on the specified parameters.</p>
+     * <p>Updates the remarks of a DNS record.</p>
      * 
      * @param request UpdateDomainRecordRemarkRequest
      * @return UpdateDomainRecordRemarkResponse
@@ -13446,7 +14686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a domain name based on the specified parameters.</p>
+     * <p>Updates the remarks for a domain name.</p>
      * 
      * @param request UpdateDomainRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13486,7 +14726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a domain name based on the specified parameters.</p>
+     * <p>Updates the remarks for a domain name.</p>
      * 
      * @param request UpdateDomainRemarkRequest
      * @return UpdateDomainRemarkResponse
@@ -13498,7 +14738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to modify the access policy of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Updates an access policy.</p>
      * 
      * @param request UpdateGtmAccessStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13550,7 +14790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to modify the access policy of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Updates an access policy.</p>
      * 
      * @param request UpdateGtmAccessStrategyRequest
      * @return UpdateGtmAccessStrategyResponse
@@ -13562,7 +14802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to modify an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Modifies an address pool.</p>
      * 
      * @param request UpdateGtmAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13614,7 +14854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to modify an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Modifies an address pool.</p>
      * 
      * @param request UpdateGtmAddressPoolRequest
      * @return UpdateGtmAddressPoolResponse
@@ -13626,7 +14866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a Global Traffic Manager (GTM) instance based on the specified parameters.</p>
+     * <p>Updates the global configuration of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request UpdateGtmInstanceGlobalConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13690,7 +14930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of a Global Traffic Manager (GTM) instance based on the specified parameters.</p>
+     * <p>Updates the global configuration of a Global Traffic Manager (GTM) instance.</p>
      * 
      * @param request UpdateGtmInstanceGlobalConfigRequest
      * @return UpdateGtmInstanceGlobalConfigResponse
@@ -13702,7 +14942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the health check configuration for an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Updates a health check configuration.</p>
      * 
      * @param request UpdateGtmMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13762,7 +15002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the health check configuration for an address pool of a Global Traffic Manager (GTM) instance.</p>
+     * <p>Updates a health check configuration.</p>
      * 
      * @param request UpdateGtmMonitorRequest
      * @return UpdateGtmMonitorResponse
@@ -13774,7 +15014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a disaster recovery plan.</p>
+     * <p>Updates a disaster recovery plan.</p>
      * 
      * @param request UpdateGtmRecoveryPlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13822,7 +15062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a disaster recovery plan.</p>
+     * <p>Updates a disaster recovery plan.</p>
      * 
      * @param request UpdateGtmRecoveryPlanRequest
      * @return UpdateGtmRecoveryPlanResponse
@@ -13834,7 +15074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改缓存刷新套餐包配置</p>
+     * <p>Modifies the configuration of a cache refresh plan.</p>
      * 
      * @param request UpdateIspFlushCacheInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13874,7 +15114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改缓存刷新套餐包配置</p>
+     * <p>Modifies the configuration of a cache refresh plan.</p>
      * 
      * @param request UpdateIspFlushCacheInstanceConfigRequest
      * @return UpdateIspFlushCacheInstanceConfigResponse
@@ -13885,8 +15125,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If a DNS record is locked, it cannot be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies HTTPDNS resolution records.</p>
+     * <p>Modifies a built-in authoritative record for recursive resolution.</p>
      * 
      * @param request UpdateRecursionRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13949,8 +15192,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If a DNS record is locked, it cannot be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies HTTPDNS resolution records.</p>
+     * <p>Modifies a built-in authoritative record for recursive resolution.</p>
      * 
      * @param request UpdateRecursionRecordRequest
      * @return UpdateRecursionRecordResponse
@@ -13962,7 +15208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the status of HTTPDNS authoritative DNS resolution records</p>
+     * <p>Updates the enable status of a recursion record.</p>
      * 
      * @param request UpdateRecursionRecordEnableStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14002,7 +15248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the status of HTTPDNS authoritative DNS resolution records</p>
+     * <p>Updates the enable status of a recursion record.</p>
      * 
      * @param request UpdateRecursionRecordEnableStatusRequest
      * @return UpdateRecursionRecordEnableStatusResponse
@@ -14014,7 +15260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies description of HTTPDNS resolution records.</p>
+     * <p>Updates the remarks for a built-in authoritative record in HTTPDNS.</p>
      * 
      * @param request UpdateRecursionRecordRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14054,7 +15300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies description of HTTPDNS resolution records.</p>
+     * <p>Updates the remarks for a built-in authoritative record in HTTPDNS.</p>
      * 
      * @param request UpdateRecursionRecordRemarkRequest
      * @return UpdateRecursionRecordRemarkResponse
@@ -14066,7 +15312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies HTTPDNS authoritative DNS resolution record weights.</p>
+     * <p>Updates the weight of a DNS record for recursive resolution.</p>
      * 
      * @param request UpdateRecursionRecordWeightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14106,7 +15352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies HTTPDNS authoritative DNS resolution record weights.</p>
+     * <p>Updates the weight of a DNS record for recursive resolution.</p>
      * 
      * @param request UpdateRecursionRecordWeightRequest
      * @return UpdateRecursionRecordWeightResponse
@@ -14118,7 +15364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the status of weight algorithm of authoritative records</p>
+     * <p>Updates the enabled status of the weight algorithm for a DNS record used for recursive resolution.</p>
      * 
      * @param request UpdateRecursionRecordWeightEnableStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14170,7 +15416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the status of weight algorithm of authoritative records</p>
+     * <p>Updates the enabled status of the weight algorithm for a DNS record used for recursive resolution.</p>
      * 
      * @param request UpdateRecursionRecordWeightEnableStatusRequest
      * @return UpdateRecursionRecordWeightEnableStatusResponse
@@ -14182,7 +15428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the effective scope of HTTPDNS</p>
+     * <p>Updates the effective scope of a built-in authoritative domain name zone in HTTPDNS.</p>
      * 
      * @param tmpReq UpdateRecursionZoneEffectiveScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14228,7 +15474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the effective scope of HTTPDNS</p>
+     * <p>Updates the effective scope of a built-in authoritative domain name zone in HTTPDNS.</p>
      * 
      * @param request UpdateRecursionZoneEffectiveScopeRequest
      * @return UpdateRecursionZoneEffectiveScopeResponse
@@ -14239,8 +15485,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The end IP address of each IP segment must be greater than or equal to the start IP address.
+     * The IP address ranges of all IP segments for the domain name cannot overlap across custom lines.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modify the HTTPDNS recursive proxy mode</p>
+     * <p>Modifies the recursive proxy mode for a zone.</p>
      * 
      * @param request UpdateRecursionZoneProxyPatternRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14279,8 +15529,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The end IP address of each IP segment must be greater than or equal to the start IP address.
+     * The IP address ranges of all IP segments for the domain name cannot overlap across custom lines.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modify the HTTPDNS recursive proxy mode</p>
+     * <p>Modifies the recursive proxy mode for a zone.</p>
      * 
      * @param request UpdateRecursionZoneProxyPatternRequest
      * @return UpdateRecursionZoneProxyPatternResponse
@@ -14291,8 +15545,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The end IP address of each IP segment must be greater than or equal to the start IP address.
+     * For a domain name, the IP address ranges of all IP segments in all custom lines cannot overlap.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the description of HTTPDNS authoritative domain names.</p>
+     * <p>Modifies the remarks for a built-in authoritative domain name zone used for recursive resolution.</p>
      * 
      * @param request UpdateRecursionZoneRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14331,8 +15589,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The end IP address of each IP segment must be greater than or equal to the start IP address.
+     * For a domain name, the IP address ranges of all IP segments in all custom lines cannot overlap.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the description of HTTPDNS authoritative domain names.</p>
+     * <p>Modifies the remarks for a built-in authoritative domain name zone used for recursive resolution.</p>
      * 
      * @param request UpdateRecursionZoneRemarkRequest
      * @return UpdateRecursionZoneRemarkResponse
@@ -14344,17 +15606,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This operation updates the server-side status of a domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于更新特定域名的状态信息。</p>
+     * <p>Updates the server-side status of a domain name.</p>
      * 
      * @param request UpdateRspDomainServerProhibitStatusForGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14398,17 +15656,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
+     * <li>This operation updates the server-side status of a domain name.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>用于更新特定域名的状态信息。</p>
+     * <p>Updates the server-side status of a domain name.</p>
      * 
      * @param request UpdateRspDomainServerProhibitStatusForGatewayRequest
      * @return UpdateRspDomainServerProhibitStatusForGatewayResponse
@@ -14420,17 +15674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
-     * </ul>
+     * <p>This operation updates the server-side status of a domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于更新特定域名的状态信息。</p>
+     * <p>Updates the server-side status of a domain name.</p>
      * 
      * @param request UpdateRspDomainServerProhibitStatusForGatewayOteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14474,17 +15721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <ul>
-     * <li>本接口专为注册局用户设计，允许他们更新指定顶级域名（TLD）的各种属性。</li>
-     * <li>必须提供<code>RegistryId</code>和<code>Tld</code>参数以标识要修改的具体TLD。</li>
-     * <li>可选参数包括但不限于宽限期设置、DNS解析缓存时间、价格设定等，这些都可根据需要进行调整。</li>
-     * <li>环境(<code>Env</code>)参数指定了API调用的目标环境，默认值为“DAILY”表示日常测试环境；正式上线前，请确保已正确设置此参数。</li>
-     * <li>某些时间戳字段如<code>SunriseStartTimeStamp</code>要求输入Unix时间戳格式的数据。</li>
-     * </ul>
+     * <p>This operation updates the server-side status of a domain name.</p>
      * 
      * <b>summary</b> : 
-     * <p>用于更新特定域名的状态信息。</p>
+     * <p>Updates the server-side status of a domain name.</p>
      * 
      * @param request UpdateRspDomainServerProhibitStatusForGatewayOteRequest
      * @return UpdateRspDomainServerProhibitStatusForGatewayOteResponse
@@ -14496,7 +15736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查实例主机名是否可添加</p>
+     * <p>Checks whether an instance hostname can be added.</p>
      * 
      * @param request ValidateDnsGtmCnameRrCanUseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14548,7 +15788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检查实例主机名是否可添加</p>
+     * <p>Checks whether an instance hostname can be added.</p>
      * 
      * @param request ValidateDnsGtmCnameRrCanUseRequest
      * @return ValidateDnsGtmCnameRrCanUseResponse
@@ -14560,7 +15800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证公共DNS Udp Ip地址段</p>
+     * <p>Validates a UDP IP address segment for Public DNS.</p>
      * 
      * @param request ValidatePdnsUdpIpSegmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14600,7 +15840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>验证公共DNS Udp Ip地址段</p>
+     * <p>Validates a UDP IP address segment for Public DNS.</p>
      * 
      * @param request ValidatePdnsUdpIpSegmentRequest
      * @return ValidatePdnsUdpIpSegmentResponse
@@ -14608,5 +15848,101 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ValidatePdnsUdpIpSegmentResponse validatePdnsUdpIpSegment(ValidatePdnsUdpIpSegmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.validatePdnsUdpIpSegmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies DNS records.</p>
+     * 
+     * @param request VerifyAtiAgentDnsRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyAtiAgentDnsRecordsResponse
+     */
+    public VerifyAtiAgentDnsRecordsResponse verifyAtiAgentDnsRecordsWithOptions(VerifyAtiAgentDnsRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyAtiAgentDnsRecords"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyAtiAgentDnsRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Verifies DNS records.</p>
+     * 
+     * @param request VerifyAtiAgentDnsRecordsRequest
+     * @return VerifyAtiAgentDnsRecordsResponse
+     */
+    public VerifyAtiAgentDnsRecordsResponse verifyAtiAgentDnsRecords(VerifyAtiAgentDnsRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyAtiAgentDnsRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>触发 ACME 预检</p>
+     * 
+     * @param request VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    public VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse verifyAtiAgentRegisterInfoAcmeChallengeRecordWithOptions(VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentRegisterInfoId)) {
+            query.put("AgentRegisterInfoId", request.agentRegisterInfoId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyAtiAgentRegisterInfoAcmeChallengeRecord"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>触发 ACME 预检</p>
+     * 
+     * @param request VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest
+     * @return VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse
+     */
+    public VerifyAtiAgentRegisterInfoAcmeChallengeRecordResponse verifyAtiAgentRegisterInfoAcmeChallengeRecord(VerifyAtiAgentRegisterInfoAcmeChallengeRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyAtiAgentRegisterInfoAcmeChallengeRecordWithOptions(request, runtime);
     }
 }

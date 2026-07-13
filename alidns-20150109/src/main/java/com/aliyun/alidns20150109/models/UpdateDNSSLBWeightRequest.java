@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateDNSSLBWeightRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,26 +20,26 @@ public class UpdateDNSSLBWeightRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the DNS record. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> operation to obtain the ID.</p>
+     * <p>The ID of the DNS record. Call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> operation to obtain the record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>9999985</p>
+     * <p>9********</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.1</p>
+     * <p>192.0.2.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The weight of the DNS record that you want to specify. Valid values: <code>1 to 100</code>.</p>
+     * <p>The new weight. The value must be an integer in the range of <code>[1,100]</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

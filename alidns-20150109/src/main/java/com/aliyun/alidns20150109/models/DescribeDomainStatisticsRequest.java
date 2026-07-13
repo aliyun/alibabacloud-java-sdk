@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsRequest extends TeaModel {
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name.&lt;props=&quot;china&quot;&gt; Call the <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.
+     * &lt;props=&quot;intl&quot;&gt;Call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -16,19 +17,21 @@ public class DescribeDomainStatisticsRequest extends TeaModel {
     /**
      * <p>The type of the domain name. Valid values:</p>
      * <ul>
-     * <li>PUBLIC (default): hosted public domain name</li>
-     * <li>CACHE: cached public domain name</li>
+     * <li><p>PUBLIC: The domain name is hosted on Alibaba Cloud DNS (default).</p>
+     * </li>
+     * <li><p>CACHE: Alibaba Cloud DNS is used as a proxy for the domain name.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>PUBLIC CACHE</p>
+     * <p>PUBLIC</p>
      */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>The default value is the day when you query the data.</p>
+     * <p>The end date of the query. The format is <strong>YYYY-MM-DD</strong>.</p>
+     * <p>The default value is the current date.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>
@@ -37,10 +40,12 @@ public class DescribeDomainStatisticsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The language of the content within the request and response.</p>
+     * <p>The language of the request and response.</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese (default)</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong> (default): Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,8 +55,8 @@ public class DescribeDomainStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>You can only query the DNS records within the last 90 days.``</p>
+     * <p>The start date of the query. The format is <strong>YYYY-MM-DD</strong>.</p>
+     * <p>You can query records only from the last 90 days. This means <code>StartDate &gt;= Now - 90</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

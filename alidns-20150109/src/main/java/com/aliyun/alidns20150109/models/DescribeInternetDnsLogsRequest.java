@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetDnsLogsRequest extends TeaModel {
     /**
-     * <p>The account ID displayed on the Recursive Resolution (Public DNS) page after you activate Alibaba Cloud Public DNS.</p>
+     * <p>The ID of the Public DNS configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>51**4</p>
@@ -17,27 +17,32 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
      * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>example.com</p>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end time of the query (timestamp, unit: milliseconds). &gt;Warning: If the query time span is too large and the amount of resolution logs for the queried domain is excessive, it may lead to a query timeout or inaccurate query results.</p>
+     * <p>The end of the time range to query. This is a UNIX timestamp in milliseconds.</p>
+     * <blockquote>
+     * <p>Warning: If you specify a wide time range, many logs may be returned. This can cause a query timeout or inaccurate results.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>1709196299999</p>
+     * <p>1741526400000</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     /**
-     * <p>Return value language, options: </p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese </li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default: en</p>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -46,10 +51,12 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Module type </p>
+     * <p>The module type.</p>
      * <ul>
-     * <li>AUTHORITY (default): Public Authoritative DNS </li>
-     * <li>RECURSION: Public Recursive DNS</li>
+     * <li><p>AUTHORITY (default): public authoritative DNS</p>
+     * </li>
+     * <li><p>RECURSION: public recursive DNS</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +66,7 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public String module;
 
     /**
-     * <p>Page number, default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -68,7 +75,7 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size for query.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -80,14 +87,20 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public Boolean preciseSort;
 
     /**
-     * <p>Query parameters </p>
+     * <p>The query parameters.</p>
      * <ul>
-     * <li>sourceIp: Source IP address </li>
-     * <li>queryNameFuzzy: Domain name (fuzzy value) </li>
-     * <li>queryType: Record type </li>
-     * <li>value: Resolution result </li>
-     * <li>status: Status </li>
-     * <li>serverIp: Resolution server IP</li>
+     * <li><p>sourceIp: the source IP address</p>
+     * </li>
+     * <li><p>queryNameFuzzy: the domain name (fuzzy match)</p>
+     * </li>
+     * <li><p>queryType: the record type</p>
+     * </li>
+     * <li><p>value: the resolution result</p>
+     * </li>
+     * <li><p>status: the status</p>
+     * </li>
+     * <li><p>serverIp: the IP address of the resolution server</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,10 +113,10 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public String recursionProtocolType;
 
     /**
-     * <p>The start time of the query (timestamp, unit: milliseconds).</p>
+     * <p>The start of the time range to query. This is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1709192640000</p>
+     * <p>1738848000000</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;

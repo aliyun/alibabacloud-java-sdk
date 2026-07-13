@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstancesRequest extends TeaModel {
     /**
-     * <p>The order in which you want to sort returned entries. Valid values:</p>
+     * <p>The sorting order. Valid values:</p>
      * <ul>
-     * <li>DESC: Returned entries are sorted in descending order. If this parameter is left empty, returned entries are sorted in descending order by default.</li>
-     * <li>ASC: Returned entries are sorted in ascending order.</li>
+     * <li><p>DESC: Descending order. This is the default value.</p>
+     * </li>
+     * <li><p>ASC: Ascending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,12 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The type of the domain name. Valid values:</p>
+     * <p>The type of the domain name. This parameter is not case-sensitive. Valid values:</p>
      * <ul>
-     * <li>PUBLIC (default): hosted public domain name</li>
-     * <li>CACHE: cached public domain name</li>
+     * <li><p>PUBLIC: authoritative domain name (default)</p>
+     * </li>
+     * <li><p>CACHE: authoritative proxy domain name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,8 +37,10 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * <p>Default value: en</p>
      * 
@@ -45,10 +51,12 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The method that is used to sort returned entries. Valid values:</p>
+     * <p>The field to sort the results by. Valid values:</p>
      * <ul>
-     * <li>createDate: sorts returned entries by creation time. If this parameter is left empty, returned entries are sorted by creation time by default.</li>
-     * <li>expireDate: sorts returned entries by expiration time.</li>
+     * <li><p>createDate: Sorts the results by creation time. This is the default value.</p>
+     * </li>
+     * <li><p>expireDate: Sorts the results by expiration time.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +66,7 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +84,7 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client\&quot;s IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.2.0</p>
@@ -85,7 +93,7 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String userClientIp;
 
     /**
-     * <p>The version code of the Alibaba Cloud DNS instance.</p>
+     * <p>The edition code of the Alibaba Cloud DNS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>version1</p>

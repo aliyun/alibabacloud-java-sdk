@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateGtmAddressPoolRequest extends TeaModel {
     /**
+     * <p>The list of addresses in the address pool.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
     public java.util.List<UpdateGtmAddressPoolRequestAddr> addr;
 
     /**
-     * <p>The ID of the address pool that you want to modify.</p>
+     * <p>The ID of the address pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +22,7 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
     public String addrPoolId;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -30,7 +31,7 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The minimum number of available addresses in the address pool.</p>
+     * <p>The minimum number of active addresses in the address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -39,13 +40,22 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
     public Integer minAvailableAddrNum;
 
     /**
-     * <p>The name of the address pool that you want to modify.</p>
+     * <p>The name of the address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>名称</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The type of the address pool that you want to modify.</p>
+     * <p>The type of the address pool. Valid values:</p>
+     * <ul>
+     * <li><p>IP: IPv4 addresses</p>
+     * </li>
+     * <li><p>DOMAIN: Domain names</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,7 +119,7 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
 
     public static class UpdateGtmAddressPoolRequestAddr extends TeaModel {
         /**
-         * <p>The weight of the address pool that you want to modify.</p>
+         * <p>The weight of the address.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -118,11 +128,14 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
         public Integer lbaWeight;
 
         /**
-         * <p>The mode of the address pool that you want to modify.</p>
+         * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><strong>SMART</strong>: Intelligent return</li>
-         * <li><strong>ONLINE</strong>: Always online</li>
-         * <li><strong>OFFLINE</strong>: Always offline</li>
+         * <li><p><strong>SMART</strong>: Intelligent return</p>
+         * </li>
+         * <li><p><strong>ONLINE</strong>: Always online</p>
+         * </li>
+         * <li><p><strong>OFFLINE</strong>: Always offline</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +145,10 @@ public class UpdateGtmAddressPoolRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The addresses in the address pool.</p>
+         * <p>The address.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.1</p>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("Value")
         public String value;

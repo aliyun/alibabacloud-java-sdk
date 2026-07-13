@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainGroupsRequest extends TeaModel {
     /**
-     * <p>The keyword of the domain name group for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+     * <p>The keyword for the group name. The search uses the %KeyWord% pattern and is case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>Group</p>
@@ -14,7 +14,14 @@ public class DescribeDomainGroupsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
+     * <p>Default value: zh</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +30,7 @@ public class DescribeDomainGroupsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The start value is <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +39,7 @@ public class DescribeDomainGroupsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

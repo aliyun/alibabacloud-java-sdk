@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmInstancesRequest extends TeaModel {
     /**
-     * <p>The keyword that you use for query. Exact match is supported by instance ID or instance name.</p>
+     * <p>The keyword for an exact match search by instance ID or instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class DescribeGtmInstancesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +23,7 @@ public class DescribeGtmInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether additional information is required. Default value: <strong>false</strong>.</p>
+     * <p>Specifies whether to return detailed information. The default value is <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class DescribeGtmInstancesRequest extends TeaModel {
     public Boolean needDetailAttributes;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeGtmInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

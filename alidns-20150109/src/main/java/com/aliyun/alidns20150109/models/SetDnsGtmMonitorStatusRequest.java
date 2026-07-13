@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDnsGtmMonitorStatusRequest extends TeaModel {
     /**
-     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Valid values: en, zh, and ja. The default value is en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,25 +14,27 @@ public class SetDnsGtmMonitorStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the health check task.</p>
+     * <p>The ID of the health check configuration. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstanceaddresspool">DescribeDnsGtmInstanceAddressPool</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MonitorConfigId1</p>
+     * <p>Monito*****</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
-     * <p>Specifies whether to enable the health check feature. Valid values:</p>
+     * <p>The status to set for the health check. Valid values:</p>
      * <ul>
-     * <li>OPEN: enables the health check feature.</li>
-     * <li>CLOSE: disables the health check feature.</li>
+     * <li><p>OPEN: Enables the health check.</p>
+     * </li>
+     * <li><p>CLOSE: Disables the health check.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>open</p>
+     * <p>OPEN</p>
      */
     @NameInMap("Status")
     public String status;

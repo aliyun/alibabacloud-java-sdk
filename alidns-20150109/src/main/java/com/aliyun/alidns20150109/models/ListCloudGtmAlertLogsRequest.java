@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmAlertLogsRequest extends TeaModel {
     /**
-     * <p>Alert type:</p>
+     * <p>The alert type.</p>
      * <ul>
-     * <li>ALERT</li>
-     * <li>RESUME</li>
+     * <li><p>ALERT: An alert is triggered.</p>
+     * </li>
+     * <li><p>RESUME: The service has recovered.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String actionType;
 
     /**
-     * <p>The end time of the query (timestamp).</p>
+     * <p>The end of the time range to query. This is a UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,12 +30,16 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
-     * <p>Alarm object types:</p>
+     * <p>The alert object.</p>
      * <ul>
-     * <li>GTM_ADDRESS: Address</li>
-     * <li>GTM_ADDRESS_POOL: Address Pool</li>
-     * <li>GTM_INSTANCE: Instance</li>
-     * <li>GTM_MONITOR_TEMPLATE: Health Check Template</li>
+     * <li><p>GTM_ADDRESS: Address</p>
+     * </li>
+     * <li><p>GTM_ADDRESS_POOL: Address pool</p>
+     * </li>
+     * <li><p>GTM_INSTANCE: Instance</p>
+     * </li>
+     * <li><p>GTM_MONITOR_TEMPLATE: Health check template</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +49,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>Search keyword, usually an address ID, address pool ID, domain information, etc.</p>
+     * <p>The keyword for the search. This is usually an address ID, address pool ID, or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>pool-895280232254422016</p>
@@ -52,10 +58,12 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Language type of the returned information:</p>
+     * <p>The language of the response.</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +73,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+     * <p>The current page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,7 +83,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +93,7 @@ public class ListCloudGtmAlertLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time of the query (timestamp).</p>
+     * <p>The start of the time range to query. This is a UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

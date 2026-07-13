@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRecordsRequest extends TeaModel {
     /**
-     * <p>The order in which you want to sort the returned DNS records. Valid values: DESC and ASC. Default value: DESC.</p>
+     * <p>The sorting direction. Valid values: DESC, ASC. Default value: DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -14,7 +14,8 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a>.
+     * &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,18 +25,24 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the domain name group.</p>
+     * <p>The ID of the domain group.</p>
      * <ul>
-     * <li>If you do not specify GroupId, all domain names are queried.</li>
-     * <li>If you set GroupId to 0, no value is returned.</li>
-     * <li>If you set GroupId to 1, the domain names in the default group are queried.</li>
-     * <li>If you set GroupId to -2, all domain names are queried.</li>
-     * <li>You can also specify GroupId based on the actual group ID.</li>
+     * <li><p>If you do not specify GroupId, the query is performed on all domain names.</p>
+     * </li>
+     * <li><p>If you set GroupId to 0, an empty result is returned.</p>
+     * </li>
+     * <li><p>If you set GroupId to -1, the query is performed on the default group. The default group includes domain names that are not assigned to a group.</p>
+     * </li>
+     * <li><p>If you set GroupId to -2, the query is performed on all domain names.</p>
+     * </li>
+     * <li><p>If you specify another value for GroupId, the query is performed on the specified group.
+     * &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomainGroups</a>.
+     * &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups</a>.</p>
+     * </li>
      * </ul>
-     * <p>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups </a>operation to obtain the ID of the domain name group.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>2****</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -50,7 +57,13 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -59,9 +72,11 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The resolution line. Default value: <strong>default</strong>.</p>
-     * <p>For more information, see</p>
-     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS lines</a>.</p>
+     * <p>The DNS resolution line. Default value: <strong>default</strong>.</p>
+     * <p>For more information, see:
+     * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/29807.html">Enumeration of DNS resolution lines</a>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">Enumeration of DNS resolution lines</a></p>
      * 
      * <strong>example:</strong>
      * <p>cn_mobile_anhui</p>
@@ -70,7 +85,7 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String line;
 
     /**
-     * <p>The method that is used to sort the returned DNS records. By default, the DNS records are sorted in reverse chronological order based on the time when they were added.</p>
+     * <p>The sorting method. Records are sorted in descending order based on the time they were added.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -79,7 +94,7 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -88,7 +103,7 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page for a paged query. Maximum value: <strong>500</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -97,7 +112,7 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The hostname keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</p>
+     * <p>The keyword for the host record. The search uses a fuzzy match pattern and is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>www</p>
@@ -106,16 +121,20 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String RRKeyWord;
 
     /**
-     * <p>The search mode. Valid values: <strong>LIKE, EXACT, and ADVANCED</strong>.</p>
+     * <p>The search mode. Valid values: LIKE, EXACT, ADVANCED, and <strong>COMBINATION</strong>.</p>
      * <ul>
-     * <li><p>If you set SearchMode to LIKE or EXACT, specify KeyWord. In this case, RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status are invalid.</p>
+     * <li><p>If you set this parameter to LIKE or EXACT, use the KeyWord parameter. The RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters are invalid.</p>
      * </li>
-     * <li><p>If you set SearchMode to ADVANCED, specify RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status.</p>
+     * <li><p>If you set this parameter to ADVANCED, use the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters. The RRKeyWord and ValueKeyWord parameters support fuzzy matching.</p>
      * </li>
-     * <li><p>If you do not specify SearchMode, the system determines the search mode based on the following rules:</p>
+     * <li><p>If you set this parameter to COMBINATION, use the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters. All these parameters support only exact matching.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter:</p>
      * <ul>
-     * <li>If KeyWord is specified, the system uses the LIKE mode.</li>
-     * <li>If KeyWord is not specified, the system queries DNS records based on values of RRKeyWord and ValueKeyWord in fuzzy match mode, and based on the values of TypeKeyWord, Type, Line, and Status in exact match mode.</li>
+     * <li><p>If you specify the keyWord parameter, the search mode is set to LIKE.</p>
+     * </li>
+     * <li><p>If you do not specify the keyWord parameter, RRKeyWord and ValueKeyWord support fuzzy matching, and TypeKeyWord, Type, Line, and Status support exact matching.</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -127,7 +146,9 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String searchMode;
 
     /**
-     * <p>The status of the DNS records to query. Valid values: <strong>Enable and Disable</strong>.</p>
+     * <p>The status of the DNS record. Valid values:</p>
+     * <p>Enable: The DNS record is enabled.</p>
+     * <p>Disable: The DNS record is paused.</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>
@@ -136,8 +157,9 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the DNS records to query. For more information, see</p>
-     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
+     * <p>The type of the DNS record. For more information, see:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/29805.html">DNS record types</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a></p>
      * 
      * <strong>example:</strong>
      * <p>A</p>
@@ -146,7 +168,7 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The type keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in exact match mode. The value is not case-sensitive.</p>
+     * <p>The keyword for the record type. The search uses an exact match and is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>MX</p>
@@ -155,7 +177,7 @@ public class DescribeDomainRecordsRequest extends TeaModel {
     public String typeKeyWord;
 
     /**
-     * <p>The record value keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</p>
+     * <p>The keyword for the record value. The search uses a fuzzy match pattern and is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>com</p>

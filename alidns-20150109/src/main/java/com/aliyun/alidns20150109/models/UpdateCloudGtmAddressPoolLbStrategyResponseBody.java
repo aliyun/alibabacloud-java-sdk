@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressPoolLbStrategyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89528023225442**16</p>
+     * <p>pool-89528023225442****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
@@ -23,10 +23,12 @@ public class UpdateCloudGtmAddressPoolLbStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the modification operation was successful:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <ul>
-     * <li>true: Operation successful</li>
-     * <li>false: Operation failed</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -23,10 +23,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
     public Integer failedCount;
 
     /**
-     * <p>The cause of the execution failure.</p>
+     * <p>The reason why the task failed.</p>
      * 
      * <strong>example:</strong>
-     * <p>failed_reason</p>
+     * <p>No match is found for the domain name specified in the file.</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -41,12 +41,16 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the task. Valid values:</p>
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: No task for importing domain names or DNS records is submitted.</li>
-     * <li><strong>0</strong>: The task is being processed.</li>
-     * <li><strong>1</strong>: The task is complete.</li>
-     * <li><strong>2</strong>: The task failed.</li>
+     * <li><p><strong>-1</strong>: No task was submitted to import domain names or DNS records.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Processing</p>
+     * </li>
+     * <li><p><strong>1</strong>: Completed</p>
+     * </li>
+     * <li><p><strong>2</strong>: Failed</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +60,7 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The total number of domain names or DNS records that were processed.</p>
+     * <p>The total number of domain names or DNS records that were successfully processed.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -68,13 +72,13 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
      * <p>The ID of the last task.</p>
      * 
      * <strong>example:</strong>
-     * <p>123456</p>
+     * <p>1******</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
-     * <p>The total number of DNS records that were processed in batches.</p>
+     * <p>The total number of records that are processed in batches.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

@@ -11,7 +11,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     public DescribeGtmAccessStrategyAvailableConfigResponseBodyLines lines;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C2851BA9-CE56-49AF-8D12-4FC6A49EE688</p>
@@ -20,7 +20,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     public String requestId;
 
     /**
-     * <p>Indicates whether the global line is recommended.</p>
+     * <p>Indicates whether a global line is suggested.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

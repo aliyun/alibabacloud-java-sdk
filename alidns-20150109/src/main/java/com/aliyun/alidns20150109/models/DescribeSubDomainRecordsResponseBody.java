@@ -8,7 +8,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
     public DescribeSubDomainRecordsResponseBodyDomainRecords domainRecords;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of records returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -35,7 +35,7 @@ public class DescribeSubDomainRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of DNS records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

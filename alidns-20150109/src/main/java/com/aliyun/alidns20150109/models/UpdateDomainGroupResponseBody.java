@@ -8,7 +8,7 @@ public class UpdateDomainGroupResponseBody extends TeaModel {
      * <p>The ID of the domain name group.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>60bb3ef15ace449082cf914ed3ea****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -23,7 +23,7 @@ public class UpdateDomainGroupResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>

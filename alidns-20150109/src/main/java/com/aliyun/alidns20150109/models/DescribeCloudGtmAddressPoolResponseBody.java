@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     /**
-     * <p>Load balancing policy among addresses in the address pool:</p>
+     * <p>The load balancing policy for the addresses in the address pool. Valid values:</p>
      * <ul>
-     * <li>round_robin: Round-robin, where for any source of DNS resolution requests, all addresses are returned, with a rotation of the order for every request.</li>
-     * <li>sequence: Sequential, where for any source of DNS resolution requests, the address with the lower sequence number (indicating a higher priority, the smaller the number, the higher the priority) is returned. If the address with the lower sequence number is unavailable, the next address with a lower sequence number is returned.</li>
-     * <li>weight: Weighted, supporting the setting of different weight values for each address to realize returning addresses according to the weight ratio of query resolutions.</li>
-     * <li>source_nearest: Source-nearest, also known as intelligent resolution, where GTM can return different addresses based on the source of different DNS resolution requests, achieving the effect of users accessing nearby servers.</li>
+     * <li><p>round_robin: For a DNS request from any source, all addresses are returned. The addresses are rotated in each response.</p>
+     * </li>
+     * <li><p>sequence: For a DNS request from any source, the address with the highest priority is returned. Priority is determined by the \<code>SerialNumber\\</code>, where a smaller value indicates a higher priority. If the highest-priority address is unavailable, the address with the next highest priority is returned.</p>
+     * </li>
+     * <li><p>weight: A weight can be set for each address. DNS requests are resolved based on the specified weight ratio.</p>
+     * </li>
+     * <li><p>source_nearest: Global Traffic Manager (GTM) returns an address based on the source of the DNS request. This implements proximity-based access for users.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +24,16 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String addressLbStrategy;
 
     /**
-     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89564674533755**96</p>
+     * <p>pool-89564674533755****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
-     * <p>Address pool name.</p>
+     * <p>The name of the address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>AddressPool-1</p>
@@ -38,11 +42,14 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String addressPoolName;
 
     /**
-     * <p>Address pool type:</p>
+     * <p>The type of the address pool. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
-     * <li>domain</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
+     * <li><p>domain</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,10 +62,12 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public DescribeCloudGtmAddressPoolResponseBodyAddresses addresses;
 
     /**
-     * <p>Address pool availability status:</p>
+     * <p>The availability status of the address pool. Valid values:</p>
      * <ul>
-     * <li>available: Available</li>
-     * <li>unavailable: Unavailable</li>
+     * <li><p>available: Available.</p>
+     * </li>
+     * <li><p>unavailable: Unavailable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +77,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String availableStatus;
 
     /**
-     * <p>Address pool creation time.</p>
+     * <p>The time when the address pool was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-15T01:46Z</p>
@@ -77,7 +86,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Address pool creation time (timestamp).</p>
+     * <p>The timestamp that indicates when the address pool was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -86,10 +95,12 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>Address pool status:</p>
+     * <p>The status of the address pool. Valid values:</p>
      * <ul>
-     * <li>enable: Enabled status</li>
-     * <li>disable: Disabled status</li>
+     * <li><p>enable: Enabled</p>
+     * </li>
+     * <li><p>disable: Disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,13 +110,18 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String enableStatus;
 
     /**
-     * <p>The condition for determining the health status of the address pool. Valid values:</p>
+     * <p>The condition used to determine the health status of the address pool. Valid values:</p>
      * <ul>
-     * <li>any_ok: At least one address in the address pool is available.</li>
-     * <li>p30_ok: At least 30% of the addresses in the address pool are available.</li>
-     * <li>p50_ok: At least 50% of the addresses in the address pool are available.</li>
-     * <li>p70_ok: At least 70% of the addresses in the address pool are available.</li>
-     * <li>all_ok: All addresses in the address pool are available.</li>
+     * <li><p>any_ok: At least one address is available.</p>
+     * </li>
+     * <li><p>p30_ok: At least 30% of the addresses are available.</p>
+     * </li>
+     * <li><p>p50_ok: At least 50% of the addresses are available.</p>
+     * </li>
+     * <li><p>p70_ok: At least 70% of the addresses are available.</p>
+     * </li>
+     * <li><p>all_ok: All addresses are available.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,11 +131,14 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String healthJudgement;
 
     /**
-     * <p>The health state of the address pool. Valid values:</p>
+     * <p>The health status of the address pool. Valid values:</p>
      * <ul>
-     * <li>ok: The health state of the address pool is normal and all addresses that are referenced by the address pool are available.</li>
-     * <li>ok_alert: The health state of the address pool is warning and some of the addresses that are referenced by the address pool are unavailable. However, the address pool is deemed normal. In this case, only the available addresses are returned for Domain Name System (DNS) requests.</li>
-     * <li>exceptional: The health state of the address pool is abnormal and some or all of the addresses that are referenced by the address pool are unavailable. In this case, the address pool is deemed abnormal.</li>
+     * <li><p>ok: The address pool is healthy. All addresses in the address pool are available.</p>
+     * </li>
+     * <li><p>ok_alert: The address pool is in an alert state. Some addresses are unavailable, but the address pool is still considered healthy. In this state, DNS resolution is performed for available addresses, but not for unavailable addresses.</p>
+     * </li>
+     * <li><p>exceptional: The address pool is unhealthy. Some or all addresses are unavailable, and the address pool is considered unhealthy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +148,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>Remarks for the address.</p>
+     * <p>The notes on the address.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -138,7 +157,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -147,10 +166,12 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The mode used if the address with the smallest sequence number is recovered. This parameter is returned only when the policy for load balancing between addresses is sequence. Valid values:</p>
+     * <p>The service recovery mode for a primary address that becomes available again when the load balancing policy is set to \<code>sequence\\</code>. Valid values:</p>
      * <ul>
-     * <li>preemptive: The address with the smallest sequence number is preferentially used if this address is recovered.</li>
-     * <li>non_preemptive: The current address is still used even if the address with the smallest sequence number is recovered.</li>
+     * <li><p>preemptive: The system preferentially uses the address with a smaller \<code>SerialNumber\\</code>.</p>
+     * </li>
+     * <li><p>non_preemptive: The system continues to use the current address.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -160,7 +181,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String sequenceLbStrategyMode;
 
     /**
-     * <p>The last modification time of the address pool.</p>
+     * <p>The time when the address pool was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-15T01:46Z</p>
@@ -169,7 +190,7 @@ public class DescribeCloudGtmAddressPoolResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>Last modification time of the address pool (timestamp).</p>
+     * <p>The timestamp that indicates when the address pool was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>

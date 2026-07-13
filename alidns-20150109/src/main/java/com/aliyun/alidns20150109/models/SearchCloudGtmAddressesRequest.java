@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class SearchCloudGtmAddressesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the return value. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese.</p>
+     * </li>
+     * <li><p>en-US: English. This is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Query by service address with precise conditions, supporting IP addresses or domain names.</p>
+     * <p>Performs an exact search by endpoint. IP addresses and domain names are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -27,19 +29,21 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The address ID. This ID uniquely identifies the address.</p>
+     * <p>The ID of the address. The address ID is a unique identifier.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-89518218114368**92</p>
+     * <p>addr-89518218114368****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>Search by address availability status with precise conditions:</p>
+     * <p>Performs an exact search by the availability status of the address.</p>
      * <ul>
-     * <li>available</li>
-     * <li>unavailable</li>
+     * <li><p>available: The address is available.</p>
+     * </li>
+     * <li><p>unavailable: The address is unavailable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,10 +53,12 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String availableStatus;
 
     /**
-     * <p>Query by exact address enable status:</p>
+     * <p>Performs an exact search by the status of the address.</p>
      * <ul>
-     * <li>enable: enabled status</li>
-     * <li>disable: disabled status</li>
+     * <li><p>enable: The address is enabled.</p>
+     * </li>
+     * <li><p>disable: The address is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,12 +68,16 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String enableStatus;
 
     /**
-     * <p>The health state of the addresses that you want to query. Valid values:</p>
+     * <p>Performs an exact search by the health status of the address.</p>
      * <ul>
-     * <li>ok: The addresses pass all health checks of the referenced health check templates.</li>
-     * <li>ok_alert: The addresses fail some health checks of the referenced health check templates, but the addresses are deemed available.</li>
-     * <li>ok_no_monitor: The addresses do not reference any health check template.</li>
-     * <li>exceptional: The addresses fail some or all health checks of the referenced health check templates, and the addresses are deemed unavailable.</li>
+     * <li><p>ok: All health check tasks for the referenced health check template are normal.</p>
+     * </li>
+     * <li><p>ok_alert: Some health check tasks for the referenced health check template are abnormal, but the address is still considered normal.</p>
+     * </li>
+     * <li><p>ok_no_monitor: The address does not reference any health check templates.</p>
+     * </li>
+     * <li><p>exceptional: Some or all health check tasks for the referenced health check template are abnormal, and the address is considered abnormal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +87,7 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>Health check template name.</p>
+     * <p>The name of the health check template.</p>
      * 
      * <strong>example:</strong>
      * <p>Ping-IPv4</p>
@@ -86,10 +96,12 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String monitorTemplateName;
 
     /**
-     * <p>The logical condition for querying addresses by name. This parameter is required if you want to query addresses by name. Valid values:</p>
+     * <p>The search logic for querying by address name. This parameter is required when you query by address name.</p>
      * <ul>
-     * <li>and: displays the results that match all search conditions.</li>
-     * <li>or: displays the results that match some or all search conditions.</li>
+     * <li><p>and: The query returns results that match all the specified keywords.</p>
+     * </li>
+     * <li><p>or: The query returns results that match some or all of the specified keywords.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,13 +111,13 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String nameSearchCondition;
 
     /**
-     * <p>Address name, usually for users to distinguish between different addresses.</p>
+     * <p>The name of the address. This name is used for easy identification.</p>
      */
     @NameInMap("Names")
     public java.util.List<String> names;
 
     /**
-     * <p>Current page number, starting from 1, default is 1.</p>
+     * <p>The current page number. The value starts from 1. The default value is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,7 +127,7 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -125,9 +137,9 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The logical condition for querying addresses by additional description. This parameter is required if you want to query addresses by additional description. Valid values:</p>
-     * <p>and: displays the results that match all search conditions.</p>
-     * <p>or: displays the results that match some or all search conditions.</p>
+     * <p>The search logic for querying by address remarks. This parameter is required when you query by address remarks.</p>
+     * <p>and: The query returns results that match all the specified keywords.</p>
+     * <p>or: The query returns results that match some or all of the specified keywords.</p>
      * 
      * <strong>example:</strong>
      * <p>or</p>
@@ -136,17 +148,20 @@ public class SearchCloudGtmAddressesRequest extends TeaModel {
     public String remarkSearchCondition;
 
     /**
-     * <p>Remarks for the address.</p>
+     * <p>The remarks for the address.</p>
      */
     @NameInMap("Remarks")
     public java.util.List<String> remarks;
 
     /**
-     * <p>Search precisely by address type conditions:</p>
+     * <p>Performs an exact search by the address type.</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
-     * <li>domain</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
+     * <li><p>domain</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

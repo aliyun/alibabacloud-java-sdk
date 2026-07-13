@@ -7,22 +7,24 @@ public class DescribeCloudGtmMonitorTemplateRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong> (default): English</li>
+     * <li><p><strong>zh-CN</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en-US</strong> (default): English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>en-US</p>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the health check template that you want to query. This ID uniquely identifies the health check template.</p>
+     * <p>The unique ID of the health check template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>mtp-89518052425100**80</p>
+     * <p>mtp-89518052425100****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

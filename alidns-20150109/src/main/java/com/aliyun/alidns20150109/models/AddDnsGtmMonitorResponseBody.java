@@ -8,13 +8,13 @@ public class AddDnsGtmMonitorResponseBody extends TeaModel {
      * <p>The ID of the health check configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>MonitorConfigId1</p>
+     * <p>Mon*******</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>

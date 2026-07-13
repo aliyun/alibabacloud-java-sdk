@@ -14,7 +14,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CC625C21-8832-4683-BF10-C3CFB1A4FA13</p>
@@ -35,7 +35,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     public DescribeDomainStatisticsSummaryResponseBodyStatistics statistics;
 
     /**
-     * <p>The total number of data records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>68</p>
@@ -44,7 +44,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>14</p>

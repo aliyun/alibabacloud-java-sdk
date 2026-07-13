@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurPage")
     public Integer curPage;
 
+    /**
+     * <p>The paginated data.</p>
+     */
     @NameInMap("PageData")
     public java.util.List<DescribeInterAuthStatisticsSummaryResponseBodyPageData> pageData;
 
     /**
+     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -31,6 +38,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -38,6 +47,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
     public Integer totalPage;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>48</p>
      */
@@ -99,6 +110,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
 
     public static class DescribeInterAuthStatisticsSummaryResponseBodyPageData extends TeaModel {
         /**
+         * <p>The start time of the current period (the 0th second of the minute).</p>
+         * 
          * <strong>example:</strong>
          * <p>1776754800000</p>
          */
@@ -106,6 +119,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public Long aggrTimestamp;
 
         /**
+         * <p>The number of requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -113,6 +128,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The domain name. Queries the transfer records of the specified domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>nervermsf.com</p>
          */
@@ -120,6 +137,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The fluctuation rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>19</p>
          */
@@ -127,6 +146,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public Integer fluctuationValue;
 
         /**
+         * <p>The resolution line.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -134,6 +155,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String line;
 
         /**
+         * <p>The value of the previous period.</p>
+         * 
          * <strong>example:</strong>
          * <p>2227</p>
          */
@@ -141,6 +164,14 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public Long previousCount;
 
         /**
+         * <p>The protocol type of the DNS resolution query request. Valid values:</p>
+         * <ul>
+         * <li><p>UDP</p>
+         * </li>
+         * <li><p>TCP.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TCP%DF\&quot;</p>
          */
@@ -148,6 +179,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The request record type.</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -155,6 +188,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String qtype;
 
         /**
+         * <p>The success rate or proportion.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -162,6 +197,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public Long ratio;
 
         /**
+         * <p>The DNS response code.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -169,6 +206,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String rcode;
 
         /**
+         * <p>The source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>112.16.17.203</p>
          */
@@ -176,6 +215,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String sourceIp;
 
         /**
+         * <p>The ISP of the request source.</p>
+         * 
          * <strong>example:</strong>
          * <p>telecom</p>
          */
@@ -183,6 +224,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String sourceIsp;
 
         /**
+         * <p>The source region for copying the image. If not specified, a random region is selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -190,6 +233,8 @@ public class DescribeInterAuthStatisticsSummaryResponseBody extends TeaModel {
         public String sourceRegion;
 
         /**
+         * <p>The zone name.</p>
+         * 
          * <strong>example:</strong>
          * <p>longzi.xyz</p>
          */

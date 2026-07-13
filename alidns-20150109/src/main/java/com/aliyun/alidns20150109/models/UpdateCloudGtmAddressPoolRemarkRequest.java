@@ -7,8 +7,10 @@ public class UpdateCloudGtmAddressPoolRemarkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,25 @@ public class UpdateCloudGtmAddressPoolRemarkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89528023225442**16</p>
+     * <p>pool-89528023225442****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client. The token can contain only ASCII characters and must be no more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The input parameter serves as the updated note; if an empty value is passed, the note will be deleted.</p>
+     * <p>The new remarks for the address pool. If you leave this parameter empty, the remarks are deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateDnsGtmInstanceGlobalConfigResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
+     * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF559**</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmLogsRequest extends TeaModel {
     /**
-     * <p>The timestamp that specifies the end of the time range to query.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
-     * <p>1363453350000</p>
+     * <p>1363453340000</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     /**
-     * <p>The ID of the GTM instance whose logs you want to query.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>gtm-cn-xxxxx</p>
@@ -23,7 +23,7 @@ public class DescribeGtmLogsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The keyword for searching logs, in case-insensitive &quot;%Keyword%&quot; format.</p>
+     * <p>The keyword for a fuzzy search. The search uses the %Keyword% pattern and is case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +32,7 @@ public class DescribeGtmLogsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -41,7 +41,7 @@ public class DescribeGtmLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeGtmLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1363453340000</p>

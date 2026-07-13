@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
@@ -17,10 +17,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
     public DescribeCloudGtmSystemLinesResponseBodySystemLines systemLines;
 
     /**
-     * <p>The system lines, which are in a tree structure. Only a system line is listed in this example.</p>
+     * <p>The data of the system lines in a tree structure. The complete data is not listed due to its large size.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;displayName\&quot;:\&quot;Default\&quot;,\&quot;id\&quot;:\&quot;default\&quot;,\&quot;isAvailable\&quot;:true,\&quot;name\&quot;:\&quot;Default\&quot;,\&quot;parentId\&quot;:\&quot;\&quot;}]</p>
+     * <p>&quot;SystemLinesTree&quot;:&quot;[{\&quot;displayName\&quot;:\&quot;默认\&quot;,\&quot;id\&quot;:\&quot;default\&quot;,\&quot;isAvailable\&quot;:true,\&quot;name\&quot;:\&quot;默认\&quot;,\&quot;parentId\&quot;:\&quot;\&quot;}</p>
      */
     @NameInMap("SystemLinesTree")
     public String systemLinesTree;

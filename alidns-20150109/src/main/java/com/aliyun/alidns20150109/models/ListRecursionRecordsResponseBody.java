@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecursionRecordsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of records returned for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -12,6 +14,8 @@ public class ListRecursionRecordsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -19,6 +23,8 @@ public class ListRecursionRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The current page number. The value starts from 1. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListRecursionRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned on each page. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,6 +44,8 @@ public class ListRecursionRecordsResponseBody extends TeaModel {
     public ListRecursionRecordsResponseBodyRecords records;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
@@ -43,6 +53,8 @@ public class ListRecursionRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -50,6 +62,8 @@ public class ListRecursionRecordsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

@@ -7,8 +7,10 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,35 +20,35 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The address pools.</p>
+     * <p>A list of address pools.</p>
      */
     @NameInMap("AddressPools")
     public java.util.List<ReplaceCloudGtmInstanceConfigAddressPoolRequestAddressPools> addressPools;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that you use to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
-     * <p>You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the configuration ID of the access domain name.</p>
+     * <p>The ID of the instance configuration. For the same access domain name and GTM instance, you can configure both A and AAAA records. In this case, the GTM instance has two instance configurations. The ConfigId parameter uniquely identifies an instance configuration.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/2797349.html">ListCloudGtmInstanceConfigs</a> operation to query the ConfigId of the instance configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Config-000**11</p>
+     * <p>Config-000****</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
-     * <p>The ID of the GTM 3.0 instance for which you want to change address pools.</p>
+     * <p>The ID of the GTM 3.0 instance for which you want to replace address pools.</p>
      * 
      * <strong>example:</strong>
-     * <p>gtm-cn-wwo3a3hbz**</p>
+     * <p>gtm-cn-wwo3a3hb****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -98,26 +100,28 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends TeaModel {
 
     public static class ReplaceCloudGtmInstanceConfigAddressPoolRequestAddressPools extends TeaModel {
         /**
-         * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+         * <p>The unique ID of the address pool.</p>
          * <ul>
-         * <li>If you specify this parameter, the address pools that are associated with the desired instance are removed and the instance is associated with new address pools.</li>
-         * <li>If this parameter is left empty, the address pools that are associated with the desired instance are removed and no address pool is associated with the instance.</li>
+         * <li><p>If you specify this parameter, the existing address pools associated with the target instance are deleted and replaced with the address pools that you specify.</p>
+         * </li>
+         * <li><p>If you leave this parameter empty, all address pools associated with the target instance are deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>pool-89564542105737**12</p>
+         * <p>pool-89564542105737****</p>
          */
         @NameInMap("AddressPoolId")
         public String addressPoolId;
 
         /**
-         * <p>The DNS request sources.</p>
+         * <p>A list of request sources.</p>
          */
         @NameInMap("RequestSource")
         public java.util.List<String> requestSource;
 
         /**
-         * <p>The sequence number of the new address pool. The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number specifies the priority for returning the address pool. A smaller sequence number specifies a higher priority.</p>
+         * <p>The ordinal number. For DNS requests from any source, address pools with smaller ordinal numbers are returned first. A smaller ordinal number indicates a higher priority. This parameter takes effect for the updated address pools.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -126,7 +130,7 @@ public class ReplaceCloudGtmInstanceConfigAddressPoolRequest extends TeaModel {
         public Integer serialNumber;
 
         /**
-         * <p>The weight value of the new address pool. You can set a different weight value for each address pool. This way, address pools are returned based on the weight values for Domain Name System (DNS) requests. A weight value must be an integer that ranges from 1 to 100.</p>
+         * <p>The weight of the address pool. Valid values are integers from 1 to 100. You can set a different weight for each address pool. DNS queries are resolved based on the specified weights. This parameter takes effect for the updated address pools.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

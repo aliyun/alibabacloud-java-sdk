@@ -8,7 +8,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
     public DescribeDnsGtmLogsResponseBodyLogs logs;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,16 +17,16 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned per page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>50C60A29-2E93-425A-ABA8-068686E28873</p>
@@ -35,7 +35,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned on all pages.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

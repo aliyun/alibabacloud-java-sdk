@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRecursionRecordResponseBody extends TeaModel {
     /**
+     * <p>The ID of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>12*****</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRecursionRecordResponseBody extends TeaModel {
     public String recordId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePdnsRequestStatisticRequest extends TeaModel {
     /**
-     * <p>The primary domain name whose statistics you want to query.</p>
+     * <p>The primary domain name for which you want to query statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -14,20 +14,22 @@ public class DescribePdnsRequestStatisticRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>The default value is the day when you query the data.</p>
+     * <p>The end date of the query in the <strong>YYYY-MM-DD</strong> format.</p>
+     * <p>The default value is the current day.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-7-1 00:00:00</p>
+     * <p>2024-07-01</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,17 +39,17 @@ public class DescribePdnsRequestStatisticRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>You can query only records of the last 90 days.</p>
+     * <p>The start date of the query in the <strong>YYYY-MM-DD</strong> format.</p>
+     * <p>You can query data from the last 90 days.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-06-14 00:00:00</p>
+     * <p>2024-06-14</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
-     * <p>The subdomain name whose statistics you want to query.</p>
+     * <p>The subdomain for which you want to query statistics.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -56,11 +58,14 @@ public class DescribePdnsRequestStatisticRequest extends TeaModel {
     public String subDomain;
 
     /**
-     * <p>The type of the request statistics that you want to query. Valid values:</p>
+     * <p>The dimension for statistics. Valid values:</p>
      * <ul>
-     * <li><strong>ACCOUNT</strong>: queries the request statistics by account.</li>
-     * <li><strong>DOMAIN</strong>: queries the request statistics by domain name.</li>
-     * <li><strong>SUB_DOMAIN</strong>: queries the request statistics by subdomain name.</li>
+     * <li><p><strong>ACCOUNT</strong>: queries statistics by account.</p>
+     * </li>
+     * <li><p><strong>DOMAIN</strong>: queries statistics by domain name. The DomainName parameter is required.</p>
+     * </li>
+     * <li><p><strong>SUB_DOMAIN</strong>: queries statistics by subdomain. The DomainName and SubDomain parameters are required.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

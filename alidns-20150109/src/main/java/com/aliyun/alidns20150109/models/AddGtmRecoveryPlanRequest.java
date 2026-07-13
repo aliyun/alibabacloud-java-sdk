@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGtmRecoveryPlanRequest extends TeaModel {
     /**
-     * <p>The IDs of faulty address pools.</p>
+     * <p>The IDs of the faulty address pools.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddGtmRecoveryPlanRequest extends TeaModel {
     public String faultAddrPool;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -34,7 +34,7 @@ public class AddGtmRecoveryPlanRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The description of the disaster recovery plan.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>remark</p>

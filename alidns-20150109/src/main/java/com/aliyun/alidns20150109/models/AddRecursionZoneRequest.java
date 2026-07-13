@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddRecursionZoneRequest extends TeaModel {
     /**
+     * <p>A client token that ensures the idempotence of the request. You can specify a custom value. Make sure that the value is unique among different requests. The value can contain up to 64 ASCII characters.</p>
+     * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
      */
@@ -12,6 +14,9 @@ public class AddRecursionZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to enable recursive proxy for subdomains. Valid values:</p>
+     * <p>zone: Disables recursive proxy. An NXDOMAIN response is returned for non-existent subdomains. record: Enables recursive proxy. For non-existent subdomains, the system queries the forwarding and recursion modules in sequence and returns the final result.</p>
+     * 
      * <strong>example:</strong>
      * <p>record</p>
      */
@@ -19,6 +24,8 @@ public class AddRecursionZoneRequest extends TeaModel {
     public String proxyPattern;
 
     /**
+     * <p>The name of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

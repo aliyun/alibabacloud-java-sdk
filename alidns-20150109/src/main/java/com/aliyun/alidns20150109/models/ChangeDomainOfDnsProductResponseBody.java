@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ChangeDomainOfDnsProductResponseBody extends TeaModel {
     /**
-     * <p>The domain name that is originally bound to the instance. If no value is returned for this parameter, the instance is bound to a domain name for the first time.</p>
+     * <p>The domain name that was originally attached. If this parameter is empty, it indicates that this is the first time a domain name is attached to the product.</p>
      * 
      * <strong>example:</strong>
-     * <p>originaldomain.com</p>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("OriginalDomain")
     public String originalDomain;

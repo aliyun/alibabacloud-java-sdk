@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategiesRequest extends TeaModel {
     /**
-     * <p>The ID of the GTM instance whose access policies you want to query.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-wwo3a3hbz**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +23,7 @@ public class DescribeGtmAccessStrategiesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeGtmAccessStrategiesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

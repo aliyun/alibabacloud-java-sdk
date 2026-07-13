@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDnsCacheDomainRequest extends TeaModel {
     /**
-     * <p>The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+     * <p>The maximum TTL for cached data from an origin fetch. The value must be an integer from 30 to 86400.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     public Integer cacheTtlMax;
 
     /**
-     * <p>The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.</p>
+     * <p>The minimum time-to-live (TTL) for cached data from an origin fetch. The value must be an integer from 30 to 86400.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,30 +25,34 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     public Integer cacheTtlMin;
 
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name.&lt;props=&quot;china&quot;&gt; Call the <a href="https://help.aliyun.com/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a> operation to query the domain name.
+     * &lt;props=&quot;intl&quot;&gt;Call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a> operation to query the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns.example.com</p>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The instance ID of the cache-accelerated domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances</a> operation to obtain the instance ID.</p>
+     * <p>The ID of the authoritative proxy instance.&lt;props=&quot;china&quot;&gt; Call the <a href="https://help.aliyun.com/en/dns/api-alidns-2015-01-09-listcloudgtminstances">ListCloudGtmInstances</a> operation to query the instance ID.
+     * &lt;props=&quot;intl&quot;&gt;Call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-listcloudgtminstances">ListCloudGtmInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-cn-j6666</p>
+     * <p>dns-cn-*****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. The default value is zh. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English Default: <strong>zh</strong></li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,14 +71,14 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</p>
+     * <p>A list of origin DNS servers. You can specify up to 10 servers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceDnsServer")
     public java.util.List<AddDnsCacheDomainRequestSourceDnsServer> sourceDnsServer;
 
     /**
-     * <p>Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
+     * <p>SUPPORT: The origin server supports EDNS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +88,7 @@ public class AddDnsCacheDomainRequest extends TeaModel {
     public String sourceEdns;
 
     /**
-     * <p>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</p>
+     * <p>The protocol used for origin fetch. Valid values: TCP and UDP. The default value is UDP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -172,11 +176,11 @@ public class AddDnsCacheDomainRequest extends TeaModel {
 
     public static class AddDnsCacheDomainRequestSourceDnsServer extends TeaModel {
         /**
-         * <p>The domain name or IP address of the origin DNS server.</p>
+         * <p>The domain name or IP address of the origin server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.0.0.0</p>
+         * <p>192.168.0.1</p>
          */
         @NameInMap("Host")
         public String host;

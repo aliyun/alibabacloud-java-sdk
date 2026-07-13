@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRecursionZoneResponseBody extends TeaModel {
     /**
+     * <p>The time when the zone was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-06-06T11:34Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The UNIX timestamp that indicates when the zone was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1533773400000</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
+     * <p>The ID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>SOAR</p>
      */
@@ -26,6 +32,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The subtype of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUB</p>
      */
@@ -33,6 +41,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String creatorSubType;
 
     /**
+     * <p>The type of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
@@ -43,6 +53,10 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public DescribeRecursionZoneResponseBodyEffectiveScopes effectiveScopes;
 
     /**
+     * <p>Indicates whether recursive proxy for subdomains is enabled. Valid values:</p>
+     * <p>zone: Disabled. If a non-existent subdomain is requested, an NXDOMAIN response is returned to indicate that the subdomain does not exist.
+     * record: Enabled. If a non-existent subdomain is requested, the system queries the forwarding and recursion modules in sequence. The final query result is used to respond to the DNS request.</p>
+     * 
      * <strong>example:</strong>
      * <p>record</p>
      */
@@ -50,6 +64,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String proxyPattern;
 
     /**
+     * <p>The number of DNS records in the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -57,6 +73,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public Integer recordCount;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -64,6 +82,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String remark;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
@@ -71,6 +91,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the zone was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-01-03T08:57Z</p>
      */
@@ -78,6 +100,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The UNIX timestamp that indicates when the zone was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
      */
@@ -85,6 +109,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public Long updateTimestamp;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
      */
@@ -92,6 +118,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String userId;
 
     /**
+     * <p>The zone ID. This is the unique identifier of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>169438909000011</p>
      */
@@ -99,6 +127,8 @@ public class DescribeRecursionZoneResponseBody extends TeaModel {
     public String zoneId;
 
     /**
+     * <p>The name of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cheng.suow.cc</p>
      */

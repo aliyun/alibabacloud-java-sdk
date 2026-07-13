@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInterAuthStatisticsZoneOverviewRequest extends TeaModel {
     /**
+     * <p>The statistical period. Valid values: DAY, WEEK, and MONTH.</p>
+     * 
      * <strong>example:</strong>
      * <p>DAY、WEEK、MONTH</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInterAuthStatisticsZoneOverviewRequest extends TeaModel {
     public String overviewPeriod;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>DescribeInterAuthStatisticsZoneOverview</p>
      */
@@ -19,6 +23,8 @@ public class DescribeInterAuthStatisticsZoneOverviewRequest extends TeaModel {
     public String serverRegion;
 
     /**
+     * <p>The name of the zone.</p>
+     * 
      * <strong>example:</strong>
      * <p>cheng.suow.cc</p>
      */

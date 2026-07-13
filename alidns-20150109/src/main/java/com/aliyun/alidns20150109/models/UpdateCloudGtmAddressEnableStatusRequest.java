@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressEnableStatusRequest extends TeaModel {
     /**
-     * <p>The language of the returned results. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><p>zh-CN: Chinese</p>
      * </li>
@@ -20,29 +20,31 @@ public class UpdateCloudGtmAddressEnableStatusRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the address. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-89518218114368**92</p>
+     * <p>addr-89518218114368****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that is used to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The enabling state of the address. Valid values:</p>
+     * <p>The enabled status of the address:</p>
      * <ul>
-     * <li>enable: The address is enabled and the address can be used for Domain Name System (DNS) resolution if the address passes health checks.</li>
-     * <li>disable: The address is disabled and the address cannot be used for DNS resolution regardless of whether the address passes health checks or not.</li>
+     * <li><p>enable: The address can be used for DNS resolution if its health check is normal.</p>
+     * </li>
+     * <li><p>disable: The address cannot be used for DNS resolution, regardless of its health check status.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

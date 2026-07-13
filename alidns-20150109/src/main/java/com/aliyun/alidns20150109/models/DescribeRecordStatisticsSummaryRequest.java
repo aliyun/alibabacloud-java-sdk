@@ -9,16 +9,18 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-example.com</p>
+     * <p>example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+     * <p>The type of the domain name. This parameter is not case-sensitive. Valid values:</p>
      * <ul>
-     * <li>PUBLIC (default): hosted public domain name</li>
-     * <li>CACHE: cache-accelerated domain name</li>
+     * <li><p>PUBLIC: authoritative domain name (default)</p>
+     * </li>
+     * <li><p>CACHE: proxy domain name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,8 +30,8 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public String domainType;
 
     /**
-     * <p>The end date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>The default value is the day when you query the data.</p>
+     * <p>The end date of the query. The format is <strong>YYYY-MM-DD</strong>.</p>
+     * <p>The default value is the current day.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>
@@ -38,7 +40,7 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The keyword for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+     * <p>The keyword. The search is performed in the %KeyWord% format and is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -47,7 +49,14 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
+     * <p>The default value is en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -56,7 +65,7 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +74,7 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>, the minimum value is <strong>1</strong>, and the default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -74,10 +83,12 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The search mode of the keyword. Valid values:</p>
+     * <p>The search mode for the keyword. Valid values:</p>
      * <ul>
-     * <li><strong>LIKE</strong> (default): fuzzy search</li>
-     * <li><strong>EXACT</strong>: exact search</li>
+     * <li><p><strong>LIKE</strong>: fuzzy search (default)</p>
+     * </li>
+     * <li><p><strong>EXACT</strong>: exact match</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,8 +98,8 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public String searchMode;
 
     /**
-     * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>You can only query the DNS records within the last 90 days.``</p>
+     * <p>The start date of the query. The format is <strong>YYYY-MM-DD</strong>.</p>
+     * <p>You can query data only from the last 90 days. The value of <code>StartDate</code> must be greater than or equal to the current date minus 90 days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +109,15 @@ public class DescribeRecordStatisticsSummaryRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.</p>
+     * <p>The threshold for the number of DNS requests. This operation returns data for subdomains whose request count is less than or equal to this value.</p>
+     * <ul>
+     * <li><p>If you set this parameter to 100, subdomains with a request count from 1 to 100 are returned.</p>
+     * </li>
+     * <li><p>If you leave this parameter empty, all subdomains that have DNS requests are returned.</p>
+     * </li>
+     * <li><p>If you set this parameter to 0, subdomains with no DNS requests are returned. If a domain name is added on the current day and has no requests, you can query its data on the next day.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>12</p>

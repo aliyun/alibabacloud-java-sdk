@@ -7,8 +7,10 @@ public class DeleteCloudGtmAddressRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese.</p>
+     * </li>
+     * <li><p>en-US (default): English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,20 +20,20 @@ public class DeleteCloudGtmAddressRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The address ID. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-895182181143688192</p>
+     * <p>addr-89518218114368****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that ensures the idempotence of the request. The token must be unique among different requests. The token can be up to 64 ASCII characters long.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

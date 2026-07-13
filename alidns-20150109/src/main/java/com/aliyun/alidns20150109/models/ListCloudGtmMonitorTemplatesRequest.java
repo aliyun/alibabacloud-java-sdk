@@ -7,21 +7,25 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese.</p>
+     * </li>
+     * <li><p>en-US (default): English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>en-US</p>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The IP address type of health check nodes. Valid values:</p>
+     * <p>The IP version of the detection points.</p>
      * <ul>
-     * <li>IPv4: applicable when health checks are performed on IPv4 addresses.</li>
-     * <li>IPv6: applicable when health checks are performed on IPv6 addresses.</li>
+     * <li><p>IPv4: The destination address is an IPv4 address.</p>
+     * </li>
+     * <li><p>IPv6: The destination address is an IPv6 address.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +35,7 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The name of the health check probe template, which is recommended to be distinguishable for configuration personnel to differentiate and remember, ideally indicating the health check protocol.</p>
+     * <p>The name of the health check template. Name the template in a way that helps you distinguish between different health check protocols.</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4-Ping</p>
@@ -40,7 +44,7 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +54,7 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,12 +64,16 @@ public class ListCloudGtmMonitorTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Protocol types for initiating probes to the target IP address:</p>
+     * <p>The protocol used for the health check.</p>
      * <ul>
-     * <li>ping</li>
-     * <li>tcp</li>
-     * <li>http</li>
-     * <li>https</li>
+     * <li><p>ping</p>
+     * </li>
+     * <li><p>tcp</p>
+     * </li>
+     * <li><p>http</p>
+     * </li>
+     * <li><p>https</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

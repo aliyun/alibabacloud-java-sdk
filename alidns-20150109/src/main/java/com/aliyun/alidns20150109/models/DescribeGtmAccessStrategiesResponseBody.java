@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     /**
-     * <p>The number of the page returned.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0CCC9971-CEC9-4132-824B-4AE611C07623</p>
@@ -35,7 +35,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     public DescribeGtmAccessStrategiesResponseBodyStrategies strategies;
 
     /**
-     * <p>The total number of entries returned on all pages.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class DescribeGtmAccessStrategiesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

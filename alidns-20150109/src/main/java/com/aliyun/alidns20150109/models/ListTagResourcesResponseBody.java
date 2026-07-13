@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token to start the next query. An empty value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>4698691</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>61092C8D-6AEB-4310-B74D-C632F89BF4FB</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the resource and the tags that are added to the resource, including information such as the resource ID, resource type, tag keys, and tag values.</p>
+     * <p>A collection of resources and their tags. It includes information such as the resource ID, resource type, tag key, and tag value.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -59,16 +59,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>dns-example.com</p>
+         * <p>example.com</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. Only DOMAIN is returned.</p>
+         * <p>The resource type. The value is DOMAIN.</p>
          * 
          * <strong>example:</strong>
          * <p>DOMAIN</p>

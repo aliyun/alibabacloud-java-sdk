@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ReplaceCloudGtmAddressPoolAddressShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The response language. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US (default)</strong>: English</li>
+     * <li><p><strong>zh-CN</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en-US</strong> (Default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,25 @@ public class ReplaceCloudGtmAddressPoolAddressShrinkRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the address pool for which you want to replace addresses. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool to update.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89618921167339**24</p>
+     * <p>pool-89618921167339****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
-     * <p>The addresses.</p>
+     * <p>The list of addresses.</p>
      */
     @NameInMap("Addresses")
     public String addressesShrink;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Ensure the client token is unique for each request. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

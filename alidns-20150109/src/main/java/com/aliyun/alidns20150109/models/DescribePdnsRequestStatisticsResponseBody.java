@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The statistics on the DNS requests.</p>
+     * <p>The list of request statistics.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribePdnsRequestStatisticsResponseBodyData> data;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>. Valid values: <strong>1 to 100</strong>.</p>
+     * <p>The number of entries returned per page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -38,7 +38,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>49</p>
@@ -93,7 +93,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
 
     public static class DescribePdnsRequestStatisticsResponseBodyDataThreatInfo extends TeaModel {
         /**
-         * <p>The current version does not support this parameter.</p>
+         * <p>This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -104,7 +104,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public String threatLevel;
 
         /**
-         * <p>The current version does not support this parameter.</p>
+         * <p>This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -139,7 +139,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
 
     public static class DescribePdnsRequestStatisticsResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of DoH requests, including the HTTP and HTTPS requests.</p>
+         * <p>The total number of DoH requests. This includes the total number of HTTP and HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -166,7 +166,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long httpCount;
 
         /**
-         * <p>The number of HTTPS requests. On the Traffic Analysis tab of the public DNS console, the value of this parameter includes the number of DNS over HTTPs (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</p>
+         * <p>The number of HTTPS requests. On the Traffic Analysis tab of the Public DNS console, this parameter includes the number of DNS over HTTPS (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -184,7 +184,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long ipCount;
 
         /**
-         * <p>The current version does not support this parameter.</p>
+         * <p>This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -195,7 +195,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public String maxThreatLevel;
 
         /**
-         * <p>The subdomain name.</p>
+         * <p>The subdomain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -204,7 +204,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public String subDomain;
 
         /**
-         * <p>The current version does not support this parameter.</p>
+         * <p>This parameter is not supported in the current version.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -215,7 +215,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long threatCount;
 
         /**
-         * <p>The current version does not support this parameter.</p>
+         * <p>This parameter is not supported in the current version.</p>
          */
         @NameInMap("ThreatInfo")
         public java.util.List<DescribePdnsRequestStatisticsResponseBodyDataThreatInfo> threatInfo;
@@ -239,7 +239,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long udpTotalCount;
 
         /**
-         * <p>The number of IPv4-based requests.</p>
+         * <p>The number of IPv4 requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -248,7 +248,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long v4Count;
 
         /**
-         * <p>The number of IPv4-based HTTP requests.</p>
+         * <p>The number of IPv4 HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -257,7 +257,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long v4HttpCount;
 
         /**
-         * <p>The number of IPv4-based HTTPS requests.</p>
+         * <p>The number of IPv4 HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -266,7 +266,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long v4HttpsCount;
 
         /**
-         * <p>The number of IPv6-based requests.</p>
+         * <p>The number of IPv6 requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -275,7 +275,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long v6Count;
 
         /**
-         * <p>The number of IPv6-based HTTP requests.</p>
+         * <p>The number of IPv6 HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -284,7 +284,7 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         public Long v6HttpCount;
 
         /**
-         * <p>The number of IPv6-based HTTPS requests.</p>
+         * <p>The number of IPv6 HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGtmAddressPoolResponseBody extends TeaModel {
     /**
-     * <p>The ID of the address pool created.</p>
+     * <p>The ID of the address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>hraf3x</p>
@@ -23,7 +23,7 @@ public class AddGtmAddressPoolResponseBody extends TeaModel {
     public String monitorConfigId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>

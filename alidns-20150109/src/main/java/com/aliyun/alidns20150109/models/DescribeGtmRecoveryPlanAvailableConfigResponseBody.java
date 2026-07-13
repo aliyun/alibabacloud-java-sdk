@@ -8,7 +8,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
     public DescribeGtmRecoveryPlanAvailableConfigResponseBodyInstances instances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F8F8EF50-8B7F-4702-B294-97170A423403</p>

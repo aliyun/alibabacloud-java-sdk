@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecursionRecordRequest extends TeaModel {
     /**
+     * <p>The unique ID of the DNS record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

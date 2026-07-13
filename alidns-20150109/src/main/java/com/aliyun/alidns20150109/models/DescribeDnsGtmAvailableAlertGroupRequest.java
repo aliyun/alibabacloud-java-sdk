@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAvailableAlertGroupRequest extends TeaModel {
     /**
-     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

@@ -4,11 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInterAuthStatisticsZoneOverviewResponseBody extends TeaModel {
+    /**
+     * <p>The overview data for the zone.</p>
+     */
     @NameInMap("Data")
     public DescribeInterAuthStatisticsZoneOverviewResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -39,6 +42,8 @@ public class DescribeInterAuthStatisticsZoneOverviewResponseBody extends TeaMode
 
     public static class DescribeInterAuthStatisticsZoneOverviewResponseBodyData extends TeaModel {
         /**
+         * <p>The number of domain names with refused responses.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -46,6 +51,8 @@ public class DescribeInterAuthStatisticsZoneOverviewResponseBody extends TeaMode
         public Long refusedDomainCount;
 
         /**
+         * <p>The number of domain names with a sudden drop in QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>66</p>
          */
@@ -53,6 +60,8 @@ public class DescribeInterAuthStatisticsZoneOverviewResponseBody extends TeaMode
         public Long suddenDropDomainCount;
 
         /**
+         * <p>The number of domain names with a sudden increase in QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>56</p>
          */

@@ -8,7 +8,7 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
      * <p>The ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>testpool1</p>
+     * <p>hrbv**</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
@@ -17,16 +17,16 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
      * <p>The ID of the health check configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>hra**a</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD5799335**B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

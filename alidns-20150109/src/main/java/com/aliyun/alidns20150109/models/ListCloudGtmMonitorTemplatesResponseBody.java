@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Current page number, starting from 1, default is 1.</p>
+     * <p>The number of the returned page. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries returned on each page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
@@ -35,7 +35,7 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public ListCloudGtmMonitorTemplatesResponseBodyTemplates templates;
 
     /**
-     * <p>Total number of health check template entries retrieved.</p>
+     * <p>The total number of health check templates.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -44,7 +44,7 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>Total number of pages after data pagination.</p>
+     * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

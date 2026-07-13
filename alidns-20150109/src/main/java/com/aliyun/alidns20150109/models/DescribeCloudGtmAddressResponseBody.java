@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     /**
-     * <p>IP address or domain name.</p>
+     * <p>The IP address or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -14,28 +14,30 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String address;
 
     /**
-     * <p>The address ID. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-89518218114368**92</p>
+     * <p>addr-89518218114368****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>Address ownership information.</p>
+     * <p>The attribution information of the address.</p>
      * 
      * <strong>example:</strong>
-     * <p>The current version does not support passing this parameter, please do not input the parameter.</p>
+     * <p>当前版本不支持此参数，不会返回地址归属信息。</p>
      */
     @NameInMap("AttributeInfo")
     public String attributeInfo;
 
     /**
-     * <p>The failover method that is used if the address fails health checks. Valid values:</p>
+     * <p>The switchover mode for the address when a health check detects an exception:</p>
      * <ul>
-     * <li>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
-     * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for Domain Name System (DNS) requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+     * <li><p>auto: Automatic mode. The system determines whether to stop or resume DNS resolution for the address based on health check results. DNS resolution is stopped if the address is abnormal and is resumed if the address becomes normal.</p>
+     * </li>
+     * <li><p>manual: Manual mode. You manually control the address status. If the address is set to abnormal, DNS resolution is stopped and is not resumed even if the health check result is normal. If the address is set to normal, DNS resolution is performed. An alert is triggered but DNS resolution is not stopped if a health check detects an exception.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +47,12 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String availableMode;
 
     /**
-     * <p>Address availability status:</p>
+     * <p>The availability status of the address:</p>
      * <ul>
-     * <li>available: Available</li>
-     * <li>unavailable: Unavailable</li>
+     * <li><p>available: The address is available.</p>
+     * </li>
+     * <li><p>unavailable: The address is unavailable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +62,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String availableStatus;
 
     /**
-     * <p>Address creation time.</p>
+     * <p>The time when the address was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-23T13:09Z</p>
@@ -67,7 +71,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Creation time (timestamp).</p>
+     * <p>The UNIX timestamp when the address was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -76,9 +80,9 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>Indicates the current enabled status of the address:
-     * enabled: enabled state
-     * disabled: disabled state</p>
+     * <p>The enabled status of the address:</p>
+     * <p>enable: The address is enabled.</p>
+     * <p>disable: The address is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>enable</p>
@@ -87,13 +91,18 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String enableStatus;
 
     /**
-     * <p>The condition for determining the health status of the address. Valid values:</p>
+     * <p>The health determination condition for the address:</p>
      * <ul>
-     * <li>any_ok: The health check results of at least one health check template are normal.</li>
-     * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
-     * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
-     * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
-     * <li>all_ok: The health check results of all health check templates are normal.</li>
+     * <li><p>any_ok: At least one health check probe is normal.</p>
+     * </li>
+     * <li><p>p30_ok: At least 30% of health check probes are normal.</p>
+     * </li>
+     * <li><p>p50_ok: At least 50% of health check probes are normal.</p>
+     * </li>
+     * <li><p>p70_ok: At least 70% of health check probes are normal.</p>
+     * </li>
+     * <li><p>all_ok: All health check probes are normal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,12 +112,16 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String healthJudgement;
 
     /**
-     * <p>The health check state of the address. Valid values:</p>
+     * <p>The health check result of the address:</p>
      * <ul>
-     * <li>ok: The address passes all health checks of the referenced health check templates.</li>
-     * <li>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</li>
-     * <li>ok_no_monitor: The address does not reference a health check template.</li>
-     * <li>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</li>
+     * <li><p>ok: All health check tasks that are associated with the address are normal.</p>
+     * </li>
+     * <li><p>ok_alert: Some health check tasks that are associated with the address are abnormal, but the address is still considered normal.</p>
+     * </li>
+     * <li><p>ok_no_monitor: The address is not associated with any health check tasks.</p>
+     * </li>
+     * <li><p>exceptional: Some or all health check tasks that are associated with the address are abnormal, and the address is considered abnormal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,10 +134,12 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public DescribeCloudGtmAddressResponseBodyHealthTasks healthTasks;
 
     /**
-     * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
+     * <p>The availability status of the address that is set when the switchover mode is manual:</p>
      * <ul>
-     * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
-     * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
+     * <li><p>available: The address is available. DNS resolution is performed for the address. If a health check detects an exception, an alert is triggered but DNS resolution is not stopped.</p>
+     * </li>
+     * <li><p>unavailable: The address is unavailable. DNS resolution is stopped for the address and is not resumed even if the health check result is normal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +149,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String manualAvailableStatus;
 
     /**
-     * <p>Address name.</p>
+     * <p>The name of the address.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -143,7 +158,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Remarks.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>
@@ -152,7 +167,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String remark;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
@@ -161,11 +176,14 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Address type:</p>
+     * <p>The type of the address. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
-     * <li>domain</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
+     * <li><p>domain</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,7 +193,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The last modification time of the address configuration.</p>
+     * <p>The time when the address configuration was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-29T13:20Z</p>
@@ -184,7 +202,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>Modified time (timestamp).</p>
+     * <p>The UNIX timestamp when the address was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>

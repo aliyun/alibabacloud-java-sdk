@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDomainDnssecStatusRequest extends TeaModel {
     /**
-     * <p>The domain name for which you want to enable the DNSSEC. Only the users of the paid editions of Alibaba Cloud DNS can enable this feature.</p>
+     * <p>The domain name for which you want to enable DNSSEC. This feature is available only to users of paid Alibaba Cloud DNS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,14 @@ public class SetDomainDnssecStatusRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the return value. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -29,10 +31,12 @@ public class SetDomainDnssecStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The DNSSEC status. Valid values:</p>
+     * <p>The status of DNSSEC. Valid values:</p>
      * <ul>
-     * <li>ON: enables DNSSEC for the domain name.</li>
-     * <li>OFF: disables DNSSEC for the domain name.</li>
+     * <li><p>ON: Enables DNSSEC.</p>
+     * </li>
+     * <li><p>OFF: Disables DNSSEC.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

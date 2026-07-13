@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     /**
-     * <p>The domain names.</p>
+     * <p>The list of domain names returned.</p>
      */
     @NameInMap("Domains")
     public java.util.List<DescribeDnsCacheDomainsResponseBodyDomains> domains;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>57121A9C-CDCF-541F-AD39-275D89099420</p>
@@ -38,7 +38,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -93,7 +93,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
 
     public static class DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers extends TeaModel {
         /**
-         * <p>The domain name or IP address of the origin DNS server.</p>
+         * <p>The domain name or IP address of the origin server.</p>
          * 
          * <strong>example:</strong>
          * <p>ns8.alidns.com</p>
@@ -135,7 +135,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
 
     public static class DescribeDnsCacheDomainsResponseBodyDomains extends TeaModel {
         /**
-         * <p>The maximum time-to-live (TTL) period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * <p>The maximum Time to Live (TTL) for cached data retrieved from the origin server. The value ranges from 30 to 86400.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -144,7 +144,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public Integer cacheTtlMax;
 
         /**
-         * <p>The minimum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * <p>The minimum TTL for cached data retrieved from the origin server. The value ranges from 30 to 86400.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -153,7 +153,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public Integer cacheTtlMin;
 
         /**
-         * <p>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the domain name was added.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-10-17T06:13Z</p>
@@ -162,7 +162,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp that indicates when the domain name was added.</p>
          * 
          * <strong>example:</strong>
          * <p>1660546144000</p>
@@ -171,25 +171,25 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The ID of the cache-accelerated domain name.</p>
+         * <p>The ID of the authoritative proxy domain.</p>
          * 
          * <strong>example:</strong>
-         * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
+         * <p>00efd71a-770e-*****************</p>
          */
         @NameInMap("DomainId")
         public String domainId;
 
         /**
-         * <p>The cache-accelerated domain name.</p>
+         * <p>The name of the authoritative proxy domain.</p>
          * 
          * <strong>example:</strong>
-         * <p>dns-example.top</p>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-12-02T16:00Z</p>
@@ -198,7 +198,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The time when the instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp that indicates when the instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1692374400000</p>
@@ -207,16 +207,16 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public Long expireTimestamp;
 
         /**
-         * <p>The instance ID of the cache-accelerated domain name.</p>
+         * <p>The ID of the authoritative proxy domain instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-7bg</p>
+         * <p>i-7***</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The description of the domain name.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark</p>
@@ -225,13 +225,13 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The origin DNS servers.</p>
+         * <p>The list of origin DNS servers.</p>
          */
         @NameInMap("SourceDnsServers")
         public java.util.List<DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers> sourceDnsServers;
 
         /**
-         * <p>Specifies whether the origin Domain Name System (DNS) server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
+         * <p>Indicates whether the origin server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
          * 
          * <strong>example:</strong>
          * <p>SUPPORT</p>
@@ -240,7 +240,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public String sourceEdns;
 
         /**
-         * <p>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</p>
+         * <p>The origin protocol. Valid values: TCP and UDP. The default value is UDP.</p>
          * 
          * <strong>example:</strong>
          * <p>UDP</p>
@@ -249,7 +249,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public String sourceProtocol;
 
         /**
-         * <p>The time when the configurations of the domain name were updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the domain name was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-22T03:40Z</p>
@@ -258,7 +258,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The time when the configurations of the domain name were updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp that indicates when the domain name was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1671690491000</p>
@@ -267,7 +267,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
-         * <p>The edition code of Alibaba Cloud DNS.</p>
+         * <p>The version code of Alibaba Cloud DNS.</p>
          * 
          * <strong>example:</strong>
          * <p>ultimate</p>

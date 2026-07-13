@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateCloudGtmAddressResponseBody extends TeaModel {
     /**
-     * <p>The address ID. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-8951821811436**192</p>
+     * <p>addr-8951821811436****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
@@ -23,10 +23,12 @@ public class CreateCloudGtmAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the address creation operation is successful:</p>
+     * <p>Indicates whether the address was created. Valid values:</p>
      * <ul>
-     * <li>true: Operation was successful</li>
-     * <li>false: Operation was failed</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

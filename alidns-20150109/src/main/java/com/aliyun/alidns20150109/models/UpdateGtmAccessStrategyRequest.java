@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGtmAccessStrategyRequest extends TeaModel {
     /**
-     * <p>The line codes of access regions.</p>
+     * <p>The source of the DNS requests.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;default&quot;, &quot;mobile&quot;]</p>
@@ -14,7 +14,7 @@ public class UpdateGtmAccessStrategyRequest extends TeaModel {
     public String accessLines;
 
     /**
-     * <p>The ID of the default address pool.</p>
+     * <p>The ID of the primary address pool collection.</p>
      * 
      * <strong>example:</strong>
      * <p>hrsix</p>
@@ -23,7 +23,7 @@ public class UpdateGtmAccessStrategyRequest extends TeaModel {
     public String defaultAddrPoolId;
 
     /**
-     * <p>The ID of the failover address pool.</p>
+     * <p>The ID of the failover address pool collection.</p>
      * 
      * <strong>example:</strong>
      * <p>hrsyw</p>
@@ -32,7 +32,7 @@ public class UpdateGtmAccessStrategyRequest extends TeaModel {
     public String failoverAddrPoolId;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -41,7 +41,7 @@ public class UpdateGtmAccessStrategyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the access policy that you want to query for the GTM instance.</p>
+     * <p>The ID of the access policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +52,9 @@ public class UpdateGtmAccessStrategyRequest extends TeaModel {
 
     /**
      * <p>The name of the access policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>访问策略测试</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;

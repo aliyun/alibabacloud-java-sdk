@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class TagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The IDs of the resources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid value:</p>
      * <ul>
      * <li><strong>DOMAIN</strong>: domain name</li>
      * </ul>
@@ -41,7 +43,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>An array of tag key-value pairs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -86,7 +88,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 20 characters in length and cannot start with <code>acs:</code> or<code>aliyun</code>.</p>
+         * <p>The tag key. The key cannot start with <code>acs:</code> or <code>aliyun</code> and cannot be longer than 20 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -95,7 +97,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 20 bytes in length.</p>
+         * <p>The tag value. The value cannot be longer than 20 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>

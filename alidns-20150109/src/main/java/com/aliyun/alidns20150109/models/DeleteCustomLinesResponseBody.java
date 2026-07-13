@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomLinesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>

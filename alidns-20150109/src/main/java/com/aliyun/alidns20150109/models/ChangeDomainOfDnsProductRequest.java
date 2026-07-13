@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ChangeDomainOfDnsProductRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcibly bind a domain name to the instance. Valid values:</p>
+     * <p>Specifies whether to forcefully attach the domain name.
+     * Valid values:</p>
      * <ul>
-     * <li><strong>false</strong><strong>: no</strong></li>
-     * <li><strong>true</strong>: <strong>yes</strong></li>
+     * <li><p><strong>false</strong>: No</p>
+     * </li>
+     * <li><p><strong>true</strong>: Yes</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>false</strong>.</p>
+     * <p>The default value is <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,23 +22,26 @@ public class ChangeDomainOfDnsProductRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The ID of the Alibaba Cloud Domain Name System (DNS) instance.</p>
-     * <p>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances </a>operation to obtain the ID.</p>
+     * <p>The ID of the Cloud DNS product.
+     * You can obtain the ID by calling <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-7sb</p>
+     * <p>i-7XX</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response.
+     * Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>zh</strong>.</p>
+     * <p>The default value is <strong>zh</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -44,19 +50,19 @@ public class ChangeDomainOfDnsProductRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The domain name that you want to bind to the instance. If you leave this parameter empty, the domain name that is bound to the instance is unbound from the instance.</p>
+     * <p>The domain name that you want to attach. If you leave this parameter empty, the currently attached domain name is detached.</p>
      * 
      * <strong>example:</strong>
-     * <p>newdomain.com</p>
+     * <p>example.com</p>
      */
     @NameInMap("NewDomain")
     public String newDomain;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.1</p>
+     * <p>1.1.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

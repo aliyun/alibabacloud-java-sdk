@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class BindInstanceDomainsRequest extends TeaModel {
     /**
-     * <p>The domain names.</p>
+     * <p>A list of domain names.</p>
      * <blockquote>
-     * <p> Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
+     * <p>Separate multiple domain names with a comma (,). You can specify up to 100 domain names.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,17 +18,24 @@ public class BindInstanceDomainsRequest extends TeaModel {
     public String domainNames;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the Alibaba Cloud DNS instance. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-listcloudgtminstances">ListCloudGtmInstances</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sdfasdf</p>
+     * <p>s********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
+     * <p>Default value: zh</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

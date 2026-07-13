@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class SearchCloudGtmInstancesRequest extends TeaModel {
     /**
-     * <p>The language of the return value. Options are:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese. </li>
-     * <li><strong>en-US</strong>: English.</li>
+     * <li><p><strong>zh-CN</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en-US</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -25,10 +27,10 @@ public class SearchCloudGtmInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Make sure that the token is unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -37,13 +39,13 @@ public class SearchCloudGtmInstancesRequest extends TeaModel {
      * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>gtm-cn-wwo3a3hbz**</p>
+     * <p>gtm-cn-wwo3a3h****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>Schedule instance name, supports fuzzy search.</p>
+     * <p>The name of the scheduling instance. Fuzzy search is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -52,7 +54,7 @@ public class SearchCloudGtmInstancesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>Current page number, starting from 1, default is 1.</p>
+     * <p>The number of the page to return. The value starts from 1. The default value is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +64,7 @@ public class SearchCloudGtmInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

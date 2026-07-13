@@ -9,7 +9,7 @@ public class AddDomainBackupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test.aliyun.com</p>
+     * <p>dns-example.top</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,10 +17,12 @@ public class AddDomainBackupRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -31,8 +33,10 @@ public class AddDomainBackupRequest extends TeaModel {
     /**
      * <p>The backup cycle. Valid values:</p>
      * <ul>
-     * <li>DAY: backs up data on a daily basis.</li>
-     * <li>HOUR: backs up data on an hourly basis.</li>
+     * <li><p>DAY: Backs up the domain once a day.</p>
+     * </li>
+     * <li><p>HOUR: Backs up the domain once an hour.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

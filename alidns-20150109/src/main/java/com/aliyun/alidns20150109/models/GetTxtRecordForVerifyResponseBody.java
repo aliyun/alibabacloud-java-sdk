@@ -7,7 +7,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     /**
      * <p>The domain name.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, it is not returned.</p>
+     * <p>This parameter is not returned if no value is specified for the DomainName parameter in the request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The top-level domain name.</p>
+     * <p>The top-level domain (TLD).</p>
      * 
      * <strong>example:</strong>
      * <p>com</p>
@@ -26,16 +26,16 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     public String parentDomainName;
 
     /**
-     * <p>The hostname.</p>
+     * <p>The host record.</p>
      * 
      * <strong>example:</strong>
-     * <p>aliyunRetrieval</p>
+     * <p>aliyun******</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9CC0D642-49D4-48DE-A1A5-9F218652E4A7</p>
@@ -46,7 +46,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     /**
      * <p>The record value.</p>
      * <blockquote>
-     * <p> The validity period is three days.</p>
+     * <p>The value is valid for three days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

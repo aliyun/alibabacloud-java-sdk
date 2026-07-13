@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
     /**
-     * <p>The total number of instances within the current account.</p>
+     * <p>The total number of instances in your account.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
     public Integer monitorTaskTotalQuota;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</p>

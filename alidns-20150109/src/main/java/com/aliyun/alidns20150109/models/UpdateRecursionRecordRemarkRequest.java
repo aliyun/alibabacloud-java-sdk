@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRecursionRecordRemarkRequest extends TeaModel {
     /**
+     * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The value can contain only ASCII characters and must be no more than 64 characters long.</p>
+     * 
      * <strong>example:</strong>
      * <p>e432232342423ew423</p>
      */
@@ -12,7 +14,7 @@ public class UpdateRecursionRecordRemarkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>record id</p>
+     * <p>The ID of the record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +24,8 @@ public class UpdateRecursionRecordRemarkRequest extends TeaModel {
     public String recordId;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

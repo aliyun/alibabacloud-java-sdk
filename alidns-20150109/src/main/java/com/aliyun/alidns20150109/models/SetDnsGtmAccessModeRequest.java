@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class SetDnsGtmAccessModeRequest extends TeaModel {
     /**
-     * <p>The switchover policy for primary and secondary address pool sets. Valid values:</p>
+     * <p>The switchover policy for the address pool collection:</p>
      * <ul>
-     * <li>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</li>
-     * <li>DEFAULT: the primary address pool set</li>
-     * <li>FAILOVER: the secondary address pool set</li>
+     * <li><p>AUTO: Automatic switchover</p>
+     * </li>
+     * <li><p>DEFAULT: The primary address pool collection</p>
+     * </li>
+     * <li><p>FAILOVER: The secondary address pool collection</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>auto</p>
+     * <p>AUTO</p>
      */
     @NameInMap("AccessMode")
     public String accessMode;
 
     /**
-     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of certain response parameters. Default: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -29,11 +32,11 @@ public class SetDnsGtmAccessModeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The policy ID.</p>
+     * <p>The ID of the access policy. Call <a href="https://help.aliyun.com/document_detail/2357191.html">DescribeDnsGtmAccessStrategies</a> to obtain the policy ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>strategyId</p>
+     * <p>hr**zb</p>
      */
     @NameInMap("StrategyId")
     public String strategyId;

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel {
     /**
-     * <p>The policy for load balancing between address pools. Valid values:</p>
+     * <p>The load balancing policy for the address pools.</p>
      * <ul>
-     * <li>round_robin: All address pools are returned for DNS requests from any source. All address pools are sorted in round-robin mode each time they are returned.</li>
-     * <li>sequence: The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number indicates the priority for returning the address pool. A smaller sequence number indicates a higher priority. If the address pool with the smallest sequence number is unavailable, the address pool with the second smallest sequence number is returned.</li>
-     * <li>weight: You can set a different weight value for each address pool. This way, address pools are returned based on the weight values.</li>
-     * <li>source_nearest: GTM returns different addresses based on the sources of DNS requests. This way, users can access nearby addresses.</li>
+     * <li><p>round_robin: Returns all address pools for any DNS request. The address pools are rotated in order for each request.</p>
+     * </li>
+     * <li><p>sequence: Returns the address pool with the smallest ordinal number for any DNS request. The ordinal number indicates the priority of the address pool. A smaller value indicates a higher priority. If the address pool with the smallest ordinal number is unavailable, the address pool with the next smallest ordinal number is returned.</p>
+     * </li>
+     * <li><p>weight: Returns address pools based on the specified weight for each address pool.</p>
+     * </li>
+     * <li><p>source_nearest: Returns different address pools based on the source of the DNS requests. This implements proximity-based access for users.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +23,14 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     @NameInMap("AddressPoolLbStrategy")
     public String addressPoolLbStrategy;
 
+    /**
+     * <p>The address pools.</p>
+     */
     @NameInMap("AddressPools")
     public DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPools addressPools;
 
     /**
-     * <p>Alert notification configuration.</p>
+     * <p>The alert notification configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;NoticeType\&quot;:\&quot;addr_alert\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true},{\&quot;NoticeType\&quot;:\&quot;addr_resume\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true},{\&quot;NoticeType\&quot;:\&quot;addr_pool_unavailable\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true},{\&quot;NoticeType\&quot;:\&quot;addr_pool_available\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true}]&quot;</p>
@@ -32,19 +39,21 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String alertConfig;
 
     /**
-     * <p>Alert notification group.</p>
+     * <p>The alert group.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\&quot;Default Contact Group\&quot;]</p>
+     * <p>[\&quot;云账号报警联系人\&quot;]</p>
      */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
     /**
-     * <p>The availability state of the access domain name. Valid values:</p>
+     * <p>The service availability status of the instance.</p>
      * <ul>
-     * <li>available: If the access domain name is <strong>enabled</strong> and the health state of the access domain name is <strong>Normal</strong>, the access domain name is deemed <strong>available</strong>.</li>
-     * <li>unavailable: If the access domain name is <strong>disabled</strong> or the health state of the access domain name is <strong>Abnormal</strong>, the access domain name is deemed <strong>unavailable</strong>.</li>
+     * <li><p><code>available</code>: The instance is enabled and its health status is Normal. The service is available for the access domain name.</p>
+     * </li>
+     * <li><p><code>unavailable</code>: The instance is disabled or its health status is abnormal. The service is unavailable for the access domain name.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,10 +63,12 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String availableStatus;
 
     /**
-     * <p>The commodity code. Valid values:</p>
+     * <p>The commodity code.</p>
      * <ul>
-     * <li>dns_gtm_public_cn: the commodity code on the China site (aliyun.com)</li>
-     * <li>dns_gtm_public_intl: the commodity code on the international site (alibabacloud.com)</li>
+     * <li><p>dns_gtm_public_cn: The commodity code for the China site (aliyun.com).</p>
+     * </li>
+     * <li><p>dns_gtm_public_intl: The commodity code for the international site (alibabacloud.com).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,16 +78,16 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String commodityCode;
 
     /**
-     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+     * <p>The ID of the instance configuration. You can configure both A and AAAA records for the same access domain name and Global Traffic Manager (GTM) instance. In this case, the GTM instance has two configurations. The ConfigId uniquely identifies an instance configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>Config-000**11</p>
+     * <p>Config-000****</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
-     * <p>Instance creation time.</p>
+     * <p>The time when the instance was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-15T01:46Z</p>
@@ -85,7 +96,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String createTime;
 
     /**
-     * <p>Instance creation time (timestamp).</p>
+     * <p>The UNIX timestamp that indicates when the instance was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -94,10 +105,12 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public Long createTimestamp;
 
     /**
-     * <p>The enabling state of the access domain name. Valid values:</p>
+     * <p>The enabled status of the instance.</p>
      * <ul>
-     * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</li>
-     * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance does not take effect.</li>
+     * <li><p>enable: The GTM instance is enabled and its intelligent scheduling policy is active.</p>
+     * </li>
+     * <li><p>disable: The GTM instance is disabled and its intelligent scheduling policy is inactive.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,11 +120,14 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String enableStatus;
 
     /**
-     * <p>The health state of the access domain name. Valid values:</p>
+     * <p>The health status of the instance.</p>
      * <ul>
-     * <li>ok: The health state of the access domain name is Normal and all address pools that are referenced by the access domain name are available.</li>
-     * <li>ok_alert: The health state of the access domain name is Warning and some of the address pools that are referenced by the access domain name are unavailable. In this case, the available address pools are normally used for DNS resolution, but the unavailable address pools cannot be used for DNS resolution.</li>
-     * <li>exceptional: The health state of the access domain name is Abnormal and all address pools that are referenced by the access domain name are unavailable. In this case, addresses in the non-empty address pool with the smallest sequence number are preferentially used for fallback resolution. This returns DNS results for clients as much as possible.</li>
+     * <li><p>ok: Normal. All address pools referenced by the access domain name are available.</p>
+     * </li>
+     * <li><p>ok_alert: Warning. Some of the address pools referenced by the access domain name are unavailable. In this state, DNS requests are resolved to the available address pools, but not to the unavailable ones.</p>
+     * </li>
+     * <li><p>exceptional: Abnormal. All address pools referenced by the access domain name are unavailable. In this case, DNS requests are resolved to the addresses in the non-empty address pool with the smallest ordinal number as a failover measure. This helps ensure that clients can receive DNS responses.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,16 +137,16 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String healthStatus;
 
     /**
-     * <p>The ID of the GTM 3.0 instance.</p>
+     * <p>The ID of the Global Traffic Manager 3.0 instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>gtm-cn-wwo3a3hbz**</p>
+     * <p>gtm-cn-wwo3a3h****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>Schedule instance name.</p>
+     * <p>The name of the GTM instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -139,7 +155,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String instanceName;
 
     /**
-     * <p>Remarks of the configuration of domain instance.</p>
+     * <p>The remarks on the instance configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -148,7 +164,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String remark;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
@@ -157,7 +173,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The GTM access domain name. The value of this parameter is composed of the value of ScheduleHostname and the value of ScheduleZoneName.</p>
+     * <p>The GTM access domain name. The format is ScheduleHostname + ScheduleZoneName.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -166,7 +182,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String scheduleDomainName;
 
     /**
-     * <p>Host name of the domain accessed by GTM.</p>
+     * <p>The host record of the GTM access domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>www</p>
@@ -175,11 +191,14 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String scheduleHostname;
 
     /**
-     * <p>DNS record types for the ScheduleDomainName:</p>
+     * <p>The DNS record type of the GTM access domain name.</p>
      * <ul>
-     * <li>A: IPv4 address</li>
-     * <li>AAAA: IPv6 address</li>
-     * <li>CNAME: Domain name</li>
+     * <li><p>A: IPv4 address</p>
+     * </li>
+     * <li><p>AAAA: IPv6 address</p>
+     * </li>
+     * <li><p>CNAME: canonical name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,10 +208,12 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String scheduleRrType;
 
     /**
-     * <p>The allocation mode of the access domain name. Valid values:</p>
+     * <p>The assignment mode of the access domain name.</p>
      * <ul>
-     * <li>custom: custom allocation. You must specify a custom hostname and associate the hostname with a zone or subzone within the account to which the GTM instance belongs to generate an access domain name.</li>
-     * <li>sys_assign: The system assigns an access domain name by default. This mode is no longer supported. Do not choose this mode.</li>
+     * <li><p>custom: You can customize the host record and associate it with a primary domain name or a subdomain name under the account to which the GTM instance belongs. This generates the access domain name.</p>
+     * </li>
+     * <li><p>sys_assign: The system assigns a default access domain name. This feature is no longer supported. Do not select this mode.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -202,7 +223,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String scheduleZoneMode;
 
     /**
-     * <p>The zone (such as example.com) or subzone (such as a.example.com) associated with the GTM access domain name. In most cases, the zone or subzone is hosted in Authoritative DNS Resolution of the Alibaba Cloud DNS console within the account to which the GTM instance belongs.</p>
+     * <p>The primary domain name (example.com) or subdomain name (a.example.com) of the GTM access domain name. This is typically a domain name hosted in the authoritative zone of the Alibaba Cloud DNS console under the account to which the GTM instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -211,10 +232,12 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String scheduleZoneName;
 
     /**
-     * <p>The mode used if the address pool with the smallest sequence number is recovered. This parameter is required when AddressPoolLbStrategy is set to sequence. Valid values:</p>
+     * <p>When the load balancing policy for address pools is sequence, this parameter specifies the service recovery mode for a resource that becomes available again.</p>
      * <ul>
-     * <li>preemptive: The address pool with the smallest sequence number is preferentially used if this address pool is recovered.</li>
-     * <li>non_preemptive: The current address pool is still used even if the address pool with the smallest sequence number is recovered.</li>
+     * <li><p>preemptive: The address pool with the smaller ordinal number is preferentially used.</p>
+     * </li>
+     * <li><p>non_preemptive: The current address pool is still used.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -224,7 +247,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String sequenceLbStrategyMode;
 
     /**
-     * <p>Global TTL (in seconds), the TTL value for resolving the access domain to addresses in the address pool, which affects the caching time of DNS records in the ISP\&quot;s LocalDNS. Custom TTL values are supported.</p>
+     * <p>The global time to live (TTL) in seconds. This is the TTL value for the DNS records that map the access domain name to the addresses in the address pool. It affects the cache duration of the DNS records on carrier Local DNS servers. You can customize the TTL value.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -233,7 +256,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public Integer ttl;
 
     /**
-     * <p>Last modified time.</p>
+     * <p>The time when the instance was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-15T01:46Z</p>
@@ -242,7 +265,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public String updateTime;
 
     /**
-     * <p>Last modified time (timestamp).</p>
+     * <p>The UNIX timestamp that indicates when the instance was last modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -251,10 +274,12 @@ public class DescribeCloudGtmInstanceConfigFullInfoResponseBody extends TeaModel
     public Long updateTimestamp;
 
     /**
-     * <p>Global Traffic Management version 3.0 instances:</p>
+     * <p>The edition of the Global Traffic Manager 3.0 instance.</p>
      * <ul>
-     * <li>standard: Standard Edition</li>
-     * <li>ultimate: Ultimate Edition</li>
+     * <li><p>standard: Standard Edition</p>
+     * </li>
+     * <li><p>ultimate: Ultimate Edition</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

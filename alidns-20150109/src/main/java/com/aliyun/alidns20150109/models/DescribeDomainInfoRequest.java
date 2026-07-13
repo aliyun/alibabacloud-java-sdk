@@ -5,17 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainInfoRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name. Call <a href="https://help.aliyun.com/document_detail/2357286.html">DescribeDomains</a> to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-example.com</p>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,8 +31,15 @@ public class DescribeDomainInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether detailed attributes are required. Default value: <strong>false</strong>, which indicates that detailed attributes are not returned.</p>
-     * <p>If you set this parameter to <strong>true</strong>, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</p>
+     * <p>Specifies whether to return detailed attributes of the domain name. Valid values:</p>
+     * <ul>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
+     * </ul>
+     * <p>The default value is false.</p>
+     * <p>If you set this parameter to <strong>true</strong>, the response includes the following parameters: lineType, minTtl, recordLineTreeJson, recordLines, lineCode, lineDisplayName, lineName, regionLines, and slaveDns.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyGtmConfigRequest extends TeaModel {
     /**
-     * <p>The type of the object that is copied. Only the INSTANCE type is supported.</p>
+     * <p>The type of copy. Only INSTANCE is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

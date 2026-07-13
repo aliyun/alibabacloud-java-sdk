@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDnsGtmAccessModeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>

@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This field is returned only when Resource Access Management (RAM) authentication fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData data;
 
     /**
+     * <p>Indicates whether the request can be retried if it fails. true: The request can be retried. false: The request cannot be retried.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,6 +26,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
     public Boolean recoverableError;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0629502C-6224-5DC9-A8ED-2ED73A2E3931</p>
      */
@@ -25,6 +35,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. true: The request was successful. false: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,13 +90,17 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
-         * <p>CreateUser</p>
+         * <p>UpdateRspDomainServerProhibitStatusForGateway</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
+         * <p>The display name of the authorized entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -92,6 +108,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The ID of the owner of the authorized entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
          */
@@ -99,6 +117,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The identity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -106,6 +126,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
         public String authPrincipalType;
 
         /**
+         * <p>The encrypted complete diagnostic information.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</p>
          */
@@ -113,6 +135,14 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The reason why authentication failed. Valid values:</p>
+         * <ul>
+         * <li><p>ExplicitDeny: The access is explicitly denied.</p>
+         * </li>
+         * <li><p>ImplicitDeny: The access is implicitly denied.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -120,6 +150,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -191,6 +223,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>uptp.test.abchina.com.cn</p>
          */
@@ -198,12 +232,20 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
         public String domainName;
 
         /**
+         * <p>The current status of the domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>serverUpdateProhibited</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The message for the domain name status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实名认证未通过，增加serverUpdateProhibited状态</p>
+         */
         @NameInMap("StatusMsg")
         public String statusMsg;
 
@@ -240,12 +282,17 @@ public class UpdateRspDomainServerProhibitStatusForGatewayResponseBody extends T
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayResponseBodyData extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status information of the task.</p>
+         */
         @NameInMap("StatusList")
         public java.util.List<UpdateRspDomainServerProhibitStatusForGatewayResponseBodyDataStatusList> statusList;
 

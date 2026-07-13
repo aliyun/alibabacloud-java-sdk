@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlansRequest extends TeaModel {
     /**
-     * <p>The keyword for the query. Fuzzy match is supported by disaster recovery plan name.</p>
+     * <p>The keyword for the query. This parameter supports a fuzzy search by disaster recovery plan name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,10 @@ public class DescribeGtmRecoveryPlansRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * <p>The language of the response. Valid values are <code>en</code> for English and <code>zh</code> for Chinese. The default value is <code>zh</code>.</p>
+     * <p>en: English.</p>
+     * <p>en: English</p>
+     * <p>Default value: zh.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +26,7 @@ public class DescribeGtmRecoveryPlansRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number to return. The page number starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. Pages start from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +35,7 @@ public class DescribeGtmRecoveryPlansRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the domain name group. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups</a> operation to obtain the ID.</p>
+     * <p>The ID of the domain name group.&lt;props=&quot;china&quot;&gt;Call the <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomainGroups</a> operation to obtain the ID.
+     * &lt;props=&quot;intl&quot;&gt;Call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>d367113100944e488352f99e3c7d****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -17,10 +18,12 @@ public class DeleteDomainGroupRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: en.</p>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

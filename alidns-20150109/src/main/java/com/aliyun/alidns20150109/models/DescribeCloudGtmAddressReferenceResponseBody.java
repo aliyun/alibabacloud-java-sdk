@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
     /**
-     * <p>IP address or domain name.</p>
+     * <p>The IP address or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -14,10 +14,10 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
     public String address;
 
     /**
-     * <p>The address ID. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-89564584963974**40</p>
+     * <p>addr-89564584963974****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
@@ -26,7 +26,7 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
     public DescribeCloudGtmAddressReferenceResponseBodyAddressPools addressPools;
 
     /**
-     * <p>Address name.</p>
+     * <p>The name of the address.</p>
      * 
      * <strong>example:</strong>
      * <p>Address-1</p>
@@ -35,7 +35,7 @@ public class DescribeCloudGtmAddressReferenceResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>

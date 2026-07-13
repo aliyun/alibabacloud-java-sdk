@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     /**
-     * <p>The time when the disaster recovery plan was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the disaster recovery plan was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-11T05:04Z</p>
@@ -14,7 +14,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The time when the disaster recovery plan was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the disaster recovery plan was created. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1565499867000</p>
@@ -23,7 +23,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The number of faulty address pools.</p>
+     * <p>The number of abnormal address pools.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -35,7 +35,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public DescribeGtmRecoveryPlanResponseBodyFaultAddrPools faultAddrPools;
 
     /**
-     * <p>The time when the disaster recovery plan was last executed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the disaster recovery plan was last executed.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-08-11T05:04Z</p>
@@ -44,7 +44,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String lastExecuteTime;
 
     /**
-     * <p>The time when the disaster recovery plan was last executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the disaster recovery plan was last executed. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1565505898000</p>
@@ -53,19 +53,19 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public Long lastExecuteTimestamp;
 
     /**
-     * <p>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the disaster recovery plan was last rolled back. The value is a string that represents a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-08-11T06:45Z</p>
+     * <p>1565505919000</p>
      */
     @NameInMap("LastRollbackTime")
     public String lastRollbackTime;
 
     /**
-     * <p>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
-     * <p>1565505919000</p>
+     * <p>1565505898000</p>
      */
     @NameInMap("LastRollbackTimestamp")
     public Long lastRollbackTimestamp;
@@ -83,13 +83,13 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
      * <p>The ID of the disaster recovery plan.</p>
      * 
      * <strong>example:</strong>
-     * <p>55</p>
+     * <p>10****</p>
      */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;
 
     /**
-     * <p>The description of the disaster recovery plan.</p>
+     * <p>The remarks.</p>
      * 
      * <strong>example:</strong>
      * <p>remark-example</p>
@@ -107,7 +107,15 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the disaster recovery plan.</p>
+     * <p>The status of the disaster recovery plan:</p>
+     * <ul>
+     * <li><p>UNEXECUTED: The disaster recovery plan is not executed.</p>
+     * </li>
+     * <li><p>EXECUTED: The disaster recovery plan is being executed.</p>
+     * </li>
+     * <li><p>ROLLED_BACK: The disaster recovery plan is being rolled back.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>UNEXECUTED</p>
@@ -116,19 +124,19 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the disaster recovery plan was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the disaster recovery plan was last updated.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-08-11T06:45Z</p>
+     * <p>2024-03-29T13:20Z</p>
      */
     @NameInMap("UpdateTime")
     public String updateTime;
 
     /**
-     * <p>The time when the disaster recovery plan was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the disaster recovery plan was last updated. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
-     * <p>1565499867000</p>
+     * <p>1565505898000</p>
      */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCustomLineRequest extends TeaModel {
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name.&lt;props=&quot;china&quot;&gt;Call the <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.&lt;props=&quot;intl&quot;&gt;Call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,17 +15,19 @@ public class AddCustomLineRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The CIDR blocks.</p>
+     * <p>The list of IP address segments.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("IpSegment")
     public java.util.List<AddCustomLineRequestIpSegment> ipSegment;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,6 +39,9 @@ public class AddCustomLineRequest extends TeaModel {
     /**
      * <p>The name of the custom line.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>北京线路</p>
      */
     @NameInMap("LineName")
     public String lineName;
@@ -80,7 +85,7 @@ public class AddCustomLineRequest extends TeaModel {
 
     public static class AddCustomLineRequestIpSegment extends TeaModel {
         /**
-         * <p>The end IP address of the CIDR block.</p>
+         * <p>The end IP address of the segment.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.2.254</p>
@@ -89,7 +94,7 @@ public class AddCustomLineRequest extends TeaModel {
         public String endIp;
 
         /**
-         * <p>The start IP address of the CIDR block.</p>
+         * <p>The start IP address of the segment.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.2.0</p>

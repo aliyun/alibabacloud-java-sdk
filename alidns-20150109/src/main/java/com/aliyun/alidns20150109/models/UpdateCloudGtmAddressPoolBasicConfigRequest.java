@@ -7,8 +7,10 @@ public class UpdateCloudGtmAddressPoolBasicConfigRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,16 +20,16 @@ public class UpdateCloudGtmAddressPoolBasicConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+     * <p>The unique ID of the address pool.</p>
      * 
      * <strong>example:</strong>
-     * <p>pool-89528023225442**16</p>
+     * <p>pool-89528023225442****</p>
      */
     @NameInMap("AddressPoolId")
     public String addressPoolId;
 
     /**
-     * <p>Address pool name, helping users distinguish the purpose of address pools.</p>
+     * <p>The name of the address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>app</p>
@@ -36,22 +38,27 @@ public class UpdateCloudGtmAddressPoolBasicConfigRequest extends TeaModel {
     public String addressPoolName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The client generates this token to make sure that each request is unique. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The condition for determining the health status of the address pool. Valid values:</p>
+     * <p>The condition for determining the health status of the address pool.</p>
      * <ul>
-     * <li>any_ok: At least one address in the address pool is available.</li>
-     * <li>p30_ok: At least 30% of the addresses in the address pool are available.</li>
-     * <li>p50_ok: At least 50% of the addresses in the address pool are available.</li>
-     * <li>p70_ok: At least 70% of the addresses in the address pool are available.</li>
-     * <li>all_ok: All addresses in the address pool are available.</li>
+     * <li><p>any_ok: At least one address in the address pool is active.</p>
+     * </li>
+     * <li><p>p30_ok: At least 30% of the addresses in the address pool are active.</p>
+     * </li>
+     * <li><p>p50_ok: At least 50% of the addresses in the address pool are active.</p>
+     * </li>
+     * <li><p>p70_ok: At least 70% of the addresses in the address pool are active.</p>
+     * </li>
+     * <li><p>all_ok: All addresses in the address pool are active.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

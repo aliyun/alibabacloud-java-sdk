@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmInstanceConfigRemarkResponseBody extends TeaModel {
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
      */
@@ -12,6 +14,14 @@ public class UpdateCloudGtmInstanceConfigRemarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The operation was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

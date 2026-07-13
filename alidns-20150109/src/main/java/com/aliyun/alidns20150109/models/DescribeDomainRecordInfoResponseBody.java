@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the domain name.</p>
+     * <p>The domain ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
+     * <p>00efd71a-7************</p>
      */
     @NameInMap("DomainId")
     public String domainId;
@@ -17,7 +17,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
      * <p>The domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-example.top</p>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -26,7 +26,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
      * <p>The ID of the domain name group.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>2****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -41,7 +41,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The DNS resolution line.</p>
+     * <p>The resolution line.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -50,7 +50,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String line;
 
     /**
-     * <p>The lock state of the DNS record. Valid values: <strong>true and false</strong>.</p>
+     * <p>The lock status of the DNS record. Valid values: true and <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,7 +59,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public Boolean locked;
 
     /**
-     * <p>The priority of the mail exchanger (MX) record.</p>
+     * <p>The priority of the MX record.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -68,7 +68,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public Long priority;
 
     /**
-     * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+     * <p>The Punycode for the Chinese domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>xn--fsq270a.com</p>
@@ -89,13 +89,13 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
      * <p>The ID of the DNS record.</p>
      * 
      * <strong>example:</strong>
-     * <p>9999985</p>
+     * <p>9******</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
-     * <p>The description of your DNS record.</p>
+     * <p>The remarks for the DNS record.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -114,8 +114,8 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
 
     /**
      * <p>The status of the DNS record. Valid values:</p>
-     * <p>Enable: enabled</p>
-     * <p>Disable: disabled</p>
+     * <p>Enable: The DNS record is enabled.</p>
+     * <p>Disable: The DNS record is paused.</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>
@@ -124,7 +124,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time for which the DNS record is cached in a local DNS system.</p>
+     * <p>The time to live (TTL). This specifies the duration for which the DNS record is cached on a local DNS server.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -133,7 +133,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public Long TTL;
 
     /**
-     * <p>The type of the DNS record.</p>
+     * <p>The record type.</p>
      * 
      * <strong>example:</strong>
      * <p>MX</p>

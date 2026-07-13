@@ -8,7 +8,7 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
      * <p>The ID of the DNS record.</p>
      * 
      * <strong>example:</strong>
-     * <p>9999985</p>
+     * <p>9*******</p>
      */
     @NameInMap("RecordId")
     public String recordId;
@@ -23,7 +23,7 @@ public class SetDomainRecordStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the DNS record.</p>
+     * <p>The current status of the DNS record.</p>
      * 
      * <strong>example:</strong>
      * <p>Disable</p>

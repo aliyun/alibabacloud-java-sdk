@@ -7,8 +7,10 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,22 +20,24 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The alert configurations.</p>
+     * <p>A list of alert configurations.</p>
      */
     @NameInMap("AlertConfig")
     public java.util.List<UpdateCloudGtmInstanceConfigAlertRequestAlertConfig> alertConfig;
 
     /**
-     * <p>The alert contact groups.</p>
+     * <p>A list of alert notification groups.</p>
      */
     @NameInMap("AlertGroup")
     public java.util.List<String> alertGroup;
 
     /**
-     * <p>The alert configuration mode of the instance. Valid values:</p>
+     * <p>The alert configuration mode for the instance. Valid values:</p>
      * <ul>
-     * <li>global: global alert configuration</li>
-     * <li>instance_config: custom alert configuration</li>
+     * <li><p>global: The instance inherits the global alert configuration.</p>
+     * </li>
+     * <li><p>instance_config: The instance uses a custom alert configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +47,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
     public String alertMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that ensures the idempotence of the request. The client must generate a unique value for this parameter. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
@@ -52,7 +56,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The configuration ID of the access domain name. Two configuration IDs exist when an A record and an AAAA record are configured for the access domain name that is bound to the GTM instance. This ID uniquely identifies a configuration.</p>
+     * <p>The ID of the domain name instance configuration. A GTM instance can have two configurations for the same access domain name if you configure both A and AAAA records. The ConfigId uniquely identifies a configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>Config-000**11</p>
@@ -132,10 +136,12 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
 
     public static class UpdateCloudGtmInstanceConfigAlertRequestAlertConfig extends TeaModel {
         /**
-         * <p>Specifies whether to configure DingTalk notifications. Valid values:</p>
+         * <p>Specifies whether to enable DingTalk notifications. Valid values:</p>
          * <ul>
-         * <li>true: configures DingTalk notifications. DingTalk notifications are sent when alerts are triggered.</li>
-         * <li>false: does not configure DingTalk notifications.</li>
+         * <li><p>true: Enabled. When an alert is triggered, a DingTalk message is sent.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,10 +151,12 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
         public Boolean dingtalkNotice;
 
         /**
-         * <p>Specifies whether to configure email notifications. Valid values:</p>
+         * <p>Specifies whether to enable email notifications. Valid values:</p>
          * <ul>
-         * <li>true: configures email notifications. Emails are sent when alerts are triggered.</li>
-         * <li>false: does not configure email notifications.</li>
+         * <li><p>true: Enabled. When an alert is triggered, an email is sent.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,12 +166,16 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
         public Boolean emailNotice;
 
         /**
-         * <p>The type of the alert event. Valid values:</p>
+         * <p>The type of alert event. Valid values:</p>
          * <ul>
-         * <li>addr_alert: The address is unavailable.</li>
-         * <li>addr_resume: The address becomes available.</li>
-         * <li>addr_pool_unavailable: The address pool is unavailable.</li>
-         * <li>addr_pool_available: The address pool becomes available.</li>
+         * <li><p>addr_alert: The address is unavailable.</p>
+         * </li>
+         * <li><p>addr_resume: The address has recovered.</p>
+         * </li>
+         * <li><p>addr_pool_unavailable: The address pool is unavailable.</p>
+         * </li>
+         * <li><p>addr_pool_available: The address pool has recovered.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,12 +185,14 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends TeaModel {
         public String noticeType;
 
         /**
-         * <p>Specifies whether to configure text message notifications. Valid values:</p>
+         * <p>Specifies whether to enable text message notifications. Valid values:</p>
          * <ul>
-         * <li>true: configures text message notifications. Text messages are sent when alerts are triggered.</li>
-         * <li>false: does not configure text message notifications.</li>
+         * <li><p>true: Enabled. When an alert is triggered, a text message is sent.</p>
+         * </li>
+         * <li><p>false: Disabled.</p>
+         * </li>
          * </ul>
-         * <p>Only the China site (aliyun.com) supports text message notifications.</p>
+         * <p>Note: Text message notifications are supported only on the China site (aliyun.com).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

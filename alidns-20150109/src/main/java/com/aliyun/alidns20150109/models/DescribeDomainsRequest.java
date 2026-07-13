@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainsRequest extends TeaModel {
     /**
-     * <p>The ID of the domain name group. If you do not specify this parameter, all domain names are queried by default.</p>
+     * <p>The ID of the domain name group.</p>
+     * <p>If you leave this parameter empty or pass an empty string, all domain names are queried.</p>
+     * <p>If you set this parameter to defaultGroup, domain names in the default group are queried.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * <p>The keyword. The search is performed in the %KeyWord% pattern and is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>com</p>
@@ -23,7 +25,14 @@ public class DescribeDomainsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
+     * <p>Default value: zh.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -32,7 +41,7 @@ public class DescribeDomainsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +50,7 @@ public class DescribeDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -53,7 +62,7 @@ public class DescribeDomainsRequest extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-resourcegroupid01</p>
+     * <p>rg-re********</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -61,9 +70,12 @@ public class DescribeDomainsRequest extends TeaModel {
     /**
      * <p>The search mode. Valid values:</p>
      * <ul>
-     * <li><strong>LIKE</strong>: fuzzy match.</li>
-     * <li><strong>EXACT</strong>: exact match.</li>
+     * <li><p><strong>LIKE</strong>: fuzzy search</p>
+     * </li>
+     * <li><p><strong>EXACT</strong>: exact search</p>
+     * </li>
      * </ul>
+     * <p>Default value: LIKE</p>
      * 
      * <strong>example:</strong>
      * <p>LIKE</p>
@@ -72,7 +84,14 @@ public class DescribeDomainsRequest extends TeaModel {
     public String searchMode;
 
     /**
-     * <p>Specifies whether to query the starmark of the domain name.</p>
+     * <p>Specifies whether to query starred domain names. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
+     * </ul>
+     * <p>Default value: true</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

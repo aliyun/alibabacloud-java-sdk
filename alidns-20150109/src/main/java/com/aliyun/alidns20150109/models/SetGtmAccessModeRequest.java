@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class SetGtmAccessModeRequest extends TeaModel {
     /**
-     * <p>The desired access policy. Valid values:</p>
+     * <p>The access mode. Valid values:</p>
      * <ul>
-     * <li><strong>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</strong></li>
-     * <li><strong>DEFAULT: specifies the primary address pool set.</strong></li>
-     * <li>**FAILOVER: specifies the secondary address pool set.</li>
+     * <li><p><strong>AUTO</strong>: Automatic switchover</p>
+     * </li>
+     * <li><p><strong>DEFAULT</strong>: The primary address pool collection</p>
+     * </li>
+     * <li><p><strong>FAILOVER</strong>: The secondary address pool collection</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

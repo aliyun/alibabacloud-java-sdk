@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceResponseBody extends TeaModel {
     /**
-     * <p>The number of access policies of the GTM instance.</p>
+     * <p>The number of access policies.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -14,7 +14,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public Integer accessStrategyNum;
 
     /**
-     * <p>The number of address pools of the GTM instance.</p>
+     * <p>The number of address pools.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,38 +23,40 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public Integer addressPoolNum;
 
     /**
-     * <p>The alert group of the GTM instance.</p>
+     * <p>The alert contact group.</p>
      * 
      * <strong>example:</strong>
-     * <p>[\\&quot;Daily test - R\&amp;D group\\&quot;]</p>
+     * <p>[\&quot;日常测试-研发组\&quot;]</p>
      */
     @NameInMap("AlertGroup")
     public String alertGroup;
 
     /**
-     * <p>The domain name of the GTM instance to which the service domain name is mapped by using a CNAME record.</p>
+     * <p>The CNAME access domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1.14.com</p>
+     * <p>gtm-cn-wwo3a3hbz**.dns-example.top</p>
      */
     @NameInMap("Cname")
     public String cname;
 
     /**
-     * <p>Indicates whether the CNAME is a custom domain name or is assigned by the system. Valid values:</p>
+     * <p>The CNAME access mode. Valid values:</p>
      * <ul>
-     * <li><strong>SYSTEM_ASSIGN</strong></li>
-     * <li><strong>CUSTOM</strong></li>
+     * <li><p><strong>SYSTEM_ASSIGN</strong>: The system assigns a domain name.</p>
+     * </li>
+     * <li><p><strong>CUSTOM</strong>: You use a custom domain name.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>SYSTEM_ASSIGN</p>
+     * <p>CUSTOM</p>
      */
     @NameInMap("CnameMode")
     public String cnameMode;
 
     /**
-     * <p>The time when the GTM instance was created.</p>
+     * <p>The time when the instance was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-06-06T11:34Z</p>
@@ -63,7 +65,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The timestamp that indicates the time when the GTM instance was created.</p>
+     * <p>The time when the instance was created. This is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1528284856000</p>
@@ -72,7 +74,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The time when the GTM instance expires.</p>
+     * <p>The time when the instance expires.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-06-06T11:34Z</p>
@@ -81,7 +83,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>The timestamp that indicates the time when the GTM instance expires.</p>
+     * <p>The expiration time of the instance. This is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1528284856000</p>
@@ -93,13 +95,13 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
      * <p>The ID of the GTM instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-wwo3a3hbz**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The name of the GTM instance.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -108,10 +110,12 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The load balancing policy. Valid values:</p>
+     * <p>The load balancing policy.</p>
      * <ul>
-     * <li><strong>ALL_RR</strong>: round robin</li>
-     * <li><strong>RATIO</strong>: weighted round-robin</li>
+     * <li><p><strong>ALL_RR</strong>: round-robin</p>
+     * </li>
+     * <li><p><strong>RATIO</strong>: weighted round-robin</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,7 +125,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public String lbaStrategy;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E41AA251-F9BA-48C6-99B2-2B82B26A573A</p>
@@ -139,7 +143,7 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The global time to live (TTL).</p>
+     * <p>The global TTL.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -148,10 +152,10 @@ public class DescribeGtmInstanceResponseBody extends TeaModel {
     public Integer ttl;
 
     /**
-     * <p>The domain name of the application.</p>
+     * <p>The custom domain name.</p>
      * 
      * <strong>example:</strong>
-     * <p><a href="http://www.example.com">www.example.com</a></p>
+     * <p>dns-example.top</p>
      */
     @NameInMap("UserDomainName")
     public String userDomainName;

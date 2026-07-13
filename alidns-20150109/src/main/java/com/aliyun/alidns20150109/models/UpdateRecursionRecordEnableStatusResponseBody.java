@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRecursionRecordEnableStatusResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */

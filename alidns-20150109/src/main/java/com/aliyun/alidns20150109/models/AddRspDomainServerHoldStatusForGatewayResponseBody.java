@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This field is returned only when Resource Access Management (RAM) verification fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public AddRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>The returned data list.</p>
+     */
     @NameInMap("Data")
     public AddRspDomainServerHoldStatusForGatewayResponseBodyData data;
 
     /**
+     * <p>Indicates whether you can retry the request if it fails. A value of <code>true</code> indicates that you can retry. A value of <code>false</code> indicates that you cannot.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,6 +26,8 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
     public Boolean recoverableError;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0629502C-XXXX-5DC9-XXXX-2ED73A2E3931</p>
      */
@@ -25,6 +35,8 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success. A value of <code>false</code> indicates failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,13 +90,17 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
 
     public static class AddRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
-         * <p>CreateUser</p>
+         * <p>AddRspDomainServerHoldStatusForGateway</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
+         * <p>The display name of the authorized entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -92,6 +108,8 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
         public String authPrincipalDisplayName;
 
         /**
+         * <p>The ID of the owner of the authorized entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>1046973331XXXX</p>
          */
@@ -99,6 +117,8 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
         public String authPrincipalOwnerId;
 
         /**
+         * <p>The identity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -106,6 +126,8 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
         public String authPrincipalType;
 
         /**
+         * <p>The complete diagnostic information after encryption.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
          */
@@ -113,6 +135,14 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>The reason why the authorization failed. Valid values:</p>
+         * <ul>
+         * <li><p>ExplicitDeny: The access is explicitly denied.</p>
+         * </li>
+         * <li><p>ImplicitDeny: The access is implicitly denied.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -120,6 +150,8 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
         public String noPermissionType;
 
         /**
+         * <p>The policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -191,6 +223,8 @@ public class AddRspDomainServerHoldStatusForGatewayResponseBody extends TeaModel
 
     public static class AddRspDomainServerHoldStatusForGatewayResponseBodyData extends TeaModel {
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */

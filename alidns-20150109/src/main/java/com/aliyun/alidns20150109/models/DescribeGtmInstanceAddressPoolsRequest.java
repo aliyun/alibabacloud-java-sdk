@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceAddressPoolsRequest extends TeaModel {
     /**
-     * <p>The ID of the GTM instance that you want to query.</p>
+     * <p>The ID of the GTM instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,7 +24,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class DescribeGtmInstanceAddressPoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

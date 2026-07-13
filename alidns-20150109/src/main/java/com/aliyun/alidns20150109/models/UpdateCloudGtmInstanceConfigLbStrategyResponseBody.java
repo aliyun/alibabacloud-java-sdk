@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmInstanceConfigLbStrategyResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
      */
@@ -12,6 +14,14 @@ public class UpdateCloudGtmInstanceConfigLbStrategyResponseBody extends TeaModel
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The operation was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

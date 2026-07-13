@@ -8,7 +8,7 @@ public class DeleteDomainRecordResponseBody extends TeaModel {
      * <p>The ID of the DNS record.</p>
      * 
      * <strong>example:</strong>
-     * <p>9999985</p>
+     * <p>99******</p>
      */
     @NameInMap("RecordId")
     public String recordId;

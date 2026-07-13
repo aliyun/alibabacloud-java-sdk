@@ -7,8 +7,10 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese.</p>
+     * </li>
+     * <li><p>en-US (default): English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>Address pool name, supports fuzzy search for the entered address pool name.</p>
+     * <p>The name of the address pool. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>AddressPool-1</p>
@@ -27,11 +29,14 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public String addressPoolName;
 
     /**
-     * <p>Address pool type, supports precise query for address pool types:</p>
+     * <p>The type of the address pool. Exact match is supported. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
-     * <li>domain</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
+     * <li><p>domain</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,10 +46,12 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public String addressPoolType;
 
     /**
-     * <p>Address pool availability status, supporting precise queries for address pool availability:</p>
+     * <p>The availability of the address pool. Exact match is supported. Valid values:</p>
      * <ul>
-     * <li>available: Available</li>
-     * <li>unavailable: Unavailable</li>
+     * <li><p>available: The address pool is available.</p>
+     * </li>
+     * <li><p>unavailable: The address pool is unavailable.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,19 +61,21 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public String availableStatus;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The client token can contain only ASCII characters and must be a maximum of 64 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Address pool enable status, supports precise query of address pool enable status:</p>
+     * <p>The status of the address pool. Exact match is supported. Valid values:</p>
      * <ul>
-     * <li>enable: Enabled status</li>
-     * <li>disable: Disabled status</li>
+     * <li><p>enable: The address pool is enabled.</p>
+     * </li>
+     * <li><p>disable: The address pool is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,10 +85,10 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public String enableStatus;
 
     /**
-     * <p>The health state of the address pool. You can enter a health state for exact search. Valid values:</p>
-     * <p>ok: The health state of the address pool is normal and all addresses that are referenced by the address pool are available.</p>
-     * <p>ok_alert: The health state of the address pool is warning and some of the addresses that are referenced by the address pool are unavailable. However, the address pool is deemed normal. In this case, only the available addresses are returned for Domain Name System (DNS) requests.</p>
-     * <p>exceptional: The health state of the address pool is abnormal and some or all of the addresses that are referenced by the address pool are unavailable. In this case, the address pool is deemed abnormal.</p>
+     * <p>The health status of the address pool. Exact match is supported. Valid values:</p>
+     * <p>ok: Normal. All addresses in the address pool are available.</p>
+     * <p>ok_alert: Warning. Some addresses in the address pool are unavailable, but the address pool is still considered normal. In the warning state, available addresses are resolved as expected, while unavailable addresses are not.</p>
+     * <p>exceptional: Abnormal. Some or all addresses in the address pool are unavailable, and the address pool is considered abnormal.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -88,7 +97,7 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>Current page number, starting from 1, default is 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +107,7 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries to return on each page. The maximum value is 100. The default value is 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +117,7 @@ public class SearchCloudGtmAddressPoolsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Address pool remarks, supporting fuzzy search for the input remarks.</p>
+     * <p>The remarks for the address pool. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

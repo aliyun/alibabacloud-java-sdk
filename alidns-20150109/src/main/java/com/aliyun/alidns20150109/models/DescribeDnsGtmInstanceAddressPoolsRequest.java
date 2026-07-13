@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceAddressPoolsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. For more information, see <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describednsgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDnsGtmInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-wwo3a3hbz**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Valid values: en, zh, and ja. The default value is en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,7 +24,7 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,10 +33,10 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

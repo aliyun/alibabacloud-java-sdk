@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecursionZoneRequest extends TeaModel {
     /**
+     * <p>The zone ID. This is the unique identifier of the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

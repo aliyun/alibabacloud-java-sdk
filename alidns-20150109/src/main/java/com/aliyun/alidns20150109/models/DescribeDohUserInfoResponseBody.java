@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDohUserInfoResponseBody extends TeaModel {
     /**
-     * <p>The number of accessed domains.</p>
+     * <p>The number of added domain names.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>2</p>
      */
     @NameInMap("DomainCount")
     public Integer domainCount;
 
     /**
-     * <p>The ID of the Alibaba Cloud public DNS user.</p>
+     * <p>The ID of the Public DNS user.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678</p>
@@ -32,10 +32,10 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of accessed subdomains.</p>
+     * <p>The number of added subdomains.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>5</p>
      */
     @NameInMap("SubDomainCount")
     public Integer subDomainCount;

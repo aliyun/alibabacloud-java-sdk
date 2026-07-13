@@ -8,11 +8,12 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     public String domainKeywords;
 
     /**
-     * <p>The ID of the Alibaba Cloud Domain Name System (DNS) instance. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> operation to obtain the ID.</p>
+     * <p>The instance ID.&lt;props=&quot;china&quot;&gt; You can call <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomainInfo</a> to obtain the ID.
+     * &lt;props=&quot;intl&quot;&gt;You can call <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>weriwieru</p>
+     * <p>dns-cn-9lb38ldq9**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -20,10 +21,12 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
-     * <p>Default value: English.</p>
+     * <p>Default: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -32,7 +35,7 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. Default: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,10 +44,10 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

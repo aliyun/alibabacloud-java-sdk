@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferDomainResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -14,7 +14,7 @@ public class TransferDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>112233</p>

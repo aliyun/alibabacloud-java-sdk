@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchRecursionZonesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of items to return for this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -19,6 +23,8 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. Pages start from <strong>1</strong>. The default is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of items returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,8 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -40,6 +50,8 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -47,6 +59,8 @@ public class SearchRecursionZonesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

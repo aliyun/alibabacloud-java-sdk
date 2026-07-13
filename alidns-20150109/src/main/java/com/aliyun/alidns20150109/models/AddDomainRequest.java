@@ -9,16 +9,16 @@ public class AddDomainRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-example.top</p>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The ID of the group to which the domain name will belong. The default value is the ID of the default group.</p>
+     * <p>The ID of the domain name group. If you do not specify this parameter, pass an empty string, or pass defaultGroup, the domain name is added to the default group. You can call the AddDomainGroup operation to obtain the group ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -26,8 +26,10 @@ public class AddDomainRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese</li>
-     * <li>en: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
      * <p>Default value: en.</p>
      * 
@@ -38,10 +40,10 @@ public class AddDomainRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group in Resource Management to which the domain name belongs. If you leave this parameter empty, the domain name is added to the default resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-resourcegroupid</p>
+     * <p>******resourcegroupid</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

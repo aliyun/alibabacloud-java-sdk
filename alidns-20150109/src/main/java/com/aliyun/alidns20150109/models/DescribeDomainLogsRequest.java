@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainLogsRequest extends TeaModel {
     /**
-     * <p>The ID of the domain name group.</p>
+     * <p>The ID of the domain name group. If you do not specify this parameter, all groups are queried.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>2****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The keyword for the query in &quot;%KeyWord%&quot; mode. The keyword is not case-sensitive.</p>
+     * <p>The keyword for the query. A case-insensitive \<code>contains\\</code> search is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,14 @@ public class DescribeDomainLogsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * <p>The language of the request and response.</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
+     * <p>The default value is <strong>zh</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -32,7 +39,7 @@ public class DescribeDomainLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number to return. The page number starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +48,7 @@ public class DescribeDomainLogsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +57,7 @@ public class DescribeDomainLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time for the query. Format: <strong>YYYY-MM-DD</strong></p>
+     * <p>The start date. The format is <strong>YYYY-MM-DD</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>
@@ -59,11 +66,14 @@ public class DescribeDomainLogsRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The type of object of which you want to query operation logs. Valid values:</p>
+     * <p>The type of content to query.</p>
      * <ul>
-     * <li>domain: domain name</li>
-     * <li>slavedns: secondary Domain Name System (DNS)</li>
+     * <li><p>domain: domain name</p>
+     * </li>
+     * <li><p>slavedns: secondary DNS</p>
+     * </li>
      * </ul>
+     * <p>If you do not specify this parameter, all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>domain</p>
@@ -72,7 +82,7 @@ public class DescribeDomainLogsRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The end time for the query. Format: <strong>YYYY-MM-DD</strong></p>
+     * <p>The end date. The format is <strong>YYYY-MM-DD</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>

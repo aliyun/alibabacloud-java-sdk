@@ -5,20 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordStatisticsRequest extends TeaModel {
     /**
-     * <p>The primary domain name.</p>
+     * <p>The primary domain name.
+     * &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/29751.html">DescribeDomains</a>.
+     * &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>dns-example.com</p>
+     * <p>exmaple.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+     * <p>The type of the domain name. This parameter is not case-sensitive. Valid values:</p>
      * <ul>
-     * <li>PUBLIC (default): hosted public domain name</li>
-     * <li>CACHE: cache-accelerated domain name</li>
+     * <li><p>PUBLIC (default): authoritative domain name</p>
+     * </li>
+     * <li><p>CACHE: authoritative proxy domain name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,8 +32,8 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
     public String domainType;
 
     /**
-     * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>The default value is the day when you query the data.</p>
+     * <p>The end date of the query. The format is <strong>YYYY-MM-DD</strong>.</p>
+     * <p>The default value is the current date.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-07-04</p>
@@ -38,7 +42,13 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the return value. Valid values:</p>
+     * <ul>
+     * <li><p>zh (default): Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -47,7 +57,7 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The hostname. If you want to resolve <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set Rr to www.</p>
+     * <p>The host record. For example, to resolve www\.example.com, set this parameter to www.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,10 +67,10 @@ public class DescribeRecordStatisticsRequest extends TeaModel {
     public String rr;
 
     /**
-     * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
-     * <p>You can only query the DNS records within the last 90 days.``</p>
-     * <p>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</p>
-     * <p>If the time range is greater than seven days, data is returned on a daily basis.````</p>
+     * <p>The start date of the query. The format is <strong>YYYY-MM-DD</strong>.</p>
+     * <p>The start date must be within the last 90 days.</p>
+     * <p>If the time range of the query is 7 days or less, data is returned by the hour.</p>
+     * <p>If the time range of the query is more than 7 days, data is returned by the day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

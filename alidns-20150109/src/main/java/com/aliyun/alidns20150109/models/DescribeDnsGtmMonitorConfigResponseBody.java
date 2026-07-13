@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     /**
-     * <p>The time when the health check configuration was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the configuration was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-12-28T13:08Z</p>
@@ -14,7 +14,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The time when the health check configuration was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the configuration was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -26,7 +26,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
      * <p>The number of consecutive failures.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>3</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
@@ -47,66 +47,74 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
      * <p>The ID of the health check configuration.</p>
      * 
      * <strong>example:</strong>
-     * <p>MonitorConfigId1</p>
+     * <p>Monit*********</p>
      */
     @NameInMap("MonitorConfigId")
     public String monitorConfigId;
 
     /**
-     * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
+     * <p>The extended information. The parameters vary by protocol.</p>
      * <ul>
-     * <li><p>HTTP or HTTPS</p>
+     * <li><p>For HTTP and HTTPS:</p>
      * <ul>
-     * <li><p>port: the port that you want to check</p>
+     * <li><p>port: The health check port.</p>
      * </li>
-     * <li><p>host: the host settings</p>
+     * <li><p>host: The Host header.</p>
      * </li>
-     * <li><p>path: the URL path</p>
+     * <li><p>path: The URL path.</p>
      * </li>
-     * <li><p>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</p>
+     * <li><p>code: The expected HTTP status code.</p>
      * </li>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>failureRate: The failure rate.</p>
      * </li>
-     * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
+     * <li><p>sni: Specifies whether to enable Server Name Indication (SNI). This parameter is valid only when the protocol is set to HTTPS.</p>
      * <ul>
-     * <li>true: enables SNI.</li>
-     * <li>false: disables SNI.</li>
-     * </ul>
+     * <li><p>true: enables SNI.</p>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
-     * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
-     * </ul>
+     * <li><p>false: disables SNI.</p>
      * </li>
      * </ul>
      * </li>
-     * <li><p>PING:</p>
+     * <li><p>nodeType: The type of the monitoring node for the health check when the address pool type is DOMAIN.</p>
      * <ul>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>IPV4</p>
      * </li>
-     * <li><p>packetNum: the number of ping packets</p>
+     * <li><p>IPV6</p>
      * </li>
-     * <li><p>packetLossRate: the loss rate of ping packets</p>
-     * </li>
-     * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
-     * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
-     * <li><p>TCP</p>
+     * <li><p>For PING:</p>
      * <ul>
-     * <li><p>port: the port that you want to check</p>
+     * <li><p>failureRate: The failure rate.</p>
      * </li>
-     * <li><p>failureRate: the failure rate</p>
+     * <li><p>packetNum: The number of ping packets.</p>
      * </li>
-     * <li><p>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</p>
+     * <li><p>packetLossRate: The packet loss rate.</p>
+     * </li>
+     * <li><p>nodeType: The type of the monitoring node for the health check when the address pool type is DOMAIN.</p>
      * <ul>
-     * <li>IPV4</li>
-     * <li>IPV6</li>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>For TCP:</p>
+     * <ul>
+     * <li><p>port: The health check port.</p>
+     * </li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
+     * <li><p>nodeType: The type of the monitoring node for the health check when the address pool type is DOMAIN.</p>
+     * <ul>
+     * <li><p>IPV4</p>
+     * </li>
+     * <li><p>IPV6</p>
+     * </li>
      * </ul>
      * </li>
      * </ul>
@@ -122,20 +130,24 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     /**
      * <p>The health check protocol. Valid values:</p>
      * <ul>
-     * <li>HTTP</li>
-     * <li>HTTPS</li>
-     * <li>PING</li>
-     * <li>TCP</li>
+     * <li><p>HTTP</p>
+     * </li>
+     * <li><p>HTTPS</p>
+     * </li>
+     * <li><p>PING</p>
+     * </li>
+     * <li><p>TCP</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>http</p>
+     * <p>TCP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -153,7 +165,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The time when the health check configuration was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the configuration was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-03T08:57Z</p>
@@ -162,7 +174,7 @@ public class DescribeDnsGtmMonitorConfigResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the health check configuration was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The timestamp that indicates when the configuration was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>

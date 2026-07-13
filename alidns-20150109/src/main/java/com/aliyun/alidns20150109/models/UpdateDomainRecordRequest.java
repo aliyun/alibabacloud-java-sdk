@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainRecordRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +20,10 @@ public class UpdateDomainRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The resolution line. Default value: <strong>default</strong>.</p>
-     * <p>For more information, see</p>
-     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS resolution lines</a>.</p>
+     * <p>The resolution line. The default value is <strong>default</strong>.
+     * For more information, see
+     * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/29807.html">Enumeration of resolution lines</a>.
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/doc-detail/29807.htm">Enumeration of resolution lines</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -29,8 +32,8 @@ public class UpdateDomainRecordRequest extends TeaModel {
     public String line;
 
     /**
-     * <p>The priority of the mail exchanger (MX) record. Valid values: <code>1 to 50</code>.</p>
-     * <p>This parameter is required if the type of the DNS record is MX.</p>
+     * <p>The priority of the MX record. Valid values: <code>[1, 50]</code>.</p>
+     * <p>This parameter is required if the record type is MX.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,31 +42,31 @@ public class UpdateDomainRecordRequest extends TeaModel {
     public Long priority;
 
     /**
-     * <p>The hostname.</p>
-     * <p>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</p>
+     * <p>The host record.
+     * To resolve the root domain, such as example.com, set the host record to the at sign (@).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>www</p>
+     * <p>@</p>
      */
     @NameInMap("RR")
     public String RR;
 
     /**
-     * <p>The ID of the Domain Name System (DNS) record.</p>
-     * <p>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> operation to obtain the ID.</p>
+     * <p>The ID of the DNS record. To obtain the ID, call the <a href="https://help.aliyun.com/document_detail/2357159.html">DescribeDomainRecords</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>9999985</p>
+     * <p>99*******</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
-     * <p>The time to live (TTL) period of the Alibaba Cloud DNS (DNS) record. Default value: 600. Unit: seconds.</p>
-     * <p>For more information, see</p>
-     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</p>
+     * <p>The time to live (TTL). The default value is 600 seconds (10 minutes).
+     * For more information, see
+     * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/29806.html">TTL definition</a>.
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/doc-detail/29806.htm">TTL definition</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -72,8 +75,9 @@ public class UpdateDomainRecordRequest extends TeaModel {
     public Long TTL;
 
     /**
-     * <p>The type of the DNS record. For more information, see</p>
-     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
+     * <p>The type of the DNS record. For more information, see
+     * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/29805.html">DNS record types</a>.
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/doc-detail/29805.htm">DNS record types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,20 +87,20 @@ public class UpdateDomainRecordRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.0.2.0</p>
+     * <p>192.0.2.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The value of the DNS record.</p>
+     * <p>The record value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.0.2.254</p>
+     * <p>192.0.2.1</p>
      */
     @NameInMap("Value")
     public String value;

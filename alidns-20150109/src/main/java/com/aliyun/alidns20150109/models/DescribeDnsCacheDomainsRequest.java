@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsCacheDomainsRequest extends TeaModel {
     /**
-     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * <p>The keyword. The search is performed in the \<code>%Keyword%\\</code> format. The search is case-insensitive.</p>
      * 
      * <strong>example:</strong>
-     * <p>a\&quot;\&quot;</p>
+     * <p>a</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the request and response. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English
+     * The default value is <strong>zh</strong>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -23,7 +30,7 @@ public class DescribeDnsCacheDomainsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +39,7 @@ public class DescribeDnsCacheDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for paged queries. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

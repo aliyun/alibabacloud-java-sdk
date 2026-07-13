@@ -7,8 +7,10 @@ public class ListCloudGtmAvailableAlertGroupsRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong>: English</li>
+     * <li><p><strong>zh-CN</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en-US</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

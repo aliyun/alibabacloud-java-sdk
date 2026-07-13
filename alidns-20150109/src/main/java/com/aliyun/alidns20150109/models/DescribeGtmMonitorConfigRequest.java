@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmMonitorConfigRequest extends TeaModel {
     /**
-     * <p>The language of the values of specific response parameters.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

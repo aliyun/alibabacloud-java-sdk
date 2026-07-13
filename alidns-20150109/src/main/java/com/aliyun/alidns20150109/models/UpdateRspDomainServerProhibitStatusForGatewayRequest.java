@@ -4,10 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateRspDomainServerProhibitStatusForGatewayRequest extends TeaModel {
+    /**
+     * <p>A collection of domain name statuses to add.</p>
+     */
     @NameInMap("AddStatusList")
     public java.util.List<UpdateRspDomainServerProhibitStatusForGatewayRequestAddStatusList> addStatusList;
 
     /**
+     * <p>A parameter that ensures idempotence.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +20,14 @@ public class UpdateRspDomainServerProhibitStatusForGatewayRequest extends TeaMod
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>A collection of domain name statuses to delete.</p>
+     */
     @NameInMap("DeleteStatusList")
     public java.util.List<UpdateRspDomainServerProhibitStatusForGatewayRequestDeleteStatusList> deleteStatusList;
 
     /**
+     * <p>The domain name whose serverHold status you want to change.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,12 +75,20 @@ public class UpdateRspDomainServerProhibitStatusForGatewayRequest extends TeaMod
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayRequestAddStatusList extends TeaModel {
         /**
+         * <p>The domain name status.</p>
+         * 
          * <strong>example:</strong>
          * <p>serverDeleteProhibited</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The description of the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实名认证未通过，增加serverUpdateProhibited状态</p>
+         */
         @NameInMap("StatusMsg")
         public String statusMsg;
 
@@ -101,12 +117,20 @@ public class UpdateRspDomainServerProhibitStatusForGatewayRequest extends TeaMod
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayRequestDeleteStatusList extends TeaModel {
         /**
+         * <p>The domain name status.</p>
+         * 
          * <strong>example:</strong>
          * <p>serverDeleteProhibited</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The description of the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实名认证通过，删除serverUpdateProhibited状态</p>
+         */
         @NameInMap("StatusMsg")
         public String statusMsg;
 

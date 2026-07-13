@@ -7,13 +7,17 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
     /**
      * <p>The type of the batch operation. Valid values:</p>
      * <ul>
-     * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
-     * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
-     * <li><strong>RR_ADD</strong>: adds Domain Name System (DNS) records in batches.</li>
-     * <li><strong>RR_DEL</strong>: deletes DNS records in batches.</li>
+     * <li><p><strong>DOMAIN_ADD</strong>: Add domain names in batches.</p>
+     * </li>
+     * <li><p><strong>DOMAIN_DEL</strong>: Delete domain names in batches.</p>
+     * </li>
+     * <li><p><strong>RR_ADD</strong>: Add DNS records in batches.</p>
+     * </li>
+     * <li><p><strong>RR_DEL</strong>: Delete DNS records in batches.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Do not perform filtering when this field is empty.</p>
+     * <p>If you leave this parameter empty, the results are not filtered by operation type.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,10 +27,12 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
     public String batchType;
 
     /**
-     * <p>The language of the content within the request and response. Default: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. The default value is <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +42,7 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The current page number. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,7 +51,7 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +60,7 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The execution result. If you do not specify this parameter, all results are returned.</p>
+     * <p>The status of the task. If you do not specify this parameter, the details of tasks in all states are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -66,7 +72,7 @@ public class DescribeBatchResultDetailRequest extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>83618818</p>
+     * <p>8*******</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

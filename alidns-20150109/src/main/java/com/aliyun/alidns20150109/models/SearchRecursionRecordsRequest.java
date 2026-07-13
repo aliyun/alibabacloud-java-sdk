@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SearchRecursionRecordsRequest extends TeaModel {
     /**
+     * <p>The sort order. Valid values: asc for ascending and dsc for descending.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -12,6 +14,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The status of the DNS record. Valid values: enable and <strong>disable</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>enable</p>
      */
@@ -19,6 +23,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String enableStatus;
 
     /**
+     * <p>The maximum number of records to return for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token used to start the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>4698691</p>
      */
@@ -33,6 +41,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sorting method. Valid values: rr, type, value, requestSource, weight, ttl, and enableStatus.</p>
+     * 
      * <strong>example:</strong>
      * <p>rr</p>
      */
@@ -40,6 +50,7 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The current page number. The value starts from 1. The default value is 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +60,7 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +70,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -65,6 +79,12 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The DNS resolution line. The default value is <strong>default</strong>. For more information, see <a href="https://www.alibabacloud.com/help/en/doc-detail/29807.htm">DNS resolution lines</a>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <p><a href="https://help.aliyun.com/document_detail/29807.html">DNS Line Enumeration</a></p>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">Resolution Line Enumeration</a></p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -72,6 +92,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String requestSource;
 
     /**
+     * <p>The host record.</p>
+     * 
      * <strong>example:</strong>
      * <p>www</p>
      */
@@ -79,6 +101,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String rr;
 
     /**
+     * <p>The time to live (TTL) in the local cache, in seconds. Valid values are 5, 30, 60, 3600 (1 hour), 43200 (12 hours), and 86400 (1 day). The default value is 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -86,6 +110,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public Integer ttl;
 
     /**
+     * <p>The type of the DNS record. The following types are supported:A: Maps a domain name to an IPv4 address.AAAA: Maps a domain name to an IPv6 address.CNAME: An alias record that points a domain name to another domain name.MX: A mail exchanger record that points a domain name to a mail server.TXT: A text record that contains arbitrary human-readable text.SRV: A service record that identifies a server for a specific service. This is common in directory management for Microsoft systems.</p>
+     * 
      * <strong>example:</strong>
      * <p>A</p>
      */
@@ -93,6 +119,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The record value.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
      */
@@ -100,6 +128,8 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public String value;
 
     /**
+     * <p>The weight of the DNS record. The value ranges from 0 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -107,6 +137,7 @@ public class SearchRecursionRecordsRequest extends TeaModel {
     public Integer weight;
 
     /**
+     * <p>The zone ID of the DNS record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

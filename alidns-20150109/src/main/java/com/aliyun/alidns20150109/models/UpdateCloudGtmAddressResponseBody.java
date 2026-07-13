@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmAddressResponseBody extends TeaModel {
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -14,10 +14,12 @@ public class UpdateCloudGtmAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Modify address base configuration operation status:</p>
+     * <p>Indicates whether the operation was successful.</p>
      * <ul>
-     * <li>true: Operation was successful</li>
-     * <li>false: Operation was failed</li>
+     * <li><p>true: The operation was successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

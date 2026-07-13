@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances">DescribeDnsGtmInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-wwo3a3hbz**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,15 +24,17 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigRequest extends TeaModel
     public String lang;
 
     /**
-     * <p>The type of the access policy. Valid values:</p>
+     * <p>The scheduling mode. Valid values:</p>
      * <ul>
-     * <li>GEO: geographical location-based</li>
-     * <li>LATENCY: latency-based</li>
+     * <li><p>GEO: Geolocation-based</p>
+     * </li>
+     * <li><p>LATENCY: Latency-based</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>geo</p>
+     * <p>GEO</p>
      */
     @NameInMap("StrategyMode")
     public String strategyMode;

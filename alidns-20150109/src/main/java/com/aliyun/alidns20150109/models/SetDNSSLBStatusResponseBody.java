@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDNSSLBStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether weighted round-robin is enabled for the subdomain name.</p>
+     * <p>The latest status of the weight configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
     public Boolean open;
 
     /**
-     * <p>The number of A records that are matched.</p>
+     * <p>The number of DNS records that match the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>

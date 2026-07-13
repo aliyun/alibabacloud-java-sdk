@@ -8,7 +8,7 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     public SearchCloudGtmAddressesResponseBodyAddresses addresses;
 
     /**
-     * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+     * <p>The current page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong> and a default of <strong>20</strong>.</p>
+     * <p>The number of entries returned on each page for a paged query. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,7 +26,7 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -35,7 +35,7 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of address entries that meet the query conditions.</p>
+     * <p>The total number of addresses that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -44,7 +44,7 @@ public class SearchCloudGtmAddressesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

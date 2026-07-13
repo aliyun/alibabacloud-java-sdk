@@ -17,7 +17,7 @@ public class OperateBatchDomainResponseBody extends TeaModel {
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>345345</p>
+     * <p>34****</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

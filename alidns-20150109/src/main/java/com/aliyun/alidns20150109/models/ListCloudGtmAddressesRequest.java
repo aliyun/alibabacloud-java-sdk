@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCloudGtmAddressesRequest extends TeaModel {
     /**
-     * <p>Return language value, options:</p>
+     * <p>The language of the return value. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese.</li>
-     * <li>en-US: English.</li>
+     * <li><p>zh-CN: Chinese.</p>
+     * </li>
+     * <li><p>en-US: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class ListCloudGtmAddressesRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>IP address or domain name.</p>
+     * <p>The IP address or domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>223.5.XX.XX</p>
@@ -27,28 +29,30 @@ public class ListCloudGtmAddressesRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The address ID. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-89518218114368**92</p>
+     * <p>addr-89518218114368****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. The client must generate a unique token for each request. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Indicates the current availability of the address:</p>
+     * <p>The state of the address. Valid values:</p>
      * <ul>
-     * <li>enable: Enabled status</li>
-     * <li>disable: Disabled status</li>
+     * <li><p>enable: The address is enabled.</p>
+     * </li>
+     * <li><p>disable: The address is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,12 +62,16 @@ public class ListCloudGtmAddressesRequest extends TeaModel {
     public String enableStatus;
 
     /**
-     * <p>The health check state of the address. Valid values:</p>
+     * <p>The health status of the address. Valid values:</p>
      * <ul>
-     * <li>ok: The address passes all health checks of the referenced health check templates.</li>
-     * <li>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</li>
-     * <li>ok_no_monitor: The address does not reference a health check template.</li>
-     * <li>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</li>
+     * <li><p>ok: All health check tasks that are associated with the address are normal.</p>
+     * </li>
+     * <li><p>ok_alert: Some health check tasks that are associated with the address are abnormal, but the address is still considered normal.</p>
+     * </li>
+     * <li><p>ok_no_monitor: No health check template is associated with the address.</p>
+     * </li>
+     * <li><p>exceptional: Some or all health check tasks that are associated with the address are abnormal, and the address is considered abnormal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,16 +81,16 @@ public class ListCloudGtmAddressesRequest extends TeaModel {
     public String healthStatus;
 
     /**
-     * <p>The ID of the health check template. This ID uniquely identifies the health check template.</p>
+     * <p>The unique ID of the health check template.</p>
      * 
      * <strong>example:</strong>
-     * <p>mtp-89518052425100**80</p>
+     * <p>mtp-89518052425100****</p>
      */
     @NameInMap("MonitorTemplateId")
     public String monitorTemplateId;
 
     /**
-     * <p>Address name.</p>
+     * <p>The name of the address.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -91,7 +99,7 @@ public class ListCloudGtmAddressesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +109,7 @@ public class ListCloudGtmAddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,11 +119,14 @@ public class ListCloudGtmAddressesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Address type:</p>
+     * <p>The type of the address. Valid values:</p>
      * <ul>
-     * <li>IPv4</li>
-     * <li>IPv6</li>
-     * <li>domain</li>
+     * <li><p>IPv4</p>
+     * </li>
+     * <li><p>IPv6</p>
+     * </li>
+     * <li><p>domain</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

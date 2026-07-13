@@ -7,8 +7,10 @@ public class UpdateCloudGtmAddressManualAvailableStatusRequest extends TeaModel 
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US (default): English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US (Default): English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,20 +20,22 @@ public class UpdateCloudGtmAddressManualAvailableStatusRequest extends TeaModel 
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the address. This ID uniquely identifies the address.</p>
+     * <p>The unique ID of the address.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>addr-89518218114368**92</p>
+     * <p>addr-89518218114368****</p>
      */
     @NameInMap("AddressId")
     public String addressId;
 
     /**
-     * <p>The failover mode that is used when address exceptions are identified. Valid values:</p>
+     * <p>The failover method for the address. Valid values:</p>
      * <ul>
-     * <li>auto: the automatic mode. The system determines whether to return an address based on health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
-     * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for DNS requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+     * <li><p>auto: Automatic. The address status is determined by health check results. If a health check fails, DNS resolution stops. If it succeeds, DNS resolution resumes.</p>
+     * </li>
+     * <li><p>manual: Manual. You control the address status. If set to abnormal, DNS resolution stops and does not resume even if health checks succeed. If set to normal, DNS resolution resumes. If a health check fails, an alert is triggered but resolution does not stop.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,19 +45,21 @@ public class UpdateCloudGtmAddressManualAvailableStatusRequest extends TeaModel 
     public String availableMode;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that is used to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
+     * <p>The availability status of the address. This parameter takes effect only when AvailableMode is set to manual. Valid values:</p>
      * <ul>
-     * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
-     * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
+     * <li><p>available: Normal. The address is available. If a health check fails, an alert is triggered but DNS resolution continues.</p>
+     * </li>
+     * <li><p>unavailable: Abnormal. DNS resolution for the address is stopped. It does not resume even if health checks succeed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

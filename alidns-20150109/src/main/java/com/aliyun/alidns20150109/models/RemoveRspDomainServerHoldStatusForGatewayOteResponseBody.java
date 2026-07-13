@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends TeaModel {
+    /**
+     * <p>Detailed information about access denial. This field appears only when RAM authentication fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>List of returned data items.</p>
+     */
     @NameInMap("Data")
     public RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyData data;
 
     /**
+     * <p>Indicates whether you can retry the request after failure. <code>true</code>: retry is allowed. <code>false</code>: retry is not allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,6 +26,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
     public Boolean recoverableError;
 
     /**
+     * <p>Unique ID of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>0629502C-6224-5DC9-A8ED-2ED73A2E3931</p>
      */
@@ -25,6 +35,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. <code>true</code>: succeeded. <code>false</code>: failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,13 +90,17 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
 
     public static class RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
-         * <p>CreateUser</p>
+         * <p>RemoveRspDomainServerHoldStatusForGatewayOte</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
+         * <p>Display name of the authenticated entity</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -92,6 +108,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
         public String authPrincipalDisplayName;
 
         /**
+         * <p>ID of the owner of the authenticated entity</p>
+         * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
          */
@@ -99,6 +117,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
         public String authPrincipalOwnerId;
 
         /**
+         * <p>Type of identity</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -106,6 +126,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
         public String authPrincipalType;
 
         /**
+         * <p>Encrypted diagnostic message</p>
+         * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</p>
          */
@@ -113,6 +135,14 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>Reason for authentication failure. Valid values:</p>
+         * <ul>
+         * <li><p>ExplicitDeny: explicit denial</p>
+         * </li>
+         * <li><p>ImplicitDeny: implicit denial</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -120,6 +150,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
         public String noPermissionType;
 
         /**
+         * <p>Type of policy</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -191,6 +223,8 @@ public class RemoveRspDomainServerHoldStatusForGatewayOteResponseBody extends Te
 
     public static class RemoveRspDomainServerHoldStatusForGatewayOteResponseBodyData extends TeaModel {
         /**
+         * <p>Domain name</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */

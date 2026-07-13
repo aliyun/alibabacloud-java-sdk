@@ -8,7 +8,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
     public DescribeDnsGtmAddressPoolAvailableConfigResponseBodyAttributeInfos attributeInfos;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</p>

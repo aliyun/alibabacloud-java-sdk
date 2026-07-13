@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddGtmAddressPoolRequest extends TeaModel {
     /**
-     * <p>The address pools.</p>
+     * <p>The list of addresses in the address pool.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
     public java.util.List<AddGtmAddressPoolRequestAddr> addr;
 
     /**
-     * <p>The number of consecutive failures.</p>
+     * <p>The number of consecutive failed health checks.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -21,7 +21,7 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     public Integer evaluationCount;
 
     /**
-     * <p>The ID of the GTM instance for which you want to create an address pool.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The health check interval. Unit: seconds. Set the value to 60.</p>
+     * <p>The health check interval. Unit: seconds. The value must be 60.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -40,13 +40,13 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The monitored nodes.</p>
+     * <p>The list of city nodes for monitoring.</p>
      */
     @NameInMap("IspCityNode")
     public java.util.List<AddGtmAddressPoolRequestIspCityNode> ispCityNode;
 
     /**
-     * <p>The language of the values of specific response parameters.</p>
+     * <p>The response language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -55,35 +55,45 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The minimum number of available addresses in the address pool.</p>
+     * <p>The minimum number of available addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("MinAvailableAddrNum")
     public Integer minAvailableAddrNum;
 
     /**
-     * <p>The extended information. The required parameters vary based on the value of ProtocolType.</p>
-     * <p>When ProtocolType is set to HTTP or HTTPS:</p>
+     * <p>The extended information. The parameters that you must configure vary based on the health check protocol.</p>
+     * <p>HTTP and HTTPS:</p>
      * <ul>
-     * <li>port: the port that you want to check</li>
-     * <li>failureRate: the failure rate</li>
-     * <li>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</li>
-     * <li>host: the host settings</li>
-     * <li>path: the URL path</li>
+     * <li><p>port: The health check port.</p>
+     * </li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
+     * <li><p>code: The return code. A response with a return code greater than the specified value is considered abnormal. Valid values: 400 and 500.</p>
+     * </li>
+     * <li><p>host: The host setting.</p>
+     * </li>
+     * <li><p>path: The URL path.</p>
+     * </li>
      * </ul>
-     * <p>When ProtocolType is set to PING:</p>
+     * <p>PING:</p>
      * <ul>
-     * <li>packetNum: the number of ping packets</li>
-     * <li>packetLossRate: the packet loss rate</li>
-     * <li>failureRate: the failure rate</li>
+     * <li><p>packetNum: The number of ping packets.</p>
+     * </li>
+     * <li><p>packetLossRate: The packet loss rate.</p>
+     * </li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
      * </ul>
-     * <p>When ProtocolType is set to TCP:</p>
+     * <p>TCP:</p>
      * <ul>
-     * <li>port: the port that you want to check</li>
-     * <li>failureRate: the failure rate</li>
+     * <li><p>port: The health check port.</p>
+     * </li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,10 +103,12 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     public String monitorExtendInfo;
 
     /**
-     * <p>Specifies whether to enable the health check. Valid values:</p>
+     * <p>The status of the health check. Valid values:</p>
      * <ul>
-     * <li><strong>OPEN</strong>: enables the health check.</li>
-     * <li><strong>CLOSE</strong>: disables the health check. This is the default value.</li>
+     * <li><p><strong>OPEN</strong>: enabled</p>
+     * </li>
+     * <li><p><strong>CLOSE</strong> (default): disabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +122,7 @@ public class AddGtmAddressPoolRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba Cloud cluster</p>
+     * <p>测试</p>
      */
     @NameInMap("Name")
     public String name;
@@ -118,14 +130,18 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The health check protocol. Valid values:</p>
      * <ul>
-     * <li>HTTP</li>
-     * <li>HTTPS</li>
-     * <li>Ping</li>
-     * <li>TCP</li>
+     * <li><p>HTTP</p>
+     * </li>
+     * <li><p>HTTPS</p>
+     * </li>
+     * <li><p>Ping</p>
+     * </li>
+     * <li><p>TCP</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>HTTPS</p>
+     * <p>TCP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
@@ -134,7 +150,7 @@ public class AddGtmAddressPoolRequest extends TeaModel {
      * <p>The timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
      * 
      * <strong>example:</strong>
-     * <p>60</p>
+     * <p>5000</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
@@ -142,8 +158,10 @@ public class AddGtmAddressPoolRequest extends TeaModel {
     /**
      * <p>The type of the address pool. Valid values:</p>
      * <ul>
-     * <li><strong>IP</strong>: IPv4 address</li>
-     * <li><strong>DOMAIN</strong>: domain name</li>
+     * <li><p><strong>IP</strong>: IPv4 address</p>
+     * </li>
+     * <li><p><strong>DOMAIN</strong>: domain name</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -264,7 +282,7 @@ public class AddGtmAddressPoolRequest extends TeaModel {
 
     public static class AddGtmAddressPoolRequestAddr extends TeaModel {
         /**
-         * <p>The weight of the address pool.</p>
+         * <p>The weight of the address.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -273,11 +291,14 @@ public class AddGtmAddressPoolRequest extends TeaModel {
         public Integer lbaWeight;
 
         /**
-         * <p>The mode of the address pool. Valid values:</p>
+         * <p>The mode of the address. Valid values:</p>
          * <ul>
-         * <li><strong>SMART</strong>: smart return</li>
-         * <li><strong>ONLINE</strong>: always online</li>
-         * <li><strong>OFFLINE</strong>: always offline</li>
+         * <li><p><strong>SMART</strong>: smart return</p>
+         * </li>
+         * <li><p><strong>ONLINE</strong>: always online</p>
+         * </li>
+         * <li><p><strong>OFFLINE</strong>: always offline</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,10 +308,10 @@ public class AddGtmAddressPoolRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The address in the address pool.</p>
+         * <p>The address.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.1</p>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("Value")
         public String value;
@@ -328,7 +349,7 @@ public class AddGtmAddressPoolRequest extends TeaModel {
 
     public static class AddGtmAddressPoolRequestIspCityNode extends TeaModel {
         /**
-         * <p>The code of the city where the monitored node is deployed. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</p>
+         * <p>The city code of the monitoring node. For information about valid values, see the response of DescribeGtmMonitorAvailableConfig.</p>
          * 
          * <strong>example:</strong>
          * <p>546</p>
@@ -338,9 +359,12 @@ public class AddGtmAddressPoolRequest extends TeaModel {
 
         /**
          * <ul>
-         * <li>The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</li>
-         * <li>If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.</li>
-         * <li>If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.</li>
+         * <li><p>For information about valid values, see the response of DescribeGtmMonitorAvailableConfig.</p>
+         * </li>
+         * <li><p>If GroupType is set to Border Gateway Protocol (BGP) or Overseas, IspCityNode.N.IspCode is optional. The default value is 465.</p>
+         * </li>
+         * <li><p>If GroupType is not set to BGP or Overseas, IspCityNode.N.IspCode is required and must be used with IspCityNode.N.CityCode.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

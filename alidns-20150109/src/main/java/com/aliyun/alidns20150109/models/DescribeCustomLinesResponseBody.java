@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLinesResponseBody extends TeaModel {
     /**
-     * <p>The custom lines.</p>
+     * <p>The list of custom lines.</p>
      */
     @NameInMap("CustomLines")
     public java.util.List<DescribeCustomLinesResponseBodyCustomLines> customLines;
@@ -47,7 +47,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -109,9 +109,21 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomLinesResponseBodyCustomLinesIpSegmentList extends TeaModel {
+        /**
+         * <p>The end IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
+         */
         @NameInMap("EndIp")
         public String endIp;
 
+        /**
+         * <p>The start IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
+         */
         @NameInMap("StartIp")
         public String startIp;
 
@@ -143,7 +155,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
          * <p>The code of the custom line.</p>
          * 
          * <strong>example:</strong>
-         * <p>hra0yc-597</p>
+         * <p>hra0yc-5********</p>
          */
         @NameInMap("Code")
         public String code;
@@ -152,19 +164,22 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
          * <p>The unique ID of the custom line.</p>
          * 
          * <strong>example:</strong>
-         * <p>597</p>
+         * <p>5*********</p>
          */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The list of IP address range. Use a hyphen (-) to separate the start and end IP address ranges. Enter one range per line. You can specify 1 to 50 lines. For a single IP address, enter it as IP1-IP1. IP address ranges cannot overlap.</p>
+         */
         @NameInMap("IpSegmentList")
         public java.util.List<DescribeCustomLinesResponseBodyCustomLinesIpSegmentList> ipSegmentList;
 
         /**
-         * <p>The name of the custom line.</p>
+         * <p>The name of the line.</p>
          * 
          * <strong>example:</strong>
-         * <p>hra0yd-597</p>
+         * <p>hra0yd-5********</p>
          */
         @NameInMap("Name")
         public String name;

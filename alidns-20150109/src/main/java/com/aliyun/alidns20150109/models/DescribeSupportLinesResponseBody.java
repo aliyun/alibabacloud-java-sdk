@@ -8,6 +8,8 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
     public DescribeSupportLinesResponseBodyRecordLines recordLines;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CFDA0830-7D6E-4C13-8632-B57C7EDCF079</p>
      */

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLineRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +20,11 @@ public class DescribeCustomLineRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The unique ID of the custom line. You can call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeCustomLines</a> operation to obtain the ID</p>
+     * <p>The unique ID of the custom line.&lt;props=&quot;china&quot;&gt; Call <a href="https://help.aliyun.com/en/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeCustomLines</a> to obtain this ID.
+     * &lt;props=&quot;intl&quot;&gt;Call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeCustomLines</a> to obtain this ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>597</p>
+     * <p>5*****</p>
      */
     @NameInMap("LineId")
     public Long lineId;

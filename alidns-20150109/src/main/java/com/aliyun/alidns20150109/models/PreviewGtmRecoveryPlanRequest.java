@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class PreviewGtmRecoveryPlanRequest extends TeaModel {
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <p>zh: Chinese</p>
+     * <p>en: English</p>
+     * <p>Default: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,7 +17,7 @@ public class PreviewGtmRecoveryPlanRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. Default: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +26,7 @@ public class PreviewGtmRecoveryPlanRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on per page. Maximum value: <strong>20</strong>. Default value: <strong>5</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>20</strong>. Default: <strong>5</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -32,11 +35,11 @@ public class PreviewGtmRecoveryPlanRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the disaster recovery plan that you want to preview.</p>
+     * <p>The ID of the disaster recovery plan.&lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describegtmrecoveryplans?spm=a2c4g.11186623.help-menu-29697.d_0_5_1_3_13_5.6dd83618vW4yD7">DescribeGtmRecoveryPlans</a> operation to obtain the ID.&lt;props=&quot;intl&quot;&gt;You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describegtmrecoveryplans?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeGtmRecoveryPlans</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>100</p>
+     * <p>10**</p>
      */
     @NameInMap("RecoveryPlanId")
     public Long recoveryPlanId;

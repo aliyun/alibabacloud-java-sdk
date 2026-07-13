@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the returned page. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned per page. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0CCC9971-CEC9-4132-824B-4AE611C07623</p>
@@ -35,7 +35,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     public DescribeDnsGtmAccessStrategiesResponseBodyStrategies strategies;
 
     /**
-     * <p>The total number of entries returned on all pages.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>11</p>

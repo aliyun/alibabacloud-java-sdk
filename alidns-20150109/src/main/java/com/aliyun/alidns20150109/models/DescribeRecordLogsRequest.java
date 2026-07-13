@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordLogsRequest extends TeaModel {
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name.&lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/29751.html">DescribeDomains</a> operation to obtain the domain name.&lt;props=&quot;intl&quot;&gt;You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a> operation to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeRecordLogsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * <p>The keyword. The system searches for the keyword in the &quot;%KeyWord%&quot; pattern. The search is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,7 +24,13 @@ public class DescribeRecordLogsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><p><strong>zh</strong>: Chinese</p>
+     * </li>
+     * <li><p><strong>en</strong>: English</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -33,7 +39,7 @@ public class DescribeRecordLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +48,7 @@ public class DescribeRecordLogsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -51,7 +57,7 @@ public class DescribeRecordLogsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
+     * <p>The start of the time range to query. The format is <strong>YYYY-MM-DD</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-12</p>
@@ -60,16 +66,16 @@ public class DescribeRecordLogsRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The client IP address.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.1</p>
+     * <p>192.0.2.1</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
+     * <p>The end of the time range to query. The format is <strong>YYYY-MM-DD</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-12-12</p>

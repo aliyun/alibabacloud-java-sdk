@@ -8,13 +8,13 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
      * <p>The ID of the DNS record.</p>
      * 
      * <strong>example:</strong>
-     * <p>9999985</p>
+     * <p>9*******</p>
      */
     @NameInMap("RecordId")
     public String recordId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>

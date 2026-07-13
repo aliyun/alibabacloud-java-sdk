@@ -4,11 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
+    /**
+     * <p>An array of data objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeInterAuthStatisticsHistoryResponseBodyData> data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -39,6 +42,8 @@ public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
 
     public static class DescribeInterAuthStatisticsHistoryResponseBodyData extends TeaModel {
         /**
+         * <p>The request count.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -46,6 +51,8 @@ public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -53,6 +60,14 @@ public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
         public String domainName;
 
         /**
+         * <p>The DNS query protocol.</p>
+         * <ul>
+         * <li><p>UDP</p>
+         * </li>
+         * <li><p>TCP</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -60,6 +75,8 @@ public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The query type.</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -67,6 +84,8 @@ public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
         public String qtype;
 
         /**
+         * <p>The success rate or ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -74,6 +93,8 @@ public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
         public Long ratio;
 
         /**
+         * <p>The timestamp of the data point in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1706716800000</p>
          */
@@ -81,6 +102,8 @@ public class DescribeInterAuthStatisticsHistoryResponseBody extends TeaModel {
         public Long timestamp;
 
         /**
+         * <p>The zone name.</p>
+         * 
          * <strong>example:</strong>
          * <p>mt2.cn</p>
          */

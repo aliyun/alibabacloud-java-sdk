@@ -8,7 +8,7 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
     public ListCloudGtmAlertLogsResponseBodyLogs logs;
 
     /**
-     * <p>Current page number, starting from 1, default is 1.</p>
+     * <p>The current page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+     * <p>The number of entries returned on each page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,7 +26,7 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Unique request identification code.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -35,7 +35,7 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of alarm log entries.</p>
+     * <p>The total number of alert logs.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -44,7 +44,7 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>Total number of pages.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -17,7 +17,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodyLines lines;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C2851BA9-CE56-49AF-8D12-4FC6A49EE688</p>
@@ -35,7 +35,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     public DescribeDnsGtmAccessStrategyAvailableConfigResponseBodySelectedIpv6Lines selectedIpv6Lines;
 
     /**
-     * <p>Indicates whether we recommend that you set the source region to global.</p>
+     * <p>Indicates whether it is recommended to set a default line.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddGtmAccessStrategyRequest extends TeaModel {
     /**
-     * <p>The line codes of access regions.</p>
+     * <p>The source of the DNS requests.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     public String accessLines;
 
     /**
-     * <p>The ID of the default address pool.</p>
+     * <p>The ID of the primary address pool collection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,8 +25,8 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     public String defaultAddrPoolId;
 
     /**
-     * <p>The ID of the failover address pool.</p>
-     * <p>If the failover address pool is not set, pass the <strong>Empty</strong> value.</p>
+     * <p>The ID of the failover address pool collection.</p>
+     * <p>If a failover address pool collection is not configured, set this parameter to <strong>EMPTY</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     public String failoverAddrPoolId;
 
     /**
-     * <p>The ID of the GTM instance for which you want to create an access policy.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -55,8 +55,11 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the access policy.</p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>访问策略测试</p>
      */
     @NameInMap("StrategyName")
     public String strategyName;

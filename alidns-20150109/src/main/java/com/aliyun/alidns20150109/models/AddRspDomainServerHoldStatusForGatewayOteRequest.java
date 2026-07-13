@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddRspDomainServerHoldStatusForGatewayOteRequest extends TeaModel {
     /**
+     * <p>Idempotency token</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class AddRspDomainServerHoldStatusForGatewayOteRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Domain name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +25,11 @@ public class AddRspDomainServerHoldStatusForGatewayOteRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Status description</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>实名认证通过，解除serverHold状态</p>
      */
     @NameInMap("StatusMsg")
     public String statusMsg;

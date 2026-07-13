@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
     /**
-     * <p>The number of available addresses.</p>
+     * <p>The number of healthy addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
     public Integer addrAvailableNum;
 
     /**
-     * <p>The number of unavailable addresses.</p>
+     * <p>The number of unhealthy addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
     public Integer addrPoolGroupNotAvailableNum;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
@@ -41,7 +41,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of access policies that are unavailable in the current active address pool group.</p>
+     * <p>The number of unavailable access policies for the active address pool group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
     public Integer strategyNotAvailableNum;
 
     /**
-     * <p>The number of access policies switched to the secondary address pool group.</p>
+     * <p>The number of access policies that are switched to the failover address pool group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

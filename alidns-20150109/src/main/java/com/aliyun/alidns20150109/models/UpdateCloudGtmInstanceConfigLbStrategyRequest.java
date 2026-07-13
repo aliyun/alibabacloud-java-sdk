@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudGtmInstanceConfigLbStrategyRequest extends TeaModel {
     /**
-     * <p>The language in which the returned results are displayed. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong> (default): English</li>
+     * <li><p><strong>zh-CN</strong>: Chinese.</p>
+     * </li>
+     * <li><p><strong>en-US</strong>: English. This is the default value.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +20,16 @@ public class UpdateCloudGtmInstanceConfigLbStrategyRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The new policy for load balancing between address pools. Valid values:</p>
+     * <p>The load balancing policy for the address pools. Valid values:</p>
      * <ul>
-     * <li>round_robin: All address pools are returned for Domain Name System (DNS) requests from any source. All address pools are sorted in round-robin mode each time they are returned.</li>
-     * <li>sequence: The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number indicates the priority for returning the address pool. A smaller sequence number indicates a higher priority. If the address pool with the smallest sequence number is unavailable, the address pool with the second smallest sequence number is returned.</li>
-     * <li>weight: You can set a different weight value for each address pool. This way, address pools are returned based on the weight values.</li>
-     * <li>source_nearest: GTM returns different address pools based on the sources of DNS requests. This way, users can access nearby address pools.</li>
+     * <li><p>round_robin: Returns all address pools for any DNS request. The address pools are rotated for each request.</p>
+     * </li>
+     * <li><p>sequence: Returns the address pool with the smallest ordinal number. The smaller the ordinal number, the higher the priority. If the primary address pool is unavailable, the next address pool in the sequence is used.</p>
+     * </li>
+     * <li><p>weight: Distributes DNS requests to address pools based on their configured weights.</p>
+     * </li>
+     * <li><p>source_nearest: Returns an address pool based on the proximity of the DNS request source. This implements intelligent DNS resolution and directs users to the nearest access point.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,38 +39,40 @@ public class UpdateCloudGtmInstanceConfigLbStrategyRequest extends TeaModel {
     public String addressPoolLbStrategy;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token that is used to ensure the idempotence of the request. The token must be unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
+     * <p>1ae05db4-10e7-11ef-b126-00163e24****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
-     * <p>You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the configuration ID of the desired access domain name.</p>
+     * <p>The ID of the instance configuration. A GTM instance can have multiple configurations for the same domain name, such as one for A records and another for AAAA records. The ConfigId uniquely identifies the configuration that you want to modify.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2797349.html">ListCloudGtmInstanceConfigs</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Config-000**11</p>
+     * <p>Config-000****</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
-     * <p>The ID of the GTM 3.0 instance for which you want to modify the load balancing policy.</p>
+     * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>gtm-cn-wwo3a3hbz**</p>
+     * <p>gtm-cn-wwo3a3h***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The mode used if the address pool with the smallest sequence number is recovered. This parameter is required when AddressPoolLbStrategy is set to sequence. Valid values:</p>
+     * <p>The recovery mode for a primary address pool when the load balancing policy is set to sequence. Valid values:</p>
      * <ul>
-     * <li>preemptive: The address pool with the smallest sequence number is preferentially used if this address pool is recovered.</li>
-     * <li>non_preemptive: The current address pool is still used even if the address pool with the smallest sequence number is recovered.</li>
+     * <li><p>preemptive: The system switches back to the primary address pool as soon as it recovers.</p>
+     * </li>
+     * <li><p>non_preemptive: The system continues to use the current address pool even after the primary address pool recovers.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

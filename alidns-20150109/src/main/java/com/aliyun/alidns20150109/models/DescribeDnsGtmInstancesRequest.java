@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstancesRequest extends TeaModel {
     /**
-     * <p>The keyword that you use for the query. Fuzzy search by instance ID or instance name is supported.</p>
+     * <p>The keyword for the query. Fuzzy search by instance ID and instance name is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +23,7 @@ public class DescribeDnsGtmInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeDnsGtmInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-testgroupid</p>

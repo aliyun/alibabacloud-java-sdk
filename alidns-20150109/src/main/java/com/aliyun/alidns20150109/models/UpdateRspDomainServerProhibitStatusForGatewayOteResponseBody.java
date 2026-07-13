@@ -4,13 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extends TeaModel {
+    /**
+     * <p>Detailed access-denied information. This field appears only when RAM authentication fails.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyAccessDeniedDetail accessDeniedDetail;
 
+    /**
+     * <p>List of returned data items.</p>
+     */
     @NameInMap("Data")
     public UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyData data;
 
     /**
+     * <p>Indicates whether you can retry the request after failure. <code>true</code>: retry is allowed. <code>false</code>: retry is not allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -18,6 +26,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
     public Boolean recoverableError;
 
     /**
+     * <p>Unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0629502C-6224-5DC9-A8ED-2ED73A2E3931</p>
      */
@@ -25,6 +35,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. <code>true</code>: succeeded. <code>false</code>: failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,13 +90,17 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyAccessDeniedDetail extends TeaModel {
         /**
+         * <p>The unauthorized operation that was attempted.</p>
+         * 
          * <strong>example:</strong>
-         * <p>CreateUser</p>
+         * <p>UpdateRspDomainServerProhibitStatusForGatewayOte</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
 
         /**
+         * <p>Display name of the authenticated entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015555733387XXXX</p>
          */
@@ -92,6 +108,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
         public String authPrincipalDisplayName;
 
         /**
+         * <p>Owner ID of the authenticated entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>10469733312XXX</p>
          */
@@ -99,6 +117,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
         public String authPrincipalOwnerId;
 
         /**
+         * <p>Identity type.</p>
+         * 
          * <strong>example:</strong>
          * <p>SubUser</p>
          */
@@ -106,6 +126,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
         public String authPrincipalType;
 
         /**
+         * <p>Encrypted diagnostic message.</p>
+         * 
          * <strong>example:</strong>
          * <p>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</p>
          */
@@ -113,6 +135,14 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
         public String encodedDiagnosticMessage;
 
         /**
+         * <p>Reason for authentication failure. Valid values:</p>
+         * <ul>
+         * <li><p>ExplicitDeny</p>
+         * </li>
+         * <li><p>ImplicitDeny</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
          */
@@ -120,6 +150,8 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
         public String noPermissionType;
 
         /**
+         * <p>Policy type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DlpSend</p>
          */
@@ -191,19 +223,29 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyDataStatusList extends TeaModel {
         /**
+         * <p>Domain name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>uptp.test.abchina.com.cn</p>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
+         * <p>Current domain name status.</p>
+         * 
          * <strong>example:</strong>
          * <p>serverUpdateProhibited</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Description of the domain name status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>实名认证未通过，增加serverUpdateProhibited状态</p>
+         */
         @NameInMap("StatusMsg")
         public String statusMsg;
 
@@ -240,12 +282,17 @@ public class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBody extend
 
     public static class UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyData extends TeaModel {
         /**
+         * <p>Domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Status information for the task</p>
+         */
         @NameInMap("StatusList")
         public java.util.List<UpdateRspDomainServerProhibitStatusForGatewayOteResponseBodyDataStatusList> statusList;
 

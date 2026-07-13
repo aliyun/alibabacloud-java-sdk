@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRecursionRecordWeightRequest extends TeaModel {
     /**
+     * <p>The client token that ensures the idempotence of the request. Generate a unique token for each request. The token can be up to 64 ASCII characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>21079fa016944979537637959d09bc</p>
      */
@@ -12,6 +14,7 @@ public class UpdateRecursionRecordWeightRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The unique ID of the DNS record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateRecursionRecordWeightRequest extends TeaModel {
     public String recordId;
 
     /**
+     * <p>The weight. The value can be an integer from 0 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -8,7 +8,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
      * <p>The code of the custom line.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0yc-597</p>
+     * <p>hra0yc-*********</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,28 +23,31 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID/Name of the custom line.</p>
+     * <p>The ID of the custom line.</p>
      * 
      * <strong>example:</strong>
-     * <p>597</p>
+     * <p>5*******</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
+     * <p>The list of IP address segments. Use a hyphen (-) to separate the start and end IP addresses. Each line represents one segment. You can specify from 1 to 50 segments. For a single IP address, use the format IP1-IP1. IP address segments cannot overlap.</p>
      */
     @NameInMap("IpSegmentList")
     public java.util.List<DescribeCustomLineResponseBodyIpSegmentList> ipSegmentList;
 
     /**
      * <p>The name of the custom line.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试线路</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
@@ -107,19 +110,19 @@ public class DescribeCustomLineResponseBody extends TeaModel {
 
     public static class DescribeCustomLineResponseBodyIpSegmentList extends TeaModel {
         /**
-         * <p>The end IP address of the CIDR block.</p>
+         * <p>The end IP address of the segment.</p>
          * 
          * <strong>example:</strong>
-         * <p>11.1.1.3</p>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("EndIp")
         public String endIp;
 
         /**
-         * <p>The start IP address of the CIDR block.</p>
+         * <p>The start IP address of the segment.</p>
          * 
          * <strong>example:</strong>
-         * <p>11.1.1.2</p>
+         * <p>1.2.XX.XX</p>
          */
         @NameInMap("StartIp")
         public String startIp;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>89184F33-48A1-4401-9C0F-40E45DB091AB</p>
@@ -32,13 +32,13 @@ public class DescribeTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tags added to the resource.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeTagsResponseBodyTags> tags;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -93,7 +93,7 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     public static class DescribeTagsResponseBodyTags extends TeaModel {
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -102,7 +102,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The values of tags added to the resource.</p>
+         * <p>A list of tag values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;

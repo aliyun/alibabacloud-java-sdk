@@ -8,13 +8,13 @@ public class ChangeDomainGroupResponseBody extends TeaModel {
      * <p>The ID of the target domain name group.</p>
      * 
      * <strong>example:</strong>
-     * <p>2223</p>
+     * <p>60bb3ef15ace449082cf914ed3ea****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The name of the destination domain name group.</p>
+     * <p>The name of the target domain name group.</p>
      * 
      * <strong>example:</strong>
      * <p>MyGroup</p>

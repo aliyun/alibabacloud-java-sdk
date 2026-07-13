@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudGtmGlobalAlertResponseBody extends TeaModel {
+    /**
+     * <p>The alert configurations.</p>
+     */
     @NameInMap("AlertConfig")
     public DescribeCloudGtmGlobalAlertResponseBodyAlertConfig alertConfig;
 
+    /**
+     * <p>The alert notification groups.</p>
+     */
     @NameInMap("AlertGroup")
     public DescribeCloudGtmGlobalAlertResponseBodyAlertGroup alertGroup;
 

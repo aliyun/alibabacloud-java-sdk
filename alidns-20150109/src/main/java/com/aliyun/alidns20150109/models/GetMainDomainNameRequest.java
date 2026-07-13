@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMainDomainNameRequest extends TeaModel {
     /**
-     * <p>The string. The string can be up to 128 characters in length.</p>
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,14 @@ public class GetMainDomainNameRequest extends TeaModel {
     public String inputString;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
+     * </ul>
+     * <p>Default: zh</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

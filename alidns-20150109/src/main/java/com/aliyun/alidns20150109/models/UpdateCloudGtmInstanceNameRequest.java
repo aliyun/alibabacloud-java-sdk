@@ -7,8 +7,10 @@ public class UpdateCloudGtmInstanceNameRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p>zh-CN: Chinese</p>
+     * </li>
+     * <li><p>en-US: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateCloudGtmInstanceNameRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
@@ -36,7 +38,7 @@ public class UpdateCloudGtmInstanceNameRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the instance. You cannot leave this parameter empty.</p>
+     * <p>The name of the instance. The value cannot be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

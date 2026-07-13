@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveDomainResourceGroupRequest extends TeaModel {
     /**
-     * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. The default value is en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -19,7 +19,7 @@ public class MoveDomainResourceGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aekzzk7hx3glaoq</p>
+     * <p>rg-aek*******</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;

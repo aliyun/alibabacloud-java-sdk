@@ -7,8 +7,10 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Chinese</li>
-     * <li>en-US: English</li>
+     * <li><p><code>zh-CN</code>: Chinese</p>
+     * </li>
+     * <li><p><code>en-US</code>: English</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,19 +20,19 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The alert configurations.</p>
+     * <p>A list of alert configurations.</p>
      */
     @NameInMap("AlertConfig")
     public java.util.List<UpdateCloudGtmGlobalAlertRequestAlertConfig> alertConfig;
 
     /**
-     * <p>The alert contact groups.</p>
+     * <p>A list of alert notification groups.</p>
      */
     @NameInMap("AlertGroup")
     public java.util.List<String> alertGroup;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client-generated token to ensure request idempotence. This token must be unique for each request, contain only ASCII characters, and be no more than 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
@@ -77,10 +79,12 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
 
     public static class UpdateCloudGtmGlobalAlertRequestAlertConfig extends TeaModel {
         /**
-         * <p>Specifies whether to configure DingTalk notifications. Valid values:</p>
+         * <p>Whether to send a DingTalk notification when an alert is triggered. Valid values:</p>
          * <ul>
-         * <li>true: configures DingTalk notifications. DingTalk notifications are sent when alerts are triggered.</li>
-         * <li>false: does not configure DingTalk notifications.</li>
+         * <li><p><code>true</code>: A DingTalk notification is sent.</p>
+         * </li>
+         * <li><p><code>false</code>: Do not send a DingTalk notification.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -90,10 +94,12 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public Boolean dingtalkNotice;
 
         /**
-         * <p>Specifies whether to configure email notifications. Valid values:</p>
+         * <p>Whether to send an email notification when an alert is triggered. Valid values:</p>
          * <ul>
-         * <li>true: configures email notifications. Emails are sent when alerts are triggered.</li>
-         * <li>false｜null: does not configure email notifications.</li>
+         * <li><p><code>true</code>: An email notification is sent.</p>
+         * </li>
+         * <li><p><code>false</code> or <code>null</code>: Do not send an email notification.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,12 +109,16 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public Boolean emailNotice;
 
         /**
-         * <p>The type of the alert event. Valid values:</p>
+         * <p>The alert event type. Valid values:</p>
          * <ul>
-         * <li>addr_alert: The address is unavailable.</li>
-         * <li>addr_resume: The address becomes available.</li>
-         * <li>addr_pool_unavailable: The address pool is unavailable.</li>
-         * <li>addr_pool_available: The address pool becomes available.</li>
+         * <li><p><code>addr_alert</code>: An address becomes unavailable.</p>
+         * </li>
+         * <li><p><code>addr_resume</code>: An address becomes available.</p>
+         * </li>
+         * <li><p><code>addr_pool_unavailable</code>: An address pool becomes unavailable.</p>
+         * </li>
+         * <li><p><code>addr_pool_available</code>: An address pool becomes available.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,6 +128,8 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public String noticeType;
 
         /**
+         * <p>The alert threshold for queries per second (QPS).</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -125,12 +137,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public Long qpsThreshold;
 
         /**
-         * <p>Specifies whether to configure text message notifications. Valid values:</p>
+         * <p>Whether to send a text message notification when an alert is triggered. Valid values:</p>
          * <ul>
-         * <li>true: configures text message notifications. Text messages are sent when alerts are triggered.</li>
-         * <li>false｜null: does not configure text message notifications.</li>
+         * <li><p><code>true</code>: A text message notification is sent.</p>
+         * </li>
+         * <li><p><code>false</code> or <code>null</code>: Do not send a text message notification.</p>
+         * </li>
          * </ul>
-         * <p>Only the China site (aliyun.com) supports text message notifications.</p>
+         * <p>Text message notifications are available only on the China site.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -139,6 +153,8 @@ public class UpdateCloudGtmGlobalAlertRequest extends TeaModel {
         public Boolean smsNotice;
 
         /**
+         * <p>The alert threshold.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

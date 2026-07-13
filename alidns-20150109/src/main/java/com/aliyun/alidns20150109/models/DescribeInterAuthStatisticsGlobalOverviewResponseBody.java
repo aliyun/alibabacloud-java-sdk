@@ -4,11 +4,14 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeInterAuthStatisticsGlobalOverviewResponseBody extends TeaModel {
+    /**
+     * <p>The statistical data.</p>
+     */
     @NameInMap("Data")
     public DescribeInterAuthStatisticsGlobalOverviewResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
@@ -39,6 +42,8 @@ public class DescribeInterAuthStatisticsGlobalOverviewResponseBody extends TeaMo
 
     public static class DescribeInterAuthStatisticsGlobalOverviewResponseBodyData extends TeaModel {
         /**
+         * <p>The average success ratio.</p>
+         * 
          * <strong>example:</strong>
          * <p>72</p>
          */
@@ -46,6 +51,8 @@ public class DescribeInterAuthStatisticsGlobalOverviewResponseBody extends TeaMo
         public Long avgSuccessRatio;
 
         /**
+         * <p>The change in the average success ratio compared to the previous statistical period.</p>
+         * 
          * <strong>example:</strong>
          * <p>75</p>
          */
@@ -53,6 +60,8 @@ public class DescribeInterAuthStatisticsGlobalOverviewResponseBody extends TeaMo
         public Long avgSuccessRatioTrend;
 
         /**
+         * <p>The total resolve count.</p>
+         * 
          * <strong>example:</strong>
          * <p>18349</p>
          */
@@ -60,6 +69,8 @@ public class DescribeInterAuthStatisticsGlobalOverviewResponseBody extends TeaMo
         public Long totalResolveCount;
 
         /**
+         * <p>The change in the total resolve count compared to the previous statistical period.</p>
+         * 
          * <strong>example:</strong>
          * <p>2341</p>
          */

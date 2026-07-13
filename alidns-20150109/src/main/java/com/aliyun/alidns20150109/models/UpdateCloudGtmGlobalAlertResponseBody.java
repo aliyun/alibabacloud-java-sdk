@@ -14,10 +14,12 @@ public class UpdateCloudGtmGlobalAlertResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the global alert configuration was successfully updated. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p><code>true</code>: The update was successful.</p>
+     * </li>
+     * <li><p><code>false</code>: The update failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

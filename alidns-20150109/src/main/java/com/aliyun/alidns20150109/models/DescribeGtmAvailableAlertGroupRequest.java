@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmAvailableAlertGroupRequest extends TeaModel {
     /**
-     * <p>The language used by the user.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

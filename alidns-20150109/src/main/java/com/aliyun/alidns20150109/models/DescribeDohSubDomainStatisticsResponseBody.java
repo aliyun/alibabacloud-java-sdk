@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
@@ -14,7 +14,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistics list.</p>
+     * <p>A list of statistics.</p>
      */
     @NameInMap("Statistics")
     public java.util.List<DescribeDohSubDomainStatisticsResponseBodyStatistics> statistics;
@@ -42,7 +42,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
 
     public static class DescribeDohSubDomainStatisticsResponseBodyStatistics extends TeaModel {
         /**
-         * <p>The timestamp.</p>
+         * <p>The timestamp of the statistical data, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1544976000000</p>
@@ -60,7 +60,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
-         * <p>The number of IPv4-based HTTP requests.</p>
+         * <p>The number of IPv4 HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>
@@ -69,7 +69,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         public Long v4HttpCount;
 
         /**
-         * <p>The number of IPv4-based HTTPS requests.</p>
+         * <p>The number of IPv4 HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>
@@ -78,7 +78,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         public Long v4HttpsCount;
 
         /**
-         * <p>The number of IPv6-based HTTP requests.</p>
+         * <p>The number of IPv6 HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>
@@ -87,7 +87,7 @@ public class DescribeDohSubDomainStatisticsResponseBody extends TeaModel {
         public Long v6HttpCount;
 
         /**
-         * <p>The number of IPv6-based HTTPS requests.</p>
+         * <p>The number of IPv6 HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>

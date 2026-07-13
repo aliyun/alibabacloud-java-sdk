@@ -5,24 +5,24 @@ import com.aliyun.tea.*;
 
 public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     /**
-     * <p>The address pools.</p>
+     * <p>A list of addresses in the address pool.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addr")
     public java.util.List<UpdateDnsGtmAddressPoolRequestAddr> addr;
 
     /**
-     * <p>The ID of the address pool.</p>
+     * <p>The ID of the address pool. For more information, see <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstanceaddresspools">DescribeDnsGtmInstanceAddressPools</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>testpool1</p>
+     * <p>testp******</p>
      */
     @NameInMap("AddrPoolId")
     public String addrPoolId;
 
     /**
-     * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default value: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -31,15 +31,17 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The load balancing policy of the address pool. Valid values:</p>
+     * <p>The load balancing policy. Valid values:</p>
      * <ul>
-     * <li>ALL_RR: returns all addresses.</li>
-     * <li>RATIO: returns addresses by weight.</li>
+     * <li><p>ALL_RR: Returns all addresses.</p>
+     * </li>
+     * <li><p>RATIO: Returns addresses by weight.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>all_rr</p>
+     * <p>ALL_RR</p>
      */
     @NameInMap("LbaStrategy")
     public String lbaStrategy;
@@ -100,39 +102,44 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
 
     public static class UpdateDnsGtmAddressPoolRequestAddr extends TeaModel {
         /**
-         * <p>The address in the address pool.</p>
+         * <p>The address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.1</p>
+         * <p>1.1.XX.XX</p>
          */
         @NameInMap("Addr")
         public String addr;
 
         /**
-         * <p>The information about the source region of the address. The value of the parameter is a string in the JSON format. Valid values:</p>
+         * <p>The source region of the address. This parameter is a JSON string.</p>
          * <ul>
-         * <li><p>LineCode: the line code of the source region. This parameter is deprecated. Use lineCodes instead.</p>
+         * <li><p>LineCode: The line code of the source region. This parameter is deprecated. Use lineCodes instead.</p>
          * </li>
-         * <li><p>lineCodes: the line codes of the source region</p>
+         * <li><p>lineCodes: A list of line codes for the source regions.</p>
          * </li>
-         * <li><p>lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:</p>
+         * <li><p>lineCodeRectifyType: The type of line code rectification. Default value: AUTO. Valid values:</p>
          * <ul>
-         * <li>NO_NEED: no need for rectification</li>
-         * <li>RECTIFIED: rectified</li>
-         * <li>AUTO: automatic rectification</li>
+         * <li><p>NO_NEED: No rectification is required.</p>
+         * </li>
+         * <li><p>RECTIFIED: The line code is rectified.</p>
+         * </li>
+         * <li><p>AUTO: The line code is automatically rectified.</p>
+         * </li>
          * </ul>
          * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Linecode:default,lineCodes:[&quot;default&quot;],lineCodeRectifyType:&quot;NO_NEED&quot;</p>
+         * <p>Linecode: default
+         * lineCodes： [&quot;default&quot;]
+         * lineCodeRectifyType: AUTO</p>
          */
         @NameInMap("AttributeInfo")
         public String attributeInfo;
 
         /**
-         * <p>The weight of the address.</p>
+         * <p>The weight.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,22 +148,25 @@ public class UpdateDnsGtmAddressPoolRequest extends TeaModel {
         public Integer lbaWeight;
 
         /**
-         * <p>The return mode of the addresses. Valid values:</p>
+         * <p>The mode. Valid values:</p>
          * <ul>
-         * <li>SMART: smart return</li>
-         * <li>ONLINE: always online</li>
-         * <li>OFFLINE: always offline</li>
+         * <li><p>SMART: Smart return</p>
+         * </li>
+         * <li><p>ONLINE: Always online</p>
+         * </li>
+         * <li><p>OFFLINE: Always offline</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>online</p>
+         * <p>SMART</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
-         * <p>The description of the address pool.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

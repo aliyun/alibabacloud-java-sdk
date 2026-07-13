@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDnsGtmAccessStrategyResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
@@ -14,7 +14,7 @@ public class AddDnsGtmAccessStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the access policy.</p>
+     * <p>The access policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>testStrategyId1</p>

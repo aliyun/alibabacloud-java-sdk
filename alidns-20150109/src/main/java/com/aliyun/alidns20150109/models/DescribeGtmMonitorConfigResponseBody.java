@@ -14,7 +14,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The timestamp that indicates the time when the health check configuration was created.</p>
+     * <p>The UNIX timestamp that indicates when the health check configuration was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
@@ -23,7 +23,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+     * <p>The number of consecutive health checks.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -53,25 +53,35 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     public String monitorConfigId;
 
     /**
-     * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
-     * <p>HTTP or HTTPS:</p>
+     * <p>The extended information. The parameters vary based on the protocol.</p>
+     * <p>For HTTP and HTTPS:</p>
      * <ul>
-     * <li>port: the port to check.</li>
-     * <li>failureRate: the failure rate.</li>
-     * <li>code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</li>
-     * <li>host: the host configuration.</li>
-     * <li>path: the health check URL.</li>
+     * <li><p>port: The health check port.</p>
+     * </li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
+     * <li><p>code: The return code. A response is considered abnormal if its status code is greater than the specified value. Valid values: 400 and 500.</p>
+     * </li>
+     * <li><p>host: The Host header of the request.</p>
+     * </li>
+     * <li><p>path: The path of the URL.</p>
+     * </li>
      * </ul>
-     * <p>PING:</p>
+     * <p>For PING:</p>
      * <ul>
-     * <li>packetNum: the number of ping packets.</li>
-     * <li>packetLossRate: the loss rate of ping packets.</li>
-     * <li>failureRate: the failure rate.</li>
+     * <li><p>packetNum: The number of ping packets.</p>
+     * </li>
+     * <li><p>packetLossRate: The packet loss rate.</p>
+     * </li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
      * </ul>
-     * <p>TCP:</p>
+     * <p>For TCP:</p>
      * <ul>
-     * <li>port: the port to check.</li>
-     * <li>failureRate: the failure rate.</li>
+     * <li><p>port: The health check port.</p>
+     * </li>
+     * <li><p>failureRate: The failure rate.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +100,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
@@ -99,7 +109,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+     * <p>The timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>
@@ -117,7 +127,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The timestamp that indicates the time when the health check configuration was last updated.</p>
+     * <p>The UNIX timestamp that indicates when the health check configuration was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>1527690629357</p>

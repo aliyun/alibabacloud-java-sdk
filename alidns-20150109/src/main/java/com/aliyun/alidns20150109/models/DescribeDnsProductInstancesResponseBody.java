@@ -10,8 +10,10 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
     /**
      * <p>The type of the domain name. Valid values:</p>
      * <ul>
-     * <li>PUBLIC (default): hosted public domain name</li>
-     * <li>CACHE: cached public domain name</li>
+     * <li><p>PUBLIC: authoritative domain name (default)</p>
+     * </li>
+     * <li><p>CACHE: authoritative proxy domain name</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +23,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
     public String domainType;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,7 +32,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -42,13 +44,13 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
+     * <p>536E9CAD-DB30-4647-AC87-AA5CC38xxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of domain names.</p>
+     * <p>The total number of instances that match the query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

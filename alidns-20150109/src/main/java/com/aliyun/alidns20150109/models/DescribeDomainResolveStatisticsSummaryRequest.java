@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     /**
-     * <p>The order in which you want to sort the returned entries. Valid values:</p>
+     * <p>The sort direction. Valid values:</p>
      * <ul>
-     * <li>DESC: the descending order</li>
-     * <li>ASC: the ascending order</li>
+     * <li><p>DESC: descending</p>
+     * </li>
+     * <li><p>ASC: ascending</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The end time in the yyyy-MM-dd format, for example, 2023-03-13.</p>
+     * <p>The end date. The format is yyyy-MM-dd. For example, 2023-03-13.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-01</p>
@@ -27,7 +29,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The keyword. The Keyword parameter is used together with the SearchMode parameter.</p>
+     * <p>The keyword. This parameter is used with SearchMode.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -45,7 +47,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +56,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 1000.</p>
+     * <p>The number of entries to return on each page for a paged query. The maximum value is 1000. The minimum value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -65,8 +67,10 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     /**
      * <p>The search mode of the keyword. Valid values:</p>
      * <ul>
-     * <li>LIKE (default): fuzzy search</li>
-     * <li>EXACT: exact search</li>
+     * <li><p>LIKE: fuzzy search (default)</p>
+     * </li>
+     * <li><p>EXACT: exact match</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +80,7 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public String searchMode;
 
     /**
-     * <p>The start time in the yyyy-MM-dd format, for example, 2023-03-01.</p>
+     * <p>The start date. The format is yyyy-MM-dd. For example, 2023-03-01.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,11 +90,11 @@ public class DescribeDomainResolveStatisticsSummaryRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>The threshold for the number of Domain Name System (DNS) requests. You can query the domain names at the specified quantity level of DNS requests and query the number of DNS requests for each domain name.</p>
-     * <p>If you do not specify this parameter, the data about the domain names that have DNS requests is obtained.</p>
-     * <p>If you set this parameter to a value less than 0, the data about all domain names is obtained.</p>
-     * <p>If you set this parameter to 0, the data about the domain names that do not have DNS requests is obtained.</p>
-     * <p>If you set this parameter to a value greater than 0, the data about the domain names whose number of DNS requests is less than or equal to the value of this parameter is obtained.</p>
+     * <p>The threshold for the number of DNS queries. This parameter filters domain names by query volume.</p>
+     * <p>If you do not specify this parameter, the operation returns domain names with more than zero queries.</p>
+     * <p>If you specify a value less than 0, the operation returns all domain names.</p>
+     * <p>If you specify 0, the operation returns domain names with zero queries.</p>
+     * <p>If you specify a value greater than 0, the operation returns domain names with a query volume up to this value.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>

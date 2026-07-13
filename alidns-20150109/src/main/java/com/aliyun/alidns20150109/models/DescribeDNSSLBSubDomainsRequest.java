@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     /**
-     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
+     * <p>The domain name. Call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a> operation to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response. Valid values are:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p><strong>zh</strong>: Chinese. This is the default value.</p>
+     * </li>
+     * <li><p><strong>en</strong>: English.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +30,7 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,7 +39,7 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>. The default value is <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -46,7 +48,7 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The hostname.</p>
+     * <p>The host record.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -55,10 +57,10 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public String rr;
 
     /**
-     * <p>The IP address of the user account.</p>
+     * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.1</p>
+     * <p>1.1.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

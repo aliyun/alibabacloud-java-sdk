@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the returned page. The value starts from <strong>1</strong>. The default value is <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
@@ -32,13 +32,13 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistics list.</p>
+     * <p>A list of statistics.</p>
      */
     @NameInMap("Statistics")
     public java.util.List<DescribeDohDomainStatisticsSummaryResponseBodyStatistics> statistics;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -47,7 +47,7 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -155,7 +155,7 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
-         * <p>The number of IPv4-based HTTP requests.</p>
+         * <p>The number of IPv4 HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>
@@ -164,7 +164,7 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
         public Long v4HttpCount;
 
         /**
-         * <p>The number of IPv4-based HTTPS requests.</p>
+         * <p>The number of IPv4 HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>
@@ -173,7 +173,7 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
         public Long v4HttpsCount;
 
         /**
-         * <p>The number of IPv6-based HTTP requests.</p>
+         * <p>The number of IPv6 HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>
@@ -182,7 +182,7 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
         public Long v6HttpCount;
 
         /**
-         * <p>The number of IPv6-based HTTPS requests.</p>
+         * <p>The number of IPv6 HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>3141592653</p>

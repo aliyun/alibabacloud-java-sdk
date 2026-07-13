@@ -11,10 +11,12 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     public DescribeCloudGtmInstanceConfigAlertResponseBodyAlertGroup alertGroup;
 
     /**
-     * <p>The alert configuration mode of the instance. Valid values:</p>
+     * <p>The alert configuration mode for the instance.</p>
      * <ul>
-     * <li>global: global alert configuration</li>
-     * <li>instance_config: custom alert configuration</li>
+     * <li><p>global: The instance inherits the global alert configuration.</p>
+     * </li>
+     * <li><p>instance_config: The instance uses a custom alert configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     public String alertMode;
 
     /**
-     * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+     * <p>The ID of the instance configuration. For the same access domain name and GTM instance, you can configure both A and AAAA records. This creates two instance configurations. \<code>ConfigId\\</code> uniquely identifies an instance configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>Config-000**11</p>
@@ -42,7 +44,7 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>

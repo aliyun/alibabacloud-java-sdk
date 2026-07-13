@@ -15,7 +15,7 @@ public class DescribeGtmInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the values of specific response parameters.</p>
+     * <p>The language.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,7 +24,7 @@ public class DescribeGtmInstanceRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether additional information is required. Default value: <strong>false</strong>. If the value is <strong>true</strong>, the AccessStrategyNum and AddressPoolNum parameters are returned.</p>
+     * <p>Specifies whether to return additional information. The default value is <strong>false</strong>. If you set this parameter to <strong>true</strong>, the response includes AccessStrategyNum (the number of access policies) and AddressPoolNum (the number of address pools).</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

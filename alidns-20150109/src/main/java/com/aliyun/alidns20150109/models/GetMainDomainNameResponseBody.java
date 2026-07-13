@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMainDomainNameResponseBody extends TeaModel {
     /**
-     * <p>The level of the entered domain name.</p>
+     * <p>The level of the input domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The hostname.</p>
+     * <p>The host record.</p>
      * 
      * <strong>example:</strong>
      * <p>www</p>
@@ -32,7 +32,7 @@ public class GetMainDomainNameResponseBody extends TeaModel {
     public String RR;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>

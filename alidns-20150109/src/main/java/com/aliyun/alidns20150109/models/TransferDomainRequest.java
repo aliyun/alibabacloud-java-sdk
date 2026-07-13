@@ -5,21 +5,25 @@ import com.aliyun.tea.*;
 
 public class TransferDomainRequest extends TeaModel {
     /**
-     * <p>The domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.</p>
+     * <p>The domain names to transfer. Separate multiple domain names with commas. Only domain names registered with Alibaba Cloud are supported. &lt;props=&quot;china&quot;&gt;To get your domain names, call <a href="https://help.aliyun.com/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a>.
+     * &lt;props=&quot;intl&quot;&gt;To get your domain names, call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1.com,test2.com</p>
+     * <p>example.com,example.net</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><p>zh: Chinese</p>
+     * </li>
+     * <li><p>en: English</p>
+     * </li>
      * </ul>
+     * <p>Default value: zh.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -28,7 +32,7 @@ public class TransferDomainRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The description of the domain name.</p>
+     * <p>The remarks for the transfer.</p>
      * 
      * <strong>example:</strong>
      * <p>test domain transfer</p>
@@ -37,11 +41,11 @@ public class TransferDomainRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The destination user ID. The domain names and their Domain Name System (DNS) records are transferred to the destination user ID.</p>
+     * <p>The ID of the target user account. The specified domain names and their DNS records are transferred to this account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>12345678</p>
+     * <p>12*******</p>
      */
     @NameInMap("TargetUserId")
     public Long targetUserId;

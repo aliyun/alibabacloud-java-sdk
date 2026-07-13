@@ -23,7 +23,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public Integer addrPoolNotAvailableNum;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
@@ -32,10 +32,12 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the instance. Valid values:</p>
+     * <p>The status of the instance. Valid values:</p>
      * <ul>
-     * <li>ALLOW: The operation on the instance is allowed.</li>
-     * <li>DENY: The operation on the instance is not allowed.</li>
+     * <li><p>ALLOW: Operations are allowed.</p>
+     * </li>
+     * <li><p>DENY: Operations are denied.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +47,12 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The reasons why the instance is in the current state. Valid values:</p>
+     * <p>A list of reasons for the instance status. Valid values:</p>
      * <ul>
-     * <li>INSTANCE_OPERATE_BLACK_LIST: The operation on the instance is not allowed.</li>
-     * <li>BETA_INSTANCE: The instance is in public preview.</li>
+     * <li><p>INSTANCE_OPERATE_BLACK_LIST: The instance is in a blacklist.</p>
+     * </li>
+     * <li><p>BETA_INSTANCE: The instance is in public preview.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +62,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public String statusReason;
 
     /**
-     * <p>The number of unavailable access policies.</p>
+     * <p>The number of access policies for which the active address pool is unavailable.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -67,7 +71,7 @@ public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
     public Integer strategyNotAvailableNum;
 
     /**
-     * <p>The number of access policies switched to the secondary address pool.</p>
+     * <p>The number of access policies that are switched to the failover address pool.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

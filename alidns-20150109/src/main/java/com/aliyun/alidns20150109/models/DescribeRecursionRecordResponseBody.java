@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRecursionRecordResponseBody extends TeaModel {
     /**
+     * <p>The time when the record was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-23T13:09Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The timestamp that indicates when the record was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
+     * <p>The priority of the Mail Exchange (MX) record.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,7 +32,7 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>record ID</p>
+     * <p>The record ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1903634198947606528</p>
@@ -35,6 +41,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String recordId;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -42,6 +50,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String remark;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
      */
@@ -49,6 +59,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The host record.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -56,7 +68,7 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String rr;
 
     /**
-     * <p>ttl</p>
+     * <p>The Time to Live (TTL).</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -65,6 +77,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public Integer ttl;
 
     /**
+     * <p>The type of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>A</p>
      */
@@ -72,6 +86,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The time when the record was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-29T13:20Z</p>
      */
@@ -79,6 +95,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The timestamp that indicates when the record was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>1527690629357</p>
      */
@@ -86,6 +104,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public Long updateTimestamp;
 
     /**
+     * <p>The value of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
      */
@@ -93,6 +113,8 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public String value;
 
     /**
+     * <p>The weight.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -100,7 +122,7 @@ public class DescribeRecursionRecordResponseBody extends TeaModel {
     public Integer weight;
 
     /**
-     * <p>zone ID</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>172635074000011</p>

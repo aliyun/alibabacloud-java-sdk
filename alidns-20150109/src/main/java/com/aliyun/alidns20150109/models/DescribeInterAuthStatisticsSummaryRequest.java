@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     /**
+     * <p>The sort direction. Valid values:</p>
+     * <ul>
+     * <li><p>DESC (default): descending order</p>
+     * </li>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -12,6 +20,8 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -19,6 +29,11 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end time of the query. The value is a UNIX timestamp in milliseconds.</p>
+     * <blockquote>
+     * <p>Warning: If the query time range is large and the domain name has an excessive volume of resolution logs, the query may time out or return inaccurate results..</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1741526400000</p>
      */
@@ -26,6 +41,8 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
+     * <p>Used for the report of subdomain names with sudden increases or decreases in request volume.</p>
+     * 
      * <strong>example:</strong>
      * <p>up
      * down</p>
@@ -34,6 +51,12 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public String growType;
 
     /**
+     * <p>The sort parameter. Valid values:</p>
+     * <ul>
+     * <li>createDate: sorts by creation time (default if left empty)</li>
+     * <li>expireDate: sorts by expiration time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -41,6 +64,8 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number. The value starts from 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -48,6 +73,8 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -55,13 +82,25 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sampling period. Valid values:</p>
+     * <ul>
+     * <li><p>DAY: day</p>
+     * </li>
+     * <li><p>WEEK: week</p>
+     * </li>
+     * <li><p>MONTH: month.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>300</p>
+     * <p>DAY</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
+     * <p>The DNS response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -69,6 +108,8 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public String rcode;
 
     /**
+     * <p>The region of the resolution cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-southeast-3</p>
      */
@@ -76,6 +117,8 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public String serverRegion;
 
     /**
+     * <p>The route type. Valid values: cloud: cloud route. local: on-premises route.</p>
+     * 
      * <strong>example:</strong>
      * <p>File</p>
      */
@@ -83,16 +126,37 @@ public class DescribeInterAuthStatisticsSummaryRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The start time of the query. The value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1516779348000</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 
+    /**
+     * <p>The type of statistical metric.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QTYPE_RATIO
+     * 枚举值：
+     * QTYPE_RATIO：DNS请求记录类型占比
+     * RCODE_DOMAIN：否定应答域名TOP排行
+     * RCODE_SOURCE_IP：某否定应答域名的请求源地址TOP排行
+     * REQUEST_ZONE：域名请求量排行（zone级别）
+     * REQUEST_DOMAIN：子域名请求量排行（domain name级别）
+     * SOURCE_REGION：请求来源地域分布
+     * SOURCE_ISP：请求来源运营商（ISP）分布
+     * SOURCE_IP：请求源IP详情（含地域、运营商、占比）
+     * LINE_HIT：解析线路命中详情
+     * LINE_RATIO：解析线路流量占比</p>
+     */
     @NameInMap("StatisticalType")
     public String statisticalType;
 
     /**
+     * <p>The zone name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

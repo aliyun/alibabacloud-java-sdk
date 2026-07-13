@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Default: en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,7 +14,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Default value: 200.</p>
+     * <p>The number of entries per page. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid value:</p>
      * <ul>
      * <li><strong>DOMAIN</strong>: domain name</li>
      * </ul>

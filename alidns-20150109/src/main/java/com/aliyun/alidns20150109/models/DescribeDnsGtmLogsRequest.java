@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsGtmLogsRequest extends TeaModel {
     /**
-     * <p>The timestamp that specifies the end of the time range to query.</p>
+     * <p>The end of the time range to query. This is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1516779348000</p>
@@ -14,17 +14,17 @@ public class DescribeDnsGtmLogsRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. Call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDnsGtmInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>instance1</p>
+     * <p>gtm-cn-wwo3a3hbz**</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * <p>The keyword. The search is performed in the \<code>%KeyWord%\\</code> pattern and is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -33,7 +33,7 @@ public class DescribeDnsGtmLogsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of some returned parameters. The default value is en. Valid values: en, zh, and ja.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -42,7 +42,7 @@ public class DescribeDnsGtmLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. The value starts from 1. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,16 +51,16 @@ public class DescribeDnsGtmLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+     * <p>The number of entries to return on each page. The maximum value is 100. The default value is 20.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The timestamp that specifies the beginning of the time range to query.</p>
+     * <p>The start of the time range to query. This is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1516779348000</p>

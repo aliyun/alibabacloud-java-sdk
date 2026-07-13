@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeGtmAvailableAlertGroupResponseBody extends TeaModel {
     /**
-     * <p>The available alert groups of the GTM instance.</p>
+     * <p>The available alert contact groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;研发组\&quot;,\&quot;GTM测试组\&quot;]</p>
      */
     @NameInMap("AvailableAlertGroup")
     public String availableAlertGroup;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
