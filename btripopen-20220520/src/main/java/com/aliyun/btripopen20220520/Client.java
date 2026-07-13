@@ -1995,7 +1995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Synchronizes an intra-city car service approval form for a specified enterprise.</p>
      * <ol>
-     * <li>To use this operation, enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
+     * <li>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
      * <li>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</li>
      * </ol>
      * 
@@ -2123,7 +2123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Synchronizes an intra-city car service approval form for a specified enterprise.</p>
      * <ol>
-     * <li>To use this operation, enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
+     * <li>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
      * <li>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</li>
      * </ol>
      * 
@@ -17675,8 +17675,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries VAT invoice detail data.</p>
+     * <ol>
+     * <li>The value-added service API requires special approval. Contact the business travel customer operations team before submitting a permission request.</li>
+     * <li>To use this API, enable the value-added service data permission in your application. For the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</li>
+     * <li>To use this API, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查询增值税发票扫描件</p>
+     * <p>Queries VAT invoice detail data.</p>
      * 
      * @param request VatInvoiceScanQueryRequest
      * @param headers VatInvoiceScanQueryHeaders
@@ -17734,8 +17742,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries VAT invoice detail data.</p>
+     * <ol>
+     * <li>The value-added service API requires special approval. Contact the business travel customer operations team before submitting a permission request.</li>
+     * <li>To use this API, enable the value-added service data permission in your application. For the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</li>
+     * <li>To use this API, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查询增值税发票扫描件</p>
+     * <p>Queries VAT invoice detail data.</p>
      * 
      * @param request VatInvoiceScanQueryRequest
      * @return VatInvoiceScanQueryResponse

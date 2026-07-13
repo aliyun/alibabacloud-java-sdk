@@ -8,7 +8,7 @@ public class CarApplyAddHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>A header parameter obtained from the Enterprise Access Credential operation. Add it to the request header. In HTTP mode, you can use so_corp_token=value or dtb_corp_token=value in the URL as an alternative.</p>
+     * <p>A header parameter obtained from the &quot;Enterprise Access Credential&quot; operation (added to the header). In HTTP mode, you can use so_corp_token=value or dtb_corp_token=value in the URL as an alternative.</p>
      * 
      * <strong>example:</strong>
      * <p>feth00jqwls</p>

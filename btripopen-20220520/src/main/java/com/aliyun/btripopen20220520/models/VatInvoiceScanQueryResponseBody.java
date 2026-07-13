@@ -4,21 +4,54 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class VatInvoiceScanQueryResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The response data. This parameter is returned by the server. An empty value is returned if no result is found or an exception occurs.</p>
+     */
     @NameInMap("module")
     public VatInvoiceScanQueryResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210e842b16611337974412836dae27</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,30 +109,84 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails extends TeaModel {
+        /**
+         * <p>The amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75.21</p>
+         */
         @NameInMap("amount")
         public String amount;
 
+        /**
+         * <p>The line number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <p>The name of the goods, taxable services, or service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>铂金首饰</p>
+         */
         @NameInMap("item_name")
         public String itemName;
 
+        /**
+         * <p>The quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("quantity")
         public String quantity;
 
+        /**
+         * <p>The specification and model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66PT11230069</p>
+         */
         @NameInMap("specification")
         public String specification;
 
+        /**
+         * <p>The tax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.79</p>
+         */
         @NameInMap("tax")
         public String tax;
 
+        /**
+         * <p>The tax rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>The unit of measurement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>件</p>
+         */
         @NameInMap("unit")
         public String unit;
 
+        /**
+         * <p>The unit price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75.21</p>
+         */
         @NameInMap("unit_price")
         public String unitPrice;
 
@@ -183,111 +270,337 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class VatInvoiceScanQueryResponseBodyModuleItems extends TeaModel {
+        /**
+         * <p>The tax-inclusive amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("amount_with_tax")
         public String amountWithTax;
 
+        /**
+         * <p>The tax-exclusive amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18.87</p>
+         */
         @NameInMap("amount_without_tax")
         public String amountWithoutTax;
 
+        /**
+         * <p>The billing date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
+         */
         @NameInMap("bill_date")
         public String billDate;
 
+        /**
+         * <p>Indicates whether the invoice has been reissued. Valid values:</p>
+         * <ul>
+         * <li>true: Reissued.</li>
+         * <li>false: Not reissued.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("changed")
+        public Boolean changed;
+
+        /**
+         * <p>The verification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07122942791187744475</p>
+         */
         @NameInMap("check_code")
         public String checkCode;
 
+        /**
+         * <p>The invoice issuer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>敏</p>
+         */
         @NameInMap("drawer")
         public String drawer;
 
+        /**
+         * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The invoice code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3300111303</p>
+         */
         @NameInMap("invoice_code")
         public String invoiceCode;
 
+        /**
+         * <p>The invoice date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24-4-7 上午12:00</p>
+         */
         @NameInMap("invoice_day")
         public String invoiceDay;
 
+        /**
+         * <p>The invoice details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>代理服务费¥20</p>
+         */
         @NameInMap("invoice_detail")
         public String invoiceDetail;
 
+        /**
+         * <p>The invoice line items.</p>
+         */
         @NameInMap("invoice_details")
         public java.util.List<VatInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> invoiceDetails;
 
+        /**
+         * <p>The invoice region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>上海</p>
+         */
         @NameInMap("invoice_location")
         public String invoiceLocation;
 
+        /**
+         * <p>The invoice number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24021111</p>
+         */
         @NameInMap("invoice_no")
         public String invoiceNo;
 
+        /**
+         * <p>The invoice subtask ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("invoice_sub_task_id")
         public Long invoiceSubTaskId;
 
+        /**
+         * <p>The invoice type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("invoice_type")
         public Integer invoiceType;
 
+        /**
+         * <p>The invoice type description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>增值税专用发票（纸质）</p>
+         */
         @NameInMap("invoice_type_desc")
         public String invoiceTypeDesc;
 
+        /**
+         * <p>The machine code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>661619906841</p>
+         */
         @NameInMap("machine_code")
         public String machineCode;
 
+        /**
+         * <p>The URL for the VAT invoice file in OFD format. This URL is available only for digitalized electronic invoicing and electronic general VAT invoices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("ofd_oss_url")
         public String ofdOssUrl;
 
+        /**
+         * <p>The URL for the VAT invoice file in image format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("oss_url")
         public String ossUrl;
 
+        /**
+         * <p>The password area.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;87*&gt;&gt;53&gt;5023&gt;-446&gt;/4+83/5* *&gt;5/81&lt;75/1931&gt;4&gt;&gt;</p>
+         */
         @NameInMap("password_area")
         public String passwordArea;
 
+        /**
+         * <p>The URL for the VAT invoice file in PDF format. This URL is available only for digitalized electronic invoicing and electronic general VAT invoices.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("pdf_oss_url")
         public String pdfOssUrl;
 
+        /**
+         * <p>The purchaser bank account information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国农业银行深圳</p>
+         */
         @NameInMap("purchaser_bank_account_info")
         public String purchaserBankAccountInfo;
 
+        /**
+         * <p>The purchaser contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州余杭区五常街道五常大道168</p>
+         */
         @NameInMap("purchaser_contact_info")
         public String purchaserContactInfo;
 
+        /**
+         * <p>The purchaser name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试购方抬头</p>
+         */
         @NameInMap("purchaser_name")
         public String purchaserName;
 
+        /**
+         * <p>The purchaser tax number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91441111111111111S</p>
+         */
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
 
+        /**
+         * <p>The payee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>琳</p>
+         */
         @NameInMap("recipient")
         public String recipient;
 
+        /**
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>舰店OMS</p>
+         */
         @NameInMap("remarks")
         public String remarks;
 
+        /**
+         * <p>The reviewer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>敏</p>
+         */
         @NameInMap("reviewer")
         public String reviewer;
 
+        /**
+         * <p>The seller bank account information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国农业银行深圳东</p>
+         */
         @NameInMap("seller_bank_account_info")
         public String sellerBankAccountInfo;
 
+        /**
+         * <p>The seller contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>深圳市盐田区深盐路黄</p>
+         */
         @NameInMap("seller_contact_info")
         public String sellerContactInfo;
 
+        /**
+         * <p>The seller name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试销方名称</p>
+         */
         @NameInMap("seller_name")
         public String sellerName;
 
+        /**
+         * <p>The seller tax number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91441111111111111N</p>
+         */
         @NameInMap("seller_tax_no")
         public String sellerTaxNo;
 
+        /**
+         * <p>The abbreviated verification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4475</p>
+         */
         @NameInMap("smart_check_code")
         public String smartCheckCode;
 
+        /**
+         * <p>The tax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.13</p>
+         */
         @NameInMap("tax_amount")
         public String taxAmount;
 
+        /**
+         * <p>The tax rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>The total amount in words.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>叁佰叁拾贰圆整</p>
+         */
         @NameInMap("total_amount_in_words")
         public String totalAmountInWords;
 
+        /**
+         * <p>The URL for the VAT invoice file in XML format. This URL is available only for digitalized electronic invoicing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("xml_oss_url")
         public String xmlOssUrl;
 
@@ -318,6 +631,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getBillDate() {
             return this.billDate;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setChanged(Boolean changed) {
+            this.changed = changed;
+            return this;
+        }
+        public Boolean getChanged() {
+            return this.changed;
         }
 
         public VatInvoiceScanQueryResponseBodyModuleItems setCheckCode(String checkCode) {
@@ -587,18 +908,45 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class VatInvoiceScanQueryResponseBodyModule extends TeaModel {
+        /**
+         * <p>The paginated results.</p>
+         */
         @NameInMap("items")
         public java.util.List<VatInvoiceScanQueryResponseBodyModuleItems> items;
 
+        /**
+         * <p>The page number of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page_no")
         public Integer pageNo;
 
+        /**
+         * <p>The page size of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 
+        /**
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Integer totalSize;
 

@@ -5,20 +5,54 @@ import com.aliyun.tea.*;
 
 public class VatInvoiceScanQueryRequest extends TeaModel {
     /**
+     * <p>The billing date.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-12-01</p>
      */
     @NameInMap("bill_date")
     public String billDate;
 
+    /**
+     * <p>The bill ID.</p>
+     * <blockquote>
+     * <p>Deprecated</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("bill_id")
     public Long billId;
 
+    /**
+     * <p>The invoice subtask ID.</p>
+     * <blockquote>
+     * <p>Deprecated</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>456</p>
+     */
     @NameInMap("invoice_sub_task_id")
     public Long invoiceSubTaskId;
 
+    /**
+     * <p>The page number, starting from 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 

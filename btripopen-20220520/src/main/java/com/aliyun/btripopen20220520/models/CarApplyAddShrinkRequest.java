@@ -16,7 +16,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
 
     /**
      * <p>The cities for car service. Separate multiple cities with Chinese commas (，).
-     * Note: A maximum of 10 cities can be specified. The values in city and city_code_set must correspond one-to-one.</p>
+     * Note: A maximum of 10 cities are supported. The values in city and city_code_set must correspond one to one.</p>
      * 
      * <strong>example:</strong>
      * <p>北京，杭州</p>
@@ -27,7 +27,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     /**
      * <p>The city code set for intra-city car service. Separate multiple cities with Chinese commas (，).
      * Note: 1) Either city_code_set or city is required. If both are specified, city_code_set takes precedence.
-     * A maximum of 10 cities can be specified.</p>
+     * A maximum of 10 cities are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>110100，330100</p>
@@ -97,7 +97,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the third-party cost center associated with the approval form.</p>
      * <blockquote>
-     * <p>Warning: This field is required. To make it optional, contact the operations team.</p>
+     * <p>Warning: This field is required. To make it optional, contact operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the third-party invoice header associated with the approval form.</p>
      * <blockquote>
-     * <p>Warning: This field is required. To make it optional, contact the operations team.</p>
+     * <p>Warning: This field is required. To make it optional, contact operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,10 +128,11 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     public Integer timesTotal;
 
     /**
-     * <p>The type of available usage count for the approval form. If the enterprise does not need to limit the number of times the approval form can be used, set this parameter to 1 (unlimited) and set both times_total and times_used to 0. Valid values:</p>
+     * <p>The usage count type of the approval form. If the enterprise does not need to limit the number of times the approval form can be used, set this parameter to 1 (unlimited) and set both times_total and times_used to 0.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>1: unlimited.</li>
-     * <li>2: user-specified count.</li>
+     * <li>1: Unlimited.</li>
+     * <li>2: User-specified count.</li>
      * </ul>
      * 
      * <strong>example:</strong>

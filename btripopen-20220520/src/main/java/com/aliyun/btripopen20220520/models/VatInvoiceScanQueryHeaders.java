@@ -7,6 +7,12 @@ public class VatInvoiceScanQueryHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>A header parameter obtained from the &quot;Enterprise access credential&quot; API operation (added in the header). In HTTP mode, you can use corp_token=value in the URL as a substitute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>feth00jqwls</p>
+     */
     @NameInMap("x-acs-btrip-so-corp-token")
     public String xAcsBtripSoCorpToken;
 
