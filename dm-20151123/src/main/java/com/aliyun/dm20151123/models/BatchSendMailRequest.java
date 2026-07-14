@@ -43,11 +43,10 @@ public class BatchSendMailRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable domain-level authentication.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * <p>Use this parameter only for domain-level authentication. Ignore it for sender address-level authentication.</p>
      * <ol>
@@ -59,7 +58,7 @@ public class BatchSendMailRequest extends TeaModel {
      * <p>Set AccountName to the domain name. The recipient sees <a href="mailto:domain-auth-created-by-system@example.com">domain-auth-created-by-system@example.com</a> as the sender.</p>
      * <p><strong>SMTP scenario</strong></p>
      * <p>a. Call the ModifyPWByDomain operation to set the domain password.</p>
-     * <p>b. Authenticate with the domain name and the configured password. Set the actual sender (mailfrom) to a custom address such as <a href="mailto:user@example.com">user@example.com</a>. The recipient sees <a href="mailto:user@example.com">user@example.com</a> as the sender.</p>
+     * <p>b. Authenticate with the domain name and the configured password. Pass a custom address such as <a href="mailto:user@example.com">user@example.com</a> as the actual sender (mailfrom). The recipient sees <a href="mailto:user@example.com">user@example.com</a> as the sender.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -69,7 +68,7 @@ public class BatchSendMailRequest extends TeaModel {
 
     /**
      * <p>The email header settings.</p>
-     * <p>Both standard and non-standard fields must comply with the syntax requirements for headers defined in the standard. A maximum of 10 headers can be passed through the headers field when sending emails via API. Headers exceeding this limit are ignored. SMTP has no such limit.</p>
+     * <p>Both standard and non-standard fields must comply with the syntax requirements for headers defined in the standard. A maximum of 10 headers can be passed through the headers field when sending emails via API. Headers that exceed this limit are ignored. SMTP has no such limit.</p>
      * <ol>
      * <li>Standard fields</li>
      * </ol>
@@ -79,7 +78,7 @@ public class BatchSendMailRequest extends TeaModel {
      * <li>Non-standard fields</li>
      * </ol>
      * <p>Case-insensitive.</p>
-     * <p>a. Fields prefixed with X-User- (not pushed to EventBridge or Message Service (MNS). This restriction applies to API only. SMTP allows any custom fields.)</p>
+     * <p>a. Fields prefixed with X-User- (not pushed to EventBridge or Message Service (MNS). This restriction applies only to API. SMTP allows any custom fields.)</p>
      * <p>b. Fields prefixed with X-User-Notify- (pushed to EventBridge and Message Service (MNS). Both API and SMTP are supported.)</p>
      * <p>When pushed to EventBridge or MNS, these fields are included under the header field.</p>
      * 
@@ -96,7 +95,7 @@ public class BatchSendMailRequest extends TeaModel {
     public String headers;
 
     /**
-     * <p>The ID of the dedicated IP address pool. Users who have purchased dedicated IP addresses can use this parameter to specify the outbound IP address for this email sending.</p>
+     * <p>The ID of the dedicated IP address pool. Users who have purchased dedicated IP addresses can use this parameter to specify the outbound IP address for this email sending task.</p>
      * 
      * <strong>example:</strong>
      * <p>e4xxxxxe-4xx0-4xx3-8xxa-74cxxxxx1cef</p>
@@ -108,7 +107,7 @@ public class BatchSendMailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The recipient list. The number of recipients must not exceed 100. Use this parameter or ReceiversName. If both Receivers and ReceiversName are specified, ReceiversName takes precedence.</p>
+     * <p>The recipient list. The number of recipients cannot exceed 100. Specify this parameter or ReceiversName. If both Receivers and ReceiversName are specified, ReceiversName takes precedence.</p>
      * <p>Example: [{&quot;To&quot;:[&quot;<a href="mailto:Jackie@example.com">Jackie@example.com</a>&quot;],&quot;TemplateData&quot;:{&quot;UserName&quot;:&quot;Jackie&quot;}},{&quot;To&quot;:[&quot;<a href="mailto:Tom@example.com">Tom@example.com</a>&quot;],&quot;TemplateData&quot;:{&quot;UserName&quot;:&quot;Tom&quot;}}].</p>
      */
     @NameInMap("Receivers")
@@ -116,15 +115,9 @@ public class BatchSendMailRequest extends TeaModel {
 
     /**
      * <p>The name of a pre-created recipient list that has recipients uploaded.</p>
-     * <blockquote>
-     * <p><strong>Note</strong></p>
-     * </blockquote>
-     * <blockquote>
+     * <p>Note:</p>
      * <p>The number of recipients in the list must not exceed the remaining daily quota. Otherwise, the email sending fails.</p>
-     * </blockquote>
-     * <blockquote>
-     * <p>Wait at least 10 minutes after triggering the task before deleting the recipient list. Otherwise, the email sending may fail.</p>
-     * </blockquote>
+     * <p>Do not delete the recipient list until at least 10 minutes after the task is triggered. Otherwise, the email sending may fail.</p>
      * 
      * <strong>example:</strong>
      * <p>test2</p>
@@ -157,7 +150,7 @@ public class BatchSendMailRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the email tag.</p>
+     * <p>The tag name of the email.</p>
      * 
      * <strong>example:</strong>
      * <p>test3</p>
@@ -166,7 +159,7 @@ public class BatchSendMailRequest extends TeaModel {
     public String tagName;
 
     /**
-     * <p>The custom email content. Directly specify the content without creating a template in advance. Use this parameter or TemplateName. If both TemplateContent and TemplateName are specified, TemplateName takes precedence.</p>
+     * <p>The custom email content. You can directly specify the content without creating a template in advance. Specify this parameter or TemplateName. If both TemplateContent and TemplateName are specified, TemplateName takes precedence.</p>
      */
     @NameInMap("TemplateContent")
     public BatchSendMailRequestTemplateContent templateContent;
@@ -181,13 +174,14 @@ public class BatchSendMailRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The filtering level. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</p>
+     * <p>The filtering level. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.
+     * Valid values:</p>
      * <ul>
      * <li>disabled: No filtering is applied.</li>
-     * <li>default: Uses the default policy. Batch addresses use sender address-level filtering.</li>
-     * <li>mailfrom: Sender address-level filtering.</li>
-     * <li>mailfrom_domain: Sender domain-level filtering.</li>
-     * <li>edm_id: Account-level filtering.</li>
+     * <li>default: The default policy is used. Batch addresses are filtered at the sender address level.</li>
+     * <li>mailfrom: Filtering at the sender address level.</li>
+     * <li>mailfrom_domain: Filtering at the sender domain level.</li>
+     * <li>edm_id: Filtering at the account level.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -197,10 +191,11 @@ public class BatchSendMailRequest extends TeaModel {
     public String unSubscribeFilterLevel;
 
     /**
-     * <p>The type of the generated unsubscribe link. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.</p>
+     * <p>The type of the generated unsubscribe link. For more information, see <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe link generation and filtering mechanism</a>.
+     * Valid values:</p>
      * <ul>
      * <li>disabled: No unsubscribe link is generated.</li>
-     * <li>default: Uses the default policy. An unsubscribe link is generated when a batch-type sender address sends emails to specific domains, such as domains containing keywords &quot;gmail&quot;, &quot;yahoo&quot;, &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;, &quot;outlook&quot;, or &quot;ymail.com&quot;.</li>
+     * <li>default: The default policy is used. An unsubscribe link is generated when emails are sent from a batch-type sender address to specific domains that contain keywords such as &quot;gmail&quot;, &quot;yahoo&quot;, &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;, &quot;outlook&quot;, or &quot;ymail.com&quot;.</li>
      * </ul>
      * <p>The display language is automatically determined based on the recipient\&quot;s browser settings.</p>
      * 
@@ -361,13 +356,13 @@ public class BatchSendMailRequest extends TeaModel {
 
     public static class BatchSendMailRequestReceivers extends TeaModel {
         /**
-         * <p>The email template parameters. This is a JSON map data type.</p>
+         * <p>The email template parameters. This parameter is of the JSON map type.</p>
          */
         @NameInMap("TemplateData")
         public java.util.Map<String, String> templateData;
 
         /**
-         * <p>The recipient list. This is an array type.</p>
+         * <p>The recipient list. This parameter is of the array type.</p>
          */
         @NameInMap("To")
         public java.util.List<String> to;
@@ -407,10 +402,8 @@ public class BatchSendMailRequest extends TeaModel {
 
         /**
          * <p>The HTML body of the email.</p>
-         * <blockquote>
-         * <p><strong>Note:</strong> HtmlBody and TextBody are for different types of email content. You must specify at least one of them.</p>
-         * </blockquote>
-         * <p>The new SDK uses Body for parameter passing with a limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</p>
+         * <p>Note: HtmlBody and TextBody are used for different types of email content. You must specify one of them.</p>
+         * <p>The new SDK uses Body for parameter passing with a size limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</p>
          * 
          * <strong>example:</strong>
          * <h1>全场九折，仅限今日</h1>
@@ -419,7 +412,7 @@ public class BatchSendMailRequest extends TeaModel {
         public String htmlBody;
 
         /**
-         * <p>The email subject.</p>
+         * <p>The subject of the email.</p>
          * 
          * <strong>example:</strong>
          * <p>黑色星期五，专属折扣来袭</p>
@@ -429,10 +422,8 @@ public class BatchSendMailRequest extends TeaModel {
 
         /**
          * <p>The plain text body of the email.</p>
-         * <blockquote>
-         * <p><strong>Note:</strong> HtmlBody and TextBody are for different types of email content. You must specify at least one of them.</p>
-         * </blockquote>
-         * <p>The new SDK uses Body for parameter passing with a limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</p>
+         * <p>Note: HtmlBody and TextBody are used for different types of email content. You must specify one of them.</p>
+         * <p>The new SDK uses Body for parameter passing with a size limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</p>
          * 
          * <strong>example:</strong>
          * <p>全场九折，仅限今日</p>

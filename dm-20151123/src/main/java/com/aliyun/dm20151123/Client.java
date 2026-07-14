@@ -251,7 +251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sends emails in batch.</p>
+     * <p>Sends emails in batches.</p>
      * 
      * @param tmpReq BatchSendMailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -363,7 +363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sends emails in batch.</p>
+     * <p>Sends emails in batches.</p>
      * 
      * @param request BatchSendMailRequest
      * @return BatchSendMailResponse
@@ -5197,7 +5197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validate an email address.</p>
+     * <p>Validates an email address.</p>
      * 
      * @param request ValidateEmailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5241,7 +5241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validate an email address.</p>
+     * <p>Validates an email address.</p>
      * 
      * @param request ValidateEmailRequest
      * @return ValidateEmailResponse

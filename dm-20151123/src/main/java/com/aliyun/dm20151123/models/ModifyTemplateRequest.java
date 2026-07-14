@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateRequest extends TeaModel {
     /**
-     * <p>The source channel through which the user accesses the service. Default value: 1. Valid values:</p>
-     * <ul>
-     * <li>1: Direct access through Alibaba Cloud.</li>
-     * <li>2: Access through a partner channel.</li>
-     * </ul>
+     * <p>The source channel through which the user connects. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,11 +41,7 @@ public class ModifyTemplateRequest extends TeaModel {
     public String smsContent;
 
     /**
-     * <p>The business type of the SMS template. This parameter is required only when the templatetype is SMS. Valid values:</p>
-     * <ul>
-     * <li>0: verification code</li>
-     * <li>2: notification or promotion.</li>
-     * </ul>
+     * <p>The business type of the SMS template. This parameter is required only when the templatetype is SMS.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

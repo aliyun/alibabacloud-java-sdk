@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique request identifier.</p>
      * 
      * <strong>example:</strong>
      * <p>C5AB05E9-D3CA-582E-9538-8C6C554040F6</p>
