@@ -154,6 +154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("data", request.data);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {
+            body.put("encryptType", request.encryptType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.env)) {
             body.put("env", request.env);
         }
@@ -172,6 +176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sign)) {
             body.put("sign", request.sign);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signType)) {
+            body.put("signType", request.signType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

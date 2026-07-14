@@ -16,6 +16,13 @@ public class CommercializeFetchRequest extends TeaModel {
     @NameInMap("data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AES</p>
+     */
+    @NameInMap("encryptType")
+    public String encryptType;
+
     @NameInMap("env")
     public String env;
 
@@ -43,6 +50,13 @@ public class CommercializeFetchRequest extends TeaModel {
     @NameInMap("sign")
     public String sign;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RSA</p>
+     */
+    @NameInMap("signType")
+    public String signType;
+
     public static CommercializeFetchRequest build(java.util.Map<String, ?> map) throws Exception {
         CommercializeFetchRequest self = new CommercializeFetchRequest();
         return TeaModel.build(map, self);
@@ -62,6 +76,14 @@ public class CommercializeFetchRequest extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public CommercializeFetchRequest setEncryptType(String encryptType) {
+        this.encryptType = encryptType;
+        return this;
+    }
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     public CommercializeFetchRequest setEnv(String env) {
@@ -102,6 +124,14 @@ public class CommercializeFetchRequest extends TeaModel {
     }
     public String getSign() {
         return this.sign;
+    }
+
+    public CommercializeFetchRequest setSignType(String signType) {
+        this.signType = signType;
+        return this;
+    }
+    public String getSignType() {
+        return this.signType;
     }
 
 }
