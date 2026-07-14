@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesRequest extends TeaModel {
     /**
-     * <p>The charge type of the pay-as-you-go premium bandwidth plan.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>PayByTraffic: charges by data transfer.</p>
-     * </li>
-     * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
-     * </li>
-     * </ul>
+     * <p>The billing method of the pay-as-you-go premium Internet bandwidth plan.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByBandwidth</p>
@@ -21,12 +14,10 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page in a paged query.    </p>
      * <ul>
-     * <li><p>Maximum value: 100</p>
-     * </li>
-     * <li><p>Default value: 10</p>
-     * </li>
+     * <li>Maximum value: 100.    </li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +27,7 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.</p>
+     * <p>The IDs of the premium Internet bandwidth plans. You can specify 1 to 100 IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>np-amtp8e8q1o9e4****</p>
@@ -45,7 +36,7 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public java.util.List<String> networkPackageId;
 
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -54,7 +45,7 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +53,9 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeNetworkPackagesRequestTag> tag;
 
     public static DescribeNetworkPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkPackagesRequest self = new DescribeNetworkPackagesRequest();
@@ -106,6 +100,44 @@ public class DescribeNetworkPackagesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeNetworkPackagesRequest setTag(java.util.List<DescribeNetworkPackagesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeNetworkPackagesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeNetworkPackagesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNetworkPackagesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkPackagesRequestTag self = new DescribeNetworkPackagesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkPackagesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNetworkPackagesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

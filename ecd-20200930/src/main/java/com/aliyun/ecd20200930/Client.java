@@ -9,6 +9,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "ecd.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "ecd.us-east-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "ecd.me-east-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "ecd.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "ecd.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "ecd.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "ecd.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("ecd", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -2052,7 +2078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a NAS file system and associate it with the office network of the shared cloud computer.</p>
+     * <p>Creates a NAS file system and binds it to the office network of a shared cloud computer.</p>
      * 
      * @param request CreateAndBindNasFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2112,7 +2138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a NAS file system and associate it with the office network of the shared cloud computer.</p>
+     * <p>Creates a NAS file system and binds it to the office network of a shared cloud computer.</p>
      * 
      * @param request CreateAndBindNasFileSystemRequest
      * @return CreateAndBindNasFileSystemResponse
@@ -3796,24 +3822,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you create a cloud desktop, meet the following requirements:</p>
+     * <p>Before creating cloud desktops, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office site (formerly a workspace) and users:<ul>
-     * <li>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
-     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
-     * <strong>Request examples</strong><details>
-     * <summary>
-     * Example: Create a cloud desktop from a bundle
-     * </summary></li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+     * <strong>Call examples:</strong><details>
+     * <summary>Example of creating with a template</summary></li>
      * </ul>
      * <pre><code>{
-     *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
      *   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
      *   &quot;Amount&quot;: &quot;1&quot;,
-     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+     *   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
      *   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
      *   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
      *   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -3821,15 +3845,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * </details>
      * <details>
-     * <summary>
-     * Example: Create a cloud desktop with custom settings
-     * </summary>
+     * <summary>Example of creating without a template</summary>
      * ```
      * {
-     *   "RegionId": "cn-hangzhou",
+     *   "RegionId": "ap-southeast-1",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -3843,15 +3865,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>
-     * Example: Create a cloud desktop with a monthly usage package
-     * </summary>
+     * <summary>Example of creating a monthly hourly package</summary>
      * ```
      * {
-     *   "RegionId": "cn-hangzhou",
+     *   "RegionId": "ap-southeast-1",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -3870,16 +3890,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>
-     * Example: Create an agent resource
-     * </summary>
+     * <summary>Example of creating an Agent resource</summary>
      * ```
      * {
-     *   "RegionId": "cn-hangzhou",
+     *   "RegionId": "ap-southeast-1",
      *   "BundleId": "b-openclaw-linux",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
      *     "DesktopType": "cloud.space.4c.8g"
@@ -3892,10 +3910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
+     * To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</p>
+     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
      * 
      * @param tmpReq CreateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3994,6 +4012,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OfficeSiteId", request.officeSiteId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ouPath)) {
+            query.put("OuPath", request.ouPath);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
             query.put("Period", request.period);
         }
@@ -4036,6 +4058,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotPolicyId)) {
             query.put("SnapshotPolicyId", request.snapshotPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subPayType)) {
+            query.put("SubPayType", request.subPayType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.subnetId)) {
@@ -4093,24 +4119,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you create a cloud desktop, meet the following requirements:</p>
+     * <p>Before creating cloud desktops, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office site (formerly a workspace) and users:<ul>
-     * <li>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
-     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
-     * <strong>Request examples</strong><details>
-     * <summary>
-     * Example: Create a cloud desktop from a bundle
-     * </summary></li>
+     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+     * <strong>Call examples:</strong><details>
+     * <summary>Example of creating with a template</summary></li>
      * </ul>
      * <pre><code>{
-     *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+     *   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
      *   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
      *   &quot;Amount&quot;: &quot;1&quot;,
-     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+     *   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
      *   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
      *   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
      *   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -4118,15 +4142,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * </details>
      * <details>
-     * <summary>
-     * Example: Create a cloud desktop with custom settings
-     * </summary>
+     * <summary>Example of creating without a template</summary>
      * ```
      * {
-     *   "RegionId": "cn-hangzhou",
+     *   "RegionId": "ap-southeast-1",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -4140,15 +4162,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>
-     * Example: Create a cloud desktop with a monthly usage package
-     * </summary>
+     * <summary>Example of creating a monthly hourly package</summary>
      * ```
      * {
-     *   "RegionId": "cn-hangzhou",
+     *   "RegionId": "ap-southeast-1",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -4167,16 +4187,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>
-     * Example: Create an agent resource
-     * </summary>
+     * <summary>Example of creating an Agent resource</summary>
      * ```
      * {
-     *   "RegionId": "cn-hangzhou",
+     *   "RegionId": "ap-southeast-1",
      *   "BundleId": "b-openclaw-linux",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+     *   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
      *     "DesktopType": "cloud.space.4c.8g"
@@ -4189,10 +4207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
+     * To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</p>
+     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
      * 
      * @param request CreateDesktopsRequest
      * @return CreateDesktopsResponse
@@ -4688,7 +4706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network package for an office network.</p>
+     * <p>Creates a premium bandwidth plan for an office network.</p>
      * 
      * @param request CreateNetworkPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4745,6 +4763,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResellerOwnerUid", request.resellerOwnerUid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4764,7 +4786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a network package for an office network.</p>
+     * <p>Creates a premium bandwidth plan for an office network.</p>
      * 
      * @param request CreateNetworkPackageRequest
      * @return CreateNetworkPackageResponse
@@ -7785,7 +7807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query details of policies that are not region-specific.</p>
+     * <p>Queries the details of region-free policies.</p>
      * 
      * @param request DescribeCenterPolicyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7849,7 +7871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query details of policies that are not region-specific.</p>
+     * <p>Queries the details of region-free policies.</p>
      * 
      * @param request DescribeCenterPolicyListRequest
      * @return DescribeCenterPolicyListResponse
@@ -9812,80 +9834,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>You can query only the traffic data in the last 90 days.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries cloud computer-level traffic statistics of a single office network.</p>
-     * 
-     * @param request DescribeFlowStatisticRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeFlowStatisticResponse
-     */
-    public DescribeFlowStatisticResponse describeFlowStatisticWithOptions(DescribeFlowStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
-            query.put("DesktopId", request.desktopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
-            query.put("OfficeSiteId", request.officeSiteId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
-            query.put("Period", request.period);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeFlowStatistic"),
-            new TeaPair("version", "2020-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFlowStatisticResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p>You can query only the traffic data in the last 90 days.</p>
-     * </blockquote>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries cloud computer-level traffic statistics of a single office network.</p>
-     * 
-     * @param request DescribeFlowStatisticRequest
-     * @return DescribeFlowStatisticResponse
-     */
-    public DescribeFlowStatisticResponse describeFlowStatistic(DescribeFlowStatisticRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeFlowStatisticWithOptions(request, runtime);
-    }
-
-    /**
      * <b>summary</b> : 
      * <p>查询DNAT条目</p>
      * 
@@ -11071,7 +11019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of one or more premium bandwidth plans.</p>
+     * <p>Queries the details of one or more premium Internet bandwidth plans.</p>
      * 
      * @param request DescribeNetworkPackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11100,6 +11048,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -11119,7 +11071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of one or more premium bandwidth plans.</p>
+     * <p>Queries the details of one or more premium Internet bandwidth plans.</p>
      * 
      * @param request DescribeNetworkPackagesRequest
      * @return DescribeNetworkPackagesResponse
@@ -12561,7 +12513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of Cloud Desktop templates.</p>
+     * <p>Queries the details of cloud computer templates.</p>
      * 
      * @param request DescribeTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12629,7 +12581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of Cloud Desktop templates.</p>
+     * <p>Queries the details of cloud computer templates.</p>
      * 
      * @param request DescribeTemplatesRequest
      * @return DescribeTemplatesResponse
@@ -14635,10 +14587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must use at least one of the following parameters in the request to determine the object that you want to query: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, and <code>Tag.N.Value</code>.</p>
+     * <p>You must specify at least one of the following parameters in the request to specify the query object: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, or <code>Tag.N.Value</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags of cloud computers.</p>
+     * <p>Queries the list of tags that are added to cloud computers.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14690,10 +14642,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must use at least one of the following parameters in the request to determine the object that you want to query: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, and <code>Tag.N.Value</code>.</p>
+     * <p>You must specify at least one of the following parameters in the request to specify the query object: <code>ResourceId.N</code>, <code>Tag.N.Key</code>, or <code>Tag.N.Value</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags of cloud computers.</p>
+     * <p>Queries the list of tags that are added to cloud computers.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -15289,7 +15241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name and snapshot retention period of an automatic snapshot policy.</p>
+     * <p>Modifies the configuration items of an automatic snapshot policy, including the policy name and snapshot retention period.</p>
      * 
      * @param request ModifyAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15341,7 +15293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the name and snapshot retention period of an automatic snapshot policy.</p>
+     * <p>Modifies the configuration items of an automatic snapshot policy, including the policy name and snapshot retention period.</p>
      * 
      * @param request ModifyAutoSnapshotPolicyRequest
      * @return ModifyAutoSnapshotPolicyResponse
@@ -20658,10 +20610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for AD directories, not for RAM directories.</p>
+     * <p>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</p>
+     * <p>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</p>
      * 
      * @param request SetDirectorySsoStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20701,10 +20653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is supported only for AD directories, not for RAM directories.</p>
+     * <p>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</p>
+     * <p>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</p>
      * 
      * @param request SetDirectorySsoStatusRequest
      * @return SetDirectorySsoStatusResponse
@@ -21074,10 +21026,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If TagKey is specified, the new TagValue value overrides the original TagValue value.</p>
+     * <p>If the specified TagKey already exists, the new TagValue overwrites the original TagValue.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.</p>
+     * <p>Adds tags to specified cloud desktops. This makes it easier to filter and manage cloud desktops by tag.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21121,10 +21073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If TagKey is specified, the new TagValue value overrides the original TagValue value.</p>
+     * <p>If the specified TagKey already exists, the new TagValue overwrites the original TagValue.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.</p>
+     * <p>Adds tags to specified cloud desktops. This makes it easier to filter and manage cloud desktops by tag.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -21356,7 +21308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.</p>
+     * <p>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21404,7 +21356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.</p>
+     * <p>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

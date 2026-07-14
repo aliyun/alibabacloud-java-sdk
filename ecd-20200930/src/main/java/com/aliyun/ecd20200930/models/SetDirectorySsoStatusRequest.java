@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDirectorySsoStatusRequest extends TeaModel {
     /**
-     * <p>The AD directory ID.</p>
+     * <p>The ID of the AD office network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class SetDirectorySsoStatusRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>Specifies whether to enable SSO. Valid values:</p>
+     * <p>Specifies whether to enable or disable single sign-on (SSO). Valid values:</p>
      * <ul>
-     * <li><p>true: enables SSO.</p>
-     * </li>
-     * <li><p>false: disables SSO.</p>
-     * </li>
+     * <li>true: enables SSO</li>
+     * <li>false: disables SSO.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,7 +29,7 @@ public class SetDirectorySsoStatusRequest extends TeaModel {
     public Boolean enableSso;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

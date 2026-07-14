@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token that determines the start point of the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
+     * <p>The IDs of the resources, that is, the IDs of the cloud computers. Valid values of N: 1 to 50.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-ia2zw38bi6cm7****</p>
@@ -42,11 +42,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
-     * </ul>
+     * <p>The resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +52,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags that you want to query.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -116,7 +112,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
+         * <p>The tag key. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>department</p>
@@ -125,7 +121,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag values. You can specify 1 to 20 tag values.</p>
+         * <p>The tag value. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>design</p>

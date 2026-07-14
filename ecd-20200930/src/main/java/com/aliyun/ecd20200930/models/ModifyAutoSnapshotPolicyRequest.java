@@ -13,6 +13,12 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("CronExpression")
     public String cronExpression;
 
+    /**
+     * <p>The type of cloud disk for which the automatic snapshot policy creates snapshots.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
@@ -27,16 +33,16 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters long, start with a letter or a Chinese character, and must not start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), and hyphens (-). The default is an empty string.</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>SystemAutoSnapshot</p>
+     * <p>系统自动快照</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions where Elastic Desktop Service is available.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +52,7 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of days to retain automatic snapshots. The value must be an integer from 1 to 180.</p>
+     * <p>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

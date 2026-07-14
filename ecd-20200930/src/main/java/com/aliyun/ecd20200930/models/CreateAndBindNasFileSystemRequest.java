@@ -14,7 +14,7 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the shared cloud computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,16 +24,10 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>Specifies whether to encrypt data in the NAS file system. You can use keys that are hosted by Key Management Service (KMS) to encrypt data in a file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:</p>
-     * <ul>
-     * <li><p>0: does not encrypt data in the NAS file system.</p>
-     * </li>
-     * <li><p>1: encrypts data in the NAS file system by using a NAS-managed key. <code>If you set </code>FileSystemType<code> to </code>standard<code> or </code>extreme<code>, you can use a NAS-managed key to encrypt data in a NAS file system.</code></p>
-     * </li>
-     * <li><p>2: encrypts data in the NAS file system by using a KMS-managed key. <code>If</code> you set FileSystemType<code> to </code>extreme<code>, you can use a KMS-managed key to encrypt data in a NAS file system.</code></p>
-     * </li>
-     * </ul>
-     * <p>Default value: 0.</p>
+     * <p>Specifies whether the file system uses a KMS-managed key to encrypt data at rest. Encrypted data does not need to be decrypted during read and write operations.</p>
+     * <blockquote>
+     * <p>NAS-managed keys are supported when <code>FileSystemType</code> is set to <code>standard</code> or <code>extreme</code>. User-managed keys are supported when <code>FileSystemType</code> is set to <code>extreme</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -42,7 +36,7 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public Integer encryptType;
 
     /**
-     * <p>The list of users.</p>
+     * <p>The list of user IDs.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
@@ -58,7 +52,7 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String fileSystemName;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The ID of the office network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +62,7 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,14 +72,7 @@ public class CreateAndBindNasFileSystemRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The storage type of the NAS file system. Valid values:</p>
-     * <ul>
-     * <li><p>Capacity</p>
-     * </li>
-     * <li><p>Performance</p>
-     * </li>
-     * </ul>
-     * <p>Default value: Capacity.</p>
+     * <p>The storage specification type of the NAS file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

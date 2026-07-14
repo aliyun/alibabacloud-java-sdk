@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkPackagesResponseBody extends TeaModel {
     /**
-     * <p>The premium bandwidth plans.</p>
+     * <p>The list of premium Internet bandwidth plans.</p>
      */
     @NameInMap("NetworkPackages")
     public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackages> networkPackages;
 
     /**
-     * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -20,7 +20,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -57,9 +57,39 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeNetworkPackagesResponseBodyNetworkPackagesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNetworkPackagesResponseBodyNetworkPackagesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkPackagesResponseBodyNetworkPackagesTags self = new DescribeNetworkPackagesResponseBodyNetworkPackagesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackagesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackagesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeNetworkPackagesResponseBodyNetworkPackages extends TeaModel {
         /**
-         * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the premium Internet bandwidth plan. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -69,22 +99,6 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The business status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Expired</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Normal</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -93,7 +107,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>The time when the premium bandwidth plan was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-10T02:35:26Z</p>
@@ -102,18 +116,16 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The public egress IP address of the premium bandwidth plan.</p>
+         * <p>The public egress IP address of the premium Internet bandwidth plan.</p>
          */
         @NameInMap("EipAddresses")
         public java.util.List<String> eipAddresses;
 
         /**
-         * <p>The time when the premium bandwidth plan expires.</p>
+         * <p>The expiration time of the premium Internet bandwidth plan.</p>
          * <ul>
-         * <li><p>If the plan is a subscription one, the time when the plan expires is returned.</p>
-         * </li>
-         * <li><p>If the plan is a pay-as-you-go one, <code>2099-12-31T15:59:59Z</code> is returned.</p>
-         * </li>
+         * <li>If the plan uses the subscription billing method, the actual expiration time is returned.</li>
+         * <li>If the plan uses the pay-as-you-go billing method, <code>2099-12-31T15:59:59Z</code> is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,19 +135,15 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The charge type of the premium bandwidth plan.</p>
+         * <p>The billing method of the premium Internet bandwidth plan.</p>
          * <ul>
-         * <li><p>Valid value when the <code>PayType</code> parameter is set to <code>PrePaid</code>:</p>
-         * <ul>
-         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * <li>If the parameter <code>PayType</code> is set to <code>PrePaid</code>, valid values:<ul>
+         * <li>PayByBandwidth: pay-by-bandwidth.</li>
          * </ul>
          * </li>
-         * <li><p>Valid values when the <code>PayType</code> parameter is set to <code>PostPaid</code>:</p>
-         * <ul>
-         * <li><p>PayByTraffic: charges by data transfer.</p>
-         * </li>
-         * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
-         * </li>
+         * <li>If the parameter <code>PayType</code> is set to <code>PostPaid</code>, valid values:<ul>
+         * <li>PayByTraffic: pay-by-data-transfer.</li>
+         * <li>PayByBandwidth: pay-by-bandwidth.</li>
          * </ul>
          * </li>
          * </ul>
@@ -147,7 +155,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The ID of the premium bandwidth plan.</p>
+         * <p>The ID of the premium Internet bandwidth plan.</p>
          * 
          * <strong>example:</strong>
          * <p>np-amtp8e8q1o9e4****</p>
@@ -156,37 +164,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String networkPackageId;
 
         /**
-         * <p>The status of the premium bandwidth plan.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Creating</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Released</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>InUse</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>Releasing</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>The status of the premium Internet bandwidth plan.</p>
          * 
          * <strong>example:</strong>
          * <p>InUse</p>
@@ -213,16 +191,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The type of the office network.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>standard: advanced office network</p>
-         * </li>
-         * <li><p>customized: custom office network</p>
-         * </li>
-         * <li><p>basic: basic office network</p>
-         * </li>
-         * </ul>
+         * <p>The office network type.</p>
          * 
          * <strong>example:</strong>
          * <p>basic</p>
@@ -231,14 +200,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String officeSiteVpcType;
 
         /**
-         * <p>The billing method of the premium bandwidth plan.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>PostPaid: pay-as-you-go</p>
-         * </li>
-         * <li><p>PrePaid: subscription</p>
-         * </li>
-         * </ul>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -247,7 +209,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The time when the reserved network bandwidth took effect.</p>
+         * <p>The effective period of the reserved network bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-10T00:00:00Z</p>
@@ -256,7 +218,7 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         public String reservationActiveTime;
 
         /**
-         * <p>The peak bandwidth that is reserved for the premium bandwidth plan. Unit: Mbit/s.</p>
+         * <p>The peak reserved network bandwidth. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -266,19 +228,15 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the reserved network bandwidth.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>PayByTraffic: charges by data transfer.</p>
-         * </li>
-         * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PayByBandwidth</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackagesTags> tags;
 
         public static DescribeNetworkPackagesResponseBodyNetworkPackages build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkPackagesResponseBodyNetworkPackages self = new DescribeNetworkPackagesResponseBodyNetworkPackages();
@@ -403,6 +361,14 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
         }
         public String getReservationInternetChargeType() {
             return this.reservationInternetChargeType;
+        }
+
+        public DescribeNetworkPackagesResponseBodyNetworkPackages setTags(java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackagesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeNetworkPackagesResponseBodyNetworkPackagesTags> getTags() {
+            return this.tags;
         }
 
     }

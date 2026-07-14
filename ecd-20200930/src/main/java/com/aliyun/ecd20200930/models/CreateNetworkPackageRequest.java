@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkPackageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-payment.</p>
+     * <p>Specifies whether to enable automatic payment.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,14 +23,11 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The bandwidth of the network package, in Mbps.</p>
+     * <p>The bandwidth of the premium bandwidth plan. Unit: Mbit/s.    </p>
      * <ul>
-     * <li><p>For subscription network packages, the value range is 2 to 1,000.</p>
-     * </li>
-     * <li><p>For pay-as-you-go network packages that are billed by traffic, the value range is 2 to 200.</p>
-     * </li>
-     * <li><p>For pay-as-you-go network packages that are billed by bandwidth, the value range is 2 to 1,000.</p>
-     * </li>
+     * <li>If the premium bandwidth plan uses the subscription billing method, the valid values are 2 to 1000.</li>
+     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the billing type is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</li>
+     * <li>If the premium bandwidth plan uses the pay-as-you-go billing method and the billing type is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,19 +41,15 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String channelCookie;
 
     /**
-     * <p>The billing method for the network package.</p>
+     * <p>The billable methods of the premium bandwidth plan.</p>
      * <ul>
-     * <li><p>When <code>PayType</code> is set to <code>PrePaid</code>, the only valid value is:</p>
-     * <ul>
-     * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
+     * <li>If the parameter <code>PayType</code> is set to <code>PrePaid</code>, valid values:<ul>
+     * <li>PayByBandwidth: billing by fixed bandwidth.</li>
      * </ul>
      * </li>
-     * <li><p>When <code>PayType</code> is set to <code>PostPaid</code>, valid values are:</p>
-     * <ul>
-     * <li><p><code>PayByTraffic</code>: pay-by-traffic.</p>
-     * </li>
-     * <li><p><code>PayByBandwidth</code>: pay-by-bandwidth.</p>
-     * </li>
+     * <li>If the parameter <code>PayType</code> is set to <code>PostPaid</code>, valid values:<ul>
+     * <li>PayByTraffic: billing by data transfer.</li>
+     * <li>PayByBandwidth: billing by fixed bandwidth.</li>
      * </ul>
      * </li>
      * </ul>
@@ -86,14 +79,11 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription duration of the network package. This parameter is required and applies only when <code>PayType</code> is set to <code>PrePaid</code>. The valid values for this parameter depend on the value of <code>PeriodUnit</code>.</p>
+     * <p>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when PayType is set to PrePaid. Valid values are determined by the PeriodUnit parameter.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Week</code>, the only valid value is 1.</p>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, and 6.</p>
-     * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values are 1, 2, and 3.</p>
-     * </li>
+     * <li>If PeriodUnit is set to Week, the valid value is 1.</li>
+     * <li>If PeriodUnit is set to Month, valid values are 1, 2, 3, and 6.</li>
+     * <li>If PeriodUnit is set to Year, valid values are 1, 2, and 3.</li>
      * </ul>
      * <p>Default value: 1.</p>
      * 
@@ -104,7 +94,7 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription duration for the network package. This parameter is required and applies only when <code>PayType</code> is set to <code>PrePaid</code>.</p>
+     * <p>The unit of the subscription duration for the premium bandwidth plan. This parameter takes effect and is required only when PayType is set to PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>Week</p>
@@ -122,7 +112,7 @@ public class CreateNetworkPackageRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to get the list of regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,6 +123,9 @@ public class CreateNetworkPackageRequest extends TeaModel {
 
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateNetworkPackageRequestTag> tag;
 
     public static CreateNetworkPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkPackageRequest self = new CreateNetworkPackageRequest();
@@ -233,6 +226,44 @@ public class CreateNetworkPackageRequest extends TeaModel {
     }
     public Long getResellerOwnerUid() {
         return this.resellerOwnerUid;
+    }
+
+    public CreateNetworkPackageRequest setTag(java.util.List<CreateNetworkPackageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateNetworkPackageRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateNetworkPackageRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateNetworkPackageRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkPackageRequestTag self = new CreateNetworkPackageRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkPackageRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateNetworkPackageRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

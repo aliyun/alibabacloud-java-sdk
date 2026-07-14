@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Operation result. Returns <code>success</code> if successful. Otherwise, returns an error message.</p>
+     * <p>The operation result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>List of template information.</p>
+     * <p>The list of queried template information.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeTemplatesResponseBodyData> data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message. This parameter is not returned when Code is <code>success</code>.</p>
+     * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +47,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Entries per page.</p>
+     * <p>The number of rows per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -56,7 +56,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1871984F-51F6-5588-BAF6-*******</p>
@@ -65,7 +65,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -74,7 +74,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total count.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>94</p>
@@ -161,7 +161,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyDataDataDiskList extends TeaModel {
         /**
-         * <p>Data disk performance level.</p>
+         * <p>The performance level of the data cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>AutoPL</p>
@@ -170,7 +170,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>Data disk size in GiB.</p>
+         * <p>The data cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -203,7 +203,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyDataRegionConfigList extends TeaModel {
         /**
-         * <p>Number of vCPUs in the Cloud Desktop instance type.</p>
+         * <p>The number of vCPUs included in the cloud computer instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -212,7 +212,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Integer cpuCount;
 
         /**
-         * <p>GPU memory size. This field appears only for graphics instance types.</p>
+         * <p>The GPU memory information. This field is displayed only when the instance type is a graphics-accelerated type.</p>
          * 
          * <strong>example:</strong>
          * <p>4GiB</p>
@@ -221,7 +221,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>Memory size in MiB.</p>
+         * <p>The memory size. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -230,7 +230,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long memorySize;
 
         /**
-         * <p>Office site ID.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing+dir-3040*****</p>
@@ -239,7 +239,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -248,7 +248,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Cloud Desktop instance type ID.</p>
+         * <p>The cloud computer instance type ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.4c8g</p>
@@ -257,7 +257,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String resourceInstanceType;
 
         /**
-         * <p>Snapshot policy ID.</p>
+         * <p>The snapshot policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-b9fasjuu0*****</p>
@@ -266,7 +266,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String snapshotPolicyId;
 
         /**
-         * <p>Subnet ID.</p>
+         * <p>The subnet ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-dgea1*****</p>
@@ -275,7 +275,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>Whether disk encryption is enabled.</p>
+         * <p>Indicates whether disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -284,7 +284,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnable;
 
         /**
-         * <p>KMS key ID used when disk encryption is enabled.</p>
+         * <p>The KMS key ID used when disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>3bc77be0-cbce-4a29-b07b-13f16394****</p>
@@ -381,7 +381,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyDataResourceTagList extends TeaModel {
         /**
-         * <p>Tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -390,7 +390,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -423,7 +423,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyDataSiteConfigList extends TeaModel {
         /**
-         * <p>Application control policy ID.</p>
+         * <p>The application control policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bwr-5a5371e0*******</p>
@@ -432,7 +432,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String appRuleId;
 
         /**
-         * <p>Site name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>mainland</p>
@@ -474,13 +474,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>Data disk size and specification configuration.</p>
+         * <p>The size and specification configurations of data cloud disks.</p>
          */
         @NameInMap("DataDiskList")
         public java.util.List<DescribeTemplatesResponseBodyDataDataDiskList> dataDiskList;
 
         /**
-         * <p>Default startup language for the template.</p>
+         * <p>The default startup language configured in the template.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -489,7 +489,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String defaultLanguage;
 
         /**
-         * <p>Template description.</p>
+         * <p>The template description.</p>
          * 
          * <strong>example:</strong>
          * <p>My template</p>
@@ -498,7 +498,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Template creation time in UTC.</p>
+         * <p>The creation time of the template (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -507,7 +507,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Template modification time in UTC.</p>
+         * <p>The last modification time of the template (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -516,7 +516,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Image ID.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-5q8ehbihx*****</p>
@@ -525,7 +525,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Image type.</p>
+         * <p>The image type.</p>
          * 
          * <strong>example:</strong>
          * <p>User</p>
@@ -540,7 +540,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-0caoeogkhz*****</p>
@@ -552,7 +552,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Boolean postPaidAfterUsedUp;
 
         /**
-         * <p>Product type.</p>
+         * <p>The product type.</p>
          * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
@@ -561,13 +561,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>Region-specific configuration parameters.</p>
+         * <p>The region-specific configuration parameters.</p>
          */
         @NameInMap("RegionConfigList")
         public java.util.List<DescribeTemplatesResponseBodyDataRegionConfigList> regionConfigList;
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1871984F-51F6-5588-BAF6-******</p>
@@ -576,7 +576,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-a5fqjjqaejt***</p>
@@ -585,19 +585,19 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Cloud Desktop tags in key-value format.</p>
+         * <p>The cloud computer tags in key-value format.</p>
          */
         @NameInMap("ResourceTagList")
         public java.util.List<DescribeTemplatesResponseBodyDataResourceTagList> resourceTagList;
 
         /**
-         * <p>Site configuration management.</p>
+         * <p>The site configuration management.</p>
          */
         @NameInMap("SiteConfigList")
         public java.util.List<DescribeTemplatesResponseBodyDataSiteConfigList> siteConfigList;
 
         /**
-         * <p>System disk type.</p>
+         * <p>The system cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>AutoPL</p>
@@ -606,7 +606,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>System disk size in GiB.</p>
+         * <p>The system cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -615,7 +615,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>Template ID.</p>
+         * <p>The template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b-0caoeogs88y*****</p>
@@ -624,7 +624,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>Template name.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>My template 001</p>
@@ -633,7 +633,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>Template type.</p>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>USER_TEMPLATE</p>
@@ -642,7 +642,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>Scheduled task group ID.</p>
+         * <p>The scheduled task group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bcc-dweha*****</p>

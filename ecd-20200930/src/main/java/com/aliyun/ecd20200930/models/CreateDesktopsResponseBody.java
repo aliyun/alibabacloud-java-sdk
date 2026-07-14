@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopsResponseBody extends TeaModel {
     /**
-     * <p>An array of cloud desktop IDs. An ID is returned for each cloud desktop created in the call.</p>
+     * <p>The list of cloud desktop IDs. If multiple cloud desktops are created in a single call, multiple cloud desktop IDs are returned.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
@@ -13,7 +13,7 @@ public class CreateDesktopsResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the <code>ChargeType</code> request parameter is set to <code>PrePaid</code>.</p>
+     * <p>This parameter is returned only when the request parameter ChargeType is set to PrePaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

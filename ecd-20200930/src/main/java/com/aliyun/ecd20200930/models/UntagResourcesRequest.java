@@ -14,7 +14,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
+     * <p>The IDs of the resources, that is, the IDs of the cloud desktops. You can specify 1 to 50 IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,6 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
