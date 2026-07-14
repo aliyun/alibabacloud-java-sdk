@@ -636,6 +636,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a pipeline.</p>
+     * 
+     * @param request CreatePipelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePipelineResponse
+     */
+    public CreatePipelineResponse createPipelineWithOptions(String agentSpace, CreatePipelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executePolicy)) {
+            body.put("executePolicy", request.executePolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipeline)) {
+            body.put("pipeline", request.pipeline);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineName)) {
+            body.put("pipelineName", request.pipelineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sink)) {
+            body.put("sink", request.sink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePipeline"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/pipeline"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePipelineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a pipeline.</p>
+     * 
+     * @param request CreatePipelineRequest
+     * @return CreatePipelineResponse
+     */
+    public CreatePipelineResponse createPipeline(String agentSpace, CreatePipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPipelineWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an AgentSpace.</p>
      * 
      * @param request DeleteAgentSpaceRequest
@@ -1122,6 +1195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2291,6 +2368,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.pausePipelineWithOptions(agentSpace, pipelineName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
+     * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
+     * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be less than <strong>toTime</strong>.</li>
+     * <li>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</p>
+     * 
+     * @param request PreviewPipelineRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PreviewPipelineResponse
+     */
+    public PreviewPipelineResponse previewPipelineWithOptions(String agentSpace, PreviewPipelineRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fromTime)) {
+            body.put("fromTime", request.fromTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipeline)) {
+            body.put("pipeline", request.pipeline);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            body.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toTime)) {
+            body.put("toTime", request.toTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PreviewPipeline"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/agentspace/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/pipeline/preview"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PreviewPipelineResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><strong>agentSpace</strong> must be an AgentSpace instance that has been created under the current account.</li>
+     * <li><strong>source.type</strong> currently supports only the <code>logstore</code> type. The <code>logstore.project</code> and <code>logstore.logstore</code> must be authorized within the AgentSpace and located in the same region.</li>
+     * <li><strong>pipeline.nodes</strong> must contain at least one node of the <code>Source</code> type and cannot be empty.</li>
+     * <li><strong>fromTime</strong> and <strong>toTime</strong> are UNIX timestamps in seconds. <strong>fromTime</strong> must be less than <strong>toTime</strong>.</li>
+     * <li>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</p>
+     * 
+     * @param request PreviewPipelineRequest
+     * @return PreviewPipelineResponse
+     */
+    public PreviewPipelineResponse previewPipeline(String agentSpace, PreviewPipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.previewPipelineWithOptions(agentSpace, request, headers, runtime);
     }
 
     /**

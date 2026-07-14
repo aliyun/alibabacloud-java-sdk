@@ -39,6 +39,9 @@ public class ExecuteQueryRequest extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    @NameInMap("version")
+    public String version;
+
     public static ExecuteQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteQueryRequest self = new ExecuteQueryRequest();
         return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class ExecuteQueryRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public ExecuteQueryRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }
