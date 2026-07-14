@@ -4,10 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListModelOperatorApiKeysResponseBody extends TeaModel {
+    /**
+     * <p>The list of API keys.</p>
+     */
     @NameInMap("ApiKeys")
     public java.util.List<ListModelOperatorApiKeysResponseBodyApiKeys> apiKeys;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -29,6 +38,8 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
 
     public static class ListModelOperatorApiKeysResponseBodyApiKeys extends TeaModel {
         /**
+         * <p>API KEY ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         public Integer apiKeyId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-01T00:00:00Z</p>
          */
@@ -96,6 +111,8 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-apikey</p>
          */
@@ -103,6 +120,8 @@ public class ListModelOperatorApiKeysResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxx">https://xxxx</a></p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAIServiceSecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>

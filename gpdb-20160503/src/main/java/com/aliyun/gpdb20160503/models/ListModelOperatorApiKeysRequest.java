@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelOperatorApiKeysRequest extends TeaModel {
     /**
+     * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of Integer. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,14 @@ public class ListModelOperatorApiKeysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of records per page. Valid values:</p>
+     * <ul>
+     * <li><strong>20</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <p>Default value: <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

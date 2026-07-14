@@ -15,7 +15,7 @@ public class ListAINodePoolsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID。</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

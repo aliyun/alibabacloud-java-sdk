@@ -24,7 +24,7 @@ public class CreateBranchRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The branch description.</p>
+     * <p>The description of the branch.</p>
      * 
      * <strong>example:</strong>
      * <p>test branch</p>
@@ -33,7 +33,7 @@ public class CreateBranchRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The time at which the branch automatically expires and is deleted. The value is in ISO 8601 UTC format.</p>
+     * <p>The time when the branch automatically expires and is deleted. The value is in the ISO 8601 UTC format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-08T09:11:12Z</p>
@@ -56,7 +56,7 @@ public class CreateBranchRequest extends TeaModel {
     public String initSource;
 
     /**
-     * <p>The parent branch ID. This parameter specifies the parent branch for the new branch or query condition.</p>
+     * <p>The ID of the parent branch. This parameter specifies the parent branch for the new branch or query condition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class CreateBranchRequest extends TeaModel {
     public String parentBranchId;
 
     /**
-     * <p>The log sequence number (LSN) from the parent branch at which the branch is created.</p>
+     * <p>The log sequence number (LSN) selected when creating a branch from the parent branch.</p>
      * 
      * <strong>example:</strong>
      * <p>0/3522648</p>
@@ -75,7 +75,7 @@ public class CreateBranchRequest extends TeaModel {
     public String parentLsn;
 
     /**
-     * <p>The point in time for data synchronization from the parent branch when creating the branch. The value is in ISO 8601 UTC format.</p>
+     * <p>The point in time for data synchronization when creating a branch from the parent branch. The value is in the ISO 8601 UTC format.</p>
      * <p>Default value: the current time.</p>
      * 
      * <strong>example:</strong>
@@ -85,7 +85,7 @@ public class CreateBranchRequest extends TeaModel {
     public String parentTimestamp;
 
     /**
-     * <p>The Supabase project ID that corresponds to the primary branch.</p>
+     * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

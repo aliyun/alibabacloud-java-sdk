@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBranchesRequest extends TeaModel {
     /**
-     * <p>The maximum number of records to return in this query.</p>
+     * <p>The maximum number of records to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListBranchesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. It is not required for the first query. For subsequent queries, use the NextToken returned from the previous query.</p>
+     * <p>The cursor for the paged query. You do not need to specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -49,7 +49,7 @@ public class ListBranchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent branch ID, used to specify the parent branch for a new branch or as a query filter condition.</p>
+     * <p>The parent branch ID. This parameter specifies the parent branch for a new branch or a query filter.</p>
      * 
      * <strong>example:</strong>
      * <p>br-main</p>
@@ -58,7 +58,7 @@ public class ListBranchesRequest extends TeaModel {
     public String parentBranchId;
 
     /**
-     * <p>The region ID. Must be specified when creating a primary branch. When creating a sub-branch, it inherits the region of the primary branch by default.</p>
+     * <p>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -67,7 +67,7 @@ public class ListBranchesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The search keyword. Supports fuzzy search by branch ID or branch name.</p>
+     * <p>The search keyword. Fuzzy search by branch ID or branch name is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>main</p>
@@ -76,12 +76,12 @@ public class ListBranchesRequest extends TeaModel {
     public String search;
 
     /**
-     * <p>The sort field.</p>
+     * <p>The field by which to sort the results.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>BranchName: Sort by branch name.</li>
-     * <li>CreateTime: Sort by creation time.</li>
-     * <li>LastRunTime: Sort by last run time.</li>
+     * <li>BranchName: sorts by branch name.</li>
+     * <li>CreateTime: sorts by creation time.</li>
+     * <li>LastRunTime: sorts by last run time.</li>
      * </ul>
      * <p>Default value: CreateTime.</p>
      * 
@@ -92,11 +92,11 @@ public class ListBranchesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The sort direction.</p>
+     * <p>The sort order.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Asc: Ascending order.</li>
-     * <li>Desc: Descending order.</li>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
      * </ul>
      * <p>Default value: Desc.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIServicesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAIServicesResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -32,7 +32,7 @@ public class ListAIServicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of AI services.</p>
+     * <p>The list of services.</p>
      */
     @NameInMap("Services")
     public java.util.List<ListAIServicesResponseBodyServices> services;
@@ -93,7 +93,7 @@ public class ListAIServicesResponseBody extends TeaModel {
 
     public static class ListAIServicesResponseBodyServices extends TeaModel {
         /**
-         * <p>The time when the AI service was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-01T00:00:00Z</p>
@@ -102,7 +102,7 @@ public class ListAIServicesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the AI service.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>dramatest</p>
@@ -111,7 +111,7 @@ public class ListAIServicesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The private endpoint for API debugging.</p>
+         * <p>The internal endpoint for API debugging.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1/api-docs</p>
@@ -120,7 +120,7 @@ public class ListAIServicesResponseBody extends TeaModel {
         public String privateApiDevUrl;
 
         /**
-         * <p>The private endpoint of the Workbench.</p>
+         * <p>The internal endpoint of the workbench.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.1</p>
@@ -138,7 +138,7 @@ public class ListAIServicesResponseBody extends TeaModel {
         public String publicApiDevUrl;
 
         /**
-         * <p>The public endpoint of the Workbench.</p>
+         * <p>The public endpoint of the workbench.</p>
          * 
          * <strong>example:</strong>
          * <p>8.8.8.8</p>
@@ -147,7 +147,7 @@ public class ListAIServicesResponseBody extends TeaModel {
         public String publicWorkbenchUrl;
 
         /**
-         * <p>The list of IP addresses in the IP address whitelist group. Separate multiple IP addresses with commas.</p>
+         * <p>The list of IP addresses in the IP address whitelist group, separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>
@@ -165,7 +165,7 @@ public class ListAIServicesResponseBody extends TeaModel {
         public String serviceAccount;
 
         /**
-         * <p>The ID of the AI service.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>drama-123456</p>
@@ -174,12 +174,10 @@ public class ListAIServicesResponseBody extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The status of the AI service. Valid values:</p>
+         * <p>The service status. Valid values:</p>
          * <ul>
-         * <li><p>deploying</p>
-         * </li>
-         * <li><p>active</p>
-         * </li>
+         * <li>deploying: being deployed</li>
+         * <li>active: running</li>
          * </ul>
          * 
          * <strong>example:</strong>

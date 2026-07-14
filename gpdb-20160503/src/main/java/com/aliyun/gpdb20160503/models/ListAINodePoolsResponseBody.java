@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAINodePoolsResponseBody extends TeaModel {
     /**
-     * <p>The details of the AINode resource pools.</p>
+     * <p>The details of the AI node resource pools.</p>
      */
     @NameInMap("AINodePoolInfos")
     public java.util.List<ListAINodePoolsResponseBodyAINodePoolInfos> AINodePoolInfos;
@@ -42,7 +42,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
 
     public static class ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos extends TeaModel {
         /**
-         * <p>The type of the bound object.</p>
+         * <p>The type of the object to which the AI node is bound.</p>
          * 
          * <strong>example:</strong>
          * <p>model_serving</p>
@@ -51,12 +51,10 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String bindObject;
 
         /**
-         * <p>The binding status.</p>
+         * <p>The status of the AI node. Valid values:</p>
          * <ul>
-         * <li><p><code>unbound</code>: The node is not bound.</p>
-         * </li>
-         * <li><p><code>bound</code>: The node is bound.</p>
-         * </li>
+         * <li>unbound: The AI node is not bound.</li>
+         * <li>bound: The AI node is bound.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,7 +64,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String bindStatus;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the AI node was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-09T02:07:15Z</p>
@@ -84,7 +82,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the AINode.</p>
+         * <p>The name of the AI node.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-xxxxxxxxx</p>
@@ -93,7 +91,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The AINode specification. The following specifications are supported:</p>
+         * <p>The node specifications of the AI node. The following specifications are supported:</p>
          * <pre><code>ADB.AIMedium.1
          * ADB.AILarge.1
          * ADB.AIStandard.2
@@ -130,7 +128,7 @@ public class ListAINodePoolsResponseBody extends TeaModel {
         public String nodeSpec;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the AI node was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-16T02:04:42Z</p>
@@ -220,13 +218,13 @@ public class ListAINodePoolsResponseBody extends TeaModel {
 
     public static class ListAINodePoolsResponseBodyAINodePoolInfos extends TeaModel {
         /**
-         * <p>The details of AINodes.</p>
+         * <p>The detailed information about the AI nodes.</p>
          */
         @NameInMap("AINodeInfos")
         public java.util.List<ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos> AINodeInfos;
 
         /**
-         * <p>The ID of the AINode resource pool.</p>
+         * <p>The ID of the resource pool to which the AI node belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>aipool-xxxxxxxxx</p>

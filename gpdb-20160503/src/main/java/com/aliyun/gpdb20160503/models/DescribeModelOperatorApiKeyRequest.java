@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModelOperatorApiKeyRequest extends TeaModel {
     /**
+     * <p>API KEY ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

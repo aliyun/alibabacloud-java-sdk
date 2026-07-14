@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeModelOperatorUsageResponseBody extends TeaModel {
     /**
+     * <p>The end time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-02T00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The list of metric values.</p>
+     */
     @NameInMap("Keys")
     public java.util.List<DescribeModelOperatorUsageResponseBodyKeys> keys;
 
     /**
+     * <p>The actual bucket size used, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
@@ -29,6 +38,8 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time of the query. The time is in the <i>YYYY-MM-DDThh:mmZ</i> format (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-01T00:00Z</p>
      */
@@ -81,6 +92,9 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
     }
 
     public static class DescribeModelOperatorUsageResponseBodyKeysSeriesValues extends TeaModel {
+        /**
+         * <p>The specific metric information, consisting of a timestamp and a metric value.</p>
+         */
         @NameInMap("Point")
         public java.util.List<String> point;
 
@@ -101,6 +115,8 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
 
     public static class DescribeModelOperatorUsageResponseBodyKeysSeries extends TeaModel {
         /**
+         * <p>The API key ID. This value is returned only when GroupBy contains api_key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -108,6 +124,8 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         public Integer apiKeyId;
 
         /**
+         * <p>The model name when GroupBy contains model. The api_key_id string when GroupBy contains only api_key.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen3.6-plus</p>
          */
@@ -115,12 +133,17 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The normalized GroupBy value: model, api_key, or model,api_key.</p>
+         * 
          * <strong>example:</strong>
          * <p>model</p>
          */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The list of metric values. Each value corresponds to a collection time point.</p>
+         */
         @NameInMap("Values")
         public java.util.List<DescribeModelOperatorUsageResponseBodyKeysSeriesValues> values;
 
@@ -165,16 +188,28 @@ public class DescribeModelOperatorUsageResponseBody extends TeaModel {
 
     public static class DescribeModelOperatorUsageResponseBodyKeys extends TeaModel {
         /**
+         * <p>The metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>request_count</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The collection of metric values.</p>
+         */
         @NameInMap("Series")
         public java.util.List<DescribeModelOperatorUsageResponseBodyKeysSeries> series;
 
         /**
+         * <p>The unit. Valid values:</p>
+         * <ul>
+         * <li>requests</li>
+         * <li>tokens</li>
+         * <li>%</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>requests</p>
          */

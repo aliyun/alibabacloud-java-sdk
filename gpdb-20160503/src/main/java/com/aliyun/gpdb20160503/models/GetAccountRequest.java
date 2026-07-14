@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAccountRequest extends TeaModel {
     /**
-     * <p>The name of the database account.</p>
+     * <p>The name of the initial account. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
+     * <li>The name cannot start with gp.</li>
+     * <li>The name must be 2 to 16 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +23,7 @@ public class GetAccountRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * <p>You can specify up to 30 instance IDs for batch operations. Separate multiple instance IDs with commas (,).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -14,13 +14,13 @@ public class TagSupabaseProjectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the instances. You can specify up to 50 instance IDs.</p>
+     * <p>The Nth instance. Valid values of N: 1 to 50.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set this parameter to <code>instance</code>.</p>
+     * <p>The resource type. Set the value to <code>instance</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -29,7 +29,7 @@ public class TagSupabaseProjectRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to add. You can specify up to 20 tags.</p>
+     * <p>The Nth tag. Valid values of N: 1 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagSupabaseProjectRequestTag> tag;
@@ -73,7 +73,7 @@ public class TagSupabaseProjectRequest extends TeaModel {
 
     public static class TagSupabaseProjectRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The key cannot be empty and can be up to 64 characters long. It cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. This parameter cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-key</p>
@@ -82,7 +82,7 @@ public class TagSupabaseProjectRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be empty or up to 128 characters long. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. This parameter can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-value</p>

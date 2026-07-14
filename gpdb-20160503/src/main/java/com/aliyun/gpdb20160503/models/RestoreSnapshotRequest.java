@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestoreSnapshotRequest extends TeaModel {
     /**
-     * <p>The idempotence token. Ensures that repeated requests do not execute the same operation more than once.</p>
+     * <p>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>

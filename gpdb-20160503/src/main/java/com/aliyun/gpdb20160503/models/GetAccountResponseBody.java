@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAccountResponseBody extends TeaModel {
     /**
-     * <p>The new description of the database account.</p>
+     * <p>The modified account description. The description must meet the following requirements:</p>
      * <ul>
-     * <li>The description must start with a letter.</li>
+     * <li>The description must start with a Chinese character or an English letter.</li>
      * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>The description can contain letters, underscores (_), hyphens (-), and digits.</li>
+     * <li>The description can contain Chinese characters, English characters, underscores (_), hyphens (-), and digits.</li>
      * <li>The description must be 2 to 256 characters in length.</li>
      * </ul>
      * 
@@ -20,10 +20,10 @@ public class GetAccountResponseBody extends TeaModel {
     public String accountDescription;
 
     /**
-     * <p>The name of the initial account.</p>
+     * <p>The name of the initial account. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
      * <li>The name cannot start with gp.</li>
      * <li>The name must be 2 to 16 characters in length.</li>
      * </ul>
@@ -35,11 +35,11 @@ public class GetAccountResponseBody extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The status of the member that you want to query.</p>
+     * <p>The status of the database account. Valid values:</p>
      * <ul>
-     * <li><strong>enabled</strong>: managed.</li>
-     * <li><strong>disabled</strong>: not managed.</li>
-     * <li><strong>disabling</strong>: being deleted.</li>
+     * <li><strong>0</strong>: Being created.</li>
+     * <li><strong>1</strong>: In use.</li>
+     * <li><strong>3</strong>: Being deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,10 +49,12 @@ public class GetAccountResponseBody extends TeaModel {
     public String accountStatus;
 
     /**
+     * <p>The type of the host account. Valid values:</p>
      * <ul>
-     * <li>Normal: standard account</li>
-     * <li>Super: privileged account</li>
+     * <li><strong>Normal</strong>: standard account.</li>
+     * <li><strong>Admin</strong>: administrator account.</li>
      * </ul>
+     * <p>For more information about the permissions of host accounts, see <a href="https://help.aliyun.com/document_detail/176240.html">Host account permissions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -63,7 +65,7 @@ public class GetAccountResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

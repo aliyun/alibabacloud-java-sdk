@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBranchResponseBody extends TeaModel {
     /**
-     * <p>The branch list. Each element represents a Supabase branch.</p>
+     * <p>The branch information. Each element represents a Supabase branch.</p>
      */
     @NameInMap("Branch")
     public DescribeBranchResponseBodyBranch branch;
@@ -129,7 +129,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the branch expires and is automatically deleted, in ISO 8601 UTC format.</p>
+         * <p>The time when the branch automatically expires and is deleted, in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-08T09:11:12Z</p>
@@ -152,7 +152,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String initSource;
 
         /**
-         * <p>Indicates whether this is the default branch.</p>
+         * <p>Indicates whether the branch is the default branch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -161,7 +161,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The parent branch ID, which specifies the parent branch of a new branch or a query condition.</p>
+         * <p>The parent branch ID, which specifies the parent branch for a new branch or a query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>br-main</p>
@@ -179,7 +179,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String parentBranchName;
 
         /**
-         * <p>The Log Sequence Number (LSN) of the parent branch at the time this branch was created.</p>
+         * <p>The LSN of the parent branch at the time this branch was created.</p>
          * 
          * <strong>example:</strong>
          * <p>0/3522648</p>
@@ -202,7 +202,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String parentTimestamp;
 
         /**
-         * <p>The Supabase project ID that corresponds to the primary branch.</p>
+         * <p>The Supabase project ID associated with the primary branch.</p>
          * 
          * <strong>example:</strong>
          * <p>spb-xxxx</p>
@@ -243,7 +243,7 @@ public class DescribeBranchResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of branch tags.</p>
+         * <p>The branch tag list.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeBranchResponseBodyBranchTags> tags;

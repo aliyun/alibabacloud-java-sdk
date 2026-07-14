@@ -8,7 +8,7 @@ public class ListBranchesResponseBody extends TeaModel {
     public ListBranchesResponseBodyBranches branches;
 
     /**
-     * <p>The maximum number of records returned in this query.</p>
+     * <p>The maximum number of records to return in this request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -17,7 +17,7 @@ public class ListBranchesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. It is not required for the first query. For subsequent queries, use the NextToken returned from the previous query.</p>
+     * <p>The cursor for the paged query. You do not need to specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -61,7 +61,7 @@ public class ListBranchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of branches that match the query conditions.</p>
+     * <p>The total number of branches that match the query criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

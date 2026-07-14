@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBranchResponseBody extends TeaModel {
     /**
-     * <p>The branch ID. This ID uniquely identifies a Supabase branch.</p>
+     * <p>The branch ID, which uniquely identifies a Supabase branch.</p>
      * 
      * <strong>example:</strong>
      * <p>br-xxxx</p>
@@ -14,7 +14,7 @@ public class CreateBranchResponseBody extends TeaModel {
     public String branchId;
 
     /**
-     * <p>The Supabase project ID that corresponds to the primary branch.</p>
+     * <p>The ID of the Supabase project that corresponds to the primary branch.</p>
      * 
      * <strong>example:</strong>
      * <p>spb-xxxx</p>

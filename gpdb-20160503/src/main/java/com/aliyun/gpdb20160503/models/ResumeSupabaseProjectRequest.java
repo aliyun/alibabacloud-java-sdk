@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeSupabaseProjectRequest extends TeaModel {
     /**
-     * <p>Supabase instance ID</p>
+     * <p>The instance ID of the Supabase instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

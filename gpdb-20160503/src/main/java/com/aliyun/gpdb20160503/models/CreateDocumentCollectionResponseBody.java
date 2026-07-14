@@ -23,12 +23,10 @@ public class CreateDocumentCollectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the operation. Valid values:</p>
+     * <p>The API execution status. Valid values:</p>
      * <ul>
-     * <li><p><strong>success</strong>: The operation succeeded.</p>
-     * </li>
-     * <li><p><strong>fail</strong>: The operation failed.</p>
-     * </li>
+     * <li><strong>success</strong>: The operation was successful.</li>
+     * <li><strong>fail</strong>: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

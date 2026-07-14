@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceShrinkRequest extends TeaModel {
     /**
-     * <p>A list of AINodes on which to deploy the model.</p>
+     * <p>The list of AI nodes used for model deployment.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AiNodes")
     public String aiNodesShrink;
 
     /**
-     * <p>A token to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
+     * <p>The idempotency check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
@@ -21,7 +21,7 @@ public class CreateModelServiceShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
      * </blockquote>
@@ -34,7 +34,7 @@ public class CreateModelServiceShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The description of the model service.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -43,7 +43,7 @@ public class CreateModelServiceShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable a public network connection.</p>
+     * <p>Specifies whether to enable public network access.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -61,7 +61,7 @@ public class CreateModelServiceShrinkRequest extends TeaModel {
     public String inferenceEngine;
 
     /**
-     * <p>The name of the model.</p>
+     * <p>The model name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class CreateModelServiceShrinkRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model parameters. This parameter is not yet supported.</p>
+     * <p>The model parameters. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Not yet available.</p>
@@ -89,7 +89,7 @@ public class CreateModelServiceShrinkRequest extends TeaModel {
     public Integer replicas;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -99,7 +99,7 @@ public class CreateModelServiceShrinkRequest extends TeaModel {
 
     /**
      * <p>The IP whitelist.</p>
-     * <p>Set this parameter to <code>127.0.0.1</code> to deny access from all external IP addresses. After the model service is created, you can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP whitelist.</p>
+     * <p>The value 127.0.0.1 indicates that no external IP addresses are allowed to access the instance. After the instance is created, you can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>

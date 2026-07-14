@@ -32,7 +32,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The actual point in time that corresponds to the created snapshot.</p>
+     * <p>The actual point in time corresponding to the created snapshot.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-08T09:11:12Z</p>

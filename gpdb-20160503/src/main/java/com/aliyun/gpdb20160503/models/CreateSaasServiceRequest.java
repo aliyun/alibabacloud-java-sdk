@@ -21,7 +21,7 @@ public class CreateSaasServiceRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If you leave this parameter empty, a Free service is created by default.</li>
+     * <li>If you leave this parameter empty, a Free type is created by default.</li>
      * <li>The subscription billing method offers discounts for purchases of one year or longer. Select a billing method as needed.</li>
      * </ul>
      * </blockquote>
@@ -70,7 +70,7 @@ public class CreateSaasServiceRequest extends TeaModel {
      * <p>The service type. Valid values:</p>
      * <ul>
      * <li><strong>memroy</strong></li>
-     * <li><strong>drama</strong>.</li>
+     * <li><strong>drama</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

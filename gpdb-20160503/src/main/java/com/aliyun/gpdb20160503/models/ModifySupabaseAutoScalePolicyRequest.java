@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseAutoScalePolicyRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-scaling. Valid values:</p>
+     * <p>Specifies whether to enable <strong>automatic start and stop</strong>. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Enables auto-scaling. The Supabase instance automatically pauses and resumes based on traffic.</p>
-     * </li>
-     * <li><p><code>false</code>: Disables auto-scaling.</p>
-     * </li>
+     * <li>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</li>
+     * <li>false: Disabled. After this feature is disabled, the automatic start and stop feature of Supabase is turned off.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -21,7 +19,7 @@ public class ModifySupabaseAutoScalePolicyRequest extends TeaModel {
     public Boolean autoScale;
 
     /**
-     * <p>The ID of the Supabase project. To obtain the workspace ID, log in to the console and go to the Supabase page.</p>
+     * <p>The ID of the Supabase project. You can obtain the workspace ID from the Supabase page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

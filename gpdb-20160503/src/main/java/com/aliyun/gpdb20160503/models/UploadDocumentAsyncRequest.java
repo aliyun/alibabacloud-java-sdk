@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UploadDocumentAsyncRequest extends TeaModel {
     /**
-     * <p>The size of data that is overlapped between consecutive chunks. The maximum value of this parameter cannot be greater than the value of the ChunkSize parameter.</p>
+     * <p>The size of overlapping data between consecutive chunks. The maximum value of this parameter cannot be greater than the value of the ChunkSize parameter.</p>
      * <blockquote>
-     * <p> This parameter is used to prevent context missing that may occur due to data truncation. For example, when you upload a long text, you can retain specific overlapped text content between consecutive chunks to better understand the context.</p>
+     * <p> This parameter prevents context loss caused by data truncation. For example, when you upload long text, you can retain specific overlapping text content between consecutive chunks for better context understanding.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public Integer chunkOverlap;
 
     /**
-     * <p>Strategy for processing large data: the size of each chunk when the data is split into smaller parts. Maximum value is 2048.</p>
+     * <p>The strategy for processing large data: the size of each chunk when data is split into smaller parts. Maximum value: 2048.</p>
      * 
      * <strong>example:</strong>
      * <p>250</p>
@@ -26,9 +26,9 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public Integer chunkSize;
 
     /**
-     * <p>The name of the document library. </p>
+     * <p>The name of the document collection.</p>
      * <blockquote>
-     * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> API. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> API to view the document libraries that have already been created.</p>
+     * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query the created document collections.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>Instance ID with vector engine optimization acceleration enabled. You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view details of all AnalyticDB PostgreSQL instances in the target region, including the instance ID.</p>
+     * <p>The ID of the instance that has vector engine optimization enabled. You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the target region, including instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies the document loader to use for processing the file. If this parameter is omitted, the system automatically selects a loader based on the file\&quot;s extension.Valid Values:[List of valid loader names would go here] Valid values:</p>
+     * <p>The name of the document loader. If you do not specify this parameter, the system automatically selects the corresponding document loader based on the file name extension in the following order. Valid values:</p>
      * <ul>
      * <li>UnstructuredHTMLLoader: .html</li>
      * <li>UnstructuredMarkdownLoader: .md</li>
@@ -61,7 +61,7 @@ public class UploadDocumentAsyncRequest extends TeaModel {
      * <li>CSVLoader: .csv</li>
      * <li>RapidOCRLoader: .png, .jpg, .jpeg, and .bmp</li>
      * <li>UnstructuredFileLoader: .eml, .msg, .rst, .txt, .docx, .epub, .odt, .pptx, and .tsv</li>
-     * <li>ADBPGLoader (free of charge for the first 3,000 pages): .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx, .xlsm, .csv, .txt, .jpg, .jpeg, .png, .bmp, .gif, .md, .html, .epub, .mobi, and .rtf</li>
+     * <li>ADBPGLoader (paid, first 3,000 pages free): .pdf, .doc, .docx, .ppt, .pptx, .xls, .xlsx, .xlsm, .csv, .txt, .jpg, .jpeg, .png, .bmp, .gif, .md, .html, .epub, .mobi, and .rtf</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,9 +71,9 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String documentLoaderName;
 
     /**
-     * <p>Specifies whether to perform only document understanding and chunking, but not vectorization and storage. Default value: false.</p>
+     * <p>Specifies whether to perform only document understanding and chunking without vectorization and storage. Default value: false.</p>
      * <blockquote>
-     * <p> You can set this parameter to true, check the chunking effect, and then perform optimization if needed.</p>
+     * <p> You can set this parameter to true to check the chunking results and then optimize as needed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,17 +83,14 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The name of the file being uploaded.</p>
+     * <p>The file name of the document.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>File name: .json, .md, and .pdf.</p>
-     * </li>
-     * <li><p>Images: .bmp,. jpg,. jpeg,. png, and. tiff.</p>
-     * </li>
-     * <li><p>Compressed packages. The package file name must contain an extension: .tar, .gz, and .zip.</p>
-     * </li>
+     * <li>The file name must include file name extension, such as .json, .md, or .pdf.</li>
+     * <li>Supported image file extensions include .bmp, .jpg, .jpeg, .png, and .tiff.</li>
+     * <li>You can upload images by using an archive. The archive file name must include file name extension. Supported archive extensions include .tar, .gz, and .zip.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,13 +100,14 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The URL of the publicly accessible document.</p>
+     * <p>The publicly accessible URL of the document.</p>
      * <blockquote>
-     * <blockquote>
-     * <ul>
-     * <li>It is recommended to call this interface using the SDK, which provides a method called UploadDocumentAsyncAdvance for directly uploading local files. &gt; - If the URL points to an image archive, the number of images in the archive should not exceed 100.</li>
-     * </ul>
+     * <p>Use the SDK to call this operation. The SDK provides a method named UploadDocumentAsyncAdvance that allows you to directly upload local files.
+     * If the URL points to an image archive, the number of images in the archive cannot exceed 100.</p>
      * </blockquote>
+     * <blockquote>
+     * <p>Notice: 
+     * The maximum size of an image uploaded by using multimodal-embedding-v1 is 3 MB.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -120,13 +118,13 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String fileUrl;
 
     /**
-     * <p>The metadata. The value of this parameter must be the same as the Metadata parameter that is specified when you call the CreateDocumentCollection operation.</p>
+     * <p>The metadata. The value of this parameter must be the same as the Metadata parameter specified when you call the CreateDocumentCollection operation.</p>
      */
     @NameInMap("Metadata")
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>Namespace, default is public. You can create one through the CreateNamespace interface and view the list via the ListNamespaces interface.</p>
+     * <p>The namespace. Default value: public. You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query the list of namespaces.</p>
      * 
      * <strong>example:</strong>
      * <p>mynamespace</p>
@@ -135,7 +133,7 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The password corresponding to the namespace.  &gt; This value is specified by the CreateNamespace interface.</p>
+     * <p>The password of the namespace. The value is specified by the CreateNamespace operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,23 +156,32 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The separators that are used to split large amounts of data.</p>
+     * <p>The separators used to split large data.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This is an important parameter that determines the chunking effect. This parameter is related to the splitter that is specified by the TextSplitterName parameter.</p>
-     * </li>
-     * <li><p>In most cases, you do not need to specify this parameter. The server assigns separators based on the value of the TextSplitterName parameter.</p>
-     * </li>
+     * <li>This is an important parameter that determines the effectiveness of data chunking. This parameter is related to the splitter specified by the TextSplitterName parameter.</li>
+     * <li>In most cases, you do not need to specify this parameter. The server assigns separators based on the value of the TextSplitterName parameter.</li>
      * </ul>
+     * </blockquote>
      */
     @NameInMap("Separators")
     public java.util.List<String> separators;
 
     /**
-     * <p>When DocumentLoaderName is set to ADBPGLoader and TextSplitterName is set to LLMSplitter, you can specify the splitting model. Default Value: qwen3-8b.</p>
+     * <p>The splitting model to use when DocumentLoaderName is set to ADBPGLoader and TextSplitterName is set to LLMSplitter. Default value: qwen3-8b.</p>
      * <blockquote>
-     * <p> Supported splitting models: qwq-plus, qwq-plus-latest, qwen-max, qwen-max-latest, qwen-plus, qwen-plus-latest, qwen-turbo, qwen-turbo-latest, qwen3-235b-a22b, qwen3-32b,qwen3-30b-a3b, qwen3-14b, qwen3-8b, qwen3-4b, qwen3-1.7b, qwen3-0.6b, qwq-32b qwen2.5-14b-instruct-1m, qwen2.5-7b-instruct-1m, qwen2.5-72b-Instruct, qwen2.5-32b-Instruct, qwen2.5-14b-Instruct, qwen2.5-7b-Instruct, qwen2.5-3b-instruct, qwen2.5-1.5b-instruct, qwen2.5-0.5b-instruct.</p>
+     * <p>Currently supported splitting models:
+     * qwq-plus, qwq-plus-latest,
+     * qwen-max, qwen-max-latest,
+     * qwen-plus, qwen-plus-latest,
+     * qwen-turbo, qwen-turbo-latest,
+     * qwen3-235b-a22b, qwen3-32b, qwen3-30b-a3b,
+     * qwen3-14b, qwen3-8b, qwen3-4b, qwen3-1.7b, qwen3-0.6b,
+     * qwq-32b
+     * qwen2.5-14b-instruct-1m, qwen2.5-7b-instruct-1m
+     * qwen2.5-72b-instruct, qwen2.5-32b-instruct,
+     * qwen2.5-14b-instruct, qwen2.5-7b-instruct,
+     * qwen2.5-3b-instruct, qwen2.5-1.5b-instruct, qwen2.5-0.5b-instruct</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -184,13 +191,24 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     public String splitterModel;
 
     /**
-     * <p>The name of the separator. Valid values:</p>
+     * <p>The name of the text splitter. Valid values:</p>
      * <ul>
-     * <li><strong>ChineseRecursiveTextSplitter</strong>: Inherits from RecursiveCharacterTextSplitter and, by default, uses the delimiters<code>[&quot;\\n\\n&quot;,&quot;\\n&quot;, &quot;。 |! |?&quot;, &quot;\\.\\s|\\! \\s|\\?\\s&quot;, &quot;;|;\\s&quot;, &quot;,|,\\s&quot;] </code>, employing regular expressions to match text.</li>
-     * <li><strong>RecursiveCharacterTextSplitter</strong>: Uses the delimiters <code>[&quot;\\n\\n&quot;, &quot;\\n&quot;, &quot; &quot;, &quot;&quot;]</code> by default. The splitter supports splitting code in languages such as C++, Go, Java, JS, PHP, Proto, Python, RST, Ruby, Rust, Scala, Swift, Markdown, LaTeX, HTML, Sol, and C Sharp.</li>
-     * <li><strong>SpacyTextSplitter</strong>: Uses the delimiters <code>\\n\\n</code> by default and leverages the spaCy en_core_web_sm model. The splitter can achieve better text splitting performance.</li>
-     * <li><strong>MarkdownHeaderTextSplitter</strong>: Splits text in the [(&quot;#&quot;, &quot;head1&quot;), (&quot;##&quot;, &quot;head2&quot;), (&quot;###&quot;, &quot;head3&quot;), (&quot;####&quot;, &quot;head4&quot;) format. This splitter works well with Markdown text.</li>
-     * <li><strong>LLMSplitter</strong>: Use LLM to split text. The default model is qwen3-8b. Currently, this splitter works only when ADBPGLoader is selected.</li>
+     * <li><strong>ChineseRecursiveTextSplitter</strong>: inherits from RecursiveCharacterTextSplitter and uses `[&quot;</li>
+     * </ul>
+     * <p>&quot;,&quot;
+     * &quot;, &quot;。|!|?&quot;, &quot;\.\s|\!\s|\?\s&quot;, &quot;;|;\s&quot;, &quot;,|,\s&quot;]` as the default separators with regular expression matching.</p>
+     * <ul>
+     * <li><strong>RecursiveCharacterTextSplitter</strong>: uses `[&quot;</li>
+     * </ul>
+     * <p>&quot;, &quot;
+     * &quot;, &quot; &quot;, &quot;&quot;]` as the default separators. This splitter supports splitting code in languages such as C++, Go, Java, JS, PHP, Proto, Python, RST, Ruby, Rust, Scala, Swift, Markdown, LaTeX, HTML, Sol, and C Sharp.</p>
+     * <ul>
+     * <li><strong>SpacyTextSplitter</strong>: uses `</li>
+     * </ul>
+     * <p>` as the default separator and the spaCy en_core_web_sm model. This splitter provides better splitting results.</p>
+     * <ul>
+     * <li><strong>MarkdownHeaderTextSplitter</strong>: splits text in the format of [(&quot;#&quot;, &quot;head1&quot;), (&quot;##&quot;, &quot;head2&quot;), (&quot;###&quot;, &quot;head3&quot;), (&quot;####&quot;, &quot;head4&quot;)]. This splitter is suitable for Markdown text.</li>
+     * <li><strong>LLMSplitter</strong>: uses an LLM to split text. The default model is qwen3-8b. This splitter takes effect only when ADBPGLoader is selected as the document loader.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -202,15 +220,12 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable VL-enhanced content recognition for complex documents. Default value: false.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>For complex documents with confusing typesetting and formatting, we recommend that you enable VL-enhanced content recognition.</p>
-     * </li>
-     * <li><p>Document processing time is longer after VL-enhanced content recognition is enabled.</p>
-     * </li>
-     * <li><p>After VL-enhanced content recognition is enabled, images in documents cannot be stored or recalled.</p>
-     * </li>
+     * <li>For complex documents with disorganized layouts and formats, enable VL-enhanced content recognition.</li>
+     * <li>After VL-enhanced content recognition is enabled, document processing takes longer.</li>
+     * <li>After VL-enhanced content recognition is enabled, images in the document cannot be stored or recalled.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -221,7 +236,7 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable title enhancement.</p>
      * <blockquote>
-     * <p> You can determine the title text, mark the text in the metadata, and then combine the text with the upper-level title to implement text enhancement.</p>
+     * <p>You can identify the title text, mark the text in the metadata, and then combine the text with the upper-level title for text enhancement.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

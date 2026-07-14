@@ -139,7 +139,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
          * <p>The service type. Valid values:</p>
          * <ul>
          * <li>memory</li>
-         * <li>drama.</li>
+         * <li>drama</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -326,7 +326,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>[Deprecated].</p>
+         * <p>[Deprecated]</p>
          * 
          * <strong>example:</strong>
          * <p>deprecated</p>
@@ -356,7 +356,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
          * <p>The service type. Valid values:</p>
          * <ul>
          * <li>memory</li>
-         * <li>drama.</li>
+         * <li>drama</li>
          * </ul>
          * 
          * <strong>example:</strong>

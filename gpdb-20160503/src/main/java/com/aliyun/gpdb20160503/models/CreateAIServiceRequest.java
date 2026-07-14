@@ -7,7 +7,7 @@ public class CreateAIServiceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to list all AnalyticDB for PostgreSQL instances in the destination region, including their instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class CreateAIServiceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A description of the service.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>dramatest</p>
@@ -27,15 +27,13 @@ public class CreateAIServiceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>A comma-separated list of IP addresses or CIDR blocks in the IP address whitelist. You can specify up to 1000 entries. To block all external IP access, use 127.0.0.1. Valid formats include the following:</p>
+     * <p>The list of IP addresses in IP address whitelist group. You can specify up to 1,000 IP addresses, separated by commas (,). The value 127.0.0.1 indicates that no external IP addresses are allowed to access the instance. The following formats are supported:</p>
      * <ul>
-     * <li><p>10.23.12.24 (an IPv4 address)</p>
-     * </li>
-     * <li><p>10.23.12.24/24 (a CIDR block, where /24 indicates the prefix length, from 1 to 32)</p>
-     * </li>
+     * <li>10.23.12.24 (IP address)</li>
+     * <li>10.23.12.24/24 (CIDR block. The value /24 indicates the length of the prefix in the address, which ranges from 1 to 32.)</li>
      * </ul>
      * <blockquote>
-     * <p>After you create the service, call the ModifyAIServiceSecurityIps operation to update the IP address whitelist.</p>
+     * <p>After the service is created, you can call the ModifyAIServiceSecurityIps operation to modify IP address whitelist.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,16 +43,12 @@ public class CreateAIServiceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The service account. It must meet these requirements:</p>
+     * <p>The service account. The following limits apply:</p>
      * <ul>
-     * <li><p>Contain only lowercase letters, digits, and underscores.</p>
-     * </li>
-     * <li><p>Start with a lowercase letter and end with a lowercase letter or digit.</p>
-     * </li>
-     * <li><p>Not start with gp.</p>
-     * </li>
-     * <li><p>Be 2 to 16 characters long.</p>
-     * </li>
+     * <li>The account name can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The account name must start with a lowercase letter and end with a lowercase letter or digit.</li>
+     * <li>The account name cannot start with gp.</li>
+     * <li>The account name must be 2 to 16 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,14 +59,11 @@ public class CreateAIServiceRequest extends TeaModel {
     public String serviceAccount;
 
     /**
-     * <p>The password for the service account. It must meet these requirements:</p>
+     * <p>The password of the service account. The following limits apply:</p>
      * <ul>
-     * <li><p>Contain at least three of the following: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * </li>
-     * <li><p>Support these special characters: !@#$%^&amp;\*()_+-=.</p>
-     * </li>
-     * <li><p>Be 8 to 32 characters long.</p>
-     * </li>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Supported special characters: !@#$%^&amp;*()_+-=</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,7 +74,7 @@ public class CreateAIServiceRequest extends TeaModel {
     public String serviceAccountPassword;
 
     /**
-     * <p>The service type. Only drama is supported.</p>
+     * <p>The service type. Currently, only drama is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

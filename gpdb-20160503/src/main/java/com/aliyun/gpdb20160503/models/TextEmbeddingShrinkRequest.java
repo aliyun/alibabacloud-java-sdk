@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextEmbeddingShrinkRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,12 @@ public class TextEmbeddingShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The number of embedding dimensions. The default value is the number of dimensions supported by the embedding algorithm.</p>
+     * <p>The vector dimensions. Default value: the dimensions supported by the embedding model.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>The text-embedding-v3 supports 1024, 768, and 512 dimensions. Default value: 1024.</li>
+     * <li>text-embedding-v3 supports 1024, 768, and 512 dimensions. Default value: 1024.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -29,7 +29,7 @@ public class TextEmbeddingShrinkRequest extends TeaModel {
     public Integer dimension;
 
     /**
-     * <p>A list of text content to be embedded. The list length must not exceed 100.</p>
+     * <p>The list of text content to vectorize. The list can contain up to 100 entries.</p>
      * 
      * <strong>example:</strong>
      * <p>What is ADBPG?</p>
@@ -38,14 +38,14 @@ public class TextEmbeddingShrinkRequest extends TeaModel {
     public String inputShrink;
 
     /**
-     * <p>The text embedding model. Valid values:</p>
+     * <p>The embedding model. Valid values:</p>
      * <ul>
-     * <li>text-embedding-v1:1536 dimensions</li>
-     * <li>text-embedding-v2:1536 dimensions</li>
-     * <li>text-embedding-v3 (default):1024, 768, and 512 dimensions</li>
-     * <li>text2vec: 1024 dimensions</li>
-     * <li>m3e-base: 768 dimensions</li>
-     * <li>m3e-small: 512 dimensions</li>
+     * <li>text-embedding-v1: 1536 dimensions</li>
+     * <li>text-embedding-v2: 1536 dimensions</li>
+     * <li>text-embedding-v3 (default): 1024, 768, or 512 dimensions</li>
+     * <li>text2vec (not recommended): 1024 dimensions</li>
+     * <li>m3e-base (not recommended): 768 dimensions</li>
+     * <li>m3e-small (not recommended): 512 dimensions</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class TextEmbeddingShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

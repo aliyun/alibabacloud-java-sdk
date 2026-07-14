@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateIndexRequest extends TeaModel {
     /**
-     * <p>The name of the collection.</p>
+     * <p>The collection name.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query the list.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class CreateIndexRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,15 +30,13 @@ public class CreateIndexRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The index parameter. If you do not specify this parameter, a B-tree index is created.</p>
+     * <p>The index parameters. If this parameter is not specified, a B-tree index is created by default.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>b-tree: To create a B-tree index, set the fillFactor parameter to a value between 10 and 100. Default value: 90.</p>
-     * </li>
-     * <li><p>gin: To create a GIN index, set the fastUpdate parameter to true or false. Default value: true.</p>
-     * </li>
+     * <li>b-tree: The fillFactor parameter. Valid values: 10 to 100. Default value: 90.</li>
+     * <li>gin: The fastUpdate parameter. Valid values: true and false. Default value: true.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} or {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</p>
@@ -47,7 +45,7 @@ public class CreateIndexRequest extends TeaModel {
     public String indexConfig;
 
     /**
-     * <p>The index field. Only a single field is supported, and it must be a key defined in metadata.</p>
+     * <p>The index field. Only a single field is supported, and the field must be a key defined in Metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>title</p>
@@ -56,7 +54,7 @@ public class CreateIndexRequest extends TeaModel {
     public String indexField;
 
     /**
-     * <p>The name of the index.</p>
+     * <p>The index name.</p>
      * 
      * <strong>example:</strong>
      * <p>testindex</p>
@@ -65,9 +63,9 @@ public class CreateIndexRequest extends TeaModel {
     public String indexName;
 
     /**
-     * <p>The namespace name.</p>
+     * <p>The namespace.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -80,7 +78,7 @@ public class CreateIndexRequest extends TeaModel {
     /**
      * <p>The password of the namespace.</p>
      * <blockquote>
-     * <p>The value of this parameter is specified by the CreateNamespace operation.</p>
+     * <p>This value is specified by the CreateNamespace operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -104,13 +102,7 @@ public class CreateIndexRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. This parameter and DBInstanceId cannot both be empty. If both parameters are specified, this value takes precedence.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ip</li>
-     * <li>l2</li>
-     * <li>cosine</li>
-     * </ul>
+     * <p>The ID of the workspace that consists of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both this parameter and DBInstanceId are specified, this parameter takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-ws-*****</p>

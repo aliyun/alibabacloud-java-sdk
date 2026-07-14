@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
     /**
+     * <p>The LSN of the snapshot to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String lsn;
 
     /**
+     * <p>The Supabase project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The region ID. Specifies the region in which to query or perform the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

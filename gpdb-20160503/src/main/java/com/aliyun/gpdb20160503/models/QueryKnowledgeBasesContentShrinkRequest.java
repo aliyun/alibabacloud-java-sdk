@@ -31,7 +31,7 @@ public class QueryKnowledgeBasesContentShrinkRequest extends TeaModel {
      * <p>The method used to merge results from multiple knowledge bases. Default value: RRF. Valid values:</p>
      * <ul>
      * <li>RRF</li>
-     * <li>Weight.</li>
+     * <li>Weight</li>
      * </ul>
      * 
      * <strong>example:</strong>

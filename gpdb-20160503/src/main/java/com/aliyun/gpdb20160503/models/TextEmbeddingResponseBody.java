@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextEmbeddingResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The message details.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -14,7 +14,7 @@ public class TextEmbeddingResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -26,10 +26,10 @@ public class TextEmbeddingResponseBody extends TeaModel {
     public TextEmbeddingResponseBodyResults results;
 
     /**
-     * <p>The status of the operation. Valid values:</p>
+     * <p>The API execution status. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong></li>
-     * <li><strong>fail</strong></li>
+     * <li><strong>success</strong>: The execution is successful.</li>
+     * <li><strong>fail</strong>: The execution failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

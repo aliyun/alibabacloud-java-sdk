@@ -1210,6 +1210,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>创建API密钥。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建API密钥</p>
+     * 
+     * @param tmpReq CreateApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateApiKeyResponse
+     */
+    public CreateApiKeyResponse createApiKeyWithOptions(CreateApiKeyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateApiKeyShrinkRequest request = new CreateApiKeyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.serviceIds)) {
+            request.serviceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.serviceIds, "ServiceIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyName)) {
+            query.put("KeyName", request.keyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceIdsShrink)) {
+            query.put("ServiceIds", request.serviceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateApiKey"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建API密钥。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建API密钥</p>
+     * 
+     * @param request CreateApiKeyRequest
+     * @return CreateApiKeyResponse
+     */
+    public CreateApiKeyResponse createApiKey(CreateApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createApiKeyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a backup set.</p>
      * 
@@ -1993,7 +2065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a knowledge base</p>
+     * <p>Creates a knowledge base.</p>
      * 
      * @param tmpReq CreateDocumentCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2151,7 +2223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a knowledge base</p>
+     * <p>Creates a knowledge base.</p>
      * 
      * @param request CreateDocumentCollectionRequest
      * @return CreateDocumentCollectionResponse
@@ -2371,7 +2443,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an index. Note: 1. Only scalar indexes are supported. 2. The table is write-locked during index creation. 3. When creating an index on a table with a large volume of data, the process consumes significant CPU and I/O resources of the instance. If this impacts instance availability, call CancelCreateIndexJob to cancel the index creation.</p>
+     * <p>Creates an index.
+     * Usage notes:</p>
+     * <ol>
+     * <li>Only scalar indexes are supported.</li>
+     * <li>Write operations on the table are prohibited during index creation.</li>
+     * <li>Creating an index on a table with a large amount of data consumes CPU and I/O resources of the instance. If instance availability is affected, call CancelCreateIndexJob to cancel the index creation.</li>
+     * </ol>
      * 
      * @param request CreateIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2439,7 +2517,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an index. Note: 1. Only scalar indexes are supported. 2. The table is write-locked during index creation. 3. When creating an index on a table with a large volume of data, the process consumes significant CPU and I/O resources of the instance. If this impacts instance availability, call CancelCreateIndexJob to cancel the index creation.</p>
+     * <p>Creates an index.
+     * Usage notes:</p>
+     * <ol>
+     * <li>Only scalar indexes are supported.</li>
+     * <li>Write operations on the table are prohibited during index creation.</li>
+     * <li>Creating an index on a table with a large amount of data consumes CPU and I/O resources of the instance. If instance availability is affected, call CancelCreateIndexJob to cancel the index creation.</li>
+     * </ol>
      * 
      * @param request CreateIndexRequest
      * @return CreateIndexResponse
@@ -2523,7 +2607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型算子 API KEY</p>
+     * <p>Creates a model creation operator API key.</p>
      * 
      * @param request CreateModelOperatorApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2555,7 +2639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建模型算子 API KEY</p>
+     * <p>Creates a model creation operator API key.</p>
      * 
      * @param request CreateModelOperatorApiKeyRequest
      * @return CreateModelOperatorApiKeyResponse
@@ -2567,7 +2651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a model service.</p>
@@ -2654,7 +2738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a model service.</p>
@@ -2821,7 +2905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a SaaS service.</p>
@@ -2884,7 +2968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a SaaS service.</p>
@@ -3864,6 +3948,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>删除API密钥。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除API密钥</p>
+     * 
+     * @param request DeleteApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteApiKeyResponse
+     */
+    public DeleteApiKeyResponse deleteApiKeyWithOptions(DeleteApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyId)) {
+            query.put("KeyId", request.keyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteApiKey"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>删除API密钥。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除API密钥</p>
+     * 
+     * @param request DeleteApiKeyRequest
+     * @return DeleteApiKeyResponse
+     */
+    public DeleteApiKeyResponse deleteApiKey(DeleteApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteApiKeyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes a backup set. You can call this operation to delete only physical backup sets that are manually backed up.</p>
      * 
@@ -3913,7 +4051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified Supabase branch. The default branch or branches that still have child branches cannot be deleted.</p>
+     * <p>Deletes a specified Supabase branch. The default branch or a branch that still has child branches cannot be deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a Supabase branch.</p>
@@ -3952,7 +4090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a specified Supabase branch. The default branch or branches that still have child branches cannot be deleted.</p>
+     * <p>Deletes a specified Supabase branch. The default branch or a branch that still has child branches cannot be deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a Supabase branch.</p>
@@ -5215,10 +5353,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于按 ProjectId 和 Lsn 删除指定 Supabase 项目中的快照。</p>
+     * <p>Deletes a snapshot from a specified Supabase project by ProjectId and Lsn.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除恢复点</p>
+     * <p>Deletes a snapshot of a Supabase project.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5258,10 +5396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>该接口用于按 ProjectId 和 Lsn 删除指定 Supabase 项目中的快照。</p>
+     * <p>Deletes a snapshot from a specified Supabase project by ProjectId and Lsn.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除恢复点</p>
+     * <p>Deletes a snapshot of a Supabase project.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @return DeleteSnapshotResponse
@@ -6351,13 +6489,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>How-To</h2>
-     * <p>This API is typically used to view information such as the specifications, network type, and instance status of an AnalyticDB for PostgreSQL instance.  </p>
-     * <h2>Queries per second (QPS) limit</h2>
-     * <p>The default QPS limit for this API is 1000 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may affect your business operations. Please invoke the API appropriately.<br>&lt;props=&quot;china&quot;&gt;The QPS value provided in this document is for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about an AnalyticDB for PostgreSQL instance, such as the instance specifications, network type, and instance status.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default QPS limit for a single user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.
+     * &lt;props=&quot;china&quot;&gt;The QPS limit in this topic is a default reference value. For accurate information, refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the details of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Queries the details of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6397,13 +6536,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>How-To</h2>
-     * <p>This API is typically used to view information such as the specifications, network type, and instance status of an AnalyticDB for PostgreSQL instance.  </p>
-     * <h2>Queries per second (QPS) limit</h2>
-     * <p>The default QPS limit for this API is 1000 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may affect your business operations. Please invoke the API appropriately.<br>&lt;props=&quot;china&quot;&gt;The QPS value provided in this document is for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about an AnalyticDB for PostgreSQL instance, such as the instance specifications, network type, and instance status.</p>
+     * <h2>QPS limit</h2>
+     * <p>The default QPS limit for a single user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.
+     * &lt;props=&quot;china&quot;&gt;The QPS limit in this topic is a default reference value. For accurate information, refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the details of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Queries the details of an AnalyticDB for PostgreSQL instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -7075,7 +7215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the maximum performance of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Queries the maximum throughput of an instance.</p>
      * 
      * @param request DescribeDBInstanceSupportMaxPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7111,7 +7251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the maximum performance of an AnalyticDB for PostgreSQL instance.</p>
+     * <p>Queries the maximum throughput of an instance.</p>
      * 
      * @param request DescribeDBInstanceSupportMaxPerformanceRequest
      * @return DescribeDBInstanceSupportMaxPerformanceResponse
@@ -8723,7 +8863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型算子 API KEY 详情</p>
+     * <p>Retrieves the details of a model operator API key.</p>
      * 
      * @param request DescribeModelOperatorApiKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8755,7 +8895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型算子 API KEY 详情</p>
+     * <p>Retrieves the details of a model operator API key.</p>
      * 
      * @param request DescribeModelOperatorApiKeyRequest
      * @return DescribeModelOperatorApiKeyResponse
@@ -8767,7 +8907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型算子用量</p>
+     * <p>Retrieves the usage metrics of model operators.</p>
      * 
      * @param tmpReq DescribeModelOperatorUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8837,7 +8977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型算子用量</p>
+     * <p>Retrieves the usage metrics of model operators.</p>
      * 
      * @param request DescribeModelOperatorUsageRequest
      * @return DescribeModelOperatorUsageResponse
@@ -8849,13 +8989,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This interface is used to view the details of a model service.</p>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</p>
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a model service.</p>
+     * <h2>Rate limit</h2>
+     * <p>The maximum number of queries per second (QPS) per user for this operation is 1,000. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a model service.</p>
+     * <p>Queries a model service.</p>
      * 
      * @param request DescribeModelServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8891,13 +9031,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
-     * <p>This interface is used to view the details of a model service.</p>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
-     * <p>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions.We recommend that you take note of this limit when you call this operation.</p>
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a model service.</p>
+     * <h2>Rate limit</h2>
+     * <p>The maximum number of queries per second (QPS) per user for this operation is 1,000. If the number of calls exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a model service.</p>
+     * <p>Queries a model service.</p>
      * 
      * @param request DescribeModelServiceRequest
      * @return DescribeModelServiceResponse
@@ -10021,7 +10161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View table details.</p>
+     * <p>Queries the details of a table.</p>
      * 
      * @param request DescribeTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10081,7 +10221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>View table details.</p>
+     * <p>Queries the details of a table.</p>
      * 
      * @param request DescribeTableRequest
      * @return DescribeTableResponse
@@ -10903,7 +11043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Execute an SQL statement.</p>
+     * <p>Executes an SQL statement.</p>
      * 
      * @param tmpReq ExecuteStatementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10995,7 +11135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Execute an SQL statement.</p>
+     * <p>Executes an SQL statement.</p>
      * 
      * @param request ExecuteStatementRequest
      * @return ExecuteStatementResponse
@@ -11007,7 +11147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a database account.</p>
+     * <p>Retrieves information about a specific account.</p>
      * 
      * @param request GetAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11043,7 +11183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a database account.</p>
+     * <p>Retrieves information about a specific account.</p>
      * 
      * @param request GetAccountRequest
      * @return GetAccountResponse
@@ -11051,6 +11191,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAccountResponse getAccount(GetAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取API密钥详情。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取API密钥详情</p>
+     * 
+     * @param request GetApiKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetApiKeyResponse
+     */
+    public GetApiKeyResponse getApiKeyWithOptions(GetApiKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyId)) {
+            query.put("KeyId", request.keyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApiKey"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetApiKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取API密钥详情。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取API密钥详情</p>
+     * 
+     * @param request GetApiKeyRequest
+     * @return GetApiKeyResponse
+     */
+    public GetApiKeyResponse getApiKey(GetApiKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getApiKeyWithOptions(request, runtime);
     }
 
     /**
@@ -11363,7 +11557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Asynchronous SQL Execution Result</p>
+     * <p>Retrieves the result of an asynchronous SQL execution.</p>
      * 
      * @param request GetStatementResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11415,7 +11609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Asynchronous SQL Execution Result</p>
+     * <p>Retrieves the result of an asynchronous SQL execution.</p>
      * 
      * @param request GetStatementResultRequest
      * @return GetStatementResultResponse
@@ -11589,16 +11783,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
+     * <p>This operation is related to UploadDocumentAsync. You can call UploadDocumentAsync to create an upload task and obtain a job ID, and then call this operation to view the execution information of the job.</p>
      * <blockquote>
-     * <p>Suggestions</p>
-     * </blockquote>
+     * <p>Usage notes</p>
      * <ul>
-     * <li>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</li>
+     * <li>Estimate the timeout based on the document complexity and the number of vector entries after chunking. The timeout generally does not exceed 2 hours.</li>
      * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the progress and result of an asynchronous document upload job based on the job ID.</p>
+     * <p>Retrieves the progress and result of an asynchronous document upload task by job ID.</p>
      * 
      * @param request GetUploadDocumentJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11656,16 +11850,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and get the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
+     * <p>This operation is related to UploadDocumentAsync. You can call UploadDocumentAsync to create an upload task and obtain a job ID, and then call this operation to view the execution information of the job.</p>
      * <blockquote>
-     * <p>Suggestions</p>
-     * </blockquote>
+     * <p>Usage notes</p>
      * <ul>
-     * <li>Based on document complexity and the number of resulting vector chunks, the timeout is estimated and typically does not exceed 2 hours.</li>
+     * <li>Estimate the timeout based on the document complexity and the number of vector entries after chunking. The timeout generally does not exceed 2 hours.</li>
      * </ul>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the progress and result of an asynchronous document upload job based on the job ID.</p>
+     * <p>Retrieves the progress and result of an asynchronous document upload task by job ID.</p>
      * 
      * @param request GetUploadDocumentJobRequest
      * @return GetUploadDocumentJobResponse
@@ -11759,6 +11953,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUpsertCollectionDataJobResponse getUpsertCollectionDataJob(GetUpsertCollectionDataJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUpsertCollectionDataJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用说明</h2>
+     * <p>本接口用于查看指定工作空间信息。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询SaaS工作空间</p>
+     * 
+     * @param request GetWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspaceWithOptions(GetWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspace"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>使用说明</h2>
+     * <p>本接口用于查看指定工作空间信息。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询SaaS工作空间</p>
+     * 
+     * @param request GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspace(GetWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWorkspaceWithOptions(request, runtime);
     }
 
     /**
@@ -11956,11 +12206,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation lists the AINode resource pools for the specified instance.</li>
+     * <li>This operation is used to query the list of AI nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of AINode resource pools.</p>
+     * <p>Queries the list of AI nodes.</p>
      * 
      * @param request ListAINodePoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11997,11 +12247,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation lists the AINode resource pools for the specified instance.</li>
+     * <li>This operation is used to query the list of AI nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of AINode resource pools.</p>
+     * <p>Queries the list of AI nodes.</p>
      * 
      * @param request ListAINodePoolsRequest
      * @return ListAINodePoolsResponse
@@ -12013,7 +12263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists AI services.</p>
+     * <p>Retrieves the list of AI services.</p>
      * 
      * @param request ListAIServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12057,7 +12307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists AI services.</p>
+     * <p>Retrieves the list of AI services.</p>
      * 
      * @param request ListAIServicesRequest
      * @return ListAIServicesResponse
@@ -12065,6 +12315,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAIServicesResponse listAIServices(ListAIServicesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAIServicesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询API密钥列表。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询API密钥列表</p>
+     * 
+     * @param request ListApiKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApiKeysResponse
+     */
+    public ListApiKeysResponse listApiKeysWithOptions(ListApiKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyName)) {
+            query.put("KeyName", request.keyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApiKeys"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApiKeysResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询API密钥列表。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询API密钥列表</p>
+     * 
+     * @param request ListApiKeysRequest
+     * @return ListApiKeysResponse
+     */
+    public ListApiKeysResponse listApiKeys(ListApiKeysRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listApiKeysWithOptions(request, runtime);
     }
 
     /**
@@ -12117,10 +12433,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to query all branches under a specified Supabase project with pagination, supporting filtering by parent branch, keyword, and sorting conditions.</p>
+     * <p>Performs a paged query for all branches under a specified Supabase project. You can filter branches by parent branch, keyword, and sorting criteria. Paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the branch list of a Supabase project.</p>
+     * <p>Queries the branch list of a Supabase project.</p>
      * 
      * @param request ListBranchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12184,10 +12500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is used to query all branches under a specified Supabase project with pagination, supporting filtering by parent branch, keyword, and sorting conditions.</p>
+     * <p>Performs a paged query for all branches under a specified Supabase project. You can filter branches by parent branch, keyword, and sorting criteria. Paging is supported.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the branch list of a Supabase project.</p>
+     * <p>Queries the branch list of a Supabase project.</p>
      * 
      * @param request ListBranchesRequest
      * @return ListBranchesResponse
@@ -12199,7 +12515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get document chunk details</p>
+     * <p>Retrieves the details of document chunks.</p>
      * 
      * @param request ListChunksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12267,7 +12583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get document chunk details</p>
+     * <p>Retrieves the details of document chunks.</p>
      * 
      * @param request ListChunksRequest
      * @return ListChunksResponse
@@ -12887,7 +13203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型算子 API KEY 列表</p>
+     * <p>Retrieves the list of API keys for model operators.</p>
      * 
      * @param request ListModelOperatorApiKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12923,7 +13239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型算子 API KEY 列表</p>
+     * <p>Retrieves the list of API keys for model operators.</p>
      * 
      * @param request ListModelOperatorApiKeysRequest
      * @return ListModelOperatorApiKeysResponse
@@ -12935,7 +13251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型服务列表</p>
+     * <p>Retrieves a list of model services.</p>
      * 
      * @param request ListModelOperatorServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12971,7 +13287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取模型服务列表</p>
+     * <p>Retrieves a list of model services.</p>
      * 
      * @param request ListModelOperatorServicesRequest
      * @return ListModelOperatorServicesResponse
@@ -13167,11 +13483,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage Notes</h2>
-     * <p>This API operation is used to view information about all SaaS services.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about all SaaS services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query SaaS Service List</p>
+     * <p>Queries the list of SaaS services.</p>
      * 
      * @param request ListSaasServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13219,11 +13535,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage Notes</h2>
-     * <p>This API operation is used to view information about all SaaS services.</p>
+     * <h2>Operation description</h2>
+     * <p>This operation is used to query information about all SaaS services.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query SaaS Service List</p>
+     * <p>Queries the list of SaaS services.</p>
      * 
      * @param request ListSaasServiceRequest
      * @return ListSaasServiceResponse
@@ -13620,11 +13936,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation queries the tags of Supabase instances.</li>
+     * <li>This operation queries the tag list of Supabase instances.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the tags of Supabase instances.</p>
+     * <p>Queries the tags of a Supabase instance.</p>
      * 
      * @param request ListSupabaseProjectTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13673,11 +13989,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation queries the tags of Supabase instances.</li>
+     * <li>This operation queries the tag list of Supabase instances.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the tags of Supabase instances.</p>
+     * <p>Queries the tags of a Supabase instance.</p>
      * 
      * @param request ListSupabaseProjectTagsRequest
      * @return ListSupabaseProjectTagsResponse
@@ -14045,7 +14361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the IP address whitelist for an AI service.</p>
+     * <p>Modifies the whitelist of an AI service.</p>
      * 
      * @param request ModifyAIServiceSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14089,7 +14405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the IP address whitelist for an AI service.</p>
+     * <p>Modifies the whitelist of an AI service.</p>
      * 
      * @param request ModifyAIServiceSecurityIpsRequest
      * @return ModifyAIServiceSecurityIpsResponse
@@ -14413,7 +14729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the development mode of an instance.</p>
+     * <p>Modifies the deployment mode of an instance.</p>
      * 
      * @param request ModifyDBInstanceDeploymentModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14457,7 +14773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the development mode of an instance.</p>
+     * <p>Modifies the deployment mode of an instance.</p>
      * 
      * @param request ModifyDBInstanceDeploymentModeRequest
      * @return ModifyDBInstanceDeploymentModeResponse
@@ -15720,11 +16036,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to ADBPG Supabase instances.</li>
+     * <li>Only ADBPG Supabase instances are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the auto-scaling policy of an ADBPG Supabase instance.</p>
+     * <p>Modifies the automatic start and stop policy for a Supabase instance.</p>
      * 
      * @param request ModifySupabaseAutoScalePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15765,11 +16081,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation applies only to ADBPG Supabase instances.</li>
+     * <li>Only ADBPG Supabase instances are supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the auto-scaling policy of an ADBPG Supabase instance.</p>
+     * <p>Modifies the automatic start and stop policy for a Supabase instance.</p>
      * 
      * @param request ModifySupabaseAutoScalePolicyRequest
      * @return ModifySupabaseAutoScalePolicyResponse
@@ -15781,10 +16097,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*Before you use this operation, make sure you fully understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL (Supabase)**.</p>
+     * <p><em>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.。</p>
      * 
      * <b>summary</b> : 
-     * <p>Change the Supabase project description</p>
+     * <p>Modifies the description of a Supabase project.</p>
      * 
      * @param request ModifySupabaseProjectDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15824,10 +16140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*Before you use this operation, make sure you fully understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL (Supabase)**.</p>
+     * <p><em>Before you use this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.。</p>
      * 
      * <b>summary</b> : 
-     * <p>Change the Supabase project description</p>
+     * <p>Modifies the description of a Supabase project.</p>
      * 
      * @param request ModifySupabaseProjectDescriptionRequest
      * @return ModifySupabaseProjectDescriptionResponse
@@ -15839,10 +16155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> for AnalyticDB PostgreSQL Supabase.</em>*</p>
+     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.</p>
      * 
      * <b>summary</b> : 
-     * <p>Scales the compute resource or expands the storage resource (cloud disk size) for a Supabase project.</p>
+     * <p>Modifies the resources of a Supabase instance, including upgrading or downgrading compute resources and expanding storage resources (cloud disk size).</p>
      * 
      * @param request ModifySupabaseProjectResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15890,10 +16206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> for AnalyticDB PostgreSQL Supabase.</em>*</p>
+     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL Supabase</em>*.</p>
      * 
      * <b>summary</b> : 
-     * <p>Scales the compute resource or expands the storage resource (cloud disk size) for a Supabase project.</p>
+     * <p>Modifies the resources of a Supabase instance, including upgrading or downgrading compute resources and expanding storage resources (cloud disk size).</p>
      * 
      * @param request ModifySupabaseProjectResourceRequest
      * @return ModifySupabaseProjectResourceResponse
@@ -16191,7 +16507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation pauses a Supabase instance.</p>
+     * <p>Pauses a Supabase instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Pauses a Supabase instance.</p>
@@ -16230,7 +16546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation pauses a Supabase instance.</p>
+     * <p>Pauses a Supabase instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Pauses a Supabase instance.</p>
@@ -16641,7 +16957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</p>
+     * <p>Retrieves vectors and metadata from multiple specified document collections using natural language statements, merges multi-channel recall results, and returns the combined results.</p>
      * 
      * @param tmpReq QueryKnowledgeBasesContentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16723,7 +17039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves vectors and metadata from multiple specified document collections by using natural language statements, merges multi-channel recall results, and returns the combined results.</p>
+     * <p>Retrieves vectors and metadata from multiple specified document collections using natural language statements, merges multi-channel recall results, and returns the combined results.</p>
      * 
      * @param request QueryKnowledgeBasesContentRequest
      * @return QueryKnowledgeBasesContentResponse
@@ -17329,7 +17645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Restores to a target branch based on a snapshot LSN. You can specify the restored branch name and target branch. FinalizeRestore controls whether to complete the restoration immediately.</p>
+     * <p>Restores to a target branch based on a snapshot LSN. You can specify the restored branch name and the target branch. FinalizeRestore controls whether to complete the restoration immediately.</p>
      * 
      * <b>summary</b> : 
      * <p>Restores a Supabase project from a snapshot.</p>
@@ -17388,7 +17704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Restores to a target branch based on a snapshot LSN. You can specify the restored branch name and target branch. FinalizeRestore controls whether to complete the restoration immediately.</p>
+     * <p>Restores to a target branch based on a snapshot LSN. You can specify the restored branch name and the target branch. FinalizeRestore controls whether to complete the restoration immediately.</p>
      * 
      * <b>summary</b> : 
      * <p>Restores a Supabase project from a snapshot.</p>
@@ -17571,7 +17887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves details about a Supabase instance.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Resumes a Supabase instance.</p>
@@ -17610,7 +17926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves details about a Supabase instance.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Resumes a Supabase instance.</p>
@@ -17947,10 +18263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adds or overwrites tags on one or more Supabase instances. If a specified tag key already exists, its value is overwritten with the new value.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to Supabase project instances.</p>
+     * <p>Tags a Supabase project.</p>
      * 
      * @param request TagSupabaseProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17994,10 +18310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Adds or overwrites tags on one or more Supabase instances. If a specified tag key already exists, its value is overwritten with the new value.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds tags to Supabase project instances.</p>
+     * <p>Tags a Supabase project.</p>
      * 
      * @param request TagSupabaseProjectRequest
      * @return TagSupabaseProjectResponse
@@ -18009,7 +18325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates text embeddings using an embedding model.</p>
+     * <p>Vectorizes text documents by using a model.</p>
      * 
      * @param tmpReq TextEmbeddingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18069,7 +18385,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates text embeddings using an embedding model.</p>
+     * <p>Vectorizes text documents by using a model.</p>
      * 
      * @param request TextEmbeddingRequest
      * @return TextEmbeddingResponse
@@ -18277,10 +18593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation removes one or more specified tags from Supabase instances.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes tags from one or more Supabase instances.</p>
+     * <p>Unbinds tags from a Supabase instance.</p>
      * 
      * @param request UntagSupabaseProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18328,10 +18644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation removes one or more specified tags from Supabase instances.</p>
+     * <p>Queries the details of a Supabase instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes tags from one or more Supabase instances.</p>
+     * <p>Unbinds tags from a Supabase instance.</p>
      * 
      * @param request UntagSupabaseProjectRequest
      * @return UntagSupabaseProjectResponse
@@ -18597,8 +18913,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation does not support modifying instances in storage-reserved mode.
-     * Before you call this operation, ensure you understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>This operation does not support instances in storage reservation mode.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the specifications of an AnalyticDB for PostgreSQL instance.</p>
@@ -18693,8 +19009,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation does not support modifying instances in storage-reserved mode.
-     * Before you call this operation, ensure you understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
+     * <p>This operation does not support instances in storage reservation mode.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Changes the specifications of an AnalyticDB for PostgreSQL instance.</p>
@@ -18833,20 +19149,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The server loads and chunks a document based on the file extension, performs vectorization by using the embedding model that is specified when you call the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multi-modal embedding for various formats of text and images.
+     * <p>The server loads and splits a document based on the file name extension, performs vectorization by using the embedding model specified when you invoke the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multimodal embedding of text and images in various formats.
      * Related operations:</p>
      * <ul>
-     * <li>You can call the GetUploadDocumentJob operation to query the progress and result of a document upload job.</li>
-     * <li>You can call the CancelUploadDocumentJob operation to cancel a document upload job.<blockquote>
+     * <li>You can invoke the GetUploadDocumentJob operation to query the progress and result of a document upload job.</li>
+     * <li>You can invoke the CancelUploadDocumentJob operation to cancel a document upload job.<blockquote>
+     * <ul>
+     * <li>After you commit a document upload request, the request is queued for processing. A maximum of 20 documents in the Pending and Running states can be processed for each Resource Access Management (RAM) user or Alibaba Cloud account.</li>
+     * <li>A text document can be split into a maximum of 100,000 chunks.</li>
+     * <li>If the document collection uses the OnePeace model, a maximum of 10,000 images can be uploaded and queried for each RAM user or Alibaba Cloud account.</li>
+     * </ul>
      * </blockquote>
      * </li>
-     * <li>After a document upload request is submitted, the request is queued for processing. Up to 20 documents in the Pending and Running states can be processed within a Resource Access Management (RAM) user or Alibaba Cloud account.</li>
-     * <li>A text document can be split into up to 100,000 chunks.</li>
-     * <li>If a document collection uses the OnePeace model, each RAM user or Alibaba Cloud account can upload and query up to 10,000 images.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronous Document Upload</p>
+     * <p>Asynchronously uploads a document.</p>
      * 
      * @param tmpReq UploadDocumentAsyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18958,20 +19276,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The server loads and chunks a document based on the file extension, performs vectorization by using the embedding model that is specified when you call the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multi-modal embedding for various formats of text and images.
+     * <p>The server loads and splits a document based on the file name extension, performs vectorization by using the embedding model specified when you invoke the CreateDocumentCollection operation, and then writes the document to the specified document collection. This operation supports multimodal embedding of text and images in various formats.
      * Related operations:</p>
      * <ul>
-     * <li>You can call the GetUploadDocumentJob operation to query the progress and result of a document upload job.</li>
-     * <li>You can call the CancelUploadDocumentJob operation to cancel a document upload job.<blockquote>
+     * <li>You can invoke the GetUploadDocumentJob operation to query the progress and result of a document upload job.</li>
+     * <li>You can invoke the CancelUploadDocumentJob operation to cancel a document upload job.<blockquote>
+     * <ul>
+     * <li>After you commit a document upload request, the request is queued for processing. A maximum of 20 documents in the Pending and Running states can be processed for each Resource Access Management (RAM) user or Alibaba Cloud account.</li>
+     * <li>A text document can be split into a maximum of 100,000 chunks.</li>
+     * <li>If the document collection uses the OnePeace model, a maximum of 10,000 images can be uploaded and queried for each RAM user or Alibaba Cloud account.</li>
+     * </ul>
      * </blockquote>
      * </li>
-     * <li>After a document upload request is submitted, the request is queued for processing. Up to 20 documents in the Pending and Running states can be processed within a Resource Access Management (RAM) user or Alibaba Cloud account.</li>
-     * <li>A text document can be split into up to 100,000 chunks.</li>
-     * <li>If a document collection uses the OnePeace model, each RAM user or Alibaba Cloud account can upload and query up to 10,000 images.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronous Document Upload</p>
+     * <p>Asynchronously uploads a document.</p>
      * 
      * @param request UploadDocumentAsyncRequest
      * @return UploadDocumentAsyncResponse

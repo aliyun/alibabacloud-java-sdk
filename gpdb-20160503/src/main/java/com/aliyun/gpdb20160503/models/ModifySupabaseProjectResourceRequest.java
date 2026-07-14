@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseProjectResourceRequest extends TeaModel {
     /**
-     * <p>The modification type.</p>
+     * <p>The specification change type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifySupabaseProjectResourceRequest extends TeaModel {
     public String modifyType;
 
     /**
-     * <p>The Supabase project ID.</p>
+     * <p>The Supabase instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifySupabaseProjectResourceRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The new project specifications.</p>
+     * <p>The specifications of the Supabase instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2C4G</p>

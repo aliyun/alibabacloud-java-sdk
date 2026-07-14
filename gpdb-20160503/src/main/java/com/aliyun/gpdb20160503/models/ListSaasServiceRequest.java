@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSaasServiceRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in this request. Default value: 10.</p>
+     * <p>The maximum number of entries to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListSaasServiceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query to begin with during a paginated query.</p>
+     * <p>The token for the next query when paging. Use this token to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

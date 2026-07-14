@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStatementResultRequest extends TeaModel {
     /**
-     * <p>Instance ID. Can be obtained by calling DescribeDBInstances.</p>
+     * <p>The instance ID. You can call DescribeDBInstances to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetStatementResultRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Database name.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,7 +24,7 @@ public class GetStatementResultRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>Task ID for asynchronous SQL execution.</p>
+     * <p>The task ID of the asynchronous SQL execution.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class GetStatementResultRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID where the instance is located.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,9 @@ public class GetStatementResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Access credential. Created through the CreateSecret interface.</p>
+     * <p>The access credential. Created by calling the CreateSecret operation.</p>
      * <blockquote>
-     * <p>When accessing this interface with a sub-account, the sub-account must have the UseSecret or GetSecretValue permission for this SecretArn.</p>
+     * <p>When you access this operation by using a RAM user, you must have the UseSecret or GetSecretValue permission on this SecretArn.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

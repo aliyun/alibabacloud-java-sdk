@@ -8,12 +8,9 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
      * <p>The vector index algorithm.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>hnswflat</code>: An HNSW index without quantization compression. This is the default value.</p>
-     * </li>
-     * <li><p><code>novam</code>: A graph index without quantization compression. This algorithm is suitable for high-performance scenarios such as real-time recommendation.</p>
-     * </li>
-     * <li><p><code>novad</code>: A partitioned index with rabitq quantization. This algorithm is suitable for large-scale, low-cost retrieval scenarios.</p>
-     * </li>
+     * <li>hnswflat: HNSW index without quantization compression (default).</li>
+     * <li>novam: graph index without quantization compression, suitable for high-performance scenarios such as real-time recommendations.</li>
+     * <li>novad: partitioned index with RaBitQ quantization, suitable for large-scale low-cost retrieval scenarios.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -23,7 +20,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The name of the document collection to create.</p>
+     * <p>The name of the knowledge base to create.</p>
      * <blockquote>
      * <p>The name must comply with PostgreSQL object naming conventions.</p>
      * </blockquote>
@@ -36,9 +33,9 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String collection;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the target region, including instance IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +46,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The vector dimension. If you omit this parameter, the system uses a default dimension for the selected <code>EmbeddingModel</code>.</p>
+     * <p>The vector dimensions. The default value is the dimension supported by the embedding model.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -58,42 +55,26 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public Integer dimension;
 
     /**
-     * <p>The embedding model. The default value is <code>text-embedding-v3</code>.</p>
+     * <p>The embedding model. Default value: text-embedding-v3.</p>
      * <blockquote>
      * <p>Supported models:</p>
      * <ul>
-     * <li><p><code>text-embedding-v3</code> (Recommended, Default): 1,024, 768, or 512 dimensions</p>
-     * </li>
-     * <li><p><code>multimodal-embedding-v1</code> (Recommended): 1,024 dimensions, a multimodal embedding model</p>
-     * </li>
-     * <li><p><code>text-embedding-v1</code>: 1,536 dimensions</p>
-     * </li>
-     * <li><p><code>text-embedding-v2</code>: 1,536 dimensions</p>
-     * </li>
-     * <li><p><code>text2vec</code> (Not recommended): 1,024 dimensions</p>
-     * </li>
-     * <li><p><code>m3e-base</code> (Not recommended): 768 dimensions</p>
-     * </li>
-     * <li><p><code>m3e-small</code> (Not recommended): 512 dimensions</p>
-     * </li>
-     * <li><p><code>clip-vit-b-32</code> (Not recommended): CLIP ViT-B/32 model, 512 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-vit-b-16</code> (Not recommended): CLIP ViT-B/16 model, 512 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-vit-l-14</code> (Not recommended): CLIP ViT-L/14 model, 768 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-vit-l-14-336px</code> (Not recommended): CLIP ViT-L/14\@336px model, 768 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-rn50</code> (Not recommended): CLIP RN50 model, 1,024 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-rn101</code> (Not recommended): CLIP RN101 model, 512 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-rn50x4</code> (Not recommended): CLIP RN50x4 model, 640 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-rn50x16</code> (Not recommended): CLIP RN50x16 model, 768 dimensions, an image embedding model</p>
-     * </li>
-     * <li><p><code>clip-rn50x64</code> (Not recommended): CLIP RN50x64 model, 1,024 dimensions, an image embedding model</p>
-     * </li>
+     * <li>text-embedding-v3 (recommended, default): 1024, 768, or 512 dimensions</li>
+     * <li>multimodal-embedding-v1 (recommended): 1024 dimensions, multimodal embedding model</li>
+     * <li>text-embedding-v1: 1536 dimensions</li>
+     * <li>text-embedding-v2: 1536 dimensions</li>
+     * <li>text2vec (not recommended): 1024 dimensions</li>
+     * <li>m3e-base (not recommended): 768 dimensions</li>
+     * <li>m3e-small (not recommended): 512 dimensions</li>
+     * <li>clip-vit-b-32 (not recommended): CLIP ViT-B/32 model, 512 dimensions, image embedding model</li>
+     * <li>clip-vit-b-16 (not recommended): CLIP ViT-B/16 model, 512 dimensions, image embedding model</li>
+     * <li>clip-vit-l-14 (not recommended): CLIP ViT-L/14 model, 768 dimensions, image embedding model</li>
+     * <li>clip-vit-l-14-336px (not recommended): CLIP ViT-L/14@336px model, 768 dimensions, image embedding model</li>
+     * <li>clip-rn50 (not recommended): CLIP RN50 model, 1024 dimensions, image embedding model</li>
+     * <li>clip-rn101 (not recommended): CLIP RN101 model, 512 dimensions, image embedding model</li>
+     * <li>clip-rn50x4 (not recommended): CLIP RN50x4 model, 640 dimensions, image embedding model</li>
+     * <li>clip-rn50x16 (not recommended): CLIP RN50x16 model, 768 dimensions, image embedding model</li>
+     * <li>clip-rn50x64 (not recommended): CLIP RN50x64 model, 1024 dimensions, image embedding model</li>
      * </ul>
      * </blockquote>
      * 
@@ -104,9 +85,9 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String embeddingModel;
 
     /**
-     * <p>Specifies whether to build a knowledge graph. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to enable knowledge graph construction. Default value: false.</p>
      * <blockquote>
-     * <p>To use this parameter, you must first upgrade your instance to a version that supports the graph engine. During the public preview period, submit a ticket to request an upgrade.</p>
+     * <p>Before using this parameter, upgrade the instance to a version that supports the graph engine. (During the public preview, submit a ticket to upgrade the version.)</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -116,9 +97,9 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public Boolean enableGraph;
 
     /**
-     * <p>A list of entity types.</p>
+     * <p>The list of entity types.</p>
      * <blockquote>
-     * <p>This parameter is required when <code>EnableGraph</code> is set to <code>true</code>.</p>
+     * <p>This parameter is required when knowledge graph construction is enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,18 +109,15 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String entityTypesShrink;
 
     /**
-     * <p>Specifies whether to use memory-mapped files (mmap) to build the HNSW index. The default value is 0. Setting this to <code>1</code> is recommended if you do not need to delete data and require high upload performance.</p>
+     * <p>Specifies whether to use mmap to build the HNSW index. Default value: 0. If data does not need to be deleted and you require high upload performance, set this parameter to 1.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: Builds the index by using segmented page storage. This mode supports delete and update operations and can use the <code>shared_buffer</code> in PostgreSQL for caching. This is the default value.</p>
-     * </li>
-     * <li><p><code>1</code>: Builds the index by using mmap. This mode does not support delete or update operations.</p>
-     * </li>
+     * <li>0: uses segment-page storage to build the index. This mode uses shared_buffer in PostgreSQL as cache and supports delete and update operations.</li>
+     * <li>1: uses mmap to build the index. This mode does not support delete or update operations.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: Only version 6.0 supports the ExternalStorage parameter. Version 7.0 does not support this parameter.</p>
      * </blockquote>
-     * <p>The <code>ExternalStorage</code> parameter is supported only by AnalyticDB for PostgreSQL V6.0 instances. It is not supported by V7.0 instances.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -148,7 +126,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public Integer externalStorage;
 
     /**
-     * <p>The metadata fields to use for full-text search. These fields must be keys defined in <code>Metadata</code>. Separate multiple fields with a comma (,).</p>
+     * <p>The fields used for full-text retrieval. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>title,page</p>
@@ -157,14 +135,12 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String fullTextRetrievalFields;
 
     /**
-     * <p>The size of the candidate set (<code>ef_construction</code>) for HNSW index construction. The value must be greater than or equal to <code>2 * HnswM</code>.</p>
+     * <p>The candidate set size when building an index with the HNSW algorithm. The value must be &gt;= 2*HNSW_M.</p>
      * <blockquote>
-     * <p>Value range:</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>For AnalyticDB for PostgreSQL V6.0 instances: 40 to 4,000.</p>
-     * </li>
-     * <li><p>For AnalyticDB for PostgreSQL V7.0 instances: 4 to 1,000. The default value is 64.</p>
-     * </li>
+     * <li>AnalyticDB for PostgreSQL 6.0 instances: 40 to 4000.</li>
+     * <li>AnalyticDB for PostgreSQL 7.0 instances: 4 to 1000. Default value: 64.</li>
      * </ul>
      * </blockquote>
      * 
@@ -175,27 +151,21 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String hnswEfConstruction;
 
     /**
-     * <p>The maximum number of neighbors (M) for the HNSW algorithm. You do not typically need to set this parameter, as the system automatically sets it based on the vector dimension.</p>
+     * <p>The maximum number of neighbors in the HNSW algorithm. This value is automatically set based on the vector dimensions. Manual configuration is generally not required.</p>
      * <blockquote>
-     * <p>Value range:</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>For AnalyticDB for PostgreSQL V6.0 instances: 1 to 1,000.</p>
-     * </li>
-     * <li><p>For AnalyticDB for PostgreSQL V7.0 instances: 2 to 100. The default value is 16.</p>
-     * </li>
+     * <li>AnalyticDB for PostgreSQL 6.0 instances: 1 to 1000.</li>
+     * <li>AnalyticDB for PostgreSQL 7.0 instances: 2 to 100. Default value: 16.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
-     * <p>We recommend that you set this parameter based on the vector dimension:</p>
+     * <p>Recommended values based on vector dimensions:</p>
      * <ul>
-     * <li><p>If the dimension is 384 or less: 16</p>
-     * </li>
-     * <li><p>If the dimension is greater than 384 and less than or equal to 768: 32</p>
-     * </li>
-     * <li><p>If the dimension is greater than 768 and less than or equal to 1,024: 64</p>
-     * </li>
-     * <li><p>If the dimension is greater than 1,024: 128</p>
-     * </li>
+     * <li>384 or fewer: 16</li>
+     * <li>Greater than 384 and up to 768: 32</li>
+     * <li>Greater than 768 and up to 1024: 64</li>
+     * <li>Greater than 1024: 128</li>
      * </ul>
      * </blockquote>
      * 
@@ -206,16 +176,14 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public Integer hnswM;
 
     /**
-     * <p>The name of the LLM model. Valid values:</p>
+     * <p>The LLM model name. Valid values:</p>
      * <ul>
-     * <li><p><code>knowledge-extract-standard</code>: The default value.</p>
-     * </li>
-     * <li><p><code>knowledge-extract-mini</code></p>
+     * <li>knowledge-extract-standard: default value.</li>
+     * <li>knowledge-extract-mini<blockquote>
+     * <p>This parameter takes effect only when knowledge graph construction is enabled.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter takes effect only when <code>EnableGraph</code> is set to <code>true</code>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>knowledge-extract-standard</p>
@@ -224,16 +192,14 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String LLMModel;
 
     /**
-     * <p>The language used to build the knowledge graph. Valid values:</p>
+     * <p>The language used for knowledge graph construction. Valid values:</p>
      * <ul>
-     * <li><p><code>Simplified Chinese</code>: The default value.</p>
-     * </li>
-     * <li><p><code>English</code></p>
+     * <li>Simplified Chinese: Simplified Chinese. Default value.</li>
+     * <li>English: English.<blockquote>
+     * <p>This parameter takes effect only when knowledge graph construction is enabled.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter takes effect only when <code>EnableGraph</code> is set to <code>true</code>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Simplified Chinese</p>
@@ -242,9 +208,9 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The name of the manager account that has <code>rds_superuser</code> permissions.</p>
+     * <p>The name of the management account that has the rds_superuser permission.</p>
      * <blockquote>
-     * <p>You can create an account in the console on the \<em>\<em>Account Management\</em>\</em> page or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
+     * <p>You can create an account in the console by navigating to Account Management, or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -255,7 +221,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String managerAccount;
 
     /**
-     * <p>The password for the manager account.</p>
+     * <p>The password of the management account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -265,20 +231,17 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String managerAccountPassword;
 
     /**
-     * <p>The metadata schema for the vector data, specified as a JSON map where keys are field names and values are data types.</p>
+     * <p>The metadata of vector data, in the format of a JSON string representing a MAP. The key represents the field name, and the value represents the data type.</p>
      * <blockquote>
-     * <p>Supported data types</p>
+     * <p>Supported data types:</p>
      * <ul>
-     * <li><p>For a list of supported data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</p>
-     * </li>
-     * <li><p>The <code>money</code> data type is not supported.</p>
-     * </li>
+     * <li>For the list of data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</li>
+     * <li>The money type is not supported.</li>
      * </ul>
      * </blockquote>
      * <blockquote>
-     * <p>Warning: </p>
+     * <p>Warning: The following fields are reserved and cannot be used: id, vector, doc_name, content, loader_metadata, source, and to_tsvector.</p>
      * </blockquote>
-     * <p>The following fields are reserved and cannot be used: <code>id</code>, <code>vector</code>, <code>doc_name</code>, <code>content</code>, <code>loader_metadata</code>, <code>source</code>, and <code>to_tsvector</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;title&quot;:&quot;text&quot;,&quot;page&quot;:&quot;int&quot;}</p>
@@ -287,7 +250,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String metadata;
 
     /**
-     * <p>The metadata fields on which to create scalar indexes. These fields must be keys defined in <code>Metadata</code>. Separate multiple fields with a comma (,).</p>
+     * <p>The scalar index fields. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>title</p>
@@ -296,15 +259,12 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String metadataIndices;
 
     /**
-     * <p>The distance metric for the vector index.</p>
+     * <p>The distance metric used for building vector indexes.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p><strong><code>l2</code></strong>: Euclidean distance.</p>
-     * </li>
-     * <li><p><strong><code>ip</code></strong>: dot product (inner product) distance.</p>
-     * </li>
-     * <li><p><strong><code>cosine</code></strong> (Default): cosine similarity.</p>
-     * </li>
+     * <li><strong>l2</strong>: Euclidean distance.</li>
+     * <li><strong>ip</strong>: inner product distance.</li>
+     * <li><strong>cosine</strong> (default): cosine similarity.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -314,9 +274,9 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String metrics;
 
     /**
-     * <p>The namespace. The default value is <code>public</code>.</p>
+     * <p>The namespace. Default value: public.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to list namespaces.</p>
+     * <p>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query the list of namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -329,7 +289,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The tokenizer for full-text search. The default value is <code>zh_cn</code>.</p>
+     * <p>The tokenizer used for full-text retrieval. Default value: zh_cn.</p>
      * 
      * <strong>example:</strong>
      * <p>zh_cn</p>
@@ -338,12 +298,10 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String parser;
 
     /**
-     * <p>Specifies whether to enable the PQ (product quantization) algorithm to accelerate indexing. This is recommended for datasets with over 500,000 entries. Valid values:</p>
+     * <p>Specifies whether to enable Product Quantization (PQ) algorithm acceleration for the index. We recommend enabling this feature when the data volume exceeds 500,000. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: Disables the feature.</p>
-     * </li>
-     * <li><p><code>1</code>: Enables the feature. This is the default value.</p>
-     * </li>
+     * <li>0: disabled.</li>
+     * <li>1: enabled (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -363,9 +321,9 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A list of relationship types.</p>
+     * <p>The list of relationship edge types.</p>
      * <blockquote>
-     * <p>This parameter is required when <code>EnableGraph</code> is set to <code>true</code>.</p>
+     * <p>This parameter is required when knowledge graph construction is enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -375,7 +333,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String relationshipTypesShrink;
 
     /**
-     * <p>The metadata fields used to build the sparse vector. These fields must be keys defined in <code>Metadata</code>. Separate multiple fields with a comma (,).</p>
+     * <p>The metadata fields used for building sparse vectors. Separate multiple fields with commas (,). The fields must be keys defined in Metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>title,abstract</p>
@@ -384,13 +342,13 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public String sparseRetrievalFields;
 
     /**
-     * <p>Configuration for the sparse vector index. Specifying this parameter creates the index.</p>
+     * <p>The sparse vector index configuration. If specified, a sparse vector index is created.</p>
      */
     @NameInMap("SparseVectorIndexConfig")
     public String sparseVectorIndexConfigShrink;
 
     /**
-     * <p>Specifies whether to support sparse vectors. The default value is <code>false</code>.</p>
+     * <p>Specifies whether to support sparse vectors. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -399,7 +357,7 @@ public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     public Boolean supportSparse;
 
     /**
-     * <p>Configuration for the dense vector index.</p>
+     * <p>The dense vector index configuration.</p>
      */
     @NameInMap("VectorIndexConfig")
     public String vectorIndexConfigShrink;

@@ -21,7 +21,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</p>
+     * <p>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value false is used.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,7 +30,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public Boolean autoScale;
 
     /**
-     * <p>The idempotency token. This token ensures that duplicate requests do not trigger the same operation more than once.</p>
+     * <p>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -45,7 +45,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
      * <li>PL0</li>
      * <li>PL1</li>
      * <li>PL2</li>
-     * <li>PL3.</li>
+     * <li>PL3</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,11 +55,11 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String diskPerformanceLevel;
 
     /**
-     * <p>The DPI engine version. If this parameter is not specified, the default value PG15 is used.</p>
+     * <p>The DPI engine version. If this parameter is not specified, the default value PG15 is used. PG17 and later versions support the data sandbox (branch) feature.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>PG15: PostgreSQL 15.</li>
-     * <li>PG17: PostgreSQL 17.</li>
+     * <li>PG17: PostgreSQL 17, which supports the data sandbox feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available on the console.</p>
+     * <p>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public Long storageSize;
 
     /**
-     * <p>The subscription duration of the resource. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</p>
+     * <p>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -181,7 +181,7 @@ public class CreateSupabaseProjectRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as the value of this parameter.</p>
+     * <p>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as this parameter value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

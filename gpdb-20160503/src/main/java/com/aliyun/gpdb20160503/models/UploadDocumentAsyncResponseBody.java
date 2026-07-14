@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadDocumentAsyncResponseBody extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The job ID, which is used to check the job status or cancel the job.</p>
      * 
      * <strong>example:</strong>
      * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
@@ -32,10 +32,10 @@ public class UploadDocumentAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>API execution status, with the following values:</p>
+     * <p>The creation status. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong>: Execution succeeded.</li>
-     * <li><strong>fail</strong>: Execution failed.</li>
+     * <li>success: The document was uploaded.</li>
+     * <li>fail: The document failed to be uploaded.</li>
      * </ul>
      * 
      * <strong>example:</strong>

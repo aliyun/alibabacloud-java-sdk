@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelOperatorServicesResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListModelOperatorServicesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,16 +23,23 @@ public class ListModelOperatorServicesResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of services.</p>
+     */
     @NameInMap("Services")
     public java.util.List<ListModelOperatorServicesResponseBodyServices> services;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListModelOperatorServicesResponseBody extends TeaModel {
 
     public static class ListModelOperatorServicesResponseBodyServices extends TeaModel {
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>agdb-xxx</p>
          */

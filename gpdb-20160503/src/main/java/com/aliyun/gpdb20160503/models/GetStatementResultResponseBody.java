@@ -11,7 +11,7 @@ public class GetStatementResultResponseBody extends TeaModel {
     public GetStatementResultResponseBodyData data;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class GetStatementResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
@@ -29,10 +29,10 @@ public class GetStatementResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>API execution status, with values as follows:</p>
+     * <p>The execution status of the API operation. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: Execution failed.</li>
-     * <li><strong>true</strong>: Execution succeeded.</li>
+     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: Succeeded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class GetStatementResultResponseBody extends TeaModel {
         public GetStatementResultResponseBodyDataRecords records;
 
         /**
-         * <p>Total number of entries.</p>
+         * <p>The total number of rows.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

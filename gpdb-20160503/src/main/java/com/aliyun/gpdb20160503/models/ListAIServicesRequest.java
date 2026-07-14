@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListAIServicesRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for PostgreSQL instance.</p>
+     * <p>The instance ID.</p>
      * <blockquote>
-     * <p>To view details of all AnalyticDB for PostgreSQL instances in a region, including their instance IDs, call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListAIServicesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,14 +27,11 @@ public class ListAIServicesRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p>20</p>
-     * </li>
-     * <li><p>50</p>
-     * </li>
-     * <li><p>100</p>
-     * </li>
+     * <li>20</li>
+     * <li>50</li>
+     * <li>100</li>
      * </ul>
      * <p>Default value: 20.</p>
      * 
@@ -45,7 +42,7 @@ public class ListAIServicesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The type of the AI service. Valid value: drama.</p>
+     * <p>The service type. Currently, only drama is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

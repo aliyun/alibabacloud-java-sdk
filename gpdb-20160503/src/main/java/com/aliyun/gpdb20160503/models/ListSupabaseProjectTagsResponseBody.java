@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSupabaseProjectTagsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token for the next page of results. This parameter is not returned if no more results are available.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -14,7 +14,7 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</p>
@@ -23,7 +23,7 @@ public class ListSupabaseProjectTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of tagged resources.</p>
+     * <p>The details.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListSupabaseProjectTagsResponseBodyTagResources> tagResources;

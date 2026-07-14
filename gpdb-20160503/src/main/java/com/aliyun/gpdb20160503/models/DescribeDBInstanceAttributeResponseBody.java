@@ -8,7 +8,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public DescribeDBInstanceAttributeResponseBodyItems items;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5E6EDEB8-D73E-5F2D-B948-86C8AEB05A68</p>

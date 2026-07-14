@@ -7,7 +7,7 @@ public class DeleteAIServiceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB PostgreSQL instances in the destination region, including the instance ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including the instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class DeleteAIServiceRequest extends TeaModel {
     public String serviceId;
 
     /**
-     * <p>The service type. Only drama is supported.</p>
+     * <p>The service type. Currently, only drama is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

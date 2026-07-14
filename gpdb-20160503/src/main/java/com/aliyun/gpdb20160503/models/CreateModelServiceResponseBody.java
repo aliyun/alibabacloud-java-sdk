@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelServiceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the model service.</p>
+     * <p>The model service ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ms-xxxxxxxxx</p>

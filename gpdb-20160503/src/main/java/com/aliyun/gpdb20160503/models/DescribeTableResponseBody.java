@@ -8,7 +8,7 @@ public class DescribeTableResponseBody extends TeaModel {
     public DescribeTableResponseBodyColumnList columnList;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The detailed information returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -26,10 +26,10 @@ public class DescribeTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the operation. Valid values:</p>
+     * <p>The execution status of the API operation. Valid values:</p>
      * <ul>
-     * <li><strong>success</strong></li>
-     * <li><strong>fail</strong></li>
+     * <li><strong>success</strong>: The execution was successful.</li>
+     * <li><strong>fail</strong>: The execution failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

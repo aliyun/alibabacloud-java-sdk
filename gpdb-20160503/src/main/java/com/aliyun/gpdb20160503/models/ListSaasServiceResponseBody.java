@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSaasServiceResponseBody extends TeaModel {
     /**
-     * <p>The list of service details.</p>
+     * <p>The list of instance details.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListSaasServiceResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries returned in this request. Default value: 10.</p>
+     * <p>The maximum number of entries to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListSaasServiceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query to begin with.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -102,7 +102,7 @@ public class ListSaasServiceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The computing resources.</p>
+         * <p>The compute resource.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,8 +122,8 @@ public class ListSaasServiceResponseBody extends TeaModel {
         /**
          * <p>The billing type. Valid values:</p>
          * <ul>
-         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
-         * <li><strong>PREPAY</strong>: subscription.</li>
+         * <li><strong>POSTPAY</strong>: Pay-as-you-go.</li>
+         * <li><strong>PREPAY</strong>: Subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class ListSaasServiceResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The service type:</p>
+         * <p>The service type. Valid values:</p>
          * <ul>
          * <li><strong>memory</strong></li>
          * <li><strong>drama</strong></li>
@@ -173,10 +173,10 @@ public class ListSaasServiceResponseBody extends TeaModel {
         public String serviceType;
 
         /**
-         * <p>The service status:</p>
+         * <p>The service status. Valid values:</p>
          * <ul>
-         * <li>active: Running</li>
-         * <li>creating: Being created</li>
+         * <li>active: Running.</li>
+         * <li>creating: Being created.</li>
          * </ul>
          * 
          * <strong>example:</strong>

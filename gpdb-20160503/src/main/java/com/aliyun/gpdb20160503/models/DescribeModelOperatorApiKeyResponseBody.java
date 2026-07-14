@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
     /**
+     * <p>The API key content.</p>
+     * 
      * <strong>example:</strong>
      * <p>QEDGOTAJOG</p>
      */
@@ -12,6 +14,8 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
     public String apiKey;
 
     /**
+     * <p>API KEY ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
     public Integer apiKeyId;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-06-01T00:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-apikey</p>
      */
@@ -33,6 +41,8 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxxx">https://xxxx</a></p>
      */
@@ -40,6 +50,8 @@ public class DescribeModelOperatorApiKeyResponseBody extends TeaModel {
     public String endpoint;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */

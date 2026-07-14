@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateModelOperatorApiKeyRequest extends TeaModel {
     /**
+     * <p>The description. Spaces are not allowed, and the value cannot exceed 256 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

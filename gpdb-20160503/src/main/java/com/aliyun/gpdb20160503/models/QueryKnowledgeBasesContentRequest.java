@@ -31,7 +31,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
      * <p>The method used to merge results from multiple knowledge bases. Default value: RRF. Valid values:</p>
      * <ul>
      * <li>RRF</li>
-     * <li>Weight.</li>
+     * <li>Weight</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String instruct;
 
         /**
-         * <p>The name of the reranking model. Valid values: qwen3-rerank, gte-rerank-v2.</p>
+         * <p>The reranking model name. Valid values: qwen3-rerank, gte-rerank-v2.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -342,7 +342,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String instruct;
 
         /**
-         * <p>The name of the reranking model. Valid values: qwen3-rerank, gte-rerank-v2.</p>
+         * <p>The reranking model name. Valid values: qwen3-rerank, gte-rerank-v2.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -386,10 +386,10 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestSourceCollectionQueryParams extends TeaModel {
         /**
-         * <p>The filter conditions for the data to query, in SQL WHERE clause format. This is an expression that returns a Boolean value (true or false). The conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). They can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions that use keywords such as IN, BETWEEN, and LIKE.</p>
+         * <p>The filter conditions for the data to query, in SQL WHERE clause format. This is an expression that returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), or less than or equal to (&lt;=). Conditions can also be more complex expressions combined with logical operators (AND, OR, NOT), as well as conditions using the IN, BETWEEN, and LIKE keywords.</p>
          * <blockquote>
          * <ul>
-         * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a>.</li>
+         * <li>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></li>
          * </ul>
          * </blockquote>
          * 
@@ -415,12 +415,12 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsGraphSearchArgs graphSearchArgs;
 
         /**
-         * <p>The multi-channel recall algorithm. Default value: empty (the scores from dense vectors and full-text retrieval are directly compared and sorted).</p>
+         * <p>The multi-channel recall algorithm. Default value: empty (scores from dense vectors and full-text retrieval are directly compared and sorted).</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RRF: reciprocal rank fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
-         * <li>Weight: weighted ranking. Parameters control the score weights of vector retrieval and full-text retrieval before sorting. For more information, see the HybridSearchArgs configuration.</li>
-         * <li>Cascaded: full-text retrieval is performed first, followed by vector retrieval on the full-text results.</li>
+         * <li>RRF: Reciprocal rank fusion. A parameter k controls the fusion effect. For more information, see the HybridSearchArgs configuration.</li>
+         * <li>Weight: Weighted ranking. Parameters control the score weights of vector retrieval and full-text retrieval results before sorting. For more information, see the HybridSearchArgs configuration.</li>
+         * <li>Cascaded: Full-text retrieval is performed first, followed by vector retrieval on the full-text retrieval results.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,7 +432,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         /**
          * <p>The algorithm parameters for multi-channel recall. RRF and Weight are supported. HybridPathsSetting specifies the recall paths: dense vectors (dense), sparse vectors (sparse), and full-text retrieval (fulltext). If this value is empty, dense vectors (dense) and full-text retrieval (fulltext) are used by default.</p>
          * <ul>
-         * <li>RRF: specifies the k constant in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
+         * <li>RRF: The k constant in the scoring algorithm <code>1/(k+rank_i)</code>. The value must be a positive integer greater than 1. Format:</li>
          * </ul>
          * <pre><code>{
          *   &quot;HybridPathsSetting&quot;: {
@@ -460,7 +460,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
          * </code></pre>
          * <ul>
          * <li>Three-path recall pattern:<ul>
-         * <li>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. dense, sparse, and fulltext represent the weights for dense vectors, sparse vectors, and full-text retrieval respectively. Valid values: greater than or equal to 0. The system automatically performs normalization on the weights to 0 to 1 (normalized_x = x / (dense + sparse + fulltext)).</li>
+         * <li>Formula: normalized_dense * dense_score + normalized_sparse * sparse_score + normalized_fulltext * fulltext_score. The dense, sparse, and fulltext parameters represent the weights for dense vectors, sparse vectors, and full-text retrieval respectively. Valid values: greater than or equal to 0. The system automatically applies normalization to the weights to 0 to 1 (normalized_x = x / (dense + sparse + fulltext)).</li>
          * </ul>
          * </li>
          * </ul>
@@ -494,7 +494,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String metrics;
 
         /**
-         * <p>The offset for paging query.</p>
+         * <p>The offset for paged query. Used for paging through results.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -507,7 +507,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
          * <p>The field must belong to metadata or a default field in the table, such as id. Supported formats:</p>
          * <p>A single field, such as chunk_id.
          * Multiple fields separated by commas, such as block_id, chunk_id.
-         * Descending order is supported, such as block_id DESC, chunk_id DESC.</p>
+         * Descending order, such as block_id DESC, chunk_id DESC.</p>
          * 
          * <strong>example:</strong>
          * <p>file_id,sort_num</p>
@@ -516,10 +516,10 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String orderBy;
 
         /**
-         * <p>The recall window. If this value is not empty, the context of the retrieval results is included. The format is a two-element array: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
+         * <p>The recall window. If this value is not empty, additional context is returned for the retrieval results. The format is a two-element array: List&lt;A, B&gt;, where -10 &lt;= A &lt;= 0 and 0 &lt;= B &lt;= 10.</p>
          * <blockquote>
          * <ul>
-         * <li>Use this parameter when document chunks are too small and retrieval may lose context information.</li>
+         * <li>Use this parameter when document chunks are too granular and retrieval may lose context information.</li>
          * <li>Reranking takes priority over windowing. Reranking is performed first, followed by windowing.</li>
          * </ul>
          * </blockquote>
@@ -679,9 +679,9 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
 
     public static class QueryKnowledgeBasesContentRequestSourceCollection extends TeaModel {
         /**
-         * <p>The name of the document collection.</p>
+         * <p>The document collection name.</p>
          * <blockquote>
-         * <p>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view existing document collections.</p>
+         * <p>Created by the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to view existing document collections.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -704,7 +704,7 @@ public class QueryKnowledgeBasesContentRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The password of the namespace.</p>
+         * <p>The password for the namespace.</p>
          * <blockquote>
          * <p>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
          * </blockquote>

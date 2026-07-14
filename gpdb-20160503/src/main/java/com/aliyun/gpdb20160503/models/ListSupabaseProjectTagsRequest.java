@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSupabaseProjectTagsRequest extends TeaModel {
     /**
-     * <p>The token for the next page of results. This token is returned in the <code>NextToken</code> parameter of a previous request.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -14,7 +14,7 @@ public class ListSupabaseProjectTagsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID.</p>
+     * <p>Region ID</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -25,14 +25,14 @@ public class ListSupabaseProjectTagsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p>You must specify at least one of the <code>ResourceId</code> and <code>Tag</code> parameters.</p>
+     * <p>You must specify at least one of ResourceId and Tag.</p>
      * </blockquote>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to <code>instance</code>.</p>
+     * <p>The resource type. Set the value to instance.</p>
      * 
      * <strong>example:</strong>
      * <p>instance</p>
@@ -41,9 +41,9 @@ public class ListSupabaseProjectTagsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      * <blockquote>
-     * <p>You must specify at least one of the <code>ResourceId</code> and <code>Tag</code> parameters.</p>
+     * <p>You must specify at least one of ResourceId and Tag.</p>
      * </blockquote>
      */
     @NameInMap("Tag")
@@ -96,16 +96,13 @@ public class ListSupabaseProjectTagsRequest extends TeaModel {
 
     public static class ListSupabaseProjectTagsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The key can be 1 to 64 characters in length.</p>
-         * <p>The <code>Tag.N</code> parameter specifies a key-value pair to filter Supabase instances.</p>
-         * <p>N is an integer from 1 to 20.</p>
+         * <p>The tag key. The tag key must be 1 to 64 characters in length.</p>
+         * <p>Tag.N is used to exactly match Supabase instances that have the specified tags bound. A tag is a key-value pair.</p>
+         * <p>Valid values of N: 1 to 20.</p>
          * <ul>
-         * <li><p>If you specify only <code>Tag.N.Key</code>, the operation returns all instances that have the specified tag key.</p>
-         * </li>
-         * <li><p>If you specify only <code>Tag.N.Value</code>, an <code>InvalidParameter.TagValue</code> error is returned.</p>
-         * </li>
-         * <li><p>If you specify multiple tag key-value pairs, the operation returns only Supabase instances that match all the specified pairs.</p>
-         * </li>
+         * <li>If you specify only Tag.N.Key, all instances associated with the specified tag key are returned.</li>
+         * <li>If you specify only Tag.N.Value, the error message <code>InvalidParameter.TagValue</code> is returned.</li>
+         * <li>If you specify multiple tag key-value pairs at the same time, only instances that match all the specified tag key-value pairs are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +112,8 @@ public class ListSupabaseProjectTagsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be 1 to 128 characters in length.</p>
+         * <p>The tag value. The tag value must be 1 to 128 characters in length.</p>
+         * <p>Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
