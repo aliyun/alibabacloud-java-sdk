@@ -103,6 +103,9 @@ public class PushTemplateRequest extends TeaModel {
     @NameInMap("TransparentMessageUrgency")
     public String transparentMessageUrgency;
 
+    @NameInMap("VendorTemplate")
+    public String vendorTemplate;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -336,6 +339,14 @@ public class PushTemplateRequest extends TeaModel {
     }
     public String getTransparentMessageUrgency() {
         return this.transparentMessageUrgency;
+    }
+
+    public PushTemplateRequest setVendorTemplate(String vendorTemplate) {
+        this.vendorTemplate = vendorTemplate;
+        return this;
+    }
+    public String getVendorTemplate() {
+        return this.vendorTemplate;
     }
 
     public PushTemplateRequest setWorkspaceId(String workspaceId) {
