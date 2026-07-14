@@ -106,6 +106,9 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("UnBindStartTime")
     public Long unBindStartTime;
 
+    @NameInMap("VendorTemplate")
+    public String vendorTemplate;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -347,6 +350,14 @@ public class PushBroadcastRequest extends TeaModel {
     }
     public Long getUnBindStartTime() {
         return this.unBindStartTime;
+    }
+
+    public PushBroadcastRequest setVendorTemplate(String vendorTemplate) {
+        this.vendorTemplate = vendorTemplate;
+        return this;
+    }
+    public String getVendorTemplate() {
+        return this.vendorTemplate;
     }
 
     public PushBroadcastRequest setWorkspaceId(String workspaceId) {

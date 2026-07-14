@@ -88,6 +88,9 @@ public class PushMultipleShrinkRequest extends TeaModel {
     @NameInMap("TransparentMessageUrgency")
     public String transparentMessageUrgency;
 
+    @NameInMap("VendorTemplate")
+    public String vendorTemplate;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -281,6 +284,14 @@ public class PushMultipleShrinkRequest extends TeaModel {
     }
     public String getTransparentMessageUrgency() {
         return this.transparentMessageUrgency;
+    }
+
+    public PushMultipleShrinkRequest setVendorTemplate(String vendorTemplate) {
+        this.vendorTemplate = vendorTemplate;
+        return this;
+    }
+    public String getVendorTemplate() {
+        return this.vendorTemplate;
     }
 
     public PushMultipleShrinkRequest setWorkspaceId(String workspaceId) {

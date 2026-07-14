@@ -106,6 +106,9 @@ public class PushSimpleShrinkRequest extends TeaModel {
     @NameInMap("Uri")
     public String uri;
 
+    @NameInMap("VendorTemplate")
+    public String vendorTemplate;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -339,6 +342,14 @@ public class PushSimpleShrinkRequest extends TeaModel {
     }
     public String getUri() {
         return this.uri;
+    }
+
+    public PushSimpleShrinkRequest setVendorTemplate(String vendorTemplate) {
+        this.vendorTemplate = vendorTemplate;
+        return this;
+    }
+    public String getVendorTemplate() {
+        return this.vendorTemplate;
     }
 
     public PushSimpleShrinkRequest setWorkspaceId(String workspaceId) {
