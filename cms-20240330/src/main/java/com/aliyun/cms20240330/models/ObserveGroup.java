@@ -11,13 +11,13 @@ public class ObserveGroup extends TeaModel {
     public String aliUid;
 
     /**
-     * <p>The time when the group was created, in UTC format (yyyy-MM-ddTHH:mm:ssZ).</p>
+     * <p>The creation time in UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
     /**
-     * <p>The description of the observability group, which describes the business purpose.</p>
+     * <p>The description of the observability group, which explains its business purpose.</p>
      */
     @NameInMap("description")
     public String description;
@@ -26,34 +26,34 @@ public class ObserveGroup extends TeaModel {
      * <p>The list of entity discovery rules that define which entities the group automatically matches.</p>
      */
     @NameInMap("discoverRules")
-    public String discoverRules;
+    public java.util.List<ObserveGroupDiscoverRule> discoverRules;
 
     /**
-     * <p>The number of entities in each category. The key is the category domain (such as acs for Alibaba Cloud services, apm, or rum, which is extensible). The value is the number of entities in that category that belong to this group. This parameter is returned only when withEntityCount is set to true.</p>
+     * <p>The number of entities in each category. The key is the category domain (acs for cloud services, apm, or rum, which is extensible). The value is the number of entities in that category that belong to this group. Returned only when withEntityCount is set to true.</p>
      */
     @NameInMap("entityCounts")
     public java.util.Map<String, Integer> entityCounts;
 
     /**
-     * <p>The extended information, which is a JSON string that contains alert templates, alert contact groups, pause policies, and other settings.</p>
+     * <p>The extended information as a JSON string, which carries alert templates, alert contact groups, and suspension policies.</p>
      */
     @NameInMap("extraInfo")
     public String extraInfo;
 
     /**
-     * <p>Indicates whether the current user has favorited this group. This value is used as the filter criterion for the My Favorites feature.</p>
+     * <p>Indicates whether the current user has followed this group. This value is used as the filter criterion for the My Favorites feature.</p>
      */
     @NameInMap("favorited")
     public Boolean favorited;
 
     /**
-     * <p>The globally unique ID of the observability group, in the format of og-&lt;16-character hash&gt;. This ID is used across metrics, alerts, and the console.</p>
+     * <p>The globally unique ID of the observability group. Format: og-&lt;16-character hash&gt;. Used uniformly across metrics, alerts, and consoles.</p>
      */
     @NameInMap("groupId")
     public String groupId;
 
     /**
-     * <p>The name of the observability group. The name must be unique within the workspace.</p>
+     * <p>The name of the observability group. Must be unique within the same workspace.</p>
      */
     @NameInMap("groupName")
     public String groupName;
@@ -76,19 +76,31 @@ public class ObserveGroup extends TeaModel {
     public Integer health;
 
     /**
-     * <p>The time when the group was last modified, in UTC format (yyyy-MM-ddTHH:mm:ssZ). This value is automatically updated when any property of the resource changes.</p>
+     * <p>The last modification time in UTC format: yyyy-MM-ddTHH:mm:ssZ. Automatically updated when any resource attribute changes.</p>
      */
     @NameInMap("modifyTime")
     public String modifyTime;
 
     /**
-     * <p>The product_group.id of the version 1.0 application group. This parameter is returned only when sourceOrigin is set to synced_from_1_0.</p>
+     * <p>Specifies whether og_entity_info metric output is enabled. When enabled, the data plane writes the group membership information to the target Prometheus instance.</p>
+     */
+    @NameInMap("ogEntityInfoEnabled")
+    public Boolean ogEntityInfoEnabled;
+
+    /**
+     * <p>The set of Prometheus instances to which og_entity_info is written. Includes two source types: system (automatically identified by the system) and custom (user-defined).</p>
+     */
+    @NameInMap("ogEntityInfoPromInstances")
+    public java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances;
+
+    /**
+     * <p>The product_group.id of the version 1.0 application group. This parameter is valid only when sourceOrigin is set to synced_from_1_0.</p>
      */
     @NameInMap("originGroupId")
     public String originGroupId;
 
     /**
-     * <p>The region ID of the group.</p>
+     * <p>The region ID to which the group belongs.</p>
      */
     @NameInMap("regionId")
     public String regionId;
@@ -110,13 +122,13 @@ public class ObserveGroup extends TeaModel {
     public String sourceOrigin;
 
     /**
-     * <p>The resource tags (Alibaba Cloud standard tags), which are an array of key-value pairs.</p>
+     * <p>The resource tags (Alibaba Cloud standard tags) as an array of key-value pairs.</p>
      */
     @NameInMap("tags")
     public java.util.List<ObserveGroupTags> tags;
 
     /**
-     * <p>The workspace ID to which the group belongs. This value is set at the workspace level and cannot be changed after the group is created.</p>
+     * <p>The workspace ID to which the group belongs. This value is set at the workspace level and cannot be changed after creation.</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;
@@ -150,11 +162,11 @@ public class ObserveGroup extends TeaModel {
         return this.description;
     }
 
-    public ObserveGroup setDiscoverRules(String discoverRules) {
+    public ObserveGroup setDiscoverRules(java.util.List<ObserveGroupDiscoverRule> discoverRules) {
         this.discoverRules = discoverRules;
         return this;
     }
-    public String getDiscoverRules() {
+    public java.util.List<ObserveGroupDiscoverRule> getDiscoverRules() {
         return this.discoverRules;
     }
 
@@ -220,6 +232,22 @@ public class ObserveGroup extends TeaModel {
     }
     public String getModifyTime() {
         return this.modifyTime;
+    }
+
+    public ObserveGroup setOgEntityInfoEnabled(Boolean ogEntityInfoEnabled) {
+        this.ogEntityInfoEnabled = ogEntityInfoEnabled;
+        return this;
+    }
+    public Boolean getOgEntityInfoEnabled() {
+        return this.ogEntityInfoEnabled;
+    }
+
+    public ObserveGroup setOgEntityInfoPromInstances(java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances) {
+        this.ogEntityInfoPromInstances = ogEntityInfoPromInstances;
+        return this;
+    }
+    public java.util.List<ObserveGroupPromInstance> getOgEntityInfoPromInstances() {
+        return this.ogEntityInfoPromInstances;
     }
 
     public ObserveGroup setOriginGroupId(String originGroupId) {

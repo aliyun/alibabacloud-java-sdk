@@ -25,6 +25,12 @@ public class SubscriptionForSNSView extends TeaModel {
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: subscribed. false or null: not subscribed.</p>
+     */
+    @NameInMap("subscribeLegacyEvent")
+    public Boolean subscribeLegacyEvent;
+
     @NameInMap("subscriptionType")
     public String subscriptionType;
 
@@ -105,6 +111,14 @@ public class SubscriptionForSNSView extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public SubscriptionForSNSView setSubscribeLegacyEvent(Boolean subscribeLegacyEvent) {
+        this.subscribeLegacyEvent = subscribeLegacyEvent;
+        return this;
+    }
+    public Boolean getSubscribeLegacyEvent() {
+        return this.subscribeLegacyEvent;
     }
 
     public SubscriptionForSNSView setSubscriptionType(String subscriptionType) {

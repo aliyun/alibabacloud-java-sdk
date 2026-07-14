@@ -7,85 +7,85 @@ public class ObserveGroupDiscoverRule extends TeaModel {
     /**
      * <p>Indicates whether the rule is enabled. If set to false, the data plane skips this rule and does not perform matching, tagging, or delivery.</p>
      */
-    @NameInMap("Enabled")
+    @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>The entity type (legacy). This parameter is retained for backward compatibility. Use entityTypes instead.</p>
+     * <p>The entity type (legacy). Retained for backward compatibility. Use entityTypes instead.</p>
      */
-    @NameInMap("EntityType")
+    @NameInMap("entityType")
     public String entityType;
 
     /**
-     * <p>The list of entity types. A single rule can match across multiple types, such as acs.ecs.instance, acs.rds.instance, and acs.arms.service.</p>
+     * <p>The list of entity types. A single rule can match multiple types, such as acs.ecs.instance, acs.rds.instance, and acs.arms.service.</p>
      */
-    @NameInMap("EntityTypes")
+    @NameInMap("entityTypes")
     public java.util.List<String> entityTypes;
 
     /**
      * <p>The time when the rule was created, in UNIX millisecond timestamp format. This value is used for display in the console.</p>
      */
-    @NameInMap("GmtCreate")
+    @NameInMap("gmtCreate")
     public Long gmtCreate;
 
     /**
-     * <p>The list of manually specified instance IDs. This is an enumeration type and includes instances synchronized manually in version 1.0.</p>
+     * <p>The list of manually specified instance IDs in enumeration mode, including instances synchronized manually in version 1.0.</p>
      */
-    @NameInMap("InstanceIds")
+    @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
     /**
      * <p>The name matching rules.</p>
      */
-    @NameInMap("NameRules")
+    @NameInMap("nameRules")
     public ObserveGroupDiscoverRuleNameRules nameRules;
 
     /**
-     * <p>The list of region IDs used for region-based filtering.</p>
+     * <p>The list of region IDs used for filtering by region.</p>
      */
-    @NameInMap("RegionIds")
+    @NameInMap("regionIds")
     public java.util.List<String> regionIds;
 
     /**
      * <p>The resource group ID used for filtering.</p>
      */
-    @NameInMap("ResourceGroupId")
+    @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The stable ID of the rule, used as an anchor for editing, deleting, and enabling or disabling operations. Format: dr-&lt;16-character hash&gt;.</p>
+     * <p>The stable rule ID used as an anchor for editing, deleting, and enabling or disabling operations. Format: dr-&lt;16-character hash&gt;.</p>
      */
-    @NameInMap("RuleId")
+    @NameInMap("ruleId")
     public String ruleId;
 
     /**
      * <p>The matching method. Valid values: byTag, byResourceGroup, byInstanceName, byManual, and bySpl.</p>
      */
-    @NameInMap("RuleType")
+    @NameInMap("ruleType")
     public String ruleType;
 
     /**
      * <p>The applicable scope. Valid values: all (all entity types, exclusive) and entity (specified entity types).</p>
      */
-    @NameInMap("Scope")
+    @NameInMap("scope")
     public String scope;
 
     /**
-     * <p>The complete SPL expression for advanced configuration. If this parameter is not empty, it takes precedence over other filter fields.</p>
+     * <p>The full SPL expression for advanced configuration. If this parameter is not empty, it takes precedence over other filter fields.</p>
      */
-    @NameInMap("Spl")
+    @NameInMap("spl")
     public String spl;
 
     /**
      * <p>The tag matching rules.</p>
      */
-    @NameInMap("TagRules")
+    @NameInMap("tagRules")
     public ObserveGroupDiscoverRuleTagRules tagRules;
 
     /**
      * <p>The UID of the user to whom the rule belongs.</p>
      */
-    @NameInMap("UserId")
+    @NameInMap("userId")
     public String userId;
 
     public static ObserveGroupDiscoverRule build(java.util.Map<String, ?> map) throws Exception {
@@ -209,13 +209,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
         /**
          * <p>The matching operation.</p>
          */
-        @NameInMap("Op")
+        @NameInMap("op")
         public String op;
 
         /**
-         * <p>The list of matching values.</p>
+         * <p>The matching value list.</p>
          */
-        @NameInMap("TagValues")
+        @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 
         public static ObserveGroupDiscoverRuleNameRulesTags build(java.util.Map<String, ?> map) throws Exception {
@@ -245,13 +245,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
         /**
          * <p>The name matching logic.</p>
          */
-        @NameInMap("Op")
+        @NameInMap("op")
         public String op;
 
         /**
-         * <p>The list of name conditions.</p>
+         * <p>The name condition list.</p>
          */
-        @NameInMap("Tags")
+        @NameInMap("tags")
         public java.util.List<ObserveGroupDiscoverRuleNameRulesTags> tags;
 
         public static ObserveGroupDiscoverRuleNameRules build(java.util.Map<String, ?> map) throws Exception {
@@ -281,19 +281,19 @@ public class ObserveGroupDiscoverRule extends TeaModel {
         /**
          * <p>The matching operation.</p>
          */
-        @NameInMap("Op")
+        @NameInMap("op")
         public String op;
 
         /**
          * <p>The tag key.</p>
          */
-        @NameInMap("TagKey")
+        @NameInMap("tagKey")
         public String tagKey;
 
         /**
-         * <p>The list of tag values.</p>
+         * <p>The tag value list.</p>
          */
-        @NameInMap("TagValues")
+        @NameInMap("tagValues")
         public java.util.List<String> tagValues;
 
         public static ObserveGroupDiscoverRuleTagRulesTags build(java.util.Map<String, ?> map) throws Exception {
@@ -331,13 +331,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
         /**
          * <p>The tag matching logic.</p>
          */
-        @NameInMap("Op")
+        @NameInMap("op")
         public String op;
 
         /**
-         * <p>The list of tag conditions.</p>
+         * <p>The tag condition list.</p>
          */
-        @NameInMap("Tags")
+        @NameInMap("tags")
         public java.util.List<ObserveGroupDiscoverRuleTagRulesTags> tags;
 
         public static ObserveGroupDiscoverRuleTagRules build(java.util.Map<String, ?> map) throws Exception {

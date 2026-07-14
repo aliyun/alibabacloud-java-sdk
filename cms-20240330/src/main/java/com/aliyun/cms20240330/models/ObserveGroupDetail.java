@@ -26,22 +26,22 @@ public class ObserveGroupDetail extends TeaModel {
      * <p>The list of entity discovery rules that define which entities the group automatically matches.</p>
      */
     @NameInMap("discoverRules")
-    public String discoverRules;
+    public java.util.List<ObserveGroupDiscoverRule> discoverRules;
 
     /**
-     * <p>The statistics of entities in the group, grouped by entity type.</p>
+     * <p>The statistics of entities in the group, categorized by entity type.</p>
      */
     @NameInMap("entitySummaries")
     public java.util.List<ObserveGroupDetailEntitySummaries> entitySummaries;
 
     /**
-     * <p>The extended information in JSON string format, which carries alert templates, alert contact groups, pause policies, and other configurations.</p>
+     * <p>The extended information in JSON string format, which carries alert templates, alert contact groups, suspension policies, and other configurations.</p>
      */
     @NameInMap("extraInfo")
     public String extraInfo;
 
     /**
-     * <p>Indicates whether the current user has favorited the group.</p>
+     * <p>Indicates whether the current user has followed the group.</p>
      */
     @NameInMap("favorited")
     public Boolean favorited;
@@ -50,7 +50,7 @@ public class ObserveGroupDetail extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the observability group. The name must be unique within the workspace.</p>
+     * <p>The name of the observability group. The name must be unique within the same workspace.</p>
      */
     @NameInMap("groupName")
     public String groupName;
@@ -68,7 +68,19 @@ public class ObserveGroupDetail extends TeaModel {
     public String modifyTime;
 
     /**
-     * <p>The ID of the version 1.0 application group (product_group.id). This parameter is valid only when sourceOrigin is set to synced_from_1_0.</p>
+     * <p>Specifies whether to enable the og_entity_info metric output. When enabled, the data plane writes the group ownership information to the target Prometheus instance.</p>
+     */
+    @NameInMap("ogEntityInfoEnabled")
+    public Boolean ogEntityInfoEnabled;
+
+    /**
+     * <p>The set of Prometheus instances to which og_entity_info is written. This includes two source types: system (automatically identified by the system) and custom (user-defined).</p>
+     */
+    @NameInMap("ogEntityInfoPromInstances")
+    public java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances;
+
+    /**
+     * <p>The product_group.id of the version 1.0 application group. This parameter is valid only when sourceOrigin is set to synced_from_1_0.</p>
      */
     @NameInMap("originGroupId")
     public String originGroupId;
@@ -94,6 +106,12 @@ public class ObserveGroupDetail extends TeaModel {
      */
     @NameInMap("sourceOrigin")
     public String sourceOrigin;
+
+    /**
+     * <p>The resource tags (Alibaba Cloud standard tags), represented as an array of key-value pairs.</p>
+     */
+    @NameInMap("tags")
+    public java.util.List<ObserveGroupDetailTags> tags;
 
     /**
      * <p>The workspace ID to which the group belongs. This value is set at the workspace level and cannot be changed after the group is created.</p>
@@ -130,11 +148,11 @@ public class ObserveGroupDetail extends TeaModel {
         return this.description;
     }
 
-    public ObserveGroupDetail setDiscoverRules(String discoverRules) {
+    public ObserveGroupDetail setDiscoverRules(java.util.List<ObserveGroupDiscoverRule> discoverRules) {
         this.discoverRules = discoverRules;
         return this;
     }
-    public String getDiscoverRules() {
+    public java.util.List<ObserveGroupDiscoverRule> getDiscoverRules() {
         return this.discoverRules;
     }
 
@@ -194,6 +212,22 @@ public class ObserveGroupDetail extends TeaModel {
         return this.modifyTime;
     }
 
+    public ObserveGroupDetail setOgEntityInfoEnabled(Boolean ogEntityInfoEnabled) {
+        this.ogEntityInfoEnabled = ogEntityInfoEnabled;
+        return this;
+    }
+    public Boolean getOgEntityInfoEnabled() {
+        return this.ogEntityInfoEnabled;
+    }
+
+    public ObserveGroupDetail setOgEntityInfoPromInstances(java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances) {
+        this.ogEntityInfoPromInstances = ogEntityInfoPromInstances;
+        return this;
+    }
+    public java.util.List<ObserveGroupPromInstance> getOgEntityInfoPromInstances() {
+        return this.ogEntityInfoPromInstances;
+    }
+
     public ObserveGroupDetail setOriginGroupId(String originGroupId) {
         this.originGroupId = originGroupId;
         return this;
@@ -226,6 +260,14 @@ public class ObserveGroupDetail extends TeaModel {
         return this.sourceOrigin;
     }
 
+    public ObserveGroupDetail setTags(java.util.List<ObserveGroupDetailTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ObserveGroupDetailTags> getTags() {
+        return this.tags;
+    }
+
     public ObserveGroupDetail setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -242,7 +284,7 @@ public class ObserveGroupDetail extends TeaModel {
         public String entityCategory;
 
         /**
-         * <p>The entity count.</p>
+         * <p>The number of entities.</p>
          */
         @NameInMap("entityCount")
         public Integer entityCount;
@@ -294,6 +336,42 @@ public class ObserveGroupDetail extends TeaModel {
         }
         public String getEntityType() {
             return this.entityType;
+        }
+
+    }
+
+    public static class ObserveGroupDetailTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         */
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static ObserveGroupDetailTags build(java.util.Map<String, ?> map) throws Exception {
+            ObserveGroupDetailTags self = new ObserveGroupDetailTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ObserveGroupDetailTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ObserveGroupDetailTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

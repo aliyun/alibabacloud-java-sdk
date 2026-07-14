@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateNotifyStrategyRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The request body parameters.</p>
      */
     @NameInMap("body")
     public NotifyStrategyForModify body;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

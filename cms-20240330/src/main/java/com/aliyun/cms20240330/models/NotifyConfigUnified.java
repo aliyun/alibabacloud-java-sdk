@@ -19,6 +19,12 @@ public class NotifyConfigUnified extends TeaModel {
     @NameInMap("notifyStrategies")
     public java.util.List<String> notifyStrategies;
 
+    @NameInMap("sendRecoverNotification")
+    public Boolean sendRecoverNotification;
+
+    @NameInMap("severityChannels")
+    public java.util.Map<String, SeverityNotifyConfig> severityChannels;
+
     @NameInMap("silenceTimeSecs")
     public Integer silenceTimeSecs;
 
@@ -74,6 +80,22 @@ public class NotifyConfigUnified extends TeaModel {
     }
     public java.util.List<String> getNotifyStrategies() {
         return this.notifyStrategies;
+    }
+
+    public NotifyConfigUnified setSendRecoverNotification(Boolean sendRecoverNotification) {
+        this.sendRecoverNotification = sendRecoverNotification;
+        return this;
+    }
+    public Boolean getSendRecoverNotification() {
+        return this.sendRecoverNotification;
+    }
+
+    public NotifyConfigUnified setSeverityChannels(java.util.Map<String, SeverityNotifyConfig> severityChannels) {
+        this.severityChannels = severityChannels;
+        return this;
+    }
+    public java.util.Map<String, SeverityNotifyConfig> getSeverityChannels() {
+        return this.severityChannels;
     }
 
     public NotifyConfigUnified setSilenceTimeSecs(Integer silenceTimeSecs) {

@@ -4,38 +4,22 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DatasourceConfigUnified extends TeaModel {
-    /**
-     * <p>The unique instance ID.</p>
-     */
     @NameInMap("instanceId")
     public String instanceId;
 
-    /**
-     * <p>The raw string value of the legacy configuration, used for backward compatibility.</p>
-     */
     @NameInMap("legacyRaw")
     public String legacyRaw;
 
-    /**
-     * <p>The legacy type of the data source, used for backward compatibility.</p>
-     */
     @NameInMap("legacyType")
     public String legacyType;
 
-    /**
-     * <p>The product category of the data source.</p>
-     */
     @NameInMap("productCategory")
     public String productCategory;
 
-    /**
-     * <p>The region ID.</p>
-     */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>The type of the data source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("type")

@@ -14,7 +14,7 @@ public class UpdateNotifyStrategyResponseBody extends TeaModel {
     public String notifyStrategyId;
 
     /**
-     * <p>The ID of the request. This is a unique identifier for troubleshooting.</p>
+     * <p>The unique ID of the request, which is used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>

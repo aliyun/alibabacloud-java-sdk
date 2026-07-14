@@ -4,99 +4,51 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class NotifyStrategyForSNSView extends TeaModel {
-    /**
-     * <p>The creation time of the notification strategy.</p>
-     */
     @NameInMap("createTime")
     public String createTime;
 
-    /**
-     * <p>The list of custom templates.</p>
-     */
     @NameInMap("customTemplateEntries")
     public java.util.List<NotifyStrategyForSNSViewCustomTemplateEntries> customTemplateEntries;
 
-    /**
-     * <p>The description of the notification strategy.</p>
-     */
     @NameInMap("description")
     public String description;
 
-    /**
-     * <p>Specifies whether to enable the notification strategy. Valid values: true, false.</p>
-     */
     @NameInMap("enable")
     public Boolean enable;
 
-    /**
-     * <p>Specifies whether to enable incident management. Valid values: true, false.</p>
-     */
     @NameInMap("enableIncidentManagement")
     public Boolean enableIncidentManagement;
 
-    /**
-     * <p>The settings for alert grouping.</p>
-     */
     @NameInMap("groupingSetting")
     public NotifyStrategyForSNSViewGroupingSetting groupingSetting;
 
-    /**
-     * <p>Specifies whether to ignore notifications for restored alerts. Valid values: true, false.</p>
-     */
     @NameInMap("ignoreRestoredNotification")
     public Boolean ignoreRestoredNotification;
 
-    /**
-     * <p>The ID of the incident response plan.</p>
-     */
     @NameInMap("incidentResponsePlanId")
     public String incidentResponsePlanId;
 
-    /**
-     * <p>The mode of the notification strategy.</p>
-     */
     @NameInMap("mode")
     public String mode;
 
-    /**
-     * <p>The ID of the notification strategy.</p>
-     */
     @NameInMap("notifyStrategyId")
     public String notifyStrategyId;
 
-    /**
-     * <p>The name of the notification strategy.</p>
-     */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
 
-    /**
-     * <p>The list of notification routes.</p>
-     */
     @NameInMap("routes")
     public java.util.List<NotifyStrategyForSNSViewRoutes> routes;
 
-    /**
-     * <p>The source from which the strategy is synchronized.</p>
-     */
     @NameInMap("syncFromType")
     public String syncFromType;
 
-    /**
-     * <p>The last update time of the notification strategy.</p>
-     */
     @NameInMap("updateTime")
     public String updateTime;
 
-    /**
-     * <p>The user ID.</p>
-     */
     @NameInMap("userId")
     public String userId;
 
-    /**
-     * <p>The workspace to which the notification strategy belongs.</p>
-     */
     @NameInMap("workspace")
     public String workspace;
 
@@ -234,15 +186,9 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewCustomTemplateEntries extends TeaModel {
-        /**
-         * <p>The target type for the custom template.</p>
-         */
         @NameInMap("targetType")
         public String targetType;
 
-        /**
-         * <p>The unique identifier (UUID) of the template.</p>
-         */
         @NameInMap("templateUuid")
         public String templateUuid;
 
@@ -270,27 +216,15 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewGroupingSetting extends TeaModel {
-        /**
-         * <p>The keys for grouping alerts.</p>
-         */
         @NameInMap("groupingKeys")
         public java.util.List<String> groupingKeys;
 
-        /**
-         * <p>The time window in minutes for grouping alerts.</p>
-         */
         @NameInMap("periodMin")
         public Integer periodMin;
 
-        /**
-         * <p>The silence period in seconds after a notification is sent for a group.</p>
-         */
         @NameInMap("silenceSec")
         public Integer silenceSec;
 
-        /**
-         * <p>The number of times to send notifications for a group.</p>
-         */
         @NameInMap("times")
         public Integer times;
 
@@ -334,21 +268,12 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewRoutesChannels extends TeaModel {
-        /**
-         * <p>The type of the notification channel, such as \&quot;sms\&quot; or \&quot;email\&quot;.</p>
-         */
         @NameInMap("channelType")
         public String channelType;
 
-        /**
-         * <p>The enabled sub-channels.</p>
-         */
         @NameInMap("enabledSubChannels")
         public java.util.List<String> enabledSubChannels;
 
-        /**
-         * <p>The list of receivers for the channel.</p>
-         */
         @NameInMap("receivers")
         public java.util.List<String> receivers;
 
@@ -384,27 +309,15 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewRoutesEffectTimeRange extends TeaModel {
-        /**
-         * <p>The days of the week when the route is active.</p>
-         */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
-        /**
-         * <p>The end time of the active period, specified in minutes from 00:00.</p>
-         */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
-        /**
-         * <p>The start time of the active period, specified in minutes from 00:00.</p>
-         */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
-        /**
-         * <p>The time zone for the active period. For example, \&quot;Asia/Shanghai\&quot;.</p>
-         */
         @NameInMap("timeZone")
         public String timeZone;
 
@@ -448,39 +361,21 @@ public class NotifyStrategyForSNSView extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSViewRoutes extends TeaModel {
-        /**
-         * <p>The notification channels for the route.</p>
-         */
         @NameInMap("channels")
         public java.util.List<NotifyStrategyForSNSViewRoutesChannels> channels;
 
-        /**
-         * <p>The name of the digital employee assigned to this route.</p>
-         */
         @NameInMap("digitalEmployeeName")
         public String digitalEmployeeName;
 
-        /**
-         * <p>The time range during which the notification route is active.</p>
-         */
         @NameInMap("effectTimeRange")
         public NotifyStrategyForSNSViewRoutesEffectTimeRange effectTimeRange;
 
-        /**
-         * <p>Specifies whether to enable root cause analysis (RCA) for alerts that match this route. Valid values: true, false.</p>
-         */
         @NameInMap("enableRca")
         public Boolean enableRca;
 
-        /**
-         * <p>The filter settings for the route.</p>
-         */
         @NameInMap("filterSetting")
         public FilterSetting filterSetting;
 
-        /**
-         * <p>The alert severities that trigger this route.</p>
-         */
         @NameInMap("severities")
         public java.util.List<String> severities;
 

@@ -5,43 +5,43 @@ import com.aliyun.tea.*;
 
 public class AlertRuleNotification extends TeaModel {
     /**
-     * <p>A list of contact IDs.</p>
+     * <p>The list of contact IDs.</p>
      */
     @NameInMap("contacts")
     public java.util.List<String> contacts;
 
     /**
-     * <p>A list of custom webhook notification object IDs.</p>
+     * <p>The list of custom webhook Notification Recipient IDs.</p>
      */
     @NameInMap("customWebhooks")
     public java.util.List<String> customWebhooks;
 
     /**
-     * <p>A list of DingTalk Cool App webhook notification object IDs.</p>
+     * <p>The list of DingTalk Cool App webhook Notification Recipient IDs.</p>
      */
     @NameInMap("dingCoolAppWebhooks")
     public java.util.List<String> dingCoolAppWebhooks;
 
     /**
-     * <p>A list of DingTalk webhook notification object IDs.</p>
+     * <p>The list of DingTalk webhook Notification Recipient IDs.</p>
      */
     @NameInMap("dingWebhooks")
     public java.util.List<String> dingWebhooks;
 
     /**
-     * <p>A list of Lark webhook notification object IDs.</p>
+     * <p>The list of Lark webhook Notification Recipient IDs.</p>
      */
     @NameInMap("fsWebhooks")
     public java.util.List<String> fsWebhooks;
 
     /**
-     * <p>A list of contact group IDs.</p>
+     * <p>The list of contact group IDs.</p>
      */
     @NameInMap("groups")
     public java.util.List<String> groups;
 
     /**
-     * <p>The notification period. Notifications are sent only within this period.</p>
+     * <p>The notification time period. Notifications are sent only during this time period.</p>
      */
     @NameInMap("notifyTime")
     public AlertRuleTimeSpan notifyTime;
@@ -49,8 +49,14 @@ public class AlertRuleNotification extends TeaModel {
     @NameInMap("qwencloudContacts")
     public java.util.Map<String, java.util.Map<String, ?>> qwencloudContacts;
 
+    @NameInMap("sendOk")
+    public Boolean sendOk;
+
+    @NameInMap("severityNotifications")
+    public java.util.Map<String, SeverityNotifyConfig> severityNotifications;
+
     /**
-     * <p>The notification silence period. Unit: seconds.</p>
+     * <p>The notification mute duration, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>
@@ -59,13 +65,13 @@ public class AlertRuleNotification extends TeaModel {
     public Long silenceTime;
 
     /**
-     * <p>A list of Slack webhook notification object IDs.</p>
+     * <p>The list of Slack webhook Notification Recipient IDs.</p>
      */
     @NameInMap("slackWebhooks")
     public java.util.List<String> slackWebhooks;
 
     /**
-     * <p>A list of WeChat webhook notification object IDs.</p>
+     * <p>The list of WeChat webhook Notification Recipient IDs.</p>
      */
     @NameInMap("wxWebhooks")
     public java.util.List<String> wxWebhooks;
@@ -137,6 +143,22 @@ public class AlertRuleNotification extends TeaModel {
     }
     public java.util.Map<String, java.util.Map<String, ?>> getQwencloudContacts() {
         return this.qwencloudContacts;
+    }
+
+    public AlertRuleNotification setSendOk(Boolean sendOk) {
+        this.sendOk = sendOk;
+        return this;
+    }
+    public Boolean getSendOk() {
+        return this.sendOk;
+    }
+
+    public AlertRuleNotification setSeverityNotifications(java.util.Map<String, SeverityNotifyConfig> severityNotifications) {
+        this.severityNotifications = severityNotifications;
+        return this;
+    }
+    public java.util.Map<String, SeverityNotifyConfig> getSeverityNotifications() {
+        return this.severityNotifications;
     }
 
     public AlertRuleNotification setSilenceTime(Long silenceTime) {

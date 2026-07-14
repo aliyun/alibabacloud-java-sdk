@@ -165,16 +165,30 @@ public class NotifyStrategyForSNSModify extends TeaModel {
 
     public static class NotifyStrategyForSNSModifyRoutesChannels extends TeaModel {
         /**
+         * <p>The notification channel type. The value must be one of the following uppercase enum values: DING (DingTalk chatbot), WEIXIN (WeCom chatbot), FEISHU (Lark chatbot), SLACK, TEAMS, WEBHOOK (custom webhook), CONTACT (contact, requires enabledSubChannels to specify sub-channels), GROUP (contact group), DUTY (on-call schedule), or DING_COOL_APP (DingTalk Cool App). Note: Lowercase values such as EMAIL or SMS are not supported. To send email, text message, or voice notifications, set channelType to CONTACT and specify EMAIL, SMS, or VOICE in enabledSubChannels.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBHOOK</p>
          */
         @NameInMap("channelType")
         public String channelType;
 
+        /**
+         * <p>Required only when channelType is CONTACT, GROUP, or DUTY. Valid values: EMAIL (email), SMS (text message), VOICE (voice call), DING (DingTalk work notification), WEIXIN (WeCom message), FEISHU (Lark message), and WEBHOOK. For example, to notify a contact by email and text message, set channelType to CONTACT and enabledSubChannels to [&quot;EMAIL&quot;,&quot;SMS&quot;]. This field is not required for other channelType values such as WEBHOOK or DING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;EMAIL&quot;,&quot;SMS&quot;]</p>
+         */
         @NameInMap("enabledSubChannels")
         public java.util.List<String> enabledSubChannels;
 
         /**
+         * <p>The list of receiver identifiers. For the WEBHOOK type, specify the webhook UUID. For DING, WEIXIN, or FEISHU, specify the chatbot UUID. For CONTACT, specify the contact ID. For GROUP, specify the contact group ID. For DUTY, specify the on-call schedule UUID. At least one element is required.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;my-webhook-uuid&quot;]</p>
          */
         @NameInMap("receivers")
         public java.util.List<String> receivers;
@@ -211,15 +225,39 @@ public class NotifyStrategyForSNSModify extends TeaModel {
     }
 
     public static class NotifyStrategyForSNSModifyRoutesEffectTimeRange extends TeaModel {
+        /**
+         * <p>The days of the week on which the setting takes effect. Array element values range from 0 to 6 (0 = Sunday, 1 = Monday, 2 = Tuesday, ... 6 = Saturday). Note: The value 7 is not supported. The maximum value is 6. Example for all days: [0,1,2,3,4,5,6]. Example for weekdays only: [1,2,3,4,5].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0,1,2,3,4,5,6]</p>
+         */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;
 
+        /**
+         * <p>The end time of the day, expressed as the number of minutes from 00:00. Valid values: 0 to 1439 (23 × 60 + 59 = 1439, which represents 23:59).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1439</p>
+         */
         @NameInMap("endTimeInMinute")
         public Integer endTimeInMinute;
 
+        /**
+         * <p>The start time of the day, expressed as the number of minutes from 00:00. Valid values: 0 to 1439 (0 represents 00:00).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("startTimeInMinute")
         public Integer startTimeInMinute;
 
+        /**
+         * <p>The IANA time zone identifier, such as Asia/Shanghai or America/Los_Angeles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("timeZone")
         public String timeZone;
 
@@ -348,8 +386,17 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         @NameInMap("channels")
         public java.util.List<NotifyStrategyForSNSModifyRoutesChannels> channels;
 
+        @NameInMap("digitalEmployeeName")
+        public String digitalEmployeeName;
+
+        /**
+         * <p>The effective period settings for notifications. Defines on which days and during which time range the system sends notifications.</p>
+         */
         @NameInMap("effectTimeRange")
         public NotifyStrategyForSNSModifyRoutesEffectTimeRange effectTimeRange;
+
+        @NameInMap("enableRca")
+        public Boolean enableRca;
 
         @NameInMap("filterSetting")
         public NotifyStrategyForSNSModifyRoutesFilterSetting filterSetting;
@@ -370,12 +417,28 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             return this.channels;
         }
 
+        public NotifyStrategyForSNSModifyRoutes setDigitalEmployeeName(String digitalEmployeeName) {
+            this.digitalEmployeeName = digitalEmployeeName;
+            return this;
+        }
+        public String getDigitalEmployeeName() {
+            return this.digitalEmployeeName;
+        }
+
         public NotifyStrategyForSNSModifyRoutes setEffectTimeRange(NotifyStrategyForSNSModifyRoutesEffectTimeRange effectTimeRange) {
             this.effectTimeRange = effectTimeRange;
             return this;
         }
         public NotifyStrategyForSNSModifyRoutesEffectTimeRange getEffectTimeRange() {
             return this.effectTimeRange;
+        }
+
+        public NotifyStrategyForSNSModifyRoutes setEnableRca(Boolean enableRca) {
+            this.enableRca = enableRca;
+            return this;
+        }
+        public Boolean getEnableRca() {
+            return this.enableRca;
         }
 
         public NotifyStrategyForSNSModifyRoutes setFilterSetting(NotifyStrategyForSNSModifyRoutesFilterSetting filterSetting) {
