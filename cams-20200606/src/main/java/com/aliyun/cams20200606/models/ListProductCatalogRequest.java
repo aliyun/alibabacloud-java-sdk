@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductCatalogRequest extends TeaModel {
     /**
-     * <p>The cursor that points to the end of the page of the returned data.</p>
+     * <p>The start position of the next page for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>kdkii48jfjjei3</p>
@@ -14,7 +14,7 @@ public class ListProductCatalogRequest extends TeaModel {
     public String after;
 
     /**
-     * <p>The cursor that points to the beginning of the page of the returned data.</p>
+     * <p>The end position of the previous page for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>wiidkd939kek93</p>
@@ -23,7 +23,7 @@ public class ListProductCatalogRequest extends TeaModel {
     public String before;
 
     /**
-     * <p>The Business Manager ID.</p>
+     * <p>The ID of the business platform where the WABA is located. You can view the business platform ID in the Chat App Message Service console after WABA registration is complete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListProductCatalogRequest extends TeaModel {
     public Long businessId;
 
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the ISV sub-customer.</p>
      * 
      * <strong>example:</strong>
      * <p>C29398882929</p>
@@ -42,7 +42,8 @@ public class ListProductCatalogRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The fields. Separate multiple fields with commas (,). see <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></p>
+     * <p>The list of fields, separated by commas (,).
+     * For specific fields, see <a href="https://help.aliyun.com/document_detail/2579419.html">Catalog fields</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>id,name</p>
@@ -51,7 +52,7 @@ public class ListProductCatalogRequest extends TeaModel {
     public String fields;
 
     /**
-     * <p>The number of catalogs to be queried. Valid values: 1 to 1000.</p>
+     * <p>The number of entries to query. Valid values: 1 to 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>73</p>

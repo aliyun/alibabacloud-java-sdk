@@ -4,30 +4,61 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListFlowNodeGroupResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This field is returned only when RAM verification fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>43</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public ListFlowNodeGroupResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,15 +120,19 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
 
     public static class ListFlowNodeGroupResponseBodyDataModel extends TeaModel {
         /**
+         * <p>The status code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>0</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
+         * <p>The public extension field.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>{}</p>
          */
         @NameInMap("PublicExtend")
         public String publicExtend;
@@ -126,6 +161,9 @@ public class ListFlowNodeGroupResponseBody extends TeaModel {
     }
 
     public static class ListFlowNodeGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The request result data.</p>
+         */
         @NameInMap("Model")
         public java.util.List<ListFlowNodeGroupResponseBodyDataModel> model;
 

@@ -14,7 +14,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The app ID.</p>
+     * <p>The App ID.</p>
      * 
      * <strong>example:</strong>
      * <p>23hr3v****</p>
@@ -23,11 +23,11 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The status code of the request.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The configuration ID.</p>
+     * <p>The configuration item ID.</p>
      * 
      * <strong>example:</strong>
      * <p>28972951817****</p>

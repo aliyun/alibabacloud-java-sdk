@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class IsvGetAppIdRequest extends TeaModel {
     /**
+     * <p>The version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>2</p>
      */
     @NameInMap("IntlVersion")
     public String intlVersion;
@@ -15,8 +17,10 @@ public class IsvGetAppIdRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The permissions.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Example value</p>
      */
     @NameInMap("Permissions")
     public String permissions;
@@ -28,10 +32,14 @@ public class IsvGetAppIdRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The channel type. Valid values:</p>
+     * <ul>
+     * <li>whatsapp: WhatsApp.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>whatsapp</p>
      */
     @NameInMap("Type")
     public String type;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncMessengerSubscriptionTokenResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class SyncMessengerSubscriptionTokenResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -49,9 +49,9 @@ public class SyncMessengerSubscriptionTokenResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

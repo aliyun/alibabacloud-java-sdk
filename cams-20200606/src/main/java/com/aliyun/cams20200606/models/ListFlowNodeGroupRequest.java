@@ -8,19 +8,21 @@ public class ListFlowNodeGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>85</p>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
+     * <p>The number of records per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>84</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

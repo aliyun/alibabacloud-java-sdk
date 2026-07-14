@@ -4,12 +4,16 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,14 +23,14 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A9486***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -94,14 +98,14 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
     public static class GetAuditRequestByTypeUnAuditResponseBodyDataAuditRecordCompanyAddress extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>xxxxcompany</p>
          */
         @NameInMap("CompanyAddress")
         public String companyAddress;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>111</p>
          */
         @NameInMap("CompanyAddressTitle")
         public String companyAddressTitle;
@@ -132,14 +136,14 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
     public static class GetAuditRequestByTypeUnAuditResponseBodyDataAuditRecordCompanyTel extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>143243**</p>
          */
         @NameInMap("CompanyTelNumber")
         public String companyTelNumber;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>example</p>
          */
         @NameInMap("CompanyTelTitle")
         public String companyTelTitle;
@@ -170,21 +174,21 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
     public static class GetAuditRequestByTypeUnAuditResponseBodyDataAuditRecord extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>eighteenUp</p>
          */
         @NameInMap("AgeLimit")
         public String ageLimit;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>bnv</p>
          */
         @NameInMap("ApplyReason")
         public String applyReason;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>aaa</p>
          */
         @NameInMap("BusinessAccountName")
         public String businessAccountName;
@@ -194,28 +198,28 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Company English Name</p>
          */
         @NameInMap("CompanyEnglishName")
         public String companyEnglishName;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>xxxxcompany</p>
          */
         @NameInMap("CompanyLegalName")
         public String companyLegalName;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>jack</p>
          */
         @NameInMap("CompanyLegalPerson")
         public String companyLegalPerson;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>CompanyProfile</p>
          */
         @NameInMap("CompanyProfile")
         public String companyProfile;
@@ -228,35 +232,35 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p><a href="mailto:qqemail@gmail.com">qqemail@gmail.com</a></p>
          */
         @NameInMap("ContactMail")
         public String contactMail;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>N</p>
          */
         @NameInMap("EnableAutoReply")
         public String enableAutoReply;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>xxx</p>
          */
         @NameInMap("IndustryDescription")
         public String industryDescription;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>it</p>
          */
         @NameInMap("IndustryInvolved")
         public String industryInvolved;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p><a href="https://www.xxxxxxx">https://www.xxxxxxx</a></p>
          */
         @NameInMap("LetterGuarantee")
         public String letterGuarantee;
@@ -272,56 +276,56 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>MessageDialogueIntroduction</p>
          */
         @NameInMap("MessageDialogueIntroduction")
         public String messageDialogueIntroduction;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>2025-11-01</p>
          */
         @NameInMap("MessageEnableDate")
         public String messageEnableDate;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Message Session Name</p>
          */
         @NameInMap("MessageSessionName")
         public String messageSessionName;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>n</p>
          */
         @NameInMap("NowRecovery")
         public String nowRecovery;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>2025-111-06</p>
          */
         @NameInMap("RecoveryDate")
         public String recoveryDate;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>aaaqq</p>
          */
         @NameInMap("ReplyContent")
         public String replyContent;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>SuspensionDate</p>
          */
         @NameInMap("SuspensionDate")
         public String suspensionDate;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p><a href="http://www.xxxxx">www.xxxxx</a></p>
          */
         @NameInMap("WebAddress")
         public String webAddress;
@@ -544,7 +548,7 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
     public static class GetAuditRequestByTypeUnAuditResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>21432</p>
          */
         @NameInMap("AliUid")
         public String aliUid;
@@ -554,84 +558,84 @@ public class GetAuditRequestByTypeUnAuditResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>pass</p>
          */
         @NameInMap("AuditResult")
         public String auditResult;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>20250106</p>
          */
         @NameInMap("AuditTime")
         public String auditTime;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>11</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>1789200</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>20251624</p>
          */
         @NameInMap("GmtModifier")
         public String gmtModifier;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>id</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>475646</p>
          */
         @NameInMap("MaapServiceNo")
         public String maapServiceNo;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>1</p>
          */
         @NameInMap("Modifier")
         public String modifier;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>45345435435</p>
          */
         @NameInMap("RequestNo")
         public String requestNo;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>viber_open</p>
          */
         @NameInMap("RequestType")
         public String requestType;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>A</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>345436456546</p>
          */
         @NameInMap("SubscriberCode")
         public String subscriberCode;

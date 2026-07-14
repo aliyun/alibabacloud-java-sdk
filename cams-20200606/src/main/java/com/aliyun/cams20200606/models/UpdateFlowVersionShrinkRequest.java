@@ -5,32 +5,56 @@ import com.aliyun.tea.*;
 
 public class UpdateFlowVersionShrinkRequest extends TeaModel {
     /**
+     * <p>The tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The extended business information. The default value is an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The code of the flow. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The version of the flow. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to open the canvas and view the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
 
     /**
+     * <p>The DSL data of the flow version, in JSON format. To obtain this data, orchestrate the components on the canvas in the Flow Editor. After you save the flow, click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas to export the flow as a JSON data file.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>{
+     *   &quot;schema&quot;: {
+     *     &quot;namespace&quot;: &quot;External&quot;,
+     *     &quot;version&quot;: &quot;1.0&quot;,
+     *     &quot;copyright&quot;: &quot;Alibaba Cloud&quot;
+     *   },
+     *   &quot;editor&quot;: &quot;H4sIAAAAAAAAA+1YbU/c***********************&quot;,
+     *   &quot;flow&quot;: {
+     *     &quot;triggerType&quot;: &quot;TriggeredByWhatsApp&quot;
+     *   }
+     * }</p>
      */
     @NameInMap("FlowViewModel")
     public String flowViewModel;
@@ -39,8 +63,10 @@ public class UpdateFlowVersionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks for the version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>修复发送WhatsApp消息错误</p>
      */
     @NameInMap("Remark")
     public String remark;

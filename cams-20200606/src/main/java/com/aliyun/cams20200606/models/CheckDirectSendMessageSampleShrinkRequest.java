@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckDirectSendMessageSampleShrinkRequest extends TeaModel {
     /**
-     * <p>The SpaceId of an ISV sub-customer or the instance ID of a direct customer.</p>
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class CheckDirectSendMessageSampleShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The body of an interactive message.</p>
+     * <p>The message body of the interactive type.</p>
      */
     @NameInMap("Interactive")
     public String interactiveShrink;
 
     /**
-     * <p>The body of a text message.</p>
+     * <p>The message body of the text content.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;text&quot;: &quot;This is a direct send message&quot;}</p>
@@ -30,12 +30,10 @@ public class CheckDirectSendMessageSampleShrinkRequest extends TeaModel {
     public String textShrink;
 
     /**
-     * <p>The type of the direct message content. Valid values:</p>
+     * <p>The direct-send content type. Valid values:</p>
      * <ul>
-     * <li><p>interactive</p>
-     * </li>
-     * <li><p>text</p>
-     * </li>
+     * <li>interactive</li>
+     * <li>text</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

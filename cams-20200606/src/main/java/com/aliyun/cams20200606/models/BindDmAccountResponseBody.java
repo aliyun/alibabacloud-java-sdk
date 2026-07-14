@@ -4,10 +4,24 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BindDmAccountResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -15,6 +29,8 @@ public class BindDmAccountResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
@@ -22,6 +38,8 @@ public class BindDmAccountResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -29,6 +47,8 @@ public class BindDmAccountResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -36,6 +56,12 @@ public class BindDmAccountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatappMigrationVerifiedResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,9 +14,9 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -99,7 +99,7 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
 
     public static class ChatappMigrationVerifiedResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the phone number.</p>
+         * <p>The phone number ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8282889****</p>

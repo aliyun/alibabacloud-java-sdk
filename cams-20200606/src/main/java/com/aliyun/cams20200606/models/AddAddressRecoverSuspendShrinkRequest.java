@@ -4,10 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class AddAddressRecoverSuspendShrinkRequest extends TeaModel {
+    /**
+     * <p>The audit record.</p>
+     */
     @NameInMap("AuditRecord")
     public String auditRecordShrink;
 
     /**
+     * <p>The customer space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -18,6 +23,8 @@ public class AddAddressRecoverSuspendShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The request type.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */

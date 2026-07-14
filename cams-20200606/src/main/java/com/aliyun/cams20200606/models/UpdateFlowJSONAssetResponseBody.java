@@ -4,11 +4,17 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdateFlowJSONAssetResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code. A value of OK indicates a successful request.</p>
+     * <p>The response code. OK indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -87,7 +93,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
 
     public static class UpdateFlowJSONAssetResponseBodyData extends TeaModel {
         /**
-         * <p>The flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>92675332812643****</p>

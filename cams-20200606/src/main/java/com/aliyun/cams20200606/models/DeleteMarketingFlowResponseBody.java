@@ -4,38 +4,66 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteMarketingFlowResponseBody extends TeaModel {
+    /**
+     * <p>The access denied details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The returned data object.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>{}</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

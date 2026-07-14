@@ -4,20 +4,36 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class AddAddressRecoverSuspendResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The returned message. A success message is returned if the request succeeds. A failure reason is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -25,6 +41,8 @@ public class AddAddressRecoverSuspendResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -32,6 +50,12 @@ public class AddAddressRecoverSuspendResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

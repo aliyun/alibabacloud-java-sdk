@@ -8,7 +8,7 @@ public class UnbindDmAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>cams-*</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

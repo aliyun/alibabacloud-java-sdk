@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class OnlineFlowVersionRequest extends TeaModel {
     /**
+     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>Business extension information. The default value is an empty object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>f4912c16943b4dfba44bd6fedacf****</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to open the orchestration canvas and view the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
@@ -32,8 +44,10 @@ public class OnlineFlowVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks for the flow. You can view the remarks in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>通过API触发下发验证模板</p>
      */
     @NameInMap("Remark")
     public String remark;

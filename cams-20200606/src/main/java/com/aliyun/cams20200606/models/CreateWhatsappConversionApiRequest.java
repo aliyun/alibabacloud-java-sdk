@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class CreateWhatsappConversionApiRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>code</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>131</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

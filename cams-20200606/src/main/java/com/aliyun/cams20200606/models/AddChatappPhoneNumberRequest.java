@@ -15,7 +15,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public String cc;
 
     /**
-     * <p>The Space ID of the Independent Software Vendor (ISV) sub-customer.</p>
+     * <p>The space ID of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>The pre-verified phone number.</p>
+     * <p>The pre-validated phone number.</p>
      * <blockquote>
      * <p>This parameter is deprecated.</p>
      * </blockquote>
@@ -57,7 +57,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the phone number.</p>
+     * <p>The display name of the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

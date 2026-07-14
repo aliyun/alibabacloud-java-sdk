@@ -14,10 +14,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
      * <li><p><strong>instagram</strong></p>
      * </li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>viber</strong></li>
-     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- <strong>viber</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +24,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The Space ID of the ISV sub-customer, or the instance ID for a direct customer. View it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+     * <p>The ISV sub-customer SpaceId or direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -36,7 +33,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business Account (WABA) ID of the Independent Software Vendor (ISV) customer. This is a deprecated parameter. Use CustSpaceId instead, which is the direct customer\&quot;s instance ID. View the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+     * <p>The ISV customer WABA ID. This parameter is deprecated. Use CustSpaceId instead, which is the direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -46,7 +43,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The custom fallback content. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).</p>
+     * <p>The custom fallback content. This parameter is for the China site (Chinese). China site users can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Fallback SMS</p>
@@ -55,7 +52,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String fallBackContent;
 
     /**
-     * <p>The time to trigger a fallback. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).&lt;props=&quot;intl&quot;&gt;If a delivery receipt is not returned within the specified time, a fallback is triggered. If you leave this parameter empty, the fallback is not determined by time. A fallback is triggered only when the message fails to be sent or a failed status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</p>
+     * <p>The fallback trigger time. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;If no delivery receipt is returned within the specified time, the fallback is triggered. If this parameter is not specified, the fallback is triggered only when the message fails to send or a failure status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -64,7 +61,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public Integer fallBackDuration;
 
     /**
-     * <p>The fallback policy ID. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).&lt;props=&quot;intl&quot;&gt;View the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><strong>Fallback Policy</strong></a> page.</p>
+     * <p>The fallback policy ID. This parameter is for the China site (Chinese). China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;You can view the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><strong>Fallback Policy</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>S0****</p>
@@ -73,15 +70,10 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String fallBackId;
 
     /**
-     * <p>The fallback rule. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com). &lt;props=&quot;intl&quot;&gt;Valid values:</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>undelivered</strong>: A fallback is triggered if the message cannot be delivered to the recipient. This rule requires that the template and parameters pass verification before sending. The rule does not apply if the message is blocked from sending, for example, due to a blacklisted template or phone number. This is the default rule if this parameter is empty.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>sentFailed</strong>: A fallback is triggered if the template, template variables, or other parameters fail verification. Only the channelType, type, messageType, to, and the existence of the from parameter are strictly verified.</li>
-     * </ul>
+     * <p>The fallback rule. This parameter is for the international site. China site users can ignore this parameter.
+     * &lt;props=&quot;intl&quot;&gt;Valid values:
+     * &lt;props=&quot;intl&quot;&gt;- <strong>undelivered</strong>: the fallback is triggered when the message cannot be delivered to the device. During sending, the template and parameters must pass validation. Blocked templates or blocked numbers are not validated. This rule is used by default if the parameter value is empty.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>sentFailed</strong>: the fallback is triggered when validation of the template or template variables fails. Only channelType, type, messageType, to, and from (whether it exists) are strictly validated.</p>
      * 
      * <strong>example:</strong>
      * <p>undelivered</p>
@@ -90,18 +82,12 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String fallBackRule;
 
     /**
-     * <p>The sender\&quot;s number.</p>
+     * <p>The sender phone number.</p>
      * <ul>
-     * <li><p>If ChannelType is <strong>whatsapp</strong>, this is the phone number registered and bound with WhatsApp. View the number on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</p>
-     * </li>
-     * <li><p>If ChannelType is <strong>messenger</strong>, this is the Page ID. View the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Facebook Homepage</strong> page.</p>
-     * </li>
-     * <li><p>If ChannelType is <strong>instagram</strong>, this is the Instagram professional account ID. View the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Professional Account</strong> page.</p>
-     * </li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If ChannelType is <strong>viber</strong>, this is the Viber service ID. View the ID on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Service Number Management&#x20;</strong>&#x70;age.</li>
+     * <li>If ChannelType is <strong>whatsapp</strong>, this is the phone number registered and bindng with WhatsApp. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</li>
+     * <li>If ChannelType is <strong>messenger</strong>, this is the Page ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Public Page</strong> page.</li>
+     * <li>If ChannelType is <strong>instagram</strong>, this is the Instagram professional Account ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Professional Account</strong> page.
+     * &lt;props=&quot;intl&quot;&gt;- If ChannelType is <strong>viber</strong>, this is the Viber Service ID. You can view it on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Service ID Management</strong> page.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -112,7 +98,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>ISV verification code, used to verify if the user is authorized by an ISV. This parameter is deprecated.</p>
+     * <p>The ISV verification code used to verify whether a RAM user is authorized by the ISV. This parameter is deprecated and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikd****</p>
@@ -122,15 +108,10 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The Viber message type. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com). &lt;props=&quot;intl&quot;&gt;Valid values:</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>promotion</strong>: marketing messages.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>transaction</strong>: notification messages.</li>
-     * </ul>
+     * <p>The Viber message type. This parameter is for the international site. China site users can ignore this parameter.
+     * &lt;props=&quot;intl&quot;&gt;Valid values:
+     * &lt;props=&quot;intl&quot;&gt;- <strong>pormotion</strong>: marketing or promotional messages.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>transaction</strong>: notification messages.</p>
      * 
      * <strong>example:</strong>
      * <p>promotion</p>
@@ -139,7 +120,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The language. For a list of language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,13 +139,13 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A list of recipients.</p>
+     * <p>The list of recipient phone numbers.</p>
      */
     @NameInMap("SenderList")
     public java.util.List<SendChatappMassMessageRequestSenderList> senderList;
 
     /**
-     * <p>A custom tag for a Viber message.</p>
+     * <p>The tag information. Custom tag information for Viber message sending.</p>
      * 
      * <strong>example:</strong>
      * <p>Tag</p>
@@ -182,7 +163,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The template code. View the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
+     * <p>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Template Design</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>1119***************</p>
@@ -191,7 +172,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The template name. View the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
+     * <p>The template name. You can view the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Template Design</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -200,7 +181,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The timeout period for sending a Viber message. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).&lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</p>
+     * <p>The timeout period for Viber message sending. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</p>
      * 
      * <strong>example:</strong>
      * <p>46</p>
@@ -377,7 +358,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
 
     public static class SendChatappMassMessageRequestSenderListFlowAction extends TeaModel {
         /**
-         * <p>A collection of default flow parameters.</p>
+         * <p>The collection of flow default parameters.</p>
          */
         @NameInMap("FlowActionData")
         public java.util.Map<String, ?> flowActionData;
@@ -416,7 +397,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
 
     public static class SendChatappMassMessageRequestSenderListProductActionSectionsProductItems extends TeaModel {
         /**
-         * <p>The product ID. View it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Catalog Management</strong> &gt; <strong>Product Management</strong> page or get it by calling the <a href="https://help.aliyun.com/document_detail/2557786.html">ListProduct</a> API.</p>
+         * <p>The product ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Catalog Management</strong> &gt; <strong>Product Management</strong> page, or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2557786.html">ListProduct</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>ksi3****</p>
@@ -447,7 +428,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
         public java.util.List<SendChatappMassMessageRequestSenderListProductActionSectionsProductItems> productItems;
 
         /**
-         * <p>The category name. View it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Catalog Management</strong> &gt; <strong>Product Management</strong> page or get it by calling the <a href="https://help.aliyun.com/document_detail/2557786.html">ListProduct</a> API.</p>
+         * <p>The category name. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Catalog Management</strong> &gt; <strong>Product Management</strong> page, or obtain it by calling the <a href="https://help.aliyun.com/document_detail/2557786.html">ListProduct</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -480,13 +461,13 @@ public class SendChatappMassMessageRequest extends TeaModel {
 
     public static class SendChatappMassMessageRequestSenderListProductAction extends TeaModel {
         /**
-         * <p>The list of product categories. You can have up to 10 categories and 30 products.</p>
+         * <p>The list of product categories. A maximum of 10 categories and 30 products are supported.</p>
          */
         @NameInMap("Sections")
         public java.util.List<SendChatappMassMessageRequestSenderListProductActionSections> sections;
 
         /**
-         * <p>The product catalog ID. Get it by calling the <a href="https://help.aliyun.com/document_detail/2539783.html">ListProductCatalog</a> API.</p>
+         * <p>The product catalog ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2539783.html">ListProductCatalog</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>skkks99****</p>
@@ -525,16 +506,23 @@ public class SendChatappMassMessageRequest extends TeaModel {
         public SendChatappMassMessageRequestSenderListFlowAction flowAction;
 
         /**
-         * <p>The list of payloads for the buttons.</p>
+         * <p>The list of button trigger message identifiers.</p>
          */
         @NameInMap("Payload")
         public java.util.List<String> payload;
 
         /**
-         * <p>Product information. This parameter is only for WhatsApp channels and refers to product information uploaded to Meta.</p>
+         * <p>The product information. This parameter applies only to WhatsApp channels and refers to the product information you uploaded on Meta.</p>
          */
         @NameInMap("ProductAction")
         public SendChatappMassMessageRequestSenderListProductAction productAction;
+
+        /**
+         * <strong>example:</strong>
+         * <p>individual</p>
+         */
+        @NameInMap("RecipientType")
+        public String recipientType;
 
         /**
          * <p>The collection of template parameters.</p>
@@ -543,18 +531,12 @@ public class SendChatappMassMessageRequest extends TeaModel {
         public java.util.Map<String, String> templateParams;
 
         /**
-         * <p>The recipient\&quot;s number.</p>
+         * <p>The recipient phone number.</p>
          * <ul>
-         * <li><p>If ChannelType is <strong>whatsapp</strong>, this is the recipient\&quot;s phone number.</p>
-         * </li>
-         * <li><p>If ChannelType is <strong>messenger</strong>, this is a Page-Scoped User ID generated when a user interacts with a Facebook page.</p>
-         * </li>
-         * <li><p>If ChannelType is <strong>instagram</strong>, this is an Instagram User ID generated when a user interacts with an Instagram business or creator account.</p>
-         * </li>
-         * </ul>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <ul>
-         * <li>If ChannelType is <strong>viber</strong>, this is the recipient\&quot;s phone number.</li>
+         * <li>If ChannelType is <strong>whatsapp</strong>, this is the phone number of the message recipient.</li>
+         * <li>If ChannelType is <strong>messenger</strong>, this is the Page-Scoped User ID generated when the user interacts with the Facebook page.</li>
+         * <li>If ChannelType is <strong>instagram</strong>, this is the Instagram User ID generated when the user interacts with the Instagram business or creator account.
+         * &lt;props=&quot;intl&quot;&gt;- If ChannelType is <strong>viber</strong>, this is the phone number of the message recipient.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -590,6 +572,14 @@ public class SendChatappMassMessageRequest extends TeaModel {
         }
         public SendChatappMassMessageRequestSenderListProductAction getProductAction() {
             return this.productAction;
+        }
+
+        public SendChatappMassMessageRequestSenderList setRecipientType(String recipientType) {
+            this.recipientType = recipientType;
+            return this;
+        }
+        public String getRecipientType() {
+            return this.recipientType;
         }
 
         public SendChatappMassMessageRequestSenderList setTemplateParams(java.util.Map<String, String> templateParams) {

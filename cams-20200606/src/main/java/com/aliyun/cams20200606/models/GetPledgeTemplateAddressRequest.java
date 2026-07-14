@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetPledgeTemplateAddressRequest extends TeaModel {
     /**
+     * <p>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> interface.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>cams-x***</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The industry type.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>it</p>
      */
     @NameInMap("IndustryType")
     public String industryType;

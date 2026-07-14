@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDmAccountRequest extends TeaModel {
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>a</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -15,15 +17,19 @@ public class ListDmAccountRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>83</p>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>86</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -35,8 +41,10 @@ public class ListDmAccountRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The sending type.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>batch</p>
      */
     @NameInMap("SendType")
     public String sendType;

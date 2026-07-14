@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class QueryMMLActiveRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>erer-retreerew**</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatGroupRequest extends TeaModel {
     /**
-     * <p>The business number.</p>
+     * <p>The business phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class ListChatGroupRequest extends TeaModel {
     public String businessNumber;
 
     /**
-     * <p>The channel type. Valid value: <strong>WHATSAPP</strong>.</p>
+     * <p>The channel type. Valid values: <strong>WHATSAPP</strong>.</p>
      * <blockquote>
-     * <p>Only the WhatsApp channel is supported.</p>
+     * <p>Only the WhatsApp channel type is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListChatGroupRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The instance ID (or SpaceId) of an ISV sub-customer, which also serves as the channel ID. You can find it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
+     * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,11 +81,8 @@ public class ListChatGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The paging information.</p>
+     * <p>The pagination information.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Example value</p>
      */
     @NameInMap("Page")
     public ListChatGroupRequestPage page;
@@ -97,7 +94,7 @@ public class ListChatGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The group title.</p>
+     * <p>The group subject.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

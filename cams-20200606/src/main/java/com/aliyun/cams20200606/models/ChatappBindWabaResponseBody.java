@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatappBindWabaResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The access denied detail.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -55,10 +55,8 @@ public class ChatappBindWabaResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful.</p>
      * <ul>
-     * <li><p><strong>true</strong>: successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
 
     public static class ChatappBindWabaResponseBodyData extends TeaModel {
         /**
-         * <p>The customer\&quot;s Space ID.</p>
+         * <p>The customer space ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C0202939293****</p>
@@ -131,7 +129,7 @@ public class ChatappBindWabaResponseBody extends TeaModel {
         public String custSpaceId;
 
         /**
-         * <p>The WABA ID.</p>
+         * <p>waba Id。</p>
          * 
          * <strong>example:</strong>
          * <p>293982****</p>

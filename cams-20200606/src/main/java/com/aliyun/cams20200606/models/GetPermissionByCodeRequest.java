@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetPermissionByCodeRequest extends TeaModel {
     /**
+     * <p>The authorization code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>flow_001</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The space ID of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>cams-isj23ljd912</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -23,6 +26,9 @@ public class GetPermissionByCodeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The permissions.</p>
+     */
     @NameInMap("Permissions")
     public java.util.List<String> permissions;
 

@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateChatFlowLogSettingRequest extends TeaModel {
     /**
+     * <p>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The unique ID of the setting. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2937212.html">ReadChatFlowLogSetting</a> operation.</p>
+     * 
      * <strong>example:</strong>
-     * <p>74</p>
+     * <p>100</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -28,8 +32,18 @@ public class UpdateChatFlowLogSettingRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The log enabling status. Valid values:</p>
+     * <ul>
+     * <li><p>ENABLED: Enables log writing.</p>
+     * </li>
+     * <li><p>DISABLED: Disables log writing but retains the Simple Log Service log instance.</p>
+     * </li>
+     * <li><p>DELETED: Disables log writing and deletes the Simple Log Service log instance.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>ENABLED</p>
      */
     @NameInMap("Status")
     public String status;

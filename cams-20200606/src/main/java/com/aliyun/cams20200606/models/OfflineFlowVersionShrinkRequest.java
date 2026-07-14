@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class OfflineFlowVersionShrinkRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. The default value is an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The code of the flow. View the code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The version of the flow. View the version on the orchestration canvas in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
@@ -32,8 +44,10 @@ public class OfflineFlowVersionShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks for the flow. View the remarks in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>不再需要此版本</p>
      */
     @NameInMap("Remark")
     public String remark;

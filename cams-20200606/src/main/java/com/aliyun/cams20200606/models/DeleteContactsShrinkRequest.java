@@ -16,28 +16,28 @@ public class DeleteContactsShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1507486****</p>
      */
     @NameInMap("ContactDetails")
     public String contactDetails;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>hahaha</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>China</p>
      */
     @NameInMap("Country")
     public String country;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>http://****</p>
      */
     @NameInMap("FilePath")
     public String filePath;

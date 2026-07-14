@@ -18,21 +18,21 @@ public class MoveContactToGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>[{&quot;id&quot;:1}]</p>
      */
     @NameInMap("Contacts")
     public String contacts;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>[{&quot;id&quot;:1}]</p>
      */
     @NameInMap("LinkExistGroups")
     public String linkExistGroups;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>[{&quot;groupName&quot;:&quot;aaa&quot;}]</p>
      */
     @NameInMap("LinkNewGroups")
     public String linkNewGroups;

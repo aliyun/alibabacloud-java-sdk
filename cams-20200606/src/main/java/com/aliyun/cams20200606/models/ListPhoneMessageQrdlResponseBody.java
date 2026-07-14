@@ -4,11 +4,17 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListPhoneMessageQrdlResponseBody extends TeaModel {
+    /**
+     * <p>The access denied details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>A value of OK indicates that the request was successful.</p>
+     * <p>The response code. OK indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -114,7 +120,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The message content.</p>
+         * <p>The prefilled message content.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello</p>
@@ -123,7 +129,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String prefilledMessage;
 
         /**
-         * <p>The URL of the QR code.</p>
+         * <p>The URL of the QR code image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.png">https://img.png</a></p>
@@ -132,7 +138,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         public String qrImageUrl;
 
         /**
-         * <p>The code.</p>
+         * <p>The QR code identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>IUIED999</p>

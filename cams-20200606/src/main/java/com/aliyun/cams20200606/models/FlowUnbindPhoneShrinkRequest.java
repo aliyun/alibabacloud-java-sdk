@@ -5,24 +5,41 @@ import com.aliyun.tea.*;
 
 public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     /**
+     * <p>The message channel type. Valid values:</p>
+     * <ul>
+     * <li><p>INSTAGRAM</p>
+     * </li>
+     * <li><p>WHATSAPP</p>
+     * </li>
+     * <li><p>MESSENGER</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>VIBER</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
     /**
+     * <p>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to go to the orchestration canvas and view the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
@@ -30,6 +47,9 @@ public class FlowUnbindPhoneShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>A list of phone numbers, Page IDs, Account IDs, or Service IDs for the channel instance.</p>
+     */
     @NameInMap("PhoneNumbers")
     public String phoneNumbersShrink;
 

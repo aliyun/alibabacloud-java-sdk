@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateFlowVersionRequest extends TeaModel {
     /**
+     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. The default value is an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>The code of the flow. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The version of the flow to copy. To view the historical versions of a flow, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> and click a flow name to open the orchestration canvas.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersionCopyFrom")
     public String flowVersionCopyFrom;
@@ -32,8 +44,10 @@ public class CreateFlowVersionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks for the version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>修复发送WhatsApp消息错误</p>
      */
     @NameInMap("Remark")
     public String remark;

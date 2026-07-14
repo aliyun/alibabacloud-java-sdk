@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableWhatsappROIMetricResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class EnableWhatsappROIMetricResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request. Valid values:</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li><p>A value of OK indicates that the request is successful.</p>
+     * <li><p>OK: The request was successful.</p>
      * </li>
-     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</p>
      * </li>
      * </ul>
      * 

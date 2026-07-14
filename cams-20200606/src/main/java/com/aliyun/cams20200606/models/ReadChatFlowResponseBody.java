@@ -4,36 +4,59 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ReadChatFlowResponseBody extends TeaModel {
+    /**
+     * <p>The detailed reason why the access was denied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Response")
     public java.util.Map<String, ?> response;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation is successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

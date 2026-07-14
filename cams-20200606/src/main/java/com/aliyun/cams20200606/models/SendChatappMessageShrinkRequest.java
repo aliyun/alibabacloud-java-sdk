@@ -7,7 +7,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The Meta ad account ID.</p>
      * <blockquote>
-     * <p>This parameter is for internal testing, is not generally available, and can be ignored.</p>
+     * <p>This parameter is a test parameter that is not fully available. Ignore this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,10 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String adAccountId;
 
     /**
-     * <p>The message category for direct WhatsApp sending.</p>
+     * <p>The message category (for WhatsApp direct send).</p>
      * <blockquote>
-     * <p>Warning: </p>
+     * <p>Warning: Do not specify this parameter unless you are a Meta-invited customer. Otherwise, message delivery will fail.</p>
      * </blockquote>
-     * <p>Specify this parameter only if you are a Meta-invited customer. Otherwise, the message may fail to send.</p>
      * 
      * <strong>example:</strong>
      * <p>UTILITY</p>
@@ -30,21 +29,18 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The channel type. Valid values:</p>
+     * <p>The channel type. Valid values:  </p>
      * <ul>
-     * <li><p><strong>whatsapp</strong></p>
+     * <li><p><strong>whatsapp</strong> </p>
      * </li>
-     * <li><p><strong>messenger</strong></p>
+     * <li><p><strong>messenger</strong> </p>
      * </li>
      * <li><p><strong>instagram</strong></p>
      * </li>
      * <li><p><strong>telegram</strong></p>
      * </li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>viber</strong></li>
-     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- <strong>viber</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,78 +50,39 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The message content, in a JSON-formatted string.</p>
-     * <p><strong>Notes for WhatsApp messages:</strong></p>
+     * <p>The message content.</p>
+     * <p><strong>WhatsApp message notes:</strong></p>
      * <ul>
-     * <li><p>If <code>MessageType</code> is <code>text</code>, the <code>text</code> field is required, and the <code>Caption</code> field is not supported.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>image</code>, the <code>Link</code> field is required.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>video</code>, the <code>Link</code> field is required.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>audio</code>, the <code>Link</code> field is required. The <code>Caption</code> field is not supported.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>document</code>, the <code>Link</code> and <code>FileName</code> fields are required. The <code>Caption</code> field is not supported.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>interactive</code>, the <code>type</code> and <code>action</code> fields are required.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>contacts</code>, the <code>name</code> field is required.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>location</code>, the <code>longitude</code> and <code>latitude</code> fields are required.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>sticker</code>, the <code>Link</code> field is required. The <code>Caption</code> and <code>FileName</code> fields are not supported.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>reaction</code>, the <code>messageId</code> and <code>emoji</code> fields are required.</p>
-     * </li>
+     * <li>If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required and the <strong>Caption</strong> field must not be specified.</li>
+     * <li>If <strong>messageType</strong> is <strong>image</strong>, the <strong>Link</strong> field is required.</li>
+     * <li>If <strong>messageType</strong> is <strong>video</strong>, the <strong>Link</strong> field is required.</li>
+     * <li>If <strong>messageType</strong> is <strong>audio</strong>, the <strong>Link</strong> field is required and the <strong>Caption</strong> field is invalid.</li>
+     * <li>If <strong>messageType</strong> is <strong>document</strong>, the <strong>Link</strong> and <strong>FileName</strong> fields are required and the <strong>Caption</strong> field is invalid.</li>
+     * <li>If <strong>messageType</strong> is <strong>interactive</strong>, the <strong>type</strong> and <strong>action</strong> fields are required.</li>
+     * <li>If <strong>messageType</strong> is <strong>contacts</strong>, the <strong>name</strong> field is required.</li>
+     * <li>If <strong>messageType</strong> is <strong>location</strong>, the <strong>longitude</strong> and <strong>latitude</strong> fields are required.</li>
+     * <li>If <strong>messageType</strong> is <strong>sticker</strong>, the <strong>Link</strong> field is required and the <strong>Caption</strong> and <strong>FileName</strong> fields are invalid.</li>
+     * <li>If <strong>messageType</strong> is <strong>reaction</strong>, the <strong>messageId</strong> and <strong>emoji</strong> fields are required.</li>
      * </ul>
-     * <p><strong>Notes for Messenger messages:</strong></p>
+     * <p><strong>Messenger message notes:</strong></p>
      * <ul>
-     * <li><p>If <code>MessageType</code> is <code>text</code>, the <code>text</code> field is required.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>image</code>, <code>video</code>, <code>audio</code>, or <code>document</code>, the <code>link</code> field is required.</p>
-     * </li>
+     * <li>If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
+     * <li>If <strong>messageType</strong> is <strong>image</strong>, <strong>video</strong>, <strong>audio</strong>, or <strong>document</strong>, the <strong>link</strong> field is required.</li>
      * </ul>
-     * <p><strong>Notes for Instagram messages:</strong></p>
+     * <p><strong>Instagram message notes:</strong></p>
      * <ul>
-     * <li><p>If <code>MessageType</code> is <code>text</code>, the <code>text</code> field is required.</p>
-     * </li>
-     * <li><p>If <code>MessageType</code> is <code>image</code>, <code>video</code>, or <code>audio</code>, the <code>link</code> field is required.</p>
-     * </li>
+     * <li>If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.</li>
+     * <li>If <strong>messageType</strong> is <strong>image</strong>, <strong>video</strong>, or <strong>audio</strong>, the <strong>link</strong> field is required.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p><strong>Notes for Viber messages:</strong></p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>text</code>, the <code>text</code> field is required.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>image</code>, the <code>link</code> field is required.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>video</code>, the <code>link</code>, <code>thumbnail</code>, <code>fileSize</code>, and <code>duration</code> fields are required.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>document</code>, the <code>link</code>, <code>fileName</code>, and <code>fileType</code> fields are required.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>text_button</code>, the <code>text</code>, <code>caption</code>, and <code>action</code> fields are required.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>text_image_button</code>, the <code>text</code>, <code>link</code>, <code>caption</code>, and <code>action</code> fields are required.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>text_video</code>, the <code>text</code>, <code>link</code>, <code>thumbnail</code>, <code>fileSize</code>, and <code>duration</code> fields are required.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>MessageType</code> is <code>text_video_button</code>, the <code>text</code>, <code>link</code>, <code>thumbnail</code>, <code>fileSize</code>, <code>duration</code>, and <code>caption</code> fields are required. The <code>action</code> field is not supported.</li>
-     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;<strong>Viber message notes:</strong>
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text</strong>, the <strong>text</strong> field is required.
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>image</strong>, the <strong>link</strong> field is required.
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>video</strong>, the <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> fields are required.
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>document</strong>, the <strong>link</strong>, <strong>fileName</strong>, and <strong>fileType</strong> fields are required.
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_button</strong>, the <strong>text</strong>, <strong>caption</strong>, and <strong>action</strong> fields are required.
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_image_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>caption</strong>, and <strong>action</strong> fields are required.
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_video</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, and <strong>duration</strong> fields are required.
+     * &lt;props=&quot;intl&quot;&gt;- If <strong>messageType</strong> is <strong>text_video_button</strong>, the <strong>text</strong>, <strong>link</strong>, <strong>thumbnail</strong>, <strong>fileSize</strong>, <strong>duration</strong>, and <strong>caption</strong> fields are required, and the <strong>action</strong> field must not be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -139,7 +96,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The ID of the message to which you are replying.</p>
+     * <p>The ID of the message to reply to. This is the ID of a previously sent or received message.</p>
      * 
      * <strong>example:</strong>
      * <p>61851ccb2f1365b16aee****</p>
@@ -148,7 +105,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String contextMessageId;
 
     /**
-     * <p>The Space ID of the ISV\&quot;s sub-account. For a direct customer, this is the Instance ID. You can find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+     * <p>The SpaceId of the ISV sub-customer, or the direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -157,7 +114,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p><strong>Deprecated.</strong> Use <code>CustSpaceId</code> instead. The WABA ID of an ISV\&quot;s customer. For a direct customer, this is the Instance ID. You can find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
+     * <p>The ISV customer WABA ID. This parameter is deprecated. Use CustSpaceId instead, which is the direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-8c8*********</p>
@@ -167,7 +124,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The custom content of the fallback message. This parameter is available only on the International Site and can be ignored if you are using the China site.</p>
+     * <p>The custom fallback content. This parameter is for the China site (Chinese mainland). China site users can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Fallback SMS</p>
@@ -176,7 +133,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String fallBackContent;
 
     /**
-     * <p>The duration after which a fallback is triggered. This parameter is available only on the International Site and can be ignored if you are using the China site.&lt;props=&quot;intl&quot;&gt; If a delivery receipt is not returned within the specified period, a fallback is triggered. If this parameter is omitted, a fallback is triggered only if the message fails to send or a failed delivery receipt is returned. Unit: seconds. The value must be between 60 and 43200.</p>
+     * <p>The fallback trigger time. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;If the message does not return a delivered receipt within the specified time, fallback is triggered. If this parameter is not specified, fallback is not triggered based on time and occurs only when the message fails to send or a failure status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</p>
      * 
      * <strong>example:</strong>
      * <p>120</p>
@@ -185,7 +142,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public Integer fallBackDuration;
 
     /**
-     * <p>The ID of the fallback strategy. This parameter is available only on the International Site and can be ignored if you are using the China site.&lt;props=&quot;intl&quot;&gt; You can find the strategy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><strong>Fallback Policy</strong></a> page.</p>
+     * <p>The fallback policy ID. This parameter is for the China site (Chinese mainland). China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;You can view the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><strong>Fallback Policy</strong></a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>S0****</p>
@@ -194,16 +151,10 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String fallBackId;
 
     /**
-     * <p>The fallback rule. This parameter is available only on the International Site and can be ignored if you are using the China site.
-     * &lt;props=&quot;intl&quot;&gt;Valid values:</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>undelivered</strong>: A fallback is triggered if message delivery fails. The template and parameters must be valid at the time of sending. Blocked templates or phone numbers are not validated. This is the default rule if the parameter is empty.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>sentFailed</strong>: A fallback is triggered if the message fails parameter validation, such as for the template or template parameters. Only the existence of <code>channelType</code>, <code>type</code>, <code>messageType</code>, <code>to</code>, and <code>from</code> is strictly validated.</li>
-     * </ul>
+     * <p>The fallback rule. This parameter is for the international site. China site users can ignore this parameter.
+     * &lt;props=&quot;intl&quot;&gt;Valid values:
+     * &lt;props=&quot;intl&quot;&gt;- <strong>undelivered</strong>: fallback is triggered when the message cannot be delivered to the device (template and parameter validation must pass at the sending stage; template bans or number bans are not validated). This rule is used by default if the parameter value is empty.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>sentFailed</strong>: fallback is also triggered when template or template variable validation fails. Only the channelType, type, messageType, to, and from (existence check) parameters are strictly validated.</p>
      * 
      * <strong>example:</strong>
      * <p>undelivered</p>
@@ -218,18 +169,12 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String flowActionShrink;
 
     /**
-     * <p>The sender\&quot;s number or ID.</p>
+     * <p>The sender number.</p>
      * <ul>
-     * <li><p>If <code>ChannelType</code> is <strong>whatsapp</strong>, this is the phone number registered with WhatsApp. You can find the number on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</p>
-     * </li>
-     * <li><p>If <code>ChannelType</code> is <strong>messenger</strong>, this is the Facebook Page ID. You can find this ID on your &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Facebook Page</strong> page.</p>
-     * </li>
-     * <li><p>If <code>ChannelType</code> is <strong>instagram</strong>, this is the Instagram professional account ID (Account ID). You can find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Professional Account</strong> page.</p>
-     * </li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>ChannelType</code> is <strong>viber</strong>, this is the Viber service ID (Service ID). You can find the ID on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Service Number Management</strong> page.</li>
+     * <li>If ChannelType is set to <strong>whatsapp</strong>, this is the phone number registered and bindded with WhatsApp. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</li>
+     * <li>If ChannelType is set to <strong>messenger</strong>, this is the Page ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Public Page</strong> page.</li>
+     * <li>If ChannelType is set to <strong>instagram</strong>, this is the Instagram professional account ID (Account ID). You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Professional Account</strong> page.
+     * &lt;props=&quot;intl&quot;&gt;- If ChannelType is set to <strong>viber</strong>, this is the Viber Service ID. You can view it on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Service ID Management</strong> page.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -240,7 +185,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String from;
 
     /**
-     * <p><strong>Deprecated.</strong> A verification code used to authorize an ISV\&quot;s sub-account. You can ignore this parameter.</p>
+     * <p>The ISV verification code used to verify whether a RAM user is authorized by the ISV. This parameter is deprecated and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>123123******</p>
@@ -250,16 +195,10 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The Viber message type. This parameter is available only on the International Site and can be ignored if you are using the China site.
-     * &lt;props=&quot;intl&quot;&gt;Valid values:</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>promotion</strong>: A promotional or marketing message.</li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li><strong>transaction</strong>: A notification message.</li>
-     * </ul>
+     * <p>The Viber message type. This parameter is for the international site. China site users can ignore this parameter.
+     * &lt;props=&quot;intl&quot;&gt;Valid values:
+     * &lt;props=&quot;intl&quot;&gt;- <strong>pormotion</strong>: marketing or promotional messages.
+     * &lt;props=&quot;intl&quot;&gt;- <strong>transaction</strong>: notification messages.</p>
      * 
      * <strong>example:</strong>
      * <p>promotion</p>
@@ -268,7 +207,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The language of the message template. For a list of supported languages and their corresponding codes, see <a href="https://help.aliyun.com/document_detail/463420.html">language code</a>.</p>
+     * <p>The language. For a list of language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -277,9 +216,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The ID of the message campaign.</p>
+     * <p>The campaign message ID.</p>
      * <blockquote>
-     * <p>This parameter is for internal testing, is not generally available, and can be ignored.</p>
+     * <p>This parameter is a test parameter that is not fully available. Ignore this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -289,127 +228,105 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String messageCampaignId;
 
     /**
-     * <p>The message type to use when <code>Type</code> is set to <code>message</code>. The valid values vary based on the channel type:</p>
+     * <p>The detailed message type when Type is set to message. Valid values:</p>
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>WHATSAPP</p>
-     * </summary>
+     * <summary>WHATSAPP</summary>
      * 
      * <ul>
-     * <li><p><code>text</code>: A text message.</p>
+     * <li><p>text: text message.</p>
      * </li>
-     * <li><p><code>image</code>: An image message.</p>
+     * <li><p>image: image message.</p>
      * </li>
-     * <li><p><code>video</code>: A video message.</p>
+     * <li><p>video: video message.</p>
      * </li>
-     * <li><p><code>audio</code>: An audio message.</p>
+     * <li><p>audio: audio message.</p>
      * </li>
-     * <li><p><code>document</code>: A document message.</p>
+     * <li><p>document: document message.</p>
      * </li>
-     * <li><p><code>interactive</code>: An interactive message.</p>
+     * <li><p>interactive: interactive message.</p>
      * </li>
-     * <li><p><code>location</code>: A location message.</p>
+     * <li><p>location: location message.</p>
      * </li>
-     * <li><p><code>contacts</code>: A contacts message.</p>
+     * <li><p>contacts: contacts message.</p>
      * </li>
-     * <li><p><code>reaction</code>: A reaction message.</p>
+     * <li><p>reaction: reaction message.</p>
      * </li>
-     * <li><p><code>sticker</code>: A sticker message.</p>
+     * <li><p>sticker: sticker message.</p>
      * </li>
-     * <li><p><code>typing_indicator</code>: A typing indicator message.</p>
+     * <li><p>typing_indicator: typing indicator message.</p>
      * </li>
-     * <li><p><code>pin</code>: A message to pin or unpin. This type is available only for group messages.</p>
+     * <li><p>pin: pin or unpin message (available only for group messages).</p>
      * </li>
-     * <li><p><code>carousel</code>: A carousel message.</p>
-     * </li>
+     * <li><p>carousel: carousel message.</p>
+     * </details></li>
      * </ul>
-     * </details>
-     * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>VIBER</p>
-     * </summary>
+     * <summary>VIBER</summary>
      * 
      * <ul>
-     * <li><p><code>text</code>: A text message.</p>
+     * <li><p>text: text message.</p>
      * </li>
-     * <li><p><code>image</code>: An image message.</p>
+     * <li><p>image: image message.</p>
      * </li>
-     * <li><p><code>text_image_button</code>: A message with text, an image, and a button.</p>
+     * <li><p>text_image_button: text + image + button message.</p>
      * </li>
-     * <li><p><code>text_button</code>: A message with text and a button.</p>
+     * <li><p>text_button: text + button message.</p>
      * </li>
-     * <li><p><code>document</code>: A document message.</p>
+     * <li><p>document: document message.</p>
      * </li>
-     * <li><p><code>video</code>: A video message.</p>
+     * <li><p>video: video message.</p>
      * </li>
-     * <li><p><code>text_video</code>: A message with text and a video.</p>
+     * <li><p>text_video: text + video message.</p>
      * </li>
-     * <li><p><code>text_video_button</code>: A message with text, a video, and a button.</p>
+     * <li><p>text_video_button: text + video + button message.</p>
      * </li>
-     * <li><p><code>text_image</code>: A message with text and an image.</p>
-     * </li>
+     * <li><p>text_image: text + image message.</p>
+     * </details></li>
      * </ul>
-     * </details>
-     * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>MESSENGER / INSTAGRAM</p>
-     * </summary>
+     * <summary>MESSENGER / INSTAGRAM</summary>
      * 
      * <ul>
-     * <li><p><code>text</code>: A text message.</p>
+     * <li><p>text: text message.</p>
      * </li>
-     * <li><p><code>image</code>: An image message.</p>
+     * <li><p>image: image message.</p>
      * </li>
-     * <li><p><code>video</code>: A video message.</p>
+     * <li><p>video: video message.</p>
      * </li>
-     * <li><p><code>document</code>: A document message.</p>
+     * <li><p>document: document message.</p>
      * </li>
-     * <li><p><code>audio</code>: An audio message.</p>
+     * <li><p>audio: audio message.</p>
      * </li>
-     * <li><p><code>interactive</code>: An interactive message.</p>
+     * <li><p>interactive: interactive message.</p>
      * </li>
-     * <li><p><code>couponTemplate</code>: A coupon template message.</p>
+     * <li><p>couponTemplate: coupon template message.</p>
      * </li>
-     * <li><p><code>regularTemplate</code>: A regular template message.</p>
+     * <li><p>regularTemplate: regular template message.</p>
      * </li>
-     * <li><p><code>quickReply</code>: A quick reply message.</p>
+     * <li><p>quickReply: quick reply message.</p>
      * </li>
-     * <li><p><code>buttonTemplate</code>: A button template message.</p>
-     * </li>
+     * <li><p>buttonTemplate: button template message.</p>
+     * </details></li>
      * </ul>
-     * </details>
-     * 
      * <details>
-     * 
-     * <summary>
-     * 
-     * <p>TELEGRAM</p>
-     * </summary>
+     * <summary>TELEGRAM</summary>
      * 
      * <ul>
-     * <li><p><code>text</code>: A text message.</p>
+     * <li><p>text: text message.</p>
      * </li>
-     * <li><p><code>image</code>: An image message.</p>
+     * <li><p>image: image message.</p>
      * </li>
-     * <li><p><code>video</code>: A video message.</p>
+     * <li><p>video: video message.</p>
      * </li>
-     * <li><p><code>audio</code>: An audio message.</p>
+     * <li><p>audio: audio message.</p>
      * </li>
-     * <li><p><code>document</code>: A document message.</p>
+     * <li><p>document: document message.</p>
      * </li>
-     * <li><p><code>location</code>: A location message.</p>
+     * <li><p>location: location message.</p>
      * </li>
-     * <li><p><code>gif</code>: An animated GIF message.</p>
+     * <li><p>gif: animated GIF message.</p>
      * </li>
-     * <li><p><code>sticker</code>: A sticker message.</p>
+     * <li><p>sticker: sticker message.</p>
      * </li>
      * </ul>
      * </details>
@@ -424,7 +341,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>An array of custom data strings that are sent to your webhook when a user clicks a corresponding button.</p>
+     * <p>The collection of button trigger messages.</p>
      * 
      * <strong>example:</strong>
      * <p>payloadtext1,payloadtext2,payloadtext3</p>
@@ -433,7 +350,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String payloadShrink;
 
     /**
-     * <p>Product information that you have uploaded to Meta. This parameter applies to WhatsApp channels only.</p>
+     * <p>The product information. This parameter applies only to the WhatsApp channel type and refers to the product information you uploaded on Meta.</p>
      */
     @NameInMap("ProductAction")
     public String productActionShrink;
@@ -441,9 +358,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The recipient type. Valid values:</p>
      * <ul>
-     * <li><p><code>individual</code>: A single recipient.</p>
+     * <li><p>individual: an individual.</p>
      * </li>
-     * <li><p><code>group</code>: A group.</p>
+     * <li><p>group: a group.</p>
      * </li>
      * </ul>
      * 
@@ -460,7 +377,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A custom tag for the Viber message.</p>
+     * <p>The tag information. Custom tag information for Viber message delivery.</p>
      * 
      * <strong>example:</strong>
      * <p>tag</p>
@@ -469,7 +386,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>A custom task ID.</p>
+     * <p>The custom task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10000****</p>
@@ -478,7 +395,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The message template code. You can find the code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
+     * <p>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Template Design</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>1119***************</p>
@@ -487,7 +404,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The template name. You can find the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
+     * <p>The template name. You can view the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Template Design</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -496,24 +413,18 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The parameters for the message template.</p>
+     * <p>The collection of template parameters.</p>
      */
     @NameInMap("TemplateParams")
     public String templateParamsShrink;
 
     /**
-     * <p>The recipient\&quot;s number or ID.</p>
+     * <p>The recipient number.</p>
      * <ul>
-     * <li><p>If <code>ChannelType</code> is <strong>whatsapp</strong>, this is the recipient\&quot;s phone number.</p>
-     * </li>
-     * <li><p>If <code>ChannelType</code> is <strong>messenger</strong>, this is a Page-Scoped User ID (PSID) generated when a user interacts with your Facebook Page.</p>
-     * </li>
-     * <li><p>If <code>ChannelType</code> is <strong>instagram</strong>, this is an Instagram-Scoped User ID (IGSID) generated when a user interacts with your Instagram business or creator account.</p>
-     * </li>
-     * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <ul>
-     * <li>If <code>ChannelType</code> is <strong>viber</strong>, this is the recipient\&quot;s phone number.</li>
+     * <li>If ChannelType is set to <strong>whatsapp</strong>, this is the phone number of the message recipient.</li>
+     * <li>If ChannelType is set to <strong>messenger</strong>, this is the Page-Scoped User ID generated when the user interacts with the Facebook page.</li>
+     * <li>If ChannelType is set to <strong>instagram</strong>, this is the Instagram User ID generated when the user interacts with the Instagram business or creator account.
+     * &lt;props=&quot;intl&quot;&gt;- If ChannelType is set to <strong>viber</strong>, this is the phone number of the message recipient.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -526,7 +437,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The token type.</p>
      * <blockquote>
-     * <p>This parameter is for internal testing, is not generally available, and can be ignored.</p>
+     * <p>This parameter is a test parameter that is not fully available. Ignore this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -536,7 +447,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String tokenType;
 
     /**
-     * <p>Custom tracking data for a Viber message. This parameter is available only on the International Site and can be ignored if you are using the China site.</p>
+     * <p>The custom tracking data passed in for Viber message types. This parameter is for the international site. China site users can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Tracking Data</p>
@@ -545,7 +456,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String trackingData;
 
     /**
-     * <p>The time-to-live (TTL) for a Viber message. This parameter is available only on the International Site and can be ignored if you are using the China site.&lt;props=&quot;intl&quot;&gt; Unit: seconds. The value must be between 30 and 1209600.</p>
+     * <p>The timeout period for Viber message delivery. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -556,15 +467,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
      * <p>The message type. Valid values:</p>
      * <ul>
-     * <li><p><code>template</code>: A message template approved in the console. You can send this type of message at any time.</p>
+     * <li><p>template: a message template that has been approved in the console. This type of message can be sent at any time.</p>
      * </li>
-     * <li><p><code>message</code>: A message of any format. You can send this type of message only within 24 hours of receiving the last message from a user.</p>
+     * <li><p>message: a message in any format. This type of message can be sent only within 24 hours after the last message is received from the user.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: If Type is set to template, you must specify TemplateCode. If Type is set to message, you must specify MessageType.</p>
      * </blockquote>
-     * <p>If you set <code>Type</code> to <code>template</code>, you must set the <code>TemplateCode</code> parameter. If you set <code>Type</code> to <code>message</code>, you must set the <code>MessageType</code> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

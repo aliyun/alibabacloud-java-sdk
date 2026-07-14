@@ -5,18 +5,40 @@ import com.aliyun.tea.*;
 
 public class CreateChatFlowShrinkRequest extends TeaModel {
     /**
+     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>Business extension information. The default value is an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The trigger type for the flow. Valid values:</p>
+     * <ul>
+     * <li><p>TriggeredManually</p>
+     * </li>
+     * <li><p>TriggeredByWhatsApp</p>
+     * </li>
+     * <li><p>TriggeredByMessenger</p>
+     * </li>
+     * <li><p>TriggeredByInstagram</p>
+     * </li>
+     * <li><p>TriggeredByViber</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>TriggeredByWhatsApp</p>
      */
     @NameInMap("FlowTriggerType")
     public String flowTriggerType;
@@ -25,8 +47,10 @@ public class CreateChatFlowShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks for the flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>通过API触发下发验证模板</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -38,8 +62,10 @@ public class CreateChatFlowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The title of the flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>WhatsApp自动回复</p>
      */
     @NameInMap("Title")
     public String title;

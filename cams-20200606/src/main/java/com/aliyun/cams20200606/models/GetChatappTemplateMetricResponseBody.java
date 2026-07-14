@@ -14,7 +14,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request. Valid values:</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
      * <li><p>OK: The request was successful.</p>
      * </li>
@@ -119,12 +119,9 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         /**
          * <p>The button type. Valid values:</p>
          * <ul>
-         * <li><p>phone_number_button: The call button.</p>
-         * </li>
-         * <li><p>url_button: The URL button.</p>
-         * </li>
-         * <li><p>quick_reply_button: The auto-reply button.</p>
-         * </li>
+         * <li>phone_number_button: a phone call button.</li>
+         * <li>url_button: a URL button.</li>
+         * <li>quick_relpy_button: a quick reply button.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +163,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     public static class GetChatappTemplateMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The statistics about button clicks.</p>
+         * <p>The list of button click statistics.</p>
          */
         @NameInMap("Cliented")
         public java.util.List<GetChatappTemplateMetricResponseBodyDataCliented> cliented;
@@ -181,7 +178,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         public Integer deliveredCount;
 
         /**
-         * <p>The end time for metric collection. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The end time of the metric collection period. This value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1668138331485</p>
@@ -190,7 +187,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         public Long end;
 
         /**
-         * <p>The language of the template.</p>
+         * <p>The template language.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -217,7 +214,7 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
         public Integer sentCount;
 
         /**
-         * <p>The start time for metric collection. This is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The start time of the metric collection period. This value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1673919240001</p>

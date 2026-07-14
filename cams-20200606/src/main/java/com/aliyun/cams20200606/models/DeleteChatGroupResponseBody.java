@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatGroupResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The access denial details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class DeleteChatGroupResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The request status code. Valid values:</p>
+     * <p>The response code. Valid values:</p>
      * <ul>
      * <li><p>OK: The request was successful.</p>
      * </li>
-     * <li><p>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -58,10 +58,8 @@ public class DeleteChatGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -16,7 +16,7 @@ public class GetDownloadExcelListShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>aa</p>
      */
     @NameInMap("Condition")
     public String condition;

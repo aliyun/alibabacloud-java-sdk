@@ -15,12 +15,12 @@ public class DeleteChatGroupRequest extends TeaModel {
     public String businessNumber;
 
     /**
-     * <p>The type. Valid value:</p>
+     * <p>The channel type. Valid values:</p>
      * <ul>
      * <li><strong>WHATSAPP</strong></li>
      * </ul>
      * <blockquote>
-     * <p>Only the WhatsApp channel is supported.</p>
+     * <p>Only the WhatsApp channel type is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,7 @@ public class DeleteChatGroupRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
-     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+     * <p>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

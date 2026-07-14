@@ -4,11 +4,17 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowResponseBody extends TeaModel {
+    /**
+     * <p>The details of the permission verification failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>A value of OK indicates that the request was successful.</p>
+     * <p>The result. OK indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -17,7 +23,7 @@ public class DeleteFlowResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error description.</p>
      * 
      * <strong>example:</strong>
      * <p>无</p>

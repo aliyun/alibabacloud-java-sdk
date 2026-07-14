@@ -8,7 +8,7 @@ public class RemoveContactByIdRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>3456456346**</p>
      */
     @NameInMap("ContactId")
     public String contactId;
@@ -17,7 +17,7 @@ public class RemoveContactByIdRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>46546546546**</p>
      */
     @NameInMap("GroupId")
     public String groupId;

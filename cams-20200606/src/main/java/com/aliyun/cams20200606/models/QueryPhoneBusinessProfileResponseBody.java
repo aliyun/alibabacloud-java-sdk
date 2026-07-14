@@ -14,9 +14,9 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>OK indicates that the request is successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -29,7 +29,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryPhoneBusinessProfileResponseBodyData data;
@@ -53,12 +53,10 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
 
     public static class QueryPhoneBusinessProfileResponseBodyData extends TeaModel {
         /**
-         * <p>The business profile.</p>
+         * <p>The about information.</p>
          * 
          * <strong>example:</strong>
          * <p>business profile</p>
@@ -158,7 +156,7 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The profile picture.</p>
+         * <p>The profile picture URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.img">https://example.img</a></p>

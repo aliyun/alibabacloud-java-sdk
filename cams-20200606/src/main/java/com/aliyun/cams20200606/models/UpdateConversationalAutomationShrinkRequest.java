@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateConversationalAutomationShrinkRequest extends TeaModel {
     /**
-     * <p>The commands.</p>
+     * <p>The list of commands.</p>
      */
     @NameInMap("Commands")
     public String commandsShrink;
 
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</p>
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class UpdateConversationalAutomationShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>Specifies whether to enable the welcoming message.</p>
+     * <p>Specifies whether to enable the welcome message.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +33,7 @@ public class UpdateConversationalAutomationShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The phone number of the enterprise.</p>
+     * <p>The business phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdateConversationalAutomationShrinkRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>The opening remarks.</p>
+     * <p>The list of conversation starters.</p>
      */
     @NameInMap("Prompts")
     public String promptsShrink;

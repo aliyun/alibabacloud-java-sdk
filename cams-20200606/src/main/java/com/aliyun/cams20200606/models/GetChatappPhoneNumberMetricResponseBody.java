@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request. Valid values:</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
      * <li><p>OK: The request was successful.</p>
      * </li>
-     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetChatappPhoneNumberMetricResponseBodyData> data;
@@ -108,7 +108,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public Integer deliveredCount;
 
         /**
-         * <p>The end time of metric collection. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the metric collection period. This value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1667196043904</p>
@@ -117,7 +117,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public Long end;
 
         /**
-         * <p>The granularity of the metrics.</p>
+         * <p>The metric granularity.</p>
          * 
          * <strong>example:</strong>
          * <p>DAILY</p>
@@ -144,7 +144,7 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
         public Integer sentCount;
 
         /**
-         * <p>The start time of metric collection. This is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the metric collection period. This value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1669619491000</p>

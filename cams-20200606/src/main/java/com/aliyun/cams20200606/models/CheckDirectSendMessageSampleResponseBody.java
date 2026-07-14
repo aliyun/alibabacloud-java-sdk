@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,9 +14,9 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p><code>OK</code> indicates that the request was successful.</p>
+     * <li><p>A value of OK indicates that the request is successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</p>
      * </li>
@@ -29,7 +29,7 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CheckDirectSendMessageSampleResponseBodyData data;
@@ -44,7 +44,7 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Use this ID to trace logs and troubleshoot issues.</p>
+     * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -53,11 +53,11 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The request failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 
@@ -122,11 +122,11 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
 
     public static class CheckDirectSendMessageSampleResponseBodyData extends TeaModel {
         /**
-         * <p>The category of the WhatsApp template. Valid values:</p>
+         * <p>The WhatsApp template category. Valid values:</p>
          * <ul>
-         * <li><p><strong>UTILITY</strong>: A template related to a specific, agreed-upon transaction.</p>
+         * <li><p><strong>UTILITY</strong>: transaction-related.</p>
          * </li>
-         * <li><p><strong>MARKETING</strong>: A template for promotional or marketing purposes.</p>
+         * <li><p><strong>MARKETING</strong>: marketing template.</p>
          * </li>
          * </ul>
          * 
@@ -137,11 +137,11 @@ public class CheckDirectSendMessageSampleResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>Whether the validation was successful. Valid values:</p>
+         * <p>Indicates whether the operation is successful. Valid values:</p>
          * <ul>
-         * <li><p>true: The validation succeeded.</p>
+         * <li><p>true: Successful.</p>
          * </li>
-         * <li><p>false: The validation failed.</p>
+         * <li><p>false: Failed.</p>
          * </li>
          * </ul>
          * 

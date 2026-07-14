@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
     /**
+     * <p>Specifies whether sending is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
     public Boolean allowSend;
 
     /**
+     * <p>Specifies whether to block sending after the Utility template category is changed.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,19 +23,21 @@ public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
     public Boolean categoryChangePaused;
 
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-idk***</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>zh_CN</p>
      */
     @NameInMap("Language")
     public String language;
@@ -46,19 +52,24 @@ public class ModifyChatappTemplatePropertiesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The template code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>929938***</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
+     * <p>The templatetype.</p>
+     * <ul>
+     * <li><strong>WHATSAPP</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

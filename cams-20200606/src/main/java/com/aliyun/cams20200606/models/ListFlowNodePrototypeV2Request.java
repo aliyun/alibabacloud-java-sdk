@@ -5,24 +5,39 @@ import com.aliyun.tea.*;
 
 public class ListFlowNodePrototypeV2Request extends TeaModel {
     /**
+     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
     /**
+     * <p>The code for the component group. Valid values:</p>
+     * <ul>
+     * <li><p>Messaging: Message components.</p>
+     * </li>
+     * <li><p>Core: Core components.</p>
+     * </li>
+     * <li><p>Intelligence: Intelligence components.</p>
+     * </li>
+     * <li><p>Contact: Contact management components.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>Core</p>
      */
     @NameInMap("GroupCode")
     public String groupCode;
 
     /**
+     * <p>The search keyword. This parameter is used to perform a fuzzy query by flow component name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>WhatsApp</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -31,19 +46,21 @@ public class ListFlowNodePrototypeV2Request extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>6</p>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>7</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

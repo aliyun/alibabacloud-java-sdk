@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMarketingFlowShrinkRequest extends TeaModel {
     /**
+     * <p>The campaign code. You can use the system code or modify it to use a custom code.</p>
+     * 
      * <strong>example:</strong>
      * <p>rewrwerw</p>
      */
@@ -12,6 +14,8 @@ public class ListMarketingFlowShrinkRequest extends TeaModel {
     public String activityCode;
 
     /**
+     * <p>The name of the node task instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>werewew</p>
      */
@@ -19,6 +23,8 @@ public class ListMarketingFlowShrinkRequest extends TeaModel {
     public String activityName;
 
     /**
+     * <p>The campaign status.</p>
+     * 
      * <strong>example:</strong>
      * <p>sucess</p>
      */
@@ -26,12 +32,20 @@ public class ListMarketingFlowShrinkRequest extends TeaModel {
     public String activityStatus;
 
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: &quot;{}&quot;.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
@@ -39,20 +53,26 @@ public class ListMarketingFlowShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public String pageIndex;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
+     * <p>The ID of the associated flow.</p>
+     * 
      * <strong>example:</strong>
      * <p>asdfsdfdsfs</p>
      */
@@ -60,6 +80,8 @@ public class ListMarketingFlowShrinkRequest extends TeaModel {
     public String relatedFlowCode;
 
     /**
+     * <p>The ID of the associated group.</p>
+     * 
      * <strong>example:</strong>
      * <p>68</p>
      */

@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeleteFlowRequest extends TeaModel {
     /**
+     * <p>The SpaceId of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-awlkj23a09jd</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>346699123</p>
      */
     @NameInMap("FlowId")
     public String flowId;

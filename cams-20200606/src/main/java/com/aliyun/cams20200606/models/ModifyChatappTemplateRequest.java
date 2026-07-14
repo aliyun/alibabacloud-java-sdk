@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateRequest extends TeaModel {
     /**
-     * <p>The templatetype is immutable.</p>
+     * <p>The templatetype cannot be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -13,13 +13,19 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>Specifies whether to pause sending when a Utility template is changed to Marketing type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("CategoryChangePaused")
     public Boolean categoryChangePaused;
 
     /**
-     * <p>A list of message template components.</p>
+     * <p>The list of message template components.</p>
      * <blockquote>
-     * <p>When Category is AUTHENTICATION, Components cannot contain a node with Type set to HEADER. If Type is BODY or FOOTER, the Text content is empty and is automatically generated.</p>
+     * <p>When Category is set to AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is set to BODY or FOOTER and the Text content is empty, the content is automatically generated.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -27,7 +33,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public java.util.List<ModifyChatappTemplateRequestComponents> components;
 
     /**
-     * <p>The Space ID of the ISV sub-customer, or the instance ID of a direct customer.</p>
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -36,9 +42,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business Account (WABA) ID of the independent software vendor (ISV) customer.</p>
+     * <p>The ISV customer WabaId.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
+     * <p>Deprecated parameter. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,13 +55,13 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The template example.</p>
+     * <p>The examples for creating the template.</p>
      */
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
     /**
-     * <p>The ISV verification code. This code is used to verify that the RAM user is authorized by the ISV.</p>
+     * <p>The ISV verification code used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>ksiekdki39ksks93939</p>
@@ -64,7 +70,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The template language. For a list of language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,12 +80,10 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The time-to-live (TTL) of the template message in seconds.</p>
+     * <p>The validity period for sending template messages in WhatsApp.</p>
      * <ul>
-     * <li><p>For AUTHENTICATION templates, the value ranges from 30 to 900.</p>
-     * </li>
-     * <li><p>For UTILITY templates, the value ranges from 30 to 43,200.</p>
-     * </li>
+     * <li>AUTHENTICATION: valid values are 30 to 900. </li>
+     * <li>UTILITY: valid values are 30 to 43200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +111,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The template type.</p>
+     * <p>The templatetype.</p>
      * <ul>
      * <li><strong>WHATSAPP</strong></li>
      * </ul>
@@ -222,7 +226,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
 
     public static class ModifyChatappTemplateRequestComponentsButtonsSupportedApps extends TeaModel {
         /**
-         * <p>Required for WhatsApp templates when Category is AUTHENTICATION and Button Type is ONE_TAP or ZERO_TAP. This is the package name of the application launched by WhatsApp.</p>
+         * <p>Required when the WhatsApp template Category is AUTHENTICATION and Button Type is ONE_TAP or ZERO_TAP. The package name for WhatsApp to launch the application.</p>
          * 
          * <strong>example:</strong>
          * <p>com.example.myapplication</p>
@@ -231,7 +235,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String packageName;
 
         /**
-         * <p>Required for WhatsApp templates when Category is AUTHENTICATION and Button Type is ONE_TAP or ZERO_TAP. This is the signature hash of the application launched by WhatsApp.</p>
+         * <p>Required when the WhatsApp template Category is AUTHENTICATION and Button Type is ONE_TAP or ZERO_TAP. The signature hash value for WhatsApp to launch the application.</p>
          * 
          * <strong>example:</strong>
          * <p>fk39kd93ks9</p>
@@ -264,7 +268,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
 
     public static class ModifyChatappTemplateRequestComponentsButtons extends TeaModel {
         /**
-         * <p>Required for WhatsApp templates when Category is AUTHENTICATION and Button Type is ONE_TAP or ZERO_TAP. This is the button text for the WhatsApp Autofill action.</p>
+         * <p>Required when the WhatsApp template Category is AUTHENTICATION and Button Type is ONE_TAP or ZERO_TAP. The button text for the WhatsApp autofill operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Autofill</p>
@@ -273,7 +277,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String autofillText;
 
         /**
-         * <p>The coupon code. It supports only letters and numbers. You can pass a variable, such as \<code>$(couponCode)\\</code>, and provide the actual coupon code at the time of sending.</p>
+         * <p>The coupon code value. Only letters and numbers are supported. You can pass in a variable such as $(couponCode) and provide the actual coupon code when sending the message.</p>
          * 
          * <strong>example:</strong>
          * <p>120293</p>
@@ -282,11 +286,11 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String couponCode;
 
         /**
-         * <p>The Flow data event type. Valid values:</p>
+         * <p>The flow data event type. Valid values:</p>
          * <ul>
-         * <li><p>DATA_EXCHANGE: Data exchange.</p>
+         * <li><p>DATA_EXCHANGE: data exchange.</p>
          * </li>
-         * <li><p>NAVIGATE: Navigation.</p>
+         * <li><p>NAVIGATE: navigation.</p>
          * </li>
          * </ul>
          * 
@@ -297,7 +301,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String flowAction;
 
         /**
-         * <p>The Flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>664597077870605</p>
@@ -306,7 +310,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String flowId;
 
         /**
-         * <p>For WhatsApp templates, this is valid when Category is Marketing and Button type is QUICK_REPLY. It indicates that the button is a marketing opt-out button. If a customer clicks this button and a sending control action is configured in ChatApp, subsequent marketing messages are not sent to the customer.</p>
+         * <p>Valid when the WhatsApp template Category is Marketing and Button type is QUICK_REPLY. Indicates the button is a marketing opt-out button. If the customer clicks this button and the send control operation is configured in ChatApp, subsequent Marketing messages will not be sent to the customer.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -315,7 +319,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public Boolean isOptOut;
 
         /**
-         * <p>The screen to navigate to. This is required when FlowAction is NAVIGATE.</p>
+         * <p>The navigate screen. Required when FlowAction is set to NAVIGATE.</p>
          * 
          * <strong>example:</strong>
          * <p>DETAILS</p>
@@ -324,7 +328,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String navigateScreen;
 
         /**
-         * <p>Use the properties under SupportedApps.</p>
+         * <p>Use the properties under SupportedApps instead.</p>
          * 
          * <strong>example:</strong>
          * <p>com.demo</p>
@@ -343,7 +347,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Use the properties under SupportedApps.</p>
+         * <p>Use the properties under SupportedApps instead.</p>
          * 
          * <strong>example:</strong>
          * <p>29dkeke</p>
@@ -353,7 +357,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String signatureHash;
 
         /**
-         * <p>A list of supported apps.</p>
+         * <p>The list of supported applications.</p>
          */
         @NameInMap("SupportedApps")
         public java.util.List<ModifyChatappTemplateRequestComponentsButtonsSupportedApps> supportedApps;
@@ -370,28 +374,28 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The button type.</p>
          * <ul>
-         * <li><p><strong>PHONE_NUMBER</strong>: Call button</p>
+         * <li><p><strong>PHONE_NUMBER</strong>: phone call button</p>
          * </li>
-         * <li><p><strong>URL</strong>: URL button</p>
+         * <li><p><strong>URL</strong>: web button</p>
          * </li>
-         * <li><p><strong>QUICK_REPLY</strong>: Quick reply button</p>
+         * <li><p><strong>QUICK_REPLY</strong>: quick reply button</p>
          * </li>
-         * <li><p><strong>COPY_CODE</strong>: Copy verification code or coupon code</p>
+         * <li><p><strong>COPY_CODE</strong>: copy verification code or coupon code</p>
          * </li>
-         * <li><p><strong>ONE_TAP</strong>: Backfill button for AUTHENTICATION templates</p>
+         * <li><p><strong>ONE_TAP</strong>: autofill button for AUTHENTICATION templates</p>
          * </li>
-         * <li><p><strong>ZERO_TAP</strong>: Backfill button for AUTHENTICATION templates</p>
+         * <li><p><strong>ZERO_TAP</strong>: autofill button for AUTHENTICATION templates</p>
          * </li>
-         * <li><p><strong>MPM</strong>: Multi-product message</p>
+         * <li><p><strong>MPM</strong>: multi-product catalog</p>
          * </li>
-         * <li><p><strong>CATALOG</strong>: Catalog</p>
+         * <li><p><strong>CATALOG</strong>: catalog</p>
          * </li>
-         * <li><p><strong>FLOW</strong>: Open WhatsApp flow</p>
+         * <li><p><strong>FLOW</strong>: open a WhatsApp flow</p>
          * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>For WhatsApp templates where Category is AUTHENTICATION, only one button is allowed, and its type must be COPY_CODE or ONE_TAP. If the type is COPY_CODE, Text is required. If the type is ONE_TAP, the Text (the name of the copy code button, displayed when the target application is not installed), SignatureHash, PackageName, and AutofillText properties are required.</li>
+         * <li>For WhatsApp templates with Category set to AUTHENTICATION, only one button is allowed, and the type can only be COPY_CODE or ONE_TAP. When the type is COPY_CODE, Text is required. When the type is ONE_TAP, Text (displayed when the target application is not installed on the device, indicating the name of the copy verification code button) is required, and SignatureHash, PackageName, and AutofillText are required.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -414,9 +418,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The URL type.</p>
          * <ul>
-         * <li><p><strong>static</strong></p>
+         * <li><p><strong>static</strong>: static</p>
          * </li>
-         * <li><p><strong>dynamic</strong></p>
+         * <li><p><strong>dynamic</strong>: dynamic</p>
          * </li>
          * </ul>
          * 
@@ -569,11 +573,11 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The button type.</p>
          * <ul>
-         * <li><p><strong>PHONE_NUMBER</strong>: Call button</p>
+         * <li><p><strong>PHONE_NUMBER</strong>: phone call button</p>
          * </li>
-         * <li><p><strong>URL</strong>: URL button</p>
+         * <li><p><strong>URL</strong>: web button</p>
          * </li>
-         * <li><p><strong>QUICK_REPLY</strong>: Quick reply button</p>
+         * <li><p><strong>QUICK_REPLY</strong>: quick reply button</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -596,9 +600,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The URL type.</p>
          * <ul>
-         * <li><p><strong>static</strong></p>
+         * <li><p><strong>static</strong>: static</p>
          * </li>
-         * <li><p><strong>dynamic</strong></p>
+         * <li><p><strong>dynamic</strong>: dynamic</p>
          * </li>
          * </ul>
          * 
@@ -657,17 +661,17 @@ public class ModifyChatappTemplateRequest extends TeaModel {
 
     public static class ModifyChatappTemplateRequestComponentsCardsCardComponents extends TeaModel {
         /**
-         * <p>A list of buttons. This applies only to the BUTTONS component. Each Carousel card can have a maximum of two buttons.</p>
+         * <p>The button list. This parameter applies only to the BUTTONS component. Each Carousel card can have a maximum of two buttons.</p>
          */
         @NameInMap("Buttons")
         public java.util.List<ModifyChatappTemplateRequestComponentsCardsCardComponentsButtons> buttons;
 
         /**
-         * <p>The media resource type. This is valid when Type is HEADER.</p>
+         * <p>The media resource type. Valid when Type is set to HEADER.</p>
          * <ul>
-         * <li><p><strong>IMAGE</strong></p>
+         * <li><p><strong>IMAGE</strong>: image </p>
          * </li>
-         * <li><p><strong>VIDEO</strong></p>
+         * <li><p><strong>VIDEO</strong>: video</p>
          * </li>
          * </ul>
          * 
@@ -678,7 +682,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The content of the BODY in the Carousel card.</p>
+         * <p>The BODY content in the Carousel card.</p>
          * 
          * <strong>example:</strong>
          * <p>Who is the very powerful team</p>
@@ -705,7 +709,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL of the media asset.</p>
+         * <p>The material path.</p>
          */
         @NameInMap("Url")
         public String url;
@@ -759,7 +763,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
 
     public static class ModifyChatappTemplateRequestComponentsCards extends TeaModel {
         /**
-         * <p>A list of controls in the Carousel card.</p>
+         * <p>The list of components in the Carousel card.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("CardComponents")
@@ -782,7 +786,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
 
     public static class ModifyChatappTemplateRequestComponents extends TeaModel {
         /**
-         * <p>For WhatsApp templates, this is valid when Category is AUTHENTICATION and Component Type is Body. It indicates that a message is displayed above the body, advising users not to share the verification code.</p>
+         * <p>Valid for WhatsApp templates when Category is AUTHENTICATION and Component Type is Body. Displays a message in the Body section advising not to share the verification code with others.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -791,18 +795,14 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public Boolean addSecretRecommendation;
 
         /**
-         * <p>A list of buttons. This applies only to the <code>BUTTONS</code> component.</p>
+         * <p>The button list. This parameter applies only to the <strong>BUTTONS</strong> component.</p>
          * <blockquote>
-         * <p>Number of buttons for WhatsApp:</p>
+         * <p>WhatsApp button limits:</p>
          * <ul>
-         * <li><p>For MARKETING or UTILITY templates, WhatsApp allows a maximum of 10 buttons.</p>
-         * </li>
-         * <li><p>Only one button of the PHONE_NUMBER type is allowed.</p>
-         * </li>
-         * <li><p>A maximum of two buttons of the URL type are allowed.</p>
-         * </li>
-         * <li><p>QUICK_REPLY buttons cannot be mixed with PHONE_NUMBER or URL buttons.</p>
-         * </li>
+         * <li>For WhatsApp templates with Category set to MARKETING or UTILITY, a maximum of 10 buttons are allowed.</li>
+         * <li>Only one PHONE_NUMBER button is allowed.</li>
+         * <li>A maximum of two URL buttons are allowed.</li>
+         * <li>QUICK_REPLY buttons cannot be mixed in random order with PHONE_NUMBER or URL buttons.</li>
          * </ul>
          * </blockquote>
          */
@@ -812,7 +812,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The description.</p>
          * <blockquote>
-         * <p>You can add a description when Type is HEADER and Format is IMAGE, <code>DOCUMENT</code>, or <code>VIDEO</code>.</p>
+         * <p>A description can be added when Type is set to <strong>HEADER</strong> and Format is set to <strong>IMAGE/DOCUMENT/VIDEO</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -822,13 +822,13 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String caption;
 
         /**
-         * <p>A list of cards for the Carousel template.</p>
+         * <p>The list of Carousel template cards.</p>
          */
         @NameInMap("Cards")
         public java.util.List<ModifyChatappTemplateRequestComponentsCards> cards;
 
         /**
-         * <p>The validity period of the verification code for a WhatsApp AUTHENTICATION template, in minutes. This is valid only for WhatsApp messages when Category is AUTHENTICATION and Component Type is Footer. This information is displayed in the footer.</p>
+         * <p>The validity period (in minutes) of the verification code in WhatsApp AUTHENTICATION templates. Valid only for WhatsApp messages when Category is AUTHENTICATION and Component Type is Footer. This information is displayed in the Footer section.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -837,7 +837,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public Integer codeExpirationMinutes;
 
         /**
-         * <p>This field is invalid.</p>
+         * <p>Invalid field.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -848,7 +848,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The file name.</p>
          * <blockquote>
-         * <p>Specify the file name when Type is HEADER and <code>Format</code> is <code>DOCUMENT</code>.</p>
+         * <p>A file name can be specified when Type is set to <strong>HEADER</strong> and Format is set to <strong>DOCUMENT</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -858,7 +858,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String fileName;
 
         /**
-         * <p>This field is invalid.</p>
+         * <p>Invalid field.</p>
          * 
          * <strong>example:</strong>
          * <p>docx</p>
@@ -869,13 +869,13 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         /**
          * <p>The media resource type.</p>
          * <ul>
-         * <li><p><strong>TEXT</strong>: Text</p>
+         * <li><p><strong>TEXT</strong>: text </p>
          * </li>
-         * <li><p><strong>IMAGE</strong>: Image</p>
+         * <li><p><strong>IMAGE</strong>: image </p>
          * </li>
-         * <li><p><strong>DOCUMENT</strong>: Document</p>
+         * <li><p><strong>DOCUMENT</strong>: document </p>
          * </li>
-         * <li><p><strong>VIDEO</strong>: Video</p>
+         * <li><p><strong>VIDEO</strong>: video</p>
          * </li>
          * </ul>
          * 
@@ -886,7 +886,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>Indicates whether the coupon code has an expiration time. Used when type is LIMITED_TIME_OFFER.</p>
+         * <p>Specifies whether the coupon code has an expiration time. Used when type is set to LIMITED_TIME_OFFER.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -895,9 +895,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public Boolean hasExpiration;
 
         /**
-         * <p>The text of the message.</p>
+         * <p>The text of the message to be sent.</p>
          * <blockquote>
-         * <p>If Category is AUTHENTICATION, this property is empty.</p>
+         * <p>When Category is set to AUTHENTICATION, this property value is empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -907,7 +907,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String text;
 
         /**
-         * <p>This field is invalid.</p>
+         * <p>Invalid field.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cdn.multiplymall.mobiapp.cloud/cloudcode/yc-165407506207478-165511576113195/20220905/ec5b9737-1507-4208-bb27-8da3958da961.jpg?x-oss-process=image/resize,w_100">https://cdn.multiplymall.mobiapp.cloud/cloudcode/yc-165407506207478-165511576113195/20220905/ec5b9737-1507-4208-bb27-8da3958da961.jpg?x-oss-process=image/resize,w_100</a></p>
@@ -916,7 +916,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String thumbUrl;
 
         /**
-         * <p>The component type:</p>
+         * <p>The component type.</p>
          * <ul>
          * <li><p><strong>BODY</strong></p>
          * </li>
@@ -933,7 +933,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>For WhatsApp templates, the <code>BODY</code> component cannot exceed 1,024 characters. The <code>HEADER</code> and <code>FOOTER</code> components cannot exceed 60 characters.</li>
+         * <li>For WhatsApp templates, the character length of the <strong>BODY</strong> component cannot exceed 1024 characters. The character length of the <strong>HEADER</strong> and <strong>FOOTER</strong> components cannot exceed 60 characters.</li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -945,7 +945,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL of the media asset.</p>
+         * <p>The material path.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://img.****.com/png_preview/00/10/24/1GygxVK3F4.jpg">https://img.****.com/png_preview/00/10/24/1GygxVK3F4.jpg</a></p>

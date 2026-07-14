@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatGroupInviteLinkRequest extends TeaModel {
     /**
-     * <p>The business number. Call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to obtain the business number.</p>
+     * <p>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,12 @@ public class DeleteChatGroupInviteLinkRequest extends TeaModel {
     public String businessNumber;
 
     /**
-     * <p>The channel type. Set this parameter to the following value:</p>
+     * <p>The channel type. Valid values:</p>
      * <ul>
-     * <li><strong>WHATSAPP</strong>.</li>
+     * <li><strong>WHATSAPP</strong></li>
      * </ul>
      * <blockquote>
-     * <p>Only the WhatsApp channel is supported.</p>
+     * <p>Only WhatsApp channel type messages are supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DeleteChatGroupInviteLinkRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The space ID or instance ID for an ISV\&quot;s sub-customer. This ID also serves as the channel ID. You can find this ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
+     * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DeleteChatGroupInviteLinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The group ID. Call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to obtain the group ID.</p>
+     * <p>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

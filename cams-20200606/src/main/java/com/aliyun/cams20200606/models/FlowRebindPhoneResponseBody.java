@@ -4,38 +4,66 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class FlowRebindPhoneResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation is successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Model")
     public Boolean model;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation is successful.</p>
+     * </li>
+     * <li><p>false: The operation failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

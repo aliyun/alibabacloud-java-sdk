@@ -9,7 +9,7 @@ public class SyncFlowRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-kei****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

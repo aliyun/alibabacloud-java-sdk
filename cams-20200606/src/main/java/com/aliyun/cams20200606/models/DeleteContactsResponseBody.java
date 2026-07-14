@@ -4,19 +4,23 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public String data;
@@ -30,7 +34,7 @@ public class DeleteContactsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>11111</p>
      */
     @NameInMap("RequestId")
     public String requestId;

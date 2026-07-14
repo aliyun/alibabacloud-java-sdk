@@ -18,7 +18,7 @@ public class GetGroupExistRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>aaa</p>
      */
     @NameInMap("GroupName")
     public String groupName;

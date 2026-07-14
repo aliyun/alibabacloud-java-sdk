@@ -5,52 +5,62 @@ import com.aliyun.tea.*;
 
 public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     /**
+     * <p>The code of the campaign to modify.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>115311507XXXX49888</p>
      */
     @NameInMap("ActivityCode")
     public String activityCode;
 
     /**
+     * <p>The campaign description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>活动描述</p>
      */
     @NameInMap("ActivityDesc")
     public String activityDesc;
 
     /**
+     * <p>The ID of the campaign to modify.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>674574575658675XX</p>
      */
     @NameInMap("ActivityId")
     public String activityId;
 
     /**
+     * <p>The campaign name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>test</p>
      */
     @NameInMap("ActivityName")
     public String activityName;
 
     /**
-     * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>The cron expression for timed scheduling.</p>
      */
     @NameInMap("CronExpression")
     public String cronExpression;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>2025-11-26 09:59:00</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
+     * <p>The execution method. Set this parameter to 1 (cron).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("ExecutionType")
     public String executionType;
@@ -59,32 +69,46 @@ public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Specifies whether to use custom pass-through parameters.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Y:传入自定义参数 N:不传参数</p>
      */
     @NameInMap("ParamFlag")
     public String paramFlag;
 
+    /**
+     * <p>The custom pass-through parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;testEmail&quot;:&quot;wy****<a href="mailto:999@alibaba-inc.com">999@alibaba-inc.com</a>&quot;}</p>
+     */
     @NameInMap("Params")
     public String paramsShrink;
 
     /**
+     * <p>The code of the associated flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>cf-kr3k31**mfeir8w</p>
      */
     @NameInMap("RelatedFlowCode")
     public String relatedFlowCode;
 
     /**
+     * <p>The name of the associated flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>testflow</p>
      */
     @NameInMap("RelatedFlowName")
     public String relatedFlowName;
 
     /**
+     * <p>The ID of the associated group.</p>
+     * 
      * <strong>example:</strong>
-     * <p>42</p>
+     * <p>114345654645XX</p>
      */
     @NameInMap("RelatedGroupId")
     public Long relatedGroupId;
@@ -96,8 +120,10 @@ public class UpdateMarketingFLowShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>2025-11-25 09:59:00</p>
      */
     @NameInMap("StartDate")
     public String startDate;

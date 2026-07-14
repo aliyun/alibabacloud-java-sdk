@@ -4,11 +4,17 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdatePhoneEncryptionPublicKeyResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -26,7 +32,7 @@ public class UpdatePhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>

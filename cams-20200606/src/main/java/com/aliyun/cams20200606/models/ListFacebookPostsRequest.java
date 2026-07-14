@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFacebookPostsRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,12 +4,16 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListInstagramPostsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,14 +23,14 @@ public class ListInstagramPostsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A***66411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -94,49 +98,49 @@ public class ListInstagramPostsResponseBody extends TeaModel {
     public static class ListInstagramPostsResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>2024-09-30T15:53:01+08:00</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p><a href="https://xxxxxxxx">https://xxxxxxxx</a></p>
          */
         @NameInMap("FullPicture")
         public String fullPicture;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>111</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>image</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p><a href="https://qjck.oss-cn-shanghai.aliyuncs.com/xcx/2025-08-29/0bfa1c8d-d35f-2dd5-e082-7b00***ee9.jpg?x-oss-process=image/resize,m_lfit,w_1200">https://qjck.oss-cn-shanghai.aliyuncs.com/xcx/2025-08-29/0bfa1c8d-d35f-2dd5-e082-7b00***ee9.jpg?x-oss-process=image/resize,m_lfit,w_1200</a></p>
          */
         @NameInMap("MediaUrl")
         public String mediaUrl;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p><a href="https://xxxxxxxx">https://xxxxxxxx</a></p>
          */
         @NameInMap("PermalinkUrl")
         public String permalinkUrl;

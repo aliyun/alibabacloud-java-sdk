@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class DeleteFlowVersionRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The flow version. Click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas page and view the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;

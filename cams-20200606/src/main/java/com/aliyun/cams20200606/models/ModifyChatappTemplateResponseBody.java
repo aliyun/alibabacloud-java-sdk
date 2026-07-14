@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,7 +16,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
     /**
      * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates a successful request.</p>
+     * <li><p>OK indicates the request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>

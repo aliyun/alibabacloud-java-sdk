@@ -4,12 +4,16 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListViberServiceMessageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,14 +23,14 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ddhjdn-dnjdnkdjknd**</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -94,7 +98,7 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
     public static class ListViberServiceMessageResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>测试</p>
          */
         @NameInMap("BusinessAccountName")
         public String businessAccountName;
@@ -107,7 +111,7 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>医疗服务</p>
          */
         @NameInMap("IndustryInvolved")
         public String industryInvolved;
@@ -120,14 +124,14 @@ public class ListViberServiceMessageResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>25644</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>stop</p>
          */
         @NameInMap("State")
         public String state;

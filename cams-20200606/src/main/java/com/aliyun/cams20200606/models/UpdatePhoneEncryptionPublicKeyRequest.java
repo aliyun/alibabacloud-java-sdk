@@ -5,17 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the
+     * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>
+     * page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-kei****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The public key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt+PMrYw4zUDEk+VeTrp0\n8LZaoVpiVFErX7iuoDjUs4F9vkxMQuIABjcXw\/swzTMEopLORQV28uqN\/2\/x9hjU\****\/Zwa\/Vk5Svp4\niVY4e22FsJCCWUEMvayO8Q+3UGq0eXXQ+8SlUWEMq1VaJ4pwCLsMnmgybA+VmJxi\nkwIDAQAB\n-----END PUBLIC KEY-----&quot;</p>
      */
     @NameInMap("EncryptionPublicKey")
     public String encryptionPublicKey;
@@ -24,10 +30,13 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number. You can view the phone number on the
+     * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Number Management</strong> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>86158********</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;

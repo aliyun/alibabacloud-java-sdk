@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CopyTemplateRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -12,6 +14,8 @@ public class CopyTemplateRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -28,15 +32,17 @@ public class CopyTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The template code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>12456</p>
      */
     @NameInMap("SceneTemplateCode")
     public String sceneTemplateCode;
 
     /**
+     * <p>The template name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

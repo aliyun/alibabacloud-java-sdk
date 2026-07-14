@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -96,11 +102,11 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         public String encryptionPublicKey;
 
         /**
-         * <p>The status of the public key. Valid values:</p>
+         * <p>The validity status of the public key. Valid values:</p>
          * <ul>
-         * <li><p>MISMATCH: The public key is invalid.</p>
+         * <li><p>MISMATCH: invalid.</p>
          * </li>
-         * <li><p>VALID: The public key is valid.</p>
+         * <li><p>VALID: valid.</p>
          * </li>
          * </ul>
          * 

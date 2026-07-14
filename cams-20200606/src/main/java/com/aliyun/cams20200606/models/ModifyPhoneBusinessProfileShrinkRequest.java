@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     /**
-     * <p>The business information.</p>
+     * <p>The about information.</p>
      * 
      * <strong>example:</strong>
      * <p>business profile</p>
@@ -23,7 +23,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
+     * <p>The space ID of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The description of the phone number.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -54,7 +54,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The mobile phone number.</p>
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     public String phoneNumber;
 
     /**
-     * <p>The URL of the profile picture.</p>
+     * <p>The profile picture URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://a.img">http://a.img</a></p>
@@ -79,10 +79,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The industry.</p>
-     * <blockquote>
-     * <p>Valid values: OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, and RESTAURANT.</p>
-     * </blockquote>
+     * <p>The industry vertical.</p>
      * 
      * <strong>example:</strong>
      * <p>OTHER</p>
@@ -91,7 +88,7 @@ public class ModifyPhoneBusinessProfileShrinkRequest extends TeaModel {
     public String vertical;
 
     /**
-     * <p>The URLs of the websites.</p>
+     * <p>The websites.</p>
      */
     @NameInMap("Websites")
     public String websitesShrink;

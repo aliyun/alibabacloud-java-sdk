@@ -5,35 +5,49 @@ import com.aliyun.tea.*;
 
 public class FlowRebindPhoneShrinkRequest extends TeaModel {
     /**
+     * <p>The message channel code, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-8c8*********</p>
      */
     @NameInMap("ChannelCode")
     public String channelCode;
 
     /**
+     * <p>The message channel type. Valid values:</p>
+     * <ul>
+     * <li><p>INSTAGRAM</p>
+     * </li>
+     * <li><p>WHATSAPP</p>
+     * </li>
+     * <li><p>MESSENGER</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
     /**
+     * <p>The flow code. You can view it on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to open the flow builder canvas and view the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
@@ -41,6 +55,9 @@ public class FlowRebindPhoneShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The list of phone numbers, PageIds, or AccountIds&lt;props=&quot;intl&quot;&gt;, or ServiceIds under the channel instance.</p>
+     */
     @NameInMap("PhoneNumbers")
     public String phoneNumbersShrink;
 
@@ -51,10 +68,17 @@ public class FlowRebindPhoneShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The WABA account ID, PageId, or AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</p>
+     * <ul>
+     * <li><p>If ChannelType is set to WHATSAPP, specify the WABA account ID. You can view the WABA account ID on the Channel Management &gt; Manage &gt; WABA Management page.</p>
+     * </li>
+     * <li><p>If ChannelType is not set to WHATSAPP, specify the PageId for MESSENGER, the AccountId for INSTAGRAM&lt;props=&quot;intl&quot;&gt;, or the ServiceId for VIBER.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1952************</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneWebhookResponseBody extends TeaModel {
     /**
-     * <p>Access denied for detailed information.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>无</p>
@@ -14,11 +14,11 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the call is successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Prompt message, there is a value when an exception is returned.</p>
+     * <p>The prompt message. This parameter is returned when an exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

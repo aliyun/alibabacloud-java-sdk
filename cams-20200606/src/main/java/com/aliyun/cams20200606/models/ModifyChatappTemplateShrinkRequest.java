@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The templatetype is immutable.</p>
+     * <p>The templatetype cannot be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -13,13 +13,19 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>Specifies whether to pause sending when a Utility template is changed to Marketing type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("CategoryChangePaused")
     public Boolean categoryChangePaused;
 
     /**
-     * <p>A list of message template components.</p>
+     * <p>The list of message template components.</p>
      * <blockquote>
-     * <p>When Category is AUTHENTICATION, Components cannot contain a node with Type set to HEADER. If Type is BODY or FOOTER, the Text content is empty and is automatically generated.</p>
+     * <p>When Category is set to AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is set to BODY or FOOTER and the Text content is empty, the content is automatically generated.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -27,7 +33,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String componentsShrink;
 
     /**
-     * <p>The Space ID of the ISV sub-customer, or the instance ID of a direct customer.</p>
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -36,9 +42,9 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business Account (WABA) ID of the independent software vendor (ISV) customer.</p>
+     * <p>The ISV customer WabaId.</p>
      * <blockquote>
-     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
+     * <p>Deprecated parameter. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,13 +55,13 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The template example.</p>
+     * <p>The examples for creating the template.</p>
      */
     @NameInMap("Example")
     public String exampleShrink;
 
     /**
-     * <p>The ISV verification code. This code is used to verify that the RAM user is authorized by the ISV.</p>
+     * <p>The ISV verification code used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>ksiekdki39ksks93939</p>
@@ -64,7 +70,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The template language. For a list of language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,12 +80,10 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The time-to-live (TTL) of the template message in seconds.</p>
+     * <p>The validity period for sending template messages in WhatsApp.</p>
      * <ul>
-     * <li><p>For AUTHENTICATION templates, the value ranges from 30 to 900.</p>
-     * </li>
-     * <li><p>For UTILITY templates, the value ranges from 30 to 43,200.</p>
-     * </li>
+     * <li>AUTHENTICATION: valid values are 30 to 900. </li>
+     * <li>UTILITY: valid values are 30 to 43200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +111,7 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The template type.</p>
+     * <p>The templatetype.</p>
      * <ul>
      * <li><strong>WHATSAPP</strong></li>
      * </ul>

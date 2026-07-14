@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappTemplateMetricRequest extends TeaModel {
     /**
-     * <p>The Space ID or instance ID of the ISV sub-customer. This is the channel ID. View the channel ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+     * <p>The space ID or instance ID of the ISV sub-customer, which is also the channel ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> interface.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-************</p>
@@ -14,7 +14,7 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The end of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end time of the query. This value is a timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,8 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     /**
      * <p>The metric granularity. Valid values:</p>
      * <ul>
-     * <li><p>DAILY: Metrics are collected by day.</p>
-     * </li>
-     * <li><p>HALF_HOUR: Metrics are collected every half an hour.</p>
-     * </li>
+     * <li>DAILY: collects metrics on a daily basis.</li>
+     * <li>HALF_HOUR: collects metrics every half hour.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +37,7 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikd****</p>
@@ -48,7 +46,7 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language of the template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The template language. For more languages, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -66,7 +64,7 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The start time of the query. This value is a timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -76,7 +74,7 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public Long start;
 
     /**
-     * <p>The template code. View the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
+     * <p>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>Template Design</strong> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,12 +84,12 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>The template type. Valid value:</p>
+     * <p>The templatetype. Valid values:</p>
      * <ul>
      * <li>WHATSAPP</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not pass this parameter, the default value WHATSAPP is used.</p>
+     * <p>If this parameter is not specified, the default value is WHATSAPP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

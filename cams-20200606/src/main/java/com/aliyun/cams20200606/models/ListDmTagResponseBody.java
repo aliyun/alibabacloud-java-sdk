@@ -4,12 +4,16 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListDmTagResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,14 +23,14 @@ public class ListDmTagResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>hgfh77-gfh55***</p>
      */
     @NameInMap("RequestId")
     public String requestId;

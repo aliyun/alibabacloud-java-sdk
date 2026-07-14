@@ -5,19 +5,24 @@ import com.aliyun.tea.*;
 
 public class CreateFlowShrinkRequest extends TeaModel {
     /**
+     * <p>The categories.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Categories")
     public String categoriesShrink;
 
     /**
+     * <p>The space ID of the ISV sub-customer.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>cams-alk21lk3j2k3lj</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The URL of the WA Flow Endpoint</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.***.com">http://www.***.com</a></p>
      */
@@ -25,10 +30,11 @@ public class CreateFlowShrinkRequest extends TeaModel {
     public String endpointUri;
 
     /**
+     * <p>The name of the Flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>flow-001</p>
      */
     @NameInMap("FlowName")
     public String flowName;

@@ -4,34 +4,63 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListPageAdAccountResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, refer to <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListPageAdAccountResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>39**</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +122,8 @@ public class ListPageAdAccountResponseBody extends TeaModel {
 
     public static class ListPageAdAccountResponseBodyData extends TeaModel {
         /**
+         * <p>The Meta ad account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>29393****</p>
          */
@@ -100,6 +131,8 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         public String adAccountId;
 
         /**
+         * <p>The name of the ad account.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
          */
@@ -107,6 +140,8 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         public String adAccountName;
 
         /**
+         * <p>The currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>USD</p>
          */
@@ -114,6 +149,8 @@ public class ListPageAdAccountResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The PageId of Messenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>2030***</p>
          */

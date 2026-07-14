@@ -4,6 +4,10 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryMMLActiveResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -23,7 +27,7 @@ public class QueryMMLActiveResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;

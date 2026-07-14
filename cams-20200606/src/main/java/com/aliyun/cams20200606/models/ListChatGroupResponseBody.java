@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChatGroupResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denied error.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,9 +14,9 @@ public class ListChatGroupResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code. Valid values:</p>
+     * <p>The request status code. Valid values:</p>
      * <ul>
-     * <li><p><code>OK</code>: The request succeeded.</p>
+     * <li><p>OK: The request was successful.</p>
      * </li>
      * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
@@ -35,7 +35,7 @@ public class ListChatGroupResponseBody extends TeaModel {
     public ListChatGroupResponseBodyData data;
 
     /**
-     * <p>The response message. This parameter is returned only when an error occurs.</p>
+     * <p>The prompt message. This parameter has a value when an exception is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -53,12 +53,10 @@ public class ListChatGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class ListChatGroupResponseBody extends TeaModel {
 
     public static class ListChatGroupResponseBodyDataList extends TeaModel {
         /**
-         * <p>The business number.</p>
+         * <p>The business phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>8613800**</p>
@@ -140,7 +138,7 @@ public class ListChatGroupResponseBody extends TeaModel {
         public String businessRole;
 
         /**
-         * <p>The group description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -149,7 +147,7 @@ public class ListChatGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time the group was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>94</p>
@@ -194,7 +192,7 @@ public class ListChatGroupResponseBody extends TeaModel {
         public String groupType;
 
         /**
-         * <p>The group invitation link.</p>
+         * <p>The invite link.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://chat.whatsapp.com/">https://chat.whatsapp.com/</a>***</p>
@@ -203,7 +201,7 @@ public class ListChatGroupResponseBody extends TeaModel {
         public String inviteLink;
 
         /**
-         * <p>The group\&quot;s profile picture.</p>
+         * <p>The group profile picture.</p>
          */
         @NameInMap("ProfilePictureFile")
         public String profilePictureFile;
@@ -218,7 +216,7 @@ public class ListChatGroupResponseBody extends TeaModel {
         public String subject;
 
         /**
-         * <p>The total number of group participants.</p>
+         * <p>The number of group members.</p>
          * 
          * <strong>example:</strong>
          * <p>35</p>
@@ -337,7 +335,7 @@ public class ListChatGroupResponseBody extends TeaModel {
         public java.util.List<ListChatGroupResponseBodyDataList> list;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>51</p>

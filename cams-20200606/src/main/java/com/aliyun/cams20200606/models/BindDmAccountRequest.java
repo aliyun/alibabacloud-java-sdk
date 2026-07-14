@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindDmAccountRequest extends TeaModel {
     /**
+     * <p>The account code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BindDmAccountRequest extends TeaModel {
     public String accountCode;
 
     /**
+     * <p>The SpaceId of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class BindDmAccountRequest extends TeaModel {
     public String custSpaceId;
 
     /**
+     * <p>The extended attributes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExtendAttr")
@@ -92,6 +95,7 @@ public class BindDmAccountRequest extends TeaModel {
 
     public static class BindDmAccountRequestExtendAttr extends TeaModel {
         /**
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +105,7 @@ public class BindDmAccountRequest extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The send type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

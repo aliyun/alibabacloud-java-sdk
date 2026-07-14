@@ -4,12 +4,16 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListBindDmAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -19,14 +23,14 @@ public class ListBindDmAccountResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>xxx-xx**</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -94,14 +98,14 @@ public class ListBindDmAccountResponseBody extends TeaModel {
     public static class ListBindDmAccountResponseBodyDataExtendAttr extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p><a href="mailto:xx@xx.com">xx@xx.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>batch</p>
          */
         @NameInMap("SendType")
         public String sendType;
@@ -132,7 +136,7 @@ public class ListBindDmAccountResponseBody extends TeaModel {
     public static class ListBindDmAccountResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p><a href="mailto:xx@xx.com">xx@xx.com</a></p>
          */
         @NameInMap("AccountCode")
         public String accountCode;
@@ -142,14 +146,14 @@ public class ListBindDmAccountResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>cams-*</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>ins</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

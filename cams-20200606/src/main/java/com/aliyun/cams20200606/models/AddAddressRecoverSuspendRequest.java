@@ -4,10 +4,15 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class AddAddressRecoverSuspendRequest extends TeaModel {
+    /**
+     * <p>The audit record.</p>
+     */
     @NameInMap("AuditRecord")
     public AddAddressRecoverSuspendRequestAuditRecord auditRecord;
 
     /**
+     * <p>The customer space ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -18,6 +23,8 @@ public class AddAddressRecoverSuspendRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The request type.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
@@ -85,19 +92,29 @@ public class AddAddressRecoverSuspendRequest extends TeaModel {
 
     public static class AddAddressRecoverSuspendRequestAuditRecord extends TeaModel {
         /**
+         * <p>The reason for the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>示例值示例值示例值</p>
          */
         @NameInMap("ApplyReason")
         public String applyReason;
 
+        /**
+         * <p>The list of destination countries for messages.</p>
+         */
         @NameInMap("MessageDestinationCountry")
         public java.util.List<String> messageDestinationCountry;
 
+        /**
+         * <p>The list of international destination countries for messages.</p>
+         */
         @NameInMap("MessageDestinationInternationalCountry")
         public java.util.List<String> messageDestinationInternationalCountry;
 
         /**
+         * <p>The recovery date.</p>
+         * 
          * <strong>example:</strong>
          * <p>示例值示例值</p>
          */
@@ -105,6 +122,8 @@ public class AddAddressRecoverSuspendRequest extends TeaModel {
         public String recoveryDate;
 
         /**
+         * <p>The suspension date.</p>
+         * 
          * <strong>example:</strong>
          * <p>示例值示例值</p>
          */

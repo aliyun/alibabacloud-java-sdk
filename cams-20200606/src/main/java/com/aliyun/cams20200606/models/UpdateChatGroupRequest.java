@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateChatGroupRequest extends TeaModel {
     /**
-     * <p>The business number. To view the business numbers, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
+     * <p>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,12 @@ public class UpdateChatGroupRequest extends TeaModel {
     public String businessNumber;
 
     /**
-     * <p>The channel type. Valid value:</p>
+     * <p>The channel type. Valid values:</p>
      * <ul>
      * <li><strong>WHATSAPP</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>Only the WhatsApp channel is supported.</p>
+     * <p>Only the WhatsApp channel type is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,7 @@ public class UpdateChatGroupRequest extends TeaModel {
     public String channelType;
 
     /**
-     * <p>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</p>
-     * <p>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+     * <p>The space ID of the ISV sub-customer, which is also the instance ID. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,13 +43,13 @@ public class UpdateChatGroupRequest extends TeaModel {
      * <p>The group description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test</p>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The group ID. To view the group IDs, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
+     * <p>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,14 +64,11 @@ public class UpdateChatGroupRequest extends TeaModel {
     /**
      * <p>The group profile picture.</p>
      * <blockquote>
-     * <p>Image requirements</p>
+     * <p>Image restrictions:</p>
      * <ul>
-     * <li><p>Supported MIME type: image/jpeg.</p>
-     * </li>
-     * <li><p>Maximum file size: 5 MB.</p>
-     * </li>
-     * <li><p>The image must be square. Minimum dimensions: 192x192 pixels.</p>
-     * </li>
+     * <li>Supported MIME type: image/jpeg</li>
+     * <li>Maximum image size: 5 MB</li>
+     * <li>The image must be square with a minimum dimension of 192 × 192 pixels.</li>
      * </ul>
      * </blockquote>
      */
@@ -86,10 +82,10 @@ public class UpdateChatGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The group title.</p>
+     * <p>The group subject.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a test title.</p>
+     * <p>test title</p>
      */
     @NameInMap("Subject")
     public String subject;

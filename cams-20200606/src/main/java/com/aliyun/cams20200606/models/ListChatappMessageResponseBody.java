@@ -4,34 +4,61 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappMessageResponseBody extends TeaModel {
+    /**
+     * <p>The access denied details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of returned data objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListChatappMessageResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -93,69 +120,101 @@ public class ListChatappMessageResponseBody extends TeaModel {
 
     public static class ListChatappMessageResponseBodyData extends TeaModel {
         /**
+         * <p>The business phone number.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>86183********</p>
          */
         @NameInMap("BusinessNumber")
         public String businessNumber;
 
         /**
+         * <p>The channel type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>WHATSAPP</p>
          */
         @NameInMap("ChannelType")
         public String channelType;
 
         /**
+         * <p>The name of the message receiving status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>Success</p>
          */
         @NameInMap("ClientAcceptStatusName")
         public String clientAcceptStatusName;
 
         /**
+         * <p>The message read status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>success</p>
          */
         @NameInMap("ClientReadStatus")
         public String clientReadStatus;
 
         /**
+         * <p>The message read status name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Success</p>
          */
         @NameInMap("ClientReadStatusName")
         public String clientReadStatusName;
 
         /**
+         * <p>The conversation ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>805a66**************************</p>
          */
         @NameInMap("ConversationId")
         public String conversationId;
 
         /**
+         * <p>The inbound or outbound message type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>DOWN</p>
          */
         @NameInMap("EventAction")
         public String eventAction;
 
         /**
+         * <p>The name of the inbound or outbound message type. Valid values:</p>
+         * <ul>
+         * <li><p>DOWN: outbound message.</p>
+         * </li>
+         * <li><p>UP: inbound message.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>DOWN</p>
          */
         @NameInMap("EventActionName")
         public String eventActionName;
 
         /**
+         * <p>The fallback content.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>None</p>
          */
         @NameInMap("FailBackContent")
         public String failBackContent;
 
         /**
+         * <p>Indicates whether the message falls back to SMS. Valid values:</p>
+         * <ul>
+         * <li><p>Y: Yes.</p>
+         * </li>
+         * <li><p>N: No.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -163,113 +222,145 @@ public class ListChatappMessageResponseBody extends TeaModel {
         public String failBackFlag;
 
         /**
+         * <p>The reason for the sending failure.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>timeout</p>
          */
         @NameInMap("FailReason")
         public String failReason;
 
         /**
+         * <p>The template language. For more languages, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>en</p>
          */
         @NameInMap("LanguageCode")
         public String languageCode;
 
         /**
+         * <p>The message content.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>test</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
+         * <p>The message ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>202509*******************</p>
          */
         @NameInMap("MessageId")
         public String messageId;
 
         /**
+         * <p>The message source.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>api</p>
          */
         @NameInMap("MessageSource")
         public String messageSource;
 
         /**
+         * <p>The message status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>success</p>
          */
         @NameInMap("MessageStatus")
         public String messageStatus;
 
         /**
+         * <p>The message status name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>Success</p>
          */
         @NameInMap("MessageStatusName")
         public String messageStatusName;
 
         /**
+         * <p>The message type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>INTERACTIVE</p>
          */
         @NameInMap("MessageType")
         public String messageType;
 
         /**
+         * <p>The message type name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>interactive</p>
          */
         @NameInMap("MessageTypeName")
         public String messageTypeName;
 
         /**
+         * <p>The month of the message.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>202507</p>
          */
         @NameInMap("Month")
         public String month;
 
         /**
+         * <p>The sending time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>2025-07-11T01:16:49.761+00:00</p>
          */
         @NameInMap("SendTime")
         public String sendTime;
 
         /**
+         * <p>The template code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>1103***************</p>
          */
         @NameInMap("TemplateCode")
         public String templateCode;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>picture_template</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The type.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>message</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
+         * <p>The unique message ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>20250911******************************</p>
          */
         @NameInMap("UniqueMessageId")
         public String uniqueMessageId;
 
         /**
+         * <p>The user phone number.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>86177********</p>
          */
         @NameInMap("UserNumber")
         public String userNumber;

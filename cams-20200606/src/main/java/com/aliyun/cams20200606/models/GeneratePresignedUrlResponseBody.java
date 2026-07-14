@@ -4,34 +4,63 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GeneratePresignedUrlResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GeneratePresignedUrlResponseBodyData data;
 
     /**
+     * <p>The additional message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866**</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -93,8 +122,10 @@ public class GeneratePresignedUrlResponseBody extends TeaModel {
 
     public static class GeneratePresignedUrlResponseBodyData extends TeaModel {
         /**
-         * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>The material path.</p>
+         * <blockquote>
+         * <p>For Viber, the recommended image size is 800 × 800.</p>
+         * </blockquote>
          */
         @NameInMap("Url")
         public String url;

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeprecateFlowResponseBody extends TeaModel {
+    /**
+     * <p>The reason why access was denied.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 

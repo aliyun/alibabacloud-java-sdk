@@ -4,29 +4,37 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetViberPauseTimesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>90E63D28-E31D-1EB2**9-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListChatappMessageRequest extends TeaModel {
     /**
+     * <p>The business phone number.</p>
+     * <ul>
+     * <li>For WhatsApp channels, view the business phone number in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> console.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;- For Viber channels, view the Service ID in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Service Account Management</strong> console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,13 @@ public class ListChatappMessageRequest extends TeaModel {
     public String businessNumber;
 
     /**
+     * <p>The channel type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>whatsapp</strong></p>
+     * </li>
+     * <li><p><strong>viber</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +35,8 @@ public class ListChatappMessageRequest extends TeaModel {
     public String channelType;
 
     /**
+     * <p>The message receiving status of the user.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -30,15 +44,18 @@ public class ListChatappMessageRequest extends TeaModel {
     public String clientAcceptStatus;
 
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. View the Space ID in the <a href="https://chatapp.console.aliyun.com/CustomerList">Channel Management</a> console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>cams-************</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The end time. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1727057232686</p>
      */
@@ -53,6 +70,12 @@ public class ListChatappMessageRequest extends TeaModel {
     public String endTimeStr;
 
     /**
+     * <p>The message type. Valid values:</p>
+     * <ul>
+     * <li>DOWN: outbound message.</li>
+     * <li>UP: inbound message.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UP</p>
      */
@@ -60,6 +83,8 @@ public class ListChatappMessageRequest extends TeaModel {
     public String eventAction;
 
     /**
+     * <p>The bulk message ID. View the bulk message ID in the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message List</strong> &gt; <strong>Bulk Sending List</strong> console.</p>
+     * 
      * <strong>example:</strong>
      * <p>9292****</p>
      */
@@ -67,6 +92,8 @@ public class ListChatappMessageRequest extends TeaModel {
     public String groupMessageId;
 
     /**
+     * <p>The message status.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -77,6 +104,7 @@ public class ListChatappMessageRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The pagination object.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Page")
@@ -89,6 +117,8 @@ public class ListChatappMessageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The start time. This value is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1727057232686</p>
      */
@@ -103,6 +133,8 @@ public class ListChatappMessageRequest extends TeaModel {
     public String startTimeStr;
 
     /**
+     * <p>The template code. View the template code in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Template Design</strong> console.</p>
+     * 
      * <strong>example:</strong>
      * <p>9938***</p>
      */
@@ -110,6 +142,8 @@ public class ListChatappMessageRequest extends TeaModel {
     public String templateCode;
 
     /**
+     * <p>The user phone number. This is the phone number that you imported when sending messages in the <a href="https://chatapp.console.aliyun.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Management</strong> &gt; <strong>Message Sending</strong> console.</p>
+     * 
      * <strong>example:</strong>
      * <p>86138***</p>
      */
@@ -259,19 +293,21 @@ public class ListChatappMessageRequest extends TeaModel {
 
     public static class ListChatappMessageRequestPage extends TeaModel {
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>49</p>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public Long index;
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>78</p>
+         * <p>10</p>
          */
         @NameInMap("Size")
         public Long size;

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetFlowPreviewUrlResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 

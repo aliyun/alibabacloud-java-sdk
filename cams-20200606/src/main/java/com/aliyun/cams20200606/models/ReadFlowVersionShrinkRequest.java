@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class ReadFlowVersionShrinkRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the canvas orchestration page and view the flow version, or call <a href="https://help.aliyun.com/document_detail/2937202.html">ListFlowVersion</a> to retrieve the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
@@ -38,8 +50,16 @@ public class ReadFlowVersionShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The flow version status. Valid values:</p>
+     * <ul>
+     * <li>DRAFT: draft.</li>
+     * <li>DELETED: deleted.</li>
+     * <li>ONLINE: online.</li>
+     * <li>OFFLINE: offline.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>DRAFT</p>
      */
     @NameInMap("Status")
     public String status;

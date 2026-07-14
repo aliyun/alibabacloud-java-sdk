@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberSettingRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>C29393993****</p>
      */
@@ -15,6 +17,7 @@ public class GetChatappPhoneNumberSettingRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

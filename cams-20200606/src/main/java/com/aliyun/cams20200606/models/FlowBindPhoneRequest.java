@@ -5,35 +5,52 @@ import com.aliyun.tea.*;
 
 public class FlowBindPhoneRequest extends TeaModel {
     /**
+     * <p>The message channel code. This is the channel ID. View the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>cams-8c8*********</p>
      */
     @NameInMap("ChannelCode")
     public String channelCode;
 
     /**
+     * <p>The message channel type. Valid values:</p>
+     * <ul>
+     * <li><p>INSTAGRAM</p>
+     * </li>
+     * <li><p>WHATSAPP</p>
+     * </li>
+     * <li><p>MESSENGER</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li>VIBER</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>WHATSAPP</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
 
     /**
+     * <p>The flow code. View the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to go to the flow editor canvas and view the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
@@ -41,6 +58,9 @@ public class FlowBindPhoneRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>A list of phone numbers, PageIds, AccountIds&lt;props=&quot;intl&quot;&gt;, or ServiceIds for the channel instance.</p>
+     */
     @NameInMap("PhoneNumbers")
     public java.util.List<String> phoneNumbers;
 
@@ -51,10 +71,17 @@ public class FlowBindPhoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The WABA account ID, PageId, AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</p>
+     * <ul>
+     * <li><p>If \<code>ChannelType\\</code> is \<code>WHATSAPP\\</code>, pass the WABA account ID. View the WABA account ID on the <strong>WABA Management</strong> page by navigating to <strong>Channel Management</strong> &gt; <strong>Manage</strong>.</p>
+     * </li>
+     * <li><p>If \<code>ChannelType\\</code> is not \<code>WHATSAPP\\</code>, pass the PageId for \<code>MESSENGER\\</code> or the AccountId for \<code>INSTAGRAM\\</code>&lt;props=&quot;intl&quot;&gt;. For \<code>VIBER\\</code>, pass the ServiceId.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>1952************</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

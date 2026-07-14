@@ -14,11 +14,11 @@ public class ListProductCatalogResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The response code.</p>
+     * <p>The request status code.</p>
      * <ul>
-     * <li><p>The value OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Model")
     public ListProductCatalogResponseBodyModel model;
@@ -53,12 +53,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     public static class ListProductCatalogResponseBodyModelPagingCursors extends TeaModel {
         /**
-         * <p>The cursor that points to the end of the page of the returned data.</p>
+         * <p>The position of the next record.</p>
          * 
          * <strong>example:</strong>
          * <p>sjsuueu83838</p>
@@ -131,7 +129,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
         public String after;
 
         /**
-         * <p>The cursor that points to the beginning of the page of the returned data.</p>
+         * <p>The position of the previous record.</p>
          * 
          * <strong>example:</strong>
          * <p>sjjsjdjjdjd83883</p>
@@ -164,7 +162,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     public static class ListProductCatalogResponseBodyModelPaging extends TeaModel {
         /**
-         * <p>The cursors for pagination.</p>
+         * <p>The cursor position for pagination.</p>
          */
         @NameInMap("Cursors")
         public ListProductCatalogResponseBodyModelPagingCursors cursors;
@@ -186,7 +184,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     public static class ListProductCatalogResponseBodyModel extends TeaModel {
         /**
-         * <p>The returned data.</p>
+         * <p>The returned data object.</p>
          */
         @NameInMap("Data")
         public java.util.List<java.util.Map<String, ?>> data;

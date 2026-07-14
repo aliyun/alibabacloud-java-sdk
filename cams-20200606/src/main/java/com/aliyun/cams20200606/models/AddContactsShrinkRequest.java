@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class AddContactsShrinkRequest extends TeaModel {
     /**
+     * <p>The business code.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The description of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>15111111111</p>
      */
@@ -22,6 +32,8 @@ public class AddContactsShrinkRequest extends TeaModel {
     public String contactDetails;
 
     /**
+     * <p>The name of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>mary</p>
      */
@@ -29,6 +41,8 @@ public class AddContactsShrinkRequest extends TeaModel {
     public String contactName;
 
     /**
+     * <p>The country.</p>
+     * 
      * <strong>example:</strong>
      * <p>China</p>
      */
@@ -36,6 +50,8 @@ public class AddContactsShrinkRequest extends TeaModel {
     public String country;
 
     /**
+     * <p>The email address.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -43,6 +59,8 @@ public class AddContactsShrinkRequest extends TeaModel {
     public String email;
 
     /**
+     * <p>The file path.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值示例值</p>
      */
@@ -50,6 +68,7 @@ public class AddContactsShrinkRequest extends TeaModel {
     public String filePath;
 
     /**
+     * <p>The user group information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +78,11 @@ public class AddContactsShrinkRequest extends TeaModel {
     public String groups;
 
     /**
+     * <p>Indicates whether the back-to-origin IP address whitelist needs to be updated. This parameter returns true when the current back-to-origin IP address whitelist differs from the latest back-to-origin IP address whitelist.</p>
+     * <ul>
+     * <li>true: The whitelist needs to be updated.</li>
+     * <li>false: The whitelist does not need to be updated.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +95,8 @@ public class AddContactsShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

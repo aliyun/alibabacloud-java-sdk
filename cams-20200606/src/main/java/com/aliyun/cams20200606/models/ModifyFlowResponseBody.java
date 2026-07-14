@@ -4,11 +4,17 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyFlowResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
-     * <p>A value of OK indicates that the request was successful.</p>
+     * <p>The response code. OK indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -87,12 +93,14 @@ public class ModifyFlowResponseBody extends TeaModel {
 
     public static class ModifyFlowResponseBodyData extends TeaModel {
         /**
-         * <p>The flow categories.</p>
+         * <p>The flow folder.</p>
          */
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
         /**
+         * <p>The URL of the WA Flow Endpoint</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.abc.com">http://www.abc.com</a></p>
          */
@@ -100,7 +108,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         public String endpointUri;
 
         /**
-         * <p>The flow ID.</p>
+         * <p>Flow ID。</p>
          * 
          * <strong>example:</strong>
          * <p>92675332812643****</p>
@@ -109,7 +117,7 @@ public class ModifyFlowResponseBody extends TeaModel {
         public String flowId;
 
         /**
-         * <p>The flow name.</p>
+         * <p>The name of the flow.</p>
          * 
          * <strong>example:</strong>
          * <p>flow_001</p>

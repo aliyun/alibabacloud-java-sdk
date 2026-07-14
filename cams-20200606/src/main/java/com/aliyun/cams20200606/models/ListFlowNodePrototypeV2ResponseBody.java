@@ -4,30 +4,54 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
+    /**
+     * <p>Details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>91</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListFlowNodePrototypeV2ResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The call was successful.</p>
+     * </li>
+     * <li><p>false: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -89,29 +113,57 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
 
     public static class ListFlowNodePrototypeV2ResponseBodyDataModel extends TeaModel {
         /**
+         * <p>The code of the component prototype.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>SendWhatsAppMessageNode</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
+         * <p>The code of the component group.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>Core</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
 
         /**
+         * <p>The public extension information. This is a JSON string that contains extension information for the frontend to display the flow component. The fields are described as follows:</p>
+         * <ul>
+         * <li><p>en: The English information about the flow component.</p>
+         * </li>
+         * <li><p>zh: The Chinese information about the flow component.</p>
+         * </li>
+         * <li><p>name: The name of the flow component.</p>
+         * </li>
+         * <li><p>remark: The remarks on the flow component.</p>
+         * </li>
+         * <li><p>order: The display order of the flow component.</p>
+         * </li>
+         * <li><p>style: The style of the flow component.</p>
+         * </li>
+         * <li><p>svg: The URL of the flow component icon.</p>
+         * </li>
+         * <li><p>icon: This field is deprecated.</p>
+         * </li>
+         * <li><p>bgcolor: The background color of the icon.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>{\&quot;i18n\&quot;: {\&quot;en\&quot;: {\&quot;name\&quot;: \&quot;Send a WhatsApp Message\&quot;, \&quot;remark\&quot;: \&quot;Send a message with the ability for the user to reply utilizing WhatsApp specific features.\&quot;}, \&quot;zh\&quot;: {\&quot;name\&quot;: \&quot;Send WhatsApp messages\&quot;, \&quot;remark\&quot;: \&quot;Send a message that allows users to reply using specific features of WhatsApp\&quot;}}, \&quot;order\&quot;: \&quot;9000\&quot;, \&quot;style\&quot;: {\&quot;svg\&quot;: \&quot;<a href="https://img.alicdn.com/***********************************%5C%5C">https://img.alicdn.com/***********************************\\</a>&quot;, \&quot;icon\&quot;: \&quot;<a href="https://img.alicdn.com/***********************************%5C%5C">https://img.alicdn.com/***********************************\\</a>&quot;, \&quot;bgcolor\&quot;: \&quot;blue\&quot;}}</p>
          */
         @NameInMap("PublicExtend")
         public String publicExtend;
 
         /**
+         * <p>The status of the component prototype. The default value is NORMAL.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;
@@ -156,6 +208,9 @@ public class ListFlowNodePrototypeV2ResponseBody extends TeaModel {
     }
 
     public static class ListFlowNodePrototypeV2ResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of the returned data.</p>
+         */
         @NameInMap("Model")
         public java.util.List<ListFlowNodePrototypeV2ResponseBodyDataModel> model;
 

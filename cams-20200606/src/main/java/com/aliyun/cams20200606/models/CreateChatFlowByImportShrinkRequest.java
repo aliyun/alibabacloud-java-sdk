@@ -5,18 +5,38 @@ import com.aliyun.tea.*;
 
 public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     /**
+     * <p>The business tenant code. The default value is ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. The default value is an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public String bizExtendShrink;
 
     /**
+     * <p>The flow DSL data to import. This is a block of data in JSON format. To obtain this data, arrange the components on the canvas in the Flow Editor, save the flow, and then click <strong>Settings</strong> &gt; <strong>Export</strong> in the upper-right corner of the canvas. The flow is exported as a JSON data file.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>{
+     *   &quot;schema&quot;: {
+     *     &quot;namespace&quot;: &quot;External&quot;,
+     *     &quot;version&quot;: &quot;1.0&quot;,
+     *     &quot;copyright&quot;: &quot;Alibaba Cloud&quot;
+     *   },
+     *   &quot;editor&quot;: &quot;H4sIAAAAAAAAA+1YbU/c***********************&quot;,
+     *   &quot;flow&quot;: {
+     *     &quot;triggerType&quot;: &quot;TriggeredByWhatsApp&quot;
+     *   }
+     * }</p>
      */
     @NameInMap("FlowViewModel")
     public String flowViewModel;
@@ -25,8 +45,10 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The remarks for the flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>触发订阅</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -38,8 +60,10 @@ public class CreateChatFlowByImportShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The title of the flow.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>WhatsApp触发订阅</p>
      */
     @NameInMap("Title")
     public String title;

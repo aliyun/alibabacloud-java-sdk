@@ -14,7 +14,7 @@ public class ChatappBindWabaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The WABA ID.</p>
+     * <p>waba Id。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

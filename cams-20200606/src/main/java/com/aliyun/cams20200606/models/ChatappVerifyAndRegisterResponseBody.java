@@ -14,11 +14,11 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li><p>A value of OK indicates that the call is successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -38,7 +38,7 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
@@ -49,10 +49,8 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -4,34 +4,63 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListDmAccountResponseBody extends TeaModel {
+    /**
+     * <p>The details of the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The response status code. Valid values:</p>
+     * <ul>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListDmAccountResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>None</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>xis-sx***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +68,8 @@ public class ListDmAccountResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -108,6 +139,8 @@ public class ListDmAccountResponseBody extends TeaModel {
 
     public static class ListDmAccountResponseBodyData extends TeaModel {
         /**
+         * <p>The account name.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:send1@xx.xx.asia">send1@xx.xx.asia</a></p>
          */
@@ -115,6 +148,8 @@ public class ListDmAccountResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <p>The time when the account was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1743579634000</p>
          */
@@ -122,13 +157,21 @@ public class ListDmAccountResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the email address.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p><a href="mailto:a@b.com">a@b.com</a></p>
          */
         @NameInMap("MailAddressId")
         public String mailAddressId;
 
         /**
+         * <p>The type of the sender address. Valid values:</p>
+         * <ul>
+         * <li>batch: batch emails</li>
+         * <li>trigger: triggered emails</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>trigger</p>
          */

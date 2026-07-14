@@ -4,20 +4,39 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListMarketingFlowResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The request status code.</p>
+     * <ul>
+     * <li><p>OK indicates that the request was successful.</p>
+     * </li>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>2993***</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListMarketingFlowResponseBodyData> data;
 
     /**
+     * <p>The message returned for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -25,13 +44,21 @@ public class ListMarketingFlowResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
-     * <p>OK</p>
+     * <p>CB6122C9-09B5-5926-**476A96CB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The call was successful.                                 </li>
+     * <li>false: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -39,6 +66,8 @@ public class ListMarketingFlowResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries in the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -108,79 +137,108 @@ public class ListMarketingFlowResponseBody extends TeaModel {
 
     public static class ListMarketingFlowResponseBodyData extends TeaModel {
         /**
+         * <p>The campaign code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>3243243***</p>
          */
         @NameInMap("ActivityCode")
         public String activityCode;
 
         /**
+         * <p>The campaign description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>aaa</p>
          */
         @NameInMap("ActivityDesc")
         public String activityDesc;
 
         /**
+         * <p>The campaign name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>aaa</p>
          */
         @NameInMap("ActivityName")
         public String activityName;
 
         /**
+         * <p>The campaign status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>active</p>
          */
         @NameInMap("ActivityStatus")
         public String activityStatus;
 
         /**
+         * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>{}</p>
          */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <p>The business extension information. Default value: &quot;{}&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("BizExtend")
         public java.util.Map<String, ?> bizExtend;
 
         /**
+         * <p>The upgrade start time. The upgrade start time is specified as a cron expression.</p>
+         * <p>For example, <code>0 0 4 1/1 * ?</code> indicates that the upgrade starts at 4:00 on the first day of each month and is performed at 4:00 every day.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>0 0 4 1/1 * ?</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>2025-01-01 XX1:11:11</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
+         * <p>The execution method.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>1(默认corn)</p>
          */
         @NameInMap("ExecutionType")
         public String executionType;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>2025-XX-01 11:11:11</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
+         * <p>The modification time (deprecated).</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>N/A</p>
          */
         @NameInMap("GmtModifier")
         public String gmtModifier;
 
         /**
+         * <p>The operational activity ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>99</p>
          */
@@ -188,60 +246,82 @@ public class ListMarketingFlowResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Indicates whether custom parameters are enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
         @NameInMap("ParamFlag")
         public String paramFlag;
 
+        /**
+         * <p>The custom user parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;CustomerLimit\&quot;:false}</p>
+         */
         @NameInMap("Params")
         public java.util.Map<String, ?> params;
 
         /**
+         * <p>The associated flow code.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>dsafdsf***</p>
          */
         @NameInMap("RelatedFlowCode")
         public String relatedFlowCode;
 
         /**
+         * <p>The name of the associated flow.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>aaa</p>
          */
         @NameInMap("RelatedFlowName")
         public String relatedFlowName;
 
         /**
+         * <p>The ID of the associated group.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值</p>
+         * <p>54354**</p>
          */
         @NameInMap("RelatedGroupId")
         public String relatedGroupId;
 
         /**
+         * <p>The name of the associated group.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>AAA</p>
          */
         @NameInMap("RelatedGroupName")
         public String relatedGroupName;
 
         /**
+         * <p>The specific time. This parameter is valid when the execution method is set to 2.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>特定时间(执行方式为2时)</p>
          */
         @NameInMap("SpecificTime")
         public String specificTime;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值</p>
+         * <p>2025-01-XX 11:11:11</p>
          */
         @NameInMap("StartDate")
         public String startDate;
 
         /**
+         * <p>The tenant.</p>
+         * 
          * <strong>example:</strong>
-         * <p>示例值示例值示例值</p>
+         * <p>1111</p>
          */
         @NameInMap("TenantCode")
         public String tenantCode;

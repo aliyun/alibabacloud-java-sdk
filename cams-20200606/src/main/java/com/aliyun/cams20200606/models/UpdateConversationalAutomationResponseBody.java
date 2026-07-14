@@ -16,9 +16,9 @@ public class UpdateConversationalAutomationResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
      * <ul>
-     * <li><p>The value OK indicates that the request was successful.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class UpdateConversationalAutomationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message.</p>
+     * <p>The prompt message. This parameter is returned when an exception occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>无</p>
@@ -47,12 +47,10 @@ public class UpdateConversationalAutomationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

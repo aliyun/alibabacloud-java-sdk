@@ -17,7 +17,7 @@ public class GetFbMessengerPagesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>inst-8t47hh***5pyj0ps</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

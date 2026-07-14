@@ -5,45 +5,84 @@ import com.aliyun.tea.*;
 
 public class GetChatFlowMetricRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>9ccc41**************************</p>
      */
     @NameInMap("FlowCode")
     public String flowCode;
 
     /**
+     * <p>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas and view the flow version.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1</p>
      */
     @NameInMap("FlowVersion")
     public String flowVersion;
 
     /**
+     * <p>The start time. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
-     * <p>31</p>
+     * <p>1751299200</p>
      */
     @NameInMap("From")
     public Long from;
 
     /**
+     * <p>The metric name. Valid values:</p>
+     * <ul>
+     * <li><p>nodeUsageStatistics: node usage statistics.</p>
+     * </li>
+     * <li><p>nodeErrorDetails: node error details.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>nodeUsageStatistics</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <p>The extended parameter for the metric query. When MetricName is set to nodeErrorDetails, pass in a JSON string. Valid values for the JSON fields:</p>
+     * <ul>
+     * <li><p>pageNo: the current page number.</p>
+     * </li>
+     * <li><p>pageSize: the number of entries per page.</p>
+     * </li>
+     * <li><p>nodeId: the node ID. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas and copy the node ID.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;pageNo&quot;: 1,
+     *   &quot;pageSize&quot;: 20,
+     *   &quot;nodeId&quot;: &quot;SendWhatsAppMessage#H7fKq5rM&quot;
+     * }</p>
+     */
     @NameInMap("MetricParam")
     public java.util.Map<String, ?> metricParam;
 
@@ -57,8 +96,10 @@ public class GetChatFlowMetricRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The end time. This value is a UNIX timestamp. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
-     * <p>81</p>
+     * <p>1751385599</p>
      */
     @NameInMap("To")
     public Long to;

@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteMarketingFlowRequest extends TeaModel {
     /**
+     * <p>The activity code. You can use the system-generated code or modify it to use a custom code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>1111</p>
      */
     @NameInMap("ActivityCode")
     public String activityCode;
 
     /**
+     * <p>The activity ID (deprecated).</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>已弃用</p>
      */
     @NameInMap("ActivityId")
     public String activityId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteChatGroupInviteLinkResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The details about the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -56,12 +56,10 @@ public class DeleteChatGroupInviteLinkResponseBody extends TeaModel {
     public Long result;
 
     /**
-     * <p>Indicates if the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListInstagramPageRequest extends TeaModel {
     /**
+     * <p>The instance ID. Only non-Alibaba Cloud hosts are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>inst-8t47hh***5pyj0ps</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

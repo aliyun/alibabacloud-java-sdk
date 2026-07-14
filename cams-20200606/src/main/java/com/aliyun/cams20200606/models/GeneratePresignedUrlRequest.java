@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class GeneratePresignedUrlRequest extends TeaModel {
     /**
+     * <p>The OSS path.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>/aaa/111/aa.png</p>
      */
     @NameInMap("FilePath")
     public String filePath;

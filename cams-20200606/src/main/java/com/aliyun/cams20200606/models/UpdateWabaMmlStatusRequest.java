@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWabaMmlStatusRequest extends TeaModel {
     /**
+     * <p>The Meta embedded authorization code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateWabaMmlStatusRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +34,7 @@ public class UpdateWabaMmlStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>waba Id。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

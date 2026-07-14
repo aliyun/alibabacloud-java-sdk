@@ -4,20 +4,33 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BindInstagramPageResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<BindInstagramPageResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -25,6 +38,8 @@ public class BindInstagramPageResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>fdsfdsf-22fk***</p>
      */
@@ -32,6 +47,12 @@ public class BindInstagramPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -93,6 +114,8 @@ public class BindInstagramPageResponseBody extends TeaModel {
 
     public static class BindInstagramPageResponseBodyData extends TeaModel {
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>13243543543</p>
          */
@@ -100,6 +123,8 @@ public class BindInstagramPageResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>The connection status.</p>
+         * 
          * <strong>example:</strong>
          * <p>connected</p>
          */
@@ -107,6 +132,8 @@ public class BindInstagramPageResponseBody extends TeaModel {
         public String connectionStatus;
 
         /**
+         * <p>The current page ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234322333</p>
          */
@@ -114,6 +141,8 @@ public class BindInstagramPageResponseBody extends TeaModel {
         public String pageId;
 
         /**
+         * <p>The page name.</p>
+         * 
          * <strong>example:</strong>
          * <p>iwhalecloud</p>
          */

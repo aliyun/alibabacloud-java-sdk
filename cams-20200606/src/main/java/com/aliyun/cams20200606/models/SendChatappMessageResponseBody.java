@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendChatappMessageResponseBody extends TeaModel {
     /**
-     * <p>Details about the access denial.</p>
+     * <p>The access denied details.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -14,11 +14,11 @@ public class SendChatappMessageResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The status code of the request.</p>
+     * <p>The response code.</p>
      * <ul>
-     * <li><p>A value of OK indicates a successful request.</p>
+     * <li><p>OK indicates that the request was successful.</p>
      * </li>
-     * <li><p>For other status codes, see <a href="https://help.aliyun.com/document_detail/196974.html">error codes</a>.</p>
+     * <li><p>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</p>
      * </li>
      * </ul>
      * 
@@ -38,7 +38,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the message.</p>
+     * <p>The message ID.</p>
      * 
      * <strong>example:</strong>
      * <p>61851ccb2f1365b16aee****</p>
@@ -47,7 +47,7 @@ public class SendChatappMessageResponseBody extends TeaModel {
     public String messageId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>90E63D28-E31D-1EB2-8939-A94866******</p>

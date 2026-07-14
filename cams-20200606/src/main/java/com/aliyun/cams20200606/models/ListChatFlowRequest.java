@@ -5,25 +5,44 @@ import com.aliyun.tea.*;
 
 public class ListChatFlowRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
+    /**
+     * <p>The business extension information. Default value: an empty collection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("BizExtend")
     public java.util.Map<String, ?> bizExtend;
 
     /**
+     * <p>The flow trigger type. Valid values:</p>
+     * <ul>
+     * <li>TriggeredManually</li>
+     * <li>TriggeredByWhatsApp</li>
+     * <li>TriggeredByInstagram</li>
+     * <li>TriggeredByViber</li>
+     * <li>TriggeredByMessenger</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>TriggeredByWhatsApp</p>
      */
     @NameInMap("FlowTriggerType")
     public String flowTriggerType;
 
     /**
+     * <p>The search keyword. This parameter is used for fuzzy match of flow names.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>LLM</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -32,15 +51,19 @@ public class ListChatFlowRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>41</p>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>42</p>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -52,6 +75,14 @@ public class ListChatFlowRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Specifies whether to return the online status. Valid values:</p>
+     * <ul>
+     * <li><p>true: Yes.</p>
+     * </li>
+     * <li><p>false: No.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -59,8 +90,10 @@ public class ListChatFlowRequest extends TeaModel {
     public Boolean returnWithOnlineVersion;
 
     /**
+     * <p>The flow status. Default value: NORMAL.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>NORMAL</p>
      */
     @NameInMap("Status")
     public String status;

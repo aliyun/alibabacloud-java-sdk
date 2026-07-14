@@ -4,20 +4,33 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CopyTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CopyTemplateResponseBodyData data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值</p>
      */
@@ -25,6 +38,8 @@ public class CopyTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>示例值示例值</p>
      */
@@ -32,6 +47,12 @@ public class CopyTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +114,8 @@ public class CopyTemplateResponseBody extends TeaModel {
 
     public static class CopyTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>The template code.</p>
+         * 
          * <strong>example:</strong>
          * <p>示例值示例值</p>
          */
@@ -100,6 +123,8 @@ public class CopyTemplateResponseBody extends TeaModel {
         public String sceneTemplateCode;
 
         /**
+         * <p>The template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>示例值示例值示例值</p>
          */
@@ -107,6 +132,8 @@ public class CopyTemplateResponseBody extends TeaModel {
         public String sceneTemplateName;
 
         /**
+         * <p>The WhatsApp category.</p>
+         * 
          * <strong>example:</strong>
          * <p>示例值示例值</p>
          */

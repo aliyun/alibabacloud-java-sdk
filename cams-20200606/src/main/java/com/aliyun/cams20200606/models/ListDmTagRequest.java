@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListDmTagRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>a</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -16,14 +16,14 @@ public class ListDmTagRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>82</p>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
     /**
      * <strong>example:</strong>
-     * <p>89</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

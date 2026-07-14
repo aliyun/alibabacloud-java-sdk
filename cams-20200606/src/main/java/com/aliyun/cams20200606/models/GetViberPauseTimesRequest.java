@@ -8,7 +8,7 @@ public class GetViberPauseTimesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-x***</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;

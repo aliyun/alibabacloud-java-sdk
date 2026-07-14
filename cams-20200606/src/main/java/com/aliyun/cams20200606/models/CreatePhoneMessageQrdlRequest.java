@@ -5,17 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreatePhoneMessageQrdlRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the
+     * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>
+     * page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>cams-kei****</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
+     * <p>The type of the generated image. Valid values:</p>
+     * <ul>
+     * <li><p>PNG</p>
+     * </li>
+     * <li><p>SVG</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>PNG</p>
      */
     @NameInMap("GenerateQrImage")
     public String generateQrImage;
@@ -24,19 +36,23 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The phone number. You can view the phone number on the
+     * &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Number Management</strong> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>86138009****</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
+     * <p>The message content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>test</p>
      */
     @NameInMap("PrefilledMessage")
     public String prefilledMessage;

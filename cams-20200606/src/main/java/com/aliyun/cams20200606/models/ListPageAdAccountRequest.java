@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListPageAdAccountRequest extends TeaModel {
     /**
+     * <p>The space ID of the ISV sub-customer or the instance ID of the direct customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>cams-**</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
@@ -17,10 +18,11 @@ public class ListPageAdAccountRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The PageId of Messenger.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>230***</p>
      */
     @NameInMap("PageId")
     public String pageId;

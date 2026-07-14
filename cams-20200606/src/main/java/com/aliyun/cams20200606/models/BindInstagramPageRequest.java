@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindInstagramPageRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class BindInstagramPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,8 @@ public class BindInstagramPageRequest extends TeaModel {
     public String pageId;
 
     /**
+     * <p>The region of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ap-southeast-1</p>
      */

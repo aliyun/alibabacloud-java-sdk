@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatappVerifyAndRegisterRequest extends TeaModel {
     /**
-     * <p>The space ID of the ISV sub-customer.</p>
+     * <p>The SpaceId of the ISV sub-customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

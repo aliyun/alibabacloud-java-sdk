@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the ISV account.</p>
+     * <p>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</p>
      * 
      * <strong>example:</strong>
      * <p>28251486512358****</p>
@@ -14,9 +14,9 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+     * <p>The WabaId of the ISV customer.</p>
      * <blockquote>
-     * <p>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
+     * <p>This parameter is deprecated. Use CustSpaceId instead.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String custWabaId;
 
     /**
-     * <p>The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.</p>
+     * <p>The ISV verification code, which is used to verify whether the sub-account is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikdkkdk</p>
@@ -36,7 +36,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String isvCode;
 
     /**
-     * <p>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
+     * <p>The language of the template. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The code of the message template.</p>
+     * <p>The code of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>****4b5c79c9432497a075bdfca36bf5</p>
@@ -55,7 +55,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String templateCode;
 
     /**
-     * <p>Name of a template.</p>
+     * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -64,13 +64,11 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The type of the message template. Valid values:</p>
+     * <p>The templatetype.</p>
      * <ul>
      * <li><p><strong>WHATSAPP</strong></p>
      * </li>
      * <li><p><strong>VIBER</strong></p>
-     * </li>
-     * <li><p>LINE (developing)</p>
      * </li>
      * </ul>
      * 

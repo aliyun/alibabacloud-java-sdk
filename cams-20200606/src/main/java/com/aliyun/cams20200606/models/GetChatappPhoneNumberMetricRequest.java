@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     /**
-     * <p>The Space ID or instance ID of the ISV sub-customer. This is the channel ID. View the channel ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</p>
+     * <p>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channels Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channels Management</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>cams-************</p>
@@ -14,7 +14,7 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public String custSpaceId;
 
     /**
-     * <p>The end of the time range to query. This is a UNIX timestamp in milliseconds.</p>
+     * <p>The query end time. This value is a timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,12 +24,10 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public Long end;
 
     /**
-     * <p>The granularity of the metrics. Valid values:</p>
+     * <p>The metric granularity. Valid values:</p>
      * <ul>
-     * <li><p>DAILY: Metrics are collected by day.</p>
-     * </li>
-     * <li><p>HALF_HOUR: Metrics are collected every half an hour.</p>
-     * </li>
+     * <li>DAILY: collects metrics on a daily basis.</li>
+     * <li>HALF_HOUR: collects metrics every half hour.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +37,7 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV.</p>
+     * <p>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</p>
      * 
      * <strong>example:</strong>
      * <p>skdi3kksloslikd****</p>
@@ -51,7 +49,7 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The business phone number. This is the phone number used to send messages. You can view the phone number in the ChatApp console by choosing &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channel Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channel Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong>.</p>
+     * <p>The business phone number. This is the number used to send messages, which can be viewed on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><strong>Channels Management</strong></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><strong>Channels Management</strong></a> &gt; <strong>Manage</strong> &gt; <strong>WABA Management</strong> &gt; <strong>Phone Number Management</strong> page.</p>
      * 
      * <strong>example:</strong>
      * <p>861380000****</p>
@@ -66,7 +64,7 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start of the time range to query. This is a UNIX timestamp in milliseconds.</p>
+     * <p>The query start time. This value is a timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

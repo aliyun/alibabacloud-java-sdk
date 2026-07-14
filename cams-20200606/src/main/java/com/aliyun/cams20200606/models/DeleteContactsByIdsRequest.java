@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactsByIdsRequest extends TeaModel {
     /**
+     * <p>The list of contact codes, separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

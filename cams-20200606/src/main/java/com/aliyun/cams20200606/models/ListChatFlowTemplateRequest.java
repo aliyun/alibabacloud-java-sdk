@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListChatFlowTemplateRequest extends TeaModel {
     /**
+     * <p>The business tenant code. Default value: ALICOM_OPAAS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>ALICOM_OPAAS</p>
      */
     @NameInMap("BizCode")
     public String bizCode;
 
     /**
+     * <p>The keyword for the search. The operation performs a fuzzy query for template names based on this keyword.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>LLM</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -24,15 +27,19 @@ public class ListChatFlowTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
-     * <p>75</p>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
-     * <p>72</p>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -44,8 +51,22 @@ public class ListChatFlowTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The trigger type of the flow. Valid values:</p>
+     * <ul>
+     * <li><p>TriggeredManually</p>
+     * </li>
+     * <li><p>TriggeredByWhatsApp</p>
+     * </li>
+     * <li><p>TriggeredByInstagram</p>
+     * </li>
+     * <li><p>TriggeredByViber</p>
+     * </li>
+     * <li><p>TriggeredByMessenger</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>TriggeredByWhatsApp</p>
      */
     @NameInMap("TriggerType")
     public String triggerType;
