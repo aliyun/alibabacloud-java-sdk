@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of regions on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of regions returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

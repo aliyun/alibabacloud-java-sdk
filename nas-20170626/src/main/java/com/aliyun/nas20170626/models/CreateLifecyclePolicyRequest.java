@@ -6,9 +6,10 @@ import com.aliyun.tea.*;
 public class CreateLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The description of the lifecycle policy.</p>
-     * <p>Format: The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>Format:
+     * The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <blockquote>
-     * <p> Only CPFS for Lingjun supports this parameter.</p>
+     * <p>Only CPFS for Lingjun is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +19,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,9 +29,9 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The name of the lifecycle policy. The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * <p>The Policy Name of the lifecycle management policy. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
      * <blockquote>
-     * <p> Required for General-purpose NAS.</p>
+     * <p>This parameter is required for General-purpose NAS but not required for CPFS for Lingjun.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,8 +43,8 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     /**
      * <p>The policy type.</p>
      * <ul>
-     * <li>Auto (default): The job is automatically triggered.</li>
-     * <li>OnDemand: On-demand execution.</li>
+     * <li>Auto (default): automatic execution.</li>
+     * <li>OnDemand: on-demand execution.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,21 +54,19 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String lifecyclePolicyType;
 
     /**
-     * <p>The management rule associated with the lifecycle policy. Only General-purpose NAS supports this parameter.</p>
+     * <p>The management rule associated with the lifecycle management policy. Only General-purpose NAS is supported.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>DEFAULT_ATIME_14: Files not accessed for 14 days.</li>
-     * <li>DEFAULT_ATIME_30: Files not accessed for 30 days.</li>
-     * <li>DEFAULT_ATIME_60: Files not accessed for 60 days.</li>
-     * <li>DEFAULT_ATIME_90: Files not accessed for 90 days.</li>
-     * <li>DEFAULT_ATIME_180: Files not accessed for 180 days. DEFAULT_ATIME_180 is supported only when the StorageType parameter is set to Archive.</li>
-     * </ul>
-     * <blockquote>
-     * </blockquote>
+     * <li>DEFAULT_ATIME_14: files that have not been accessed for 14 days.</li>
+     * <li>DEFAULT_ATIME_30: files that have not been accessed for 30 days.</li>
+     * <li>DEFAULT_ATIME_60: files that have not been accessed for 60 days.</li>
+     * <li>DEFAULT_ATIME_90: files that have not been accessed for 90 days.</li>
+     * <li>DEFAULT_ATIME_180: files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<blockquote>
      * <ul>
-     * <li><p>If an IA policy already exists for the directory, the new archive policy must have a longer transition period.</p>
-     * </li>
-     * <li><p>Only General-purpose NAS supports this parameter.</p>
+     * <li>If an IA storage class policy has already been configured for the directory, the archive policy duration must be longer than the IA storage class policy duration.</li>
+     * <li>Only General-purpose NAS supports this parameter.</li>
+     * </ul>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -78,16 +77,16 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String lifecycleRuleName;
 
     /**
-     * <p>The absolute path of the directory associated with the lifecycle policy. Only General-purpose NAS supports this parameter.</p>
+     * <p>The absolute path of the directory associated with the lifecycle management policy. Only General-purpose NAS is supported.</p>
      * <ul>
-     * <li>Single value only. The path must start with a forward slash (/) and must be a path that exists in the mount target.</li>
+     * <li>General-purpose NAS supports associating only a single directory. The path must start with a forward slash (/) and must be an existing path in the mount target.</li>
      * </ul>
      * <blockquote>
-     * <p> We recommend configuring the Paths.N parameter so that you can associate the policy with multiple directories at a time.</p>
-     * </blockquote>
+     * <p>Only General-purpose NAS is supported. For General-purpose NAS, use Paths.N to associate multiple directories at the same time.</p>
      * <ul>
-     * <li>Path and Paths are mutually exclusive. You must specify one.</li>
+     * <li>Only one of Path and Paths can be specified.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>/pathway/to/folder</p>
@@ -96,7 +95,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>The absolute paths of the directories associated with the lifecycle policy.</p>
+     * <p>The absolute paths of directories associated with the lifecycle management policy.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;/path1&quot;, &quot;/path2&quot;</p>
@@ -105,22 +104,25 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public java.util.List<String> paths;
 
     /**
-     * <p>The file data retrieval rule. Only one rule can be configured.</p>
+     * <p>The file data retrieval rules. A maximum of one rule can be configured.</p>
      * <blockquote>
-     * <p> Only CPFS for Lingjun supports this parameter.</p>
+     * <p>Only CPFS for Lingjun file systems are supported.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p>When LifecyclePolicyType is set to OnDemand, at least one of TransitRules or RetrieveRules must be specified.</p>
      * </blockquote>
      */
     @NameInMap("RetrieveRules")
     public java.util.List<CreateLifecyclePolicyRequestRetrieveRules> retrieveRules;
 
     /**
-     * <p>The storage class.</p>
+     * <p>The storage type.</p>
      * <ul>
-     * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
-     * <li>Archive: the Archive storage class.</li>
+     * <li>InfrequentAccess: IA storage class.</li>
+     * <li>Archive: Archive storage.</li>
      * </ul>
      * <blockquote>
-     * <p> General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun only supports InfrequentAccess.</p>
+     * <p>General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun supports only InfrequentAccess.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -131,9 +133,9 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The data transition rule. Only one rule can be configured.</p>
+     * <p>The file data transit rules. A maximum of one rule can be configured.</p>
      * <blockquote>
-     * <p> Supported only for CPFS for Lingjun file systems with LifecyclePolicyType set to Auto.</p>
+     * <p>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
      * </blockquote>
      */
     @NameInMap("TransitRules")
@@ -226,7 +228,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
 
     public static class CreateLifecyclePolicyRequestRetrieveRules extends TeaModel {
         /**
-         * <p>The attribute of the rule. Valid value:</p>
+         * <p>The rule attribute. Valid values:</p>
          * <ul>
          * <li>RetrieveType: the retrieval method.</li>
          * </ul>
@@ -238,12 +240,11 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The threshold of the rule. Valid values:</p>
+         * <p>The rule threshold. Valid values:</p>
          * <ul>
-         * <li><p>RetrieveType</p>
-         * <ul>
-         * <li>AfterVisit: Supported when LifecyclePolicyType is Auto. Represents a best-effort recall on access.</li>
-         * <li>All: Supported when LifecyclePolicyType is OnDemand. Represents retrieving all data.</li>
+         * <li>RetrieveType<ul>
+         * <li>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</li>
+         * <li>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieving all data.</li>
          * </ul>
          * </li>
          * </ul>
@@ -279,7 +280,7 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
 
     public static class CreateLifecyclePolicyRequestTransitRules extends TeaModel {
         /**
-         * <p>Attribute of the rule.</p>
+         * <p>The rule attribute.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Atime: the access time of the file.</li>
@@ -292,10 +293,10 @@ public class CreateLifecyclePolicyRequest extends TeaModel {
         public String attribute;
 
         /**
-         * <p>Threshold for the rule.</p>
+         * <p>The rule threshold.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>If Attribute is set to Atime, this value represents the number of days since the file was last accessed. Valid values: [1, 365].</li>
+         * <li>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 0 to 365.</li>
          * </ul>
          * 
          * <strong>example:</strong>

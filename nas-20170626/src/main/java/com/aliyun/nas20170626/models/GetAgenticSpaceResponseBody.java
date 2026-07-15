@@ -4,10 +4,15 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class GetAgenticSpaceResponseBody extends TeaModel {
+    /**
+     * <p>The AgenticSpace information.</p>
+     */
     @NameInMap("AgenticSpace")
     public GetAgenticSpaceResponseBodyAgenticSpace agenticSpace;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D****3E</p>
      */
@@ -37,6 +42,14 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
 
     public static class GetAgenticSpaceResponseBodyAgenticSpaceQuota extends TeaModel {
         /**
+         * <p>The file count limit of the quota. Valid values:</p>
+         * <ul>
+         * <li><p>Minimum value: 10,000.</p>
+         * </li>
+         * <li><p>Maximum value: 100,000,000.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>10000000</p>
          */
@@ -44,6 +57,14 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public Long fileCountLimit;
 
         /**
+         * <p>The total capacity limit of the quota. Unit: bytes.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
+         * <li>Maximum value: 1,099,511,627,776,000 (1024000 GiB).</li>
+         * <li>Step: 1,073,741,824 (1 GiB).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>10737418240</p>
          */
@@ -75,6 +96,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
 
     public static class GetAgenticSpaceResponseBodyAgenticSpace extends TeaModel {
         /**
+         * <p>AgenticSpace Id。</p>
+         * 
          * <strong>example:</strong>
          * <p>agentic-229oypxjgpau2****</p>
          */
@@ -82,6 +105,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String agenticSpaceId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -89,6 +114,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String azone;
 
         /**
+         * <p>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>
          */
@@ -96,6 +123,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String createTimeUtc;
 
         /**
+         * <p>AgenticSpace Description。</p>
+         * 
          * <strong>example:</strong>
          * <p>AgenticSpace Description。</p>
          */
@@ -103,6 +132,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The number of files used.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -110,6 +141,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public Long fileCountUsage;
 
         /**
+         * <p>The file system ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>06229oypxjgox0u****</p>
          */
@@ -117,16 +150,23 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
+         * <p>The absolute path of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>/test/</p>
          */
         @NameInMap("FileSystemPath")
         public String fileSystemPath;
 
+        /**
+         * <p>The quota information.</p>
+         */
         @NameInMap("Quota")
         public GetAgenticSpaceResponseBodyAgenticSpaceQuota quota;
 
         /**
+         * <p>The capacity usage. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -134,6 +174,11 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public Long spaceUsage;
 
         /**
+         * <p>The status of the AgenticSpace. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -141,6 +186,8 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the AgenticSpace was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-06-10T10:08:08Z</p>
          */

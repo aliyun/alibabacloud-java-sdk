@@ -3,22 +3,20 @@ package com.aliyun.nas20170626.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyAgenticSpaceResponseBody extends TeaModel {
+public class ModifyCpfsAccessPointResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
+     * <p>70EACC9C-D07A-4A34-ADA4-77506C42B023</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyAgenticSpaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyAgenticSpaceResponseBody self = new ModifyAgenticSpaceResponseBody();
+    public static ModifyCpfsAccessPointResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyCpfsAccessPointResponseBody self = new ModifyCpfsAccessPointResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAgenticSpaceResponseBody setRequestId(String requestId) {
+    public ModifyCpfsAccessPointResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

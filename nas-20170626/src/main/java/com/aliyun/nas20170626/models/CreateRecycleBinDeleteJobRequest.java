@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRecycleBinDeleteJobRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+     * <p>Ensures the idempotence of the request.</p>
+     * <p>Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <p>If you do not specify ClientToken, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,18 +18,18 @@ public class CreateRecycleBinDeleteJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the file or directory that you want to permanently delete.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of the deleted data.</p>
+     * <p>The FileId of the file or directory that you want to permanently delete.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of deleted data.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>04***08</p>
+     * <p>104</p>
      */
     @NameInMap("FileId")
     public String fileId;
 
     /**
-     * <p>The ID of the file system.</p>
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

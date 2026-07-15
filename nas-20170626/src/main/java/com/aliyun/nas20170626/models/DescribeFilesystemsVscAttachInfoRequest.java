@@ -31,6 +31,12 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     @NameInMap("ResourceIds")
     public java.util.List<DescribeFilesystemsVscAttachInfoRequestResourceIds> resourceIds;
 
+    /**
+     * <p>The role chain.</p>
+     * <blockquote>
+     * <p>Required only for cross-account scenarios.</p>
+     * </blockquote>
+     */
     @NameInMap("RoleChain")
     public java.util.List<DescribeFilesystemsVscAttachInfoRequestRoleChain> roleChain;
 
@@ -114,12 +120,30 @@ public class DescribeFilesystemsVscAttachInfoRequest extends TeaModel {
     }
 
     public static class DescribeFilesystemsVscAttachInfoRequestRoleChain extends TeaModel {
+        /**
+         * <p>The UID of the Alibaba Cloud account, which specifies the account on whose behalf the service assumes the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101522855006****</p>
+         */
         @NameInMap("AssumeRoleFor")
         public String assumeRoleFor;
 
+        /**
+         * <p>The resource descriptor of the specified role. Format: acs:ram::$accountID:role/$roleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123472233814****:role/aliyunnasclientvsc****</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The role type. Valid values: service and user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 

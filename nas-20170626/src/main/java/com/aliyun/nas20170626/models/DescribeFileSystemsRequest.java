@@ -8,9 +8,9 @@ public class DescribeFileSystemsRequest extends TeaModel {
      * <p>The file system ID.</p>
      * <ul>
      * <li>General-purpose NAS: 31a8e4****.</li>
-     * <li>Extreme NAS: Must start with extreme-, such as extreme-0015****.</li>
-     * <li>CPFS (locally redundant): Must start with cpfs-, such as cpfs-125487****.</li>
-     * <li>CPFS SE (zone-redundant): Must start with cpfsse-, such as cpfsse-022c71b134****.</li>
+     * <li>Extreme NAS: must start with extreme-, such as extreme-0015****.</li>
+     * <li>Cloud Parallel File Storage (CPFS) (locally redundant): must start with cpfs-, such as cpfs-125487****.</li>
+     * <li>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class DescribeFileSystemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of file systems on each page in a paging query.</p>
+     * <p>The number of file systems on each page during a paged query.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -69,6 +69,9 @@ public class DescribeFileSystemsRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("StorageType")
+    public String storageType;
 
     /**
      * <p>The tag information.</p>
@@ -129,6 +132,14 @@ public class DescribeFileSystemsRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeFileSystemsRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public DescribeFileSystemsRequest setTag(java.util.List<DescribeFileSystemsRequestTag> tag) {

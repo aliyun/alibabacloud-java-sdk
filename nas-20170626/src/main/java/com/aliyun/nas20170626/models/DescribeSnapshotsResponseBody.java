@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the snapshot list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public DescribeSnapshotsResponseBodySnapshots snapshots;
 
     /**
-     * <p>The total number of snapshots returned.</p>
+     * <p>The total number of snapshots.</p>
      * 
      * <strong>example:</strong>
      * <p>36</p>

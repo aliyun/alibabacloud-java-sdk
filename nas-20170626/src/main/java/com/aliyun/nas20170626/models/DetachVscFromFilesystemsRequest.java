@@ -8,7 +8,7 @@ public class DetachVscFromFilesystemsRequest extends TeaModel {
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,18 @@ public class DetachVscFromFilesystemsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</p>
+     * <p>The ID information of the file system and virtual storage channel. A maximum of 10 entries can be specified per batch.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<DetachVscFromFilesystemsRequestResourceIds> resourceIds;
 
+    /**
+     * <p>The role chain.</p>
+     * <blockquote>
+     * <p>This parameter is required only for cross-account scenarios.</p>
+     * </blockquote>
+     */
     @NameInMap("RoleChain")
     public java.util.List<DetachVscFromFilesystemsRequestRoleChain> roleChain;
 
@@ -99,12 +105,30 @@ public class DetachVscFromFilesystemsRequest extends TeaModel {
     }
 
     public static class DetachVscFromFilesystemsRequestRoleChain extends TeaModel {
+        /**
+         * <p>The UID of the Alibaba Cloud account on whose behalf the service assumes the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>528394183225****</p>
+         */
         @NameInMap("AssumeRoleFor")
         public String assumeRoleFor;
 
+        /**
+         * <p>The resource descriptor of the specified role. Format: acs:ram::$accountID:role/$roleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123472233814****:role/aliyunnasclientvsc****</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The role type. Valid values: service and user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 

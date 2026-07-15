@@ -18,12 +18,18 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</p>
+     * <p>The ID information of file systems and Virtual Storage Channels. A maximum of 10 entries can be specified per batch.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<AttachVscToFilesystemsRequestResourceIds> resourceIds;
 
+    /**
+     * <p>The role chain.</p>
+     * <blockquote>
+     * <p>This parameter is required only for cross-account scenarios.</p>
+     * </blockquote>
+     */
     @NameInMap("RoleChain")
     public java.util.List<AttachVscToFilesystemsRequestRoleChain> roleChain;
 
@@ -67,7 +73,7 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The virtual storage channel ID.</p>
+         * <p>The Virtual Storage Channel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-8vb864o3ppwfvh****</p>
@@ -99,12 +105,30 @@ public class AttachVscToFilesystemsRequest extends TeaModel {
     }
 
     public static class AttachVscToFilesystemsRequestRoleChain extends TeaModel {
+        /**
+         * <p>The UID of the Alibaba Cloud account on whose behalf the service assumes the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176498472570****</p>
+         */
         @NameInMap("AssumeRoleFor")
         public String assumeRoleFor;
 
+        /**
+         * <p>The resource descriptor of the specified role. Format: acs:ram::$accountID:role/$roleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123472233814****:role/aliyunnasclientvsc****</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The role type. Valid values: service and user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
+         */
         @NameInMap("RoleType")
         public String roleType;
 

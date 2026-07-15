@@ -8,6 +8,8 @@ public class DescribeAgenticSpacesResponseBody extends TeaModel {
     public DescribeAgenticSpacesResponseBodyAgenticSpaces agenticSpaces;
 
     /**
+     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTc2NTg1MTUyMzA1OTczNTc1OCM0NjQxMzQ****=</p>
      */
@@ -15,6 +17,8 @@ public class DescribeAgenticSpacesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
      */

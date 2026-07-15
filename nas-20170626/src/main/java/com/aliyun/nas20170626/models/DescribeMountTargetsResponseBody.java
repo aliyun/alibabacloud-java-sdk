@@ -4,14 +4,11 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeMountTargetsResponseBody extends TeaModel {
-    /**
-     * <p>A collection of mount targets.</p>
-     */
     @NameInMap("MountTargets")
     public DescribeMountTargetsResponseBodyMountTargets mountTargets;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the file system list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +17,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of mount targets per page.</p>
+     * <p>The number of mount targets on each page when paging is used.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

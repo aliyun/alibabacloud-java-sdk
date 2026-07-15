@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgenticSpaceRequest extends TeaModel {
     /**
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class CreateAgenticSpaceRequest extends TeaModel {
     public String azone;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
@@ -21,6 +28,14 @@ public class CreateAgenticSpaceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The description of the AgenticSpace.</p>
+     * <p>Limits:</p>
+     * <ul>
+     * <li>The description must be 2 to 128 characters in length.</li>
+     * <li>The description must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AgenticSpace Description</p>
      */
@@ -28,6 +43,13 @@ public class CreateAgenticSpaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether to perform a dry run for this request. A dry run checks parameter validity and dependencies without actually modifying the instance or incurring fees.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true: sends a dry run request without modifying the protocol service. The system checks whether required parameters are specified, whether the request format is valid, and whether business limit dependencies are met. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned.</li>
+     * <li>false (default): sends a normal request. After the check is passed, the protocol service is directly modified.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -35,6 +57,7 @@ public class CreateAgenticSpaceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +67,7 @@ public class CreateAgenticSpaceRequest extends TeaModel {
     public String fileSystemId;
 
     /**
+     * <p>The absolute path of the file. Only first-level directories are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +77,7 @@ public class CreateAgenticSpaceRequest extends TeaModel {
     public String fileSystemPath;
 
     /**
+     * <p>The quota information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Quota")
@@ -121,6 +146,13 @@ public class CreateAgenticSpaceRequest extends TeaModel {
 
     public static class CreateAgenticSpaceRequestQuota extends TeaModel {
         /**
+         * <p>The maximum number of files allowed by the quota. Valid values:</p>
+         * <ul>
+         * <li><p>Minimum value: 10000.</p>
+         * </li>
+         * <li><p>Maximum value: 100000000.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +162,13 @@ public class CreateAgenticSpaceRequest extends TeaModel {
         public Long fileCountLimit;
 
         /**
+         * <p>The total capacity limit of the quota. Unit: bytes.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Minimum value: 10737418240 (10 GiB).</li>
+         * <li>Maximum value: 1099511627776000 (1024000 GiB).</li>
+         * <li>Increment: 1073741824 (1 GiB).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

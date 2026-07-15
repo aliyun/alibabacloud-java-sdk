@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticSpacesRequest extends TeaModel {
     /**
+     * <p>The file system ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,16 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>The collection of filter key information.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<DescribeAgenticSpacesRequestFilters> filters;
 
     /**
+     * <p>The number of results per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -24,6 +31,8 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>MTc3OTkzNTA0Mjg0NTc1MDI4OCM0MDQ0MzA****=</p>
      */
@@ -69,6 +78,11 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
 
     public static class DescribeAgenticSpacesRequestFilters extends TeaModel {
         /**
+         * <p>The name of the filter key. Valid values:</p>
+         * <ul>
+         * <li>AgenticSpaceIds</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AgenticSpaceIds</p>
          */
@@ -76,6 +90,11 @@ public class DescribeAgenticSpacesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the filter key. Wildcards are not supported.</p>
+         * <ul>
+         * <li>AgenticSpaceIds: only a single ID is supported.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>06229oypxjgox0u****</p>
          */
