@@ -79,7 +79,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
 
     public static class GetGatewayQuotaRuleResponseBodyDataConsumers extends TeaModel {
         /**
-         * <p>The principal (consumer) ID.</p>
+         * <p>The ID of the principal (consumer).</p>
          * 
          * <strong>example:</strong>
          * <p>c-aaa</p>
@@ -88,7 +88,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The principal (consumer) name.</p>
+         * <p>The name of the principal (consumer).</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
@@ -199,7 +199,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The time zone corresponding to the calendar period, in UTC+x format.</p>
+         * <p>The time zone for the calendar period, in UTC+x format.</p>
          * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
@@ -208,7 +208,7 @@ public class GetGatewayQuotaRuleResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The reset period type. Currently, only calendar period is supported, which means windowAlignment=&quot;calendar&quot;.</p>
+         * <p>The reset period type.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>

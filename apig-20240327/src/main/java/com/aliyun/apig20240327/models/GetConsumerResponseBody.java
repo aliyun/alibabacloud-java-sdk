@@ -76,6 +76,8 @@ public class GetConsumerResponseBody extends TeaModel {
 
     public static class GetConsumerResponseBodyDataConsumerGroups extends TeaModel {
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
          */
@@ -83,6 +85,8 @@ public class GetConsumerResponseBody extends TeaModel {
         public String consumerGroupId;
 
         /**
+         * <p>The consumer group description.</p>
+         * 
          * <strong>example:</strong>
          * <p>用于线上 API 调用方分组</p>
          */
@@ -90,6 +94,8 @@ public class GetConsumerResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The time when the API consumer joined the consumer group. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715769600000</p>
          */
@@ -97,6 +103,8 @@ public class GetConsumerResponseBody extends TeaModel {
         public Long joinTimestamp;
 
         /**
+         * <p>The consumer group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-consumer-group</p>
          */
@@ -144,17 +152,20 @@ public class GetConsumerResponseBody extends TeaModel {
 
     public static class GetConsumerResponseBodyData extends TeaModel {
         /**
-         * <p>The AccessKey pair authentication configuration.</p>
+         * <p>The AccessKey identity authentication configurations.</p>
          */
         @NameInMap("akSkIdentityConfigs")
         public java.util.List<AkSkIdentityConfig> akSkIdentityConfigs;
 
         /**
-         * <p>The API key authentication configuration.</p>
+         * <p>The API key identity authentication configuration.</p>
          */
         @NameInMap("apiKeyIdentityConfig")
         public ApiKeyIdentityConfig apiKeyIdentityConfig;
 
+        /**
+         * <p>The list of consumer groups to which the API consumer belongs.</p>
+         */
         @NameInMap("consumerGroups")
         public java.util.List<GetConsumerResponseBodyDataConsumerGroups> consumerGroups;
 
@@ -177,7 +188,7 @@ public class GetConsumerResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The publish status of the API in the current environment.</p>
+         * <p>The deployment status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -204,7 +215,7 @@ public class GetConsumerResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The JWT authentication configuration.</p>
+         * <p>The JWT identity authentication configuration.</p>
          */
         @NameInMap("jwtIdentityConfig")
         public JwtIdentityConfig jwtIdentityConfig;

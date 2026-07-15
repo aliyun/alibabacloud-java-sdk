@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class HiMarketProductRefConfig extends TeaModel {
     /**
-     * <p>Reference settings for the API gateway.</p>
+     * <p>The APIG resource reference configuration.</p>
      */
     @NameInMap("apigRefConfig")
     public HiMarketProductRefConfigApigRefConfig apigRefConfig;
 
     /**
-     * <p>Unique identifier for the gateway.</p>
+     * <p>The ID of the associated gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-xxx</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
@@ -39,43 +42,64 @@ public class HiMarketProductRefConfig extends TeaModel {
 
     public static class HiMarketProductRefConfigApigRefConfig extends TeaModel {
         /**
-         * <p>Unique identifier for the agent API.</p>
+         * <p>The associated Agent API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-xxx</p>
          */
         @NameInMap("agentApiId")
         public String agentApiId;
 
         /**
-         * <p>The name of the agent API.</p>
+         * <p>The Agent API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-api</p>
          */
         @NameInMap("agentApiName")
         public String agentApiName;
 
         /**
-         * <p>Unique identifier for the MCP route.</p>
+         * <p>The associated MCP route ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>route-xxx</p>
          */
         @NameInMap("mcpRouteId")
         public String mcpRouteId;
 
         /**
-         * <p>Unique identifier for the MCP server.</p>
+         * <p>The associated MCP Server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mcp-xxx</p>
          */
         @NameInMap("mcpServerId")
         public String mcpServerId;
 
         /**
-         * <p>The name of the MCP server.</p>
+         * <p>The MCP Server name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-mcp-server</p>
          */
         @NameInMap("mcpServerName")
         public String mcpServerName;
 
         /**
-         * <p>Unique identifier for the model API.</p>
+         * <p>The associated Model API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-yyy</p>
          */
         @NameInMap("modelApiId")
         public String modelApiId;
 
         /**
-         * <p>The name of the model API.</p>
+         * <p>The Model API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-model-api</p>
          */
         @NameInMap("modelApiName")
         public String modelApiName;

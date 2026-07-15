@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Service extends TeaModel {
     /**
-     * <p>The address information, including IP addresses or domain name lists.</p>
+     * <p>The address information, including IP addresses or domain names.</p>
      */
     @NameInMap("addresses")
     public java.util.List<String> addresses;
@@ -23,7 +23,7 @@ public class Service extends TeaModel {
     public AiServiceConfig aiServiceConfig;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The time when the service was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1725617840096</p>
@@ -65,7 +65,11 @@ public class Service extends TeaModel {
     public ServiceHealthCheck healthCheck;
 
     /**
-     * <p>The health check status. Valid values: Healthy and Unhealthy.</p>
+     * <p>The health check status. Valid values:</p>
+     * <ul>
+     * <li>Healthy</li>
+     * <li>Unhealthy</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Healthy</p>
@@ -126,7 +130,7 @@ public class Service extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The function qualifier.</p>
+     * <p>The qualifier of the function.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>
@@ -135,13 +139,27 @@ public class Service extends TeaModel {
     public String qualifier;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxx</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>RuntimeEndpointTimeout</p>
+     */
+    @NameInMap("runtimeDetailErrorCode")
+    public String runtimeDetailErrorCode;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Available</p>
+     */
+    @NameInMap("runtimeDetailStatus")
+    public String runtimeDetailStatus;
 
     /**
      * <p>The unique ID of the service.</p>
@@ -168,7 +186,7 @@ public class Service extends TeaModel {
     public java.util.List<String> unhealthyEndpoints;
 
     /**
-     * <p>The update time.</p>
+     * <p>The time when the service was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>1725868548440</p>
@@ -329,6 +347,22 @@ public class Service extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public Service setRuntimeDetailErrorCode(String runtimeDetailErrorCode) {
+        this.runtimeDetailErrorCode = runtimeDetailErrorCode;
+        return this;
+    }
+    public String getRuntimeDetailErrorCode() {
+        return this.runtimeDetailErrorCode;
+    }
+
+    public Service setRuntimeDetailStatus(String runtimeDetailStatus) {
+        this.runtimeDetailStatus = runtimeDetailStatus;
+        return this;
+    }
+    public String getRuntimeDetailStatus() {
+        return this.runtimeDetailStatus;
     }
 
     public Service setServiceId(String serviceId) {

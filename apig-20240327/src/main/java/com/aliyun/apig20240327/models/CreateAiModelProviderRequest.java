@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateAiModelProviderRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OpenAI</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gw-ucbx3s2m****</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>openai</p>
      */
     @NameInMap("provider")
     public String provider;

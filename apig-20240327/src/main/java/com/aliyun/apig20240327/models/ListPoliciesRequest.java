@@ -14,7 +14,7 @@ public class ListPoliciesRequest extends TeaModel {
     public String attachResourceId;
 
     /**
-     * <p>The type of attachment point supported by the policy.</p>
+     * <p>The type of the attachment point supported by the policy.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>HttpApi: HTTP API.</li>

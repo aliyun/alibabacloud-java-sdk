@@ -59,7 +59,7 @@ public class ListGatewaysShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzq6bzz5uyg2q</p>

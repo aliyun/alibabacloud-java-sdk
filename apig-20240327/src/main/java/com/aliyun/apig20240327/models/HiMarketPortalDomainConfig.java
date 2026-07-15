@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class HiMarketPortalDomainConfig extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>portal.example.com</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
-     * <p>The domain protocol.</p>
+     * <p>The request protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTPS</p>
      */
     @NameInMap("protocol")
     public String protocol;
 
     /**
-     * <p>The domain type.</p>
+     * <p>The domain name type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
      */
     @NameInMap("type")
     public String type;

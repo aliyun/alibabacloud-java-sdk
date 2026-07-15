@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete all tags. This parameter takes effect only when tags are empty. Valid values:</p>
+     * <p>Specifies whether to delete all tags. This parameter is valid only when tags are empty. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>

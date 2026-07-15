@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HiMarketProductFeature extends TeaModel {
     /**
-     * <p>Specifies the product\&quot;s model feature. For more information, see HiMarketModelFeature.</p>
+     * <p>The model feature.</p>
      */
     @NameInMap("modelFeature")
     public HiMarketModelFeature modelFeature;

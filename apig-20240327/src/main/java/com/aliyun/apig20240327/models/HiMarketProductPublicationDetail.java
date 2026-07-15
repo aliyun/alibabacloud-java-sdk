@@ -5,37 +5,55 @@ import com.aliyun.tea.*;
 
 public class HiMarketProductPublicationDetail extends TeaModel {
     /**
-     * <p>The unique ID of the portal.</p>
+     * <p>The portal ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>portal-xxx</p>
      */
     @NameInMap("portalId")
     public String portalId;
 
     /**
-     * <p>The name of the portal.</p>
+     * <p>The portal name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>开发者门户</p>
      */
     @NameInMap("portalName")
     public String portalName;
 
     /**
-     * <p>The unique ID of the product.</p>
+     * <p>The product ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod-xxx</p>
      */
     @NameInMap("productId")
     public String productId;
 
     /**
-     * <p>The name of the product.</p>
+     * <p>The product name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI网关API</p>
      */
     @NameInMap("productName")
     public String productName;
 
     /**
-     * <p>The type of the product.</p>
+     * <p>The product type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ApiGateway</p>
      */
     @NameInMap("productType")
     public String productType;
 
     /**
-     * <p>The unique ID of the product publication.</p>
+     * <p>The product publish ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pub-xxx</p>
      */
     @NameInMap("publicationId")
     public String publicationId;

@@ -5,43 +5,58 @@ import com.aliyun.tea.*;
 
 public class HiMarketOidcConfig extends TeaModel {
     /**
-     * <p>Configuration settings for the authorization code grant type.</p>
+     * <p>The OAuth2 Authorization Code configuration.</p>
      */
     @NameInMap("authCodeConfig")
     public HiMarketOidcConfigAuthCodeConfig authCodeConfig;
 
     /**
-     * <p>Enables or disables this identity provider. If set to <code>false</code>, users cannot sign in with this provider.</p>
+     * <p>Indicates whether the OIDC configuration is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>The OAuth 2.0 grant type. For OIDC, this must be <code>authorization_code</code>.</p>
+     * <p>The authorization type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>authorization_code</p>
      */
     @NameInMap("grantType")
     public String grantType;
 
     /**
-     * <p>Specifies how to map claims from an ID token to user attributes in your system.</p>
+     * <p>The identity field mapping configuration.</p>
      */
     @NameInMap("identityMapping")
     public HiMarketOidcConfigIdentityMapping identityMapping;
 
     /**
-     * <p>The URL for the provider\&quot;s logo. This logo appears on the sign-in page.</p>
+     * <p>The provider logo URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/logo.png">https://example.com/logo.png</a></p>
      */
     @NameInMap("logoUrl")
     public String logoUrl;
 
     /**
-     * <p>The provider\&quot;s display name. This name appears on the sign-in page.</p>
+     * <p>The OIDC configuration name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-oidc-config</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The unique identifier for the identity provider.</p>
+     * <p>The OIDC provider name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里云IDaaS</p>
      */
     @NameInMap("provider")
     public String provider;
@@ -109,55 +124,82 @@ public class HiMarketOidcConfig extends TeaModel {
 
     public static class HiMarketOidcConfigAuthCodeConfig extends TeaModel {
         /**
-         * <p>The URL of the identity provider\&quot;s authorization endpoint.</p>
+         * <p>The authorization endpoint URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idaas.example.com/oauth2/authorize">https://idaas.example.com/oauth2/authorize</a></p>
          */
         @NameInMap("authorizationEndpoint")
         public String authorizationEndpoint;
 
         /**
-         * <p>The client ID obtained from the identity provider after registering your application.</p>
+         * <p>The OAuth2 client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-client-id</p>
          */
         @NameInMap("clientId")
         public String clientId;
 
         /**
-         * <p>The client secret obtained from the identity provider after registering your application.</p>
+         * <p>The OAuth2 client secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-client-secret</p>
          */
         @NameInMap("clientSecret")
         public String clientSecret;
 
         /**
-         * <p>The identity provider\&quot;s unique issuer URL, used to validate ID tokens.</p>
+         * <p>The OIDC issuer URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idaas.example.com">https://idaas.example.com</a></p>
          */
         @NameInMap("issuer")
         public String issuer;
 
         /**
-         * <p>The provider\&quot;s JWK Set URI. This URI provides the public keys needed to verify ID token signatures.</p>
+         * <p>The JWKS public key set URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idaas.example.com/.well-known/jwks.json">https://idaas.example.com/.well-known/jwks.json</a></p>
          */
         @NameInMap("jwkSetUri")
         public String jwkSetUri;
 
         /**
-         * <p>The application\&quot;s redirect URI. The provider sends the authorization code to this URI after successful authentication. You must register this URI with the identity provider.</p>
+         * <p>The OAuth2 redirect URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://gateway.example.com/callback">https://gateway.example.com/callback</a></p>
          */
         @NameInMap("redirectUri")
         public String redirectUri;
 
         /**
-         * <p>A space-separated list of scopes to request from the provider. The <code>openid</code> scope is required for OIDC authentication. For example: <code>openid profile email</code>.</p>
+         * <p>The OAuth2 authorization scopes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openid profile email</p>
          */
         @NameInMap("scopes")
         public String scopes;
 
         /**
-         * <p>The URL of the identity provider\&quot;s token endpoint.</p>
+         * <p>The token endpoint URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idaas.example.com/oauth2/token">https://idaas.example.com/oauth2/token</a></p>
          */
         @NameInMap("tokenEndpoint")
         public String tokenEndpoint;
 
         /**
-         * <p>The URL of the identity provider\&quot;s user info endpoint.</p>
+         * <p>The UserInfo endpoint URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idaas.example.com/userinfo">https://idaas.example.com/userinfo</a></p>
          */
         @NameInMap("userInfoEndpoint")
         public String userInfoEndpoint;
@@ -243,25 +285,34 @@ public class HiMarketOidcConfig extends TeaModel {
 
     public static class HiMarketOidcConfigIdentityMapping extends TeaModel {
         /**
-         * <p>Maps additional claims from the ID token to custom user attributes. For each mapping, the key is the target attribute in your system, and the value is the name of the claim from the ID token.</p>
+         * <p>The custom field mappings.</p>
          */
         @NameInMap("customFields")
         public java.util.Map<String, String> customFields;
 
         /**
-         * <p>The ID token claim that maps to the user\&quot;s email address. The <code>email</code> claim is a common choice.</p>
+         * <p>The identity field name that corresponds to the email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>email</p>
          */
         @NameInMap("emailField")
         public String emailField;
 
         /**
-         * <p>The ID token claim that maps to the user\&quot;s unique ID. The <code>sub</code> claim is a common choice.</p>
+         * <p>The identity field name that corresponds to the user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub</p>
          */
         @NameInMap("userIdField")
         public String userIdField;
 
         /**
-         * <p>The ID token claim that maps to the user\&quot;s display name. Common choices include <code>name</code> and <code>preferred_username</code>.</p>
+         * <p>The identity field name that corresponds to the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("userNameField")
         public String userNameField;

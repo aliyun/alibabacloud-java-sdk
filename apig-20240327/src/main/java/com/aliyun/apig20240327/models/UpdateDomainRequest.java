@@ -36,7 +36,7 @@ public class UpdateDomainRequest extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The domain name scope.</p>
+     * <p>The scope of the domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>Dedicated</p>
@@ -45,7 +45,7 @@ public class UpdateDomainRequest extends TeaModel {
     public String domainScope;
 
     /**
-     * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is set. When the protocol is HTTPS, forceHttps is required.</p>
+     * <p>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS. This parameter is required when the protocol is HTTPS.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -63,7 +63,7 @@ public class UpdateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
-     * <p>Specifies whether to enable mTLS mutual authentication.</p>
+     * <p>Specifies whether to enable mutual TLS (mTLS) authentication.</p>
      */
     @NameInMap("mTLSEnabled")
     public Boolean mTLSEnabled;
@@ -71,8 +71,8 @@ public class UpdateDomainRequest extends TeaModel {
     /**
      * <p>The protocol type supported by the domain name.</p>
      * <ul>
-     * <li>HTTP: Only the HTTP protocol is supported.</li>
-     * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+     * <li>HTTP: Only HTTP is supported.</li>
+     * <li>HTTPS: Only HTTPS is supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>

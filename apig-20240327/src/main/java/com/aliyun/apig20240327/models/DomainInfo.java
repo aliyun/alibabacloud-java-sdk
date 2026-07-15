@@ -27,7 +27,7 @@ public class DomainInfo extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The source from which the domain name is created.</p>
+     * <p>The source from which the domain name was created.</p>
      * 
      * <strong>example:</strong>
      * <p>Console</p>
@@ -72,7 +72,7 @@ public class DomainInfo extends TeaModel {
     public Boolean forceHttps;
 
     /**
-     * <p>Indicates whether MTLS mutual authentication is enabled.</p>
+     * <p>Specifies whether to enable mTLS mutual authentication.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -92,8 +92,8 @@ public class DomainInfo extends TeaModel {
     /**
      * <p>The protocol type supported by the domain name.</p>
      * <ul>
-     * <li>HTTP: Only the HTTP protocol is supported.</li>
-     * <li>HTTP: Only the HTTPS protocol is supported.</li>
+     * <li>HTTP: Only HTTP is supported.</li>
+     * <li>HTTPS: Only HTTPS is supported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,6 +119,12 @@ public class DomainInfo extends TeaModel {
      */
     @NameInMap("status")
     public String status;
+
+    @NameInMap("tlsMax")
+    public String tlsMax;
+
+    @NameInMap("tlsMin")
+    public String tlsMin;
 
     /**
      * <p>The update timestamp.</p>
@@ -228,6 +234,22 @@ public class DomainInfo extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DomainInfo setTlsMax(String tlsMax) {
+        this.tlsMax = tlsMax;
+        return this;
+    }
+    public String getTlsMax() {
+        return this.tlsMax;
+    }
+
+    public DomainInfo setTlsMin(String tlsMin) {
+        this.tlsMin = tlsMin;
+        return this;
+    }
+    public String getTlsMin() {
+        return this.tlsMin;
     }
 
     public DomainInfo setUpdateTimestamp(Long updateTimestamp) {

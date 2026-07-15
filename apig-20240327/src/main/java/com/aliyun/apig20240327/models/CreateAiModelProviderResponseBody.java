@@ -4,15 +4,27 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateAiModelProviderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public CreateAiModelProviderResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>464F9EA0-1052-51BD-8187-D292AA2D8D24</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
     }
 
     public static class CreateAiModelProviderResponseBodyDataModelCardsAvailablePaths extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/v1/chat/completions</p>
+         */
         @NameInMap("path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chat</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -84,15 +104,31 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
     }
 
     public static class CreateAiModelProviderResponseBodyDataModelCardsCredit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.015</p>
+         */
         @NameInMap("cacheCost")
         public Float cacheCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.03</p>
+         */
         @NameInMap("inputCost")
         public Float inputCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.06</p>
+         */
         @NameInMap("outputCost")
         public Float outputCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>token</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -136,12 +172,24 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
     }
 
     public static class CreateAiModelProviderResponseBodyDataModelCardsMeta extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>128000</p>
+         */
         @NameInMap("maxInputTokens")
         public Long maxInputTokens;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4096</p>
+         */
         @NameInMap("maxOutputTokens")
         public Long maxOutputTokens;
 
+        /**
+         * <strong>example:</strong>
+         * <p>132096</p>
+         */
         @NameInMap("maxTokens")
         public Long maxTokens;
 
@@ -205,27 +253,55 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         @NameInMap("credit")
         public CreateAiModelProviderResponseBodyDataModelCardsCredit credit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;stream&quot;:true,&quot;tools&quot;:true}</p>
+         */
         @NameInMap("features")
         public java.util.Map<String, ?> features;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-ucbx3s2m****</p>
+         */
         @NameInMap("gatewayId")
         public String gatewayId;
 
         @NameInMap("meta")
         public CreateAiModelProviderResponseBodyDataModelCardsMeta meta;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mc-xxx****</p>
+         */
         @NameInMap("modelCardId")
         public String modelCardId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gpt-4</p>
+         */
         @NameInMap("modelName")
         public String modelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>openai</p>
+         */
         @NameInMap("modelProvider")
         public String modelProvider;
 
+        /**
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-03T10:48:00Z</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
@@ -320,27 +396,55 @@ public class CreateAiModelProviderResponseBody extends TeaModel {
         @NameInMap("boundServices")
         public java.util.List<ServiceInfo> boundServices;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAI</p>
+         */
         @NameInMap("displayName")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gw-ucbx3s2m****</p>
+         */
         @NameInMap("gatewayId")
         public String gatewayId;
 
         @NameInMap("modelCards")
         public java.util.List<CreateAiModelProviderResponseBodyDataModelCards> modelCards;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("modelCount")
         public Integer modelCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp-xxx****</p>
+         */
         @NameInMap("modelProviderId")
         public String modelProviderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>openai</p>
+         */
         @NameInMap("provider")
         public String provider;
 
+        /**
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-03T10:48:00Z</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 

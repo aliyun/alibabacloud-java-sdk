@@ -131,7 +131,7 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The Agent service configuration. This parameter is required when <code>sourceType</code> is set to <code>AGENT</code>.</p>
+         * <p>The Agent service configuration. This parameter is required when sourceType is set to AGENT.</p>
          */
         @NameInMap("agentServiceConfig")
         public AgentServiceConfig agentServiceConfig;
@@ -166,6 +166,12 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <p>The model provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp-xxx****</p>
+         */
         @NameInMap("modelProviderId")
         public String modelProviderId;
 
@@ -179,7 +185,7 @@ public class CreateServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace of the service:</p>
+         * <p>The namespace of the service.</p>
          * <ul>
          * <li>If sourceType is set to K8S, this parameter specifies the namespace of the Kubernetes service.</li>
          * <li>If sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</li>

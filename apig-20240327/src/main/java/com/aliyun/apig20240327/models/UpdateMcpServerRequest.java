@@ -89,7 +89,7 @@ public class UpdateMcpServerRequest extends TeaModel {
      * <li>HTTP: HTTP protocol.</li>
      * <li>HTTPS: HTTPS protocol.</li>
      * <li>SSE: Server-Sent Events protocol.</li>
-     * <li>StreamableHTTP: Streamable HTTP protocol.</li>
+     * <li>StreamableHTTP: streamable HTTP protocol.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

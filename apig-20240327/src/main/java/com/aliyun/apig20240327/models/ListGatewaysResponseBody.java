@@ -87,8 +87,8 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li>TCP</li>
-         * <li>UDP</li>
+         * <li>TCP.</li>
+         * <li>UDP.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The load balancing provisioning pattern of the gateway. Valid values:</p>
          * <ul>
-         * <li>Managed: Managed by Cloud-native API Gateway.</li>
+         * <li>Managed: managed by the cloud-native API gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,8 +207,8 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The load balancing status. Valid values:</p>
          * <ul>
-         * <li>Ready: Active.</li>
-         * <li>NotCreate: No associated instance.</li>
+         * <li>Ready: active.</li>
+         * <li>NotCreate: no associated instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,8 +220,8 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The load balancing type of the gateway. Valid values:</p>
          * <ul>
-         * <li>NLB: Network load balancing.</li>
-         * <li>CLB: Classic load balancing.</li>
+         * <li>NLB: Network Load Balancer (NLB).</li>
+         * <li>CLB: Classic Load Balancer (CLB).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -510,8 +510,8 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The billing type. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: Pay-as-you-go.</li>
-         * <li>PREPAY: Subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>PREPAY: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -523,7 +523,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The source from which the gateway was created. Valid values:</p>
          * <ul>
-         * <li>Console: The gateway was created from the console.</li>
+         * <li>Console: the console.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -533,7 +533,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String createFrom;
 
         /**
-         * <p>The creation timestamp, in milliseconds.</p>
+         * <p>The creation timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -542,7 +542,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The subscription expiration timestamp, in milliseconds.</p>
+         * <p>The subscription expiration timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>172086834548</p>
@@ -553,7 +553,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         /**
          * <p>The gateway instance edition. Valid values:</p>
          * <ul>
-         * <li><p>Professional: Standard instance.</p>
+         * <li><p>Professional: standard instance.</p>
          * </li>
          * <li><p>Serverless: Serverless instance.</p>
          * </li>
@@ -584,7 +584,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String gatewayType;
 
         /**
-         * <p>Indicates whether the gateway instance was created before the AI gateway feature was launched.</p>
+         * <p>Indicates whether the gateway instance was created before the AI gateway feature was released.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -685,7 +685,7 @@ public class ListGatewaysResponseBody extends TeaModel {
         public String targetVersion;
 
         /**
-         * <p>The update timestamp, in milliseconds.</p>
+         * <p>The update timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>

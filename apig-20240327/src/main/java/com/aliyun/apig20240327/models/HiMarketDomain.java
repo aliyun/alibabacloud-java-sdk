@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class HiMarketDomain extends TeaModel {
     /**
-     * <p>The custom domain name. This must be a valid DNS hostname.</p>
+     * <p>The domain name address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api.example.com</p>
      */
     @NameInMap("domain")
     public String domain;
 
     /**
-     * <p>The network type of the endpoint. For example, <code>VPC</code> for an internal network or <code>INTERNET</code> for a public network.</p>
+     * <p>The network type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Internet</p>
      */
     @NameInMap("networkType")
     public String networkType;
 
     /**
-     * <p>The port number for the endpoint. For example, <code>80</code> for HTTP or <code>443</code> for HTTPS.</p>
+     * <p>The port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>443</p>
      */
     @NameInMap("port")
     public Integer port;
 
     /**
-     * <p>The communication protocol. Valid values include <code>HTTP</code> and <code>HTTPS</code>.</p>
+     * <p>The access protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTPS</p>
      */
     @NameInMap("protocol")
     public String protocol;

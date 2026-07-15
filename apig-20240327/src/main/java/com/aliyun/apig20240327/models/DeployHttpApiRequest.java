@@ -146,7 +146,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the ratio-based scenario.</p>
+         * <p>The weight. Valid values: 1 to 100. This parameter takes effect only in the by-ratio scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -237,7 +237,7 @@ public class DeployHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed.</p>
+         * <p>The existing service configurations. In the single-service scenario, only one entry is allowed. In scenarios such as by-ratio or by-content, multiple entries are allowed.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>
@@ -290,7 +290,7 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigOperationDeployments extends TeaModel {
         /**
-         * <p>The operation type.</p>
+         * <p>The action type.</p>
          * 
          * <strong>example:</strong>
          * <p>Publish</p>

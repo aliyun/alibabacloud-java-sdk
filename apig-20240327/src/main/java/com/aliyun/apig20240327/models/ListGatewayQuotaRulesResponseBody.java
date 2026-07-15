@@ -23,7 +23,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
     public ListGatewayQuotaRulesResponseBodyData data;
 
     /**
-     * <p>The maximum number of records to retrieve in a single request. This parameter is not supported.</p>
+     * <p>The maximum number of records to retrieve at a time. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -167,7 +167,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The time zone for the calendar period, in UTC+x format.</p>
+         * <p>The time zone for the natural period, in UTC+x format.</p>
          * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
@@ -176,7 +176,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String timezone;
 
         /**
-         * <p>The reset period type. Only calendar periods are supported, which means windowAlignment=&quot;calendar&quot;.</p>
+         * <p>The reset period type.</p>
          * 
          * <strong>example:</strong>
          * <p>calendar</p>

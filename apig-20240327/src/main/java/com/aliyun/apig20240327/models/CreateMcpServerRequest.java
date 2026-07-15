@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMcpServerRequest extends TeaModel {
     /**
-     * <p>The list of assembled sources. This parameter is required when type is set to AssemblyMCP.</p>
+     * <p>The list of assembly sources. This parameter is required when type is set to AssemblyMCP.</p>
      */
     @NameInMap("assembledSources")
     public java.util.List<CreateMcpServerRequestAssembledSources> assembledSources;
@@ -19,11 +19,11 @@ public class CreateMcpServerRequest extends TeaModel {
     /**
      * <p>The creation source type. Valid values:</p>
      * <ul>
-     * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</li>
-     * <li>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.</li>
-     * <li>ApiGatewayAssembly: gateway MCP assembly.</li>
-     * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</li>
-     * <li>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</li>
+     * <li>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion</li>
+     * <li>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy</li>
+     * <li>ApiGatewayAssembly: gateway MCP assembly</li>
+     * <li>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion</li>
+     * <li>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class CreateMcpServerRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li>RealMCP: standard MCP service.</li>
+     * <li>RealMCP: standard MCP service</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -311,8 +311,8 @@ public class CreateMcpServerRequest extends TeaModel {
         /**
          * <p>The service protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP.</li>
-         * <li>HTTPS.</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>

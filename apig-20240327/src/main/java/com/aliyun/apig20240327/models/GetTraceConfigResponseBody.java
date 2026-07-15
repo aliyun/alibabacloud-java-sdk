@@ -99,7 +99,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Tracing Analysis is enabled. Valid values:</p>
          * <ul>
-         * <li>true: Enabled.</li>
+         * <li>true: enabled.</li>
          * <li>false: shutdown.</li>
          * </ul>
          * 
@@ -142,7 +142,7 @@ public class GetTraceConfigResponseBody extends TeaModel {
          * <li>XTRACE</li>
          * <li>SKYWALKING</li>
          * <li>OPENTELEMETRY</li>
-         * <li>OTSKYWALKING.</li>
+         * <li>OTSKYWALKING</li>
          * </ul>
          * 
          * <strong>example:</strong>

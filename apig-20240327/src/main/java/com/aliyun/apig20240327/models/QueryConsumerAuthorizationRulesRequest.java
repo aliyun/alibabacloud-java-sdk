@@ -14,6 +14,8 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String apiNameLike;
 
     /**
+     * <p>The consumer group ID. If specified, the authorization rules of the consumer group are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>csg-8c13d2b4f8a1</p>
      */
@@ -84,6 +86,8 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     public String parentResourceId;
 
     /**
+     * <p>The principal type. Valid values: Consumer or ConsumerGroup.</p>
+     * 
      * <strong>example:</strong>
      * <p>ConsumerGroup</p>
      */

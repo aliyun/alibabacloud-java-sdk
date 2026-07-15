@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetTraceConfigRequest extends TeaModel {
     /**
-     * <p>The language type. Valid values:</p>
-     * <p>zh: Chinese
-     * en: English.</p>
+     * <p>The language type. Valid values:
+     * zh: Chinese
+     * en: English</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

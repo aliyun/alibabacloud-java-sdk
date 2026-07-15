@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HiMarketHmacConfig extends TeaModel {
     /**
-     * <p>The authentication credentials.</p>
+     * <p>The list of credentials.</p>
      */
     @NameInMap("credentials")
     public java.util.List<HiMarketHmacConfigCredentials> credentials;
@@ -25,19 +25,28 @@ public class HiMarketHmacConfig extends TeaModel {
 
     public static class HiMarketHmacConfigCredentials extends TeaModel {
         /**
-         * <p>The AccessKey ID.</p>
+         * <p>Access Key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-access-key-123</p>
          */
         @NameInMap("ak")
         public String ak;
 
         /**
-         * <p>The HMAC mode.</p>
+         * <p>The generation mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("mode")
         public String mode;
 
         /**
-         * <p>The AccessKey Secret.</p>
+         * <p>Access Key Secret</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-secret-key-456</p>
          */
         @NameInMap("sk")
         public String sk;

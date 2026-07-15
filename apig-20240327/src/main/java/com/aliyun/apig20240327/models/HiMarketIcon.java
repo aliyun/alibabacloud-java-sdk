@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class HiMarketIcon extends TeaModel {
     /**
-     * <p>Specifies the icon type. Example: <code>URL</code>.</p>
+     * <p>The icon type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>url</p>
      */
     @NameInMap("type")
     public String type;
 
     /**
-     * <p>The value of the icon, based on the specified <code>type</code>. For example, if <code>type</code> is <code>URL</code>, this is the URL of the icon.</p>
+     * <p>The icon value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/icon.png">https://example.com/icon.png</a></p>
      */
     @NameInMap("value")
     public String value;

@@ -43,6 +43,12 @@ public class UpdateServiceRequest extends TeaModel {
     @NameInMap("healthyPanicThreshold")
     public Float healthyPanicThreshold;
 
+    /**
+     * <p>The model provider ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mp-xxx****</p>
+     */
     @NameInMap("modelProviderId")
     public String modelProviderId;
 
@@ -163,7 +169,7 @@ public class UpdateServiceRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The list of expected HTTP status codes that indicate a healthy response. This parameter is required when the protocol is HTTP.</p>
+         * <p>The list of expected normal status codes returned by requests. This parameter is required when the protocol is HTTP.</p>
          */
         @NameInMap("expectedStatuses")
         public java.util.List<String> expectedStatuses;
@@ -312,7 +318,7 @@ public class UpdateServiceRequest extends TeaModel {
 
     public static class UpdateServiceRequestOutlierDetectionConfig extends TeaModel {
         /**
-         * <p>The base ejection time, which is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation time is calculated by using the following formula: k × base_ejection_time (the initial value of k is 1). Each ejection increases the isolation time (k is incremented by 1). If consecutive checks are healthy, the isolation time is gradually reduced (k is decremented by 1).</p>
+         * <p>The initial ejection duration. This is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation duration is calculated by using the formula: k × base_ejection_time (k starts at 1). Each ejection increases the isolation duration (k is incremented by 1). If consecutive checks are normal, the isolation duration is gradually reduced (k is decremented by 1).</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -331,7 +337,7 @@ public class UpdateServiceRequest extends TeaModel {
 
         /**
          * <p>The panic threshold.</p>
-         * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally. Requests are sent only to healthy nodes and not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled. Requests are sent to all nodes, including ejected nodes.</p>
+         * <p>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally and requests are sent only to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled and requests are sent to all nodes, including ejected nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -415,7 +421,7 @@ public class UpdateServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The port number.</p>
+         * <p>The port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>

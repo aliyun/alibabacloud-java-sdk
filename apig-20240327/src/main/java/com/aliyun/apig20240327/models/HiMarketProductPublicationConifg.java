@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class HiMarketProductPublicationConifg extends TeaModel {
     /**
-     * <p>The unique identifier for the publication.</p>
+     * <p>The publication ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pub-xxx</p>
      */
     @NameInMap("publicationId")
     public String publicationId;

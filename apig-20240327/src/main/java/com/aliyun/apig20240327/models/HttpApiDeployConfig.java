@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiDeployConfig extends TeaModel {
     /**
-     * <p>Specifies whether to automatically deploy.</p>
+     * <p>Indicates whether auto-deploy is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,19 +35,19 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<String> customDomainIds;
 
     /**
-     * <p>The list of custom domain name details.</p>
+     * <p>The list of custom domain name information.</p>
      */
     @NameInMap("customDomainInfos")
     public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
 
     /**
-     * <p>The list of environment domain name IDs. If this parameter is not specified, all environment domain names are associated. An empty array indicates that no environment domain names are associated.</p>
+     * <p>The list of environment domain name IDs. If this parameter is not specified, all environment domain names are bound. An empty array indicates that no environment domain names are bound.</p>
      */
     @NameInMap("envDomainIds")
     public java.util.List<String> envDomainIds;
 
     /**
-     * <p>The list of environment domain name details.</p>
+     * <p>The list of environment domain name information.</p>
      */
     @NameInMap("envDomainInfos")
     public java.util.List<HttpApiDeployConfigEnvDomainInfos> envDomainInfos;
@@ -119,7 +119,7 @@ public class HttpApiDeployConfig extends TeaModel {
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
 
     /**
-     * <p>The list of subdomain details.</p>
+     * <p>The list of subdomain information.</p>
      */
     @NameInMap("subDomains")
     public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
@@ -496,7 +496,7 @@ public class HttpApiDeployConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>The observability metric routing configuration.</p>
+         * <p>The observability-based routing configuration.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>true</p>

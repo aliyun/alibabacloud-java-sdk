@@ -76,7 +76,7 @@ public class UpdateDomainResponseBody extends TeaModel {
 
     public static class UpdateDomainResponseBodyData extends TeaModel {
         /**
-         * <p>The deployment revision ID.</p>
+         * <p>The publish version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>apr-xxxxx</p>

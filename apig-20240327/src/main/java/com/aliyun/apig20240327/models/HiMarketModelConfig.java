@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HiMarketModelConfig extends TeaModel {
     /**
-     * <p>Configuration for the model API.</p>
+     * <p>The Model API configuration wrapper.</p>
      */
     @NameInMap("modelAPIConfig")
     public HiMarketModelConfigModelAPIConfig modelAPIConfig;
@@ -25,19 +25,22 @@ public class HiMarketModelConfig extends TeaModel {
 
     public static class HiMarketModelConfigModelAPIConfig extends TeaModel {
         /**
-         * <p>The AI protocols supported by the model.</p>
+         * <p>The list of AI protocols.</p>
          */
         @NameInMap("aiProtocols")
         public java.util.List<String> aiProtocols;
 
         /**
-         * <p>The model category.</p>
+         * <p>The model categorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Text</p>
          */
         @NameInMap("modelCategory")
         public String modelCategory;
 
         /**
-         * <p>Route configurations for the model API.</p>
+         * <p>The list of routing configurations.</p>
          */
         @NameInMap("routes")
         public java.util.List<HiMarketHttpRoute> routes;

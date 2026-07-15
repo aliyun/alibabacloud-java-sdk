@@ -176,9 +176,21 @@ public class ImportHttpApiResponseBody extends TeaModel {
     }
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes extends TeaModel {
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conflict</p>
+         */
         @NameInMap("errorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin-route</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -209,8 +221,8 @@ public class ImportHttpApiResponseBody extends TeaModel {
         /**
          * <p>The action to be performed after the dry run. Valid values:</p>
          * <ul>
-         * <li>Create: create.</li>
-         * <li>Update: update.</li>
+         * <li>Create: Create.</li>
+         * <li>Update: Update.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,8 +267,8 @@ public class ImportHttpApiResponseBody extends TeaModel {
         /**
          * <p>The action to be performed after the dry run. Valid values:</p>
          * <ul>
-         * <li>Create: create.</li>
-         * <li>Update: update.</li>
+         * <li>Create: Create.</li>
+         * <li>Update: Update.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,9 +344,21 @@ public class ImportHttpApiResponseBody extends TeaModel {
     }
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes extends TeaModel {
+        /**
+         * <p>The action type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-route</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -363,13 +387,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfo extends TeaModel {
         /**
-         * <p>The error messages. If error messages are not empty, the API cannot be imported successfully.</p>
+         * <p>The error messages. If error messages are not empty, the API cannot be successfully imported.</p>
          */
         @NameInMap("errorMessages")
         public java.util.List<String> errorMessages;
 
         /**
-         * <p>The information about the existing API. If this field is not empty, the import updates this API.</p>
+         * <p>The information about the existing API. If this field is not empty, the import action updates this API.</p>
          */
         @NameInMap("existHttpApiInfo")
         public HttpApiApiInfo existHttpApiInfo;
@@ -386,9 +410,18 @@ public class ImportHttpApiResponseBody extends TeaModel {
         @NameInMap("failureOperations")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> failureOperations;
 
+        /**
+         * <p>The list of routes that failed.</p>
+         */
         @NameInMap("failureRoutes")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> failureRoutes;
 
+        /**
+         * <p>The MCP tool definition information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>...</p>
+         */
         @NameInMap("mcpToolsDefinition")
         public String mcpToolsDefinition;
 
@@ -404,6 +437,9 @@ public class ImportHttpApiResponseBody extends TeaModel {
         @NameInMap("successOperations")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> successOperations;
 
+        /**
+         * <p>The list of routes that were successfully imported.</p>
+         */
         @NameInMap("successRoutes")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> successRoutes;
 

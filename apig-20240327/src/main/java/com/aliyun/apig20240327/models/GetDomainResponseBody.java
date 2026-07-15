@@ -133,6 +133,39 @@ public class GetDomainResponseBody extends TeaModel {
         public String caCertIdentifier;
 
         /**
+         * <p>The certificate detail error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
+        @NameInMap("certDetailErrorCode")
+        public String certDetailErrorCode;
+
+        /**
+         * <p>The certificate detail error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
+        @NameInMap("certDetailErrorMessage")
+        public String certDetailErrorMessage;
+
+        /**
+         * <p>The certificate detail status.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
+        @NameInMap("certDetailStatus")
+        public String certDetailStatus;
+
+        /**
          * <p>The certificate identifier.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +236,8 @@ public class GetDomainResponseBody extends TeaModel {
         public String domainId;
 
         /**
+         * <p>The domain name scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>Serverless</p>
          */
@@ -210,7 +245,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String domainScope;
 
         /**
-         * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</p>
+         * <p>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -228,7 +263,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String http2Option;
 
         /**
-         * <p>The certification authority.</p>
+         * <p>The certificate issue authority.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
@@ -273,10 +308,10 @@ public class GetDomainResponseBody extends TeaModel {
         public Long notBeforeTimestamp;
 
         /**
-         * <p>The protocol type supported by the domain name.</p>
+         * <p>The protocol type supported by the domain name. Valid values:</p>
          * <ul>
-         * <li>HTTP: supports only the HTTP protocol.</li>
-         * <li>HTTPS: supports only the HTTPS protocol.</li>
+         * <li>HTTP: only HTTP is supported.</li>
+         * <li>HTTPS: only HTTPS is supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,6 +396,30 @@ public class GetDomainResponseBody extends TeaModel {
         }
         public String getCaCertIdentifier() {
             return this.caCertIdentifier;
+        }
+
+        public GetDomainResponseBodyData setCertDetailErrorCode(String certDetailErrorCode) {
+            this.certDetailErrorCode = certDetailErrorCode;
+            return this;
+        }
+        public String getCertDetailErrorCode() {
+            return this.certDetailErrorCode;
+        }
+
+        public GetDomainResponseBodyData setCertDetailErrorMessage(String certDetailErrorMessage) {
+            this.certDetailErrorMessage = certDetailErrorMessage;
+            return this;
+        }
+        public String getCertDetailErrorMessage() {
+            return this.certDetailErrorMessage;
+        }
+
+        public GetDomainResponseBodyData setCertDetailStatus(String certDetailStatus) {
+            this.certDetailStatus = certDetailStatus;
+            return this;
+        }
+        public String getCertDetailStatus() {
+            return this.certDetailStatus;
         }
 
         public GetDomainResponseBodyData setCertIdentifier(String certIdentifier) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The resource IDs. You can specify up to 50 subkeys.</p>
+     * <p>The resource IDs. A maximum of 50 subkeys are supported.</p>
      */
     @NameInMap("resourceId")
     public java.util.List<String> resourceId;

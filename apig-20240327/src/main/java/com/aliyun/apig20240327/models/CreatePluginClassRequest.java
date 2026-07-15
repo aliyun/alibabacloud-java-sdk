@@ -4,53 +4,99 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreatePluginClassRequest extends TeaModel {
+    /**
+     * <p>The alias of the plugin.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My Wasm Plugin</p>
+     */
     @NameInMap("alias")
     public String alias;
 
     /**
+     * <p>The description of the plugin.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom authentication plugin for validating tokens in request headers</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The execution priority of the plugin.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("executePriority")
     public Integer executePriority;
 
     /**
+     * <p>The execution stage of the plugin.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTHN</p>
      */
     @NameInMap("executeStage")
     public String executeStage;
 
     /**
+     * <p>The name of the plugin class.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-wasm-plugin</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The minimum gateway version that the plugin is compatible with.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0.0</p>
+     */
     @NameInMap("supportedMinGatewayVersion")
     public String supportedMinGatewayVersion;
 
     /**
+     * <p>The version number of the plugin.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("version")
     public String version;
 
     /**
+     * <p>The description of the current version.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Initial version with basic token validation</p>
      */
     @NameInMap("versionDescription")
     public String versionDescription;
 
     /**
+     * <p>The programming language used to develop the WASM plugin.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Rust</p>
      */
     @NameInMap("wasmLanguage")
     public String wasmLanguage;
 
     /**
+     * <p>The download URL of the WASM plugin binary file.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/plugins/my-plugin.wasm">https://example.com/plugins/my-plugin.wasm</a></p>
      */
     @NameInMap("wasmUrl")
     public String wasmUrl;

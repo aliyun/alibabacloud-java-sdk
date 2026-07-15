@@ -23,7 +23,7 @@ public class ListExternalServicesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The keyword used for fuzzy match by API name.</p>
+     * <p>The API name for fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>imah</p>
@@ -43,11 +43,11 @@ public class ListExternalServicesRequest extends TeaModel {
     /**
      * <p>The service source type used to filter results. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: the service originates from MSE Nacos.</li>
-     * <li>K8S: the service originates from a Kubernetes cluster in Container Service.</li>
-     * <li>FC3: the service originates from Function Compute.</li>
-     * <li>VIP: the service originates from a fixed address.</li>
-     * <li>DNS: the service originates from a domain name.</li>
+     * <li>MSE_NACOS: services from MSE Nacos.</li>
+     * <li>K8S: services from a Kubernetes cluster in Container Service.</li>
+     * <li>FC3: services from Function Compute.</li>
+     * <li>VIP: services from a fixed address.</li>
+     * <li>DNS: services from a domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>

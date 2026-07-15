@@ -4,39 +4,105 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ServiceInfo extends TeaModel {
+    /**
+     * <p>The service routing type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("expressType")
     public String expressType;
 
+    /**
+     * <p>The service group name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default-group</p>
+     */
     @NameInMap("groupName")
     public String groupName;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-openai-service</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The service namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The PAI workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ws-xxx****</p>
+     */
     @NameInMap("paiWorkspaceId")
     public String paiWorkspaceId;
 
+    /**
+     * <p>The PAI workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-workspace</p>
+     */
     @NameInMap("paiWorkspaceName")
     public String paiWorkspaceName;
 
+    /**
+     * <p>The list of service ports.</p>
+     */
     @NameInMap("ports")
     public java.util.List<ServiceInfoPorts> ports;
 
+    /**
+     * <p>The service version qualifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <p>The service ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>svc-xxx****</p>
+     */
     @NameInMap("serviceId")
     public String serviceId;
 
+    /**
+     * <p>The service source type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 
+    /**
+     * <p>The service status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The list of service versions.</p>
+     */
     @NameInMap("versions")
     public java.util.List<ServiceInfoVersions> versions;
 
@@ -142,12 +208,30 @@ public class ServiceInfo extends TeaModel {
     }
 
     public static class ServiceInfoPorts extends TeaModel {
+        /**
+         * <p>The port name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("port")
         public Integer port;
 
+        /**
+         * <p>The port protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("protocol")
         public String protocol;
 
@@ -183,9 +267,21 @@ public class ServiceInfo extends TeaModel {
     }
 
     public static class ServiceInfoVersionsLabels extends TeaModel {
+        /**
+         * <p>The label key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>production</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -213,9 +309,18 @@ public class ServiceInfo extends TeaModel {
     }
 
     public static class ServiceInfoVersions extends TeaModel {
+        /**
+         * <p>The list of version labels.</p>
+         */
         @NameInMap("labels")
         public java.util.List<ServiceInfoVersionsLabels> labels;
 
+        /**
+         * <p>The version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.0.0</p>
+         */
         @NameInMap("name")
         public String name;
 

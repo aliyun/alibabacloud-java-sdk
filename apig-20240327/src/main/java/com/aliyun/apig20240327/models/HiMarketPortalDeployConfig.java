@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class HiMarketPortalDeployConfig extends TeaModel {
     /**
-     * <p>Additional information about the deployment status, such as error details.</p>
+     * <p>The deployment status message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The target deployment platform. For example, set this to <code>SAE</code> to deploy on Serverless App Engine.</p>
+     * <p>The deployment platform type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAE</p>
      */
     @NameInMap("platform")
     public String platform;
 
     /**
-     * <p>Configuration settings for deploying to Serverless App Engine (SAE). This object is required when the <code>platform</code> is <code>SAE</code>.</p>
+     * <p>The SAE (Serverless App Engine) deployment configuration.</p>
      */
     @NameInMap("saeConfig")
     public HiMarketPortalDeployConfigSaeConfig saeConfig;
 
     /**
-     * <p>The current status of the deployment. Possible values include <code>succeeded</code>, <code>failed</code>, and <code>in_progress</code>.</p>
+     * <p>The deployment status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("status")
     public String status;
@@ -67,49 +76,73 @@ public class HiMarketPortalDeployConfig extends TeaModel {
 
     public static class HiMarketPortalDeployConfigSaeConfig extends TeaModel {
         /**
-         * <p>The ID of the application in Serverless App Engine.</p>
+         * <p>The SAE application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-xxx</p>
          */
         @NameInMap("appId")
         public String appId;
 
         /**
-         * <p>The ID of the namespace that logically isolates the application.</p>
+         * <p>The SAE namespace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou:default</p>
          */
         @NameInMap("namespaceId")
         public String namespaceId;
 
         /**
-         * <p>The name of the OIDC role that grants permissions to the application.</p>
+         * <p>The OIDC role name used for SAE to access other cloud resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apig-portal-oidc-role</p>
          */
         @NameInMap("oidcRoleName")
         public String oidcRoleName;
 
         /**
-         * <p>The ID of the region in which to deploy the application.</p>
+         * <p>The region ID of SAE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
         /**
-         * <p>The desired number of application replicas.</p>
+         * <p>The number of instance replicas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("replicas")
         public String replicas;
 
         /**
-         * <p>The ID of the security group to apply to the application instances. A security group acts as a virtual firewall.</p>
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxx</p>
          */
         @NameInMap("securityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The ID of the vSwitch within the specified VPC. Serverless App Engine launches application instances in the vSwitch\&quot;s zone.</p>
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
          */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC to connect the application to.</p>
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
          */
         @NameInMap("vpcId")
         public String vpcId;

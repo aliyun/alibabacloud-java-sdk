@@ -160,7 +160,7 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The time zone corresponding to the natural cycle, in UTC+x format.</p>
+         * <p>The time zone corresponding to the calendar cycle, in UTC+x format.</p>
          * 
          * <strong>example:</strong>
          * <p>UTC+8</p>
@@ -171,8 +171,8 @@ public class ListConsumerQuotaRulesResponseBody extends TeaModel {
         /**
          * <p>The cycle type. Valid values:</p>
          * <ul>
-         * <li>calendar: Natural cycle.</li>
-         * <li>epoch: Custom cycle.</li>
+         * <li>calendar: calendar cycle.</li>
+         * <li>epoch: custom cycle.</li>
          * </ul>
          * 
          * <strong>example:</strong>

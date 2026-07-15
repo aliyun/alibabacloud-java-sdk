@@ -115,10 +115,10 @@ public class GetGatewayQuotaRuleSubjectUsageResponseBody extends TeaModel {
         public Long outputAmount;
 
         /**
-         * <p>The consumption (request) time.</p>
+         * <p>The consumption (request) time in the format of YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-06-05 13:16:31</p>
+         * <p>2026-06-05</p>
          */
         @NameInMap("startTime")
         public String startTime;

@@ -5,28 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRequest extends TeaModel {
     /**
-     * <p>The list of protocols supported by the agent.</p>
+     * <p>The list of protocols supported by the agent. This parameter is required when type is set to Agent. This parameter is not required for other types.</p>
      */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
 
     /**
-     * <p>The AI API protocols. The following protocols are supported:</p>
-     * <ul>
-     * <li>OpenAI/v1</li>
-     * </ul>
+     * <p>The AI API protocols. This parameter is required when type is set to LLM, and only one protocol can be specified. This parameter is required when type is set to Ai, and multiple protocols can be specified. This parameter is not required for other types.</p>
      */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
     /**
-     * <p>The authentication configuration.</p>
+     * <p>The authentication configuration. This parameter is required when enableAuth is set to true.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>The base path of the API. The value must start with a forward slash (/).</p>
+     * <p>The API base path. The path must start with a forward slash (/), cannot exceed 256 bytes in length, and cannot contain spaces. This parameter is required when type is set to Rest. When type is set to LLM, Ai, or Agent, this parameter is optional and defaults to /.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -44,22 +41,22 @@ public class CreateHttpApiRequest extends TeaModel {
     public String belongGatewayId;
 
     /**
-     * <p>The API deployment configurations. Currently, only AI APIs support deployment configurations, and only a single deployment configuration can be specified.</p>
+     * <p>The API deployment configurations. This parameter is required when type is set to LLM or Ai, and only one deployment configuration can be specified. This parameter is not validated at the request level for other types.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>The description of the API.</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试专用API。</p>
+     * <p>Test API for integration</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run without actually executing the operation.</p>
+     * <p>Specifies whether to perform a dry run without executing the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -69,7 +66,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to enable authentication.</p>
+     * <p>Specifies whether to enable authentication. This parameter is validated when type is set to LLM, Ai, or Agent. This parameter is not validated at the request level when type is set to Rest.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -87,22 +84,22 @@ public class CreateHttpApiRequest extends TeaModel {
     public Integer firstByteTimeout;
 
     /**
-     * <p>The configuration of the HTTP Ingress API.</p>
+     * <p>The HTTP Ingress API configuration. This parameter is required and cannot be nil when type is set to HttpIngress. This parameter is not required for other types.</p>
      */
     @NameInMap("ingressConfig")
     public CreateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>The model category.</p>
+     * <p>The model category. This parameter is optional when type is set to LLM or Ai. This parameter is not required for other types.</p>
      * 
      * <strong>example:</strong>
-     * <p>llm/text-to-image</p>
+     * <p>Text</p>
      */
     @NameInMap("modelCategory")
     public String modelCategory;
 
     /**
-     * <p>The name of the API.</p>
+     * <p>The API name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -136,7 +133,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The conflict merge strategy for the import.</p>
+     * <p>The conflict merge strategy for import.</p>
      * 
      * <strong>example:</strong>
      * <p>ExistFirst</p>
@@ -154,6 +151,7 @@ public class CreateHttpApiRequest extends TeaModel {
      * <li>LLM</li>
      * <li>Agent</li>
      * </ul>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>
@@ -162,7 +160,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The versioning configuration of the API.</p>
+     * <p>The API versioning configuration.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
@@ -345,7 +343,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The Ingress class to listen on.</p>
+         * <p>The Ingress Class to listen on.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -354,7 +352,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>Specifies whether to update the address in the Ingress status.</p>
+         * <p>Specifies whether to update the address in the Ingress Status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

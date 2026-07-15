@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>The CA certificate identifier.</p>
+     * <p>The CA certificate identifier. This parameter is required for Dedicated+HTTPS.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -45,7 +45,7 @@ public class CreateDomainRequest extends TeaModel {
     public String domainScope;
 
     /**
-     * <p>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS.</p>
+     * <p>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless and for Dedicated+HTTPS. This parameter is not validated for Dedicated+HTTP.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -88,11 +88,7 @@ public class CreateDomainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type supported by the domain name. Valid values:</p>
-     * <ul>
-     * <li>HTTP: Only HTTP is supported.</li>
-     * <li>HTTPS: Only HTTPS is supported.</li>
-     * </ul>
+     * <p>The protocol type supported by the domain name. This parameter is required for Dedicated and only allows HTTP or HTTPS. This parameter is not allowed for Serverless.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>

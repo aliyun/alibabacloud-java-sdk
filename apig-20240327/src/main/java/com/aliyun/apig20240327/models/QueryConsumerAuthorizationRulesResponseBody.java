@@ -76,7 +76,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo extends TeaModel {
         /**
-         * <p>The operation information.</p>
+         * <p>The API operation information.</p>
          */
         @NameInMap("operationInfo")
         public HttpApiOperationInfo operationInfo;
@@ -127,12 +127,17 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerAuthorizationRuleId;
 
         /**
+         * <p>The consumer group ID. This field is returned for consumer group authorization rules.</p>
+         * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
          */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <p>The consumer group information. This field is returned for consumer group authorization rules.</p>
+         */
         @NameInMap("consumerGroupInfo")
         public ConsumerGroupInfo consumerGroupInfo;
 
@@ -213,6 +218,8 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public GatewayInfo gatewayInfo;
 
         /**
+         * <p>The principal type. Valid values: Consumer or ConsumerGroup.</p>
+         * 
          * <strong>example:</strong>
          * <p>ConsumerGroup</p>
          */

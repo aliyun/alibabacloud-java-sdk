@@ -98,6 +98,8 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
 
     public static class CreateConsumerAuthorizationRulesRequestAuthorizationRules extends TeaModel {
         /**
+         * <p>The consumer group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>csg-8c13d2b4f8a1</p>
          */
@@ -123,15 +125,17 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String expireMode;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>174116222x</p>
+         * <p>1741162221</p>
          */
         @NameInMap("expireTimestamp")
         public Long expireTimestamp;
 
         /**
+         * <p>The type of the authorization principal.</p>
+         * 
          * <strong>example:</strong>
          * <p>ConsumerGroup</p>
          */
@@ -139,7 +143,7 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         public String principalType;
 
         /**
-         * <p>The resource identifier, which serves as a unique identifier for non-standard code sources for space reuse.</p>
+         * <p>The resource identifier, which serves as a unique identifier for space reuse by non-standard code sources.</p>
          */
         @NameInMap("resourceIdentifier")
         public CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier resourceIdentifier;

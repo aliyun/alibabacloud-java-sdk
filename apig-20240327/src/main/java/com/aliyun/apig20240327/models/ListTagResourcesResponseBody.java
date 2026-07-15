@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query. An empty value of NextToken indicates that no more results exist.</p>
+     * <p>The token for the next query. An empty NextToken indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeb235b-xxx</p>

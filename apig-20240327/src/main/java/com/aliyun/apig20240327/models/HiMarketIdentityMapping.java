@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class HiMarketIdentityMapping extends TeaModel {
     /**
-     * <p>The identity provider attribute that maps to the user\&quot;s email address.</p>
+     * <p>The identity field name that corresponds to the mailbox.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>email</p>
      */
     @NameInMap("emailField")
     public String emailField;
 
     /**
-     * <p>The identity provider attribute that maps to the user\&quot;s unique ID.</p>
+     * <p>The identity field name that corresponds to the user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sub</p>
      */
     @NameInMap("userIdField")
     public String userIdField;
 
     /**
-     * <p>The identity provider attribute that maps to the username.</p>
+     * <p>The identity field name that corresponds to the username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("userNameField")
     public String userNameField;

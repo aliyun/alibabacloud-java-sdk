@@ -160,6 +160,8 @@ public class GetSourceResponseBody extends TeaModel {
 
     public static class GetSourceResponseBodyData extends TeaModel {
         /**
+         * <p>The reason for the association status</p>
+         * 
          * <strong>example:</strong>
          * <p>Association completed</p>
          */
@@ -167,6 +169,8 @@ public class GetSourceResponseBody extends TeaModel {
         public String associationReason;
 
         /**
+         * <p>The association status of the source</p>
+         * 
          * <strong>example:</strong>
          * <p>ASSOCIATED</p>
          */

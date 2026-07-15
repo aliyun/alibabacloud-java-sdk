@@ -4,17 +4,35 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreatePluginClassResponseBody extends TeaModel {
+    /**
+     * <p>The response status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("data")
     public CreatePluginClassResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>880F8DC9-1CD9-5A83-AA54-AD2D3B7D2466</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -57,6 +75,12 @@ public class CreatePluginClassResponseBody extends TeaModel {
     }
 
     public static class CreatePluginClassResponseBodyData extends TeaModel {
+        /**
+         * <p>The plugin class ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pls-csqmjxxxxxxx</p>
+         */
         @NameInMap("pluginClassId")
         public String pluginClassId;
 

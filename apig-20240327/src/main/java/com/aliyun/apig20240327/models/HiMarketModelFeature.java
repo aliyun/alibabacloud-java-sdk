@@ -5,43 +5,64 @@ import com.aliyun.tea.*;
 
 public class HiMarketModelFeature extends TeaModel {
     /**
-     * <p>Indicates whether to enable multi-modal capabilities. If set to <code>true</code>, the model can process requests that include multiple data types, such as text and images.</p>
+     * <p>Indicates whether multimodal input is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("enableMultiModal")
     public Boolean enableMultiModal;
 
     /**
-     * <p>Indicates whether to include the model\&quot;s reasoning process in the response. If set to <code>true</code>, the output may contain intermediate steps that show how the model arrived at a conclusion.</p>
+     * <p>Indicates whether chain-of-thought (Thinking) is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("enableThinking")
     public Boolean enableThinking;
 
     /**
-     * <p>The maximum number of tokens to generate in the response. A token is a unit of text processed by the model.</p>
+     * <p>The maximum number of tokens supported by the model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
      */
     @NameInMap("maxTokens")
     public Integer maxTokens;
 
     /**
-     * <p>The identifier of the model to use for inference.</p>
+     * <p>The model name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qwen-max</p>
      */
     @NameInMap("model")
     public String model;
 
     /**
-     * <p>Indicates whether to deliver the response as a continuous stream. If set to <code>true</code>, results are sent incrementally.</p>
+     * <p>Indicates whether streaming output is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("streaming")
     public Boolean streaming;
 
     /**
-     * <p>Controls the randomness of the output. Valid values range from 0 to 1. Higher values, such as 0.8, make the output more random. Lower values, such as 0.2, make the output more deterministic.</p>
+     * <p>The temperature parameter that controls the randomness of generation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.7</p>
      */
     @NameInMap("temperature")
     public Float temperature;
 
     /**
-     * <p>Indicates whether the model can search the web to provide more up-to-date responses.</p>
+     * <p>Indicates whether web search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("webSearch")
     public Boolean webSearch;
