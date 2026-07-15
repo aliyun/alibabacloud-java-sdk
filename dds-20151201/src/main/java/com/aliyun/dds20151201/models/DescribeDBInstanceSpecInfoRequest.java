@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSpecInfoRequest extends TeaModel {
     /**
+     * <p>The instance type. You can query this parameter by calling the <a href="https://next.api.aliyun.com/api/Dds/2015-12-01/DescribeDBInstanceAttribute">DescribeDBInstanceAttribute</a> operation.</p>
+     * <p>For instance types of different instance categories, see the following topics:</p>
+     * <ul>
+     * <li><p><a href="https://help.aliyun.com/document_detail/311407.html">Specifications of standalone instances</a></p>
+     * </li>
+     * <li><p><a href="https://help.aliyun.com/document_detail/311410.html">Specifications of replica set instances</a></p>
+     * </li>
+     * <li><p><a href="https://help.aliyun.com/document_detail/311414.html">Specifications of sharded cluster instances</a></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

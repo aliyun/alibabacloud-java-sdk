@@ -7,8 +7,10 @@ public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
     /**
      * <p>Indicates whether any O\&amp;M tasks need pop-up windows to notify users actions. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: No O\&amp;M tasks need pop-up windows to notify users actions.</li>
-     * <li><strong>1</strong>: Some O\&amp;M tasks need pop-up windows to notify users actions.</li>
+     * <li><p><strong>0</strong>: No O\&amp;M tasks need pop-up windows to notify users actions.</p>
+     * </li>
+     * <li><p><strong>1</strong>: Some O\&amp;M tasks need pop-up windows to notify users actions.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

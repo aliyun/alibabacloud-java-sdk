@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>53924AF0-1628-5AA2-9C95-D4**********</p>
      */
@@ -26,12 +32,17 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The list of VPCs.</p>
+     */
     @NameInMap("Vpcs")
     public java.util.List<DescribeVpcsForMongoDBResponseBodyVpcs> vpcs;
 
@@ -81,10 +92,15 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcsForMongoDBResponseBodyVpcsVSwitchs extends TeaModel {
+        /**
+         * <p>The CIDR block of the vSwitch.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -92,6 +108,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -99,6 +117,14 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -106,6 +132,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The zone to which the vSwitch belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -113,6 +141,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String izNo;
 
         /**
+         * <p>The status of the vSwitch. A value of <strong>Available</strong> indicates that the vSwitch is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -120,7 +150,7 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>VSwitch ID。</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp*******************</p>
@@ -129,6 +159,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-name</p>
          */
@@ -208,6 +240,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
 
     public static class DescribeVpcsForMongoDBResponseBodyVpcs extends TeaModel {
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -215,16 +249,23 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String aliUid;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
         @NameInMap("Bid")
         public String bid;
 
+        /**
+         * <p>The CIDR block of the VPC.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -232,6 +273,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -239,6 +282,14 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the VPC is the default one. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The VPC is the default one.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The VPC is not the default one.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -246,6 +297,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -253,17 +306,22 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The status of the VPC. A value of <strong>Available</strong> indicates that the VPC is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of vSwitches.</p>
+         */
         @NameInMap("VSwitchs")
         public java.util.List<DescribeVpcsForMongoDBResponseBodyVpcsVSwitchs> vSwitchs;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zep2pepkthg5ueal****</p>
@@ -272,6 +330,8 @@ public class DescribeVpcsForMongoDBResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The name of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-name</p>
          */

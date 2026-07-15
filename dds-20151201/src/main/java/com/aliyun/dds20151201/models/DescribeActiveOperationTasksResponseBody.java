@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The O\&amp;M tasks.</p>
+     * <p>The list of O\&amp;M tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -32,16 +32,16 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>111E7B16-0A87-4CBA-B271-F34AD61E099F</p>
+     * <p>111E7B16-0A87-4CBA-B271-F34AD61E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The number of returned task records.</p>
      * 
      * <strong>example:</strong>
-     * <p>727</p>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -93,74 +93,88 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>N/A</p>
+         * <p>Indicates whether the task can be canceled.</p>
+         * <ul>
+         * <li><p><strong>1</strong>: The task can be canceled.</p>
+         * </li>
+         * <li><p><strong>0</strong>: The task cannot be canceled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>1</p>
          */
         @NameInMap("AllowCancel")
         public String allowCancel;
 
         /**
-         * <p>Indicates whether the modification operation is allowed.</p>
+         * <p>Indicates whether the time can be changed.</p>
          * <ul>
-         * <li><strong>0</strong>: The modification operation is not allowed.</li>
-         * <li><strong>1</strong>: The modification operation is allowed.</li>
+         * <li><p><strong>1</strong>: The time can be changed.</p>
+         * </li>
+         * <li><p><strong>0</strong>: The time cannot be changed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("AllowChange")
         public String allowChange;
 
         /**
-         * <p>The change level of the O\&amp;M task.</p>
+         * <p>The code of the event level.</p>
+         * <ul>
+         * <li><p><strong>S1</strong>: system O\&amp;M.</p>
+         * </li>
+         * <li><p><strong>S0</strong>: threat fixing.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>S1</p>
          */
         @NameInMap("ChangeLevel")
         public String changeLevel;
 
         /**
-         * <p>N/A</p>
+         * <p>The event level in English.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>System maintenance</p>
          */
         @NameInMap("ChangeLevelEn")
         public String changeLevelEn;
 
         /**
-         * <p>The task type in English.</p>
+         * <p>The event level in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>系统运维</p>
          */
         @NameInMap("ChangeLevelZh")
         public String changeLevelZh;
 
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the task was created. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-07-14 10:48:43</p>
+         * <p>2023-05-30T14:30:00Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>N/A</p>
+         * <p>The current zone.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>cn-beijing-h</p>
          */
         @NameInMap("CurrentAVZ")
         public String currentAVZ;
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>mongoDb</p>
@@ -169,7 +183,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version number.</p>
          * 
          * <strong>example:</strong>
          * <p>5.6</p>
@@ -178,10 +192,10 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String dbVersion;
 
         /**
-         * <p>The end time of the O\&amp;M task.</p>
+         * <p>The latest time to which the task execution time can be postponed. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>1646014421633</p>
+         * <p>2023-05-30T23:59:59Z</p>
          */
         @NameInMap("Deadline")
         public String deadline;
@@ -190,142 +204,172 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>11111</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
-         * <p>N/A</p>
+         * <p>The impact of the event in English.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Transient instance disconnection</p>
          */
         @NameInMap("ImpactEn")
         public String impactEn;
 
         /**
-         * <p>N/A</p>
+         * <p>The impact of the event in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>实例闪断</p>
          */
         @NameInMap("ImpactZh")
         public String impactZh;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The alias or description of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>test</p>
          */
         @NameInMap("InsComment")
         public String insComment;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>dds-bp16aaccfe10****</p>
          */
         @NameInMap("InsName")
         public String insName;
 
         /**
-         * <p>The time when the task is modified. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the task was modified. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-12-24T09:48:01Z</p>
+         * <p>2023-05-30T14:30:00Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the <em>HH:mm:ss</em> format.</p>
+         * <p>The preparation time required between the start time of the O\&amp;M task and the switchover time. The time is in the <em>HH:mm:ss</em> format.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>04:00:00</p>
          */
         @NameInMap("PrepareInterval")
         public String prepareInterval;
 
         /**
-         * <p>The region of the instance.</p>
+         * <p>The ID of the region where the pending event is located.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-beijing</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The result information. The value of this parameter can be ignored.</p>
+         * <p>The information about the execution result.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>userCancel</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
         /**
-         * <p>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em> T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the task was executed. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-12-24T06:01:05Z</p>
+         * <p>2023-05-30T00:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>N/A</p>
+         * <p>The task status.</p>
+         * <ul>
+         * <li><p><strong>3</strong>: pending.</p>
+         * </li>
+         * <li><p><strong>4</strong>: running.</p>
+         * </li>
+         * <li><p><strong>5</strong>: successful.</p>
+         * </li>
+         * <li><p><strong>6</strong>: failed.</p>
+         * </li>
+         * <li><p><strong>7</strong>: canceled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>3</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The subinstances.</p>
+         * <p>The list of child instances.</p>
          */
         @NameInMap("SubInsNames")
         public java.util.List<String> subInsNames;
 
         /**
-         * <p>The switchover point in time in which disconnection may occur. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the switchover was initiated. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-11-24T11:20:00Z</p>
+         * <p>2023-05-30T14:30:00Z</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        /**
+         * <p>The task parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("TaskParams")
         public String taskParams;
 
         /**
-         * <p>The task type.</p>
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>rds_apsaradb_ha</strong>: primary-secondary node switchover.</p>
+         * </li>
+         * <li><p><strong>rds_apsaradb_transfer</strong>: instance migration.</p>
+         * </li>
+         * <li><p><strong>rds_apsaradb_upgrade</strong>: minor version upgrade.</p>
+         * </li>
+         * <li><p><strong>rds_apsaradb_maxscale</strong>: proxy minor version upgrade.</p>
+         * </li>
+         * <li><p><strong>all</strong>: all task types.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>rds_apsaradb_upgrade</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
-         * <p>N/A</p>
+         * <p>The reason for the task in English.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Minor version update</p>
          */
         @NameInMap("TaskTypeEn")
         public String taskTypeEn;
 
         /**
-         * <p>The task type in Chinese.</p>
+         * <p>The reason for the task in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>小版本升级</p>
          */
         @NameInMap("TaskTypeZh")
         public String taskTypeZh;

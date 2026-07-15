@@ -4,10 +4,17 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeBinlogFilesRequest extends TeaModel {
+    /**
+     * <p>The binlog ID. This parameter is not currently supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("BinlogId")
     public String binlogId;
 
     /**
+     * <p>The ID of the instance. If the instance is a sharded cluster, you must also specify the <strong>NodeId</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +23,20 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The region where the cross-region backup is stored.</p>
+     * <blockquote>
+     * <p>This parameter is required when you query cross-region backups.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("DestRegion")
     public String destRegion;
 
     /**
+     * <p>The end time of the query. The time must be later than the start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss.xxx</em>Z format. The time is displayed in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +46,11 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The ID of the mongos node or shard node in the sharded cluster instance.</p>
+     * <blockquote>
+     * <p>This parameter is applicable only to sharded cluster instances.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>d-uf696817a1b5d9f4</p>
      */
@@ -42,6 +64,8 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -49,6 +73,8 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -56,6 +82,8 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou</p>
      */
@@ -63,6 +91,8 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxx</p>
      */
@@ -75,10 +105,22 @@ public class DescribeBinlogFilesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The region of the source instance for a cross-region backup.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required when you query cross-region backups.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
+     */
     @NameInMap("SrcRegion")
     public String srcRegion;
 
     /**
+     * <p>The start time of the query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss.xxx</em>Z format. The time is displayed in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

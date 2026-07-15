@@ -27,7 +27,7 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class ModifyDBInstanceDescriptionRequest extends TeaModel {
     /**
      * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
      * <blockquote>
-     * <p> This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

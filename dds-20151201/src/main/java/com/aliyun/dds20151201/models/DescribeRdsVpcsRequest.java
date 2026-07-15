@@ -11,6 +11,8 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>
      */
@@ -24,6 +26,8 @@ public class DescribeRdsVpcsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing-l</p>
      */

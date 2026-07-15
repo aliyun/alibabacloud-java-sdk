@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyParametersRequest extends TeaModel {
     /**
-     * <p>The role of the instance. Valid values:</p>
+     * <p>The type of the node. Valid values:</p>
      * <ul>
-     * <li><strong>db</strong>: a shard node.</li>
-     * <li><strong>cs</strong>: a Configserver node.</li>
-     * <li><strong>mongos</strong>: a mongos node.</li>
+     * <li><p><strong>db</strong>: shard node.</p>
+     * </li>
+     * <li><p><strong>cs</strong>: Configserver node.</p>
+     * </li>
+     * <li><p><strong>mongos</strong>: mongos node.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,7 @@ public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</p>
+     * <p>If this parameter is a sharded cluster instance ID, you must also specify the NodeId parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,9 +35,9 @@ public class ModifyParametersRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
+     * <p>The ID of the mongos or shard node in the sharded cluster instance.</p>
      * <blockquote>
-     * <p> This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is active only when the DBInstanceId parameter is set to a sharded cluster instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,9 +53,9 @@ public class ModifyParametersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;}.</p>
+     * <p>The parameters and their new values. The value must be a JSON string. Example: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;}.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query a list of default parameter templates.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the list of default parameter templates.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +66,7 @@ public class ModifyParametersRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. To query the latest region list, call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -77,6 +80,18 @@ public class ModifyParametersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The time to apply the parameter modifications. Valid values:</p>
+     * <ul>
+     * <li><p>0: Immediately.</p>
+     * </li>
+     * <li><p>1: During the maintenance window.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SwitchMode")
     public String switchMode;
 

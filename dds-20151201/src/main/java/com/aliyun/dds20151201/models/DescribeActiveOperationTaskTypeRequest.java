@@ -7,8 +7,10 @@ public class DescribeActiveOperationTaskTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to return historical O\&amp;M tasks. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong> (default): The system returns only pending O\&amp;M tasks.</li>
-     * <li><strong>1</strong>: The system returns historical O\&amp;M tasks.</li>
+     * <li><p><strong>0</strong> (default): The system returns only pending O\&amp;M tasks.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The system returns historical O\&amp;M tasks.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

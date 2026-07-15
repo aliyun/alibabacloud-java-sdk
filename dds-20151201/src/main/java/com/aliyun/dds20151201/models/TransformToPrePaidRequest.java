@@ -7,11 +7,13 @@ public class TransformToPrePaidRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment.</li>
-     * <li><strong>false</strong>: disables automatic payment. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Renew an ApsaraDB for MongoDB subscription instance</a>.</li>
+     * <li><p><strong>true</strong>: enables automatic payment.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables automatic payment. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Renew an ApsaraDB for MongoDB subscription instance</a>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Default value: <strong>true</strong>.</p>
+     * <p>Default value: <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,11 +25,13 @@ public class TransformToPrePaidRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> Default value: <strong>false</strong>.</p>
+     * <p>Default value: <strong>false</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,7 +53,7 @@ public class TransformToPrePaidRequest extends TeaModel {
      * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     * <p>default</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;

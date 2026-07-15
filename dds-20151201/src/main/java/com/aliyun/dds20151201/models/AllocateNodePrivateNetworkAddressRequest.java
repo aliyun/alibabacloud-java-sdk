@@ -26,8 +26,10 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     /**
      * <p>The password for the account.</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></li>
-     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></p>
+     * </li>
+     * <li><p>The password must be 8 to 32 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +51,7 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     /**
      * <p>The ID of the shard or Configserver node.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -74,7 +76,7 @@ public class AllocateNodePrivateNetworkAddressRequest extends TeaModel {
     /**
      * <p>The ID of the zone to which the instance belongs.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the zone ID of the instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the zone ID of the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAttributeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6826DEE3-B374-5DB7-909D-C8978827C534</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
-     * <p>The business information. This is an additional parameter.</p>
+     * <p>Additional business information, provided as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -14,16 +14,22 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The coupon code. Default value: <strong>youhuiquan_promotion_option_id_for_blank</strong>.</p>
+     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <ul>
+     * <li><p><strong>default</strong> or <strong>null</strong> (default): Use a coupon.</p>
+     * </li>
+     * <li><p><strong>youhuiquan_promotion_option_id_for_blank</strong>: Do not use a coupon.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     * <p>default</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

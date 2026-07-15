@@ -13,6 +13,18 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     @NameInMap("CertCommonName")
     public String certCommonName;
 
+    /**
+     * <p>Specifies whether connections must be encrypted using SSL. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Connections must be encrypted using SSL.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Connections do not need to be encrypted using SSL.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ForceEncryption")
     public String forceEncryption;
 
@@ -26,7 +38,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in Coordinated Universal Time (UTC).</p>
+     * <p>The expiration time of the SSL certificate. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-03-11T02:28:25Z</p>
@@ -35,10 +47,12 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String SSLExpiredTime;
 
     /**
-     * <p>The status of the SSL feature. Valid values:</p>
+     * <p>The status of the SSL feature.</p>
      * <ul>
-     * <li><strong>Open</strong>: The SSL feature is enabled.</li>
-     * <li><strong>Closed</strong>: The SSL feature is disabled.</li>
+     * <li><p><strong>Open</strong>: The SSL feature is enabled.</p>
+     * </li>
+     * <li><p><strong>Closed</strong>: The SSL feature is disabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

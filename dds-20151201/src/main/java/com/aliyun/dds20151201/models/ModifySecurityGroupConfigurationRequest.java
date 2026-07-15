@@ -30,8 +30,10 @@ public class ModifySecurityGroupConfigurationRequest extends TeaModel {
      * <p>The ID of the ECS security group.</p>
      * <blockquote>
      * <ul>
-     * <li>You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroup</a> operation of ECS to query the security groups in the specified region.</li>
+     * <li><p>You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</p>
+     * </li>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroup</a> operation of ECS to query the security groups in the specified region.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

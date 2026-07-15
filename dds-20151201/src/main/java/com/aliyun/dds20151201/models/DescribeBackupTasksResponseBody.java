@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupTasksResponseBody extends TeaModel {
     /**
-     * <p>The details of the backup task.</p>
+     * <p>The details of the backup jobs.</p>
      */
     @NameInMap("BackupJobs")
     public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs;
@@ -42,12 +42,16 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     public static class DescribeBackupTasksResponseBodyBackupJobs extends TeaModel {
         /**
-         * <p>The backup task status. Valid values:</p>
+         * <p>The status of the backup job.</p>
          * <ul>
-         * <li><strong>Scheduled</strong>: The backup task is in planning. Regular backup tasks that have not started are also in this state.</li>
-         * <li><strong>Checking</strong>: The instance is being checked before the backup.</li>
-         * <li><strong>Backuping</strong>: The backup task is in progress.</li>
-         * <li><strong>Finished</strong>: The backup task is completed.</li>
+         * <li><p><strong>Scheduled</strong>: The backup job is scheduled. This includes regular backup jobs that have not started.</p>
+         * </li>
+         * <li><p><strong>Checking</strong>: The instance is being checked before the backup.</p>
+         * </li>
+         * <li><p><strong>Backuping</strong>: The backup is in progress.</p>
+         * </li>
+         * <li><p><strong>Finished</strong>: The backup is complete.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,7 +61,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String backupSetStatus;
 
         /**
-         * <p>The start time of the backup task.</p>
+         * <p>The start time of the backup.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-16T11:04:56Z</p>
@@ -66,7 +70,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String backupStartTime;
 
         /**
-         * <p>The ID of the backup task.</p>
+         * <p>The backup job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>170034</p>
@@ -77,8 +81,10 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong>: automatic backup</li>
-         * <li><strong>Manual</strong>: manual backup</li>
+         * <li><p><strong>Automated</strong>: automatic backup.</p>
+         * </li>
+         * <li><p><strong>Manual</strong>: manual backup.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,7 +94,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String jobMode;
 
         /**
-         * <p>The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.</p>
+         * <p>The backup progress in percentage. The progress is displayed only for running backup jobs.</p>
          * 
          * <strong>example:</strong>
          * <p>18%</p>

@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupExpireTimeRequest extends TeaModel {
     /**
+     * <p>The time-to-live (TTL) of the backup. The time must be in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</p>
+     * <blockquote>
+     * <ul>
+     * <li><p><em>9999-01-01</em>T<em>00:00:00</em>&#x5A;<em>&#x20;indicates that the backup is retained permanently.</em></p>
+     * <p><em>- You can only extend the retention period. You cannot shorten it.- If you do not set the time to <em>9999-01-01</em>T</em>00:00:00<em>Z, the new expiration time must be within 730 days after the end time of the backup set.</em></p>
+     * </li>
+     * </ul>
+     * <p>**</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2025-03-29T03:47:12Z</p>
      */
@@ -12,6 +22,7 @@ public class ModifyBackupExpireTimeRequest extends TeaModel {
     public String backupExpireTime;
 
     /**
+     * <p>The backup ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,7 @@ public class ModifyBackupExpireTimeRequest extends TeaModel {
     public String backupId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

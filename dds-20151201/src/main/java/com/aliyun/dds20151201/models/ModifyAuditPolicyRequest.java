@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAuditPolicyRequest extends TeaModel {
     /**
-     * <p>The request source for the audit log feature. Set the value to <strong>Console</strong>.</p>
+     * <p>The source of the request. Set this parameter to <strong>Console</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Console</p>
@@ -14,10 +14,12 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public String auditLogSwitchSource;
 
     /**
-     * <p>Specifies whether to enable the audit log feature. Valid values:</p>
+     * <p>The status of the audit log. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong></li>
-     * <li><strong>disabled</strong></li>
+     * <li><p><strong>enable</strong>: Enables the audit log feature.</p>
+     * </li>
+     * <li><p><strong>disabled</strong>: Disables the audit log feature.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,6 +39,12 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>This parameter is effective only for the <strong>V2_Standard</strong> (DAS Enterprise Edition (NoSQL Compatible) audit log) edition. It specifies the hot storage duration for the audit log. Valid values: 0 to 7. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("HotStoragePeriod")
     public Integer hotStoragePeriod;
 
@@ -53,13 +61,22 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the audit log feature. Valid values:</p>
+     * <p>The edition of the audit log. Valid values:</p>
      * <ul>
-     * <li><strong>Trail</strong>: free trial edition.</li>
-     * <li><strong>Standard</strong>: official edition.</li>
+     * <li><p><strong>Trial</strong>: Trial Edition.</p>
+     * </li>
+     * <li><p><strong>Standard</strong>: Standard Edition.</p>
+     * </li>
+     * <li><p><strong>V2_Standard</strong>: DAS Enterprise Edition (NoSQL Compatible) audit log.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>Trail</strong>. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to <strong>Standard</strong>.</p>
+     * <ul>
+     * <li><p>The default value of this parameter is <strong>Trial</strong>. Starting from January 6, 2022, the Standard edition is being rolled out across regions, and new applications for the Trial edition are no longer accepted.</p>
+     * </li>
+     * <li><p>Starting from February 2026, the DAS Enterprise Edition (NoSQL Compatible) audit log will be rolled out across regions, and new applications for the Standard edition will no longer be accepted.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,7 +86,12 @@ public class ModifyAuditPolicyRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The log retention period. Valid values: 1 to 365 days. Default value: 30 days.</p>
+     * <ul>
+     * <li><p>For the <strong>Standard</strong> edition, this parameter specifies the retention period for the audit log. Valid values: 1 to 365. The default value is 30. Unit: days.</p>
+     * </li>
+     * <li><p>For the <strong>V2_Standard</strong> (DAS Enterprise Edition (NoSQL Compatible) audit log) edition, this parameter specifies the cold storage duration for the audit log. Valid values: 30, 180, 365, 1095, and 1825. Unit: days.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>30</p>

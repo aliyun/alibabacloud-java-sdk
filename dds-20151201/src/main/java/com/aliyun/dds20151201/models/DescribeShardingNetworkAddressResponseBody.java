@@ -7,6 +7,12 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     @NameInMap("CompatibleConnections")
     public DescribeShardingNetworkAddressResponseBodyCompatibleConnections compatibleConnections;
 
+    /**
+     * <p>The suffix of the connection string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.mongodb.rds.aliyuncs.com</p>
+     */
     @NameInMap("ConnectionStringSuffix")
     public String connectionStringSuffix;
 

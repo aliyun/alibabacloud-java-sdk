@@ -7,8 +7,10 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the account.</p>
      * <ul>
-     * <li>The description must start with a letter and cannot start with http:// or https://.</li>
-     * <li>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li><p>The description must start with a letter and cannot start with http\:// or https\://.</p>
+     * </li>
+     * <li><p>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,12 +33,15 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The type of the account whose description you can modify. Valid values:</p>
      * <ul>
-     * <li><strong>db</strong>: shard account</li>
-     * <li><strong>cs</strong>: ConfigServer account</li>
-     * <li><strong>normal</strong> (default): replica set account (available)</li>
+     * <li><p><strong>db</strong>: shard account</p>
+     * </li>
+     * <li><p><strong>cs</strong>: ConfigServer account</p>
+     * </li>
+     * <li><p><strong>normal</strong> (default): replica set account (available)</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can set this parameter only to <strong>normal</strong>.</p>
+     * <p>You can set this parameter only to <strong>normal</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

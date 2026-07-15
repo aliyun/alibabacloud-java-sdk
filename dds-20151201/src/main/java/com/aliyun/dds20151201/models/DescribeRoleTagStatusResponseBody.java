@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleTagStatusResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>69D55DEC-B219-569F-A686-AC2F67A1****</p>
      */
@@ -12,6 +14,17 @@ public class DescribeRoleTagStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The tag status of the ReplicaSet node. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The tag is created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The tag is not created.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>If the instance is a sharded cluster, this parameter returns false.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +32,14 @@ public class DescribeRoleTagStatusResponseBody extends TeaModel {
     public String roleTagStatus;
 
     /**
+     * <p>The tag status of each node in the sharded cluster. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The tag is created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The tag is not created.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;d-2ze204b4db58****&quot;: &quot;false&quot;,

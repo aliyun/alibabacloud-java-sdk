@@ -17,13 +17,20 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     /**
      * <p>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>admin</strong>: O\&amp;M and management operations</li>
-     * <li><strong>slow</strong>: slow query logs</li>
-     * <li><strong>query</strong>: query operations</li>
-     * <li><strong>insert</strong>: insert operations</li>
-     * <li><strong>update</strong>: update operations</li>
-     * <li><strong>delete</strong>: delete operations</li>
-     * <li><strong>command</strong>: protocol commands such as the aggregate method</li>
+     * <li><p><strong>admin</strong>: O\&amp;M and management operations</p>
+     * </li>
+     * <li><p><strong>slow</strong>: slow query logs</p>
+     * </li>
+     * <li><p><strong>query</strong>: query operations</p>
+     * </li>
+     * <li><p><strong>insert</strong>: insert operations</p>
+     * </li>
+     * <li><p><strong>update</strong>: update operations</p>
+     * </li>
+     * <li><p><strong>delete</strong>: delete operations</p>
+     * </li>
+     * <li><p><strong>command</strong>: protocol commands such as the aggregate method</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,8 +55,10 @@ public class ModifyAuditLogFilterRequest extends TeaModel {
     /**
      * <p>The role of the node in the instance. Valid values:</p>
      * <ul>
-     * <li><strong>primary</strong></li>
-     * <li><strong>secondary</strong></li>
+     * <li><p><strong>primary</strong></p>
+     * </li>
+     * <li><p><strong>secondary</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

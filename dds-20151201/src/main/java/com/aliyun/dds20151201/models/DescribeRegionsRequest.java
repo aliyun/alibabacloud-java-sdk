@@ -7,8 +7,10 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The language of the values of the returned <strong>RegionName</strong> and <strong>ZoneName</strong> parameters. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default)</li>
-     * <li><strong>en</strong></li>
+     * <li><p><strong>zh</strong> (default)</p>
+     * </li>
+     * <li><p><strong>en</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +28,7 @@ public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, all supported regions are queried.</p>
+     * <p>If you do not specify this parameter, all supported regions are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

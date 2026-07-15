@@ -58,8 +58,10 @@ public class SwitchDBInstanceHARequest extends TeaModel {
     /**
      * <p>The time when the primary and secondary nodes are switched. Valid values:</p>
      * <ul>
-     * <li>0: The primary and secondary nodes are immediately switched.</li>
-     * <li>1: The primary and secondary nodes are switched during the O\&amp;M time period.</li>
+     * <li><p>0: The primary and secondary nodes are immediately switched.</p>
+     * </li>
+     * <li><p>1: The primary and secondary nodes are switched during the O\&amp;M time period.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

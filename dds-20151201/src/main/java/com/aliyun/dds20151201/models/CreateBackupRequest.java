@@ -5,13 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
     /**
-     * <p>The backup method of the instance. Valid values:</p>
+     * <p>The backup method. Valid values:</p>
      * <ul>
-     * <li><strong>Logical</strong></li>
-     * <li><strong>Physical</strong> (default)</li>
+     * <li><p><strong>Snapshot</strong>: A snapshot backup.</p>
+     * </li>
+     * <li><p><strong>Logical</strong>: A logical backup.</p>
+     * </li>
+     * <li><p><strong>Physical</strong> (default): A physical backup.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.</p>
+     * <ul>
+     * <li><p>Instances with cloud disks support only snapshot backups.</p>
+     * </li>
+     * <li><p>This parameter applies only to replica set and sharded cluster instances. This parameter is not required for standalone instances, which use snapshot backups.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,6 +29,21 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("BackupMethod")
     public String backupMethod;
 
+    /**
+     * <p>The backup retention period in days. This parameter applies only to replica set and sharded cluster instances that use cloud disks.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the retention period from the default backup policy is used. You can set this parameter to one of the following values:</p>
+     * <ul>
+     * <li><p>A value from 7 to 730</p>
+     * </li>
+     * <li><p>-1 (permanent retention)</p>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public Long backupRetentionPeriod;
 

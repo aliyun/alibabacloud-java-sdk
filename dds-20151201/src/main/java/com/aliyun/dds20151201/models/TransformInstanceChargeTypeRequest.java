@@ -7,8 +7,10 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>true</strong>.</p>
@@ -23,8 +25,10 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>false</strong>.</p>
@@ -48,8 +52,10 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid:</strong> subscription.</li>
-     * <li><strong>PostPaid:</strong> pay-as-you-go.</li>
+     * <li><p><strong>PrePaid:</strong> subscription.</p>
+     * </li>
+     * <li><p><strong>PostPaid:</strong> pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -63,7 +69,7 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
      * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     * <p>default</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
@@ -85,7 +91,7 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1, 2, 3, 4, 5, 6, 7, 8, 9</strong>****, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>The subscription duration of the instance. Unit: months. Valid values: <strong>1, 2, 3, 4, 5, 6, 7, 8, 9</strong>\<em>\</em>\<em>\</em>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -94,13 +100,14 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     public Long period;
 
     /**
-     * <p>实例付费时长单位
-     * 取值说明：</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
-     * <li><strong>Month：</strong> 月</li>
-     * <li><strong>Year：</strong> 年</li>
+     * <li><p><strong>Month</strong>: month.</p>
+     * </li>
+     * <li><p><strong>Year</strong>: year.</p>
+     * </li>
      * </ul>
-     * <p>默认值：Month</p>
+     * <p>Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>

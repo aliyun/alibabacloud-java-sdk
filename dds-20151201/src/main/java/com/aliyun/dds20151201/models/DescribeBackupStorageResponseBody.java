@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupStorageResponseBody extends TeaModel {
     /**
-     * <p>The free quota for the storage capacity used for backup. Unit: bytes.</p>
+     * <p>The free backup quota for the instance. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>42949672960</p>
@@ -14,9 +14,9 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
     public Long freeSize;
 
     /**
-     * <p>The storage capacity used for the full backup. Unit: bytes.</p>
+     * <p>The storage space used by full backups. Unit: bytes.</p>
      * <blockquote>
-     * <p> Instances that use cloud disks support snapshot backup. The size of the storage used for the current full backup is the size of the snapshot chain.</p>
+     * <p>Instances that use cloud disks are backed up using snapshots. The size of a full backup is the total size of the snapshot chain.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
     public Long fullStorageSize;
 
     /**
-     * <p>The storage capacity used for the log backup. Unit: bytes.</p>
+     * <p>The storage space used by log backups. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>7892216</p>

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     /**
+     * <p>The day of the cycle.</p>
+     * <ul>
+     * <li><p>If CycleType is set to Month, enter a number from 1 to 28 to specify the day of the month. Use a comma (,) to separate multiple days.</p>
+     * </li>
+     * <li><p>If CycleType is set to Week, enter a number from 1 to 7 to specify the day of the week. Use a comma (,) to separate multiple days.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -12,6 +20,14 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public String cycleTime;
 
     /**
+     * <p>The cycle type.</p>
+     * <ul>
+     * <li><p>Month: monthly</p>
+     * </li>
+     * <li><p>Week: weekly</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Week</p>
      */
@@ -19,6 +35,8 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public String cycleType;
 
     /**
+     * <p>The end time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>22:00Z</p>
      */
@@ -26,6 +44,8 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
+     * <p>The start time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>21:00Z</p>
      */
@@ -45,6 +65,14 @@ public class ModifyActiveOperationMaintenanceConfigRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Specifies whether the configuration is enabled.</p>
+     * <ul>
+     * <li><p>1: enabled</p>
+     * </li>
+     * <li><p>2: disabled</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

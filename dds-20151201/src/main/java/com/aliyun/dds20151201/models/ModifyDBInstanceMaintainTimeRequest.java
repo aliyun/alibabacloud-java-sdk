@@ -17,7 +17,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends TeaModel {
     /**
      * <p>The end time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time of the maintenance window.</p>
+     * <p>The end time must be later than the start time of the maintenance window.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

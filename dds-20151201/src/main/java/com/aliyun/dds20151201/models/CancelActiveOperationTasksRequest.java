@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The IDs of the O\&amp;M events to cancel. Separate multiple IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class CancelActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxx</p>
      */

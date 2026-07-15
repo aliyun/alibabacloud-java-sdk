@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateDBInstanceSrvNetworkAddressRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class AllocateDBInstanceSrvNetworkAddressRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The ID of a mongos or shard node in a sharded cluster instance.</p>
+     * <blockquote>
+     * <p>This parameter is not currently required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>d-bp1b7bb3bbe****</p>
      */
@@ -33,6 +39,17 @@ public class AllocateDBInstanceSrvNetworkAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The type of SRV connection string to enable.</p>
+     * <ul>
+     * <li><p><code>vpc</code>: SRV connection string for the VPC.</p>
+     * </li>
+     * <li><p><code>public</code>: Public SRV connection string.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>The default is the VPC connection string.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>vpc</p>
      */

@@ -17,7 +17,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
      * <p>The database version to which you want to upgrade. Valid values: <strong>3.4</strong>, <strong>4.0</strong>, and <strong>4.2</strong>.</p>
      * <blockquote>
-     * <p> This database version must be later than the current database version of the instance.</p>
+     * <p>This database version must be later than the current database version of the instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -42,8 +42,10 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
      * <p>The time when to perform the upgrade. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: immediately performs the upgrade.</li>
-     * <li><strong>1</strong>: performs the upgrade during the maintenance window.</li>
+     * <li><p><strong>0</strong>: immediately performs the upgrade.</p>
+     * </li>
+     * <li><p><strong>1</strong>: performs the upgrade during the maintenance window.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

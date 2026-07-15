@@ -15,9 +15,9 @@ public class RestartDBInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the shard or mongos node in the sharded cluster instance.</p>
+     * <p>The ID of a shard or Mongos node in a sharded cluster instance.</p>
      * <blockquote>
-     * <p>The sharded cluster instance is restarted if you do not specify this parameter.</p>
+     * <p>If you do not specify this parameter for a sharded cluster instance, the entire instance is restarted.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,9 @@ public class RestartDBInstanceRequest extends TeaModel {
      */
     @NameInMap("NodeId")
     public String nodeId;
+
+    @NameInMap("NodeType")
+    public String nodeType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -38,6 +41,18 @@ public class RestartDBInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The time to restart the instance. Valid values:</p>
+     * <ul>
+     * <li><p>0: The instance is restarted immediately.</p>
+     * </li>
+     * <li><p>1: The instance is restarted within the maintenance window.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SwitchMode")
     public String switchMode;
 
@@ -60,6 +75,14 @@ public class RestartDBInstanceRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
+    }
+
+    public RestartDBInstanceRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public RestartDBInstanceRequest setOwnerAccount(String ownerAccount) {

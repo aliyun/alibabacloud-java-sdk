@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskRegionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the historical tasks. Default value: 0. Valid values:</p>
+     * <p>Specifies whether to return historical tasks. Valid values:</p>
      * <ul>
-     * <li>0: returns the current task.</li>
-     * <li>1: returns the historical tasks.</li>
+     * <li><p>0: The default value. Returns current tasks.</p>
+     * </li>
+     * <li><p>1: Returns historical tasks.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +32,14 @@ public class DescribeActiveOperationTaskRegionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the task. Valid values:</p>
+     * <p>The task type. Valid values:</p>
      * <ul>
-     * <li>rds_apsaradb_ha: master-replica switchover</li>
-     * <li>rds_apsaradb_transfer: instance migration</li>
-     * <li>rds_apsaradb_upgrade: minor version update</li>
-     * <li>all: all types</li>
+     * <li><p>rds_apsaradb_ha: a primary/secondary node switchover.</p>
+     * </li>
+     * <li><p>rds_apsaradb_transfer: an instance migration.</p>
+     * </li>
+     * <li><p>rds_apsaradb_upgrade: a minor version upgrade.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

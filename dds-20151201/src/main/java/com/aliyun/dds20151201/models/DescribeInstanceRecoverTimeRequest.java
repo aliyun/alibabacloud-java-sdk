@@ -14,8 +14,22 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The region where the geo-redundancy backup set is stored.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required when you query geo-redundancy backups.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("DestRegion")
     public String destRegion;
+
+    @NameInMap("OnlyDbTableRecovery")
+    public Boolean onlyDbTableRecovery;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -24,6 +38,8 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-xxxx</p>
      */
@@ -39,6 +55,17 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The area where the source instance of the geo-redundancy backup resides.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is required when you query geo-redundancy backups.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("SrcRegion")
     public String srcRegion;
 
@@ -61,6 +88,14 @@ public class DescribeInstanceRecoverTimeRequest extends TeaModel {
     }
     public String getDestRegion() {
         return this.destRegion;
+    }
+
+    public DescribeInstanceRecoverTimeRequest setOnlyDbTableRecovery(Boolean onlyDbTableRecovery) {
+        this.onlyDbTableRecovery = onlyDbTableRecovery;
+        return this;
+    }
+    public Boolean getOnlyDbTableRecovery() {
+        return this.onlyDbTableRecovery;
     }
 
     public DescribeInstanceRecoverTimeRequest setOwnerAccount(String ownerAccount) {

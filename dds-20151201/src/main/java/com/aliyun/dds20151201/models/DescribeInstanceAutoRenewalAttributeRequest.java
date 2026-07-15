@@ -16,8 +16,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>The category of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>replicate</strong>: the standalone or replica set instance</li>
-     * <li><strong>sharding</strong>: the sharded cluster instance</li>
+     * <li><p><strong>replicate</strong>: the standalone or replica set instance</p>
+     * </li>
+     * <li><p><strong>sharding</strong>: the sharded cluster instance</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>replicate</strong>.</p>
      * 
@@ -45,7 +47,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
      * <blockquote>
-     * <p> Default value: <strong>30</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

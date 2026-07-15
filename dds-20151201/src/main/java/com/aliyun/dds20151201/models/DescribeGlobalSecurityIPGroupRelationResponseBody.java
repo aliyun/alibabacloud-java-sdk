@@ -14,13 +14,13 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     public String DBClusterId;
 
     /**
-     * <p>The global IP whitelist templates associated with the instance.</p>
+     * <p>The mapping of the global IP address whitelist template.</p>
      */
     @NameInMap("GlobalSecurityIPGroupRel")
     public java.util.List<DescribeGlobalSecurityIPGroupRelationResponseBodyGlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
 
     /**
-     * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * <p>The ID of the request. If you encounter a problem, provide this ID to our support staff for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
@@ -61,7 +61,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         /**
          * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.</p>
+         * <p>Separate multiple IP addresses with commas. A maximum of 1,000 IP addresses or CIDR blocks can be added across all IP address whitelists.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         public String GIpList;
 
         /**
-         * <p>The name of the IP whitelist template.</p>
+         * <p>The name of the IP address whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>dev_baoxian_k8s_bj</p>
@@ -80,7 +80,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         public String globalIgName;
 
         /**
-         * <p>The ID of the IP whitelist template.</p>
+         * <p>The ID of the IP address whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>g-gfurfpsh4ycbrm2avst7</p>
@@ -89,7 +89,7 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
         public String globalSecurityGroupId;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hongkong</p>

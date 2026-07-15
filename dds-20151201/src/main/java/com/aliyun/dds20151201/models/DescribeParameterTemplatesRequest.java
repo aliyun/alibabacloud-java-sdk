@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
-     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * <p>The database engine. Set the value to <strong>mongodb</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,22 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance. Valid values:</p>
+     * <p>The database version number. Valid values:</p>
      * <ul>
-     * <li><strong>5.0</strong></li>
-     * <li><strong>4.4</strong></li>
-     * <li><strong>4.2</strong></li>
-     * <li><strong>4.0</strong></li>
-     * <li><strong>3.4</strong></li>
+     * <li><p><strong>7.0</strong></p>
+     * </li>
+     * <li><p><strong>6.0</strong></p>
+     * </li>
+     * <li><p><strong>5.0</strong></p>
+     * </li>
+     * <li><p><strong>4.4</strong></p>
+     * </li>
+     * <li><p><strong>4.2</strong></p>
+     * </li>
+     * <li><p><strong>4.0</strong></p>
+     * </li>
+     * <li><p><strong>3.4</strong></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -38,7 +47,7 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -54,19 +63,19 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
 
     /**
      * <p>The role of the instance. Valid values:</p>
-     * <ol>
-     * <li><p>db:  a shard node.</p>
+     * <ul>
+     * <li><p>db: the shard role of a sharded cluster instance.</p>
      * </li>
-     * <li><p>cs:  a Configserver node.</p>
+     * <li><p>cs: the config server role of a sharded cluster instance.</p>
      * </li>
-     * <li><p>mongos:  a mongos node.</p>
+     * <li><p>mongos: the mongos role of a sharded cluster instance.</p>
      * </li>
-     * <li><p>normal: a replica set node.</p>
+     * <li><p>normal: the role of a replica set instance.</p>
      * </li>
-     * <li><p>physical: a standalone node.</p>
+     * <li><p>physical: the role of a single node instance.</p>
      * </li>
-     * </ol>
-     * <p>default: normal</p>
+     * </ul>
+     * <p>The default value is normal.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>

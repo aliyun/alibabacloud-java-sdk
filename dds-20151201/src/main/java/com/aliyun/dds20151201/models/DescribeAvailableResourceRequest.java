@@ -16,8 +16,10 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The architecture of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>normal</strong>: replica set instance</li>
-     * <li><strong>sharding</strong>: sharded cluster instance</li>
+     * <li><p><strong>normal</strong>: replica set instance</p>
+     * </li>
+     * <li><p><strong>sharding</strong>: sharded cluster instance</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,8 +40,10 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong> (default): subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><p><strong>PrePaid</strong> (default): subscription</p>
+     * </li>
+     * <li><p><strong>PostPaid</strong>: pay-as-you-go</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,11 +95,16 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <ul>
-     * <li>local_ssd: local SSD</li>
-     * <li>cloud_essd1: PL1 enhanced SSD (ESSD)</li>
-     * <li>cloud_essd2: PL2 ESSD</li>
-     * <li>cloud_essd3: PL3 ESSD</li>
-     * <li>cloud_auto: ESSD AutoPL disk</li>
+     * <li><p>local_ssd: local SSD</p>
+     * </li>
+     * <li><p>cloud_essd1: PL1 enhanced SSD (ESSD)</p>
+     * </li>
+     * <li><p>cloud_essd2: PL2 ESSD</p>
+     * </li>
+     * <li><p>cloud_essd3: PL3 ESSD</p>
+     * </li>
+     * <li><p>cloud_auto: ESSD AutoPL disk</p>
+     * </li>
      * </ul>
      * <p>This parameter is empty by default, which indicates all types of storage resources are queried.</p>
      * 

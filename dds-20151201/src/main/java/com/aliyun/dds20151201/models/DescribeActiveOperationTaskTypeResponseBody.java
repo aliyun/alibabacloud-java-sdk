@@ -53,8 +53,10 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
         /**
          * <p>The type of the task. Valid values:</p>
          * <ul>
-         * <li><strong>rds_apsaradb_transfer</strong>: data migration</li>
-         * <li><strong>rds_apsaradb_upgrade</strong>: minor version update</li>
+         * <li><p><strong>rds_apsaradb_transfer</strong>: data migration</p>
+         * </li>
+         * <li><p><strong>rds_apsaradb_upgrade</strong>: minor version update</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,7 +78,7 @@ public class DescribeActiveOperationTaskTypeResponseBody extends TeaModel {
          * <p>The task type in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>rds_apsaradb_upgrade</p>
+         * <p>小版本升级</p>
          */
         @NameInMap("TaskTypeInfoZh")
         public String taskTypeInfoZh;

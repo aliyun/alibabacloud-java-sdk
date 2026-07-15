@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup set.</p>
+     * <p>The backup ID.</p>
+     * <blockquote>
+     * <p>This parameter is deprecated. To obtain the backup ID, call the <a href="https://help.aliyun.com/document_detail/468441.html">DescribeBackups</a> operation.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5664****</p>
@@ -14,6 +17,8 @@ public class CreateBackupResponseBody extends TeaModel {
     public String backupId;
 
     /**
+     * <p>The backup job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>775051</p>
      */

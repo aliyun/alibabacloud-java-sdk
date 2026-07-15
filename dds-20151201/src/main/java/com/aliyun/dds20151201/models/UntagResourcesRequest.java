@@ -7,8 +7,10 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the instances. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: removes all tags from the instances.</li>
-     * <li><strong>false</strong>: does not remove all tags from the instances.</li>
+     * <li><p><strong>true</strong>: removes all tags from the instances.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not remove all tags from the instances.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * </blockquote>
@@ -78,6 +80,9 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The tag keys of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Development group</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the historical tasks. </p>
+     * <p>Specifies whether to return the historical tasks.</p>
      * <p>Default value: 0. Valid values:</p>
      * <ul>
-     * <li>0: returns the current task.</li>
-     * <li>1: returns the historical tasks.</li>
+     * <li><p>0: returns the current task.</p>
+     * </li>
+     * <li><p>1: returns the historical tasks.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +56,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <blockquote>
-     * <p> If you set the Region parameter to <strong>all</strong>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <strong>taskType</strong> parameter to <strong>all</strong>.</p>
+     * <p>If you set the Region parameter to <strong>all</strong>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <strong>taskType</strong> parameter to <strong>all</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -73,9 +75,12 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <ul>
-     * <li>rds_apsaradb_ha: master-replica switchover</li>
-     * <li>rds_apsaradb_transfer: instance migration</li>
-     * <li>rds_apsaradb_upgrade: minor version update</li>
+     * <li><p>rds_apsaradb_ha: master-replica switchover</p>
+     * </li>
+     * <li><p>rds_apsaradb_transfer: instance migration</p>
+     * </li>
+     * <li><p>rds_apsaradb_upgrade: minor version update</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

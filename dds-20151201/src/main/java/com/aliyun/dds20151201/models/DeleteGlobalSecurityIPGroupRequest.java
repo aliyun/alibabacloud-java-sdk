@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     /**
-     * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+     * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
      * <ul>
-     * <li>It can contain lowercase letters, digits, and underscores (_).</li>
-     * <li>It must start with a letter and end with a letter or digit.</li>
-     * <li>It must be 2 to 120 characters in length.</li>
+     * <li><p>It must consist of lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * <li><p>It must start with a letter and end with a letter or a digit.</p>
+     * </li>
+     * <li><p>It must be 2 to 120 characters in length.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +22,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     public String globalIgName;
 
     /**
-     * <p>The ID of the IP whitelist template.</p>
+     * <p>The ID of the IP address whitelist template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +38,7 @@ public class DeleteGlobalSecurityIPGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest list of regions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

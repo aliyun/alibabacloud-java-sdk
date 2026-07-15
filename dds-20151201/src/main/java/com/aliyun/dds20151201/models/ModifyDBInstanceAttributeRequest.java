@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceAttributeRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Specifies whether to enable instance release protection. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

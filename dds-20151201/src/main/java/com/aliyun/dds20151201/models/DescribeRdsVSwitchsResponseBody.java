@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeRdsVSwitchsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>60EEBD77-227C-5B39-86EA-D89163C5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of vSwitches.</p>
+     */
     @NameInMap("VSwitches")
     public DescribeRdsVSwitchsResponseBodyVSwitches vSwitches;
 
@@ -37,6 +42,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
 
     public static class DescribeRdsVSwitchsResponseBodyVSwitchesVSwitch extends TeaModel {
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String bid;
 
         /**
+         * <p>The CIDR block of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.<strong>.</strong>.0/24</p>
          */
@@ -58,6 +69,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -65,6 +78,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -72,6 +87,14 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -79,6 +102,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */
@@ -86,6 +111,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String izNo;
 
         /**
+         * <p>This parameter is deprecated. No value is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -93,6 +120,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The status of the vSwitch. A value of <strong>Available</strong> indicates that the vSwitch is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -100,7 +129,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>VSwitch ID。</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp*******************</p>
@@ -109,6 +138,8 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-name</p>
          */
@@ -211,6 +242,9 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
     }
 
     public static class DescribeRdsVSwitchsResponseBodyVSwitches extends TeaModel {
+        /**
+         * <p>The vSwitch information.</p>
+         */
         @NameInMap("VSwitch")
         public java.util.List<DescribeRdsVSwitchsResponseBodyVSwitchesVSwitch> vSwitch;
 

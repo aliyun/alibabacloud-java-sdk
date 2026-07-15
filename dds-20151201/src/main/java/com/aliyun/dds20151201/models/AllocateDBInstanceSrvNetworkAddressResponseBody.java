@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AllocateDBInstanceSrvNetworkAddressResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B82A9EF-9961-5A31-A19F-009B7098ACCA</p>
      */

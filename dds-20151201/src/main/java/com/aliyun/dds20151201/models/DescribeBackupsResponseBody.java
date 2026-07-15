@@ -8,7 +8,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public DescribeBackupsResponseBodyBackups backups;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -19,9 +19,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
-     * <li><strong>50</strong></li>
-     * <li><strong>100</strong></li>
+     * <li><p><strong>30</strong> (Default)</p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,13 +37,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>275D43C3-F12F-5224-B375-0C6BF453BD56</p>
+     * <p>275D43C3-F12F-5224-B375-************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of backup sets.</p>
+     * <p>The total number of backups.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

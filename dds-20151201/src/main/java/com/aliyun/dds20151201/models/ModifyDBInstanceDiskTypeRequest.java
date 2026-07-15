@@ -7,8 +7,15 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
-     * <li><strong>false</strong>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <strong>Expenses</strong> and select <strong>User Center</strong> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <strong>Order Management</strong> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</li>
+     * <li><strong>true</strong>: Enables automatic payment. Make sure that your account has a sufficient balance.</li>
+     * </ul>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><strong>false</strong>: Disables automatic payment. To pay for the order, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the navigation pane on the left, choose <strong>Subscription Orders</strong> &gt; <strong>My Orders</strong>. On the <strong>Product Orders</strong> tab, find the order and complete the payment.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><strong>false</strong>: Disables automatic payment. To pay for the order, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Expenses and Costs</strong>. In the navigation pane on the left, click <strong>Order Management</strong>. On the <strong>Product Orders</strong> page, find the order and complete the payment.</li>
      * </ul>
      * <p>Default value: <strong>true</strong>.</p>
      * 
@@ -19,12 +26,14 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Enables auto-renewal.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disables auto-renewal.</p>
+     * </li>
      * </ul>
-     * <p>Default value: <strong>false</strong>.</p>
+     * <p>Default value: <strong>false</strong></p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -42,7 +51,7 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+     * <p>The coupon code. The default value is <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -61,12 +70,9 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The new disk type. Valid values:</p>
+     * <p>The disk type after the modification. Valid value:</p>
      * <ul>
-     * <li><strong>cloud_auto</strong>: ESSD AutoPL disk</li>
-     * <li><strong>cloud_essd1</strong>: PL1 ESSD</li>
-     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+     * <li><strong>cloud_auto</strong>: ESSD AutoPL disk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,13 +91,15 @@ public class ModifyDBInstanceDiskTypeRequest extends TeaModel {
     public String extraParam;
 
     /**
-     * <p>The type of configuration changes. Valid values:</p>
+     * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><strong>UPGRADE</strong></li>
-     * <li><strong>DOWNGRADE</strong></li>
+     * <li><p><strong>UPGRADE</strong>: Upgrades the instance configuration.</p>
+     * </li>
+     * <li><p><strong>DOWNGRADE</strong>: Downgrades the instance configuration.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is valid only when the billing method of the instance is subscription.</p>
+     * <p>This parameter is available only when the instance uses the subscription billing method.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

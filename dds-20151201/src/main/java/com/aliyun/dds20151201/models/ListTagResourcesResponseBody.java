@@ -7,7 +7,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
      * <blockquote>
-     * <p> If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.</p>
+     * <p>If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter in the next query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

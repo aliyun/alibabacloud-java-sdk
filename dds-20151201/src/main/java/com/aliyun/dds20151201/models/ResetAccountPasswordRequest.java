@@ -17,8 +17,10 @@ public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The new password.</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></li>
-     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li><p>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>! # $ % ^ &amp; * ( ) _ + - =</code></p>
+     * </li>
+     * <li><p>The password must be 8 to 32 characters in length.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,8 +33,10 @@ public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The role of the instance.</p>
      * <ul>
-     * <li>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</li>
-     * <li>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</li>
+     * <li><p>If the instance is a sharded cluster instance, this parameter is required. Valid values: db and cs.</p>
+     * </li>
+     * <li><p>If the instance is a replica set instance, you can leave this parameter empty or set the parameter to normal.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

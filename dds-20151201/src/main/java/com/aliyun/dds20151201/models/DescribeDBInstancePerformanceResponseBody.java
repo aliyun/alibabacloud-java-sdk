@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
-     * <p>The end of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range to query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-13T11:58Z</p>
@@ -26,7 +26,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The beginning of the queried time range. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range to query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-13T10:58Z</p>

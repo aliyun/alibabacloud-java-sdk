@@ -113,7 +113,7 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
          * <p>The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.</p>
          * 
          * <strong>example:</strong>
-         * <p>dds-uf68f1b5a57exxxx</p>
+         * <p>NodeId-example-id-****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -121,12 +121,18 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
         /**
          * <p>The code that indicates the reason of a primary/secondary switchover. Valid values:</p>
          * <ul>
-         * <li>USER_CONSOLE_OPERATION: The switchover is manually performed.</li>
-         * <li>OPERATION_AND_MAINTENANCE: Potential risks exist.</li>
-         * <li>MACHINE_DOWNTIME: The host is offline.</li>
-         * <li>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</li>
-         * <li>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</li>
-         * <li>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</li>
+         * <li><p>USER_CONSOLE_OPERATION: The switchover is manually performed.</p>
+         * </li>
+         * <li><p>OPERATION_AND_MAINTENANCE: Potential risks exist.</p>
+         * </li>
+         * <li><p>MACHINE_DOWNTIME: The host is offline.</p>
+         * </li>
+         * <li><p>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</p>
+         * </li>
+         * <li><p>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</p>
+         * </li>
+         * <li><p>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

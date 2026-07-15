@@ -14,7 +14,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The cluster backup sets of the instance. A cluster backup file contains the backup sets of each node.</p>
+     * <p>The list of cluster backup sets. A cluster backup contains the backup set of each node.</p>
      */
     @NameInMap("RestoreRanges")
     public java.util.List<DescribeClusterRecoverTimeResponseBodyRestoreRanges> restoreRanges;
@@ -42,7 +42,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
 
     public static class DescribeClusterRecoverTimeResponseBodyRestoreRanges extends TeaModel {
         /**
-         * <p>The beginning of the time range to which data can be restored.</p>
+         * <p>The beginning of the restorable time range.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-16T19:33:20Z</p>
@@ -51,7 +51,7 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         public String restoreBeginTime;
 
         /**
-         * <p>The end of the time range to which data can be restored.</p>
+         * <p>The end of the restorable time range.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-16T19:43:20Z</p>
@@ -60,9 +60,9 @@ public class DescribeClusterRecoverTimeResponseBody extends TeaModel {
         public String restoreEndTime;
 
         /**
-         * <p>The method used to restore data. Valid values:</p>
+         * <p>The restoration method. Valid values:</p>
          * <ul>
-         * <li><strong>PointInTime</strong> (default): Data is restored based on point in time</li>
+         * <li><strong>PointInTime</strong> (default): point-in-time restoration.</li>
          * </ul>
          * 
          * <strong>example:</strong>

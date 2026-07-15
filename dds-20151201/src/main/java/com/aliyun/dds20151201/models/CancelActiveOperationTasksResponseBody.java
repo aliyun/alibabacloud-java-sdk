@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksResponseBody extends TeaModel {
     /**
+     * <p>The IDs of the canceled O\&amp;M events. Multiple IDs are separated by commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>1508850,1508310,1507849,1506274,1505811</p>
      */
@@ -12,6 +14,8 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
     public String ids;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>55A2504F-xxxx-xxxx-xxxx-C7C5E57350A6</p>
      */

@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
     /**
-     * <p>The public endpoint type. Valid values:</p>
+     * <p>The type of the public endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>SRV</strong></li>
-     * <li><strong>Normal</strong></li>
+     * <li><p><strong>SRV</strong></p>
+     * </li>
+     * <li><p><strong>Normal</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is valid only when you want to release an SRV endpoint.</p>
+     * <p>This parameter is available only when the endpoint to be released is an SRV endpoint.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,13 +33,15 @@ public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The network type of the internal endpoint. Valid values:</p>
+     * <p>The network type of the internal endpoint for the node. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
-     * <li><strong>Classic</strong>: classic network.</li>
+     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * </li>
+     * <li><p><strong>Classic</strong>: classic network.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/62135.html">DescribeShardingNetworkAddress</a> operation to query the network type of the internal endpoint.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/62135.html">DescribeShardingNetworkAddress</a> API to query the network type of the internal endpoint for the node.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,7 +53,11 @@ public class ReleaseNodePrivateNetworkAddressRequest extends TeaModel {
     /**
      * <p>The ID of the shard or Configserver node.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> API to query the ID of the shard or Configserver node.</p>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>When you release an SRV address, enter the instance ID for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

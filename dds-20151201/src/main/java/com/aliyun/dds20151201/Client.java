@@ -68,7 +68,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-zhangjiakou-na62-a01", "mongodb.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "mongodb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "mongodb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "mongodb.us-southeast-1.aliyuncs.com"),
+            new TeaPair("na-south-1", "mongodb.na-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "mongodb.me-central-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "mongodb.eu-west-2.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "mongodb.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "mongodb.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu-gic-1", "mongodb.cn-wulanchabu-gic-1.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "mongodb.cn-wuhan-lr.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "mongodb.cn-nanjing.aliyuncs.com"),
+            new TeaPair("cn-heyuan-acdr-1", "mongodb.cn-heyuan-acdr-1.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "mongodb.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "mongodb.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "mongodb.ap-northeast-2.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dds", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -88,8 +103,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Applicable only to cloud disk-based replica set and sharded cluster instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</p>
+     * <p>Applies for an SRV connection string for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request AllocateDBInstanceSrvNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -144,8 +162,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Applicable only to cloud disk-based replica set and sharded cluster instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</p>
+     * <p>Applies for an SRV connection string for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request AllocateDBInstanceSrvNetworkAddressRequest
      * @return AllocateDBInstanceSrvNetworkAddressResponse
@@ -159,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</p>
      * <blockquote>
-     * <p> The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</p>
+     * <p>The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -229,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation is applicable only to sharded cluster instances. For more information, see <a href="https://help.aliyun.com/document_detail/134037.html">Apply for an endpoint for a shard or Configserver node</a>.</p>
      * <blockquote>
-     * <p> The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</p>
+     * <p>The allocated endpoints can be used only for internal access. To gain Internet access, you must call the <a href="https://help.aliyun.com/document_detail/67602.html">AllocatePublicNetworkAddress</a> operation to apply for public endpoints.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -308,6 +329,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An O\&amp;M event cannot be canceled in the following scenarios:</p>
+     * <ul>
+     * <li>The event is not cancelable if the value of the AllowCancel parameter is 0.</li>
+     * <li>The scheduled start time of the O\&amp;M event has passed.</li>
+     * <li>The status of the O\&amp;M event is not Pending if the value of the Status parameter is not 3.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels Operations and Maintenance (O&amp;M) events in a batch.</p>
+     * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelActiveOperationTasksResponse
@@ -357,6 +389,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An O\&amp;M event cannot be canceled in the following scenarios:</p>
+     * <ul>
+     * <li>The event is not cancelable if the value of the AllowCancel parameter is 0.</li>
+     * <li>The scheduled start time of the O\&amp;M event has passed.</li>
+     * <li>The status of the O\&amp;M event is not Pending if the value of the Status parameter is not 3.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels Operations and Maintenance (O&amp;M) events in a batch.</p>
+     * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
      */
@@ -601,8 +644,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
      * <ul>
+     * <li>You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</li>
      * <li>The account is granted read-only permissions.</li>
      * </ul>
      * 
@@ -667,8 +710,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
      * <ul>
+     * <li>You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</li>
      * <li>The account is granted read-only permissions.</li>
      * </ul>
      * 
@@ -685,10 +728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, the instance must be in the Running state.</p>
+     * <p>The instance must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a backup set for an ApsaraDB for MongoDB instance.</p>
+     * <p>Creates a backup for a MongoDB instance.</p>
      * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -744,10 +787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, the instance must be in the Running state.</p>
+     * <p>The instance must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a backup set for an ApsaraDB for MongoDB instance.</p>
+     * <p>Creates a backup for a MongoDB instance.</p>
      * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
@@ -759,9 +802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
-     * For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
-     * To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * For more information about the instance types of ApsaraDB for MongoDB, see <a href="">Instance types</a>.
+     * To create a sharded cluster instance, call the <a href="">CreateShardingDBInstance</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates or clones an ApsaraDB for MongoDB replica set instance.</p>
@@ -956,9 +999,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
-     * For more information about the instance types of ApsaraDB for MongoDB instances, see <a href="https://www.alibabacloud.com/help/en/mongodb/product-overview/instance-types-1">Instance types</a>.
-     * To create sharded cluster instances, you can call the <a href="~~CreateShardingDBInstance~~">CreateShardingDBInstance</a> operation.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * For more information about the instance types of ApsaraDB for MongoDB, see <a href="">Instance types</a>.
+     * To create a sharded cluster instance, call the <a href="">CreateShardingDBInstance</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates or clones an ApsaraDB for MongoDB replica set instance.</p>
@@ -1045,11 +1088,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * <p>Before calling this operation, ensure you are familiar with the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
      * This operation applies only to sharded cluster instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a shard or mongos node to an ApsaraDB for MongoDB instance.</p>
+     * <p>Adds a shard node or a mongos node to an ApsaraDB for MongoDB sharded cluster instance.</p>
      * 
      * @param request CreateNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1118,6 +1161,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.searchDBInstanceClass)) {
+            query.put("SearchDBInstanceClass", request.searchDBInstanceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchNodeCount)) {
+            query.put("SearchNodeCount", request.searchNodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchStorage)) {
+            query.put("SearchStorage", request.searchStorage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shardDirect)) {
             query.put("ShardDirect", request.shardDirect);
         }
@@ -1141,11 +1196,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * <p>Before calling this operation, ensure you are familiar with the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
      * This operation applies only to sharded cluster instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a shard or mongos node to an ApsaraDB for MongoDB instance.</p>
+     * <p>Adds a shard node or a mongos node to an ApsaraDB for MongoDB sharded cluster instance.</p>
      * 
      * @param request CreateNodeRequest
      * @return CreateNodeResponse
@@ -1157,7 +1212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB. 
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
      * This operation is applicable only to sharded cluster instances.</p>
      * 
      * <b>summary</b> : 
@@ -1245,7 +1300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB. 
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
      * This operation is applicable only to sharded cluster instances.</p>
      * 
      * <b>summary</b> : 
@@ -1260,6 +1315,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a role tag for an instance node.</p>
+     * 
      * @param request CreateNodeRoleTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNodeRoleTagResponse
@@ -1309,6 +1367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a role tag for an instance node.</p>
+     * 
      * @param request CreateNodeRoleTagRequest
      * @return CreateNodeRoleTagResponse
      */
@@ -1319,14 +1380,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</p>
      * <ul>
+     * <li>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</li>
      * <li>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</li>
-     * <li>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</li>
+     * <li>To create a standalone or replica set instance, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Creates or clones a MongoDB sharded cluster instance.</p>
      * 
      * @param request CreateShardingDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1506,14 +1567,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.</p>
      * <ul>
+     * <li>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</li>
      * <li>For more information about the instance types of ApsaraDB for MongoDB, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</li>
-     * <li>To create standalone instances and replica set instances, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</li>
+     * <li>To create a standalone or replica set instance, you can call the <a href="https://help.aliyun.com/document_detail/61763.html">CreateDBInstance</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates or clones an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Creates or clones a MongoDB sharded cluster instance.</p>
      * 
      * @param request CreateShardingDBInstanceRequest
      * @return CreateShardingDBInstanceResponse
@@ -1524,8 +1585,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete only manual backups.
+     * This operation supports only MongoDB instances that use cloud disks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes the backup set of MongoDB.</p>
+     * <p>Deletes a MongoDB backup set.</p>
      * 
      * @param request DeleteBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1576,8 +1641,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete only manual backups.
+     * This operation supports only MongoDB instances that use cloud disks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes the backup set of MongoDB.</p>
+     * <p>Deletes a MongoDB backup set.</p>
      * 
      * @param request DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -1589,17 +1658,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the instance meets the following requirements</p>
+     * <p>The instance must meet the following conditions:</p>
      * <ul>
-     * <li>The instance is in the Running state.</li>
+     * <li>The instance status is running.</li>
      * <li>The billing method of the instance is pay-as-you-go.<blockquote>
-     * <p>After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.</p>
+     * <p>After an instance is released, its data cannot be recovered. Proceed with caution.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases an ApsaraDB for MongoDB instance.</p>
+     * <p>Releases a pay-as-you-go MongoDB instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1651,17 +1720,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the instance meets the following requirements</p>
+     * <p>The instance must meet the following conditions:</p>
      * <ul>
-     * <li>The instance is in the Running state.</li>
+     * <li>The instance status is running.</li>
      * <li>The billing method of the instance is pay-as-you-go.<blockquote>
-     * <p>After an instance is released, all data in the instance is cleared and cannot be recovered. Proceed with caution.</p>
+     * <p>After an instance is released, its data cannot be recovered. Proceed with caution.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases an ApsaraDB for MongoDB instance.</p>
+     * <p>Releases a pay-as-you-go MongoDB instance.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -1673,7 +1742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a global IP whitelist template.</p>
+     * <p>Deletes a global IP address whitelist template.</p>
      * 
      * @param request DeleteGlobalSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1733,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a global IP whitelist template.</p>
+     * <p>Deletes a global IP address whitelist template.</p>
      * 
      * @param request DeleteGlobalSecurityIPGroupRequest
      * @return DeleteGlobalSecurityIPGroupResponse
@@ -1830,11 +1899,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> This operation can be used to query only the information of the root account.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
      * <p>Queries the database accounts of an ApsaraDB for MongoDB instance.</p>
      * 
@@ -1887,11 +1951,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> This operation can be used to query only the information of the root account.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
      * <p>Queries the database accounts of an ApsaraDB for MongoDB instance.</p>
      * 
@@ -1904,6 +1963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the Operation and Maintenance (O&amp;M) task configuration for a MongoDB instance.</p>
+     * 
      * @param request DescribeActiveOperationMaintenanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeActiveOperationMaintenanceConfigResponse
@@ -1945,6 +2007,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the Operation and Maintenance (O&amp;M) task configuration for a MongoDB instance.</p>
+     * 
      * @param request DescribeActiveOperationMaintenanceConfigRequest
      * @return DescribeActiveOperationMaintenanceConfigResponse
      */
@@ -1955,7 +2020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about  tasks of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the detailed information about tasks of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeActiveOperationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2023,7 +2088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detailed information about  tasks of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the detailed information about tasks of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeActiveOperationTaskRequest
      * @return DescribeActiveOperationTaskResponse
@@ -2095,7 +2160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query maintenance task types and task quantities.</p>
+     * <p>Queries the types and number of O&amp;M tasks for a MongoDB instance.</p>
      * 
      * @param request DescribeActiveOperationTaskRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2147,7 +2212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query maintenance task types and task quantities.</p>
+     * <p>Queries the types and number of O&amp;M tasks for a MongoDB instance.</p>
      * 
      * @param request DescribeActiveOperationTaskRegionRequest
      * @return DescribeActiveOperationTaskRegionResponse
@@ -2229,7 +2294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries O&amp;M task details for MongoDB instances.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2321,7 +2386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of operation and maintenance tasks initiated for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries O&amp;M task details for MongoDB instances.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
@@ -2333,14 +2398,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the running state when you call this operation.</p>
      * <ul>
+     * <li>The instance must be in the running state when you call this operation.</li>
      * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the audit log types collected for a MongoDB instance.</p>
      * 
      * @param request DescribeAuditLogFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2392,14 +2457,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the running state when you call this operation.</p>
      * <ul>
+     * <li>The instance must be in the running state when you call this operation.</li>
      * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the types of entries in the audit log collected for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the audit log types collected for a MongoDB instance.</p>
      * 
      * @param request DescribeAuditLogFilterRequest
      * @return DescribeAuditLogFilterResponse
@@ -2411,14 +2476,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the running state when you call this operation.</p>
      * <ul>
-     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>The instance must be in the running state.</li>
+     * <li>This operation is available only for <strong>General-purpose Local Disk Edition</strong> and <strong>Dedicated Local Disk Edition</strong> instances.</li>
+     * <li>You can call this operation up to 30 times per minute. Calls that exceed this limit are throttled. To make frequent calls, use Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.</p>
+     * <p>Checks whether audit logging is enabled for a MongoDB instance.</p>
      * 
      * @param request DescribeAuditPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2466,14 +2531,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the running state when you call this operation.</p>
      * <ul>
-     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>The instance must be in the running state.</li>
+     * <li>This operation is available only for <strong>General-purpose Local Disk Edition</strong> and <strong>Dedicated Local Disk Edition</strong> instances.</li>
+     * <li>You can call this operation up to 30 times per minute. Calls that exceed this limit are throttled. To make frequent calls, use Log Service. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether the audit log feature is enabled for an ApsaraDB for MongoDB instance.</p>
+     * <p>Checks whether audit logging is enabled for a MongoDB instance.</p>
      * 
      * @param request DescribeAuditPolicyRequest
      * @return DescribeAuditPolicyResponse
@@ -2485,14 +2550,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</p>
      * <ul>
+     * <li>When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</li>
      * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the audit logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries audit log entries for a MongoDB instance.</p>
      * 
      * @param request DescribeAuditRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2584,14 +2649,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</p>
      * <ul>
+     * <li>When you call this operation, ensure that the audit log feature of the instance is enabled. Otherwise, the operation returns an empty audit log.</li>
      * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the audit logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries audit log entries for a MongoDB instance.</p>
      * 
      * @param request DescribeAuditRecordsRequest
      * @return DescribeAuditRecordsResponse
@@ -2983,7 +3048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup policy of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the backup policy of a MongoDB instance.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3043,7 +3108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup policy of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the backup policy of a MongoDB instance.</p>
      * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
@@ -3054,8 +3119,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Backup usage for a sharded cluster is billed on a per-shard basis. You can use this operation to query the backup usage for a single shard.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries the backup usage for a MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
      * 
      * @param request DescribeBackupStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3110,8 +3178,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Backup usage for a sharded cluster is billed on a per-shard basis. You can use this operation to query the backup usage for a single shard.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries the backup usage for a MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
      * 
      * @param request DescribeBackupStorageRequest
      * @return DescribeBackupStorageResponse
@@ -3123,7 +3194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries ongoing backup jobs for MongoDB ReplicaSet or sharded cluster instances that use cloud disks.</p>
      * 
      * @param request DescribeBackupTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3179,7 +3250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries backup tasks running in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries ongoing backup jobs for MongoDB ReplicaSet or sharded cluster instances that use cloud disks.</p>
      * 
      * @param request DescribeBackupTasksRequest
      * @return DescribeBackupTasksResponse
@@ -3191,7 +3262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the backups of a MongoDB instance.</p>
      * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3279,7 +3350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the backups of a MongoDB instance.</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -3291,7 +3362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries binary log files bound to an ApsaraDB for MongoDB instance.</p>
+     * <p>Query log backup files for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeBinlogFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3379,7 +3450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries binary log files bound to an ApsaraDB for MongoDB instance.</p>
+     * <p>Query log backup files for an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeBinlogFilesRequest
      * @return DescribeBinlogFilesResponse
@@ -3391,11 +3462,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
-     * By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.</p>
+     * <p>For sharded cluster instances that use cloud disks and were created before October 19, 2023, you must first call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to convert shard backups to cluster backups.
+     * Sharded cluster instances that use cloud disks and were created after October 19, 2023 use cluster backups by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries the cluster backup sets for an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
      * 
      * @param request DescribeClusterBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3483,11 +3554,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For a sharded cluster instance that is created before October 19, 2023 and uses cloud disks, you must call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to switch the instance from the shard backup mode to the cluster backup mode before you call the DescribeClusterBackups operation.
-     * By default, cloud disk-based sharded cluster instances that are created after October 19, 2023 are in the cluster backup mode.</p>
+     * <p>For sharded cluster instances that use cloud disks and were created before October 19, 2023, you must first call the <a href="https://help.aliyun.com/document_detail/2587931.html">TransferClusterBackup</a> operation to convert shard backups to cluster backups.
+     * Sharded cluster instances that use cloud disks and were created after October 19, 2023 use cluster backups by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup sets of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries the cluster backup sets for an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
      * 
      * @param request DescribeClusterBackupsRequest
      * @return DescribeClusterBackupsResponse
@@ -3499,13 +3570,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</p>
      * <ul>
-     * <li>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.</li>
+     * <li>The MongoDB instance must be a sharded cluster instance that runs major engine version 4.4 or later and uses standard SSDs as the storage pattern.</li>
+     * <li>Only instances created before October 19, 2023 need to invoke the TransferClusterBackup operation to switch to the cluster backup mode. Instances that have been switched to the cluster backup mode or sharded cluster instances with cloud disks created on or after October 19, 2023 can directly invoke this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries the restorable time range of a sharded cluster instance that uses cloud disks in ApsaraDB for MongoDB.</p>
      * 
      * @param request DescribeClusterRecoverTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3520,6 +3591,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.destRegion)) {
             query.put("DestRegion", request.destRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyDbTableRecovery)) {
+            query.put("OnlyDbTableRecovery", request.onlyDbTableRecovery);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -3565,13 +3640,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</p>
      * <ul>
-     * <li>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. The DescribeClusterRecoverTime operation is applicable only to instances that are switched to the cluster backup mode or instances that are created on or after October 19, 2023.</li>
+     * <li>The MongoDB instance must be a sharded cluster instance that runs major engine version 4.4 or later and uses standard SSDs as the storage pattern.</li>
+     * <li>Only instances created before October 19, 2023 need to invoke the TransferClusterBackup operation to switch to the cluster backup mode. Instances that have been switched to the cluster backup mode or sharded cluster instances with cloud disks created on or after October 19, 2023 can directly invoke this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the time range to which you can restore the data of an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.</p>
+     * <p>Queries the restorable time range of a sharded cluster instance that uses cloud disks in ApsaraDB for MongoDB.</p>
      * 
      * @param request DescribeClusterRecoverTimeRequest
      * @return DescribeClusterRecoverTimeResponse
@@ -3583,7 +3658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries information about an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3647,7 +3722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries information about an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -3662,7 +3737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a key for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the encryption key of a MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceEncryptionKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3717,7 +3792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call the DescribeDBInstanceEncryptionKey operation, the instance must have transparent data encryption (TDE) enabled in BYOK mode. You can call the <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a> operation to enable TDE.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a key for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the encryption key of a MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceEncryptionKeyRequest
      * @return DescribeDBInstanceEncryptionKeyResponse
@@ -3789,7 +3864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the performance data of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the performance data of a MongoDB instance.</p>
      * 
      * @param request DescribeDBInstancePerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3869,7 +3944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the performance data of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the performance data of a MongoDB instance.</p>
      * 
      * @param request DescribeDBInstancePerformanceRequest
      * @return DescribeDBInstancePerformanceResponse
@@ -3881,15 +3956,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>To use this operation, the instance must meet the following requirements:</p>
      * <ul>
-     * <li>The instance is in the Running state.</li>
-     * <li>The instance is a replica set instance.</li>
-     * <li>The instance runs MongoDB 3.4 or later.</li>
+     * <li>The instance status is Running.</li>
+     * <li>The instance is a replica set instance or a sharded cluster instance.<ul>
+     * <li>The replica set instance must be version 3.4 or later.</li>
+     * <li>The sharded cluster instance must use Enhanced SSDs (ESSDs).</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.</p>
+     * <p>Query SSL configuration details for a MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3937,15 +4015,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>To use this operation, the instance must meet the following requirements:</p>
      * <ul>
-     * <li>The instance is in the Running state.</li>
-     * <li>The instance is a replica set instance.</li>
-     * <li>The instance runs MongoDB 3.4 or later.</li>
+     * <li>The instance status is Running.</li>
+     * <li>The instance is a replica set instance or a sharded cluster instance.<ul>
+     * <li>The replica set instance must be version 3.4 or later.</li>
+     * <li>The sharded cluster instance must use Enhanced SSDs (ESSDs).</li>
+     * </ul>
+     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Secure Sockets Layer (SSL) settings of an ApsaraDB for MongoDB instance.</p>
+     * <p>Query SSL configuration details for a MongoDB instance.</p>
      * 
      * @param request DescribeDBInstanceSSLRequest
      * @return DescribeDBInstanceSSLResponse
@@ -3957,7 +4038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of an ApsaraDB for MongoDB instance.</p>
+     * <p>Gets instance type details.</p>
      * 
      * @param request DescribeDBInstanceSpecInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4009,7 +4090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of an ApsaraDB for MongoDB instance.</p>
+     * <p>Gets instance type details.</p>
      * 
      * @param request DescribeDBInstanceSpecInfoRequest
      * @return DescribeDBInstanceSpecInfoResponse
@@ -4100,13 +4181,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For more information about TDE, see <a href="https://help.aliyun.com/document_detail/131048.html">TDE</a>.
-     * Before you call this operation, make sure that the instance meets the following requirements:</p>
+     * <p>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/131048.html">Settings for transparent data encryption TDE</a>.
+     * When you invoke this operation, the instance must meet the following conditions:</p>
      * </blockquote>
      * <ul>
-     * <li>The instance is a replica set or sharded cluster instance.</li>
-     * <li>The storage engine of the instance is WiredTiger.</li>
-     * <li>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</li>
+     * <li>The instance is a replica set instance or a sharded cluster instance.</li>
+     * <li>The storage DPI engine of the instance is WiredTiger.</li>
+     * <li>The database DPI engine version of the instance is 4.0 or 4.2. If the database DPI engine version is earlier than the required version, you can invoke the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database DPI engine version.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4159,13 +4240,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For more information about TDE, see <a href="https://help.aliyun.com/document_detail/131048.html">TDE</a>.
-     * Before you call this operation, make sure that the instance meets the following requirements:</p>
+     * <p>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/131048.html">Settings for transparent data encryption TDE</a>.
+     * When you invoke this operation, the instance must meet the following conditions:</p>
      * </blockquote>
      * <ul>
-     * <li>The instance is a replica set or sharded cluster instance.</li>
-     * <li>The storage engine of the instance is WiredTiger.</li>
-     * <li>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</li>
+     * <li>The instance is a replica set instance or a sharded cluster instance.</li>
+     * <li>The storage DPI engine of the instance is WiredTiger.</li>
+     * <li>The database DPI engine version of the instance is 4.0 or 4.2. If the database DPI engine version is earlier than the required version, you can invoke the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database DPI engine version.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4181,10 +4262,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list of replica set and standalone instances is displayed when the <strong>DBInstanceType</strong> parameter uses the default value <strong>replicate</strong>. To query a list of sharded cluster instances, you must set the <strong>DBInstanceType</strong> parameter to <strong>sharding</strong>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <strong>DBInstanceType</strong> request parameter, the default value is <strong>replicate</strong>. To query a list of sharded cluster instances, set <strong>DBInstanceType</strong> to <strong>sharding</strong>. To query a list of serverless instances, set <strong>DBInstanceType</strong> to <strong>serverless</strong>.
+     * &lt;props=&quot;intl&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <strong>DBInstanceType</strong> request parameter, the default value is <strong>replicate</strong>. To query a list of sharded cluster instances, set <strong>DBInstanceType</strong> to <strong>sharding</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of ApsaraDB for MongoDB instances.</p>
+     * <p>Queries a list of MongoDB instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4316,10 +4398,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The list of replica set and standalone instances is displayed when the <strong>DBInstanceType</strong> parameter uses the default value <strong>replicate</strong>. To query a list of sharded cluster instances, you must set the <strong>DBInstanceType</strong> parameter to <strong>sharding</strong>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <strong>DBInstanceType</strong> request parameter, the default value is <strong>replicate</strong>. To query a list of sharded cluster instances, set <strong>DBInstanceType</strong> to <strong>sharding</strong>. To query a list of serverless instances, set <strong>DBInstanceType</strong> to <strong>serverless</strong>.
+     * &lt;props=&quot;intl&quot;&gt;By default, this operation queries a list of replica set instances, which includes standalone instances. If you do not specify the <strong>DBInstanceType</strong> request parameter, the default value is <strong>replicate</strong>. To query a list of sharded cluster instances, set <strong>DBInstanceType</strong> to <strong>sharding</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of ApsaraDB for MongoDB instances.</p>
+     * <p>Queries a list of MongoDB instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -4331,13 +4414,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.</p>
      * <ul>
-     * <li>Paged query is disabled for this operation.</li>
+     * <li>If you do not specify any instances, the operation returns overview information for all instances in the destination region associated with your Alibaba Cloud account.</li>
+     * <li>The results of this operation are not paginated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overview information of one or more ApsaraDB for MongoDB instances.</p>
+     * <p>Queries the overview of one or more ApsaraDB for MongoDB instances.</p>
      * 
      * @param request DescribeDBInstancesOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4433,13 +4516,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify an instance when you call this operation, the overview information of all instances in a specific region within this account is returned.</p>
      * <ul>
-     * <li>Paged query is disabled for this operation.</li>
+     * <li>If you do not specify any instances, the operation returns overview information for all instances in the destination region associated with your Alibaba Cloud account.</li>
+     * <li>The results of this operation are not paginated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the overview information of one or more ApsaraDB for MongoDB instances.</p>
+     * <p>Queries the overview of one or more ApsaraDB for MongoDB instances.</p>
      * 
      * @param request DescribeDBInstancesOverviewRequest
      * @return DescribeDBInstancesOverviewResponse
@@ -4451,13 +4534,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
+     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries entries in error logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries error log entries for a MongoDB instance.</p>
      * 
      * @param request DescribeErrorLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4545,13 +4628,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
+     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries entries in error logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries error log entries for a MongoDB instance.</p>
      * 
      * @param request DescribeErrorLogRecordsRequest
      * @return DescribeErrorLogRecordsResponse
@@ -4603,7 +4686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the mapping between an instance and a global IP address whitelist template.</p>
      * 
      * @param request DescribeGlobalSecurityIPGroupRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4655,7 +4738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global IP whitelist templates associated with an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the mapping between an instance and a global IP address whitelist template.</p>
      * 
      * @param request DescribeGlobalSecurityIPGroupRelationRequest
      * @return DescribeGlobalSecurityIPGroupRelationResponse
@@ -4858,7 +4941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is applicable to subscription instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the auto-renewal status of MongoDB instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewalAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4925,7 +5008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is applicable to subscription instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to query whether auto-renewal is enabled for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the auto-renewal status of MongoDB instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewalAttributeRequest
      * @return DescribeInstanceAutoRenewalAttributeResponse
@@ -4937,7 +5020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.</p>
+     * <p>Queries the restorable time ranges of an ApsaraDB for MongoDB replica set instance with cloud disks.</p>
      * 
      * @param request DescribeInstanceRecoverTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4952,6 +5035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.destRegion)) {
             query.put("DestRegion", request.destRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyDbTableRecovery)) {
+            query.put("OnlyDbTableRecovery", request.onlyDbTableRecovery);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -5001,7 +5088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the time required to restore the data of an ApsaraDB for MongoDB replica set instance that uses cloud disks.</p>
+     * <p>Queries the restorable time ranges of an ApsaraDB for MongoDB replica set instance with cloud disks.</p>
      * 
      * @param request DescribeInstanceRecoverTimeRequest
      * @return DescribeInstanceRecoverTimeResponse
@@ -5135,15 +5222,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.
-     * This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable the audit log feature</a>.</p>
+     * <p>This API applies to General-purpose and Dedicated instances that use local disks.
+     * You can enable the audit log feature for ApsaraDB for MongoDB as needed. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable audit logs</a>.</p>
      * <ul>
-     * <li>Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see <a href="https://help.aliyun.com/document_detail/377480.html">Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition</a></li>
-     * <li>You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">Pricing of ApsaraDB for MongoDB instances</a>.</li>
+     * <li>As of January 6, 2022, the official version of the audit log feature is being rolled out to all regions. New requests for the free trial version are no longer accepted. For more information, see <a href="~~377480~~">[Notice] ApsaraDB for MongoDB launches pay-as-you-go audit logs and discontinues the free trial</a>.</li>
+     * <li>The official version of the audit log feature is pay-as-you-go. Charges are based on storage usage and retention period. For pricing details, see &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?#/mongodb/detail/badds">ApsaraDB for MongoDB pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">ApsaraDB for MongoDB pricing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the logging configurations of an ApsaraDB for MongoDB instance.</p>
+     * <p>You can view the configuration of MongoDB Log Service.</p>
      * 
      * @param request DescribeMongoDBLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5191,15 +5278,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.
-     * This operation depends on the audit log feature of ApsaraDB for MongoDB. You can enable the audit log feature based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable the audit log feature</a>.</p>
+     * <p>This API applies to General-purpose and Dedicated instances that use local disks.
+     * You can enable the audit log feature for ApsaraDB for MongoDB as needed. For more information, see <a href="https://help.aliyun.com/document_detail/59903.html">Enable audit logs</a>.</p>
      * <ul>
-     * <li>Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and new applications for the free trial edition have ended. For more information, see <a href="https://help.aliyun.com/document_detail/377480.html">Notice on official launch of the pay-as-you-go audit log feature and no more application for the free trial edition</a></li>
-     * <li>You are charged for the official edition of the audit log feature based on the storage capacity that is consumed by audit logs and the retention period of the audit logs. For more information, see <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">Pricing of ApsaraDB for MongoDB instances</a>.</li>
+     * <li>As of January 6, 2022, the official version of the audit log feature is being rolled out to all regions. New requests for the free trial version are no longer accepted. For more information, see <a href="~~377480~~">[Notice] ApsaraDB for MongoDB launches pay-as-you-go audit logs and discontinues the free trial</a>.</li>
+     * <li>The official version of the audit log feature is pay-as-you-go. Charges are based on storage usage and retention period. For pricing details, see &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?#/mongodb/detail/badds">ApsaraDB for MongoDB pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">ApsaraDB for MongoDB pricing</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the logging configurations of an ApsaraDB for MongoDB instance.</p>
+     * <p>You can view the configuration of MongoDB Log Service.</p>
      * 
      * @param request DescribeMongoDBLogConfigRequest
      * @return DescribeMongoDBLogConfigResponse
@@ -5287,7 +5374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of default parameter templates for ApsaraDB for MongoDB instances.</p>
+     * <p>Queries the default parameter templates for MongoDB instances.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5347,7 +5434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of default parameter templates for ApsaraDB for MongoDB instances.</p>
+     * <p>Queries the default parameter templates for MongoDB instances.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -5431,7 +5518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the pricing information of an ApsaraDB for MongoDB instance.</p>
+     * <p>Query prices.</p>
      * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5511,7 +5598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the pricing information of an ApsaraDB for MongoDB instance.</p>
+     * <p>Query prices.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -5522,6 +5609,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the vSwitches that are available in a specified region and zone. Use this before creating an ApsaraDB for MongoDB instance to select a vSwitch.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of vSwitches.</p>
+     * 
      * @param request DescribeRdsVSwitchsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRdsVSwitchsResponse
@@ -5575,6 +5668,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the vSwitches that are available in a specified region and zone. Use this before creating an ApsaraDB for MongoDB instance to select a vSwitch.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of vSwitches.</p>
+     * 
      * @param request DescribeRdsVSwitchsRequest
      * @return DescribeRdsVSwitchsResponse
      */
@@ -5584,6 +5683,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries available VPCs in a specified region and zone. Use this before creating an ApsaraDB for MongoDB instance to select a VPC.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of VPCs.</p>
+     * 
      * @param request DescribeRdsVpcsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRdsVpcsResponse
@@ -5633,6 +5738,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries available VPCs in a specified region and zone. Use this before creating an ApsaraDB for MongoDB instance to select a VPC.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves a list of VPCs.</p>
+     * 
      * @param request DescribeRdsVpcsRequest
      * @return DescribeRdsVpcsResponse
      */
@@ -5644,7 +5755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</p>
+     * <p>To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5701,7 +5812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</p>
+     * <p>To query available regions and zones in which an ApsaraDB for MongoDB instance can be created, call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -5717,10 +5828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to subscription instances.</p>
+     * <p>This operation applies to subscription MongoDB instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monthly renewal price of an ApsaraDB for MongoDB instance.</p>
+     * <p>Get the price to renew a specific MongoDB instance for one month.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5776,10 +5887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to subscription instances.</p>
+     * <p>This operation applies to subscription MongoDB instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the monthly renewal price of an ApsaraDB for MongoDB instance.</p>
+     * <p>Get the price to renew a specific MongoDB instance for one month.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @return DescribeRenewalPriceResponse
@@ -5791,10 +5902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.</p>
+     * <p>This operation applies to replica set instances and single-node instances. It does not apply to sharded cluster instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the role and connection information of an ApsaraDB for MongoDB instance.</p>
+     * <p>Retrieves the role information and connection details for a MongoDB instance.</p>
      * 
      * @param request DescribeReplicaSetRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5842,10 +5953,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to replica set instances and standalone instances, but not to sharded cluster instances.</p>
+     * <p>This operation applies to replica set instances and single-node instances. It does not apply to sharded cluster instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the role and connection information of an ApsaraDB for MongoDB instance.</p>
+     * <p>Retrieves the role information and connection details for a MongoDB instance.</p>
      * 
      * @param request DescribeReplicaSetRoleRequest
      * @return DescribeReplicaSetRoleResponse
@@ -5928,6 +6039,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Describes the status of a tag for a node.</p>
+     * 
      * @param request DescribeRoleTagStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRoleTagStatusResponse
@@ -5973,6 +6087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Describes the status of a tag for a node.</p>
+     * 
      * @param request DescribeRoleTagStatusRequest
      * @return DescribeRoleTagStatusResponse
      */
@@ -6055,13 +6172,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>This API is for instances with the following specification types: <strong>general-purpose local disk</strong>, <strong>dedicated local disk</strong>, and <strong>cloud disk</strong>.</li>
+     * <li>This API is limited to 30 calls per minute. Exceeding this limit triggers rate limiting, so avoid high-frequency calls. For high-frequency operations, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the operational logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>View the running logs for a MongoDB instance.</p>
      * 
      * @param request DescribeRunningLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6157,13 +6274,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>This API is for instances with the following specification types: <strong>general-purpose local disk</strong>, <strong>dedicated local disk</strong>, and <strong>cloud disk</strong>.</li>
+     * <li>This API is limited to 30 calls per minute. Exceeding this limit triggers rate limiting, so avoid high-frequency calls. For high-frequency operations, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the operational logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>View the running logs for a MongoDB instance.</p>
      * 
      * @param request DescribeRunningLogRecordsRequest
      * @return DescribeRunningLogRecordsResponse
@@ -6235,7 +6352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.</p>
+     * <p>Retrieves the IP whitelists of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeSecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6287,7 +6404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to query the IP whitelists of an ApsaraDB for MongoDB instance.</p>
+     * <p>Retrieves the IP whitelists of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribeSecurityIpsRequest
      * @return DescribeSecurityIpsResponse
@@ -6299,10 +6416,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable only to sharded cluster instances.</p>
+     * <p>This API is for sharded cluster instances only.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Retrieves the connection information for a MongoDB sharded cluster instance.</p>
      * 
      * @param request DescribeShardingNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6358,10 +6475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable only to sharded cluster instances.</p>
+     * <p>This API is for sharded cluster instances only.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries connection information about an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Retrieves the connection information for a MongoDB sharded cluster instance.</p>
      * 
      * @param request DescribeShardingNetworkAddressRequest
      * @return DescribeShardingNetworkAddressResponse
@@ -6373,13 +6490,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
+     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries slow query log entries for a MongoDB instance.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6467,13 +6584,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
+     * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of entries in slow query logs of an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries slow query log entries for a MongoDB instance.</p>
      * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
@@ -6557,10 +6674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</p>
+     * <p>You can use the custom keys returned by this operation to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of custom keys for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the custom keys for an instance.</p>
      * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6616,10 +6733,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use the custom key obtained by calling the DescribeUserEncryptionKeyList operation to enable TDE. For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</p>
+     * <p>You can use the custom keys returned by this operation to enable transparent data encryption (TDE). For more information, see <a href="https://help.aliyun.com/document_detail/131267.html">ModifyDBInstanceTDE</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of custom keys for an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the custom keys for an instance.</p>
      * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @return DescribeUserEncryptionKeyListResponse
@@ -6630,6 +6747,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a paginated list of VPCs.</p>
+     * 
      * @param request DescribeVpcsForMongoDBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVpcsForMongoDBResponse
@@ -6691,6 +6811,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a paginated list of VPCs.</p>
+     * 
      * @param request DescribeVpcsForMongoDBRequest
      * @return DescribeVpcsForMongoDBResponse
      */
@@ -6793,13 +6916,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.</p>
+     * <p>Evaluate resource availability for MongoDB replica set instances and sharded cluster instances. Supported scenarios include purchasing a new instance, changing an instance configuration, and adding nodes to a sharded cluster.</p>
      * <blockquote>
-     * <p>You can call this operation a maximum of 200 times per minute.</p>
+     * <p>You can call this operation up to 200 times per minute. Calls that exceed this limit are subject to traffic throttling.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.</p>
+     * <p>Evaluate resource availability before purchasing a new instance or changing the configuration of an existing instance.</p>
      * 
      * @param request EvaluateResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6883,13 +7006,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.</p>
+     * <p>Evaluate resource availability for MongoDB replica set instances and sharded cluster instances. Supported scenarios include purchasing a new instance, changing an instance configuration, and adding nodes to a sharded cluster.</p>
      * <blockquote>
-     * <p>You can call this operation a maximum of 200 times per minute.</p>
+     * <p>You can call this operation up to 200 times per minute. Calls that exceed this limit are subject to traffic throttling.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether sufficient resources are available in a region in which you want to create or upgrade an ApsaraDB for MongoDB instance.</p>
+     * <p>Evaluate resource availability before purchasing a new instance or changing the configuration of an existing instance.</p>
      * 
      * @param request EvaluateResourceRequest
      * @return EvaluateResourceResponse
@@ -6977,8 +7100,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</p>
      * <ul>
+     * <li>This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</li>
      * <li>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</li>
      * <li>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</li>
      * <li>The source zone and the destination zone belong to the same region.</li>
@@ -7054,8 +7177,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</p>
      * <ul>
+     * <li>This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.</li>
      * <li>If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint before you call the MigrateAvailableZone operation.</li>
      * <li>Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.</li>
      * <li>The source zone and the destination zone belong to the same region.</li>
@@ -7077,11 +7200,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</p>
      * <blockquote>
-     * <p> If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</p>
+     * <p>If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.</p>
+     * <p>Migrates an ApsaraDB for MongoDB instance to another zone.</p>
      * 
      * @param request MigrateToOtherZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7143,11 +7266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>This operation is applicable only to replica set instances, but not to standalone instances or sharded cluster instances.</p>
      * <blockquote>
-     * <p> If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</p>
+     * <p>If you have applied for a public endpoint of the instance, you must first call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation to release the public endpoint.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to migrate an ApsaraDB for MongoDB instance to another zone.</p>
+     * <p>Migrates an ApsaraDB for MongoDB instance to another zone.</p>
      * 
      * @param request MigrateToOtherZoneRequest
      * @return MigrateToOtherZoneResponse
@@ -7158,6 +7281,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is not supported for sharded cluster instances.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the description of the root account in an ApsaraDB for MongoDB instance.</p>
      * 
@@ -7218,6 +7344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is not supported for sharded cluster instances.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the description of the root account in an ApsaraDB for MongoDB instance.</p>
      * 
@@ -7231,7 +7360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the O\\\&amp;M task configurations for an instance.</p>
+     * <p>Modifies the Operations and Maintenance (O&amp;M) task configuration for a MongoDB instance.</p>
      * 
      * @param request ModifyActiveOperationMaintenanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7295,7 +7424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the O\\\&amp;M task configurations for an instance.</p>
+     * <p>Modifies the Operations and Maintenance (O&amp;M) task configuration for a MongoDB instance.</p>
      * 
      * @param request ModifyActiveOperationMaintenanceConfigRequest
      * @return ModifyActiveOperationMaintenanceConfigResponse
@@ -7379,14 +7508,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the running state when you call this operation.</p>
      * <ul>
+     * <li>The instance must be in the running state when you call this operation.</li>
      * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> or <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the audit log types collected for a MongoDB instance.</p>
      * 
      * @param request ModifyAuditLogFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7442,14 +7571,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the running state when you call this operation.</p>
      * <ul>
+     * <li>The instance must be in the running state when you call this operation.</li>
      * <li>This operation is applicable only to <strong>general-purpose local-disk</strong> or <strong>dedicated local-disk</strong> instances.</li>
      * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the types of logs collected by the audit log feature of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the audit log types collected for a MongoDB instance.</p>
      * 
      * @param request ModifyAuditLogFilterRequest
      * @return ModifyAuditLogFilterResponse
@@ -7461,13 +7590,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>You can call this operation up to 30 times per minute. The system throttles calls that exceed this limit. Avoid calling this operation frequently. If you need to make frequent calls, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.</p>
+     * <p>Enables or disables the audit log for a MongoDB instance, or modifies the log retention period.</p>
      * 
      * @param request ModifyAuditPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7535,13 +7663,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to <strong>general-purpose local-disk</strong> and <strong>dedicated local-disk</strong> instances.</p>
      * <ul>
-     * <li>You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage a Logstore</a>.</li>
+     * <li>You can call this operation up to 30 times per minute. The system throttles calls that exceed this limit. Avoid calling this operation frequently. If you need to make frequent calls, use Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/48990.html">Manage Logstore</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the audit log feature or configures the log storage duration for an ApsaraDB for MongoDB instance.</p>
+     * <p>Enables or disables the audit log for a MongoDB instance, or modifies the log retention period.</p>
      * 
      * @param request ModifyAuditPolicyRequest
      * @return ModifyAuditPolicyResponse
@@ -7552,8 +7679,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can modify the TTL only for manual backups.
+     * This operation is applicable only to MongoDB instances that use cloud disks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the expiration time of MongoDB backup sets</p>
+     * <p>Modifies the time-to-live (TTL) of a MongoDB backup set.</p>
      * 
      * @param request ModifyBackupExpireTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7608,8 +7739,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can modify the TTL only for manual backups.
+     * This operation is applicable only to MongoDB instances that use cloud disks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the expiration time of MongoDB backup sets</p>
+     * <p>Modifies the time-to-live (TTL) of a MongoDB backup set.</p>
      * 
      * @param request ModifyBackupExpireTimeRequest
      * @return ModifyBackupExpireTimeResponse
@@ -7621,10 +7756,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cross-region backup feature is suitable only for replica set or sharded cluster instances that use cloud disks.</p>
+     * <p>Geo-redundancy is available only for replica set instances and sharded cluster instances that use cloud disks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a backup policy for an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the backup policy of a MongoDB instance.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7752,10 +7887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cross-region backup feature is suitable only for replica set or sharded cluster instances that use cloud disks.</p>
+     * <p>Geo-redundancy is available only for replica set instances and sharded cluster instances that use cloud disks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies a backup policy for an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the backup policy of a MongoDB instance.</p>
      * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
@@ -7766,8 +7901,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to pay-as-you-go instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies existing release protection configurations.</p>
+     * <p>Modifies instance release protection configuration.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7818,8 +7956,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is applicable only to pay-as-you-go instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies existing release protection configurations.</p>
+     * <p>Modifies instance release protection configuration.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @return ModifyDBInstanceAttributeResponse
@@ -7831,7 +7972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies instance configuration</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7887,7 +8028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configurations of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies instance configuration</p>
      * 
      * @param request ModifyDBInstanceConfigRequest
      * @return ModifyDBInstanceConfigResponse
@@ -7899,14 +8040,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify the connection strings and ports of the following instances:</p>
+     * <p>You can modify the connection address and port for the following instance types:</p>
      * <ul>
-     * <li>You can modify the connection strings of instances that use local or cloud disks.</li>
-     * <li>You can only modify the ports of instances that use cloud disks.</li>
+     * <li>You can modify the connection address and port for instances that use local disks or cloud disks.</li>
+     * <li>For sharded cluster instances, you can modify only the connection address of Mongos nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the connection address and port of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7982,14 +8123,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can modify the connection strings and ports of the following instances:</p>
+     * <p>You can modify the connection address and port for the following instance types:</p>
      * <ul>
-     * <li>You can modify the connection strings of instances that use local or cloud disks.</li>
-     * <li>You can only modify the ports of instances that use cloud disks.</li>
+     * <li>You can modify the connection address and port for instances that use local disks or cloud disks.</li>
+     * <li>For sharded cluster instances, you can modify only the connection address of Mongos nodes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint that is used to connect to an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the connection address and port of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceConnectionStringRequest
      * @return ModifyDBInstanceConnectionStringResponse
@@ -8068,6 +8209,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This feature is not supported for instances with less than 40 GB of disk space.</li>
+     * <li>You can change the disk type only to an ESSD AutoPL disk (cloud_auto).</li>
+     * <li>The interval between two consecutive modifications to the provisioned input/output operations per second (IOPS) of an instance must be longer than one hour. For more information, see <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance of an ESSD AutoPL disk</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the disk type of an ApsaraDB for MongoDB instance.</p>
      * 
@@ -8136,6 +8284,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This feature is not supported for instances with less than 40 GB of disk space.</li>
+     * <li>You can change the disk type only to an ESSD AutoPL disk (cloud_auto).</li>
+     * <li>The interval between two consecutive modifications to the provisioned input/output operations per second (IOPS) of an instance must be longer than one hour. For more information, see <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance of an ESSD AutoPL disk</a>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the disk type of an ApsaraDB for MongoDB instance.</p>
      * 
@@ -8218,8 +8373,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
-     * Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>Due to changes in the monitoring collection granularity adjustment feature, this operation is only applicable to the previous version of the MongoDB console.
+     * To use this operation, the instance must meet the following requirements:</p>
      * </blockquote>
      * <ul>
      * <li>A replica set or sharded cluster instance is used.</li>
@@ -8227,7 +8382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.</p>
+     * <p>Set the monitoring collection granularity for a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8280,8 +8435,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the feature of adjusting collection intervals of monitoring data.
-     * Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>Due to changes in the monitoring collection granularity adjustment feature, this operation is only applicable to the previous version of the MongoDB console.
+     * To use this operation, the instance must meet the following requirements:</p>
      * </blockquote>
      * <ul>
      * <li>A replica set or sharded cluster instance is used.</li>
@@ -8289,7 +8444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to set the monitoring granularity for an ApsaraDB for MongoDB instance.</p>
+     * <p>Set the monitoring collection granularity for a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceMonitorRequest
      * @return ModifyDBInstanceMonitorResponse
@@ -8305,7 +8460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The instance is in the Running state.</li>
      * <li>The network of the instance is in hybrid access mode.<blockquote>
-     * <p> This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</p>
+     * <p>This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -8371,7 +8526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The instance is in the Running state.</li>
      * <li>The network of the instance is in hybrid access mode.<blockquote>
-     * <p> This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</p>
+     * <p>This operation is supported by replica set instances and sharded cluster instances. This operation is not supported by standalone instances.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -8389,10 +8544,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.</p>
+     * <ul>
+     * <li>This operation applies to replica set instances and sharded cluster instances. Single-node instances are not supported. Only the transform from the classic network type to the VPC network type is supported.</li>
+     * <li>This operation supports only instances that run MongoDB 4.2 or earlier and use local disks.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the network type of an ApsaraDB for MongoDB instance.</p>
+     * <p>Switches the network type of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceNetworkTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8464,10 +8622,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is applicable to replica set instances and sharded cluster instances, but not standalone instances. You can call this operation to change the network of an instance from a classic network to a VPC.</p>
+     * <ul>
+     * <li>This operation applies to replica set instances and sharded cluster instances. Single-node instances are not supported. Only the transform from the classic network type to the VPC network type is supported.</li>
+     * <li>This operation supports only instances that run MongoDB 4.2 or earlier and use local disks.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the network type of an ApsaraDB for MongoDB instance.</p>
+     * <p>Switches the network type of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceNetworkTypeRequest
      * @return ModifyDBInstanceNetworkTypeResponse
@@ -8479,19 +8640,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage</h2>
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>Before you call the ModifyDBInstanceSSL operation, make sure that the instance meets the following requirements:</p>
      * <ul>
      * <li>The instance is in the running state.</li>
-     * <li>The instance is a replica set instance.</li>
-     * <li>The engine version of the instance is 3.4 or 4.0.<blockquote>
-     * <p> When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.</p>
+     * <li>The instance is a replica set instance or a sharded cluster instance.<ul>
+     * <li>The replica set instance is version 3.4 or later.</li>
+     * <li>The sharded cluster instance uses enhanced solid-state drives (ESSDs).<blockquote>
+     * <p>Enabling, updating, or disabling SSL restarts the instance. We recommend that you perform these operations during off-peak hours.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SSL settings of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the SSL configuration of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8551,19 +8714,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage</h2>
-     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <p>Before you call the ModifyDBInstanceSSL operation, make sure that the instance meets the following requirements:</p>
      * <ul>
      * <li>The instance is in the running state.</li>
-     * <li>The instance is a replica set instance.</li>
-     * <li>The engine version of the instance is 3.4 or 4.0.<blockquote>
-     * <p> When you enable or disable SSL encryption or update the SSL certificate, the instance restarts. We recommend that you call this operation during off-peak hours.</p>
+     * <li>The instance is a replica set instance or a sharded cluster instance.<ul>
+     * <li>The replica set instance is version 3.4 or later.</li>
+     * <li>The sharded cluster instance uses enhanced solid-state drives (ESSDs).<blockquote>
+     * <p>Enabling, updating, or disabling SSL restarts the instance. We recommend that you perform these operations during off-peak hours.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SSL settings of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the SSL configuration of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceSSLRequest
      * @return ModifyDBInstanceSSLResponse
@@ -8575,11 +8740,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-     * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the <a href="https://help.aliyun.com/document_detail/61911.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61922.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61816.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpecBatch</a> operation.</p>
+     * <p>Before calling this operation, make sure you understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * This operation applies only to ApsaraDB for MongoDB&lt;props=&quot;china&quot;&gt; standalone instances, replica set instances, and Serverless instances&lt;props=&quot;intl&quot;&gt; standalone instances and replica set instances. To change the configuration of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).</p>
+     * <p>Changes the instance type or storage space for ApsaraDB for MongoDB standalone, replica set, or serverless instances. Serverless instances are exclusive to the Alibaba Cloud China website.</p>
      * 
      * @param request ModifyDBInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8695,11 +8860,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
-     * This operation applies only to standalone and replica set instances. To modify the specifications of sharded cluster instances, you can call the <a href="https://help.aliyun.com/document_detail/61911.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61922.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61816.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpecBatch</a> operation.</p>
+     * <p>Before calling this operation, make sure you understand the billing method and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * This operation applies only to ApsaraDB for MongoDB&lt;props=&quot;china&quot;&gt; standalone instances, replica set instances, and Serverless instances&lt;props=&quot;intl&quot;&gt; standalone instances and replica set instances. To change the configuration of a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a>, <a href="https://help.aliyun.com/document_detail/61911.html">CreateNode</a>, <a href="https://help.aliyun.com/document_detail/61922.html">DeleteNode</a>, or <a href="https://help.aliyun.com/document_detail/61816.html">ModifyNodeSpecBatch</a> operations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the specifications or storage space of an ApsaraDB for MongoDB standalone, replica set, or serverless instance. Serverless instances are available only on the China site (aliyun.com).</p>
+     * <p>Changes the instance type or storage space for ApsaraDB for MongoDB standalone, replica set, or serverless instances. Serverless instances are exclusive to the Alibaba Cloud China website.</p>
      * 
      * @param request ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
@@ -8711,20 +8876,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</p>
+     * <p>Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption for data files. Data is encrypted before it is written to a disk and decrypted when it is read from the disk into memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</p>
      * <blockquote>
-     * <p> TDE cannot be disabled after it is enabled.
-     * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
+     * <p>You cannot disable TDE after it is enabled.
+     * Before you call this operation, make sure that the instance meets the following requirements:</p>
      * </blockquote>
      * <ul>
-     * <li>A replica set or sharded cluster instance is used.</li>
-     * <li>The storage engine of the instance is WiredTiger.</li>
-     * <li>The instance uses local disks to store data.</li>
-     * <li>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</li>
+     * <li>The instance is a replica set instance or a sharded cluster instance.</li>
+     * <li>The instance uses the WiredTiger storage engine.</li>
+     * <li>The instance uses local disks.</li>
+     * <li>The instance runs MongoDB 4.0 or 4.2. If the instance runs an earlier version, you must upgrade the database version by calling the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the Transparent Data Encryption (TDE) status of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8792,20 +8957,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</p>
+     * <p>Transparent Data Encryption (TDE) provides real-time I/O encryption and decryption for data files. Data is encrypted before it is written to a disk and decrypted when it is read from the disk into memory. For more information, see <a href="https://help.aliyun.com/document_detail/131048.html">Configure TDE</a>.</p>
      * <blockquote>
-     * <p> TDE cannot be disabled after it is enabled.
-     * Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
+     * <p>You cannot disable TDE after it is enabled.
+     * Before you call this operation, make sure that the instance meets the following requirements:</p>
      * </blockquote>
      * <ul>
-     * <li>A replica set or sharded cluster instance is used.</li>
-     * <li>The storage engine of the instance is WiredTiger.</li>
-     * <li>The instance uses local disks to store data.</li>
-     * <li>The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation to upgrade the database engine.</li>
+     * <li>The instance is a replica set instance or a sharded cluster instance.</li>
+     * <li>The instance uses the WiredTiger storage engine.</li>
+     * <li>The instance uses local disks.</li>
+     * <li>The instance runs MongoDB 4.0 or 4.2. If the instance runs an earlier version, you must upgrade the database version by calling the <a href="https://help.aliyun.com/document_detail/67608.html">UpgradeDBInstanceEngineVersion</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the transparent data encryption (TDE) status of an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the Transparent Data Encryption (TDE) status of a MongoDB instance.</p>
      * 
      * @param request ModifyDBInstanceTDERequest
      * @return ModifyDBInstanceTDEResponse
@@ -9197,13 +9362,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of MongoDB.</p>
      * <blockquote>
      * <p>This operation is applicable only to sharded cluster instances.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Changes the instance type and storage space of a node in a MongoDB sharded cluster instance.</p>
      * 
      * @param request ModifyNodeSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9315,13 +9480,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.</p>
+     * <p>Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of MongoDB.</p>
      * <blockquote>
      * <p>This operation is applicable only to sharded cluster instances.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications and storage capacity of a node of an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Changes the instance type and storage space of a node in a MongoDB sharded cluster instance.</p>
      * 
      * @param request ModifyNodeSpecRequest
      * @return ModifyNodeSpecResponse
@@ -9333,12 +9498,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
-     * This operation is applicable only to sharded cluster instances.
-     * When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * This operation applies only to ApsaraDB for MongoDB sharded cluster instances.
+     * When you upgrade or downgrade multiple sharded cluster instances in a batch, the target instance types are subject to certain constraints. For example, if you expand storage capacity, the target capacity must be greater than or equal to the current capacity. If the instances have different instance types, the system randomly selects the instance type of one instance and applies its constraints to the entire batch. This may cause the upgrade or downgrade to fail. If you cannot upgrade or downgrade instances in a batch, you can use the ModifyNodeSpec operation to change the configuration of a single sharded cluster instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Changes the configuration of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</p>
      * 
      * @param request ModifyNodeSpecBatchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9434,12 +9599,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB before you call this operation.
-     * This operation is applicable only to sharded cluster instances.
-     * When you upgrade or downgrade the configurations of multiple sharded cluster instances in batches, the specifications of the instances are limited. For example, if you want to expand the storage capacity of the instances, the storage capacity of the instances after expansion must be greater than the current capacity. When the specifications of multiple sharded cluster instances are different, limits are defined based on the specifications of a random sharded cluster instance. In this case, you may be unable to upgrade or downgrade the configurations of the instances. In this case, we recommend that you call the ModifyNodeSpec operation to individually change the configurations of each sharded cluster instance.</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/mongodb/detail">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of ApsaraDB for MongoDB.
+     * This operation applies only to ApsaraDB for MongoDB sharded cluster instances.
+     * When you upgrade or downgrade multiple sharded cluster instances in a batch, the target instance types are subject to certain constraints. For example, if you expand storage capacity, the target capacity must be greater than or equal to the current capacity. If the instances have different instance types, the system randomly selects the instance type of one instance and applies its constraints to the entire batch. This may cause the upgrade or downgrade to fail. If you cannot upgrade or downgrade instances in a batch, you can use the ModifyNodeSpec operation to change the configuration of a single sharded cluster instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</p>
+     * <p>Changes the configuration of one or more Mongos or shard nodes in an ApsaraDB for MongoDB sharded cluster instance.</p>
      * 
      * @param request ModifyNodeSpecBatchRequest
      * @return ModifyNodeSpecBatchResponse
@@ -9451,9 +9616,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the Running state when you call this operation.</p>
      * <ul>
-     * <li>If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the parameters that take effect only after the instance is restarted.</li>
+     * <li>When you call this operation, the instance status must be running.</li>
+     * <li>If you call this operation to modify specific instance parameters that require a restart to take effect, the instance is automatically restarted after the operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to identify which parameters require an instance restart to take effect after modification.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9525,9 +9690,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance must be in the Running state when you call this operation.</p>
      * <ul>
-     * <li>If you call this operation to modify specific instance parameters and the modification for part of the parameters can take effect only after an instance restart, the instance is automatically restarted after this operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the parameters that take effect only after the instance is restarted.</li>
+     * <li>When you call this operation, the instance status must be running.</li>
+     * <li>If you call this operation to modify specific instance parameters that require a restart to take effect, the instance is automatically restarted after the operation is called. You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to identify which parameters require an instance restart to take effect after modification.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -9618,11 +9783,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</p>
+     * <p>For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the ECS security group bound to an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifySecurityGroupConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9675,11 +9840,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</p>
+     * <p>For a sharded cluster instance, the bound ECS security group takes effect only for mongos nodes.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call this operation to modify an ECS Security group that is bound to an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the ECS security group bound to an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request ModifySecurityGroupConfigurationRequest
      * @return ModifySecurityGroupConfigurationResponse
@@ -9766,8 +9931,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation applies only to replica set instances and sharded cluster instances that use disks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the SRV connection address of a MongoDB instance.</p>
      * 
      * @param request ModifySrvNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9822,8 +9990,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation applies only to replica set instances and sharded cluster instances that use disks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</p>
+     * <p>Modifies the SRV connection address of a MongoDB instance.</p>
      * 
      * @param request ModifySrvNetworkAddressRequest
      * @return ModifySrvNetworkAddressResponse
@@ -9909,13 +10080,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</p>
      * <ul>
-     * <li>To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</li>
+     * <li>This operation releases the internal endpoint of a shard or Configserver node for a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</li>
+     * <li>To release the public endpoint of a shard or Configserver node for a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.</p>
+     * <p>Releases the internal endpoint of a shard or Configserver node for a sharded cluster instance.</p>
      * 
      * @param request ReleaseNodePrivateNetworkAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9975,13 +10146,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation can be used to release the internal endpoint of a shard or Configserver node in a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</p>
      * <ul>
-     * <li>To release the public endpoint of a shard or Configserver node in a sharded cluster instance, you can call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</li>
+     * <li>This operation releases the internal endpoint of a shard or Configserver node for a sharded cluster instance. For more information, see <a href="https://help.aliyun.com/document_detail/134067.html">Release the endpoint of a shard or Configserver node</a>.</li>
+     * <li>To release the public endpoint of a shard or Configserver node for a sharded cluster instance, call the <a href="https://help.aliyun.com/document_detail/67604.html">ReleasePublicNetworkAddress</a> operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases the internal endpoint of a shard or Configserver node in a sharded cluster instance.</p>
+     * <p>Releases the internal endpoint of a shard or Configserver node for a sharded cluster instance.</p>
      * 
      * @param request ReleaseNodePrivateNetworkAddressRequest
      * @return ReleaseNodePrivateNetworkAddressResponse
@@ -10152,11 +10323,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> This operation can be used to reset only the password of the root account of an instance.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
      * <p>Resets the password of the root account in an ApsaraDB for MongoDB instance.</p>
      * 
@@ -10217,11 +10383,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <blockquote>
-     * <p> This operation can be used to reset only the password of the root account of an instance.</p>
-     * </blockquote>
-     * 
      * <b>summary</b> : 
      * <p>Resets the password of the root account in an ApsaraDB for MongoDB instance.</p>
      * 
@@ -10235,7 +10396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.</p>
+     * <p>You can call this operation to restart an instance. You can also restart a shard or Mongos node in a sharded cluster instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Restarts an ApsaraDB for MongoDB instance.</p>
@@ -10253,6 +10414,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
             query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -10294,7 +10459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.</p>
+     * <p>You can call this operation to restart an instance. You can also restart a shard or Mongos node in a sharded cluster instance.</p>
      * 
      * <b>summary</b> : 
      * <p>Restarts an ApsaraDB for MongoDB instance.</p>
@@ -10309,17 +10474,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</p>
-     * <blockquote>
-     * <p> When you call this operation, the instance must meet the following requirements:</p>
-     * </blockquote>
+     * <p>Limitations:</p>
      * <ul>
-     * <li>The instance is in the Running state.</li>
-     * <li>The instance is a replica set or sharded cluster instance of the standard edition.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>The instance must be a standard replica set instance or a sharded cluster instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restarts a node in an ApsaraDB for MongoDB instance.</p>
+     * <p>Restarts a single node of a MongoDB instance.</p>
      * 
      * @param request RestartNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10379,17 +10541,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to restart a node in a replica set instance or a child instance in a sharded cluster instance.</p>
-     * <blockquote>
-     * <p> When you call this operation, the instance must meet the following requirements:</p>
-     * </blockquote>
+     * <p>Limitations:</p>
      * <ul>
-     * <li>The instance is in the Running state.</li>
-     * <li>The instance is a replica set or sharded cluster instance of the standard edition.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>The instance must be a standard replica set instance or a sharded cluster instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restarts a node in an ApsaraDB for MongoDB instance.</p>
+     * <p>Restarts a single node of a MongoDB instance.</p>
      * 
      * @param request RestartNodeRequest
      * @return RestartNodeResponse
@@ -10587,8 +10746,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</p>
      * <ul>
+     * <li>The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</li>
      * <li>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.</li>
      * </ul>
      * 
@@ -10641,8 +10800,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</p>
      * <ul>
+     * <li>The instance is an ApsaraDB for MongoDB sharded cluster instance that runs MongoDB 4.4 or later and uses enhanced SSDs (ESSDs) to store data.</li>
      * <li>You can call the TransferClusterBackup operation only for instances that are created before October 19, 2023 to switch the instances to the cluster backup mode. Cloud disk-based sharded cluster instances that are created on or after October 19, 2023 are set to the cluster backup mode by default.</li>
      * </ul>
      * 
@@ -10779,7 +10938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The billing method of the instance is pay-as-you-go.</li>
      * <li>The instance has no unpaid subscription orders.</li>
      * <li>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<blockquote>
-     * <p> To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</p>
+     * <p>To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -10861,7 +11020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>The billing method of the instance is pay-as-you-go.</li>
      * <li>The instance has no unpaid subscription orders.</li>
      * <li>The instance type is available for purchase. For more information about unavailable instance types, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.<blockquote>
-     * <p> To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</p>
+     * <p>To change the billing method of an instance whose instance type is no longer available to subscription, call the <a href="https://help.aliyun.com/document_detail/61816.html">ModifyDBInstanceSpec</a> or <a href="https://help.aliyun.com/document_detail/61923.html">ModifyNodeSpec</a> operation to first change the instance type.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -10978,9 +11137,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The instance must be in the running state when you call this operation.</p>
      * <blockquote>
      * <ul>
-     * <li>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</li>
-     * <li>You cannot downgrade the MongoDB version of an instance after you upgrade it.</li>
-     * <li>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</li>
+     * <li><p>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</p>
+     * </li>
+     * <li><p>You cannot downgrade the MongoDB version of an instance after you upgrade it.</p>
+     * </li>
+     * <li><p>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -11044,9 +11206,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The instance must be in the running state when you call this operation.</p>
      * <blockquote>
      * <ul>
-     * <li>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</li>
-     * <li>You cannot downgrade the MongoDB version of an instance after you upgrade it.</li>
-     * <li>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</li>
+     * <li><p>The available database versions depend on the storage engine used by the instance. For more information, see <a href="https://help.aliyun.com/document_detail/398673.html">Upgrades of MongoDB major versions</a>. You can also call the <a href="https://help.aliyun.com/document_detail/141355.html">DescribeAvailableEngineVersion</a> operation to query the available database versions.</p>
+     * </li>
+     * <li><p>You cannot downgrade the MongoDB version of an instance after you upgrade it.</p>
+     * </li>
+     * <li><p>The instance is automatically restarted for two to three times during the upgrade process. Make sure that you upgrade the instance during off-peak hours.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 

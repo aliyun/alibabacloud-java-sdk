@@ -7,10 +7,14 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     /**
      * <p>The role of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>db</strong>: shard</li>
-     * <li><strong>cs</strong>: Configserver</li>
-     * <li><strong>mongos</strong>: mongos</li>
-     * <li><strong>logic</strong>: sharded cluster instance</li>
+     * <li><p><strong>db</strong>: shard</p>
+     * </li>
+     * <li><p><strong>cs</strong>: Configserver</p>
+     * </li>
+     * <li><p><strong>mongos</strong>: mongos</p>
+     * </li>
+     * <li><p><strong>logic</strong>: sharded cluster instance</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +26,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +41,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-01-02T12:10:10Z</p>
+     * <p>2019-01-02T12:10Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -45,7 +49,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     /**
      * <p>The ID of the mongos node or shard node whose parameter modification records you want to query in the instance.</p>
      * <blockquote>
-     * <p> This parameter is valid only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is valid only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,7 +75,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2019-01-01T12:10:10Z</p>
+     * <p>2019-01-01T12:10Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

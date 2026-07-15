@@ -7,9 +7,12 @@ public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The role of the instance. Valid values:</p>
      * <ul>
-     * <li>db: a shard node.</li>
-     * <li>cs: a Configserver node.</li>
-     * <li>mongos: a mongos node.</li>
+     * <li><p>db: a shard node.</p>
+     * </li>
+     * <li><p>cs: a Configserver node.</p>
+     * </li>
+     * <li><p>mongos: a mongos node.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,7 @@ public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +46,7 @@ public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
      * <blockquote>
-     * <p> This parameter is valid when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is valid when the <strong>DBInstanceId</strong> parameter is set to the ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

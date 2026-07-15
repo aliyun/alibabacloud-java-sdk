@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The database engine of the instance.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>mongodb</p>
@@ -14,7 +14,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database version number.</p>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>
@@ -23,7 +23,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The number of parameters that are supported by the instance.</p>
+     * <p>The number of parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BDA54203-9D61-54A3-A568-D281F785****</p>

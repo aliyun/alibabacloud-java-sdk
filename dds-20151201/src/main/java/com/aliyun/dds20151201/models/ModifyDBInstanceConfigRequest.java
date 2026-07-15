@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConfigRequest extends TeaModel {
     /**
+     * <p>The configuration item name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String configName;
 
     /**
+     * <p>The configuration item value</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     public String configValue;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -27,12 +27,15 @@ public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The type of the account that you want to create. Valid values:</p>
      * <ul>
-     * <li><strong>db</strong> (default): shard account (available)</li>
-     * <li><strong>cs</strong>: ConfigServer account</li>
-     * <li><strong>normal</strong>: replica set account</li>
+     * <li><p><strong>db</strong> (default): shard account (available)</p>
+     * </li>
+     * <li><p><strong>cs</strong>: ConfigServer account</p>
+     * </li>
+     * <li><p><strong>normal</strong>: replica set account</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You can set this parameter only to <strong>db</strong>.</p>
+     * <p>You can set this parameter only to <strong>db</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

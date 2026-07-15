@@ -8,7 +8,7 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     public String modifiedConnectionString;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FF36A84C-0694-42D0-861D-C383E8E4FAAF</p>

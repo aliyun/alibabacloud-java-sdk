@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSpecInfoResponseBody extends TeaModel {
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <p>The description of the instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2核8GB（独享型）</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The memory size, in GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -22,6 +32,8 @@ public class DescribeDBInstanceSpecInfoResponseBody extends TeaModel {
     public String memory;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6B82A9EF-9961-5A31-A19F-009B709xxxxx</p>
      */

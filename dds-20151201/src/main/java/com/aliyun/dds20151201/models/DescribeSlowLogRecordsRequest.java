@@ -47,8 +47,10 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
      * <p>The logical relationship among multiple keywords.</p>
      * <ul>
-     * <li><strong>or</strong></li>
-     * <li><strong>and</strong> (default value)</li>
+     * <li><p><strong>or</strong></p>
+     * </li>
+     * <li><p><strong>and</strong> (default value)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,8 +74,10 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
      * <p>The order of time in which the log entries to return are sorted. Valid values:</p>
      * <ul>
-     * <li>asc: The log entries are sorted by time in ascending order.</li>
-     * <li>desc: The log entries are sorted by time in descending order.</li>
+     * <li><p>asc: The log entries are sorted by time in ascending order.</p>
+     * </li>
+     * <li><p>desc: The log entries are sorted by time in descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

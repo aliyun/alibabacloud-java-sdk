@@ -15,7 +15,24 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the custom key.</p>
+     * <p>The ID of the custom key.
+     * Custom keys are supported only in the following regions. In other regions, the default key is used.</p>
+     * <ul>
+     * <li><p>Singapore (ap-southeast-1)</p>
+     * </li>
+     * <li><p>Hangzhou (cn-hangzhou)</p>
+     * </li>
+     * <li><p>Shanghai (cn-shanghai)</p>
+     * </li>
+     * <li><p>Beijing (cn-beijing)</p>
+     * </li>
+     * <li><p>Shenzhen (cn-shenzhen)</p>
+     * </li>
+     * <li><p>Hong Kong (cn-hongkong)</p>
+     * </li>
+     * <li><p>Malaysia (ap-southeast-3)</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>749c1df7-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
@@ -26,7 +43,7 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     /**
      * <p>The encryption method. Set the value to <strong>aes-256-cbc</strong>.</p>
      * <blockquote>
-     * <p>This parameter is valid only when the <strong>TEDStatus</strong> parameter is set to <strong>enabled</strong>.</p>
+     * <p>This parameter is available only when <strong>TDEStatus</strong> is set to <strong>enabled</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,15 +65,13 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the specified Resource Access Management (RAM) role. The ARN is displayed in the <code>acs:ram::$accountID:role/$roleName</code> format.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. The format is <code>acs:ram::$accountID:role/$roleName </code>.</p>
      * <blockquote>
      * <ul>
-     * <li><code>$accountID</code>: specifies the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud Management Console, move your pointer over your profile picture in the upper-right corner, and then click Security Settings.</li>
-     * </ul>
-     * </blockquote>
-     * <blockquote>
-     * <ul>
-     * <li><code>$roleName</code>: specifies the name of the RAM role. To view the RAM role name, log on to the RAM console. In the left-side navigation pane, choose Identities &gt; Roles. On the Roles page, view the name of the RAM role.</li>
+     * <li><p><code>$accountID</code>: The ID of your Alibaba Cloud account. To view the ID, log on to the Alibaba Cloud Management Console, move the pointer over your profile picture in the upper-right corner, and then click Security Settings.</p>
+     * </li>
+     * <li><p><code>$roleName</code>: The name of the RAM role. To view the name, log on to the RAM console, click RAM Role Management in the navigation pane on the left, and then view the role name in the RAM Role Name list.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -66,13 +81,25 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("RoleARN")
     public String roleARN;
 
+    /**
+     * <p>Specifies when to enable TDE. Valid values:</p>
+     * <ul>
+     * <li><p>0: Enables TDE immediately.</p>
+     * </li>
+     * <li><p>1: Enables TDE during the maintenance window.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SwitchMode")
     public String switchMode;
 
     /**
-     * <p>The TDE status. When the value of this parameter is set to <strong>Enabled</strong>, TDE is enabled.</p>
+     * <p>The TDE status. Set the value to <strong>enabled</strong> to enable TDE.</p>
      * <blockquote>
-     * <p>You cannot disable TDE after it is enabled. Proceed with caution.</p>
+     * <p>You cannot disable TDE after you enable it. Enable this feature with caution.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

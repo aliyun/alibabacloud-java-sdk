@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine. Set the value to <strong>MongoDB</strong>.</p>
+     * <p>The database engine. Valid value: <strong>MongoDB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>
@@ -24,10 +24,12 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>Specifies whether to query instances that are deleted. Valid values:</p>
+     * <p>Indicates whether the instance has been deleted. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: queries instances that are running.</li>
-     * <li><strong>true</strong>: queries instance that are deleted.</li>
+     * <li><p><strong>false</strong>: The instance is running normally. Query information about a running instance.</p>
+     * </li>
+     * <li><p><strong>true</strong>: The instance has been deleted. Query information about a deleted instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,9 +45,9 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
+     * <p>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
      * <blockquote>
-     * <p>This parameter is available only if you use the China site (aliyun.com).</p>
+     * <p>This parameter is supported only on Alibaba Cloud China Website (www\.aliyun.com).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

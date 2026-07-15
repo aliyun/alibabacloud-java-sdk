@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupTasksRequest extends TeaModel {
     /**
-     * <p>The ID of the backup task.</p>
+     * <p>The backup job ID.</p>
      * <blockquote>
-     * <p> If you call the <a href="https://help.aliyun.com/document_detail/468439.html">CreateBackup</a> operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.</p>
+     * <p>If you call <a href="https://help.aliyun.com/document_detail/468439.html">CreateBackup</a> to perform a manual backup, you can pass the returned backup ID to query the backup progress.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

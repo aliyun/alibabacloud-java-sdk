@@ -7,7 +7,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query.</p>
      * <blockquote>
-     * <p> If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</p>
+     * <p>If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,13 +65,16 @@ public class DescribeTagsResponseBody extends TeaModel {
          * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>newKey</p>
+         * <p>Test group</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The values of the tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4 environment</p>
          */
         @NameInMap("TagValues")
         public java.util.List<String> tagValues;

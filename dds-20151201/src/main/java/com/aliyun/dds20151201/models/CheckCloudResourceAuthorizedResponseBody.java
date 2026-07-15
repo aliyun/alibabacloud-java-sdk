@@ -7,9 +7,12 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     /**
      * <p>Indicates whether KMS keys are authorized to ApsaraDB for MongoDB instances. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: KMS keys are not authorized.</li>
-     * <li><strong>1</strong>: KMS keys are authorized.</li>
-     * <li><strong>2</strong>: KMS is not enabled.</li>
+     * <li><p><strong>0</strong>: KMS keys are not authorized.</p>
+     * </li>
+     * <li><p><strong>1</strong>: KMS keys are authorized.</p>
+     * </li>
+     * <li><p><strong>2</strong>: KMS is not enabled.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     /**
      * <p>The role information of the authorized Alibaba Resource Name (ARN).</p>
      * <blockquote>
-     * <p> This parameter is returned only when the value of the <strong>AuthorizationState</strong> parameter is <strong>1</strong>.</p>
+     * <p>This parameter is returned only when the value of the <strong>AuthorizationState</strong> parameter is <strong>1</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

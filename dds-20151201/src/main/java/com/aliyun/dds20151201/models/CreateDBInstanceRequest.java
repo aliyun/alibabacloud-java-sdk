@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
     /**
-     * <p>The password of the root account. The password must meet the following requirements:</p>
+     * <p>The password for the root account. The password must meet the following requirements:</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>Special characters include ! # $ % ^ &amp; \* ( ) _ + - =</li>
-     * <li>The password of the account must be 8 to 32 characters in length.</li>
+     * <li><p>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * </li>
+     * <li><p>The special characters are !@#$%^&amp;\*()_+-=</p>
+     * </li>
+     * <li><p>It must be 8 to 32 characters long.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>For more information about connection failures caused by special characters in passwords, see <a href="">How do I fix a connection failure that is caused by special characters in a password?</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456Aa</p>
@@ -19,13 +25,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The instance is automatically renewed.</li>
-     * <li><strong>false</strong>: The instance is manually renewed.</li>
+     * <li><p><strong>true</strong>: Enables auto-renewal.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The default value. Disables auto-renewal. You must manually renew the instance.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid and optional when the <strong>ChargeType</strong> parameter is set to <strong>PrePaid</strong>.</p>
+     * <p>This parameter is optional and takes effect only when you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,9 +43,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/62172.html">DescribeBackups</a> operation to query the backup set ID.</p>
+     * <p>The backup point ID. To query the backup point ID, call the <a href="">DescribeBackups</a> operation.</p>
      * <blockquote>
-     * <p>When you call this operation to clone an instance based on the backup set, this parameter is required. The <strong>SrcDBInstanceId</strong> parameter is also required.</p>
+     * <p>You must specify this parameter and the <strong>SrcDBInstanceId</strong> parameter only when you clone an instance based on a backup point.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +55,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The business information. This is an additional parameter.</p>
+     * <p>The business information. This is an optional parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{“ActivityId&quot;:&quot;000000000&quot;}</p>
@@ -58,8 +66,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PostPaid</strong>: pay-as-you-go. This is the default value.</li>
-     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><p><strong>PostPaid</strong>: The default value. Pay-as-you-go.</p>
+     * </li>
+     * <li><p><strong>PrePaid</strong>: Subscription.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <p>If you set this parameter to <strong>PrePaid</strong>, you must also specify the <strong>Period</strong> parameter.</p>
@@ -72,7 +82,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot be more than 64 characters long.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -80,30 +90,26 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The ID of the dedicated cluster to which the instance belongs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>dhg-2x78****</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
+     * <p>Specifies whether to use a coupon. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
-     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+     * <li><p><strong>default</strong> or <strong>null</strong> (default): Uses a coupon.</p>
+     * </li>
+     * <li><p><strong>youhuiquan_promotion_option_id_for_blank</strong>: Does not use a coupon.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     * <p>default</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
 
     /**
-     * <p>The instance type. You can also call the <a href="https://help.aliyun.com/document_detail/149719.html">DescribeAvailableResource</a> operation to query the instance type.</p>
+     * <p>The instance type. To query instance types, call the <a href="">DescribeAvailableResource</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,11 +119,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The name of the instance. The name of the instance must meet the following requirements:</p>
+     * <p>The instance name. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must start with a letter.</li>
-     * <li>The name can contain digits, letters, underscores (_), and hyphens (-).</li>
-     * <li>The name must be 2 to 256 characters in length.</li>
+     * <li><p>It must start with a letter or a Chinese character.</p>
+     * </li>
+     * <li><p>It can contain letters, Chinese characters, digits, underscores (_), periods (.), and hyphens (-).</p>
+     * </li>
+     * <li><p>It must be 2 to 256 characters long.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -127,8 +136,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
-     * <p>The storage capacity of the instance. Unit: GB.</p>
-     * <p>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a>.</p>
+     * <p>The storage space of the instance in GB.</p>
+     * <p>The value of this parameter varies based on the instance type. For more information, see <a href="">Replica set instance types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -138,9 +147,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * <blockquote>
-     * <p>When you call this operation to clone an instance, you can set this parameter to specify the database to clone. Otherwise, all databases of the instance are cloned.</p>
+     * <p>When you clone an instance, you can specify this parameter to clone specific databases. If you do not specify this parameter, all databases of the instance are cloned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -159,7 +168,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the custom key.</p>
+     * <p>The custom key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
@@ -168,7 +177,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The database engine of the instance. Set the value to <strong>MongoDB</strong>.</p>
+     * <p>The database engine. The value is fixed as <strong>MongoDB</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>MongoDB</p>
@@ -177,17 +186,30 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The version of the database engine. Valid values:</p>
+     * <p>The database engine version. Valid values:</p>
      * <ul>
-     * <li><strong>6.0</strong></li>
-     * <li><strong>5.0</strong></li>
-     * <li><strong>4.4</strong></li>
-     * <li><strong>4.2</strong></li>
-     * <li><strong>4.0</strong></li>
+     * <li><p><strong>8.0</strong></p>
+     * </li>
+     * <li><p><strong>7.0</strong></p>
+     * </li>
+     * <li><p><strong>6.0</strong></p>
+     * </li>
+     * <li><p><strong>5.0</strong></p>
+     * </li>
+     * <li><p><strong>4.4</strong></p>
+     * </li>
+     * <li><p><strong>4.2</strong></p>
+     * </li>
+     * <li><p><strong>4.0</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>When you call this operation to clone an instance or restore an instance from the recycle bin, set the value of this parameter to the engine version of the source instance.</p>
+     * <p>When you clone an instance or restore an instance from the recycle bin, this parameter must be the same as the engine version of the source instance.</p>
      * </blockquote>
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>Versions 3.4 and earlier are discontinued.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -197,40 +219,60 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The global IP address whitelist template name of the instance. Multiple IP address whitelist template names are separated by commas (,) and each template name must be unique. (The template feature is available only in canary release.)</p>
+     * <p>The global IP address whitelist templates for the instance. Separate multiple templates with commas (,). The templates cannot be repeated. This feature is in canary release.</p>
      * 
      * <strong>example:</strong>
-     * <p>g-qxieqf40xjst1ngp****</p>
+     * <p>g-qxieqf40xjst1ngpr3jz</p>
      */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
 
     /**
-     * <p>The zone where the hidden node resides for multi-zone deployment. Valid values:</p>
+     * <p>The zone where the hidden node is deployed. This parameter is used for multi-zone deployment. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G.</li>
-     * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H.</li>
-     * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I.</li>
-     * <li><strong>cn-hongkong-b</strong>: Hongkong Zone B.</li>
-     * <li><strong>cn-hongkong-c</strong>: Hongkong Zone C.</li>
-     * <li><strong>cn-hongkong-d</strong>: Hongkong Zone D.</li>
-     * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A.</li>
-     * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B.</li>
-     * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C.</li>
-     * <li><strong>ap-southeast-1a</strong>: Singapore Zone A.</li>
-     * <li><strong>ap-southeast-1b</strong>: Singapore Zone B.</li>
-     * <li><strong>ap-southeast-1c</strong>: Singapore Zone C.</li>
-     * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A.</li>
-     * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B.</li>
-     * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C.</li>
-     * <li><strong>eu-central-1a</strong>: Frankfurt Zone A.</li>
-     * <li><strong>eu-central-1b</strong>: Frankfurt Zone B.</li>
-     * <li><strong>eu-central-1c</strong>: Frankfurt Zone C.</li>
+     * <li><p><strong>cn-hangzhou-g</strong>: Zone G in Hangzhou.</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-h</strong>: Zone H in Hangzhou.</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-i</strong>: Zone I in Hangzhou.</p>
+     * </li>
+     * <li><p><strong>cn-hongkong-b</strong>: Zone B in Hong Kong (China).</p>
+     * </li>
+     * <li><p><strong>cn-hongkong-c</strong>: Zone C in Hong Kong (China).</p>
+     * </li>
+     * <li><p><strong>cn-hongkong-d</strong>: Zone D in Hong Kong (China).</p>
+     * </li>
+     * <li><p><strong>cn-wulanchabu-a</strong>: Zone A in Ulanqab.</p>
+     * </li>
+     * <li><p><strong>cn-wulanchabu-b</strong>: Zone B in Ulanqab.</p>
+     * </li>
+     * <li><p><strong>cn-wulanchabu-c</strong>: Zone C in Ulanqab.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1a</strong>: Zone A in Singapore.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1b</strong>: Zone B in Singapore.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1c</strong>: Zone C in Singapore.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5a</strong>: Zone A in Jakarta.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5b</strong>: Zone B in Jakarta.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5c</strong>: Zone C in Jakarta.</p>
+     * </li>
+     * <li><p><strong>eu-central-1a</strong>: Zone A in Frankfurt.</p>
+     * </li>
+     * <li><p><strong>eu-central-1b</strong>: Zone B in Frankfurt.</p>
+     * </li>
+     * <li><p><strong>eu-central-1c</strong>: Zone C in Frankfurt.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is valid and required when the <strong>EngineVersion</strong> parameter is set to <strong>4.4</strong> or <strong>5.0</strong>.</li>
-     * <li>The value of this parameter cannot be the same as the value of the <strong>ZoneId</strong> or <strong>SecondaryZoneId</strong> parameter.</li>
+     * <li><p>This parameter is available when the instance uses disks.</p>
+     * </li>
+     * <li><p>The value of this parameter cannot be the same as the value of the <strong>ZoneId</strong> or <strong>SecondaryZoneId</strong> parameter.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -241,8 +283,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String hiddenZoneId;
 
     /**
-     * <p>The network type of the instance. Valid value:</p>
-     * <p><strong>VPC</strong>: Virtual Private Cloud (VPC)</p>
+     * <p>The network type of the instance. Valid values:</p>
+     * <p><strong>VPC</strong>: virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -257,10 +299,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period of the instance. Unit: months.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
+     * <p>The subscription duration of the instance in months.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>9</strong> (integers), <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
      * <blockquote>
-     * <p>When you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>, this parameter is valid and required.</p>
+     * <p>This parameter is required and takes effect only when you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -270,7 +312,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The provisioned IOPS. Valid values: 0 to 50000.</p>
+     * <p>The provisioned IOPS (input/output operations per second). Valid values: 0 to 50000.</p>
      * 
      * <strong>example:</strong>
      * <p>1960</p>
@@ -279,7 +321,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long provisionedIops;
 
     /**
-     * <p>The number of <strong>read-only nodes</strong> in the replica set instance. Default value: <strong>0</strong>. Valid values: <strong>0</strong> to <strong>5</strong>.</p>
+     * <p>The number of <strong>read-only nodes</strong> in the replica set instance. Valid values are integers from <strong>0</strong> to <strong>5</strong>. The default value is <strong>0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -288,7 +330,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String readonlyReplicas;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. To query the region ID, call the <a href="">DescribeRegions</a> operation.</p>
+     * <blockquote>
+     * <p>When you clone an instance or restore an instance from the recycle bin, this parameter must be the same as the region ID of the source instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -298,12 +343,19 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of <strong>nodes</strong> in the replica set instance. Default value: 3. Valid values:</p>
+     * <p>The number of <strong>primary and secondary nodes</strong> in the replica set instance. Valid values:</p>
      * <ul>
-     * <li><strong>3</strong></li>
-     * <li><strong>5</strong></li>
-     * <li><strong>7</strong></li>
+     * <li><p><strong>3</strong> (default)</p>
+     * </li>
+     * <li><p><strong>5</strong></p>
+     * </li>
+     * <li><p><strong>7</strong></p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <p>Notice: </p>
+     * </blockquote>
+     * <p>You do not need to specify this parameter for standalone instances.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -311,12 +363,6 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ReplicationFactor")
     public String replicationFactor;
 
-    /**
-     * <p>The ID of the resource group to which the instance belongs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rg-acfmyiu4ekp****</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -327,9 +373,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which the instance is restored, which must be within seven days. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC time).</p>
+     * <p>The point in time to which you want to restore the instance. You can specify any point in time within the last seven days. The time must be in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and in UTC.</p>
      * <blockquote>
-     * <p>When you call this operation to restore an instance to the specified time, this parameter is required. The <strong>SrcDBInstanceId</strong> parameter is also required.</p>
+     * <p>You must specify this parameter and the <strong>SrcDBInstanceId</strong> parameter only when you clone an instance based on a point in time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -339,12 +385,16 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The backup restore type of the instance.</p>
+     * <p>The method to restore an instance from a backup.</p>
      * <ul>
-     * <li>0: restore an instance to the specified backup set.</li>
-     * <li>1:  restore an instance to the specified time.</li>
-     * <li>2: restore an  released instance to the specified backup set.</li>
-     * <li>3：restore an instance to the specified cross-regional backup set.</li>
+     * <li><p>0: Restores the instance to a specified backup set.</p>
+     * </li>
+     * <li><p>1: Restores the instance to a specified point in time.</p>
+     * </li>
+     * <li><p>2: Restores a released instance to a specified backup set.</p>
+     * </li>
+     * <li><p>3: Restores the instance to a specified geo-redundant backup set.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -354,31 +404,51 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>The zone where the secondary node resides for multi-zone deployment. Valid values:</p>
+     * <p>The zone where the secondary node is deployed. This parameter is used for multi-zone deployment. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou-g</strong>: Hangzhou Zone G.</li>
-     * <li><strong>cn-hangzhou-h</strong>: Hangzhou Zone H.</li>
-     * <li><strong>cn-hangzhou-i</strong>: Hangzhou Zone I.</li>
-     * <li><strong>cn-hongkong-b</strong>: Hongkong Zone B.</li>
-     * <li><strong>cn-hongkong-c</strong>: Hongkong Zone C.</li>
-     * <li><strong>cn-hongkong-d</strong>: Hongkong Zone D.</li>
-     * <li><strong>cn-wulanchabu-a</strong>: Ulanqab Zone A.</li>
-     * <li><strong>cn-wulanchabu-b</strong>: Ulanqab Zone B.</li>
-     * <li><strong>cn-wulanchabu-c</strong>: Ulanqab Zone C.</li>
-     * <li><strong>ap-southeast-1a</strong>: Singapore Zone A.</li>
-     * <li><strong>ap-southeast-1b</strong>: Singapore Zone B.</li>
-     * <li><strong>ap-southeast-1c</strong>: Singapore Zone C.</li>
-     * <li><strong>ap-southeast-5a</strong>: Jakarta Zone A.</li>
-     * <li><strong>ap-southeast-5b</strong>: Jakarta Zone B.</li>
-     * <li><strong>ap-southeast-5c</strong>: Jakarta Zone C.</li>
-     * <li><strong>eu-central-1a</strong>: Frankfurt Zone A.</li>
-     * <li><strong>eu-central-1b</strong>: Frankfurt Zone B.</li>
-     * <li><strong>eu-central-1c</strong>: Frankfurt Zone C.</li>
+     * <li><p><strong>cn-hangzhou-g</strong>: Zone G in Hangzhou.</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-h</strong>: Zone H in Hangzhou.</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-i</strong>: Zone I in Hangzhou.</p>
+     * </li>
+     * <li><p><strong>cn-hongkong-b</strong>: Zone B in Hong Kong (China).</p>
+     * </li>
+     * <li><p><strong>cn-hongkong-c</strong>: Zone C in Hong Kong (China).</p>
+     * </li>
+     * <li><p><strong>cn-hongkong-d</strong>: Zone D in Hong Kong (China).</p>
+     * </li>
+     * <li><p><strong>cn-wulanchabu-a</strong>: Zone A in Ulanqab.</p>
+     * </li>
+     * <li><p><strong>cn-wulanchabu-b</strong>: Zone B in Ulanqab.</p>
+     * </li>
+     * <li><p><strong>cn-wulanchabu-c</strong>: Zone C in Ulanqab.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1a</strong>: Zone A in Singapore.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1b</strong>: Zone B in Singapore.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1c</strong>: Zone C in Singapore.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5a</strong>: Zone A in Jakarta.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5b</strong>: Zone B in Jakarta.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-5c</strong>: Zone C in Jakarta.</p>
+     * </li>
+     * <li><p><strong>eu-central-1a</strong>: Zone A in Frankfurt.</p>
+     * </li>
+     * <li><p><strong>eu-central-1b</strong>: Zone B in Frankfurt.</p>
+     * </li>
+     * <li><p><strong>eu-central-1c</strong>: Zone C in Frankfurt.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter is valid and required when the <strong>EngineVersion</strong> parameter is set to <strong>4.4</strong> or <strong>5.0</strong>.</li>
-     * <li>The value of this parameter cannot be the same as the value of the <strong>ZoneId</strong> or <strong>HiddenZoneId</strong> parameter.</li>
+     * <li><p>This parameter is available when the instance uses disks.</p>
+     * </li>
+     * <li><p>The value of this parameter cannot be the same as the value of the <strong>ZoneId</strong> or <strong>HiddenZoneId</strong> parameter.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -389,16 +459,21 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String secondaryZoneId;
 
     /**
-     * <p>The IP addresses in an IP address whitelist. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:</p>
+     * <p>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Each IP address in the whitelist must be unique. The whitelist can be in one of the following formats:</p>
      * <ul>
-     * <li>0.0.0.0/0</li>
-     * <li>IP addresses, such as 10.23.12.24.</li>
-     * <li>Classless Inter-Domain Routing (CIDR) blocks, such as 10.23.12.0/24. In this case, /24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</li>
+     * <li><p>0.0.0.0/0</p>
+     * </li>
+     * <li><p>An IP address, for example, 10.23.12.24.</p>
+     * </li>
+     * <li><p>A CIDR block, for example, 10.23.12.0/24. The /24 indicates that the prefix of the CIDR block is 24 bits in length. You can set the prefix to a value from 1 to 32.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>A maximum of 1,000 IP addresses or CIDR blocks can be configured for each instance.</li>
-     * <li>If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</li>
+     * <li><p>You can add a maximum of 1,000 IP addresses or CIDR blocks to all IP address whitelists.</p>
+     * </li>
+     * <li><p>If you set the whitelist to 0.0.0.0/0, all IP addresses can access the instance. This is a high-risk setting. Use this with caution.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -409,9 +484,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The ID of the source instance.</p>
+     * <p>The source instance ID.</p>
      * <blockquote>
-     * <p>When you call this operation to clone an instance, this parameter is required. The <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter is also required. When you call this operation to restore an instance from the recycle bin, this parameter is required. The <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter is not required.</p>
+     * <p>When you clone an instance, you must specify this parameter and the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter. When you restore an instance from the recycle bin, you only need to specify this parameter. You do not need to specify the <strong>BackupId</strong> or <strong>RestoreTime</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -421,10 +496,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String srcDBInstanceId;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region where the source instance is located.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when restore type is set to 2 or 3.</li>
+     * <li>This parameter is required when RestoreType is set to 2 or 3.</li>
      * </ul>
      * </blockquote>
      * 
@@ -435,11 +510,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String srcRegion;
 
     /**
-     * <p>The storage engine of the instance. Set the value to <strong>WiredTiger</strong>.</p>
+     * <p>The storage engine of the instance. The value is fixed as <strong>WiredTiger</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>If you call this operation to clone an instance or restore an instance from the recycle bin, set this parameter to the storage engine of the source instance.</li>
-     * <li>For more information about the limits on database versions and storage engines of an instance, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
+     * <li><p>When you clone an instance or restore an instance from the recycle bin, this parameter must be the same as the storage engine of the source instance.</p>
+     * </li>
+     * <li><p>For more information about the constraints on storage engines and database versions, see <a href="">Versions and storage engines</a>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -450,13 +527,31 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String storageEngine;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The storage class. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_essd1</strong> :ESSD PL1.</li>
-     * <li><strong>cloud_essd2</strong>: ESSD PL2.</li>
-     * <li><strong>cloud_essd3</strong>: ESSD PL3.</li>
-     * <li><strong>local_ssd</strong>: local SSD.</li>
+     * <li><p><strong>cloud_essd1</strong>: ESSD PL1 disk.</p>
+     * </li>
+     * <li><p><strong>cloud_essd2</strong>: ESSD PL2 disk.</p>
+     * </li>
+     * <li><p><strong>cloud_essd3</strong>: ESSD PL3 disk.</p>
+     * </li>
+     * <li><p><strong>cloud_auto</strong>: ESSD AutoPL disk.</p>
+     * </li>
+     * <li><p><strong>local_ssd</strong>: Local SSD.</p>
+     * </li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li><p>For standalone instances, if you pass the value cloud_essd1, an ESSD disk is used.</p>
+     * </li>
+     * <li><p>ESSD AutoPL disks are available only on the China site (aliyun.com).</p>
+     * </li>
+     * <li><p>For instances of version 4.4 or later, the default value is <strong>cloud_essd1</strong>.</p>
+     * </li>
+     * <li><p>For instances of version 4.2 or earlier, the default value is <strong>local_ssd</strong>.</p>
+     * </li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cloud_essd1</p>
@@ -465,13 +560,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The custom tags added to the instance.</p>
+     * <p>The custom tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDBInstanceRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch to which the instance is connected.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1gzt31twhlo0sa5****</p>
@@ -480,7 +575,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp175iuvg8nxqraf2****</p>
@@ -489,7 +584,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID. To query the zone ID, call the <a href="">DescribeRegions</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>
@@ -832,9 +927,11 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     public static class CreateDBInstanceRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * <blockquote>
-         * <p><strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag and <strong>Tag.2.Key</strong> specifies the key of the second tag.</p>
+         * <ul>
+         * <li><strong>N</strong> specifies the Nth tag. For example, <strong>Tag.1.Key</strong> specifies the key of the first tag, and <strong>Tag.2.Key</strong> specifies the key of the second tag.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -844,9 +941,9 @@ public class CreateDBInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <blockquote>
-         * <p><strong>N</strong> specifies the serial number of the tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
+         * <p><strong>N</strong> specifies the Nth tag. For example, <strong>Tag.1.Value</strong> specifies the value of the first tag, and <strong>Tag.2.Value</strong> specifies the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -86,13 +86,20 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Scheduled: The task is waiting to be executed.</li>
-     * <li>Running: The task is running.</li>
-     * <li>Succeed: The task is successful.</li>
-     * <li>Failed: The task failed.</li>
-     * <li>Cancelling: The task is being terminated.</li>
-     * <li>Canceled: The task has been terminated.</li>
-     * <li>Waiting: The task is waiting for scheduled time.</li>
+     * <li><p>Scheduled: The task is waiting to be executed.</p>
+     * </li>
+     * <li><p>Running: The task is running.</p>
+     * </li>
+     * <li><p>Succeed: The task is successful.</p>
+     * </li>
+     * <li><p>Failed: The task failed.</p>
+     * </li>
+     * <li><p>Cancelling: The task is being terminated.</p>
+     * </li>
+     * <li><p>Canceled: The task has been terminated.</p>
+     * </li>
+     * <li><p>Waiting: The task is waiting for scheduled time.</p>
+     * </li>
      * </ul>
      * <p>Separate multiple states with commas (,). This parameter is empty by default, which indicates that tasks in all states are queried.</p>
      * 
@@ -114,29 +121,52 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     /**
      * <p>The task type. This parameter is left empty by default, which indicates that all types of tasks are queried. Valid values:</p>
      * <ul>
-     * <li>CreateIns: Create an instance.</li>
-     * <li>DeleteIns: Delete an instance.</li>
-     * <li>ChangeVariable: Modify parameter settings for an instance.</li>
-     * <li>ModifyInsConfig: Change the configurations of an instance.</li>
-     * <li>RestartIns: Restart an instance.</li>
-     * <li>HaSwitch: Perform a primary/secondary switchover on an instance.</li>
-     * <li>CloneIns: Clone an instance.</li>
-     * <li>KernelVersionUpgrade: Update the minor version of an instance.</li>
-     * <li>ProxyVersionUpgrade: Upgrade the agent version of an instance.</li>
-     * <li>ModifyAccount: Change the account of an instance.</li>
-     * <li>ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.</li>
-     * <li>CreateReadIns: Create a read-only instance.</li>
-     * <li>StartIns: Start an instance.</li>
-     * <li>StopIns: Stop an instance.</li>
-     * <li>ModifyNetwork: Modify the network type for an instance.</li>
-     * <li>LockIns: Lock an instance.</li>
-     * <li>UnlockIns: Unlock an instance.</li>
-     * <li>DiskOnlineExpansion: Scale out the disks of an instance online.</li>
-     * <li>StorageOnlineExpansion: Expend the storage capacity of an instance online.</li>
-     * <li>AddInsNode: Add a node to an instance.</li>
-     * <li>DeleteInsNode: Delete a node from an instance.</li>
-     * <li>ManualBackupIns: Manually back up an instance.</li>
-     * <li>ModifyInsStorageType: Modify the storage type for an instance.</li>
+     * <li><p>CreateIns: Create an instance.</p>
+     * </li>
+     * <li><p>DeleteIns: Delete an instance.</p>
+     * </li>
+     * <li><p>ChangeVariable: Modify parameter settings for an instance.</p>
+     * </li>
+     * <li><p>ModifyInsConfig: Change the configurations of an instance.</p>
+     * </li>
+     * <li><p>RestartIns: Restart an instance.</p>
+     * </li>
+     * <li><p>HaSwitch: Perform a primary/secondary switchover on an instance.</p>
+     * </li>
+     * <li><p>CloneIns: Clone an instance.</p>
+     * </li>
+     * <li><p>KernelVersionUpgrade: Update the minor version of an instance.</p>
+     * </li>
+     * <li><p>ProxyVersionUpgrade: Upgrade the agent version of an instance.</p>
+     * </li>
+     * <li><p>ModifyAccount: Change the account of an instance.</p>
+     * </li>
+     * <li><p>ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.</p>
+     * </li>
+     * <li><p>CreateReadIns: Create a read-only instance.</p>
+     * </li>
+     * <li><p>StartIns: Start an instance.</p>
+     * </li>
+     * <li><p>StopIns: Stop an instance.</p>
+     * </li>
+     * <li><p>ModifyNetwork: Modify the network type for an instance.</p>
+     * </li>
+     * <li><p>LockIns: Lock an instance.</p>
+     * </li>
+     * <li><p>UnlockIns: Unlock an instance.</p>
+     * </li>
+     * <li><p>DiskOnlineExpansion: Scale out the disks of an instance online.</p>
+     * </li>
+     * <li><p>StorageOnlineExpansion: Expend the storage capacity of an instance online.</p>
+     * </li>
+     * <li><p>AddInsNode: Add a node to an instance.</p>
+     * </li>
+     * <li><p>DeleteInsNode: Delete a node from an instance.</p>
+     * </li>
+     * <li><p>ManualBackupIns: Manually back up an instance.</p>
+     * </li>
+     * <li><p>ModifyInsStorageType: Modify the storage type for an instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

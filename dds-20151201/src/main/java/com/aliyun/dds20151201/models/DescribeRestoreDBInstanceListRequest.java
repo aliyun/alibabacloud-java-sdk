@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreDBInstanceListRequest extends TeaModel {
     /**
-     * <p>Find instances created after the specified time, formatted as <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z (UTC time).</p>
+     * <p>Find instances created after the specified time, formatted as <em>yyyy-MM-dd</em>T<em>HH:00:00</em>Z (UTC time).</p>
      * <blockquote>
      * <ul>
-     * <li>The time must be on the hour.</li>
-     * <li>The time cannot be earlier than 7 days before the current time.</li>
+     * <li><p>The time must be on the hour.</p>
+     * </li>
+     * <li><p>The time cannot be earlier than 7 days before the current time.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

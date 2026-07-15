@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeRoleTagRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +27,13 @@ public class CreateNodeRoleTagRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the shard node.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter applies only to sharded cluster instances.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>d-l5xf98b78b9fxxxx,d-l5xf98b7sf9fxxxx</p>
      */

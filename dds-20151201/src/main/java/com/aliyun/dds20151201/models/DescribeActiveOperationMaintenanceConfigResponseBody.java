@@ -5,16 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaModel {
     /**
-     * <p>The description of the configuration.</p>
+     * <p>The details of the configuration.</p>
      */
     @NameInMap("Config")
     public DescribeActiveOperationMaintenanceConfigResponseBodyConfig config;
 
     /**
-     * <p>Indicates whether the O\&amp;M task is configured. Valid values:</p>
+     * <p>Indicates whether a configuration is set.</p>
      * <ul>
-     * <li>1: The O\&amp;M task is configured.</li>
-     * <li>0: The O\&amp;M task is not configured.</li>
+     * <li><p>1: A configuration is set.</p>
+     * </li>
+     * <li><p>0: No configuration is set.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +26,7 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
     public Integer hasConfig;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>72651AF9-7897-41A7-8B67-6C15C7F26A0A</p>
@@ -63,43 +65,55 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
 
     public static class DescribeActiveOperationMaintenanceConfigResponseBodyConfig extends TeaModel {
         /**
-         * <p>The time when the O\&amp;M task was created. The timefollows the <em>yyyy-mm-dd</em>t<em>hh:mm:ss</em>z format. The time is displayed in UTC.</p>
+         * <p>The time when the O\&amp;M task configuration was created. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-01-20T00:05:54+08:00</p>
+         * <p>2018-05-30T14:30:00Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The start time of the O\&amp;M period. The time follows the <em>hh:mm</em> z format. The time is displayed in UTC.</p>
+         * <p>The days of the cycle.</p>
+         * <ul>
+         * <li><p>If CycleType is set to Month, this parameter returns the days of the month. Valid values: 1 to 28. Multiple values are separated by commas (,).</p>
+         * </li>
+         * <li><p>If CycleType is set to Week, this parameter returns the days of the week. Valid values: 1 to 7. Multiple values are separated by commas (,).</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>6</p>
+         * <p>1,2,3</p>
          */
         @NameInMap("CycleTime")
         public String cycleTime;
 
         /**
-         * <p>The cyclical type of the O\&amp;M task.</p>
+         * <p>The cycle type.</p>
+         * <ul>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Week</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>Month</p>
          */
         @NameInMap("CycleType")
         public String cycleType;
 
         /**
-         * <p>The end time of the maintenance window. The time follows the <em>hh:mm</em>z format. The time is displayed in UTC.</p>
+         * <p>The end time of the O\&amp;M time window. The time is in the <em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>04:00:00Z</p>
+         * <p>20:00:00Z</p>
          */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the maintenance window. The time follows the <em>hh:mm</em>z format.</p>
+         * <p>The start time of the O\&amp;M time window. The time is in the <em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>18:00:00Z</p>
@@ -108,16 +122,22 @@ public class DescribeActiveOperationMaintenanceConfigResponseBody extends TeaMod
         public String maintainStartTime;
 
         /**
-         * <p>The time when the O\&amp;M task was modified. The time follows the <em>yyyy-mm-dd</em>t<em>hh:mm:ss</em>z format. The time is displayed in Coordinated Universal Time (UTC).</p>
+         * <p>The time when the operations and maintenance (O\&amp;M) task configuration was modified. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-07-26T05:50:34.000+00:00</p>
+         * <p>2024-05-30T14:30:00Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The state of the O\&amp;M task. Valid values: <strong>0</strong>: The O\&amp;M task is in the starting state. <strong>1</strong>: The O\&amp;M task is in the running state. <strong>2</strong>: The O\&amp;M task is in the stopped state.</p>
+         * <p>Indicates whether the configuration is enabled.</p>
+         * <ul>
+         * <li><p>1: Enabled</p>
+         * </li>
+         * <li><p>2: Disabled</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>

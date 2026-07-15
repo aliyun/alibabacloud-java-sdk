@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSSLRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,36 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Specifies whether to forcibly enable SSL encryption for connections. Valid values:</p>
+     * <ul>
+     * <li><p><strong>1</strong>: Forcibly enable SSL encryption.</p>
+     * </li>
+     * <li><p><strong>0</strong>: Do not forcibly enable SSL encryption.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li><p>Forced SSL encryption is supported only for MongoDB 7.0 and 8.0 instances that use cloud disks and meet the following minor engine version requirements:</p>
+     * </li>
+     * <li><ul>
+     * <li>For version 7.0, the minor engine version must be 8.0.13 or later.</li>
+     * </ul>
+     * </li>
+     * <li><ul>
+     * <li>For version 8.0, the minor engine version must be 9.0.5 or later.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
+     * <blockquote>
+     * <p>Warning: </p>
+     * </blockquote>
+     * <p>After you enable forced SSL encryption, only SSL connections to the instance are allowed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ForceEncryption")
     public String forceEncryption;
 
@@ -30,11 +60,14 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The operation on the SSL feature. Valid values:</p>
+     * <p>The operation to perform on the SSL feature. Valid values:</p>
      * <ul>
-     * <li><strong>Open</strong>: enables SSL encryption.</li>
-     * <li><strong>Close</strong>: disables SSL encryption.</li>
-     * <li><strong>Update</strong>: updates the SSL certificate.</li>
+     * <li><p><strong>Open</strong>: Enable SSL encryption.</p>
+     * </li>
+     * <li><p><strong>Close</strong>: Disable SSL encryption.</p>
+     * </li>
+     * <li><p><strong>Update</strong>: Update the SSL certificate.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,6 +77,18 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("SSLAction")
     public String SSLAction;
 
+    /**
+     * <p>The time to modify the SSL configuration of the MongoDB instance. Valid values:</p>
+     * <ul>
+     * <li><p>0: Modify immediately.</p>
+     * </li>
+     * <li><p>1: Modify within the maintenance window.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SwitchMode")
     public String switchMode;
 

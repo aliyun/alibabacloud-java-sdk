@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
     /**
-     * <p>The list of orders.</p>
+     * <p>The order details.</p>
      */
     @NameInMap("Order")
     public DescribeRenewalPriceResponseBodyOrder order;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EFD65226-08CC-4C4D-B6A4-CB3C382F67B0</p>
@@ -19,9 +19,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the available promotion rules.</p>
+     */
     @NameInMap("Rules")
     public DescribeRenewalPriceResponseBodyRules rules;
 
+    /**
+     * <p>The sub-order details.</p>
+     */
     @NameInMap("SubOrders")
     public DescribeRenewalPriceResponseBodySubOrders subOrders;
 
@@ -175,15 +181,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyOrder extends TeaModel {
+        /**
+         * <p>The coupon details.</p>
+         */
         @NameInMap("Coupons")
         public DescribeRenewalPriceResponseBodyOrderCoupons coupons;
 
         /**
-         * <p>The type of the currency. Valid values:</p>
-         * <ul>
-         * <li>USD: United States dollar</li>
-         * <li>JPY: Japanese Yen</li>
-         * </ul>
+         * <p>The currency of the transaction.</p>
          * 
          * <strong>example:</strong>
          * <p>USD</p>
@@ -192,7 +197,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discount amount of the order.</p>
+         * <p>The total discount amount for the order.</p>
          * 
          * <strong>example:</strong>
          * <p>1144.8</p>
@@ -201,7 +206,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public Float discountAmount;
 
         /**
-         * <p>The original price of the order.</p>
+         * <p>The original amount for the order.</p>
          * 
          * <strong>example:</strong>
          * <p>1144.8</p>
@@ -209,11 +214,14 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         @NameInMap("OriginalAmount")
         public Float originalAmount;
 
+        /**
+         * <p>The matched rule IDs.</p>
+         */
         @NameInMap("RuleIds")
         public DescribeRenewalPriceResponseBodyOrderRuleIds ruleIds;
 
         /**
-         * <p>The actual price of the order.</p>
+         * <p>The final trade amount for the order.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

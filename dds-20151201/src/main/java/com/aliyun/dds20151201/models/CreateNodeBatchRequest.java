@@ -7,15 +7,21 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>The username of the account. The username must meet the following requirements:</p>
      * <ul>
-     * <li>The username starts with a lowercase letter. </li>
-     * <li>The username contains lowercase letters, digits, and underscores (_). </li>
-     * <li>The username is 4 to 16 characters in length.</li>
+     * <li><p>The username starts with a lowercase letter.</p>
+     * </li>
+     * <li><p>The username contains lowercase letters, digits, and underscores (_).</p>
+     * </li>
+     * <li><p>The username is 4 to 16 characters in length.</p>
+     * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Keywords cannot be used as account usernames. </li>
-     * <li>The permissions of this account are fixed at read-only. </li>
-     * <li>The username and password are required to be set only when you apply for an endpoint for the shard node for the first time.</li>
+     * <li><p>Keywords cannot be used as account usernames.</p>
+     * </li>
+     * <li><p>The permissions of this account are fixed at read-only.</p>
+     * </li>
+     * <li><p>The username and password are required to be set only when you apply for an endpoint for the shard node for the first time.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -28,16 +34,19 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>The password of the account. The password must meet the following requirements:</p>
      * <ul>
-     * <li>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. </li>
-     * <li>These special characters include ! @ # $ % ^ &amp; * ( ) _ + - = </li>
-     * <li>The password is 8 to 32 characters in length. <blockquote>
-     * <p>The account password of the shard node cannot be reset.</p>
-     * </blockquote>
+     * <li><p>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters.</p>
+     * </li>
+     * <li><p>These special characters include ! @ # $ % ^ &amp; \* ( ) _ + - =</p>
+     * </li>
+     * <li><p>The password is 8 to 32 characters in length.</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>The account password of the shard node cannot be reset.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>123+abc</p>
+     * <p>PassWord123</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
@@ -45,8 +54,10 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account. </li>
-     * <li><strong>false</strong>: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Orders</strong>. On the Orders page, find the order and complete the payment.</li>
+     * <li><p><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
+     * </li>
+     * <li><p><strong>false</strong>: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <strong>Expenses</strong> &gt; <strong>Orders</strong>. On the Orders page, find the order and complete the payment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,12 +87,14 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>Specifies whether to use coupons. Default value: null. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong> or <strong>null</strong>: uses coupons.</li>
-     * <li><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</li>
+     * <li><p><strong>default</strong> or <strong>null</strong>: uses coupons.</p>
+     * </li>
+     * <li><p><strong>youhuiquan_promotion_option_id_for_blank</strong>: does not use coupons.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>youhuiquan_promotion_option_id_for_blank</p>
+     * <p>default</p>
      */
     @NameInMap("CouponNo")
     public String couponNo;
@@ -99,8 +112,10 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>The source of the request. Valid values:</p>
      * <ul>
-     * <li><strong>OpenApi</strong>: ApsaraDB for MongoDB API </li>
-     * <li><strong>mongo_buy</strong>: ApsaraDB for MongoDB console</li>
+     * <li><p><strong>OpenApi</strong>: ApsaraDB for MongoDB API</p>
+     * </li>
+     * <li><p><strong>mongo_buy</strong>: ApsaraDB for MongoDB console</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +125,7 @@ public class CreateNodeBatchRequest extends TeaModel {
     public String fromApp;
 
     /**
-     * <p>The specifications of the mongos or shard node that you want to add. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>. </p>
+     * <p>The specifications of the mongos or shard node that you want to add. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</p>
      * <blockquote>
      * <p>Up to 32 mongos or shard nodes are supported for each sharded cluster instance.</p>
      * </blockquote>
@@ -137,8 +152,10 @@ public class CreateNodeBatchRequest extends TeaModel {
     /**
      * <p>Specifies whether to apply for an endpoint for the shard node. Default value: false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: applies for an endpoint for the shard node. </li>
-     * <li><strong>false</strong>: does not apply for an endpoint for the shard node.</li>
+     * <li><p><strong>true</strong>: applies for an endpoint for the shard node.</p>
+     * </li>
+     * <li><p><strong>false</strong>: does not apply for an endpoint for the shard node.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -29,9 +29,12 @@ public class DescribeAuditLogFilterRequest extends TeaModel {
     /**
      * <p>The role of the node in the instance. Valid values:</p>
      * <ul>
-     * <li><strong>mongos</strong>: mongos node.</li>
-     * <li><strong>db</strong> : shard node.</li>
-     * <li><strong>logic</strong> : logical instance.</li>
+     * <li><p><strong>mongos</strong>: mongos node.</p>
+     * </li>
+     * <li><p><strong>db</strong> : shard node.</p>
+     * </li>
+     * <li><p><strong>logic</strong> : logical instance.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -11,6 +11,8 @@ public class DescribeVpcsForMongoDBRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. The value must be an integer greater than 0. The default value is <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +20,8 @@ public class DescribeVpcsForMongoDBRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. The value must be an integer greater than 0. The default value is <strong>50</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +29,8 @@ public class DescribeVpcsForMongoDBRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -32,6 +38,8 @@ public class DescribeVpcsForMongoDBRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmyiu4ekp****</p>
      */
@@ -45,6 +53,8 @@ public class DescribeVpcsForMongoDBRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
      */

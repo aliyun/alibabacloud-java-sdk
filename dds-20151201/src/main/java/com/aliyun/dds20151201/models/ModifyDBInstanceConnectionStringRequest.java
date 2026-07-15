@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
-     * <p>The current endpoint that is to be modified.</p>
+     * <p>The current connection address—the address to modify.</p>
      * 
      * <strong>example:</strong>
      * <p>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</p>
@@ -14,9 +14,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String currentConnectionString;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * <blockquote>
-     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you specify the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,9 +37,19 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</p>
+     * <p>The new connection address. It must meet these requirements:</p>
+     * <ul>
+     * <li><p>Start with a lowercase letter.</p>
+     * </li>
+     * <li><p>End with a lowercase letter or digit.</p>
+     * </li>
+     * <li><p>Contain only lowercase letters, digits, and hyphens (-).</p>
+     * </li>
+     * <li><p>Be 8 to 63 characters long.</p>
+     * </li>
+     * </ul>
      * <blockquote>
-     * <p>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</p>
+     * <p>Specify only the prefix of the connection address. You cannot change any part beyond the prefix.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,9 +59,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String newConnectionString;
 
     /**
-     * <p>The new port number of the instance. The port number must be within the range from 1000 to 65535.</p>
+     * <p>The new port number. Valid values are from 1000 to 65535.</p>
      * <blockquote>
-     * <p> This parameter is available only when you set the <strong>DBInstanceId</strong> parameter to the ID of an instance that uses cloud disks.</p>
+     * <p>This parameter is valid only when <strong>DBInstanceId</strong> specifies the ID of a cloud disk instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,9 +71,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public Integer newPort;
 
     /**
-     * <p>The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.</p>
+     * <p>The ID of a Mongos node in a sharded cluster instance. You can specify only one Mongos node ID per call.</p>
      * <blockquote>
-     * <p>This parameter is valid only when you specify the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is valid only when <strong>DBInstanceId</strong> specifies the ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

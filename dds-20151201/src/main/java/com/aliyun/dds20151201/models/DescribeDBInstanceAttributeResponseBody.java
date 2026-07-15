@@ -8,7 +8,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public DescribeDBInstanceAttributeResponseBodyDBInstances DBInstances;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A935A8EE-A6CC-53DE-98BA-20ABAA7E632B</p>
@@ -651,6 +651,88 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes extends TeaModel {
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("SearchNodeClass")
+        public String searchNodeClass;
+
+        @NameInMap("SearchNodeCount")
+        public String searchNodeCount;
+
+        @NameInMap("SearchNodeId")
+        public String searchNodeId;
+
+        @NameInMap("SearchNodeStorage")
+        public String searchNodeStorage;
+
+        public static DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes self = new DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes setSearchNodeClass(String searchNodeClass) {
+            this.searchNodeClass = searchNodeClass;
+            return this;
+        }
+        public String getSearchNodeClass() {
+            return this.searchNodeClass;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes setSearchNodeCount(String searchNodeCount) {
+            this.searchNodeCount = searchNodeCount;
+            return this;
+        }
+        public String getSearchNodeCount() {
+            return this.searchNodeCount;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes setSearchNodeId(String searchNodeId) {
+            this.searchNodeId = searchNodeId;
+            return this;
+        }
+        public String getSearchNodeId() {
+            return this.searchNodeId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes setSearchNodeStorage(String searchNodeStorage) {
+            this.searchNodeStorage = searchNodeStorage;
+            return this;
+        }
+        public String getSearchNodeStorage() {
+            return this.searchNodeStorage;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes extends TeaModel {
+        @NameInMap("ShardSearchNodes")
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes> shardSearchNodes;
+
+        public static DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes self = new DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes setShardSearchNodes(java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes> shardSearchNodes) {
+            this.shardSearchNodes = shardSearchNodes;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes> getShardSearchNodes() {
+            return this.shardSearchNodes;
+        }
+
+    }
+
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTagsTag extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -701,6 +783,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance extends TeaModel {
+        @NameInMap("AIGatewayEnabled")
+        public Boolean AIGatewayEnabled;
+
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
@@ -854,6 +939,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ShardList")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList shardList;
 
+        @NameInMap("ShardSearchNodes")
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes shardSearchNodes;
+
         @NameInMap("StorageEngine")
         public String storageEngine;
 
@@ -887,6 +975,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance self = new DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setAIGatewayEnabled(Boolean AIGatewayEnabled) {
+            this.AIGatewayEnabled = AIGatewayEnabled;
+            return this;
+        }
+        public Boolean getAIGatewayEnabled() {
+            return this.AIGatewayEnabled;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setBurstingEnabled(Boolean burstingEnabled) {
@@ -1263,6 +1359,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardList getShardList() {
             return this.shardList;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setShardSearchNodes(DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes shardSearchNodes) {
+            this.shardSearchNodes = shardSearchNodes;
+            return this;
+        }
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes getShardSearchNodes() {
+            return this.shardSearchNodes;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setStorageEngine(String storageEngine) {

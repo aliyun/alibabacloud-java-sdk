@@ -7,7 +7,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token used to start the next query to retrieve more results.</p>
      * <blockquote>
-     * <p> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned in the previous query to perform the query again.</p>
+     * <p>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <strong>NextToken</strong> value returned in the previous query to perform the query again.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class ListTagResourcesRequest extends TeaModel {
      * <p>The resource IDs. You must specify this parameter or the Tag parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>dds-bpxxxxxxxx</p>
+     * <p>Development group</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -145,7 +145,7 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The key of tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>env</p>
+         * <p>Development group</p>
          */
         @NameInMap("Key")
         public String key;
@@ -154,7 +154,7 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The value of tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>dev</p>
+         * <p>4.0 environment</p>
          */
         @NameInMap("Value")
         public String value;

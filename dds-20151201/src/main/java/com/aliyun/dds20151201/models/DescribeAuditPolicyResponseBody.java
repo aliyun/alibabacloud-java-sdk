@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditPolicyResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the log audit feature is enabled. Valid values:</p>
+     * <p>The status of the audit log.</p>
      * <ul>
-     * <li>Enable</li>
-     * <li>Disabled</li>
+     * <li><p>Enable: The audit log is enabled.</p>
+     * </li>
+     * <li><p>Disabled: The audit log is disabled.</p>
+     * </li>
      * </ul>
-     * <p>Default value: Disabled.</p>
+     * <p>The default value is Disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>

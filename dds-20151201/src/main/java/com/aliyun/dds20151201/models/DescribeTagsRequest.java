@@ -7,7 +7,7 @@ public class DescribeTagsRequest extends TeaModel {
     /**
      * <p>The token used to start the next query to retrieve more results.</p>
      * <blockquote>
-     * <p> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.</p>
+     * <p>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

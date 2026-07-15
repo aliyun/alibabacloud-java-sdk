@@ -8,7 +8,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public DescribeDBInstancesResponseBodyDBInstances DBInstances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -35,7 +35,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of instances in the query results.</p>
+     * <p>The number of instances returned.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

@@ -4,6 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
+    /**
+     * <p>The domain name suffix for the connection string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.mongodb.rds.aliyuncs.com</p>
+     */
     @NameInMap("ConnectionStringSuffix")
     public String connectionStringSuffix;
 
@@ -16,6 +22,9 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Details of the replica set.</p>
+     */
     @NameInMap("ReplicaSets")
     public DescribeReplicaSetRoleResponseBodyReplicaSets replicaSets;
 

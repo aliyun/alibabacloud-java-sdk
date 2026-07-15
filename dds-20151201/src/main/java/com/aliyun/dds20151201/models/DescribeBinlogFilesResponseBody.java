@@ -8,6 +8,8 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
     public DescribeBinlogFilesResponseBodyItems items;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -15,6 +17,8 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
     public Integer maxRecordsPerPage;
 
     /**
+     * <p>The page number of the returned results.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -22,6 +26,8 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8CA8312-530A-413A-9129-F2BB32A8D404</p>
      */
@@ -29,6 +35,8 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of binlog files found.</p>
+     * 
      * <strong>example:</strong>
      * <p>240</p>
      */

@@ -7,7 +7,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <blockquote>
-     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,8 +39,10 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
      * <p>The logical relationship between multiple keywords. Valid values:</p>
      * <ul>
-     * <li><strong>or</strong></li>
-     * <li><strong>and</strong> (default value)</li>
+     * <li><p><strong>or</strong></p>
+     * </li>
+     * <li><p><strong>and</strong> (default value)</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +54,7 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the mongos node or shard node whose error logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</p>
      * <blockquote>
-     * <p> This parameter is valid only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
+     * <p>This parameter is valid only when <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,11 +114,13 @@ public class DescribeErrorLogRecordsRequest extends TeaModel {
     /**
      * <p>The role of the node whose error logs you want to query in the instance. Valid values:</p>
      * <ul>
-     * <li><strong>primary</strong></li>
-     * <li><strong>secondary</strong></li>
+     * <li><p><strong>primary</strong></p>
+     * </li>
+     * <li><p><strong>secondary</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> If you set the <strong>NodeId</strong> parameter to the ID of a mongos node, the RoleType parameter must be set to <strong>primary</strong>.</p>
+     * <p>If you set the <strong>NodeId</strong> parameter to the ID of a mongos node, the RoleType parameter must be set to <strong>primary</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

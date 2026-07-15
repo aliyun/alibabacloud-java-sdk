@@ -185,12 +185,18 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         /**
          * <p>The state of the task. Valid values:</p>
          * <ul>
-         * <li>2: The task is waiting for users to specify a switchover time.</li>
-         * <li>3: The task is waiting to be performed.</li>
-         * <li>4: The task is being performed. If the task is in this state, the ModifyActiveOperationTask operation cannot be called to modify the scheduled switchover time.</li>
-         * <li>5: The task is performed.</li>
-         * <li>6: The task fails.</li>
-         * <li>7: The task is canceled.</li>
+         * <li><p>2: The task is waiting for users to specify a switchover time.</p>
+         * </li>
+         * <li><p>3: The task is waiting to be performed.</p>
+         * </li>
+         * <li><p>4: The task is being performed. If the task is in this state, the ModifyActiveOperationTask operation cannot be called to modify the scheduled switchover time.</p>
+         * </li>
+         * <li><p>5: The task is performed.</p>
+         * </li>
+         * <li><p>6: The task fails.</p>
+         * </li>
+         * <li><p>7: The task is canceled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,10 +226,14 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         /**
          * <p>The type of the task. Valid values:</p>
          * <ul>
-         * <li>rds_apsaradb_ha: master-replica switchover</li>
-         * <li>rds_apsaradb_transfer: instance migration</li>
-         * <li>rds_apsaradb_upgrade: minor version update</li>
-         * <li>all: all types</li>
+         * <li><p>rds_apsaradb_ha: master-replica switchover</p>
+         * </li>
+         * <li><p>rds_apsaradb_transfer: instance migration</p>
+         * </li>
+         * <li><p>rds_apsaradb_upgrade: minor version update</p>
+         * </li>
+         * <li><p>all: all types</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -17,7 +17,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public DescribeRunningLogRecordsResponseBodyItems items;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -35,7 +35,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>45D2B592-DEBA-4347-BBF3-47FF6C97DBBC</p>
@@ -44,7 +44,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

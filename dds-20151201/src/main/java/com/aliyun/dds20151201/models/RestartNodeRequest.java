@@ -7,7 +7,7 @@ public class RestartNodeRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If the instance is a sharded cluster instance, also set the <code>NodeId</code> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class RestartNodeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the shard, mongos, or ConfigServer node in a child instance of the sharded cluster instance.</p>
+     * <p>The ID of the Mongos, shard, or Configserver node in the sharded cluster instance. Call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</p>
      * <blockquote>
-     * <p> If you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance, you must specify this parameter.</p>
+     * <p>This parameter is required if <strong>DBInstanceId</strong> is set to the ID of a sharded cluster instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,8 +44,10 @@ public class RestartNodeRequest extends TeaModel {
     /**
      * <p>The role ID of the node.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/468469.html">DescribeReplicaSetRole</a> operation to query the role ID of a node in a replica set instance.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/468472.html">DescribeRoleZoneInfo</a> operation to query the role ID of a node in a sharded cluster instance.</li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/468469.html">DescribeReplicaSetRole</a> operation to query the role ID of a node in a replica set instance.</p>
+     * </li>
+     * <li><p>Call the <a href="https://help.aliyun.com/document_detail/468472.html">DescribeRoleZoneInfo</a> operation to query the role ID of a node in a sharded cluster instance.</p>
+     * </li>
      * </ol>
      * <p>This parameter is required.</p>
      * 
@@ -55,6 +57,21 @@ public class RestartNodeRequest extends TeaModel {
     @NameInMap("RoleId")
     public String roleId;
 
+    /**
+     * <p>The time to execute the task. Valid values:</p>
+     * <ul>
+     * <li><p><strong>0</strong>: The task is executed immediately. This is the default value.</p>
+     * </li>
+     * <li><p><strong>1</strong>: The task is executed during the maintenance window.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SwitchMode")
     public String switchMode;
 

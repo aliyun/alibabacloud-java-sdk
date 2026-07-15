@@ -17,9 +17,12 @@ public class ModifySecurityIpsRequest extends TeaModel {
     /**
      * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>Cover</strong>: overwrites the original IP address whitelist.</li>
-     * <li><strong>Append</strong>: appends data to the IP address whitelist.</li>
-     * <li><strong>Delete</strong>: deletes the IP address whitelist.</li>
+     * <li><p><strong>Cover</strong>: overwrites the original IP address whitelist.</p>
+     * </li>
+     * <li><p><strong>Append</strong>: appends data to the IP address whitelist.</p>
+     * </li>
+     * <li><p><strong>Delete</strong>: deletes the IP address whitelist.</p>
+     * </li>
      * </ul>
      * <p>Default value: <strong>Cover</strong>.</p>
      * 
@@ -63,8 +66,10 @@ public class ModifySecurityIpsRequest extends TeaModel {
     /**
      * <p>The IP addresses in the IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to the IP address whitelist. The entries in the IP address whitelist must be in one of the following formats:</p>
      * <ul>
-     * <li>IP addresses, such as 127.0.0.1.</li>
-     * <li>CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+     * <li><p>IP addresses, such as 127.0.0.1.</p>
+     * </li>
+     * <li><p>CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

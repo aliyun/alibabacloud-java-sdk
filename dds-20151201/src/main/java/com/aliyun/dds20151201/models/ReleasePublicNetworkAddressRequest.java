@@ -7,11 +7,13 @@ public class ReleasePublicNetworkAddressRequest extends TeaModel {
     /**
      * <p>The public endpoint type. Valid values:</p>
      * <ul>
-     * <li><strong>SRV</strong></li>
-     * <li><strong>Normal</strong></li>
+     * <li><p><strong>SRV</strong></p>
+     * </li>
+     * <li><p><strong>Normal</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is valid only when you want to release an SRV endpoint.</p>
+     * <p>This parameter is valid only when you want to release an SRV endpoint.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +25,7 @@ public class ReleasePublicNetworkAddressRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <blockquote>
-     * <p> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
+     * <p>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <strong>NodeId</strong> parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,8 +39,10 @@ public class ReleasePublicNetworkAddressRequest extends TeaModel {
      * <p>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</li>
+     * <li><p>This parameter is valid only if you set the <strong>DBInstanceId</strong> parameter to the ID of a sharded cluster instance.</p>
+     * </li>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
