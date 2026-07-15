@@ -32,7 +32,7 @@ public class CarApplyAddResponseBody extends TeaModel {
     public Long module;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>

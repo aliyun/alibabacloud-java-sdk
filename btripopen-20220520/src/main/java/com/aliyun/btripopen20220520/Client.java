@@ -1995,8 +1995,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Synchronizes an intra-city car service approval form for a specified enterprise.</p>
      * <ol>
-     * <li>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
-     * <li>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</li>
+     * <li>To use this operation, you must enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
+     * <li>To use this operation, you must include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -2123,8 +2123,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>Synchronizes an intra-city car service approval form for a specified enterprise.</p>
      * <ol>
-     * <li>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
-     * <li>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</li>
+     * <li>To use this operation, you must enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </li>
+     * <li>To use this operation, you must include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -4520,6 +4520,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         EstimatedPriceQueryHeaders headers = new EstimatedPriceQueryHeaders();
         return this.estimatedPriceQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预估价格查询v2.0</p>
+     * 
+     * @param request EstimatedPriceQueryV2Request
+     * @param headers EstimatedPriceQueryV2Headers
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EstimatedPriceQueryV2Response
+     */
+    public EstimatedPriceQueryV2Response estimatedPriceQueryV2WithOptions(EstimatedPriceQueryV2Request request, EstimatedPriceQueryV2Headers headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("biz_type", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.departDate)) {
+            query.put("depart_date", request.departDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromCity)) {
+            query.put("from_city", request.fromCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.leaveDate)) {
+            query.put("leave_date", request.leaveDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toCity)) {
+            query.put("to_city", request.toCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EstimatedPriceQueryV2"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/costcenter/v3/estimated-price"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EstimatedPriceQueryV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>预估价格查询v2.0</p>
+     * 
+     * @param request EstimatedPriceQueryV2Request
+     * @return EstimatedPriceQueryV2Response
+     */
+    public EstimatedPriceQueryV2Response estimatedPriceQueryV2(EstimatedPriceQueryV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        EstimatedPriceQueryV2Headers headers = new EstimatedPriceQueryV2Headers();
+        return this.estimatedPriceQueryV2WithOptions(request, headers, runtime);
     }
 
     /**

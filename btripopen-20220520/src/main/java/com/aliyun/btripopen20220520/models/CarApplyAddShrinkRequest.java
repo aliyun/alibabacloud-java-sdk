@@ -15,8 +15,8 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     public String cause;
 
     /**
-     * <p>The cities for car service. Separate multiple cities with Chinese commas (，).
-     * Note: A maximum of 10 cities are supported. The values in city and city_code_set must correspond one to one.</p>
+     * <p>The car service cities. Separate multiple cities with Chinese commas (，).
+     * Note: A maximum of 10 cities can be specified. The values in city and city_code_set must correspond one-to-one.</p>
      * 
      * <strong>example:</strong>
      * <p>北京，杭州</p>
@@ -25,9 +25,9 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     public String city;
 
     /**
-     * <p>The city code set for intra-city car service. Separate multiple cities with Chinese commas (，).
+     * <p>The set of city codes for intra-city car service. Separate multiple cities with Chinese commas (，).
      * Note: 1) Either city_code_set or city is required. If both are specified, city_code_set takes precedence.
-     * A maximum of 10 cities are supported.</p>
+     * A maximum of 10 cities can be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>110100，330100</p>
@@ -36,7 +36,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     public String cityCodeSet;
 
     /**
-     * <p>The car service time. This parameter is controlled on a daily basis. For example, a value of 2021-03-18 20:26:56 indicates that the car service is available on 2021-03-18. For multi-day scenarios, use this parameter together with the finished_date parameter. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The car service date. Access is controlled on a daily basis. For example, a value of 2021-03-18 20:26:56 indicates that the car service is available on 2021-03-18. For cross-day scenarios, use this parameter together with the finished_date parameter. The time parameter must be in the yyyy-MM-dd HH:mm:ss string format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-12 14:52:52</p>
@@ -45,7 +45,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     public String date;
 
     /**
-     * <p>The car service end time. This parameter is controlled on a daily basis. For example, if date is set to 2021-03-18 20:26:56 and finished_date is set to 2021-03-30 20:26:56, the car service is available from 2021-03-18 (inclusive) to 2021-03-30 (inclusive). If this parameter is not specified, the value of date is used as the end time. The time must be in the yyyy-MM-dd HH:mm:ss format.</p>
+     * <p>The car service end date. Access is controlled on a daily basis. For example, if date is set to 2021-03-18 20:26:56 and finished_date is set to 2021-03-30 20:26:56, the car service is available from 2021-03-18 (inclusive) to 2021-03-30 (inclusive). If this parameter is not specified, the value of date is used as the end date. The time parameter must be in the yyyy-MM-dd HH:mm:ss string format.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-12 18:51:25</p>
@@ -53,6 +53,9 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     @NameInMap("finished_date")
     public String finishedDate;
 
+    /**
+     * <p>The intra-city car service itinerary.</p>
+     */
     @NameInMap("itinerary_list")
     public String itineraryListShrink;
 
@@ -97,7 +100,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the third-party cost center associated with the approval form.</p>
      * <blockquote>
-     * <p>Warning: This field is required. To make it optional, contact operations.</p>
+     * <p>Warning: This field is required. To configure it as optional, contact operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +112,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the third-party invoice header associated with the approval form.</p>
      * <blockquote>
-     * <p>Warning: This field is required. To make it optional, contact operations.</p>
+     * <p>Warning: This field is required. To configure it as optional, contact operations.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,7 +122,7 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     public String thirdPartInvoiceId;
 
     /**
-     * <p>The total number of times the approval form can be used.</p>
+     * <p>The total available count for the approval form.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -128,11 +131,12 @@ public class CarApplyAddShrinkRequest extends TeaModel {
     public Integer timesTotal;
 
     /**
-     * <p>The usage count type of the approval form. If the enterprise does not need to limit the number of times the approval form can be used, set this parameter to 1 (unlimited) and set both times_total and times_used to 0.</p>
+     * <p>The type of available usage count for the approval form. If the enterprise does not need to limit the number of times the approval form can be used, set this parameter to 1 (unlimited) and set both times_total and times_used to 0.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>1: Unlimited.</li>
      * <li>2: User-specified count.</li>
+     * <li>3: Admin-limited count.</li>
      * </ul>
      * 
      * <strong>example:</strong>
