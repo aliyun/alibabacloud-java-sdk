@@ -15,7 +15,7 @@ public class DescribeApplicationLogsRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The subcomponent instance ID.</p>
+     * <p>The instance ID of the subcomponent.</p>
      * 
      * <strong>example:</strong>
      * <p>pac-xxx</p>

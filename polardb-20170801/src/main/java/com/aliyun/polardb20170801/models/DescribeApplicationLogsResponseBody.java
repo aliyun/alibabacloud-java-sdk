@@ -130,6 +130,9 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
         @NameInMap("Hostname")
         public String hostname;
 
+        @NameInMap("InsName")
+        public String insName;
+
         @NameInMap("LogLevelId")
         public Long logLevelId;
 
@@ -150,6 +153,9 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
 
         @NameInMap("Time")
         public String time;
+
+        @NameInMap("Timestamp")
+        public Long timestamp;
 
         public static DescribeApplicationLogsResponseBodyItemsLogRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationLogsResponseBodyItemsLogRecords self = new DescribeApplicationLogsResponseBodyItemsLogRecords();
@@ -220,6 +226,14 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
             return this.hostname;
         }
 
+        public DescribeApplicationLogsResponseBodyItemsLogRecords setInsName(String insName) {
+            this.insName = insName;
+            return this;
+        }
+        public String getInsName() {
+            return this.insName;
+        }
+
         public DescribeApplicationLogsResponseBodyItemsLogRecords setLogLevelId(Long logLevelId) {
             this.logLevelId = logLevelId;
             return this;
@@ -274,6 +288,14 @@ public class DescribeApplicationLogsResponseBody extends TeaModel {
         }
         public String getTime() {
             return this.time;
+        }
+
+        public DescribeApplicationLogsResponseBodyItemsLogRecords setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
     }

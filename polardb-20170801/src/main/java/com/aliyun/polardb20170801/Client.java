@@ -11133,6 +11133,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ConsumerGroup", request.consumerGroup);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.downsample)) {
+            query.put("Downsample", request.downsample);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endStep)) {
+            query.put("EndStep", request.endStep);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -11145,8 +11153,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Key", request.key);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPoints)) {
+            query.put("MaxPoints", request.maxPoints);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modelService)) {
             query.put("ModelService", request.modelService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startStep)) {
+            query.put("StartStep", request.startStep);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -11276,6 +11292,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeApplicationServerlessConfResponse describeApplicationServerlessConf(DescribeApplicationServerlessConfRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeApplicationServerlessConfWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries AI application sessions.</p>
+     * 
+     * @param request DescribeApplicationSessionIdsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationSessionIdsResponse
+     */
+    public DescribeApplicationSessionIdsResponse describeApplicationSessionIdsWithOptions(DescribeApplicationSessionIdsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationSessionIds"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationSessionIdsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries AI application sessions.</p>
+     * 
+     * @param request DescribeApplicationSessionIdsRequest
+     * @return DescribeApplicationSessionIdsResponse
+     */
+    public DescribeApplicationSessionIdsResponse describeApplicationSessionIds(DescribeApplicationSessionIdsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeApplicationSessionIdsWithOptions(request, runtime);
     }
 
     /**

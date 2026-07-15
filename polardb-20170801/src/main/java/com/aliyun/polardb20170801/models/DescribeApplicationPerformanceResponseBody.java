@@ -31,6 +31,9 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Interval")
+    public String interval;
+
     /**
      * <p>The performance metrics.</p>
      */
@@ -84,6 +87,14 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeApplicationPerformanceResponseBody setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
+    }
+
     public DescribeApplicationPerformanceResponseBody setPerformanceKeys(DescribeApplicationPerformanceResponseBodyPerformanceKeys performanceKeys) {
         this.performanceKeys = performanceKeys;
         return this;
@@ -109,6 +120,9 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
+        @NameInMap("Step")
+        public Long step;
+
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -118,6 +132,14 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         public static DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue self = new DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setStep(Long step) {
+            this.step = step;
+            return this;
+        }
+        public Long getStep() {
+            return this.step;
         }
 
         public DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue setTimestamp(Long timestamp) {

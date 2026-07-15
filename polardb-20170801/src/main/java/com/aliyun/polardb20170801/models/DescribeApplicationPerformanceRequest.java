@@ -32,6 +32,12 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     @NameInMap("ConsumerGroup")
     public String consumerGroup;
 
+    @NameInMap("Downsample")
+    public String downsample;
+
+    @NameInMap("EndStep")
+    public Long endStep;
+
     /**
      * <p>The end time for the query. Specify the time in UTC in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
      * <p>This parameter is required.</p>
@@ -77,6 +83,9 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    @NameInMap("MaxPoints")
+    public Integer maxPoints;
+
     /**
      * <p>The ID of the model service.</p>
      * 
@@ -85,6 +94,9 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
      */
     @NameInMap("ModelService")
     public String modelService;
+
+    @NameInMap("StartStep")
+    public Long startStep;
 
     /**
      * <p>The start time for the query. Specify the time in UTC in the <code>yyyy-MM-ddTHH:mmZ</code> format.</p>
@@ -125,6 +137,22 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.consumerGroup;
     }
 
+    public DescribeApplicationPerformanceRequest setDownsample(String downsample) {
+        this.downsample = downsample;
+        return this;
+    }
+    public String getDownsample() {
+        return this.downsample;
+    }
+
+    public DescribeApplicationPerformanceRequest setEndStep(Long endStep) {
+        this.endStep = endStep;
+        return this;
+    }
+    public Long getEndStep() {
+        return this.endStep;
+    }
+
     public DescribeApplicationPerformanceRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -149,12 +177,28 @@ public class DescribeApplicationPerformanceRequest extends TeaModel {
         return this.key;
     }
 
+    public DescribeApplicationPerformanceRequest setMaxPoints(Integer maxPoints) {
+        this.maxPoints = maxPoints;
+        return this;
+    }
+    public Integer getMaxPoints() {
+        return this.maxPoints;
+    }
+
     public DescribeApplicationPerformanceRequest setModelService(String modelService) {
         this.modelService = modelService;
         return this;
     }
     public String getModelService() {
         return this.modelService;
+    }
+
+    public DescribeApplicationPerformanceRequest setStartStep(Long startStep) {
+        this.startStep = startStep;
+        return this;
+    }
+    public Long getStartStep() {
+        return this.startStep;
     }
 
     public DescribeApplicationPerformanceRequest setStartTime(String startTime) {
