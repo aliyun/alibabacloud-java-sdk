@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MaterialInspectionResponseBody extends TeaModel {
     /**
+     * <p>The error code. This parameter is not returned for successful calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The material display detection result.</p>
+     */
     @NameInMap("Data")
     public MaterialInspectionResponseBodyData data;
 
     /**
+     * <p>The error message. This parameter is not returned for successful calls.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class MaterialInspectionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
      */
@@ -29,6 +38,8 @@ public class MaterialInspectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -82,6 +93,8 @@ public class MaterialInspectionResponseBody extends TeaModel {
 
     public static class MaterialInspectionResponseBodyDataResultSteps extends TeaModel {
         /**
+         * <p>The step result. Valid values: PASS, FAIL, and UNABLE_TO_JUDGE.</p>
+         * 
          * <strong>example:</strong>
          * <p>PASS</p>
          */
@@ -89,6 +102,8 @@ public class MaterialInspectionResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>The step ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>XXX</p>
          */
@@ -120,6 +135,8 @@ public class MaterialInspectionResponseBody extends TeaModel {
 
     public static class MaterialInspectionResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The natural language summary, such as &quot;1 rule: 1 PASS, all inspection items are compliant.&quot;</p>
+         * 
          * <strong>example:</strong>
          * <p>1项规则：1 PASS，所有检测项合规</p>
          */
@@ -127,6 +144,8 @@ public class MaterialInspectionResponseBody extends TeaModel {
         public String evidence;
 
         /**
+         * <p>The overall result. Valid values: PASS and FAIL.</p>
+         * 
          * <strong>example:</strong>
          * <p>PASS</p>
          */
@@ -134,16 +153,23 @@ public class MaterialInspectionResponseBody extends TeaModel {
         public String overallResult;
 
         /**
+         * <p>The request ID returned as-is from the input.</p>
+         * 
          * <strong>example:</strong>
          * <p>req-001</p>
          */
         @NameInMap("ReqId")
         public String reqId;
 
+        /**
+         * <p>The list of detection steps.</p>
+         */
         @NameInMap("Steps")
         public java.util.List<MaterialInspectionResponseBodyDataResultSteps> steps;
 
         /**
+         * <p>The detection type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Stamp</p>
          */
@@ -198,10 +224,15 @@ public class MaterialInspectionResponseBody extends TeaModel {
     }
 
     public static class MaterialInspectionResponseBodyData extends TeaModel {
+        /**
+         * <p>The inspection result.</p>
+         */
         @NameInMap("Result")
         public MaterialInspectionResponseBodyDataResult result;
 
         /**
+         * <p>The usage information. The key is the usage metric name and the value is the count.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessingCount&quot;:1}</p>
          */

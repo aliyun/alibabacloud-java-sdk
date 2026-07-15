@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ImageMattingRequest extends TeaModel {
     /**
-     * <p>The URL of the image to process.</p>
+     * <p>Specifies the background type of the returned image. Valid values:</p>
+     * <ul>
+     * <li>WHITE_BACKGROUND: white background image.</li>
+     * <li>TRANSPARENT: transparent background image.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +19,7 @@ public class ImageMattingRequest extends TeaModel {
     public String backGroundType;
 
     /**
-     * <p>The target image height in pixels.</p>
+     * <p>BGColor</p>
      * 
      * <strong>example:</strong>
      * <p>255,255,255</p>
@@ -24,7 +28,7 @@ public class ImageMattingRequest extends TeaModel {
     public String bgColor;
 
     /**
-     * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels. The file size cannot exceed 10 MB.<br><strong>Example</strong>: <code>&quot;https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg&quot;</code>.</p>
+     * <p>The URL of the original image. The image must be in JPG, JPEG, PNG, BMP, or WEBP format. The resolution must be between 256 × 256 and 3000 × 3000 pixels. The file size cannot exceed 10 MB.<br><strong>Example</strong>: <code>&quot;https://ae01.alicdn.com/kf/S342f0070dc9f4be09a6cbed34e90dc8fs.jpg&quot;</code></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +38,7 @@ public class ImageMattingRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The target image width in pixels.</p>
+     * <p>The target image height in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -43,11 +47,7 @@ public class ImageMattingRequest extends TeaModel {
     public Integer targetHeight;
 
     /**
-     * <p>The background type of the returned image. Valid values:</p>
-     * <ul>
-     * <li>WHITE_BACKGROUND: white background.</li>
-     * <li>TRANSPARENT: transparent background.</li>
-     * </ul>
+     * <p>The target image width in pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>

@@ -20,7 +20,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public DocumentTranslateResponseBodyData data;
 
     /**
-     * <p>The error message. This parameter is not returned if the call is successful.</p>
+     * <p>The error message. Not returned for successful calls.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,11 +38,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
-     * </ul>
+     * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -97,7 +93,7 @@ public class DocumentTranslateResponseBody extends TeaModel {
 
     public static class DocumentTranslateResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</p>
+         * <p>The unique identifier of the asynchronous task, used to query the task status and result.</p>
          * 
          * <strong>example:</strong>
          * <p>6071a030-5c92-9df1-96d0-44952343439a</p>

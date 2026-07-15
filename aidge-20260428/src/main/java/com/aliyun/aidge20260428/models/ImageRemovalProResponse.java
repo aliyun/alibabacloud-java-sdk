@@ -3,7 +3,7 @@ package com.aliyun.aidge20260428.models;
 
 import com.aliyun.tea.*;
 
-public class ImageTranslationPlusResponse extends TeaModel {
+public class ImageRemovalProResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ImageTranslationPlusResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ImageTranslationPlusResponseBody body;
+    public ImageRemovalProResponseBody body;
 
-    public static ImageTranslationPlusResponse build(java.util.Map<String, ?> map) throws Exception {
-        ImageTranslationPlusResponse self = new ImageTranslationPlusResponse();
+    public static ImageRemovalProResponse build(java.util.Map<String, ?> map) throws Exception {
+        ImageRemovalProResponse self = new ImageRemovalProResponse();
         return TeaModel.build(map, self);
     }
 
-    public ImageTranslationPlusResponse setHeaders(java.util.Map<String, String> headers) {
+    public ImageRemovalProResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ImageTranslationPlusResponse extends TeaModel {
         return this.headers;
     }
 
-    public ImageTranslationPlusResponse setStatusCode(Integer statusCode) {
+    public ImageRemovalProResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ImageTranslationPlusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ImageTranslationPlusResponse setBody(ImageTranslationPlusResponseBody body) {
+    public ImageRemovalProResponse setBody(ImageRemovalProResponseBody body) {
         this.body = body;
         return this;
     }
-    public ImageTranslationPlusResponseBody getBody() {
+    public ImageRemovalProResponseBody getBody() {
         return this.body;
     }
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRemoveRequest extends TeaModel {
     /**
-     * <p>URL of the image to be processed (mutually exclusive with ImageBase64)</p>
+     * <p>The URL of the image to process. This parameter is mutually exclusive with ImageBase64. You must specify one of them.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ImageRemoveRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specific removal area in RLE format. If provided, this takes priority and the remove parameters are ignored</p>
+     * <p>The specific erasure region in RLE format. If this parameter is specified, it takes priority and the remove parameters are ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -24,7 +24,14 @@ public class ImageRemoveRequest extends TeaModel {
     public String mask;
 
     /**
-     * <p>Elements to remove from the non-subject area of the image (1=transparent text blocks; 2=specific names; 3=text; 4=blemishes). Multiple selections allowed</p>
+     * <p>The elements to remove from the non-subject area of the image. Valid values:</p>
+     * <ul>
+     * <li>1: transparent text block</li>
+     * <li>2: specific name</li>
+     * <li>3: text</li>
+     * <li>4: image blemish</li>
+     * </ul>
+     * <p>You can specify multiple values.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2]</p>
@@ -33,8 +40,14 @@ public class ImageRemoveRequest extends TeaModel {
     public java.util.List<Integer> nonObjectRemoveElements;
 
     /**
-     * <p>Elements to remove from the image subject (1=transparent text blocks; 2=specific names; 3=text; 4=blemishes). Multiple selections allowed</p>
-     * <p>This parameter is required.</p>
+     * <p>The elements to remove from the image subject area. Valid values:</p>
+     * <ul>
+     * <li>1: transparent text block</li>
+     * <li>2: specific name</li>
+     * <li>3: text</li>
+     * <li>4: image blemish</li>
+     * </ul>
+     * <p>You can specify multiple values.</p>
      * 
      * <strong>example:</strong>
      * <p>[1,2]</p>

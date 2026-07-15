@@ -38,7 +38,7 @@ public class ImageMattingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -115,7 +115,7 @@ public class ImageMattingResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The quality score of the matting result.</p>
+         * <p>The matting quality score.</p>
          * 
          * <strong>example:</strong>
          * <p>0.11</p>

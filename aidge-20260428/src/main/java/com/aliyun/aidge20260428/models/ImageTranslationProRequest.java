@@ -4,11 +4,14 @@ package com.aliyun.aidge20260428.models;
 import com.aliyun.tea.*;
 
 public class ImageTranslationProRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to call the operation asynchronously.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
     /**
-     * <p>Glossary ID, optional. You need to create a glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results will not be modified.</p>
+     * <p>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -17,7 +20,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>Original image URL, required. Image requirements: width and height must not exceed 4000×4000; size must not exceed 10MB; supported formats include png, jpeg, jpg, bmp, and webp.</p>
+     * <p>The URL of the original image. Required. Image requirements: width and height must not exceed 4000 × 4000. Size must not exceed 10 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +30,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Choose whether to translate text on the image subject, optional, default false. This helps you protect information by avoiding translation of embedded content such as product names.</p>
+     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps you protect information and avoid translating embedded information such as product names.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -36,7 +39,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>Source language code, required. See the supported language pairs list for available translation directions.</p>
+     * <p>The source language code. Required. For supported language directions, see the supported language direction list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +49,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>Target language code, required. See the supported language pairs list for available translation directions.</p>
+     * <p>The target language code. Required. For supported language directions, see the supported language direction list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +59,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Choose whether to translate brand names on the image, optional, default false. This helps you protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps you protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -65,7 +68,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Whether to return layout information such as text position, font, and color, optional, default false. This can be used for secondary editing when integrating with an image editor.</p>
+     * <p>Specifies whether to return layout information such as text position, font, and color. Optional. Default value: false. This can be used for secondary editing when integrated with an image editor.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

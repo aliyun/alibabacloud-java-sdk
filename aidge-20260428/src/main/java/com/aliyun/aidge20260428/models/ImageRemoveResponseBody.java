@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageRemoveResponseBody extends TeaModel {
     /**
-     * <p>Error code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ImageRemoveResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Intelligent removal result</p>
+     * <p>The intelligent erasure result.</p>
      */
     @NameInMap("Data")
     public ImageRemoveResponseBodyData data;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class ImageRemoveResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the call was successful</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,7 +93,7 @@ public class ImageRemoveResponseBody extends TeaModel {
 
     public static class ImageRemoveResponseBodyData extends TeaModel {
         /**
-         * <p>Height of the result image (pixels)</p>
+         * <p>The height of the result image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -102,7 +102,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         public Integer height;
 
         /**
-         * <p>URL of the removal result image</p>
+         * <p>The URL of the result image after erasure.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></p>
@@ -111,7 +111,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>Usage information</p>
+         * <p>The usage information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1}</p>
@@ -120,7 +120,7 @@ public class ImageRemoveResponseBody extends TeaModel {
         public java.util.Map<String, Long> usageMap;
 
         /**
-         * <p>Width of the result image (pixels)</p>
+         * <p>The width of the result image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
