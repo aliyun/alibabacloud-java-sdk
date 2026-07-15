@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRoutineRequest extends TeaModel {
     /**
-     * <p>The routine name.</p>
+     * <p>The name of the Edge Routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,28 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListWafManagedRulesShrinkRequest extends TeaModel {
     /**
-     * <p>The attack type to filter the results by. Valid values:</p>
+     * <p>The attack type of the vulnerability prevention event. Valid values:</p>
      * <ul>
-     * <li><p>SQL injection</p>
-     * </li>
-     * <li><p>cross-site scripting</p>
-     * </li>
-     * <li><p>code execution</p>
-     * </li>
-     * <li><p>CRLF</p>
-     * </li>
-     * <li><p>local file inclusion</p>
-     * </li>
-     * <li><p>remote file inclusion</p>
-     * </li>
-     * <li><p>webshell</p>
-     * </li>
-     * <li><p>cross-site request forgery</p>
-     * </li>
-     * <li><p>Other</p>
-     * </li>
-     * <li><p>SEMA</p>
-     * </li>
+     * <li>SQL injection</li>
+     * <li>cross-site scripting (XSS)</li>
+     * <li>code execute</li>
+     * <li>CRLF</li>
+     * <li>local file inclusion (LFI)</li>
+     * <li>remote file inclusion (RFI)</li>
+     * <li>webshell</li>
+     * <li>cross-site request forgery</li>
+     * <li>Others</li>
+     * <li>SEMA</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,16 +35,20 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The WAF instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esa-site-awmmx25y2igw</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The response language. Valid values:</p>
+     * <p>The language type. The response is returned in the specified language. Valid values:</p>
      * <ul>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
-     * <li><p><strong>zh</strong>: Chinese.</p>
-     * </li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,11 +57,15 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The managed ruleset configuration in JSON string format.</p>
+     * <p>Contains the AttackType, ProtectionLevel, Action, and ManagedRules subfields. When ProtectionLevel is set to -1 (custom mode), specify the status and action for each rule through the ManagedRules array.</p>
+     */
     @NameInMap("ManagedRuleset")
     public String managedRulesetShrink;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +74,7 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -84,17 +82,28 @@ public class ListWafManagedRulesShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The currently saved protection level, which represents the existing configuration state in the database.</p>
+     * <p>Valid values: -1 (custom mode), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</p>
+     * <p>Difference from ManagedRuleset.ProtectionLevel: this parameter indicates the currently effective configuration, while ManagedRuleset.ProtectionLevel indicates the target value being passed in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ProtectionLevel")
     public Integer protectionLevel;
 
     /**
      * <p>The query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Status\&quot;:\&quot;\&quot;,\&quot;ProtectionLevels\&quot;:[2,1],\&quot;Action\&quot;:\&quot;\&quot;,\&quot;IdNameLike\&quot;:\&quot;\&quot;}</p>
      */
     @NameInMap("QueryArgs")
     public String queryArgsShrink;
 
     /**
-     * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
+     * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

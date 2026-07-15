@@ -134,7 +134,7 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
          * <p>The custom event name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test event</p>
+         * <p>test event</p>
          */
         @NameInMap("Name")
         public String name;

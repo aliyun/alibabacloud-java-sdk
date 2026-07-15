@@ -4,9 +4,21 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListWafUsageOfRulesResponseBody extends TeaModel {
+    /**
+     * <p>The number of rules or rule sets for the specified phase under instance-level batch configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BatchConfigUsage")
     public Long batchConfigUsage;
 
+    /**
+     * <p>The total number of rules or rule sets for the instance under the specified phase, including both site-level and instance-level rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("InstanceUsage")
     public Long instanceUsage;
 
@@ -20,7 +32,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of sites and their respective WAF rule usage.</p>
+     * <p>The list of site usage.</p>
      */
     @NameInMap("Sites")
     public java.util.List<ListWafUsageOfRulesResponseBodySites> sites;
@@ -82,7 +94,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of WAF rules or rule sets used by the site.</p>
+         * <p>The number of WAF rules or WAF rule sets that have been used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

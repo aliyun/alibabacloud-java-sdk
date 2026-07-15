@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     /**
-     * <p>A list of expression objects to process.</p>
+     * <p>The list of expressions.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -13,9 +13,21 @@ public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     @NameInMap("Expressions")
     public String expressionsShrink;
 
+    /**
+     * <p>The plan instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esa-site-bitkull7uubk</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wireshark</p>
+     */
     @NameInMap("Kind")
     public String kind;
 
@@ -28,11 +40,17 @@ public class BatchGetExpressionFieldsShrinkRequest extends TeaModel {
     @NameInMap("Phase")
     public String phase;
 
+    /**
+     * <p>The plan name (in English).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>entranceplan</p>
+     */
     @NameInMap("PlanNameEn")
     public String planNameEn;
 
     /**
-     * <p>The ID of the site.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

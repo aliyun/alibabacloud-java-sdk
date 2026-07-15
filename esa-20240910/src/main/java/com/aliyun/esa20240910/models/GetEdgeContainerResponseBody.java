@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerResponseBody extends TeaModel {
     /**
+     * <p>The billing mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>container_95</p>
      */
@@ -12,6 +14,8 @@ public class GetEdgeContainerResponseBody extends TeaModel {
     public String billingMode;
 
     /**
+     * <p>The plan instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-cn-jea67jfbs0x</p>
      */
@@ -19,6 +23,8 @@ public class GetEdgeContainerResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9BEB8659-9CDE-5F2C-83E9-50F55277E844</p>
      */
@@ -26,6 +32,8 @@ public class GetEdgeContainerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The plan instance status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

@@ -23,7 +23,7 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the operation. A value of <code>OK</code> indicates that the operation was successful.</p>
+     * <p>The operation status, which indicates success or failure.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

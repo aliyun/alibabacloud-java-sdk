@@ -20,7 +20,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public String checkRemainingSiteQuota;
 
     /**
-     * <p>The instance ID. Use this parameter to query a specific instance.</p>
+     * <p>The instance ID. Specify this parameter to query a specific instance.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-dps-xxxxxx</p>
@@ -29,7 +29,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number for paging. The value must be greater than or equal to 1.</p>
+     * <p>The page number for paging queries. The value must be greater than or equal to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page for paging queries. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -49,7 +49,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     /**
      * <p>The field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li>CreateTime: sorts by creation time.</li>
+     * <li>CreateTime: sorted by creation time</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
      * <ul>
      * <li><p>asc: ascending order</p>
      * </li>
-     * <li><p>desc: descending order.</p>
+     * <li><p>desc: descending order</p>
      * </li>
      * </ul>
      * 

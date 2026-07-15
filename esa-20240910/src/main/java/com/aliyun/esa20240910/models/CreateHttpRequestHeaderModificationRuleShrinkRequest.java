@@ -5,19 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaModel {
     /**
-     * <p>An array of objects that define Request Header modifications. Supported operations include add, del, and modify.</p>
+     * <p>The request header modifications. Three operation types are supported: add, delete, and modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RequestHeaderModification")
     public String requestHeaderModificationShrink;
 
     /**
-     * <p>The content of the Rule, which uses a Conditional Expression to match user requests. This parameter is not required when you add a global configuration. Supports two Use Cases:</p>
+     * <p>The rule content, which uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li><p>To match all incoming requests, set the value to true.</p>
-     * </li>
-     * <li><p>To match specific requests, set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;).</p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,12 +25,10 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the Rule. This parameter is not required when you add a global configuration. Valid values are:</p>
+     * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
      * <ul>
-     * <li><p>on: Enables the Rule.</p>
-     * </li>
-     * <li><p>off: Disables the Rule.</p>
-     * </li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +38,7 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String ruleEnable;
 
     /**
-     * <p>The name of the Rule. This parameter is not required when you add a global configuration.</p>
+     * <p>The rule name. This parameter is not required when you add a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -51,7 +47,7 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String ruleName;
 
     /**
-     * <p>The execution order of the Rule. A smaller value indicates a higher priority.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +56,7 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public Integer sequence;
 
     /**
-     * <p>The ID of the Site. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +66,7 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public Long siteId;
 
     /**
-     * <p>The Version of the Site configuration. For a Site with configuration versioning enabled, this parameter specifies the configuration\&quot;s target Version. The default value is 0.</p>
+     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

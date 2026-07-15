@@ -14,10 +14,10 @@ public class DeleteRoutineRelatedRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>The operation status. Valid values:</p>
      * <ul>
-     * <li>OK</li>
-     * <li>Fail</li>
+     * <li><strong>OK</strong>: The operation was successful.</li>
+     * <li><strong>Fail</strong>: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

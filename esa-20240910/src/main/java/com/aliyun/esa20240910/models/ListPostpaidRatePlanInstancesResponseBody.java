@@ -175,9 +175,9 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
 
     public static class ListPostpaidRatePlanInstancesResponseBodyInstanceInfo extends TeaModel {
         /**
-         * <p>The billable methods. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>dps_month95: monthly 95th percentile billing.</li>
+         * <li>dps_month95: Monthly 95th Percentile.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String billingMode;
 
         /**
-         * <p>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</p>
+         * <p>The acceleration regions to which sites can be associated with this instance. Multiple values are separated by commas (,). Valid values:</p>
          * <ul>
          * <li>domestic: the Chinese mainland.</li>
          * <li>overseas: global (excluding the Chinese mainland).</li>
@@ -213,7 +213,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String coverages;
 
         /**
-         * <p>The time when the instance was created. The value is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-19T11:15:20Z</p>
@@ -222,7 +222,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The scheduled specification change time. The value is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The scheduled specification change time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-19T11:15:20Z</p>
@@ -252,7 +252,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
          * <p>The plan name in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试套餐</p>
+         * <p>test-plan</p>
          */
         @NameInMap("PlanNameCn")
         public String planNameCn;
@@ -260,8 +260,8 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         /**
          * <p>The plan type of the instance. Valid values:</p>
          * <ul>
-         * <li>normal: Fixed plan.</li>
-         * <li>enterprise: Enterprise plan.</li>
+         * <li>normal: Fixed edition plan.</li>
+         * <li>enterprise: Enterprise edition plan.</li>
          * </ul>
          * 
          * <strong>example:</strong>

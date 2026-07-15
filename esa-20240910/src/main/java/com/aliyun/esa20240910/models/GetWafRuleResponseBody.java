@@ -69,6 +69,9 @@ public class GetWafRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000001</p>
      */
     @NameInMap("RulesetId")
     public Long rulesetId;

@@ -5,28 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListWafManagedRulesRequest extends TeaModel {
     /**
-     * <p>The attack type to filter the results by. Valid values:</p>
+     * <p>The attack type of the vulnerability prevention event. Valid values:</p>
      * <ul>
-     * <li><p>SQL injection</p>
-     * </li>
-     * <li><p>cross-site scripting</p>
-     * </li>
-     * <li><p>code execution</p>
-     * </li>
-     * <li><p>CRLF</p>
-     * </li>
-     * <li><p>local file inclusion</p>
-     * </li>
-     * <li><p>remote file inclusion</p>
-     * </li>
-     * <li><p>webshell</p>
-     * </li>
-     * <li><p>cross-site request forgery</p>
-     * </li>
-     * <li><p>Other</p>
-     * </li>
-     * <li><p>SEMA</p>
-     * </li>
+     * <li>SQL injection</li>
+     * <li>cross-site scripting (XSS)</li>
+     * <li>code execute</li>
+     * <li>CRLF</li>
+     * <li>local file inclusion (LFI)</li>
+     * <li>remote file inclusion (RFI)</li>
+     * <li>webshell</li>
+     * <li>cross-site request forgery</li>
+     * <li>Others</li>
+     * <li>SEMA</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -45,16 +35,20 @@ public class ListWafManagedRulesRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The WAF instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esa-site-awmmx25y2igw</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The response language. Valid values:</p>
+     * <p>The language type. The response is returned in the specified language. Valid values:</p>
      * <ul>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
-     * <li><p><strong>zh</strong>: Chinese.</p>
-     * </li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,11 +57,15 @@ public class ListWafManagedRulesRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <p>The managed ruleset configuration in JSON string format.</p>
+     * <p>Contains the AttackType, ProtectionLevel, Action, and ManagedRules subfields. When ProtectionLevel is set to -1 (custom mode), specify the status and action for each rule through the ManagedRules array.</p>
+     */
     @NameInMap("ManagedRuleset")
     public ListWafManagedRulesRequestManagedRuleset managedRuleset;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,7 +74,7 @@ public class ListWafManagedRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -84,17 +82,28 @@ public class ListWafManagedRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The currently saved protection level, which represents the existing configuration state in the database.</p>
+     * <p>Valid values: -1 (custom mode), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</p>
+     * <p>Difference from ManagedRuleset.ProtectionLevel: this parameter indicates the currently effective configuration, while ManagedRuleset.ProtectionLevel indicates the target value being passed in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ProtectionLevel")
     public Integer protectionLevel;
 
     /**
      * <p>The query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;Status\&quot;:\&quot;\&quot;,\&quot;ProtectionLevels\&quot;:[2,1],\&quot;Action\&quot;:\&quot;\&quot;,\&quot;IdNameLike\&quot;:\&quot;\&quot;}</p>
      */
     @NameInMap("QueryArgs")
     public ListWafManagedRulesRequestQueryArgs queryArgs;
 
     /**
-     * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
+     * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -188,12 +197,36 @@ public class ListWafManagedRulesRequest extends TeaModel {
     }
 
     public static class ListWafManagedRulesRequestManagedRulesetManagedRules extends TeaModel {
+        /**
+         * <p>The action for a single rule. This parameter takes effect only in custom mode (ProtectionLevel = -1).</p>
+         * <p>Common valid values: monitor, deny, js, captcha. The actual available values depend on the instance quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>js</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The unique ID of a single managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20611349</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The rule enabled status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -229,15 +262,41 @@ public class ListWafManagedRulesRequest extends TeaModel {
     }
 
     public static class ListWafManagedRulesRequestManagedRuleset extends TeaModel {
+        /**
+         * <p>The unified action when ProtectionLevel is greater than 0. This parameter cannot be empty in this case.</p>
+         * <p>Common valid values: monitor, deny, js, captcha. The actual available values depend on the instance quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>monitor</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The attack type encoding. The value cannot be 0.</p>
+         * <p>Example values: 11 (SQL injection), 12 (XSS), 13 (code execute), 14 (CRLF), 15 (local file inclusion (LFI)), 16 (remote file inclusion (RFI)), 17 (WebShell), 22 (command injection), 26 (SSRF), 27 (path traversal), 28 (protocol violation), 31 (scanner behavior).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("AttackType")
         public Integer attackType;
 
+        /**
+         * <p>The rule configuration list in custom mode. This parameter is used only when ProtectionLevel is set to -1.</p>
+         * <p>Each element contains Id, Status, and Action, which are used to specify the enabled status and action for each managed rule.</p>
+         */
         @NameInMap("ManagedRules")
         public java.util.List<ListWafManagedRulesRequestManagedRulesetManagedRules> managedRules;
 
+        /**
+         * <p>The protection level within the ruleset.</p>
+         * <p>Valid values: -1 (custom mode, specify each rule through ManagedRules), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</p>
+         * <p>When the value is -1, ManagedRules cannot be empty. When the value is greater than 0, Action cannot be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ProtectionLevel")
         public Integer protectionLevel;
 
@@ -282,7 +341,7 @@ public class ListWafManagedRulesRequest extends TeaModel {
 
     public static class ListWafManagedRulesRequestQueryArgs extends TeaModel {
         /**
-         * <p>The rule action to filter by.</p>
+         * <p>The action.</p>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -291,7 +350,7 @@ public class ListWafManagedRulesRequest extends TeaModel {
         public String action;
 
         /**
-         * <p>The keyword for a fuzzy search on the rule ID or rule name.</p>
+         * <p>Fuzzy match by rule ID or rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -300,13 +359,13 @@ public class ListWafManagedRulesRequest extends TeaModel {
         public String idNameLike;
 
         /**
-         * <p>The rule protection levels to filter the results by.</p>
+         * <p>The list of rule protection levels.</p>
          */
         @NameInMap("ProtectionLevels")
         public java.util.List<Integer> protectionLevels;
 
         /**
-         * <p>The rule status to filter by.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>

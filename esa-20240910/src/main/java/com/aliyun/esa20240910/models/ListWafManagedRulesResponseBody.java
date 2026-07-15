@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafManagedRulesResponseBody extends TeaModel {
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of managed rules.</p>
+     * <p>The list of managed rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListWafManagedRulesResponseBodyRules> rules;
@@ -93,7 +93,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
 
     public static class ListWafManagedRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The managed rule\&quot;s action.</p>
+         * <p>The protection action of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -120,7 +120,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The managed rule\&quot;s protection level.</p>
+         * <p>The protection level of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +129,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         public Integer protectionLevel;
 
         /**
-         * <p>The managed rule\&quot;s status.</p>
+         * <p>The protection status of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>

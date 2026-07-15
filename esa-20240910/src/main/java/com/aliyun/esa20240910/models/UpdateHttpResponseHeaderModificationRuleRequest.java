@@ -23,8 +23,8 @@ public class UpdateHttpResponseHeaderModificationRuleRequest extends TeaModel {
     /**
      * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li>Match all incoming requests: Set the value to true.</li>
-     * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
+     * <li>Match all incoming requests: set the value to true.</li>
+     * <li>Match specified requests: set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateHttpResponseHeaderModificationRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</p>
+     * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
      * <ul>
      * <li>on: enabled.</li>
      * <li>off: disabled.</li>

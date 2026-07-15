@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListCasCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The certificate list.</p>
+     */
     @NameInMap("Certificates")
     public java.util.List<ListCasCertificatesResponseBodyCertificates> certificates;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
@@ -29,6 +38,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,6 +93,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
 
     public static class ListCasCertificatesResponseBodyCertificates extends TeaModel {
         /**
+         * <p>The common name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>example.com</p>
          */
@@ -89,6 +102,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         public String commonName;
 
         /**
+         * <p>The certificate fingerprint.</p>
+         * 
          * <strong>example:</strong>
          * <p>0151xxxx</p>
          */
@@ -96,6 +111,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         public String fingerprint;
 
         /**
+         * <p>The certificate ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30000145</p>
          */
@@ -103,6 +120,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The certificate issuer.</p>
+         * 
          * <strong>example:</strong>
          * <p>DigiCert</p>
          */
@@ -110,6 +129,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>The certificate name.</p>
+         * 
          * <strong>example:</strong>
          * <p>demo</p>
          */
@@ -117,6 +138,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The expiration time of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708423200000</p>
          */
@@ -124,6 +147,8 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         public String notAfter;
 
         /**
+         * <p>The region where the certificate resides. Supported values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
          */

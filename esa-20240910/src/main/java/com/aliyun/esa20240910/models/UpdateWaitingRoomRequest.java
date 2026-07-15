@@ -26,7 +26,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
      * <p>The description of the waiting room.</p>
      * 
      * <strong>example:</strong>
-     * <p>特别活动排队页面</p>
+     * <p>Special event queue page</p>
      */
     @NameInMap("Description")
     public String description;
@@ -94,7 +94,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
      * <p>The name of the waiting room.</p>
      * 
      * <strong>example:</strong>
-     * <p>节假日促销等候室</p>
+     * <p>holiday-promotion-waiting-room</p>
      */
     @NameInMap("Name")
     public String name;
@@ -137,7 +137,7 @@ public class UpdateWaitingRoomRequest extends TeaModel {
     public String queuingMethod;
 
     /**
-     * <p>The HTTP status code returned by the waiting room. Valid values:</p>
+     * <p>The status code returned by the waiting room. Valid values:</p>
      * <ul>
      * <li><strong>200</strong></li>
      * <li><strong>202</strong></li>

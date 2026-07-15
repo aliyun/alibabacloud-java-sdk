@@ -233,6 +233,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a user opportunity order.</p>
+     * 
+     * @param request AddUserBusinessFormRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddUserBusinessFormResponse
+     */
+    public AddUserBusinessFormResponse addUserBusinessFormWithOptions(AddUserBusinessFormRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.company)) {
+            query.put("Company", request.company);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
+            query.put("PhoneNumber", request.phoneNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.position)) {
+            query.put("Position", request.position);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.website)) {
+            query.put("Website", request.website);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddUserBusinessForm"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddUserBusinessFormResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a user opportunity order.</p>
+     * 
+     * @param request AddUserBusinessFormRequest
+     * @return AddUserBusinessFormResponse
+     */
+    public AddUserBusinessFormResponse addUserBusinessForm(AddUserBusinessFormRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addUserBusinessFormWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Applies for a free certificate.</p>
      * 
      * @param request ApplyCertificateRequest
@@ -743,7 +811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves match fields for a batch of expressions.</p>
+     * <p>Retrieves matching items for expressions in batches.</p>
      * 
      * @param tmpReq BatchGetExpressionFieldsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -803,7 +871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves match fields for a batch of expressions.</p>
+     * <p>Retrieves matching items for expressions in batches.</p>
      * 
      * @param request BatchGetExpressionFieldsRequest
      * @return BatchGetExpressionFieldsResponse
@@ -1266,6 +1334,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CheckAssumeSlrRoleResponse checkAssumeSlrRole() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.checkAssumeSlrRoleWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Validates whether a site is compatible with the target plan during site plan migration.</p>
+     * 
+     * @param request CheckSiteFeaturesMatchPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckSiteFeaturesMatchPlanResponse
+     */
+    public CheckSiteFeaturesMatchPlanResponse checkSiteFeaturesMatchPlanWithOptions(CheckSiteFeaturesMatchPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.newInstanceId)) {
+            query.put("NewInstanceId", request.newInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckSiteFeaturesMatchPlan"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckSiteFeaturesMatchPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Validates whether a site is compatible with the target plan during site plan migration.</p>
+     * 
+     * @param request CheckSiteFeaturesMatchPlanRequest
+     * @return CheckSiteFeaturesMatchPlanResponse
+     */
+    public CheckSiteFeaturesMatchPlanResponse checkSiteFeaturesMatchPlan(CheckSiteFeaturesMatchPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkSiteFeaturesMatchPlanWithOptions(request, runtime);
     }
 
     /**
@@ -2376,7 +2492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Configuration for modifying a Site\&quot;s HTTP Request Headers.</p>
+     * <p>Creates an HTTP request header modification configuration for a site.</p>
      * 
      * @param tmpReq CreateHttpRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2438,7 +2554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Configuration for modifying a Site\&quot;s HTTP Request Headers.</p>
+     * <p>Creates an HTTP request header modification configuration for a site.</p>
      * 
      * @param request CreateHttpRequestHeaderModificationRuleRequest
      * @return CreateHttpRequestHeaderModificationRuleResponse
@@ -2450,7 +2566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a rule to modify HTTP response headers.</p>
+     * <p>Creates an HTTP response header modification configuration.</p>
      * 
      * @param tmpReq CreateHttpResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2512,7 +2628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a rule to modify HTTP response headers.</p>
+     * <p>Creates an HTTP response header modification configuration.</p>
      * 
      * @param request CreateHttpResponseHeaderModificationRuleRequest
      * @return CreateHttpResponseHeaderModificationRuleResponse
@@ -3852,7 +3968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a new record to a site that triggers a specified edge function Routine.</p>
+     * <p>Adds an associated site record for an Edge Routine function. This creates a new record under the site to trigger the execution of the Edge Routine function code.</p>
      * 
      * @param request CreateRoutineRelatedRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3892,7 +4008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a new record to a site that triggers a specified edge function Routine.</p>
+     * <p>Adds an associated site record for an Edge Routine function. This creates a new record under the site to trigger the execution of the Edge Routine function code.</p>
      * 
      * @param request CreateRoutineRelatedRecordRequest
      * @return CreateRoutineRelatedRecordResponse
@@ -7049,7 +7165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a routine in Edge Routine.</p>
+     * <p>Deletes an Edge Routine.</p>
      * 
      * @param request DeleteRoutineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7081,7 +7197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a routine in Edge Routine.</p>
+     * <p>Deletes an Edge Routine.</p>
      * 
      * @param request DeleteRoutineRequest
      * @return DeleteRoutineResponse
@@ -7141,7 +7257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a record that is associated with a routine.</p>
+     * <p>Deletes an association record of an Edge Routine.</p>
      * 
      * @param request DeleteRoutineRelatedRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7187,7 +7303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a record that is associated with a routine.</p>
+     * <p>Deletes an association record of an Edge Routine.</p>
      * 
      * @param request DeleteRoutineRelatedRecordRequest
      * @return DeleteRoutineRelatedRecordResponse
@@ -8085,7 +8201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the price for a configuration change of a cache reserve instance.</p>
+     * <p>Queries the price for a cache-retained specification change.</p>
      * 
      * @param request DescribeCacheReservePriceGapRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8121,7 +8237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the price for a configuration change of a cache reserve instance.</p>
+     * <p>Queries the price for a cache-retained specification change.</p>
      * 
      * @param request DescribeCacheReservePriceGapRequest
      * @return DescribeCacheReservePriceGapResponse
@@ -10719,7 +10835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetEdgeImage</p>
+     * <p>Retrieves the details of an edge container plan instance.</p>
      * 
      * @param request GetEdgeContainerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10751,7 +10867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetEdgeImage</p>
+     * <p>Retrieves the details of an edge container plan instance.</p>
      * 
      * @param request GetEdgeContainerRequest
      * @return GetEdgeContainerResponse
@@ -13861,7 +13977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a single rule in Web Application Firewall (WAF). You can call this operation to query the configuration and status of a specific rule.</p>
+     * <p>Retrieves the details of a single rule in Web Application Firewall (WAF). You can use this operation to query the configuration and status of a specific rule.</p>
      * 
      * @param request GetWafRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13897,7 +14013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a single rule in Web Application Firewall (WAF). You can call this operation to query the configuration and status of a specific rule.</p>
+     * <p>Retrieves the details of a single rule in Web Application Firewall (WAF). You can use this operation to query the configuration and status of a specific rule.</p>
      * 
      * @param request GetWafRuleRequest
      * @return GetWafRuleResponse
@@ -14041,7 +14157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询证书列表，支持翻页</p>
+     * <p>Queries the list of China Shield certificates.</p>
      * 
      * @param request ListCasCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14085,7 +14201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询证书列表，支持翻页</p>
+     * <p>Queries the list of China Shield certificates.</p>
      * 
      * @param request ListCasCertificatesRequest
      * @return ListCasCertificatesResponse
@@ -15502,10 +15618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating a load balancer \&quot;based on country/region scheduling\&quot; strategy through OpenAPI, use the code of primary or secondary regions to represent traffic from this geographical area.</p>
+     * <p>When you create a country/region-based scheduling policy for a load balancing instance by calling an OpenAPI operation, use the primary or secondary region code from the lookup table to represent traffic originating from the corresponding geographic region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Load Balancer Region List</p>
+     * <p>Queries the primary and secondary region information of a load balancing instance to obtain geographic region codes, descriptions, and other basic information that are active and can be used to configure a country/region-based scheduling policy for the load balancing instance.</p>
      * 
      * @param request ListLoadBalancerRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15533,10 +15649,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When creating a load balancer \&quot;based on country/region scheduling\&quot; strategy through OpenAPI, use the code of primary or secondary regions to represent traffic from this geographical area.</p>
+     * <p>When you create a country/region-based scheduling policy for a load balancing instance by calling an OpenAPI operation, use the primary or secondary region code from the lookup table to represent traffic originating from the corresponding geographic region.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query Load Balancer Region List</p>
+     * <p>Queries the primary and secondary region information of a load balancing instance to obtain geographic region codes, descriptions, and other basic information that are active and can be used to configure a country/region-based scheduling policy for the load balancing instance.</p>
      * 
      * @param request ListLoadBalancerRegionsRequest
      * @return ListLoadBalancerRegionsResponse
@@ -15588,7 +15704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Custom Managed Rule Groups</p>
+     * <p>Lists all WAF managed rule groups under the current account. You can call this operation to retrieve a list of all rule groups and their summary information.</p>
      * 
      * @param request ListManagedRulesGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15624,7 +15740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List Custom Managed Rule Groups</p>
+     * <p>Lists all WAF managed rule groups under the current account. You can call this operation to retrieve a list of all rule groups and their summary information.</p>
      * 
      * @param request ListManagedRulesGroupsRequest
      * @return ListManagedRulesGroupsResponse
@@ -17119,7 +17235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of WAF managed rules, optionally filtered by specific criteria. The response is paginated.</p>
+     * <p>Lists all managed rules under Web Application Firewall (WAF) or filters rules based on specific conditions. You can use this operation to query detailed information about WAF managed rules in a paginated manner.</p>
      * 
      * @param tmpReq ListWafManagedRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17197,7 +17313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of WAF managed rules, optionally filtered by specific criteria. The response is paginated.</p>
+     * <p>Lists all managed rules under Web Application Firewall (WAF) or filters rules based on specific conditions. You can use this operation to query detailed information about WAF managed rules in a paginated manner.</p>
      * 
      * @param request ListWafManagedRulesRequest
      * @return ListWafManagedRulesResponse
@@ -17607,10 +17723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</p>
+     * <p>This API allows you to query the configuration details of all waiting rooms for a specified site, including the enabled status, name, and queuing rules.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all waiting rooms in a website.</p>
+     * <p>Queries the details of all configured waiting rooms for a specified site.</p>
      * 
      * @param request ListWaitingRoomsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17638,10 +17754,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</p>
+     * <p>This API allows you to query the configuration details of all waiting rooms for a specified site, including the enabled status, name, and queuing rules.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all waiting rooms in a website.</p>
+     * <p>Queries the details of all configured waiting rooms for a specified site.</p>
      * 
      * @param request ListWaitingRoomsRequest
      * @return ListWaitingRoomsResponse
@@ -17887,7 +18003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a specific version of Edge Routine code to the staging or production environment. When publishing to the production environment, you can choose canary release to specific regions.</p>
+     * <p>Publishes a specific version of Edge Routine code to a staging or production environment. When publishing to the production environment, you can perform a canary release to specific regions.</p>
      * 
      * @param request PublishRoutineCodeVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17927,7 +18043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Publishes a specific version of Edge Routine code to the staging or production environment. When publishing to the production environment, you can choose canary release to specific regions.</p>
+     * <p>Publishes a specific version of Edge Routine code to a staging or production environment. When publishing to the production environment, you can perform a canary release to specific regions.</p>
      * 
      * @param request PublishRoutineCodeVersionRequest
      * @return PublishRoutineCodeVersionResponse

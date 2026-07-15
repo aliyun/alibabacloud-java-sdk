@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCasCertificatesRequest extends TeaModel {
     /**
+     * <p>The current page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListCasCertificatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size. Valid values: any integer from 1 to 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ListCasCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The certificate name for fuzzy match.</p>
+     * 
      * <strong>example:</strong>
      * <p>aliyun</p>
      */

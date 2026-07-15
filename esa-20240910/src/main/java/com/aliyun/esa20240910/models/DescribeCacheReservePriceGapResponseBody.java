@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
+    /**
+     * <p>The pricing information.</p>
+     */
     @NameInMap("PriceModel")
     public DescribeCacheReservePriceGapResponseBodyPriceModel priceModel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40423A7F-A83D-1E24-B80E-86DD25790759</p>
      */
@@ -86,6 +91,13 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
 
     public static class DescribeCacheReservePriceGapResponseBodyPriceModel extends TeaModel {
         /**
+         * <p>The currency. Valid values:</p>
+         * <ul>
+         * <li>JPY: Japanese Yen.</li>
+         * <li>USD: US Dollar.</li>
+         * <li>CNY: Chinese Yuan.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -93,6 +105,8 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discount amount of the order.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -100,6 +114,8 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>esa-cr-9tuv*********</p>
          */
@@ -107,6 +123,8 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The final order price, which is the actual transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -117,6 +135,8 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
         public DescribeCacheReservePriceGapResponseBodyPriceModelRule rule;
 
         /**
+         * <p>The original order price. Original order price = actual transaction price + discount amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

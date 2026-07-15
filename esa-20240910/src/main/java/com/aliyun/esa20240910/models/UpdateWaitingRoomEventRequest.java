@@ -90,7 +90,7 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
      * <p>The name of the waiting room event.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试事件2</p>
+     * <p>test event</p>
      */
     @NameInMap("Name")
     public String name;
@@ -130,7 +130,7 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
      * <p>The queuing method. Valid values:</p>
      * <ul>
      * <li><strong>random</strong>: random.</li>
-     * <li><strong>fifo</strong>: first-in, first-out.</li>
+     * <li><strong>fifo</strong>: first-in-first-out.</li>
      * <li><strong>passthrough</strong>: passthrough.</li>
      * <li><strong>reject-all</strong>: reject all.</li>
      * </ul>

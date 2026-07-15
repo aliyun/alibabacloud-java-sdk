@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCacheReservePriceGapRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>esa-cr-9tuv*********</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCacheReservePriceGapRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The requested cache size. Unit: GB.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

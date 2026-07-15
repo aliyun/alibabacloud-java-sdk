@@ -5,19 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateHttpResponseHeaderModificationRuleShrinkRequest extends TeaModel {
     /**
-     * <p>An array of objects that specify modifications to the response header. The supported operations are <code>add</code>, <code>del</code>, and <code>modify</code>.</p>
+     * <p>The response header modifications. Three operation types are supported: add, delete, and modify.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResponseHeaderModification")
     public String responseHeaderModificationShrink;
 
     /**
-     * <p>Specifies the conditional expression that an incoming request must match for the rule to apply. This parameter is not required when adding a Global Configuration. You can set the value in one of the following ways:</p>
+     * <p>The rule content, which uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
      * <ul>
-     * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
-     * </li>
-     * <li><p>To match specific requests, set the value to a custom expression. For example: <code>(http.host eq &quot;video.example.com&quot;)</code></p>
-     * </li>
+     * <li>Match all incoming requests: Set the value to true.</li>
+     * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,12 +25,10 @@ public class CreateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. This parameter is not required when adding a Global Configuration. Valid values:</p>
+     * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
      * <ul>
-     * <li><p><code>on</code>: Enables the rule.</p>
-     * </li>
-     * <li><p><code>off</code>: Disables the rule.</p>
-     * </li>
+     * <li>on: enabled.</li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +38,7 @@ public class CreateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String ruleEnable;
 
     /**
-     * <p>The name of the rule. This parameter is not required when adding a Global Configuration.</p>
+     * <p>The rule name. This parameter is not required when you add a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -51,7 +47,7 @@ public class CreateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String ruleName;
 
     /**
-     * <p>The rule\&quot;s execution order. A lower value indicates a higher priority.</p>
+     * <p>The rule execution order. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +56,7 @@ public class CreateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public Integer sequence;
 
     /**
-     * <p>The Site ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +66,7 @@ public class CreateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public Long siteId;
 
     /**
-     * <p>The version number of the Site configuration. For sites with Configuration Version Management enabled, this parameter specifies the configuration version that the Rule applies to. If omitted, this parameter defaults to version 0.</p>
+     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

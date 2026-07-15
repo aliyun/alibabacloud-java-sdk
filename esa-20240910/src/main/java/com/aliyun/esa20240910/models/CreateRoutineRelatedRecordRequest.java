@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRoutineRelatedRecordRequest extends TeaModel {
     /**
-     * <p>The name of the edge function Routine.</p>
+     * <p>The name of the Edge Routine function.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
