@@ -40,9 +40,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig interconnectConfig;
 
     /**
-     * <p>The network type of the edge node pool. This parameter takes effect only for node pools whose <code>type</code> is <code>edge</code>. Valid values:</p>
+     * <p>The network type of the edge node pool. This parameter takes effect only for node pools with <code>type</code> set to <code>edge</code>. Valid values:</p>
      * <ul>
-     * <li><code>basic</code>: public network. Nodes in cloud node pool communicate with cloud nodes over the Internet. Applications in cloud node pool cannot directly access the cloud VPC internal network.</li>
+     * <li><code>basic</code>: public network. Nodes in cloud node pool interact with cloud nodes over the public network. Applications in cloud node pool cannot directly access the cloud VPC internal network.</li>
      * <li><code>private</code>: private network. Nodes in cloud node pool connect to the cloud through Express Connect, VPN, or CEN, providing higher cloud-edge communication quality and more effective security.</li>
      * </ul>
      * 
@@ -53,10 +53,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public String interconnectMode;
 
     /**
-     * <p>Indicates whether nodes within the edge node pool have Layer 3 network connectivity.</p>
+     * <p>Specifies whether nodes in the edge node pool have Layer 3 network connectivity with each other.</p>
      * <ul>
-     * <li><code>true</code>: connected. All nodes within the node pool have Layer 3 network connectivity.</li>
-     * <li><code>false</code>: not connected. All nodes within the node pool do not have Layer 3 network connectivity.</li>
+     * <li><code>true</code>: connected. All nodes in the node pool have Layer 3 network connectivity.</li>
+     * <li><code>false</code>: not connected. All nodes in the node pool do not have Layer 3 network connectivity.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyAutoMode extends TeaModel {
         /**
-         * <p>Indicates whether this feature is enabled.</p>
+         * <p>Specifies whether to enable intelligent managed mode.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -283,7 +283,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyAutoScaling extends TeaModel {
         /**
-         * <p>The peak bandwidth of the EIP.</p>
+         * <p>The EIP peak bandwidth.</p>
          * <p>Valid values: [1,100]. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          * <p>The EIP billing type. Valid values:</p>
          * <ul>
          * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
-         * <li><code>PayByTraffic</code>: pay-by-data-transfer.</li>
+         * <li><code>PayByTraffic</code>: pay-by-traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,11 +306,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String eipInternetChargeType;
 
         /**
-         * <p>Specifies whether auto scaling is enabled. Valid values:</p>
+         * <p>Specifies whether the auto scaling feature is enabled. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Enables the auto scaling feature for the node pool. When the cluster capacity planning cannot meet the scheduling requirements of application pods, ACK automatically scales nodes based on the configured minimum and maximum instance counts. Clusters of version 1.24 and later use instant node elasticity by default. Clusters of versions earlier than 1.24 use node auto scaling by default. For more information, see <a href="https://help.aliyun.com/document_detail/2746785.html">Node scaling</a>.</p>
+         * <li><p><code>true</code>: Enables the auto scaling feature for the node pool. When the cluster capacity planning cannot meet the scheduling requirements of application Pods, ACK automatically scales node resources based on the configured minimum and maximum instance counts. Clusters of version 1.24 and later use instant elasticity by default. Clusters of versions earlier than 1.24 use node auto scaling by default. For more information, see <a href="https://help.aliyun.com/document_detail/2746785.html">Node scaling</a>.</p>
          * </li>
-         * <li><p><code>false</code>: Disables auto scaling. ACK adjusts the number of nodes in the node pool based on the configured desired node count and maintains the node count at the desired value.</p>
+         * <li><p><code>false</code>: Disables auto scaling. ACK adjusts the number of nodes in the node pool based on the configured desired node count, maintaining the node count at the desired value.</p>
          * </li>
          * </ul>
          * <p>When this parameter is set to false, other configuration parameters in <code>auto_scaling</code> do not take effect.</p>
@@ -322,10 +322,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Specifies whether to associate an EIP. Valid values:</p>
+         * <p>Specifies whether an EIP is associated. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Associate an EIP.</li>
-         * <li><code>false</code>: Do not associate an EIP.</li>
+         * <li><code>true</code>: An EIP is associated.</li>
+         * <li><code>false</code>: No EIP is associated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -493,7 +493,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolDetailResponseBodyInterconnectConfig extends TeaModel {
         /**
          * <p>[This field is deprecated]</p>
-         * <p>The network bandwidth of the enhanced edge node pool, in Mbit/s.</p>
+         * <p>The network bandwidth of the enhanced edge node pool, in Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -513,7 +513,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
         /**
          * <p>[This field is deprecated]</p>
-         * <p>The region of the CCN instance bound to the enhanced edge node pool.</p>
+         * <p>The region of the Cloud Connect Network instance bound to the enhanced edge node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -592,8 +592,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view monitoring information for the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: installs the CloudMonitor agent on ECS nodes.</li>
-         * <li><code>false</code>: does not install the CloudMonitor agent on ECS nodes.</li>
+         * <li><code>true</code>: Install the CloudMonitor agent on ECS nodes.</li>
+         * <li><code>false</code>: Do not install the CloudMonitor agent on ECS nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -637,7 +637,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String nodeNameMode;
 
         /**
-         * <p>The pre-initialization custom data of the node pool, which is a script that runs before node initialization. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate instance user data</a>.</p>
+         * <p>The node pool pre-custom data, which is a script that runs before node initialization. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate instance user data</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dGhpcyBpcyBhIGV4YW1wbGU</p>
@@ -648,9 +648,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         /**
          * <p>The container runtime name. ACK supports the following three container runtimes:</p>
          * <ul>
-         * <li>containerd: recommended, supports all cluster versions.</li>
-         * <li>Sandboxed-Container.runv: sandboxed container, provides higher isolation, supports cluster versions 1.31 and earlier.</li>
-         * <li>docker: no longer maintained, supports cluster versions 1.22 and earlier.</li>
+         * <li>containerd: recommended. Supports all cluster versions.</li>
+         * <li>Sandboxed-Container.runv: sandboxed container that provides higher isolation. Supports cluster versions 1.31 and earlier.</li>
+         * <li>docker: no longer maintained. Supports cluster versions 1.22 and earlier.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -675,11 +675,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public java.util.List<Taint> taints;
 
         /**
-         * <p>Indicates whether nodes are unschedulable after scale-out.</p>
+         * <p>Specifies whether nodes are unschedulable after scale-out.</p>
          * <ul>
-         * <li><p>true: unschedulable.</p>
+         * <li><p>true: Unschedulable.</p>
          * </li>
-         * <li><p>false: schedulable.</p>
+         * <li><p>false: Schedulable.</p>
          * </li>
          * </ul>
          * 
@@ -690,7 +690,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean unschedulable;
 
         /**
-         * <p>The custom data of the node pool, which is a script that runs after node initialization. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate instance user data</a>.</p>
+         * <p>The node pool custom data, which is a script that runs after node initialization. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate instance user data</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFDSyEi</p>
@@ -805,10 +805,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String autoRepairPolicyId;
 
         /**
-         * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_repair=true</code>.</p>
+         * <p>Specifies whether node restart is allowed. This parameter takes effect only when <code>auto_repair=true</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Allow node restart.</li>
-         * <li><code>false</code>: Do not allow node restart.</li>
+         * <li><code>true</code>: Node restart is allowed.</li>
+         * <li><code>false</code>: Node restart is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -850,10 +850,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy extends TeaModel {
         /**
-         * <p>Specifies whether to allow automatic kubelet upgrade. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
+         * <p>Specifies whether automatic kubelet upgrade is allowed. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Allow automatic kubelet upgrade.</li>
-         * <li><code>false</code>: Do not allow automatic kubelet upgrade.</li>
+         * <li><code>true</code>: Automatic kubelet upgrade is allowed.</li>
+         * <li><code>false</code>: Automatic kubelet upgrade is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -888,10 +888,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String excludePackages;
 
         /**
-         * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_vul_fix=true</code>. Valid values:</p>
+         * <p>Specifies whether node restart is allowed. This parameter takes effect only when <code>auto_vul_fix=true</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Allow node restart.</li>
-         * <li><code>false</code>: Do not allow node restart.</li>
+         * <li><code>true</code>: Node restart is allowed.</li>
+         * <li><code>false</code>: Node restart is not allowed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -901,7 +901,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean restartNode;
 
         /**
-         * <p>The vulnerability levels that are allowed for automatic fix, separated by commas.</p>
+         * <p>The vulnerability levels allowed for automatic fix, separated by commas.</p>
          * <ul>
          * <li><code>asap</code>: high</li>
          * <li><code>later</code>: medium</li>
@@ -947,10 +947,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable automatic upgrade. Valid values:</p>
+         * <p>Specifies whether auto upgrade is enabled. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable automatic upgrade.</li>
-         * <li><code>false</code>: Disable automatic upgrade.</li>
+         * <li><code>true</code>: Enables auto upgrade.</li>
+         * <li><code>false</code>: Disables auto upgrade.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -970,7 +970,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long maxUnavailable;
 
         /**
-         * <p>The number of extra nodes. You can set either this parameter or surge_percentage.</p>
+         * <p>The number of extra nodes. Mutually exclusive with surge_percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -979,8 +979,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long surge;
 
         /**
-         * <p>The percentage of extra nodes. You can set either this parameter or <code>surge</code>.</p>
-         * <p>Number of extra nodes = extra node percentage × number of nodes. For example, if the extra node percentage is set to 50% and there are 6 existing nodes, the number of extra nodes = 50% × 6 = 3.</p>
+         * <p>The percentage of extra nodes. Mutually exclusive with <code>surge</code>.</p>
+         * <p>Number of extra nodes = percentage of extra nodes × number of nodes. For example, if the percentage is set to 50% and there are 6 existing nodes, the number of extra nodes = 50% × 6 = 3.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1032,10 +1032,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean autoFaultDiagnosis;
 
         /**
-         * <p>Specifies whether to enable auto repair. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>Specifies whether auto repair is enabled. This parameter takes effect only when <code>enable=true</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable auto repair.</li>
-         * <li><code>false</code>: Disable auto repair.</li>
+         * <li><code>true</code>: Enables auto repair.</li>
+         * <li><code>false</code>: Disables auto repair.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1045,16 +1045,16 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean autoRepair;
 
         /**
-         * <p>The auto repair policy for nodes.</p>
+         * <p>The auto repair node policy.</p>
          */
         @NameInMap("auto_repair_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy autoRepairPolicy;
 
         /**
-         * <p>Specifies whether to enable automatic node upgrade. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>Specifies whether auto upgrade is enabled for nodes. This parameter takes effect only when <code>enable=true</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable automatic upgrade.</li>
-         * <li><code>false</code>: Disable automatic upgrade.</li>
+         * <li><code>true</code>: Enables auto upgrade.</li>
+         * <li><code>false</code>: Disables auto upgrade.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1064,16 +1064,16 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean autoUpgrade;
 
         /**
-         * <p>The automatic upgrade policy.</p>
+         * <p>The auto upgrade policy.</p>
          */
         @NameInMap("auto_upgrade_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoUpgradePolicy autoUpgradePolicy;
 
         /**
-         * <p>Specifies whether to enable automatic CVE fix. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>Specifies whether automatic CVE fix is enabled. This parameter takes effect only when <code>enable=true</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable automatic CVE fix.</li>
-         * <li><code>false</code>: Disable automatic CVE fix.</li>
+         * <li><code>true</code>: Enables automatic CVE fix.</li>
+         * <li><code>false</code>: Disables automatic CVE fix.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1088,11 +1088,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("auto_vul_fix_policy")
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy autoVulFixPolicy;
 
+        @NameInMap("drift_enabled")
+        public Boolean driftEnabled;
+
         /**
-         * <p>Specifies whether to enable the managed node pool. Valid values:</p>
+         * <p>Specifies whether the managed node pool is enabled. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable the managed node pool.</li>
-         * <li><code>false</code>: Disable the managed node pool. Other related configurations take effect only when <code>enable=true</code>.</li>
+         * <li><code>true</code>: Enables the managed node pool.</li>
+         * <li><code>false</code>: Disables the managed node pool. Other related configurations take effect only when <code>enable=true</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1102,7 +1105,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The automatic upgrade configuration. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>The auto upgrade configuration. This parameter takes effect only when <code>enable=true</code>.</p>
          */
         @NameInMap("upgrade_config")
         public DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig upgradeConfig;
@@ -1168,6 +1171,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return this.autoVulFixPolicy;
         }
 
+        public DescribeClusterNodePoolDetailResponseBodyManagement setDriftEnabled(Boolean driftEnabled) {
+            this.driftEnabled = driftEnabled;
+            return this;
+        }
+        public Boolean getDriftEnabled() {
+            return this.driftEnabled;
+        }
+
         public DescribeClusterNodePoolDetailResponseBodyManagement setEnable(Boolean enable) {
             this.enable = enable;
             return this;
@@ -1188,7 +1199,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyNodeComponentsConfig extends TeaModel {
         /**
-         * <p>The node component custom configuration.</p>
+         * <p>The custom configuration of the node component.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</p>
@@ -1284,7 +1295,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyNodeConfigNodeOsConfig extends TeaModel {
         /**
-         * <p>The Hugepage configuration.</p>
+         * <p>The hugepage configuration.</p>
          */
         @NameInMap("hugepage")
         public Hugepage hugepage;
@@ -1351,10 +1362,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>Indicates whether the node pool is the default node pool. A cluster typically has only one default node pool. Valid values:</p>
+         * <p>Indicates whether this is the default node pool. A cluster typically has only one default node pool. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Default node pool.</li>
-         * <li><code>false</code>: Non-default node pool.</li>
+         * <li><code>true</code>: This is the default node pool.</li>
+         * <li><code>false</code>: This is not the default node pool.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1402,7 +1413,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         /**
          * <p>The node pool type. Valid values:</p>
          * <ul>
-         * <li><code>ess</code>: standard node pool (includes managed and elastic scaling features).</li>
+         * <li><code>ess</code>: standard node pool (includes managed and automatic elastic scaling features).</li>
          * <li><code>edge</code>: edge node pool.</li>
          * <li><code>lingjun</code>: Lingjun node pool.</li>
          * </ul>
@@ -1508,9 +1519,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
          * <ul>
          * <li><p><code>Open</code>: open mode. Automatically matches open private pool capacity. If no matching private pool capacity is available, public pool resources are used.</p>
          * </li>
-         * <li><p><code>Target</code>: specified mode. Uses the specified private pool capacity to launch instances. If the private pool capacity is unavailable, the instance fails to launch.</p>
+         * <li><p><code>Target</code>: targeted mode. Uses the specified private pool capacity to launch instances. If the specified private pool capacity is unavailable, instance launch fails.</p>
          * </li>
-         * <li><p><code>None</code>: no private pool mode. The instance launch does not use private pool capacity.</p>
+         * <li><p><code>None</code>: no private pool mode. Instance launch does not use private pool capacity.</p>
          * </li>
          * </ul>
          * 
@@ -1631,10 +1642,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyScalingGroup extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal for nodes. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p>Specifies whether auto-renewal is enabled for nodes. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable auto-renewal.</li>
-         * <li><code>false</code>: Disable auto-renewal.</li>
+         * <li><code>true</code>: Enables auto-renewal.</li>
+         * <li><code>false</code>: Disables auto-renewal.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1657,7 +1668,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>[Deprecated] Use the security_hardening_os parameter instead.</p>
+         * <p>[This field is deprecated] Use the security_hardening_os parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1667,10 +1678,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean cisEnabled;
 
         /**
-         * <p>When <code>multi_az_policy</code> is set to <code>COST_OPTIMIZED</code>, specifies whether to allow automatic creation of pay-as-you-go instances to meet the required number of ECS instances when spot instances cannot be created due to cost or inventory constraints. Valid values:</p>
+         * <p>Specifies whether to allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements when <code>multi_az_policy</code> is set to <code>COST_OPTIMIZED</code> and sufficient spot instances cannot be created due to price or inventory reasons. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Allows automatic creation of pay-as-you-go instances to meet the required number of ECS instances.</li>
-         * <li><code>false</code>: Does not allow automatic creation of pay-as-you-go instances to meet the required number of ECS instances.</li>
+         * <li><code>true</code>: Automatic creation of pay-as-you-go instances is allowed to meet ECS instance quantity requirements.</li>
+         * <li><code>false</code>: Automatic creation of pay-as-you-go instances is not allowed to meet ECS instance quantity requirements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1680,7 +1691,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean compensateWithOnDemand;
 
         /**
-         * <p>The combination of data cloud disk type, size, and other configurations for nodes.</p>
+         * <p>The combination of node data cloud disk type, size, and other configurations.</p>
          */
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
@@ -1771,10 +1782,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public java.util.List<String> instanceTypes;
 
         /**
-         * <p>The billing type for the public IP of nodes.</p>
+         * <p>The network billing type for node public IP addresses.</p>
          * <ul>
          * <li>PayByBandwidth: pay-by-bandwidth.</li>
-         * <li>PayByTraffic: pay-by-data-transfer.</li>
+         * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1784,7 +1795,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String internetChargeType;
 
         /**
-         * <p>The maximum outbound public bandwidth of nodes. Unit: Mbit/s. Valid values: 1 to 100.</p>
+         * <p>The maximum outbound bandwidth for node public IP addresses. Unit: Mbit/s. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1793,7 +1804,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long internetMaxBandwidthOut;
 
         /**
-         * <p>The key pair name. You can set either this parameter or <code>login_password</code>. For managed node pools, only <code>key_pair</code> is supported.</p>
+         * <p>The key pair name. Mutually exclusive with <code>login_password</code>. When the node pool is a managed node pool, only <code>key_pair</code> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>pro-nodepool</p>
@@ -1802,11 +1813,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String keyPair;
 
         /**
-         * <p>Specifies whether to log on to the scaled-out ECS instance as a non-root user.</p>
+         * <p>Specifies whether the ECS instance uses a non-root user for login.</p>
          * <ul>
-         * <li><p>true: Log on as a non-root user (ecs-user).</p>
+         * <li><p>true: Logs on as a non-root user (ecs-user).</p>
          * </li>
-         * <li><p>false: Log on as the root user.</p>
+         * <li><p>false: Logs on as the root user.</p>
          * </li>
          * </ul>
          * 
@@ -1817,8 +1828,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean loginAsNonRoot;
 
         /**
-         * <p>The SSH logon password. You can set either this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-         * <p>For security purposes, the password is encrypted in query results.</p>
+         * <p>The SSH login password. Mutually exclusive with <code>key_pair</code>. Logon password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p>For security purposes, logon password is encrypted in query results.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -1829,17 +1840,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         /**
          * <p>The multi-zone scaling policy for ECS instances in the scaling group. Valid values:</p>
          * <ul>
-         * <li><p><code>PRIORITY</code>: Scales based on the vSwitches (VSwitchIds.N) that you define. When ECS instances cannot be created in the zone of a higher-priority vSwitch, the system automatically uses the next-priority vSwitch to create ECS instances.</p>
+         * <li><p><code>PRIORITY</code>: Scales based on the vSwitches (VSwitchIds.N) you defined. When ECS instances cannot be created in the zone of a higher-priority vSwitch, the system automatically uses the next-priority vSwitch.</p>
          * </li>
-         * <li><p><code>COST_OPTIMIZED</code>: Attempts to create instances in order of vCPU unit price from low to high. When the scaling configuration specifies multiple instance types with spot billing, spot instances are created first. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether to automatically create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory.</p>
+         * <li><p><code>COST_OPTIMIZED</code>: Attempts to create instances in order of vCPU unit price from lowest to highest. When the scaling configuration specifies multiple instance types with spot billing method, spot instances are created first. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether the system automatically attempts to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory.</p>
          * <blockquote>
-         * <p><code>COST_OPTIMIZED</code> takes effect only when the scaling configuration specifies multiple instance types or uses spot instances.</p>
+         * <p><code>COST_OPTIMIZED</code> takes effect only when the scaling configuration specifies multiple instance types</p>
          * </blockquote>
          * </li>
-         * <li><p><code>BALANCE</code>: Evenly allocates ECS instances across the multiple zones specified in the scaling group. If zones become unbalanced due to insufficient inventory, you can call the RebalanceInstances operation to rebalance resources. For more information, see <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>.</p>
-         * </li>
          * </ul>
-         * <p>Default value: <code>PRIORITY</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>BALANCE</p>
@@ -1848,7 +1856,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String multiAzPolicy;
 
         /**
-         * <p>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: [0,1000\]. If the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are created first.</p>
+         * <p>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: [0,1000\]. Pay-as-you-go instances are preferentially created when the number of pay-as-you-go instances is less than this value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1857,7 +1865,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long onDemandBaseCapacity;
 
         /**
-         * <p>The percentage of pay-as-you-go instances among the extra instances that exceed the minimum number of pay-as-you-go instances (<code>on_demand_base_capacity</code>) in the scaling group. Valid values: [0,100\].</p>
+         * <p>The percentage of pay-as-you-go instances among the excess instances after the minimum number of pay-as-you-go instances (<code>on_demand_base_capacity</code>) is met. Valid values: [0,100\].</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1879,7 +1887,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long period;
 
         /**
-         * <p>The unit of the subscription period. This parameter must be specified when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>The subscription period unit. This parameter must be specified when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
          * <li><code>Month</code>: month as the billing unit.</li>
          * <li><code>Week</code>: week as the billing unit.</li>
@@ -1931,13 +1939,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>If an ApsaraDB RDS instance list is specified, the ECS instances of cluster nodes are automatically added to the ApsaraDB RDS whitelist.</p>
+         * <p>If an RDS instance list is specified, ECS instances in the cluster node pool are automatically added to the RDS access whitelist.</p>
          */
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
         /**
-         * <p>The resource pools and resource pool strategy used when creating instances.</p>
+         * <p>The resource pool and resource pool strategy used when creating instances.</p>
          */
         @NameInMap("resource_pool_options")
         public DescribeClusterNodePoolDetailResponseBodyScalingGroupResourcePoolOptions resourcePoolOptions;
@@ -1952,11 +1960,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String scalingGroupId;
 
         /**
-         * <p>The scaling group mode. Valid values:</p>
+         * <p>The scaling group pattern. Valid values:</p>
          * <ul>
-         * <li><code>release</code>: standard mode. Scales by creating and releasing ECS instances based on resource usage.</li>
-         * <li><code>recycle</code>: swift mode. Scales by creating, stopping, and starting instances, which accelerates subsequent scaling operations. Compute resources are not charged during the stop period. Only storage fees are charged, except for instances with local disks.
-         * [_single.resp.200.props.scaling_group.on_demand</li>
+         * <li><code>release</code>: standard pattern. Instances are created and released based on resource usage.</li>
+         * <li><code>recycle</code>: swift pattern. Instances are created, stopped, and started to improve scaling speed. Stopped instances do not incur compute resource charges, but storage charges still apply, except for instances with local disks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1981,10 +1988,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
-         * <p>Specifies whether to enable Alibaba Cloud OS security hardening. Valid values:</p>
+         * <p>Specifies whether Alibaba Cloud OS security hardening is enabled. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enable Alibaba Cloud OS security hardening.</li>
-         * <li><code>false</code>: Disable Alibaba Cloud OS security hardening.</li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          * 
@@ -1995,7 +2002,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean securityHardeningOs;
 
         /**
-         * <p>Specifies whether to enable MLPS 2.0 security hardening. You can enable MLPS 2.0 security hardening for nodes only when the system image is Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3. Alibaba Cloud provides classified protection compliance baseline check standards and scanning programs for Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 MLPS 2.0 Level 3 images.</p>
+         * <p>Specifies whether MLPS 2.0 security hardening is enabled. This feature is available only when the system image is Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3. Alibaba Cloud provides classified protection compliance baseline check standards and scanning programs for Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 MLPS 2.0 Level 3 images.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -2004,7 +2011,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean socEnabled;
 
         /**
-         * <p>The number of available instance types. The scaling group creates spot instances across multiple instance types at the lowest cost. Valid values: [1,10\].</p>
+         * <p>The number of available instance types. The scaling group creates spot instances across multiple instance types with the lowest cost. Valid values: [1,10\].</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -2013,7 +2020,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long spotInstancePools;
 
         /**
-         * <p>Indicates whether spot instance supplementation is enabled. When enabled, the scaling group attempts to create new instances to replace spot instances that are about to be reclaimed. Valid values:</p>
+         * <p>Specifies whether to supplement spot instances. If enabled, the scaling group attempts to create new instances to replace spot instances that are about to be reclaimed. Valid values:</p>
          * <ul>
          * <li><code>true</code>: Spot instance supplementation is enabled.</li>
          * <li><code>false</code>: Spot instance supplementation is disabled.</li>
@@ -2026,13 +2033,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean spotInstanceRemedy;
 
         /**
-         * <p>The price range configuration for spot instances.</p>
+         * <p>The spot instance price limit configuration.</p>
          */
         @NameInMap("spot_price_limit")
         public java.util.List<DescribeClusterNodePoolDetailResponseBodyScalingGroupSpotPriceLimit> spotPriceLimit;
 
         /**
-         * <p>The type of spot instance. Valid values:</p>
+         * <p>The spot instance type. Valid values:</p>
          * <ul>
          * <li>NoSpot: non-spot instance.</li>
          * <li>SpotWithPriceLimit: spot instance with a price limit.</li>
@@ -2047,10 +2054,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>Specifies whether to enable burst (performance burst) for the system cloud disk. Valid values:</p>
+         * <p>Specifies whether burst (performance burst) is enabled for the node system cloud disk. Valid values:</p>
          * <ul>
-         * <li>true: Enable. When enabled, the cloud disk temporarily boosts performance during sudden data read/write pressure from fluctuating workloads until the workload stabilizes.</li>
-         * <li>false: Disable.</li>
+         * <li>true: Enabled. When enabled, the cloud disk temporarily boosts performance during sudden data read/write pressure from fluctuating workloads until the workload stabilizes.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * 
@@ -2061,13 +2068,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The multiple cloud disk types for the system cloud disk. When a higher-priority cloud disk type is unavailable, the system automatically attempts the next-priority cloud disk type to create the system cloud disk.</p>
+         * <p>The multiple system cloud disk types. When a higher-priority disk type is unavailable, the system automatically attempts the next-priority disk type to create the system cloud disk.</p>
          */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
         /**
-         * <p>The type of the system cloud disk. Valid values:</p>
+         * <p>The node system cloud disk type. Valid values:</p>
          * <ul>
          * <li><code>cloud_efficiency</code>: ultra cloud disk.</li>
          * <li><code>cloud_ssd</code>: standard SSD.</li>
@@ -2083,7 +2090,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The encryption algorithm used for the system cloud disk. Valid values: aes-256.</p>
+         * <p>The encryption algorithm for the system cloud disk. Valid values: aes-256.</p>
          * 
          * <strong>example:</strong>
          * <p>aes-256</p>
@@ -2092,7 +2099,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskEncryptAlgorithm;
 
         /**
-         * <p>Specifies whether to encrypt the system cloud disk. Valid values:</p>
+         * <p>Specifies whether the system cloud disk is encrypted. Valid values:</p>
          * <ul>
          * <li><code>true</code>: Encrypted.</li>
          * <li><code>false</code>: Not encrypted.</li>
@@ -2114,7 +2121,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskKmsKeyId;
 
         /**
-         * <p>The performance level of the system cloud disk. This parameter takes effect only for ESSD cloud disks. The performance level varies based on the cloud disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
+         * <p>The performance level of the node system cloud disk. This parameter takes effect only for ESSD disks. The performance level is related to the disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. Valid values:</p>
          * <ul>
          * <li>PL0: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
          * <li>PL1: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
@@ -2129,7 +2136,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS for the system cloud disk.</p>
+         * <p>The provisioned read/write IOPS for the node system cloud disk.</p>
          * <p>Valid values: 0~min{50,000, 1000\*capacity-baseline performance}. Baseline performance=min{1,800+50\*capacity, 50000}.</p>
          * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * 
@@ -2140,7 +2147,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long systemDiskProvisionedIops;
 
         /**
-         * <p>The size of the system cloud disk. Unit: GiB.</p>
+         * <p>The node system cloud disk size. Unit: GiB.</p>
          * <p>Valid values: [20,2048\].</p>
          * 
          * <strong>example:</strong>
@@ -2605,7 +2612,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String lastTransitionTime;
 
         /**
-         * <p>The detailed message.</p>
+         * <p>The detailed information.</p>
          * 
          * <strong>example:</strong>
          * <p>AutoUpgradeDisabled</p>
@@ -2689,7 +2696,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolDetailResponseBodyStatus extends TeaModel {
         /**
-         * <p>The current conditions of the node pool, representing status information across different dimensions.</p>
+         * <p>The node pool conditions, which represent the status information of the node pool across different dimensions.</p>
          */
         @NameInMap("conditions")
         public java.util.List<DescribeClusterNodePoolDetailResponseBodyStatusConditions> conditions;
@@ -2751,11 +2758,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         /**
          * <p>The node pool status. Valid values:</p>
          * <ul>
-         * <li><code>active</code>: Active.</li>
-         * <li><code>scaling</code>: Scaling in progress.</li>
-         * <li><code>removing</code>: Nodes are being removed.</li>
-         * <li><code>deleting</code>: Being deleted.</li>
-         * <li><code>updating</code>: Being updated.</li>
+         * <li><code>active</code>: active.</li>
+         * <li><code>scaling</code>: scaling in progress.</li>
+         * <li><code>removing</code>: nodes are being removed.</li>
+         * <li><code>deleting</code>: being deleted.</li>
+         * <li><code>updating</code>: being updated.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2856,8 +2863,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to enable the confidential computing cluster. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enabled.</li>
-         * <li><code>false</code>: disabled.</li>
+         * <li><code>true</code>: Enabled.</li>
+         * <li><code>false</code>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

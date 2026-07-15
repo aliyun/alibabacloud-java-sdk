@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolRequest extends TeaModel {
     /**
-     * <p>The intelligent managed configuration for the node pool.</p>
+     * <p>The node pool intelligent managed configuration.</p>
      */
     @NameInMap("auto_mode")
     public CreateClusterNodePoolRequestAutoMode autoMode;
 
     /**
-     * <p>The automatic elastic scaling configuration.</p>
+     * <p>The automatic scaling configuration.</p>
      */
     @NameInMap("auto_scaling")
     public CreateClusterNodePoolRequestAutoScaling autoScaling;
@@ -68,10 +68,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     public String interconnectMode;
 
     /**
-     * <p>Specifies whether nodes in the edge node pool have Layer 3 network connectivity.</p>
+     * <p>Specifies whether nodes in the edge node pool have Layer 3 network connectivity with each other.</p>
      * <ul>
      * <li><code>true</code>: Connected. All nodes in the node pool have Layer 3 network connectivity.</li>
-     * <li><code>false</code>: Not connected. All hosts in the node pool do not have Layer 3 network connectivity.</li>
+     * <li><code>false</code>: Not connected. All nodes in the node pool do not have Layer 3 network connectivity.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     public CreateClusterNodePoolRequestKubernetesConfig kubernetesConfig;
 
     /**
-     * <p>The managed feature configuration of the node pool.</p>
+     * <p>The managed node pool configuration.</p>
      */
     @NameInMap("management")
     public CreateClusterNodePoolRequestManagement management;
@@ -104,7 +104,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     public Long maxNodes;
 
     /**
-     * <p>The list of node components.</p>
+     * <p>The node component list.</p>
      */
     @NameInMap("node_components")
     public java.util.List<CreateClusterNodePoolRequestNodeComponents> nodeComponents;
@@ -274,7 +274,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>Specifies whether to enable intelligent managed mode. Valid values:</p>
          * <ul>
          * <li>true: Enables intelligent managed mode. This can be enabled only when the cluster has intelligent managed mode enabled.</li>
-         * <li>false: Disables intelligent managed mode.</li>
+         * <li>false: Does not enable intelligent managed mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The billing method of the EIP. Valid values:</p>
          * <ul>
          * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
-         * <li><code>PayByTraffic</code>: pay-by-data-transfer.</li>
+         * <li><code>PayByTraffic</code>: pay-by-traffic.</li>
          * </ul>
          * <p>Default value: <code>PayByBandwidth</code>.</p>
          * 
@@ -329,7 +329,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable automatic scaling. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: enables the automatic scaling feature for the node pool. When the cluster capacity planning cannot meet the scheduling requirements of application pods, ACK automatically scales node resources based on the configured minimum and maximum instance counts. For clusters of version 1.24 or later, instant node elasticity is enabled by default. For clusters of versions earlier than 1.24, node auto scaling is enabled by default. For more information, see <a href="https://help.aliyun.com/document_detail/2746785.html">Node scaling</a>.</p>
+         * <li><p><code>true</code>: enables the automatic scaling feature for the node pool. When the cluster capacity planning cannot meet application Pod scheduling requirements, ACK automatically scales node resources based on the configured minimum and maximum instance counts. Clusters of version 1.24 or later use instant node elastic scaling by default. Clusters of versions earlier than 1.24 use node automatic scaling by default. For more information, see <a href="https://help.aliyun.com/document_detail/2746785.html">Node scaling</a>.</p>
          * </li>
          * <li><p><code>false</code>: disables automatic scaling. ACK adjusts the number of nodes in the node pool based on the configured desired node count and maintains the node count at the desired value.</p>
          * </li>
@@ -345,7 +345,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         /**
          * <p>[Deprecated] This field is deprecated. Use internet_charge_type and internet_max_bandwidth_out instead.</p>
-         * <p>Specifies whether to associate an elastic IP address (EIP). Valid values:</p>
+         * <p>Specifies whether to associate an EIP. Valid values:</p>
          * <ul>
          * <li><p><code>true</code>: associates an EIP.</p>
          * </li>
@@ -362,7 +362,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean isBondEip;
 
         /**
-         * <p>The maximum number of scalable instances in the node pool, excluding your existing instances. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>The maximum number of instances that can be scaled in the node pool, excluding your existing instances. Takes effect only when <code>enable=true</code>.</p>
          * <p>Valid values: [min_instances, 2000]. Default value: 0.</p>
          * 
          * <strong>example:</strong>
@@ -372,12 +372,12 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long maxInstances;
 
         /**
-         * <p>The minimum number of scalable instances in the node pool, excluding your existing instances. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>The minimum number of instances that can be scaled in the node pool, excluding your existing instances. Takes effect only when <code>enable=true</code>.</p>
          * <p>Valid values: [0, max_instances]. Default value: 0.</p>
          * <blockquote>
          * <ul>
-         * <li>If the minimum number of instances is not 0, the corresponding number of ECS instances is automatically created after the scaling group takes effect. Settings take effect after the elastic scaling group is activated, and instances are automatically created.</li>
-         * <li>Set the maximum number of instances to a value that is not less than the current number of nodes in the node pool. Otherwise, nodes in the node pool are scaled in after the elastic scaling feature takes effect.</li>
+         * <li>If the minimum instance count is not 0, the scaling group triggers automatic creation of the corresponding number of ECS instances after the automatic scaling feature takes effect.</li>
+         * <li>Set the maximum instance count to a value no less than the current number of nodes in the node pool. Otherwise, nodes in the node pool are scaled in after the automatic scaling feature takes effect.</li>
          * </ul>
          * </blockquote>
          * 
@@ -388,13 +388,13 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long minInstances;
 
         /**
-         * <p>The automatic elastic scaling instance type. This parameter takes effect only when <code>enable=true</code>. Valid values:</p>
+         * <p>The automatic scaling instance type. Takes effect only when <code>enable=true</code>. Valid values:</p>
          * <ul>
          * <li><p><code>cpu</code>: regular instance type.</p>
          * </li>
          * <li><p><code>gpu</code>: GPU instance type.</p>
          * </li>
-         * <li><p><code>gpushare</code>: GPU-shared type.</p>
+         * <li><p><code>gpushare</code>: GPU shared type.</p>
          * </li>
          * <li><p><code>spot</code>: spot instance type.</p>
          * </li>
@@ -481,7 +481,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoAttachEnabled;
 
         /**
-         * <p>The Lingjun cluster ID to associate with when creating a Lingjun node pool.</p>
+         * <p>The Lingjun cluster ID to associate when creating a Lingjun node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>i1169130516633730****</p>
@@ -490,7 +490,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The Lingjun group ID of the Lingjun cluster to associate with when creating a Lingjun node pool.</p>
+         * <p>The Lingjun group ID of the Lingjun cluster to associate when creating a Lingjun node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-ec3c96ff0aa****</p>
@@ -640,11 +640,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestKubernetesConfig extends TeaModel {
         /**
-         * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view monitoring information for the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</p>
+         * <p>Specifies whether to install CloudMonitor on ECS nodes. After installation, you can view monitoring information for the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: Installs the CloudMonitor agent on ECS nodes.</p>
+         * <li><p><code>true</code>: Installs CloudMonitor on ECS nodes.</p>
          * </li>
-         * <li><p><code>false</code>: Does not install the CloudMonitor agent on ECS nodes.</p>
+         * <li><p><code>false</code>: Does not install CloudMonitor on ECS nodes.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
@@ -658,7 +658,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The node CPU management policy. The following two policies are supported for cluster versions 1.12.6 and later:</p>
          * <ul>
-         * <li><code>static</code>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+         * <li><code>static</code>: Allows enhanced CPU affinity and exclusivity for pods with certain resource characteristics on the node.</li>
          * <li><code>none</code>: Enables the existing default CPU affinity scheme.</li>
          * </ul>
          * <p>Default value: <code>none</code>.</p>
@@ -691,11 +691,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li><p>The node IP is the full private IP address of the node.</p>
          * </li>
          * </ul>
-         * <p>For example, if the node IP address is 192.XX.YY.55, the prefix is aliyun.com, and the suffix is test:</p>
+         * <p>Example: The node IP address is 192.XX.YY.55, the prefix is aliyun.com, and the suffix is test.</p>
          * <ul>
-         * <li><p>For a Linux node, the node name, ECS instance name, and ECS instance hostname are all aliyun.com192.XX.YY.55test.</p>
+         * <li><p>For Linux nodes, the node name, ECS instance name, and ECS instance hostname are all aliyun.com192.XX.YY.55test.</p>
          * </li>
-         * <li><p>For a Windows node, the ECS instance hostname is 192-XX-YY-55, and the node name and ECS instance name are both aliyun.com192.XX.YY.55test.</p>
+         * <li><p>For Windows nodes, the ECS instance hostname is 192-XX-YY-55, and the node name and ECS instance name are both aliyun.com192.XX.YY.55test.</p>
          * </li>
          * </ul>
          * 
@@ -706,7 +706,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String nodeNameMode;
 
         /**
-         * <p>The instance pre-user data. Before the node joins the cluster, the specified pre-user data script is executed. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User data scripts</a>.</p>
+         * <p>The instance pre-custom data. Before the node joins the cluster, the specified pre-custom data script runs. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data scripts</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dGhpcyBpcyBhIGV4YW1wbGU</p>
@@ -745,7 +745,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public java.util.List<Taint> taints;
 
         /**
-         * <p>Specifies whether the scaled-out nodes are unschedulable.</p>
+         * <p>Specifies whether scaled-out nodes are unschedulable.</p>
          * <ul>
          * <li><p>true: Unschedulable.</p>
          * </li>
@@ -760,7 +760,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean unschedulable;
 
         /**
-         * <p>The instance user data. After the node joins the cluster, the specified user data script is executed. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User data scripts</a>.</p>
+         * <p>The instance user data. After the node joins the cluster, the specified instance user data script runs. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data scripts</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dGhpcyBpcyBhIGV4YW1wbGU=</p>
@@ -863,7 +863,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean approvalRequired;
 
         /**
-         * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_repair=true</code>. Valid values:</p>
+         * <p>Specifies whether to allow node restart. Takes effect only when <code>auto_repair=true</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: allows node restart.</li>
          * <li><code>false</code>: does not allow node restart.</li>
@@ -901,7 +901,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestManagementAutoUpgradePolicy extends TeaModel {
         /**
-         * <p>Specifies whether to allow automatic kubelet upgrade. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
+         * <p>Specifies whether to allow automatic kubelet upgrade. Takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: allows automatic kubelet upgrade.</li>
          * <li><code>false</code>: does not allow automatic kubelet upgrade.</li>
@@ -915,7 +915,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoUpgradeKubelet;
 
         /**
-         * <p>Specifies whether to allow automatic operating system upgrade. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
+         * <p>Specifies whether to allow automatic operating system upgrade. Takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: allows automatic operating system upgrade.</li>
          * <li><code>false</code>: does not allow automatic operating system upgrade.</li>
@@ -929,7 +929,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoUpgradeOs;
 
         /**
-         * <p>Specifies whether to allow automatic runtime upgrade. This parameter takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
+         * <p>Specifies whether to allow automatic runtime upgrade. Takes effect only when <code>auto_upgrade=true</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: allows automatic runtime upgrade.</li>
          * <li><code>false</code>: does not allow automatic runtime upgrade.</li>
@@ -985,7 +985,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String excludePackages;
 
         /**
-         * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_vul_fix=true</code>. Valid values:</p>
+         * <p>Specifies whether to allow node restart. Takes effect only when <code>auto_vul_fix=true</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: allows node restart.</li>
          * <li><code>false</code>: does not allow node restart.</li>
@@ -1047,11 +1047,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     public static class CreateClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
         /**
          * <p>[Deprecated] Use the <code>auto_upgrade</code> parameter at the upper level instead.</p>
-         * <p>Specifies whether to enable automatic upgrade. Valid values:</p>
+         * <p>Specifies whether to enable auto upgrade. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: enables automatic upgrade.</p>
+         * <li><p><code>true</code>: enables auto upgrade.</p>
          * </li>
-         * <li><p><code>false</code>: disables automatic upgrade.</p>
+         * <li><p><code>false</code>: disables auto upgrade.</p>
          * </li>
          * </ul>
          * 
@@ -1074,8 +1074,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long maxUnavailable;
 
         /**
-         * <p>The number of extra nodes. Specify either this parameter or <code>surge_percentage</code>.</p>
-         * <p>Nodes become unavailable during an upgrade. You can create extra nodes to compensate for the cluster workload.</p>
+         * <p>The number of extra nodes. Mutually exclusive with <code>surge_percentage</code>.</p>
+         * <p>Nodes become unavailable during upgrades. You can create extra nodes to compensate for the cluster load.</p>
          * <blockquote>
          * <p>The number of extra nodes should not exceed the current number of nodes.</p>
          * </blockquote>
@@ -1087,8 +1087,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long surge;
 
         /**
-         * <p>The percentage of extra nodes. Specify either this parameter or <code>surge</code>.</p>
-         * <p>Number of extra nodes = percentage of extra nodes × number of nodes. For example, if the percentage of extra nodes is set to 50% and there are 6 existing nodes, the number of extra nodes = 50% × 6 = 3.</p>
+         * <p>The percentage of extra nodes. Mutually exclusive with <code>surge</code>.</p>
+         * <p>Number of extra nodes = percentage of extra nodes × number of nodes. For example, if the percentage is set to 50% and there are 6 existing nodes, the number of extra nodes = 50% × 6 = 3.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1141,11 +1141,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoFaultDiagnosis;
 
         /**
-         * <p>Specifies whether to automatically repair nodes. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>Specifies whether to automatically repair nodes. Takes effect only when <code>enable=true</code>.</p>
          * <ul>
-         * <li><p><code>true</code>: automatically repairs nodes.</p>
+         * <li><p><code>true</code>: enables auto repair.</p>
          * </li>
-         * <li><p><code>false</code>: does not automatically repair nodes.</p>
+         * <li><p><code>false</code>: disables auto repair.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
@@ -1163,10 +1163,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public CreateClusterNodePoolRequestManagementAutoRepairPolicy autoRepairPolicy;
 
         /**
-         * <p>Specifies whether to automatically upgrade nodes. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>Specifies whether to automatically upgrade nodes. Takes effect only when <code>enable=true</code>.</p>
          * <ul>
-         * <li><code>true</code>: enables automatic upgrade.</li>
-         * <li><code>false</code>: disables automatic upgrade.</li>
+         * <li><code>true</code>: enables auto upgrade.</li>
+         * <li><code>false</code>: disables auto upgrade.</li>
          * </ul>
          * <p>Default value: <code>true</code>.</p>
          * 
@@ -1183,7 +1183,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public CreateClusterNodePoolRequestManagementAutoUpgradePolicy autoUpgradePolicy;
 
         /**
-         * <p>Specifies whether to automatically fix CVE vulnerabilities. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>Specifies whether to automatically fix CVE vulnerabilities. Takes effect only when <code>enable=true</code>.</p>
          * <ul>
          * <li><code>true</code>: allows automatic CVE fixing.</li>
          * <li><code>false</code>: does not allow automatic CVE fixing.</li>
@@ -1201,6 +1201,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          */
         @NameInMap("auto_vul_fix_policy")
         public CreateClusterNodePoolRequestManagementAutoVulFixPolicy autoVulFixPolicy;
+
+        @NameInMap("drift_enabled")
+        public Boolean driftEnabled;
 
         /**
          * <p>Specifies whether to enable the managed feature for the node pool. Valid values:</p>
@@ -1220,7 +1223,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         /**
          * <p>[Deprecated] Use the <code>auto_upgrade</code> parameter at the upper level instead.</p>
-         * <p>The automatic upgrade configuration. This parameter takes effect only when <code>enable=true</code>.</p>
+         * <p>The auto upgrade configuration. Takes effect only when <code>enable=true</code>.</p>
          */
         @NameInMap("upgrade_config")
         @Deprecated
@@ -1285,6 +1288,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public CreateClusterNodePoolRequestManagementAutoVulFixPolicy getAutoVulFixPolicy() {
             return this.autoVulFixPolicy;
+        }
+
+        public CreateClusterNodePoolRequestManagement setDriftEnabled(Boolean driftEnabled) {
+            this.driftEnabled = driftEnabled;
+            return this;
+        }
+        public Boolean getDriftEnabled() {
+            return this.driftEnabled;
         }
 
         public CreateClusterNodePoolRequestManagement setEnable(Boolean enable) {
@@ -1421,7 +1432,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The resource group ID of the node pool. Instances scaled out by the node pool belong to this resource group.</p>
+         * <p>The resource group ID of the node pool. Instances created by the node pool belong to this resource group.</p>
          * <p>A resource can belong to only one resource group. You can map resource groups to concepts such as projects, applications, or organizations based on your business scenarios.</p>
          * 
          * <strong>example:</strong>
@@ -1433,7 +1444,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The node pool type. Valid values:</p>
          * <ul>
-         * <li><code>ess</code>: standard node pool (includes managed features and automatic elastic scaling).</li>
+         * <li><code>ess</code>: standard node pool (includes managed features and automatic scaling).</li>
          * <li><code>edge</code>: edge node pool.</li>
          * <li><code>lingjun</code>: Lingjun node pool.</li>
          * <li><code>hybrid</code>: hybrid cloud node pool.</li>
@@ -1487,11 +1498,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The private node pool type. Specifies the private pool capacity option for instance startup. After an elasticity assurance or capacity reservation takes effect, a private pool is generated for instance startup. Valid values:</p>
+         * <p>The private node pool type. Specifies the private pool capacity option for instance launch. After an elasticity assurance or capacity reservation takes effect, a private pool is generated for instance launch. Valid values:</p>
          * <ul>
-         * <li><code>Open</code>: Open mode. Automatically matches open private pool capacity. If no matching private pool capacity is available, public pool resources are used.</li>
-         * <li><code>Target</code>: Specified mode. Uses the specified private pool capacity to start instances. If the private pool capacity is unavailable, instance startup fails.</li>
-         * <li><code>None</code>: No private pool mode. Private pool capacity is not used for instance startup.</li>
+         * <li><code>Open</code>: Open mode. Automatically matches open-type private pool capacity. If no matching private pool capacity is available, public pool resources are used.</li>
+         * <li><code>Target</code>: Targeted mode. Uses the specified private pool capacity to launch instances. If the specified private pool capacity is unavailable, instance launch fails.</li>
+         * <li><code>None</code>: No private pool. Instance launch does not use private pool capacity.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1531,11 +1542,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public java.util.List<String> privatePoolIds;
 
         /**
-         * <p>The resource pool strategy used when creating instances. Resource pools include private pools generated by elasticity assurance or capacity reservation services and public pools. Valid values:
-         * PrivatePoolFirst: Private pool first. When this strategy is selected and resouce_pool_options.private_pool_ids is specified, the specified private pools are used first. If no private pool is specified or the specified private pool capacity is insufficient, open private pools are automatically matched. If no matching private pool is available, public pool resources are used.
-         * PrivatePoolOnly: Private pool only. When this strategy is selected, resouce_pool_options.private_pool_ids must be specified. If the specified private pool capacity is insufficient, instance startup fails.
-         * None: No resource pool strategy is used.
-         * Default value: None.</p>
+         * <p>The resource pool strategy used when creating instances. Resource pools include private pools generated after elasticity assurance or capacity reservation takes effect, and public pools for instance launch. Valid values: PrivatePoolFirst: Private pool first. When resouce_pool_options.private_pool_ids is specified, the specified private pools are used first. If no private pool is specified or the specified private pool capacity is insufficient, open-type private pools are automatically matched. If no matching private pool is available, public pool resources are used. PrivatePoolOnly: Private pool only. You must specify resouce_pool_options.private_pool_ids. If the specified private pool capacity is insufficient, instance launch fails. None: No resource pool strategy. Default value: None.</p>
          * 
          * <strong>example:</strong>
          * <p>PrivatePoolFirst</p>
@@ -1654,7 +1661,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestScalingGroup extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal for nodes in the node pool. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal for nodes in the node pool. Takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables auto-renewal.</li>
          * <li><code>false</code>: disables auto-renewal.</li>
@@ -1670,8 +1677,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The duration of each auto-renewal cycle. Valid values:</p>
          * <ul>
-         * <li>When PeriodUnit=Week: 1, 2, 3.</li>
-         * <li>When PeriodUnit=Month: 1, 2, 3, 6, 12, 24, 36, 48, 60.</li>
+         * <li>PeriodUnit=Week: 1, 2, 3.</li>
+         * <li>PeriodUnit=Month: 1, 2, 3, 6, 12, 24, 36, 48, 60.</li>
          * </ul>
          * <p>Default value: 1.</p>
          * 
@@ -1692,10 +1699,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean cisEnabled;
 
         /**
-         * <p>Specifies whether to allow automatic creation of pay-as-you-go instances to meet the required number of ECS instances when <code>multi_az_policy</code> is set to <code>COST_OPTIMIZED</code> and spot instances cannot be created due to price, inventory, or other reasons. Valid values:</p>
+         * <p>When <code>multi_az_policy</code> is set to <code>COST_OPTIMIZED</code>, specifies whether to allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements when spot instances cannot be created due to price or inventory reasons. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Allows automatic creation of pay-as-you-go instances to meet the required number of ECS instances.</li>
-         * <li><code>false</code>: Does not allow automatic creation of pay-as-you-go instances to meet the required number of ECS instances.</li>
+         * <li><code>true</code>: Allows automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements.</li>
+         * <li><code>false</code>: Does not allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1711,9 +1718,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public java.util.List<DataDisk> dataDisks;
 
         /**
-         * <p>The deployment set ID. You can use a deployment set to distribute ECS instances scaled out by the node pool across different physical servers to ensure high availability and underlying disaster recovery. When ECS instances are created in a deployment set, they are started across the specified region based on the preconfigured deployment strategy.</p>
+         * <p>The deployment set ID. You can use a deployment set to distribute ECS instances scaled out by the node pool across different physical servers to ensure high availability and underlying disaster recovery. When creating ECS instances within a deployment set, instances are launched in the specified region based on the pre-configured deployment strategy.</p>
          * <blockquote>
-         * <p>Notice: After you select a deployment set, the maximum number of nodes in the node pool is limited. By default, a deployment set supports up to 20 × number of zones (the number of zones is determined by the vSwitches). Select carefully and ensure that the deployment set has sufficient quota to avoid node scale-out failures.</p>
+         * <p>Notice: After you select a deployment set, the maximum number of nodes in the node pool is limited. The default upper limit for a deployment set is 20 × number of zones (the number of zones is determined by the vSwitches). Choose carefully and ensure sufficient quota in the deployment set to avoid node scale-out failures.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1725,8 +1732,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The desired number of nodes in the node pool.</p>
          * <p>The total number of nodes that the node pool should maintain. We recommend that you configure at least 2 nodes to ensure that cluster components run properly. You can scale the node pool in or out by adjusting the desired node count.</p>
-         * <p>If you do not need to create nodes, set this parameter to 0 and manually adjust the value later to add nodes.
-         * [_single.params.body.props.scaling_group</p>
+         * <p>If you do not need to create nodes, set this value to 0 and manually adjust it later to add nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1800,8 +1806,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public java.util.List<InstancePatterns> instancePatterns;
 
         /**
-         * <p>The list of instance types for nodes in the node pool. When the node pool scales out nodes, eligible instance types are selected from this list to create instances.</p>
-         * <p>The number of supported instance types ranges from 1 to 10.</p>
+         * <p>The list of instance types for nodes in the node pool. When the node pool scales out, instances are created from the specified instance types that meet the requirements.</p>
+         * <p>Supported number of instance types: [1,10].</p>
          * <blockquote>
          * <p>To ensure high availability, select multiple instance types.</p>
          * </blockquote>
@@ -1814,7 +1820,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The billing method of the public IP address. Valid values:</p>
          * <ul>
          * <li>PayByBandwidth: pay-by-bandwidth.</li>
-         * <li>PayByTraffic: pay-by-data-transfer.</li>
+         * <li>PayByTraffic: pay-by-traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1833,7 +1839,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long internetMaxBandwidthOut;
 
         /**
-         * <p>The name of the key pair for password-free logon. Specify either this parameter or <code>login_password</code>.</p>
+         * <p>The key pair name for password-free logon. Mutually exclusive with <code>login_password</code>.</p>
          * <blockquote>
          * <p>If the node pool uses the ContainerOS operating system, only <code>key_pair</code> is supported.</p>
          * </blockquote>
@@ -1845,7 +1851,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String keyPair;
 
         /**
-         * <p>Specifies whether scaled-out ECS instances use non-root logon.</p>
+         * <p>Specifies whether to log on to the ECS instance as a non-root user.</p>
          * <ul>
          * <li><p>true: logs on as a non-root user (ecs-user).</p>
          * </li>
@@ -1860,7 +1866,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean loginAsNonRoot;
 
         /**
-         * <p>The SSH logon password. Specify either this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p>The SSH logon password. Mutually exclusive with <code>key_pair</code>. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -1869,16 +1875,16 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>The multi-zone scaling policy for ECS instances in the scaling group. Valid values:</p>
+         * <p>The scaling policy for ECS instances in a multi-zone scaling group. Valid values:</p>
          * <ul>
-         * <li><p><code>PRIORITY</code>: Scales instances based on the vSwitches (VSwitchIds.N) that you define. When ECS instances cannot be created in the zone of the vSwitch with the highest priority, the system automatically uses the vSwitch with the next highest priority to create ECS instances.</p>
+         * <li><p><code>PRIORITY</code>: Scales based on the vSwitches (VSwitchIds.N) you define. When ECS instances cannot be created in the zone of a higher-priority vSwitch, the system automatically uses the next-priority vSwitch to create ECS instances.</p>
          * </li>
-         * <li><p><code>COST_OPTIMIZED</code>: Creates instances by trying instance types in ascending order of vCPU unit price. When the scaling configuration sets multiple instance types with the spot billing method, spot instances are created first. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether the system is allowed to automatically create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory or other reasons.</p>
+         * <li><p><code>COST_OPTIMIZED</code>: Attempts to create instances in order of vCPU unit price from lowest to highest. When the scaling configuration specifies multiple instance types with the preemptible billing method, spot instances are created first. You can use the <code>CompensateWithOnDemand</code> parameter to specify whether the system is allowed to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory.</p>
          * <blockquote>
-         * <p><code>COST_OPTIMIZED</code> takes effect only when the scaling configuration sets multiple instance types or uses spot instances.</p>
+         * <p><code>COST_OPTIMIZED</code> takes effect only when the scaling configuration specifies multiple instance types or uses spot instances.</p>
          * </blockquote>
          * </li>
-         * <li><p><code>BALANCE</code>: Allocates ECS instances evenly across the zones specified for the scaling group. If the zones become unbalanced due to insufficient inventory or other reasons, you can call the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a> API operation to rebalance resources.</p>
+         * <li><p><code>BALANCE</code>: Evenly allocates ECS instances across the multiple zones specified in the scaling group. If zones become unbalanced due to insufficient inventory, you can use the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a> API to rebalance resources.</p>
          * </li>
          * </ul>
          * <p>Default value: <code>PRIORITY</code>.</p>
@@ -1899,7 +1905,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long onDemandBaseCapacity;
 
         /**
-         * <p>The percentage of pay-as-you-go instances among the excess instances after the minimum number of pay-as-you-go instances (<code>on_demand_base_capacity</code>) is met. Valid values: [0,100\].</p>
+         * <p>The percentage of pay-as-you-go instances among the extra instances that exceed the minimum number of pay-as-you-go instances (<code>on_demand_base_capacity</code>) in the scaling group. Valid values: [0,100\].</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1908,7 +1914,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long onDemandPercentageAboveBaseCapacity;
 
         /**
-         * <p>The subscription duration of nodes in the node pool. This parameter takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>The subscription duration of nodes in the node pool. Takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <ul>
          * <li>When <code>period_unit=Week</code>, valid values of <code>period</code>: {1, 2, 3, 4}.</li>
          * <li>When <code>period_unit=Month</code>, valid values of <code>period</code>: {1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, 60}.</li>
@@ -1921,10 +1927,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long period;
 
         /**
-         * <p>The billing epoch of nodes in the node pool. This parameter takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>The billing period unit of nodes in the node pool. Takes effect and is required only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
          * <ul>
-         * <li><code>Month</code>: uses month as the compute unit (CU).</li>
-         * <li><code>Week</code>: uses week as the compute unit (CU).</li>
+         * <li><code>Month</code>: billed on a monthly basis.</li>
+         * <li><code>Week</code>: billed on a weekly basis.</li>
          * </ul>
          * <p>Default value: <code>Month</code>.</p>
          * 
@@ -1962,10 +1968,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The Worker RAM role name.</p>
          * <ul>
          * <li>If left empty, the default Worker RAM role created by the cluster is used.</li>
-         * <li>If specified, the RAM role must be a <strong>normal service role</strong> with its <strong>trusted service</strong> set to <strong>Elastic Compute Service</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a normal service role</a>. If the specified RAM role is not the default Worker RAM role created by the cluster, the role name cannot start with <code>KubernetesMasterRole-</code> or <code>KubernetesWorkerRole-</code>.</li>
+         * <li>If specified, the RAM role must be a <strong>normal service role</strong> with its <strong>trusted service</strong> configured as <strong>Elastic Compute Service</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a normal service role</a>. When the specified RAM role is not the default Worker RAM role created by the cluster, the role name cannot start with <code>KubernetesMasterRole-</code> or <code>KubernetesWorkerRole-</code>.</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: This parameter is supported only by ACK managed clusters of version 1.22 or later.</p>
+         * <p>Notice: Only ACK managed clusters of version 1.22 or later support this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1981,9 +1987,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public java.util.List<String> rdsInstances;
 
         /**
-         * <p>The resource pool and resource pool strategy used when creating instances. Note the following when you set this parameter:
-         * This parameter takes effect only when creating pay-as-you-go instances.
-         * This parameter cannot be set together with private_pool_options.match_criteria or private_pool_options.id.</p>
+         * <p>The resource pool and resource pool strategy used when creating instances. Note the following when you set this parameter: This parameter takes effect only when creating pay-as-you-go instances. This parameter cannot be set together with private_pool_options.match_criteria or private_pool_options.id.</p>
          */
         @NameInMap("resource_pool_options")
         public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions resourcePoolOptions;
@@ -1992,7 +1996,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <p>The scaling group mode. Valid values:</p>
          * <ul>
          * <li><code>release</code>: Standard mode. Scales by creating and releasing ECS instances based on resource usage.</li>
-         * <li><code>recycle</code>: Swift mode. Scales by creating, stopping, and starting instances, which improves the speed of subsequent scaling operations. Stopped instances are not charged for compute resources, but storage fees still apply, except for instances with local disks.</li>
+         * <li><code>recycle</code>: Swift mode. Scales by creating, stopping, and starting instances, which improves subsequent scaling speed. Stopped instances are not charged for compute resources, only for storage. This does not apply to instances with local disks.</li>
          * </ul>
          * <p>Default value: <code>release</code>.</p>
          * 
@@ -2013,7 +2017,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The list of security group IDs. Specify either this parameter or <code>security_group_id</code>. We recommend that you use <code>security_group_ids</code>. When both <code>security_group_id</code> and <code>security_group_ids</code> are specified, <code>security_group_ids</code> takes precedence.</p>
+         * <p>The list of security group IDs. Mutually exclusive with <code>security_group_id</code>. We recommend that you use <code>security_group_ids</code>. When both <code>security_group_id</code> and <code>security_group_ids</code> are specified, <code>security_group_ids</code> takes precedence.</p>
          */
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
@@ -2033,7 +2037,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean securityHardeningOs;
 
         /**
-         * <p>Specifies whether to enable MLPS 2.0 security hardening. This feature is available only when the system image is Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3. Alibaba Cloud provides classified protection compliance baseline check standards and scanning programs for Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 MLPS 2.0 Level 3 images.</p>
+         * <p>Specifies whether to enable mlps 2.0 security hardening. This feature is available only when the system image is Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3. Alibaba Cloud provides classified protection compliance baseline check standards and scanning programs for Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 MLPS 2.0 Level 3 images.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -2051,10 +2055,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long spotInstancePools;
 
         /**
-         * <p>Specifies whether to enable supplementation of spot instances. If enabled, the scaling group attempts to create new instances to replace spot instances that are about to be reclaimed when a reclamation notification is received. Valid values:</p>
+         * <p>Specifies whether to enable supplementing spot instances. When enabled, the scaling group attempts to create new instances to replace spot instances that are about to be reclaimed. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: Enables supplementation of spot instances.</li>
-         * <li><code>false</code>: Disables supplementation of spot instances.</li>
+         * <li><code>true</code>: Enables supplementing spot instances.</li>
+         * <li><code>false</code>: Disables supplementing spot instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2064,13 +2068,13 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean spotInstanceRemedy;
 
         /**
-         * <p>The market price range configuration for a single spot instance type.</p>
+         * <p>The price limit configuration for the current spot instance type.</p>
          */
         @NameInMap("spot_price_limit")
         public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit;
 
         /**
-         * <p>The type of spot instance. Valid values:</p>
+         * <p>The spot instance type. Valid values:</p>
          * <ul>
          * <li><p><code>NoSpot</code>: non-spot instance.</p>
          * </li>
@@ -2088,7 +2092,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>Specifies whether to enable burst (performance burst) for the node system cloud disk. Valid values:</p>
+         * <p>Specifies whether to enable burst (performance bursting) for the node system cloud disk. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.</li>
@@ -2102,13 +2106,13 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The multiple cloud disk types for the system cloud disk. When a higher-priority cloud disk type is unavailable, the system automatically tries the next-priority cloud disk type to create the system cloud disk.</p>
+         * <p>Multiple system cloud disk types. When a higher-priority cloud disk type is unavailable, the system automatically tries the next-priority cloud disk type to create the system cloud disk.</p>
          */
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
         /**
-         * <p>The type of the node system cloud disk. Valid values:</p>
+         * <p>The system cloud disk type of nodes. Valid values:</p>
          * <ul>
          * <li><code>cloud_efficiency</code>: ultra cloud disk.</li>
          * <li><code>cloud_ssd</code>: standard SSD.</li>
@@ -2125,7 +2129,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The encryption algorithm used by the system cloud disk. Valid values: aes-256.</p>
+         * <p>The encryption algorithm for the system cloud disk. Valid values: aes-256.</p>
          * 
          * <strong>example:</strong>
          * <p>aes-256</p>
@@ -2158,7 +2162,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String systemDiskKmsKeyId;
 
         /**
-         * <p>The performance level of the node system cloud disk. This parameter takes effect only for ESSD cloud disks. The performance level varies based on the cloud disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>The performance level of the node system cloud disk. Applicable only to ESSD cloud disks. The performance level is related to the cloud disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</p>
          * <ul>
          * <li>PL0: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
          * <li>PL1: moderate maximum concurrent I/O performance with relatively stable read/write latency.</li>
@@ -2174,7 +2178,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         /**
          * <p>The provisioned read/write IOPS for the node system cloud disk.</p>
-         * <p>Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50000}.</p>
+         * <p>Valid values: 0~min{50,000, 1000\*capacity-baseline performance}. Baseline performance=min{1,800+50\*capacity, 50000}.</p>
          * <p>This parameter is supported only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</p>
          * 
          * <strong>example:</strong>
@@ -2184,7 +2188,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long systemDiskProvisionedIops;
 
         /**
-         * <p>The size of the node system cloud disk. Unit: GiB.</p>
+         * <p>The system cloud disk size of nodes. Unit: GiB.</p>
          * <p>Valid values: [20,2048\].</p>
          * 
          * <strong>example:</strong>
@@ -2204,7 +2208,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         /**
          * <p>Tags added only to ECS instances.</p>
-         * <p>Tag keys cannot be duplicated and can be up to 128 characters in length. Tag keys and tag values cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, or contain &quot;https://&quot; or &quot;http://&quot;.</p>
+         * <p>Tag keys cannot be duplicated and have a maximum length of 128 characters. Tag keys and values cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, or contain &quot;https://&quot; or &quot;http://&quot;.</p>
          */
         @NameInMap("tags")
         public java.util.List<CreateClusterNodePoolRequestScalingGroupTags> tags;
@@ -2635,7 +2639,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <ul>
          * <li><p>true: Enables confidential computing.</p>
          * </li>
-         * <li><p>false: Disables confidential computing.</p>
+         * <li><p>false: Does not enable confidential computing.</p>
          * </li>
          * </ul>
          * 
