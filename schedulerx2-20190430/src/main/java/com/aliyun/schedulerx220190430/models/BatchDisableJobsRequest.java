@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDisableJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+     * <p>The ID of the application group. You can find this ID on the <strong>Application Management</strong> page in the console.</p>
      * 
      * <strong>example:</strong>
      * <p>testSchedulerx.defaultGroup</p>
@@ -14,7 +14,7 @@ public class BatchDisableJobsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The job IDs. Separate multiple job IDs with commas (,).</p>
+     * <p>The IDs of the jobs to disable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class BatchDisableJobsRequest extends TeaModel {
     public java.util.List<Long> jobIdList;
 
     /**
-     * <p>The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+     * <p>The ID of the namespace that contains the jobs. You can find this ID on the <strong>Namespaces</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class BatchDisableJobsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * <p>This parameter is used only by specific third-party services.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -43,7 +43,7 @@ public class BatchDisableJobsRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region to which the job belongs.</p>
+     * <p>The ID of the region where the jobs are located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

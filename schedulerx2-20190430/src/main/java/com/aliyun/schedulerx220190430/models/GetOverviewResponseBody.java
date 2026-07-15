@@ -14,21 +14,21 @@ public class GetOverviewResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned in JSON format. Valid data types:</p>
+     * <p>The overview data in JSON format, which corresponds to the overview data on the console. The result is returned in one of the following three formats:</p>
      * <ul>
-     * <li>Basic job data.</li>
-     * <li>Job running data.</li>
-     * <li>Time series data for job execution: includes triggering statistics, records of successful and failed executions, and their associated timestamps within a specific time range.</li>
+     * <li>Basic information.</li>
+     * <li>Node runtime information within a time interval.</li>
+     * <li>Node runtime timing information within a time interval. This format returns statistics information at each time point for three data items: node triggers, successful executions, and failed executions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;schedulerx_job_counter_disable&quot;: &quot;4&quot;,&quot;schedulerx_job_trigger_counter_running&quot;: &quot;0&quot;,&quot;schedulerx_job_counter_enable&quot;: &quot;70&quot;,&quot;schedulerx_job_counter_all&quot;: &quot;74&quot;,&quot;schedulerx_worker_counter&quot;: &quot;2&quot;}</p>
+     * <p>Basic info: {&quot;schedulerx_job_counter_disable&quot;: &quot;4&quot;,&quot;schedulerx_job_trigger_counter_running&quot;: &quot;0&quot;,&quot;schedulerx_job_counter_enable&quot;: &quot;70&quot;,&quot;schedulerx_job_counter_all&quot;: &quot;74&quot;,&quot;schedulerx_worker_counter&quot;: &quot;2&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>Additional information. Returned only if an error occurs.</p>
+     * <p>The error message. This parameter is returned only when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>No access permission for the namespace [***]</p>
@@ -46,10 +46,10 @@ public class GetOverviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

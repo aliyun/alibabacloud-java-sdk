@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CreateJobResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the job.</p>
+     * <p>The node details.</p>
      */
     @NameInMap("Data")
     public CreateJobResponseBodyData data;
 
     /**
-     * <p>The additional information returned.</p>
+     * <p>The additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>message</p>
@@ -38,10 +38,10 @@ public class CreateJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>If you set JobType to k8s, this parameter is required. Valid values:</p>
+     * <p>Indicates whether the node was created successfully. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The node was created successfully.</li>
+     * <li><strong>false</strong>: The node failed to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class CreateJobResponseBody extends TeaModel {
 
     public static class CreateJobResponseBodyData extends TeaModel {
         /**
-         * <p>The job ID.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>92583</p>

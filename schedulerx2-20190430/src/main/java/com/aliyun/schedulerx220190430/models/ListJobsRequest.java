@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+     * <p>The application ID. You can obtain the ID on the <strong>Application Management</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListJobsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The node name.</p>
      * 
      * <strong>example:</strong>
      * <p>helloword</p>
@@ -24,7 +24,7 @@ public class ListJobsRequest extends TeaModel {
     public String jobName;
 
     /**
-     * <p>The ID of the namespace. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+     * <p>The namespace. You can obtain the namespace on the <strong>Namespace</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListJobsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * <p>Required only for special third-party users.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -42,14 +42,20 @@ public class ListJobsRequest extends TeaModel {
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of records per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,10 +65,12 @@ public class ListJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to enable the job. Valid values:</p>
+     * <p>The node status.</p>
      * <ul>
-     * <li><strong>0</strong>: disables the job.</li>
-     * <li><strong>1</strong>: enables the job.</li>
+     * <li><p><strong>0</strong>: disabled</p>
+     * </li>
+     * <li><p><strong>1</strong>: enabled</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowDagRequest extends TeaModel {
     /**
-     * <p>The directed acyclic graph (DAG) of the workflow, including the information about the nodes and the edges. Specify the value of this parameter in the JSON format.</p>
+     * <p>The definition of the workflow\&quot;s directed acyclic graph (DAG), including nodes and edges, as a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateWorkflowDagRequest extends TeaModel {
     public String dagJson;
 
     /**
-     * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The Application Group ID. You can find this ID on the <strong>Application Management</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateWorkflowDagRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <p>The Namespace ID. You can obtain the ID on the <strong>Namespaces</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateWorkflowDagRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * <p>This parameter is required only for specific third-party integrations.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -44,7 +44,7 @@ public class UpdateWorkflowDagRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class UpdateWorkflowDagRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The workflow ID.</p>
+     * <p>The Workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class UpdateNamespaceRequest extends TeaModel {
      * <p>The description of the namespace.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test</p>
+     * <p>Namespace reserved for testing</p>
      */
     @NameInMap("Description")
     public String description;
@@ -27,7 +27,7 @@ public class UpdateNamespaceRequest extends TeaModel {
      * <p>The name of the namespace.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test Namespace</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

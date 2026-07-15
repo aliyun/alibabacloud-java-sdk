@@ -13,7 +13,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-beijing", "schedulerx.cn-beijing.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "schedulerx.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-shanghai", "schedulerx.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "schedulerx.cn-shenzhen.aliyuncs.com")
+            new TeaPair("cn-shenzhen", "schedulerx.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("us-west-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("us-east-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("public", "schedulerx.aliyuncs.com"),
+            new TeaPair("eu-west-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("eu-central-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "schedulerx.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "schedulerx.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "schedulerx.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("schedulerx2", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -34,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>Before you call this API, add the following dependency to your POM file:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -43,7 +63,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple jobs at a time.</p>
+     * <p>Deletes multiple Jobs.</p>
      * 
      * @param request BatchDeleteJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -93,7 +113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>Before you call this API, add the following dependency to your POM file:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -102,7 +122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Deletes multiple jobs at a time.</p>
+     * <p>Deletes multiple Jobs.</p>
      * 
      * @param request BatchDeleteJobsRequest
      * @return BatchDeleteJobsResponse
@@ -114,7 +134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes multiple routing policies at a time.</p>
+     * <p>Deletes multiple Route Strategies in a batch.</p>
      * 
      * @param request BatchDeleteRouteStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -160,7 +180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes multiple routing policies at a time.</p>
+     * <p>Deletes multiple Route Strategies in a batch.</p>
      * 
      * @param request BatchDeleteRouteStrategyRequest
      * @return BatchDeleteRouteStrategyResponse
@@ -172,7 +192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>To call this API, add the following dependency to your POM File:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -181,7 +201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Disables multiple jobs at a time.</p>
+     * <p>Disables multiple jobs in a batch.</p>
      * 
      * @param request BatchDisableJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -231,7 +251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>To call this API, add the following dependency to your POM File:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -240,7 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Disables multiple jobs at a time.</p>
+     * <p>Disables multiple jobs in a batch.</p>
      * 
      * @param request BatchDisableJobsRequest
      * @return BatchDisableJobsResponse
@@ -332,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application group. The AppKey is returned.</p>
+     * <p>Creates an app group and returns an AppKey.</p>
      * 
      * @param request CreateAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -360,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application group. The AppKey is returned.</p>
+     * <p>Creates an app group and returns an AppKey.</p>
      * 
      * @param request CreateAppGroupRequest
      * @return CreateAppGroupResponse
@@ -372,7 +392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job and obtains the job ID.</p>
+     * <p>Creates a node and returns the node ID.</p>
      * 
      * @param request CreateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -486,6 +506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SendChannel", request.sendChannel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             body.put("Status", request.status);
         }
@@ -550,7 +574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a job and obtains the job ID.</p>
+     * <p>Creates a node and returns the node ID.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -1182,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a workflow.</p>
+     * <p>Deletes the specified workflow.</p>
      * 
      * @param request DeleteWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1210,7 +1234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a workflow.</p>
+     * <p>Deletes the specified workflow.</p>
      * 
      * @param request DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
@@ -1222,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns available regions.</p>
+     * <p>Returns a list of available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1254,7 +1278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns available regions.</p>
+     * <p>Returns a list of available regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -1306,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a specified task.</p>
+     * <p>Disables a job.</p>
      * 
      * @param request DisableJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1334,7 +1358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables a specified task.</p>
+     * <p>Disables a job.</p>
      * 
      * @param request DisableJobRequest
      * @return DisableJobResponse
@@ -1385,6 +1409,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>任务创建完成以后默认启用，所以该功能是在停用任务后使用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Enables a job.</p>
      * 
@@ -1413,6 +1440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>任务创建完成以后默认启用，所以该功能是在停用任务后使用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Enables a job.</p>
      * 
@@ -1426,7 +1456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a specified workflow.</p>
+     * <p>Enables a workflow.</p>
      * 
      * @param request EnableWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1454,7 +1484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables a specified workflow.</p>
+     * <p>Enables a workflow.</p>
      * 
      * @param request EnableWorkflowRequest
      * @return EnableWorkflowResponse
@@ -1516,7 +1546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately triggers a workflow.</p>
+     * <p>Executes a workflow immediately.</p>
      * 
      * @param request ExecuteWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1544,7 +1574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately triggers a workflow.</p>
+     * <p>Executes a workflow immediately.</p>
      * 
      * @param request ExecuteWorkflowRequest
      * @return ExecuteWorkflowResponse
@@ -1556,7 +1586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</p>
+     * <p>Retrieves the details of an App Group.</p>
      * 
      * @param request GetAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1596,7 +1626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The configuration of the alert. The value is a JSON string. For more information, see \\\\<em>\\\\<em>the additional information about response parameters below this table\\\\</em>\\\\</em>.</p>
+     * <p>Retrieves the details of an App Group.</p>
      * 
      * @param request GetAppGroupRequest
      * @return GetAppGroupResponse
@@ -1648,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a job instance. You can view the status and progress of the job instance.</p>
+     * <p>Returns the information of a job instance, allowing you to view its status and progress.</p>
      * 
      * @param request GetJobInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1676,7 +1706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a job instance. You can view the status and progress of the job instance.</p>
+     * <p>Returns the information of a job instance, allowing you to view its status and progress.</p>
      * 
      * @param request GetJobInstanceRequest
      * @return GetJobInstanceResponse
@@ -1768,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves job scheduling data for Professional Edition applications.</p>
+     * <p>Retrieves the overview data of task scheduling for a professional edition application.</p>
      * 
      * @param request GetOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1828,7 +1858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves job scheduling data for Professional Edition applications.</p>
+     * <p>Retrieves the overview data of task scheduling for a professional edition application.</p>
      * 
      * @param request GetOverviewRequest
      * @return GetOverviewResponse
@@ -1840,7 +1870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about a workflow.</p>
+     * <p>Retrieves workflow information.</p>
      * 
      * @param request GetWorkFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1868,7 +1898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about a workflow.</p>
+     * <p>Retrieves workflow information.</p>
      * 
      * @param request GetWorkFlowRequest
      * @return GetWorkFlowResponse
@@ -2028,7 +2058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>Before you call this operation, add the following dependency to your POM file:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -2037,7 +2067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of applications.</p>
+     * <p>Gets the list of applications.</p>
      * 
      * @param request ListGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2081,7 +2111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <p>Before you call this operation, add the following dependency to your POM file:</p>
      * <pre><code class="language-xml">&lt;dependency&gt;
      *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
      *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
@@ -2090,7 +2120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of applications.</p>
+     * <p>Gets the list of applications.</p>
      * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
@@ -2162,15 +2192,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
-     *     <dependency>
-     *           <groupId>com.aliyun</groupId>
-     *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *           <version>1.0.5</version>
-     *     </dependency></p>
+     * <p>Before calling this operation, add the following dependency to the POM file:</p>
+     * <pre><code>&lt;dependency&gt;
+     *       &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *       &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *       &lt;version&gt;1.0.5&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries jobs.</p>
+     * <p>Retrieves a list of nodes.</p>
      * 
      * @param request ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2198,15 +2229,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
-     *     <dependency>
-     *           <groupId>com.aliyun</groupId>
-     *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *           <version>1.0.5</version>
-     *     </dependency></p>
+     * <p>Before calling this operation, add the following dependency to the POM file:</p>
+     * <pre><code>&lt;dependency&gt;
+     *       &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *       &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *       &lt;version&gt;1.0.5&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries jobs.</p>
+     * <p>Retrieves a list of nodes.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -2720,7 +2752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information of specified workers.</p>
+     * <p>Retrieves basic information for the specified instance.</p>
      * 
      * @param request ReadSchedulerxDesignateInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2768,7 +2800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information of specified workers.</p>
+     * <p>Retrieves basic information for the specified instance.</p>
      * 
      * @param request ReadSchedulerxDesignateInfoRequest
      * @return ReadSchedulerxDesignateInfoResponse
@@ -2908,7 +2940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns a successful or failed job instance. You can call this operation only in the professional edition.</p>
+     * <p>Reruns a node instance in the failed or successful state. Only the professional edition supports this operation.</p>
      * 
      * @param request RetryJobInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2960,7 +2992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns a successful or failed job instance. You can call this operation only in the professional edition.</p>
+     * <p>Reruns a node instance in the failed or successful state. Only the professional edition supports this operation.</p>
      * 
      * @param request RetryJobInstanceRequest
      * @return RetryJobInstanceResponse
@@ -3032,7 +3064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.</p>
+     * <p>Forcibly sets the instance status of a node to successful. Only the professional edition supports this operation.</p>
      * 
      * @param request SetJobInstanceSuccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3084,7 +3116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.</p>
+     * <p>Forcibly sets the instance status of a node to successful. Only the professional edition supports this operation.</p>
      * 
      * @param request SetJobInstanceSuccessRequest
      * @return SetJobInstanceSuccessResponse
@@ -3200,7 +3232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the application group.</p>
+     * <p>Update the application group.</p>
      * 
      * @param request UpdateAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3268,7 +3300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the application group.</p>
+     * <p>Update the application group.</p>
      * 
      * @param request UpdateAppGroupRequest
      * @return UpdateAppGroupResponse
@@ -3280,7 +3312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.</p>
+     * <p>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</p>
      * 
      * @param request UpdateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3394,6 +3426,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SendChannel", request.sendChannel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.successNoticeEnable)) {
             body.put("SuccessNoticeEnable", request.successNoticeEnable);
         }
@@ -3462,7 +3498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.</p>
+     * <p>Updates the configuration of a node. By default, call the get node operation first to find the corresponding fields to modify.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
@@ -3676,7 +3712,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.</p>
+     * <p>Updates the nodes and dependencies of a workflow. This operation is available only in the Enterprise Edition.</p>
      * 
      * @param request UpdateWorkflowDagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3730,7 +3766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.</p>
+     * <p>Updates the nodes and dependencies of a workflow. This operation is available only in the Enterprise Edition.</p>
      * 
      * @param request UpdateWorkflowDagRequest
      * @return UpdateWorkflowDagResponse

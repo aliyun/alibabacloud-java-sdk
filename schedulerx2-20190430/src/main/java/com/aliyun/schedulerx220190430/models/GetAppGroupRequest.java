@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+     * <p>The App Group ID. You can obtain this ID on the <strong>Application Management</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetAppGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the namespace. You can obtain the ID of the namespace on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+     * <p>The namespace ID. You can obtain this ID on the <strong>Namespaces</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetAppGroupRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

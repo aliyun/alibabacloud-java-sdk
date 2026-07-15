@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppGroupRequest extends TeaModel {
     /**
-     * <p>The AppKey for the application.</p>
+     * <p>The AppKey of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>adcExHZviLcl****</p>
@@ -14,7 +14,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,12 @@ public class CreateAppGroupRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The type of application. Valid values:</p>
+     * <p>The application type.</p>
      * <ul>
-     * <li><code>TRACE</code>: Application Monitoring</li>
-     * <li><code>EBPF</code>: Application Monitoring eBPF Edition</li>
+     * <li><p><code>1</code>: Standard application.</p>
+     * </li>
+     * <li><p><code>2</code>: Kubernetes (K8s) application.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +39,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public Integer appType;
 
     /**
-     * <p>The application version. 1: Basic version, 2: Professional version.</p>
+     * <p>The application version. Valid values: <code>1</code> (Basic Edition) and <code>2</code> (Professional Edition).</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -46,7 +48,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public Integer appVersion;
 
     /**
-     * <p>The description of the application.</p>
+     * <p>The application description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>
@@ -55,10 +57,12 @@ public class CreateAppGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable logging. Valid values:</p>
+     * <p>Specifies whether to enable logging.</p>
      * <ul>
-     * <li><code>true</code>: enabled</li>
-     * <li><code>false</code>: disabled</li>
+     * <li><p><code>true</code>: Enable logging.</p>
+     * </li>
+     * <li><p><code>false</code>: Disable logging.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +72,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public Boolean enableLog;
 
     /**
-     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The ID of the application group. You can find this ID on the <strong>Application Management</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,25 +91,38 @@ public class CreateAppGroupRequest extends TeaModel {
     public Integer maxJobs;
 
     /**
-     * <p>The configuration of the alert. The value is a JSON string. For more information about this parameter, see <strong>Additional information about request parameters</strong>.</p>
+     * <p>Specifies the alert notification configuration as a JSON string. The string can contain the following properties: <code>sendChannel</code>, <code>alarmType</code>, and <code>webhookIsAtAll</code>.</p>
+     * <blockquote>
+     * <p>For more information, see the <strong>Additional information about request parameters</strong> section.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;sendChannel&quot;:&quot;sms,ding&quot;}</p>
+     * <p>{
+     *     &quot;sendChannel&quot;: &quot;ding,sms,mail,phone&quot;,
+     *     &quot;alarmType&quot;: &quot;Contacts&quot;,
+     *     &quot;webhookIsAtAll&quot;: false
+     * }</p>
      */
     @NameInMap("MonitorConfigJson")
     public String monitorConfigJson;
 
     /**
-     * <p>The configuration of alert contacts. The value is a JSON string.</p>
+     * <p>The alert contacts. This can include individual contacts and contact groups.</p>
+     * <blockquote>
+     * <p>For more information, see the <strong>Additional information about request parameters</strong> section.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
+     * <p>[
+     *     {&quot;name&quot;: &quot;Alice Johnson&quot;},
+     *     {&quot;name&quot;: &quot;Lee Smith&quot;}
+     * ]</p>
      */
     @NameInMap("MonitorContactsJson")
     public String monitorContactsJson;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <p>The ID of the namespace. You can find this ID on the <strong>Namespace</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +141,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public String namespaceName;
 
     /**
-     * <p>This parameter is not supported. You do not need to specify this parameter.</p>
+     * <p>This parameter is currently unsupported and can be left unspecified.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -133,6 +150,8 @@ public class CreateAppGroupRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <p>The notification policy name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-workday-notification</p>
      */
@@ -140,7 +159,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public String notificationPolicyName;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -149,7 +168,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to schedule a busy worker.</p>
+     * <p>Specifies whether to schedule jobs on a busy worker.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

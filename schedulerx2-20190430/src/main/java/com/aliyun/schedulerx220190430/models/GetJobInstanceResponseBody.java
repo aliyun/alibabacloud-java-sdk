@@ -23,7 +23,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
      * <p>The error message that is returned only if the corresponding error occurs.</p>
      * 
      * <strong>example:</strong>
-     * <p>jobid: 92583 not match groupId: testSchedulerx.defaultGroup</p>
+     * <p>jobId=xxx is not existed</p>
      */
     @NameInMap("Message")
     public String message;
@@ -40,8 +40,10 @@ public class GetJobInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +120,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
          * <p>The user who executes the job.</p>
          * 
          * <strong>example:</strong>
-         * <p>A</p>
+         * <p>John Smith</p>
          */
         @NameInMap("Executor")
         public String executor;
@@ -127,7 +129,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
          * <p>The job instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>11111111</p>
+         * <p>1189853849</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
@@ -163,7 +165,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
          * <p>The progress of the job instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>complete</p>
+         * <p>{&quot;taskProgress&quot;:[{&quot;name&quot;:&quot;MAP_TASK_ROOT&quot;,&quot;total&quot;:1,&quot;pulled&quot;:1,&quot;running&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0}],&quot;workerProgress&quot;:[{&quot;workerAddr&quot;:&quot;11.122.241.245:34865&quot;,&quot;total&quot;:1,&quot;pulled&quot;:1,&quot;running&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0}]}</p>
          */
         @NameInMap("Progress")
         public String progress;
@@ -172,7 +174,7 @@ public class GetJobInstanceResponseBody extends TeaModel {
          * <p>The execution results of the job instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>success</p>
+         * <p>{\&quot;TotalSize\&quot;: 31, \&quot;CurrentPage\&quot;: 5, \&quot;PageSize\&quot;: 10}</p>
          */
         @NameInMap("Result")
         public String result;
@@ -198,11 +200,16 @@ public class GetJobInstanceResponseBody extends TeaModel {
         /**
          * <p>The state of the job instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The job instance is waiting for execution.</li>
-         * <li><strong>3</strong>: The job instance is running.</li>
-         * <li><strong>4</strong>: The job instance is successful.</li>
-         * <li><strong>5</strong>: The job instance failed.</li>
-         * <li><strong>9</strong>: The job instance is rejected.</li>
+         * <li><p><strong>1</strong>: The job instance is waiting for execution.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The job instance is running.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The job instance is successful.</p>
+         * </li>
+         * <li><p><strong>5</strong>: The job instance failed.</p>
+         * </li>
+         * <li><p><strong>9</strong>: The job instance is rejected.</p>
+         * </li>
          * </ul>
          * <p>Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus</p>
          * 
@@ -215,10 +222,14 @@ public class GetJobInstanceResponseBody extends TeaModel {
         /**
          * <p>The method that is used to specify the time when to schedule the job instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: cron</li>
-         * <li><strong>3</strong>: fix_rate</li>
-         * <li><strong>4</strong>: second_delay</li>
-         * <li><strong>100</strong>: api</li>
+         * <li><p><strong>1</strong>: cron</p>
+         * </li>
+         * <li><p><strong>3</strong>: fix_rate</p>
+         * </li>
+         * <li><p><strong>4</strong>: second_delay</p>
+         * </li>
+         * <li><p><strong>100</strong>: api</p>
+         * </li>
          * </ul>
          * <p>Enumeration class: com.alibaba.schedulerx.common.domain.TimeType</p>
          * 
@@ -240,16 +251,21 @@ public class GetJobInstanceResponseBody extends TeaModel {
         /**
          * <p>The trigger type of the job instance. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The job instance was triggered at the scheduled time.</li>
-         * <li><strong>2</strong>: The job instance was triggered due to data update.</li>
-         * <li><strong>3</strong>: The job instance was triggered by an API call.</li>
-         * <li><strong>4</strong>: The job instance was triggered because it is manually rerun.</li>
-         * <li><strong>5</strong>: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.</li>
+         * <li><p><strong>1</strong>: The job instance was triggered at the scheduled time.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The job instance was triggered due to data update.</p>
+         * </li>
+         * <li><p><strong>3</strong>: The job instance was triggered by an API call.</p>
+         * </li>
+         * <li><p><strong>4</strong>: The job instance was triggered because it is manually rerun.</p>
+         * </li>
+         * <li><p><strong>5</strong>: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.</p>
+         * </li>
          * </ul>
          * <p>Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType</p>
          * 
          * <strong>example:</strong>
-         * <p>3</p>
+         * <p>1</p>
          */
         @NameInMap("TriggerType")
         public Integer triggerType;

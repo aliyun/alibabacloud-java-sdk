@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkFlowRequest extends TeaModel {
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetWorkFlowRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetWorkFlowRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespace.</p>
+     * <p>The namespace source.</p>
      * 
      * <strong>example:</strong>
      * <p>source</p>
@@ -34,7 +34,7 @@ public class GetWorkFlowRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The region information.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class GetWorkFlowRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the workflow.</p>
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

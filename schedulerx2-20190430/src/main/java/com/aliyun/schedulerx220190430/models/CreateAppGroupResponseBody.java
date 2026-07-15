@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAppGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CreateAppGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about the job group.</p>
+     * <p>Information about the created Application Group.</p>
      */
     @NameInMap("Data")
     public CreateAppGroupResponseBodyData data;
 
     /**
-     * <p>The error message that is returned only if the corresponding error occurs.</p>
+     * <p>The error message. Returned only when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Your request is denied as lack of ssl protect.</p>
@@ -29,7 +29,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>883AFE93-FB03-4FA9-A958-E750C6DE120C</p>
@@ -38,10 +38,12 @@ public class CreateAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application was created. Valid values:</p>
+     * <p>Indicates whether the Application Group was successfully created. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The Application Group was successfully created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The Application Group failed to be created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +99,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
 
     public static class CreateAppGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The job group ID.</p>
+         * <p>The Application Group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6607</p>
@@ -106,7 +108,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public Long appGroupId;
 
         /**
-         * <p>The AppKey for the application.</p>
+         * <p>The Application Key (AppKey).</p>
          * 
          * <strong>example:</strong>
          * <p>adcExHZviL******</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about the namespace.</p>
+     * <p>The namespace information.</p>
      */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
 
     /**
-     * <p>The error message that is returned only if the corresponding error occurs.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>namespace=test3 is existed, noting update</p>
@@ -38,10 +38,12 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application was created. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The namespace was successfully created.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The namespace failed to be created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +99,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     public static class CreateNamespaceResponseBodyData extends TeaModel {
         /**
-         * <p>The UID of the namespace.</p>
+         * <p>The namespace UID.</p>
          * 
          * <strong>example:</strong>
          * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>

@@ -14,7 +14,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The applications.</p>
+     * <p>The list of applications.</p>
      */
     @NameInMap("Data")
     public ListGroupsResponseBodyData data;
@@ -38,10 +38,12 @@ public class ListGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +99,7 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyDataAppGroups extends TeaModel {
         /**
-         * <p>The application group ID.</p>
+         * <p>The ID of the application group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -106,7 +108,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public Long appGroupId;
 
         /**
-         * <p>The AppKey for the application.</p>
+         * <p>The application key.</p>
          * 
          * <strong>example:</strong>
          * <p>a3G77O6NZxq/lyo1NC****==</p>
@@ -124,7 +126,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The application version. 1: Basic version, 2: Professional version.</p>
+         * <p>The application version. Valid values: 1 (Basic Edition) and 2 (Professional Edition).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -141,11 +143,23 @@ public class ListGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether logging is enabled.</p>
+         * <ul>
+         * <li><p>true: Logging is enabled.</p>
+         * </li>
+         * <li><p>false: Logging is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableLog")
         public Boolean enableLog;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>DocTest.Group</p>
@@ -235,7 +249,7 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyData extends TeaModel {
         /**
-         * <p>The applications and their details.</p>
+         * <p>The list of applications and their details.</p>
          */
         @NameInMap("AppGroups")
         public java.util.List<ListGroupsResponseBodyDataAppGroups> appGroups;

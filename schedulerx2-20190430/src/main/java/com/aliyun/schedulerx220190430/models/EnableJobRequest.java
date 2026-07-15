@@ -18,7 +18,7 @@ public class EnableJobRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>92583</p>
+     * <p>92555</p>
      */
     @NameInMap("JobId")
     public Long jobId;

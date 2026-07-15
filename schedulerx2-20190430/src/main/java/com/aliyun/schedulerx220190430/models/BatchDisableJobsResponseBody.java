@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDisableJobsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class BatchDisableJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional information that was returned.</p>
+     * <p>A message that provides more information about the response.</p>
      * 
      * <strong>example:</strong>
      * <p>disable failed jobs=[99341]</p>
@@ -23,7 +23,7 @@ public class BatchDisableJobsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</p>
@@ -32,10 +32,12 @@ public class BatchDisableJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The operation was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The operation failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

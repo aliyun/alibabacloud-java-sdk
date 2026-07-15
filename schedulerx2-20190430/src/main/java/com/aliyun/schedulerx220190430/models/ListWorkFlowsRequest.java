@@ -64,8 +64,10 @@ public class ListWorkFlowsRequest extends TeaModel {
     /**
      * <p>The job status.</p>
      * <ul>
-     * <li><strong>0</strong>: disables the job.</li>
-     * <li><strong>1</strong>: enables the routing policy.</li>
+     * <li><p><strong>0</strong>: disables the job.</p>
+     * </li>
+     * <li><p><strong>1</strong>: enables the routing policy.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +80,7 @@ public class ListWorkFlowsRequest extends TeaModel {
      * <p>The workflow name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test3</p>
+     * <p>Test3</p>
      */
     @NameInMap("WorkflowName")
     public String workflowName;

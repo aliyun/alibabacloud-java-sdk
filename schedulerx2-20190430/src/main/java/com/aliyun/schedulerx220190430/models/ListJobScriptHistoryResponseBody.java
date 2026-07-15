@@ -117,16 +117,16 @@ public class ListJobScriptHistoryResponseBody extends TeaModel {
          * 
          * <strong>example:</strong>
          * <p>#!/bin/bash</p>
-         * <h1>The following are predefined variables provided by the system. You can use them to obtain information about the job run.</h1>
+         * <h1>The following are built-in variables provided by the system to retrieve job runtime information</h1>
          * <p>echo &quot;Job parameters: #{schedulerx.jobParameters}&quot;
-         * echo &quot;Shard index: #{schedulerx.shardingId}&quot;
-         * echo &quot;Shard parameters: #{schedulerx.shardingParameters}&quot;
-         * echo &quot;Total number of shards: #{schedulerx.shardingNum}&quot;
-         * echo &quot;Current retry count: #{schedulerx.attempt}&quot;
+         * echo &quot;Sharding ID: #{schedulerx.shardingId}&quot;
+         * echo &quot;Sharding parameters: #{schedulerx.shardingParameters}&quot;
+         * echo &quot;Total shards: #{schedulerx.shardingNum}&quot;
+         * echo &quot;Retry attempts: #{schedulerx.attempt}&quot;
          * echo &quot;Trigger type: #{schedulerx.triggerType}&quot;
-         * echo &quot;Scheduled timestamp: #{schedulerx.scheduleTime}&quot;
+         * echo &quot;Schedule timestamp: #{schedulerx.scheduleTime}&quot;
          * echo &quot;Data timestamp: #{schedulerx.dataTime}&quot;</p>
-         * <h1>The output of the last line will be returned as the result</h1>
+         * <h1>The last line of output will be returned as the result</h1>
          * <p>echo &quot;hello world&quot;</p>
          * <h1>exit 1 indicates failure</h1>
          * <p>exit 0</p>

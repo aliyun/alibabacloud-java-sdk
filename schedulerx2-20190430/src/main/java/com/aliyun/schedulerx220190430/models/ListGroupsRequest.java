@@ -14,7 +14,7 @@ public class ListGroupsRequest extends TeaModel {
     public String appGroupName;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
+     * <p>The namespace. You can obtain the ID of the namespace on the <strong>Namespace</strong> page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListGroupsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * <p>This parameter is required only for specific third-party integrations.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -33,7 +33,7 @@ public class ListGroupsRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

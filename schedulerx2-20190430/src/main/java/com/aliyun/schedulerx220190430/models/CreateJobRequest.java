@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
     /**
-     * <p>The time interval between retry attempts in case of a job failure. Unit: seconds. Default value: 30.</p>
+     * <p>The retry interval on failure. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,17 +14,14 @@ public class CreateJobRequest extends TeaModel {
     public Integer attemptInterval;
 
     /**
-     * <p>If you set TimeType to 1 (cron), you can specify calendar days.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>This parameter is not supported. You do not need to specify this parameter.</p>
+     * <p>The custom calendar. This parameter is available for the cron time type.</p>
      */
     @NameInMap("Calendar")
     public String calendar;
 
     /**
-     * <p>The full path of the job interface class.</p>
-     * <p>This parameter is available only when you set JobType to java. You must enter a full path.</p>
+     * <p>The full path of the node interface class.</p>
+     * <p>This field is required only when you select the Java node type. Specify the full path.</p>
      * 
      * <strong>example:</strong>
      * <p>com.alibaba.schedulerx.test.helloworld</p>
@@ -33,7 +30,7 @@ public class CreateJobRequest extends TeaModel {
     public String className;
 
     /**
-     * <p>The number of threads that a single worker triggers simultaneously. You can specify this parameter for MapReduce jobs. Default value: 5.</p>
+     * <p>The advanced configuration for parallel grid nodes. The number of threads triggered for a single execution on a single machine. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -42,13 +39,19 @@ public class CreateJobRequest extends TeaModel {
     public Integer consumerSize;
 
     /**
-     * <p>The information about the alert contact.</p>
+     * <p>The node contact information.</p>
+     * <blockquote>
+     * <p>Notice: This field is deprecated.</notice></p>
+     * </blockquote>
      */
     @NameInMap("ContactInfo")
     public java.util.List<CreateJobRequestContactInfo> contactInfo;
 
     /**
-     * <p>The script content. This parameter is required when you set JobType to python, shell, go, or k8s.</p>
+     * <ul>
+     * <li>If the node type is python, shell, or k8s, specify the corresponding script content.</li>
+     * <li>If the node type is golang, the content format example is {&quot;jobName&quot;:&quot;HelloWorld&quot;}.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>echo \&quot;hello\&quot;</p>
@@ -57,7 +60,7 @@ public class CreateJobRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>If you set TimeType to 1 (cron), you can specify a time offset. Unit: seconds.</p>
+     * <p>The time offset. Unit: seconds. This parameter is available for the cron time type.</p>
      * 
      * <strong>example:</strong>
      * <p>2400</p>
@@ -66,7 +69,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer dataOffset;
 
     /**
-     * <p>The job description.</p>
+     * <p>The node description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test</p>
@@ -75,7 +78,7 @@ public class CreateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The number of task distribution threads. This parameter is an advanced configuration item of the MapReduce job. Default value: 5.</p>
+     * <p>The advanced configuration for parallel grid nodes. The number of subtask dispatch threads. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -84,13 +87,13 @@ public class CreateJobRequest extends TeaModel {
     public Integer dispatcherSize;
 
     /**
-     * <p>The execution mode of the job. Valid values:</p>
+     * <p>The node execution mode. The following execution modes are supported:</p>
      * <ul>
-     * <li><strong>Stand-alone operation</strong></li>
-     * <li><strong>Broadcast run</strong></li>
-     * <li><strong>Visual MapReduce</strong></li>
-     * <li><strong>MapReduce</strong></li>
-     * <li><strong>Shard run</strong></li>
+     * <li><strong>Standalone</strong>: standalone</li>
+     * <li><strong>Broadcast</strong>: broadcast</li>
+     * <li><strong>Visual MapReduce</strong>: parallel</li>
+     * <li><strong>MapReduce</strong>: batch</li>
+     * <li><strong>Sharding</strong>: sharding</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -101,10 +104,10 @@ public class CreateJobRequest extends TeaModel {
     public String executeMode;
 
     /**
-     * <p>Specifies whether to trigger an alert when a job fails. Valid values:</p>
+     * <p>Specifies whether to enable the failure alert. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: triggers an alert when a job fails.</li>
-     * <li><strong>false</strong>: does not trigger an alert when a job fails.</li>
+     * <li><strong>true</strong>: Enables the failure alert.</li>
+     * <li><strong>false</strong>: Disables the failure alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +117,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean failEnable;
 
     /**
-     * <p>The maximum number of consecutive failures before an alert is triggered. An alert will be triggered if the number of consecutive failures reaches the value of this parameter.</p>
+     * <p>The number of consecutive failures before an alert is triggered.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -123,7 +126,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer failTimes;
 
     /**
-     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The application ID. You can obtain the application ID on the Application Management page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -133,7 +136,7 @@ public class CreateJobRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The job type. Valid values:</p>
+     * <p>The node type. The following node types are supported:</p>
      * <ul>
      * <li>java</li>
      * <li>python</li>
@@ -154,7 +157,7 @@ public class CreateJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The maximum number of retry attempts in case of a job failure. Specify this parameter based on your business requirements. Default value: 0.</p>
+     * <p>The maximum number of retries on failure. Set this parameter based on your business requirements. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -163,7 +166,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer maxAttempt;
 
     /**
-     * <p>The maximum number of concurrent instances. By default, only one instance can run at a time. When an instance is running, the next instance is not triggered even if the scheduled start time arrives.</p>
+     * <p>The maximum number of concurrently running instances. Default value: 1. This means that if the previous trigger has not finished running, the next trigger is not performed even if the scheduled time arrives.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -172,10 +175,10 @@ public class CreateJobRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
-     * <p>Specifies whether to generate an alert if no machines are available to run the job. Valid values:</p>
+     * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: generates an alert if no machines are available to run the job.</li>
-     * <li><strong>false</strong>: does not generate an alert if no machines are available to run the job.</li>
+     * <li><strong>true</strong>: Enables the no-available-machine alert.</li>
+     * <li><strong>false</strong>: Disables the no-available-machine alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -185,7 +188,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean missWorkerEnable;
 
     /**
-     * <p>The job name.</p>
+     * <p>The node name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -195,7 +198,7 @@ public class CreateJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -205,7 +208,7 @@ public class CreateJobRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespace. You must specify this parameter only if the namespace is provided by a third party.</p>
+     * <p>This parameter is required only for special third-party users.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -214,7 +217,7 @@ public class CreateJobRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The number of entries per page. You can specify this parameter for MapReduce jobs. Default value: 100.</p>
+     * <p>The advanced configuration for parallel grid nodes. The number of subtasks pulled in a single request. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -223,7 +226,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The user-defined parameters that you can obtain when the job is running.</p>
+     * <p>The user-defined parameters that can be obtained at runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -231,11 +234,23 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>The node priority. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: low</li>
+     * <li><strong>5</strong>: medium</li>
+     * <li><strong>10</strong>: high</li>
+     * <li><strong>15</strong>: very high</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
-     * <p>The maximum capacity of the task queue. You can specify this parameter for MapReduce jobs. Default value: 10000.</p>
+     * <p>The advanced configuration for parallel grid nodes. The maximum cache size of the subtask queue. Default value: 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -254,7 +269,11 @@ public class CreateJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The method that is used to send alerts. Set the value to sms. Default value: sms.</p>
+     * <p>The alert notification channel.</p>
+     * <ul>
+     * <li>Use the default channel of the application group: default.</li>
+     * <li>Specify a notification channel for the node: sms, mail, phone, or webhook.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>sms</p>
@@ -262,8 +281,11 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("SendChannel")
     public String sendChannel;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
     /**
-     * <p>Specifies whether to enable the job. If this parameter is set to 0, the job is disabled. If this parameter is set to 1, the job is enabled. Default value: 1.</p>
+     * <p>The node status. Valid values: 0: disabled. 1: enabled. Default value: 1 (enabled).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -272,7 +294,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Specifies whether to send notifications for successfully running the job.</p>
+     * <p>Specifies whether to enable the success notification.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -281,7 +303,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean successNoticeEnable;
 
     /**
-     * <p>The time interval between retry attempts in case of a job failure. This parameter is an advanced configuration item of the MapReduce job. Default value: 0.</p>
+     * <p>The advanced configuration for parallel grid nodes. The retry interval for a failed subtask. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -290,7 +312,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer taskAttemptInterval;
 
     /**
-     * <p>The maximum number of retry attempts in case of a job failure. This parameter is an advanced configuration item of the MapReduce job. Default value: 0.</p>
+     * <p>The advanced configuration for parallel grid nodes. The number of retries for a failed subtask. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -299,13 +321,13 @@ public class CreateJobRequest extends TeaModel {
     public Integer taskMaxAttempt;
 
     /**
-     * <p>The time expression. Specify the time expression based on the value of TimeType:</p>
+     * <p>The time expression. Set the time expression based on the selected time type.</p>
      * <ul>
-     * <li>If you set TimeType to <strong>1</strong> (cron), specify this parameter to a standard CRON expression.</li>
-     * <li>If you set TimeType to <strong>100</strong> (api), no time expression is required.</li>
-     * <li>If you set TimeType to <strong>3</strong> (fixed_rate), specify this parameter to a fixed frequency in seconds. For example, if you set this parameter to 30, the system triggers a job every 30 seconds.</li>
-     * <li>If you set TimeType to <strong>4</strong> (second_delay), specify this parameter to a fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</li>
-     * <li>If you set TimeType to <strong>5</strong> (one_time), specify this parameter to a specific time point at which the job is triggered. The time is in the format of yyyy-MM-dd HH:mm:ss, such as 2022-10-10 10:10:00, or a timestamp in milliseconds.</li>
+     * <li><strong>cron</strong>: Specify a standard cron expression. Online verification is supported.</li>
+     * <li><strong>api</strong>: No time expression is required.</li>
+     * <li><strong>fixed_rate</strong>: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
+     * <li><strong>second_delay</strong>: Specify a fixed delay in seconds before each execution (1s to 60s).</li>
+     * <li><strong>one_time</strong>: Specify a time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -315,13 +337,14 @@ public class CreateJobRequest extends TeaModel {
     public String timeExpression;
 
     /**
-     * <p>The time type. Valid values:</p>
+     * <p>The time type. The following time types are supported:</p>
      * <ul>
-     * <li><strong>1</strong>: cron</li>
-     * <li><strong>3</strong>: fixed_rate</li>
-     * <li><strong>4</strong>: second_delay</li>
-     * <li><strong>5</strong>: one_time</li>
-     * <li><strong>100</strong>: api</li>
+     * <li><strong>cron</strong>: 1</li>
+     * <li><strong>fixed_rate</strong>: 3</li>
+     * <li><strong>second_delay</strong>: 4</li>
+     * <li><strong>one_time</strong>: 5 </li>
+     * <li><strong>api</strong>: 100</li>
+     * <li><strong>none</strong>: -1</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -341,10 +364,10 @@ public class CreateJobRequest extends TeaModel {
     public Long timeout;
 
     /**
-     * <p>Specifies whether to enable the timeout alert feature. If the feature is enabled, an alert will be triggered upon a timeout. Valid values:</p>
+     * <p>Specifies whether to enable the timeout alert. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the timeout alert feature.</li>
-     * <li><strong>false</strong>: disables the timeout alert feature.</li>
+     * <li><strong>true</strong>: Enables the timeout alert.</li>
+     * <li><strong>false</strong>: Disables the timeout alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -354,10 +377,10 @@ public class CreateJobRequest extends TeaModel {
     public Boolean timeoutEnable;
 
     /**
-     * <p>Specifies whether to enable the timeout termination feature. If the feature is enabled, a job will automatically be terminated if it times out. Valid values:</p>
+     * <p>Specifies whether to enable timeout termination. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the timeout termination feature.</li>
-     * <li><strong>false</strong>: disables the timeout termination feature.</li>
+     * <li><strong>true</strong>: Enables timeout termination.</li>
+     * <li><strong>false</strong>: Disables timeout termination.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -367,7 +390,7 @@ public class CreateJobRequest extends TeaModel {
     public Boolean timeoutKillEnable;
 
     /**
-     * <p>Time zone.</p>
+     * <p>The time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>GMT+8</p>
@@ -376,7 +399,9 @@ public class CreateJobRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The extended attributes. If you set JobType to k8s, this parameter is required. For a job whose resource type is Job-YAML, set this parameter to {&quot;resource&quot;:&quot;job&quot;}. For a job whose resource type is Shell-Script, set this parameter to {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}.</p>
+     * <p>If the node type is k8s, configure this parameter.
+     * Job task: {&quot;resource&quot;:&quot;job&quot;}
+     * Shell task: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;resource&quot;:&quot;job&quot;}</p>
@@ -597,6 +622,14 @@ public class CreateJobRequest extends TeaModel {
         return this.sendChannel;
     }
 
+    public CreateJobRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
     public CreateJobRequest setStatus(Integer status) {
         this.status = status;
         return this;
@@ -687,7 +720,7 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestContactInfo extends TeaModel {
         /**
-         * <p>The webhook URL of the DingTalk chatbot.<a href="https://open.dingtalk.com/document/org/application-types"></a></p>
+         * <p>The webhook URL of the DingTalk chatbot for the alert contact\&quot;s DingTalk group. References: <a href="https://open.dingtalk.com/document/org/application-types">DingTalk development documentation</a>.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</p>
@@ -708,13 +741,13 @@ public class CreateJobRequest extends TeaModel {
          * <p>The name of the alert contact.</p>
          * 
          * <strong>example:</strong>
-         * <p>Tom</p>
+         * <p>John Smith</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
-         * <p>The mobile number of the alert contact.</p>
+         * <p>The mobile phone number of the alert recipient.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>

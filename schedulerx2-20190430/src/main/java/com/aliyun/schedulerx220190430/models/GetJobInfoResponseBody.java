@@ -40,8 +40,10 @@ public class GetJobInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the job details were obtained. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong></p>
+     * </li>
+     * <li><p><strong>false</strong></p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,8 +177,10 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Failure alarm switch was turned on. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,8 +219,10 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Timeout alarm switch was turned on. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -440,7 +446,7 @@ public class GetJobInfoResponseBody extends TeaModel {
          * <p>Custom calendar days specified if TimeType is set to <strong>1</strong> (cron).</p>
          * 
          * <strong>example:</strong>
-         * <p>Business days</p>
+         * <p>workday</p>
          */
         @NameInMap("Calendar")
         public String calendar;
@@ -457,10 +463,14 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * <p>The time expression specified based on the value of TimeType:</p>
          * <ul>
-         * <li>If TimeType is set to <strong>100</strong> (api), no time expression is required.</li>
-         * <li>If TimeType is set to <strong>3</strong> (fix_rate), this parameter value indicates the specific and fixed frequency. For example, if the value is 30, the system triggers a job every 30 seconds.</li>
-         * <li>If TimeType is set to <strong>1</strong> (cron), this parameter value indicates the standard CRON expression used to specify the time when to schedule the job.</li>
-         * <li>If TimeType is set to <strong>4</strong> (second_delay), this parameter value indicates the fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</li>
+         * <li><p>If TimeType is set to <strong>100</strong> (api), no time expression is required.</p>
+         * </li>
+         * <li><p>If TimeType is set to <strong>3</strong> (fix_rate), this parameter value indicates the specific and fixed frequency. For example, if the value is 30, the system triggers a job every 30 seconds.</p>
+         * </li>
+         * <li><p>If TimeType is set to <strong>1</strong> (cron), this parameter value indicates the standard CRON expression used to specify the time when to schedule the job.</p>
+         * </li>
+         * <li><p>If TimeType is set to <strong>4</strong> (second_delay), this parameter value indicates the fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -472,11 +482,16 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * <p>The time type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: cron</li>
-         * <li><strong>3</strong>: fix_rate</li>
-         * <li><strong>4</strong>: second_delay</li>
-         * <li><strong>5</strong>: one_time</li>
-         * <li><strong>100</strong>: api</li>
+         * <li><p><strong>1</strong>: cron</p>
+         * </li>
+         * <li><p><strong>3</strong>: fix_rate</p>
+         * </li>
+         * <li><p><strong>4</strong>: second_delay</p>
+         * </li>
+         * <li><p><strong>5</strong>: one_time</p>
+         * </li>
+         * <li><p><strong>100</strong>: api</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -564,11 +579,16 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * <p>The execution mode of the job. Valid values:</p>
          * <ul>
-         * <li><strong>Stand-alone operation</strong>: standalone</li>
-         * <li><strong>Broadcast run</strong>: broadcast</li>
-         * <li><strong>Visual MapReduce</strong>: parallel</li>
-         * <li><strong>MapReduce</strong>: batch</li>
-         * <li><strong>Shard run</strong>: sharding</li>
+         * <li><p><strong>Stand-alone operation</strong>: standalone</p>
+         * </li>
+         * <li><p><strong>Broadcast run</strong>: broadcast</p>
+         * </li>
+         * <li><p><strong>Visual MapReduce</strong>: parallel</p>
+         * </li>
+         * <li><p><strong>MapReduce</strong>: batch</p>
+         * </li>
+         * <li><p><strong>Shard run</strong>: sharding</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -656,8 +676,10 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the job was enabled. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: The job was enabled and could be triggered.</li>
-         * <li><strong>0</strong>: The job was disabled and could not be triggered.</li>
+         * <li><p><strong>1</strong>: The job was enabled and could be triggered.</p>
+         * </li>
+         * <li><p><strong>0</strong>: The job was disabled and could not be triggered.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

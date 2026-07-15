@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkflowResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteWorkflowResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message that is returned only if the corresponding error occurs.</p>
+     * <p>The error message. This parameter is returned only if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Your request is denied as lack of ssl protect.</p>
@@ -23,7 +23,7 @@ public class DeleteWorkflowResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
@@ -32,10 +32,12 @@ public class DeleteWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the workflow was deleted. Valid values:</p>
+     * <p>Indicates whether the workflow was deleted successfully. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: The workflow was deleted.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The workflow was not deleted.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

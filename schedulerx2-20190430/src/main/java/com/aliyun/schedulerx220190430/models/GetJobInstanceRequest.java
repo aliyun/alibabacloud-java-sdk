@@ -29,7 +29,7 @@ public class GetJobInstanceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>11111111</p>
+     * <p>1685883418</p>
      */
     @NameInMap("JobInstanceId")
     public Long jobInstanceId;
@@ -54,6 +54,7 @@ public class GetJobInstanceRequest extends TeaModel {
     public String namespaceSource;
 
     /**
+     * <p>Region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

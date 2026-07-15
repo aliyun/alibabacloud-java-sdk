@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateJobResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional information returned only if an error occurs.</p>
+     * <p>The additional information. The error message is returned only when a fault occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>job type is java className can not be blank</p>

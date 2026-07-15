@@ -22,6 +22,9 @@ public class UpdateAppGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Enable logging</p>
+     */
     @NameInMap("EnableLog")
     public Boolean enableLog;
 
@@ -61,7 +64,10 @@ public class UpdateAppGroupRequest extends TeaModel {
      * <p>The configuration of alert contacts. The value is a JSON string.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
+     * <p>[
+     *     {&quot;name&quot;: &quot;Alice Johnson&quot;},
+     *     {&quot;name&quot;: &quot;Lee Smith&quot;}
+     * ]</p>
      */
     @NameInMap("MonitorContactsJson")
     public String monitorContactsJson;
@@ -77,6 +83,8 @@ public class UpdateAppGroupRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>Notification policy name</p>
+     * 
      * <strong>example:</strong>
      * <p>test-workday-notification</p>
      */

@@ -141,7 +141,7 @@ public class ListWorkFlowsResponseBody extends TeaModel {
          * <p>The workflow name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test3</p>
+         * <p>Test3</p>
          */
         @NameInMap("Name")
         public String name;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOverviewRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value must be a UNIX timestamp (in seconds). If left empty, the current time is used.</p>
+     * <p>The end timestamp of the data, in seconds. Example: 1684166400. If this parameter is not specified, the current time is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>1684166400</p>
@@ -25,8 +25,8 @@ public class GetOverviewRequest extends TeaModel {
     /**
      * <p>The metric type. Valid values:</p>
      * <ul>
-     * <li>0: the basic job data.</li>
-     * <li>1: the job running data.</li>
+     * <li>0: basic task information.</li>
+     * <li>1: task execution information.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class GetOverviewRequest extends TeaModel {
     public Integer metricType;
 
     /**
-     * <p>The unique identifier (UID) of the namespace.</p>
+     * <p>The namespace UID.</p>
      * 
      * <strong>example:</strong>
      * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
@@ -46,7 +46,7 @@ public class GetOverviewRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * <p>The source of the namespace. This parameter is required only for special third-party integrations.</p>
      * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
@@ -55,10 +55,10 @@ public class GetOverviewRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The query type. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li>query: queries data in a time range.</li>
-     * <li>query_range: queries time series data in a time range.</li>
+     * <li>query: queries interval data.</li>
+     * <li>query_range: queries interval time series data.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -79,7 +79,7 @@ public class GetOverviewRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. The value must be a UNIX timestamp (in seconds).</p>
+     * <p>The start timestamp of the data, in seconds. Example: 1684166400.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

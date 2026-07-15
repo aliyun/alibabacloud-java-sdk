@@ -284,7 +284,7 @@ public class ReadSchedulerxDesignateDetailResponseBody extends TeaModel {
          * <p>The used disk space in MB.</p>
          * 
          * <strong>example:</strong>
-         * <p>0.14865875</p>
+         * <p>148</p>
          */
         @NameInMap("DiskUsed")
         public Integer diskUsed;

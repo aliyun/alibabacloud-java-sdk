@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetAppGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about the application group.</p>
+     * <p>The details of the App Group.</p>
      */
     @NameInMap("Data")
     public GetAppGroupResponseBodyData data;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
@@ -29,7 +29,7 @@ public class GetAppGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
@@ -40,8 +40,10 @@ public class GetAppGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><p><strong>true</strong>: The request was successful.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +99,7 @@ public class GetAppGroupResponseBody extends TeaModel {
 
     public static class GetAppGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The AppKey of the application.</p>
+         * <p>The application\&quot;s AppKey.</p>
          * 
          * <strong>example:</strong>
          * <p>QI4lWMZ+xk1rNB67jFUhaw==</p>
@@ -106,7 +108,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>DocTest</p>
@@ -115,7 +117,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The application version. 1: Basic version, 2: Professional version.</p>
+         * <p>The application version. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -124,7 +126,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>The number of jobs that are configured for the application group.</p>
+         * <p>The number of jobs currently configured for the App Group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -133,7 +135,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         public Integer curJobs;
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The application description.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -141,11 +143,14 @@ public class GetAppGroupResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Specifies whether to enable log collection. The default value is false.</p>
+         */
         @NameInMap("EnableLog")
         public Boolean enableLog;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The App Group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>testSchedulerx.defaultGroup</p>
@@ -154,7 +159,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The maximum number of jobs that can be configured for the application group.</p>
+         * <p>The maximum number of jobs that can be configured for the App Group.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -163,31 +168,38 @@ public class GetAppGroupResponseBody extends TeaModel {
         public Integer maxJobs;
 
         /**
-         * <p>The alert notification configurations.</p>
+         * <p>The alarm notification configuration.</p>
          * <blockquote>
-         * <p> For more information about this parameter, see the following <strong>additional information about request parameters</strong>.</p>
+         * <p>For more information, see the <strong>MonitorConfigJson</strong> section below.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</p>
+         * <p>{
+         *     &quot;sendChannel&quot;: &quot;ding,sms,mail,phone&quot;,
+         *     &quot;alarmType&quot;: &quot;Contacts&quot;,
+         *     &quot;webhookIsAtAll&quot;: false
+         * }</p>
          */
         @NameInMap("MonitorConfigJson")
         public String monitorConfigJson;
 
         /**
-         * <p>The alert contact configurations.</p>
+         * <p>The alarm contact configuration.</p>
          * <blockquote>
-         * <p> For more information about this parameter, see the following <strong>additional information about request parameters</strong>.</p>
+         * <p>For more information, see the <strong>MonitorContactsJson</strong> section below.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>[ {&quot;name&quot;: &quot;Peter&quot;}, {&quot;name&quot;: &quot;Paul&quot;} ]</p>
+         * <p>[
+         *     {&quot;name&quot;: &quot;Alice Johnson&quot;},
+         *     {&quot;name&quot;: &quot;Lee Smith&quot;}
+         * ]</p>
          */
         @NameInMap("MonitorContactsJson")
         public String monitorContactsJson;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
@@ -196,6 +208,8 @@ public class GetAppGroupResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>The name of the notification policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-workday-notification</p>
          */
