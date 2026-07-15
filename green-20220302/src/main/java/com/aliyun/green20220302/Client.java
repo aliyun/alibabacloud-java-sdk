@@ -839,6 +839,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The content moderation Agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronously detects multimodal content by using the Agent API.</p>
+     * 
+     * @param request MultiModalAgentSSERequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MultiModalAgentSSEResponse
+     */
+    public MultiModalAgentSSEResponse multiModalAgentSSEWithOptions(MultiModalAgentSSERequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appID)) {
+            body.put("AppID", request.appID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            body.put("ServiceParameters", request.serviceParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            body.put("Stream", request.stream);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MultiModalAgentSSE"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MultiModalAgentSSEResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The content moderation Agent.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Synchronously detects multimodal content by using the Agent API.</p>
+     * 
+     * @param request MultiModalAgentSSERequest
+     * @return MultiModalAgentSSEResponse
+     */
+    public MultiModalAgentSSEResponse multiModalAgentSSE(MultiModalAgentSSERequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.multiModalAgentSSEWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>API for synchronous detection</p>
      * 
@@ -996,7 +1054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>多模态同步检测接口，支持图片base64字符串</p>
+     * <p>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</p>
      * 
      * @param request MultiModalGuardForBase64Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1038,7 +1096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>多模态同步检测接口，支持图片base64字符串</p>
+     * <p>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</p>
      * 
      * @param request MultiModalGuardForBase64Request
      * @return MultiModalGuardForBase64Response

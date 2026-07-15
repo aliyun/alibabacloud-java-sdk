@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class MultiModalGuardForBase64ResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public MultiModalGuardForBase64ResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>XXXX</p>
      */
@@ -67,6 +76,8 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
 
     public static class MultiModalGuardForBase64ResponseBodyDataDetailResult extends TeaModel {
         /**
+         * <p>The confidence level.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -74,6 +85,8 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         public Float confidence;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>未检测出风险</p>
          */
@@ -81,6 +94,8 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The extension information.</p>
+         * 
          * <strong>example:</strong>
          * <p>json格式数据</p>
          */
@@ -88,6 +103,8 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         public Object ext;
 
         /**
+         * <p>The label.</p>
+         * 
          * <strong>example:</strong>
          * <p>nonLable</p>
          */
@@ -95,6 +112,8 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>low</p>
          */
@@ -150,16 +169,23 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
 
     public static class MultiModalGuardForBase64ResponseBodyDataDetail extends TeaModel {
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>low</p>
          */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The result.</p>
+         */
         @NameInMap("Result")
         public java.util.List<MultiModalGuardForBase64ResponseBodyDataDetailResult> result;
 
         /**
+         * <p>The suggested action.</p>
+         * 
          * <strong>example:</strong>
          * <p>pass</p>
          */
@@ -167,6 +193,8 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         public String suggestion;
 
         /**
+         * <p>The category.</p>
+         * 
          * <strong>example:</strong>
          * <p>contentModeration</p>
          */
@@ -214,16 +242,23 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
 
     public static class MultiModalGuardForBase64ResponseBodyData extends TeaModel {
         /**
+         * <p>The data ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <p>The details.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<MultiModalGuardForBase64ResponseBodyDataDetail> detail;
 
         /**
+         * <p>The suggested action.</p>
+         * 
          * <strong>example:</strong>
          * <p>pass</p>
          */

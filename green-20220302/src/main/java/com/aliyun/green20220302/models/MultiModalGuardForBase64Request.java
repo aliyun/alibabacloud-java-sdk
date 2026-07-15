@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MultiModalGuardForBase64Request extends TeaModel {
     /**
+     * <p>The base64-encoded string of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>{base64}</p>
      */
@@ -12,6 +14,8 @@ public class MultiModalGuardForBase64Request extends TeaModel {
     public String imageBase64Str;
 
     /**
+     * <p>Service</p>
+     * 
      * <strong>example:</strong>
      * <p>query_security_check</p>
      */
@@ -19,6 +23,8 @@ public class MultiModalGuardForBase64Request extends TeaModel {
     public String service;
 
     /**
+     * <p>The service parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;content&quot;:&quot;test&quot;}</p>
      */

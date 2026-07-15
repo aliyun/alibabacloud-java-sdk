@@ -132,17 +132,23 @@ public class ManualModerationResultResponseBody extends TeaModel {
         @NameInMap("Result")
         public java.util.List<ManualModerationResultResponseBodyDataResult> result;
 
+        /**
+         * <p>The number of reviews.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReviewCount")
         public String reviewCount;
 
         /**
          * <p>The risk level, returned based on the configured high and low risk scores. Valid values:</p>
          * <ul>
-         * <li><p>high: high risk</p>
+         * <li><p>high: High risk.</p>
          * </li>
-         * <li><p>low: low risk</p>
+         * <li><p>low: Low risk.</p>
          * </li>
-         * <li><p>none: no risk detected</p>
+         * <li><p>none: No risk detected.</p>
          * </li>
          * </ul>
          * 
