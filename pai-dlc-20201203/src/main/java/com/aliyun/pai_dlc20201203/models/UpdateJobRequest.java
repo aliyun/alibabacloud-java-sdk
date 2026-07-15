@@ -5,14 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
     /**
-     * <p>The job visibility. Valid values:</p>
+     * <p>The job\&quot;s visibility. You can only increase, not decrease, the visibility. Valid value:</p>
      * <ul>
-     * <li>PUBLIC: The job is visible to all members in the workspace.</li>
-     * <li>PRIVATE: The job is visible only to you and the administrator of the workspace.</li>
+     * <li><code>PUBLIC</code>: The job is visible to all users in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>PRIVATE</p>
+     * <p>PUBLIC</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
@@ -20,14 +19,19 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The job specifications.</p>
+     */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
     /**
-     * <p>The job priority. Valid values: 1 to 9.</p>
+     * <p>The priority of the job. Valid values range from 1 to 9:</p>
      * <ul>
-     * <li>1: the lowest priority.</li>
-     * <li>9: the highest priority.</li>
+     * <li><p>1 indicates the lowest priority.</p>
+     * </li>
+     * <li><p>9 indicates the highest priority.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

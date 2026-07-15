@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobResponseBody extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc*************</p>
@@ -14,7 +14,7 @@ public class UpdateJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID, which is used for diagnostics and Q\&amp;A.</p>
+     * <p>The request ID, used for diagnostics and support.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

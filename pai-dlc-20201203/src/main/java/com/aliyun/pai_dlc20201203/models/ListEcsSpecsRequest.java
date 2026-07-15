@@ -80,7 +80,7 @@ public class ListEcsSpecsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Gpu</p>
+     * <p>GPU</p>
      */
     @NameInMap("SortBy")
     public String sortBy;

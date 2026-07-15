@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesRequest extends TeaModel {
     /**
+     * <p>The sort order. Valid values: <code>asc</code> for ascending and <code>desc</code> for descending. Default value: <code>desc</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -12,6 +14,8 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListJobTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListJobTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field to sort the results by. Default value: <code>GmtCreateTime</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -33,7 +41,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>按模板 ID 精确筛选。</p>
+     * <p>The job template ID. Use this parameter to filter for an exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>tpl1****6jcq2q</p>
@@ -42,7 +50,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>按模板名称模糊筛选。</p>
+     * <p>The job template name. Use this parameter to filter for a partial match.</p>
      * 
      * <strong>example:</strong>
      * <p>job-template-example-1778047****</p>
@@ -51,7 +59,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>按创建者用户 ID 筛选。</p>
+     * <p>The ID of the creator. Use this parameter to filter results by a specific creator.</p>
      * 
      * <strong>example:</strong>
      * <p>20**************02</p>
@@ -60,7 +68,7 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>工作空间 ID。如何获取工作空间 ID，请参见 ListWorkspaces。</p>
+     * <p>The ID of the workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

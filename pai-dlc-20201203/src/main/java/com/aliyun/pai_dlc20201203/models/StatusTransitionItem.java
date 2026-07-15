@@ -4,18 +4,33 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class StatusTransitionItem extends TeaModel {
+    /**
+     * <p>The end time of this status (UTC).</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The reason code for this status.</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <p>The detailed message for this status.</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <p>The start time of this status (UTC).</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The job status.</p>
+     */
     @NameInMap("Status")
     public String status;
 

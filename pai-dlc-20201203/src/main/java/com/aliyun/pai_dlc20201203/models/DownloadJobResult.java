@@ -4,57 +4,111 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DownloadJobResult extends TeaModel {
+    /**
+     * <p>The display name of the download job.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The ID of the download job.</p>
+     */
     @NameInMap("DownloadJobId")
     public String downloadJobId;
 
+    /**
+     * <p>A temporary, pre-signed URL for downloading the result file.</p>
+     */
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
+    /**
+     * <p>The completion time of the download job, in UTC format.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The type of file to download, such as <code>logs</code> or <code>output</code>.</p>
+     */
     @NameInMap("FileType")
     public String fileType;
 
+    /**
+     * <p>The creation time of the download job, in UTC format.</p>
+     */
     @NameInMap("GmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>The last modification time of the download job, in UTC format.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The number of log entries included in the download.</p>
+     */
     @NameInMap("LogCount")
     public Integer logCount;
 
+    /**
+     * <p>The IDs of the pods for the source job.</p>
+     */
     @NameInMap("PodIds")
     public java.util.List<String> podIds;
 
+    /**
+     * <p>The UIDs of the pods for the source job.</p>
+     */
     @NameInMap("PodUids")
     public java.util.List<String> podUids;
 
+    /**
+     * <p>The ID of the source job whose results are downloaded.</p>
+     */
     @NameInMap("SourceJobId")
     public String sourceJobId;
 
+    /**
+     * <p>The start time of the download job, in UTC format.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The status of the download job. Valid values: <code>Running</code>, <code>Succeeded</code>, and <code>Failed</code>.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the tenant that the job belongs to.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The type of the download job.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The time when the download URL expires, in UTC format.</p>
+     */
     @NameInMap("UrlExpireTime")
     public String urlExpireTime;
 
+    /**
+     * <p>The ID of the user who created the job.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The ID of the workspace where the job was created.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

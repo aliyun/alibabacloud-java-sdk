@@ -75,7 +75,7 @@ public class TensorboardDataSourceSpec extends TeaModel {
      * <p>The file system URI in the dataset configurations.</p>
      * 
      * <strong>example:</strong>
-     * <p>oss://.oss-cn-shanghai-finance-1.aliyuncs.com/</p>
+     * <p>oss://examplebucket.oss-cn-shanghai-internal.aliyuncs.com/</p>
      */
     @NameInMap("Uri")
     public String uri;

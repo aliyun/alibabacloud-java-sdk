@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRayDashboardRequest extends TeaModel {
     /**
-     * <p>Specifies whether the link is a sharing link. If yes, a token is required.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true</li>
-     * <li>false</li>
-     * </ul>
+     * <p>Set to true to generate a shareable link. If you set this parameter to true, you must also specify the token parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,7 +14,7 @@ public class GetRayDashboardRequest extends TeaModel {
     public Boolean isShared;
 
     /**
-     * <p>The token obtained from GetToken</p>
+     * <p>The token returned by GetToken</p>
      * 
      * <strong>example:</strong>
      * <p>some_token_value</p>

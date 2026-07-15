@@ -52,7 +52,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "pai-dlc.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "pai-dlc.aliyuncs.com"),
             new TeaPair("me-east-1", "pai-dlc.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "pai-dlc.aliyuncs.com"),
+            new TeaPair("us-west-1", "pai-dlc.us-west-1.aliyuncs.com"),
+            new TeaPair("us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "pai-dlc.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "pai-dlc.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "pai-dlc.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "pai-dlc.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "pai-dlc.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "pai-dlc.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pai-dlc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -73,10 +91,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -210,10 +231,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</p>
+     * <p>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -226,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a job template.</p>
+     * <p>Creates a job template.</p>
      * 
      * @param request CreateJobTemplateRequest
      * @param headers map
@@ -280,7 +304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a job template.</p>
+     * <p>Creates a job template.</p>
      * 
      * @param request CreateJobTemplateRequest
      * @return CreateJobTemplateResponse
@@ -292,8 +316,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Create RayHistoryServer</p>
+     * <p>Creates a RayHistoryServer.</p>
      * 
      * @param request CreateRayHistoryServerRequest
      * @param headers map
@@ -350,8 +380,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
+     * <blockquote>
+     * <p>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Create RayHistoryServer</p>
+     * <p>Creates a RayHistoryServer.</p>
      * 
      * @param request CreateRayHistoryServerRequest
      * @return CreateRayHistoryServerResponse
@@ -524,7 +560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</p>
+     * <p>Deletes a job template. You cannot delete a job template that is in use by a job.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @param headers map
@@ -552,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</p>
+     * <p>Deletes a job template. You cannot delete a job template that is in use by a job.</p>
      * 
      * @param request DeleteJobTemplateRequest
      * @return DeleteJobTemplateResponse
@@ -564,8 +600,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Delete RayHistoryServer</p>
+     * <p>Deletes a Ray History Server.</p>
      * 
      * @param request DeleteRayHistoryServerRequest
      * @param headers map
@@ -592,8 +631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Delete RayHistoryServer</p>
+     * <p>Deletes a Ray History Server.</p>
      * 
      * @param request DeleteRayHistoryServerRequest
      * @return DeleteRayHistoryServerResponse
@@ -653,10 +695,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the DLC task\&quot;s Dashboard URL, if one exists.</p>
+     * <p>Retrieves the Dashboard URL for a DLC job, if available.</p>
      * 
      * @param request GetDashboardRequest
      * @param headers map
@@ -694,10 +736,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the DLC task\&quot;s Dashboard URL, if one exists.</p>
+     * <p>Retrieves the Dashboard URL for a DLC job, if available.</p>
      * 
      * @param request GetDashboardRequest
      * @return GetDashboardResponse
@@ -710,7 +752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the configuration and runtime information of a job.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a DLC job.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -744,7 +786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the configuration and runtime information of a job.</p>
+     * <p>Retrieves the detailed configuration and runtime information of a DLC job.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -930,7 +972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a job template.</p>
+     * <p>Retrieves the details of a job template.</p>
      * 
      * @param request GetJobTemplateRequest
      * @param headers map
@@ -964,7 +1006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the details of a job template.</p>
+     * <p>Retrieves the details of a job template.</p>
      * 
      * @param request GetJobTemplateRequest
      * @return GetJobTemplateResponse
@@ -976,8 +1018,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</li>
+     * <li>It supports custom time ranges. By default, it returns data from the last hour.</li>
+     * <li>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
+     * <li>To paginate through large datasets, use the <code>NextToken</code> parameter.</li>
+     * <li>The <code>MetricName</code> parameter is required and specifies the monitoring metric to query.</li>
+     * <li>For advanced features or specific metric types, see the related documentation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries metrics data.</p>
+     * <p>Retrieve metrics data.</p>
      * 
      * @param request GetMetricsRequest
      * @param headers map
@@ -1046,8 +1099,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</li>
+     * <li>It supports custom time ranges. By default, it returns data from the last hour.</li>
+     * <li>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</li>
+     * <li>To paginate through large datasets, use the <code>NextToken</code> parameter.</li>
+     * <li>The <code>MetricName</code> parameter is required and specifies the monitoring metric to query.</li>
+     * <li>For advanced features or specific metric types, see the related documentation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries metrics data.</p>
+     * <p>Retrieve metrics data.</p>
      * 
      * @param request GetMetricsRequest
      * @return GetMetricsResponse
@@ -1182,10 +1246,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a Ray Dashboard URL.</p>
+     * <p>Retrieve the Ray Dashboard URL.</p>
      * 
      * @param request GetRayDashboardRequest
      * @param headers map
@@ -1223,10 +1287,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * <p>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Obtains a Ray Dashboard URL.</p>
+     * <p>Retrieve the Ray Dashboard URL.</p>
      * 
      * @param request GetRayDashboardRequest
      * @return GetRayDashboardResponse
@@ -1238,8 +1302,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query RayHistoryServer</p>
+     * <p>Retrieves the details of a specific RayHistoryServer.</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @param headers map
@@ -1266,8 +1333,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Query RayHistoryServer</p>
+     * <p>Retrieves the details of a specific RayHistoryServer.</p>
      * 
      * @param request GetRayHistoryServerRequest
      * @return GetRayHistoryServerResponse
@@ -1280,7 +1350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a TensorBoard instance.</p>
+     * <p>Retrieves the details of a Tensorboard instance.</p>
      * 
      * @param request GetTensorboardRequest
      * @param headers map
@@ -1322,7 +1392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information of a TensorBoard instance.</p>
+     * <p>Retrieves the details of a Tensorboard instance.</p>
      * 
      * @param request GetTensorboardRequest
      * @return GetTensorboardResponse
@@ -1606,7 +1676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</p>
+     * <p>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <code>TemplateId</code>, or <code>TemplateName</code>.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @param headers map
@@ -1668,7 +1738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</p>
+     * <p>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <code>TemplateId</code>, or <code>TemplateName</code>.</p>
      * 
      * @param request ListJobTemplatesRequest
      * @return ListJobTemplatesResponse
@@ -1681,7 +1751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</p>
+     * <p>Retrieves a list of jobs with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param tmpReq ListJobsRequest
      * @param headers map
@@ -1861,7 +1931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</p>
+     * <p>Retrieves a list of jobs with support for pagination, sorting, and conditional filtering.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -1873,8 +1943,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</p>
+     * <blockquote>
+     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>List resource RayHistoryServer</p>
+     * <p>Lists RayHistoryServer resources.</p>
      * 
      * @param request ListRayHistoryServersRequest
      * @param headers map
@@ -1936,6 +2012,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storagePath)) {
+            query.put("StoragePath", request.storagePath);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userIdForFilter)) {
             query.put("UserIdForFilter", request.userIdForFilter);
         }
@@ -1967,8 +2047,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</p>
+     * <blockquote>
+     * <p>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>List resource RayHistoryServer</p>
+     * <p>Lists RayHistoryServer resources.</p>
      * 
      * @param request ListRayHistoryServersRequest
      * @return ListRayHistoryServersResponse
@@ -1981,7 +2067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of TensorBoard instances.</p>
+     * <p>Queries a list of created Tensorboard instances.</p>
      * 
      * @param request ListTensorboardsRequest
      * @param headers map
@@ -2091,7 +2177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of TensorBoard instances.</p>
+     * <p>Queries a list of created Tensorboard instances.</p>
      * 
      * @param request ListTensorboardsRequest
      * @return ListTensorboardsResponse
@@ -2104,7 +2190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default version of the template.</p>
+     * <p>Sets the default version of a job template.</p>
      * 
      * @param request SetJobTemplateDefaultVersionRequest
      * @param headers map
@@ -2138,7 +2224,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default version of the template.</p>
+     * <p>Sets the default version of a job template.</p>
      * 
      * @param request SetJobTemplateDefaultVersionRequest
      * @return SetJobTemplateDefaultVersionResponse
@@ -2150,8 +2236,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Start Ray History Server</p>
+     * <p>Starts a Ray History Server.</p>
      * 
      * @param request StartRayHistoryServerRequest
      * @param headers map
@@ -2178,8 +2267,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Start Ray History Server</p>
+     * <p>Starts a Ray History Server.</p>
      * 
      * @param request StartRayHistoryServerRequest
      * @return StartRayHistoryServerResponse
@@ -2275,8 +2367,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Stop Ray History Server</p>
+     * <p>Stops a Ray History Server.</p>
      * 
      * @param request StopRayHistoryServerRequest
      * @param headers map
@@ -2303,8 +2398,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Stop Ray History Server</p>
+     * <p>Stops a Ray History Server.</p>
      * 
      * @param request StopRayHistoryServerRequest
      * @return StopRayHistoryServerResponse
@@ -2364,7 +2462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</p>
+     * <p>Updates a job\&quot;s configuration, such as its priority.</p>
      * 
      * @param request UpdateJobRequest
      * @param headers map
@@ -2410,7 +2508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</p>
+     * <p>Updates a job\&quot;s configuration, such as its priority.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
@@ -2494,7 +2592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a TensorBoard instance.</p>
+     * <p>Update a Tensorboard.</p>
      * 
      * @param request UpdateTensorboardRequest
      * @param headers map
@@ -2540,7 +2638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a TensorBoard instance.</p>
+     * <p>Update a Tensorboard.</p>
      * 
      * @param request UpdateTensorboardRequest
      * @return UpdateTensorboardResponse

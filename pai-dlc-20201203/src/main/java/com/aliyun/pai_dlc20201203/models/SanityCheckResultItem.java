@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SanityCheckResultItem extends TeaModel {
     /**
-     * <p>The nth time the check is performed.</p>
+     * <p>The sequence number of the check.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class SanityCheckResultItem extends TeaModel {
     public Integer checkNumber;
 
     /**
-     * <p>The time when the check ends.</p>
+     * <p>The end time of the check.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-11-30T16:47:30.378817+08:00</p>
@@ -23,13 +23,13 @@ public class SanityCheckResultItem extends TeaModel {
     public String finishedAt;
 
     /**
-     * <p>The detailed information about the check results.</p>
+     * <p>The details of the check result.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The check phase.</p>
+     * <p>The phase of the check.</p>
      * 
      * <strong>example:</strong>
      * <p>CheckInit</p>
@@ -38,7 +38,7 @@ public class SanityCheckResultItem extends TeaModel {
     public String phase;
 
     /**
-     * <p>The time when the check starts.</p>
+     * <p>The start time of the check.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-11-30T16:47:30.343005+08:00</p>
@@ -47,7 +47,7 @@ public class SanityCheckResultItem extends TeaModel {
     public String startedAt;
 
     /**
-     * <p>The check status.</p>
+     * <p>The status of the check.</p>
      * 
      * <strong>example:</strong>
      * <p>Succeeded</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTensorboardRequest extends TeaModel {
     /**
-     * <p>The job ID. For more information about how to query the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJob</a>.</p>
+     * <p>The job ID. Refer to <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class GetTensorboardRequest extends TeaModel {
     public String jodId;
 
     /**
-     * <p>The information about the shared token. You can specify this parameter to obtain the permission to view a TensorBoard job based on the shared token information. You can execute <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a> and extract the shared token from the obtained information.</p>
+     * <p>The sharing token. Specify this parameter to use the sharing token to obtain the permission to view a specific Tensorboard job. You can extract the token from the URL returned by calling <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e
@@ -26,7 +26,7 @@ public class GetTensorboardRequest extends TeaModel {
     public String token;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;Refer to <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID..</p>
      * 
      * <strong>example:</strong>
      * <p>46099</p>

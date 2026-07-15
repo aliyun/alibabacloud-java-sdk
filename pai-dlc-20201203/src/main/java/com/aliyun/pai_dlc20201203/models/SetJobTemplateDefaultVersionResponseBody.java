@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetJobTemplateDefaultVersionResponseBody extends TeaModel {
     /**
-     * <p>设置后的默认版本号</p>
+     * <p>The current default version number.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,6 +14,7 @@ public class SetJobTemplateDefaultVersionResponseBody extends TeaModel {
     public Integer defaultVersion;
 
     /**
+     * <p>The time the template was last modified.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -23,7 +24,7 @@ public class SetJobTemplateDefaultVersionResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>本次请求的 ID，用于诊断和答疑。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>

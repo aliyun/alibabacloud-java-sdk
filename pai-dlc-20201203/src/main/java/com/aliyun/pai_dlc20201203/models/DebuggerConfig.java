@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DebuggerConfig extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>{&quot;description&quot;:&quot;这是一个新的pytorchjob模板&quot;}</p>
+     * <p>{\&quot;description\&quot;:\&quot;这是一个新的pytorchjob模板\&quot;}</p>
      */
     @NameInMap("Content")
     public String content;

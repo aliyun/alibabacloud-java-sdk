@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
     /**
-     * <p>The job visibility. Valid values:</p>
+     * <p>The visibility of the job. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: The job is visible to all members in the workspace.</li>
-     * <li>PRIVATE: The job is visible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: visible to all members in the workspace.</li>
+     * <li>PRIVATE: visible only to you and administrators in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateJobRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The code source of the job. Before the node of the job runs, DLC automatically downloads the configured code from the code source and mounts the code to the local path of the container.</p>
+     * <p>The code source used by this job. Before the job nodes start, DLC automatically downloads the code configured in the code source and mounts it to a local directory of the container.</p>
      */
     @NameInMap("CodeSource")
     public CreateJobRequestCodeSource codeSource;
@@ -33,13 +33,13 @@ public class CreateJobRequest extends TeaModel {
     public java.util.List<CreateJobRequestCustomEnvs> customEnvs;
 
     /**
-     * <p>The data sources for job running.</p>
+     * <p>The list of data sources used by the job.</p>
      */
     @NameInMap("DataSources")
     public java.util.List<CreateJobRequestDataSources> dataSources;
 
     /**
-     * <p>This parameter is not supported.</p>
+     * <p>This parameter is not supported. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -51,9 +51,9 @@ public class CreateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The job name. The name must be in the following format:</p>
+     * <p>The name of the job. The name must meet the following requirements:</p>
      * <ul>
-     * <li>The name must be 1 to 256 characters in length.</li>
+     * <li>The name cannot exceed 256 characters in length.</li>
      * <li>The name can contain digits, letters, underscores (_), periods (.), and hyphens (-).</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -65,19 +65,19 @@ public class CreateJobRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>This parameter is not supported.</p>
+     * <p>This parameter is not supported. Ignore this parameter.</p>
      */
     @NameInMap("ElasticSpec")
     public JobElasticSpec elasticSpec;
 
     /**
-     * <p>The environment variables.</p>
+     * <p>The environment variable configuration.</p>
      */
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
     /**
-     * <p>The maximum running duration of the job. Unit: minutes.</p>
+     * <p>The maximum running duration of the job, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -86,15 +86,15 @@ public class CreateJobRequest extends TeaModel {
     public Long jobMaxRunningTimeMinutes;
 
     /**
-     * <p><strong>JobSpecs</strong> describes the configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.</p>
-     * <p>A DLC job consists of different types of nodes. If nodes of the same type have exactly the same configuration, the configuration is called JobSpec. <strong>JobSpecs</strong> specifies the configurations of all types of nodes. The value is of the array type.</p>
+     * <p>The various runtime configurations of the job, such as the image address, startup command, node resource declarations, and number of replicas.</p>
+     * <p>A DLC job consists of different types of nodes. Nodes of the same type share identical configurations, which is called a JobSpec. <strong>JobSpecs</strong> describes the configurations of all node types and is an array of JobSpec objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
     /**
-     * <p>The job type. The value is case-sensitive. The following job types are supported:</p>
+     * <p>The job type. This parameter is case-sensitive. Valid values:</p>
      * <ul>
      * <li>TFJob</li>
      * <li>PyTorchJob</li>
@@ -104,17 +104,7 @@ public class CreateJobRequest extends TeaModel {
      * <li>ElasticBatchJob</li>
      * <li>SlurmJob</li>
      * <li>RayJob</li>
-     * </ul>
-     * <p>Valid values and corresponding frameworks:</p>
-     * <ul>
-     * <li>OneFlowJob: OneFlow.</li>
-     * <li>PyTorchJob: PyTorch.</li>
-     * <li>SlurmJob: Slurm.</li>
-     * <li>XGBoostJob: XGBoost.</li>
-     * <li>ElasticBatchJob: ElasticBatch.</li>
-     * <li>MPIJob: MPIJob.</li>
-     * <li>TFJob: Tensorflow.</li>
-     * <li>RayJob: Ray.</li>
+     * <li>DataJuicerJob.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -125,7 +115,7 @@ public class CreateJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The additional configuration of the job. You can use this parameter to adjust the behavior of the attached data source. For example, if the attached data source of the job is of the OSS type, you can use this parameter to add the following configurations to override the default parameters of JindoFS: <code>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</code>.</p>
+     * <p>The additional configuration for this node. You can use this parameter to adjust the behavior of mounted data sources. For example, if the node has an OSS data source mounted, you can set this parameter to <code>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</code> to overwrite the default JindoFS parameter settings.</p>
      * 
      * <strong>example:</strong>
      * <p>key1=value1,key2=value2</p>
@@ -134,9 +124,9 @@ public class CreateJobRequest extends TeaModel {
     public String options;
 
     /**
-     * <p>The priority of the job. Default value: 1. Valid values: 1 to 9.</p>
+     * <p>The priority of the job. This parameter is optional. Default value: 1. Valid values: 1 to 9.</p>
      * <ul>
-     * <li>1 is the lowest priority.</li>
+     * <li>1: the lowest priority.</li>
      * <li>9: the highest priority.</li>
      * </ul>
      * 
@@ -147,10 +137,10 @@ public class CreateJobRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the resource group. This parameter is optional.</p>
+     * <p>The resource group ID. This parameter is optional.</p>
      * <ul>
-     * <li>If you leave this parameter empty, the job is submitted to a public resource group.</li>
-     * <li>If a resource quota is bound to the current workspace, you can specify the resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
+     * <li>If this parameter is left empty, the job is submitted to the public resource group.</li>
+     * <li>If the current workspace has an attached resource quota, you can specify the corresponding resource quota ID. For details about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,16 +157,16 @@ public class CreateJobRequest extends TeaModel {
     public String schedulingStrategy;
 
     /**
-     * <p>The additional parameter configurations of the job.</p>
+     * <p>The additional parameter settings for the job.</p>
      */
     @NameInMap("Settings")
     public JobSettings settings;
 
     /**
-     * <p>The policy that is used to check whether a distributed multi-node job is successful. Only TensorFlow distributed multi-node jobs are supported.</p>
+     * <p>The success policy for distributed multi-node jobs. Only TensorFlow multi-node jobs support this parameter. Valid values:</p>
      * <ul>
-     * <li>ChiefWorker: If you use this policy, the job is considered successful when the pod on the chief node completes operations.</li>
-     * <li>AllWorkers (default): If you use this policy, the job is considered successful when all worker nodes complete operations.</li>
+     * <li>ChiefWorker: the entire job is considered successful when the Chief pod finishes successfully.</li>
+     * <li>AllWorkers (default): the entire job is considered successful only when all Worker pods finish successfully.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -186,16 +176,16 @@ public class CreateJobRequest extends TeaModel {
     public String successPolicy;
 
     /**
-     * <p>任务模板的 ID。指定后将基于模板创建作业，作业参数需符合模板约束规则。</p>
+     * <p>The job template ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>tplxxxxxxxxxxxxxxxx</p>
+     * <p>tplabc1234567</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>指定使用的模板版本号，不传则使用模板默认版本。</p>
+     * <p>The job template version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -204,7 +194,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer templateVersion;
 
     /**
-     * <p>The folder in which the third-party Python library file requirements.txt is stored. Before the startup command specified by the UserCommand parameter is run on each node, DLC fetches the requirements.txt file from the folder and runs <code>pip install -r</code> to install the required package and library.</p>
+     * <p>The name of the folder that contains the third-party Python library file (requirements.txt). Before running the specified UserCommand on each node, PAI-DLC retrieves the requirements.txt file from the specified folder and runs <code>pip install -r</code> to install the libraries.</p>
      * 
      * <strong>example:</strong>
      * <p>/root/code/</p>
@@ -213,7 +203,7 @@ public class CreateJobRequest extends TeaModel {
     public String thirdpartyLibDir;
 
     /**
-     * <p>The third-party Python libraries to be installed.</p>
+     * <p>The list of third-party Python libraries to install.</p>
      */
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
@@ -229,13 +219,13 @@ public class CreateJobRequest extends TeaModel {
     public String userCommand;
 
     /**
-     * <p>The VPC settings.</p>
+     * <p>The user VPC configuration.</p>
      */
     @NameInMap("UserVpc")
     public CreateJobRequestUserVpc userVpc;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</p>
      * 
      * <strong>example:</strong>
      * <p>ws-20210126170216-xxxxxxx</p>
@@ -458,7 +448,7 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestCodeSource extends TeaModel {
         /**
-         * <p>The branch of the referenced code repository. By default, the branch configured in the code source is used. This parameter is optional.</p>
+         * <p>The branch of the code repository referenced at runtime. This parameter is optional. By default, the branch configured in the code source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>master</p>
@@ -467,7 +457,7 @@ public class CreateJobRequest extends TeaModel {
         public String branch;
 
         /**
-         * <p>The ID of the code source.</p>
+         * <p>The code source ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the code source ID, see <a href="https://help.aliyun.com/document_detail/459922.html">ListCodeSources</a>..</p>
          * 
          * <strong>example:</strong>
          * <p>code-20210111103721-xxxxxxx</p>
@@ -476,7 +466,7 @@ public class CreateJobRequest extends TeaModel {
         public String codeSourceId;
 
         /**
-         * <p>The commit ID of the code to be downloaded. By default, the commit ID configured in the code source is used. This parameter is optional.</p>
+         * <p>The commit ID of the code to download for this job. This parameter is optional. By default, the commit ID configured in the code source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>44da109b5******</p>
@@ -485,7 +475,7 @@ public class CreateJobRequest extends TeaModel {
         public String commit;
 
         /**
-         * <p>The path to which the job is mounted. By default, the mount path configured in the data source is used. This parameter is optional.</p>
+         * <p>The mount path for this job. This parameter is optional. By default, the mount path configured in the code source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/data</p>
@@ -578,7 +568,7 @@ public class CreateJobRequest extends TeaModel {
         public String accessPointId;
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The ID of the data source. &lt;props=&quot;china&quot;&gt;For information about how to obtain the data source ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>..</p>
          * 
          * <strong>example:</strong>
          * <p>d-cn9dl*******</p>
@@ -596,7 +586,7 @@ public class CreateJobRequest extends TeaModel {
         public String mountAccess;
 
         /**
-         * <p>The path to which the job is mounted. By default, the mount path in the data source configuration is used. This parameter is optional.</p>
+         * <p>The mount path for this job. This parameter is optional. By default, the mount path configured in the data source is used.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/data</p>
@@ -605,7 +595,7 @@ public class CreateJobRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The mount attribute of the custom dataset. Set the value to OSS.</p>
+         * <p>The custom dataset mount properties. Only OSS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -710,10 +700,10 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestUserVpc extends TeaModel {
         /**
-         * <p>The default route. Default value: false. Valid values:</p>
+         * <p>The default routing. Valid values:</p>
          * <ul>
-         * <li>eth0: The default network interface is used to access the Internet through the public gateway.</li>
-         * <li>eth1: The user\&quot;s elastic network interface (ENI) is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</li>
+         * <li>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.</li>
+         * <li>eth1: uses the user elastic network interfaces (ENIs) to access external networks through the private gateway. For the specific configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Configure a DSW instance to access the Internet through a dedicated public gateway</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -723,17 +713,17 @@ public class CreateJobRequest extends TeaModel {
         public String defaultRoute;
 
         /**
-         * <p>The extended CIDR block.</p>
+         * <p>The extended CIDR blocks.</p>
          * <ul>
-         * <li>If you leave the SwitchId and ExtendedCIDRs parameters empty, the system automatically obtains all CIDR blocks in a VPC.</li>
-         * <li>If you configure the SwitchId and ExtendedCIDRs parameters, we recommend that you specify all CIDR blocks in a VPC.</li>
+         * <li>If the vSwitch ID is empty, this parameter is not required. The system automatically obtains all CIDR blocks under the VPC.</li>
+         * <li>If the vSwitch ID is specified, this parameter is required. Specify all CIDR blocks under the VPC.</li>
          * </ul>
          */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The ID of the user security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-abcdef****</p>
@@ -742,9 +732,9 @@ public class CreateJobRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The vSwitch ID. This parameter is optional.</p>
+         * <p>The ID of the user vSwitch. This parameter is optional.</p>
          * <ul>
-         * <li>If you leave this parameter empty, the system automatically selects a vSwitch based on the inventory status.</li>
+         * <li>If this parameter is left empty, the system automatically selects an appropriate vSwitch based on inventory.</li>
          * <li>You can also specify a vSwitch ID.</li>
          * </ul>
          * 
@@ -755,7 +745,7 @@ public class CreateJobRequest extends TeaModel {
         public String switchId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The ID of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-abcdef****</p>

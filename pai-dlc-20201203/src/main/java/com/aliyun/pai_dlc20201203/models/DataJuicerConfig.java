@@ -5,16 +5,35 @@ import com.aliyun.tea.*;
 
 public class DataJuicerConfig extends TeaModel {
     /**
+     * <p>The command type.</p>
+     * <ul>
+     * <li><p>shell: A shell command.</p>
+     * </li>
+     * <li><p>config: The YAML configuration for DataJuicer.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>config</p>
      */
     @NameInMap("CommandType")
     public String commandType;
 
+    /**
+     * <p>Specifies whether to enable resource estimation.</p>
+     */
     @NameInMap("EnableResourceEstimation")
     public Boolean enableResourceEstimation;
 
     /**
+     * <p>The execution mode.</p>
+     * <ul>
+     * <li><p>standalone: Single node.</p>
+     * </li>
+     * <li><p>distributed: Distributed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>standalone</p>
      */

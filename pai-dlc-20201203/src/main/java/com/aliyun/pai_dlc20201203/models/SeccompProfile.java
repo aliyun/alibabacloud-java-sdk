@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SeccompProfile extends TeaModel {
     /**
+     * <p>The path of the Seccomp profile on the node. This parameter takes effect only when Type is set to Localhost.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-profiles/profile-allow.json</p>
      */
@@ -12,6 +14,8 @@ public class SeccompProfile extends TeaModel {
     public String localhostProfile;
 
     /**
+     * <p>The Seccomp configuration type. Valid values: Localhost, RuntimeDefault, Unconfined.</p>
+     * 
      * <strong>example:</strong>
      * <p>Unconfined</p>
      */

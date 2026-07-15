@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class JobSpec extends TeaModel {
     /**
-     * <p>The scheduling node configurations.</p>
+     * <p>The scheduling node assignment configuration.</p>
      */
     @NameInMap("AssignNodeSpec")
     public AssignNodeSpec assignNodeSpec;
 
     /**
-     * <p>The auto scaling configurations.</p>
+     * <p>The auto scaling configuration.</p>
      */
     @NameInMap("AutoScalingSpec")
     public AutoScalingSpec autoScalingSpec;
 
+    /**
+     * <p>Specifies whether to consider this role when determining job success. This parameter takes effect only when the success policy is set to Partial.</p>
+     */
     @NameInMap("ConsiderInSuccessPolicy")
     public Boolean considerInSuccessPolicy;
 
     /**
-     * <p>The hardware specifications of the worker. For more information, see <a href="https://help.aliyun.com/document_detail/171758.html">Billing of DLC</a> of PAI.</p>
-     * <blockquote>
-     * <p> The price varies based on instance types.</p>
-     * </blockquote>
+     * <p>The hardware specifications of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed list of specifications.&gt;Notice: Prices vary depending on the specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -35,13 +35,16 @@ public class JobSpec extends TeaModel {
     public java.util.List<ElasticSpotSpec> elasticSpotSpecs;
 
     /**
-     * <p>The additional pod configurations.</p>
+     * <p>The additional pod configuration.</p>
      */
     @NameInMap("ExtraPodSpec")
     public ExtraPodSpec extraPodSpec;
 
+    @NameInMap("HyperNodeSchedulingConfig")
+    public HyperNodeSchedulingConfig hyperNodeSchedulingConfig;
+
     /**
-     * <p>The address of the image that is run by the worker node. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image provided by PAI. You can also specify a third-party public image.</p>
+     * <p>The runtime image address for this type of worker. Call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain images provided by the PAI platform. You can also specify a third-party public image.</p>
      * 
      * <strong>example:</strong>
      * <p>registry-vpc.cn-hangzhou.aliyuncs.com/cloud-dsw/tensorflow:1.12PAI-gpu-py36-cu101-ubuntu18.04</p>
@@ -50,20 +53,20 @@ public class JobSpec extends TeaModel {
     public String image;
 
     /**
-     * <p>The configuration of the private image.</p>
+     * <p>The private image configuration.</p>
      */
     @NameInMap("ImageConfig")
     public ImageConfig imageConfig;
 
     /**
-     * <p>Deprecated.</p>
+     * <p>Deprecated due to a spelling error.</p>
      */
     @NameInMap("IsCheif")
     @Deprecated
     public Boolean isCheif;
 
     /**
-     * <p>Whether the role is a Chief role. Chief role must be unique.</p>
+     * <p>Indicates whether this role is the Chief role. Only one Chief role is allowed.</p>
      */
     @NameInMap("IsChief")
     public Boolean isChief;
@@ -73,6 +76,9 @@ public class JobSpec extends TeaModel {
      */
     @NameInMap("LocalMountSpecs")
     public java.util.List<LocalMountSpec> localMountSpecs;
+
+    @NameInMap("OversoldType")
+    public String oversoldType;
 
     /**
      * <p>The number of replicas.</p>
@@ -87,7 +93,7 @@ public class JobSpec extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>The resource configurations.</p>
+     * <p>The resource configuration.</p>
      */
     @NameInMap("ResourceConfig")
     public ResourceConfig resourceConfig;
@@ -102,17 +108,20 @@ public class JobSpec extends TeaModel {
     public String restartPolicy;
 
     /**
-     * <p>The service configurations.</p>
+     * <p>The service configuration.</p>
      */
     @NameInMap("ServiceSpec")
     public ServiceSpec serviceSpec;
 
     /**
-     * <p>The configurations of the preemptible instance.</p>
+     * <p>The spot instance configuration.</p>
      */
     @NameInMap("SpotSpec")
     public SpotSpec spotSpec;
 
+    /**
+     * <p>The dependencies required before this role starts.</p>
+     */
     @NameInMap("StartupDependencies")
     public java.util.List<StartupDependency> startupDependencies;
 
@@ -120,15 +129,22 @@ public class JobSpec extends TeaModel {
     public SystemDisk systemDisk;
 
     /**
-     * <p>The worker type, which is related to JobType. The valid values of this parameter vary based on the value of JobType.</p>
+     * <p>Type is closely related to Job Type. Different Job Types support different Worker Types.</p>
      * <ul>
-     * <li>Valid values when JobType is set to <strong>TFJob</strong>: Chief, PS, Worker, Evaluator, and GraphLearn.</li>
-     * <li>Valid values when JobType is set to <strong>PyTorchJob</strong>: Worker and Master.</li>
-     * <li>Valid values when JobType is set to <strong>XGBoostJob</strong>: Worker and Master.</li>
-     * <li>Valid values when JobType is set to <strong>OneFlowJob</strong>: Worker and Master.</li>
-     * <li>Valid values when JobType is set to <strong>ElasticBatch</strong>: Worker and Master.</li>
+     * <li><p><strong>TFJob</strong>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</p>
+     * </li>
+     * <li><p><strong>PyTorchJob</strong>: Supports Worker and Master.</p>
+     * </li>
+     * <li><p><strong>XGBoostJob</strong>: Supports Worker and Master.</p>
+     * </li>
+     * <li><p><strong>OneFlowJob</strong>: Supports Worker and Master.</p>
+     * </li>
+     * <li><p><strong>ElasticBatch</strong>: Supports Worker and Master.</p>
+     * </li>
+     * <li><p><strong>RayJob</strong>: Supports Head, Worker, and Worker[-xxx].</p>
+     * </li>
      * </ul>
-     * <p>The Master node in jobs of the PyTorchJob, XGBoostJob, OneFlowJob, or ElasticBatch type is optional. If you do not specify the Master node, the system automatically uses the first Worker node as the Master node.</p>
+     * <p>Master is optional in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch. If Master is not specified, the system automatically designates the first Worker node as Master.</p>
      * 
      * <strong>example:</strong>
      * <p>Worker</p>
@@ -137,7 +153,7 @@ public class JobSpec extends TeaModel {
     public String type;
 
     /**
-     * <p>Whether to use preemptible instances.</p>
+     * <p>Specifies whether to use spot instances.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -199,6 +215,14 @@ public class JobSpec extends TeaModel {
         return this.extraPodSpec;
     }
 
+    public JobSpec setHyperNodeSchedulingConfig(HyperNodeSchedulingConfig hyperNodeSchedulingConfig) {
+        this.hyperNodeSchedulingConfig = hyperNodeSchedulingConfig;
+        return this;
+    }
+    public HyperNodeSchedulingConfig getHyperNodeSchedulingConfig() {
+        return this.hyperNodeSchedulingConfig;
+    }
+
     public JobSpec setImage(String image) {
         this.image = image;
         return this;
@@ -238,6 +262,14 @@ public class JobSpec extends TeaModel {
     }
     public java.util.List<LocalMountSpec> getLocalMountSpecs() {
         return this.localMountSpecs;
+    }
+
+    public JobSpec setOversoldType(String oversoldType) {
+        this.oversoldType = oversoldType;
+        return this;
+    }
+    public String getOversoldType() {
+        return this.oversoldType;
     }
 
     public JobSpec setPodCount(Long podCount) {

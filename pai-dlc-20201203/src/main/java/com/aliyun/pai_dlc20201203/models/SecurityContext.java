@@ -4,13 +4,21 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SecurityContext extends TeaModel {
+    /**
+     * <p>The Linux capabilities configuration of the container.</p>
+     */
     @NameInMap("Capabilities")
     public SecurityContextCapabilities capabilities;
 
+    /**
+     * <p>Specifies whether to enable privileged mode. This option is available only for specific Lingjun AI Computing Service subscription user scenarios.</p>
+     */
     @NameInMap("Privileged")
     public Boolean privileged;
 
     /**
+     * <p>The GID of the user that runs the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -18,12 +26,17 @@ public class SecurityContext extends TeaModel {
     public Long runAsGroup;
 
     /**
+     * <p>The UID of the user that runs the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
     @NameInMap("RunAsUser")
     public Long runAsUser;
 
+    /**
+     * <p>The Seccomp profile configuration.</p>
+     */
     @NameInMap("SeccompProfile")
     public SeccompProfile seccompProfile;
 

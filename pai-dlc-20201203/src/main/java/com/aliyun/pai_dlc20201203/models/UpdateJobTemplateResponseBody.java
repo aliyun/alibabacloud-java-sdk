@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateJobTemplateResponseBody extends TeaModel {
     /**
+     * <p>The default version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
     public Integer defaultVersion;
 
     /**
+     * <p>The time the template was last modified.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,7 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
-     * <p>本次请求的 ID，用于诊断和答疑。</p>
+     * <p>The request ID, used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
@@ -30,6 +33,8 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -37,6 +42,8 @@ public class UpdateJobTemplateResponseBody extends TeaModel {
     public Integer version;
 
     /**
+     * <p>Indicates whether a new version was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

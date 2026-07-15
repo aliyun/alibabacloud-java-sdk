@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateRayHistoryServerRequest extends TeaModel {
     /**
+     * <p>The visibility of the job. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: visible to all members in the workspace.</li>
+     * <li>PRIVATE: visible only to you and administrators in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
@@ -12,6 +18,7 @@ public class CreateRayHistoryServerRequest extends TeaModel {
     public String accessibility;
 
     /**
+     * <p>The display name of the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,8 @@ public class CreateRayHistoryServerRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The hardware specifications of the public resource group. To access the detailed list of specifications, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Prices vary depending on the specifications..</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
      */
@@ -28,6 +37,8 @@ public class CreateRayHistoryServerRequest extends TeaModel {
     public String ecsSpec;
 
     /**
+     * <p>The maximum runtime in minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -35,6 +46,12 @@ public class CreateRayHistoryServerRequest extends TeaModel {
     public Integer maxRuntimeMinutes;
 
     /**
+     * <p>The resource group ID. This parameter is optional.</p>
+     * <ul>
+     * <li>If this parameter is left empty, the job is committed to the public resource group.</li>
+     * <li>If the current workspace is attached to a resource quota, you can specify the corresponding resource quota ID. For details about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>quotaxxx</p>
      */
@@ -42,6 +59,7 @@ public class CreateRayHistoryServerRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The storage path for Ray logs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +69,7 @@ public class CreateRayHistoryServerRequest extends TeaModel {
     public String storagePath;
 
     /**
+     * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

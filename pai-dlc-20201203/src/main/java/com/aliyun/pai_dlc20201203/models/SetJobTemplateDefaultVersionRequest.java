@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetJobTemplateDefaultVersionRequest extends TeaModel {
     /**
-     * <p>要设置为默认的模板版本号</p>
+     * <p>The version number to set as the default.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

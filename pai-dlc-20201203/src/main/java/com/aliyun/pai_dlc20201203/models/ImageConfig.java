@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ImageConfig extends TeaModel {
     /**
-     * <p>The authentication information of the image repository.</p>
+     * <p>Image repository authentication information</p>
      */
     @NameInMap("Auth")
     public String auth;
 
     /**
-     * <p>The address of the image repository.</p>
+     * <p>Image repository address</p>
      * 
      * <strong>example:</strong>
      * <p>docker****registry.com</p>
@@ -20,7 +20,7 @@ public class ImageConfig extends TeaModel {
     public String dockerRegistry;
 
     /**
-     * <p>The password that is used to log on to the image repository.</p>
+     * <p>Image repository password</p>
      * 
      * <strong>example:</strong>
      * <p>password</p>
@@ -29,7 +29,7 @@ public class ImageConfig extends TeaModel {
     public String password;
 
     /**
-     * <p>The username that is used to log on to the image repository.</p>
+     * <p>Image repository username</p>
      * 
      * <strong>example:</strong>
      * <p>username</p>

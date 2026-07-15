@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
     /**
-     * <p>The jobs.</p>
+     * <p>The job list.</p>
      */
     @NameInMap("Jobs")
     public java.util.List<JobItem> jobs;
 
     /**
-     * <p>The request ID used to troubleshoot issues.</p>
+     * <p>The request ID, used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -20,10 +20,10 @@ public class ListJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of jobs that meet the filter conditions.</p>
+     * <p>The total number of jobs that match the filter conditions.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

@@ -4,35 +4,57 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobReplicaStatus extends TeaModel {
+    /**
+     * <p>The number of active pods for this replica type.</p>
+     */
     @NameInMap("Active")
     public Integer active;
 
+    /**
+     * <p>The type of spot instance in use, if any.</p>
+     */
     @NameInMap("CurrentSpotInstanceType")
     public String currentSpotInstanceType;
 
+    /**
+     * <p>The number of dequeued pods.</p>
+     */
     @NameInMap("Dequeued")
     public Integer dequeued;
 
     /**
+     * <p>The estimated auto scaling specification.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("EstimatedAutoScalingSpec")
     public AutoScalingSpec estimatedAutoScalingSpec;
 
+    /**
+     * <p>The estimated number of pods for this replica type, used for auto scaling.</p>
+     */
     @NameInMap("EstimatedPodCount")
     public Long estimatedPodCount;
 
     /**
+     * <p>The estimated resource configuration.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("EstimatedResourceConfig")
     public ResourceConfig estimatedResourceConfig;
 
+    /**
+     * <p>The number of queued pods.</p>
+     */
     @NameInMap("Queuing")
     public Integer queuing;
 
+    /**
+     * <p>The type of the job replica.</p>
+     */
     @NameInMap("Type")
     public String type;
 

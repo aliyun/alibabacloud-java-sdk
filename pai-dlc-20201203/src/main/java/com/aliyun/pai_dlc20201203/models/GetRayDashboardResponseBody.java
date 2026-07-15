@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRayDashboardResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the dashboard has been integrated with CloudMonitor and supports ray metrics</p>
+     * <p>Indicates whether Cloud Monitor is enabled for this dashboard to display Ray metrics</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

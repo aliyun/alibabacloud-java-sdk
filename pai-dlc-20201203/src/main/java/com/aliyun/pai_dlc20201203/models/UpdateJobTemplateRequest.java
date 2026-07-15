@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobTemplateRequest extends TeaModel {
     /**
-     * <p>字段约束规则。Key 为 JSONPath 表达式，Value 为约束类型：locked（锁定不可覆盖）、overridable（可覆盖）、required（必填）。需与 Content 同时提供，不允许单独更新。</p>
+     * <p>The field constraints. The key is a JSONPath expression and the value is the constraint type. Valid values are <code>locked</code>, <code>overridable</code>, and <code>required</code>. This parameter must be specified with <code>Content</code> and cannot be updated on its own.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
@@ -14,7 +14,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
     public java.util.Map<String, ?> constraints;
 
     /**
-     * <p>任务模板的配置内容，支持 CreateJob 接口的所有参数字段，以 JSON 格式传入。提供时会创建新版本。</p>
+     * <p>The configuration content of the job template. This parameter supports all fields from the <code>CreateJob</code> operation and must be in JSON format. Specifying this parameter creates a new version.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</p>
@@ -23,6 +23,8 @@ public class UpdateJobTemplateRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The description of the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>Template description</p>
      */
@@ -30,7 +32,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>用户自定义的键值对元数据，用于存储模板的附加信息。</p>
+     * <p>User-defined key-value pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -39,7 +41,7 @@ public class UpdateJobTemplateRequest extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>当创建了新版本时，是否将新版本设为默认版本。</p>
+     * <p>If <code>true</code>, the new version becomes the default version.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -48,12 +50,20 @@ public class UpdateJobTemplateRequest extends TeaModel {
     public Boolean setAsDefault;
 
     /**
+     * <p>The name of the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-template-example-1778047****</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>This field is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无效字段</p>
+     */
     @NameInMap("version")
     public Integer version;
 

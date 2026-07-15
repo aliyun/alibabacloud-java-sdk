@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateJobTemplateResponseBody extends TeaModel {
     /**
+     * <p>The default version number of the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public Integer defaultVersion;
 
     /**
+     * <p>The description of the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>Template description</p>
      */
@@ -19,6 +23,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The creation time of the job template.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The last modification time of the job template.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>User-defined key-value metadata.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -44,7 +52,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
-     * <p>本次请求的 ID，用于诊断和答疑。</p>
+     * <p>The ID of the request, used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>8762921A-911C-515F-A3A4-*********</p>
@@ -53,7 +61,7 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>此次调用创建的模板 ID。</p>
+     * <p>The unique ID of the job template.</p>
      * 
      * <strong>example:</strong>
      * <p>tplmceolmf2****</p>
@@ -62,6 +70,8 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String templateId;
 
     /**
+     * <p>The name of the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-template-example-1778047****</p>
      */
@@ -69,6 +79,8 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String templateName;
 
     /**
+     * <p>The ID of the tenant that contains the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>10**************14</p>
      */
@@ -76,6 +88,8 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String tenantId;
 
     /**
+     * <p>The ID of the user who created the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>20**************02</p>
      */
@@ -83,6 +97,8 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public String userId;
 
     /**
+     * <p>The version number of the created job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -90,6 +106,8 @@ public class CreateJobTemplateResponseBody extends TeaModel {
     public Integer version;
 
     /**
+     * <p>The ID of the workspace that contains the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>15****05</p>
      */

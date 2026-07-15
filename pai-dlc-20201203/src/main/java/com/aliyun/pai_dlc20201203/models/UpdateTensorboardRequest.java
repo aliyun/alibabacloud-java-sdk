@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateTensorboardRequest extends TeaModel {
     /**
-     * <p>The visibility of the jobs. Valid values:</p>
+     * <p>Visibility of the task. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: The jobs are public in the workspace.</li>
-     * <li>PRIVATE: The jobs are visible only to you and the administrator of the workspace.</li>
+     * <li><p>PUBLIC: Visible to all users in this workspace.</p>
+     * </li>
+     * <li><p>PRIVATE: Visible only to you and administrators in this workspace.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class UpdateTensorboardRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The maximum running time. Unit: minutes.</p>
+     * <p>Maximum runtime. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -30,7 +32,7 @@ public class UpdateTensorboardRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>Workspace ID. For more information about how to get a workspace ID, see <a href="">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>380</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMetricsResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class GetMetricsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The monitoring metric data.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;Content\&quot;: \&quot;\&quot;, \&quot;OperationName\&quot;: \&quot;purchase\&quot;, \&quot;Success\&quot;: 1, \&quot;Id\&quot;: \&quot;217\&quot;, \&quot;LogDatetime\&quot;: 1687679582923}]</p>
      */
@@ -19,6 +23,8 @@ public class GetMetricsResponseBody extends TeaModel {
     public String dataPoints;
 
     /**
+     * <p>Detailed result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success.</p>
      */
@@ -35,6 +41,8 @@ public class GetMetricsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The statistical period for monitoring data. Valid values: 15, 60, 900, and 3600. Unit: seconds. If you do not specify a statistical period, the system uses the reporting period registered for the metric. Each cloud service metric (MetricName) may have a different statistical period. For more information, see cloud service monitoring metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -42,6 +50,8 @@ public class GetMetricsResponseBody extends TeaModel {
     public String period;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -49,6 +59,8 @@ public class GetMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation succeeded. Valid values: true (success) and false (failure).</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobTemplateRequest extends TeaModel {
     /**
-     * <p>字段约束规则。Key 为 JSONPath 表达式，Value 为约束类型：locked（锁定不可覆盖）、overridable（可覆盖）、required（必填）。</p>
+     * <p>The field constraint rules. The key is a JSONPath expression, and the value is a constraint type: <code>locked</code> (cannot be overridden), <code>overridable</code> (can be overridden), or <code>required</code> (must be specified).</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
@@ -14,7 +14,7 @@ public class CreateJobTemplateRequest extends TeaModel {
     public java.util.Map<String, ?> constraints;
 
     /**
-     * <p>任务模板的配置内容，包含作业配置参数，以 JSON 格式传入。</p>
+     * <p>The configuration of the job template, which must be a JSON string containing the job configuration parameters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,8 @@ public class CreateJobTemplateRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The description of the job template.</p>
+     * 
      * <strong>example:</strong>
      * <p>Template description</p>
      */
@@ -31,7 +33,7 @@ public class CreateJobTemplateRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>用户自定义的键值对元数据，用于存储模板的附加信息。</p>
+     * <p>User-defined key-value metadata.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -40,6 +42,7 @@ public class CreateJobTemplateRequest extends TeaModel {
     public java.util.Map<String, ?> metadata;
 
     /**
+     * <p>The name of the job template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +52,7 @@ public class CreateJobTemplateRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>工作空间 ID。如何获取工作空间 ID，请参见 ListWorkspaces。</p>
+     * <p>The ID of the workspace that contains the job template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

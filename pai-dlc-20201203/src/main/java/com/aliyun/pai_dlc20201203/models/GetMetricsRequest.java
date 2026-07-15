@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMetricsRequest extends TeaModel {
     /**
+     * <p>(Required) Request parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;jobId\&quot;:\&quot;dlcdpfpc96mh63mg\&quot;,\&quot;pod\&quot;:\&quot;dlcdpfpc96mh63mg-worker-748\&quot;,\&quot;regionId\&quot;:\&quot;cn-wulanchabu\&quot;,\&quot;userId\&quot;:\&quot;1458867964644701\&quot;}]</p>
      */
@@ -12,6 +14,8 @@ public class GetMetricsRequest extends TeaModel {
     public String dimensions;
 
     /**
+     * <p>The end time of the query. Default value: current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-09T16:00:00Z</p>
      */
@@ -19,6 +23,8 @@ public class GetMetricsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlckjd5hm84tmjec</p>
      */
@@ -26,6 +32,8 @@ public class GetMetricsRequest extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The number of records per query for paged queries. Default value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>5000</p>
      */
@@ -33,6 +41,8 @@ public class GetMetricsRequest extends TeaModel {
     public String length;
 
     /**
+     * <p>Metric name. Not filled. Not in use.</p>
+     * 
      * <strong>example:</strong>
      * <p>JOB_MEMORY_FREE</p>
      */
@@ -40,6 +50,8 @@ public class GetMetricsRequest extends TeaModel {
     public String metricName;
 
     /**
+     * <p>The namespace for cloud service monitoring data. For more information about namespaces, see cloud service monitoring metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>acs_pai_dlc</p>
      */
@@ -47,6 +59,8 @@ public class GetMetricsRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The pagination cursor token. If you do not set this parameter, the first page of data is returned. When a NextToken value is returned, more data is available. Use the returned NextToken as a parameter in your next request to retrieve the next page. Repeat until NextToken returns null, which means all data has been retrieved.</p>
+     * 
      * <strong>example:</strong>
      * <p>2c6b65b6f9d625d4716568ca19b2064be0b5e8707e68181f</p>
      */
@@ -54,6 +68,8 @@ public class GetMetricsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The statistical period for monitoring data. Unit: seconds. Valid values: 15, 60, 900, and 3600.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -61,6 +77,8 @@ public class GetMetricsRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The start time of the monitoring data query interval (UTC). Default value: one hour ago.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>
      */
@@ -68,6 +86,8 @@ public class GetMetricsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>A temporary token used for authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyXXXX-XXXX.XXXXX</p>
      */

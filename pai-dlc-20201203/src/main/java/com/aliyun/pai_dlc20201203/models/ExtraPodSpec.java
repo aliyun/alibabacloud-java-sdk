@@ -5,42 +5,45 @@ import com.aliyun.tea.*;
 
 public class ExtraPodSpec extends TeaModel {
     /**
-     * <p>The containers to be initialized.</p>
+     * <p>A list of init containers that run to completion before the main container starts.</p>
      */
     @NameInMap("InitContainers")
     public java.util.List<ContainerSpec> initContainers;
 
     /**
-     * <p>The lifecycle object.</p>
+     * <p>Defines lifecycle hooks for the main container.</p>
      */
     @NameInMap("Lifecycle")
     public Lifecycle lifecycle;
 
+    /**
+     * <p>Defines the security context for the main container.</p>
+     */
     @NameInMap("MainContainerSecurityContext")
     public SecurityContext mainContainerSecurityContext;
 
     /**
-     * <p>The pod annotations.</p>
+     * <p>Key-value pairs to apply to the pod as annotations. Use annotations to attach arbitrary, non-identifying metadata.</p>
      */
     @NameInMap("PodAnnotations")
     @Deprecated
     public java.util.Map<String, String> podAnnotations;
 
     /**
-     * <p>The pod labels.</p>
+     * <p>Key-value pairs to apply to the pod as labels. Use labels to organize and select pods.</p>
      */
     @NameInMap("PodLabels")
     @Deprecated
     public java.util.Map<String, String> podLabels;
 
     /**
-     * <p>The local paths shared between containers.</p>
+     * <p>A list of local directory paths to mount and share among all containers in the pod.</p>
      */
     @NameInMap("SharedVolumeMountPaths")
     public java.util.List<String> sharedVolumeMountPaths;
 
     /**
-     * <p>The sidecar containers.</p>
+     * <p>A list of sidecar containers.</p>
      */
     @NameInMap("SideCarContainers")
     public java.util.List<ContainerSpec> sideCarContainers;

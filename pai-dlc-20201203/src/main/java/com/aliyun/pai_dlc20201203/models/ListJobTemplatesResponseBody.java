@@ -4,10 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListJobTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The list of job templates.</p>
+     */
     @NameInMap("JobTemplates")
     public java.util.List<ListJobTemplatesResponseBodyJobTemplates> jobTemplates;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of results on the current page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -22,7 +29,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>本次请求的 ID，用于诊断和答疑。</p>
+     * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D*****</p>
@@ -31,6 +38,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of job templates that match the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -84,6 +93,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
 
     public static class ListJobTemplatesResponseBodyJobTemplates extends TeaModel {
         /**
+         * <p>The default version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -91,6 +102,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public Integer defaultVersion;
 
         /**
+         * <p>The description of the job template.</p>
+         * 
          * <strong>example:</strong>
          * <p>job description</p>
          */
@@ -98,6 +111,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The creation time of the template, in UTC and ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -107,6 +121,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The modification time of the template, in UTC and ISO 8601 format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +131,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String gmtModifyTime;
 
         /**
+         * <p>Custom metadata, represented as a collection of key-value pairs.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -123,6 +140,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
+         * <p>The ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>20**************26</p>
          */
@@ -130,6 +149,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String modifiedBy;
 
         /**
+         * <p>The ID of the job template.</p>
+         * 
          * <strong>example:</strong>
          * <p>tpl1r5g9ait7****</p>
          */
@@ -137,6 +158,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The name of the job template.</p>
+         * 
          * <strong>example:</strong>
          * <p>job-template-1772516653885</p>
          */
@@ -144,6 +167,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
+         * <p>The ID of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>142388383837****</p>
          */
@@ -151,6 +176,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>20**************26</p>
          */
@@ -158,6 +185,8 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The ID of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>88****</p>
          */

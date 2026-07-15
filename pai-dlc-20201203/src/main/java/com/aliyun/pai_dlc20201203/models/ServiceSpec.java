@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ServiceSpec extends TeaModel {
     /**
+     * <p>The default port for the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
     @NameInMap("DefaultPort")
     public Integer defaultPort;
 
+    /**
+     * <p>The list of extra ports for the service.</p>
+     */
     @NameInMap("ExtraPorts")
     public java.util.List<Integer> extraPorts;
 
     /**
+     * <p>The service pattern. Valid values are PerRole and PerPod. The default value is PerPod.</p>
+     * 
      * <strong>example:</strong>
      * <p>PerRole</p>
      */

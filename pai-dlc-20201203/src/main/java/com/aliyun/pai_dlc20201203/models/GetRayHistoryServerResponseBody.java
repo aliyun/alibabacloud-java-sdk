@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRayHistoryServerResponseBody extends TeaModel {
     /**
+     * <p>The visibility of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
@@ -12,6 +14,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String accessibility;
 
     /**
+     * <p>The display name of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-ray-history-server</p>
      */
@@ -19,6 +23,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The specifications of the public resource group. For a list of supported instance types, see <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a>.&gt;Notice: Pricing varies based on the specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
      */
@@ -26,6 +32,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String ecsSpec;
 
     /**
+     * <p>The time when the job was created. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -33,6 +41,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the job is complete. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
      */
@@ -40,6 +50,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String gmtFinishTime;
 
     /**
+     * <p>The time when the job was last modified. The time is in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:00Z</p>
      */
@@ -47,6 +59,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>The maximum running time. Unit: minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -54,6 +68,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public Integer maxRuntimeMinutes;
 
     /**
+     * <p>The ID of the Ray history server.</p>
+     * 
      * <strong>example:</strong>
      * <p>rhsxxx</p>
      */
@@ -61,7 +77,7 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String rayHistoryServerId;
 
     /**
-     * <p>Ray Dashboard URL。</p>
+     * <p>The URL of the Ray dashboard.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/">https://rhsxxx-dashboard.dsw-gateway-cn-wulanchabu.data.aliyun.com/</a></p>
@@ -70,6 +86,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String rayHistoryServerUrl;
 
     /**
+     * <p>The code of the job status.</p>
+     * 
      * <strong>example:</strong>
      * <p>NotFound</p>
      */
@@ -77,6 +95,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String reasonCode;
 
     /**
+     * <p>The message that describes the job status.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -84,6 +104,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String reasonMessage;
 
     /**
+     * <p>The ID of the resource group to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>quotaxxx</p>
      */
@@ -91,6 +113,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The name of the resource on which the job runs.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-resource-name</p>
      */
@@ -98,6 +122,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The status of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>running</p>
      */
@@ -105,6 +131,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The storage path of Ray logs.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://bucket-test-hangzhou.oss-cn-hangzhou-internal.aliyuncs.com/tmp</p>
      */
@@ -112,6 +140,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String storagePath;
 
     /**
+     * <p>The tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10**************14</p>
      */
@@ -119,6 +149,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String tenantId;
 
     /**
+     * <p>The ID of the user who creates the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -126,6 +158,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String userId;
 
     /**
+     * <p>The username of the user who creates the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>myusername</p>
      */
@@ -133,6 +167,8 @@ public class GetRayHistoryServerResponseBody extends TeaModel {
     public String username;
 
     /**
+     * <p>The ID of the workspace to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>46099</p>
      */

@@ -14,13 +14,13 @@ public class ListTensorboardsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The TensorBoard instances.</p>
+     * <p>The list and details of Tensorboard instances.</p>
      */
     @NameInMap("Tensorboards")
     public java.util.List<Tensorboard> tensorboards;
 
     /**
-     * <p>The total number of data sources that meet the conditions.</p>
+     * <p>The total number of Tensorboard instances that match the specified conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

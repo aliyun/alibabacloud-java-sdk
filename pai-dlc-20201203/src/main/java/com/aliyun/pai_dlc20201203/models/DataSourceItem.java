@@ -17,7 +17,7 @@ public class DataSourceItem extends TeaModel {
      * <p>The data source type. Only File Storage NAS (NAS) file systems are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>nas</p>
+     * <p>NAS</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
