@@ -1,0 +1,609 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.apig20240327.models;
+
+import com.aliyun.tea.*;
+
+public class ListAiModelProvidersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Ok</p>
+     */
+    @NameInMap("code")
+    public String code;
+
+    @NameInMap("data")
+    public ListAiModelProvidersResponseBodyData data;
+
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
+    @NameInMap("message")
+    public String message;
+
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
+    @NameInMap("requestId")
+    public String requestId;
+
+    public static ListAiModelProvidersResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListAiModelProvidersResponseBody self = new ListAiModelProvidersResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ListAiModelProvidersResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListAiModelProvidersResponseBody setData(ListAiModelProvidersResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ListAiModelProvidersResponseBodyData getData() {
+        return this.data;
+    }
+
+    public ListAiModelProvidersResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListAiModelProvidersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/v1/chat/completions</p>
+         */
+        @NameInMap("path")
+        public String path;
+
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAICompatible</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths build(java.util.Map<String, ?> map) throws Exception {
+            ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths self = new ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListAiModelProvidersResponseBodyDataItemsModelCardsCredit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
+        @NameInMap("cacheCost")
+        public Float cacheCost;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1.5</p>
+         */
+        @NameInMap("inputCost")
+        public Float inputCost;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("outputCost")
+        public Float outputCost;
+
+        /**
+         * <strong>example:</strong>
+         * <p>fixed</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListAiModelProvidersResponseBodyDataItemsModelCardsCredit build(java.util.Map<String, ?> map) throws Exception {
+            ListAiModelProvidersResponseBodyDataItemsModelCardsCredit self = new ListAiModelProvidersResponseBodyDataItemsModelCardsCredit();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsCredit setCacheCost(Float cacheCost) {
+            this.cacheCost = cacheCost;
+            return this;
+        }
+        public Float getCacheCost() {
+            return this.cacheCost;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsCredit setInputCost(Float inputCost) {
+            this.inputCost = inputCost;
+            return this;
+        }
+        public Float getInputCost() {
+            return this.inputCost;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsCredit setOutputCost(Float outputCost) {
+            this.outputCost = outputCost;
+            return this;
+        }
+        public Float getOutputCost() {
+            return this.outputCost;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsCredit setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListAiModelProvidersResponseBodyDataItemsModelCardsMeta extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>131072</p>
+         */
+        @NameInMap("maxInputTokens")
+        public Long maxInputTokens;
+
+        /**
+         * <strong>example:</strong>
+         * <p>8192</p>
+         */
+        @NameInMap("maxOutputTokens")
+        public Long maxOutputTokens;
+
+        /**
+         * <strong>example:</strong>
+         * <p>131072</p>
+         */
+        @NameInMap("maxTokens")
+        public Long maxTokens;
+
+        @NameInMap("supportedInputModalities")
+        public java.util.List<String> supportedInputModalities;
+
+        @NameInMap("supportedOutputModalities")
+        public java.util.List<String> supportedOutputModalities;
+
+        public static ListAiModelProvidersResponseBodyDataItemsModelCardsMeta build(java.util.Map<String, ?> map) throws Exception {
+            ListAiModelProvidersResponseBodyDataItemsModelCardsMeta self = new ListAiModelProvidersResponseBodyDataItemsModelCardsMeta();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsMeta setMaxInputTokens(Long maxInputTokens) {
+            this.maxInputTokens = maxInputTokens;
+            return this;
+        }
+        public Long getMaxInputTokens() {
+            return this.maxInputTokens;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsMeta setMaxOutputTokens(Long maxOutputTokens) {
+            this.maxOutputTokens = maxOutputTokens;
+            return this;
+        }
+        public Long getMaxOutputTokens() {
+            return this.maxOutputTokens;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsMeta setMaxTokens(Long maxTokens) {
+            this.maxTokens = maxTokens;
+            return this;
+        }
+        public Long getMaxTokens() {
+            return this.maxTokens;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsMeta setSupportedInputModalities(java.util.List<String> supportedInputModalities) {
+            this.supportedInputModalities = supportedInputModalities;
+            return this;
+        }
+        public java.util.List<String> getSupportedInputModalities() {
+            return this.supportedInputModalities;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsMeta setSupportedOutputModalities(java.util.List<String> supportedOutputModalities) {
+            this.supportedOutputModalities = supportedOutputModalities;
+            return this;
+        }
+        public java.util.List<String> getSupportedOutputModalities() {
+            return this.supportedOutputModalities;
+        }
+
+    }
+
+    public static class ListAiModelProvidersResponseBodyDataItemsModelCards extends TeaModel {
+        @NameInMap("availablePaths")
+        public java.util.List<ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths> availablePaths;
+
+        @NameInMap("credit")
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsCredit credit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;functionCalling&quot;:true,&quot;toolChoice&quot;:true}</p>
+         */
+        @NameInMap("features")
+        public java.util.Map<String, ?> features;
+
+        /**
+         * <strong>example:</strong>
+         * <p>gw-8c13d2b4f8a1</p>
+         */
+        @NameInMap("gatewayId")
+        public String gatewayId;
+
+        @NameInMap("meta")
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsMeta meta;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mc-8c13d2b4f8a1</p>
+         */
+        @NameInMap("modelCardId")
+        public String modelCardId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("modelName")
+        public String modelName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen</p>
+         */
+        @NameInMap("modelProvider")
+        public String modelProvider;
+
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://https://dashscope-intl.aliyuncs.com">http://https://dashscope-intl.aliyuncs.com</a></p>
+         */
+        @NameInMap("sourceURL")
+        public String sourceURL;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2026-07-14 18:30:00</p>
+         */
+        @NameInMap("updateTime")
+        public String updateTime;
+
+        public static ListAiModelProvidersResponseBodyDataItemsModelCards build(java.util.Map<String, ?> map) throws Exception {
+            ListAiModelProvidersResponseBodyDataItemsModelCards self = new ListAiModelProvidersResponseBodyDataItemsModelCards();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setAvailablePaths(java.util.List<ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths> availablePaths) {
+            this.availablePaths = availablePaths;
+            return this;
+        }
+        public java.util.List<ListAiModelProvidersResponseBodyDataItemsModelCardsAvailablePaths> getAvailablePaths() {
+            return this.availablePaths;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setCredit(ListAiModelProvidersResponseBodyDataItemsModelCardsCredit credit) {
+            this.credit = credit;
+            return this;
+        }
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsCredit getCredit() {
+            return this.credit;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setFeatures(java.util.Map<String, ?> features) {
+            this.features = features;
+            return this;
+        }
+        public java.util.Map<String, ?> getFeatures() {
+            return this.features;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setGatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setMeta(ListAiModelProvidersResponseBodyDataItemsModelCardsMeta meta) {
+            this.meta = meta;
+            return this;
+        }
+        public ListAiModelProvidersResponseBodyDataItemsModelCardsMeta getMeta() {
+            return this.meta;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setModelCardId(String modelCardId) {
+            this.modelCardId = modelCardId;
+            return this;
+        }
+        public String getModelCardId() {
+            return this.modelCardId;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setModelProvider(String modelProvider) {
+            this.modelProvider = modelProvider;
+            return this;
+        }
+        public String getModelProvider() {
+            return this.modelProvider;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setSourceURL(String sourceURL) {
+            this.sourceURL = sourceURL;
+            return this;
+        }
+        public String getSourceURL() {
+            return this.sourceURL;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItemsModelCards setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+    }
+
+    public static class ListAiModelProvidersResponseBodyDataItems extends TeaModel {
+        @NameInMap("boundServices")
+        public java.util.List<ServiceInfo> boundServices;
+
+        /**
+         * <strong>example:</strong>
+         * <p>千问云 / 阿里云百炼</p>
+         */
+        @NameInMap("displayName")
+        public String displayName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>gw-8c13d2b4f8a1</p>
+         */
+        @NameInMap("gatewayId")
+        public String gatewayId;
+
+        @NameInMap("modelCards")
+        public java.util.List<ListAiModelProvidersResponseBodyDataItemsModelCards> modelCards;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("modelCount")
+        public Integer modelCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mp-8c13d2b4f8a1</p>
+         */
+        @NameInMap("modelProviderId")
+        public String modelProviderId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>qwen</p>
+         */
+        @NameInMap("provider")
+        public String provider;
+
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
+        @NameInMap("source")
+        public String source;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2026-07-14 18:30:00</p>
+         */
+        @NameInMap("updateTime")
+        public String updateTime;
+
+        public static ListAiModelProvidersResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
+            ListAiModelProvidersResponseBodyDataItems self = new ListAiModelProvidersResponseBodyDataItems();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setBoundServices(java.util.List<ServiceInfo> boundServices) {
+            this.boundServices = boundServices;
+            return this;
+        }
+        public java.util.List<ServiceInfo> getBoundServices() {
+            return this.boundServices;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setGatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setModelCards(java.util.List<ListAiModelProvidersResponseBodyDataItemsModelCards> modelCards) {
+            this.modelCards = modelCards;
+            return this;
+        }
+        public java.util.List<ListAiModelProvidersResponseBodyDataItemsModelCards> getModelCards() {
+            return this.modelCards;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setModelCount(Integer modelCount) {
+            this.modelCount = modelCount;
+            return this;
+        }
+        public Integer getModelCount() {
+            return this.modelCount;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setModelProviderId(String modelProviderId) {
+            this.modelProviderId = modelProviderId;
+            return this;
+        }
+        public String getModelProviderId() {
+            return this.modelProviderId;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setProvider(String provider) {
+            this.provider = provider;
+            return this;
+        }
+        public String getProvider() {
+            return this.provider;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public ListAiModelProvidersResponseBodyDataItems setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+    }
+
+    public static class ListAiModelProvidersResponseBodyData extends TeaModel {
+        @NameInMap("items")
+        public java.util.List<ListAiModelProvidersResponseBodyDataItems> items;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("pageNumber")
+        public Integer pageNumber;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("pageSize")
+        public Integer pageSize;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("totalSize")
+        public Integer totalSize;
+
+        public static ListAiModelProvidersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListAiModelProvidersResponseBodyData self = new ListAiModelProvidersResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAiModelProvidersResponseBodyData setItems(java.util.List<ListAiModelProvidersResponseBodyDataItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<ListAiModelProvidersResponseBodyDataItems> getItems() {
+            return this.items;
+        }
+
+        public ListAiModelProvidersResponseBodyData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public ListAiModelProvidersResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListAiModelProvidersResponseBodyData setTotalSize(Integer totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Integer getTotalSize() {
+            return this.totalSize;
+        }
+
+    }
+
+}

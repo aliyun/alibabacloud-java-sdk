@@ -253,6 +253,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量添加消费者组成员</p>
+     * 
+     * @param request BatchAddConsumerGroupConsumersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchAddConsumerGroupConsumersResponse
+     */
+    public BatchAddConsumerGroupConsumersResponse batchAddConsumerGroupConsumersWithOptions(String consumerGroupId, BatchAddConsumerGroupConsumersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerIds)) {
+            body.put("consumerIds", request.consumerIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchAddConsumerGroupConsumers"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + "/consumers/batch-add"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchAddConsumerGroupConsumersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量添加消费者组成员</p>
+     * 
+     * @param request BatchAddConsumerGroupConsumersRequest
+     * @return BatchAddConsumerGroupConsumersResponse
+     */
+    public BatchAddConsumerGroupConsumersResponse batchAddConsumerGroupConsumers(String consumerGroupId, BatchAddConsumerGroupConsumersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchAddConsumerGroupConsumersWithOptions(consumerGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Revokes consumer authorization rules in batches.</p>
      * 
      * @param request BatchDeleteConsumerAuthorizationRuleRequest
@@ -296,6 +343,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.batchDeleteConsumerAuthorizationRuleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量移除消费者组成员</p>
+     * 
+     * @param request BatchRemoveConsumerGroupConsumersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchRemoveConsumerGroupConsumersResponse
+     */
+    public BatchRemoveConsumerGroupConsumersResponse batchRemoveConsumerGroupConsumersWithOptions(String consumerGroupId, BatchRemoveConsumerGroupConsumersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerIds)) {
+            body.put("consumerIds", request.consumerIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchRemoveConsumerGroupConsumers"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + "/consumers/batch-remove"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchRemoveConsumerGroupConsumersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量移除消费者组成员</p>
+     * 
+     * @param request BatchRemoveConsumerGroupConsumersRequest
+     * @return BatchRemoveConsumerGroupConsumersResponse
+     */
+    public BatchRemoveConsumerGroupConsumersResponse batchRemoveConsumerGroupConsumers(String consumerGroupId, BatchRemoveConsumerGroupConsumersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.batchRemoveConsumerGroupConsumersWithOptions(consumerGroupId, request, headers, runtime);
     }
 
     /**
@@ -355,6 +449,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.changeResourceGroupWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
+     * 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建AI模型卡片</p>
+     * 
+     * @param request CreateAiModelCardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAiModelCardResponse
+     */
+    public CreateAiModelCardResponse createAiModelCardWithOptions(CreateAiModelCardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.availablePaths)) {
+            body.put("availablePaths", request.availablePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credit)) {
+            body.put("credit", request.credit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.features)) {
+            body.put("features", request.features);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meta)) {
+            body.put("meta", request.meta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("modelName", request.modelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelProvider)) {
+            body.put("modelProvider", request.modelProvider);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAiModelCard"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-cards"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAiModelCardResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>在指定AI网关实例的已有模型供应商下创建模型卡片。目标网关必须存在、属于当前账号且类型为AI网关，modelProvider必须引用该网关中已存在的模型供应商。
+     * 同一AI网关实例、同一模型供应商下的modelName必须唯一；单个网关实例最多可创建1000张模型卡片。credit当前仅支持fixed类型，费用单位为Credits/百万Token；未传时type默认为fixed，各项费用默认为0。availablePaths中的每一项必须同时包含path和type。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建AI模型卡片</p>
+     * 
+     * @param request CreateAiModelCardRequest
+     * @return CreateAiModelCardResponse
+     */
+    public CreateAiModelCardResponse createAiModelCard(CreateAiModelCardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAiModelCardWithOptions(request, headers, runtime);
     }
 
     /**
@@ -670,6 +843,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createConsumerAuthorizationRulesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建消费者组</p>
+     * 
+     * @param request CreateConsumerGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConsumerGroupResponse
+     */
+    public CreateConsumerGroupResponse createConsumerGroupWithOptions(CreateConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.consumerGroupId)) {
+            body.put("consumerGroupId", request.consumerGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            body.put("gatewayType", request.gatewayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateConsumerGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConsumerGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建消费者组</p>
+     * 
+     * @param request CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     */
+    public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createConsumerGroupWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1803,6 +2035,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除AI模型卡片</p>
+     * 
+     * @param request DeleteAiModelCardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAiModelCardResponse
+     */
+    public DeleteAiModelCardResponse deleteAiModelCardWithOptions(String modelCardId, DeleteAiModelCardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAiModelCard"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-cards/" + com.aliyun.openapiutil.Client.getEncodeParam(modelCardId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAiModelCardResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除AI模型卡片</p>
+     * 
+     * @param request DeleteAiModelCardRequest
+     * @return DeleteAiModelCardResponse
+     */
+    public DeleteAiModelCardResponse deleteAiModelCard(String modelCardId, DeleteAiModelCardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAiModelCardWithOptions(modelCardId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除AI模型供应商</p>
+     * 
+     * @param request DeleteAiModelProviderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAiModelProviderResponse
+     */
+    public DeleteAiModelProviderResponse deleteAiModelProviderWithOptions(String modelProviderId, DeleteAiModelProviderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAiModelProvider"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-providers/" + com.aliyun.openapiutil.Client.getEncodeParam(modelProviderId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAiModelProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除AI模型供应商</p>
+     * 
+     * @param request DeleteAiModelProviderRequest
+     * @return DeleteAiModelProviderResponse
+     */
+    public DeleteAiModelProviderResponse deleteAiModelProvider(String modelProviderId, DeleteAiModelProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAiModelProviderWithOptions(modelProviderId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes an API consumer.</p>
      * 
      * @param headers map
@@ -1873,6 +2187,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteConsumerAuthorizationRuleWithOptions(consumerAuthorizationRuleId, consumerId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除消费者组</p>
+     * 
+     * @param request DeleteConsumerGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConsumerGroupResponse
+     */
+    public DeleteConsumerGroupResponse deleteConsumerGroupWithOptions(String consumerGroupId, DeleteConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConsumerGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConsumerGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除消费者组</p>
+     * 
+     * @param request DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     */
+    public DeleteConsumerGroupResponse deleteConsumerGroup(String consumerGroupId, DeleteConsumerGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteConsumerGroupWithOptions(consumerGroupId, request, headers, runtime);
     }
 
     /**
@@ -2738,6 +3093,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询AI模型卡片详情</p>
+     * 
+     * @param request GetAiModelCardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAiModelCardResponse
+     */
+    public GetAiModelCardResponse getAiModelCardWithOptions(String modelCardId, GetAiModelCardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAiModelCard"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-cards/" + com.aliyun.openapiutil.Client.getEncodeParam(modelCardId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiModelCardResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AI模型卡片详情</p>
+     * 
+     * @param request GetAiModelCardRequest
+     * @return GetAiModelCardResponse
+     */
+    public GetAiModelCardResponse getAiModelCard(String modelCardId, GetAiModelCardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAiModelCardWithOptions(modelCardId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AI模型供应商详情</p>
+     * 
+     * @param request GetAiModelProviderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAiModelProviderResponse
+     */
+    public GetAiModelProviderResponse getAiModelProviderWithOptions(String modelProviderId, GetAiModelProviderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAiModelProvider"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-providers/" + com.aliyun.openapiutil.Client.getEncodeParam(modelProviderId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAiModelProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AI模型供应商详情</p>
+     * 
+     * @param request GetAiModelProviderRequest
+     * @return GetAiModelProviderResponse
+     */
+    public GetAiModelProviderResponse getAiModelProvider(String modelProviderId, GetAiModelProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAiModelProviderWithOptions(modelProviderId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves an API consumer.</p>
      * 
      * @param headers map
@@ -2808,6 +3245,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getConsumerAuthorizationRuleWithOptions(consumerAuthorizationRuleId, consumerId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者组</p>
+     * 
+     * @param request GetConsumerGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConsumerGroupResponse
+     */
+    public GetConsumerGroupResponse getConsumerGroupWithOptions(String consumerGroupId, GetConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConsumerGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConsumerGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者组</p>
+     * 
+     * @param request GetConsumerGroupRequest
+     * @return GetConsumerGroupResponse
+     */
+    public GetConsumerGroupResponse getConsumerGroup(String consumerGroupId, GetConsumerGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getConsumerGroupWithOptions(consumerGroupId, request, headers, runtime);
     }
 
     /**
@@ -3868,6 +4346,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询AI模型卡片列表</p>
+     * 
+     * @param request ListAiModelCardsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAiModelCardsResponse
+     */
+    public ListAiModelCardsResponse listAiModelCardsWithOptions(ListAiModelCardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAiModelCards"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-cards"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAiModelCardsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AI模型卡片列表</p>
+     * 
+     * @param request ListAiModelCardsRequest
+     * @return ListAiModelCardsResponse
+     */
+    public ListAiModelCardsResponse listAiModelCards(ListAiModelCardsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAiModelCardsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AI模型供应商列表</p>
+     * 
+     * @param request ListAiModelProvidersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAiModelProvidersResponse
+     */
+    public ListAiModelProvidersResponse listAiModelProvidersWithOptions(ListAiModelProvidersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provider)) {
+            query.put("provider", request.provider);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAiModelProviders"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-providers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAiModelProvidersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AI模型供应商列表</p>
+     * 
+     * @param request ListAiModelProvidersRequest
+     * @return ListAiModelProvidersResponse
+     */
+    public ListAiModelProvidersResponse listAiModelProviders(ListAiModelProvidersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAiModelProvidersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the list of consumer authorization rules.</p>
      * 
      * @param request ListConsumerAuthorizationRulesRequest
@@ -3919,6 +4515,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listConsumerAuthorizationRulesWithOptions(consumerId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者组成员列表</p>
+     * 
+     * @param request ListConsumerGroupConsumersRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConsumerGroupConsumersResponse
+     */
+    public ListConsumerGroupConsumersResponse listConsumerGroupConsumersWithOptions(String consumerGroupId, ListConsumerGroupConsumersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
+            query.put("nameLike", request.nameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerGroupConsumers"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + "/consumers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerGroupConsumersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者组成员列表</p>
+     * 
+     * @param request ListConsumerGroupConsumersRequest
+     * @return ListConsumerGroupConsumersResponse
+     */
+    public ListConsumerGroupConsumersResponse listConsumerGroupConsumers(String consumerGroupId, ListConsumerGroupConsumersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerGroupConsumersWithOptions(consumerGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者组列表</p>
+     * 
+     * @param request ListConsumerGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConsumerGroupsResponse
+     */
+    public ListConsumerGroupsResponse listConsumerGroupsWithOptions(ListConsumerGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            query.put("gatewayType", request.gatewayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nameLike)) {
+            query.put("nameLike", request.nameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerGroups"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消费者组列表</p>
+     * 
+     * @param request ListConsumerGroupsRequest
+     * @return ListConsumerGroupsResponse
+     */
+    public ListConsumerGroupsResponse listConsumerGroups(ListConsumerGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerGroupsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6226,6 +6936,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新AI模型卡片</p>
+     * 
+     * @param request UpdateAiModelCardRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAiModelCardResponse
+     */
+    public UpdateAiModelCardResponse updateAiModelCardWithOptions(String modelCardId, UpdateAiModelCardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.availablePaths)) {
+            body.put("availablePaths", request.availablePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credit)) {
+            body.put("credit", request.credit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.features)) {
+            body.put("features", request.features);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.meta)) {
+            body.put("meta", request.meta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("modelName", request.modelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelProvider)) {
+            body.put("modelProvider", request.modelProvider);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAiModelCard"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-cards/" + com.aliyun.openapiutil.Client.getEncodeParam(modelCardId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAiModelCardResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新AI模型卡片</p>
+     * 
+     * @param request UpdateAiModelCardRequest
+     * @return UpdateAiModelCardResponse
+     */
+    public UpdateAiModelCardResponse updateAiModelCard(String modelCardId, UpdateAiModelCardRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAiModelCardWithOptions(modelCardId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新AI模型供应商</p>
+     * 
+     * @param request UpdateAiModelProviderRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAiModelProviderResponse
+     */
+    public UpdateAiModelProviderResponse updateAiModelProviderWithOptions(String modelProviderId, UpdateAiModelProviderRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceIds)) {
+            body.put("serviceIds", request.serviceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAiModelProvider"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/ai-model-providers/" + com.aliyun.openapiutil.Client.getEncodeParam(modelProviderId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAiModelProviderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新AI模型供应商</p>
+     * 
+     * @param request UpdateAiModelProviderRequest
+     * @return UpdateAiModelProviderResponse
+     */
+    public UpdateAiModelProviderResponse updateAiModelProvider(String modelProviderId, UpdateAiModelProviderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAiModelProviderWithOptions(modelProviderId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates and mounts a policy.</p>
      * 
      * @param request UpdateAndAttachPolicyRequest
@@ -6411,6 +7239,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateConsumerAuthorizationRuleWithOptions(consumerId, consumerAuthorizationRuleId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新消费者组</p>
+     * 
+     * @param request UpdateConsumerGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConsumerGroupResponse
+     */
+    public UpdateConsumerGroupResponse updateConsumerGroupWithOptions(String consumerGroupId, UpdateConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConsumerGroup"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/consumer-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConsumerGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新消费者组</p>
+     * 
+     * @param request UpdateConsumerGroupRequest
+     * @return UpdateConsumerGroupResponse
+     */
+    public UpdateConsumerGroupResponse updateConsumerGroup(String consumerGroupId, UpdateConsumerGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateConsumerGroupWithOptions(consumerGroupId, request, headers, runtime);
     }
 
     /**
