@@ -1000,10 +1000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</p>
+     * <p>If an API involves fees, add the following bold statement as the first sentence: <strong>Make sure that you fully understand the billing methods and pricing of XXX before you call this operation.</strong> In this statement, &quot;pricing&quot; is a hyperlink that points to: <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</p>
+     * <p>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</p>
      * 
      * @param request MultiModalGuardAsyncResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1039,10 +1039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For APIs that incur charges, add the following sentence in bold at the beginning of the description: &quot;Before you use this API, make sure that you fully understand the billing methods and pricing of the XXX product.&quot; Link the word \&quot;pricing\&quot; to https\://www\.aliyun.com/price/product#/ecs/detail.</p>
+     * <p>If an API involves fees, add the following bold statement as the first sentence: <strong>Make sure that you fully understand the billing methods and pricing of XXX before you call this operation.</strong> In this statement, &quot;pricing&quot; is a hyperlink that points to: <a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This AI Security Guardrail API retrieves asynchronous multimodal results from both audio and video.</p>
+     * <p>Queries the asynchronous results of AI safety guardrail multimodal content moderation, supporting audio and video modalities.</p>
      * 
      * @param request MultiModalGuardAsyncResultRequest
      * @return MultiModalGuardAsyncResultResponse
