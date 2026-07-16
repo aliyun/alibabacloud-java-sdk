@@ -4,6 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class VideoInsightsSystemLabelConfig extends TeaModel {
+    /**
+     * <p>Specifies whether system labels are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 

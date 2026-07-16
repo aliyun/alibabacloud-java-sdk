@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DocumentReadOption extends TeaModel {
     /**
-     * <p>Configuration for extracting keywords from the document.</p>
+     * <p>The document intensive reading keyword extraction options.</p>
      */
     @NameInMap("Keyword")
     public DocumentReadKeywordOption keyword;
 
     /**
-     * <p>Configuration for the text-to-speech (TTS) narrator.</p>
+     * <p>The document intensive reading guide options.</p>
      */
     @NameInMap("Narrator")
     public DocumentReadNarratorOption narrator;
 
     /**
-     * <p>Configuration for the question-answering (Q\&amp;A) feature, which answers questions based on the document\&quot;s content.</p>
+     * <p>The document intensive reading question guide options.</p>
      */
     @NameInMap("Question")
     public DocumentReadQuestionOption question;
 
     /**
-     * <p>Configuration for generating a document summary.</p>
+     * <p>The document intensive reading summary options.</p>
      */
     @NameInMap("Summary")
     public DocumentReadSummaryOption summary;

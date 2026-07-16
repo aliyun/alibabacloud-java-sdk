@@ -4,9 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ImageInsightsCaptionConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to enable this feature.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Provide a concise title for this monitoring section, capturing the core subject and key event. Keep the title within 10 characters.</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 

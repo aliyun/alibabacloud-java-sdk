@@ -1176,17 +1176,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><strong>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/477042.html">Billing</a>.</strong>
+     * <notice>Asynchronous tasks do not guarantee timeliness.</notice></p>
      * <ul>
-     * <li><strong>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</strong><blockquote>
-     * <p>Notice: The completion time of asynchronous tasks is not guaranteed.</p>
-     * </blockquote>
-     * </li>
-     * <li>File format: Only point cloud files in the PCD format are supported.</li>
-     * <li>This is an asynchronous API. After a task starts, its information is saved for only 7 days. After this period, the information cannot be retrieved. To view task information, call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation and use the returned <code>TaskId</code>. You can also set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through notification messages.</li>
+     * <li>File format limit: Only point cloud files in PCD format are supported.</li>
+     * <li>This is an asynchronous operation. After the task starts, task information is retained for only 7 days. After 7 days, the task information can no longer be retrieved. Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to obtain the returned <code>TaskId</code> and view the task information. You can also configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through message notifications.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The point cloud compression feature compresses point cloud data in Object Storage Service (OSS). This helps reduce data transmission over the network.</p>
+     * <p>Compresses point cloud data stored in Object Storage Service (OSS) to reduce network data transmission.</p>
      * 
      * @param tmpReq CreateCompressPointCloudTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1288,17 +1286,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p><strong>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/477042.html">Billing</a>.</strong>
+     * <notice>Asynchronous tasks do not guarantee timeliness.</notice></p>
      * <ul>
-     * <li><strong>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/477042.html">pricing</a> of Intelligent Media Management.</strong><blockquote>
-     * <p>Notice: The completion time of asynchronous tasks is not guaranteed.</p>
-     * </blockquote>
-     * </li>
-     * <li>File format: Only point cloud files in the PCD format are supported.</li>
-     * <li>This is an asynchronous API. After a task starts, its information is saved for only 7 days. After this period, the information cannot be retrieved. To view task information, call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation and use the returned <code>TaskId</code>. You can also set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through notification messages.</li>
+     * <li>File format limit: Only point cloud files in PCD format are supported.</li>
+     * <li>This is an asynchronous operation. After the task starts, task information is retained for only 7 days. After 7 days, the task information can no longer be retrieved. Call the <a href="https://help.aliyun.com/document_detail/478241.html">GetTask</a> or <a href="https://help.aliyun.com/document_detail/478242.html">ListTasks</a> operation to obtain the returned <code>TaskId</code> and view the task information. You can also configure the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive task information through message notifications.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>The point cloud compression feature compresses point cloud data in Object Storage Service (OSS). This helps reduce data transmission over the network.</p>
+     * <p>Compresses point cloud data stored in Object Storage Service (OSS) to reduce network data transmission.</p>
      * 
      * @param request CreateCompressPointCloudTaskRequest
      * @return CreateCompressPointCloudTaskResponse
@@ -2155,7 +2151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM).</strong> For more information, see <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">Billing overview</a>. This operation incurs fees for highlight extraction and media processing.</li>
      * <li>Before you call this operation, make sure that a project already exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<blockquote>
-     * <p>Notice: Asynchronous tasks do not guarantee timeliness..</p>
+     * <p>Notice: Asynchronous tasks do not guarantee timeliness.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2268,7 +2264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management (IMM).</strong> For more information, see <a href="https://www.alibabacloud.com/help/en/imm/product-overview/billing-overview">Billing overview</a>. This operation incurs fees for highlight extraction and media processing.</li>
      * <li>Before you call this operation, make sure that a project already exists in the current region. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/api-imm-2020-09-30-createproject">Project management</a>.<blockquote>
-     * <p>Notice: Asynchronous tasks do not guarantee timeliness..</p>
+     * <p>Notice: Asynchronous tasks do not guarantee timeliness.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -5016,13 +5012,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
-     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</strong></li>
+     * <li>Before you call this operation, make sure that a project is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries media metadata, including the media format and stream information.</p>
+     * <p>Retrieves the metadata of a media file, including media format information and media stream information.</p>
      * 
      * @param tmpReq DetectMediaMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5068,13 +5064,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/88317.html">billing</a> of Intelligent Media Management (IMM).****</p>
      * <ul>
-     * <li>Make sure that the specified project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li><strong>Before you use this operation, make sure that you are familiar with the billing of Intelligent Media Management (IMM) and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</strong></li>
+     * <li>Before you call this operation, make sure that a project is available in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries media metadata, including the media format and stream information.</p>
+     * <p>Retrieves the metadata of a media file, including media format information and media stream information.</p>
      * 
      * @param request DetectMediaMetaRequest
      * @return DetectMediaMetaResponse
@@ -5409,30 +5405,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p><strong>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a> of Intelligent Media Management.</strong></p>
-     * </li>
-     * <li><p>Before you call this API, ensure that an active project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</p>
-     * </li>
-     * <li><p>By default, this API processes only one video, audio, or subtitle stream. You can also configure the number of video, audio, and subtitle streams to process.</p>
-     * <blockquote>
-     * <p>Notice: 
-     * The Video, Audio, and Subtitle parameters within Targets cannot all be empty. If a parameter is left empty, the corresponding processing is disabled. For example, if the Video parameter is empty, video processing is disabled, and the output TS file does not contain a video stream.</p>
-     * </blockquote>
-     * </li>
-     * <li><p>The source video must be at least 0.x seconds long. The minimum duration varies slightly based on the output frame rate.</p>
-     * </li>
-     * <li><p>This API supports generating both Media playlists and Master playlists. For more information, see the parameter descriptions in this document.</p>
-     * </li>
-     * <li><p>This is a synchronous API. Transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive the transcoding task result through an asynchronous notification message.</p>
-     * </li>
-     * <li><p>For more information about the features of this API, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</p>
-     * </li>
-     * <li><p>The data processing feature of OSS can also be used to generate playlists. However, this feature generates only Media Playlists and uses simplified parameters. For more information, see the OSS data processing topic <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a>.</p>
-     * </li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</strong></li>
+     * <li>Before you invoke this operation, make sure that a project is active in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>By default, this operation processes only one video, audio, or subtitle stream. You can configure the number of video, audio, and subtitle streams to process.
+     * <notice>The Video, Audio, and Subtitle parameters under Targets cannot all be empty. An empty value indicates that the corresponding processing is disabled. For example, if Video is empty, video processing is disabled and the output TS files do not contain video streams.</li>
+     * <li>The minimum duration of the source video is approximately 0.x seconds, which varies depending on the output frame rate.</li>
+     * <li>This operation supports generating both Media Playlists and Master Playlists. Pay attention to the metric descriptions in this document.</li>
+     * <li>This is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> message notification parameters to obtain the transcoding task result through message notifications.</li>
+     * <li>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/477192.html">Just-in-time transcoding</a>.</li>
+     * <li>The data processing capability of OSS also provides a playlist generation feature, but it only supports generating Media Playlists with simplified parameters. For details, see <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a> in OSS data processing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates a playlist from a video file for live transcoding. The output is an M3U8 file that enables immediate playback and on-demand transcoding based on playback progress. Compared with offline transcoding, this method significantly reduces transcoding wait times and lowers transcoding and storage overhead.</p>
+     * <p>Creates a just-in-time transcoding playlist that converts a video file into an M3U8 file for instant playback upon playlist generation. Transcoding is performed on demand based on playback progress, which significantly reduces transcoding wait time and lowers transcoding and storage costs compared to offline transcoding.</p>
      * 
      * @param tmpReq GenerateVideoPlaylistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5531,30 +5516,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li><p><strong>Before you use this API, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a> of Intelligent Media Management.</strong></p>
-     * </li>
-     * <li><p>Before you call this API, ensure that an active project exists in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</p>
-     * </li>
-     * <li><p>By default, this API processes only one video, audio, or subtitle stream. You can also configure the number of video, audio, and subtitle streams to process.</p>
-     * <blockquote>
-     * <p>Notice: 
-     * The Video, Audio, and Subtitle parameters within Targets cannot all be empty. If a parameter is left empty, the corresponding processing is disabled. For example, if the Video parameter is empty, video processing is disabled, and the output TS file does not contain a video stream.</p>
-     * </blockquote>
-     * </li>
-     * <li><p>The source video must be at least 0.x seconds long. The minimum duration varies slightly based on the output frame rate.</p>
-     * </li>
-     * <li><p>This API supports generating both Media playlists and Master playlists. For more information, see the parameter descriptions in this document.</p>
-     * </li>
-     * <li><p>This is a synchronous API. Transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> parameter to receive the transcoding task result through an asynchronous notification message.</p>
-     * </li>
-     * <li><p>For more information about the features of this API, see <a href="https://help.aliyun.com/document_detail/477192.html">Live transcoding</a>.</p>
-     * </li>
-     * <li><p>The data processing feature of OSS can also be used to generate playlists. However, this feature generates only Media Playlists and uses simplified parameters. For more information, see the OSS data processing topic <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a>.</p>
-     * </li>
+     * <li><strong>Before you use this operation, make sure that you fully understand the billing of Intelligent Media Management and its <a href="https://help.aliyun.com/document_detail/88317.html">pricing</a>.</strong></li>
+     * <li>Before you invoke this operation, make sure that a project is active in the current region. For more information, see <a href="https://help.aliyun.com/document_detail/478152.html">Project management</a>.</li>
+     * <li>By default, this operation processes only one video, audio, or subtitle stream. You can configure the number of video, audio, and subtitle streams to process.
+     * <notice>The Video, Audio, and Subtitle parameters under Targets cannot all be empty. An empty value indicates that the corresponding processing is disabled. For example, if Video is empty, video processing is disabled and the output TS files do not contain video streams.</li>
+     * <li>The minimum duration of the source video is approximately 0.x seconds, which varies depending on the output frame rate.</li>
+     * <li>This operation supports generating both Media Playlists and Master Playlists. Pay attention to the metric descriptions in this document.</li>
+     * <li>This is a synchronous operation. Synchronous or asynchronous transcoding is triggered only during playback or pre-transcoding. You can set the <a href="https://help.aliyun.com/document_detail/2743997.html">Notification</a> message notification parameters to obtain the transcoding task result through message notifications.</li>
+     * <li>For more information about this feature, see <a href="https://help.aliyun.com/document_detail/477192.html">Just-in-time transcoding</a>.</li>
+     * <li>The data processing capability of OSS also provides a playlist generation feature, but it only supports generating Media Playlists with simplified parameters. For details, see <a href="https://help.aliyun.com/document_detail/2709281.html">Generate a playlist</a> in OSS data processing.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates a playlist from a video file for live transcoding. The output is an M3U8 file that enables immediate playback and on-demand transcoding based on playback progress. Compared with offline transcoding, this method significantly reduces transcoding wait times and lowers transcoding and storage overhead.</p>
+     * <p>Creates a just-in-time transcoding playlist that converts a video file into an M3U8 file for instant playback upon playlist generation. Transcoding is performed on demand based on playback progress, which significantly reduces transcoding wait time and lowers transcoding and storage costs compared to offline transcoding.</p>
      * 
      * @param request GenerateVideoPlaylistRequest
      * @return GenerateVideoPlaylistResponse
@@ -5984,13 +5958,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</li>
+     * <li>Before you call this operation, make sure that you have created a project in Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</li>
+     * <li>Before you call this operation, make sure that you have created a blind watermark extraction task for an image and obtained the <code>TaskId</code> of the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the result of an invisible watermark parsing task.</p>
+     * <p>Retrieves the result of a blind watermark extraction task for an image.</p>
      * 
      * @param request GetDecodeBlindWatermarkResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6030,13 +6004,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that an Intelligent Media Management (IMM) project is created. For information about how to create a project, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
      * <ul>
-     * <li>Before you call this operation, make sure that an invisible watermark task is created and the task ID is obtained.``</li>
+     * <li>Before you call this operation, make sure that you have created a project in Intelligent Media Management (IMM). For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</li>
+     * <li>Before you call this operation, make sure that you have created a blind watermark extraction task for an image and obtained the <code>TaskId</code> of the task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the result of an invisible watermark parsing task.</p>
+     * <p>Retrieves the result of a blind watermark extraction task for an image.</p>
      * 
      * @param request GetDecodeBlindWatermarkResultRequest
      * @return GetDecodeBlindWatermarkResultResponse

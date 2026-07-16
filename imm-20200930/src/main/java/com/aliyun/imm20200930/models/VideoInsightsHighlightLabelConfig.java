@@ -4,9 +4,18 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class VideoInsightsHighlightLabelConfig extends TeaModel {
+    /**
+     * <p>Specifies whether highlight labels are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The list of labels.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<InsightsLabel> labels;
 

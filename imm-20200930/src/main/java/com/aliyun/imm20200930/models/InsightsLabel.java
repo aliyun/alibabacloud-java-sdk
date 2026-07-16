@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class InsightsLabel extends TeaModel {
+    /**
+     * <p>The label description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>有人摔倒</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The label name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>摔倒</p>
+     */
     @NameInMap("Name")
     public String name;
 

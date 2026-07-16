@@ -4,9 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class WorkflowParameter extends TeaModel {
+    /**
+     * <p>The invalid parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The invalid parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>value</p>
+     */
     @NameInMap("Value")
     public String value;
 

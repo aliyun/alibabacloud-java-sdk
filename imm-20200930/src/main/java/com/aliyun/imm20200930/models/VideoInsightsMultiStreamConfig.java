@@ -4,6 +4,12 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class VideoInsightsMultiStreamConfig extends TeaModel {
+    /**
+     * <p>Specifies whether video multi-stream is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 

@@ -4,12 +4,21 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class VideoInsightsLabelConfig extends TeaModel {
+    /**
+     * <p>The highlight label configuration.</p>
+     */
     @NameInMap("Highlight")
     public VideoInsightsHighlightLabelConfig highlight;
 
+    /**
+     * <p>The system label configuration.</p>
+     */
     @NameInMap("System")
     public VideoInsightsSystemLabelConfig system;
 
+    /**
+     * <p>The custom label configuration.</p>
+     */
     @NameInMap("UserDefined")
     public VideoInsightsUserDefinedLabelConfig userDefined;
 

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     /**
-     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
-     * <p>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
+     * <p><strong>Leave this parameter empty unless you have specific requirements.</strong></p>
+     * <p>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use Chinese authorization to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
     /**
      * <p>The OSS URI of the Master Playlist.</p>
-     * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file with the .m3u8 file name extension.</p>
+     * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path of the file with the &quot;.m3u8&quot; extension.</p>
      * <blockquote>
-     * <p>If the playlist has subtitle inputs or multiple target outputs, MasterURI is required. The subtitle URI or target URI must be in the same directory as or a subdirectory of the directory specified by MasterURI.</p>
+     * <p>If the playlist has subtitle input or multiple Target outputs, MasterURI is required. The subtitle URI or Target URI must be in the same directory as or a subdirectory of MasterURI.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -25,18 +25,16 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String masterURI;
 
     /**
-     * <p>The message notification configuration. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
+     * <p>The message notification configuration. Click Notification for details. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;
 
     /**
-     * <p>The policy to overwrite an existing Media Playlist. Valid values:</p>
+     * <p>The overwrite policy when a Media Playlist already exists. Valid values:</p>
      * <ul>
-     * <li><p>overwrite (default): Overwrites the existing Media Playlist.</p>
-     * </li>
-     * <li><p>skip-existing: Skips the generation and retains the existing Media Playlist.</p>
-     * </li>
+     * <li>overwrite (default): overwrites the existing Media Playlist.</li>
+     * <li>skip-existing: skips generation and retains the existing Media Playlist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +44,7 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String overwritePolicy;
 
     /**
-     * <p>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
+     * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,15 +54,15 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The duration for which the playlist is generated. Unit: seconds (s). Valid values:</p>
+     * <p>The duration for generating the playlist. Unit: seconds. Valid values:</p>
      * <ul>
-     * <li><p>0 (default) or empty: continues to the end of the source video.</p>
+     * <li><p>0 (default) or empty: continues until the end of the source video.</p>
      * </li>
-     * <li><p>Greater than 0: lasts for the specified duration from the start time.</p>
+     * <li><p>A value greater than 0: continues for the specified duration from the start time of the playlist.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the specified duration extends beyond the end of the source video, the default value is used.</p>
+     * <p>If the time point corresponding to the specified parameter exceeds the end of the source video, the default value is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,15 +72,15 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public Float sourceDuration;
 
     /**
-     * <p>The start time for generating the playlist. Unit: seconds (s). Valid values:</p>
+     * <p>The start time for generating the playlist. Unit: seconds. Valid values:</p>
      * <ul>
      * <li><p>0 (default) or empty: starts from the beginning of the source video.</p>
      * </li>
-     * <li><p>Greater than 0: starts from the specified time point in the source video.</p>
+     * <li><p>A value greater than 0: starts from the specified time point in the source video.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>You can set this parameter together with the <strong>SourceDuration</strong> parameter to generate a playlist for a specific part of the source video.</p>
+     * <p>You can set this parameter together with <strong>SourceDuration</strong> to generate a playlist for a specific portion of the source video.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,16 +90,17 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public Float sourceStartTime;
 
     /**
-     * <p>The list of subtitles to add. The default value is empty. You can add up to two subtitles.</p>
+     * <p>The list of subtitles to add. This parameter is empty by default. A maximum of two subtitles are supported.</p>
      */
     @NameInMap("SourceSubtitles")
     public String sourceSubtitlesShrink;
 
     /**
      * <p>The OSS URI of the video.</p>
-     * <p>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file, including the file name extension.</p>
+     * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path of the file including the file name extension.</p>
      * <blockquote>
-     * <p>Only OSS Standard storage buckets are supported. Buckets with hotlink protection whitelists are not supported.</p>
+     * <p>Only OSS buckets with Standard storage class are supported.
+     * Buckets with hotlink protection whitelist configured are not supported.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -112,7 +111,7 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String sourceURI;
 
     /**
-     * <p>Adds OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to the generated TS files. You can use tags to control the lifecycle of OSS files.</p>
+     * <p>The OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to add to the generated TS files. You can use tags to control the lifecycle of OSS files.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
@@ -121,9 +120,9 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>An array of live transcoding playlists. The maximum array length is 6. Each target corresponds to a maximum of one video Media Playlist and one or more subtitle Media Playlists.</p>
+     * <p>The array of just-in-time transcoding playlists. The maximum array length is 6. Each Target corresponds to at most one video Media Playlist and one or more subtitle Media Playlists.</p>
      * <blockquote>
-     * <p>If you configure more than one target, the <strong>MasterURI</strong> parameter must not be empty.</p>
+     * <p>If more than one Target is configured, the <strong>MasterURI</strong> parameter must not be empty.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -131,7 +130,7 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     public String targetsShrink;
 
     /**
-     * <p>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your services. The maximum length is 2,048 bytes.</p>
+     * <p>The custom information, which is returned in asynchronous message notifications. This allows you to associate message notifications with specific processes in your system. Maximum length: 2,048 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

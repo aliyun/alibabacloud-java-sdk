@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class VideoInsightsCaptionConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to enable video captioning.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The person reference configuration.</p>
+     */
     @NameInMap("PersonReference")
     public PersonReferenceConfig personReference;
 
+    /**
+     * <p>The custom prompt for video captioning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>请用一句话描述这个视频</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 

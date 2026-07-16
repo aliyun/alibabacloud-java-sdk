@@ -5,49 +5,73 @@ import com.aliyun.tea.*;
 
 public class GetVideoAnalysisOption extends TeaModel {
     /**
-     * <p>Specifies whether to generate a chapter summary for each segment of the video.</p>
+     * <p>Specifies whether to retrieve the chapter-based summary of the video.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ChapterSummary")
     public Boolean chapterSummary;
 
     /**
-     * <p>Specifies whether to extract relevant keywords from the video.</p>
+     * <p>Specifies whether to retrieve keywords.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Keyword")
     public Boolean keyword;
 
     /**
-     * <p>Specifies whether to generate a presentation (PPT) file based on the video analysis.</p>
+     * <p>Specifies whether to retrieve the PPT from the video. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PPT")
     public Boolean PPT;
 
     /**
-     * <p>Specifies whether to generate potential questions about the video.</p>
+     * <p>Specifies whether to retrieve the generated questions and corresponding answers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Question")
     public Boolean question;
 
     /**
-     * <p>Specifies whether to generate a concise video summary.</p>
+     * <p>Specifies whether to retrieve the full-text summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Summary")
     public Boolean summary;
 
     /**
-     * <p>Specifies whether to transcribe the spoken audio in the video to text.</p>
+     * <p>Specifies whether to retrieve the dialogue in the video. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Transcript")
     public Boolean transcript;
 
     /**
-     * <p>Specifies whether to generate a chapter-based summary from the video transcript.</p>
+     * <p>Specifies whether to retrieve the segmented summary generated from the dialogue in the video. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("TranscriptChapterSummary")
     public Boolean transcriptChapterSummary;
 
     /**
-     * <p>Specifies whether to generate a summary of the video transcript.</p>
+     * <p>Specifies whether to retrieve the summary generated from the dialogue in the video. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("TranscriptSummary")
     public Boolean transcriptSummary;

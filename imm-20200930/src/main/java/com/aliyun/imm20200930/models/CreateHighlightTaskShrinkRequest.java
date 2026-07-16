@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHighlightTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The China authorization configuration. <strong>Leave this parameter empty unless you have specific requirements.</strong>.</p>
+     * <p>The China authorization configuration. <strong>Leave this parameter empty unless you have specific requirements.</strong></p>
      */
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
@@ -84,7 +84,7 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
      * </li>
      * <li><p>Concat: video composition.</p>
      * </li>
-     * <li><p>Compose: one-click video creation.</p>
+     * <li><p>Compose: one-click video production.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -96,7 +96,7 @@ public class CreateHighlightTaskShrinkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The custom user data, which is returned in asynchronous message notifications.</p>
+     * <p>The custom information, which is returned in asynchronous message notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>

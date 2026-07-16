@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     /**
-     * <p>The error code of the task.</p>
+     * <p>The task error code.</p>
      * 
      * <strong>example:</strong>
      * <p>ResourceNotFound</p>
@@ -17,13 +17,13 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
      * <p>The watermark content.</p>
      * 
      * <strong>example:</strong>
-     * <p>Copyright Alibaba Cloud</p>
+     * <p>阿里云版权所有</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The end time of the task.</p>
+     * <p>The time when the task ended. The time is in the ISO 8601 UTC timestamp format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-03T09:45:56.87Z</p>
@@ -41,7 +41,7 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The error message of the task.</p>
+     * <p>The task error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified resource project is not found.</p>
@@ -68,7 +68,7 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the task.</p>
+     * <p>The time when the task started. The time is in the ISO 8601 UTC timestamp format with millisecond precision.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-03T09:44:31.029Z</p>
@@ -104,7 +104,7 @@ public class GetDecodeBlindWatermarkResultResponseBody extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The user data of the task.</p>
+     * <p>The custom information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ImageReverseImageConfig extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the feature.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 

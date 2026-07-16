@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ImageInsightsConfig extends TeaModel {
+    /**
+     * <p>The image content recognition Caption configuration.</p>
+     */
     @NameInMap("Caption")
     public ImageInsightsCaptionConfig caption;
 

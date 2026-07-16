@@ -130,7 +130,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         public Integer channels;
 
         /**
-         * <p>The token generated for the audio Media Playlist. You can use this parameter to construct the URI of the generated TS file.</p>
+         * <p>The token generated for the audio Media Playlist. You can use this parameter to construct the addresses of the generated TS files.</p>
          * 
          * <strong>example:</strong>
          * <p>affe0c6042f09722fec95a21b8b******</p>
@@ -180,7 +180,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
 
     public static class GenerateVideoPlaylistResponseBodySubtitlePlaylist extends TeaModel {
         /**
-         * <p>The sequence number of the subtitle stream, starting from 0.</p>
+         * <p>The subtitle stream number, starting from 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         /**
          * <p>The language of the subtitle stream.</p>
          * <blockquote>
-         * <p>The language is obtained from the subtitle stream information of the source video specified by SourceURI. If the source video does not contain language information, this parameter is empty.</p>
+         * <p>The language is obtained from the subtitle stream information of the source video specified by SourceURI. If the source video does not contain language information, an empty value is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -201,9 +201,9 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The token generated for the subtitle Media Playlist. You can use this parameter to construct the URI of the generated subtitle file.</p>
+         * <p>The token generated for the subtitle Media Playlist. You can use this parameter to construct the addresses of the generated subtitle files.</p>
          * <blockquote>
-         * <p>You can use the returned token value to construct the URI of the transcoded subtitle file. The format is oss\://${Bucket}/${Object}-${Token}_${Index}.ts. oss\://${Bucket}/${Object} is the subtitle URI specified in the request parameters. ${Token} is the returned parameter. ${Index} is the sequence number of the subtitle.</p>
+         * <p>Based on the returned Token value, you can construct the addresses of the transcoded subtitle files. The format is: oss://${Bucket}/${Object}-${Token}_${Index}.ts, where oss://${Bucket}/${Object} is the Subtitle URI specified in the input parameters, ${Token} is the returned parameter, and ${Index} is the sequence number of the subtitle file.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -280,9 +280,9 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         public String resolution;
 
         /**
-         * <p>The token generated for the video Media Playlist. You can use this parameter to construct the URI of the generated TS file.</p>
+         * <p>The token generated for the video Media Playlist. You can use this parameter to construct the addresses of the generated TS files.</p>
          * <blockquote>
-         * <p>You can use the returned token value to construct the URI of the transcoded TS file. The format is oss\://${Bucket}/${Object}-${Token}-${Index}.ts. oss\://${Bucket}/${Object} is the target URI specified in the request parameters. ${Token} is the returned parameter. ${Index} is the sequence number of the TS file.</p>
+         * <p>Based on the returned Token value, you can construct the addresses of the transcoded TS files. The format is: oss://${Bucket}/${Object}-${Token}-${Index}.ts, where oss://${Bucket}/${Object} is the Target URI specified in the input parameters, ${Token} is the returned parameter, and ${Index} is the sequence number of the TS file.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

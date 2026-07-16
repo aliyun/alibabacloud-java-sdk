@@ -7,10 +7,8 @@ public class TargetVideo extends TeaModel {
     /**
      * <p>Specifies whether to disable video stream generation. Valid values:</p>
      * <ul>
-     * <li><p>true: Disables video stream generation. The output file will not contain a video stream.</p>
-     * </li>
-     * <li><p>false (default): Enables video stream generation.</p>
-     * </li>
+     * <li>true: Disabled. The output file does not contain a video stream.</li>
+     * <li>false (default): Not disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,30 +18,30 @@ public class TargetVideo extends TeaModel {
     public Boolean disableVideo;
 
     /**
-     * <p>The video processing parameters. This parameter is invalid if <strong>TranscodeVideo</strong> is empty or if <strong>TranscodeVideo.Codec</strong> is set to copy.</p>
+     * <p>The video filter parameters. This parameter does not take effect when <strong>TranscodeVideo</strong> is empty or <strong>TranscodeVideo.Codec</strong> is set to copy.</p>
      * <blockquote>
-     * <p>You cannot set this parameter for the GenerateVideoPlaylist API.</p>
+     * <p>This parameter is not supported for the GenerateVideoPlaylist API.</p>
      * </blockquote>
      */
     @NameInMap("FilterVideo")
     public TargetVideoFilterVideo filterVideo;
 
     /**
-     * <p>A list of index numbers for the source video streams to process. If you leave this parameter empty (default), the system processes the video stream with the smallest index number (the first video stream). If you set the index number to a value greater than 100, the system processes all video streams.</p>
+     * <p>The list of video stream index numbers to process from the source file. An empty value (default) indicates that the video stream with the smallest index number (the first video stream) is processed. An index number greater than 100 indicates that all video streams are processed.</p>
      * <ul>
      * <li>Example: <code>[0,1]</code> processes video streams with index numbers 0 and 1. <code>[1]</code> processes the video stream with index number 1. <code>[101]</code> processes all video streams.</li>
      * </ul>
      * <blockquote>
-     * <p>The system only processes video streams with existing index numbers. If a video stream corresponding to an index number does not exist, the system ignores that index number.</p>
+     * <p>Only video streams with existing index numbers are processed. If a video stream corresponding to an index number does not exist, that index number is ignored.</p>
      * </blockquote>
      */
     @NameInMap("Stream")
     public java.util.List<Integer> stream;
 
     /**
-     * <p>The video transcoding parameters. An empty value disables video processing. The output file will not contain a video stream.</p>
+     * <p>The video transcoding parameters. An empty value indicates that video processing is disabled and the output file does not contain a video stream.</p>
      * <blockquote>
-     * <p>Do not disable video processing by leaving this parameter empty.</p>
+     * <p>Setting this parameter to an empty value to disable video processing is not recommended.</p>
      * </blockquote>
      */
     @NameInMap("TranscodeVideo")
@@ -88,7 +86,7 @@ public class TargetVideo extends TeaModel {
 
     public static class TargetVideoFilterVideoDelogos extends TeaModel {
         /**
-         * <p>The duration for which the mosaic is displayed, in seconds (s). By default, the mosaic is displayed until the end of the video.</p>
+         * <p>The duration for which the mosaic is applied, in seconds (s). The default value is until the end of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -97,14 +95,11 @@ public class TargetVideo extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>0 (default): The pixel offset is 0. The ratio of the horizontal offset to the output video width is also 0.</p>
-         * </li>
-         * <li><p>Integer: The offset in pixels (px). The value ranges from 1 to 4096.</p>
-         * </li>
-         * <li><p>Decimal: The ratio of the horizontal offset to the output video width. The value ranges from (0, 1).</p>
-         * </li>
+         * <li>0 (default): Both the offset in pixels and the ratio of horizontal offset to the output resolution height are 0.</li>
+         * <li>Integer: The offset in pixels (px). Valid values: [1,4096].</li>
+         * <li>Decimal: The ratio of horizontal offset to the output resolution height. Valid values: (0,1).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,14 +109,11 @@ public class TargetVideo extends TeaModel {
         public Float dx;
 
         /**
-         * <p>The default value is 0. The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>Default value: 0. The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>0 (default): The pixel offset is 0. The ratio of the vertical offset to the output video height is also 0.</p>
-         * </li>
-         * <li><p>Integer: The offset in pixels (px). The value ranges from 1 to 4096.</p>
-         * </li>
-         * <li><p>Decimal: The ratio of the vertical offset to the output video height. The value ranges from (0, 1).</p>
-         * </li>
+         * <li>0 (default): Both the offset in pixels and the ratio of vertical offset to the output resolution height are 0.</li>
+         * <li>Integer: The offset in pixels (px). Valid values: [1,4096].</li>
+         * <li>Decimal: The ratio of vertical offset to the output resolution height. Valid values: (0,1).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,12 +123,10 @@ public class TargetVideo extends TeaModel {
         public Float dy;
 
         /**
-         * <p>The height of the mosaic. The default value is the decimal 1.0, which means it fills the entire height of the output video. The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>The height of the mosaic. The default value is the decimal 1.0, which fills the entire output video height. The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>Integer: The height in pixels (px). The value ranges from 1 to 4096.</p>
-         * </li>
-         * <li><p>Decimal: The ratio of the mosaic height to the output video height. The value ranges from (0, 1).</p>
-         * </li>
+         * <li>Integer: The height in pixels (px). Valid values: [1,4096].</li>
+         * <li>Decimal: The ratio relative to the output video resolution height. Valid values: (0,1).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,14 +138,10 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The reference position for adding the mosaic. Valid values:</p>
          * <ul>
-         * <li><p>topleft (default): The top-left corner.</p>
-         * </li>
-         * <li><p>topright: The top-right corner.</p>
-         * </li>
-         * <li><p>bottomright: The bottom-right corner.</p>
-         * </li>
-         * <li><p>bottomleft: The bottom-left corner.</p>
-         * </li>
+         * <li>topleft (default): top-left corner</li>
+         * <li>topright: top-right corner</li>
+         * <li>bottomright: bottom-right corner</li>
+         * <li>bottomleft: bottom-left corner</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +151,7 @@ public class TargetVideo extends TeaModel {
         public String referPos;
 
         /**
-         * <p>The start time for adding the mosaic, in seconds (s). By default, the mosaic is added from the beginning of the video.</p>
+         * <p>The start time for adding the mosaic, in seconds (s). The default value is the start time of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -174,12 +160,10 @@ public class TargetVideo extends TeaModel {
         public Double startTime;
 
         /**
-         * <p>The width of the mosaic. The default value is the decimal 1.0, which means it fills the entire width of the output video. The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>The width of the mosaic. The default value is the decimal 1.0, which fills the entire output video width. The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>Integer: The width in pixels (px). The value ranges from 1 to 4096.</p>
-         * </li>
-         * <li><p>Decimal: The ratio of the mosaic width to the output video width. The value ranges from (0, 1).</p>
-         * </li>
+         * <li>Integer: The width in pixels (px). Valid values: [1,4096].</li>
+         * <li>Decimal: The ratio relative to the output video resolution width. Valid values: (0,1).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,13 +236,14 @@ public class TargetVideo extends TeaModel {
     }
 
     public static class TargetVideoFilterVideoDesensitizationFace extends TeaModel {
+        @NameInMap("BlurRadius")
+        public Integer blurRadius;
+
         /**
-         * <p>The confidence threshold for facial recognition. This sets the lower limit for the confidence level. If the confidence level of a detected face is below this threshold, the face is not desensitized.</p>
+         * <p>The face confidence threshold, which sets the lower limit of confidence for face recognition. If the confidence value of a detected face is lower than this threshold, the face is not desensitized.</p>
          * <ul>
-         * <li><p>Value range: 0.0 to 1.0.</p>
-         * </li>
-         * <li><p>Default value: 0.0 (no confidence filtering).</p>
-         * </li>
+         * <li>Valid values: 0.0 to 1.0.</li>
+         * <li>Default value: 0.0 (no confidence filtering is performed).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +253,7 @@ public class TargetVideo extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The minimum face size threshold. This sets the minimum size for a face to be desensitized. If the width or height of a detected face is smaller than this threshold, the face is not desensitized. The unit is pixels. The default value is 0, which means there is no restriction on face size.</p>
+         * <p>The minimum face size threshold, which sets the minimum size of faces to be desensitized. If the width or height of a detected face is smaller than this threshold, the face is not desensitized. Unit: pixels. Default value: 0, which indicates no size restriction on faces.</p>
          * 
          * <strong>example:</strong>
          * <p>0.4</p>
@@ -276,9 +261,23 @@ public class TargetVideo extends TeaModel {
         @NameInMap("MinSize")
         public Integer minSize;
 
+        @NameInMap("ScaleRatio")
+        public Float scaleRatio;
+
+        @NameInMap("Transparency")
+        public Float transparency;
+
         public static TargetVideoFilterVideoDesensitizationFace build(java.util.Map<String, ?> map) throws Exception {
             TargetVideoFilterVideoDesensitizationFace self = new TargetVideoFilterVideoDesensitizationFace();
             return TeaModel.build(map, self);
+        }
+
+        public TargetVideoFilterVideoDesensitizationFace setBlurRadius(Integer blurRadius) {
+            this.blurRadius = blurRadius;
+            return this;
+        }
+        public Integer getBlurRadius() {
+            return this.blurRadius;
         }
 
         public TargetVideoFilterVideoDesensitizationFace setConfidence(Float confidence) {
@@ -297,16 +296,33 @@ public class TargetVideo extends TeaModel {
             return this.minSize;
         }
 
+        public TargetVideoFilterVideoDesensitizationFace setScaleRatio(Float scaleRatio) {
+            this.scaleRatio = scaleRatio;
+            return this;
+        }
+        public Float getScaleRatio() {
+            return this.scaleRatio;
+        }
+
+        public TargetVideoFilterVideoDesensitizationFace setTransparency(Float transparency) {
+            this.transparency = transparency;
+            return this;
+        }
+        public Float getTransparency() {
+            return this.transparency;
+        }
+
     }
 
     public static class TargetVideoFilterVideoDesensitizationLicensePlate extends TeaModel {
+        @NameInMap("BlurRadius")
+        public Integer blurRadius;
+
         /**
-         * <p>The confidence threshold for license plate recognition. This sets the lower limit for the confidence level. If the confidence level of a detected license plate is below this threshold, the license plate is not desensitized.</p>
+         * <p>The license plate confidence threshold, which sets the lower limit of confidence for license plate recognition. If the confidence value of a detected license plate is lower than this threshold, the license plate is not desensitized.</p>
          * <ul>
-         * <li><p>Value range: 0.0 to 1.0.</p>
-         * </li>
-         * <li><p>Default value: 0.0 (no confidence filtering).</p>
-         * </li>
+         * <li>Valid values: 0.0 to 1.0.</li>
+         * <li>Default value: 0.0 (no confidence filtering is performed).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -316,7 +332,7 @@ public class TargetVideo extends TeaModel {
         public Float confidence;
 
         /**
-         * <p>The minimum license plate size threshold. This sets the minimum size for a license plate to be desensitized. If the width or height of a detected license plate is smaller than this threshold, the license plate is not desensitized. The unit is pixels. The default value is 0, which means there is no restriction on license plate size.</p>
+         * <p>The minimum license plate size threshold, which sets the minimum size of license plates to be desensitized. If the width or height of a detected license plate is smaller than this threshold, the license plate is not desensitized. Unit: pixels. Default value: 0, which indicates no size restriction on license plates.</p>
          * 
          * <strong>example:</strong>
          * <p>0.4</p>
@@ -324,9 +340,23 @@ public class TargetVideo extends TeaModel {
         @NameInMap("MinSize")
         public Integer minSize;
 
+        @NameInMap("ScaleRatio")
+        public Float scaleRatio;
+
+        @NameInMap("Transparency")
+        public Float transparency;
+
         public static TargetVideoFilterVideoDesensitizationLicensePlate build(java.util.Map<String, ?> map) throws Exception {
             TargetVideoFilterVideoDesensitizationLicensePlate self = new TargetVideoFilterVideoDesensitizationLicensePlate();
             return TeaModel.build(map, self);
+        }
+
+        public TargetVideoFilterVideoDesensitizationLicensePlate setBlurRadius(Integer blurRadius) {
+            this.blurRadius = blurRadius;
+            return this;
+        }
+        public Integer getBlurRadius() {
+            return this.blurRadius;
         }
 
         public TargetVideoFilterVideoDesensitizationLicensePlate setConfidence(Float confidence) {
@@ -345,11 +375,27 @@ public class TargetVideo extends TeaModel {
             return this.minSize;
         }
 
+        public TargetVideoFilterVideoDesensitizationLicensePlate setScaleRatio(Float scaleRatio) {
+            this.scaleRatio = scaleRatio;
+            return this;
+        }
+        public Float getScaleRatio() {
+            return this.scaleRatio;
+        }
+
+        public TargetVideoFilterVideoDesensitizationLicensePlate setTransparency(Float transparency) {
+            this.transparency = transparency;
+            return this;
+        }
+        public Float getTransparency() {
+            return this.transparency;
+        }
+
     }
 
     public static class TargetVideoFilterVideoDesensitization extends TeaModel {
         /**
-         * <p>The facial desensitization configuration.</p>
+         * <p>The face desensitization configuration.</p>
          * <blockquote>
          * <p>This feature is in public preview. If you have any questions, join the DingTalk group for feedback. For the DingTalk group number, see <a href="https://help.aliyun.com/document_detail/84454.html">Contact us</a>.</p>
          * </blockquote>
@@ -391,11 +437,10 @@ public class TargetVideo extends TeaModel {
 
     public static class TargetVideoFilterVideoWatermarks extends TeaModel {
         /**
-         * <p>The outline color of the watermark text. The format is #RRGGBB. The default value is #000000. You can also enter values such as &quot;red&quot; or &quot;green&quot;.</p>
+         * <p>The border color of the watermark text. The format is #RRGGBB. Default value: #000000. Values such as &quot;red&quot; and &quot;green&quot; are also supported.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>text</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>text</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>red</p>
@@ -404,11 +449,10 @@ public class TargetVideo extends TeaModel {
         public String borderColor;
 
         /**
-         * <p>The outline width for the text watermark, in pixels (px). The value must be an integer from 0 to 4096. The default value is 0.</p>
+         * <p>The border width of the text watermark, in pixels (px). The value must be an integer. Valid values: [0,4096]. Default value: 0.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>text</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>text</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -417,11 +461,10 @@ public class TargetVideo extends TeaModel {
         public Integer borderWidth;
 
         /**
-         * <p>The content of the text watermark. The default value is empty.</p>
+         * <p>The content of the text watermark. Default value: empty.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>text</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>text</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -430,7 +473,7 @@ public class TargetVideo extends TeaModel {
         public String content;
 
         /**
-         * <p>The duration for which the watermark is displayed, in seconds (s). By default, the watermark is displayed until the end of the video.</p>
+         * <p>The duration for which the watermark is displayed, in seconds (s). The default value is until the end of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -439,14 +482,11 @@ public class TargetVideo extends TeaModel {
         public Double duration;
 
         /**
-         * <p>The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>0 (default): The pixel offset is 0. The ratio of the horizontal offset to the output video width is also 0.</p>
-         * </li>
-         * <li><p>Integer: The offset in pixels (px). The value ranges from 1 to 4096.</p>
-         * </li>
-         * <li><p>Decimal: The ratio of the horizontal offset to the output video width. The value ranges from (0, 1).</p>
-         * </li>
+         * <li>0 (default): Both the offset in pixels and the ratio of horizontal offset to the output resolution height are 0.</li>
+         * <li>Integer: The offset in pixels (px). Valid values: [1,4096].</li>
+         * <li>Decimal: The ratio of horizontal offset to the output resolution height. Valid values: (0,1).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -456,13 +496,13 @@ public class TargetVideo extends TeaModel {
         public Float dx;
 
         /**
-         * <p>The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>0 (default): The pixel offset is 0. The ratio of the vertical offset to the output video height is also 0.</p>
+         * <li><p>0 (default): Both the offset in pixels and the ratio of vertical offset to the output resolution height are 0.</p>
          * </li>
-         * <li><p>Integer: The offset in pixels (px). The value ranges from 1 to 4096.</p>
+         * <li><p>Integer: The offset in pixels (px). Valid values: [1,4096].</p>
          * </li>
-         * <li><p>Decimal: The ratio of the vertical offset to the output video height. The value ranges from (0, 1).</p>
+         * <li><p>Decimal: The ratio of vertical offset to the output resolution height. Valid values: (0,1).</p>
          * </li>
          * </ul>
          * 
@@ -473,11 +513,10 @@ public class TargetVideo extends TeaModel {
         public Float dy;
 
         /**
-         * <p>The font opacity of the text watermark. The value ranges from (0, 1]. The default value is 1, which means fully opaque.</p>
+         * <p>The font opacity of the text watermark. Valid values: (0,1]. Default value: 1, which indicates fully opaque.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>text</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>text</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>0.8</p>
@@ -486,11 +525,10 @@ public class TargetVideo extends TeaModel {
         public Float fontApha;
 
         /**
-         * <p>The font color of the watermark text. The format is #RRGGBB. The default value is #000000. You can also enter values such as &quot;red&quot; or &quot;green&quot;.</p>
+         * <p>The font color of the watermark text. The format is #RRGGBB. Default value: #000000. Values such as &quot;red&quot; and &quot;green&quot; are also supported.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>text</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>text</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>red</p>
@@ -499,21 +537,16 @@ public class TargetVideo extends TeaModel {
         public String fontColor;
 
         /**
-         * <p>The font name for the text watermark. Valid values:</p>
+         * <p>The font name of the text watermark. Valid values:</p>
          * <ul>
-         * <li><p>SourceHanSans-Regular (default)</p>
-         * </li>
-         * <li><p>SourceHanSans-Bold</p>
-         * </li>
-         * <li><p>SourceHanSerif-Regular</p>
-         * </li>
-         * <li><p>SourceHanSerif-Bold</p>
-         * </li>
+         * <li>SourceHanSans-Regular (default)</li>
+         * <li>SourceHanSans-Bold</li>
+         * <li>SourceHanSerif-Regular</li>
+         * <li>SourceHanSerif-Bold</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>text</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>text</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>SourceHanSans-Bold</p>
@@ -522,11 +555,10 @@ public class TargetVideo extends TeaModel {
         public String fontName;
 
         /**
-         * <p>The font size for the text watermark. The default value is 16. The value must be an integer in the range (4, 120).</p>
+         * <p>The font size of the text watermark. Default value: 16. The value must be an integer. Valid values: (4,120).</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>text</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>text</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -535,12 +567,10 @@ public class TargetVideo extends TeaModel {
         public Integer fontSize;
 
         /**
-         * <p>The height of the watermark image. By default, this is the height of the original watermark image. The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>The height of the watermark image. The default value is the original height of the watermark image. The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>Integer: The height of the watermark in pixels (px). The value ranges from 1 to 4096.</p>
-         * </li>
-         * <li><p>Decimal: The ratio of the watermark height to the output video height. The value ranges from (0, 1).</p>
-         * </li>
+         * <li>Integer: The height in pixels (px). Valid values: [1,4096].</li>
+         * <li>Decimal: The ratio relative to the output video resolution height. Valid values: (0,1).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -552,14 +582,10 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The reference position for adding the watermark. Valid values:</p>
          * <ul>
-         * <li><p>topleft (default): The top-left corner.</p>
-         * </li>
-         * <li><p>topright: The top-right corner.</p>
-         * </li>
-         * <li><p>bottomright: The bottom-right corner.</p>
-         * </li>
-         * <li><p>bottomleft: The bottom-left corner.</p>
-         * </li>
+         * <li>topleft (default): top-left corner</li>
+         * <li>topright: top-right corner</li>
+         * <li>bottomright: bottom-right corner</li>
+         * <li>bottomleft: bottom-left corner</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -569,7 +595,7 @@ public class TargetVideo extends TeaModel {
         public String referPos;
 
         /**
-         * <p>The start time for adding the watermark, in seconds (s). By default, the watermark is added from the beginning of the video.</p>
+         * <p>The start time for adding the watermark, in seconds (s). The default value is the start time of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -580,10 +606,8 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The watermark type. Valid values:</p>
          * <ul>
-         * <li><p>text (default): A text watermark.</p>
-         * </li>
-         * <li><p>file: An image or animated image watermark.</p>
-         * </li>
+         * <li>text (default): text watermark.</li>
+         * <li>file: image or animated image watermark.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -593,12 +617,11 @@ public class TargetVideo extends TeaModel {
         public String type;
 
         /**
-         * <p>The OSS URL of the watermark file. Supported formats are PNG and MOV.</p>
-         * <p>The OSS URL must follow the format <code>oss://&lt;bucket&gt;/&lt;object&gt;</code>, where <code>&lt;bucket&gt;</code> is the name of an OSS bucket in the same region as the current project, and <code>&lt;object&gt;</code> is the full path of the file, including the file name extension.</p>
+         * <p>The OSS URI of the watermark file. Supported formats are PNG and MOV.</p>
+         * <p>The OSS URI format is <code>oss://&lt;bucket&gt;/&lt;object&gt;</code>, where <code>&lt;bucket&gt;</code> is the name of an OSS bucket in the same region as the current project, and <code>&lt;object&gt;</code> is the full path of the file including the file name extension.</p>
          * <blockquote>
-         * <p>Notice: </p>
+         * <p>Notice:  This parameter takes effect only when the <code>Type</code> parameter is set to <code>file</code>.</notice></p>
          * </blockquote>
-         * <p>This parameter is effective only when the <code>Type</code> parameter is set to <code>file</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/watermark.jpg</p>
@@ -607,12 +630,10 @@ public class TargetVideo extends TeaModel {
         public String URI;
 
         /**
-         * <p>The width of the watermark image. By default, this is the width of the original watermark image. The meaning of this parameter varies depending on whether the value is an integer or a decimal:</p>
+         * <p>The width of the watermark image. The default value is the original width of the watermark image. The meanings differ depending on whether the value is an integer or a decimal:</p>
          * <ul>
-         * <li><p>Integer: The width of the watermark in pixels (px). The value ranges from 1 to 4096.</p>
-         * </li>
-         * <li><p>Decimal: The ratio of the watermark width to the output video width. The value ranges from (0, 1).</p>
-         * </li>
+         * <li>Integer: The width in pixels (px). Valid values: [1,4096].</li>
+         * <li>Decimal: The ratio relative to the output video resolution width. Valid values: (0,1).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -758,7 +779,7 @@ public class TargetVideo extends TeaModel {
 
     public static class TargetVideoFilterVideo extends TeaModel {
         /**
-         * <p>Blurs a rectangular area of the video to remove logos, station icons, and other elements.</p>
+         * <p>Applies mosaic processing to a rectangular area of the video to remove logos or station watermarks.</p>
          */
         @NameInMap("Delogos")
         public java.util.List<TargetVideoFilterVideoDelogos> delogos;
@@ -769,24 +790,24 @@ public class TargetVideo extends TeaModel {
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li>This parameter applies only to the CreateMediaConvertTask API.</li>
+         * <li>This parameter is applicable only to the CreateMediaConvertTask API.</li>
          * </ul>
          */
         @NameInMap("Desensitization")
         public TargetVideoFilterVideoDesensitization desensitization;
 
         /**
-         * <p>The video playback speed setting. The value ranges from 0.5 to 1.0. The default value is 1.0.</p>
+         * <p>The video playback speed setting. Valid values: [0.5,1.0]. Default value: 1.0.</p>
          * <blockquote>
          * <ul>
-         * <li>This is the ratio of the default playback speed of the transcoded media file to that of the source media file. This is not a high-speed transcoding feature.</li>
+         * <li>This is the ratio of the transcoded media file playback speed to the source media file default playback speed, not speed-up transcoding.</li>
          * </ul>
          * </blockquote>
          * <blockquote>
          * <p>Notice: </p>
          * </blockquote>
          * <ul>
-         * <li>This parameter applies only to the CreateMediaConvertTask API.</li>
+         * <li>This parameter is applicable only to the CreateMediaConvertTask API.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -796,7 +817,7 @@ public class TargetVideo extends TeaModel {
         public Float speed;
 
         /**
-         * <p>A list of video watermarks.</p>
+         * <p>The list of video watermarks.</p>
          */
         @NameInMap("Watermarks")
         public java.util.List<TargetVideoFilterVideoWatermarks> watermarks;
@@ -842,12 +863,10 @@ public class TargetVideo extends TeaModel {
 
     public static class TargetVideoTranscodeVideo extends TeaModel {
         /**
-         * <p>Specifies whether to enable adaptive resolution for long and short edges. Valid values:</p>
+         * <p>Specifies whether to enable adaptive long/short side mode. Valid values:</p>
          * <ul>
-         * <li><p>true: Yes. In this case, the format for the <strong>Resolution</strong> parameter is <code>long edge × short edge</code>.</p>
-         * </li>
-         * <li><p>false (default): No. In this case, the format for the <strong>Resolution</strong> parameter is <code>width × height</code>.</p>
-         * </li>
+         * <li>true: Enabled. The format of the <strong>Resolution</strong> parameter is <code>LongSide×ShortSide</code>.</li>
+         * <li>false (default): Disabled. The format of the <strong>Resolution</strong> parameter is <code>Width×Height</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -857,7 +876,7 @@ public class TargetVideo extends TeaModel {
         public Boolean adaptiveResolutionDirection;
 
         /**
-         * <p>The number of consecutive B-frames. The default value is 3.</p>
+         * <p>The number of consecutive B-frames. Default value: 3.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -866,9 +885,9 @@ public class TargetVideo extends TeaModel {
         public Integer BFrames;
 
         /**
-         * <p>The video stream bitrate in bits per second (bit/s).</p>
+         * <p>The video stream bitrate, in bits per second (bit/s).</p>
          * <blockquote>
-         * <p>This parameter is mutually exclusive with <strong>CRF</strong>. If both this parameter and the <strong>CRF</strong> parameter are empty, the system encodes the video with a CRF value of 23.</p>
+         * <p>This parameter is mutually exclusive with <strong>CRF</strong>. If both this parameter and <strong>CRF</strong> are empty, encoding is performed with a <strong>CRF</strong> value of 23.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -880,19 +899,14 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The video bitrate option. Valid values:</p>
          * <ul>
-         * <li><p>fixed: Always uses the specified target video bitrate.</p>
-         * </li>
-         * <li><p>adaptive: Uses the source video bitrate if it is lower than the specified target video bitrate.</p>
-         * </li>
-         * <li><p>fall: The task fails if the source video bitrate is lower than the specified target video bitrate.</p>
-         * </li>
+         * <li>fixed: Always uses the specified target video bitrate.</li>
+         * <li>adaptive: Uses the source video bitrate when it is lower than the specified target video bitrate.</li>
+         * <li>fall: Returns a failure when the source video bitrate is lower than the specified target video bitrate.</li>
          * </ul>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>For the CreateMediaConvert API, the default value is fixed.</p>
-         * </li>
-         * <li><p>For the GenerateVideoPlaylist API, the default value is adaptive.</p>
-         * </li>
+         * <li>For the CreateMediaConvert API, the default value is fixed.</li>
+         * <li>For the GenerateVideoPlaylist API, the default value is adaptive.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter must be set together with the <strong>Bitrate</strong> parameter.</p>
@@ -905,9 +919,9 @@ public class TargetVideo extends TeaModel {
         public String bitrateOption;
 
         /**
-         * <p>The size of the decoding buffer for dynamic bitrate, in bits per second (bps).</p>
+         * <p>The decoding buffer size for variable bitrate, in bits per second (bps).</p>
          * <blockquote>
-         * <p>This parameter is effective only when used with the <strong>CRF</strong> parameter.</p>
+         * <p>This parameter takes effect only when used together with the <strong>CRF</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -917,7 +931,7 @@ public class TargetVideo extends TeaModel {
         public Integer bufferSize;
 
         /**
-         * <p>Specifies the Constant Rate Factor (CRF) mode. This parameter is mutually exclusive with <strong>Bitrate</strong>. The value ranges from 0 to 51. A larger value indicates lower image quality. A value from 18 to 38 is recommended.</p>
+         * <p>Specifies the constant quality mode. This parameter is mutually exclusive with <strong>Bitrate</strong>. Valid values: [0,51]. A higher value results in lower quality. Recommended values: [18,38].</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -928,14 +942,9 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The video encoding format. Valid values:</p>
          * <ul>
-         * <li><p>For the CreateMediaConvert API: copy (default), h264, h265, and vp9.</p>
-         * <blockquote>
-         * <p>Warning: </p>
-         * </blockquote>
-         * <p>If you set this parameter to copy, the system directly copies the video stream to the output file. In this case, the other parameters under <strong>TranscodeVideo</strong> are invalid. The copy value cannot be used for video concatenation and is typically used for container format conversion.</p>
-         * </li>
-         * <li><p>For the GenerateVideoPlaylist API: h264 (default) and h265.</p>
-         * </li>
+         * <li>For the CreateMediaConvert API: copy (default), h264, h265, vp9.
+         * <warning>When this parameter is set to copy, the video streams to be processed are directly copied to the output file, and other parameters under <strong>TranscodeVideo</strong> do not take effect. copy cannot be used for video concatenation and is typically used for container format conversion scenarios.</warning></li>
+         * <li>For the GenerateVideoPlaylist API: h264 (default), h265.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -945,7 +954,7 @@ public class TargetVideo extends TeaModel {
         public String codec;
 
         /**
-         * <p>The video frame rate. By default, this is the same as the source video.</p>
+         * <p>The video frame rate. The default value is the same as the source video.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -956,19 +965,14 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The frame rate option. Valid values:</p>
          * <ul>
-         * <li><p>fixed: Always uses the specified target video frame rate.</p>
-         * </li>
-         * <li><p>adaptive: Uses the source video frame rate if it is lower than the specified target video frame rate.</p>
-         * </li>
-         * <li><p>fall: The task fails if the source video frame rate is lower than the specified target video frame rate.</p>
-         * </li>
+         * <li>fixed: Always uses the specified target video frame rate.</li>
+         * <li>adaptive: Uses the source video frame rate when it is lower than the specified target video frame rate.</li>
+         * <li>fall: Returns a failure when the source video frame rate is lower than the specified target video frame rate.</li>
          * </ul>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>For the CreateMediaConvert API, the default value is fixed.</p>
-         * </li>
-         * <li><p>For the GenerateVideoPlaylist API, the default value is adaptive.</p>
-         * </li>
+         * <li>For the CreateMediaConvert API, the default value is fixed.</li>
+         * <li>For the GenerateVideoPlaylist API, the default value is adaptive.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter must be set together with the <strong>FrameRate</strong> parameter.</p>
@@ -981,9 +985,9 @@ public class TargetVideo extends TeaModel {
         public String frameRateOption;
 
         /**
-         * <p>The size of the Group of Pictures (GOP) in frames. The default value is 150.</p>
+         * <p>The number of frames between keyframes. Default value: 150.</p>
          * <blockquote>
-         * <p>This parameter is not supported by the GenerateVideoPlaylist API.</p>
+         * <p>This parameter is not supported for the GenerateVideoPlaylist API.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -993,9 +997,9 @@ public class TargetVideo extends TeaModel {
         public Integer GOPSize;
 
         /**
-         * <p>The maximum bitrate limit for dynamic bitrate. When you use this parameter, you must also specify the BufferSize parameter.</p>
+         * <p>The maximum bitrate limit for variable bitrate. When using this parameter, you must specify the BufferSize parameter.</p>
          * <blockquote>
-         * <p>This parameter is effective only when used with the <strong>CRF</strong> parameter.</p>
+         * <p>This parameter takes effect only when used together with the <strong>CRF</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1005,25 +1009,18 @@ public class TargetVideo extends TeaModel {
         public Integer maxBitrate;
 
         /**
-         * <p>The pixel format. By default, this is the same as the source video. Valid values:</p>
+         * <p>The pixel format. The default value is the same as the source video. Valid values:</p>
          * <ul>
-         * <li><p>yuv420p</p>
-         * </li>
-         * <li><p>yuv422p</p>
-         * </li>
-         * <li><p>yuv444p</p>
-         * </li>
-         * <li><p>yuv420p10le</p>
-         * </li>
-         * <li><p>yuv422p10le</p>
-         * </li>
-         * <li><p>yuv444p10le</p>
-         * </li>
-         * <li><p>yuva420p</p>
-         * </li>
+         * <li>yuv420p</li>
+         * <li>yuv422p</li>
+         * <li>yuv444p</li>
+         * <li>yuv420p10le</li>
+         * <li>yuv422p10le</li>
+         * <li>yuv444p10le</li>
+         * <li>yuva420p</li>
          * </ul>
          * <blockquote>
-         * <p>The yuva420p value is available only for the CreateMediaConvert API, and the <strong>Codec</strong> parameter must be set to vp9.</p>
+         * <p>yuva420p is available only for the CreateMediaConvert API, and the <strong>Codec</strong> parameter must be set to vp9.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1033,7 +1030,7 @@ public class TargetVideo extends TeaModel {
         public String pixelFormat;
 
         /**
-         * <p>The number of reference frames. The default value is 2.</p>
+         * <p>The number of reference frames. Default value: 2.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1042,15 +1039,13 @@ public class TargetVideo extends TeaModel {
         public Integer refs;
 
         /**
-         * <p>The resolution of the output video in the format of <code>width × height</code>. By default, this is the same as the playback resolution of the source video. You can configure both width and height, or only width or height. You can also use this parameter with the <strong>AdaptiveResolutionDirection</strong> parameter to configure both the long and short edges, or only the long or short edge. The value for a single edge ranges from (0, 4096].</p>
+         * <p>The resolution of the output video in the format of <code>WidthxHeight</code>. The default value is the same as the playback resolution of the source video. You can configure both width and height, or configure only width or height. You can also use the <strong>AdaptiveResolutionDirection</strong> parameter to configure both long and short sides, or configure only the long side or short side. The value range for a single side is (0,4096].</p>
          * <ul>
-         * <li><p>Example 1: If <strong>AdaptiveResolutionDirection</strong> is set to false, <code>1280x720</code> sets the width to 1280 and the height to 720. <code>1280x</code> sets the width to 1280 and keeps the height the same as the source video. <code>x720</code> sets the height to 720 and keeps the width the same as the source video.</p>
-         * </li>
-         * <li><p>Example 2: If <strong>AdaptiveResolutionDirection</strong> is set to true, <code>1280x720</code> sets the long edge to 1280 and the short edge to 720. <code>1280x</code> sets the long edge to 1280 and keeps the short edge the same as the source video. <code>x720</code> sets the short edge to 720 and keeps the long edge the same as the source video.</p>
-         * </li>
+         * <li>Example 1: If <strong>AdaptiveResolutionDirection</strong> is false, <code>1280x720</code> sets the width to 1280 and the height to 720. <code>1280x</code> sets the width to 1280 and keeps the height the same as the source video. <code>x720</code> sets the height to 720 and keeps the width the same as the source video.</li>
+         * <li>Example 2: If <strong>AdaptiveResolutionDirection</strong> is true, <code>1280x720</code> sets the long side to 1280 and the short side to 720. <code>1280x</code> sets the long side to 1280 and keeps the short side the same as the source video. <code>x720</code> sets the short side to 720 and keeps the long side the same as the source video.</li>
          * </ul>
          * <blockquote>
-         * <p>If the source video contains rotation information, the width, height, long edge, and short edge are determined based on the rotated video, which means the playback resolution is used.</p>
+         * <p>If the source video contains rotation information, the width/height and long/short side determination is based on the post-rotation state, which is the playback resolution.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1062,19 +1057,14 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The resolution option. Valid values:</p>
          * <ul>
-         * <li><p>fixed: Always uses the specified target video resolution.</p>
-         * </li>
-         * <li><p>adaptive: Uses the source video resolution if its area is smaller than the area of the specified target video resolution.</p>
-         * </li>
-         * <li><p>fall: The task fails if the area of the source video resolution is smaller than the area of the specified target video resolution.</p>
-         * </li>
+         * <li>fixed: Always uses the specified target video resolution.</li>
+         * <li>adaptive: Uses the source video resolution when the source video resolution area is smaller than the specified target video resolution area.</li>
+         * <li>fall: Returns a failure when the source video resolution area is smaller than the specified target video resolution area.</li>
          * </ul>
          * <p>Default value:</p>
          * <ul>
-         * <li><p>For the CreateMediaConvert API, the default value is fixed.</p>
-         * </li>
-         * <li><p>For the GenerateVideoPlaylist API, the default value is adaptive.</p>
-         * </li>
+         * <li>For the CreateMediaConvert API, the default value is fixed.</li>
+         * <li>For the GenerateVideoPlaylist API, the default value is adaptive.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter must be set together with the <strong>Resolution</strong> parameter.</p>
@@ -1089,14 +1079,10 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The clockwise rotation angle of the video in degrees. Valid values:</p>
          * <ul>
-         * <li><p>0 (default)</p>
-         * </li>
-         * <li><p>90</p>
-         * </li>
-         * <li><p>180</p>
-         * </li>
-         * <li><p>270</p>
-         * </li>
+         * <li>0 (default)</li>
+         * <li>90</li>
+         * <li>180</li>
+         * <li>270</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1108,14 +1094,10 @@ public class TargetVideo extends TeaModel {
         /**
          * <p>The scaling mode. Valid values:</p>
          * <ul>
-         * <li><p>stretch (default): Fixes the width and height or the long and short edges, and forces scaling to stretch and fill any blank areas.</p>
-         * </li>
-         * <li><p>crop: Scales the video proportionally to the minimum resolution that extends beyond the specified rectangle (defined by width/height or long/short edges), and then center-crops the excess parts.</p>
-         * </li>
-         * <li><p>fill: Scales the video proportionally to the maximum resolution that fits within the specified rectangle (defined by width/height or long/short edges), and then center-fills any blank areas with black.</p>
-         * </li>
-         * <li><p>fit: Scales the video proportionally to the maximum resolution that fits within the specified rectangle (defined by width/height or long/short edges).</p>
-         * </li>
+         * <li>stretch (default): Fixes the width/height or long/short sides and forcibly scales the video to fill the blank area by stretching.</li>
+         * <li>crop: Scales proportionally to the minimum resolution that extends beyond the specified width/height or long/short side rectangle, and then center-crops the excess area.</li>
+         * <li>fill: Scales proportionally to the maximum resolution within the specified width/height or long/short side rectangle, and then center-fills the blank area with black.</li>
+         * <li>fit: Scales proportionally to the maximum resolution within the specified width/height or long/short side rectangle.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter must be set together with the <strong>Resolution</strong> parameter.</p>
@@ -1128,16 +1110,13 @@ public class TargetVideo extends TeaModel {
         public String scaleType;
 
         /**
-         * <p>Enables the Narrowband HD mode. Set the value as follows:</p>
-         * <p>0: The default value. Disables the mode.</p>
-         * <p>1: Enables transcoding in Narrowband HD mode.</p>
+         * <p>Enables the Narrowband HD mode. Valid values:</p>
+         * <p>0: Default value. Disabled.</p>
+         * <p>1: Uses the Narrowband HD mode for transcoding.</p>
          * <blockquote>
-         * <p>For best results, use the officially recommended Bitrate or CRF parameters for video transcoding and encoding in Narrowband HD mode.</p>
+         * <p>For optimal results, use the officially recommended Bitrate or CRF parameters for video transcoding with Narrowband HD.</p>
+         * <p>Notice: Narrowband HD supports only H.264/H.265 formats, only yuv420p, 8-bit depth, and does not support multi-target video transcoding output or video concatenation. For more information, see <a href="https://help.aliyun.com/document_detail/2984556.html">Narrowband HD overview</a>.</p>
          * </blockquote>
-         * <blockquote>
-         * <p>Notice: </p>
-         * </blockquote>
-         * <p>Narrowband HD only supports the h.264/h.265 format, yuv420p, and an 8-bit depth. It does not support transcoding output for multiple target videos or video concatenation. For more information, see <a href="https://help.aliyun.com/document_detail/2984556.html">Introduction to Narrowband HD</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

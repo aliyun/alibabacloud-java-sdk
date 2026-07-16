@@ -29,7 +29,7 @@ public class Illustration extends TeaModel {
     public java.util.List<Float> normalizedBox;
 
     /**
-     * <p>The page number on which the image is located.</p>
+     * <p>The page number where the image is located.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

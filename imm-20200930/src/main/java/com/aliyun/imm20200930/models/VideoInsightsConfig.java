@@ -10,9 +10,15 @@ public class VideoInsightsConfig extends TeaModel {
     @NameInMap("Caption")
     public VideoInsightsCaptionConfig caption;
 
+    /**
+     * <p>The label configuration.</p>
+     */
     @NameInMap("Label")
     public VideoInsightsLabelConfig label;
 
+    /**
+     * <p>The video multi-stream configuration.</p>
+     */
     @NameInMap("MultiStream")
     public VideoInsightsMultiStreamConfig multiStream;
 
