@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskDefaultKMSKeyIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the KMS key.</p>
+     * <p>The KMS key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>

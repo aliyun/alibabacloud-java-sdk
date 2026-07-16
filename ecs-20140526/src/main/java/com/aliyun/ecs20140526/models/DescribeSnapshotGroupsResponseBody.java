@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * <blockquote>
-     * <p>If the return value is empty, no more data exists.</p>
+     * <p>If this parameter is empty, no more results are available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3F9A4CC4-362F-469A-B9EF-B3204EF8AA3A</p>

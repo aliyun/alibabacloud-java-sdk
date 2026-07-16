@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelImagePipelineExecutionRequest extends TeaModel {
     /**
-     * <p>The ID of the build task.</p>
+     * <p>The ID of the image building task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

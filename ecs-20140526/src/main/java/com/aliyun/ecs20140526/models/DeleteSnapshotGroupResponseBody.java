@@ -8,7 +8,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
     public DeleteSnapshotGroupResponseBodyOperationProgressSet operationProgressSet;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6EDE885A-FDC1-4FAE-BC44-6EACAEA6CC6E</p>

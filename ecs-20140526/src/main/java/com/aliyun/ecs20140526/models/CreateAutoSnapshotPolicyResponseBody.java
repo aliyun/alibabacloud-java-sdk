@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
-     * <p>The automatic snapshot policy ID.</p>
+     * <p>The ID of the automatic snapshot policy.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-bp12m37ccmxvbmi5****</p>

@@ -563,6 +563,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeImagesResponseBodyImagesImageTags tags;
 
+        @NameInMap("Usable")
+        public Boolean usable;
+
         @NameInMap("Usage")
         public String usage;
 
@@ -825,6 +828,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public DescribeImagesResponseBodyImagesImageTags getTags() {
             return this.tags;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setUsable(Boolean usable) {
+            this.usable = usable;
+            return this;
+        }
+        public Boolean getUsable() {
+            return this.usable;
         }
 
         public DescribeImagesResponseBodyImagesImage setUsage(String usage) {

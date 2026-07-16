@@ -7,9 +7,9 @@ public class DeleteSnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to force delete the snapshot that has been used to create cloud disks. Valid values:</p>
      * <ul>
-     * <li><p>true: force deletes the snapshot. After the snapshot is force deleted, the cloud disks created from the snapshot cannot be re-initialized.</p>
+     * <li><p>true: Force deletes the snapshot. After the snapshot is forcibly deleted, the cloud disk created from the snapshot cannot be reinitialized.</p>
      * </li>
-     * <li><p>false: does not force delete the snapshot.</p>
+     * <li><p>false: Does not force delete the snapshot.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>

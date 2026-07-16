@@ -40,16 +40,16 @@ public class CloneDisksRequest extends TeaModel {
     /**
      * <p>The category of the new disk. Valid values:</p>
      * <ul>
-     * <li>cloud_essd: standard SSD.</li>
+     * <li>cloud_essd: enterprise SSD.</li>
      * <li>cloud_auto: ESSD AutoPL disk.</li>
      * <li>cloud_essd_entry: ESSD Entry disk.</li>
-     * <li>cloud_regional_disk_auto: regional Standard SSD (ESSD).</li>
+     * <li>cloud_regional_disk_auto: regional ESSD.</li>
      * </ul>
      * <blockquote>
      * <p>Disk category restrictions for disk cloning:</p>
      * <ul>
-     * <li>Non-regional disks can only be cloned to non-regional disk types.</li>
-     * <li>Regional disks can only be cloned to regional disk types.</li>
+     * <li>Non-regional disks can be cloned only to non-regional types.</li>
+     * <li>Regional disks can be cloned only to regional types.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -73,8 +73,8 @@ public class CloneDisksRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>true: sends a check request without querying the filing status. The system checks whether your AccessKey pair is valid, whether RAM user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</li>
-     * <li>false (default): sends a normal request. After the check passes, a 2XX HTTP status code is returned and the filing status is queried.</li>
+     * <li>true: sends a check request without querying the filing status. The check items include whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
+     * <li>false (default): sends a Normal request. After the check succeeds, a 2XX HTTP status code is returned and the filing status is directly queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,10 +107,10 @@ public class CloneDisksRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>Specifies whether to enable the multi-attach attribute for the new disk. Settings for this parameter. Valid values:</p>
+     * <p>Specifies whether to enable the multi-attach attribute for the new disk. Valid values:</p>
      * <ul>
      * <li>Disabled: disables the multi-attach attribute.</li>
-     * <li>Enabled: enables the multi-attach attribute. Only standard SSDs support the value <code>Enabled</code>.</li>
+     * <li>Enabled: enables the multi-attach attribute. Currently, only enterprise SSDs support Settings to <code>Enabled</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -124,7 +124,7 @@ public class CloneDisksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The performance level (PL) of the enterprise SSD to create. Settings for this parameter vary based on the standard SSD type. Valid values:</p>
+     * <p>The performance level of the standard SSD. Settings for this parameter depend on the disk category. Valid values:</p>
      * <ul>
      * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
      * <li>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</li>
@@ -184,7 +184,7 @@ public class CloneDisksRequest extends TeaModel {
     /**
      * <p>The capacity of the new disk. Unit: GiB. You must specify a value for this parameter. Valid values:</p>
      * <ul>
-     * <li>cloud_essd: the valid value range varies based on the performance level.<ul>
+     * <li>cloud_essd: The valid values depend on the performance level.<ul>
      * <li>PL0: 1 to 65,536.</li>
      * <li>PL1: 20 to 65,536.</li>
      * <li>PL2: 461 to 65,536.</li>

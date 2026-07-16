@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</p>
+     * <p>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</p>
      * <ul>
-     * <li><p>-1: The snapshot copy is retained until it is deleted.</p>
-     * </li>
-     * <li><p>1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</p>
-     * </li>
+     * <li>-1: Snapshot replicas are permanently retained.</li>
+     * <li>1 to 65535: Snapshot replicas are retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * 
@@ -21,18 +19,16 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Integer copiedSnapshotsRetentionDays;
 
     /**
-     * <p>The encryption parameters for cross-region snapshot replication.</p>
+     * <p>The backup encryption parameter object for snapshot geo-redundancy.</p>
      */
     @NameInMap("CopyEncryptionConfiguration")
     public CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration copyEncryptionConfiguration;
 
     /**
-     * <p>Specifies whether to enable cross-region replication for snapshots.</p>
+     * <p>Specifies whether to enable automatic cross-region replication.</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: enables automatic cross-region replication.</li>
+     * <li>false: disables automatic cross-region replication.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +41,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2kkmhmhs****</p>
@@ -71,13 +67,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String storageLocationArn;
 
     /**
-     * <p>The tags to add to the automatic snapshot policy.</p>
+     * <p>The tags of the automatic snapshot policy.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateAutoSnapshotPolicyRequestTag> tag;
 
     /**
-     * <p>The destination region to which to copy the snapshot. You can specify only a single destination region.</p>
+     * <p>The destination region to which snapshots are replicated. You can specify only one destination region.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cn-hangzhou&quot;]</p>
@@ -86,8 +82,8 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String targetCopyRegions;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>Default value: null.</p>
      * 
      * <strong>example:</strong>
      * <p>TestName</p>
@@ -96,7 +92,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String autoSnapshotPolicyName;
 
     /**
-     * <p>The ID of the region in which to create the automatic snapshot policy. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region to which the automatic snapshot policy belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,12 +102,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to Monday to Sunday. 1 indicates Monday. Format description:</p>
+     * <p>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday. Format description:</p>
      * <ul>
-     * <li><p>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created every Monday.</p>
-     * </li>
-     * <li><p>To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.</p>
-     * </li>
+     * <li>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created every Monday.</li>
+     * <li>To create multiple automatic snapshots within a week, specify multiple days separated by commas (,). You can specify a maximum of 7 days. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created every Monday, Wednesday, and Friday.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -122,12 +116,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public String repeatWeekdays;
 
     /**
-     * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
+     * <p>The retention period of automatic snapshots. Unit: days. Valid values:</p>
      * <ul>
-     * <li><p>-1: The automatic snapshot is retained until it is deleted.</p>
-     * </li>
-     * <li><p>1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</p>
-     * </li>
+     * <li>-1: Automatic snapshots are permanently retained.</li>
+     * <li>1 to 65535: Automatic snapshots are retained for the specified number of days.</li>
      * </ul>
      * <p>Default value: -1.</p>
      * <p>This parameter is required.</p>
@@ -139,15 +131,13 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Integer retentionDays;
 
     /**
-     * <p>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. For example, 1 indicates 01:00:00. Format description:</p>
+     * <p>The points in time at which automatic snapshots are created. The time is displayed in UTC+8. Unit: hours. Valid values: 0 to 23, which represent the 24 points in time from 00:00 to 23:00. For example, 1 indicates 01:00. Format description:</p>
      * <ul>
-     * <li><p>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</p>
-     * </li>
-     * <li><p>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify up to 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</p>
-     * </li>
+     * <li>The parameter value must be a JSON array. For example, [&quot;1&quot;\] indicates that automatic snapshots are created at 01:00.</li>
+     * <li>To create multiple automatic snapshots within a day, specify multiple points in time separated by commas (,). You can specify a maximum of 24 points in time. For example, [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;\] indicates that automatic snapshots are created at 01:00, 03:00, and 05:00.</li>
      * </ul>
      * <blockquote>
-     * <p>If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you scheduled snapshots to be automatically created at 09:00, 10:00, 11:00, and 12:00. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.</p>
+     * <p>If a disk contains a large amount of data and the time required to create an automatic snapshot exceeds the interval between two consecutive points in time, the next point in time is skipped. For example, you set 09:00, 10:00, 11:00, and 12:00 as the points in time for automatic snapshot creation. The snapshot creation starts at 09:00 and is completed at 10:20, which takes 80 minutes. The system skips the 10:00 point in time and creates the next automatic snapshot at 11:00.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -357,12 +347,10 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public java.util.List<CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn> arn;
 
         /**
-         * <p>Specifies whether to enable cross-region snapshot replication and encryption. Valid values:</p>
+         * <p>Specifies whether to enable encryption for cross-region snapshot backup. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: enables encryption.</li>
+         * <li>false: disables encryption.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -373,7 +361,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public Boolean encrypted;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used in cross-region snapshot replication and encryption.</p>
+         * <p>The KMS key ID used for encrypted cross-region snapshot backup.</p>
          * 
          * <strong>example:</strong>
          * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
@@ -414,7 +402,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
 
     public static class CreateAutoSnapshotPolicyRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The tag key of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. The tag key cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -423,7 +411,7 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://. The tag value cannot start with acs:.</p>
+         * <p>The tag value of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs:. The tag value cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
