@@ -10608,7 +10608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve information about one or more EIAM applications with paging.</p>
+     * <p>Queries information about one or more EIAM applications by using paged query. Paging is supported.</p>
      * 
      * @param request ListApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10631,6 +10631,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
             query.put("ApplicationName", request.applicationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationTemplateId)) {
+            query.put("ApplicationTemplateId", request.applicationTemplateId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.authorizationType)) {
@@ -10696,7 +10700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a paged query to retrieve information about one or more EIAM applications with paging.</p>
+     * <p>Queries information about one or more EIAM applications by using paged query. Paging is supported.</p>
      * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse

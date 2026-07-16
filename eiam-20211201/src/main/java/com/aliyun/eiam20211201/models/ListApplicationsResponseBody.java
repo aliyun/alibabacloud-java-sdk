@@ -126,7 +126,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>The time when the application was created, in UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The application creation time, in UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -225,7 +225,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
-         * <p>The single sign-on (SSO) logon protocol. Valid values:</p>
+         * <p>The single sign-on protocol. Valid values:</p>
          * <ul>
          * <li>saml2: SAML 2.0 protocol.</li>
          * <li>oidc: OpenID Connect protocol.</li>

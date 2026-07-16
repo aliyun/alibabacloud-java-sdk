@@ -40,6 +40,9 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    @NameInMap("ApplicationTemplateId")
+    public String applicationTemplateId;
+
     /**
      * <p>The application access authorization type. Valid values:</p>
      * <ul>
@@ -168,6 +171,14 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    public ListApplicationsRequest setApplicationTemplateId(String applicationTemplateId) {
+        this.applicationTemplateId = applicationTemplateId;
+        return this;
+    }
+    public String getApplicationTemplateId() {
+        return this.applicationTemplateId;
     }
 
     public ListApplicationsRequest setAuthorizationType(String authorizationType) {
