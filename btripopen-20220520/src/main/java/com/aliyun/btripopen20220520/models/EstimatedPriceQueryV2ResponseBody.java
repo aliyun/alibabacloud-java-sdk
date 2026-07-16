@@ -4,18 +4,34 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EstimatedPriceQueryV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public Integer code;
 
     @NameInMap("module")
     public java.util.List<EstimatedPriceQueryV2ResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210bcc3a16583004579056128d33d7</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -65,12 +81,20 @@ public class EstimatedPriceQueryV2ResponseBody extends TeaModel {
     }
 
     public static class EstimatedPriceQueryV2ResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>flight</p>
+         */
         @NameInMap("biz_type")
         public String bizType;
 
         @NameInMap("price_map")
         public java.util.Map<String, ModulePriceMapValue> priceMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经济舱</p>
+         */
         @NameInMap("type")
         public String type;
 

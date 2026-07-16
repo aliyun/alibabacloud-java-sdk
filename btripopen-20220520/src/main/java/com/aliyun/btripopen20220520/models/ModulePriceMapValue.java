@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModulePriceMapValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("price")
     public Long price;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MU1234</p>
+     */
     @NameInMap("service_no")
     public String serviceNo;
 

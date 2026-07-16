@@ -4,21 +4,60 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarSceneQueryResponseBody extends TeaModel {
+    /**
+     * <p>The operation status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The error details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>未开启用车预订服务</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The list of car service scenario templates. An empty array [] is returned if no data exists.</p>
+     */
     @NameInMap("module")
     public java.util.List<CarSceneQueryResponseBodyModule> module;
 
+    /**
+     * <p>The unique identifier of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the query was successful.</p>
+     * <ul>
+     * <li><p>true: Successful.</p>
+     * </li>
+     * <li><p>false: Failed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,12 +115,30 @@ public class CarSceneQueryResponseBody extends TeaModel {
     }
 
     public static class CarSceneQueryResponseBodyModule extends TeaModel {
+        /**
+         * <p>The scenario template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>travel</p>
+         */
         @NameInMap("scenarioTemplateId")
         public String scenarioTemplateId;
 
+        /**
+         * <p>The scenario template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>差标用车</p>
+         */
         @NameInMap("scenarioTemplateName")
         public String scenarioTemplateName;
 
+        /**
+         * <p>The scenario status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATE</p>
+         */
         @NameInMap("state")
         public String state;
 

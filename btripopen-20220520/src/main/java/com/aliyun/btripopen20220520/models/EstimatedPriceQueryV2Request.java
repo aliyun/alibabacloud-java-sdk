@@ -6,34 +6,53 @@ import com.aliyun.tea.*;
 public class EstimatedPriceQueryV2Request extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>flight</p>
      */
     @NameInMap("biz_type")
     public String bizType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000-01-01</p>
      */
     @NameInMap("depart_date")
     public String departDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州</p>
      */
     @NameInMap("from_city")
     public String fromCity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000-01-01</p>
      */
     @NameInMap("leave_date")
     public String leaveDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>北京</p>
      */
     @NameInMap("to_city")
     public String toCity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Fei123</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

@@ -3,25 +3,23 @@ package com.aliyun.btripopen20220520.models;
 
 import com.aliyun.tea.*;
 
-public class CarSceneQueryHeaders extends TeaModel {
+public class IntlFlightReShopListSearchHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The header parameter obtained from the &quot;Enterprise access credential&quot; operation (added in the header). In HTTP mode, you can use socorptoken=value or dtbcorptoken=value in the URL as an alternative.</p>
-     * 
      * <strong>example:</strong>
-     * <p>feth00jqwis</p>
+     * <p>feth00jqwls</p>
      */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 
-    public static CarSceneQueryHeaders build(java.util.Map<String, ?> map) throws Exception {
-        CarSceneQueryHeaders self = new CarSceneQueryHeaders();
+    public static IntlFlightReShopListSearchHeaders build(java.util.Map<String, ?> map) throws Exception {
+        IntlFlightReShopListSearchHeaders self = new IntlFlightReShopListSearchHeaders();
         return TeaModel.build(map, self);
     }
 
-    public CarSceneQueryHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
+    public IntlFlightReShopListSearchHeaders setCommonHeaders(java.util.Map<String, String> commonHeaders) {
         this.commonHeaders = commonHeaders;
         return this;
     }
@@ -29,7 +27,7 @@ public class CarSceneQueryHeaders extends TeaModel {
         return this.commonHeaders;
     }
 
-    public CarSceneQueryHeaders setXAcsBtripCorpToken(String xAcsBtripCorpToken) {
+    public IntlFlightReShopListSearchHeaders setXAcsBtripCorpToken(String xAcsBtripCorpToken) {
         this.xAcsBtripCorpToken = xAcsBtripCorpToken;
         return this;
     }

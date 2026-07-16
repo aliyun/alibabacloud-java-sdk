@@ -2540,8 +2540,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries enterprise car service scenario templates.</p>
+     * <ol>
+     * <li>To use this operation, enable business management permissions in your application. For the permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</li>
+     * <li>To use this operation, include the enterprise access credential (x-acs-btrip-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查询企业用车场景</p>
+     * <p>Queries enterprise car service scenario templates.</p>
      * 
      * @param headers CarSceneQueryHeaders
      * @param runtime runtime options for this request RuntimeOptions
@@ -2575,8 +2582,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries enterprise car service scenario templates.</p>
+     * <ol>
+     * <li>To use this operation, enable business management permissions in your application. For the permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</li>
+     * <li>To use this operation, include the enterprise access credential (x-acs-btrip-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查询企业用车场景</p>
+     * <p>Queries enterprise car service scenario templates.</p>
      * @return CarSceneQueryResponse
      */
     public CarSceneQueryResponse carSceneQuery() throws Exception {
@@ -4523,6 +4537,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>使用该接口可以查询预估价格。
+     * 增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。
+     * 使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。
+     * 使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证企业访问凭证。</p>
+     * 
      * <b>summary</b> : 
      * <p>预估价格查询v2.0</p>
      * 
@@ -4586,6 +4606,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>使用该接口可以查询预估价格。
+     * 增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。
+     * 使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。
+     * 使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证企业访问凭证。</p>
+     * 
      * <b>summary</b> : 
      * <p>预估价格查询v2.0</p>
      * 
@@ -11940,6 +11966,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>国际机票改签生单</p>
+     * 
+     * @param tmpReq IntlFlightReShopCreateRequest
+     * @param headers IntlFlightReShopCreateHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return IntlFlightReShopCreateResponse
+     */
+    public IntlFlightReShopCreateResponse intlFlightReShopCreateWithOptions(IntlFlightReShopCreateRequest tmpReq, IntlFlightReShopCreateHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        IntlFlightReShopCreateShrinkRequest request = new IntlFlightReShopCreateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.selectedPassengers)) {
+            request.selectedPassengersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.selectedPassengers, "selected_passengers", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncApplyKey)) {
+            body.put("async_apply_key", request.asyncApplyKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncApplyMode)) {
+            body.put("async_apply_mode", request.asyncApplyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            body.put("order_id", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otaItemId)) {
+            body.put("ota_item_id", request.otaItemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            body.put("out_order_id", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outReShopApplyId)) {
+            body.put("out_re_shop_apply_id", request.outReShopApplyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passengerJourneyGroupKey)) {
+            body.put("passenger_journey_group_key", request.passengerJourneyGroupKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reShopReasonCode)) {
+            body.put("re_shop_reason_code", request.reShopReasonCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedPassengersShrink)) {
+            body.put("selected_passengers", request.selectedPassengersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalReShopFee)) {
+            body.put("total_re_shop_fee", request.totalReShopFee);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IntlFlightReShopCreate"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/intl-flight/v1/flights/action/reshop/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IntlFlightReShopCreateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>国际机票改签生单</p>
+     * 
+     * @param request IntlFlightReShopCreateRequest
+     * @return IntlFlightReShopCreateResponse
+     */
+    public IntlFlightReShopCreateResponse intlFlightReShopCreate(IntlFlightReShopCreateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        IntlFlightReShopCreateHeaders headers = new IntlFlightReShopCreateHeaders();
+        return this.intlFlightReShopCreateWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>国际机票改签详情</p>
      * 
      * @param request IntlFlightReShopDetailRequest
@@ -12004,6 +12128,194 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         IntlFlightReShopDetailHeaders headers = new IntlFlightReShopDetailHeaders();
         return this.intlFlightReShopDetailWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>国际机票改签航班列表查询</p>
+     * 
+     * @param tmpReq IntlFlightReShopListSearchRequest
+     * @param headers IntlFlightReShopListSearchHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return IntlFlightReShopListSearchResponse
+     */
+    public IntlFlightReShopListSearchResponse intlFlightReShopListSearchWithOptions(IntlFlightReShopListSearchRequest tmpReq, IntlFlightReShopListSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        IntlFlightReShopListSearchShrinkRequest request = new IntlFlightReShopListSearchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchJourneys)) {
+            request.searchJourneysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchJourneys, "search_journeys", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.selectedPassengers)) {
+            request.selectedPassengersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.selectedPassengers, "selected_passengers", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("order_id", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            query.put("out_order_id", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outWheelSearch)) {
+            query.put("out_wheel_search", request.outWheelSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passengerJourneyGroupKey)) {
+            query.put("passenger_journey_group_key", request.passengerJourneyGroupKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reShopReasonCode)) {
+            query.put("re_shop_reason_code", request.reShopReasonCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchJourneysShrink)) {
+            query.put("search_journeys", request.searchJourneysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedPassengersShrink)) {
+            query.put("selected_passengers", request.selectedPassengersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("token", request.token);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IntlFlightReShopListSearch"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/intl-flight/v1/flights/action/reshop/listSearch"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IntlFlightReShopListSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>国际机票改签航班列表查询</p>
+     * 
+     * @param request IntlFlightReShopListSearchRequest
+     * @return IntlFlightReShopListSearchResponse
+     */
+    public IntlFlightReShopListSearchResponse intlFlightReShopListSearch(IntlFlightReShopListSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        IntlFlightReShopListSearchHeaders headers = new IntlFlightReShopListSearchHeaders();
+        return this.intlFlightReShopListSearchWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>国际机票改签航班报价</p>
+     * 
+     * @param tmpReq IntlFlightReShopOtaSearchRequest
+     * @param headers IntlFlightReShopOtaSearchHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return IntlFlightReShopOtaSearchResponse
+     */
+    public IntlFlightReShopOtaSearchResponse intlFlightReShopOtaSearchWithOptions(IntlFlightReShopOtaSearchRequest tmpReq, IntlFlightReShopOtaSearchHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        IntlFlightReShopOtaSearchShrinkRequest request = new IntlFlightReShopOtaSearchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.searchJourneys)) {
+            request.searchJourneysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.searchJourneys, "search_journeys", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.selectedPassengers)) {
+            request.selectedPassengersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.selectedPassengers, "selected_passengers", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("order_id", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
+            query.put("out_order_id", request.outOrderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outWheelSearch)) {
+            query.put("out_wheel_search", request.outWheelSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.passengerJourneyGroupKey)) {
+            query.put("passenger_journey_group_key", request.passengerJourneyGroupKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reShopReasonCode)) {
+            query.put("re_shop_reason_code", request.reShopReasonCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchJourneysShrink)) {
+            query.put("search_journeys", request.searchJourneysShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedPassengersShrink)) {
+            query.put("selected_passengers", request.selectedPassengersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("token", request.token);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "IntlFlightReShopOtaSearch"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/intl-flight/v1/flights/action/reshop/otaSerach"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IntlFlightReShopOtaSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>国际机票改签航班报价</p>
+     * 
+     * @param request IntlFlightReShopOtaSearchRequest
+     * @return IntlFlightReShopOtaSearchResponse
+     */
+    public IntlFlightReShopOtaSearchResponse intlFlightReShopOtaSearch(IntlFlightReShopOtaSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        IntlFlightReShopOtaSearchHeaders headers = new IntlFlightReShopOtaSearchHeaders();
+        return this.intlFlightReShopOtaSearchWithOptions(request, headers, runtime);
     }
 
     /**
