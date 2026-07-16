@@ -25,7 +25,7 @@ public class DeleteEdgeContainerAppRecordRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5407498413****</p>

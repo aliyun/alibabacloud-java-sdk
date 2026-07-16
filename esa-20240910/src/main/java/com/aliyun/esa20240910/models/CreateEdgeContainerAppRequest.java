@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeContainerAppRequest extends TeaModel {
     /**
-     * <p>The number of consecutive failed health checks required for an application to be considered as unhealthy. Valid values: 1 to 10. Default value: 5.</p>
+     * <p>The number of consecutive failed health checks required before a healthy application is considered unhealthy.</p>
+     * <ul>
+     * <li>Valid values: <strong>1 to 10</strong>. </li>
+     * <li>Default value: <strong>5</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +18,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckFailTimes;
 
     /**
-     * <p>The domain name that is used for health checks. This parameter is empty by default.</p>
+     * <p>The domain name used for health checks. If this parameter is not specified, the value is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -23,10 +27,10 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String healthCheckHost;
 
     /**
-     * <p>The HTTP status code returned for a successful health check. Valid values:</p>
+     * <p>The HTTP status code that indicates the health check is Normal. Valid values:</p>
      * <ul>
-     * <li><strong>http_2xx</strong> (default)</li>
-     * <li><strong>http_3xx</strong></li>
+     * <li><strong>http_2xx</strong> (default).</li>
+     * <li><strong>http_3xx</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +40,12 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String healthCheckHttpCode;
 
     /**
-     * <p>The interval between two consecutive health checks. Unit: seconds. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>5</strong>.</p>
+     * <p>The interval between health checks.</p>
+     * <ul>
+     * <li>Valid values: <strong>1</strong> to <strong>50</strong>.</li>
+     * <li>Default value: <strong>5</strong>.</li>
+     * <li>Unit: <strong>seconds</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -45,10 +54,10 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The HTTP request method for health checks. Valid values:</p>
+     * <p>The health check method for HTTP-type listeners. Valid values:</p>
      * <ul>
-     * <li><strong>HEAD</strong> (default): requests the headers of the resource.</li>
-     * <li><strong>GET</strong>: requests the specified resource and returns both the headers and entity body.</li>
+     * <li><strong>HEAD</strong> (default): requests only the header of the page.</li>
+     * <li><strong>GET</strong>: requests the specified page information and returns the entity body.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +67,11 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String healthCheckMethod;
 
     /**
-     * <p>The port used for health checks. Valid values: 1 to 65535. Default value: 80.</p>
+     * <p>The port used for health checks.</p>
+     * <ul>
+     * <li>Valid values: <strong>1 to 65535</strong>.</li>
+     * <li>Default value: <strong>80</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -67,7 +80,11 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckPort;
 
     /**
-     * <p>The number of consecutive successful health checks required for an application to be considered as healthy. Valid values: 1 to 10. Default value: 2.</p>
+     * <p>The number of consecutive successful health checks required before an unhealthy application is considered healthy.</p>
+     * <ul>
+     * <li>Valid values: <strong>1 to 10</strong>.</li>
+     * <li>Default value: <strong>2</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -76,9 +93,12 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckSuccTimes;
 
     /**
-     * <p>The timeout period of a health check response. If a backend ECS instance does not respond within the specified timeout period, the ECS instance fails the health check. Unit: seconds.\
-     * Valid values: <strong>1</strong> to <strong>100</strong>.\
-     * Default value: <strong>3</strong>.</p>
+     * <p>The amount of time to wait for a response from the health check. If the backend ECS instance does not respond within the specified time, the health check is considered failed.    </p>
+     * <ul>
+     * <li>Valid values: <strong>1</strong> to <strong>100</strong>.   </li>
+     * <li>Default value: <strong>3</strong>.</li>
+     * <li>Unit: <strong>seconds</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -87,11 +107,11 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The health check type. By default, this parameter is left empty.</p>
+     * <p>The health check type, which includes Layer 4 and Layer 7 probing. If this parameter is not specified, the value is empty by default.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>l4</strong>: Layer 4 health check.</li>
-     * <li><strong>l7</strong>: Layer 7 health check.</li>
+     * <li><strong>l4</strong>: Layer 4 probing.</li>
+     * <li><strong>l7</strong>: Layer 7 probing.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -101,7 +121,11 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String healthCheckType;
 
     /**
-     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length. Default value: &quot;/&quot;.</p>
+     * <p>The URI used for health checks.</p>
+     * <ul>
+     * <li>Length limit: <strong>1</strong> to <strong>80</strong> characters.</li>
+     * <li>Default value: <strong>&quot;/&quot;</strong>.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>/health_check</p>
@@ -110,7 +134,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String healthCheckURI;
 
     /**
-     * <p>The name of the application. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name must be 6 to 128 characters in length.</p>
+     * <p>The application name. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name must be 6 to 128 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,7 +144,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The remarks. This parameter is empty by default.</p>
+     * <p>The remarks. If this parameter is not specified, the value is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p>test app</p>
@@ -129,7 +153,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String remarks;
 
     /**
-     * <p>The server port. Valid values: 1 to 65535.</p>
+     * <p>The service port number. Valid values: 1 to 65535.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

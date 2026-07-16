@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeContainerAppResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application that is created.</p>
+     * <p>The ID of the created application.</p>
      * 
      * <strong>example:</strong>
      * <p>app-880688675783794688</p>
