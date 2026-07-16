@@ -1650,6 +1650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DbPassword", request.dbPassword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeSpec)) {
+            query.put("NodeSpec", request.nodeSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
             query.put("PayType", request.payType);
         }
@@ -1886,6 +1890,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSQLEvaluateTaskResponse createSQLEvaluateTask(CreateSQLEvaluateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSQLEvaluateTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service account.</p>
+     * 
+     * @param request CreateServiceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceAccountResponse
+     */
+    public CreateServiceAccountResponse createServiceAccountWithOptions(CreateServiceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceAccountType)) {
+            query.put("ServiceAccountType", request.serviceAccountType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceAccount"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceAccountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service account.</p>
+     * 
+     * @param request CreateServiceAccountRequest
+     * @return CreateServiceAccountResponse
+     */
+    public CreateServiceAccountResponse createServiceAccount(CreateServiceAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createServiceAccountWithOptions(request, runtime);
     }
 
     /**
@@ -2664,6 +2726,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePolardbxSupabaseInstanceResponse deletePolardbxSupabaseInstance(DeletePolardbxSupabaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolardbxSupabaseInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a service account.</p>
+     * 
+     * @param request DeleteServiceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServiceAccountResponse
+     */
+    public DeleteServiceAccountResponse deleteServiceAccountWithOptions(DeleteServiceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceAccountType)) {
+            query.put("ServiceAccountType", request.serviceAccountType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteServiceAccount"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceAccountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a service account.</p>
+     * 
+     * @param request DeleteServiceAccountRequest
+     * @return DeleteServiceAccountResponse
+     */
+    public DeleteServiceAccountResponse deleteServiceAccount(DeleteServiceAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteServiceAccountWithOptions(request, runtime);
     }
 
     /**
@@ -5570,6 +5690,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of a service account.</p>
+     * 
+     * @param request DescribeServiceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeServiceAccountResponse
+     */
+    public DescribeServiceAccountResponse describeServiceAccountWithOptions(DescribeServiceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServiceAccount"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceAccountResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of a service account.</p>
+     * 
+     * @param request DescribeServiceAccountRequest
+     * @return DescribeServiceAccountResponse
+     */
+    public DescribeServiceAccountResponse describeServiceAccount(DescribeServiceAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeServiceAccountWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the storage usage details of an instance, including the total capacity, used space, remaining space, and other information.</p>
      * 
@@ -6675,6 +6849,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableSqlAuditResponse enableSqlAudit(EnableSqlAuditRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableSqlAuditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a metadata query.</p>
+     * 
+     * @param request ExecuteMetaQueryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteMetaQueryResponse
+     */
+    public ExecuteMetaQueryResponse executeMetaQueryWithOptions(ExecuteMetaQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sql)) {
+            query.put("Sql", request.sql);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageInstId)) {
+            query.put("StorageInstId", request.storageInstId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteMetaQuery"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteMetaQueryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes a metadata query.</p>
+     * 
+     * @param request ExecuteMetaQueryRequest
+     * @return ExecuteMetaQueryResponse
+     */
+    public ExecuteMetaQueryResponse executeMetaQuery(ExecuteMetaQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.executeMetaQueryWithOptions(request, runtime);
     }
 
     /**

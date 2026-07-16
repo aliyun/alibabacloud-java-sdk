@@ -52,6 +52,15 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String dbPassword;
 
     /**
+     * <p>The node specifications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polarx.supabase.x2.small</p>
+     */
+    @NameInMap("NodeSpec")
+    public String nodeSpec;
+
+    /**
      * <p>The billing type. Valid values:</p>
      * <ul>
      * <li>PREPAY: subscription.</li>
@@ -189,6 +198,14 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     }
     public String getDbPassword() {
         return this.dbPassword;
+    }
+
+    public CreatePolardbxSupabaseInstanceRequest setNodeSpec(String nodeSpec) {
+        this.nodeSpec = nodeSpec;
+        return this;
+    }
+    public String getNodeSpec() {
+        return this.nodeSpec;
     }
 
     public CreatePolardbxSupabaseInstanceRequest setPayType(String payType) {
