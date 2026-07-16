@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListIncidentsResponseBody extends TeaModel {
     /**
-     * <p>The list of incidents.</p>
+     * <p>The list of events.</p>
      */
     @NameInMap("Incidents")
     public java.util.List<ListIncidentsResponseBodyIncidents> incidents;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -20,7 +20,7 @@ public class ListIncidentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAUqcj6VO4E3ECWIrFczs****</p>
@@ -126,6 +126,12 @@ public class ListIncidentsResponseBody extends TeaModel {
     }
 
     public static class ListIncidentsResponseBodyIncidents extends TeaModel {
+        @NameInMap("AlertInfos")
+        public String alertInfos;
+
+        @NameInMap("AttckTactics")
+        public String attckTactics;
+
         /**
          * <p>The creation time.</p>
          * 
@@ -136,7 +142,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the detection rule.</p>
+         * <p>The detection rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dr-qo5ww6ux0uc28*****</p>
@@ -144,8 +150,14 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("DetectionRuleId")
         public String detectionRuleId;
 
+        @NameInMap("EntityInfos")
+        public String entityInfos;
+
+        @NameInMap("IncidentDescription")
+        public String incidentDescription;
+
         /**
-         * <p>The name of the incident.</p>
+         * <p>The event name.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS unusual log in</p>
@@ -154,7 +166,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentName;
 
         /**
-         * <p>The remarks of the incident.</p>
+         * <p>The event remark.</p>
          * 
          * <strong>example:</strong>
          * <p>remark</p>
@@ -163,12 +175,12 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentRemark;
 
         /**
-         * <p>The status of the incident. Valid values:</p>
+         * <p>The event status. Valid values:</p>
          * <ul>
-         * <li>0: unhandled.</li>
-         * <li>1: handling.</li>
-         * <li>5: handling failed.</li>
-         * <li>10: handled.</li>
+         * <li>0: Unhandled.</li>
+         * <li>1: Handling.</li>
+         * <li>5: Handling failed.</li>
+         * <li>10: Handled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +190,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Integer incidentStatus;
 
         /**
-         * <p>The tags of the incident.</p>
+         * <p>The event tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;sys:data_source:siem&quot;,&quot;sys:trigger_type:auto&quot;]</p>
@@ -187,7 +199,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentTags;
 
         /**
-         * <p>The UUID of the incident.</p>
+         * <p>The event UUID.</p>
          * 
          * <strong>example:</strong>
          * <p>dbb1d7211c9285c862aa89385098****</p>
@@ -196,7 +208,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String incidentUuid;
 
         /**
-         * <p>The UID of the account that owns the incident.</p>
+         * <p>The UID of the account responsible for the event.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890xxxxxx</p>
@@ -205,7 +217,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The number of alerts associated with the incident.</p>
+         * <p>The number of alerts associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -214,7 +226,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         public Integer relateAlertCount;
 
         /**
-         * <p>The number of assets associated with the incident.</p>
+         * <p>The number of assets associated with the event.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -234,11 +246,11 @@ public class ListIncidentsResponseBody extends TeaModel {
         /**
          * <p>The threat level. Valid values:</p>
          * <ul>
-         * <li>5: critical.</li>
-         * <li>4: high.</li>
-         * <li>3: medium.</li>
-         * <li>2: low.</li>
-         * <li>1: informational.</li>
+         * <li>5: Critical.</li>
+         * <li>4: High.</li>
+         * <li>3: Medium.</li>
+         * <li>2: Low.</li>
+         * <li>1: Informational.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,6 +273,22 @@ public class ListIncidentsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListIncidentsResponseBodyIncidents setAlertInfos(String alertInfos) {
+            this.alertInfos = alertInfos;
+            return this;
+        }
+        public String getAlertInfos() {
+            return this.alertInfos;
+        }
+
+        public ListIncidentsResponseBodyIncidents setAttckTactics(String attckTactics) {
+            this.attckTactics = attckTactics;
+            return this;
+        }
+        public String getAttckTactics() {
+            return this.attckTactics;
+        }
+
         public ListIncidentsResponseBodyIncidents setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -275,6 +303,22 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
         public String getDetectionRuleId() {
             return this.detectionRuleId;
+        }
+
+        public ListIncidentsResponseBodyIncidents setEntityInfos(String entityInfos) {
+            this.entityInfos = entityInfos;
+            return this;
+        }
+        public String getEntityInfos() {
+            return this.entityInfos;
+        }
+
+        public ListIncidentsResponseBodyIncidents setIncidentDescription(String incidentDescription) {
+            this.incidentDescription = incidentDescription;
+            return this;
+        }
+        public String getIncidentDescription() {
+            return this.incidentDescription;
         }
 
         public ListIncidentsResponseBodyIncidents setIncidentName(String incidentName) {

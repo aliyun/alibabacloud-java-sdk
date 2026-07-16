@@ -14,7 +14,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String alertUuid;
 
     /**
-     * <p>The end time as a timestamp in milliseconds (ms).</p>
+     * <p>The end time as a UNIX timestamp in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1749090526055</p>
@@ -23,7 +23,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The name of the incident.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS unusual log in</p>
@@ -32,12 +32,12 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String incidentName;
 
     /**
-     * <p>The status of the incident. Valid values:</p>
+     * <p>The event status. Valid values:</p>
      * <ul>
-     * <li>0: unhandled.</li>
-     * <li>1: handling.</li>
-     * <li>5: handling failed.</li>
-     * <li>10: handled.</li>
+     * <li>0: Unhandled.</li>
+     * <li>1: Handling.</li>
+     * <li>5: Handling failed.</li>
+     * <li>10: Handled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,14 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer incidentStatus;
 
     /**
-     * <p>The tags of the incident.</p>
+     * <strong>example:</strong>
+     * <p>[0,1,5]</p>
+     */
+    @NameInMap("IncidentStatusList")
+    public java.util.List<String> incidentStatusList;
+
+    /**
+     * <p>The event tags.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;data_source\&quot;:[\&quot;sas\&quot;]}]</p>
@@ -56,13 +63,13 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String incidentTags;
 
     /**
-     * <p>The list of incident UUIDs, separated by commas (,).</p>
+     * <p>The list of event UUIDs, separated by commas (,).</p>
      */
     @NameInMap("IncidentUuids")
     public String incidentUuidsShrink;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language type of the response messages. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -75,7 +82,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -84,7 +91,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</p>
+     * <p>The pagination token for the next query. Leave this parameter empty for the first query or if no more results exist. If a next page exists, set this parameter to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAASLVeIxed4466E0LVmGkzwS6hJKd9DGVGMDRM6Lu****</p>
@@ -95,8 +102,8 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     /**
      * <p>The sort direction. Valid values:</p>
      * <ul>
-     * <li><strong>desc</strong> (default): descending order.</li>
-     * <li><strong>asc</strong>: ascending order.</li>
+     * <li><strong>desc</strong> (default): Descending order.</li>
+     * <li><strong>asc</strong>: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,10 +113,10 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String orderDirection;
 
     /**
-     * <p>The field name used to sort the list. Valid values:</p>
+     * <p>The name of the field used to sort the list.</p>
      * <ul>
-     * <li>GmtModified: sorts by incident update time (default).</li>
-     * <li>ThreatScore: sorts by threat score.</li>
+     * <li>GmtModified: Event update time (default).</li>
+     * <li>ThreatScore: Threat score.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,7 +126,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String orderFieldName;
 
     /**
-     * <p>The UID of the account that owns the incident.</p>
+     * <p>The UID of the account responsible for the event.</p>
      */
     @NameInMap("Owners")
     public java.util.List<String> owners;
@@ -145,10 +152,10 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:</p>
+     * <p>The region where the threat analysis data management center is located. Select the management center based on the region of your assets. Valid values:</p>
      * <ul>
-     * <li>cn-hangzhou: Your assets reside in the Chinese mainland.</li>
-     * <li>ap-southeast-1: Your assets reside outside China.</li>
+     * <li>cn-hangzhou: Your assets are located in the Chinese mainland.</li>
+     * <li>ap-southeast-1: Your assets are located outside China.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,7 +165,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the asset associated with the incident.</p>
+     * <p>The ID of the asset associated with the event.</p>
      * 
      * <strong>example:</strong>
      * <p>6c740667-80b2-476d-8924-2e706feb****</p>
@@ -167,7 +174,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public String relateAssetId;
 
     /**
-     * <p>The ID of the entity associated with the incident.</p>
+     * <p>The ID of the entity associated with the event.</p>
      * 
      * <strong>example:</strong>
      * <p>b920ed22259f5412099e97dfda96****</p>
@@ -187,8 +194,8 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     /**
      * <p>The view type. Valid values:</p>
      * <ul>
-     * <li>0: the view of the current Alibaba Cloud account.</li>
-     * <li>1: the view of all accounts in the enterprise.</li>
+     * <li>0: The view of the current Alibaba Cloud account.</li>
+     * <li>1: The view of all accounts in the enterprise.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -198,7 +205,7 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     public Integer roleType;
 
     /**
-     * <p>The start time as a timestamp in milliseconds (ms).</p>
+     * <p>The start time as a UNIX timestamp in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>1690102943000</p>
@@ -209,12 +216,15 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     /**
      * <p>The threat level. Valid values:</p>
      * <ul>
-     * <li>5: critical.</li>
-     * <li>4: high.</li>
-     * <li>3: medium.</li>
-     * <li>2: low.</li>
-     * <li>1: informational.</li>
+     * <li>5: Critical.</li>
+     * <li>4: High.</li>
+     * <li>3: Medium.</li>
+     * <li>2: Low.</li>
+     * <li>1: Informational.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ThreatLevel")
     public java.util.List<String> threatLevel;
@@ -254,6 +264,14 @@ public class ListIncidentsShrinkRequest extends TeaModel {
     }
     public Integer getIncidentStatus() {
         return this.incidentStatus;
+    }
+
+    public ListIncidentsShrinkRequest setIncidentStatusList(java.util.List<String> incidentStatusList) {
+        this.incidentStatusList = incidentStatusList;
+        return this;
+    }
+    public java.util.List<String> getIncidentStatusList() {
+        return this.incidentStatusList;
     }
 
     public ListIncidentsShrinkRequest setIncidentTags(String incidentTags) {

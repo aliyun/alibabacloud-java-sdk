@@ -1744,6 +1744,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a normalization schema.</p>
+     * 
+     * @param request DeleteNormalizationSchemaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNormalizationSchemaResponse
+     */
+    public DeleteNormalizationSchemaResponse deleteNormalizationSchemaWithOptions(DeleteNormalizationSchemaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaId)) {
+            body.put("NormalizationSchemaId", request.normalizationSchemaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.normalizationSchemaType)) {
+            body.put("NormalizationSchemaType", request.normalizationSchemaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNormalizationSchema"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNormalizationSchemaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a normalization schema.</p>
+     * 
+     * @param request DeleteNormalizationSchemaRequest
+     * @return DeleteNormalizationSchemaResponse
+     */
+    public DeleteNormalizationSchemaResponse deleteNormalizationSchema(DeleteNormalizationSchemaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNormalizationSchemaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>The JsonConfig request parameter is a complex JSON configuration. A supporting tool class is provided to help you create the configuration. For an example, see the <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</p>
      * 
      * <b>summary</b> : 
@@ -4084,7 +4150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of events.</p>
@@ -4121,6 +4187,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.incidentStatus)) {
             body.put("IncidentStatus", request.incidentStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentStatusList)) {
+            body.put("IncidentStatusList", request.incidentStatusList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.incidentTags)) {
@@ -4208,7 +4278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>Notifications are subject to frequency and time restrictions.
-     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
+     * Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves a list of events.</p>
@@ -6121,6 +6191,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDataBatchIngestionResponse updateDataBatchIngestion(UpdateDataBatchIngestionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateDataBatchIngestionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Notifications are subject to frequency and time restrictions.
+     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00 (UTC+8). No notifications are sent outside this time range.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a collector.</p>
+     * 
+     * @param request UpdateDataConnectorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDataConnectorResponse
+     */
+    public UpdateDataConnectorResponse updateDataConnectorWithOptions(UpdateDataConnectorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigId)) {
+            body.put("AuthConfigId", request.authConfigId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigProduct)) {
+            body.put("AuthConfigProduct", request.authConfigProduct);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authConfigVendor)) {
+            body.put("AuthConfigVendor", request.authConfigVendor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataConnectorConfig)) {
+            body.put("DataConnectorConfig", request.dataConnectorConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataConnectorId)) {
+            body.put("DataConnectorId", request.dataConnectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataConnectorStatus)) {
+            body.put("DataConnectorStatus", request.dataConnectorStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            body.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
+            body.put("RoleFor", request.roleFor);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDataConnector"),
+            new TeaPair("version", "2024-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDataConnectorResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Notifications are subject to frequency and time restrictions.
+     * Each user can receive a maximum of two notifications per day between 08:00 and 20:00 (UTC+8). No notifications are sent outside this time range.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a collector.</p>
+     * 
+     * @param request UpdateDataConnectorRequest
+     * @return UpdateDataConnectorResponse
+     */
+    public UpdateDataConnectorResponse updateDataConnector(UpdateDataConnectorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDataConnectorWithOptions(request, runtime);
     }
 
     /**
