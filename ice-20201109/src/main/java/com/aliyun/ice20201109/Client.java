@@ -19414,6 +19414,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is complete and to obtain the training status.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to query the task status.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a CosyVoice voice cloning training task.</p>
+     * 
+     * @param request SubmitCosyVoiceCustomizedVoiceJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitCosyVoiceCustomizedVoiceJobResponse
+     */
+    public SubmitCosyVoiceCustomizedVoiceJobResponse submitCosyVoiceCustomizedVoiceJobWithOptions(SubmitCosyVoiceCustomizedVoiceJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audios)) {
+            query.put("Audios", request.audios);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.demoAudioMediaURL)) {
+            query.put("DemoAudioMediaURL", request.demoAudioMediaURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            query.put("Gender", request.gender);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceName)) {
+            query.put("VoiceName", request.voiceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitCosyVoiceCustomizedVoiceJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCosyVoiceCustomizedVoiceJobResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>During training, you can call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to check whether the current task is complete and to obtain the training status.</li>
+     * <li>This is an <a href="https://help.aliyun.com/document_detail/3027141.html">asynchronous operation</a>. After you submit the task, a task ID is returned. The task is not yet complete at this point and enters a background queue for asynchronous execution. The final result is sent through a callback notification. You can also call the <a href="https://help.aliyun.com/document_detail/2384473.html">GetCustomizedVoiceJob</a> operation to query the task status.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Submits a CosyVoice voice cloning training task.</p>
+     * 
+     * @param request SubmitCosyVoiceCustomizedVoiceJobRequest
+     * @return SubmitCosyVoiceCustomizedVoiceJobResponse
+     */
+    public SubmitCosyVoiceCustomizedVoiceJobResponse submitCosyVoiceCustomizedVoiceJob(SubmitCosyVoiceCustomizedVoiceJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitCosyVoiceCustomizedVoiceJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li>Billing for voice cloning is based on customization and usage. For more information, see <a href="~~2399891#section-gy3-80e-clt~~">voice cloning pricing</a>.</li>
