@@ -7,13 +7,13 @@ public class AddFileShrinkRequest extends TeaModel {
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>If <code>CategoryType</code> is set to <code>UNSTRUCTURED</code>, you must specify the ID of the category to which the file belongs. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> API. You can also obtain the category ID by navigating to the \<em>\<em>Application data\</em>\</em> &gt; \<em>\<em>Files\</em>\</em> tab and clicking the ID icon next to the category name. You can specify <code>default</code> to use the default category.</p>
+     * <li><p>When CategoryType is set to UNSTRUCTURED, set this parameter to the category ID of the uploaded file, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>, click the File tab, and then click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</p>
      * </li>
-     * <li><p>If <code>CategoryType</code> is set to <code>SESSION_FILE</code>, specify <code>default</code>.</p>
+     * <li><p>When CategoryType is set to SESSION_FILE, set this parameter to &quot;default&quot;.</p>
      * </li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The ID of the category to which the file belongs. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> API. You can also obtain the category ID by navigating to the \<em>\<em>Application data\</em>\</em> &gt; \<em>\<em>Files\</em>\</em> tab and clicking the ID icon next to the category name. You can specify <code>default</code> to use the default category.</p>
+     * <p>Set this parameter to the category ID of the uploaded file, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also go to <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>, click the File tab, and then click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,17 +23,15 @@ public class AddFileShrinkRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The type of category. This parameter is optional. Default value: <code>UNSTRUCTURED</code>. Valid values:</p>
+     * <p>The category type. This parameter is optional. Default value: UNSTRUCTURED. Valid values:</p>
      * <ul>
-     * <li><code>UNSTRUCTURED</code>: A category used for building a knowledge base.</li>
+     * <li>UNSTRUCTURED: category used for building knowledge base scenarios.</li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><code>SESSION_FILE</code>: A file used for interactions within an agent <a href="https://help.aliyun.com/zh/model-studio/user-guide/file-interaction">session</a>.<blockquote>
-     * <p>If you set this parameter to <code>SESSION_FILE</code>, you must also set the <code>CategoryType</code> parameter to <code>SESSION_FILE</code> when you call the ApplyFileUploadLease API.
-     * Files of this type are valid only for the current session and expire after the session is closed, with a maximum validity of 7 days. These files are not intended for long-term storage.</p>
-     * </blockquote>
-     * </li>
+     * <li>SESSION_FILE: file used for <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> in agent applications.
+     * <note>When using <code>SESSION_FILE</code>, set the CategoryType parameter to <code>SESSION_FILE</code> when calling the ApplyFileUploadLease operation as well.</note>
+     * <note>The file is valid only for the current user session. After the user closes the session, the file expires. The maximum validity period is 7 days. Long-term storage is not supported.</note></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class AddFileShrinkRequest extends TeaModel {
     public String categoryType;
 
     /**
-     * <p>The upload lease ID. This value maps to the <code>FileUploadLeaseId</code> returned by the <strong>ApplyFileUploadLease</strong> API.</p>
+     * <p>The upload lease ID, which corresponds to the <code>FileUploadLeaseId</code> returned by the <strong>ApplyFileUploadLease</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,14 +52,14 @@ public class AddFileShrinkRequest extends TeaModel {
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The URL of the file. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document retrieval-based knowledge base</a>. When you interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent</a> in the Alibaba Cloud Model Studio console, this URL is returned with the retrieval results for the file in the <code>docUrl</code> field.</p>
+     * <p>Specifies a URL for the file. The system records this URL when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the retrieval results of the file through the <code>docUrl</code> field.</p>
      * <blockquote>
-     * <p>For this parameter to take effect, the <strong>knowledge base</strong> feature must be enabled for the agent, and the <strong>display the source of the answer</strong> option must be enabled.</p>
+     * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Show answer sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
      * </blockquote>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The URL of the file. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document retrieval-based knowledge base</a>. When you interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent</a> in the Alibaba Cloud Model Studio console, this URL is returned with the retrieval results for the file in the <code>docUrl</code> field.</p>
+     * <p>Specifies a URL for the file. The system records this URL when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the retrieval results of the file through the <code>docUrl</code> field.</p>
      * <blockquote>
-     * <p>For this parameter to take effect, the <strong>knowledge base</strong> feature must be enabled for the agent, and the <strong>display the source of the answer</strong> option must be enabled.</p>
+     * <p>The agent application must have <strong>Knowledge Base</strong> enabled and the <strong>Show answer sources</strong> feature turned on. Otherwise, this parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,30 +69,20 @@ public class AddFileShrinkRequest extends TeaModel {
     public String originalFileUrl;
 
     /**
-     * <p>The type of parser. Valid values:</p>
+     * <p>The parser type. Valid values:</p>
      * <ul>
-     * <li><p>DOCMIND: Intelligent Document Parsing</p>
-     * </li>
-     * <li><p>DOCMIND_DIGITAL: Digital Document Parsing</p>
-     * </li>
-     * <li><p>DOCMIND_LLM_VERSION: Large Language Model-based Document Parsing</p>
-     * </li>
-     * <li><p>DASH_QWEN_VL_PARSER: Qwen-VL Parsing</p>
-     * </li>
-     * <li><p>DOCMIND_LLM_VERSION_MEDIA: Audio and Video Parsing</p>
-     * </li>
-     * <li><p>AUTO_SELECT: Automatic Parser Selection</p>
-     * </li>
+     * <li>DOCMIND: intelligent document parsing</li>
+     * <li>DOCMIND_DIGITAL: electronic document parsing</li>
+     * <li>DOCMIND_LLM_VERSION: large language model document parsing</li>
+     * <li>DASH_QWEN_VL_PARSER: Qwen VL parsing</li>
+     * <li>DOCMIND_LLM_VERSION_MEDIA: audio and video parsing</li>
+     * <li>AUTO_SELECT: automatic parser selection</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <blockquote>
-     * <p>The system uses the specified parser to parse the uploaded file. If you set this parameter to <code>AUTO_SELECT</code>, the parser configured for the category is used.</p>
-     * </blockquote>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <blockquote>
-     * <p>If <code>CategoryType</code> is set to <code>UNSTRUCTURED</code>, the parser parses your uploaded file based on the category’s data parsing settings.
-     * If <code>CategoryType</code> is set to <code>SESSION_FILE</code>, the system uses a default parsing method that cannot be changed.</p>
-     * </blockquote>
+     * <p>&lt;props=&quot;intl&quot;&gt;
+     * <note>The uploaded file is parsed by using the currently specified parser. If you set this parameter to AUTO_SELECT, the parser configured for the category is used.</note></p>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * <note>When CategoryType is set to UNSTRUCTURED, the parser parses the uploaded file based on the data parsing settings of the current category.</note>
+     * <note>When CategoryType is set to SESSION_FILE, the system parses the file content by using the default method, which cannot be changed.</note></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,17 +92,15 @@ public class AddFileShrinkRequest extends TeaModel {
     public String parser;
 
     /**
-     * <p>The parser configuration. This parameter is required only if you set <code>Parser</code> to <code>DASH_QWEN_VL_PARSER</code>.</p>
+     * <p>The parser configuration. This parameter is required only when the parser type is set to Qwen VL parsing.</p>
      */
     @NameInMap("ParserConfig")
     public String parserConfigShrink;
 
     /**
      * <ul>
-     * <li><p>A list of tags for the file. You can specify up to 100 tags. The total length of all tags cannot exceed 700 characters.</p>
-     * </li>
-     * <li><p>If this parameter is not specified, no tags are added.</p>
-     * </li>
+     * <li>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</li>
+     * <li>Default value: empty, which means no tags are set.</li>
      * </ul>
      */
     @NameInMap("Tags")

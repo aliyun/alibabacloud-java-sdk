@@ -25,7 +25,7 @@ public class GetIndexJobStatusRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The <strong>SubmitIndexJob</strong> and <strong>SubmitIndexAddDocumentsJob</strong> operations support batch file import. This operation returns the overall knowledge base job status <code>Status</code> and the import status of each file <code>Document.Status</code>. If there are many files, use the <code>PageNumber</code> parameter for paging. Minimum value: 1. Default value: 1.</p>
+     * <p>Both the <strong>SubmitIndexJob</strong> and <strong>SubmitIndexAddDocumentsJob</strong> operations support batch file import. This operation returns the overall status of the knowledge base job (<code>Status</code>) and the import status of each file (<code>Document.Status</code>). If there are many files, use the <code>PageNumber</code> parameter for paged query. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

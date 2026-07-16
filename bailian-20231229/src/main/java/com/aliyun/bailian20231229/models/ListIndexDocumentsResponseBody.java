@@ -49,8 +49,8 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The operation was successful.</li>
-     * <li>false: The operation failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
 
     public static class ListIndexDocumentsResponseBodyDataDocuments extends TeaModel {
         /**
-         * <p>The error status code for the file import.</p>
+         * <p>The error status code for file import.</p>
          * 
          * <strong>example:</strong>
          * <p>110002</p>
@@ -150,7 +150,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The error message for the file import.</p>
+         * <p>The error message for file import.</p>
          * 
          * <strong>example:</strong>
          * <p>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</p>
@@ -178,12 +178,11 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
 
         /**
          * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>For document search or audio/video search knowledge bases, this parameter specifies the category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain the category ID by clicking the ID icon next to the category name on the Files tab of the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page.</p>
-         * <p>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain the data table ID by clicking the ID icon next to the data table name on the Tables tab of the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page.</p>
+         * <p>For document search or audio/video search knowledge bases, this parameter specifies the category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it by clicking the ID icon next to the category name on the Files tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</p>
+         * <p>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain it by clicking the ID icon next to the data table name on the Tables tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</p>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <p>For document search knowledge bases, this parameter specifies the category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain the category ID by clicking the ID icon next to the category name on the Files tab of the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page.</p>
-         * <p>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain the data table ID by clicking the ID icon next to the data table name on the Tables tab of the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</p>
-         * <p>.</p>
+         * <p>For document search knowledge bases, this parameter specifies the category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it by clicking the ID icon next to the category name on the Files tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</p>
+         * <p>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain it by clicking the ID icon next to the data table name on the Tables tab of <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cate_21a407a3372c4ba7aedc649709143f0cxxxxxxxx</p>
@@ -194,10 +193,10 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         /**
          * <p>The file import status. Valid values:</p>
          * <ul>
-         * <li>INSERT_ERROR: The file failed to be imported.</li>
-         * <li>RUNNING: The file is being imported.</li>
-         * <li>DELETED: The file has been deleted.</li>
-         * <li>FINISH: The file was imported.</li>
+         * <li>INSERT_ERROR: File import failed.</li>
+         * <li>RUNNING: File import in progress.</li>
+         * <li>DELETED: File deleted.</li>
+         * <li>FINISH: File import succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +286,7 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
 
     public static class ListIndexDocumentsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of files in the knowledge base, sorted by file import time in descending order (consistent with the console).</p>
+         * <p>The list of files in the knowledge base, sorted by document import time in descending order (consistent with the console).</p>
          */
         @NameInMap("Documents")
         public java.util.List<ListIndexDocumentsResponseBodyDataDocuments> documents;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddTableResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.Forbidden</p>
@@ -29,7 +29,7 @@ public class AddTableResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>778C0B3B-03C1-5FC1-A947-36EDD13606AB</p>
@@ -38,7 +38,7 @@ public class AddTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned by the operation.</p>
+     * <p>The status code returned by the interface.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,10 +47,10 @@ public class AddTableResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li>true: Succeeded.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data field of the operation.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public DescribeFileResponseBodyData data;
@@ -150,7 +150,7 @@ public class DescribeFileResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file type (extension). Valid values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</p>
+         * <p>The file type (extension). Possible values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</p>
          * 
          * <strong>example:</strong>
          * <p>pdf</p>
@@ -158,6 +158,12 @@ public class DescribeFileResponseBody extends TeaModel {
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The reason for the parsing failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error Message</p>
+         */
         @NameInMap("ParseErrorMessage")
         public String parseErrorMessage;
 
@@ -165,7 +171,7 @@ public class DescribeFileResponseBody extends TeaModel {
         public String parseResultDownloadUrl;
 
         /**
-         * <p>The parser type used to parse the file. Valid values:</p>
+         * <p>The parser type used to parse the file. Possible values:</p>
          * <ul>
          * <li>DASHSCOPE_DOCMIND: the default document parser.</li>
          * </ul>
@@ -187,34 +193,34 @@ public class DescribeFileResponseBody extends TeaModel {
 
         /**
          * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>For files used in document-based knowledge bases (type: UNSTRUCTURED), valid values:</p>
+         * <p>For files used in document-based knowledge bases (type: UNSTRUCTURED), possible values:</p>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <p>For files used in unstructured knowledge bases (type: UNSTRUCTURED), valid values:</p>
+         * <p>For files used in unstructured knowledge bases (type: UNSTRUCTURED), possible values:</p>
          * <ul>
-         * <li>INIT: pending parsing.</li>
-         * <li>IN_PARSE_QUEUE: queued for parsing.</li>
-         * <li>PARSING: being parsed.</li>
-         * <li>PARSE_SUCCESS: parsing completed.
+         * <li>INIT: Pending parsing.</li>
+         * <li>IN_PARSE_QUEUE: Queued for parsing.</li>
+         * <li>PARSING: Being parsed.</li>
+         * <li>PARSE_SUCCESS: Parsing completed.
          * <note>The document can be imported into a knowledge base only after the status changes to PARSE_SUCCESS.</note></li>
-         * <li>PARSE_FAILED: parsing failed.</li>
+         * <li>PARSE_FAILED: Parsing failed.</li>
          * </ul>
          * <p>&lt;props=&quot;china&quot;&gt;
-         * For files used in agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> (type: SESSION_FILE), valid values:</p>
+         * For files used in agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> (type: SESSION_FILE), possible values:</p>
          * <ul>
-         * <li>INIT: pending parsing.</li>
-         * <li>IN_PARSE_QUEUE: queued for parsing.</li>
-         * <li>PARSING: being parsed.</li>
-         * <li>PARSE_SUCCESS: parsing completed.</li>
-         * <li>PARSE_FAILED: parsing failed.</li>
-         * <li>SAFE_CHECKING: security check in progress.</li>
-         * <li>SAFE_CHECK_FAILED: security check failed.</li>
-         * <li>INDEX_BUILDING: index being built.</li>
-         * <li>INDEX_BUILD_SUCCESS: index built.</li>
-         * <li>INDEX_BUILDING_FAILED: index building failed.</li>
-         * <li>INDEX_DELETED: file index deleted.</li>
-         * <li>FILE_IS_READY: file is ready.
-         * <note>Q&amp;A can proceed only after the status changes to FILE_IS_READY.</note></li>
-         * <li>FILE_EXPIRED: file expired.
+         * <li>INIT: Pending parsing.</li>
+         * <li>IN_PARSE_QUEUE: Queued for parsing.</li>
+         * <li>PARSING: Being parsed.</li>
+         * <li>PARSE_SUCCESS: Parsing completed.</li>
+         * <li>PARSE_FAILED: Parsing failed.</li>
+         * <li>SAFE_CHECKING: Safety check in progress.</li>
+         * <li>SAFE_CHECK_FAILED: Safety check failed.</li>
+         * <li>INDEX_BUILDING: Index being built.</li>
+         * <li>INDEX_BUILD_SUCCESS: Index built.</li>
+         * <li>INDEX_BUILDING_FAILED: Index building failed.</li>
+         * <li>INDEX_DELETED: File index deleted.</li>
+         * <li>FILE_IS_READY: File is ready.
+         * <note>Q&amp;A is available only after the status changes to FILE_IS_READY.</note></li>
+         * <li>FILE_EXPIRED: File expired.
          * <note>The file is valid only for the current user session. After the user closes the session, the file expires (maximum validity period: 7 days). Long-term retention is not supported.</note>
          * .</li>
          * </ul>

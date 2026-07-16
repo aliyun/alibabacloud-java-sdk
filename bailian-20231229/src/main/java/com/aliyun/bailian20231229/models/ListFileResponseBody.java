@@ -158,6 +158,12 @@ public class ListFileResponseBody extends TeaModel {
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The reason for parsing failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error Message</p>
+         */
         @NameInMap("ParseErrorMessage")
         public String parseErrorMessage;
 
@@ -185,7 +191,7 @@ public class ListFileResponseBody extends TeaModel {
         /**
          * <p>The file parsing status. Valid values:</p>
          * <ul>
-         * <li>INIT: Initialization state, waiting to be scheduled.</li>
+         * <li>INIT: Initialization state. Waiting to be scheduled.</li>
          * <li>PARSING: Parsing in progress.</li>
          * <li>PARSE_SUCCESS: Parsing completed.</li>
          * <li>PARSE_FAILED: Parsing failed.</li>

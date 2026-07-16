@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIndexDocumentsRequest extends TeaModel {
     /**
-     * <p>Filters the returned file list by file name (without the file extension). Default value: empty, which means the results are not filtered by file name.</p>
+     * <p>Filters the returned file list by file name (without the file extension). Default value: empty, which means no filtering by file name.</p>
      * 
      * <strong>example:</strong>
      * <p>product-overview</p>
@@ -16,12 +16,14 @@ public class ListIndexDocumentsRequest extends TeaModel {
     /**
      * <p>Filters the returned file list by file import status. Valid values:</p>
      * <ul>
-     * <li>INSERT_ERROR: The file failed to be imported.</li>
-     * <li>RUNNING: The file is being imported.</li>
-     * <li>DELETED: The file has been deleted.</li>
-     * <li>FINISH: The file was imported.</li>
+     * <li>INSERT_ERROR: failed to import to the index.</li>
+     * <li>RUNNING: index building in progress.</li>
+     * <li>DELETED: deleted.</li>
+     * <li>FINISH: index building succeeded.</li>
+     * <li>PARSE_FAILED: parsing failed.</li>
+     * <li>DOC_PARSING: parsing in progress.</li>
      * </ul>
-     * <p>Default value: empty, which means the results are not filtered by file import status.</p>
+     * <p>Default value: empty, which means no filtering by file import status.</p>
      * 
      * <strong>example:</strong>
      * <p>FINISH</p>
@@ -32,8 +34,8 @@ public class ListIndexDocumentsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <code>DocumentName</code> parameter. Valid values:</p>
      * <ul>
-     * <li>true: Fuzzy matching is used to filter the returned file list by file name.</li>
-     * <li>false: Exact matching is used to filter the returned file list by file name.</li>
+     * <li>true: Performs fuzzy matching on the returned file list based on the file name.</li>
+     * <li>false: Performs exact matching on the returned file list based on the file name.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 
@@ -63,7 +65,7 @@ public class ListIndexDocumentsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of files to display per page in a paging query. No maximum limit.
+     * <p>The number of files to display per page in a paged query. No maximum limit.
      * Default value: 10.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeParseSettingRequest extends TeaModel {
     /**
-     * <p>The category ID. This is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain the ID from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - File tab&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Unstructured Data tab by clicking the ID icon next to the category name.</p>
+     * <p>The category ID, which is the <code>CategoryId</code> returned by the <strong>AddCategory</strong> operation. You can also obtain it by clicking the ID icon next to the category name on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files tab&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Unstructured Data tab.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,38 +15,23 @@ public class ChangeParseSettingRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The file type, specified by its extension. Valid values:</p>
+     * <p>The file type (extension). Valid values:</p>
      * <ul>
-     * <li><p>doc</p>
-     * </li>
-     * <li><p>docx</p>
-     * </li>
-     * <li><p>ppt</p>
-     * </li>
-     * <li><p>pptx</p>
-     * </li>
-     * <li><p>xls</p>
-     * </li>
-     * <li><p>xlsx</p>
-     * </li>
-     * <li><p>md</p>
-     * </li>
-     * <li><p>txt</p>
-     * </li>
-     * <li><p>pdf</p>
-     * </li>
-     * <li><p>png</p>
-     * </li>
-     * <li><p>jpg</p>
-     * </li>
-     * <li><p>jpeg</p>
-     * </li>
-     * <li><p>bmp</p>
-     * </li>
-     * <li><p>gif</p>
-     * </li>
-     * <li><p>html</p>
-     * </li>
+     * <li>doc</li>
+     * <li>docx</li>
+     * <li>ppt</li>
+     * <li>pptx</li>
+     * <li>xls</li>
+     * <li>xlsx</li>
+     * <li>md</li>
+     * <li>txt</li>
+     * <li>pdf</li>
+     * <li>png</li>
+     * <li>jpg</li>
+     * <li>jpeg</li>
+     * <li>bmp</li>
+     * <li>gif</li>
+     * <li>html</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -57,16 +42,13 @@ public class ChangeParseSettingRequest extends TeaModel {
     public String fileType;
 
     /**
-     * <p>The identifier for the parser. Different parsers are suitable for different scenarios. For more information, refer to the knowledge base. Valid values:</p>
+     * <p>The parser identifier code. Different parsers are applicable to different scenarios. For more information, see &quot;Knowledge Base&quot;. Valid values:</p>
      * <ul>
-     * <li><p>DOCMIND (intelligent document parsing)</p>
-     * </li>
-     * <li><p>DOCMIND_DIGITAL (digital document parsing)</p>
-     * </li>
-     * <li><p>DOCMIND_LLM_VERSION (LLM-based document parsing)</p>
-     * </li>
-     * <li><p>DASH_QWEN_VL_PARSER (Qwen VL Parser)</p>
-     * </li>
+     * <li>DOCMIND (Intelligent Document Parsing)</li>
+     * <li>DOCMIND_DIGITAL (Electronic Document Parsing)</li>
+     * <li>DOCMIND_LLM_VERSION (Large Model Document Parsing)</li>
+     * <li>DASH_QWEN_VL_PARSER (Qwen VL Parsing)</li>
+     * <li>DOCMIND_LLM_VERSION_MEDIA (Audio/Video Parsing)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -77,7 +59,7 @@ public class ChangeParseSettingRequest extends TeaModel {
     public String parser;
 
     /**
-     * <p>The parser configuration. This parameter is required only when the <code>Parser</code> parameter is set to <code>DASH_QWEN_VL_PARSER</code>.</p>
+     * <p>The parser configuration. This parameter is required only when the parser is set to Qwen VL Parsing.</p>
      */
     @NameInMap("ParserConfig")
     public ChangeParseSettingRequestParserConfig parserConfig;
@@ -130,7 +112,7 @@ public class ChangeParseSettingRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The prompt to use when calling the Qwen VL Parser.</p>
+         * <p>The prompt used when calling Qwen VL Parsing.</p>
          * 
          * <strong>example:</strong>
          * <p>#角色

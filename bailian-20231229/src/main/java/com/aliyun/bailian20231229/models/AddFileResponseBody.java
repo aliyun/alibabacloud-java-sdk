@@ -14,7 +14,7 @@ public class AddFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned for the request.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public AddFileResponseBodyData data;
@@ -38,7 +38,7 @@ public class AddFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code of the request.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,12 +47,10 @@ public class AddFileResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The call was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The call failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +114,7 @@ public class AddFileResponseBody extends TeaModel {
 
     public static class AddFileResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the file. Save this ID for use in subsequent API calls involving this file.</p>
+         * <p>The file ID. Keep this value safe because it is used in all subsequent API operations related to this file.</p>
          * 
          * <strong>example:</strong>
          * <p>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</p>
@@ -125,9 +123,9 @@ public class AddFileResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The parser that was used for the file. A possible value is:</p>
+         * <p>The parser type used to parse the file. Valid values:</p>
          * <ul>
-         * <li><code>DASHSCOPE_DOCMIND</code>: Alibaba Cloud Document Intelligence</li>
+         * <li>DASHSCOPE_DOCMIND: Alibaba Cloud intelligent document parsing.</li>
          * </ul>
          * 
          * <strong>example:</strong>

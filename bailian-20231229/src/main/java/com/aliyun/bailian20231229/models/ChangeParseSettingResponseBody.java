@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeParseSettingResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
@@ -14,7 +14,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned for a successful request.</p>
+     * <p>The business data returned when the request is successful.</p>
      */
     @NameInMap("Data")
     public ChangeParseSettingResponseBodyData data;
@@ -38,7 +38,7 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned for the request.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -47,12 +47,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,12 +114,10 @@ public class ChangeParseSettingResponseBody extends TeaModel {
 
     public static class ChangeParseSettingResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the configuration was successfully updated.</p>
+         * <p>Indicates whether the configuration was changed. Valid values:</p>
          * <ul>
-         * <li><p>true: The configuration was updated.</p>
-         * </li>
-         * <li><p>false: The configuration failed to be updated.</p>
-         * </li>
+         * <li>true: The configuration was updated.</li>
+         * <li>false: The configuration was not changed. The modification failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
     /**
-     * <p>Error status code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Business data field returned by the operation.</p>
+     * <p>The data field returned by the operation.</p>
      */
     @NameInMap("Data")
     public AddFilesFromAuthorizedOssResponseBodyData data;
 
     /**
-     * <p>Error information.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Cant find out category for category_id param.</p>
@@ -29,7 +29,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
@@ -47,10 +47,10 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Whether the operation call succeeded. Possible values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: Success.</li>
-     * <li>false: Failure.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
 
     public static class AddFilesFromAuthorizedOssResponseBodyDataAddFileResultList extends TeaModel {
         /**
-         * <p>The file ID. Please keep this value safe, as it will be used for all subsequent API operations related to this file.</p>
+         * <p>The file ID. Keep this value safe because it is required for all subsequent API operations related to this file.</p>
          * 
          * <strong>example:</strong>
          * <p>file_809f469a59ac449586ec692576xxxxx_102248XXX</p>
@@ -123,7 +123,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>Error information returned when file import fails.</p>
+         * <p>The error message returned when the file import fails.</p>
          * 
          * <strong>example:</strong>
          * <p>size too large</p>
@@ -132,7 +132,7 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The key name (Key) of the imported file in the OSS Bucket.</p>
+         * <p>The key of the imported file in the OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>root/path/this_is_temp_xxxx.pdf</p>
@@ -141,13 +141,13 @@ public class AddFilesFromAuthorizedOssResponseBody extends TeaModel {
         public String ossKey;
 
         /**
-         * <p>File import status. Possible values:</p>
+         * <p>The file import status. Valid values:</p>
          * <ul>
-         * <li>SUCCESS: Import (application data) completed.</li>
-         * <li>FAILED: Import (application data) failed.</li>
+         * <li>SUCCESS: The import to application data is complete.</li>
+         * <li>FAILED: The import to application data failed.</li>
          * </ul>
          * <blockquote>
-         * <p>Only files with the SUCCESS status can be used to create or update knowledge bases.</p>
+         * <p>Only files with a SUCCESS status can be used to create or update a knowledge base.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

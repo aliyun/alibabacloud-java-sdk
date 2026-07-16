@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIndexJobStatusResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Index.Forbidden</p>
@@ -38,7 +38,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The HTTP status code returned by the operation.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -49,8 +49,8 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The operation was successful.</li>
-     * <li>false: The operation failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
 
     public static class GetIndexJobStatusResponseBodyDataDocuments extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The error status code.</p>
          * 
          * <strong>example:</strong>
          * <p>Index.Document.ChunkError</p>
@@ -155,10 +155,12 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         /**
          * <p>The file import status. Valid values:</p>
          * <ul>
-         * <li>INSERT_ERROR: The file import failed.</li>
-         * <li>RUNNING: The file is being imported.</li>
-         * <li>DELETED: The file has been deleted.</li>
-         * <li>FINISH: The file was imported.</li>
+         * <li>INSERT_ERROR: Failed to import into the index.</li>
+         * <li>RUNNING: Index building in progress.</li>
+         * <li>DELETED: Deleted.</li>
+         * <li>FINISH: Index building succeeded.</li>
+         * <li>PARSE_FAILED: Parsing failed.</li>
+         * <li>DOC_PARSING: Parsing in progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,10 +243,10 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         /**
          * <p>The current status of the knowledge base job. Valid values:</p>
          * <ul>
-         * <li>COMPLETED: The job succeeded.</li>
-         * <li>FAILED: The job failed.</li>
-         * <li>RUNNING: The job is running.</li>
-         * <li>PENDING: The job is pending execution.</li>
+         * <li>COMPLETED: Execution succeeded.</li>
+         * <li>FAILED: Execution failed.</li>
+         * <li>RUNNING: Execution in progress.</li>
+         * <li>PENDING: Waiting for execution.</li>
          * </ul>
          * 
          * <strong>example:</strong>

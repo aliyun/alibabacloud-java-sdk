@@ -21,6 +21,12 @@ public class AddTableRequest extends TeaModel {
     @NameInMap("TableColumns")
     public java.util.List<AddTableRequestTableColumns> tableColumns;
 
+    /**
+     * <p>The table description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table description</p>
+     */
     @NameInMap("TableDesc")
     public String tableDesc;
 

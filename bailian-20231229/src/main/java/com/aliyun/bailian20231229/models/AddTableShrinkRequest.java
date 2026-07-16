@@ -21,6 +21,12 @@ public class AddTableShrinkRequest extends TeaModel {
     @NameInMap("TableColumns")
     public String tableColumnsShrink;
 
+    /**
+     * <p>The table description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table description</p>
+     */
     @NameInMap("TableDesc")
     public String tableDesc;
 

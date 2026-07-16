@@ -19,7 +19,7 @@ public class ListFileShrinkRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The list of file IDs to query. A maximum of 20 files can be queried per request.</p>
+     * <p>The list of file IDs to query. A maximum of 20 files can be queried at a time.</p>
      */
     @NameInMap("FileIds")
     public String fileIdsShrink;
@@ -36,7 +36,7 @@ public class ListFileShrinkRequest extends TeaModel {
     /**
      * <p>The number of entries per page for paging. Valid values: 1 to 200.</p>
      * <p>Default value:
-     * If the value is not set or is less than 1, the default value is 20. If the value is greater than 200, the default value is 200.</p>
+     * If no value is set or the value is less than 1, the default value is 20. If the value is set to greater than 200, the default value is 200.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
