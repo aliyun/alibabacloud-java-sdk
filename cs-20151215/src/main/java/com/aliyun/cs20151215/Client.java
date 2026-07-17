@@ -822,20 +822,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Generate OpenAPI request parameters through the console</h3>
-     * <p>When calling the CreateCluster API to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations through the console. Follow these steps:</p>
+     * <h3>Generate OpenAPI request parameters from the console</h3>
+     * <p>When you call the CreateCluster operation to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations from the console. Perform the following steps:</p>
      * <ol>
-     * <li>Log in to the <a href="https://csnew.console.aliyun.com">Container Service management console</a> and choose <strong>Clusters</strong> in the left navigation pane.</li>
-     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Template</strong>.</li>
-     * <li>In the dialog box, select the cluster type to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
-     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box will display the parameter combinations required for creating the cluster, which you can copy and use.<blockquote>
-     * <p>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For change details and alternative parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on OpenAPI parameter changes and API deprecation for ACK cluster management</a>.</notice></p>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service console</a> and choose <strong>Cluster List</strong> in the left-side navigation pane.</li>
+     * <li>On the <strong>Cluster List</strong> page, click <strong>Cluster Template</strong>.</li>
+     * <li>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
+     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the parameter combinations required to create the cluster, which you can copy and use.<blockquote>
+     * <p>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For details about the changes and override parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI parameters and offline of OpenAPIs for ACK cluster management</a>.</notice></p>
      * </blockquote>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>You can create ACK clusters through OpenAPI, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you will configure the cluster information, cluster components, and ACK-related cloud resources.</p>
+     * <p>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</p>
      * 
      * @param request CreateClusterRequest
      * @param headers map
@@ -1277,20 +1277,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Generate OpenAPI request parameters through the console</h3>
-     * <p>When calling the CreateCluster API to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations through the console. Follow these steps:</p>
+     * <h3>Generate OpenAPI request parameters from the console</h3>
+     * <p>When you call the CreateCluster operation to create a cluster, if the API call fails due to incorrect request parameter combinations, you can generate the required request parameter combinations from the console. Perform the following steps:</p>
      * <ol>
-     * <li>Log in to the <a href="https://csnew.console.aliyun.com">Container Service management console</a> and choose <strong>Clusters</strong> in the left navigation pane.</li>
-     * <li>On the <strong>Clusters</strong> page, click <strong>Cluster Template</strong>.</li>
-     * <li>In the dialog box, select the cluster type to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
-     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box will display the parameter combinations required for creating the cluster, which you can copy and use.<blockquote>
-     * <p>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For change details and alternative parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on OpenAPI parameter changes and API deprecation for ACK cluster management</a>.</notice></p>
+     * <li>Log on to the <a href="https://csnew.console.aliyun.com">Container Service console</a> and choose <strong>Cluster List</strong> in the left-side navigation pane.</li>
+     * <li>On the <strong>Cluster List</strong> page, click <strong>Cluster Template</strong>.</li>
+     * <li>In the dialog box, select the cluster type that you want to create, click Create, and then configure the cluster information on the cluster configuration page.</li>
+     * <li>After the configuration is complete, on the <strong>Confirm Configuration</strong> page, click <strong>Equivalent Code</strong> in the upper-right corner. The dialog box displays the parameter combinations required to create the cluster, which you can copy and use.<blockquote>
+     * <p>Notice: Starting from July 4, 2026, some request parameters will no longer take effect. For details about the changes and override parameter descriptions, see <a href="https://help.aliyun.com/document_detail/2932733.html">Notice on changes to OpenAPI parameters and offline of OpenAPIs for ACK cluster management</a>.</notice></p>
      * </blockquote>
      * </li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>You can create ACK clusters through OpenAPI, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you will configure the cluster information, cluster components, and ACK-related cloud resources.</p>
+     * <p>Creates an ACK cluster, including ACK managed clusters, ACK Serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, you configure cluster information, cluster components, and ACK-related cloud resources.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -1409,7 +1409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</p>
+     * <p>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1503,7 +1503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</p>
+     * <p>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further leverage the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -2852,7 +2852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterDetail API to query the detailed information of a specified cluster by cluster ID.</p>
+     * <p>Queries the details of a specified cluster by cluster ID.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2878,7 +2878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the DescribeClusterDetail API to query the detailed information of a specified cluster by cluster ID.</p>
+     * <p>Queries the details of a specified cluster by cluster ID.</p>
      * @return DescribeClusterDetailResponse
      */
     public DescribeClusterDetailResponse describeClusterDetail(String ClusterId) throws Exception {
@@ -3028,15 +3028,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>When removing nodes, perform standardized operations through this API or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by using <code>kubectl delete node</code>.</li>
-     * <li>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expiration in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</li>
+     * <li>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expires in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</li>
      * <li>If the node pool has a desired node count configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</li>
      * <li>Removing nodes involves Pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up relevant data in advance.</li>
-     * <li>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduled.</li>
+     * <li>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduling.</li>
      * <li>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not left unschedulable after node removal.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all node pools in a cluster.</p>
+     * <p>Queries the list of all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @param headers map
@@ -3072,15 +3072,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>When removing nodes, perform standardized operations through this API or the <a href="https://cs.console.aliyun.com">Container Service console</a>. Do not manually remove nodes by using <code>kubectl delete node</code>.</li>
-     * <li>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expiration in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</li>
+     * <li>Do not directly release nodes, remove instances, or allow nodes to be passively released due to subscription instance expires in the ECS or ESS console (or through related APIs). In these cases, nodes are directly stopped and automatically removed from the Container Service console.</li>
      * <li>If the node pool has a desired node count configured, the node pool automatically scales out other instances based on the corresponding configuration to maintain the node count at the desired number.</li>
      * <li>Removing nodes involves Pod migration, which may affect your services. Perform this operation during off-peak hours. Unexpected risks may occur during the operation. Back up relevant data in advance.</li>
-     * <li>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduled.</li>
+     * <li>When removing nodes, ACK executes a drain operation. Ensure that other nodes in the cluster have sufficient resources to avoid application Pods that cannot be scheduling.</li>
      * <li>Check the node affinity rules and scheduling policies of Pods on the nodes to be removed to ensure that Pods are not left unschedulable after node removal.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries all node pools in a cluster.</p>
+     * <p>Queries the list of all node pools in a cluster.</p>
      * 
      * @param request DescribeClusterNodePoolsRequest
      * @return DescribeClusterNodePoolsResponse
@@ -6006,10 +6006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><notice>Starting from July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes to ACK Cluster Management OpenAPI Parameters and OpenAPI Deprecation</a>.</notice></p>
+     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</p>
+     * <p>Modifies the configuration of an ACK cluster.</p>
      * 
      * @param request ModifyClusterRequest
      * @param headers map
@@ -6033,6 +6033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerEipId)) {
             body.put("api_server_eip_id", request.apiServerEipId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("client_token", request.clientToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
@@ -6119,10 +6123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><notice>Starting from July 04, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes to ACK Cluster Management OpenAPI Parameters and OpenAPI Deprecation</a>.</notice></p>
+     * <p><notice>Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For more information about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to OpenAPI request and response parameters and OpenAPI deprecation for ACK cluster management</a>.</notice></p>
      * 
      * <b>summary</b> : 
-     * <p>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</p>
+     * <p>Modifies the configuration of an ACK cluster.</p>
      * 
      * @param request ModifyClusterRequest
      * @return ModifyClusterResponse

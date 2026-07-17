@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>集群ID。</p>
      * 
      * <strong>example:</strong>
      * <p>cb95aa626a47740afbf6aa099b650****</p>
@@ -14,7 +14,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
@@ -23,7 +23,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>任务ID。</p>
      * 
      * <strong>example:</strong>
      * <p>T-5a54309c80282e39ea****</p>
