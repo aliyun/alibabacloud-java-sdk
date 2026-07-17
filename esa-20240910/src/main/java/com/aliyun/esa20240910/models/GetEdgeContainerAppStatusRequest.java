@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppStatusRequest extends TeaModel {
     /**
-     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+     * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetEdgeContainerAppStatusRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The release environment. Valid values: prod and staging.</p>
+     * <p>The publishing environment. Valid values: prod and staging.</p>
      * 
      * <strong>example:</strong>
      * <p>staging</p>

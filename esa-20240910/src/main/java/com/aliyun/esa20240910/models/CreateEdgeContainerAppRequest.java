@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEdgeContainerAppRequest extends TeaModel {
     /**
-     * <p>The number of consecutive failed health checks required before a healthy application is considered unhealthy.</p>
+     * <p>The number of consecutive failed health checks required. If an application is healthy, it is considered unhealthy after the specified number of consecutive failed probes.</p>
      * <ul>
      * <li>Valid values: <strong>1 to 10</strong>. </li>
      * <li>Default value: <strong>5</strong>.</li>
@@ -18,7 +18,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckFailTimes;
 
     /**
-     * <p>The domain name used for health checks. If this parameter is not specified, the value is empty by default.</p>
+     * <p>The domain name used for health checks. If not specified, the value is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -27,7 +27,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String healthCheckHost;
 
     /**
-     * <p>The HTTP status code that indicates the health check is Normal. Valid values:</p>
+     * <p>The HTTP status code that indicates a Normal health check result. Valid values:</p>
      * <ul>
      * <li><strong>http_2xx</strong> (default).</li>
      * <li><strong>http_3xx</strong>.</li>
@@ -80,7 +80,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckPort;
 
     /**
-     * <p>The number of consecutive successful health checks required before an unhealthy application is considered healthy.</p>
+     * <p>The number of consecutive successful health checks required. If an application is unhealthy, it is considered healthy again after the specified number of consecutive successful probes.</p>
      * <ul>
      * <li>Valid values: <strong>1 to 10</strong>.</li>
      * <li>Default value: <strong>2</strong>.</li>
@@ -93,7 +93,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckSuccTimes;
 
     /**
-     * <p>The amount of time to wait for a response from the health check. If the backend ECS instance does not respond within the specified time, the health check is considered failed.    </p>
+     * <p>The amount of time to wait for a response from the health check. If the backend ECS instance does not respond correctly within the specified time, the health check is considered failed.    </p>
      * <ul>
      * <li>Valid values: <strong>1</strong> to <strong>100</strong>.   </li>
      * <li>Default value: <strong>3</strong>.</li>
@@ -107,7 +107,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The health check type, which includes Layer 4 and Layer 7 probing. If this parameter is not specified, the value is empty by default.</p>
+     * <p>The health check type, which includes Layer 4 and Layer 7 probing. If not specified, the value is empty by default.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><strong>l4</strong>: Layer 4 probing.</li>
@@ -135,6 +135,9 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
 
     /**
      * <p>The application name. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name must be 6 to 128 characters in length.</p>
+     * <blockquote>
+     * <p>Notice: You must activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</notice></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -144,7 +147,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The remarks. If this parameter is not specified, the value is empty by default.</p>
+     * <p>The remarks. If not specified, the value is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p>test app</p>

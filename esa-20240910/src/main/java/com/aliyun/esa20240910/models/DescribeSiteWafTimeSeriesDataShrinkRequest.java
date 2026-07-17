@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteWafTimeSeriesDataShrinkRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time for the data query.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
@@ -25,8 +25,8 @@ public class DescribeSiteWafTimeSeriesDataShrinkRequest extends TeaModel {
     public String fieldsShrink;
 
     /**
-     * <p>The time granularity of the queried data. Unit: seconds.</p>
-     * <p>Based on the maximum time span of a single query, this parameter supports the values 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the <strong>supported time granularity</strong> section above.</p>
+     * <p>The time granularity of the queried data, in seconds.</p>
+     * <p>Based on the maximum time span of a single query, this parameter supports the following values: 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the <strong>supported query time granularity</strong> section above.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -45,7 +45,7 @@ public class DescribeSiteWafTimeSeriesDataShrinkRequest extends TeaModel {
     public String siteId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time for the data query.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>

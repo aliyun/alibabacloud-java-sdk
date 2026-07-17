@@ -113,6 +113,7 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
 
         /**
          * <p>The beginning of the time interval.</p>
+         * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-10T00:00:00Z</p>

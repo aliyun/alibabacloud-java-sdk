@@ -20,11 +20,11 @@ public class DescribeWafUsageDataRequest extends TeaModel {
      * <p>The time granularity for the query data, in seconds.</p>
      * <p>The valid values vary based on the time range specified by <strong>StartTime</strong> and <strong>EndTime</strong>:</p>
      * <ul>
-     * <li><p>Less than 3 days: <strong>300</strong>, <strong>3600</strong>, or <strong>86400</strong>. Default value: <strong>300</strong>.</p>
+     * <li><p>Less than 3 days: Valid values are <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. Default value: <strong>300</strong>.</p>
      * </li>
-     * <li><p>3 to 31 days (excluding 31 days): <strong>3600</strong> or <strong>86400</strong>. Default value: <strong>3600</strong>.</p>
+     * <li><p>3 to 31 days (exclusive of 31 days): Valid values are <strong>3600</strong> and <strong>86400</strong>. Default value: <strong>3600</strong>.</p>
      * </li>
-     * <li><p>31 days or more: <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
+     * <li><p>31 days or more: The only valid value is <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
      * </li>
      * </ul>
      * 

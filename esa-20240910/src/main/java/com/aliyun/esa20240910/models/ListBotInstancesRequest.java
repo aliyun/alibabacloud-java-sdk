@@ -3,9 +3,9 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class ListCacheReserveInstancesRequest extends TeaModel {
+public class ListBotInstancesRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
@@ -14,7 +14,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number for the paged query. Settings this parameter for paging. Default value: 1. Valid values: 1 to 100000.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>500</strong>.</p>
+     * <p>The number of entries per page for the paged query. This parameter is used for paging. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,20 +32,20 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort field. Valid values:</p>
+     * <p>The field by which to sort the results. By default, the results are sorted by purchase time. Valid values:</p>
      * <ul>
-     * <li><strong>ExpireTime</strong>: sorts by expiration time.</li>
-     * <li><strong>CreateTime</strong>: sorts by creation time.</li>
+     * <li><strong>CreateTime</strong>: purchase time.</li>
+     * <li><strong>ExpireTime</strong>: expiration time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>ExpireTime</p>
+     * <p>CreateTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sort order. Default value: desc. Valid values:</p>
      * <ul>
      * <li><strong>asc</strong>: ascending order.</li>
      * <li><strong>desc</strong>: descending order.</li>
@@ -58,29 +58,26 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>The instance status of the cache reserve instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: Normal service status.</li>
-     * <li><strong>offline</strong>: The instance expires but has not exceeded the retention period and is unavailable.</li>
+     * <li><strong>online</strong>: The instance is running normally.</li>
+     * <li><strong>offline</strong>: The instance has expired but has not exceeded the retention period and is unavailable.</li>
      * <li><strong>disable</strong>: The instance has been released.</li>
-     * <li><strong>overdue</strong>: The instance is stopped due to an overdue payment.</li>
+     * <li><strong>overdue</strong>: The instance has an overdue payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>online</p>
-     * 
-     * <strong>if can be null:</strong>
-     * <p>false</p>
      */
     @NameInMap("Status")
     public String status;
 
-    public static ListCacheReserveInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListCacheReserveInstancesRequest self = new ListCacheReserveInstancesRequest();
+    public static ListBotInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListBotInstancesRequest self = new ListBotInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListCacheReserveInstancesRequest setInstanceId(String instanceId) {
+    public ListBotInstancesRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -88,7 +85,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListCacheReserveInstancesRequest setPageNumber(Integer pageNumber) {
+    public ListBotInstancesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -96,7 +93,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListCacheReserveInstancesRequest setPageSize(Integer pageSize) {
+    public ListBotInstancesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -104,7 +101,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListCacheReserveInstancesRequest setSortBy(String sortBy) {
+    public ListBotInstancesRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
@@ -112,7 +109,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListCacheReserveInstancesRequest setSortOrder(String sortOrder) {
+    public ListBotInstancesRequest setSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
@@ -120,7 +117,7 @@ public class ListCacheReserveInstancesRequest extends TeaModel {
         return this.sortOrder;
     }
 
-    public ListCacheReserveInstancesRequest setStatus(String status) {
+    public ListBotInstancesRequest setStatus(String status) {
         this.status = status;
         return this;
     }

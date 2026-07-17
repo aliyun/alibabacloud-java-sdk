@@ -2126,7 +2126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application for edge containers. You can deploy and publish application versions to containerize edge services.
+     * <p>Creates an application for edge containers. You can deploy and release the application through versioning to containerize edge services.
      * Note: You must activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</p>
      * 
      * @param request CreateEdgeContainerAppRequest
@@ -2211,7 +2211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application for edge containers. You can deploy and publish application versions to containerize edge services.
+     * <p>Creates an application for edge containers. You can deploy and release the application through versioning to containerize edge services.
      * Note: You must activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</p>
      * 
      * @param request CreateEdgeContainerAppRequest
@@ -2280,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</p>
+     * <p>Creates an associated domain name for an Edge Container application. When a user sends a request from a client to access the associated domain name, the request is forwarded to the edge application deployed by the user.</p>
      * 
      * @param request CreateEdgeContainerAppRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2320,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates a domain name with a containerized application. This way, requests destined for the associated domain name are forwarded to the application.</p>
+     * <p>Creates an associated domain name for an Edge Container application. When a user sends a request from a client to access the associated domain name, the request is forwarded to the edge application deployed by the user.</p>
      * 
      * @param request CreateEdgeContainerAppRecordRequest
      * @return CreateEdgeContainerAppRecordResponse
@@ -2332,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an edge container application version. You can iteratively publish applications by version.
+     * <p>Creates an edge container application version. You can iteratively release applications by version.
      * Note:</p>
      * <ol>
      * <li>Your account must have an ESA plan with the Edge Container feature enabled.</li>
@@ -2388,7 +2388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an edge container application version. You can iteratively publish applications by version.
+     * <p>Creates an edge container application version. You can iteratively release applications by version.
      * Note:</p>
      * <ol>
      * <li>Your account must have an ESA plan with the Edge Container feature enabled.</li>
@@ -6110,9 +6110,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Deletes an associated domain name from an edge container application. After deletion, the edge container service can no longer be accessed through this domain name.
-     * Note: 1) Call CreateEdgeContainerApp first to create an edge container application and record the returned AppId.
-     * 2) Call CreateEdgeContainerAppRecord first to bindomain name record (RecordName) to the application.
-     * 3) Provide a complete three-step call example: create → bindomain → delete.</p>
+     * Note: 1) You must first call CreateEdgeContainerApp to create an edge container application and record the returned AppId.
+     * 2) You must first call CreateEdgeContainerAppRecord to bind a domain name record (RecordName) to the application.
+     * 3) A complete three-step call example of create, bind, and delete is provided.</p>
      * 
      * @param request DeleteEdgeContainerAppRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6153,9 +6153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Deletes an associated domain name from an edge container application. After deletion, the edge container service can no longer be accessed through this domain name.
-     * Note: 1) Call CreateEdgeContainerApp first to create an edge container application and record the returned AppId.
-     * 2) Call CreateEdgeContainerAppRecord first to bindomain name record (RecordName) to the application.
-     * 3) Provide a complete three-step call example: create → bindomain → delete.</p>
+     * Note: 1) You must first call CreateEdgeContainerApp to create an edge container application and record the returned AppId.
+     * 2) You must first call CreateEdgeContainerAppRecord to bind a domain name record (RecordName) to the application.
+     * 3) A complete three-step call example of create, bind, and delete is provided.</p>
      * 
      * @param request DeleteEdgeContainerAppRecordRequest
      * @return DeleteEdgeContainerAppRecordResponse
@@ -9589,20 +9589,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the past 24 hours; if you specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the specified time period.</li>
-     * <li>The API returns different time granularities based on the span between <code>StartTime</code> and <code>EndTime</code>.<ul>
-     * <li>For a span of 3 hours or less, it returns 1-minute granularity data.</li>
-     * <li>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</li>
-     * <li>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</li>
-     * <li>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</li>
-     * <li>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>The time granularity of returned data varies based on the time span between StartTime and EndTime.<ul>
+     * <li>Less than or equal to 3 hours: returns data at 1-minute granularity.</li>
+     * <li>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</li>
+     * <li>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</li>
+     * <li>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</li>
+     * <li>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</li>
      * </ul>
      * </li>
-     * <li>Due to the high number of accesses during the query period, the data analysis may be sampled.</li>
+     * <li>Due to the large number of access requests during the query time range, data analytics results may involve sampling.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query traffic analysis time series data</p>
+     * <p>Queries network traffic analysis timing data at the account dimension or site dimension.</p>
      * 
      * @param tmpReq DescribeSiteTimeSeriesDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9657,20 +9657,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the past 24 hours; if you specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the specified time period.</li>
-     * <li>The API returns different time granularities based on the span between <code>StartTime</code> and <code>EndTime</code>.<ul>
-     * <li>For a span of 3 hours or less, it returns 1-minute granularity data.</li>
-     * <li>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</li>
-     * <li>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</li>
-     * <li>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</li>
-     * <li>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>The time granularity of returned data varies based on the time span between StartTime and EndTime.<ul>
+     * <li>Less than or equal to 3 hours: returns data at 1-minute granularity.</li>
+     * <li>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</li>
+     * <li>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</li>
+     * <li>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</li>
+     * <li>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</li>
      * </ul>
      * </li>
-     * <li>Due to the high number of accesses during the query period, the data analysis may be sampled.</li>
+     * <li>Due to the large number of access requests during the query time range, data analytics results may involve sampling.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Query traffic analysis time series data</p>
+     * <p>Queries network traffic analysis timing data at the account dimension or site dimension.</p>
      * 
      * @param request DescribeSiteTimeSeriesDataRequest
      * @return DescribeSiteTimeSeriesDataResponse
@@ -9997,8 +9997,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the page monitoring data.</p>
+     * <p>Queries web page observation quality data.</p>
      * 
      * @param request DescribeUrlObservationDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10049,8 +10052,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the page monitoring data.</p>
+     * <p>Queries web page observation quality data.</p>
      * 
      * @param request DescribeUrlObservationDataRequest
      * @return DescribeUrlObservationDataResponse
@@ -11259,7 +11265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a containerized application, including basic application configurations and health check configurations.</p>
+     * <p>Retrieves application information for an edge container, including basic application configurations and health check settings.</p>
      * 
      * @param request GetEdgeContainerAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11291,7 +11297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a containerized application, including basic application configurations and health check configurations.</p>
+     * <p>Retrieves application information for an edge container, including basic application configurations and health check settings.</p>
      * 
      * @param request GetEdgeContainerAppRequest
      * @return GetEdgeContainerAppResponse
@@ -11475,7 +11481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status information about a containerized application, including the deployment, release, and rollback of the application.</p>
+     * <p>Retrieves the application status information of an edge container, including deployment, publishing, and rollback details.</p>
      * 
      * @param request GetEdgeContainerAppStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11511,7 +11517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status information about a containerized application, including the deployment, release, and rollback of the application.</p>
+     * <p>Retrieves the application status information of an edge container, including deployment, publishing, and rollback details.</p>
      * 
      * @param request GetEdgeContainerAppStatusRequest
      * @return GetEdgeContainerAppStatusResponse
@@ -11523,7 +11529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a version of a containerized application. You can select an application version to release based on the version information.</p>
+     * <p>Retrieves the version information of an edge container application. You can use the version information to select a specific version for publishing.</p>
      * 
      * @param request GetEdgeContainerAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11551,7 +11557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a version of a containerized application. You can select an application version to release based on the version information.</p>
+     * <p>Retrieves the version information of an edge container application. You can use the version information to select a specific version for publishing.</p>
      * 
      * @param request GetEdgeContainerAppVersionRequest
      * @return GetEdgeContainerAppVersionResponse
@@ -14294,6 +14300,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the maximum value of a numeric quota across all plans under a user account.</p>
+     * 
+     * @param request GetUserMaxPlanQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserMaxPlanQuotaResponse
+     */
+    public GetUserMaxPlanQuotaResponse getUserMaxPlanQuotaWithOptions(GetUserMaxPlanQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaName)) {
+            query.put("QuotaName", request.quotaName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserMaxPlanQuota"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserMaxPlanQuotaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the maximum value of a numeric quota across all plans under a user account.</p>
+     * 
+     * @param request GetUserMaxPlanQuotaRequest
+     * @return GetUserMaxPlanQuotaResponse
+     */
+    public GetUserMaxPlanQuotaResponse getUserMaxPlanQuota(GetUserMaxPlanQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserMaxPlanQuotaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>By calling the <code>GetUserWafRuleset</code> operation, you can retrieve information about a specific Web Application Firewall (WAF) ruleset based on the instance ID and ruleset ID. The returned information includes but is not limited to the position, name, description, status, and specific rules of the ruleset. Make sure that you correctly specify the required parameters to avoid request failures.</p>
      * 
@@ -14751,7 +14807,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cache reserve instances for your account.</p>
+     * <p>Queries the list of Bot security instances.</p>
+     * 
+     * @param request ListBotInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBotInstancesResponse
+     */
+    public ListBotInstancesResponse listBotInstancesWithOptions(ListBotInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBotInstances"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBotInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of Bot security instances.</p>
+     * 
+     * @param request ListBotInstancesRequest
+     * @return ListBotInstancesResponse
+     */
+    public ListBotInstancesResponse listBotInstances(ListBotInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBotInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of cache reserve instances for the current user.</p>
      * 
      * @param request ListCacheReserveInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14779,7 +14899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cache reserve instances for your account.</p>
+     * <p>Queries the list of cache reserve instances for the current user.</p>
      * 
      * @param request ListCacheReserveInstancesRequest
      * @return ListCacheReserveInstancesResponse
@@ -15497,7 +15617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists versions of all containerized applications.</p>
+     * <p>Retrieves the version list of an edge container application, including information about all successfully created applications.</p>
      * 
      * @param request ListEdgeContainerAppVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15525,7 +15645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists versions of all containerized applications.</p>
+     * <p>Retrieves the version list of an edge container application, including information about all successfully created applications.</p>
      * 
      * @param request ListEdgeContainerAppVersionsRequest
      * @return ListEdgeContainerAppVersionsResponse
@@ -15537,7 +15657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all containerized applications in your Alibaba Cloud account.</p>
+     * <p>Retrieves a list of edge container applications, including all edge applications created under the current account.</p>
      * 
      * @param request ListEdgeContainerAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15589,7 +15709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all containerized applications in your Alibaba Cloud account.</p>
+     * <p>Retrieves a list of edge container applications, including all edge applications created under the current account.</p>
      * 
      * @param request ListEdgeContainerAppsRequest
      * @return ListEdgeContainerAppsResponse
@@ -16120,6 +16240,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstanceQuotasWithUsageResponse listInstanceQuotasWithUsage(ListInstanceQuotasWithUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstanceQuotasWithUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the quota information of multiple instances.</p>
+     * 
+     * @param request ListInstancesQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancesQuotaResponse
+     */
+    public ListInstancesQuotaResponse listInstancesQuotaWithOptions(ListInstancesQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaName)) {
+            query.put("QuotaName", request.quotaName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            body.put("InstanceIds", request.instanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstancesQuota"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesQuotaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the quota information of multiple instances.</p>
+     * 
+     * @param request ListInstancesQuotaRequest
+     * @return ListInstancesQuotaResponse
+     */
+    public ListInstancesQuotaResponse listInstancesQuota(ListInstancesQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInstancesQuotaWithOptions(request, runtime);
     }
 
     /**
@@ -16809,6 +16979,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPostpaidSitePlansResponse listPostpaidSitePlans(ListPostpaidSitePlansRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPostpaidSitePlansWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the minimum plan edition required for a site plan quota to take effect, that is, the minimum plan edition to which the quota must be upgraded for use.</p>
+     * 
+     * @param request ListQuotasMinEffectPlanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListQuotasMinEffectPlanResponse
+     */
+    public ListQuotasMinEffectPlanResponse listQuotasMinEffectPlanWithOptions(ListQuotasMinEffectPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListQuotasMinEffectPlan"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotasMinEffectPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the minimum plan edition required for a site plan quota to take effect, that is, the minimum plan edition to which the quota must be upgraded for use.</p>
+     * 
+     * @param request ListQuotasMinEffectPlanRequest
+     * @return ListQuotasMinEffectPlanResponse
+     */
+    public ListQuotasMinEffectPlanResponse listQuotasMinEffectPlan(ListQuotasMinEffectPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listQuotasMinEffectPlanWithOptions(request, runtime);
     }
 
     /**
@@ -18606,6 +18816,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies the feature configurations of a plan instance.</p>
+     * 
+     * @param tmpReq ModifyInstanceFeaturesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceFeaturesResponse
+     */
+    public ModifyInstanceFeaturesResponse modifyInstanceFeaturesWithOptions(ModifyInstanceFeaturesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyInstanceFeaturesShrinkRequest request = new ModifyInstanceFeaturesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.siteFeatures)) {
+            request.siteFeaturesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.siteFeatures, "SiteFeatures", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteFeaturesShrink)) {
+            query.put("SiteFeatures", request.siteFeaturesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceFeatures"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceFeaturesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the feature configurations of a plan instance.</p>
+     * 
+     * @param request ModifyInstanceFeaturesRequest
+     * @return ModifyInstanceFeaturesResponse
+     */
+    public ModifyInstanceFeaturesResponse modifyInstanceFeatures(ModifyInstanceFeaturesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceFeaturesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables plan-related configurations with one click when changing the plan for a site.</p>
+     * 
+     * @param request ModifySiteFeaturesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySiteFeaturesResponse
+     */
+    public ModifySiteFeaturesResponse modifySiteFeaturesWithOptions(ModifySiteFeaturesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.newInstanceId)) {
+            query.put("NewInstanceId", request.newInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteFeatures)) {
+            query.put("SiteFeatures", request.siteFeatures);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySiteFeatures"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySiteFeaturesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables plan-related configurations with one click when changing the plan for a site.</p>
+     * 
+     * @param request ModifySiteFeaturesRequest
+     * @return ModifySiteFeaturesResponse
+     */
+    public ModifySiteFeaturesResponse modifySiteFeatures(ModifySiteFeaturesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySiteFeaturesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Activates the edge container service.</p>
      * 
      * @param request OpenEdgeContainerRequest
@@ -18756,7 +19072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a specific version of a containerized application.</p>
+     * <p>Publishes a specified version of an edge container application. You can use this operation to iterate application versions.</p>
      * 
      * @param tmpReq PublishEdgeContainerAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18828,7 +19144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Releases a specific version of a containerized application.</p>
+     * <p>Publishes a specified version of an edge container application. You can use this operation to iterate application versions.</p>
      * 
      * @param request PublishEdgeContainerAppVersionRequest
      * @return PublishEdgeContainerAppVersionResponse

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeSiteTimeSeriesDataResponseBodyData> data;
 
     /**
-     * <p>The end time for fetching the data.</p>
-     * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time of the returned data.</p>
+     * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-09T16:00:00Z</p>
@@ -21,7 +21,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The granularity of the data, in seconds.</p>
+     * <p>The data granularity. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -39,7 +39,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sampling rate, in %.</p>
+     * <p>The sampling rate. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -48,8 +48,8 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
     public Float samplingRate;
 
     /**
-     * <p>The start time for fetching the data.</p>
-     * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time for the data query.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-08T16:00:00Z</p>
@@ -58,7 +58,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>Aggregated query data.</p>
+     * <p>The summarized data.</p>
      */
     @NameInMap("SummarizedData")
     public java.util.List<DescribeSiteTimeSeriesDataResponseBodySummarizedData> summarizedData;
@@ -126,7 +126,8 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
 
     public static class DescribeSiteTimeSeriesDataResponseBodyDataDetailData extends TeaModel {
         /**
-         * <p>Start timestamp of the time slice.</p>
+         * <p>The start time of the time slice.</p>
+         * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-08T16:00:00Z</p>
@@ -135,7 +136,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
-         * <p>Value.</p>
+         * <p>The value.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -168,13 +169,13 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
 
     public static class DescribeSiteTimeSeriesDataResponseBodyData extends TeaModel {
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("DetailData")
         public java.util.List<DescribeSiteTimeSeriesDataResponseBodyDataDetailData> detailData;
 
         /**
-         * <p>Query dimension.</p>
+         * <p>The query dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -183,7 +184,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         public String dimensionName;
 
         /**
-         * <p>Query dimension value.</p>
+         * <p>The dimension value.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -192,7 +193,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         public String dimensionValue;
 
         /**
-         * <p>Query metric value.</p>
+         * <p>The metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>Traffic</p>
@@ -241,7 +242,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
 
     public static class DescribeSiteTimeSeriesDataResponseBodySummarizedData extends TeaModel {
         /**
-         * <p>The aggregation method used.</p>
+         * <p>The aggregation method.</p>
          * 
          * <strong>example:</strong>
          * <p>sum</p>
@@ -250,7 +251,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         public String aggMethod;
 
         /**
-         * <p>The dimension of the aggregated data being queried.</p>
+         * <p>The summarized dimension name.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -259,7 +260,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         public String dimensionName;
 
         /**
-         * <p>The value of the aggregated dimension being queried.</p>
+         * <p>The summarized dimension value.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -268,7 +269,7 @@ public class DescribeSiteTimeSeriesDataResponseBody extends TeaModel {
         public String dimensionValue;
 
         /**
-         * <p>The value of the aggregated metric being queried.</p>
+         * <p>The summarized metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>Traffic</p>

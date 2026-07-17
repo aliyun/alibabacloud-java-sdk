@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListEdgeContainerAppsRequest extends TeaModel {
     /**
-     * <p>The sorting field. This parameter is left empty by default. Valid values:</p>
+     * <p>The field used for sorting. If this parameter is not specified, no sorting is applied. Valid values:</p>
      * <ul>
-     * <li>Name: the version name.</li>
-     * <li>CreateTime: the time when the version was created.</li>
-     * <li>UpdateTime: the time when the version was last modified.</li>
+     * <li><strong>Name</strong>: the version name.</li>
+     * <li><strong>CreateTime</strong>: the version creation time.</li>
+     * <li><strong>ModifyTime</strong>: the version modification time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,10 +19,12 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public String orderKey;
 
     /**
-     * <p>The order in which you want to sort the query results. This parameter is left empty by default. Valid values:</p>
+     * <p>The sort order. If this parameter is not specified, no sorting is applied. Valid values:</p>
      * <ul>
-     * <li>ASC: in ascending order.</li>
-     * <li>DESC: in descending order.</li>
+     * <li><p><strong>Asc</strong>: ascending order.</p>
+     * </li>
+     * <li><p><strong>Desc</strong>: descending order.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +34,7 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>. Valid values: 1 to 65535.</p>
+     * <p>The page number. Default value: <strong>1</strong>. Valid values: <strong>1 to 65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +43,7 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>20</strong>. Valid values: 1 to 500.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Valid values: <strong>1 to 500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,10 +61,10 @@ public class ListEdgeContainerAppsRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The search criterion based on which you want to perform fuzzy search. Valid values:</p>
+     * <p>The type of fuzzy match. Valid values:</p>
      * <ul>
-     * <li>Appid: the application ID.</li>
-     * <li>Name: the application name.</li>
+     * <li><strong>AppId</strong>: the application ID.</li>
+     * <li><strong>Name</strong>: the application name.</li>
      * </ul>
      * 
      * <strong>example:</strong>

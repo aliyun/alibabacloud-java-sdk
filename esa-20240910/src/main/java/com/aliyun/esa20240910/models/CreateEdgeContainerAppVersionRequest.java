@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     /**
      * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
+     * <blockquote>
+     * <p>Notice: 1) Your account must have an ESA plan with the Edge Container feature enabled. 2) Call CreateEdgeContainerApp first to create an application and obtain the AppId. 3) Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</notice></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The container group to deploy for this version, including specific image information. The image information consists of the image address, startup commands, parameters, environment variables, and probe rules. Multiple images are supported. This parameter is a JSON array.</p>
+     * <p>The container group to be deployed for this version, including specific image information. The image information consists of the image address, startup command, parameters, environment variables, and probe rules. Multiple images are supported in a JSON array structure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -126,7 +129,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Boolean isEnterpriseRegistry;
 
         /**
-         * <p>The list of regions for the ACR instance.</p>
+         * <p>The region list of the ACR instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -257,7 +260,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
 
     public static class CreateEdgeContainerAppVersionRequestContainersProbeContent extends TeaModel {
         /**
-         * <p>The probe command for the exec probe type.</p>
+         * <p>The probe command for exec-type probes.</p>
          * 
          * <strong>example:</strong>
          * <p>echo ok</p>
@@ -293,7 +296,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String httpHeaders;
 
         /**
-         * <p>The initial delay before the container probe starts, in seconds.</p>
+         * <p>The initial delay time for the container probe, in seconds. For example, 5 indicates that the initial delay is set to 5 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -311,7 +314,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>The interval between container health checks, in seconds.</p>
+         * <p>The interval between container health checks, in seconds. For example, 5 indicates that the health check interval is set to 5 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -347,7 +350,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public Integer successThreshold;
 
         /**
-         * <p>The timeout period for the container health check, in seconds.</p>
+         * <p>The timeout period for the container health check, in seconds. For example, 5 indicates that the timeout is set to 5 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -476,7 +479,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String command;
 
         /**
-         * <p>The environment variables, in the format of key1=val1,key2=val2.</p>
+         * <p>The environment variables. Format: key1=val1,key2=val2.</p>
          * 
          * <strong>example:</strong>
          * <p>VITE_APP_TITLE=My App</p>
@@ -515,7 +518,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The command to run before the container starts. Separate multiple commands with spaces. This command runs before the service starts and is typically used for initialization operations.</p>
+         * <p>The command to execute before the container starts. Separate multiple commands with spaces. This command is executed before the service starts and is typically used for initialization operations.</p>
          * 
          * <strong>example:</strong>
          * <p>sh poststart.sh &quot;echo hello world&quot;</p>
@@ -524,7 +527,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String postStart;
 
         /**
-         * <p>The command to run before the container stops. Separate multiple commands with spaces. This command runs before the service exits and is typically used for cleanup operations.</p>
+         * <p>The command to execute before the container stops. Separate multiple commands with spaces. This command is executed before the service exits and is typically used for cleanup operations.</p>
          * 
          * <strong>example:</strong>
          * <p>sh prestop.sh &quot;echo hello world&quot;</p>
@@ -537,7 +540,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>For details, see the definition of readiness probes in Kubernetes.</p>
+         * <p>具体字段可参照k8s官方就绪探针的定义。</p>
          */
         @NameInMap("ProbeContent")
         public CreateEdgeContainerAppVersionRequestContainersProbeContent probeContent;
@@ -545,7 +548,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         /**
          * <p>The probe type. Valid values:</p>
          * <ul>
-         * <li><strong>exec</strong>: command-based.</li>
+         * <li><strong>exec</strong>: Command-based.</li>
          * <li><strong>tcpSocket</strong>: TCP-based.</li>
          * <li><strong>httpGet</strong>: HTTP-based.</li>
          * </ul>
@@ -558,7 +561,7 @@ public class CreateEdgeContainerAppVersionRequest extends TeaModel {
         public String probeType;
 
         /**
-         * <p>The container specifications. This parameter specifies the computing specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</p>
+         * <p>The container specifications. Specifies the computing power specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

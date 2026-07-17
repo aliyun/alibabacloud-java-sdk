@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCacheReserveInstancesResponseBody extends TeaModel {
     /**
-     * <p>A list of cache reserve instances.</p>
+     * <p>The list of cache reserve instances.</p>
      */
     @NameInMap("InstanceInfo")
     public java.util.List<ListCacheReserveInstancesResponseBodyInstanceInfo> instanceInfo;
 
     /**
-     * <p>The page number of the returned data.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -110,7 +110,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
 
     public static class ListCacheReserveInstancesResponseBodyInstanceInfo extends TeaModel {
         /**
-         * <p>The cache reserve capacity, in GB.</p>
+         * <p>The capacity of the cache reserve instance. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>512000</p>
@@ -119,7 +119,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public Long cacheReserveCapacity;
 
         /**
-         * <p>The region where the cache reserve instance is used.</p>
+         * <p>The region where the cache reserve instance is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>HK</p>
@@ -127,11 +127,21 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         @NameInMap("CacheReserveRegion")
         public String cacheReserveRegion;
 
+        /**
+         * <p>The billing type. Valid values:</p>
+         * <ul>
+         * <li>PREPAY: subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-12T05:41:51Z</p>
@@ -140,7 +150,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The purchase duration of the instance, in months.</p>
+         * <p>The subscription duration of the instance. Unit: months.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -149,7 +159,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The expiration time of the instance.</p>
+         * <p>The time when the instance expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-05T16:00:00Z</p>
@@ -167,16 +177,12 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p><strong>online</strong>: The instance is running normally.</p>
-         * </li>
-         * <li><p><strong>offline</strong>: The instance has expired and is unavailable but remains within the grace period.</p>
-         * </li>
-         * <li><p><strong>disable</strong>: The instance is disabled.</p>
-         * </li>
-         * <li><p><strong>overdue</strong>: The instance is suspended due to an overdue payment.</p>
-         * </li>
+         * <li><strong>online</strong>: The instance is running normally.</li>
+         * <li><strong>offline</strong>: The instance has expired but has not exceeded the retention period and is unavailable.</li>
+         * <li><strong>disable</strong>: The instance has been released.</li>
+         * <li><strong>overdue</strong>: The instance is stopped due to an overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>

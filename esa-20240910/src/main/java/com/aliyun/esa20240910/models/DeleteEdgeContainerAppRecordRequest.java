@@ -25,7 +25,7 @@ public class DeleteEdgeContainerAppRecordRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The site ID.</p>
+     * <p>The site ID. This parameter is required. If it is not specified, the service returns InternalError(400). Call ListSites to obtain a valid SiteId before calling this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>5407498413****</p>

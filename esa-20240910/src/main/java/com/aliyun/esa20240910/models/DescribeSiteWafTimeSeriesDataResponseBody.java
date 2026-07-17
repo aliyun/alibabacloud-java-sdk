@@ -11,7 +11,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
     public java.util.List<DescribeSiteWafTimeSeriesDataResponseBodyData> data;
 
     /**
-     * <p>The end of the time range for the returned data.</p>
+     * <p>The end time of the returned data.</p>
      * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
     public Float samplingRate;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time for the data query.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The summarized data.</p>
+     * <p>The summarized query data.</p>
      */
     @NameInMap("SummarizedData")
     public java.util.List<DescribeSiteWafTimeSeriesDataResponseBodySummarizedData> summarizedData;
@@ -127,6 +127,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
     public static class DescribeSiteWafTimeSeriesDataResponseBodyDataDetailData extends TeaModel {
         /**
          * <p>The start time of the time slice.</p>
+         * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-08T16:00:00Z</p>

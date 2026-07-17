@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     /**
-     * <p>The end time for obtaining data.</p>
-     * <p>The date format follows ISO8601 notation and uses UTC+0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time for the data query.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -18,15 +18,15 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Query metrics.</p>
+     * <p>The query metrics.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
     public java.util.List<DescribeSiteTimeSeriesDataRequestFields> fields;
 
     /**
-     * <p>The time granularity for querying data, in seconds.</p>
-     * <p>Depending on the maximum time span of a single query, this parameter supports values of 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For details, see the <strong>Supported Query Time Granularities</strong>.</p>
+     * <p>The time granularity for the query data, in seconds.</p>
+     * <p>Based on the maximum time span of a single query, this parameter supports the values 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the <strong>Supported time granularity</strong> section above.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -35,8 +35,8 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>Site ID. Obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
-     * <p>If this parameter is empty, user-level data will be queried.</p>
+     * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+     * <p>If this parameter is left empty, account-level data is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1150376036*****</p>
@@ -45,8 +45,8 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
     public String siteId;
 
     /**
-     * <p>The start time for obtaining data.</p>
-     * <p>The date format follows ISO8601 notation and uses UTC+0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time for the data query.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-04-08T16:00:00Z</p>
@@ -101,15 +101,15 @@ public class DescribeSiteTimeSeriesDataRequest extends TeaModel {
 
     public static class DescribeSiteTimeSeriesDataRequestFields extends TeaModel {
         /**
-         * <p>Query dimension.</p>
+         * <p>The query dimension.</p>
          */
         @NameInMap("Dimension")
         public java.util.List<String> dimension;
 
         /**
-         * <p>Query metric value.</p>
+         * <p>The metric name.</p>
          * <blockquote>
-         * <p>For specific dimensions, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data Analysis Field Description</a>.</p>
+         * <p>For specific dimensions, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data analytics field description</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

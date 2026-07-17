@@ -25,7 +25,10 @@ public class CreateEdgeContainerAppRecordRequest extends TeaModel {
     public String recordName;
 
     /**
-     * <p>The website ID.</p>
+     * <p>The site ID.</p>
+     * <blockquote>
+     * <p>Notice: Although SiteId is marked as optional in the schema, it is required when you call this operation. If you omit this parameter, an InternalError (400) is returned. Call the ListSites operation to obtain a valid SiteId.</notice></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5407498413****</p>
