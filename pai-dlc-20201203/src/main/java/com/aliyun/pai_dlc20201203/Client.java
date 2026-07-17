@@ -399,6 +399,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于向指定作业的一个或多个Pod发送特定信号。</li>
+     * <li>发送信号后，API立即返回一个<code>SignalId</code>，实际的信号投递由后台worker处理。</li>
+     * <li>信号的状态可以通过<code>GetSignal</code>或<code>ListSignals</code>接口查询。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建信号</p>
+     * 
+     * @param request CreateSignalRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSignalResponse
+     */
+    public CreateSignalResponse createSignalWithOptions(String JobId, CreateSignalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.signal)) {
+            body.put("Signal", request.signal);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.target)) {
+            body.put("Target", request.target);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSignal"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/signals"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSignalResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于向指定作业的一个或多个Pod发送特定信号。</li>
+     * <li>发送信号后，API立即返回一个<code>SignalId</code>，实际的信号投递由后台worker处理。</li>
+     * <li>信号的状态可以通过<code>GetSignal</code>或<code>ListSignals</code>接口查询。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建信号</p>
+     * 
+     * @param request CreateSignalRequest
+     * @return CreateSignalResponse
+     */
+    public CreateSignalResponse createSignal(String JobId, CreateSignalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSignalWithOptions(JobId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a TensorBoard by using a job or specifying a data source configuration.</p>
      * 
@@ -1349,6 +1416,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>通过此 API，用户可以获取到指定 <code>JobId</code> 和 <code>SignalId</code> 对应的信号详情，包括信号的状态、发送范围等信息。请注意，返回的结果中不再包含每个 Pod 的原始结果结构，而是通过 <code>Status</code>, <code>Reason</code>, 和 <code>Message</code> 字段来表达信号处理的整体情况。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取信号</p>
+     * 
+     * @param request GetSignalRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSignalResponse
+     */
+    public GetSignalResponse getSignalWithOptions(String JobId, String SignalId, GetSignalRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSignal"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/signals/" + com.aliyun.openapiutil.Client.getEncodeParam(SignalId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSignalResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>通过此 API，用户可以获取到指定 <code>JobId</code> 和 <code>SignalId</code> 对应的信号详情，包括信号的状态、发送范围等信息。请注意，返回的结果中不再包含每个 Pod 的原始结果结构，而是通过 <code>Status</code>, <code>Reason</code>, 和 <code>Message</code> 字段来表达信号处理的整体情况。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取信号</p>
+     * 
+     * @param request GetSignalRequest
+     * @return GetSignalResponse
+     */
+    public GetSignalResponse getSignal(String JobId, String SignalId, GetSignalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSignalWithOptions(JobId, SignalId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves the details of a Tensorboard instance.</p>
      * 
@@ -2063,6 +2185,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listRayHistoryServersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>通过此 API 可以获取特定作业下的所有信号记录详情，包括信号 ID、状态、创建时间等信息。支持通过查询参数进一步筛选或排序结果。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取信号列表</p>
+     * 
+     * @param request ListSignalsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSignalsResponse
+     */
+    public ListSignalsResponse listSignalsWithOptions(String JobId, ListSignalsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSignals"),
+            new TeaPair("version", "2020-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/jobs/" + com.aliyun.openapiutil.Client.getEncodeParam(JobId) + "/signals"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSignalsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>通过此 API 可以获取特定作业下的所有信号记录详情，包括信号 ID、状态、创建时间等信息。支持通过查询参数进一步筛选或排序结果。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取信号列表</p>
+     * 
+     * @param request ListSignalsRequest
+     * @return ListSignalsResponse
+     */
+    public ListSignalsResponse listSignals(String JobId, ListSignalsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSignalsWithOptions(JobId, request, headers, runtime);
     }
 
     /**

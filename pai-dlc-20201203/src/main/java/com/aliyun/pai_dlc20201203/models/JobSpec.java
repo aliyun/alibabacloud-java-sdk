@@ -35,7 +35,7 @@ public class JobSpec extends TeaModel {
     public java.util.List<ElasticSpotSpec> elasticSpotSpecs;
 
     /**
-     * <p>The additional pod configuration.</p>
+     * <p>The extra pod configuration.</p>
      */
     @NameInMap("ExtraPodSpec")
     public ExtraPodSpec extraPodSpec;

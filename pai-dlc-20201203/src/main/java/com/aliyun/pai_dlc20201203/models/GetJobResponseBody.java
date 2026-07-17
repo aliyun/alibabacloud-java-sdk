@@ -75,7 +75,7 @@ public class GetJobResponseBody extends TeaModel {
     public JobElasticSpec elasticSpec;
 
     /**
-     * <p>Indicates whether the debugger job is enabled.</p>
+     * <p>Indicates whether the debugger is enabled for the job.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -90,7 +90,7 @@ public class GetJobResponseBody extends TeaModel {
     public java.util.Map<String, String> envs;
 
     /**
-     * <p>The time when the job was created (UTC).</p>
+     * <p>The job creation time (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
@@ -108,7 +108,7 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtFailedTime;
 
     /**
-     * <p>The time when the job finished (UTC).</p>
+     * <p>The job finish time (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
@@ -1286,7 +1286,7 @@ public class GetJobResponseBody extends TeaModel {
         public String subStatus;
 
         /**
-         * <p>The node type, which corresponds to a JobSpec in the JobSpecs parameter of the CreateJob API.</p>
+         * <p>The node type, which corresponds to a JobSpec in the JobSpecs parameter of CreateJob.</p>
          * 
          * <strong>example:</strong>
          * <p>Worker</p>
@@ -1415,7 +1415,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyRestartRecordDetailErrorInfoList extends TeaModel {
         /**
-         * <p>The job blacklist.</p>
+         * <p>The job-level blacklist.</p>
          */
         @NameInMap("AddJobLevelBlacklist")
         public Boolean addJobLevelBlacklist;
@@ -1439,7 +1439,7 @@ public class GetJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message.</p>
+         * <p>The fault message.</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
@@ -1549,7 +1549,7 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyRestartRecord extends TeaModel {
         /**
-         * <p>The error message list.</p>
+         * <p>The list of fault information.</p>
          */
         @NameInMap("DetailErrorInfoList")
         public java.util.List<GetJobResponseBodyRestartRecordDetailErrorInfoList> detailErrorInfoList;
@@ -1585,7 +1585,7 @@ public class GetJobResponseBody extends TeaModel {
         public Long restartDurationInSec;
 
         /**
-         * <p>The reason for the restart failure.</p>
+         * <p>The restart failure reason.</p>
          */
         @NameInMap("RestartFailReason")
         public String restartFailReason;
