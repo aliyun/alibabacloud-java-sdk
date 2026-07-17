@@ -10912,10 +10912,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves all information about a specific PolarDB application, such as component details and endpoints.</p>
+     * <p>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific application in a PolarDB instance.</p>
+     * <p>Retrieves the detailed information of a specified PolarDB application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10947,10 +10947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves all information about a specific PolarDB application, such as component details and endpoints.</p>
+     * <p>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific application in a PolarDB instance.</p>
+     * <p>Retrieves the detailed information of a specified PolarDB application.</p>
      * 
      * @param request DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
@@ -28965,6 +28965,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestartDBNodeZonalResponse restartDBNodeZonal(RestartDBNodeZonalRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restartDBNodeZonalWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Restarts a PolarClaw gateway.</p>
+     * 
+     * @param request RestartPolarClawGatewayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartPolarClawGatewayResponse
+     */
+    public RestartPolarClawGatewayResponse restartPolarClawGatewayWithOptions(RestartPolarClawGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartPolarClawGateway"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartPolarClawGatewayResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Restarts a PolarClaw gateway.</p>
+     * 
+     * @param request RestartPolarClawGatewayRequest
+     * @return RestartPolarClawGatewayResponse
+     */
+    public RestartPolarClawGatewayResponse restartPolarClawGateway(RestartPolarClawGatewayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartPolarClawGatewayWithOptions(request, runtime);
     }
 
     /**
