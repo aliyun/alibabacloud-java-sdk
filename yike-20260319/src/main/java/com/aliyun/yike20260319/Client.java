@@ -10,7 +10,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-shanghai", "yike.cn-shanghai.aliyuncs.com")
+            new TeaPair("cn-shanghai", "yike.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "yike.ap-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("yike", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -31,7 +32,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a member to a Yike project.</p>
+     * <p>Adds members to a Yike project.</p>
      * 
      * @param request AddYikeProductionMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -67,7 +68,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a member to a Yike project.</p>
+     * <p>Adds members to a Yike project.</p>
      * 
      * @param request AddYikeProductionMembersRequest
      * @return AddYikeProductionMembersResponse
@@ -171,7 +172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about multiple media assets in a batch.</p>
+     * <p>Retrieves media asset information in batches.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -203,7 +204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about multiple media assets in a batch.</p>
+     * <p>Retrieves media asset information in batches.</p>
      * 
      * @param request BatchGetYikeAssetMediaInfosRequest
      * @return BatchGetYikeAssetMediaInfosResponse
@@ -263,6 +264,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建一刻云剪辑工程</p>
+     * 
+     * @param request CreateYikeEditingProjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateYikeEditingProjectResponse
+     */
+    public CreateYikeEditingProjectResponse createYikeEditingProjectWithOptions(CreateYikeEditingProjectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.coverURL)) {
+            query.put("CoverURL", request.coverURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.materialMaps)) {
+            query.put("MaterialMaps", request.materialMaps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.timeline)) {
+            body.put("Timeline", request.timeline);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateYikeEditingProject"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateYikeEditingProjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一刻云剪辑工程</p>
+     * 
+     * @param request CreateYikeEditingProjectRequest
+     * @return CreateYikeEditingProjectResponse
+     */
+    public CreateYikeEditingProjectResponse createYikeEditingProject(CreateYikeEditingProjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createYikeEditingProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a project.</p>
      * 
      * @param request CreateYikeProductionRequest
@@ -311,7 +370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a sub-account user in WonderClip.</p>
+     * <p>Creates a sub-user.</p>
      * 
      * @param request CreateYikeUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -359,7 +418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a sub-account user in WonderClip.</p>
+     * <p>Creates a sub-user.</p>
      * 
      * @param request CreateYikeUserRequest
      * @return CreateYikeUserResponse
@@ -468,7 +527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <p>This API is used to generate a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries an image generation task.</p>
@@ -504,7 +563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <p>This API is used to generate a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries an image generation task.</p>
@@ -519,7 +578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an AI video generation task.</p>
+     * <p>Queries a video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -528,10 +587,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetVideoGenerationJobResponse getVideoGenerationJobWithOptions(GetVideoGenerationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
-            query.put("ClientToken", request.clientToken);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
         }
@@ -555,7 +610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an AI video generation task.</p>
+     * <p>Queries a video generation task.</p>
      * 
      * @param request GetVideoGenerationJobRequest
      * @return GetVideoGenerationJobResponse
@@ -567,7 +622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an AI application task.</p>
+     * <p>Retrieves an AI application task from China International Communications Group (YIKE) AI.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -599,7 +654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an AI application task.</p>
+     * <p>Retrieves an AI application task from China International Communications Group (YIKE) AI.</p>
      * 
      * @param request GetYikeAIAppJobRequest
      * @return GetYikeAIAppJobResponse
@@ -611,7 +666,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an agent task.</p>
+     * <p>Retrieves the membership plan and credit information for a Yike primary account.</p>
+     * 
+     * @param request GetYikeAccountCreditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetYikeAccountCreditResponse
+     */
+    public GetYikeAccountCreditResponse getYikeAccountCreditWithOptions(GetYikeAccountCreditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetYikeAccountCredit"),
+            new TeaPair("version", "2026-03-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetYikeAccountCreditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the membership plan and credit information for a Yike primary account.</p>
+     * 
+     * @param request GetYikeAccountCreditRequest
+     * @return GetYikeAccountCreditResponse
+     */
+    public GetYikeAccountCreditResponse getYikeAccountCredit(GetYikeAccountCreditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getYikeAccountCreditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an intelligent agent task.</p>
      * 
      * @param request GetYikeAgentJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -643,7 +735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an agent task.</p>
+     * <p>Queries an intelligent agent task.</p>
      * 
      * @param request GetYikeAgentJobRequest
      * @return GetYikeAgentJobResponse
@@ -831,7 +923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a WonderClip sub-account.</p>
+     * <p>Retrieves the information of a Yike RAM user.</p>
      * 
      * @param request GetYikeUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -863,7 +955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about a WonderClip sub-account.</p>
+     * <p>Retrieves the information of a Yike RAM user.</p>
      * 
      * @param request GetYikeUserRequest
      * @return GetYikeUserResponse
@@ -875,7 +967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the credit balance of a WonderClip user.</p>
+     * <p>Queries the credits of a Yike user.</p>
      * 
      * @param request GetYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -907,7 +999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the credit balance of a WonderClip user.</p>
+     * <p>Queries the credits of a Yike user.</p>
      * 
      * @param request GetYikeUserCreditRequest
      * @return GetYikeUserCreditResponse
@@ -919,7 +1011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an intelligent video generation task for a narration-only video without a digital human.</p>
+     * <p>Queries the status of an intelligent video generation task for narration-only videos (without digital humans).</p>
      * 
      * @param request GetYikeVoiceNarratorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -951,7 +1043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an intelligent video generation task for a narration-only video without a digital human.</p>
+     * <p>Queries the status of an intelligent video generation task for narration-only videos (without digital humans).</p>
      * 
      * @param request GetYikeVoiceNarratorJobRequest
      * @return GetYikeVoiceNarratorJobResponse
@@ -1015,7 +1107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Yike projects.</p>
+     * <p>Retrieves the list of Yike projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1063,7 +1155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of Yike projects.</p>
+     * <p>Retrieves the list of Yike projects.</p>
      * 
      * @param request ListYikeProductionsRequest
      * @return ListYikeProductionsResponse
@@ -1075,7 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Yike Workspace List</p>
+     * <p>Retrieves the list of Yike workspaces.</p>
      * 
      * @param request ListYikeWorkspacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1111,7 +1203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Yike Workspace List</p>
+     * <p>Retrieves the list of Yike workspaces.</p>
      * 
      * @param request ListYikeWorkspacesRequest
      * @return ListYikeWorkspacesResponse
@@ -1171,7 +1263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers a Yike media asset.</p>
+     * <p>Registers a media asset.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1215,7 +1307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Registers a Yike media asset.</p>
+     * <p>Registers a media asset.</p>
      * 
      * @param request RegisterYikeAssetMediaInfoRequest
      * @return RegisterYikeAssetMediaInfoResponse
@@ -1319,7 +1411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the user role.</p>
+     * <p>Sets the role of a user.</p>
      * 
      * @param request SetYikeUserRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1355,7 +1447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the user role.</p>
+     * <p>Sets the role of a user.</p>
      * 
      * @param request SetYikeUserRoleRequest
      * @return SetYikeUserRoleResponse
@@ -1367,7 +1459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reclaims credits from a user.</p>
+     * <p>Deducts user credits.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1403,7 +1495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reclaims credits from a user.</p>
+     * <p>Deducts user credits.</p>
      * 
      * @param request SubYikeUserCreditRequest
      * @return SubYikeUserCreditResponse
@@ -1415,8 +1507,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
+     * <h2>Request description</h2>
+     * <p>This API is used to generate a video narrated by a virtual human based on the provided text content and other parameters (such as digital human information and application scenario type). You must specify key configuration items such as the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits an image generation task.</p>
@@ -1487,8 +1579,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</p>
+     * <h2>Request description</h2>
+     * <p>This API is used to generate a video narrated by a virtual human based on the provided text content and other parameters (such as digital human information and application scenario type). You must specify key configuration items such as the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits an image generation task.</p>
@@ -1504,7 +1596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <p>This API generates a video featuring a virtual human speaking based on the provided text content and other parameters (such as digital human information and common scenarios type). You must specify the text type (original script or spoken script), output dimensions, resolution, and other key configuration items. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a video generation task.</p>
@@ -1580,7 +1672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
+     * <p>This API generates a video featuring a virtual human speaking based on the provided text content and other parameters (such as digital human information and common scenarios type). You must specify the text type (original script or spoken script), output dimensions, resolution, and other key configuration items. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <code>UserData</code> field, which are returned as-is in the callback.</p>
      * 
      * <b>summary</b> : 
      * <p>Submits a video generation task.</p>
@@ -2069,7 +2161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the permissions of a Yike project member.</p>
+     * <p>Modifies the permissions of a China Short Video (Yike) project member.</p>
      * 
      * @param request UpdateYikeProductionMemberAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2109,7 +2201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the permissions of a Yike project member.</p>
+     * <p>Modifies the permissions of a China Short Video (Yike) project member.</p>
      * 
      * @param request UpdateYikeProductionMemberAuthRequest
      * @return UpdateYikeProductionMemberAuthResponse

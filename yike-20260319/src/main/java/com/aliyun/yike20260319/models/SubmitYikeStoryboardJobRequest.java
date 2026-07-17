@@ -52,7 +52,7 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
 
     /**
      * <p>The model parameters in JSON format.</p>
-     * <p>&quot;AudioEnable&quot;: false disables audio.</p>
+     * <p> &quot;AudioEnable&quot;: false disables audio.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -75,14 +75,14 @@ public class SubmitYikeStoryboardJobRequest extends TeaModel {
      * <li>sys_SereneIntellect: serene intellectual male</li>
      * <li>sys_MajesticBaritone: majestic baritone male</li>
      * <li>sys_GravellySoulful: gravelly soulful male</li>
-     * <li>sys_ClassicYoungMan: classic narrator male</li>
-     * <li>sys_WiseYoungMan: wise narrator male</li>
-     * <li>sys_ClassicYoungWoman: classic narrator female</li>
-     * <li>sys_IntellectualYoungWoman: intellectual narrator female</li>
-     * <li>sys_GentleYoungMan: gentle narrator male</li>
+     * <li>sys_ClassicYoungMan: classic narration male</li>
+     * <li>sys_WiseYoungMan: wise narration male</li>
+     * <li>sys_ClassicYoungWoman: classic narration female</li>
+     * <li>sys_IntellectualYoungWoman: intellectual narration female</li>
+     * <li>sys_GentleYoungMan: gentle narration male</li>
      * <li>sys_thoughtfulBoy: thoughtful boy</li>
      * <li>sys_RichBassMale: rich bass male</li>
-     * <li>sys_ClassicMiddleAgedWoman: classic middle-aged narrator female</li>
+     * <li>sys_ClassicMiddleAgedWoman: classic middle-aged narration female</li>
      * </ul>
      * 
      * <strong>example:</strong>

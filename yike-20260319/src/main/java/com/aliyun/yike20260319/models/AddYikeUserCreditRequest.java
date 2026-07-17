@@ -15,7 +15,7 @@ public class AddYikeUserCreditRequest extends TeaModel {
     public Integer credit;
 
     /**
-     * <p>The ID of the sub-account user.</p>
+     * <p>The sub-account user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

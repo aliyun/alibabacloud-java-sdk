@@ -8,7 +8,7 @@ public class UpdateYikeProductionMemberAuthRequest extends TeaModel {
      * <p>The permission name. Valid values:</p>
      * <ul>
      * <li>Manage: manageable</li>
-     * <li>Edit: editable.</li>
+     * <li>Edit: editable</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -15,7 +15,7 @@ public class AddYikeProductionMembersRequest extends TeaModel {
     public String productionId;
 
     /**
-     * <p>The IDs of the RAM users.</p>
+     * <p>The RAM user IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

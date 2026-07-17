@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetVideoGenerationJobRequest extends TeaModel {
     /**
-     * <p>The idempotency token.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>xxxx</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
      * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
@@ -25,14 +16,6 @@ public class GetVideoGenerationJobRequest extends TeaModel {
     public static GetVideoGenerationJobRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVideoGenerationJobRequest self = new GetVideoGenerationJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetVideoGenerationJobRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public GetVideoGenerationJobRequest setJobId(String jobId) {

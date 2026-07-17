@@ -51,7 +51,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String aspectRatio;
 
         /**
-         * <p>The error message. This parameter is of the String type and is returned when the task is in the Failed state.</p>
+         * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
@@ -139,7 +139,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
-         * <p>The scenario type. Currently only <code>general</code> is supported.</p>
+         * <p>The scenario type. Currently, only <code>general</code> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>

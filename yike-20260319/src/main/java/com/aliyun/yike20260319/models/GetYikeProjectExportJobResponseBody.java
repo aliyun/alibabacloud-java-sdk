@@ -51,7 +51,7 @@ public class GetYikeProjectExportJobResponseBody extends TeaModel {
         public String srtUrl;
 
         /**
-         * <p>The type enumeration. Currently, only VoiceOver is supported.</p>
+         * <p>The type enumeration. Currently only VoiceOver is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>VoiceOver</p>
@@ -93,7 +93,7 @@ public class GetYikeProjectExportJobResponseBody extends TeaModel {
         public String audioUrl;
 
         /**
-         * <p>The download URL of the PR project file (not supported).</p>
+         * <p>The download URL of the PR project file (not supported currently).</p>
          * 
          * <strong>example:</strong>
          * <p>....</p>
@@ -108,7 +108,7 @@ public class GetYikeProjectExportJobResponseBody extends TeaModel {
         public java.util.List<GetYikeProjectExportJobResponseBodyProjectExportJobExportResultSrtList> srtList;
 
         /**
-         * <p>The editing timeline (not supported).</p>
+         * <p>The editing timeline (not supported currently).</p>
          * 
          * <strong>example:</strong>
          * <p>....</p>

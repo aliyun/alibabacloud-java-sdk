@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetYikeUserCreditRequest extends TeaModel {
     /**
-     * <p>The user ID of the sub-account.</p>
+     * <p>The sub-account user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

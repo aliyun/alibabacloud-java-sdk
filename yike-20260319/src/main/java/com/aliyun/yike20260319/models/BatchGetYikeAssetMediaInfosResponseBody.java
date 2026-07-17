@@ -83,7 +83,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String creationJobId;
 
         /**
-         * <p>The folder ID.</p>
+         * <p>The ID of the folder.</p>
          * 
          * <strong>example:</strong>
          * <p>pd_0617169475</p>
@@ -110,7 +110,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String isLogicalDeleted;
 
         /**
-         * <p>The media asset subtype.</p>
+         * <p>The subtype of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>Image</p>
@@ -119,7 +119,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String mediaAssetSubType;
 
         /**
-         * <p>The media asset type.</p>
+         * <p>The type of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>HistoricalUpload</p>
@@ -128,7 +128,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String mediaAssetType;
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>pd_0617169475</p>
@@ -137,7 +137,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String productionId;
 
         /**
-         * <p>The source ID.</p>
+         * <p>The ID of the source.</p>
          * 
          * <strong>example:</strong>
          * <p>f4a26390f02371f0a1f4e6e7c7586706</p>
@@ -146,7 +146,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The source name.</p>
+         * <p>The name of the source.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -268,7 +268,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
         /**
-         * <p>The bitrate.</p>
+         * <p>The bitrate of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -277,7 +277,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The duration.</p>
+         * <p>The duration of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -286,7 +286,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>example.mp4</p>
@@ -295,7 +295,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size, in bytes.</p>
+         * <p>The size of the file, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>191</p>
@@ -304,7 +304,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String fileSize;
 
         /**
-         * <p>The file status.</p>
+         * <p>The status of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -313,7 +313,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String fileStatus;
 
         /**
-         * <p>The file type.</p>
+         * <p>The type of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>source_file</p>
@@ -331,7 +331,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>The container format.</p>
+         * <p>The container format of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>jpg</p>
@@ -340,7 +340,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String formatName;
 
         /**
-         * <p>The height.</p>
+         * <p>The height of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>416</p>
@@ -358,7 +358,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The width.</p>
+         * <p>The width of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>640</p>
@@ -463,7 +463,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoList extends TeaModel {
         /**
-         * <p>The basic file information, including the duration and size.</p>
+         * <p>The basic file information, including duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
@@ -503,7 +503,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String businessType;
 
         /**
-         * <p>The category.</p>
+         * <p>The category of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>category</p>
@@ -512,7 +512,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The cover URL.</p>
+         * <p>The URL of the cover image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></p>
@@ -539,7 +539,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String deletedTime;
 
         /**
-         * <p>The content description.</p>
+         * <p>The description of the media asset content.</p>
          * 
          * <strong>example:</strong>
          * <p>sample_description</p>
@@ -566,7 +566,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1，tag2</p>
@@ -584,7 +584,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The time when the media asset was modified.</p>
+         * <p>The time when the media asset was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-08T16:52:04Z</p>
@@ -593,7 +593,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The snapshots.</p>
+         * <p>The snapshots of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -602,7 +602,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String snapshots;
 
         /**
-         * <p>The source.</p>
+         * <p>The source of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -611,7 +611,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The sprite images.</p>
+         * <p>The sprite images of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
@@ -620,7 +620,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String spriteImages;
 
         /**
-         * <p>The resource status.</p>
+         * <p>The status of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -629,7 +629,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The title.</p>
+         * <p>The title of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>
@@ -638,7 +638,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The transcoding status.</p>
+         * <p>The transcoding status of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p>Init</p>
@@ -834,7 +834,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public BatchGetYikeAssetMediaInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
         /**
-         * <p>The media asset ID.</p>
+         * <p>The ID of the media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>

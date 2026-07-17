@@ -14,7 +14,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The input parameters for the AI application run. The value is a string obtained after JSON serialize.</p>
+     * <p>The input parameters for the AI application execution, a string after JSON serialization.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</p>
@@ -85,11 +85,11 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Created: The task is created.</li>
+     * <li>Created: The task is just created.</li>
      * <li>Queuing: The task is queuing.</li>
      * <li>Executing: The task is being executed.</li>
-     * <li>Finished: The task is finished.</li>
-     * <li>Failed: The task failed.</li>
+     * <li>Finished: The task execution is complete.</li>
+     * <li>Failed: The task execution failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

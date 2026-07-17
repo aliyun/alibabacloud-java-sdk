@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteYikeAssetMediaInfosResponseBody extends TeaModel {
     /**
-     * <p>The IDs or input URLs for which errors occurred during retrieval.</p>
+     * <p>The IDs or inputUrls for which retrieval errors occurred.</p>
      */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;

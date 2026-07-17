@@ -42,7 +42,7 @@ public class CreateYikeUserResponseBody extends TeaModel {
 
     public static class CreateYikeUserResponseBodyUserInfo extends TeaModel {
         /**
-         * <p>The nickname of the user.</p>
+         * <p>The user nickname.</p>
          * 
          * <strong>example:</strong>
          * <p>nick</p>

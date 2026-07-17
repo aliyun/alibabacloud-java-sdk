@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubYikeUserCreditRequest extends TeaModel {
     /**
-     * <p>The number of credits to reclaim. The value must be greater than 0 and cannot exceed the sub-account credit balance.</p>
+     * <p>The number of credits to deduct. The value must be greater than 0 and cannot exceed the sub-account credit balance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

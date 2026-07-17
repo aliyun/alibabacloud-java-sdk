@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeYikeStoryboardJobResponseBody extends TeaModel {
     /**
-     * <p>The task ID. You can obtain this value from the response of <a href="https://help.aliyun.com/document_detail/461964.html">SubmitPackageJob</a>.</p>
+     * <p>The task ID. You can obtain this value from the response parameters of the <a href="https://help.aliyun.com/document_detail/461964.html">Submit a packaging task</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>

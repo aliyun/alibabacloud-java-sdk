@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateYikeAssetUploadResponseBody extends TeaModel {
     /**
-     * <p>The OSS URL of the file, without authentication.</p>
+     * <p>The OSS URL of the file (without authentication).</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4">http://outin-***.oss-cn-shanghai.aliyuncs.com/stream/48555e8b-181dd5a8c07/48555e8b-181dd5a8c07.mp4</a></p>

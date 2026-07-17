@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetYikeAgentJobResponseBody extends TeaModel {
     /**
-     * <p>The time when the task started. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * <p>The time when the task started, in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:34.001+08:00</p>
@@ -23,7 +23,7 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The time when the task ended. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * <p>The time when the task ended, in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:34.001+08:00</p>
@@ -41,7 +41,7 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The input parameters of the task. The value is a JSON string.</p>
+     * <p>The input parameters of the task, in JSON string format.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;TextType\&quot;:2,\&quot;TextContent\&quot;:\&quot;Today, Beijing held a press conference to announce plans to further optimize the city\&quot;s transportation network, including adding three new subway lines within the next three years....\&quot;,\&quot;AspectRatio\&quot;:\&quot;16:9\&quot;, \&quot;Resolution\&quot;:\&quot;720P\&quot;, \&quot;OutputLanguages\&quot;:[\&quot;CN\&quot;,\&quot;YUE\&quot;]&quot;}</p>
@@ -60,7 +60,7 @@ public class GetYikeAgentJobResponseBody extends TeaModel {
      * <ul>
      * <li>Running</li>
      * <li>Succeeded</li>
-     * <li>Failed.</li>
+     * <li>Failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

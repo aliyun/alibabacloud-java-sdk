@@ -60,7 +60,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The error message. This parameter is returned when the task is in the Failed state.</p>
+         * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
@@ -123,8 +123,8 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public Integer n;
 
         /**
-         * <p>The output result in JsonString format. The following fields are included:</p>
-         * <p>Medias: a list of media information (Media objects). The Media object contains the following fields:
+         * <p>The generation result. The value is a JSON string that contains the following fields:</p>
+         * <p>Medias: a list of Media objects. Each Media object contains the following fields:
          * MediaId: String. The media asset ID.
          * OutputUrl: String. The media URL (with the authentication string).</p>
          * 

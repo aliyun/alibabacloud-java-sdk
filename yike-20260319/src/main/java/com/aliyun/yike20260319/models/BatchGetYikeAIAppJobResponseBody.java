@@ -227,7 +227,7 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The input parameters for running the AI application. The value is a JSON-serialized string.</p>
+         * <p>The input parameters for running the AI application. The value is a JSON serialize string.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</p>
@@ -292,7 +292,7 @@ public class BatchGetYikeAIAppJobResponseBody extends TeaModel {
          * <li>Created: The task is created.</li>
          * <li>Queuing: The task is queuing.</li>
          * <li>Executing: The task is being executed.</li>
-         * <li>Finished: The task is finished.</li>
+         * <li>Finished: The task is completed.</li>
          * <li>Failed: The task failed.</li>
          * </ul>
          * 

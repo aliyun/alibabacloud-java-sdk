@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListYikeWorkspacesRequest extends TeaModel {
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListYikeWorkspacesRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Number of records per page</p>
+     * <p>The number of records to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

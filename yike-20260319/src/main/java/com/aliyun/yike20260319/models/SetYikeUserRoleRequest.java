@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetYikeUserRoleRequest extends TeaModel {
     /**
-     * <p>The role of the user. Valid values:</p>
+     * <p>The user role. Valid values:</p>
      * <ul>
      * <li>SuperAdmin: super administrator.</li>
      * <li>Admin: administrator.</li>
@@ -19,7 +19,7 @@ public class SetYikeUserRoleRequest extends TeaModel {
     public String roleName;
 
     /**
-     * <p>The ID of the sub-account user.</p>
+     * <p>The ID of the RAM user.</p>
      * 
      * <strong>example:</strong>
      * <p>id</p>

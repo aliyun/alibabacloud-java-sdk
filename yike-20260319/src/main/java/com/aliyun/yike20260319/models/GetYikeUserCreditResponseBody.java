@@ -14,7 +14,7 @@ public class GetYikeUserCreditResponseBody extends TeaModel {
     public String creditTotal;
 
     /**
-     * <p>The remaining available credits.</p>
+     * <p>The current remaining available credits.</p>
      * 
      * <strong>example:</strong>
      * <p>165.0</p>

@@ -25,7 +25,7 @@ public class CreateYikeUserRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>The associated projects. Multiple project IDs are supported, separated by commas.</p>
+     * <p>The associated projects. Multiple projects are supported, separated by commas.</p>
      * <blockquote>
      * <ul>
      * <li>A single user can be added to multiple projects.</li>
@@ -42,8 +42,8 @@ public class CreateYikeUserRequest extends TeaModel {
     /**
      * <p>The username prefix of the sub-account. Rules:</p>
      * <ul>
-     * <li>The prefix can be up to 50 characters in length and must be unique within the workspace.</li>
-     * <li>The system automatically generates the login name in the following format: {UserNamePrefix}.{Workspace Code}@{Alibaba Cloud UID}.yikeai.</li>
+     * <li>Maximum 50 characters. Must be unique within the workspace.</li>
+     * <li>The system automatically generates the user logon name in the following format: {UserNamePrefix}.{Workspace Code}@{Alibaba Cloud UID}.yikeai.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

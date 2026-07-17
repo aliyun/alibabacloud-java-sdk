@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is returned only when JobStatus is Failed.</p>
+     * <p>The error code. This parameter is returned only when JobStatus is <code>Failed</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>WorkflowTaskFailed</p>
@@ -32,7 +32,7 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
     public String jobParams;
 
     /**
-     * <p>The task results. This parameter is valid only when JobStatus is Succeeded.</p>
+     * <p>The task results. This parameter is valid only when JobStatus is <code>Succeeded</code>.</p>
      */
     @NameInMap("JobResult")
     public java.util.List<GetYikeVoiceNarratorJobResponseBodyJobResult> jobResult;
@@ -42,7 +42,7 @@ public class GetYikeVoiceNarratorJobResponseBody extends TeaModel {
      * <ul>
      * <li>Running</li>
      * <li>Succeeded</li>
-     * <li>Failed.</li>
+     * <li>Failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
