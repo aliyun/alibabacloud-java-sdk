@@ -3165,6 +3165,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>为sdk查询agent信息功能</p>
+     * 
+     * @param request DescribeAtiAgentRegisterInfoMarketRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAtiAgentRegisterInfoMarketResponse
+     */
+    public DescribeAtiAgentRegisterInfoMarketResponse describeAtiAgentRegisterInfoMarketWithOptions(DescribeAtiAgentRegisterInfoMarketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentHost)) {
+            query.put("AgentHost", request.agentHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentVersion)) {
+            query.put("AgentVersion", request.agentVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAtiAgentRegisterInfoMarket"),
+            new TeaPair("version", "2015-01-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAtiAgentRegisterInfoMarketResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为sdk查询agent信息功能</p>
+     * 
+     * @param request DescribeAtiAgentRegisterInfoMarketRequest
+     * @return DescribeAtiAgentRegisterInfoMarketResponse
+     */
+    public DescribeAtiAgentRegisterInfoMarketResponse describeAtiAgentRegisterInfoMarket(DescribeAtiAgentRegisterInfoMarketRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAtiAgentRegisterInfoMarketWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries alert settings.</p>
      * 
      * @param request DescribeAtiAlertSettingsRequest
