@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The resource IDs. You can specify a maximum number of 50 resource IDs.</p>
+     * <p>The IDs of the resources. You can specify up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resourceId")
@@ -22,7 +22,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. You can specify a maximum number of 20 tags.</p>
+     * <p>The tags to add to the resources. You can add up to 20 tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tag")
@@ -59,7 +59,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_manage</p>
@@ -68,7 +68,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>31261301</p>

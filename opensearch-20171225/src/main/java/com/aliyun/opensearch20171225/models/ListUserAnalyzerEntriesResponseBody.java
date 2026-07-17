@@ -14,10 +14,20 @@ public class ListUserAnalyzerEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The entries of the custom analyzer. For more information, see <a href="https://www.alibabacloud.com/help/en/open-search/industry-algorithm-edition/useranalyzerentry">UserAnalyzerEntry</a>.</p>
+     * <p>The entries of the custom analyzer. For more information, see UserAnalyzerEntry.</p>
      * 
      * <strong>example:</strong>
-     * <p>[]</p>
+     * <p>[
+     * {
+     *     &quot;cmd&quot;: &quot;add&quot;,
+     *     &quot;key&quot;: &quot;kevintest&quot;,
+     *     &quot;value&quot;: &quot;kevin test&quot;,
+     *     &quot;created&quot;: 1536690285,
+     *     &quot;updated&quot;: 1537348987,
+     *     &quot;status&quot;: &quot;ACTIVE&quot;,
+     *     &quot;splitEnabled&quot;: true
+     * }
+     * ]</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

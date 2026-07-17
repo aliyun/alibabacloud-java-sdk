@@ -23,7 +23,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the request, in milliseconds.</p>
+     * <p>The request latency in milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -41,7 +41,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1638157479281</p>
@@ -50,7 +50,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the request.</p>
+     * <p>The returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{         &quot;versionName&quot;: &quot;v1&quot;,         &quot;versionId&quot;: 101,         &quot;functionName&quot;: &quot;ctr&quot;,         &quot;modelType&quot;: &quot;tf_checkpoint&quot;,         &quot;functionType&quot;: &quot;PAAS&quot;,         &quot;versionConfig&quot;: {             &quot;createParameters&quot;: [                 {                     &quot;name&quot;: &quot;params1&quot;,                     &quot;required&quot;: &quot;true&quot;,                     &quot;formItemProps&quot;: &quot;{\&quot;required\&quot;: true, \&quot;pattern?\&quot;: \&quot;/^[a-zA-Z][a-zA-Z0-9_]{0,29}$/\&quot;}&quot;,                     &quot;componentProps&quot;: &quot;{\&quot;component\&quot;: \&quot;Input\&quot;, \&quot;attributes\&quot;: {\&quot;defaultValue\&quot;: \&quot;value1\&quot;}}&quot;                 }             ],             &quot;depends&quot;: [                 {                     &quot;dependency&quot;: &quot;依赖项&quot;,                     &quot;condition&quot;: &quot;条件&quot;,                     &quot;description&quot;: &quot;&quot;                 }             ],             &quot;usageParameters&quot;: []         }     }</p>
      */
     @NameInMap("Result")
     public GetFunctionCurrentVersionResponseBodyResult result;
@@ -136,7 +139,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the parameter is required.</p>
+         * <p>Specifies whether the parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -237,7 +240,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the parameter is required.</p>
+         * <p>Specifies whether the parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -270,7 +273,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
 
     public static class GetFunctionCurrentVersionResponseBodyResultVersionConfig extends TeaModel {
         /**
-         * <p>The parameters that are used to create the instance.</p>
+         * <p>The parameters used to create an instance.</p>
          * 
          * <strong>example:</strong>
          * <p>[                 {                     &quot;name&quot;: &quot;params1&quot;,                     &quot;required&quot;: &quot;true&quot;,                     &quot;formItemProps&quot;: &quot;{\&quot;required\&quot;: true, \&quot;pattern?\&quot;: \&quot;/^[a-zA-Z][a-zA-Z0-9_]{0,29}$/\&quot;}&quot;,                     &quot;componentProps&quot;: &quot;{\&quot;component\&quot;: \&quot;Input\&quot;, \&quot;attributes\&quot;: {\&quot;defaultValue\&quot;: \&quot;value1\&quot;}}&quot;                 }             ]</p>
@@ -279,13 +282,16 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         public java.util.List<GetFunctionCurrentVersionResponseBodyResultVersionConfigCreateParameters> createParameters;
 
         /**
-         * <p>The dependencies of the instance.</p>
+         * <p>A list of instance dependencies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[                 {                     &quot;dependency&quot;: &quot;依赖项&quot;,                     &quot;condition&quot;: &quot;条件&quot;,                     &quot;description&quot;: &quot;&quot;                 }             ]</p>
          */
         @NameInMap("Depends")
         public java.util.List<GetFunctionCurrentVersionResponseBodyResultVersionConfigDepends> depends;
 
         /**
-         * <p>The parameters that are used to use the instance online.</p>
+         * <p>The parameters for using the instance online.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -337,8 +343,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         /**
          * <p>The type of the feature. Valid values:</p>
          * <ul>
-         * <li>PAAS</li>
-         * <li>SAAS</li>
+         * <li><p>PAAS</p>
+         * </li>
+         * <li><p>SAAS</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -348,7 +356,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         public String functionType;
 
         /**
-         * <p>The type of the model.</p>
+         * <p>The model type.</p>
          * 
          * <strong>example:</strong>
          * <p>tf_checkpoint</p>
@@ -357,13 +365,16 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         public String modelType;
 
         /**
-         * <p>The configuration information about the instance.</p>
+         * <p>The configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{             &quot;createParameters&quot;: [                 {                     &quot;name&quot;: &quot;params1&quot;,                     &quot;required&quot;: &quot;true&quot;,                     &quot;formItemProps&quot;: &quot;{\&quot;required\&quot;: true, \&quot;pattern?\&quot;: \&quot;/^[a-zA-Z][a-zA-Z0-9_]{0,29}$/\&quot;}&quot;,                     &quot;componentProps&quot;: &quot;{\&quot;component\&quot;: \&quot;Input\&quot;, \&quot;attributes\&quot;: {\&quot;defaultValue\&quot;: \&quot;value1\&quot;}}&quot;                 }             ],             &quot;depends&quot;: [                 {                     &quot;dependency&quot;: &quot;依赖项&quot;,                     &quot;condition&quot;: &quot;条件&quot;,                     &quot;description&quot;: &quot;&quot;                 }             ],             &quot;usageParameters&quot;: []         }</p>
          */
         @NameInMap("VersionConfig")
         public GetFunctionCurrentVersionResponseBodyResultVersionConfig versionConfig;
 
         /**
-         * <p>The ID of the version.</p>
+         * <p>The version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>101</p>
@@ -372,7 +383,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         public Long versionId;
 
         /**
-         * <p>The name of the version.</p>
+         * <p>The version name.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>

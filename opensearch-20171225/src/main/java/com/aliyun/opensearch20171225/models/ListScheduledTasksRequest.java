@@ -23,12 +23,16 @@ public class ListScheduledTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The scheduled task type. Valid values:</p>
+     * <p>The type of the scheduled task. Valid values:</p>
      * <ul>
-     * <li>wipe: data cleaning.</li>
-     * <li>fork: reindexing.</li>
-     * <li>check-status: application status check.</li>
-     * <li>index: reindexing.</li>
+     * <li><p>wipe: data cleaning</p>
+     * </li>
+     * <li><p>fork: reindexing</p>
+     * </li>
+     * <li><p>check-status: application status check</p>
+     * </li>
+     * <li><p>index: reindexing</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

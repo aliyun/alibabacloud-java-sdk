@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindESUserAnalyzerRequest extends TeaModel {
     /**
-     * <p>The request parameters.</p>
+     * <p>The request body.</p>
      * 
      * <strong>example:</strong>
      * <p>{

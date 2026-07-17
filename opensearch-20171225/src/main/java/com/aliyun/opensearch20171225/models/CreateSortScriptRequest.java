@@ -8,7 +8,7 @@ public class CreateSortScriptRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The sort phase to which the script applies.</p>
+     * <p>The applicable scope of the script.</p>
      * 
      * <strong>example:</strong>
      * <p>second_rank</p>
@@ -17,7 +17,7 @@ public class CreateSortScriptRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The script name.</p>
+     * <p>The name of the script.</p>
      * 
      * <strong>example:</strong>
      * <p>rank_cava_20230606_v7</p>
@@ -26,7 +26,7 @@ public class CreateSortScriptRequest extends TeaModel {
     public String scriptName;
 
     /**
-     * <p>The script type. Set the value to cava_script.</p>
+     * <p>The type of the script. Only cava_script is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cava_script</p>

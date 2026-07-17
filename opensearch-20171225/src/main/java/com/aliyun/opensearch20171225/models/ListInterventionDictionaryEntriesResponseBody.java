@@ -71,42 +71,78 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         /**
          * <p>The internal name of the identified entity type. Valid values:</p>
          * <ul>
-         * <li>brand</li>
-         * <li>category</li>
-         * <li>material</li>
-         * <li>element</li>
-         * <li>style</li>
-         * <li>color</li>
-         * <li>function</li>
-         * <li>scenario</li>
-         * <li>people</li>
-         * <li>season</li>
-         * <li>model</li>
-         * <li>region</li>
-         * <li>name</li>
-         * <li>adjective</li>
-         * <li>category-modifier</li>
-         * <li>size</li>
-         * <li>quality</li>
-         * <li>suit</li>
-         * <li>new-release</li>
-         * <li>series</li>
-         * <li>marketing</li>
-         * <li>entertainment</li>
-         * <li>organization</li>
-         * <li>movie</li>
-         * <li>game</li>
-         * <li>number</li>
-         * <li>unit</li>
-         * <li>common</li>
-         * <li>new-word</li>
-         * <li>proper-noun</li>
-         * <li>symbol</li>
-         * <li>prefix</li>
-         * <li>suffix</li>
-         * <li>gift</li>
-         * <li>negative</li>
-         * <li>agent</li>
+         * <li><p>brand</p>
+         * </li>
+         * <li><p>category</p>
+         * </li>
+         * <li><p>material</p>
+         * </li>
+         * <li><p>element</p>
+         * </li>
+         * <li><p>style</p>
+         * </li>
+         * <li><p>color</p>
+         * </li>
+         * <li><p>function</p>
+         * </li>
+         * <li><p>scenario</p>
+         * </li>
+         * <li><p>people</p>
+         * </li>
+         * <li><p>season</p>
+         * </li>
+         * <li><p>model</p>
+         * </li>
+         * <li><p>region</p>
+         * </li>
+         * <li><p>name</p>
+         * </li>
+         * <li><p>adjective</p>
+         * </li>
+         * <li><p>category-modifier</p>
+         * </li>
+         * <li><p>size</p>
+         * </li>
+         * <li><p>quality</p>
+         * </li>
+         * <li><p>suit</p>
+         * </li>
+         * <li><p>new-release</p>
+         * </li>
+         * <li><p>series</p>
+         * </li>
+         * <li><p>marketing</p>
+         * </li>
+         * <li><p>entertainment</p>
+         * </li>
+         * <li><p>organization</p>
+         * </li>
+         * <li><p>movie</p>
+         * </li>
+         * <li><p>game</p>
+         * </li>
+         * <li><p>number</p>
+         * </li>
+         * <li><p>unit</p>
+         * </li>
+         * <li><p>common</p>
+         * </li>
+         * <li><p>new-word</p>
+         * </li>
+         * <li><p>proper-noun</p>
+         * </li>
+         * <li><p>symbol</p>
+         * </li>
+         * <li><p>prefix</p>
+         * </li>
+         * <li><p>suffix</p>
+         * </li>
+         * <li><p>gift</p>
+         * </li>
+         * <li><p>negative</p>
+         * </li>
+         * <li><p>agent</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +155,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
          * <p>The description of the internal name of the identified entity type.</p>
          * 
          * <strong>example:</strong>
-         * <p>category</p>
+         * <p>品类</p>
          */
         @NameInMap("tagLabel")
         public String tagLabel;
@@ -128,7 +164,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
          * <p>The entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>category</p>
+         * <p>本</p>
          */
         @NameInMap("token")
         public String token;
@@ -176,8 +212,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         /**
          * <p>The command. Valid values:</p>
          * <ul>
-         * <li>add</li>
-         * <li>delete</li>
+         * <li><p>add</p>
+         * </li>
+         * <li><p>delete</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the tickets. For more information, see <a href="https://help.aliyun.com/document_detail/173609.html">QuotaReviewTask</a>.</p>
+     * <p>The information about the approval tickets. For more information, see <a href="https://help.aliyun.com/document_detail/173609.html">QuotaReviewTask</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -23,7 +23,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
     public java.util.List<ListQuotaReviewTasksResponseBodyResult> result;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -89,7 +89,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public String appGroupType;
 
         /**
-         * <p>Indicates whether the ticket is approved.</p>
+         * <p>Indicates whether the task is approved.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -98,7 +98,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public Boolean approved;
 
         /**
-         * <p>Indicates whether the application is available.</p>
+         * <p>Indicates whether the resource is active.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -107,7 +107,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public Boolean available;
 
         /**
-         * <p>The time when the ticket was created.</p>
+         * <p>The time when the task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;2020-04-08T08:29:45+0000&quot;</p>
@@ -116,7 +116,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the ticket was last updated.</p>
+         * <p>The time of the last modification.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;2020-04-08T08:36:36+0000&quot;</p>
@@ -143,7 +143,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public String memo;
 
         /**
-         * <p>The computing resource quota that is applied for.</p>
+         * <p>The target computing resource.</p>
          * 
          * <strong>example:</strong>
          * <p>6000</p>
@@ -152,7 +152,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public Integer newComputeResource;
 
         /**
-         * <p>The storage capacity quota that is applied for.</p>
+         * <p>The target storage capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>1100</p>
@@ -161,7 +161,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public Integer newSocSize;
 
         /**
-         * <p>The application specifications that are applied for.</p>
+         * <p>The new application specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;opensearch.private.common&quot;</p>
@@ -170,7 +170,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public String newSpec;
 
         /**
-         * <p>The original quota of computing resources.</p>
+         * <p>The original computing resource.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -179,7 +179,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public Integer oldComputeResource;
 
         /**
-         * <p>The original quota of storage capacity.</p>
+         * <p>The original storage capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -197,7 +197,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         public String oldSpec;
 
         /**
-         * <p>Indicates whether the ticket is pending.</p>
+         * <p>Indicates whether the task is pending.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -42,7 +42,7 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
 
     public static class DescribeQueryProcessorResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the query analysis rule is the default one.</p>
+         * <p>Indicates whether the rule is the default rule.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -51,7 +51,7 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The time when the query analysis rule was created.</p>
+         * <p>The time when the rule was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1587398402</p>
@@ -60,11 +60,14 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The type of the industry. Valid values:</p>
+         * <p>The industry type.</p>
          * <ul>
-         * <li>GENERAL</li>
-         * <li>ECOMMERCE</li>
-         * <li>IT_CONTENT</li>
+         * <li><p>GENERAL: General</p>
+         * </li>
+         * <li><p>ECOMMERCE: E-commerce</p>
+         * </li>
+         * <li><p>IT_CONTENT: IT content</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -80,7 +83,7 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
         public java.util.List<String> indexes;
 
         /**
-         * <p>The name of the query analysis rule.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -95,7 +98,7 @@ public class DescribeQueryProcessorResponseBody extends TeaModel {
         public java.util.List<java.util.Map<String, ?>> processors;
 
         /**
-         * <p>The time when the query analysis rule was last updated.</p>
+         * <p>The time when the rule was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1587398402</p>

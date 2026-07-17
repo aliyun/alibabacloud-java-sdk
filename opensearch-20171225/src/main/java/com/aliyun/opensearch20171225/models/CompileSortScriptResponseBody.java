@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CompileSortScriptResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCDEFGH</p>

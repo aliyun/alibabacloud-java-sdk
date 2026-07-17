@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListABTestGroupsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -72,8 +72,10 @@ public class ListABTestGroupsResponseBody extends TeaModel {
         /**
          * <p>The status of the test group. Valid values:</p>
          * <ul>
-         * <li>0: not in effect</li>
-         * <li>1: in effect</li>
+         * <li><p>0: Not in effect</p>
+         * </li>
+         * <li><p>1: In effect</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

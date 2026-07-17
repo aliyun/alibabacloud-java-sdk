@@ -7,9 +7,12 @@ public class GetFunctionInstanceRequest extends TeaModel {
     /**
      * <p>Specifies the richness of returned information. Valid values:</p>
      * <ul>
-     * <li>simple: displays only the basic information.</li>
-     * <li>normal: displays information such as createParameters and cron. This is the default value.</li>
-     * <li>detail: returns the details of the training task.</li>
+     * <li><p>simple: displays only the basic information.</p>
+     * </li>
+     * <li><p>normal: displays information such as createParameters and cron. This is the default value.</p>
+     * </li>
+     * <li><p>detail: returns the details of the training task.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

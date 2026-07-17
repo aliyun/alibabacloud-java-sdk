@@ -11,7 +11,14 @@ public class CreateABTestExperimentRequest extends TeaModel {
     public ABTestExperiment body;
 
     /**
-     * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+     * <p>Specifies whether to perform a dry run. The default value is false. Valid values:</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The system checks the validity of the request parameters.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The system checks the validity of the request parameters and creates the experiment.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -14,11 +14,14 @@ public class ListStatisticReportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistical reports. Valid values:</p>
+     * <p>The statistical reports.</p>
      * <ul>
-     * <li>For more information about the metrics in data quality reports, see the Upload behavioral data section of <a href="https://help.aliyun.com/document_detail/131547.html">Data collection 2.0</a>.</li>
-     * <li>For more information about the metrics in application and A/B test reports, see the Core metrics section of <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</li>
-     * <li>For more information about the metrics in query analysis reports, see the Query analysis metrics section of <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</li>
+     * <li><p>For \<code>data-quality\\</code> reports, see the &quot;Upload behavioral data&quot; section in <a href="https://help.aliyun.com/document_detail/131547.html">Data collection 2.0</a>.</p>
+     * </li>
+     * <li><p>For \<code>app\\</code> and \<code>abtest\\</code> reports, see the &quot;Core metrics&quot; section in <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</p>
+     * </li>
+     * <li><p>For \<code>app-query\\</code> reports, see the &quot;Query analysis metrics&quot; section in <a href="https://help.aliyun.com/document_detail/187665.html">Metrics of statistical reports</a>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,7 @@ public class ListStatisticReportResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> result;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>43</p>

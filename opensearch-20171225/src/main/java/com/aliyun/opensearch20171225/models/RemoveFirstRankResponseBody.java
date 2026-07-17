@@ -14,7 +14,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the rough sort expression.</p>
+     * <p>The details of the rough sort expression.</p>
      */
     @NameInMap("result")
     public RemoveFirstRankResponseBodyResult result;
@@ -42,7 +42,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
 
     public static class RemoveFirstRankResponseBodyResultMeta extends TeaModel {
         /**
-         * <p>The parameters that are used by a function in the expression. For more information, see Rough sort functions.<a href="~~170007~~"></a></p>
+         * <p>The parameters of the function in the expression. For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">Rough sort</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -51,7 +51,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public String arg;
 
         /**
-         * <p>The attribute, which refers to the scoring feature or search field, For more information about supported feature functions, see Rough sort functions.<a href="~~170007~~"></a></p>
+         * <p>The attribute. This can be a scoring feature or a search field. For information about available scoring features, see <a href="https://help.aliyun.com/document_detail/170007.html">Rough sort</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>static_bm25()</p>
@@ -101,7 +101,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
 
     public static class RemoveFirstRankResponseBodyResult extends TeaModel {
         /**
-         * <p>Specifies whether to set the fine sort expression as the default sort expression.</p>
+         * <p>Indicates whether this is the default expression.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -110,7 +110,7 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -119,13 +119,13 @@ public class RemoveFirstRankResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The information about the expression.</p>
+         * <p>The details of the expression.</p>
          */
         @NameInMap("meta")
         public java.util.List<RemoveFirstRankResponseBodyResultMeta> meta;
 
         /**
-         * <p>Parameter</p>
+         * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

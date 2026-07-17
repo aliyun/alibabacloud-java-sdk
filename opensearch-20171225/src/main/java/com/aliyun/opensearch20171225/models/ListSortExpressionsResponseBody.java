@@ -14,7 +14,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the rough sort or fine sort expressions that are returned.</p>
+     * <p>The information about the rough sort or fine sort expressions.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170007.html">FirstRank</a> and <a href="https://help.aliyun.com/document_detail/170008.html">SecondRank</a>.</p>
      */
     @NameInMap("result")

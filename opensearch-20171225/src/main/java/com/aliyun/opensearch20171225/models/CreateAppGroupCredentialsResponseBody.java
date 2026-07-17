@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateAppGroupCredentialsResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1-2-3-4</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The details of the operation result.</p>
+     */
     @NameInMap("result")
     public CreateAppGroupCredentialsResponseBodyResult result;
 
@@ -37,16 +42,23 @@ public class CreateAppGroupCredentialsResponseBody extends TeaModel {
 
     public static class CreateAppGroupCredentialsResponseBodyResult extends TeaModel {
         /**
+         * <p>The ID of the application group.</p>
+         * 
          * <strong>example:</strong>
          * <p>app_group_123</p>
          */
         @NameInMap("appGroupId")
         public Long appGroupId;
 
+        /**
+         * <p>Indicates whether the credential is enabled.</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
+         * <p>The generated credential token.</p>
+         * 
          * <strong>example:</strong>
          * <p>generated_token_string</p>
          */
@@ -54,6 +66,8 @@ public class CreateAppGroupCredentialsResponseBody extends TeaModel {
         public String token;
 
         /**
+         * <p>The credential type.</p>
+         * 
          * <strong>example:</strong>
          * <p>api-token</p>
          */

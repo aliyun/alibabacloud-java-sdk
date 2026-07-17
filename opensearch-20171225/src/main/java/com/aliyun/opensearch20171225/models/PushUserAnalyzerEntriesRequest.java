@@ -42,11 +42,13 @@ public class PushUserAnalyzerEntriesRequest extends TeaModel {
 
     public static class PushUserAnalyzerEntriesRequestEntries extends TeaModel {
         /**
-         * <p>The operation to be performed on the entries.</p>
+         * <p>The operation to perform on the entries.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>add</li>
-         * <li>delete</li>
+         * <li><p>add</p>
+         * </li>
+         * <li><p>delete</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,8 +67,8 @@ public class PushUserAnalyzerEntriesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies whether to further analyze the terms that are generated after the search query is analyzed.</p>
-         * <p>Default value: true.</p>
+         * <p>Specifies whether to enable fine-grained splitting.</p>
+         * <p>Default: true</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

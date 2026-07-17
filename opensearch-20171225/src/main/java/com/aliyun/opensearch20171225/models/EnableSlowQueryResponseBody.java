@@ -14,7 +14,7 @@ public class EnableSlowQueryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

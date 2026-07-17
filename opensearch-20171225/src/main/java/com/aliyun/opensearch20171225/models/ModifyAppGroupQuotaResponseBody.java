@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAppGroupQuotaResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0A6EB64B-B4C8-CF02-810F-E660812972FF</p>
@@ -42,7 +42,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
 
     public static class ModifyAppGroupQuotaResponseBodyResultQuota extends TeaModel {
         /**
-         * <p>The computing resources. Unit: logical computing unit (LCU).</p>
+         * <p>The compute resources in LCU.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -51,7 +51,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer computeResource;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage capacity in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,15 +60,22 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer docSize;
 
         /**
-         * <p>The specifications. Valid values:</p>
+         * <p>The specifications.</p>
          * <ul>
-         * <li>opensearch.share.junior: basic.</li>
-         * <li>opensearch.share.common: shared general-purpose.</li>
-         * <li>opensearch.share.compute: shared computing.</li>
-         * <li>opensearch.share.storage: shared storage.</li>
-         * <li>opensearch.private.common: exclusive general-purpose.</li>
-         * <li>opensearch.private.compute: exclusive computing.</li>
-         * <li>opensearch.private.storage: exclusive storage.</li>
+         * <li><p>opensearch.share.junior: Entry-level</p>
+         * </li>
+         * <li><p>opensearch.share.common: Shared General-purpose</p>
+         * </li>
+         * <li><p>opensearch.share.compute: Shared Compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.share.storage: Shared Storage-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.common: Dedicated General-purpose</p>
+         * </li>
+         * <li><p>opensearch.private.compute: Dedicated Compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.storage: Dedicated Storage-optimized</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,10 +117,12 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
 
     public static class ModifyAppGroupQuotaResponseBodyResult extends TeaModel {
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method.</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go.</li>
-         * <li>PREPAY: subscription.</li>
+         * <li><p>POSTPAY: pay-as-you-go</p>
+         * </li>
+         * <li><p>PREPAY: subscription</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,10 +132,12 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The billable item. Valid values:</p>
+         * <p>The billing model.</p>
          * <ul>
-         * <li>1: computing resources.</li>
-         * <li>2: queries per second (QPS).</li>
+         * <li><p>1: by compute resources</p>
+         * </li>
+         * <li><p>2: by queries per second (QPS)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +165,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The ID of the current online version.</p>
+         * <p>The current online version.</p>
          * 
          * <strong>example:</strong>
          * <p>100302903</p>
@@ -173,10 +184,6 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
 
         /**
          * <p>The engine type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ha3: ha3.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ha3</p>
@@ -185,7 +192,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The time when the application expired.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -194,10 +201,12 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String expireOn;
 
         /**
-         * <p>The approval state of the quotas. Valid values:</p>
+         * <p>Indicates whether a quota is pending for approval.</p>
          * <ul>
-         * <li>0: The application is in service.</li>
-         * <li>1: The quotas are being reviewed.</li>
+         * <li><p>0: No quota is pending for approval.</p>
+         * </li>
+         * <li><p>1: A quota is pending for approval.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -207,7 +216,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer hasPendingQuotaReviewTask;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>100302881</p>
@@ -216,7 +225,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,11 +234,14 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The lock state. Valid values:</p>
+         * <p>The lock status.</p>
          * <ul>
-         * <li>Unlock: The instance is unlocked.</li>
-         * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
-         * <li>ManualLock: The instance is manually locked.</li>
+         * <li><p>Unlock: The application is not locked.</p>
+         * </li>
+         * <li><p>LockByExpiration: The application is automatically locked upon expiration.</p>
+         * </li>
+         * <li><p>ManualLock: The application is manually locked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,7 +251,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The name of the application</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>lsh_test_1</p>
@@ -248,10 +260,12 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the application is created. Valid values:</p>
+         * <p>Indicates whether the application is provisioned.</p>
          * <ul>
-         * <li>0: The application is being created.</li>
-         * <li>1: The application is created.</li>
+         * <li><p>0: The application is being provisioned.</p>
+         * </li>
+         * <li><p>1: The application is provisioned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +275,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer produced;
 
         /**
-         * <p>The name of the A/B test group.</p>
+         * <p>The name of the A/B test project.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -270,7 +284,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The information about the quotas of the application.</p>
+         * <p>The quota information of the application.</p>
          */
         @NameInMap("quota")
         public ModifyAppGroupQuotaResponseBodyResultQuota quota;
@@ -285,13 +299,18 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The state of the application. Valid values:</p>
+         * <p>The status of the application.</p>
          * <ul>
-         * <li>producing: The application is being created.</li>
-         * <li>review_pending: The application is being reviewed.</li>
-         * <li>config_pending: The application is to be configured.</li>
-         * <li>normal: The application is in service.</li>
-         * <li>frozen: The application is frozen.</li>
+         * <li><p>producing: The application is being provisioned.</p>
+         * </li>
+         * <li><p>review_pending: The application is pending for review.</p>
+         * </li>
+         * <li><p>config_pending: The application is pending for configuration.</p>
+         * </li>
+         * <li><p>normal: The application is running as normal.</p>
+         * </li>
+         * <li><p>frozen: The application is frozen.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,7 +320,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The timestamp when the current online version was published.</p>
+         * <p>The timestamp when the online version was switched.</p>
          * 
          * <strong>example:</strong>
          * <p>1590486386</p>
@@ -310,11 +329,14 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public Integer switchedTime;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The type of the application.</p>
          * <ul>
-         * <li>standard: a standard edition application.</li>
-         * <li>advance: an advanced edition application of an old version. New versions are not supported for this edition.</li>
-         * <li>enhanced: an advanced edition application of a new version.</li>
+         * <li><p>standard: Standard Edition</p>
+         * </li>
+         * <li><p>advance: an earlier version of Premium Edition. This type is not supported for new applications.</p>
+         * </li>
+         * <li><p>enhanced: a new version of Premium Edition.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -324,7 +346,7 @@ public class ModifyAppGroupQuotaResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The timestamp when the application was last modified.</p>
+         * <p>The timestamp when the application was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1590978265</p>

@@ -11,11 +11,13 @@ public class CreateABTestGroupRequest extends TeaModel {
     public ABTestGroup body;
 
     /**
-     * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+     * <p>Specifies whether to check the validity of the input parameters. The default value is false.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks only the validity of input parameters.</li>
-     * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+     * <li><p><strong>true</strong>: checks only the validity of the input parameters.</p>
+     * </li>
+     * <li><p><strong>false</strong>: checks the validity of the input parameters and creates an attribution configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

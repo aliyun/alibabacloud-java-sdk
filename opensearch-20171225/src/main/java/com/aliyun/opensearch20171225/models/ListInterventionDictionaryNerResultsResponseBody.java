@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8F780CA8-D4D4-2FFE-B8AC-42040822C554</p>
@@ -14,8 +14,8 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The NER result.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173606.html">InterventionDictionaryEntry</a>.</p>
+     * <p>The NER results.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173606.html">Named Entity Recognition (NER)</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListInterventionDictionaryNerResultsResponseBodyResult> result;
@@ -43,7 +43,7 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
 
     public static class ListInterventionDictionaryNerResultsResponseBodyResult extends TeaModel {
         /**
-         * <p>The sequence number.</p>
+         * <p>The ordinal number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -52,44 +52,80 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
         public Integer order;
 
         /**
-         * <p>The internal name of the identified entity type. Valid values:</p>
+         * <p>The tag of the detected entity.</p>
          * <ul>
-         * <li>brand</li>
-         * <li>category</li>
-         * <li>material</li>
-         * <li>element</li>
-         * <li>style</li>
-         * <li>color</li>
-         * <li>function</li>
-         * <li>scenario</li>
-         * <li>people</li>
-         * <li>season</li>
-         * <li>model</li>
-         * <li>region</li>
-         * <li>name</li>
-         * <li>adjective</li>
-         * <li>category-modifier</li>
-         * <li>size</li>
-         * <li>quality</li>
-         * <li>suit</li>
-         * <li>new-release</li>
-         * <li>series</li>
-         * <li>marketing</li>
-         * <li>entertainment</li>
-         * <li>organization</li>
-         * <li>movie</li>
-         * <li>game</li>
-         * <li>number</li>
-         * <li>unit</li>
-         * <li>common</li>
-         * <li>new-word</li>
-         * <li>proper-noun</li>
-         * <li>symbol</li>
-         * <li>prefix</li>
-         * <li>suffix</li>
-         * <li>gift</li>
-         * <li>negative</li>
-         * <li>agent</li>
+         * <li><p>brand: Brand</p>
+         * </li>
+         * <li><p>category: Category</p>
+         * </li>
+         * <li><p>material: Material</p>
+         * </li>
+         * <li><p>element: Element</p>
+         * </li>
+         * <li><p>style: Style</p>
+         * </li>
+         * <li><p>color: Color</p>
+         * </li>
+         * <li><p>function: Function</p>
+         * </li>
+         * <li><p>scenario: Scenario</p>
+         * </li>
+         * <li><p>people: People</p>
+         * </li>
+         * <li><p>season: Season</p>
+         * </li>
+         * <li><p>model: Model</p>
+         * </li>
+         * <li><p>region: Region</p>
+         * </li>
+         * <li><p>name: Name</p>
+         * </li>
+         * <li><p>adjective: Adjective</p>
+         * </li>
+         * <li><p>category-modifier: Category modifier</p>
+         * </li>
+         * <li><p>size: Size</p>
+         * </li>
+         * <li><p>quality: Quality</p>
+         * </li>
+         * <li><p>suit: Suit</p>
+         * </li>
+         * <li><p>new-release: New release</p>
+         * </li>
+         * <li><p>series: Series</p>
+         * </li>
+         * <li><p>marketing: Marketing</p>
+         * </li>
+         * <li><p>entertainment: Entertainment</p>
+         * </li>
+         * <li><p>organization: Organization</p>
+         * </li>
+         * <li><p>movie: Movie</p>
+         * </li>
+         * <li><p>game: Game</p>
+         * </li>
+         * <li><p>number: Number</p>
+         * </li>
+         * <li><p>unit: Unit</p>
+         * </li>
+         * <li><p>common: Common word</p>
+         * </li>
+         * <li><p>new-word: New word</p>
+         * </li>
+         * <li><p>proper-noun: Proper noun</p>
+         * </li>
+         * <li><p>symbol: Symbol</p>
+         * </li>
+         * <li><p>prefix: Prefix</p>
+         * </li>
+         * <li><p>suffix: Suffix</p>
+         * </li>
+         * <li><p>gift: Gift</p>
+         * </li>
+         * <li><p>negative: Negative</p>
+         * </li>
+         * <li><p>agent: Agent</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,19 +135,19 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
         public String tag;
 
         /**
-         * <p>The description of the internal name of the identified entity type.</p>
+         * <p>The label of the tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>category</p>
+         * <p>品类</p>
          */
         @NameInMap("tagLabel")
         public String tagLabel;
 
         /**
-         * <p>The entity.</p>
+         * <p>The detected entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>eaa73f35-007a-4be7-88c7-37dca4a04ab7</p>
+         * <p>milk</p>
          */
         @NameInMap("token")
         public String token;

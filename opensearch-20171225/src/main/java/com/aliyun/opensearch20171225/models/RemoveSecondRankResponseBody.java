@@ -14,7 +14,7 @@ public class RemoveSecondRankResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>—</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

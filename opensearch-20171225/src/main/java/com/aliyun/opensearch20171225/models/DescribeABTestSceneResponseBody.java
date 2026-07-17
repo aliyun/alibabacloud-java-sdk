@@ -60,10 +60,10 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the test scenario.</p>
+         * <p>The alias of the test scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>&quot;test&quot;</p>
          */
         @NameInMap("name")
         public String name;
@@ -71,8 +71,10 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
         /**
          * <p>The status of the test scenario. Valid values:</p>
          * <ul>
-         * <li>0: The test is stopped.</li>
-         * <li>1: The test is started.</li>
+         * <li><p>0: The test is stopped.</p>
+         * </li>
+         * <li><p>1: The test is running.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +93,7 @@ public class DescribeABTestSceneResponseBody extends TeaModel {
         public Integer updated;
 
         /**
-         * <p>The indicators of the test scenarios.</p>
+         * <p>The identifiers of the test scenario.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;

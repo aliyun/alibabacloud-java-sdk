@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppGroupsShrinkRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. Exact match is used.</p>
+     * <p>The ID of the instance. An exact match is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>ops-cn-xxxx</p>
@@ -14,7 +14,7 @@ public class ListAppGroupsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * 
      * <strong>example:</strong>
      * <p>my_name</p>
@@ -32,7 +32,7 @@ public class ListAppGroupsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,10 +50,12 @@ public class ListAppGroupsShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The method based on which applications are sorted. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>0: sorts applications in descending order by creation time.</li>
-     * <li>1: sorts applications in descending order by modification time.</li>
+     * <li><p>0: Sorts applications by creation time in descending order.</p>
+     * </li>
+     * <li><p>1: Sorts applications by modification time in descending order.</p>
+     * </li>
      * </ul>
      * <p>Default value: 0.</p>
      * 
@@ -64,7 +66,7 @@ public class ListAppGroupsShrinkRequest extends TeaModel {
     public Integer sortBy;
 
     /**
-     * <p>The tags.</p>
+     * <p>A list of tags.</p>
      */
     @NameInMap("tags")
     public String tagsShrink;
@@ -72,8 +74,10 @@ public class ListAppGroupsShrinkRequest extends TeaModel {
     /**
      * <p>The type of the application. Valid values:</p>
      * <ul>
-     * <li>standard: a High-performance Search Edition application.</li>
-     * <li>enhanced: an Industry Algorithm Edition application.</li>
+     * <li><p>standard: a Standard Edition application.</p>
+     * </li>
+     * <li><p>enhanced: a Premium Edition application.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

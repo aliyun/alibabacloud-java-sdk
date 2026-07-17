@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSortScriptResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCDEFGH</p>
@@ -14,7 +14,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("result")
     public CreateSortScriptResponseBodyResult result;
@@ -42,7 +42,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
 
     public static class CreateSortScriptResponseBodyResult extends TeaModel {
         /**
-         * <p>The sort phase to which the script applies.</p>
+         * <p>The applicable scope of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>second_rank</p>
@@ -51,7 +51,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The script name.</p>
+         * <p>The name of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>rank_cava_20230606_v7</p>
@@ -60,7 +60,7 @@ public class CreateSortScriptResponseBody extends TeaModel {
         public String scriptName;
 
         /**
-         * <p>The script type.</p>
+         * <p>The type of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>cava_script</p>

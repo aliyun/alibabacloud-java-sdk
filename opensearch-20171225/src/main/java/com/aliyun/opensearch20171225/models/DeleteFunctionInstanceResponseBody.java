@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFunctionInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code. If no error occurs, this parameter is left empty.</p>
+     * <p>The error code. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;Instance.NotExist&quot;</p>
@@ -23,7 +23,7 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the request, in milliseconds.</p>
+     * <p>The request latency, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
     public Long latency;
 
     /**
-     * <p>The error message. If no error occurs, this parameter is left empty.</p>
+     * <p>The error message. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;instance not exist.&quot;</p>
@@ -50,10 +50,12 @@ public class DeleteFunctionInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the request. Valid values:</p>
+     * <p>The status of the request.</p>
      * <ul>
-     * <li>OK: The request is successful.</li>
-     * <li>FAIL: The request fails.</li>
+     * <li><p>OK: The request is successful.</p>
+     * </li>
+     * <li><p>FAIL: The request fails.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

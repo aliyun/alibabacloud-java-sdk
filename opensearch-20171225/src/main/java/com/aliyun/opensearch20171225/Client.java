@@ -9,6 +9,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-east-1", "opensearch.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "opensearch.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "opensearch.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "opensearch.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "opensearch.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "opensearch.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "opensearch.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "opensearch.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "opensearch.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "opensearch.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "opensearch.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("opensearch", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -70,7 +83,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds an Elasticsearch instance.</p>
+     * <p>Binds an Elasticsearch instance as a dependency.</p>
      * 
      * @param request BindEsInstanceRequest
      * @param headers map
@@ -104,7 +117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds an Elasticsearch instance.</p>
+     * <p>Binds an Elasticsearch instance as a dependency.</p>
      * 
      * @param request BindEsInstanceRequest
      * @return BindEsInstanceResponse
@@ -202,7 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a test group.</p>
+     * <p>Creates an experiment group.</p>
      * 
      * @param request CreateABTestGroupRequest
      * @param headers map
@@ -237,7 +250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a test group.</p>
+     * <p>Creates an experiment group.</p>
      * 
      * @param request CreateABTestGroupRequest
      * @return CreateABTestGroupResponse
@@ -250,7 +263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an scenario.</p>
+     * <p>Creates an experiment scenario.</p>
      * 
      * @param request CreateABTestSceneRequest
      * @param headers map
@@ -285,7 +298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an scenario.</p>
+     * <p>Creates an experiment scenario.</p>
      * 
      * @param request CreateABTestSceneRequest
      * @return CreateABTestSceneResponse
@@ -298,15 +311,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you create a standard application, a new version of the application is created if the specified application name already exists.</p>
      * <ul>
-     * <li>When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.</li>
-     * <li>When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.</li>
-     * <li>When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.</li>
+     * <li>If a Standard Edition application with the same name already exists, a new version is created.</li>
+     * <li>The autoSwitch and realtimeShared parameters are required to create a new version.</li>
+     * <li>The quota for the new version is automatically inherited from the previous version.</li>
+     * <li>You cannot modify the quota when you create the new version.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a version for an OpenSearch application.</p>
+     * <p>Creates a new version of an OpenSearch application.</p>
      * 
      * @param request CreateAppRequest
      * @param headers map
@@ -410,15 +423,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you create a standard application, a new version of the application is created if the specified application name already exists.</p>
      * <ul>
-     * <li>When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.</li>
-     * <li>When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.</li>
-     * <li>When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.</li>
+     * <li>If a Standard Edition application with the same name already exists, a new version is created.</li>
+     * <li>The autoSwitch and realtimeShared parameters are required to create a new version.</li>
+     * <li>The quota for the new version is automatically inherited from the previous version.</li>
+     * <li>You cannot modify the quota when you create the new version.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a version for an OpenSearch application.</p>
+     * <p>Creates a new version of an OpenSearch application.</p>
      * 
      * @param request CreateAppRequest
      * @return CreateAppResponse
@@ -497,6 +510,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates access credentials for a specified application group. This operation supports a dry run to preview the results.</p>
+     * 
      * @param request CreateAppGroupCredentialsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -534,6 +550,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates access credentials for a specified application group. This operation supports a dry run to preview the results.</p>
+     * 
      * @param request CreateAppGroupCredentialsRequest
      * @return CreateAppGroupCredentialsResponse
      */
@@ -545,7 +564,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a rough sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified rough sort expression. By default, the value of dryRun is false if you do not set this parameter.</p>
+     * <p>创建弹性计划</p>
+     * 
+     * @param request CreateElasticPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateElasticPlanResponse
+     */
+    public CreateElasticPlanResponse createElasticPlanWithOptions(String appGroupIdentity, CreateElasticPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customDates)) {
+            body.put("customDates", request.customDates);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticLcu)) {
+            body.put("elasticLcu", request.elasticLcu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endHour)) {
+            body.put("endHour", request.endHour);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleType)) {
+            body.put("scheduleType", request.scheduleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startHour)) {
+            body.put("startHour", request.startHour);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateElasticPlan"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/elastic-plans"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateElasticPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建弹性计划</p>
+     * 
+     * @param request CreateElasticPlanRequest
+     * @return CreateElasticPlanResponse
+     */
+    public CreateElasticPlanResponse createElasticPlan(String appGroupIdentity, CreateElasticPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createElasticPlanWithOptions(appGroupIdentity, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a rough sort expression for a version of an OpenSearch application. If you set <code>dryRun</code> to true, this operation validates the specified rough sort expression. By default, the value of <code>dryRun</code> is <code>false</code>.</p>
      * 
      * @param request CreateFirstRankRequest
      * @param headers map
@@ -580,7 +676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a rough sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified rough sort expression. By default, the value of dryRun is false if you do not set this parameter.</p>
+     * <p>Creates a rough sort expression for a version of an OpenSearch application. If you set <code>dryRun</code> to true, this operation validates the specified rough sort expression. By default, the value of <code>dryRun</code> is <code>false</code>.</p>
      * 
      * @param request CreateFirstRankRequest
      * @return CreateFirstRankResponse
@@ -670,7 +766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an algorithm resource for a specific feature.</p>
+     * <p>Creates an algorithm resource for a specified feature.</p>
      * 
      * @param request CreateFunctionResourceRequest
      * @param headers map
@@ -716,7 +812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an algorithm resource for a specific feature.</p>
+     * <p>Creates an algorithm resource for a specified feature.</p>
      * 
      * @param request CreateFunctionResourceRequest
      * @return CreateFunctionResourceResponse
@@ -729,7 +825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a training task for an algorithm instance.</p>
+     * <p>Starts a training task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -755,7 +851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts a training task for an algorithm instance.</p>
+     * <p>Starts a training task.</p>
      * @return CreateFunctionTaskResponse
      */
     public CreateFunctionTaskResponse createFunctionTask(String appGroupIdentity, String functionName, String instanceName) throws Exception {
@@ -766,7 +862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an intervention dictionary.</p>
+     * <p>Creates an intervention dictionary.</p>
      * 
      * @param request CreateInterventionDictionaryRequest
      * @param headers map
@@ -814,7 +910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an intervention dictionary.</p>
+     * <p>Creates an intervention dictionary.</p>
      * 
      * @param request CreateInterventionDictionaryRequest
      * @return CreateInterventionDictionaryResponse
@@ -917,7 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a query policy.</p>
+     * <p>Creates a search strategy.</p>
      * 
      * @param request CreateSearchStrategyRequest
      * @param headers map
@@ -946,7 +1042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a query policy.</p>
+     * <p>Creates a search strategy.</p>
      * 
      * @param request CreateSearchStrategyRequest
      * @return CreateSearchStrategyResponse
@@ -959,7 +1055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a fine sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified fine sort expression. The default value of dryRun is false if you do not set this parameter.</p>
+     * <p>Creates a fine sort expression for a version of an OpenSearch application. If you set the dryRun parameter to true, this operation validates the specified fine sort expression. The default value of this parameter is false.</p>
      * 
      * @param request CreateSecondRankRequest
      * @param headers map
@@ -994,7 +1090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a fine sort expression for a version of an OpenSearch application. If you set dryRun to true, this operation checks the specified fine sort expression. The default value of dryRun is false if you do not set this parameter.</p>
+     * <p>Creates a fine sort expression for a version of an OpenSearch application. If you set the dryRun parameter to true, this operation validates the specified fine sort expression. The default value of this parameter is false.</p>
      * 
      * @param request CreateSecondRankRequest
      * @return CreateSecondRankResponse
@@ -1066,7 +1162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom analyzer.</p>
+     * <p>Creates a custom analyzer.</p>
      * 
      * @param request CreateUserAnalyzerRequest
      * @param headers map
@@ -1122,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a custom analyzer.</p>
+     * <p>Creates a custom analyzer.</p>
      * 
      * @param request CreateUserAnalyzerRequest
      * @return CreateUserAnalyzerResponse
@@ -1135,7 +1231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a test.</p>
+     * <p>Deletes an experiment.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1161,7 +1257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a test.</p>
+     * <p>Deletes an experiment.</p>
      * @return DeleteABTestExperimentResponse
      */
     public DeleteABTestExperimentResponse deleteABTestExperiment(String appGroupIdentity, String sceneId, String groupId, String experimentId) throws Exception {
@@ -1172,7 +1268,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实验组</p>
+     * <p>Deletes an A/B test group.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1198,7 +1294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实验组</p>
+     * <p>Deletes an A/B test group.</p>
      * @return DeleteABTestGroupResponse
      */
     public DeleteABTestGroupResponse deleteABTestGroup(String appGroupIdentity, String sceneId, String groupId) throws Exception {
@@ -1246,7 +1342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an algorithm instance. Before you delete an instance, make sure that it is not in use to prevent service interruptions.</p>
+     * <p>Deletes an algorithm instance. Before you delete an instance, ensure that it is not in use to prevent service interruptions.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1272,7 +1368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an algorithm instance. Before you delete an instance, make sure that it is not in use to prevent service interruptions.</p>
+     * <p>Deletes an algorithm instance. Before you delete an instance, ensure that it is not in use to prevent service interruptions.</p>
      * @return DeleteFunctionInstanceResponse
      */
     public DeleteFunctionInstanceResponse deleteFunctionInstance(String appGroupIdentity, String functionName, String instanceName) throws Exception {
@@ -1283,7 +1379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an algorithm resource.</p>
+     * <p>Deletes a specified algorithm resource.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1309,7 +1405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an algorithm resource.</p>
+     * <p>Deletes a specified algorithm resource.</p>
      * @return DeleteFunctionResourceResponse
      */
     public DeleteFunctionResourceResponse deleteFunctionResource(String appGroupIdentity, String functionName, String resourceName) throws Exception {
@@ -1320,7 +1416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a training task. The training task in progress cannot be deleted.</p>
+     * <p>Deletes a training record. A training record that is in progress cannot be deleted.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1346,7 +1442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a training task. The training task in progress cannot be deleted.</p>
+     * <p>Deletes a training record. A training record that is in progress cannot be deleted.</p>
      * @return DeleteFunctionTaskResponse
      */
     public DeleteFunctionTaskResponse deleteFunctionTask(String appGroupIdentity, String functionName, String instanceName, String generation) throws Exception {
@@ -1357,7 +1453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除排序脚本</p>
+     * <p>Deletes a sort script.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1383,7 +1479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除排序脚本</p>
+     * <p>Deletes a sort script.</p>
      * @return DeleteSortScriptResponse
      */
     public DeleteSortScriptResponse deleteSortScript(String appGroupIdentity, String scriptName, String appVersionId) throws Exception {
@@ -1431,7 +1527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验详情</p>
+     * <p>Retrieves the details of an experiment.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1457,7 +1553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验详情</p>
+     * <p>Retrieves the details of an experiment.</p>
      * @return DescribeABTestExperimentResponse
      */
     public DescribeABTestExperimentResponse describeABTestExperiment(String appGroupIdentity, String sceneId, String groupId, String experimentId) throws Exception {
@@ -1468,7 +1564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a test group.</p>
+     * <p>Retrieves the details of an A/B test group.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1494,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a test group.</p>
+     * <p>Retrieves the details of an A/B test group.</p>
      * @return DescribeABTestGroupResponse
      */
     public DescribeABTestGroupResponse describeABTestGroup(String appGroupIdentity, String sceneId, String groupId) throws Exception {
@@ -1505,7 +1601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an A/B test scenario.</p>
+     * <p>Query an A/B test scenario.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1531,7 +1627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an A/B test scenario.</p>
+     * <p>Query an A/B test scenario.</p>
      * @return DescribeABTestSceneResponse
      */
     public DescribeABTestSceneResponse describeABTestScene(String appGroupIdentity, String sceneId) throws Exception {
@@ -1579,7 +1675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an OpenSearch application.</p>
+     * <p>Query an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1605,7 +1701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an OpenSearch application.</p>
+     * <p>Query an OpenSearch application.</p>
      * @return DescribeAppGroupResponse
      */
     public DescribeAppGroupResponse describeAppGroup(String appGroupIdentity) throws Exception {
@@ -1653,15 +1749,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you create a standard application, a new version of the application is created if the specified application name already exists.</p>
      * <ul>
-     * <li>When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.</li>
-     * <li>When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.</li>
-     * <li>When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.</li>
+     * <li>If a Standard Edition application with the same name exists, a new version is created.</li>
+     * <li>When you create a new version, the autoSwitch and realtimeShared parameters are required.</li>
+     * <li>When you create a new version, the quota is inherited from the previous version.</li>
+     * <li>When you create a new version, modifications to the quota do not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the version list of an OpenSearch application.</p>
+     * <p>Queries the versions of an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1687,15 +1783,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you create a standard application, a new version of the application is created if the specified application name already exists.</p>
      * <ul>
-     * <li>When you create a version of an existing application, you must specify the autoSwitch and realtimeShared parameters.</li>
-     * <li>When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.</li>
-     * <li>When you create a version of an existing application, the modification of the value of the quota parameter does not take effect.</li>
+     * <li>If a Standard Edition application with the same name exists, a new version is created.</li>
+     * <li>When you create a new version, the autoSwitch and realtimeShared parameters are required.</li>
+     * <li>When you create a new version, the quota is inherited from the previous version.</li>
+     * <li>When you create a new version, modifications to the quota do not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the version list of an OpenSearch application.</p>
+     * <p>Queries the versions of an OpenSearch application.</p>
      * @return DescribeAppsResponse
      */
     public DescribeAppsResponse describeApps(String appGroupIdentity) throws Exception {
@@ -1706,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data collection task of an application.</p>
+     * <p>Retrieves the details of a data collection for a specified application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1732,7 +1828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a data collection task of an application.</p>
+     * <p>Retrieves the details of a data collection for a specified application.</p>
      * @return DescribeDataCollctionResponse
      */
     public DescribeDataCollctionResponse describeDataCollction(String appGroupIdentity, String dataCollectionIdentity) throws Exception {
@@ -1742,8 +1838,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>若已存在同名标准版应用，则创建新版本；</li>
+     * <li>在新建版本情况下，autoSwitch 和 realtimeShared 也是必填的；</li>
+     * <li>在新建版本情况下，quota 是自动从上一个版本继承的；</li>
+     * <li>在新建版本情况下，修改 quota 是无效的。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a rough sort expression that is configured for an OpenSearch application version.</p>
+     * <p>获取弹性计划详情</p>
+     * 
+     * @param request DescribeElasticPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeElasticPlanResponse
+     */
+    public DescribeElasticPlanResponse describeElasticPlanWithOptions(String appGroupIdentity, String planId, DescribeElasticPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeElasticPlan"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/elastic-plans/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeElasticPlanResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>若已存在同名标准版应用，则创建新版本；</li>
+     * <li>在新建版本情况下，autoSwitch 和 realtimeShared 也是必填的；</li>
+     * <li>在新建版本情况下，quota 是自动从上一个版本继承的；</li>
+     * <li>在新建版本情况下，修改 quota 是无效的。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取弹性计划详情</p>
+     * 
+     * @param request DescribeElasticPlanRequest
+     * @return DescribeElasticPlanResponse
+     */
+    public DescribeElasticPlanResponse describeElasticPlan(String appGroupIdentity, String planId, DescribeElasticPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeElasticPlanWithOptions(appGroupIdentity, planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the rough sort expression configured for an OpenSearch application version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1769,7 +1928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a rough sort expression that is configured for an OpenSearch application version.</p>
+     * <p>Queries the rough sort expression configured for an OpenSearch application version.</p>
      * @return DescribeFirstRankResponse
      */
     public DescribeFirstRankResponse describeFirstRank(String appGroupIdentity, String appId, String name) throws Exception {
@@ -1780,7 +1939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an intervention dictionary.</p>
+     * <p>Retrieves the details of an intervention dictionary.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1806,7 +1965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an intervention dictionary.</p>
+     * <p>Retrieves the details of an intervention dictionary.</p>
      * @return DescribeInterventionDictionaryResponse
      */
     public DescribeInterventionDictionaryResponse describeInterventionDictionary(String name) throws Exception {
@@ -1817,7 +1976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the query analysis rule for a version of an OpenSearch application.</p>
+     * <p>Describes a query analysis rule for a version of an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1843,7 +2002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the query analysis rule for a version of an OpenSearch application.</p>
+     * <p>Describes a query analysis rule for a version of an OpenSearch application.</p>
      * @return DescribeQueryProcessorResponse
      */
     public DescribeQueryProcessorResponse describeQueryProcessor(String appGroupIdentity, String appId, String name) throws Exception {
@@ -1854,7 +2013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoints of all regions that support OpenSearch.</p>
+     * <p>Retrieves the endpoints for all regions.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1880,7 +2039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the endpoints of all regions that support OpenSearch.</p>
+     * <p>Retrieves the endpoints for all regions.</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -1891,7 +2050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看应用定时任务详情</p>
+     * <p>Query a scheduled task for an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1917,7 +2076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看应用定时任务详情</p>
+     * <p>Query a scheduled task for an OpenSearch application.</p>
      * @return DescribeScheduledTaskResponse
      */
     public DescribeScheduledTaskResponse describeScheduledTask(String appGroupIdentity, String taskId) throws Exception {
@@ -1928,7 +2087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a fine sort expression that is configured for a version of an OpenSearch application.</p>
+     * <p>Queries the fine sort expression for a version of an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1954,7 +2113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a fine sort expression that is configured for a version of an OpenSearch application.</p>
+     * <p>Queries the fine sort expression for a version of an OpenSearch application.</p>
      * @return DescribeSecondRankResponse
      */
     public DescribeSecondRankResponse describeSecondRank(String appGroupIdentity, String appId, String name) throws Exception {
@@ -1965,7 +2124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取优化大师慢查询开通状态</p>
+     * <p>Queries the status of the slow query feature.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1991,7 +2150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取优化大师慢查询开通状态</p>
+     * <p>Queries the status of the slow query feature.</p>
      * @return DescribeSlowQueryStatusResponse
      */
     public DescribeSlowQueryStatusResponse describeSlowQueryStatus(String appGroupIdentity) throws Exception {
@@ -2002,7 +2161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义分析器详情</p>
+     * <p>Retrieves the details of a custom analyzer.</p>
      * 
      * @param request DescribeUserAnalyzerRequest
      * @param headers map
@@ -2036,7 +2195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取自定义分析器详情</p>
+     * <p>Retrieves the details of a custom analyzer.</p>
      * 
      * @param request DescribeUserAnalyzerRequest
      * @return DescribeUserAnalyzerResponse
@@ -2049,7 +2208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用优化大师慢查询服务</p>
+     * <p>Disables the slow query service for Search Diagnoser.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2075,7 +2234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用优化大师慢查询服务</p>
+     * <p>Disables the slow query service for Search Diagnoser.</p>
      * @return DisableSlowQueryResponse
      */
     public DisableSlowQueryResponse disableSlowQuery(String appGroupIdentity) throws Exception {
@@ -2086,7 +2245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables slow query optimization of Optimization Master.</p>
+     * <p>Enables the slow query service for the optimizer.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2112,7 +2271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables slow query optimization of Optimization Master.</p>
+     * <p>Enables the slow query service for the optimizer.</p>
      * @return EnableSlowQueryResponse
      */
     public EnableSlowQueryResponse enableSlowQuery(String appGroupIdentity) throws Exception {
@@ -2171,7 +2330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the type of an industry.</p>
+     * <p>Retrieves the industry type.</p>
      * 
      * @param request GetDomainRequest
      * @param headers map
@@ -2205,7 +2364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the type of an industry.</p>
+     * <p>Retrieves the industry type.</p>
      * 
      * @param request GetDomainRequest
      * @return GetDomainResponse
@@ -2218,7 +2377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version information about the current feature when you create an instance.</p>
+     * <p>Retrieves the version information of the feature that is used to create an instance.</p>
      * 
      * @param request GetFunctionCurrentVersionRequest
      * @param headers map
@@ -2264,7 +2423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version information about the current feature when you create an instance.</p>
+     * <p>Retrieves the version information of the feature that is used to create an instance.</p>
      * 
      * @param request GetFunctionCurrentVersionRequest
      * @return GetFunctionCurrentVersionResponse
@@ -2277,7 +2436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the algorithm instance that an application uses by default.</p>
+     * <p>Queries the default algorithm instance for an application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2303,7 +2462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the algorithm instance that an application uses by default.</p>
+     * <p>Queries the default algorithm instance for an application.</p>
      * @return GetFunctionDefaultInstanceResponse
      */
     public GetFunctionDefaultInstanceResponse getFunctionDefaultInstance(String appGroupIdentity, String functionName) throws Exception {
@@ -2314,7 +2473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an algorithm instance by instance name.</p>
+     * <p>Query an algorithm instance by instance name.</p>
      * 
      * @param request GetFunctionInstanceRequest
      * @param headers map
@@ -2348,7 +2507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of an algorithm instance by instance name.</p>
+     * <p>Query an algorithm instance by instance name.</p>
      * 
      * @param request GetFunctionInstanceRequest
      * @return GetFunctionInstanceResponse
@@ -2361,7 +2520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an algorithm resource.</p>
+     * <p>Retrieves the specified algorithm resource.</p>
      * 
      * @param request GetFunctionResourceRequest
      * @param headers map
@@ -2395,7 +2554,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an algorithm resource.</p>
+     * <p>Retrieves the specified algorithm resource.</p>
      * 
      * @param request GetFunctionResourceRequest
      * @return GetFunctionResourceResponse
@@ -2445,7 +2604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries version information by version ID.</p>
+     * <p>Queries the information about a function version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2471,7 +2630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries version information by version ID.</p>
+     * <p>Queries the information about a function version.</p>
      * @return GetFunctionVersionResponse
      */
     public GetFunctionVersionResponse getFunctionVersion(String functionName, String versionId) throws Exception {
@@ -2481,6 +2640,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the names of all files in a specified script for a specific application version.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetScriptFileNamesResponse
@@ -2504,6 +2666,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the names of all files in a specified script for a specific application version.</p>
      * @return GetScriptFileNamesResponse
      */
     public GetScriptFileNamesResponse getScriptFileNames(String appGroupIdentity, String appVersionId, String scriptName) throws Exception {
@@ -2514,7 +2678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a query policy.</p>
+     * <p>Retrieves the details of a query policy.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2540,7 +2704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a query policy.</p>
+     * <p>Retrieves the details of a query policy.</p>
      * @return GetSearchStrategyResponse
      */
     public GetSearchStrategyResponse getSearchStrategy(String appGroupIdentity, String appId, String strategyName) throws Exception {
@@ -2551,7 +2715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a sort script.</p>
+     * <p>Retrieves the details of a sort script.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2577,7 +2741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a sort script.</p>
+     * <p>Retrieves the details of a sort script.</p>
      * @return GetSortScriptResponse
      */
     public GetSortScriptResponse getSortScript(String appGroupIdentity, String scriptName, String appVersionId) throws Exception {
@@ -2588,7 +2752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the content of a sort script.</p>
+     * <p>Retrieves the content of a sort script.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2614,7 +2778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the content of a sort script.</p>
+     * <p>Retrieves the content of a sort script.</p>
      * @return GetSortScriptFileResponse
      */
     public GetSortScriptFileResponse getSortScriptFile(String appGroupIdentity, String scriptName, String appVersionId, String fileName) throws Exception {
@@ -2662,7 +2826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whitelists.</p>
+     * <p>Lists whitelists.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2688,7 +2852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whitelists.</p>
+     * <p>Lists whitelists.</p>
      * @return ListABTestFixedFlowDividersResponse
      */
     public ListABTestFixedFlowDividersResponse listABTestFixedFlowDividers(String appGroupIdentity, String sceneId, String groupId, String experimentId) throws Exception {
@@ -2699,7 +2863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验组清单</p>
+     * <p>Retrieves a list of test groups.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2725,7 +2889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验组清单</p>
+     * <p>Retrieves a list of test groups.</p>
      * @return ListABTestGroupsResponse
      */
     public ListABTestGroupsResponse listABTestGroups(String appGroupIdentity, String sceneId) throws Exception {
@@ -2773,10 +2937,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation allows you to query applications by application name, instance ID, and application type.</p>
      * <ul>
-     * <li>This operation allows you to sort the applications based on their creation time.</li>
-     * <li>This operation supports the parameters for paging.</li>
+     * <li>Filters applications by name, instance ID, and type.</li>
+     * <li>Sorts applications by their creation time.</li>
+     * <li>Supports paging.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2848,10 +3012,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation allows you to query applications by application name, instance ID, and application type.</p>
      * <ul>
-     * <li>This operation allows you to sort the applications based on their creation time.</li>
-     * <li>This operation supports the parameters for paging.</li>
+     * <li>Filters applications by name, instance ID, and type.</li>
+     * <li>Sorts applications by their creation time.</li>
+     * <li>Supports paging.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2868,7 +3032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data collection tasks of an OpenSearch application.</p>
+     * <p>Lists the data collections for an OpenSearch application.</p>
      * 
      * @param request ListDataCollectionsRequest
      * @param headers map
@@ -2906,7 +3070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the data collection tasks of an OpenSearch application.</p>
+     * <p>Lists the data collections for an OpenSearch application.</p>
      * 
      * @param request ListDataCollectionsRequest
      * @return ListDataCollectionsResponse
@@ -2919,7 +3083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all fields in a table of a data source. This operation is for internal use only.</p>
+     * <p>This internal API retrieves all fields from a specified data table.</p>
      * 
      * @param request ListDataSourceTableFieldsRequest
      * @param headers map
@@ -2957,7 +3121,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all fields in a table of a data source. This operation is for internal use only.</p>
+     * <p>This internal API retrieves all fields from a specified data table.</p>
      * 
      * @param request ListDataSourceTableFieldsRequest
      * @return ListDataSourceTableFieldsResponse
@@ -2970,7 +3134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains all data from a specified data source.</p>
+     * <p>Retrieves all data from a specified data source.</p>
      * 
      * @param request ListDataSourceTablesRequest
      * @param headers map
@@ -3004,7 +3168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains all data from a specified data source.</p>
+     * <p>Retrieves all data from a specified data source.</p>
      * 
      * @param request ListDataSourceTablesRequest
      * @return ListDataSourceTablesResponse
@@ -3013,6 +3177,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listDataSourceTablesWithOptions(dataSourceType, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取弹性计划列表</p>
+     * 
+     * @param request ListElasticPlansRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListElasticPlansResponse
+     */
+    public ListElasticPlansResponse listElasticPlansWithOptions(String appGroupIdentity, ListElasticPlansRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            query.put("enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListElasticPlans"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/elastic-plans"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListElasticPlansResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取弹性计划列表</p>
+     * 
+     * @param request ListElasticPlansRequest
+     * @return ListElasticPlansResponse
+     */
+    public ListElasticPlansResponse listElasticPlans(String appGroupIdentity, ListElasticPlansRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listElasticPlansWithOptions(appGroupIdentity, request, headers, runtime);
     }
 
     /**
@@ -3054,7 +3285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all algorithm instances of a user, which meet specified conditions.</p>
+     * <p>Lists all instances that match the specified conditions.</p>
      * 
      * @param request ListFunctionInstancesRequest
      * @param headers map
@@ -3108,7 +3339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all algorithm instances of a user, which meet specified conditions.</p>
+     * <p>Lists all instances that match the specified conditions.</p>
      * 
      * @param request ListFunctionInstancesRequest
      * @return ListFunctionInstancesResponse
@@ -3121,7 +3352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries algorithm resources.</p>
+     * <p>Lists the algorithm resources.</p>
      * 
      * @param request ListFunctionResourcesRequest
      * @param headers map
@@ -3167,7 +3398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries algorithm resources.</p>
+     * <p>Lists the algorithm resources.</p>
      * 
      * @param request ListFunctionResourcesRequest
      * @return ListFunctionResourcesResponse
@@ -3180,7 +3411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the training tasks. The returned results are sorted by start time in descending order.</p>
+     * <p>Queries the training tasks. The results are sorted in descending order by start time.</p>
      * 
      * @param request ListFunctionTasksRequest
      * @param headers map
@@ -3230,7 +3461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the training tasks. The returned results are sorted by start time in descending order.</p>
+     * <p>Queries the training tasks. The results are sorted in descending order by start time.</p>
      * 
      * @param request ListFunctionTasksRequest
      * @return ListFunctionTasksResponse
@@ -3243,7 +3474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户的干预词典列表</p>
+     * <p>Retrieves a list of intervention dictionaries.</p>
      * 
      * @param request ListInterventionDictionariesRequest
      * @param headers map
@@ -3285,7 +3516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用户的干预词典列表</p>
+     * <p>Retrieves a list of intervention dictionaries.</p>
      * 
      * @param request ListInterventionDictionariesRequest
      * @return ListInterventionDictionariesResponse
@@ -3353,7 +3584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实体识别结果</p>
+     * <p>Retrieves the Named Entity Recognition (NER) results.</p>
      * 
      * @param request ListInterventionDictionaryNerResultsRequest
      * @param headers map
@@ -3387,7 +3618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实体识别结果</p>
+     * <p>Retrieves the Named Entity Recognition (NER) results.</p>
      * 
      * @param request ListInterventionDictionaryNerResultsRequest
      * @return ListInterventionDictionaryNerResultsResponse
@@ -3400,7 +3631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resources that are associated with an intervention dictionary. If the intervention dictionary is referenced by query analysis rules, this operation returns all applications that use the intervention dictionary and the information about the query analysis rules.</p>
+     * <p>Queries the list of resources associated with an intervention dictionary. If a query processor (QP) references the dictionary, the operation returns all associated applications and information about the QP.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3426,7 +3657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resources that are associated with an intervention dictionary. If the intervention dictionary is referenced by query analysis rules, this operation returns all applications that use the intervention dictionary and the information about the query analysis rules.</p>
+     * <p>Queries the list of resources associated with an intervention dictionary. If a query processor (QP) references the dictionary, the operation returns all associated applications and information about the QP.</p>
      * @return ListInterventionDictionaryRelatedEntitiesResponse
      */
     public ListInterventionDictionaryRelatedEntitiesResponse listInterventionDictionaryRelatedEntities(String name) throws Exception {
@@ -3437,7 +3668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看当前的处理流</p>
+     * <p>Lists the current proceedings.</p>
      * 
      * @param request ListProceedingsRequest
      * @param headers map
@@ -3471,7 +3702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看当前的处理流</p>
+     * <p>Lists the current proceedings.</p>
      * 
      * @param request ListProceedingsRequest
      * @return ListProceedingsResponse
@@ -3484,7 +3715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of a query analysis test. This API operation is available only to existing applications of OpenSearch Open Source Compatible Edition.</p>
+     * <p>Tests the results of query analysis. This operation can be called only for existing applications of the Open Source-compatible Edition.</p>
      * 
      * @param request ListQueryProcessorAnalyzerResultsRequest
      * @param headers map
@@ -3518,7 +3749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the results of a query analysis test. This API operation is available only to existing applications of OpenSearch Open Source Compatible Edition.</p>
+     * <p>Tests the results of query analysis. This operation can be called only for existing applications of the Open Source-compatible Edition.</p>
      * 
      * @param request ListQueryProcessorAnalyzerResultsRequest
      * @return ListQueryProcessorAnalyzerResultsResponse
@@ -3531,7 +3762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the recommended priority settings of entity types for named entity recognition (NER).</p>
+     * <p>Queries the recommended priority settings for entity types in Named Entity Recognition (NER).</p>
      * 
      * @param request ListQueryProcessorNersRequest
      * @param headers map
@@ -3565,7 +3796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the recommended priority settings of entity types for named entity recognition (NER).</p>
+     * <p>Queries the recommended priority settings for entity types in Named Entity Recognition (NER).</p>
      * 
      * @param request ListQueryProcessorNersRequest
      * @return ListQueryProcessorNersResponse
@@ -3578,7 +3809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of query analysis rules that are configured for a version of an OpenSearch application.</p>
+     * <p>Queries a list of query analysis rules configured for a specific version of an OpenSearch application.</p>
      * 
      * @param request ListQueryProcessorsRequest
      * @param headers map
@@ -3612,7 +3843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of query analysis rules that are configured for a version of an OpenSearch application.</p>
+     * <p>Queries a list of query analysis rules configured for a specific version of an OpenSearch application.</p>
      * 
      * @param request ListQueryProcessorsRequest
      * @return ListQueryProcessorsResponse
@@ -3625,7 +3856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tickets that are submitted to apply for quotas for an OpenSearch application.</p>
+     * <p>Lists the quota approval tickets for a specified OpenSearch application.</p>
      * 
      * @param request ListQuotaReviewTasksRequest
      * @param headers map
@@ -3663,7 +3894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tickets that are submitted to apply for quotas for an OpenSearch application.</p>
+     * <p>Lists the quota approval tickets for a specified OpenSearch application.</p>
      * 
      * @param request ListQuotaReviewTasksRequest
      * @return ListQuotaReviewTasksResponse
@@ -3676,7 +3907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of scheduled tasks of an OpenSearch application.</p>
+     * <p>Queries a list of scheduled tasks for an OpenSearch application.</p>
      * 
      * @param request ListScheduledTasksRequest
      * @param headers map
@@ -3718,7 +3949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of scheduled tasks of an OpenSearch application.</p>
+     * <p>Queries a list of scheduled tasks for an OpenSearch application.</p>
      * 
      * @param request ListScheduledTasksRequest
      * @return ListScheduledTasksResponse
@@ -3731,7 +3962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of query policies.</p>
+     * <p>Retrieves the details of query policies.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3757,7 +3988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of query policies.</p>
+     * <p>Retrieves the details of query policies.</p>
      * @return ListSearchStrategiesResponse
      */
     public ListSearchStrategiesResponse listSearchStrategies(String appGroupIdentity, String appId) throws Exception {
@@ -3768,7 +3999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fine sort expressions that are configured for a version of an OpenSearch application.</p>
+     * <p>Lists the fine sort expressions for a specific version of an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3794,7 +4025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fine sort expressions that are configured for a version of an OpenSearch application.</p>
+     * <p>Lists the fine sort expressions for a specific version of an OpenSearch application.</p>
      * @return ListSecondRanksResponse
      */
     public ListSecondRanksResponse listSecondRanks(String appGroupIdentity, String appId) throws Exception {
@@ -3805,7 +4036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the suggestions that are provided by Optimization Master for slow queries.</p>
+     * <p>Lists the optimization suggestions for slow queries from Search Diagnosis.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3831,7 +4062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the suggestions that are provided by Optimization Master for slow queries.</p>
+     * <p>Lists the optimization suggestions for slow queries from Search Diagnosis.</p>
      * @return ListSlowQueryCategoriesResponse
      */
     public ListSlowQueryCategoriesResponse listSlowQueryCategories(String appGroupIdentity) throws Exception {
@@ -3842,7 +4073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出优化大师慢查询Query清单</p>
+     * <p>Lists the slow queries from the Query Optimizer.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3868,7 +4099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出优化大师慢查询Query清单</p>
+     * <p>Lists the slow queries from the Query Optimizer.</p>
      * @return ListSlowQueryQueriesResponse
      */
     public ListSlowQueryQueriesResponse listSlowQueryQueries(String appGroupIdentity, String categoryIndex) throws Exception {
@@ -3879,7 +4110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of sort expressions that are configured for a version of an OpenSearch application.</p>
+     * <p>Lists the sort expressions that are configured for a version of an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3905,7 +4136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of sort expressions that are configured for a version of an OpenSearch application.</p>
+     * <p>Lists the sort expressions that are configured for a version of an OpenSearch application.</p>
      * @return ListSortExpressionsResponse
      */
     public ListSortExpressionsResponse listSortExpressions(String appGroupIdentity, String appId) throws Exception {
@@ -3916,7 +4147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all sort scripts of an application version.</p>
+     * <p>Lists all sort scripts for a specified application version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3942,7 +4173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries all sort scripts of an application version.</p>
+     * <p>Lists all sort scripts for a specified application version.</p>
      * @return ListSortScriptsResponse
      */
     public ListSortScriptsResponse listSortScripts(String appGroupIdentity, String appVersionId) throws Exception {
@@ -4028,7 +4259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistical reports, such as application reports, drop-down suggestion reports, hotword shading reports, A/B test reports, and data quality reports.</p>
+     * <p>Queries statistical reports, such as application, drop-down suggestion, top search hint, A/B test, and data quality reports.</p>
      * 
      * @param request ListStatisticReportRequest
      * @param headers map
@@ -4082,7 +4313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistical reports, such as application reports, drop-down suggestion reports, hotword shading reports, A/B test reports, and data quality reports.</p>
+     * <p>Queries statistical reports, such as application, drop-down suggestion, top search hint, A/B test, and data quality reports.</p>
      * 
      * @param request ListStatisticReportRequest
      * @return ListStatisticReportResponse
@@ -4095,7 +4326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tagged resources.</p>
+     * <p>Queries the tags of specified resources.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
      * @param headers map
@@ -4151,7 +4382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries tagged resources.</p>
+     * <p>Queries the tags of specified resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4219,7 +4450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the custom analyzers that belong to the current account.</p>
+     * <p>Retrieves a list of custom analyzers for your account.</p>
      * 
      * @param request ListUserAnalyzersRequest
      * @param headers map
@@ -4257,7 +4488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the custom analyzers that belong to the current account.</p>
+     * <p>Retrieves a list of custom analyzers for your account.</p>
      * 
      * @param request ListUserAnalyzersRequest
      * @return ListUserAnalyzersResponse
@@ -4270,7 +4501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the properties of an OpenSearch application or sets the online version of an OpenSearch application.</p>
+     * <p>Modifies the properties of an OpenSearch application or sets its online version.</p>
      * 
      * @param request ModifyAppGroupRequest
      * @param headers map
@@ -4322,7 +4553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the properties of an OpenSearch application or sets the online version of an OpenSearch application.</p>
+     * <p>Modifies the properties of an OpenSearch application or sets its online version.</p>
      * 
      * @param request ModifyAppGroupRequest
      * @return ModifyAppGroupResponse
@@ -4335,7 +4566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the quotas of an OpenSearch application.</p>
+     * <p>Modifies the quota of an OpenSearch application.</p>
      * 
      * @param request ModifyAppGroupQuotaRequest
      * @param headers map
@@ -4374,7 +4605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the quotas of an OpenSearch application.</p>
+     * <p>Modifies the quota of an OpenSearch application.</p>
      * 
      * @param request ModifyAppGroupQuotaRequest
      * @return ModifyAppGroupQuotaResponse
@@ -4387,7 +4618,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a rough sort expression for an OpenSearch application. If you set dryRun to true, this operation checks the rough sort expression after the expression is modified. If you do not specify this parameter, false is used by default.</p>
+     * <p>更新弹性计划</p>
+     * 
+     * @param request ModifyElasticPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyElasticPlanResponse
+     */
+    public ModifyElasticPlanResponse modifyElasticPlanWithOptions(String appGroupIdentity, String planId, ModifyElasticPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customDates)) {
+            body.put("customDates", request.customDates);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticLcu)) {
+            body.put("elasticLcu", request.elasticLcu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enabled)) {
+            body.put("enabled", request.enabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endHour)) {
+            body.put("endHour", request.endHour);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleType)) {
+            body.put("scheduleType", request.scheduleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startHour)) {
+            body.put("startHour", request.startHour);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyElasticPlan"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/elastic-plans/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyElasticPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新弹性计划</p>
+     * 
+     * @param request ModifyElasticPlanRequest
+     * @return ModifyElasticPlanResponse
+     */
+    public ModifyElasticPlanResponse modifyElasticPlan(String appGroupIdentity, String planId, ModifyElasticPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyElasticPlanWithOptions(appGroupIdentity, planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the rough sort expression for an OpenSearch application version. If you set the dryRun parameter to true, this operation validates the modified rough sort expression. The default value of this parameter is false.</p>
      * 
      * @param request ModifyFirstRankRequest
      * @param headers map
@@ -4422,7 +4730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a rough sort expression for an OpenSearch application. If you set dryRun to true, this operation checks the rough sort expression after the expression is modified. If you do not specify this parameter, false is used by default.</p>
+     * <p>Modifies the rough sort expression for an OpenSearch application version. If you set the dryRun parameter to true, this operation validates the modified rough sort expression. The default value of this parameter is false.</p>
      * 
      * @param request ModifyFirstRankRequest
      * @return ModifyFirstRankResponse
@@ -4435,7 +4743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a query analysis rule for a specific application version. If you set dryRun to true, this operation checks the specified query analysis rule. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * <p>Modifies a query analysis rule for a specific application version. If you set the dryRun parameter to true, this operation checks the specified query analysis rule. If you do not specify the dryRun parameter, the default value is false.</p>
      * 
      * @param request ModifyQueryProcessorRequest
      * @param headers map
@@ -4470,7 +4778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a query analysis rule for a specific application version. If you set dryRun to true, this operation checks the specified query analysis rule. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * <p>Modifies a query analysis rule for a specific application version. If you set the dryRun parameter to true, this operation checks the specified query analysis rule. If you do not specify the dryRun parameter, the default value is false.</p>
      * 
      * @param request ModifyQueryProcessorRequest
      * @return ModifyQueryProcessorResponse
@@ -4525,7 +4833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a fine sort expression that is configured for a specific OpenSearch application version. If you set dryRun to true, the specified fine sort expression is checked after the expression is modified. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * <p>Modifies a fine sort expression for an OpenSearch application version. If you set <code>dryRun</code> to <code>true</code>, the modified fine sort expression is validated. The <code>dryRun</code> parameter is <code>false</code> by default.</p>
      * 
      * @param request ModifySecondRankRequest
      * @param headers map
@@ -4560,7 +4868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a fine sort expression that is configured for a specific OpenSearch application version. If you set dryRun to true, the specified fine sort expression is checked after the expression is modified. By default, the value of dryRun is false if you do not specify this parameter.</p>
+     * <p>Modifies a fine sort expression for an OpenSearch application version. If you set <code>dryRun</code> to <code>true</code>, the modified fine sort expression is validated. The <code>dryRun</code> parameter is <code>false</code> by default.</p>
      * 
      * @param request ModifySecondRankRequest
      * @return ModifySecondRankResponse
@@ -4573,7 +4881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Accepts the changes in intervention entries.</p>
+     * <p>Applies changes to intervention dictionary entries.</p>
      * 
      * @param request PushInterventionDictionaryEntriesRequest
      * @param headers map
@@ -4608,7 +4916,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Accepts the changes in intervention entries.</p>
+     * <p>Applies changes to intervention dictionary entries.</p>
      * 
      * @param request PushInterventionDictionaryEntriesRequest
      * @return PushInterventionDictionaryEntriesResponse
@@ -4621,7 +4929,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Accepts the changes in the entries of a custom analyzer.</p>
+     * <p>Applies changes to the entries of a custom analyzer.</p>
      * 
      * @param request PushUserAnalyzerEntriesRequest
      * @param headers map
@@ -4661,7 +4969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Accepts the changes in the entries of a custom analyzer.</p>
+     * <p>Applies changes to the entries of a custom analyzer.</p>
      * 
      * @param request PushUserAnalyzerEntriesRequest
      * @return PushUserAnalyzerEntriesResponse
@@ -4674,7 +4982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布排序脚本</p>
+     * <p>Releases a sort script.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4700,7 +5008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布排序脚本</p>
+     * <p>Releases a sort script.</p>
      * @return ReleaseSortScriptResponse
      */
     public ReleaseSortScriptResponse releaseSortScript(String appGroupIdentity, String scriptName, String appVersionId) throws Exception {
@@ -4748,7 +5056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete only pay-as-you-go applications. You cannot delete subscription applications.</p>
+     * <p>You can only delete pay-as-you-go applications. Subscription applications cannot be deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an OpenSearch application.</p>
@@ -4777,7 +5085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can delete only pay-as-you-go applications. You cannot delete subscription applications.</p>
+     * <p>You can only delete pay-as-you-go applications. Subscription applications cannot be deleted.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an OpenSearch application.</p>
@@ -4828,7 +5136,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a rough sort expression for a version of an OpenSearch application.</p>
+     * <p>获取弹性计划详情</p>
+     * 
+     * @param request RemoveElasticPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveElasticPlanResponse
+     */
+    public RemoveElasticPlanResponse removeElasticPlanWithOptions(String appGroupIdentity, String planId, RemoveElasticPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RemoveElasticPlan"),
+            new TeaPair("version", "2017-12-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v4/openapi/app-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(appGroupIdentity) + "/elastic-plans/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveElasticPlanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取弹性计划详情</p>
+     * 
+     * @param request RemoveElasticPlanRequest
+     * @return RemoveElasticPlanResponse
+     */
+    public RemoveElasticPlanResponse removeElasticPlan(String appGroupIdentity, String planId, RemoveElasticPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.removeElasticPlanWithOptions(appGroupIdentity, planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the rough sort configuration of an OpenSearch application version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4854,7 +5203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a rough sort expression for a version of an OpenSearch application.</p>
+     * <p>Deletes the rough sort configuration of an OpenSearch application version.</p>
      * @return RemoveFirstRankResponse
      */
     public RemoveFirstRankResponse removeFirstRank(String appGroupIdentity, String appId, String name) throws Exception {
@@ -4902,7 +5251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a query analysis rule for an OpenSearch application version.</p>
+     * <p>Removes a query analysis rule from an OpenSearch application version.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4928,7 +5277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a query analysis rule for an OpenSearch application version.</p>
+     * <p>Removes a query analysis rule from an OpenSearch application version.</p>
      * @return RemoveQueryProcessorResponse
      */
     public RemoveQueryProcessorResponse removeQueryProcessor(String appGroupIdentity, String appId, String name) throws Exception {
@@ -4939,7 +5288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a scheduled task of an OpenSearch application.</p>
+     * <p>Deletes a scheduled task from an OpenSearch application.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4965,7 +5314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a scheduled task of an OpenSearch application.</p>
+     * <p>Deletes a scheduled task from an OpenSearch application.</p>
      * @return RemoveScheduledTaskResponse
      */
     public RemoveScheduledTaskResponse removeScheduledTask(String appGroupIdentity, String taskId) throws Exception {
@@ -4976,7 +5325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a query policy.</p>
+     * <p>Deletes a search strategy.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5002,7 +5351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a query policy.</p>
+     * <p>Deletes a search strategy.</p>
      * @return RemoveSearchStrategyResponse
      */
     public RemoveSearchStrategyResponse removeSearchStrategy(String appGroupIdentity, String appId, String strategyName) throws Exception {
@@ -5087,7 +5436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an application. This operation is not available now. You must renew an application in the OpenSearch console.</p>
+     * <p>Renews an application. This API operation is unavailable. To renew an application, use the OpenSearch console.</p>
      * 
      * @param request RenewAppGroupRequest
      * @param headers map
@@ -5122,7 +5471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an application. This operation is not available now. You must renew an application in the OpenSearch console.</p>
+     * <p>Renews an application. This API operation is unavailable. To renew an application, use the OpenSearch console.</p>
      * 
      * @param request RenewAppGroupRequest
      * @return RenewAppGroupResponse
@@ -5223,7 +5572,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>立即进行慢查询分析</p>
+     * <p>Starts a slow query analysis task.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5249,7 +5598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>立即进行慢查询分析</p>
+     * <p>Starts a slow query analysis task.</p>
      * @return StartSlowQueryAnalyzerResponse
      */
     public StartSlowQueryAnalyzerResponse startSlowQueryAnalyzer(String appGroupIdentity) throws Exception {
@@ -5315,10 +5664,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to unbind a custom analyzer from an Elasticsearch instance.</p>
+     * <p>Use this operation to detach a custom analyzer from an Elasticsearch instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a custom analyzer from an Elasticsearch instance.</p>
+     * <p>Detaches a custom analyzer from an Elasticsearch instance.</p>
      * 
      * @param request UnbindESUserAnalyzerRequest
      * @param headers map
@@ -5347,10 +5696,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to unbind a custom analyzer from an Elasticsearch instance.</p>
+     * <p>Use this operation to detach a custom analyzer from an Elasticsearch instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds a custom analyzer from an Elasticsearch instance.</p>
+     * <p>Detaches a custom analyzer from an Elasticsearch instance.</p>
      * 
      * @param request UnbindESUserAnalyzerRequest
      * @return UnbindESUserAnalyzerResponse
@@ -5400,7 +5749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove tags from resources.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param tmpReq UntagResourcesRequest
      * @param headers map
@@ -5456,7 +5805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove tags from resources.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -5469,7 +5818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameters of an A/B test.</p>
+     * <p>Updates the parameters of an A/B test experiment.</p>
      * 
      * @param request UpdateABTestExperimentRequest
      * @param headers map
@@ -5504,7 +5853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the parameters of an A/B test.</p>
+     * <p>Updates the parameters of an A/B test experiment.</p>
      * 
      * @param request UpdateABTestExperimentRequest
      * @return UpdateABTestExperimentResponse
@@ -5517,7 +5866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies whitelists.</p>
+     * <p>Updates the whitelist data.</p>
      * 
      * @param request UpdateABTestFixedFlowDividersRequest
      * @param headers map
@@ -5546,7 +5895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies whitelists.</p>
+     * <p>Updates the whitelist data.</p>
      * 
      * @param request UpdateABTestFixedFlowDividersRequest
      * @return UpdateABTestFixedFlowDividersResponse
@@ -5607,7 +5956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an A/B test scenario.</p>
+     * <p>Modifies an experiment scenario.</p>
      * 
      * @param request UpdateABTestSceneRequest
      * @param headers map
@@ -5642,7 +5991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies an A/B test scenario.</p>
+     * <p>Modifies an experiment scenario.</p>
      * 
      * @param request UpdateABTestSceneRequest
      * @return UpdateABTestSceneResponse
@@ -5655,7 +6004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用删除保护</p>
+     * <p>Updates the delete protection status for an application group.</p>
      * 
      * @param request UpdateAppGroupDeleteProtectionRequest
      * @param headers map
@@ -5689,7 +6038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用删除保护</p>
+     * <p>Updates the delete protection status for an application group.</p>
      * 
      * @param request UpdateAppGroupDeleteProtectionRequest
      * @return UpdateAppGroupDeleteProtectionResponse
@@ -5702,7 +6051,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates fetch fields. A dry run is supported.</p>
+     * <p>This operation supports dry runs.</p>
      * 
      * @param request UpdateFetchFieldsRequest
      * @param headers map
@@ -5737,7 +6086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates fetch fields. A dry run is supported.</p>
+     * <p>This operation supports dry runs.</p>
      * 
      * @param request UpdateFetchFieldsRequest
      * @return UpdateFetchFieldsResponse
@@ -5750,7 +6099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default algorithm instance used by the specified application. The new algorithm instance automatically overwrites the most recently set default instance. If no instance is set, the default instance is canceled.</p>
+     * <p>Sets the default algorithm instance for the specified application. The new algorithm instance automatically overwrites the previously set default instance. If no instance is specified, the default instance is canceled.</p>
      * 
      * @param request UpdateFunctionDefaultInstanceRequest
      * @param headers map
@@ -5784,7 +6133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the default algorithm instance used by the specified application. The new algorithm instance automatically overwrites the most recently set default instance. If no instance is set, the default instance is canceled.</p>
+     * <p>Sets the default algorithm instance for the specified application. The new algorithm instance automatically overwrites the previously set default instance. If no instance is specified, the default instance is canceled.</p>
      * 
      * @param request UpdateFunctionDefaultInstanceRequest
      * @return UpdateFunctionDefaultInstanceResponse
@@ -5797,7 +6146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an algorithm instance.</p>
+     * <p>Updates the configuration of a function instance.</p>
      * 
      * @param request UpdateFunctionInstanceRequest
      * @param headers map
@@ -5843,7 +6192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an algorithm instance.</p>
+     * <p>Updates the configuration of a function instance.</p>
      * 
      * @param request UpdateFunctionInstanceRequest
      * @return UpdateFunctionInstanceResponse
@@ -5856,7 +6205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to update the information about resources by resource name. You can modify only the values of data and description.</p>
+     * <p>Updates the information of a resource specified by its name. You can modify only the data and description of the resource.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an algorithm resource.</p>
@@ -5897,7 +6246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to update the information about resources by resource name. You can modify only the values of data and description.</p>
+     * <p>Updates the information of a resource specified by its name. You can modify only the data and description of the resource.</p>
      * 
      * <b>summary</b> : 
      * <p>Updates an algorithm resource.</p>
@@ -5913,7 +6262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a query policy.</p>
+     * <p>This operation supports dry runs.</p>
      * 
      * @param request UpdateSearchStrategyRequest
      * @param headers map
@@ -5942,7 +6291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a query policy.</p>
+     * <p>This operation supports dry runs.</p>
      * 
      * @param request UpdateSearchStrategyRequest
      * @return UpdateSearchStrategyResponse
@@ -5955,7 +6304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to modify the description of a sort script.</p>
+     * <p>Modifies the description of a sort script.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the description of a sort script.</p>
@@ -5992,7 +6341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to modify the description of a sort script.</p>
+     * <p>Modifies the description of a sort script.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the description of a sort script.</p>
@@ -6008,7 +6357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates summaries. A dry run is supported.</p>
+     * <p>This operation supports dry runs.</p>
      * 
      * @param request UpdateSummariesRequest
      * @param headers map
@@ -6043,7 +6392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates summaries. A dry run is supported.</p>
+     * <p>This operation supports dry runs.</p>
      * 
      * @param request UpdateSummariesRequest
      * @return UpdateSummariesResponse
@@ -6056,7 +6405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies data sources.</p>
+     * <p>Validates data sources.</p>
      * 
      * @param request ValidateDataSourcesRequest
      * @param headers map
@@ -6085,7 +6434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies data sources.</p>
+     * <p>Validates data sources.</p>
      * 
      * @param request ValidateDataSourcesRequest
      * @return ValidateDataSourcesResponse

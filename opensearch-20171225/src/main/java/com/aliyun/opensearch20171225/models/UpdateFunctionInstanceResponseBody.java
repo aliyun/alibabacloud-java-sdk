@@ -23,7 +23,7 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the request, in milliseconds.</p>
+     * <p>The time consumed by the request. Unit: milliseconds (ms).</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,12 +50,12 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the request. Valid values:</p>
+     * <p>The request status.</p>
      * <ul>
-     * <li><pre><code>  OK: The request was successful.
+     * <li><pre><code>OK: The request is successful.
      * </code></pre>
      * </li>
-     * <li><pre><code>  FAIL: The request failed.
+     * <li><pre><code>FAIL: The request failed.
      * </code></pre>
      * </li>
      * </ul>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaReviewTasksRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListQuotaReviewTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

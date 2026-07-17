@@ -8,7 +8,7 @@ public class DeleteABTestSceneResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ABCDEFGH</p>
+     * <p>5C1C1C45-C64A-AD30-565F-140871D57E5E</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -17,7 +17,7 @@ public class DeleteABTestSceneResponseBody extends TeaModel {
      * <p>The returned results.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>[]</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

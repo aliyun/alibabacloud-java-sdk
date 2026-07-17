@@ -233,11 +233,16 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li>success: succeeded</li>
-         * <li>failed: failed</li>
-         * <li>untrained: to be trained</li>
-         * <li>pending: being scheduled</li>
-         * <li>running: being trained</li>
+         * <li><p>success: succeeded</p>
+         * </li>
+         * <li><p>failed: failed</p>
+         * </li>
+         * <li><p>untrained: to be trained</p>
+         * </li>
+         * <li><p>pending: being scheduled</p>
+         * </li>
+         * <li><p>running: being trained</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -346,7 +351,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
          * <p>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</p>
          * 
          * <strong>example:</strong>
-         * <p>0 3 ? \* 0,1,3,5 (at 3 a.m. on Sunday, Monday, Wednesday, and Friday)</p>
+         * <p>0 3 ? * 0,1,3,5 (at 3 a.m. on Sunday, Monday, Wednesday, and Friday)</p>
          */
         @NameInMap("Cron")
         public String cron;
@@ -408,8 +413,10 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         /**
          * <p>How the instance is created. Valid values:</p>
          * <ul>
-         * <li>user: The instance is created by user.</li>
-         * <li>builtin: The instance is created by the system.</li>
+         * <li><p>user: The instance is created by user.</p>
+         * </li>
+         * <li><p>builtin: The instance is created by the system.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -421,8 +428,10 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         /**
          * <p>The status of the instance. Valid values:</p>
          * <ol>
-         * <li>unavailable: No model is available. Models must be trained before you can use them.</li>
-         * <li>available: Models can be used.</li>
+         * <li><p>unavailable: No model is available. Models must be trained before you can use them.</p>
+         * </li>
+         * <li><p>available: Models can be used.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>

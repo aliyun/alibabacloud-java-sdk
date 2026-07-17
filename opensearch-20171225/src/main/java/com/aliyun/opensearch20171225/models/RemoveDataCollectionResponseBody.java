@@ -14,9 +14,7 @@ public class RemoveDataCollectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>—</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

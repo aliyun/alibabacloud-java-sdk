@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAppGroupDeleteProtectionResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>80326EFE-485F-46E7-B291-5A1DD08D2198</p>
@@ -13,6 +13,9 @@ public class UpdateAppGroupDeleteProtectionResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result.</p>
+     */
     @NameInMap("result")
     public UpdateAppGroupDeleteProtectionResponseBodyResult result;
 
@@ -39,6 +42,8 @@ public class UpdateAppGroupDeleteProtectionResponseBody extends TeaModel {
 
     public static class UpdateAppGroupDeleteProtectionResponseBodyResult extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ops-cn-m7r1ywo2h1b</p>
          */

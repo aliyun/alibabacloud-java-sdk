@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFunctionTasksRequest extends TeaModel {
     /**
-     * <p>The end time is less than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>Returns tasks that ended before the specified time. The time is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582646399</p>
@@ -14,7 +14,7 @@ public class ListFunctionTasksRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListFunctionTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time is greater than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>Returns tasks that started after the specified time. The time is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1582214400</p>
@@ -43,9 +43,12 @@ public class ListFunctionTasksRequest extends TeaModel {
     /**
      * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li>success</li>
-     * <li>failed</li>
-     * <li>running</li>
+     * <li><p>success</p>
+     * </li>
+     * <li><p>failed</p>
+     * </li>
+     * <li><p>running</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

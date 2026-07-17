@@ -52,7 +52,7 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The priority of an entity type among entity types that have the same priority level. A smaller value indicates a higher priority. Default value: 0.</p>
+         * <p>The sort order within the same priority level. A smaller value indicates a higher priority. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -63,9 +63,12 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         /**
          * <p>The priority level of the entity type. Valid values:</p>
          * <ul>
-         * <li>HIGH</li>
-         * <li>MIDDLE</li>
-         * <li>LOW</li>
+         * <li><p>HIGH</p>
+         * </li>
+         * <li><p>MIDDLE</p>
+         * </li>
+         * <li><p>LOW</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

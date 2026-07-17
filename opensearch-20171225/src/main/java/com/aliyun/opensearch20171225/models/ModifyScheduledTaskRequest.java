@@ -8,7 +8,15 @@ public class ModifyScheduledTaskRequest extends TeaModel {
      * <p>The request parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request parameters.</p>
+     * <p>{
+     *   &quot;cron&quot;: &quot;0 0 * * 1,2,3,4,5,6,7&quot;,
+     *   &quot;enabled&quot;: true,
+     *   &quot;filter&quot;: {
+     *     &quot;field&quot;: &quot;cat_id&quot;,
+     *     &quot;days&quot;: 30,
+     *     &quot;unit&quot;: &quot;s&quot;
+     *   }
+     * }</p>
      */
     @NameInMap("body")
     public Object body;

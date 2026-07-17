@@ -14,7 +14,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The request results.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -45,7 +45,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
 
     public static class ValidateDataSourcesResponseBodyResultDataSource extends TeaModel {
         /**
-         * <p>The parameters of the data source.</p>
+         * <p>The parameter body.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -54,7 +54,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
         public java.util.Map<String, ?> parameters;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>user_activity_decision</p>
@@ -63,7 +63,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The type of the data source.</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>rds</p>
@@ -104,7 +104,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
 
     public static class ValidateDataSourcesResponseBodyResult extends TeaModel {
         /**
-         * <p>The code returned for the request.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCEED</p>
@@ -122,10 +122,10 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
         public ValidateDataSourcesResponseBodyResultDataSource dataSource;
 
         /**
-         * <p>The status of the execution.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
-         * <p>successful</p>
+         * <p>Validate succeeded</p>
          */
         @NameInMap("message")
         public String message;

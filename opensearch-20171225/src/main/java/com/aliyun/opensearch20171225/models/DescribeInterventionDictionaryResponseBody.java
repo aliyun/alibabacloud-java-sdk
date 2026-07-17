@@ -14,7 +14,7 @@ public class DescribeInterventionDictionaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details about the intervention dictionary.</p>
+     * <p>The details of the intervention dictionary.</p>
      */
     @NameInMap("result")
     public DescribeInterventionDictionaryResponseBodyResult result;
@@ -53,7 +53,7 @@ public class DescribeInterventionDictionaryResponseBody extends TeaModel {
         public String analyzer;
 
         /**
-         * <p>The time when the the intervention dictionary was created.</p>
+         * <p>The time when the intervention dictionary was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1536233287</p>
@@ -62,7 +62,7 @@ public class DescribeInterventionDictionaryResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The name of the the intervention dictionary.</p>
+         * <p>The name of the intervention dictionary.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -71,14 +71,20 @@ public class DescribeInterventionDictionaryResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Type</p>
+         * <p>The type of the intervention dictionary.</p>
          * <ul>
-         * <li>stopword: an intervention dictionary for stop word filtering.</li>
-         * <li>synonym: an intervention dictionary for synonym configuration.</li>
-         * <li>correction: an intervention dictionary for spelling correction.</li>
-         * <li>category_prediction: an intervention dictionary for category prediction.</li>
-         * <li>ner: an intervention dictionary for named entity recognition.</li>
-         * <li>term_weighting: an intervention dictionary for term weight analysis.</li>
+         * <li><p>stopword: an intervention dictionary for stop word filtering.</p>
+         * </li>
+         * <li><p>synonym: an intervention dictionary for synonym configuration.</p>
+         * </li>
+         * <li><p>correction: an intervention dictionary for spelling correction.</p>
+         * </li>
+         * <li><p>category_prediction: an intervention dictionary for category prediction.</p>
+         * </li>
+         * <li><p>ner: an intervention dictionary for Named Entity Recognition (NER).</p>
+         * </li>
+         * <li><p>term_weighting: an intervention dictionary for term weight analysis.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,7 +94,7 @@ public class DescribeInterventionDictionaryResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the the intervention dictionary was modified.</p>
+         * <p>The time when the intervention dictionary was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1536233287</p>

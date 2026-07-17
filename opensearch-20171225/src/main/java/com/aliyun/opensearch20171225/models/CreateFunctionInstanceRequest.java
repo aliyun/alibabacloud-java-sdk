@@ -26,7 +26,7 @@ public class CreateFunctionInstanceRequest extends TeaModel {
      * <p>The description.</p>
      * 
      * <strong>example:</strong>
-     * <p>test instance</p>
+     * <p>Test instance</p>
      */
     @NameInMap("description")
     public String description;
@@ -56,17 +56,28 @@ public class CreateFunctionInstanceRequest extends TeaModel {
     /**
      * <p>The model type. The value varies based on the model.</p>
      * <ul>
-     * <li>Click-through rate (CTR) model: tf_checkpoint</li>
-     * <li>Popularity model: pop</li>
-     * <li>Category model: offline_inference</li>
-     * <li>Hotword model: offline_inference</li>
-     * <li>Hint model: offline_inference</li>
-     * <li>Hotword model for real-time top searches: near_realtime</li>
-     * <li>Personalized hint model: near_realtime</li>
-     * <li>Drop-down suggestion model: offline_inference</li>
-     * <li>Tokenization model: text</li>
-     * <li>Term weight model: tf_checkpoint</li>
-     * <li>Synonym model: offline_inference</li>
+     * <li><p>Click-through rate (CTR) model: tf_checkpoint</p>
+     * </li>
+     * <li><p>Popularity model: pop</p>
+     * </li>
+     * <li><p>Category model: offline_inference</p>
+     * </li>
+     * <li><p>Hotword model: offline_inference</p>
+     * </li>
+     * <li><p>Hint model: offline_inference</p>
+     * </li>
+     * <li><p>Hotword model for real-time top searches: near_realtime</p>
+     * </li>
+     * <li><p>Personalized hint model: near_realtime</p>
+     * </li>
+     * <li><p>Drop-down suggestion model: offline_inference</p>
+     * </li>
+     * <li><p>Tokenization model: text</p>
+     * </li>
+     * <li><p>Term weight model: tf_checkpoint</p>
+     * </li>
+     * <li><p>Synonym model: offline_inference</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

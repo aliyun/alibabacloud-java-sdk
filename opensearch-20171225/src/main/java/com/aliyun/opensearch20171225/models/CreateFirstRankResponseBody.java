@@ -60,7 +60,8 @@ public class CreateFirstRankResponseBody extends TeaModel {
         public String attribute;
 
         /**
-         * <p>The weight. Valid values: [-100000,100000]. The value cannot be 0.</p>
+         * <p>The weight.
+         * Valid values: [-100000, 100000]. The value cannot be 0.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

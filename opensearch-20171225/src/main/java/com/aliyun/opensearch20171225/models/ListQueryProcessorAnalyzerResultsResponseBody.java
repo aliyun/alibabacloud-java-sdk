@@ -14,7 +14,7 @@ public class ListQueryProcessorAnalyzerResultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The result of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

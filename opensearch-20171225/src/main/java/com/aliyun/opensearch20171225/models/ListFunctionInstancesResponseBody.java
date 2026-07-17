@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFunctionInstancesResponseBody extends TeaModel {
     /**
-     * <p>The error code. If no error occurs, the parameter is left empty.</p>
+     * <p>The error code. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Instance.NotExist</p>
@@ -23,7 +23,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the request, in milliseconds.</p>
+     * <p>The request latency, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public Long latency;
 
     /**
-     * <p>The error message. If no error occurs, the parameter is left empty.</p>
+     * <p>The error message. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>instance not exist.</p>
@@ -50,7 +50,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the instances.</p>
+     * <p>The list of instances.</p>
      * 
      * <strong>example:</strong>
      * <p>[]</p>
@@ -68,7 +68,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -165,7 +165,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The abbreviation of the language that applies.</p>
+         * <p>The language code.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;zh&quot;</p>
@@ -290,7 +290,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
 
     public static class ListFunctionInstancesResponseBodyResult extends TeaModel {
         /**
-         * <p>The information about the instance.</p>
+         * <p>The ownership information of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -299,7 +299,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         public ListFunctionInstancesResponseBodyResultBelongs belongs;
 
         /**
-         * <p>The parameters of the instance.</p>
+         * <p>The list of parameters for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>[]</p>
@@ -317,10 +317,10 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.</p>
+         * <p>The training schedule. This is a cron expression in the format of Minutes Hours DayofMonth Month DayofWeek. If this parameter is empty, periodic training is not performed.</p>
          * 
          * <strong>example:</strong>
-         * <p>0 3 ? \* 0,1,3,5 (at 3 a.m. on Sunday, Monday, Wednesday, and Friday)</p>
+         * <p>0 3 ? * 0,1,3,5 (周日，周一，周三，周五凌晨3点)</p>
          */
         @NameInMap("Cron")
         public String cron;
@@ -335,7 +335,7 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The extended information, which is a JSON string. It includes model evaluation information and error information.</p>
+         * <p>The extended information. This is a JSON string that contains information such as model evaluation results and error messages.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;{\&quot;dataReport\&quot;:{},\&quot;errors\&quot;:{}}&quot;</p>
@@ -380,10 +380,12 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         public String modelType;
 
         /**
-         * <p>How the instance is created. Valid values:</p>
+         * <p>The source of the instance. Valid values:</p>
          * <ul>
-         * <li>user: The instance is created by user.</li>
-         * <li>builtin: The instance is created by system.</li>
+         * <li><p>user: The instance is created by the user.</p>
+         * </li>
+         * <li><p>builtin: The instance is created by the system.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -393,10 +395,12 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The state of the instance. Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ol>
-         * <li>unavailable: No model is available. Models must be trained before you can use them.</li>
-         * <li>available: Models can be used.</li>
+         * <li><p>unavailable: No model is available. You must train a model before you can use the instance.</p>
+         * </li>
+         * <li><p>available: The instance is available.</p>
+         * </li>
          * </ol>
          * 
          * <strong>example:</strong>
@@ -406,13 +410,13 @@ public class ListFunctionInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The parameters that are used.</p>
+         * <p>The list of parameters in use.</p>
          */
         @NameInMap("UsageParameters")
         public java.util.List<ListFunctionInstancesResponseBodyResultUsageParameters> usageParameters;
 
         /**
-         * <p>The ID of the version.</p>
+         * <p>The version ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

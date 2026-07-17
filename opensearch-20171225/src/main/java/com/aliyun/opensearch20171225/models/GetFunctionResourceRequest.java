@@ -6,12 +6,6 @@ import com.aliyun.tea.*;
 public class GetFunctionResourceRequest extends TeaModel {
     /**
      * <p>The output level.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>simple</li>
-     * <li>normal</li>
-     * <li>detail</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>detail</p>

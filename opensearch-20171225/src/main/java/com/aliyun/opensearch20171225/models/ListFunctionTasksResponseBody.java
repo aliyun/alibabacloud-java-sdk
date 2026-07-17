@@ -23,7 +23,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the request, in milliseconds.</p>
+     * <p>The time consumed by the request, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
     public Long latency;
 
     /**
-     * <p>The error message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>fail</p>
@@ -147,7 +147,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
 
     public static class ListFunctionTasksResponseBodyResult extends TeaModel {
         /**
-         * <p>The timestamp that indicates the end time. Unit: milliseconds. 0 indicates that the task has not ended.</p>
+         * <p>The time when the task ended. This is a UNIX timestamp in milliseconds. A value of 0 indicates that the task has not ended.</p>
          * 
          * <strong>example:</strong>
          * <p>100010</p>
@@ -156,7 +156,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The value is a JSON string. It includes model evaluation information and training error information.</p>
+         * <p>A JSON string that contains information such as model evaluation results and training errors.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;recall\&quot;:91,\&quot;errors\&quot;:[]}</p>
@@ -174,7 +174,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The number of iterations.</p>
+         * <p>The iteration number.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -183,7 +183,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         public String generation;
 
         /**
-         * <p>The progress. 90 indicates 90%.</p>
+         * <p>The progress of the task. For example, a value of 90 indicates that the task is 90% complete.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -201,7 +201,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         public String runId;
 
         /**
-         * <p>The timestamp that indicates the start time. Unit: milliseconds.</p>
+         * <p>The time when the task started. This is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>100010</p>
@@ -210,11 +210,14 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The status of the task.</p>
          * <ul>
-         * <li>success</li>
-         * <li>failed</li>
-         * <li>running</li>
+         * <li><p>success</p>
+         * </li>
+         * <li><p>failed</p>
+         * </li>
+         * <li><p>running</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

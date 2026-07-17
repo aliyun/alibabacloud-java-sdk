@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserAnalyzerEntriesRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListUserAnalyzerEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,10 +23,10 @@ public class ListUserAnalyzerEntriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The key to be used to query entries.</p>
+     * <p>The entry key.</p>
      * 
      * <strong>example:</strong>
-     * <p>kevintest</p>
+     * <p>&quot;kevintest&quot;</p>
      */
     @NameInMap("word")
     public String word;

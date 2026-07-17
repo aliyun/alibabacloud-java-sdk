@@ -23,11 +23,14 @@ public class ListFunctionInstancesRequest extends TeaModel {
     public String modelType;
 
     /**
-     * <p>The richness of the returned information. Valid values:</p>
+     * <p>The level of detail for the returned information. Valid values:</p>
      * <ul>
-     * <li>normal: displays information such as createParameters and cron. This is the default value.</li>
-     * <li>simple: displays only the basic information.</li>
-     * <li>detail: returns the details of the training task.</li>
+     * <li><p>normal: Displays information such as createParameters and cron. This is the default value.</p>
+     * </li>
+     * <li><p>simple: Displays only basic information.</p>
+     * </li>
+     * <li><p>detail: Returns the details of the training task.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +40,7 @@ public class ListFunctionInstancesRequest extends TeaModel {
     public String output;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,7 +49,7 @@ public class ListFunctionInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries per page. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -55,11 +58,14 @@ public class ListFunctionInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>How the instance is created. Valid values:</p>
+     * <p>The source of the instance. Valid values:</p>
      * <ul>
-     * <li>builtin: The instance is created by system.</li>
-     * <li>user: The instance is created by user. This is the default value.</li>
-     * <li>all: all instances</li>
+     * <li><p>builtin: The instance is created by the system.</p>
+     * </li>
+     * <li><p>user: The instance is created by the user. This is the default value.</p>
+     * </li>
+     * <li><p>all: All instances.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

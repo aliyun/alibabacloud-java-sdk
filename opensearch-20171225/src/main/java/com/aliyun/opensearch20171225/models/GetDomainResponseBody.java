@@ -8,7 +8,7 @@ public class GetDomainResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ABCDEFGH</p>
+     * <p>271D5762-32B7-5F0D-B97D-463EB67F1F3B</p>
      */
     @NameInMap("requestId")
     public String requestId;

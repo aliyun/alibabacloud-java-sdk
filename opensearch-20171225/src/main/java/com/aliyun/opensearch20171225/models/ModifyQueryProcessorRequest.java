@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyQueryProcessorRequest extends TeaModel {
     /**
-     * <p>The request parameters.</p>
+     * <p>The request body.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -27,7 +27,7 @@ public class ModifyQueryProcessorRequest extends TeaModel {
     public Object body;
 
     /**
-     * <p>Specifies whether the request is a dry run.</p>
+     * <p>Specifies whether to perform a dry run.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

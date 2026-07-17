@@ -14,7 +14,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>None</p>
+     * <p>This parameter is left empty.</p>
      */
     @NameInMap("result")
     public CreateAppGroupResponseBodyResult result;
@@ -42,7 +42,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
 
     public static class CreateAppGroupResponseBodyResultQuota extends TeaModel {
         /**
-         * <p>The computing resources. Unit: logical computing units (LCUs).</p>
+         * <p>The computing resources. Unit: LCU.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -62,13 +62,20 @@ public class CreateAppGroupResponseBody extends TeaModel {
         /**
          * <p>The specifications. Valid values:</p>
          * <ul>
-         * <li>opensearch.share.junior: basic.</li>
-         * <li>opensearch.share.common: shared general-purpose.</li>
-         * <li>opensearch.share.compute: shared computing.</li>
-         * <li>opensearch.share.storage: shared storage.</li>
-         * <li>opensearch.private.common: exclusive general-purpose.</li>
-         * <li>opensearch.private.compute: exclusive computing.</li>
-         * <li>opensearch.private.storage: exclusive storage.</li>
+         * <li><p>opensearch.share.junior: basic</p>
+         * </li>
+         * <li><p>opensearch.share.common: shared general-purpose</p>
+         * </li>
+         * <li><p>opensearch.share.compute: shared compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.share.storage: shared storage-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.common: exclusive general-purpose</p>
+         * </li>
+         * <li><p>opensearch.private.compute: exclusive compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.storage: exclusive storage-optimized</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,8 +119,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go.</li>
-         * <li>PREPAY: subscription.</li>
+         * <li><p>POSTPAY: pay-as-you-go</p>
+         * </li>
+         * <li><p>PREPAY: subscription</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,10 +132,12 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The type of billing. Valid values:</p>
+         * <p>The billing type. Valid values:</p>
          * <ul>
-         * <li>1: computing resources.</li>
-         * <li>2: queries per second (QPS).</li>
+         * <li><p>1: computing resources</p>
+         * </li>
+         * <li><p>2: queries per second (QPS)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,11 +185,14 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of the industry. Valid values:</p>
+         * <p>The industry type. Valid values:</p>
          * <ul>
-         * <li>GENERAL</li>
-         * <li>ECOMMERCE</li>
-         * <li>IT_CONTENT</li>
+         * <li><p>GENERAL</p>
+         * </li>
+         * <li><p>ECOMMERCE</p>
+         * </li>
+         * <li><p>IT_CONTENT</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,10 +222,12 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String expireOn;
 
         /**
-         * <p>The approval state of the quotas. Valid values:</p>
+         * <p>The approval status of the quota. Valid values:</p>
          * <ul>
-         * <li>0: The application is in service.</li>
-         * <li>1: The quotas are being reviewed.</li>
+         * <li><p>0: The application is running as normal.</p>
+         * </li>
+         * <li><p>1: The quota change is under review.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +246,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -243,9 +259,12 @@ public class CreateAppGroupResponseBody extends TeaModel {
         /**
          * <p>The lock state. Valid values:</p>
          * <ul>
-         * <li>Unlock: The instance is unlocked.</li>
-         * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
-         * <li>ManualLock: The instance is manually locked.</li>
+         * <li><p>Unlock: The instance is unlocked.</p>
+         * </li>
+         * <li><p>LockByExpiration: The instance is automatically locked after it expires.</p>
+         * </li>
+         * <li><p>ManualLock: The instance is manually locked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,8 +285,10 @@ public class CreateAppGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application is created. Valid values:</p>
          * <ul>
-         * <li>0: The application is being created.</li>
-         * <li>1: The application is created.</li>
+         * <li><p>0: The application is being created.</p>
+         * </li>
+         * <li><p>1: The application is created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +298,7 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public Integer produced;
 
         /**
-         * <p>The name of the A/B test group.</p>
+         * <p>The name of the A/B test project.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -288,19 +309,24 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The information about the quotas of the application.</p>
+         * <p>The quota information for the application.</p>
          */
         @NameInMap("quota")
         public CreateAppGroupResponseBodyResultQuota quota;
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The application status. Valid values:</p>
          * <ul>
-         * <li>producing: The application is being created.</li>
-         * <li>review_pending: The application is being reviewed.</li>
-         * <li>config_pending: The application is to be configured.</li>
-         * <li>normal: The application is in service.</li>
-         * <li>frozen: The application is frozen.</li>
+         * <li><p>producing: The application is being created.</p>
+         * </li>
+         * <li><p>review_pending: The application is under review.</p>
+         * </li>
+         * <li><p>config_pending: The application is pending configuration.</p>
+         * </li>
+         * <li><p>normal: The application is running as normal.</p>
+         * </li>
+         * <li><p>frozen: The application is frozen.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -319,11 +345,14 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public Integer switchedTime;
 
         /**
-         * <p>The type of the application. Valid values:</p>
+         * <p>The application type. Valid values:</p>
          * <ul>
-         * <li>standard: a standard edition application.</li>
-         * <li>advance: an advanced edition which is of an old version. New version is not supported for this edition.</li>
-         * <li>enhanced: an advanced edition application of a new version.</li>
+         * <li><p>standard: Standard Edition</p>
+         * </li>
+         * <li><p>advance: an old version of Premium Edition. You cannot create new applications of this type.</p>
+         * </li>
+         * <li><p>enhanced: a new version of Premium Edition</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

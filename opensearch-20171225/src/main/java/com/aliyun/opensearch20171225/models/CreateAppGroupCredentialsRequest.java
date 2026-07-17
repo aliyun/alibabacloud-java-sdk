@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateAppGroupCredentialsRequest extends TeaModel {
     /**
+     * <p>The credential type, such as \<code>api-key\\</code>, \<code>account\\</code>, \<code>invoke-key\\</code>, or \<code>api-token\\</code>. To create an API key, set this parameter to \<code>api-token\\</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>api-token</p>
      */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>Specifies whether to perform a dry run. In a dry run, the system checks the request parameters but does not execute the operation.</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 

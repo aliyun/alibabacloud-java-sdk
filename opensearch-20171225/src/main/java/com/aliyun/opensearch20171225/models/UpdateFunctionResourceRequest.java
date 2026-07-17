@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFunctionResourceRequest extends TeaModel {
     /**
-     * <p>The resource data. The data structure varies with the resource type.</p>
+     * <p>The data of the resource. The structure of this parameter varies based on the value of resourceType.</p>
      */
     @NameInMap("Data")
     public UpdateFunctionResourceRequestData data;
@@ -84,7 +84,7 @@ public class UpdateFunctionResourceRequest extends TeaModel {
 
     public static class UpdateFunctionResourceRequestDataGeneratorsInput extends TeaModel {
         /**
-         * <p>The input features.</p>
+         * <p>A list of input features.</p>
          */
         @NameInMap("Features")
         public java.util.List<UpdateFunctionResourceRequestDataGeneratorsInputFeatures> features;
@@ -162,7 +162,7 @@ public class UpdateFunctionResourceRequest extends TeaModel {
 
     public static class UpdateFunctionResourceRequestData extends TeaModel {
         /**
-         * <p>The content of the file that corresponds to a resource of the raw_file type.</p>
+         * <p>The content of the file. This parameter is used for resources of the raw_file type.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -171,7 +171,7 @@ public class UpdateFunctionResourceRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The feature generators that correspond to resources of the feature_generator type.</p>
+         * <p>The list of feature generators. This parameter is used for resources of the feature_generator type.</p>
          */
         @NameInMap("Generators")
         public java.util.List<UpdateFunctionResourceRequestDataGenerators> generators;

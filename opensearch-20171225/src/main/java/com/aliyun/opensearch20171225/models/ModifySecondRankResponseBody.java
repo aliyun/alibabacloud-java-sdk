@@ -72,7 +72,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expression ID. This parameter is displayed only in the response.</p>
+         * <p>The ID of the expression. This parameter is returned only in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>890473</p>
@@ -81,10 +81,12 @@ public class ModifySecondRankResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the expression is the default one. This parameter is displayed only in the response. Valid values:</p>
+         * <p>Indicates whether the expression is the default expression. This parameter is returned only in the response.</p>
          * <ul>
-         * <li>true: the expression is the default one.</li>
-         * <li>false: the expression is not the default one.</li>
+         * <li><p>true: The expression is the default expression.</p>
+         * </li>
+         * <li><p>false: The expression is not the default expression.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,10 +96,12 @@ public class ModifySecondRankResponseBody extends TeaModel {
         public String isDefault;
 
         /**
-         * <p>Indicates whether the expression is a system expression. This parameter is displayed only in the response. Valid values:</p>
+         * <p>Indicates whether the expression is a system expression. This parameter is returned only in the response.</p>
          * <ul>
-         * <li>true: The expression is a system expression.</li>
-         * <li>false:The expression is not a system expression</li>
+         * <li><p>true: The expression is a system expression.</p>
+         * </li>
+         * <li><p>false: The expression is not a system expression.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +111,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
         public String isSys;
 
         /**
-         * <p>The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         * <p>The fine sort expression. You can create an expression that contains fields, scoring features, and mathematical functions to implement complex sorting logic.</p>
          * 
          * <strong>example:</strong>
          * <p>cate_id &gt; 0 and cate_id &lt; 1000</p>
@@ -116,7 +120,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
         public String meta;
 
         /**
-         * <p>The expression name.</p>
+         * <p>The name of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>lsh_second_1</p>

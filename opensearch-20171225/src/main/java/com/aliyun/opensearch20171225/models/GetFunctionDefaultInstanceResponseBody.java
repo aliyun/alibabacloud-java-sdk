@@ -41,7 +41,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The default running time.</p>
+     * <p>The default runtime.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -68,7 +68,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the request.</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;Pagination\&quot;: {\&quot;TotalCount\&quot;: 0, \&quot;PageNumber\&quot;: 1, \&quot;PageSize\&quot;: 10}, \&quot;AntConsortiums\&quot;: []}</p>
@@ -77,7 +77,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
     public GetFunctionDefaultInstanceResponseBodyResult result;
 
     /**
-     * <p>The status of the request.</p>
+     * <p>The request status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

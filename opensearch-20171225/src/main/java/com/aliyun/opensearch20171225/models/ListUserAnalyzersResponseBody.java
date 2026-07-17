@@ -14,14 +14,14 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The custom analyzer.</p>
+     * <p>The list of custom analyzers.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178934.html">UserAnalyzer</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListUserAnalyzersResponseBodyResult> result;
 
     /**
-     * <p>The total number.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
 
     public static class ListUserAnalyzersResponseBodyResultDicts extends TeaModel {
         /**
-         * <p>Indicates whether the application is available.</p>
+         * <p>Indicates whether the dictionary is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,7 +69,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public Boolean available;
 
         /**
-         * <p>The timestamp when the application was created.</p>
+         * <p>The timestamp when the dictionary was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1588054131</p>
@@ -78,7 +78,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The number of intervention entries.</p>
+         * <p>The number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -87,7 +87,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public Integer entriesCount;
 
         /**
-         * <p>The maximum number of intervention entries that can be created in the dictionary.</p>
+         * <p>The maximum number of entries in the dictionary.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -105,9 +105,9 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The type. Valid value:</p>
+         * <p>The type of the dictionary. Valid value:</p>
          * <ul>
-         * <li>segment</li>
+         * <li>segment: A dictionary for word segmentation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The timestamp when the application was last updated.</p>
+         * <p>The timestamp when the dictionary was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1588054131</p>
@@ -190,7 +190,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
 
     public static class ListUserAnalyzersResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the application is available.</p>
+         * <p>Indicates whether the analyzer is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -201,18 +201,30 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         /**
          * <p>The basic analyzer. Valid values:</p>
          * <ul>
-         * <li>chn_standard: <a href="https://help.aliyun.com/document_detail/179424.html">a common analyzer in Chinese</a></li>
-         * <li>chn_scene_name: an analyzer for person names in Chinese</li>
-         * <li>chn_ecommerce: <a href="https://help.aliyun.com/document_detail/179424.html">an analyzer for E-commerce in Chinese</a></li>
-         * <li>chn_it_content: <a href="https://help.aliyun.com/document_detail/179424.html">an analyzer for IT content in Chinese</a></li>
-         * <li>en_min: a small-granularity analyzer in English</li>
-         * <li>th_standard: a common analyzer in Thai</li>
-         * <li>th_ecommerce: an analyzer for E-commerce in Thai</li>
-         * <li>vn_standard: a common analyzer in Vietnamese</li>
-         * <li>chn_community_it: an analyzer for IT community content in Chinese</li>
-         * <li>chn_ecommerce_general: a common analyzer for the E-commerce industry in Chinese</li>
-         * <li>chn_esports_general: a common analyzer for the gaming industry in Chinese</li>
-         * <li>chn_edu_question: an analyzer for question search of the education industry in Chinese</li>
+         * <li><p>chn_standard: <a href="https://help.aliyun.com/document_detail/179424.html">A general-purpose analyzer for Chinese</a>.</p>
+         * </li>
+         * <li><p>chn_scene_name: An analyzer for Chinese person names.</p>
+         * </li>
+         * <li><p>chn_ecommerce: <a href="https://help.aliyun.com/document_detail/179424.html">An analyzer for e-commerce in Chinese</a>.</p>
+         * </li>
+         * <li><p>chn_it_content: <a href="https://help.aliyun.com/document_detail/179424.html">An analyzer for IT content in Chinese</a>.</p>
+         * </li>
+         * <li><p>en_min: A fine-grained analyzer for English.</p>
+         * </li>
+         * <li><p>th_standard: A general-purpose analyzer for Thai.</p>
+         * </li>
+         * <li><p>th_ecommerce: An analyzer for e-commerce in Thai.</p>
+         * </li>
+         * <li><p>vn_standard: A general-purpose analyzer for Vietnamese.</p>
+         * </li>
+         * <li><p>chn_community_it: An analyzer for IT community content in Chinese.</p>
+         * </li>
+         * <li><p>chn_ecommerce_general: A general-purpose analyzer for the e-commerce industry in Chinese.</p>
+         * </li>
+         * <li><p>chn_esports_general: A general-purpose analyzer for the gaming industry in Chinese.</p>
+         * </li>
+         * <li><p>chn_edu_question: An analyzer for question-answering search in the education industry in Chinese.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -222,7 +234,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public String business;
 
         /**
-         * <p>The timestamp when the application was created.</p>
+         * <p>The timestamp when the analyzer was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1588054131</p>
@@ -231,7 +243,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The dictionaries that are used by the custom analyzer.</p>
+         * <p>The dictionaries that the custom analyzer uses.</p>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/178933.html">UserDict</a>.</p>
          */
         @NameInMap("dicts")
@@ -256,7 +268,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The timestamp when the application was last updated.</p>
+         * <p>The timestamp when the analyzer was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1588054131</p>

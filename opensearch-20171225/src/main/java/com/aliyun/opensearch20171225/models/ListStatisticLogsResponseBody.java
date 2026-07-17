@@ -14,9 +14,9 @@ public class ListStatisticLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned result. For more information, see</p>
+     * <p>The returned data. For more information, see:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/421248.html">Parameters of hotwords rankings</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/421248.html">Hotword rankings</a></li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateAppGroupDeleteProtectionRequest extends TeaModel {
     /**
+     * <p>The request body.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;deleteProtection&quot;: &quot;on&quot;

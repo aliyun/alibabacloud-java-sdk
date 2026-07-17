@@ -14,7 +14,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the intervention dictionary.</p>
+     * <p>The details of the intervention dictionary.</p>
      */
     @NameInMap("result")
     public RemoveInterventionDictionaryResponseBodyResult result;
@@ -60,7 +60,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>Parameter</p>
+         * <p>The name of the dictionary.</p>
          * 
          * <strong>example:</strong>
          * <p>tongyici</p>
@@ -69,14 +69,20 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Type</p>
+         * <p>The type of the dictionary. Valid values:</p>
          * <ul>
-         * <li>stopword: an intervention dictionary for stop word filtering.</li>
-         * <li>synonym: an intervention dictionary for synonym configuration.</li>
-         * <li>correction: an intervention dictionary for spelling correction.</li>
-         * <li>category_prediction: an intervention dictionary for category prediction.</li>
-         * <li>ner: an intervention dictionary for named entity recognition.</li>
-         * <li>term_weighting: an intervention dictionary for term weight analysis.</li>
+         * <li><p>stopword: An intervention dictionary for stop words.</p>
+         * </li>
+         * <li><p>synonym: An intervention dictionary for synonyms.</p>
+         * </li>
+         * <li><p>correction: An intervention dictionary for spelling correction.</p>
+         * </li>
+         * <li><p>category_prediction: An intervention dictionary for category prediction.</p>
+         * </li>
+         * <li><p>ner: An intervention dictionary for Named Entity Recognition (NER).</p>
+         * </li>
+         * <li><p>term_weighting: An intervention dictionary for term weights.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,7 +92,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the the intervention dictionary was modified.</p>
+         * <p>The time when the intervention dictionary was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1539158313</p>

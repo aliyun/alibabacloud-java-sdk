@@ -14,22 +14,27 @@ public class ModifyAppGroupRequest extends TeaModel {
     public String currentVersion;
 
     /**
-     * <p>The description of the application.</p>
+     * <p>The description of the application group.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;test&quot;</p>
+     * <p>&quot; instance description&quot;</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The type of the industry. Valid values:</p>
+     * <p>The industry. Valid values:</p>
      * <ul>
-     * <li>general: general.</li>
-     * <li>ecommerce: e-commerce.</li>
-     * <li>education: education.</li>
-     * <li>esports: electronic sports.</li>
-     * <li>community: content community.</li>
+     * <li><p>general: general.</p>
+     * </li>
+     * <li><p>ecommerce: e-commerce.</p>
+     * </li>
+     * <li><p>education: education.</p>
+     * </li>
+     * <li><p>esports: gaming.</p>
+     * </li>
+     * <li><p>community: content community.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +53,7 @@ public class ModifyAppGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to verify the application before modification. Valid values: true and false.</p>
+     * <p>Specifies whether to perform a dry run. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifySecondRankRequest extends TeaModel {
     /**
-     * <p>The request parameters.</p>
+     * <p>The request body, which contains the fine sort information.</p>
      */
     @NameInMap("body")
     public SecondRank body;
 
     /**
-     * <p>Specifies whether the request is a dry run.</p>
+     * <p>Specifies whether to perform a dry run.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListQueryProcessorsRequest extends TeaModel {
     /**
-     * <p>The scope of query analysis rules to be queried. Default value: 0. Valid values:</p>
+     * <p>Specifies whether to return default rules. The default value is 0. Valid values:</p>
      * <ul>
-     * <li>0: queries all query analysis rules.</li>
-     * <li>1: queries the default query analysis rules.</li>
-     * <li>2: queries the query analysis rules that are not the default rules.</li>
+     * <li><p>0: Returns all query analysis rules.</p>
+     * </li>
+     * <li><p>1: Returns only default query analysis rules.</p>
+     * </li>
+     * <li><p>2: Returns only non-default query analysis rules.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

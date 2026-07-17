@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindEsInstanceRequest extends TeaModel {
     /**
-     * <p>The body of the request.</p>
+     * <p>The request body.</p>
      * 
      * <strong>example:</strong>
      * <p>{

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProceedingsRequest extends TeaModel {
     /**
-     * <p>Specifies whether the filtering is complete.</p>
+     * <p>Specifies whether to return only completed proceedings.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is used to retrieve the next page.</p>
+     * <p>The token to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources.</p>
+     * <p>The list of resources.</p>
      */
     @NameInMap("result")
     public java.util.List<ListTagResourcesResponseBodyResult> result;
@@ -59,7 +59,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54041</p>
@@ -77,7 +77,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>GENIE_FUNCTION</p>
@@ -86,7 +86,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>ALLOW</p>

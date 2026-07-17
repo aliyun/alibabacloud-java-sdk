@@ -14,10 +14,10 @@ public class BindEsInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result</p>
+     * <p>The result.</p>
      * 
      * <strong>example:</strong>
-     * <p>[]</p>
+     * <p>{}</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

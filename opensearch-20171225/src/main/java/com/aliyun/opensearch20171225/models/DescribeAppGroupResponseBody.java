@@ -62,13 +62,20 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>The specifications. Valid values:</p>
          * <ul>
-         * <li>opensearch.share.junior: basic.</li>
-         * <li>opensearch.share.common: shared general-purpose.</li>
-         * <li>opensearch.share.compute: shared computing.</li>
-         * <li>opensearch.share.storage: shared storage.</li>
-         * <li>opensearch.private.common: exclusive general-purpose.</li>
-         * <li>opensearch.private.compute: exclusive computing.</li>
-         * <li>opensearch.private.storage: exclusive storage.</li>
+         * <li><p>opensearch.share.junior: basic.</p>
+         * </li>
+         * <li><p>opensearch.share.common: shared general-purpose.</p>
+         * </li>
+         * <li><p>opensearch.share.compute: shared computing.</p>
+         * </li>
+         * <li><p>opensearch.share.storage: shared storage.</p>
+         * </li>
+         * <li><p>opensearch.private.common: exclusive general-purpose.</p>
+         * </li>
+         * <li><p>opensearch.private.compute: exclusive computing.</p>
+         * </li>
+         * <li><p>opensearch.private.storage: exclusive storage.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,8 +161,10 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go.</li>
-         * <li>PREPAY: subscription.</li>
+         * <li><p>POSTPAY: pay-as-you-go.</p>
+         * </li>
+         * <li><p>PREPAY: subscription.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,8 +176,10 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>The billable item. Valid values:</p>
          * <ul>
-         * <li>1: computing resources.</li>
-         * <li>2: queries per second (QPS).</li>
+         * <li><p>1: computing resources.</p>
+         * </li>
+         * <li><p>2: queries per second (QPS).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,6 +235,9 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         @NameInMap("domain")
         public String domain;
 
+        @NameInMap("elasticLcu")
+        public Integer elasticLcu;
+
         /**
          * <p>The engine type.</p>
          * 
@@ -256,8 +270,10 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>The approval state of the quotas. Valid values:</p>
          * <ul>
-         * <li>0: The application is in service.</li>
-         * <li>1: The quotas are being reviewed.</li>
+         * <li><p>0: The application is in service.</p>
+         * </li>
+         * <li><p>1: The quotas are being reviewed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -289,9 +305,12 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>The lock state. Valid values:</p>
          * <ul>
-         * <li>Unlock: The instance is unlocked.</li>
-         * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
-         * <li>ManualLock: The instance is manually locked.</li>
+         * <li><p>Unlock: The instance is unlocked.</p>
+         * </li>
+         * <li><p>LockByExpiration: The instance is automatically locked after it expires.</p>
+         * </li>
+         * <li><p>ManualLock: The instance is manually locked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -341,8 +360,10 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application is created. Valid values:</p>
          * <ul>
-         * <li>0: The application is being created.</li>
-         * <li>1: The application is created.</li>
+         * <li><p>0: The application is being created.</p>
+         * </li>
+         * <li><p>1: The application is created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,11 +410,16 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>The state of the application. Valid values:</p>
          * <ul>
-         * <li>producing: The application is being created.</li>
-         * <li>review_pending: The application is being reviewed.</li>
-         * <li>config_pending: The application is to be configured.</li>
-         * <li>normal: The application is in service.</li>
-         * <li>frozen: The application is frozen.</li>
+         * <li><p>producing: The application is being created.</p>
+         * </li>
+         * <li><p>review_pending: The application is being reviewed.</p>
+         * </li>
+         * <li><p>config_pending: The application is to be configured.</p>
+         * </li>
+         * <li><p>normal: The application is in service.</p>
+         * </li>
+         * <li><p>frozen: The application is frozen.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -420,8 +446,10 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         /**
          * <p>The type of the application. Valid values:</p>
          * <ul>
-         * <li>standard: a High-performance Search Edition application.</li>
-         * <li>enhanced: an Industry Algorithm Edition application.</li>
+         * <li><p>standard: a High-performance Search Edition application.</p>
+         * </li>
+         * <li><p>enhanced: an Industry Algorithm Edition application.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -498,6 +526,14 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public DescribeAppGroupResponseBodyResult setElasticLcu(Integer elasticLcu) {
+            this.elasticLcu = elasticLcu;
+            return this;
+        }
+        public Integer getElasticLcu() {
+            return this.elasticLcu;
         }
 
         public DescribeAppGroupResponseBodyResult setEngineType(String engineType) {

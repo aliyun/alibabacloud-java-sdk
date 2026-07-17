@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQueryProcessorAnalyzerResultsRequest extends TeaModel {
     /**
-     * <p>The text to be tested.</p>
+     * <p>The text to test.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

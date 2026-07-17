@@ -14,7 +14,7 @@ public class CreateSecondRankResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the fine sort expression.</p>
+     * <p>The information about the fine-sort expression.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

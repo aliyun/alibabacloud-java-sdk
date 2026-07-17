@@ -14,7 +14,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the rough sort expression.</p>
+     * <p>Details about the rough sort expression.</p>
      */
     @NameInMap("result")
     public ModifyFirstRankResponseBodyResult result;
@@ -42,7 +42,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
 
     public static class ModifyFirstRankResponseBodyResultMeta extends TeaModel {
         /**
-         * <p>The parameters that are used by a function in the expression.</p>
+         * <p>The parameters for a function in the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>“1 ”</p>
@@ -51,7 +51,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
         public String arg;
 
         /**
-         * <p>The attribute, feature function, or field to be searched for.</p>
+         * <p>The attribute, feature function, or search field.</p>
          * 
          * <strong>example:</strong>
          * <p>static_bm25()</p>
@@ -110,7 +110,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>The description of the rough sort expression.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -119,13 +119,13 @@ public class ModifyFirstRankResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The information about the expression.</p>
+         * <p>Details about the expression.</p>
          */
         @NameInMap("meta")
         public java.util.List<ModifyFirstRankResponseBodyResultMeta> meta;
 
         /**
-         * <p>The name of the expression.</p>
+         * <p>The name of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

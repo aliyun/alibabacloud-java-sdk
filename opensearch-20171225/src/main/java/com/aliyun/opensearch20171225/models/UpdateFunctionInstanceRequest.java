@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFunctionInstanceRequest extends TeaModel {
     /**
-     * <p>The parameters that are used to create the instance.</p>
+     * <p>The list of creation parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{             &quot;name&quot;: &quot;title_field&quot;,             &quot;value&quot;: &quot;title&quot;         }</p>
@@ -14,7 +14,7 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
     public java.util.List<UpdateFunctionInstanceRequestCreateParameters> createParameters;
 
     /**
-     * <p>The cron expression used to schedule periodic training, in the format of (Minutes Hours DayofMonth Month DayofWeek). The default value is empty, which indicates that no periodic training is performed. DayofWeek 0 indicates Sunday.</p>
+     * <p>The schedule for periodic training. The value must be a cron expression in the format of Minutes Hours DayofMonth Month DayofWeek. If you leave this parameter empty, periodic training is disabled by default. For DayofWeek, 0 indicates Sunday.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;0 3 ? * 0,1,3,5&quot;</p>
@@ -26,13 +26,13 @@ public class UpdateFunctionInstanceRequest extends TeaModel {
      * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>test instance</p>
+     * <p>Test instance</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The parameters that are used.</p>
+     * <p>The list of usage parameters.</p>
      */
     @NameInMap("usageParameters")
     public java.util.List<UpdateFunctionInstanceRequestUsageParameters> usageParameters;

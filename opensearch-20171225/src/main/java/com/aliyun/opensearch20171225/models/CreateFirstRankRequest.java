@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFirstRankRequest extends TeaModel {
     /**
-     * <p>The request body that contains the parameters of the rough sort expression.</p>
+     * <p>The request body, which contains the information about the rough sort expression.</p>
      */
     @NameInMap("body")
     public FirstRank body;

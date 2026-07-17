@@ -5,14 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceTablesRequest extends TeaModel {
     /**
-     * <p>The parameters of the data source. The value is a JSON string which must be encoded in the urlencode format.</p>
-     * <p>Different types of data sources use different parameters. For more information, see the following sections of the &quot;DataSource&quot; topic:</p>
+     * <p>The parameters for the data source. The value must be a URL-encoded JSON string.</p>
+     * <p>The parameters vary based on the data source type. For more information, see:</p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/170005.html">rds</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/170005.html">polardb</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/170005.html">odps</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/173627.html">mysql</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/173627.html">drds</a></li>
+     * <li><p><a href="https://help.aliyun.com/document_detail/170005.html">rds</a></p>
+     * </li>
+     * <li><p><a href="https://help.aliyun.com/document_detail/170005.html">polardb</a></p>
+     * </li>
+     * <li><p><a href="https://help.aliyun.com/document_detail/170005.html">odps</a></p>
+     * </li>
+     * <li><p><a href="https://help.aliyun.com/document_detail/173627.html">mysql</a></p>
+     * </li>
+     * <li><p><a href="https://help.aliyun.com/document_detail/173627.html">drds</a></p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

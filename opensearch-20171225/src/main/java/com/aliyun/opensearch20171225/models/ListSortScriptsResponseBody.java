@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSortScriptsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCDEFGH</p>
@@ -14,7 +14,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scripts.</p>
+     * <p>The list of scripts.</p>
      */
     @NameInMap("result")
     public java.util.List<ListSortScriptsResponseBodyResult> result;
@@ -60,7 +60,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The sort phase to which the script applies.</p>
+         * <p>The applicable scope of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>second_rank</p>
@@ -78,13 +78,18 @@ public class ListSortScriptsResponseBody extends TeaModel {
         public String scriptName;
 
         /**
-         * <p>The status of the script. Valid values:</p>
+         * <p>The status of the script:</p>
          * <ul>
-         * <li>configurable: The script is created, but no script files are uploaded.</li>
-         * <li>not compiled: The script is not compiled.</li>
-         * <li>compile failed: The compilation of the script failed.</li>
-         * <li>compile successful: The script is compiled.</li>
-         * <li>released: The script is published.</li>
+         * <li><p>configurable: The script is created, but no file has been uploaded.</p>
+         * </li>
+         * <li><p>not compiled: The script has not been compiled.</p>
+         * </li>
+         * <li><p>compile failed: The script failed to be compiled.</p>
+         * </li>
+         * <li><p>compile successful: The script is compiled.</p>
+         * </li>
+         * <li><p>released: The script is published.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

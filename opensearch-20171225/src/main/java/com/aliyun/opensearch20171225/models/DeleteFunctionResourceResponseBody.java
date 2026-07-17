@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFunctionResourceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned. If no error occurs, this value is empty.</p>
+     * <p>The error code. This parameter is empty if no error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -14,7 +14,7 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the request. Unit: milliseconds.</p>
+     * <p>The request latency. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -50,10 +50,12 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code. Valid values:</p>
+     * <p>The status of the request.</p>
      * <ul>
-     * <li>OK</li>
-     * <li>FAIL</li>
+     * <li><p>OK: The request is successful.</p>
+     * </li>
+     * <li><p>FAIL: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

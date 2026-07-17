@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListQueryProcessorNersRequest extends TeaModel {
     /**
-     * <p>The type of the industry.</p>
+     * <p>The industry type.</p>
      * <ul>
-     * <li>ECOMMERCE</li>
+     * <li>ECOMMERCE: The e-commerce industry.</li>
      * </ul>
      * 
      * <strong>example:</strong>

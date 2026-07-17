@@ -26,7 +26,7 @@ public class ListInterventionDictionaryEntriesRequest extends TeaModel {
      * <p>The intervention entry.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Test</p>
      */
     @NameInMap("word")
     public String word;

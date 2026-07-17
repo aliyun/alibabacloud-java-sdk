@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSearchStrategyRequest extends TeaModel {
     /**
-     * <p>The query policy.</p>
+     * <p>The search strategy.</p>
      */
     @NameInMap("body")
     public SearchStrategy body;

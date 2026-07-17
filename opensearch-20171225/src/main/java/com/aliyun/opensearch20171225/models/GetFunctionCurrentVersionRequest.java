@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFunctionCurrentVersionRequest extends TeaModel {
     /**
-     * <p>The category. By default, this parameter is left empty.</p>
+     * <p>The category. The default value is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>general</p>
@@ -14,7 +14,7 @@ public class GetFunctionCurrentVersionRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The industry. By default, this parameter is left empty, which indicates General-purpose Edition.</p>
+     * <p>The industry. The default value is empty, which indicates the General-purpose Edition.</p>
      * 
      * <strong>example:</strong>
      * <p>ecommerce</p>
@@ -25,8 +25,10 @@ public class GetFunctionCurrentVersionRequest extends TeaModel {
     /**
      * <p>The type of the feature. Valid values:</p>
      * <ul>
-     * <li>PAAS. This is the default value.</li>
-     * <li>SAAS.</li>
+     * <li><p>PAAS (default)</p>
+     * </li>
+     * <li><p>SAAS</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,16 +38,24 @@ public class GetFunctionCurrentVersionRequest extends TeaModel {
     public String functionType;
 
     /**
-     * <p>The type of the model. The following features correspond to different model types:</p>
+     * <p>The model type. Different features correspond to different model types:</p>
      * <ul>
-     * <li>CTR model: tf_checkpoint</li>
-     * <li>Popularity model: pop</li>
-     * <li>Category model: offline_inference</li>
-     * <li>Hotword model: offline_inference</li>
-     * <li>Shading model: offline_inference</li>
-     * <li>Drop-down suggestion model: offline_inference</li>
-     * <li>Word segmentation model: text</li>
-     * <li>Word weight model: tf_checkpoint</li>
+     * <li><p>CTR model: tf_checkpoint</p>
+     * </li>
+     * <li><p>Popularity model: pop</p>
+     * </li>
+     * <li><p>Category model: offline_inference</p>
+     * </li>
+     * <li><p>Hotword model: offline_inference</p>
+     * </li>
+     * <li><p>Hint model: offline_inference</p>
+     * </li>
+     * <li><p>Drop-down suggestion model: offline_inference</p>
+     * </li>
+     * <li><p>Word segmentation model: text</p>
+     * </li>
+     * <li><p>Term weighting model: tf_checkpoint</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

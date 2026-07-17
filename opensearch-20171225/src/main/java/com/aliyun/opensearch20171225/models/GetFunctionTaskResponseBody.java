@@ -56,7 +56,7 @@ public class GetFunctionTaskResponseBody extends TeaModel {
     public GetFunctionTaskResponseBodyResult result;
 
     /**
-     * <p>The status of the request.</p>
+     * <p>The request status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -192,9 +192,12 @@ public class GetFunctionTaskResponseBody extends TeaModel {
         /**
          * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li>success</li>
-         * <li>failed</li>
-         * <li>running</li>
+         * <li><p>success</p>
+         * </li>
+         * <li><p>failed</p>
+         * </li>
+         * <li><p>running</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

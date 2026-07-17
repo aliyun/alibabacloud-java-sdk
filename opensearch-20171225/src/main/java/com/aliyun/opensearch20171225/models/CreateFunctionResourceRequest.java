@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFunctionResourceRequest extends TeaModel {
     /**
-     * <p>The resource data. The data structure varies with the resource type.</p>
+     * <p>The resource data. Its structure depends on the \<code>ResourceType\\</code> value.</p>
      */
     @NameInMap("Data")
     public CreateFunctionResourceRequestData data;
@@ -29,23 +29,7 @@ public class CreateFunctionResourceRequest extends TeaModel {
     public String resourceName;
 
     /**
-     * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>feature_generator</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>raw_file</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The type of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>feature_generator</p>
@@ -102,22 +86,6 @@ public class CreateFunctionResourceRequest extends TeaModel {
 
         /**
          * <p>The type of the feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>item</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>user</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -150,7 +118,7 @@ public class CreateFunctionResourceRequest extends TeaModel {
 
     public static class CreateFunctionResourceRequestDataGeneratorsInput extends TeaModel {
         /**
-         * <p>The input features.</p>
+         * <p>The list of input features.</p>
          */
         @NameInMap("Features")
         public java.util.List<CreateFunctionResourceRequestDataGeneratorsInputFeatures> features;
@@ -173,50 +141,6 @@ public class CreateFunctionResourceRequest extends TeaModel {
     public static class CreateFunctionResourceRequestDataGenerators extends TeaModel {
         /**
          * <p>The type of the feature generator.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>lookup</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>sequence</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>overlap</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>raw</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>combo</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>id</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -272,7 +196,7 @@ public class CreateFunctionResourceRequest extends TeaModel {
 
     public static class CreateFunctionResourceRequestData extends TeaModel {
         /**
-         * <p>The content of the file that corresponds to a resource of the raw_file type.</p>
+         * <p>The file content. Use this for \<code>raw_file\\</code> resources.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;abc&quot;</p>
@@ -281,7 +205,7 @@ public class CreateFunctionResourceRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The feature generators that correspond to resources of the feature_generator type.</p>
+         * <p>A list of feature generators. Use this for \<code>feature_generator\\</code> resources.</p>
          */
         @NameInMap("Generators")
         public java.util.List<CreateFunctionResourceRequestDataGenerators> generators;

@@ -42,7 +42,7 @@ public class CreateABTestGroupResponseBody extends TeaModel {
 
     public static class CreateABTestGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test group was created.</p>
+         * <p>The time when the experiment group was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1588839490</p>
@@ -51,7 +51,7 @@ public class CreateABTestGroupResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The ID of the test group.</p>
+         * <p>The ID of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>13466</p>
@@ -60,7 +60,7 @@ public class CreateABTestGroupResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The alias of the test group.</p>
+         * <p>The alias of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>Group_2020-5-7_15:23:3</p>
@@ -69,10 +69,12 @@ public class CreateABTestGroupResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the test group.</p>
+         * <p>The status of the experiment group.</p>
          * <ul>
-         * <li>0: not in effect</li>
-         * <li>1: in effect</li>
+         * <li><p>0: Inactive</p>
+         * </li>
+         * <li><p>1: Active</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class CreateABTestGroupResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the test group was last updated.</p>
+         * <p>The time when the experiment group was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1588839490</p>

@@ -14,7 +14,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the data collection task.</p>
+     * <p>The data collection information.</p>
      */
     @NameInMap("result")
     public DescribeDataCollctionResponseBodyResult result;
@@ -42,7 +42,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
 
     public static class DescribeDataCollctionResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the data collection was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1581065837</p>
@@ -51,11 +51,14 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The type of data collected. Valid values:</p>
+         * <p>The type of the data collection.</p>
          * <ul>
-         * <li>behavior: behavioral data.</li>
-         * <li>item_info: project information.</li>
-         * <li>industry_specific: industry-specific data.</li>
+         * <li><p>behavior: User behavior data.</p>
+         * </li>
+         * <li><p>item_info: Item information.</p>
+         * </li>
+         * <li><p>industry_specific: Industry-specific attributes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,7 +68,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public String dataCollectionType;
 
         /**
-         * <p>The ID of the data collection task.</p>
+         * <p>The ID of the data collection.</p>
          * 
          * <strong>example:</strong>
          * <p>286</p>
@@ -74,10 +77,12 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The industry name. Valid values:</p>
+         * <p>The name of the industry.</p>
          * <ul>
-         * <li>general</li>
-         * <li>ecommerce</li>
+         * <li><p>general: General</p>
+         * </li>
+         * <li><p>ecommerce: E-commerce</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +92,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public String industryName;
 
         /**
-         * <p>The name of the data collection task.</p>
+         * <p>The name of the data collection.</p>
          * 
          * <strong>example:</strong>
          * <p>os_function_test_v1</p>
@@ -96,12 +101,16 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the data collection feature. Valid values:</p>
+         * <p>The status.</p>
          * <ul>
-         * <li>0: The feature is disabled.</li>
-         * <li>1: The feature is being enabled.</li>
-         * <li>2: The feature is enabled.</li>
-         * <li>3: The feature failed to be enabled.</li>
+         * <li><p>0: The data collection is not enabled.</p>
+         * </li>
+         * <li><p>1: The data collection is being enabled.</p>
+         * </li>
+         * <li><p>2: The data collection is enabled.</p>
+         * </li>
+         * <li><p>3: The data collection failed to be enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -111,7 +120,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The sundial ID.</p>
+         * <p>The ID of the sundial.</p>
          * 
          * <strong>example:</strong>
          * <p>1755</p>
@@ -120,11 +129,15 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public String sundialId;
 
         /**
-         * <p>The type of the source from which data was collected. Valid values:</p>
+         * <p>The type of the data collection client.</p>
          * <ul>
-         * <li>server</li>
-         * <li>web</li>
-         * <li>app Note: Only server is supported.</li>
+         * <li><p>server</p>
+         * </li>
+         * <li><p>web</p>
+         * </li>
+         * <li><p>app
+         * Only server is supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +147,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the data collection task was updated.</p>
+         * <p>The time when the data collection was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1581065904</p>

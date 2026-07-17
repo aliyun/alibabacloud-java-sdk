@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSlowQueryQueriesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EB250CA0-ACFD-C5DE-17CD-01445BFE8AE5</p>
@@ -14,7 +14,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>The result of the request.</p>
      */
     @NameInMap("result")
     public ListSlowQueryQueriesResponseBodyResult result;
@@ -42,7 +42,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
 
     public static class ListSlowQueryQueriesResponseBodyResult extends TeaModel {
         /**
-         * <p>The content of the optimization suggestion for the query.</p>
+         * <p>The information about the optimization suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>no data</p>
@@ -51,7 +51,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         public String appQuery;
 
         /**
-         * <p>The end of the time range that was queried.</p>
+         * <p>The end timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1589990340</p>
@@ -69,7 +69,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         public Integer index;
 
         /**
-         * <p>The beginning of the time range that was queried.</p>
+         * <p>The start timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1589986800</p>

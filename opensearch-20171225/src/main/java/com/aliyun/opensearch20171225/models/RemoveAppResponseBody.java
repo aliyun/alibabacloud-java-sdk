@@ -14,7 +14,7 @@ public class RemoveAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>—</p>
      */
     @NameInMap("result")
     public java.util.List<Integer> result;

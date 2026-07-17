@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFunctionResourceResponseBody extends TeaModel {
     /**
-     * <p>The error code returned. If no error occurs, this value is empty.</p>
+     * <p>The returned error code. This is empty if no error occurred.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource.NotExist</p>
@@ -14,7 +14,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the API request. Unit: milliseconds.</p>
+     * <p>The time consumed by the API request. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
     public Double latency;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The returned error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource not exist.</p>
@@ -50,16 +50,18 @@ public class GetFunctionResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Result")
     public GetFunctionResourceResponseBodyResult result;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The status code.</p>
      * <ul>
-     * <li>OK</li>
-     * <li>FAIL</li>
+     * <li><p>OK: The request was successful.</p>
+     * </li>
+     * <li><p>FAIL: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
 
     public static class GetFunctionResourceResponseBodyResultDataGeneratorsInputFeatures extends TeaModel {
         /**
-         * <p>The name of the feature.</p>
+         * <p>The feature name.</p>
          * 
          * <strong>example:</strong>
          * <p>system_item_id</p>
@@ -140,7 +142,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the feature.</p>
+         * <p>The feature type.</p>
          * 
          * <strong>example:</strong>
          * <p>item</p>
@@ -173,7 +175,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
 
     public static class GetFunctionResourceResponseBodyResultDataGeneratorsInput extends TeaModel {
         /**
-         * <p>The input features.</p>
+         * <p>The list of input features.</p>
          */
         @NameInMap("Features")
         public java.util.List<GetFunctionResourceResponseBodyResultDataGeneratorsInputFeatures> features;
@@ -251,7 +253,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
 
     public static class GetFunctionResourceResponseBodyResultData extends TeaModel {
         /**
-         * <p>The content of the file that corresponds to a resource of the raw_file type.</p>
+         * <p>The content of the file for a resource of the raw_file type.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -260,7 +262,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The feature generators that correspond to resources of the feature_generator type.</p>
+         * <p>The list of feature generators for a resource of the feature_generator type.</p>
          */
         @NameInMap("Generators")
         public java.util.List<GetFunctionResourceResponseBodyResultDataGenerators> generators;
@@ -299,7 +301,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The resource data. The data structure varies with the resource type.</p>
+         * <p>The resource data. The structure of the data varies based on the resourceType.</p>
          */
         @NameInMap("Data")
         public GetFunctionResourceResponseBodyResultData data;
@@ -314,7 +316,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the feature.</p>
+         * <p>The feature name.</p>
          * 
          * <strong>example:</strong>
          * <p>rank</p>
@@ -323,7 +325,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The time when the resource was modified. Unit: milliseconds.</p>
+         * <p>The time when the resource was last modified. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -332,13 +334,13 @@ public class GetFunctionResourceResponseBody extends TeaModel {
         public Long modifyTime;
 
         /**
-         * <p>The algorithm instances that are referenced.</p>
+         * <p>The list of referenced algorithm instance names.</p>
          */
         @NameInMap("ReferencedInstances")
         public java.util.List<String> referencedInstances;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          * 
          * <strong>example:</strong>
          * <p>fg_json</p>
@@ -347,7 +349,7 @@ public class GetFunctionResourceResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>raw_file</p>

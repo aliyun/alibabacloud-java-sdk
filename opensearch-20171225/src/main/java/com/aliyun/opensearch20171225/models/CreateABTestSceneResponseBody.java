@@ -14,7 +14,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The result of the request.</p>
      */
     @NameInMap("result")
     public CreateABTestSceneResponseBodyResult result;
@@ -42,7 +42,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
 
     public static class CreateABTestSceneResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test scenario was created.</p>
+         * <p>The time when the scene was created.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -51,7 +51,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The ID of the test group.</p>
+         * <p>The ID of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>20405</p>
@@ -60,7 +60,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the A/B test group.</p>
+         * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>kevintest_2020-5-7_15:21:48</p>
@@ -69,10 +69,12 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status. Valid values:</p>
+         * <p>The status of the scene. Valid values:</p>
          * <ul>
-         * <li>0: not in effect</li>
-         * <li>1: in effect</li>
+         * <li><p>0: disabled</p>
+         * </li>
+         * <li><p>1: enabled</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The time when the test scenario was last updated.</p>
+         * <p>The time when the scene was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1589012351</p>
@@ -91,7 +93,7 @@ public class CreateABTestSceneResponseBody extends TeaModel {
         public Integer updated;
 
         /**
-         * <p>The ID of the test scenario</p>
+         * <p>The IDs of the scenes.</p>
          */
         @NameInMap("values")
         public java.util.List<String> values;

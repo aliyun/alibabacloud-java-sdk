@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateUserAnalyzerRequest extends TeaModel {
     /**
-     * <p>The basic analyzer.</p>
+     * <p>The name of the basic analyzer.</p>
      * 
      * <strong>example:</strong>
-     * <p>chn_standard</p>
+     * <p>Chinese - general analysis</p>
      */
     @NameInMap("business")
     public String business;
 
     /**
-     * <p>The application ID of the custom analyzer.</p>
+     * <p>The application ID for the custom model-based analyzer.</p>
      * 
      * <strong>example:</strong>
      * <p>110123123</p>
@@ -23,7 +23,7 @@ public class CreateUserAnalyzerRequest extends TeaModel {
     public String businessAppGroupId;
 
     /**
-     * <p>The basic analyzer type. Valid values: AUTO, MODEL, SYSTEM, and USER.</p>
+     * <p>The type of the basic analyzer. Valid values: AUTO, MODEL, SYSTEM, and USER.</p>
      * 
      * <strong>example:</strong>
      * <p>AUTO</p>
@@ -32,7 +32,7 @@ public class CreateUserAnalyzerRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The analyzer name.</p>
+     * <p>The name of the analyzer.</p>
      * 
      * <strong>example:</strong>
      * <p>jmbon_analyzer</p>
@@ -50,11 +50,12 @@ public class CreateUserAnalyzerRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.
-     * Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p>true: sends a check request without creating the analyzer. The system checks the AccessKey, RAM user authorization, and required parameters.</p>
+     * </li>
+     * <li><p>false (default): sends a regular request to create the analyzer.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the query analysis rule.</p>
+     * <p>The information about the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -45,7 +45,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
 
     public static class ModifyQueryProcessorResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the query analysis rule is a default rule.</p>
+         * <p>Indicates whether the rule is a default rule.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -63,11 +63,14 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The type of the industry to which the query analysis rule is applied. Valid values:</p>
+         * <p>The industry to which the query analysis rule applies. Valid values:</p>
          * <ul>
-         * <li>GENERAL</li>
-         * <li>ECOMMERCE</li>
-         * <li>IT_CONTENT</li>
+         * <li><p>GENERAL: General</p>
+         * </li>
+         * <li><p>ECOMMERCE: E-commerce</p>
+         * </li>
+         * <li><p>IT_CONTENT: IT content</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -77,7 +80,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The indexes to which the query analysis rule is applied.</p>
+         * <p>The indexes to which the query analysis rule applies.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;default&quot;]</p>
@@ -86,7 +89,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
         public java.util.List<String> indexes;
 
         /**
-         * <p>The name of the query analysis rule.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>synonym</p>

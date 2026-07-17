@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeUserAnalyzerRequest extends TeaModel {
     /**
-     * <p>The Associated information,output properties based on hierarchy.</p>
+     * <p>Specifies related information to return. The properties are returned based on the specified level.</p>
      * <ul>
-     * <li><strong>all</strong>: Outputs associated app information</li>
+     * <li>all: Returns information about the associated application.</li>
      * </ul>
      * 
      * <strong>example:</strong>

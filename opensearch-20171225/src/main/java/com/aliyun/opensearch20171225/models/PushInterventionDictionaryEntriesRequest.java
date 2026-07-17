@@ -11,11 +11,13 @@ public class PushInterventionDictionaryEntriesRequest extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> body;
 
     /**
-     * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
+     * <p>Specifies whether to validate the request parameters without creating the attribution configuration. The default value is false.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks only the validity of input parameters.</li>
-     * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+     * <li><p><strong>true</strong>: Validates the request parameters only.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Validates the request parameters and creates the attribution configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

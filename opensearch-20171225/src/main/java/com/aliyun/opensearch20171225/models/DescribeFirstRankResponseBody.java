@@ -51,7 +51,7 @@ public class DescribeFirstRankResponseBody extends TeaModel {
         public String arg;
 
         /**
-         * <p>The attribute, feature function, or field to be searched for.</p>
+         * <p>The attribute, scoring feature, or search field.</p>
          * 
          * <strong>example:</strong>
          * <p>timeliness_ms()</p>
@@ -110,7 +110,7 @@ public class DescribeFirstRankResponseBody extends TeaModel {
         public Boolean active;
 
         /**
-         * <p>Description</p>
+         * <p>The description of the expression.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -127,7 +127,7 @@ public class DescribeFirstRankResponseBody extends TeaModel {
         public java.util.List<DescribeFirstRankResponseBodyResultMeta> meta;
 
         /**
-         * <p>Parameter</p>
+         * <p>The name of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>ar_wear_edit_time</p>

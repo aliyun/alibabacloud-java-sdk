@@ -7,8 +7,10 @@ public class CreateAppGroupRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li>POSTPAY: pay-as-you-go</li>
-     * <li>PREPAY: subscription</li>
+     * <li><p>POSTPAY: pay-as-you-go</p>
+     * </li>
+     * <li><p>PREPAY: subscription</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,10 +50,12 @@ public class CreateAppGroupRequest extends TeaModel {
     public java.util.List<CreateAppGroupRequestTags> tags;
 
     /**
-     * <p>The type of the application. Valid values:</p>
+     * <p>The application type. Valid values:</p>
      * <ul>
-     * <li>standard</li>
-     * <li>enhanced</li>
+     * <li><p>standard: Standard Edition</p>
+     * </li>
+     * <li><p>enhanced: Premium Edition</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -135,13 +139,20 @@ public class CreateAppGroupRequest extends TeaModel {
         /**
          * <p>The specifications. Valid values:</p>
          * <ul>
-         * <li>opensearch.share.junior: basic</li>
-         * <li>opensearch.share.common: shared general-purpose</li>
-         * <li>opensearch.share.compute: shared computing</li>
-         * <li>opensearch.share.storage: shared storage</li>
-         * <li>opensearch.private.common: exclusive general-purpose</li>
-         * <li>opensearch.private.compute: exclusive computing</li>
-         * <li>opensearch.private.storage: exclusive storage</li>
+         * <li><p>opensearch.share.junior: basic</p>
+         * </li>
+         * <li><p>opensearch.share.common: shared general-purpose</p>
+         * </li>
+         * <li><p>opensearch.share.compute: shared compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.share.storage: shared storage-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.common: exclusive general-purpose</p>
+         * </li>
+         * <li><p>opensearch.private.compute: exclusive compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.storage: exclusive storage-optimized</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

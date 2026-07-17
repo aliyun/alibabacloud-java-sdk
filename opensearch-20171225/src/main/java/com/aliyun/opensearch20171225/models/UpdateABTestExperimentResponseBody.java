@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateABTestExperimentResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -14,7 +14,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the test.</p>
+     * <p>The details of the experiment.</p>
      */
     @NameInMap("result")
     public UpdateABTestExperimentResponseBodyResult result;
@@ -42,7 +42,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
 
     public static class UpdateABTestExperimentResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test was created.</p>
+         * <p>The time when the experiment was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1588842080</p>
@@ -51,7 +51,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The test ID.</p>
+         * <p>The ID of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>12888</p>
@@ -60,7 +60,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The alias of the test.</p>
+         * <p>The name of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -69,10 +69,12 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the test is in effect. Valid values:</p>
+         * <p>The status of the experiment.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The experiment is online.</p>
+         * </li>
+         * <li><p>false: The experiment is offline.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +84,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         public Boolean online;
 
         /**
-         * <p>The test parameters.</p>
+         * <p>The parameters of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -91,7 +93,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         public java.util.Map<String, ?> params;
 
         /**
-         * <p>The percentage of traffic that is routed to the test. Valid values: [0,100]</p>
+         * <p>The percentage of traffic allocated to the experiment. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -100,7 +102,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         public Integer traffic;
 
         /**
-         * <p>The time when the test was last modified.</p>
+         * <p>The time when the experiment was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1588842080</p>

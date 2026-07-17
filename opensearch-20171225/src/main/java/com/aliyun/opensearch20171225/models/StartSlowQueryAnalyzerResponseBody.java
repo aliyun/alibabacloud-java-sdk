@@ -14,7 +14,7 @@ public class StartSlowQueryAnalyzerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>N/A</p>
+     * <p>\-</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>The token that is used to retrieve the next page.</p>
+     * <p>The token to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource IDs. You can specify a maximum number of 50 resource IDs.</p>
+     * <p>The resource IDs. You can specify a maximum of 50 resource IDs.</p>
      */
     @NameInMap("resourceId")
     public String resourceIdShrink;
@@ -30,7 +30,7 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags. You can specify a maximum number of 20 tags.</p>
+     * <p>The tags to query. The list can contain a maximum of 20 tags.</p>
      */
     @NameInMap("tag")
     public String tagShrink;

@@ -14,7 +14,8 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the test scenario. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a>.</p>
+     * <p>The details of the A/B test scenario.
+     * For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -45,7 +46,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
 
     public static class UpdateABTestSceneResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test scenario was created.</p>
+         * <p>The time when the scenario was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1596527691</p>
@@ -54,7 +55,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The ID of the test scenario.</p>
+         * <p>The ID of the scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>20614</p>
@@ -63,7 +64,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the test scenario.</p>
+         * <p>The alias of the scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>kevintest22</p>
@@ -72,10 +73,12 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the test. Valid values:</p>
+         * <p>The status of the test.</p>
          * <ul>
-         * <li>true: The test is started.</li>
-         * <li>false: The test is stopped.</li>
+         * <li><p>true: The test is started.</p>
+         * </li>
+         * <li><p>false: The test is stopped.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -85,7 +88,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         public Boolean online;
 
         /**
-         * <p>The parameters of the A/B test.</p>
+         * <p>The parameters of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -103,7 +106,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         public Integer traffic;
 
         /**
-         * <p>The time when the test scenario was last modified.</p>
+         * <p>The time when the scenario was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1596527691</p>

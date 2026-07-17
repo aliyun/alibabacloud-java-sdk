@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateABTestSceneRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>The A/B test scenario.</p>
      */
     @NameInMap("body")
     public ABTestScene body;
 
     /**
-     * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+     * <p>Specifies whether to perform a dry run. This parameter is used only to check whether the data source is valid. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

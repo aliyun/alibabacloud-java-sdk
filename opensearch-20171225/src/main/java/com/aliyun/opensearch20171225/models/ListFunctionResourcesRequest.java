@@ -6,12 +6,6 @@ import com.aliyun.tea.*;
 public class ListFunctionResourcesRequest extends TeaModel {
     /**
      * <p>The output level.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>simple</li>
-     * <li>normal</li>
-     * <li>detail</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>detail</p>
@@ -29,7 +23,7 @@ public class ListFunctionResourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,23 +32,7 @@ public class ListFunctionResourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>feature_generator</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>raw_file</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>feature_generator</p>

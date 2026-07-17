@@ -98,12 +98,18 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
         /**
          * <p>The type of the intervention dictionary. Valid values:</p>
          * <ul>
-         * <li>stopword: an intervention dictionary for stop word filtering</li>
-         * <li>synonym: an intervention dictionary for synonym configuration</li>
-         * <li>correction: an intervention dictionary for spelling correction</li>
-         * <li>category_prediction: an intervention dictionary for category prediction</li>
-         * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
-         * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+         * <li><p>stopword: an intervention dictionary for stop word filtering</p>
+         * </li>
+         * <li><p>synonym: an intervention dictionary for synonym configuration</p>
+         * </li>
+         * <li><p>correction: an intervention dictionary for spelling correction</p>
+         * </li>
+         * <li><p>category_prediction: an intervention dictionary for category prediction</p>
+         * </li>
+         * <li><p>ner: an intervention dictionary for Named Entity Recognition (NER)</p>
+         * </li>
+         * <li><p>term_weighting: an intervention dictionary for term weight analysis</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

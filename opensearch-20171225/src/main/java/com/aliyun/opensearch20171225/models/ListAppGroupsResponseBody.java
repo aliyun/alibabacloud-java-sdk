@@ -14,7 +14,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the application.</p>
+     * <p>The applications.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170000.html">AppGroup</a>.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
 
     public static class ListAppGroupsResponseBodyResultQuota extends TeaModel {
         /**
-         * <p>The computing resources. Unit: logical computing unit (LCU).</p>
+         * <p>The computing resources in logical compute units (LCUs).</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -72,7 +72,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public Integer computeResource;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage capacity in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -83,13 +83,20 @@ public class ListAppGroupsResponseBody extends TeaModel {
         /**
          * <p>The specifications. Valid values:</p>
          * <ul>
-         * <li>opensearch.share.junior: basic.</li>
-         * <li>opensearch.share.common: shared general-purpose.</li>
-         * <li>opensearch.share.compute: shared computing.</li>
-         * <li>opensearch.share.storage: shared storage.</li>
-         * <li>opensearch.private.common: exclusive general-purpose.</li>
-         * <li>opensearch.private.compute: exclusive computing.</li>
-         * <li>opensearch.private.storage: exclusive storage.</li>
+         * <li><p>opensearch.share.junior: Basic</p>
+         * </li>
+         * <li><p>opensearch.share.common: Shared General-purpose</p>
+         * </li>
+         * <li><p>opensearch.share.compute: Shared Compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.share.storage: Shared Storage-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.common: Exclusive General-purpose</p>
+         * </li>
+         * <li><p>opensearch.private.compute: Exclusive Compute-optimized</p>
+         * </li>
+         * <li><p>opensearch.private.storage: Exclusive Storage-optimized</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,8 +182,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go.</li>
-         * <li>PREPAY: subscription.</li>
+         * <li><p>POSTPAY: pay-as-you-go.</p>
+         * </li>
+         * <li><p>PREPAY: subscription.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,10 +195,12 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The billable item. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>1: computing resources.</li>
-         * <li>2: queries per second (QPS).</li>
+         * <li><p>1: computing resources</p>
+         * </li>
+         * <li><p>2: queries per second (QPS)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,7 +219,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The timestamp when the application was created.</p>
+         * <p>The timestamp that indicates when the application was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1575442875</p>
@@ -235,7 +246,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The industry of the application.</p>
+         * <p>The domain of the application group.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -253,7 +264,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The time when the application expired.</p>
+         * <p>The time when the application expires.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;xxx&quot;</p>
@@ -262,10 +273,12 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String expireOn;
 
         /**
-         * <p>The approval state of the quotas. Valid values:</p>
+         * <p>The quota approval status. Valid values:</p>
          * <ul>
-         * <li>0: The application is in service.</li>
-         * <li>1: The quotas are being reviewed.</li>
+         * <li><p>0: Normal</p>
+         * </li>
+         * <li><p>1: Pending approval</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,11 +306,14 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The lock state. Valid values:</p>
+         * <p>The lock status. Valid values:</p>
          * <ul>
-         * <li>Unlock: The instance is unlocked.</li>
-         * <li>LockByExpiration: The instance is automatically locked after it expires.</li>
-         * <li>ManualLock: The instance is manually locked.</li>
+         * <li><p>Unlock: The instance is not locked.</p>
+         * </li>
+         * <li><p>LockByExpiration: The instance is automatically locked after it expires.</p>
+         * </li>
+         * <li><p>ManualLock: The instance is manually locked.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,8 +343,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the application is created. Valid values:</p>
          * <ul>
-         * <li>0: The application is being created.</li>
-         * <li>1: The application is created.</li>
+         * <li><p>0: The application is being created.</p>
+         * </li>
+         * <li><p>1: The application is created.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,7 +356,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public Integer produced;
 
         /**
-         * <p>The name of the A/B test group.</p>
+         * <p>The name of the A/B test project.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;xxx&quot;</p>
@@ -347,7 +365,8 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The information about the quotas of the application. For more information, see <a href="https://help.aliyun.com/document_detail/170001.html">Quota</a>.</p>
+         * <p>The quota information of the application.
+         * For more information, see <a href="https://help.aliyun.com/document_detail/170001.html">Quota</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -356,13 +375,18 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public ListAppGroupsResponseBodyResultQuota quota;
 
         /**
-         * <p>The state of the application. Valid values:</p>
+         * <p>The status of the application. Valid values:</p>
          * <ul>
-         * <li>producing: The application is being created.</li>
-         * <li>review_pending: The application is being reviewed.</li>
-         * <li>config_pending: The application is to be configured.</li>
-         * <li>normal: The application is in service.</li>
-         * <li>frozen: The application is frozen.</li>
+         * <li><p>producing: The application is being created.</p>
+         * </li>
+         * <li><p>review_pending: The application is pending approval.</p>
+         * </li>
+         * <li><p>config_pending: The application is pending configuration.</p>
+         * </li>
+         * <li><p>normal: The application is running as normal.</p>
+         * </li>
+         * <li><p>frozen: The application is frozen.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,7 +396,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The timestamp when the current online version was published.</p>
+         * <p>The timestamp that indicates when the current online version was published.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -381,7 +405,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public Integer switchedTime;
 
         /**
-         * <p>The application tags.</p>
+         * <p>The tags of the application.</p>
          */
         @NameInMap("tags")
         public java.util.List<ListAppGroupsResponseBodyResultTags> tags;
@@ -389,8 +413,10 @@ public class ListAppGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the application. Valid values:</p>
          * <ul>
-         * <li>standard: a High-performance Search Edition application.</li>
-         * <li>enhanced: an Industry Algorithm Edition application.</li>
+         * <li><p>standard: a Standard Edition application.</p>
+         * </li>
+         * <li><p>enhanced: a Premium Edition application.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,7 +426,7 @@ public class ListAppGroupsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The timestamp when the application was last updated.</p>
+         * <p>The timestamp that indicates when the application was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1578916076</p>

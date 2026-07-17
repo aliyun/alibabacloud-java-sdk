@@ -17,7 +17,7 @@ public class PushUserAnalyzerEntriesResponseBody extends TeaModel {
      * <p>The result returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>[]</p>
      */
     @NameInMap("result")
     public java.util.Map<String, ?> result;

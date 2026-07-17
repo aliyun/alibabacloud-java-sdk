@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSlowQueryCategoriesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4406F40B-A0A2-9D5D-531F-3B6936567584</p>
@@ -14,7 +14,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("result")
     public ListSlowQueryCategoriesResponseBodyResult result;
@@ -42,13 +42,18 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
 
     public static class ListSlowQueryCategoriesResponseBodyResult extends TeaModel {
         /**
-         * <p>The status of the analysis. Valid values:</p>
+         * <p>The analysis status.</p>
          * <ul>
-         * <li>PENDING: preparing</li>
-         * <li>SUCCESS: succeeded</li>
-         * <li>RUNNING: running</li>
-         * <li>FAILED: failed</li>
-         * <li>N/A: unknown</li>
+         * <li><p>PENDING: The analysis is being prepared.</p>
+         * </li>
+         * <li><p>SUCCESS: The analysis is successful.</p>
+         * </li>
+         * <li><p>RUNNING: The analysis is in progress.</p>
+         * </li>
+         * <li><p>FAILED: The analysis failed.</p>
+         * </li>
+         * <li><p>N/A: The analysis status is unknown.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -58,7 +63,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         public String analyzeStatus;
 
         /**
-         * <p>The timestamp that indicates the end of the time range to query.</p>
+         * <p>The end timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1589990340</p>
@@ -67,7 +72,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         public Integer end;
 
         /**
-         * <p>The timestamp that indicates the beginning of the time range to query.</p>
+         * <p>The start timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1589986800</p>

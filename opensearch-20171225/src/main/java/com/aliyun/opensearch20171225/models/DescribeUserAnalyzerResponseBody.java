@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserAnalyzerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FFAEF396-10EF-53C7-1F51-518853880729</p>
@@ -14,7 +14,7 @@ public class DescribeUserAnalyzerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the custom analyzer.</p>
+     * <p>The details of the custom analyzer. For more information, see <a href="https://help.aliyun.com/document_detail/178934.html">UserAnalyzer</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

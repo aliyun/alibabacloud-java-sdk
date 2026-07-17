@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically switch the created version to an online version. Valid values:</p>
+     * <p>Specifies whether to automatically set the new version as the online version after it is created.</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class CreateAppRequest extends TeaModel {
     public Boolean autoSwitch;
 
     /**
-     * <p>The capability opening configurations.</p>
+     * <p>The feature configurations.</p>
      */
     @NameInMap("cluster")
     public CreateAppRequestCluster cluster;
@@ -27,22 +29,22 @@ public class CreateAppRequest extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> configItems;
 
     /**
-     * <p>The configurations of data sources.</p>
+     * <p>The data source configurations.</p>
      */
     @NameInMap("dataSources")
     public java.util.List<CreateAppRequestDataSources> dataSources;
 
     /**
-     * <p>The version description.</p>
+     * <p>The description of the version.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;Version description&quot;</p>
+     * <p>&quot;version description&quot;</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The industry model module.</p>
+     * <p>The industry model.</p>
      */
     @NameInMap("domain")
     public CreateAppRequestDomain domain;
@@ -54,7 +56,7 @@ public class CreateAppRequest extends TeaModel {
     public java.util.List<String> fetchFields;
 
     /**
-     * <p>The configurations of rough sort.</p>
+     * <p>The rough sort configurations.</p>
      */
     @NameInMap("firstRanks")
     public java.util.List<CreateAppRequestFirstRanks> firstRanks;
@@ -63,10 +65,12 @@ public class CreateAppRequest extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> interpretations;
 
     /**
-     * <p>The zone identifier. Valid values:</p>
+     * <p>The network type. Valid values:</p>
      * <ul>
-     * <li>vpc</li>
-     * <li>oxs</li>
+     * <li><p>vpc</p>
+     * </li>
+     * <li><p>oxs</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +83,7 @@ public class CreateAppRequest extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> prompts;
 
     /**
-     * <p>The query intent understanding configurations.</p>
+     * <p>The intention recognition configurations.</p>
      */
     @NameInMap("queryProcessors")
     public java.util.List<CreateAppRequestQueryProcessors> queryProcessors;
@@ -88,31 +92,31 @@ public class CreateAppRequest extends TeaModel {
     public Boolean realtimeShared;
 
     /**
-     * <p>The single-table schema.</p>
+     * <p>The schema of the single-table application.</p>
      */
     @NameInMap("schema")
     public CreateAppRequestSchema schema;
 
     /**
-     * <p>The multi-table schema.</p>
+     * <p>The schema of the multi-table application.</p>
      */
     @NameInMap("schemas")
     public java.util.List<CreateAppRequestSchemas> schemas;
 
     /**
-     * <p>The configurations of fine sort.</p>
+     * <p>The fine sort configurations.</p>
      */
     @NameInMap("secondRanks")
     public java.util.List<CreateAppRequestSecondRanks> secondRanks;
 
     /**
-     * <p>The summary configurations of search results.</p>
+     * <p>The search result summary settings.</p>
      */
     @NameInMap("summaries")
     public java.util.List<CreateAppRequestSummaries> summaries;
 
     /**
-     * <p>Specifies whether to perform a dry run. This parameter is only used to check whether the data source is valid. Valid values: true and false.</p>
+     * <p>Specifies whether to perform a dry run. A dry run checks the validity of the data source but does not create the application. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -289,7 +293,7 @@ public class CreateAppRequest extends TeaModel {
         public Integer maxQueryClauseLength;
 
         /**
-         * <p>The timeout period. Unit: milliseconds.</p>
+         * <p>The timeout period for the cluster, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>750</p>
@@ -419,22 +423,32 @@ public class CreateAppRequest extends TeaModel {
         public java.util.Map<String, ?> parameters;
 
         /**
-         * <p>The plug-ins that are used for data processing.</p>
-         * <p>name:</p>
+         * <p>The data processing plugins for fields.</p>
+         * <p>Plugin name (name):</p>
          * <ul>
-         * <li>JsonKeyValueExtractor</li>
-         * <li>MultiValueSpliter</li>
-         * <li>KeyValueExtractor</li>
-         * <li>StringCatenateExtractor</li>
-         * <li>HTMLTagRemover</li>
+         * <li><p>JsonKeyValueExtractor</p>
+         * </li>
+         * <li><p>MultiValueSpliter</p>
+         * </li>
+         * <li><p>KeyValueExtractor</p>
+         * </li>
+         * <li><p>StringCatenateExtractor</p>
+         * </li>
+         * <li><p>HTMLTagRemover</p>
+         * </li>
          * </ul>
-         * <p>parameters:</p>
+         * <p>Plugin parameters (parameters):</p>
          * <ul>
-         * <li>JsonKeyValueExtractor</li>
-         * <li>MultiValueSpliter</li>
-         * <li>KeyValueExtractor</li>
-         * <li>StringCatenateExtractor</li>
-         * <li>HTMLTagRemover</li>
+         * <li><p>JsonKeyValueExtractor</p>
+         * </li>
+         * <li><p>MultiValueSpliter</p>
+         * </li>
+         * <li><p>KeyValueExtractor</p>
+         * </li>
+         * <li><p>StringCatenateExtractor</p>
+         * </li>
+         * <li><p>HTMLTagRemover</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -458,7 +472,7 @@ public class CreateAppRequest extends TeaModel {
         public String schemaName;
 
         /**
-         * <p>The name of the table in the application.</p>
+         * <p>The name of the application table.</p>
          * 
          * <strong>example:</strong>
          * <p>main</p>
@@ -467,12 +481,16 @@ public class CreateAppRequest extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The type of the data source. Valid values:</p>
+         * <p>The type of the data source.</p>
          * <ul>
-         * <li>rds</li>
-         * <li>odps</li>
-         * <li>opensearch</li>
-         * <li>polardb</li>
+         * <li><p>rds</p>
+         * </li>
+         * <li><p>odps</p>
+         * </li>
+         * <li><p>opensearch</p>
+         * </li>
+         * <li><p>polardb</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -555,11 +573,14 @@ public class CreateAppRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The selected feature category. Valid values:</p>
+         * <p>The selected features.</p>
          * <ul>
-         * <li>qp: query analysis</li>
-         * <li>algo: sort policy</li>
-         * <li>service: service</li>
+         * <li><p>qp: query analysis</p>
+         * </li>
+         * <li><p>algo: sort policy</p>
+         * </li>
+         * <li><p>service: ancillary service</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -569,7 +590,7 @@ public class CreateAppRequest extends TeaModel {
         public java.util.Map<String, ?> functions;
 
         /**
-         * <p>The industry type.</p>
+         * <p>The industry.</p>
          * 
          * <strong>example:</strong>
          * <p>ecommerce</p>
@@ -628,10 +649,10 @@ public class CreateAppRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The information about the expression. The information can be of the array or string type.</p>
+         * <p>The details of the expression. The value can be an array or a string.</p>
          * 
          * <strong>example:</strong>
-         * <p>String :&quot;random()*100+now()&quot;;
+         * <p>String :&quot;random()*100+now()&quot;；
          * Array: [
          *     {
          *       &quot;attribute&quot;: &quot;static_bm25()&quot;,
@@ -653,10 +674,12 @@ public class CreateAppRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The expression type. Valid values:</p>
+         * <p>The type of the expression.</p>
          * <ul>
-         * <li>STRUCT: The content of the expression is a structure.</li>
-         * <li>STRING (default): You can configure a custom formula.</li>
+         * <li><p>STRUCT: structured expression.</p>
+         * </li>
+         * <li><p>STRING: custom formula. This is the default value.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -732,11 +755,14 @@ public class CreateAppRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The industry type. Valid values:</p>
+         * <p>The industry. Valid values:</p>
          * <ul>
-         * <li>GENERAL</li>
-         * <li>ECOMMERCE</li>
-         * <li>IT_CONTENT</li>
+         * <li><p>GENERAL: general</p>
+         * </li>
+         * <li><p>ECOMMERCE: e-commerce</p>
+         * </li>
+         * <li><p>IT_CONTENT: IT content</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -746,7 +772,7 @@ public class CreateAppRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>The index range.</p>
+         * <p>The indexes of the application.</p>
          */
         @NameInMap("indexes")
         public java.util.List<String> indexes;
@@ -761,7 +787,7 @@ public class CreateAppRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The features.</p>
+         * <p>The features that are included.</p>
          */
         @NameInMap("processors")
         public java.util.List<java.util.Map<String, ?>> processors;
@@ -823,7 +849,7 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSchemaIndexSortConfig extends TeaModel {
         /**
-         * <p>The sort method.</p>
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>ASC;
@@ -908,7 +934,7 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSchemaTtlField extends TeaModel {
         /**
-         * <p>The name of the document time field.</p>
+         * <p>The document time field.</p>
          * 
          * <strong>example:</strong>
          * <p>text1</p>
@@ -917,7 +943,7 @@ public class CreateAppRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The TTL. Unit: milliseconds.</p>
+         * <p>The time to live (TTL), in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -950,7 +976,7 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSchema extends TeaModel {
         /**
-         * <p>The sort configurations.</p>
+         * <p>The inverted index configurations.</p>
          */
         @NameInMap("indexSortConfig")
         public java.util.List<CreateAppRequestSchemaIndexSortConfig> indexSortConfig;
@@ -980,13 +1006,13 @@ public class CreateAppRequest extends TeaModel {
         public String routeField;
 
         /**
-         * <p>The hot values of the level-1 routing field. After you configure this parameter, level-2 routing is enabled.</p>
+         * <p>The list of hotspot values for the level-1 routing field. After you configure this parameter, level-2 routing is enabled.</p>
          */
         @NameInMap("routeFieldValues")
         public java.util.List<String> routeFieldValues;
 
         /**
-         * <p>The name of the level-2 routing field. This parameter takes effect only when the <code>routeFieldValues</code> parameter is configured. By default, the wide-table primary key field is used as the level-2 routing field.</p>
+         * <p>The name of the level-2 routing field. This parameter takes effect only when <code>routeFieldValues</code> is configured. By default, the primary key of the wide table is used.</p>
          * 
          * <strong>example:</strong>
          * <p>field2</p>
@@ -1034,7 +1060,7 @@ public class CreateAppRequest extends TeaModel {
         public java.util.Map<String, ?> tables;
 
         /**
-         * <p>The document clearing configurations.</p>
+         * <p>The document expiration configuration.</p>
          */
         @NameInMap("ttlField")
         public CreateAppRequestSchemaTtlField ttlField;
@@ -1112,10 +1138,12 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSchemasIndexSortConfig extends TeaModel {
         /**
-         * <p>The sort method.</p>
+         * <p>The sort order.</p>
          * <ul>
-         * <li>ASC</li>
-         * <li>DESC</li>
+         * <li><p>ASC</p>
+         * </li>
+         * <li><p>DESC</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1200,7 +1228,7 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSchemasTtlField extends TeaModel {
         /**
-         * <p>The name of the document time field.</p>
+         * <p>The document time field.</p>
          * 
          * <strong>example:</strong>
          * <p>text1</p>
@@ -1209,7 +1237,7 @@ public class CreateAppRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The TTL. Unit: milliseconds.</p>
+         * <p>The time to live (TTL), in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1242,7 +1270,7 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSchemas extends TeaModel {
         /**
-         * <p>The sort configurations.</p>
+         * <p>The inverted index configurations.</p>
          */
         @NameInMap("indexSortConfig")
         public java.util.List<CreateAppRequestSchemasIndexSortConfig> indexSortConfig;
@@ -1272,13 +1300,13 @@ public class CreateAppRequest extends TeaModel {
         public String routeField;
 
         /**
-         * <p>The hot values of the level-1 routing field. After you configure this parameter, level-2 routing is enabled.</p>
+         * <p>The list of hotspot values for the level-1 routing field. After you configure this parameter, level-2 routing is enabled.</p>
          */
         @NameInMap("routeFieldValues")
         public java.util.List<String> routeFieldValues;
 
         /**
-         * <p>The name of the level-2 routing field. This parameter takes effect only when the routeFieldValues parameter is configured. By default, the wide-table primary key field is used as the level-2 routing field.</p>
+         * <p>The name of the level-2 routing field. This parameter takes effect only when routeFieldValues is configured. By default, the primary key of the wide table is used.</p>
          * 
          * <strong>example:</strong>
          * <p>field2</p>
@@ -1326,7 +1354,7 @@ public class CreateAppRequest extends TeaModel {
         public java.util.Map<String, ?> tables;
 
         /**
-         * <p>The document clearing configurations.</p>
+         * <p>The document expiration configuration.</p>
          */
         @NameInMap("ttlField")
         public CreateAppRequestSchemasTtlField ttlField;
@@ -1416,13 +1444,13 @@ public class CreateAppRequest extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>描述</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The fine sort expression. You can define an expression that contains fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         * <p>The fine sort expression. You can write an expression that contains fields, feature functions, and mathematical functions to implement complex sort logic.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;cate_id &gt; 0 and cate_id &lt; 1000&quot;</p>
@@ -1480,7 +1508,7 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSummariesMeta extends TeaModel {
         /**
-         * <p>The element that is used for highlighting.</p>
+         * <p>The HTML tag for highlight.</p>
          * 
          * <strong>example:</strong>
          * <p>em</p>
@@ -1489,7 +1517,7 @@ public class CreateAppRequest extends TeaModel {
         public String element;
 
         /**
-         * <p>The connector that is used to connect segments.</p>
+         * <p>The string used to connect snippets.</p>
          * 
          * <strong>example:</strong>
          * <p>...</p>
@@ -1507,7 +1535,7 @@ public class CreateAppRequest extends TeaModel {
         public String field;
 
         /**
-         * <p>The length of the segment. Valid values: 1 to 300.</p>
+         * <p>The length of the snippet. The value must be in the range of [1, 300].</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1516,7 +1544,7 @@ public class CreateAppRequest extends TeaModel {
         public Integer len;
 
         /**
-         * <p>The number of segments. Valid values: 1 to 5.</p>
+         * <p>The number of snippets. The value must be in the range of [1, 5].</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1573,7 +1601,7 @@ public class CreateAppRequest extends TeaModel {
 
     public static class CreateAppRequestSummaries extends TeaModel {
         /**
-         * <p>The collection of summary configurations.</p>
+         * <p>The summary configurations.</p>
          */
         @NameInMap("meta")
         public java.util.List<CreateAppRequestSummariesMeta> meta;

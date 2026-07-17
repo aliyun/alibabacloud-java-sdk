@@ -50,7 +50,7 @@ public class UpdateFunctionDefaultInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the request.</p>
+     * <p>The request status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataCollectionsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>959D8782-B130-95EB-86CC-1F6ED447981F</p>
@@ -14,14 +14,14 @@ public class ListDataCollectionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the data collection task.</p>
+     * <p>The data collection information.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/173605.html">DataCollection</a>.</p>
      */
     @NameInMap("result")
     public java.util.List<ListDataCollectionsResponseBodyResult> result;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
 
     public static class ListDataCollectionsResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the data collection was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1581065837</p>
@@ -69,11 +69,14 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The type of data collected. Valid values:</p>
+         * <p>The type of data collection.</p>
          * <ul>
-         * <li>behavior: behavioral data.</li>
-         * <li>item_info: project information.</li>
-         * <li>industry_specific: industry-specific data.</li>
+         * <li><p>behavior: User behavior data.</p>
+         * </li>
+         * <li><p>item_info: Item information.</p>
+         * </li>
+         * <li><p>industry_specific: Industry-specific attributes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -83,7 +86,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String dataCollectionType;
 
         /**
-         * <p>The data collection ID.</p>
+         * <p>The ID of the data collection.</p>
          * 
          * <strong>example:</strong>
          * <p>286</p>
@@ -92,10 +95,12 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The industry name. Valid values:</p>
+         * <p>The name of the industry.</p>
          * <ul>
-         * <li>general</li>
-         * <li>ecommerce</li>
+         * <li><p>general: General.</p>
+         * </li>
+         * <li><p>ecommerce: E-commerce.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +110,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String industryName;
 
         /**
-         * <p>The name of the data collection task.</p>
+         * <p>The name of the data collection.</p>
          * 
          * <strong>example:</strong>
          * <p>os_function_test_v1</p>
@@ -114,12 +119,16 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the data collection feature. Valid values:</p>
+         * <p>The status.</p>
          * <ul>
-         * <li>0: The feature is disabled.</li>
-         * <li>1: The feature is being enabled.</li>
-         * <li>2: The feature is enabled.</li>
-         * <li>3: The feature failed to be enabled.</li>
+         * <li><p>0: Disabled.</p>
+         * </li>
+         * <li><p>1: Enabling.</p>
+         * </li>
+         * <li><p>2: Enabled.</p>
+         * </li>
+         * <li><p>3: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +138,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The sundial ID.</p>
+         * <p>The ID of the sundial.</p>
          * 
          * <strong>example:</strong>
          * <p>1755</p>
@@ -138,13 +147,16 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String sundialId;
 
         /**
-         * <p>The type of the source from which data was collected. Valid values:</p>
+         * <p>The type of the data collection client.</p>
          * <ul>
-         * <li>server</li>
-         * <li>web</li>
-         * <li>app</li>
+         * <li><p>server</p>
+         * </li>
+         * <li><p>web</p>
+         * </li>
+         * <li><p>app</p>
+         * </li>
          * </ul>
-         * <p>Only server is supported.</p>
+         * <p>Note: Only server is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>server</p>
@@ -153,7 +165,7 @@ public class ListDataCollectionsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time when the data collection task was updated.</p>
+         * <p>The time when the data collection was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1581065904</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeABTestExperimentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D77D0DAF-790D-F5F5-A9C0-133738165014</p>
@@ -14,7 +14,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the test.</p>
+     * <p>The details of the experiment.</p>
      */
     @NameInMap("result")
     public DescribeABTestExperimentResponseBodyResult result;
@@ -42,7 +42,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
 
     public static class DescribeABTestExperimentResponseBodyResultParams extends TeaModel {
         /**
-         * <p>The name of the rough sort policy.</p>
+         * <p>The name of the coarse-grained ranking policy.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -67,7 +67,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
 
     public static class DescribeABTestExperimentResponseBodyResult extends TeaModel {
         /**
-         * <p>The time when the test was created.</p>
+         * <p>The time when the experiment was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1588842080</p>
@@ -76,7 +76,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The ID of the test.</p>
+         * <p>The experiment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12888</p>
@@ -85,7 +85,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the test.</p>
+         * <p>The alias of the experiment.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -94,10 +94,12 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the test. Valid values:</p>
+         * <p>The status of the experiment.</p>
          * <ul>
-         * <li>true: in effect</li>
-         * <li>false: not in effect</li>
+         * <li><p>true: The experiment is online.</p>
+         * </li>
+         * <li><p>false: The experiment is offline.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,13 +109,13 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         public Boolean online;
 
         /**
-         * <p>The parameters of the test.</p>
+         * <p>The experiment parameters.</p>
          */
         @NameInMap("params")
         public DescribeABTestExperimentResponseBodyResultParams params;
 
         /**
-         * <p>The percentage of traffic that is routed to the test.</p>
+         * <p>The percentage of traffic for the experiment bucketing.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -122,7 +124,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         public Integer traffic;
 
         /**
-         * <p>The time when the test was last modified.</p>
+         * <p>The time when the experiment was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1588842080</p>

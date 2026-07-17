@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInterventionDictionaryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>80326EFE-485F-46E7-B291-5A1DD08D2198</p>
@@ -14,7 +14,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The details of the intervention dictionary.</p>
      */
     @NameInMap("result")
     public CreateInterventionDictionaryResponseBodyResult result;
@@ -51,7 +51,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         public String analyzer;
 
         /**
-         * <p>The time when the test scenario was created.</p>
+         * <p>The time when the dictionary was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1591086323</p>
@@ -60,7 +60,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The name of the test group.</p>
+         * <p>The name of the dictionary.</p>
          * 
          * <strong>example:</strong>
          * <p>testb</p>
@@ -71,12 +71,30 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         /**
          * <p>The type of the intervention dictionary. Valid values:</p>
          * <ul>
-         * <li>stopword: an intervention dictionary for stop word filtering</li>
-         * <li>synonym: an intervention dictionary for synonym configuration</li>
-         * <li>correction: an intervention dictionary for spelling correction</li>
-         * <li>category_prediction: an intervention dictionary for category prediction</li>
-         * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
-         * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+         * <li><p>stopword: an intervention dictionary for stop word filtering.</p>
+         * </li>
+         * <li><p>synonym: an intervention dictionary for synonym configuration.</p>
+         * </li>
+         * <li><p>correction: an intervention dictionary for spelling correction.</p>
+         * </li>
+         * <li><p>category_prediction: an intervention dictionary for category prediction.</p>
+         * </li>
+         * <li><p>ner: an intervention dictionary for Named Entity Recognition (NER).</p>
+         * </li>
+         * <li><p>term_weighting: an intervention dictionary for term weight analysis.</p>
+         * </li>
+         * <li><p>suggest_allowlist: a drop-down suggestion whitelist.</p>
+         * </li>
+         * <li><p>suggest_denylist: a drop-down suggestion blacklist.</p>
+         * </li>
+         * <li><p>hot_allowlist: a top search whitelist.</p>
+         * </li>
+         * <li><p>hot_denylist: a top search blacklist.</p>
+         * </li>
+         * <li><p>hint_allowlist: a hint whitelist.</p>
+         * </li>
+         * <li><p>hint_denylist: a hint blacklist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

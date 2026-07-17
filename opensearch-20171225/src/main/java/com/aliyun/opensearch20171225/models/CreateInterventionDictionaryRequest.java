@@ -7,9 +7,12 @@ public class CreateInterventionDictionaryRequest extends TeaModel {
     /**
      * <p>The type of the analyzer. Valid values:</p>
      * <ul>
-     * <li>MODEL: model-based custom analyzer.</li>
-     * <li>SYSTEM: system analyzer.</li>
-     * <li>USER: custom analyzer.</li>
+     * <li><p>MODEL: a model-based custom analyzer.</p>
+     * </li>
+     * <li><p>SYSTEM: a system analyzer.</p>
+     * </li>
+     * <li><p>USER: a custom analyzer.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,18 +33,30 @@ public class CreateInterventionDictionaryRequest extends TeaModel {
     /**
      * <p>The type of the intervention dictionary. Valid values:</p>
      * <ul>
-     * <li>stopword: an intervention dictionary for stop word filtering.</li>
-     * <li>synonym: an intervention dictionary for synonym configuration.</li>
-     * <li>correction: an intervention dictionary for spelling correction.</li>
-     * <li>category_prediction: an intervention dictionary for category prediction.</li>
-     * <li>ner: an intervention dictionary for named entity recognition (NER).</li>
-     * <li>term_weighting: an intervention dictionary for term weight analysis.</li>
-     * <li>suggest_allowlist: a drop-down suggestion whitelist.</li>
-     * <li>suggest_denylist: a drop-down suggestion blacklist.</li>
-     * <li>hot_allowlist: a top search whitelist.</li>
-     * <li>hot_denylist: a top search blacklist.</li>
-     * <li>hint_allowlist: a hint whitelist.</li>
-     * <li>hint_denylist: a hint blacklist.</li>
+     * <li><p>stopword: an intervention dictionary for stop word filtering.</p>
+     * </li>
+     * <li><p>synonym: an intervention dictionary for synonym configuration.</p>
+     * </li>
+     * <li><p>correction: an intervention dictionary for spelling correction.</p>
+     * </li>
+     * <li><p>category_prediction: an intervention dictionary for category prediction.</p>
+     * </li>
+     * <li><p>ner: an intervention dictionary for Named Entity Recognition (NER).</p>
+     * </li>
+     * <li><p>term_weighting: an intervention dictionary for term weight analysis.</p>
+     * </li>
+     * <li><p>suggest_allowlist: a drop-down suggestion whitelist.</p>
+     * </li>
+     * <li><p>suggest_denylist: a drop-down suggestion blacklist.</p>
+     * </li>
+     * <li><p>hot_allowlist: a top search whitelist.</p>
+     * </li>
+     * <li><p>hot_denylist: a top search blacklist.</p>
+     * </li>
+     * <li><p>hint_allowlist: a hint whitelist.</p>
+     * </li>
+     * <li><p>hint_denylist: a hint blacklist.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,11 +66,13 @@ public class CreateInterventionDictionaryRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default value: false.</p>
+     * <p>Specifies whether to perform a dry run. The default value is false.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><p><strong>true</strong>: Validates the request parameters but does not create the intervention dictionary.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Validates the request parameters and creates the intervention dictionary.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

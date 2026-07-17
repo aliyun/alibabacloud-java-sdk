@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ListStatisticLogsRequest extends TeaModel {
     /**
      * <p>The fields to query. Format: columns=wordsTopPv.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/187665.html">Metrics in statistical reports</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/187665.html">Metrics for query analysis</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>wordsTopPv</p>
@@ -24,7 +24,7 @@ public class ListStatisticLogsRequest extends TeaModel {
     public Boolean distinct;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class ListStatisticLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,7 +60,7 @@ public class ListStatisticLogsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The beginning of the time range to query. The default value is the timestamp of 00:00:00 on the current day.</p>
+     * <p>The start of the time range to query. The value must be a UNIX timestamp. The default value is the UNIX timestamp for 00:00:00 on the current day.</p>
      * 
      * <strong>example:</strong>
      * <p>1582214400</p>
@@ -69,7 +69,7 @@ public class ListStatisticLogsRequest extends TeaModel {
     public Integer startTime;
 
     /**
-     * <p>The end of the time range to query. The default value is the timestamp of 24:00:00 on the current day.</p>
+     * <p>The end of the time range to query. The value must be a UNIX timestamp. The default value is the UNIX timestamp for 24:00:00 on the current day.</p>
      * 
      * <strong>example:</strong>
      * <p>1682222400</p>

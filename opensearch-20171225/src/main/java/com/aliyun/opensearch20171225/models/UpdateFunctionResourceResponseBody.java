@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFunctionResourceResponseBody extends TeaModel {
     /**
-     * <p>The error code. If no error occurs, this parameter is left empty.</p>
+     * <p>The error code. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidRequest</p>
@@ -14,7 +14,7 @@ public class UpdateFunctionResourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class UpdateFunctionResourceResponseBody extends TeaModel {
     public Long httpCode;
 
     /**
-     * <p>The time consumed for the request. Unit: milliseconds.</p>
+     * <p>The request latency. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class UpdateFunctionResourceResponseBody extends TeaModel {
     public Double latency;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Invalid request.</p>
@@ -41,7 +41,7 @@ public class UpdateFunctionResourceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7E375703-5B12-5466-8B48-C4D01AE1291A</p>

@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateABTestSceneRequest extends TeaModel {
     /**
-     * <p>The ABTest scenario. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a></p>
+     * <p>The A/B test scene. For more information, see <a href="https://help.aliyun.com/document_detail/173618.html">ABTestScene</a>.</p>
      */
     @NameInMap("body")
     public ABTestScene body;
 
     /**
-     * <p>Specifies whether to check the validity of input parameters. Default value: false.</p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to validate only the request parameters. The default value is false.</p>
+     * <p>Values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks only the validity of input parameters.</li>
-     * <li><strong>false</strong>: checks the validity of input parameters and creates an attribution configuration.</li>
+     * <li><p><strong>true</strong>: Validates only the request parameters.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Validates the request parameters and creates the attribution configuration.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

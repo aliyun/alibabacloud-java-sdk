@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSortScriptResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ABCDEFGH</p>
@@ -63,7 +63,7 @@ public class GetSortScriptResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The sort phase to which the script applies.</p>
+         * <p>The applicable scope of the script.</p>
          * 
          * <strong>example:</strong>
          * <p>second_rank</p>
@@ -81,7 +81,7 @@ public class GetSortScriptResponseBody extends TeaModel {
         public String scriptName;
 
         /**
-         * <p>The status of the script. For more information, see the description of the status response parameter in the ListSortScripts topic.</p>
+         * <p>The status of the script. For more information, see the list of script statuses.</p>
          * 
          * <strong>example:</strong>
          * <p>released</p>

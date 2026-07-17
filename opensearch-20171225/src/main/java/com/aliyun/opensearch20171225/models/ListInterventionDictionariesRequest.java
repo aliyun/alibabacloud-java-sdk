@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInterventionDictionariesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number to return. The default value is 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListInterventionDictionariesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. The default value is 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,14 +23,20 @@ public class ListInterventionDictionariesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the intervention dictionary. Valid values:</p>
+     * <p>The types of the intervention dictionaries. Format: urlencode([&quot;synonym&quot;, &quot;stopword&quot;])</p>
      * <ul>
-     * <li>stopword: an intervention dictionary for stop word filtering</li>
-     * <li>synonym: an intervention dictionary for synonym configuration</li>
-     * <li>correction: an intervention dictionary for spelling correction</li>
-     * <li>category_prediction: an intervention dictionary for category prediction</li>
-     * <li>ner: an intervention dictionary for named entity recognition (NER)</li>
-     * <li>term_weighting: an intervention dictionary for term weight analysis</li>
+     * <li><p>stopword: an intervention dictionary for stop word filtering</p>
+     * </li>
+     * <li><p>synonym: an intervention dictionary for synonym configuration</p>
+     * </li>
+     * <li><p>correction: an intervention dictionary for spelling correction</p>
+     * </li>
+     * <li><p>category_prediction: an intervention dictionary for category prediction</p>
+     * </li>
+     * <li><p>ner: an intervention dictionary for Named Entity Recognition (NER)</p>
+     * </li>
+     * <li><p>term_weighting: an intervention dictionary for term weight analysis</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

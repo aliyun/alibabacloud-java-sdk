@@ -14,7 +14,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the fine sort expression.</p>
+     * <p>A list of fine-sort expressions.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170008.html">SecondRank</a>.</p>
      */
     @NameInMap("result")
@@ -60,7 +60,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
 
     public static class ListSecondRanksResponseBodyResult extends TeaModel {
         /**
-         * <p>Indicates whether the expression is the default one.</p>
+         * <p>Indicates whether the expression is active.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -78,7 +78,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>Description</p>
+         * <p>The description of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -87,7 +87,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The expression ID. This parameter is displayed only in the response.</p>
+         * <p>The ID of the expression. This parameter is displayed only in the response.</p>
          * 
          * <strong>example:</strong>
          * <p>890473</p>
@@ -96,10 +96,12 @@ public class ListSecondRanksResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the expression is the default one. This parameter is displayed only in the response. Valid values:</p>
+         * <p>Indicates whether the expression is the default one. This parameter is displayed only in the response.</p>
          * <ul>
-         * <li>true: the expression is the default one.</li>
-         * <li>false: the expression is not the default one.</li>
+         * <li><p>true: The expression is the default one.</p>
+         * </li>
+         * <li><p>false: The expression is not the default one.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,10 +111,12 @@ public class ListSecondRanksResponseBody extends TeaModel {
         public String isDefault;
 
         /**
-         * <p>Indicates whether the expression is a system expression. This parameter is displayed only in the response. Valid values:</p>
+         * <p>Indicates whether the expression is a system expression. This parameter is displayed only in the response.</p>
          * <ul>
-         * <li>true: The expression is a system expression.</li>
-         * <li>false:The expression is not a system expression</li>
+         * <li><p>true: The expression is a system expression.</p>
+         * </li>
+         * <li><p>false: The expression is not a system expression.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +126,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
         public String isSys;
 
         /**
-         * <p>The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
+         * <p>The content of the fine-sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.</p>
          * 
          * <strong>example:</strong>
          * <p>random()+now()</p>
@@ -131,7 +135,7 @@ public class ListSecondRanksResponseBody extends TeaModel {
         public String meta;
 
         /**
-         * <p>Parameter</p>
+         * <p>The name of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>tests</p>

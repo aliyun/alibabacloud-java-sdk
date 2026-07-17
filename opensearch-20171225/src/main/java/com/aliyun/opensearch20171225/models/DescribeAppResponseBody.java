@@ -122,19 +122,29 @@ public class DescribeAppResponseBody extends TeaModel {
          * <p>The plug-ins that are used for data processing.</p>
          * <p>name:</p>
          * <ul>
-         * <li>JsonKeyValueExtractor</li>
-         * <li>MultiValueSpliter</li>
-         * <li>KeyValueExtractor</li>
-         * <li>StringCatenateExtractor</li>
-         * <li>HTMLTagRemover</li>
+         * <li><p>JsonKeyValueExtractor</p>
+         * </li>
+         * <li><p>MultiValueSpliter</p>
+         * </li>
+         * <li><p>KeyValueExtractor</p>
+         * </li>
+         * <li><p>StringCatenateExtractor</p>
+         * </li>
+         * <li><p>HTMLTagRemover</p>
+         * </li>
          * </ul>
          * <p>parameters:</p>
          * <ul>
-         * <li>JsonKeyValueExtractor</li>
-         * <li>MultiValueSpliter</li>
-         * <li>KeyValueExtractor</li>
-         * <li>StringCatenateExtractor</li>
-         * <li>HTMLTagRemover</li>
+         * <li><p>JsonKeyValueExtractor</p>
+         * </li>
+         * <li><p>MultiValueSpliter</p>
+         * </li>
+         * <li><p>KeyValueExtractor</p>
+         * </li>
+         * <li><p>StringCatenateExtractor</p>
+         * </li>
+         * <li><p>HTMLTagRemover</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,10 +179,14 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li>rds</li>
-         * <li>odps</li>
-         * <li>opensearch</li>
-         * <li>polardb</li>
+         * <li><p>rds</p>
+         * </li>
+         * <li><p>odps</p>
+         * </li>
+         * <li><p>opensearch</p>
+         * </li>
+         * <li><p>polardb</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,7 +392,7 @@ public class DescribeAppResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>Description</p>
          */
         @NameInMap("description")
         public String description;
@@ -387,7 +401,7 @@ public class DescribeAppResponseBody extends TeaModel {
          * <p>The information about the expression. The information can be of the array or string type.</p>
          * 
          * <strong>example:</strong>
-         * <p>String :&quot;random()*100+now()&quot;;
+         * <p>String :&quot;random()*100+now()&quot;；
          * Array: [
          *     {
          *       &quot;attribute&quot;: &quot;static_bm25()&quot;,
@@ -487,9 +501,12 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The industry type. Valid values:</p>
          * <ul>
-         * <li>GENERAL</li>
-         * <li>ECOMMERCE</li>
-         * <li>IT_CONTENT</li>
+         * <li><p>GENERAL</p>
+         * </li>
+         * <li><p>ECOMMERCE</p>
+         * </li>
+         * <li><p>IT_CONTENT</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -605,13 +622,20 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The specifications. Valid values:</p>
          * <ul>
-         * <li>opensearch.share.junior: basic</li>
-         * <li>opensearch.share.common: shared general-purpose</li>
-         * <li>opensearch.share.compute: shared computing</li>
-         * <li>opensearch.share.storage: shared storage</li>
-         * <li>opensearch.private.common: exclusive general-purpose</li>
-         * <li>opensearch.private.compute: exclusive computing</li>
-         * <li>opensearch.private.storage: exclusive storage</li>
+         * <li><p>opensearch.share.junior: basic</p>
+         * </li>
+         * <li><p>opensearch.share.common: shared general-purpose</p>
+         * </li>
+         * <li><p>opensearch.share.compute: shared computing</p>
+         * </li>
+         * <li><p>opensearch.share.storage: shared storage</p>
+         * </li>
+         * <li><p>opensearch.private.common: exclusive general-purpose</p>
+         * </li>
+         * <li><p>opensearch.private.compute: exclusive computing</p>
+         * </li>
+         * <li><p>opensearch.private.storage: exclusive storage</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -663,8 +687,10 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The sort method. Valid values:</p>
          * <ul>
-         * <li>ASC</li>
-         * <li>DESC</li>
+         * <li><p>ASC</p>
+         * </li>
+         * <li><p>DESC</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -955,8 +981,10 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The sort method. Valid values:</p>
          * <ul>
-         * <li>ASC</li>
-         * <li>DESC</li>
+         * <li><p>ASC</p>
+         * </li>
+         * <li><p>DESC</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1257,7 +1285,7 @@ public class DescribeAppResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Description</p>
+         * <p>描述</p>
          */
         @NameInMap("description")
         public String description;
@@ -1498,9 +1526,12 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The industry type. Valid values:</p>
          * <ul>
-         * <li>GENERAL</li>
-         * <li>ECOMMERCE</li>
-         * <li>IT_CONTENT</li>
+         * <li><p>GENERAL</p>
+         * </li>
+         * <li><p>ECOMMERCE</p>
+         * </li>
+         * <li><p>IT_CONTENT</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1537,7 +1568,21 @@ public class DescribeAppResponseBody extends TeaModel {
          * <p>The industry model module.</p>
          * 
          * <strong>example:</strong>
-         * <p>[ { &quot;table&quot;: &quot;table1&quot;, &quot;fields&quot;: [ { &quot;name&quot;: &quot;field1&quot;, &quot;interpretation&quot;: &quot;Title&quot; }, { &quot;name&quot;: &quot;field2&quot;, &quot;interpretation&quot;: &quot;Number&quot; } ] } ]</p>
+         * <p>[
+         *     {
+         *         &quot;table&quot;: &quot;table1&quot;,
+         *         &quot;fields&quot;: [
+         *             {
+         *                 &quot;name&quot;: &quot;field1&quot;,
+         *                 &quot;interpretation&quot;: &quot; title&quot;
+         *             },
+         *             {
+         *                 &quot;name&quot;: &quot;field2&quot;,
+         *                 &quot;interpretation&quot;: &quot; ID&quot;
+         *             }
+         *         ]
+         *     }
+         * ]</p>
          */
         @NameInMap("interpretations")
         public java.util.Map<String, ?> interpretations;
@@ -1562,6 +1607,22 @@ public class DescribeAppResponseBody extends TeaModel {
 
         /**
          * <p>The prompt configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;parameters&quot; : [
+         *           {
+         *             &quot;name&quot; : &quot;docs&quot;,
+         *             &quot;value&quot; : &quot;The concatenation method for doc content. For example, the current qwen format: \&quot;<article>\n${doc}\n</article>\n&quot;
+         *           }
+         *         ],
+         *         &quot;messages&quot;:[
+         *           {
+         *             &quot;role&quot; : &quot;role_name. Whether this should be limited to system, user, or assistant, or allow custom values&quot;,
+         *             &quot;content&quot; : &quot;User-defined prompt content. Use ${parameter_key} to indicate dynamically replaced content. See the rules below for details&quot;
+         *           }
+         *         ]
+         *       }</p>
          */
         @NameInMap("prompts")
         public java.util.List<java.util.Map<String, ?>> prompts;
@@ -1580,6 +1641,9 @@ public class DescribeAppResponseBody extends TeaModel {
          */
         @NameInMap("quota")
         public DescribeAppResponseBodyResultQuota quota;
+
+        @NameInMap("realtimeShared")
+        public Boolean realtimeShared;
 
         /**
          * <p>The schema of the application.</p>
@@ -1605,13 +1669,20 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The status of the version. Valid values:</p>
          * <ul>
-         * <li>ok: The version is normal.</li>
-         * <li>stopped: The version is suspended.</li>
-         * <li>frozen: The version is frozen.</li>
-         * <li>initializing: The version is being initialized.</li>
-         * <li>unavailable: The version is invalid.</li>
-         * <li>data_waiting: Data is to be initialized.</li>
-         * <li>data_preparing: Data is being initialized.</li>
+         * <li><p>ok: The version is normal.</p>
+         * </li>
+         * <li><p>stopped: The version is suspended.</p>
+         * </li>
+         * <li><p>frozen: The version is frozen.</p>
+         * </li>
+         * <li><p>initializing: The version is being initialized.</p>
+         * </li>
+         * <li><p>unavailable: The version is invalid.</p>
+         * </li>
+         * <li><p>data_waiting: Data is to be initialized.</p>
+         * </li>
+         * <li><p>data_preparing: Data is being initialized.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1629,9 +1700,12 @@ public class DescribeAppResponseBody extends TeaModel {
         /**
          * <p>The edition type. Valid values:</p>
          * <ul>
-         * <li>standard: a standard edition application.</li>
-         * <li>advance: an advanced edition application of an old version. New versions are not supported for this edition.</li>
-         * <li>enhanced: an advanced edition application of a new version.</li>
+         * <li><p>standard: a standard edition application.</p>
+         * </li>
+         * <li><p>advance: an advanced edition application of an old version. New versions are not supported for this edition.</p>
+         * </li>
+         * <li><p>enhanced: an advanced edition application of a new version.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1763,6 +1837,14 @@ public class DescribeAppResponseBody extends TeaModel {
         }
         public DescribeAppResponseBodyResultQuota getQuota() {
             return this.quota;
+        }
+
+        public DescribeAppResponseBodyResult setRealtimeShared(Boolean realtimeShared) {
+            this.realtimeShared = realtimeShared;
+            return this;
+        }
+        public Boolean getRealtimeShared() {
+            return this.realtimeShared;
         }
 
         public DescribeAppResponseBodyResult setSchema(DescribeAppResponseBodyResultSchema schema) {

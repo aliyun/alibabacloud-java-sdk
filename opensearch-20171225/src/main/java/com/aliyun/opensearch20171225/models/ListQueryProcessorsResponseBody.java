@@ -14,7 +14,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the query analysis rule.</p>
+     * <p>The information about the query analysis rules.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/170014.html">QueryProcessor</a>.</p>
      */
     @NameInMap("result")
@@ -61,11 +61,14 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
         public Integer created;
 
         /**
-         * <p>The type of the industry to which the query analysis rule is applied. Valid values:</p>
+         * <p>The industry to which the query analysis rule applies. Valid values:</p>
          * <ul>
-         * <li>GENERAL</li>
-         * <li>ECOMMERCE</li>
-         * <li>IT_CONTENT</li>
+         * <li><p>GENERAL: General</p>
+         * </li>
+         * <li><p>ECOMMERCE: E-commerce</p>
+         * </li>
+         * <li><p>IT_CONTENT: IT content</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

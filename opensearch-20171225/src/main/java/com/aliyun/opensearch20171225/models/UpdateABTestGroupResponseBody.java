@@ -60,7 +60,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The alias of the test group.</p>
+         * <p>The name of the test group.</p>
          * 
          * <strong>example:</strong>
          * <p>Group_2020-5-7_15:23:3</p>
@@ -71,8 +71,10 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         /**
          * <p>The status of the test group. Valid values:</p>
          * <ul>
-         * <li>0: not in effect</li>
-         * <li>1: in effect</li>
+         * <li><p>0: inactive</p>
+         * </li>
+         * <li><p>1: active</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

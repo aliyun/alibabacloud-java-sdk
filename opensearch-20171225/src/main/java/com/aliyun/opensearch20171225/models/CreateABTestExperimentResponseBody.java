@@ -69,10 +69,12 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the experiment is in effect. Valid values:</p>
+         * <p>The status of the experiment.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The experiment is in effect.</p>
+         * </li>
+         * <li><p>false: The experiment is not in effect.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

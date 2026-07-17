@@ -11,10 +11,12 @@ public class UpdateABTestExperimentRequest extends TeaModel {
     public ABTestExperiment body;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. No endpoint is created. The system checks whether your AccessKey is valid, whether Resource Access Management (RAM) users are authorized, and whether the required parameters are set.</li>
-     * <li>false (default): creates an endpoint immediately.</li>
+     * <li><p>true: Performs a dry run. The system checks if your AccessKey is valid, if the Resource Access Management (RAM) user is authorized, and if all required parameters are specified. The request is not sent.</p>
+     * </li>
+     * <li><p>false (default): Sends the request to update the experiment.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

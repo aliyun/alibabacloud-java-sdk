@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowQueryStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5C1C1C45-C64A-AD30-565F-140871D57E5E</p>
@@ -14,7 +14,7 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The return result.</p>
+     * <p>The result.</p>
      */
     @NameInMap("result")
     public DescribeSlowQueryStatusResponseBodyResult result;
@@ -42,7 +42,7 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
 
     public static class DescribeSlowQueryStatusResponseBodyResult extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100298370</p>
@@ -51,10 +51,12 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
         public String appGroupId;
 
         /**
-         * <p>The network type of the slow query optimization service. Valid values:</p>
+         * <p>The region.</p>
          * <ul>
-         * <li>outer: the Internet</li>
-         * <li>internal: the internal network</li>
+         * <li><p>outer: Public network</p>
+         * </li>
+         * <li><p>internal: Internal network</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,11 +66,14 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The status of the slow query optimization service. Valid values:</p>
+         * <p>The activation status.</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
-         * <li>n/a</li>
+         * <li><p>enabled: Enabled</p>
+         * </li>
+         * <li><p>disabled: Disabled</p>
+         * </li>
+         * <li><p>n/a: Unknown</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
