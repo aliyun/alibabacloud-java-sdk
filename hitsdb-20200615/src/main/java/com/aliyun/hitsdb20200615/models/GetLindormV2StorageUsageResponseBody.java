@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class GetLindormV2StorageUsageResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why the access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The capacity information for each storage medium.</p>
+     */
     @NameInMap("CapacityByDiskCategory")
     public java.util.List<java.util.Map<String, ?>> capacityByDiskCategory;
 
     /**
+     * <p>The capacity information for the multi-zone instance.</p>
+     * <p>{&quot;ZoneId&quot;:{&quot;CapacityByDiskCategory&quot;:{...},&quot;UsageByDiskCategory&quot;:{...}}}</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;cn-hangzhou-i&quot;: {
@@ -50,12 +58,17 @@ public class GetLindormV2StorageUsageResponseBody extends TeaModel {
     public java.util.Map<String, ?> instanceStorageZoneMap;
 
     /**
+     * <p>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>BDDB1954-002B-4249-B2DF-2CDDA0259668</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The usage information for each storage medium.</p>
+     */
     @NameInMap("UsageByDiskCategory")
     public java.util.List<java.util.Map<String, ?>> usageByDiskCategory;
 

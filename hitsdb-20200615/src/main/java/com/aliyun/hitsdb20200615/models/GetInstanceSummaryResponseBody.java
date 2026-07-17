@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetInstanceSummaryResponseBody extends TeaModel {
     /**
+     * <p>The number of instances that are about to expire.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("LockingCount")
     public Integer lockingCount;
 
+    /**
+     * <p>An array of region summaries.</p>
+     */
     @NameInMap("RegionalSummary")
     public java.util.List<GetInstanceSummaryResponseBodyRegionalSummary> regionalSummary;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1556DCB0-043A-4444-8BD9-CF4A68E7EE64</p>
      */
@@ -22,6 +29,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of running instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
@@ -29,6 +38,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
     public Integer runningCount;
 
     /**
+     * <p>The total number of instances that are running or about to expire.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -82,6 +93,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
 
     public static class GetInstanceSummaryResponseBodyRegionalSummary extends TeaModel {
         /**
+         * <p>The number of instances in <code>{RegionId}</code> that are about to expire.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,6 +102,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         public Integer lockingCount;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -96,6 +111,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The number of running instances in <code>{RegionId}</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -103,6 +120,8 @@ public class GetInstanceSummaryResponseBody extends TeaModel {
         public Integer runningCount;
 
         /**
+         * <p>The total number of instances in <code>{RegionId}</code> that are running or about to expire.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */

@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable deletion protection. Valid values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Disabled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +20,8 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>lindorm-test</p>
      */
@@ -19,6 +29,7 @@ public class UpdateLindormInstanceAttributeRequest extends TeaModel {
     public String instanceAlias;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

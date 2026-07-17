@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormInstanceEngineListRequest extends TeaModel {
     /**
-     * <p>Instance ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> interface.</p>
+     * <p>The ID of the instance. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class GetLindormInstanceEngineListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

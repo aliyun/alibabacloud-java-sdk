@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyInstancePayTypeRequest extends TeaModel {
     /**
-     * <p>The subscription duration of the instance. The parameter is required if the instance is an subscription instance.</p>
+     * <p>The subscription duration. This parameter is required when you change the billing method to subscription.</p>
      * <ul>
-     * <li>If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.</li>
-     * <li>If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.</li>
+     * <li><p>If \<code>PricingCycle\\</code> is \<code>Month\\</code>, the valid values are 1 to 9.</p>
+     * </li>
+     * <li><p>If \<code>PricingCycle\\</code> is \<code>Year\\</code>, the valid values are 1 to 3.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,8 +38,10 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PREPAY</strong>: subscription.</li>
-     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+     * <li><p><strong>PREPAY</strong>: subscription.</p>
+     * </li>
+     * <li><p><strong>POSTPAY</strong>: pay-as-you-go.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,10 +52,12 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration for the instance. Valid values:</p>
+     * <p>The unit of the subscription duration. This parameter is required when you change the billing method to subscription.</p>
      * <ul>
-     * <li>Month</li>
-     * <li>Year</li>
+     * <li><p>Month: The unit is month.</p>
+     * </li>
+     * <li><p>Year: The unit is year.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

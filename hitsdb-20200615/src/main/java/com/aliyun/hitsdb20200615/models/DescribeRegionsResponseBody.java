@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The regions supported by Lindorm.</p>
+     * <p>The list of regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
@@ -43,15 +43,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The endpoint for the region.</p>
+         * <p>The endpoint of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>hitsdb.aliyuncs.com</p>
+         * <p>hitsdb.cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;

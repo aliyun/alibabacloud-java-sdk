@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLindormInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the vSwitch that is specified for the zone for the coordinate node of the instance. The vSwitch must be deployed in the zone specified by the ArbiterZoneId parameter. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The ID of the VSwitch for the arbiter zone of the multi-zone instance. The VSwitch must be in the zone specified by <code>ArbiterZoneId</code>. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6664pqjawb87k36****</p>
@@ -14,7 +14,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String arbiterVSwitchId;
 
     /**
-     * <p>The ID of the zone for the coordinate node of the instance. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The ID of the arbiter zone for the multi-zone instance. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-g</p>
@@ -23,12 +23,14 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String arbiterZoneId;
 
     /**
-     * <p>The architecture of the instance. Valid values:</p>
+     * <p>The deployment architecture of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>1.0</strong>: The instance that you want to create is a single-zone instance.</li>
-     * <li><strong>2.0</strong>: The instance that you want to create is a multi-zone instance.</li>
+     * <li><p><strong>1.0</strong>: Single-zone deployment.</p>
+     * </li>
+     * <li><p><strong>2.0</strong>: Multi-zone deployment.</p>
+     * </li>
      * </ul>
-     * <p>By default, the value of this parameter is 1.0. To create a multi-zone instance, set this parameter to 2.0. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The default value is 1.0. To create a multi-zone instance, set this parameter to 2.0. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>2.0</p>
@@ -37,10 +39,10 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String archVersion;
 
     /**
-     * <p>The auto-renewal duration. Unit: month.</p>
-     * <p>Valid values: <strong>1</strong> to <strong>12</strong>.</p>
+     * <p>The auto-renewal duration, in months.</p>
+     * <p>The value of this parameter ranges from <strong>1</strong> to <strong>12</strong>.</p>
      * <blockquote>
-     * <p> This parameter is available only when the <strong>AutoRenewal</strong> parameter is set to <strong>true</strong>.</p>
+     * <p>This parameter takes effect only when <strong>AutoRenewal</strong> is set to <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,14 +52,16 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String autoRenewDuration;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the Subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong>: disables auto-renewal.</li>
+     * <li><p><strong>true</strong>: Auto-renewal is enabled.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Auto-renewal is disabled.</p>
+     * </li>
      * </ul>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p> This parameter is available only when the <strong>PayType</strong> parameter is set to <strong>PREPAY</strong>.</p>
+     * <p>This parameter takes effect only when the <strong>PayType</strong> parameter is set to <strong>PREPAY</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -67,7 +71,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Boolean autoRenewal;
 
     /**
-     * <p>The cold storage capacity of the instance. By default, if you leave this parameter unspecified, cold storage is not enabled for the instance. Unit: GB. Valid values: <strong>800</strong> to <strong>1000000</strong>.</p>
+     * <p>The cold storage capacity of the instance, in GB. The value of this parameter ranges from <strong>800</strong> to <strong>1,000,000</strong>. If you do not specify this parameter, cold storage is not enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>800</p>
@@ -76,7 +80,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer coldStorage;
 
     /**
-     * <p>The storage capacity of the disk of a single core node. Valid values: 400 to 64000. Unit: GB. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The storage capacity of a single core node in the multi-zone instance. Unit: GB. The value of this parameter ranges from 400 to 64,000. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -85,35 +89,58 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer coreSingleStorage;
 
     /**
-     * <p>The specification of the nodes in the instance if you set DiskCategory to local_ssd_pro or local_hdd_pro.</p>
-     * <p>Valid values when DiskCategory is set to local_ssd_pro (i3 instance types support only subscription instances):</p>
+     * <p>The node specification for an instance that uses local disks.</p>
+     * <p>If the storage type is <strong>local_ssd_pro</strong>, valid values include the following: Note that I3-family specifications are available only for Subscription instances.</p>
      * <ul>
-     * <li><strong>lindorm.i4.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
-     * <li><strong>lindorm.i4.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
-     * <li><strong>lindorm.i4.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
-     * <li><strong>lindorm.i4.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
-     * <li><strong>lindorm.i3.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
-     * <li><strong>lindorm.i3.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
-     * <li><strong>lindorm.i3.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
-     * <li><strong>lindorm.i3.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
-     * <li><strong>lindorm.i2.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
-     * <li><strong>lindorm.i2.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
-     * <li><strong>lindorm.i2.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
-     * <li><strong>lindorm.i2.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
+     * <li><p><strong>lindorm.i4.xlarge</strong>: 4 cores, 32 GB memory (I4).</p>
+     * </li>
+     * <li><p><strong>lindorm.i4.2xlarge</strong>: 8 cores, 64 GB memory (I4).</p>
+     * </li>
+     * <li><p><strong>lindorm.i4.4xlarge</strong>: 16 cores, 128 GB memory (I4).</p>
+     * </li>
+     * <li><p><strong>lindorm.i4.8xlarge</strong>: 32 cores, 256 GB memory (I4).</p>
+     * </li>
+     * <li><p><strong>lindorm.i3.xlarge</strong>: 4 cores, 32 GB memory (I3).</p>
+     * </li>
+     * <li><p><strong>lindorm.i3.2xlarge</strong>: 8 cores, 64 GB memory (I3).</p>
+     * </li>
+     * <li><p><strong>lindorm.i3.4xlarge</strong>: 16 cores, 128 GB memory (I3).</p>
+     * </li>
+     * <li><p><strong>lindorm.i3.8xlarge</strong>: 32 cores, 256 GB memory (I3).</p>
+     * </li>
+     * <li><p><strong>lindorm.i2.xlarge</strong>: 4 cores, 32 GB memory (I2).</p>
+     * </li>
+     * <li><p><strong>lindorm.i2.2xlarge</strong>: 8 cores, 64 GB memory (I2).</p>
+     * </li>
+     * <li><p><strong>lindorm.i2.4xlarge</strong>: 16 cores, 128 GB memory (I2).</p>
+     * </li>
+     * <li><p><strong>lindorm.i2.8xlarge</strong>: 32 cores, 256 GB memory (I2).</p>
+     * </li>
      * </ul>
-     * <p>Valid values when DiskCategory is set to local_hhd_pro:</p>
+     * <p>If the storage type is <strong>local_hdd_pro</strong>, valid values include:</p>
      * <ul>
-     * <li><strong>lindorm.sd3c.3xlarge</strong>: Each node has 14 CPU cores and 56 GB of memory.</li>
-     * <li><strong>lindorm.sd3c.7xlarge</strong>: Each node has 28 CPU cores and 112 GB of memory.</li>
-     * <li><strong>lindorm.sd3c.14xlarge</strong>: Each node has 56 CPU cores and 224 GB of memory.</li>
-     * <li><strong>lindorm.d2c.6xlarge</strong>: Each node has 24 CPU cores and 88 GB of memory.</li>
-     * <li><strong>lindorm.d2c.12xlarge</strong>: Each node has 48 CPU cores and 176 GB of memory.</li>
-     * <li><strong>lindorm.d2c.24xlarge</strong>: Each node has 96 CPU cores and 352 GB of memory.</li>
-     * <li><strong>lindorm.d2s.5xlarge</strong>: Each node has 20 CPU cores and 88 GB of memory.</li>
-     * <li><strong>lindorm.d2s.10xlarge</strong>: Each node has 40 CPU cores and 176 GB of memory.</li>
-     * <li><strong>lindorm.d1.2xlarge</strong>: Each node has 8 CPU cores and 32 GB of memory.</li>
-     * <li><strong>lindorm.d1.4xlarge</strong>: Each node has 16 CPU cores and 64 GB of memory.</li>
-     * <li><strong>lindorm.d1.6xlarge</strong>: Each node has 24 CPU cores and 96 GB of memory.</li>
+     * <li><p><strong>lindorm.sd3c.3xlarge</strong>: 14 cores, 56 GB memory (D3C PRO).</p>
+     * </li>
+     * <li><p><strong>lindorm.sd3c.7xlarge</strong>: 28 cores, 112 GB memory (D3C PRO).</p>
+     * </li>
+     * <li><p><strong>lindorm.sd3c.14xlarge</strong>: 56 cores, 224 GB memory (D3C PRO).</p>
+     * </li>
+     * <li><p><strong>lindorm.d2c.6xlarge</strong>: 24 cores, 88 GB memory (D2C).</p>
+     * </li>
+     * <li><p><strong>lindorm.d2c.12xlarge</strong>: 48 cores, 176 GB memory (D2C).</p>
+     * </li>
+     * <li><p><strong>lindorm.d2c.24xlarge</strong>: 96 cores, 352 GB memory (D2C).</p>
+     * </li>
+     * <li><p><strong>lindorm.d2s.5xlarge</strong>: 20 cores, 88 GB memory (D2S).</p>
+     * </li>
+     * <li><p><strong>lindorm.d2s.10xlarge</strong>: 40 cores, 176 GB memory (D2S).</p>
+     * </li>
+     * <li><p><strong>lindorm.d1.2xlarge</strong>: 8 cores, 32 GB memory (D1NE).</p>
+     * </li>
+     * <li><p><strong>lindorm.d1.4xlarge</strong>: 16 cores, 64 GB memory (D1NE).</p>
+     * </li>
+     * <li><p><strong>lindorm.d1.6xlarge</strong>: 24 cores, 96 GB memory (D1NE).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,11 +152,20 @@ public class CreateLindormInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_efficiency</strong>: This instance uses the Standard type of storage.</li>
-     * <li><strong>cloud_ssd</strong>: This instance uses the Performance type of storage.</li>
-     * <li><strong>capacity_cloud_storage</strong>: This instance uses the Capacity type of storage.</li>
-     * <li><strong>local_ssd_pro</strong>: This instance uses local SSDs.</li>
-     * <li><strong>local_hdd_pro</strong>: This instance uses local HDDs.</li>
+     * <li><p><strong>cloud_efficiency</strong>: Efficiency cloud disk.</p>
+     * </li>
+     * <li><p><strong>cloud_ssd</strong>: Performance cloud disk.</p>
+     * </li>
+     * <li><p><strong>cloud_essd</strong>: Enhanced SSD (ESSD).</p>
+     * </li>
+     * <li><p><strong>cloud_essd_pl0</strong>: ESSD PL0.</p>
+     * </li>
+     * <li><p><strong>capacity_cloud_storage</strong>: Capacity-optimized cloud storage. (Not available for multi-zone instances.)</p>
+     * </li>
+     * <li><p><strong>local_ssd_pro</strong>: Local SSD. (Not available for multi-zone instances.)</p>
+     * </li>
+     * <li><p><strong>local_hdd_pro</strong>: Local HDD. (Not available for multi-zone instances.)</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -140,13 +176,15 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String diskCategory;
 
     /**
-     * <p>The subscription period of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</p>
+     * <p>The subscription duration for the instance. Valid values:</p>
      * <ul>
-     * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>9</strong>.</li>
-     * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>3</strong>.</li>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, the value can range from <strong>1</strong> to <strong>9</strong>.</p>
+     * </li>
+     * <li><p>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, the value can range from <strong>1</strong> to <strong>3</strong>.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available and required when the PayType parameter is set to <strong>PREPAY</strong>.</p>
+     * <p>This parameter is required if you set <strong>PayType</strong> to <strong>PREPAY</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,10 +194,12 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String duration;
 
     /**
-     * <p>The number of LindormDFS nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</p>
+     * <p>The number of nodes in the file engine. Valid values:</p>
      * <ul>
-     * <li>If the PayType parameter is set to <strong>PREPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>60</strong>.</li>
-     * <li>If the PayType parameter is set to <strong>POSTPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>8</strong>.</li>
+     * <li><p>For a Subscription instance, the value of this parameter ranges from <strong>0</strong> to <strong>60</strong>.</p>
+     * </li>
+     * <li><p>For a Pay-As-You-Go instance, the value of this parameter ranges from <strong>0</strong> to <strong>8</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,7 +209,10 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer filestoreNum;
 
     /**
-     * <p>The specification of LindormDFS nodes in the instance. Set the value of this parameter to <strong>lindorm.c.xlarge</strong>, which indicates that each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</p>
+     * <p>The specification of the file engine nodes. Valid values:</p>
+     * <ul>
+     * <li><strong>lindorm.c.xlarge</strong>: 4 cores, 8 GB memory (standard).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>lindorm.c.xlarge</p>
@@ -178,7 +221,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String filestoreSpec;
 
     /**
-     * <p>The name of the instance that you want to create.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>lindorm_test</p>
@@ -187,7 +230,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String instanceAlias;
 
     /**
-     * <p>The storage capacity of the instance you want to create. Unit: GB.</p>
+     * <p>The storage capacity of the instance, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>480</p>
@@ -196,12 +239,9 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String instanceStorage;
 
     /**
-     * <p>The number of LindormTable nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</p>
-     * <ul>
-     * <li>If the PayType parameter is set to <strong>PREPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>90</strong>.</li>
-     * <li>If the PayType parameter is set to <strong>POSTPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>400</strong>.</li>
-     * </ul>
-     * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.  The valid values of this parameter range from 4 to 400 if you want to create a multi-zone instance.</p>
+     * <p>The number of nodes in the wide table engine.</p>
+     * <p>For a single-zone instance, the value of this parameter ranges from <strong>0</strong> to <strong>90</strong>.</p>
+     * <p><strong>This parameter is required for multi-zone instances.</strong> For an instance that uses cloud disks, the value ranges from <strong>4</strong> to <strong>400</strong>. For an instance that uses local disks, the value ranges from <strong>6</strong> to <strong>400</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -210,12 +250,22 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer lindormNum;
 
     /**
-     * <p>The specification of LindormTable nodes in the instance. Valid values:</p>
+     * <p>The specification of the wide table engine nodes. Valid values:</p>
      * <ul>
-     * <li><strong>lindorm.c.xlarge</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
+     * <li><p><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB memory (dedicated).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -225,12 +275,14 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String lindormSpec;
 
     /**
-     * <p>The disk type of the log nodes. Valid values:</p>
+     * <p>The storage type of the log nodes for the multi-zone instance. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_efficiency</strong>: This instance uses the Standard type of storage.</li>
-     * <li><strong>cloud_ssd</strong>: This instance uses the Performance type of storage.</li>
+     * <li><p><strong>cloud_efficiency</strong>: Efficiency cloud disk.</p>
+     * </li>
+     * <li><p><strong>cloud_ssd</strong>: Performance cloud disk.</p>
+     * </li>
      * </ul>
-     * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p><strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
@@ -239,7 +291,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String logDiskCategory;
 
     /**
-     * <p>The number of the log nodes. Valid values: 4 to 400. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The number of log nodes for the multi-zone instance. The value of this parameter ranges from 4 to 400. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -248,7 +300,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer logNum;
 
     /**
-     * <p>The storage capacity of the disk of a single log node. Valid values: 400 to 64000. Unit: GB. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The storage capacity of a single log node in the multi-zone instance. Unit: GB. The value of this parameter ranges from 400 to 64,000. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -257,12 +309,14 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer logSingleStorage;
 
     /**
-     * <p>The type of the log nodes. Valid values:</p>
+     * <p>The specification of the log nodes for the multi-zone instance. Valid values:</p>
      * <ul>
-     * <li><strong>lindorm.sn1.xlarge</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-     * <li><strong>lindorm.sn1.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
+     * <li><p><strong>lindorm.sn1.large</strong>: 4 cores, 8 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.sn1.2xlarge</strong>: 8 cores, 16 GB memory (dedicated).</p>
+     * </li>
      * </ul>
-     * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p><strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>lindorm.sn1.large</p>
@@ -271,7 +325,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String logSpec;
 
     /**
-     * <p>The number of LTS nodes in the instance. Valid values: <strong>0</strong> to <strong>60</strong>.</p>
+     * <p>The number of nodes in the LTS engine. The value of this parameter ranges from <strong>0</strong> to <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -280,16 +334,24 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String ltsNum;
 
     /**
-     * <p>The specification of LTS nodes in the instance. Valid values:</p>
+     * <p>The specification of the LTS engine nodes. Valid values:</p>
      * <ul>
-     * <li><strong>lindorm.c.xlarge</strong>: Each node has 4 dedicated CPU cores and 8 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+     * <li><p><strong>lindorm.c.xlarge</strong>: 4 cores, 8 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB memory (dedicated).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -299,21 +361,32 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String ltsSpec;
 
     /**
-     * <p>The combinations of zones that are available for the multi-zone instance. You can go to the purchase page of Lindorm to view the supported zone combinations.</p>
+     * <p>The combination of zones for the multi-zone instance. For a list of supported combinations, refer to the instance purchase page.</p>
      * <ul>
-     * <li><strong>ap-southeast-5abc-aliyun</strong>: Zone A+B+C in the Indonesia (Jakarta) region.</li>
-     * <li><strong>cn-hangzhou-ehi-aliyun</strong>: Zone E+H+I in the China (Hangzhou) region.</li>
-     * <li><strong>cn-beijing-acd-aliyun</strong>: Zone A+C+D in the China (Beijing) region.</li>
-     * <li><strong>ap-southeast-1-abc-aliyun</strong>: Zone A+B+C in the Singapore region.</li>
-     * <li><strong>cn-zhangjiakou-abc-aliyun</strong>: Zone A+B+C in the China (Zhangjiakou) region.</li>
-     * <li><strong>cn-shanghai-efg-aliyun</strong>: Zone E+F+G in the China (Shanghai) region.</li>
-     * <li><strong>cn-shanghai-abd-aliyun</strong>: Zone A+B+D in the China (Shanghai) region.</li>
-     * <li><strong>cn-hangzhou-bef-aliyun</strong>: Zone B+E+F in the China (Hangzhou) region.</li>
-     * <li><strong>cn-hangzhou-bce-aliyun</strong>: Zone B+C+E in the China (Hangzhou) region.</li>
-     * <li><strong>cn-beijing-fgh-aliyun</strong>: Zone F+G+H in the China (Beijing) region.</li>
-     * <li><strong>cn-shenzhen-abc-aliyun</strong>: Zone A+B+C in the China (Shenzhen) region.</li>
+     * <li><p><strong>ap-southeast-5abc-aliyun</strong>: Indonesia (Jakarta) A+B+C.</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-ehi-aliyun</strong>: China (Hangzhou) E+H+I.</p>
+     * </li>
+     * <li><p><strong>cn-beijing-acd-aliyun</strong>: China (Beijing) A+C+D.</p>
+     * </li>
+     * <li><p><strong>ap-southeast-1-abc-aliyun</strong>: Singapore A+B+C.</p>
+     * </li>
+     * <li><p><strong>cn-zhangjiakou-abc-aliyun</strong>: China (Zhangjiakou) A+B+C.</p>
+     * </li>
+     * <li><p><strong>cn-shanghai-efg-aliyun</strong>: China (Shanghai) E+F+G.</p>
+     * </li>
+     * <li><p><strong>cn-shanghai-abd-aliyun</strong>: China (Shanghai) A+B+D.</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-bef-aliyun</strong>: China (Hangzhou) B+E+F.</p>
+     * </li>
+     * <li><p><strong>cn-hangzhou-bce-aliyun</strong>: China (Hangzhou) B+C+E.</p>
+     * </li>
+     * <li><p><strong>cn-beijing-fgh-aliyun</strong>: China (Beijing) F+G+H.</p>
+     * </li>
+     * <li><p><strong>cn-shenzhen-abc-aliyun</strong>: China (Shenzhen) A+B+C.</p>
+     * </li>
      * </ul>
-     * <p><strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p><strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-efg-aliyun</p>
@@ -328,10 +401,12 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The billing method of the instance you want to create. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PREPAY</strong>: subscription.</li>
-     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+     * <li><p><strong>PREPAY</strong>: Subscription.</p>
+     * </li>
+     * <li><p><strong>POSTPAY</strong>: Pay-As-You-Go.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -342,13 +417,15 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The period based on which you are charged for the instance. Valid values:</p>
+     * <p>The billing cycle for the Subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: You are charged for the instance on a monthly basis.</li>
-     * <li><strong>Year</strong>: You are charged for the instance on a yearly basis.</li>
+     * <li><p><strong>Month</strong></p>
+     * </li>
+     * <li><p><strong>Year</strong></p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available and required when the PayType parameter is set to <strong>PREPAY</strong>.</p>
+     * <p>This parameter is required if you set <strong>PayType</strong> to <strong>PREPAY</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -358,7 +435,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The ID of the VSwitch for the primary zone of the multi-zone instance. The VSwitch must be in the zone specified by <code>PrimaryZoneId</code>. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6fdqa7c0pipnqzq****</p>
@@ -367,7 +444,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String primaryVSwitchId;
 
     /**
-     * <p>Multi-zone instance, availability zone ID of the primary zone. <strong>This parameter is required if you need to create a multi-zone instance.</strong></p>
+     * <p>The ID of the primary zone for the multi-zone instance. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-e</p>
@@ -376,7 +453,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String primaryZoneId;
 
     /**
-     * <p>The ID of the region in which you want to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region in which you can create the instance.</p>
+     * <p>The ID of the region in which to create the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the latest region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -386,7 +463,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the Lindorm instance belongs.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2i6weeb4nfii</p>
@@ -404,7 +481,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of LindormSearch nodes in the instance. Valid values: integers from <strong>0</strong> to <strong>60</strong>.</p>
+     * <p>The number of search engine nodes. The value of this parameter ranges from <strong>0</strong> to <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -413,15 +490,22 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer solrNum;
 
     /**
-     * <p>The specification of the LindormSearch nodes in the instance. Valid values:</p>
+     * <p>The specification of the search engine nodes. Valid values:</p>
      * <ul>
-     * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+     * <li><p><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB memory (dedicated).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -431,7 +515,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String solrSpec;
 
     /**
-     * <p>The ID of the vSwitch that is specified for the secondary zone of the instance. The vSwitch must be deployed in the zone specified by the StandbyZoneId parameter. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The ID of the VSwitch for the standby zone of the multi-zone instance. The VSwitch must be in the zone specified by <code>StandbyZoneId</code>. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>vsw-2zec0kcn08cgdtr6****</p>
@@ -440,7 +524,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String standbyVSwitchId;
 
     /**
-     * <p>The ID of the secondary zone of the instance. <strong>This parameter is required if you want to create a multi-zone instance</strong>.</p>
+     * <p>The ID of the standby zone for the multi-zone instance. <strong>This parameter is required for multi-zone instances.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-f</p>
@@ -449,7 +533,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String standbyZoneId;
 
     /**
-     * <p>The number of LindormStream nodes in the instance. Valid values: integers from <strong>0</strong> to <strong>60</strong>.</p>
+     * <p>The number of nodes in the stream engine. The value of this parameter ranges from <strong>0</strong> to <strong>60</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -458,12 +542,22 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer streamNum;
 
     /**
-     * <p>The specification of the LindormStream nodes in the instance. Valid values:</p>
+     * <p>The specification of the stream engine nodes. Valid values:</p>
      * <ul>
-     * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+     * <li><p><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.2xlarge</strong>: 8 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.4xlarge</strong>: 16 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.c.8xlarge</strong>: 32 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB memory (dedicated).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -473,16 +567,18 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String streamSpec;
 
     /**
-     * <p>The tags that are added to instances.</p>
+     * <p>The tags to add to the instance. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateLindormInstanceRequestTag> tag;
 
     /**
-     * <p>The number of the LindormTSDB nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</p>
+     * <p>The number of nodes in the time series engine. Valid values:</p>
      * <ul>
-     * <li>If the PayType parameter is set to <strong>PREPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>24</strong>.</li>
-     * <li>If the PayType parameter is set to <strong>POSTPAY</strong>, set this parameter to an integer that ranges from <strong>0</strong> to <strong>32</strong>.</li>
+     * <li><p>For a Subscription instance, the value of this parameter ranges from <strong>0</strong> to <strong>24</strong>.</p>
+     * </li>
+     * <li><p>For a Pay-As-You-Go instance, the value of this parameter ranges from <strong>0</strong> to <strong>32</strong>.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -492,12 +588,16 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public Integer tsdbNum;
 
     /**
-     * <p>The specification of the LindormTSDB nodes in the instance. Valid values:</p>
+     * <p>The specification of the time series engine nodes. Valid values:</p>
      * <ul>
-     * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
+     * <li><p><strong>lindorm.g.xlarge</strong>: 4 cores, 16 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.2xlarge</strong>: 8 cores, 32 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.4xlarge</strong>: 16 cores, 64 GB memory (dedicated).</p>
+     * </li>
+     * <li><p><strong>lindorm.g.8xlarge</strong>: 32 cores, 128 GB memory (dedicated).</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -507,7 +607,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String tsdbSpec;
 
     /**
-     * <p>The ID of the VPC in which you want to create the instance.</p>
+     * <p>The ID of the VPC where you want to create the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -517,7 +617,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch to which you want the instance to connect.</p>
+     * <p>The ID of the VSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -527,7 +627,7 @@ public class CreateLindormInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the zone in which you want to create the instance.</p>
+     * <p>The ID of the zone where you want to create the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -911,9 +1011,9 @@ public class CreateLindormInstanceRequest extends TeaModel {
 
     public static class CreateLindormInstanceRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Valid values of N: 1 to 20.</p>
+         * <p>The key of a tag.</p>
          * <blockquote>
-         * <p> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         * <p>You can specify the keys of multiple tags. For example, <code>Tag.1.Key</code> specifies the key of the first tag and <code>Tag.2.Key</code> specifies the key of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -923,9 +1023,9 @@ public class CreateLindormInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Valid values of N: 1 to 20.</p>
+         * <p>The value of a tag.</p>
          * <blockquote>
-         * <p> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         * <p>You can specify the values of multiple tags. For example, <code>Tag.1.Value</code> specifies the value of the first tag and <code>Tag.2.Value</code> specifies the value of the second tag.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

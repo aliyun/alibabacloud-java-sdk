@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormV2StorageUsageRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLindormInstanceAttributeResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why the access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateLindormInstanceAttributeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1556DCB0-043A-4444-8BD9-CF4A68E7EE64</p>
      */

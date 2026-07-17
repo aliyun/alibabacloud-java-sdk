@@ -3,31 +3,24 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class GetLindormFsUsedDetailRequest extends TeaModel {
+public class GetComputeEngineJobDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> API to obtain it.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ld-xxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("JobId")
+    public String jobId;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
-
-    /**
-     * <p>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> API to obtain it.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -38,12 +31,12 @@ public class GetLindormFsUsedDetailRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static GetLindormFsUsedDetailRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetLindormFsUsedDetailRequest self = new GetLindormFsUsedDetailRequest();
+    public static GetComputeEngineJobDetailRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetComputeEngineJobDetailRequest self = new GetComputeEngineJobDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetLindormFsUsedDetailRequest setInstanceId(String instanceId) {
+    public GetComputeEngineJobDetailRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -51,7 +44,15 @@ public class GetLindormFsUsedDetailRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public GetLindormFsUsedDetailRequest setOwnerAccount(String ownerAccount) {
+    public GetComputeEngineJobDetailRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
+    public GetComputeEngineJobDetailRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -59,7 +60,7 @@ public class GetLindormFsUsedDetailRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public GetLindormFsUsedDetailRequest setOwnerId(Long ownerId) {
+    public GetComputeEngineJobDetailRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -67,15 +68,7 @@ public class GetLindormFsUsedDetailRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public GetLindormFsUsedDetailRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public GetLindormFsUsedDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetComputeEngineJobDetailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -83,7 +76,7 @@ public class GetLindormFsUsedDetailRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public GetLindormFsUsedDetailRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetComputeEngineJobDetailRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -91,7 +84,7 @@ public class GetLindormFsUsedDetailRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public GetLindormFsUsedDetailRequest setSecurityToken(String securityToken) {
+    public GetComputeEngineJobDetailRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

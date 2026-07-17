@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetLindormV2InstanceDetailsRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ts-xxxxxxxxxxxxxxxxx</p>
+     * <p>ld-bp1mq0tdzbx1m****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

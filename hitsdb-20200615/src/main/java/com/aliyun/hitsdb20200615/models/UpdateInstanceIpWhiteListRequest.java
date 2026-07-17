@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to clear all IP addresses and CIDR blocks in the whitelist.</p>
+     * <p>Specifies whether to clear the whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     public Boolean delete;
 
     /**
-     * <p>The name of the IP whitelist. Default value: user.</p>
+     * <p>The name of the whitelist group. If you leave this parameter empty, the default value user is used.</p>
      * 
      * <strong>example:</strong>
      * <p>test_group</p>
@@ -23,7 +23,7 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the instance for which you want to configure a whitelist. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the ID.</p>
+     * <p>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,14 +45,14 @@ public class UpdateInstanceIpWhiteListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP addresses or CIDR blocks that you want to add to the whitelist.</p>
+     * <p>The IP addresses to add to the whitelist.</p>
      * <blockquote>
-     * <p> If you add 127.0.0.1 to the whitelist, all IP addresses cannot be used to access the Lindorm instance. If you add the CIDR block 192.168.0.0/24 to the whitelist, you can use all IP addresses in the CIDR block to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
+     * <p>Set this parameter to 127.0.0.1 to deny access from all IP addresses. For example, 192.168.0.0/24 allows all IP addresses in the 192.168.0.0/24 CIDR block to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with a comma (,).</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>106.11.XX.XX/24</p>
+     * <p>192.168.0.X/24</p>
      */
     @NameInMap("SecurityIpList")
     public String securityIpList;

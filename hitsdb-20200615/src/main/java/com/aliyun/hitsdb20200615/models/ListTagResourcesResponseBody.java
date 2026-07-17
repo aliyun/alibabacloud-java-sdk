@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The token that is used to start the next query.</p>
      * <blockquote>
-     * <p>If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</p>
+     * <p>If not all results are returned in a query, the response includes this parameter. You can use the value of this parameter to start the next query.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>05CB115C-91CB-529F-9098-50C1F6CB3BD3</p>
@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The ID of the resource, which is the ID of the instance.</p>
+         * <p>The resource ID, which is the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ld-bp17j28j2y7pm****</p>
@@ -71,7 +71,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resources. The returned value is fixed to <strong>ALIYUN::HITSDB::INSTANCE</strong>.</p>
+         * <p>The resource type. The value is fixed to <strong>ALIYUN::HITSDB::INSTANCE</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::HITSDB::INSTANCE</p>
@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The key of the tag associated with the instance.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -89,7 +89,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The value of the tag associated with the instance.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>2.2.8</p>

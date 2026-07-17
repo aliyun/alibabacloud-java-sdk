@@ -9,6 +9,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "hitsdb.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "hitsdb.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "hitsdb.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "hitsdb.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "hitsdb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "hitsdb.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "hitsdb.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "hitsdb.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "hitsdb.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "hitsdb.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "hitsdb.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "hitsdb.cn-north-2-gov-1.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "hitsdb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "hitsdb.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "hitsdb.cn-hangzhou-finance.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "hitsdb.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "hitsdb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing", "hitsdb.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "hitsdb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "hitsdb.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "hitsdb.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "hitsdb.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("hitsdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +52,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes a resource group to another.</p>
+     * <p>Moves a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -68,7 +92,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes a resource group to another.</p>
+     * <p>Moves a resource to a different resource group.</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -646,10 +670,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must select at least one engine when you create a Lindorm instance. For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine types</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</p>
+     * <p>To create an instance, you must specify at least one data engine. For example, to create a wide table engine, you must specify both the <strong>LindormNum</strong> (node count) and <strong>LindormSpec</strong> (node specification) parameters. For details on data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * If you do not specify any data engine parameters when you create an instance, the API call fails.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Lindorm instance.</p>
+     * <p>Create a Lindorm instance.</p>
      * 
      * @param request CreateLindormInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -861,10 +889,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You must select at least one engine when you create a Lindorm instance. For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine types</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</p>
+     * <p>To create an instance, you must specify at least one data engine. For example, to create a wide table engine, you must specify both the <strong>LindormNum</strong> (node count) and <strong>LindormSpec</strong> (node specification) parameters. For details on data engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select a storage specification</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * If you do not specify any data engine parameters when you create an instance, the API call fails.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Lindorm instance.</p>
+     * <p>Create a Lindorm instance.</p>
      * 
      * @param request CreateLindormInstanceRequest
      * @return CreateLindormInstanceResponse
@@ -875,8 +907,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify at least one DPI engine when you create an instance. For more information about DPI engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a DPI engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * If you do not specify a DPI engine parameter when you create an instance, the API call fails.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建Lindorm实例</p>
+     * <p>Creates a Lindorm V2 instance.</p>
      * 
      * @param request CreateLindormV2InstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1023,8 +1062,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must specify at least one DPI engine when you create an instance. For more information about DPI engines and storage specifications, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a DPI engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * If you do not specify a DPI engine parameter when you create an instance, the API call fails.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>创建Lindorm实例</p>
+     * <p>Creates a Lindorm V2 instance.</p>
      * 
      * @param request CreateLindormV2InstanceRequest
      * @return CreateLindormV2InstanceResponse
@@ -1362,7 +1408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the regions supported by Lindorm.</p>
+     * <p>Queries all regions where Lindorm is available.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1414,7 +1460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the regions supported by Lindorm.</p>
+     * <p>Queries all regions where Lindorm is available.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -1615,6 +1661,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取计算引擎作业详情</p>
+     * 
+     * @param request GetComputeEngineJobDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetComputeEngineJobDetailResponse
+     */
+    public GetComputeEngineJobDetailResponse getComputeEngineJobDetailWithOptions(GetComputeEngineJobDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetComputeEngineJobDetail"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetComputeEngineJobDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取计算引擎作业详情</p>
+     * 
+     * @param request GetComputeEngineJobDetailRequest
+     * @return GetComputeEngineJobDetailResponse
+     */
+    public GetComputeEngineJobDetailResponse getComputeEngineJobDetail(GetComputeEngineJobDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getComputeEngineJobDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取计算引擎作业日志</p>
+     * 
+     * @param request GetComputeEngineJobLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetComputeEngineJobLogResponse
+     */
+    public GetComputeEngineJobLogResponse getComputeEngineJobLogWithOptions(GetComputeEngineJobLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetComputeEngineJobLog"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetComputeEngineJobLogResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取计算引擎作业日志</p>
+     * 
+     * @param request GetComputeEngineJobLogRequest
+     * @return GetComputeEngineJobLogResponse
+     */
+    public GetComputeEngineJobLogResponse getComputeEngineJobLog(GetComputeEngineJobLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getComputeEngineJobLogWithOptions(request, runtime);
+    }
+
+    /**
      * @param request GetEngineDefaultAuthRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEngineDefaultAuthResponse
@@ -1678,7 +1872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the whitelists configured for a Lindorm instance.</p>
+     * <p>Retrieves the access whitelist for a Lindorm instance.</p>
      * 
      * @param request GetInstanceIpWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1730,7 +1924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the whitelists configured for a Lindorm instance.</p>
+     * <p>Retrieves the access whitelist for a Lindorm instance.</p>
      * 
      * @param request GetInstanceIpWhiteListRequest
      * @return GetInstanceIpWhiteListResponse
@@ -1799,6 +1993,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a summary of Lindorm instances in your account.</p>
+     * 
      * @param request GetInstanceSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceSummaryResponse
@@ -1848,6 +2045,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves a summary of Lindorm instances in your account.</p>
+     * 
      * @param request GetInstanceSummaryRequest
      * @return GetInstanceSummaryResponse
      */
@@ -2136,10 +2336,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</p>
+     * <p>For Lindorm clusters with a storage version of 4.1.9 or later, storage usage details are available in the list returned by <code>LStorageUsageList</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of each storage type in a Lindorm instance.</p>
+     * <p>Retrieves the storage details for each storage medium in a specified Lindorm instance.</p>
      * 
      * @param request GetLindormFsUsedDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2195,10 +2395,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</p>
+     * <p>For Lindorm clusters with a storage version of 4.1.9 or later, storage usage details are available in the list returned by <code>LStorageUsageList</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of each storage type in a Lindorm instance.</p>
+     * <p>Retrieves the storage details for each storage medium in a specified Lindorm instance.</p>
      * 
      * @param request GetLindormFsUsedDetailRequest
      * @return GetLindormFsUsedDetailResponse
@@ -2210,7 +2410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the detailed information about a Lindorm instance, including the instance type, billing method, and VPC.</p>
+     * <p>Retrieves detailed information about a Lindorm instance, including its instance type, billing method, and VPC.</p>
      * 
      * @param request GetLindormInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2262,7 +2462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the detailed information about a Lindorm instance, including the instance type, billing method, and VPC.</p>
+     * <p>Retrieves detailed information about a Lindorm instance, including its instance type, billing method, and VPC.</p>
      * 
      * @param request GetLindormInstanceRequest
      * @return GetLindormInstanceResponse
@@ -2274,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the engine types supported by the specified Lindorm instance.</p>
+     * <p>Queries the engine types that a Lindorm instance supports.</p>
      * 
      * @param request GetLindormInstanceEngineListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2330,7 +2530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the engine types supported by the specified Lindorm instance.</p>
+     * <p>Queries the engine types that a Lindorm instance supports.</p>
      * 
      * @param request GetLindormInstanceEngineListRequest
      * @return GetLindormInstanceEngineListResponse
@@ -2342,7 +2542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instances that meet the specified conditions.</p>
+     * <p>Queries a list of Lindorm instances.</p>
      * 
      * @param request GetLindormInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2422,7 +2622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the instances that meet the specified conditions.</p>
+     * <p>Queries a list of Lindorm instances.</p>
      * 
      * @param request GetLindormInstanceListRequest
      * @return GetLindormInstanceListResponse
@@ -2497,8 +2697,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the values in the list returned by LStorageUsageList for storage usage details.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询新架构实例详情</p>
+     * <p>Queries the details of an instance that uses the new architecture.</p>
      * 
      * @param request GetLindormV2InstanceDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2549,8 +2752,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For Lindorm clusters with an underlying storage version of 4.1.9 or later, refer to the values in the list returned by LStorageUsageList for storage usage details.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询新架构实例详情</p>
+     * <p>Queries the details of an instance that uses the new architecture.</p>
      * 
      * @param request GetLindormV2InstanceDetailsRequest
      * @return GetLindormV2InstanceDetailsResponse
@@ -2751,6 +2957,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the storage details for each storage medium of a specific Lindorm instance that uses the new architecture.</p>
+     * 
      * @param request GetLindormV2StorageUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLindormV2StorageUsageResponse
@@ -2800,6 +3009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Retrieves the storage details for each storage medium of a specific Lindorm instance that uses the new architecture.</p>
+     * 
      * @param request GetLindormV2StorageUsageRequest
      * @return GetLindormV2StorageUsageResponse
      */
@@ -3092,6 +3304,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询计算引擎作业列表</p>
+     * 
+     * @param request ListComputeEngineJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListComputeEngineJobResponse
+     */
+    public ListComputeEngineJobResponse listComputeEngineJobWithOptions(ListComputeEngineJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeGroup)) {
+            query.put("ComputeGroup", request.computeGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            query.put("JobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListComputeEngineJob"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListComputeEngineJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询计算引擎作业列表</p>
+     * 
+     * @param request ListComputeEngineJobRequest
+     * @return ListComputeEngineJobResponse
+     */
+    public ListComputeEngineJobResponse listComputeEngineJob(ListComputeEngineJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listComputeEngineJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取计算引擎资源组列表</p>
      * 
      * @param request ListLdpsComputeGroupsRequest
@@ -3160,7 +3472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags associated with the specified Lindorm instance.</p>
+     * <p>Get Lindorm instance-to-tag bindings.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3228,7 +3540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tags associated with the specified Lindorm instance.</p>
+     * <p>Get Lindorm instance-to-tag bindings.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -3574,11 +3886,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
-     * Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/en/pricing-calculator?spm=a2c63.p38356.0.0.2b024c2adcHeXL&_p_lc=1#/commodity/hitsdb_lindormpre_public_intl">pricing</a> of Lindorm. Published on only international site (alibabacloud.com).</p>
+     * <p>Switches the billing method of an instance between subscription and pay-as-you-go.
+     * Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn">pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.7396b91aC5VjZ7#/commodity/vm_intl">pricing</a> of Lindorm.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of the specified Lindorm instance.</p>
+     * <p>Changes the billing method of a Lindorm instance.</p>
      * 
      * @param request ModifyInstancePayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3642,11 +3955,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
-     * Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/en/pricing-calculator?spm=a2c63.p38356.0.0.2b024c2adcHeXL&_p_lc=1#/commodity/hitsdb_lindormpre_public_intl">pricing</a> of Lindorm. Published on only international site (alibabacloud.com).</p>
+     * <p>Switches the billing method of an instance between subscription and pay-as-you-go.
+     * Before you call this operation, make sure that you understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn">pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/pricing-calculator?_p_lc=1%5C&spm=a2796.7960336.3034855210.1.7396b91aC5VjZ7#/commodity/vm_intl">pricing</a> of Lindorm.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of the specified Lindorm instance.</p>
+     * <p>Changes the billing method of a Lindorm instance.</p>
      * 
      * @param request ModifyInstancePayTypeRequest
      * @return ModifyInstancePayTypeResponse
@@ -4170,7 +4484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Releases a Lindorm instance.</p>
      * 
      * @param request ReleaseLindormV2InstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4226,7 +4540,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Releases a Lindorm instance.</p>
      * 
      * @param request ReleaseLindormV2InstanceRequest
      * @return ReleaseLindormV2InstanceResponse
@@ -4238,7 +4552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+     * <p>You can renew a subscription instance for a specific duration. The renewal period can be specified in months (1 to 9) or years (1 to 3).
      * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</p>
      * 
      * <b>summary</b> : 
@@ -4306,7 +4620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to renew a subscription Lindorm instance for 1 to 9 months or 1 to 3 years.
+     * <p>You can renew a subscription instance for a specific duration. The renewal period can be specified in months (1 to 9) or years (1 to 3).
      * Before you call this operation, make sure that you fully understand the billing methods and pricing of Lindorm.</p>
      * 
      * <b>summary</b> : 
@@ -4458,15 +4772,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites</p>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
      * <ul>
-     * <li>The LindormTable version of your instance is 2.6.0 or later.</li>
-     * <li>The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
-     * You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.</li>
+     * <li>The version of LindormTable for the instance is 2.6.0 or later.</li>
+     * <li>LindormTable supports Lindorm SQL (LSQL) V3. You can check whether LSQL V3 is supported by calling the GetLindormInstance operation. If the EnableLsqlVersionV3 parameter in the response is true, LSQL V3 is supported. For instances that are purchased after October 24, 2023, this feature is enabled by default. For existing instances, contact Alibaba Cloud support for an evaluation before enabling this feature.
+     * You can enable the MySQL protocol only if the two preceding conditions are met.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the MySQL compatibility feature for a Lindorm instance.</p>
+     * <p>Enables or disables the Lindorm protocol that is compatible with MySQL.</p>
      * 
      * @param request SwitchLSQLV3MySQLServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4522,15 +4836,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Prerequisites</p>
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
      * <ul>
-     * <li>The LindormTable version of your instance is 2.6.0 or later.</li>
-     * <li>The LindormTable of your instance supports LindormSQL V3. The value of the EnableLsqlVersionV3 parameter in the response of the GetLindormInstance operation is true for Lindorm instances purchased after Oct 24, 2023, which indicates that LindormSQL is supported by these instances by default. If you want to enable LindormSQL for instances purchased before Oct 24, 2023, contact the on-duty technical support.
-     * You can enable the MySQL compatibility feature for a Lindorm instance only when the instance meets the preceding requirements.</li>
+     * <li>The version of LindormTable for the instance is 2.6.0 or later.</li>
+     * <li>LindormTable supports Lindorm SQL (LSQL) V3. You can check whether LSQL V3 is supported by calling the GetLindormInstance operation. If the EnableLsqlVersionV3 parameter in the response is true, LSQL V3 is supported. For instances that are purchased after October 24, 2023, this feature is enabled by default. For existing instances, contact Alibaba Cloud support for an evaluation before enabling this feature.
+     * You can enable the MySQL protocol only if the two preceding conditions are met.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the MySQL compatibility feature for a Lindorm instance.</p>
+     * <p>Enables or disables the Lindorm protocol that is compatible with MySQL.</p>
      * 
      * @param request SwitchLSQLV3MySQLServiceRequest
      * @return SwitchLSQLV3MySQLServiceResponse
@@ -4542,7 +4856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to one or more Lindorm instances.</p>
+     * <p>Attaches tags to one or more Lindorm instances.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4606,7 +4920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds tags to one or more Lindorm instances.</p>
+     * <p>Attaches tags to one or more Lindorm instances.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -4618,10 +4932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If a tag is not added to any Lindorm instance, it is deleted.</p>
+     * <p>If a tag is not attached to any Lindorm instance, the tag is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes tags from a Lindorm instance.</p>
+     * <p>Detaches tags from Lindorm instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4685,10 +4999,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If a tag is not added to any Lindorm instance, it is deleted.</p>
+     * <p>If a tag is not attached to any Lindorm instance, the tag is deleted.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes tags from a Lindorm instance.</p>
+     * <p>Detaches tags from Lindorm instances.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -4700,7 +5014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures an IP address whitelist for a Lindorm instance.</p>
+     * <p>Sets the access whitelist for a Lindorm instance.</p>
      * 
      * @param request UpdateInstanceIpWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4764,7 +5078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures an IP address whitelist for a Lindorm instance.</p>
+     * <p>Sets the access whitelist for a Lindorm instance.</p>
      * 
      * @param request UpdateInstanceIpWhiteListRequest
      * @return UpdateInstanceIpWhiteListResponse
@@ -4907,8 +5221,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must select at least one data engine when you create an instance. For example, to create a LindormTable engine, you must specify both the <strong>LindormNum</strong> (number of LindormTable nodes) and <strong>LindormSpec</strong> (node specifications for LindormTable) parameters. For more information, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * If you do not specify data engine parameters when you create an instance, the API call fails.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>更新实例名称或删除保护</p>
+     * <p>Updates the name or deletion protection settings of an instance.</p>
      * 
      * @param request UpdateLindormInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4967,8 +5288,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must select at least one data engine when you create an instance. For example, to create a LindormTable engine, you must specify both the <strong>LindormNum</strong> (number of LindormTable nodes) and <strong>LindormSpec</strong> (node specifications for LindormTable) parameters. For more information, see <a href="https://help.aliyun.com/document_detail/174643.html">How to select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">How to select storage specifications</a>.</p>
+     * <blockquote>
+     * <p>Notice: 
+     * If you do not specify data engine parameters when you create an instance, the API call fails.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>更新实例名称或删除保护</p>
+     * <p>Updates the name or deletion protection settings of an instance.</p>
      * 
      * @param request UpdateLindormInstanceAttributeRequest
      * @return UpdateLindormInstanceAttributeResponse
@@ -4980,7 +5308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新LindormV2Instance</p>
+     * <p>Updates a Lindorm instance.</p>
      * 
      * @param request UpdateLindormV2InstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5056,7 +5384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新LindormV2Instance</p>
+     * <p>Updates a Lindorm instance.</p>
      * 
      * @param request UpdateLindormV2InstanceRequest
      * @return UpdateLindormV2InstanceResponse
@@ -5138,7 +5466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Lindorm新版实例白名单分组列表</p>
+     * <p>Modifies the IP whitelists for a LindormV2 instance.</p>
      * 
      * @param request UpdateLindormV2WhiteIpListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5198,7 +5526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改Lindorm新版实例白名单分组列表</p>
+     * <p>Modifies the IP whitelists for a LindormV2 instance.</p>
      * 
      * @param request UpdateLindormV2WhiteIpListRequest
      * @return UpdateLindormV2WhiteIpListResponse
@@ -5210,10 +5538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</p>
+     * <p>For information about how to select the data engine and storage type for a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/174643.html">Select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">Select a storage type</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades, scales up, or enable cold storage for a Lindorm instance.</p>
+     * <p>Enable cold storage for a Lindorm instance, change the node specification or the number of nodes, and adjust the storage space.</p>
      * 
      * @param request UpgradeLindormInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5349,10 +5677,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about how to select the storage type and engine type when you create a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/181971.html">Select engine typpes</a> and <a href="https://help.aliyun.com/document_detail/174643.html">Select storage types</a>.</p>
+     * <p>For information about how to select the data engine and storage type for a Lindorm instance, see <a href="https://help.aliyun.com/document_detail/174643.html">Select a data engine</a> and <a href="https://help.aliyun.com/document_detail/181971.html">Select a storage type</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades, scales up, or enable cold storage for a Lindorm instance.</p>
+     * <p>Enable cold storage for a Lindorm instance, change the node specification or the number of nodes, and adjust the storage space.</p>
      * 
      * @param request UpgradeLindormInstanceRequest
      * @return UpgradeLindormInstanceResponse

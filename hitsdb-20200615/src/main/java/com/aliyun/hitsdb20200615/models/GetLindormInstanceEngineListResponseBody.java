@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormInstanceEngineListResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed reason why the access was denied.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
@@ -14,13 +14,13 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The list of engines that can run on the specified instance.</p>
+     * <p>The list of engine types.</p>
      */
     @NameInMap("EngineList")
     public java.util.List<GetLindormInstanceEngineListResponseBodyEngineList> engineList;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ld-bp1nq34mv3smk****</p>
@@ -29,7 +29,7 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B496BA0E-520C-59FC-BA04-196D8F3B07EF</p>
@@ -76,15 +76,22 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
 
     public static class GetLindormInstanceEngineListResponseBodyEngineListNetInfoList extends TeaModel {
         /**
-         * <p>The method by which the connection information can be used to access LindormTable. Valid values:</p>
+         * <p>The connection method for LindormTable. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The default value. This value can be ignored.</li>
-         * <li><strong>1</strong>: The connection information can be used to access LindormTable by using ApsaraDB for HBase API for Java.</li>
-         * <li><strong>2</strong>: The connection information can be used to access LindormTable by using ApsaraDB for HBase API for a non-Java language.</li>
-         * <li><strong>3</strong>: The connection information can be used to access LindormTable by using the LindormTable endpoint for CQL.</li>
-         * <li><strong>4</strong>: The connection information can be used to access LindormTable by using the LindormTable endpoint for SQL.</li>
-         * <li><strong>5</strong>: The connection information can be used to access Lindorm by using the LindormTable endpoint for Amazon S3.</li>
-         * <li><strong>6</strong>: The connection information can be used to access Lindorm by using the LindormTable endpoint for MySQL.</li>
+         * <li><p><strong>0</strong>: This is the default value and can be ignored.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Use the HBase Java API to access LindormTable.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Use a non-Java HBase API to access LindormTable.</p>
+         * </li>
+         * <li><p><strong>3</strong>: Use CQL to access LindormTable.</p>
+         * </li>
+         * <li><p><strong>4</strong>: Use the LindormTable SQL endpoint.</p>
+         * </li>
+         * <li><p><strong>5</strong>: Use the S3-compatible endpoint for LindormTable.</p>
+         * </li>
+         * <li><p><strong>6</strong>: Use the MySQL-compatible endpoint for LindormTable.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -94,7 +101,7 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         public Integer accessType;
 
         /**
-         * <p>The endpoint that is used to connect to the engine.</p>
+         * <p>The database endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>ld-bp1nq34mv3smk****-proxy-lindorm.lindorm.rds.aliyuncs.com</p>
@@ -103,10 +110,12 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
+         * <p>The network type of the database endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Internet</li>
-         * <li><strong>2</strong>: virtual private cloud (VPC)</li>
+         * <li><p><strong>0</strong>: Internet.</p>
+         * </li>
+         * <li><p><strong>2</strong>: Virtual private cloud (VPC).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +125,7 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         public String netType;
 
         /**
-         * <p>The port number used to connect to the engine.</p>
+         * <p>The port number of the database endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>30020</p>
@@ -165,12 +174,16 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
 
     public static class GetLindormInstanceEngineListResponseBodyEngineList extends TeaModel {
         /**
-         * <p>The type of engine that can run on the instance. Valid values:</p>
+         * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>lindorm</strong>: LindormTable.</li>
-         * <li><strong>tsdb</strong>: LindormTSDB.</li>
-         * <li><strong>solr</strong>: LindormSearch.</li>
-         * <li><strong>store</strong>: LindormDFS.</li>
+         * <li><p><strong>lindorm</strong>: LindormTable.</p>
+         * </li>
+         * <li><p><strong>tsdb</strong>: LindormTSDB.</p>
+         * </li>
+         * <li><p><strong>solr</strong>: Search engine.</p>
+         * </li>
+         * <li><p><strong>store</strong>: File engine.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +193,7 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The list of connection information about the engine.</p>
+         * <p>The list of database connection information for the engine.</p>
          */
         @NameInMap("NetInfoList")
         public java.util.List<GetLindormInstanceEngineListResponseBodyEngineListNetInfoList> netInfoList;

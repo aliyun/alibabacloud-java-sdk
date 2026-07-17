@@ -23,7 +23,7 @@ public class RenewLindormInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the order. You can obtain the order ID on the Orders page of the Expenses and Costs console.</p>
+     * <p>The ID of the order. You can find the order ID in the Order Management section of Expenses and Costs.</p>
      * 
      * <strong>example:</strong>
      * <p>213465921640411</p>

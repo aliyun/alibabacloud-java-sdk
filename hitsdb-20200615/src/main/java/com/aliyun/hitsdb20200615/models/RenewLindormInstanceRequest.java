@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class RenewLindormInstanceRequest extends TeaModel {
     /**
-     * <p>The subscription duration of the instance. The valid values of this parameter depend on the value of the PricingCycle parameter.</p>
+     * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If PricingCycle is set to <strong>Month</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>9</strong>.</li>
-     * <li>If PricingCycle is set to <strong>Year</strong>, set this parameter to an integer that ranges from <strong>1</strong> to <strong>3</strong>.</li>
+     * <li><p>If you set PricingCycle to <strong>Month</strong>, the valid values for this parameter are <strong>1</strong> to <strong>9</strong>.</p>
+     * </li>
+     * <li><p>If you set PricingCycle to <strong>Year</strong>, the valid values for this parameter are <strong>1</strong> to <strong>3</strong>.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +21,7 @@ public class RenewLindormInstanceRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The ID of the instance that you want to renew. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
+     * <p>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +37,12 @@ public class RenewLindormInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The period based on which you are charged for the instance. Valid values:</p>
+     * <p>The billing cycle for the instance renewal. Valid values:</p>
      * <ul>
-     * <li><strong>Month</strong>: You are charged for the instance based on months.</li>
-     * <li><strong>Year</strong>: You are charged for the instance based on years.</li>
+     * <li><p><strong>Month</strong>: The instance is renewed by month.</p>
+     * </li>
+     * <li><p><strong>Year</strong>: The instance is renewed by year.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +53,7 @@ public class RenewLindormInstanceRequest extends TeaModel {
     public String pricingCycle;
 
     /**
-     * <p>The ID of the region in which the instance that you want to renew is located. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

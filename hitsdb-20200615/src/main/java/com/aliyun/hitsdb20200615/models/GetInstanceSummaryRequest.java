@@ -11,6 +11,8 @@ public class GetInstanceSummaryRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

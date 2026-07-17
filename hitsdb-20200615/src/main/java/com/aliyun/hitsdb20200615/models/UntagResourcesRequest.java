@@ -5,16 +5,20 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the instances. Valid values:</p>
+     * <p>Specifies whether to detach all tags from the instances. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Remove all tags from the instances.</li>
-     * <li><strong>false</strong>: Do not remove all tags from the instances.</li>
+     * <li><p><strong>true</strong>: Detach all tags from the instances.</p>
+     * </li>
+     * <li><p><strong>false</strong>: Do not detach all tags from the instances.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> The default value of this parameter is false.</p>
+     * <ul>
+     * <li>The default value is false.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>If you specify this parameter together with the TagKey parameter, this parameter does not take effect.</li>
+     * <li>If TagKey is specified, this parameter is ignored.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +34,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The IDs of instances.</p>
+     * <p>A list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -43,7 +47,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
+     * <p>The resource type. The value is fixed to <strong>INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +60,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The list of keys of the tags that you want to remove.</p>
+     * <p>A list of tag keys.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

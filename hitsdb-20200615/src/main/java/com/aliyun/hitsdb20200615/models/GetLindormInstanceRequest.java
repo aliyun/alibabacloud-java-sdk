@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormInstanceRequest extends TeaModel {
     /**
-     * <p>The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:</p>
-     * <ul>
-     * <li><strong>cloud_efficiency</strong>: The nodes use the Standard type of storage.</li>
-     * <li><strong>cloud_ssd</strong>: The nodes use the Performance type of storage.</li>
-     * </ul>
+     * <p>The instance ID. Call <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
