@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAIStaffPreviewUrlRequest extends TeaModel {
     /**
-     * <p>session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>81bc5a34-1d8d-4ef7-a208-7401c51b054b</p>
@@ -14,7 +14,7 @@ public class GetAIStaffPreviewUrlRequest extends TeaModel {
     public String conversationId;
 
     /**
-     * <p>is application restart required</p>
+     * <p>Specifies whether to restart the application.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
