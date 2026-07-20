@@ -21,36 +21,80 @@ public class BatchReceiveMessageResponseBody extends TeaModel {
     }
 
     public static class BatchReceiveMessageResponseBodyMessages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DequeueCount")
         public Long dequeueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1250700979348</p>
+         */
         @NameInMap("EnqueueTime")
         public Long enqueueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1250700979348</p>
+         */
         @NameInMap("FirstDequeueTime")
         public Long firstDequeueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is test message 1.</p>
+         */
         @NameInMap("MessageBody")
         public String messageBody;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C5DD56A39F5F7BB8B3337C6D11B6D8BE</p>
+         */
         @NameInMap("MessageBodyMD5")
         public String messageBodyMD5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group</p>
+         */
         @NameInMap("MessageGroupId")
         public String messageGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5F290C926D472878214D9529A8FA200000001</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1250700979348</p>
+         */
         @NameInMap("NextVisibleTime")
         public Long nextVisibleTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1-ODU4OTkzNDU5My0xNDMyNzI3ODI3LTItOA==</p>
+         */
         @NameInMap("ReceiptHandle")
         public String receiptHandle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;properties1&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("UserProperties")
         public java.util.Map<String, MessagesUserPropertiesValue> userProperties;
 

@@ -21,15 +21,31 @@ public class BatchSendMessageRequest extends TeaModel {
     }
 
     public static class BatchSendMessageRequestMessages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("DelaySeconds")
         public Integer delaySeconds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is test message 1.</p>
+         */
         @NameInMap("MessageBody")
         public String messageBody;
 
+        /**
+         * <strong>example:</strong>
+         * <p>group1</p>
+         */
         @NameInMap("MessageGroupId")
         public String messageGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 

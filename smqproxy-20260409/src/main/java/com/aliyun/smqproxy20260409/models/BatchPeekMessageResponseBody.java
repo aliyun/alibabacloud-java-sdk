@@ -21,30 +21,66 @@ public class BatchPeekMessageResponseBody extends TeaModel {
     }
 
     public static class BatchPeekMessageResponseBodyMessages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("DequeueCount")
         public Long dequeueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1250700979248</p>
+         */
         @NameInMap("EnqueueTime")
         public Long enqueueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1250700979348</p>
+         */
         @NameInMap("FirstDequeueTime")
         public Long firstDequeueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test message</p>
+         */
         @NameInMap("MessageBody")
         public String messageBody;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F9360F391579E71CA77BC5D50242****</p>
+         */
         @NameInMap("MessageBodyMD5")
         public String messageBodyMD5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-group</p>
+         */
         @NameInMap("MessageGroupId")
         public String messageGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C0A80255D7D1163042EA3F2814D055F1</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;properties1&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("UserProperties")
         public java.util.Map<String, MessagesUserPropertiesValue> userProperties;
 

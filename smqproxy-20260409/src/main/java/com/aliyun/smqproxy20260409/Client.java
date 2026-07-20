@@ -63,6 +63,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于批量查看指定队列中的消息，一次最多可以查看16条消息。</li>
+     * <li>使用此接口不会改变消息的状态，消息仍保持为Active状态。</li>
+     * <li>不支持长轮询功能。</li>
+     * <li>需要提供<code>queueName</code>作为路径参数，并通过查询参数设置<code>peekonly=true</code>及指定要查看的消息数量<code>numOfMessages</code>（范围在1到16之间）。</li>
+     * <li>成功响应将返回一个包含所请求消息详细信息的数组，包括但不限于消息ID、正文、入队时间等。</li>
+     * <li>如果指定的队列不存在或队列中没有可见消息，则会返回相应的错误码。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>批量查看消息</p>
      * 
@@ -101,6 +112,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于批量查看指定队列中的消息，一次最多可以查看16条消息。</li>
+     * <li>使用此接口不会改变消息的状态，消息仍保持为Active状态。</li>
+     * <li>不支持长轮询功能。</li>
+     * <li>需要提供<code>queueName</code>作为路径参数，并通过查询参数设置<code>peekonly=true</code>及指定要查看的消息数量<code>numOfMessages</code>（范围在1到16之间）。</li>
+     * <li>成功响应将返回一个包含所请求消息详细信息的数组，包括但不限于消息ID、正文、入队时间等。</li>
+     * <li>如果指定的队列不存在或队列中没有可见消息，则会返回相应的错误码。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>批量查看消息</p>
      * 
@@ -114,6 +136,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该操作会将取得的消息状态变为 Inactive，Inactive 持续时间由队列属性 <code>VisibilityTimeout</code> 决定。</li>
+     * <li>消费者需在 VisibilityTimeout 时间内调用 DeleteMessage 删除消息，否则消息会重新变为 Active。</li>
+     * <li>支持长轮询（Long Polling）：设置 <code>waitseconds &gt; 0</code> 后，若队列为空则等待至有消息到达或超时返回。<blockquote>
+     * <p>Notice: 进入长轮询后，建议您降低外部调用长轮询的并发数，选择合适的长轮询时间。目前服务端会根据长轮询数量、长轮询等待时间、访问 IP 数量等因素动态调整长轮询防攻击的并发上限值。当队列无消息时，超过长轮询上限值的请求将无法被监听到，并直接返回 404 MessageNotExist（按请求量正常计费）。如果您有临时提升长轮询上限值的需求，请及时提交工单。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>批量消费消息</p>
      * 
@@ -152,6 +185,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该操作会将取得的消息状态变为 Inactive，Inactive 持续时间由队列属性 <code>VisibilityTimeout</code> 决定。</li>
+     * <li>消费者需在 VisibilityTimeout 时间内调用 DeleteMessage 删除消息，否则消息会重新变为 Active。</li>
+     * <li>支持长轮询（Long Polling）：设置 <code>waitseconds &gt; 0</code> 后，若队列为空则等待至有消息到达或超时返回。<blockquote>
+     * <p>Notice: 进入长轮询后，建议您降低外部调用长轮询的并发数，选择合适的长轮询时间。目前服务端会根据长轮询数量、长轮询等待时间、访问 IP 数量等因素动态调整长轮询防攻击的并发上限值。当队列无消息时，超过长轮询上限值的请求将无法被监听到，并直接返回 404 MessageNotExist（按请求量正常计费）。如果您有临时提升长轮询上限值的需求，请及时提交工单。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>批量消费消息</p>
      * 
@@ -165,6 +209,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>一次 Batch 请求的消息总大小不得超过 64 KB。</li>
+     * <li><code>BatchSendMessage</code> 与 <code>SendMessage</code> 使用相同的 URL 路径，通过 Body 结构区分：包含 <code>Messages</code> 数组即为批量发送，否则为单条发送。</li>
+     * <li>批量操作的返回结果可能同时包含成功和失败的子消息。</li>
+     * <li>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</li>
+     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 参数来指定消息分组 ID。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>批量发送消息</p>
      * 
@@ -199,6 +253,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>一次 Batch 请求的消息总大小不得超过 64 KB。</li>
+     * <li><code>BatchSendMessage</code> 与 <code>SendMessage</code> 使用相同的 URL 路径，通过 Body 结构区分：包含 <code>Messages</code> 数组即为批量发送，否则为单条发送。</li>
+     * <li>批量操作的返回结果可能同时包含成功和失败的子消息。</li>
+     * <li>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</li>
+     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 参数来指定消息分组 ID。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>批量发送消息</p>
      * 
@@ -263,100 +327,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>删除已消费消息</p>
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</li>
+     * <li>推送到 Queue 和 HTTP Endpoint 时不需要设置 <code>MessageAttributes</code>。</li>
+     * <li>推送到邮件、短信或移动推送时需要设置对应的 <code>MessageAttributes</code> 子属性。</li>
+     * <li>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</li>
+     * </ul>
      * 
-     * @param request DeleteMessageRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteMessageResponse
-     */
-    public DeleteMessageResponse deleteMessageWithOptions(String queueName, DeleteMessageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.receiptHandle)) {
-            query.put("ReceiptHandle", request.receiptHandle);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteMessage"),
-            new TeaPair("version", "2026-04-09"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/queues/" + queueName + "/messages"),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteMessageResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>删除已消费消息</p>
-     * 
-     * @param request DeleteMessageRequest
-     * @return DeleteMessageResponse
-     */
-    public DeleteMessageResponse deleteMessage(String queueName, DeleteMessageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteMessageWithOptions(queueName, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查看消息</p>
-     * 
-     * @param request PeekMessageRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return PeekMessageResponse
-     */
-    public PeekMessageResponse peekMessageWithOptions(String queueName, PeekMessageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.peekonly)) {
-            query.put("peekonly", request.peekonly);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "PeekMessage"),
-            new TeaPair("version", "2026-04-09"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/queues/" + queueName + "/messages"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new PeekMessageResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>查看消息</p>
-     * 
-     * @param request PeekMessageRequest
-     * @return PeekMessageResponse
-     */
-    public PeekMessageResponse peekMessage(String queueName, PeekMessageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.peekMessageWithOptions(queueName, request, headers, runtime);
-    }
-
-    /**
      * <b>summary</b> : 
      * <p>发布消息</p>
      * 
@@ -403,6 +382,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</li>
+     * <li>推送到 Queue 和 HTTP Endpoint 时不需要设置 <code>MessageAttributes</code>。</li>
+     * <li>推送到邮件、短信或移动推送时需要设置对应的 <code>MessageAttributes</code> 子属性。</li>
+     * <li>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>发布消息</p>
      * 
@@ -416,53 +404,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>消费消息</p>
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>SendMessage</strong> 接口用于将消息发送至指定队列。</li>
+     * <li>消息可以立即被消费或通过设置 <code>DelaySeconds</code> 参数来延迟消费。</li>
+     * <li>发送的消息可以指定优先级，数值越小表示优先级越高。</li>
+     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 来保证同一分组内消息的顺序投递。</li>
+     * <li>用户还可以自定义属性 <code>UserProperties</code>，以 JSON 格式字符串形式提供额外信息。</li>
+     * <li>当 <code>DelaySeconds</code> 大于 0 时，API 返回的 <code>ReceiptHandle</code> 可用来在消息变为 Active 状态前删除该延迟消息。</li>
+     * </ul>
      * 
-     * @param request ReceiveMessageRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ReceiveMessageResponse
-     */
-    public ReceiveMessageResponse receiveMessageWithOptions(String queueName, ReceiveMessageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.waitseconds)) {
-            query.put("waitseconds", request.waitseconds);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ReceiveMessage"),
-            new TeaPair("version", "2026-04-09"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/queues/" + queueName + "/messages"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new ReceiveMessageResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>消费消息</p>
-     * 
-     * @param request ReceiveMessageRequest
-     * @return ReceiveMessageResponse
-     */
-    public ReceiveMessageResponse receiveMessage(String queueName, ReceiveMessageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.receiveMessageWithOptions(queueName, request, headers, runtime);
-    }
-
-    /**
      * <b>summary</b> : 
      * <p>发送消息</p>
      * 
@@ -513,6 +465,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><strong>SendMessage</strong> 接口用于将消息发送至指定队列。</li>
+     * <li>消息可以立即被消费或通过设置 <code>DelaySeconds</code> 参数来延迟消费。</li>
+     * <li>发送的消息可以指定优先级，数值越小表示优先级越高。</li>
+     * <li>对于 FIFO 队列，可以通过 <code>MessageGroupId</code> 来保证同一分组内消息的顺序投递。</li>
+     * <li>用户还可以自定义属性 <code>UserProperties</code>，以 JSON 格式字符串形式提供额外信息。</li>
+     * <li>当 <code>DelaySeconds</code> 大于 0 时，API 返回的 <code>ReceiptHandle</code> 可用来在消息变为 Active 状态前删除该延迟消息。</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>发送消息</p>
      * 

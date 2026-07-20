@@ -4,9 +4,17 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class BatchReceiveMessageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("numOfMessages")
     public Integer numOfMessages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("waitseconds")
     public Integer waitseconds;
 

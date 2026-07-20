@@ -4,6 +4,10 @@ package com.aliyun.smqproxy20260409.models;
 import com.aliyun.tea.*;
 
 public class BatchPeekMessageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("numOfMessages")
     public Integer numOfMessages;
 
