@@ -14,14 +14,7 @@ public class ListDeploymentJobRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The type of the deployment task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>cloud: multi-cloud deployment task.</p>
-     * </li>
-     * <li><p>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</p>
-     * </li>
-     * </ul>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -30,7 +23,7 @@ public class ListDeploymentJobRequest extends TeaModel {
     public String jobType;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 50.</p>
+     * <p>The number of certificates to display per page in a paged query. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -39,22 +32,7 @@ public class ListDeploymentJobRequest extends TeaModel {
     public Integer showSize;
 
     /**
-     * <p>The status of the deployment task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>success</p>
-     * </li>
-     * <li><p>pending</p>
-     * </li>
-     * <li><p>scheduling</p>
-     * </li>
-     * <li><p>processing</p>
-     * </li>
-     * <li><p>error</p>
-     * </li>
-     * <li><p>editing</p>
-     * </li>
-     * </ul>
+     * <p>The deployment task status.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>

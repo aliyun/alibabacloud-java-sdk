@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserCertificateOrderResponseBody extends TeaModel {
     /**
-     * <p>The list of certificates and orders.</p>
+     * <p>The certificate and order list.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;CertificateOrderList&quot;: [{&quot;Status&quot;: &quot;PAYED&quot;,&quot;ProductName&quot;: &quot;专业版通配符 OV SSL&quot;,&quot;InstanceId&quot;: &quot;cert-instanceId&quot;,&quot;ProductCode&quot;: &quot;globalsign-xxxx&quot;,&quot;SourceType&quot;: &quot;buy&quot;,&quot;WildDomainCount&quot;: 1,&quot;CertType&quot;: &quot;OV&quot;,&quot;PartnerOrderId&quot;: &quot;&quot;,&quot;OrderId&quot;: 3451111,&quot;Algorithm&quot;: &quot;RSA&quot;,&quot;RootBrand&quot;: &quot;GlobalSign&quot;,&quot;AliyunOrderId&quot;: 21xxxxxx40655,&quot;DomainType&quot;: &quot;WILDCARD&quot;,&quot;TrusteeStatus&quot;: &quot;trustee&quot;,&quot;Domain&quot;: &quot;&quot;,&quot;BuyDate&quot;: 1632649385000,&quot;DomainCount&quot;: 1}]}</p>
@@ -14,7 +14,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     public java.util.List<ListUserCertificateOrderResponseBodyCertificateOrderList> certificateOrderList;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The request ID. This ID is unique to each request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
@@ -32,7 +32,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
     public Long showSize;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,7 +96,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
 
     public static class ListUserCertificateOrderResponseBodyCertificateOrderList extends TeaModel {
         /**
-         * <p>The algorithm. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The algorithm. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -105,7 +105,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The ID of the Alibaba Cloud order. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The Alibaba Cloud order ID. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>234567</p>
@@ -114,7 +114,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Long aliyunOrderId;
 
         /**
-         * <p>The purchase time. The value is a UNIX timestamp. Unit: milliseconds. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The purchase time. Unit: milliseconds. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>1634283958000</p>
@@ -123,7 +123,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Long buyDate;
 
         /**
-         * <p>The expiration time of the certificate. The value is a UNIX timestamp. Unit: milliseconds. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The certificate expiration time. Unit: milliseconds. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>1665819958000</p>
@@ -132,7 +132,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Long certEndTime;
 
         /**
-         * <p>The start time of the certificate. The value is a UNIX timestamp. Unit: milliseconds. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The certificate start time. Unit: milliseconds. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>1665819958000</p>
@@ -141,16 +141,12 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Long certStartTime;
 
         /**
-         * <p>The certificate type. This parameter is returned when OrderType is set to CPACK or BUY. Valid values:</p>
+         * <p>The certificate type. Returned when OrderType is set to CPACK or BUY. Valid values:</p>
          * <ul>
-         * <li><p><strong>DV</strong>: A DV certificate.</p>
-         * </li>
-         * <li><p><strong>EV</strong>: An EV certificate.</p>
-         * </li>
-         * <li><p><strong>OV</strong>: An OV certificate.</p>
-         * </li>
-         * <li><p><strong>FREE</strong>: A free certificate for personal trial. This value is supported only on the Alibaba Cloud China website (www\.aliyun.com).</p>
-         * </li>
+         * <li><strong>DV</strong>: DV certificate.</li>
+         * <li><strong>EV</strong>: EV certificate.</li>
+         * <li><strong>OV</strong>: OV certificate.</li>
+         * <li><strong>FREE</strong>: personal test certificate (supported only on the China site).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +156,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String certType;
 
         /**
-         * <p>The certificate ID. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The certificate ID. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>896521</p>
@@ -169,7 +165,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Long certificateId;
 
         /**
-         * <p>The city. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The city. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>杭州市</p>
@@ -178,7 +174,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String city;
 
         /**
-         * <p>The primary domain name of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The common name of the certificate. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
@@ -187,7 +183,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The country code. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The country code. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -196,7 +192,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String country;
 
         /**
-         * <p>The domain name. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The domain name. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyundoc.com</p>
@@ -205,7 +201,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The number of domain names that you purchased. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The total number of purchased domain names. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,18 +210,13 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Long domainCount;
 
         /**
-         * <p>The domain name type. This parameter is returned when OrderType is set to CPACK or BUY. Valid values:</p>
+         * <p>The domain name type. Returned when OrderType is set to CPACK or BUY. Valid values:</p>
          * <ul>
-         * <li><p><strong>ONE</strong>: A single domain name.</p>
-         * </li>
-         * <li><p><strong>MULTIPLE</strong>: Multiple domain names.</p>
-         * </li>
-         * <li><p><strong>WILDCARD</strong>: A single wildcard domain name.</p>
-         * </li>
-         * <li><p><strong>M_WILDCARD</strong>: Multiple wildcard domain names.</p>
-         * </li>
-         * <li><p><strong>MIX</strong>: A hybrid domain name.</p>
-         * </li>
+         * <li><strong>ONE</strong>: single domain name.</li>
+         * <li><strong>MULTIPLE</strong>: multiple domain names.</li>
+         * <li><strong>WILDCARD</strong>: single wildcard domain name.</li>
+         * <li><strong>M_WILDCARD</strong>: multiple wildcard domain names.</li>
+         * <li><strong>MIX</strong>: hybrid domain names.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -235,7 +226,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String domainType;
 
         /**
-         * <p>The end date of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The certificate end date. Returned when OrderType is set to CERT or UPLOAD. The date is in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-17</p>
@@ -244,7 +235,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>Indicates whether the certificate has expired. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>Indicates whether the certificate has expired. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,7 +244,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
-         * <p>The certificate fingerprint. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The certificate fingerprint. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>CC6B3696E7C7CA715BD26E28E45FF3E3DF435C03</p>
@@ -271,7 +262,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The issuer of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The certificate issuer. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>MyIssuer</p>
@@ -280,7 +271,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>The certificate name. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The certificate name. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>cert-name</p>
@@ -289,7 +280,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The order ID. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The order ID. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>2345687</p>
@@ -298,7 +289,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Long orderId;
 
         /**
-         * <p>The name of the organization that is associated with the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The organization name of the certificate. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>阿里云</p>
@@ -307,7 +298,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String orgName;
 
         /**
-         * <p>The ID of the third-party certificate authority (CA) order. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The third-party CA order ID. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-123456</p>
@@ -316,7 +307,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String partnerOrderId;
 
         /**
-         * <p>The code for the product specifications. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The order specification ID. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>bykj123456</p>
@@ -325,7 +316,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The name of the product specifications. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The order specification name. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>CFCA</p>
@@ -334,7 +325,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The province or autonomous region. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The province or autonomous region. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>浙江省</p>
@@ -343,7 +334,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String province;
 
         /**
-         * <p>The ID of the resource group. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The resource group ID. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******4wia</p>
@@ -352,7 +343,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The brand, such as WoSign, CFCA, DigiCert, and vTrus. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The brand (such as WoSign, CFCA, DigiCert, and vTrus). Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>CFCA</p>
@@ -361,7 +352,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String rootBrand;
 
         /**
-         * <p>The domain names that are bound to the certificate. Multiple domain names are separated by commas (,). This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>All domain names bound to the certificate. Multiple domain names are separated by commas (,). Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
@@ -370,7 +361,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String sans;
 
         /**
-         * <p>The certificate serial number. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The certificate serial number. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>040a6e493cffdda6d744acf99b6576cf</p>
@@ -379,7 +370,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String serialNo;
 
         /**
-         * <p>The SHA-2 value of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The SHA-2 value of the certificate. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>56B4DED2243A81DD909D7C39824FFE4DDBD87F91BFA46CD333FF212FE0E7CB11</p>
@@ -388,12 +379,10 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String sha2;
 
         /**
-         * <p>The order type. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The order type. Returned when OrderType is set to CPACK or BUY. Valid values:</p>
          * <ul>
-         * <li><p><strong>cpack</strong>: An order for a resource plan.</p>
-         * </li>
-         * <li><p><strong>buy</strong>: A direct purchase.</p>
-         * </li>
+         * <li><strong>cpack</strong>: resource virtual order.</li>
+         * <li><strong>buy</strong>: purchase order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,7 +392,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The start date of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>The certificate start date. Returned when OrderType is set to CERT or UPLOAD. The date is in the YYYY-MM-DD format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-16</p>
@@ -412,24 +401,16 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String startDate;
 
         /**
-         * <p>The status of the order or certificate. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The order or certificate status. Returned when OrderType is set to CPACK or BUY. Valid values:</p>
          * <ul>
-         * <li><p><strong>PAYED</strong>: The certificate is pending application.</p>
-         * </li>
-         * <li><p><strong>CHECKING</strong>: The certificate is under review.</p>
-         * </li>
-         * <li><p><strong>CHECKED_FAIL</strong>: The review failed.</p>
-         * </li>
-         * <li><p><strong>ISSUED</strong>: The certificate is issued.</p>
-         * </li>
-         * <li><p><strong>WILLEXPIRED</strong>: The certificate is about to expire.</p>
-         * </li>
-         * <li><p><strong>EXPIRED</strong>: The certificate has expired.</p>
-         * </li>
-         * <li><p><strong>NOTACTIVATED</strong>: The certificate is not activated.</p>
-         * </li>
-         * <li><p><strong>REVOKED</strong>: The certificate is revoked.</p>
-         * </li>
+         * <li><strong>PAYED</strong>: Pending application.</li>
+         * <li><strong>CHECKING</strong>: Under review.</li>
+         * <li><strong>CHECKED_FAIL</strong>: Review failed.</li>
+         * <li><strong>ISSUED</strong>: Issued.</li>
+         * <li><strong>WILLEXPIRED</strong>: About to expire.</li>
+         * <li><strong>EXPIRED</strong>: Expired.</li>
+         * <li><strong>NOTACTIVATED</strong>: Not activated.</li>
+         * <li><strong>REVOKED</strong>: Revoked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -439,12 +420,10 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The hosting status. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The hosting status. Returned when OrderType is set to CPACK or BUY. Valid values:</p>
          * <ul>
-         * <li><p><strong>unTrustee</strong>: Not hosted.</p>
-         * </li>
-         * <li><p><strong>trustee</strong>: Hosted.</p>
-         * </li>
+         * <li><strong>unTrustee</strong>: Not hosted.</li>
+         * <li><strong>trustee</strong>: Hosted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -454,7 +433,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public String trusteeStatus;
 
         /**
-         * <p>Indicates whether the certificate is an uploaded certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</p>
+         * <p>Indicates whether the certificate is an uploaded certificate. Returned when OrderType is set to CERT or UPLOAD.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -463,7 +442,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         public Boolean upload;
 
         /**
-         * <p>The number of wildcard domain names that you purchased. This parameter is returned when OrderType is set to CPACK or BUY.</p>
+         * <p>The number of purchased wildcard domain names. Returned when OrderType is set to CPACK or BUY.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeploymentJobResponseBody extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class ListDeploymentJobResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The data returned for the request.</p>
+     * <p>The data returned by the API.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListDeploymentJobResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789ABC</p>
@@ -93,7 +93,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
 
     public static class ListDeploymentJobResponseBodyData extends TeaModel {
         /**
-         * <p>The domain names bound to the certificate of the deployment task.</p>
+         * <p>The domain names included in the certificate of the deployment task.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyundoc1.com,aliyundoc2.com,aliyundoc3.com</p>
@@ -102,14 +102,11 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String certDomain;
 
         /**
-         * <p>The type of the certificate. Valid values:</p>
+         * <p>The certificate type. Valid values:</p>
          * <ul>
-         * <li><p><strong>upload</strong>: uploaded certificate</p>
-         * </li>
-         * <li><p><strong>buy</strong>: purchased certificate</p>
-         * </li>
-         * <li><p><strong>free</strong>: free certificate, available only on the China site (aliyun.com)</p>
-         * </li>
+         * <li><strong>upload</strong>: uploaded certificate</li>
+         * <li><strong>buy</strong>: purchased certificate</li>
+         * <li><strong>free</strong>: personal test certificate (supported only on the China site)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,12 +116,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String certType;
 
         /**
-         * <p>Indicates whether the deployment task is deleted. Valid values:</p>
+         * <p>The deletion flag. This parameter has no practical significance. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: not deleted</p>
-         * </li>
-         * <li><p><strong>1</strong>: deleted</p>
-         * </li>
+         * <li><strong>0</strong>: not deleted.</li>
+         * <li><strong>1</strong>: deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +129,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public Integer del;
 
         /**
-         * <p>The end time of the deployment task.</p>
+         * <p>The end time of the deployment task execution, in UNIX timestamp format (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1606482979000</p>
@@ -143,7 +138,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The time when the deployment task was created.</p>
+         * <p>The time when the deployment task was created, in UNIX timestamp format (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1624343180000</p>
@@ -152,7 +147,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the deployment task was last modified.</p>
+         * <p>The time when the deployment task was last modified, in UNIX timestamp format (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1606482979000</p>
@@ -161,7 +156,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The ID of the deployment task. You can use the ID to query the details and status of the deployment task.</p>
+         * <p>The deployment task ID. You can use this ID to query the deployment task details and status.</p>
          * 
          * <strong>example:</strong>
          * <p>19975</p>
@@ -179,12 +174,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of the deployment task.</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p><strong>cloud</strong>: multi-cloud deployment task.</p>
-         * </li>
-         * <li><p><strong>user</strong>: cloud service deployment task. This type of task does not support ECS instances.</p>
-         * </li>
+         * <li><strong>cloud</strong>: multi-cloud deployment task.</li>
+         * <li><strong>user</strong>: cloud service deployment task (excluding ECS instances).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +196,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The cloud service included in the resources of the deployment task.</p>
+         * <p>The cloud services included in the deployment task resources.</p>
          * 
          * <strong>example:</strong>
          * <p>NLB</p>
@@ -212,12 +205,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>Indicates whether the rollback worker is included. For example, if a cloud service involved in a deployment task has been rolled back, <strong>1</strong> is returned. Valid values:</p>
+         * <p>Indicates whether the task contains a rollback worker. For example, if a cloud service in the task has been rolled back, the value <strong>1</strong> is returned. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: The rollback worker is not included.</p>
-         * </li>
-         * <li><p><strong>1</strong>: The rollback worker is included.</p>
-         * </li>
+         * <li><strong>0</strong>: does not contain a rollback worker.</li>
+         * <li><strong>1</strong>: contains a rollback worker.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,7 +218,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public Integer rollback;
 
         /**
-         * <p>The time when the deployment task was scheduled.</p>
+         * <p>The scheduled time of the task, in UNIX timestamp format (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1606482979000</p>
@@ -236,7 +227,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String scheduleTime;
 
         /**
-         * <p>The start time of the deployment task.</p>
+         * <p>The start time of the deployment task execution, in UNIX timestamp format (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>1606482979000</p>
@@ -245,20 +236,14 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the deployment task. Valid values:</p>
+         * <p>The deployment task status. Valid values:</p>
          * <ul>
-         * <li><p><strong>pending</strong></p>
-         * </li>
-         * <li><p><strong>editing</strong></p>
-         * </li>
-         * <li><p><strong>scheduling</strong></p>
-         * </li>
-         * <li><p><strong>processing</strong></p>
-         * </li>
-         * <li><p><strong>error</strong></p>
-         * </li>
-         * <li><p><strong>success</strong></p>
-         * </li>
+         * <li><strong>pending</strong>: pending execution.</li>
+         * <li><strong>editing</strong>: being edited.</li>
+         * <li><strong>scheduling</strong>: being scheduled.</li>
+         * <li><strong>processing</strong>: being deployed.</li>
+         * <li><strong>error</strong>: deployment failed.</li>
+         * <li><strong>success</strong>: deployment succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +253,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user account ID (UID).</p>
          * 
          * <strong>example:</strong>
          * <p>166688437*****</p>

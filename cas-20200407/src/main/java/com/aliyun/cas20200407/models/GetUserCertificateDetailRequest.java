@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetUserCertificateDetailRequest extends TeaModel {
     /**
-     * <p>Specifies whether to filter the certificate content from the response. Valid values: <strong>true</strong>: The Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey parameters are not returned. <strong>false</strong> (default): All parameters are returned.</p>
+     * <p>Specifies whether to filter certificate content from the response. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey fields are not returned.</li>
+     * <li><strong>false</strong>: All fields are returned.</li>
+     * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +19,10 @@ public class GetUserCertificateDetailRequest extends TeaModel {
     public Boolean certFilter;
 
     /**
-     * <p>The ID of the certificate. To get this ID, call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation.</p>
+     * <p>The certificate ID.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> to obtain the certificate ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

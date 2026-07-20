@@ -145,7 +145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a certificate application for a Certificate Management Service instance.</p>
+     * <p>Applies for a certificate.</p>
      * 
      * @param request ApplyCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -177,7 +177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a certificate application for a Certificate Management Service instance.</p>
+     * <p>Applies for a certificate.</p>
      * 
      * @param request ApplyCertificateRequest
      * @return ApplyCertificateResponse
@@ -361,7 +361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a pending certificate application that has not been issued.</p>
+     * <p>Revokes a certificate application.</p>
      * 
      * @param request CancelPendingCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -393,7 +393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a pending certificate application that has not been issued.</p>
+     * <p>Revokes a certificate application.</p>
      * 
      * @param request CancelPendingCertificateRequest
      * @return CancelPendingCertificateResponse
@@ -659,6 +659,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCertificateWithCsrRequestResponse createCertificateWithCsrRequest(CreateCertificateWithCsrRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCertificateWithCsrRequestWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a company.</p>
+     * 
+     * @param request CreateCompanyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCompanyResponse
+     */
+    public CreateCompanyResponse createCompanyWithOptions(CreateCompanyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyAddress)) {
+            query.put("CompanyAddress", request.companyAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyCode)) {
+            query.put("CompanyCode", request.companyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyEmail)) {
+            query.put("CompanyEmail", request.companyEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyName)) {
+            query.put("CompanyName", request.companyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyPhone)) {
+            query.put("CompanyPhone", request.companyPhone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyType)) {
+            query.put("CompanyType", request.companyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.countryCode)) {
+            query.put("CountryCode", request.countryCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.department)) {
+            query.put("Department", request.department);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postCode)) {
+            query.put("PostCode", request.postCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            query.put("Province", request.province);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCompany"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCompanyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a company.</p>
+     * 
+     * @param request CreateCompanyRequest
+     * @return CreateCompanyResponse
+     */
+    public CreateCompanyResponse createCompany(CreateCompanyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCompanyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a certificate application contact.</p>
+     * 
+     * @param request CreateContactRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateContactResponse
+     */
+    public CreateContactResponse createContactWithOptions(CreateContactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idcard)) {
+            query.put("Idcard", request.idcard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.webhooks)) {
+            query.put("Webhooks", request.webhooks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateContact"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateContactResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a certificate application contact.</p>
+     * 
+     * @param request CreateContactRequest
+     * @return CreateContactResponse
+     */
+    public CreateContactResponse createContact(CreateContactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createContactWithOptions(request, runtime);
     }
 
     /**
@@ -1153,6 +1301,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCloudAccessResponse deleteCloudAccess(DeleteCloudAccessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCloudAccessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a company.</p>
+     * 
+     * @param request DeleteCompanyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCompanyResponse
+     */
+    public DeleteCompanyResponse deleteCompanyWithOptions(DeleteCompanyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.companyId)) {
+            query.put("CompanyId", request.companyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCompany"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCompanyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a company.</p>
+     * 
+     * @param request DeleteCompanyRequest
+     * @return DeleteCompanyResponse
+     */
+    public DeleteCompanyResponse deleteCompany(DeleteCompanyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCompanyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a contact.</p>
+     * 
+     * @param request DeleteContactRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteContactResponse
+     */
+    public DeleteContactResponse deleteContactWithOptions(DeleteContactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            query.put("ContactId", request.contactId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteContact"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContactResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a contact.</p>
+     * 
+     * @param request DeleteContactRequest
+     * @return DeleteContactResponse
+     */
+    public DeleteContactResponse deleteContact(DeleteContactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteContactWithOptions(request, runtime);
     }
 
     /**
@@ -1841,12 +2077,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API call queries the number of CA certificates that you have created, including root CA certificates and sub-CA certificates.</p>
-     * <h2>QPS Limit</h2>
-     * <p>This API call has a single-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business. We recommend that you call this API operation at a reasonable rate.</p>
+     * <p>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</p>
+     * <h2>QPS limit</h2>
+     * <p>The China single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the total number of certificate-related assets, such as websites and cloud resources.</p>
+     * <p>Queries the number of assets.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAssetCountResponse
@@ -1869,12 +2105,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API call queries the number of CA certificates that you have created, including root CA certificates and sub-CA certificates.</p>
-     * <h2>QPS Limit</h2>
-     * <p>This API call has a single-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business. We recommend that you call this API operation at a reasonable rate.</p>
+     * <p>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</p>
+     * <h2>QPS limit</h2>
+     * <p>The China single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the total number of certificate-related assets, such as websites and cloud resources.</p>
+     * <p>Queries the number of assets.</p>
      * @return GetAssetCountResponse
      */
     public GetAssetCountResponse getAssetCount() throws Exception {
@@ -1963,6 +2199,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCertificateDetailResponse getCertificateDetail(GetCertificateDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCertificateDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a company.</p>
+     * 
+     * @param request GetCompanyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCompanyResponse
+     */
+    public GetCompanyResponse getCompanyWithOptions(GetCompanyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.companyId)) {
+            query.put("CompanyId", request.companyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCompany"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCompanyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a company.</p>
+     * 
+     * @param request GetCompanyRequest
+     * @return GetCompanyResponse
+     */
+    public GetCompanyResponse getCompany(GetCompanyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCompanyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a contact.</p>
+     * 
+     * @param request GetContactRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetContactResponse
+     */
+    public GetContactResponse getContactWithOptions(GetContactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            query.put("ContactId", request.contactId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetContact"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetContactResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a contact.</p>
+     * 
+     * @param request GetContactRequest
+     * @return GetContactResponse
+     */
+    public GetContactResponse getContact(GetContactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getContactWithOptions(request, runtime);
     }
 
     /**
@@ -2258,10 +2582,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for each user is 100. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you call this operation within this limit.</p>
+     * <p>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves certificate details, including the basic information, certificate body, and private key. You can also use this operation to download the certificate content and private key.</p>
+     * <p>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</p>
      * 
      * @param request GetUserCertificateDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2297,10 +2621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for each user is 100. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you call this operation within this limit.</p>
+     * <p>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves certificate details, including the basic information, certificate body, and private key. You can also use this operation to download the certificate content and private key.</p>
+     * <p>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</p>
      * 
      * @param request GetUserCertificateDetailRequest
      * @return GetUserCertificateDetailResponse
@@ -2312,12 +2636,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the number of created Certificate Authority (CA) certificates, including root and subordinate CA certificates.</p>
+     * <p>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</p>
      * <h2>QPS limit</h2>
-     * <p>Each user can make up to 10 queries per second (QPS). If you exceed this limit, the system applies rate limiting to your API calls. This may affect your business. Make API calls at a reasonable rate.</p>
+     * <p>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate deployment statistics by cloud service type.</p>
+     * <p>Queries the resource statistics list of cloud services.</p>
      * 
      * @param request ListAssetCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2361,12 +2685,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the number of created Certificate Authority (CA) certificates, including root and subordinate CA certificates.</p>
+     * <p>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</p>
      * <h2>QPS limit</h2>
-     * <p>Each user can make up to 10 queries per second (QPS). If you exceed this limit, the system applies rate limiting to your API calls. This may affect your business. Make API calls at a reasonable rate.</p>
+     * <p>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the certificate deployment statistics by cloud service type.</p>
+     * <p>Queries the resource statistics list of cloud services.</p>
      * 
      * @param request ListAssetCountRequest
      * @return ListAssetCountResponse
@@ -2724,7 +3048,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the contacts that receive certificate deployment notifications.</p>
+     * <p>Retrieves a list of companies.</p>
+     * 
+     * @param request ListCompaniesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCompaniesResponse
+     */
+    public ListCompaniesResponse listCompaniesWithOptions(ListCompaniesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.companyId)) {
+            query.put("CompanyId", request.companyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
+            query.put("ShowSize", request.showSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCompanies"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCompaniesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of companies.</p>
+     * 
+     * @param request ListCompaniesRequest
+     * @return ListCompaniesResponse
+     */
+    public ListCompaniesResponse listCompanies(ListCompaniesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCompaniesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a list of contacts.</p>
      * 
      * @param request ListContactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2764,7 +3144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the contacts that receive certificate deployment notifications.</p>
+     * <p>Retrieves a list of contacts.</p>
      * 
      * @param request ListContactRequest
      * @return ListContactResponse
@@ -2832,7 +3212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the certificate deployment tasks that are created in your account.</p>
+     * <p>Retrieves a list of deployment tasks after you create a deployment task.</p>
      * 
      * @param request ListDeploymentJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2876,7 +3256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the certificate deployment tasks that are created in your account.</p>
+     * <p>Retrieves a list of deployment tasks after you create a deployment task.</p>
      * 
      * @param request ListDeploymentJobRequest
      * @return ListDeploymentJobResponse
@@ -3052,12 +3432,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a list of your certificates or orders. Set OrderType to CERT or UPLOAD to query certificates. Set OrderType to CPACK or BUY to query orders.</p>
+     * <p>This operation is used to query the list of user certificates or orders. If OrderType is set to CERT or UPLOAD, the certificate list is queried. If OrderType is set to CPACK or BUY, the order list is queried.</p>
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SSL certificates and certificate orders in your account.</p>
+     * <p>Queries the list of user certificates or orders.</p>
      * 
      * @param request ListUserCertificateOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3109,12 +3489,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries a list of your certificates or orders. Set OrderType to CERT or UPLOAD to query certificates. Set OrderType to CPACK or BUY to query orders.</p>
+     * <p>This operation is used to query the list of user certificates or orders. If OrderType is set to CERT or UPLOAD, the certificate list is queried. If OrderType is set to CPACK or BUY, the order list is queried.</p>
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the SSL certificates and certificate orders in your account.</p>
+     * <p>Queries the list of user certificates or orders.</p>
      * 
      * @param request ListUserCertificateOrderRequest
      * @return ListUserCertificateOrderResponse
@@ -3318,7 +3698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refunds a Certificate Management Service instance if the refund is requested within seven days of purchase.</p>
+     * <p>Refunds an instance within 7 days.</p>
      * 
      * @param request RefundInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3350,7 +3730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refunds a Certificate Management Service instance if the refund is requested within seven days of purchase.</p>
+     * <p>Refunds an instance within 7 days.</p>
      * 
      * @param request RefundInstanceRequest
      * @return RefundInstanceResponse
@@ -3598,7 +3978,163 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the private key associated with a certificate signing request (CSR).</p>
+     * <p>Updates company information.</p>
+     * 
+     * @param request UpdateCompanyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCompanyResponse
+     */
+    public UpdateCompanyResponse updateCompanyWithOptions(UpdateCompanyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.city)) {
+            query.put("City", request.city);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyAddress)) {
+            query.put("CompanyAddress", request.companyAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyCode)) {
+            query.put("CompanyCode", request.companyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyEmail)) {
+            query.put("CompanyEmail", request.companyEmail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyId)) {
+            query.put("CompanyId", request.companyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyName)) {
+            query.put("CompanyName", request.companyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyPhone)) {
+            query.put("CompanyPhone", request.companyPhone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.companyType)) {
+            query.put("CompanyType", request.companyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.countryCode)) {
+            query.put("CountryCode", request.countryCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.department)) {
+            query.put("Department", request.department);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postCode)) {
+            query.put("PostCode", request.postCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            query.put("Province", request.province);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCompany"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCompanyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates company information.</p>
+     * 
+     * @param request UpdateCompanyRequest
+     * @return UpdateCompanyResponse
+     */
+    public UpdateCompanyResponse updateCompany(UpdateCompanyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCompanyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a contact.</p>
+     * 
+     * @param request UpdateContactRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateContactResponse
+     */
+    public UpdateContactResponse updateContactWithOptions(UpdateContactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactId)) {
+            query.put("ContactId", request.contactId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("Email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idcard)) {
+            query.put("Idcard", request.idcard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.webhooks)) {
+            query.put("Webhooks", request.webhooks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateContact"),
+            new TeaPair("version", "2020-04-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateContactResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a contact.</p>
+     * 
+     * @param request UpdateContactRequest
+     * @return UpdateContactResponse
+     */
+    public UpdateContactResponse updateContact(UpdateContactRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateContactWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</p>
      * 
      * @param request UpdateCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3634,7 +4170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the private key associated with a certificate signing request (CSR).</p>
+     * <p>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</p>
      * 
      * @param request UpdateCsrRequest
      * @return UpdateCsrResponse

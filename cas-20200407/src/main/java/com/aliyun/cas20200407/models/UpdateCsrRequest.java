@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCsrRequest extends TeaModel {
     /**
-     * <p>The unique ID of the CSR. This ID is generated when you upload a CSR. To obtain the ID, call the <a href="https://help.aliyun.com/document_detail/2709717.html">ListCsr</a> operation.</p>
+     * <p>The unique ID of the CSR. The CsrId is generated when the CSR is uploaded. You can obtain this value by querying the CSR list. For more information, see <a href="https://help.aliyun.com/document_detail/2709717.html">ListCsr</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateCsrRequest extends TeaModel {
     public Long csrId;
 
     /**
-     * <p>The content of the certificate private key in PEM format.</p>
+     * <p>The private key content in PEM format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

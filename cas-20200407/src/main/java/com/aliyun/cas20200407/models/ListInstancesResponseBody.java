@@ -115,12 +115,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String brand;
 
         /**
-         * <p>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
+         * <p>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</p>
          * <ul>
          * <li>For the China site: certificate ID + &quot;-cn-hangzhou&quot;</li>
          * <li>For the China site: certificate ID + &quot;-ap-southeast-1&quot;</li>
          * </ul>
-         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</p>
+         * <p>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>21795675-cn-hangzhou</p>
@@ -156,7 +156,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String certificateName;
 
         /**
-         * <p>The end time of the latest certificate, in UNIX timestamp format. If no certificate has been issued, this value is empty.</p>
+         * <p>The end time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -164,11 +164,17 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("CertificateNotAfter")
         public Long certificateNotAfter;
 
+        /**
+         * <p>The start time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1776988800000</p>
+         */
         @NameInMap("CertificateNotBefore")
         public Long certificateNotBefore;
 
         /**
-         * <p>The revocation time of the latest certificate, in UNIX timestamp format.</p>
+         * <p>The revocation time of the latest certificate, in timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -179,10 +185,10 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The status of the certificate. Valid values:</p>
          * <ul>
-         * <li><strong>issued</strong>: issued.</li>
-         * <li><strong>revoked</strong>: revoked.</li>
-         * <li><strong>willExpire</strong>: about to expire.</li>
-         * <li><strong>expired</strong>: expired.</li>
+         * <li><strong>issued</strong>: Issued.</li>
+         * <li><strong>revoked</strong>: Revoked.</li>
+         * <li><strong>willExpire</strong>: About to expire.</li>
+         * <li><strong>expired</strong>: Expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +225,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer fullDomainCount;
 
         /**
-         * <p>The expiration time of the instance, in UNIX timestamp format. If no certificate has been issued, this value is empty.</p>
+         * <p>The expiration time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -237,7 +243,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The start time of the instance, in UNIX timestamp format. If no certificate has been issued, this value is empty.</p>
+         * <p>The start time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -246,7 +252,11 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long instanceStartTime;
 
         /**
-         * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>BUY: official certificate.</li>
+         * <li>TEST: test certificate.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -261,7 +271,7 @@ public class ListInstancesResponseBody extends TeaModel {
          * <li><strong>RSA_3072</strong></li>
          * <li><strong>RSA_4096</strong></li>
          * <li><strong>ECC_256</strong></li>
-         * <li><strong>SM2</strong>.</li>
+         * <li><strong>SM2</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +281,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String keyAlgorithm;
 
         /**
-         * <p>The end time of the instance purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</p>
+         * <p>The end time of the instance purchase, in timestamp format. Used to determine the purchase duration of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>
@@ -280,7 +290,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long orderEndTime;
 
         /**
-         * <p>The start time of the instance purchase, in UNIX timestamp format. This value is used to determine the refund time limit.</p>
+         * <p>The start time of the instance purchase, in timestamp format. Used to determine the refund time limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1801324800000</p>

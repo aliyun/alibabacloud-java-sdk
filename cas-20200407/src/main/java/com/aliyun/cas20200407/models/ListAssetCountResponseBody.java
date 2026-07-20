@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAssetCountResponseBody extends TeaModel {
     /**
-     * <p>A list of resource statistics.</p>
+     * <p>The resource statistics list.</p>
      */
     @NameInMap("AssetCountList")
     public java.util.List<ListAssetCountResponseBodyAssetCountList> assetCountList;
 
     /**
-     * <p>The current page number. The default value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAssetCountResponseBody extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -29,7 +29,7 @@ public class ListAssetCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries returned on each page. This parameter is not returned if you do not specify \<code>ShowSize\\</code> in the request.</p>
+     * <p>The number of entries displayed on each page for paging. This parameter is not returned if ShowSize is not specified in the request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListAssetCountResponseBody extends TeaModel {
     public Long showSize;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -111,7 +111,7 @@ public class ListAssetCountResponseBody extends TeaModel {
         public Integer certificateCount;
 
         /**
-         * <p>The date when the statistics were collected.</p>
+         * <p>The statistics date. The value is a UNIX timestamp accurate to seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1767680115423</p>

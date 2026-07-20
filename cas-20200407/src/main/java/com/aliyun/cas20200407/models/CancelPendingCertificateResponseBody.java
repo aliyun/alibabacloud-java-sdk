@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelPendingCertificateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678-1234-1234-1234-123456789ABC</p>

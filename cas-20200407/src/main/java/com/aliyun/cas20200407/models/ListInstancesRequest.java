@@ -16,10 +16,10 @@ public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The status of the certificate. Valid values:</p>
      * <ul>
-     * <li><strong>issued</strong>: issued.</li>
-     * <li><strong>revoked</strong>: revoked.</li>
-     * <li><strong>willExpire</strong>: about to expire.</li>
-     * <li><strong>expired</strong>: expired.</li>
+     * <li><strong>issued</strong>: Issued.</li>
+     * <li><strong>revoked</strong>: Revoked.</li>
+     * <li><strong>willExpire</strong>: About to expire.</li>
+     * <li><strong>expired</strong>: Expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,11 @@ public class ListInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</p>
+     * <p>The instance type. Valid values:</p>
+     * <ul>
+     * <li>BUY: official certificate.</li>
+     * <li>TEST: test certificate.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>

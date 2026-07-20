@@ -14,16 +14,16 @@ public class ListAssetCountRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The expiration date of the certificate.</p>
+     * <p>The certificate expiration date, in seconds. The value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
-     * <p>2020-07-13</p>
+     * <p>1767807000000</p>
      */
     @NameInMap("EndDate")
     public Long endDate;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 50.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,10 +32,10 @@ public class ListAssetCountRequest extends TeaModel {
     public Long showSize;
 
     /**
-     * <p>The date of certificate issuance.</p>
+     * <p>The certificate issuance date, in seconds. The value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
-     * <p>2018-07-13</p>
+     * <p>1767202200000</p>
      */
     @NameInMap("StartDate")
     public Long startDate;

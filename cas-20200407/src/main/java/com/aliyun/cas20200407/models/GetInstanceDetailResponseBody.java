@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceDetailResponseBody extends TeaModel {
     /**
-     * <p>Specifies whether automatic managed renewal is enabled. Valid values:</p>
+     * <p>Indicates whether automatic managed renewal is enabled. Valid values:</p>
      * <ul>
      * <li>enable: Enabled.</li>
      * <li>disable: Disabled.</li>
@@ -66,7 +66,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String certificateName;
 
     /**
-     * <p>The end time of the latest certificate. The value is a UNIX timestamp. This field is empty if no certificate has been issued.</p>
+     * <p>The end time of the latest certificate, in timestamp format. This value is empty if no certificate has been issued.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -78,7 +78,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Long certificateNotBefore;
 
     /**
-     * <p>The revocation time of the latest certificate. The value is a UNIX timestamp.</p>
+     * <p>The revocation time of the latest certificate, in timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -196,7 +196,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String generateCsrMethod;
 
     /**
-     * <p>The expiration time of the instance. The value is a UNIX timestamp. If no certificate has been issued, this field is empty.</p>
+     * <p>The expiration time of the instance, in timestamp format. This value is empty if no certificate has been issued.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -214,7 +214,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The start time of the instance. The value is a UNIX timestamp. If no certificate has been issued, this field is empty.</p>
+     * <p>The start time of the instance, in timestamp format. This value is empty if no certificate has been issued.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -242,7 +242,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      * <li><strong>RSA_3072</strong></li>
      * <li><strong>RSA_4096</strong></li>
      * <li><strong>ECC_256</strong></li>
-     * <li><strong>SM2</strong>.</li>
+     * <li><strong>SM2</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -252,7 +252,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public String keyAlgorithm;
 
     /**
-     * <p>The end time of the instance purchase. The value is a UNIX timestamp. You can use this value to determine the purchase duration of the instance.</p>
+     * <p>The end time of the instance purchase, in timestamp format. This value is used to determine the purchase duration of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -261,7 +261,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Long orderEndTime;
 
     /**
-     * <p>The start time of the instance purchase. The value is a UNIX timestamp. You can use this value to determine the refund time limit.</p>
+     * <p>The start time of the instance purchase, in timestamp format. This value is used to determine the refund time limit.</p>
      * 
      * <strong>example:</strong>
      * <p>1801324800000</p>
@@ -345,7 +345,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
      * </li>
      * <li><p>payed: the instance upgrade has been paid.</p>
      * </li>
-     * <li><p>issued: the latest certificate has been issued after the instance upgrade.</p>
+     * <li><p>issued: the latest certificate has been issued for the upgraded instance.</p>
      * </li>
      * </ul>
      * 
@@ -719,7 +719,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         public String dingGroupType;
 
         /**
-         * <p>The link to join the expert service DingTalk group.</p>
+         * <p>The URL for joining the expert service DingTalk group.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://123.com">https://123.com</a></p>
@@ -768,7 +768,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
     public static class GetInstanceDetailResponseBodyDomainValidationList extends TeaModel {
         /**
-         * <p>The CNAME record value for verification-free authorization. This field may be empty.</p>
+         * <p>The CNAME record value for verification-free authorization. This value may be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>123.com</p>
@@ -822,7 +822,7 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         public String validationType;
 
         /**
-         * <p>The host record value for validation.</p>
+         * <p>The validation host record value.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

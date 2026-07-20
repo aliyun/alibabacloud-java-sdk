@@ -3,9 +3,18 @@ package com.aliyun.cas20200407.models;
 
 import com.aliyun.tea.*;
 
-public class ListContactRequest extends TeaModel {
+public class ListCompaniesRequest extends TeaModel {
     /**
-     * <p>The current page number for paged queries. Default value: <strong>1</strong>.</p>
+     * <p>The company ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51001</p>
+     */
+    @NameInMap("CompanyId")
+    public Long companyId;
+
+    /**
+     * <p>The page number of the current page. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +23,10 @@ public class ListContactRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The search keyword, such as a keyword in the name, email address, or phone number.</p>
+     * <p>The search keyword. For example, a keyword for the company name, province, country code, or city.</p>
      * 
      * <strong>example:</strong>
-     * <p>186</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -31,12 +40,20 @@ public class ListContactRequest extends TeaModel {
     @NameInMap("ShowSize")
     public Integer showSize;
 
-    public static ListContactRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListContactRequest self = new ListContactRequest();
+    public static ListCompaniesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListCompaniesRequest self = new ListCompaniesRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListContactRequest setCurrentPage(Integer currentPage) {
+    public ListCompaniesRequest setCompanyId(Long companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    public Long getCompanyId() {
+        return this.companyId;
+    }
+
+    public ListCompaniesRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
@@ -44,7 +61,7 @@ public class ListContactRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ListContactRequest setKeyword(String keyword) {
+    public ListCompaniesRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -52,7 +69,7 @@ public class ListContactRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListContactRequest setShowSize(Integer showSize) {
+    public ListCompaniesRequest setShowSize(Integer showSize) {
         this.showSize = showSize;
         return this;
     }
