@@ -27,6 +27,9 @@ public class GetAliYunSafeCenterResultShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ListInstanceStatus</p>
      */
     @NameInMap("InterfaceCode")
     public String interfaceCode;
@@ -34,6 +37,10 @@ public class GetAliYunSafeCenterResultShrinkRequest extends TeaModel {
     @NameInMap("ListInstancesRequest")
     public String listInstancesRequestShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-guangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

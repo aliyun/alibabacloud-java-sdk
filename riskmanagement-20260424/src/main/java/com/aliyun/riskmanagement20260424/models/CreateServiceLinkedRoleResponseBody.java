@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateServiceLinkedRoleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B4C9A14-94E6-5EEB-BF39-7DACCE9AC0D6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     }
 
     public static class CreateServiceLinkedRoleResponseBodyDataBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>E00516EB-A56A-5381-ACFE-E618DBC3D0EA</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

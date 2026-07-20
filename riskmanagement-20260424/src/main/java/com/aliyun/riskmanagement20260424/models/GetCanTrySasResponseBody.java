@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetCanTrySasResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetCanTrySasResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6B48613E-86DE-5411-BDBE-429C80B45F3F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,20 @@ public class GetCanTrySasResponseBody extends TeaModel {
     }
 
     public static class GetCanTrySasResponseBodyDataBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CanTry")
         public Integer canTry;
 
         @NameInMap("CanTryVersions")
         public java.util.List<Integer> canTryVersions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TryType")
         public Integer tryType;
 
@@ -109,6 +133,10 @@ public class GetCanTrySasResponseBody extends TeaModel {
         @NameInMap("Data")
         public GetCanTrySasResponseBodyDataBodyData data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0EBD97B8-65AD-52C8-94D5-A0F81E7D70D0</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

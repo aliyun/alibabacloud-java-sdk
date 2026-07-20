@@ -4,15 +4,27 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class InitSasModuleRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AutoBind")
     public Integer autoBind;
 
     @NameInMap("Instances")
     public java.util.List<InitSasModuleRuleRequestInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsTrial")
     public Boolean isTrial;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-guangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -54,15 +66,31 @@ public class InitSasModuleRuleRequest extends TeaModel {
     }
 
     public static class InitSasModuleRuleRequestInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Cores")
         public String cores;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-gw85zjrhsg2sgex7ovfx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>168d374e-f449-4d0b-9556-14f233fa7171</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

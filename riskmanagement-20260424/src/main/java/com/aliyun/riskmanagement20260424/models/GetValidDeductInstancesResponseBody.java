@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetValidDeductInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetValidDeductInstancesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,27 +81,59 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
     }
 
     public static class GetValidDeductInstancesResponseBodyDataBodyDataDeductPackageList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("CurrentPeriodUsed")
         public Long currentPeriodUsed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1737734400000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("InitCapacity")
         public Double initCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>apigateway-hz-96f6659a1490</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>POST_HOST</p>
+         */
         @NameInMap("Module")
         public String module;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PeriodCapacity")
         public Double periodCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1737734400000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CREATE_FAILED</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -161,6 +209,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
     }
 
     public static class GetValidDeductInstancesResponseBodyDataBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanTry")
         public Boolean canTry;
 
@@ -194,6 +246,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         @NameInMap("Data")
         public GetValidDeductInstancesResponseBodyDataBodyData data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A6FB9AC3-4431-538F-BA8A-2A13AEA208A4</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

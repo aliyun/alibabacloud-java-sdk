@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeCloudCenterInstancesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B4C9A14-94E6-5EEB-BF39-7DACCE9AC0D6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,183 +81,464 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudCenterInstancesResponseBodyDataBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NO</p>
+         */
         @NameInMap("AlarmStatus")
         public String alarmStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FC2U0JVHWS49S2OT</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>guokent</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AssetType")
         public String assetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
+         */
         @NameInMap("AssetTypeName")
         public String assetTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1627974044000</p>
+         */
         @NameInMap("AuthModifyTime")
         public Long authModifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("AuthVersion")
         public Integer authVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>免费版</p>
+         */
         @NameInMap("AuthVersionName")
         public String authVersionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Bind")
         public Boolean bind;
 
+        /**
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("BindFileProtectType")
         public String bindFileProtectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("ClientStatus")
         public String clientStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("ClientSubStatus")
         public String clientSubStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cb703cb0ba6bd40d4a6d8de5bff050fb9</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>auto-cn-heyuan</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("Cores")
         public Integer cores;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Intel(R) Xeon(R) Platinum 8269CY CPU @ 2.50GHz</p>
+         */
         @NameInMap("CpuInfo")
         public String cpuInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1607365213000</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ExposedStatus")
         public Integer exposedStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0,1,2</p>
+         */
         @NameInMap("Flag")
         public Integer flag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALIYUN</p>
+         */
         @NameInMap("FlagName")
         public String flagName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86d30f8b0e124aadb7ef3197f9dbd1f5</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("GroupTrace")
         public String groupTrace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YES</p>
+         */
         @NameInMap("HasContainer")
         public String hasContainer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YES</p>
+         */
         @NameInMap("HcStatus")
         public String hcStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HealthCheckCount")
         public Integer healthCheckCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Importance")
         public Integer importance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ls-cn-tl32rf**008</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ra-supabase-22u1iv3hr**5v9</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47.1**.52.125</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.16.1**.245</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>114.55.*4.*6</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>172.31.XX.XX,172.171.XX.XX</p>
+         */
         @NameInMap("IpListString")
         public String ipListString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3.10.0-1127.19.1.el7.x86_64</p>
+         */
         @NameInMap("Kernel")
         public String kernel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1637592907000</p>
+         */
         @NameInMap("LastLoginTimestamp")
         public Long lastLoginTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:13:3e:31:13:39,02:12:67:b8:<strong>:</strong></p>
+         */
         @NameInMap("MacListString")
         public String macListString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Mem")
         public String mem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>slsshpcorlsmetrics</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>linux</p>
+         */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliOS7U2-x86-64</p>
+         */
         @NameInMap("OsName")
         public String osName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("PodCount")
         public Integer podCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PostPaidFlag")
         public Integer postPaidFlag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhouxxxx</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;account&quot;: 0,
+         *       &quot;appNum&quot;: 0,
+         *       &quot;asapVulCount&quot;: 0,
+         *       &quot;baselineHigh&quot;: 0,
+         *       &quot;baselineLow&quot;: 0,
+         *       &quot;baselineMedium&quot;: 0,
+         *       &quot;baselineNum&quot;: 0,
+         *       &quot;cmsNum&quot;: 0,
+         *       &quot;containerAsap&quot;: 0,
+         *       &quot;containerLater&quot;: 0,
+         *       &quot;containerNntf&quot;: 0,
+         *       &quot;containerRemind&quot;: 0,
+         *       &quot;containerSerious&quot;: 0,
+         *       &quot;containerSuspicious&quot;: 0,
+         *       &quot;cveNum&quot;: 0,
+         *       &quot;emgNum&quot;: 0,
+         *       &quot;health&quot;: 0,
+         *       &quot;imageBaselineHigh&quot;: 0,
+         *       &quot;imageBaselineLow&quot;: 0,
+         *       &quot;imageBaselineMedium&quot;: 0,
+         *       &quot;imageBaselineNum&quot;: 0,
+         *       &quot;imageMaliciousFileRemind&quot;: 0,
+         *       &quot;imageMaliciousFileSerious&quot;: 0,
+         *       &quot;imageMaliciousFileSuspicious&quot;: 0,
+         *       &quot;imageVulAsap&quot;: 0,
+         *       &quot;imageVulLater&quot;: 0,
+         *       &quot;imageVulNntf&quot;: 0,
+         *       &quot;laterVulCount&quot;: 0,
+         *       &quot;newSuspicious&quot;: 0,
+         *       &quot;nntfVulCount&quot;: 0,
+         *       &quot;remindNum&quot;: 0,
+         *       &quot;scaNum&quot;: 0,
+         *       &quot;seriousNum&quot;: 0,
+         *       &quot;suspNum&quot;: 0,
+         *       &quot;suspicious&quot;: 0,
+         *       &quot;sysNum&quot;: 0,
+         *       &quot;trojan&quot;: 0,
+         *       &quot;uuid&quot;: &quot;inet-37316411-37fe-4b72-b245-346a2721****&quot;,
+         *       &quot;vul&quot;: 0,
+         *       &quot;weakPWNum&quot;: 0
+         * }</p>
+         */
         @NameInMap("RiskCount")
         public String riskCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NO</p>
+         */
         @NameInMap("RiskStatus")
         public String riskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("SafeEventCount")
         public String safeEventCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsw-76jlywunsif09bp15p</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pre_20250714_idpt_adjust</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d8586ab8be4549e3815995858d277763</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>app:test,type:lingjun</p>
+         */
         @NameInMap("TagResources")
         public String tagResources;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1f0459ee-ed49-6484-8958-4f10f61e6362</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IDC</p>
+         */
         @NameInMap("VendorName")
         public String vendorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("VendorUid")
         public String vendorUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VendorUserName</p>
+         */
         @NameInMap("VendorUserName")
         public String vendorUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2zek7v0z4r6lbp02xckei</p>
+         */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("VulCount")
         public Integer vulCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>YES</p>
+         */
         @NameInMap("VulStatus")
         public String vulStatus;
 
@@ -733,18 +1030,38 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudCenterInstancesResponseBodyDataBodyPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m1NGAAAAAABzLzIwMjQwMg==</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -802,9 +1119,17 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("PageInfo")
         public DescribeCloudCenterInstancesResponseBodyDataBodyPageInfo pageInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20EBDE7B-AA36-5D60-9DCA-151C48EDB9F8</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

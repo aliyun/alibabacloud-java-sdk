@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class QuerySecurityCheckReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public QuerySecurityCheckReportResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,52 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
     }
 
     public static class QuerySecurityCheckReportResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CloudSecurityGuide")
         public Integer cloudSecurityGuide;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ConfigCheckNumber")
         public Integer configCheckNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ContactCheckNumber")
         public Integer contactCheckNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RiskEventNumber")
         public Integer riskEventNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SasCheckNumber")
         public Integer sasCheckNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SecurityStatus")
         public Integer securityStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exist risk event。</p>
+         */
         @NameInMap("SuggestionText")
         public String suggestionText;
 

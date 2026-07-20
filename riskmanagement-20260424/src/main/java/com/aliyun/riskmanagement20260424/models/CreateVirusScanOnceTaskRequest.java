@@ -4,12 +4,24 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class CreateVirusScanOnceTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rm-0iw73ro05vcwn6ntq</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12.3*.22.11</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

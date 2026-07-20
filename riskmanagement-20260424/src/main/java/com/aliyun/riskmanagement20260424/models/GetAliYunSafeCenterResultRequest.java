@@ -27,6 +27,9 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ListInstanceStatus</p>
      */
     @NameInMap("InterfaceCode")
     public String interfaceCode;
@@ -34,6 +37,10 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     @NameInMap("ListInstancesRequest")
     public GetAliYunSafeCenterResultRequestListInstancesRequest listInstancesRequest;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-guangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -123,12 +130,24 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestCreateSimilarSecurityEventsQueryTaskRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>629755508</p>
+         */
         @NameInMap("SecurityEventId")
         public Long securityEventId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("SimilarEventScenarioCode")
         public String similarEventScenarioCode;
 
@@ -167,6 +186,10 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
         @NameInMap("InstanceId")
         public java.util.List<String> instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -194,12 +217,20 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestDescribeSecurityEventOperationStatusRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("SecurityEventIds")
         public java.util.List<String> securityEventIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0BC3B4E600002A9F000048BCDCE7E710</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
@@ -235,9 +266,17 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestDescribeSimilarSecurityEventsRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1689135</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
@@ -265,9 +304,17 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestGetAssetDetailByUuidRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9A75F21D3993C0A2B094A4AB132890B2</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -295,36 +342,80 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestHandleSecurityEventsRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fbbb90731fbb6df57c933173182d01a5</p>
+         */
         @NameInMap("FileMd5")
         public String fileMd5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>flyfish-lfp-wy.release</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>api-shared-vpc-002</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123.56.127.180</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MarkBatch")
         public String markBatch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;gmtModified&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;asd&quot;},{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;loginUser&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;vff&quot;}]</p>
+         */
         @NameInMap("MarkMissParam")
         public String markMissParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block_ip</p>
+         */
         @NameInMap("OperationCode")
         public String operationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;expireTime\&quot;:1719588943551,\&quot;subOperation\&quot;:\&quot;killAndQuaraFileByMd5andPath\&quot;}</p>
+         */
         @NameInMap("OperationParams")
         public String operationParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
@@ -435,27 +526,59 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestHandleSimilarSecurityEventsRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cfw_elasticity_public_cn-g4t3nkh3i00b</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>203.10*.44.71</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>offline_handled</p>
+         */
         @NameInMap("OperationCode")
         public String operationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;expireTime\&quot;:1767687685917}</p>
+         */
         @NameInMap("OperationParams")
         public String operationParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>220.2*3.155.93</p>
+         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12221</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
@@ -531,9 +654,17 @@ public class GetAliYunSafeCenterResultRequest extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultRequestListInstancesRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;2ad1ae67295445f598017499dc****&quot;, &quot;2ad1ae67295445f598017123dc****&quot;]</p>
+         */
         @NameInMap("InstanceIds")
         public String instanceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

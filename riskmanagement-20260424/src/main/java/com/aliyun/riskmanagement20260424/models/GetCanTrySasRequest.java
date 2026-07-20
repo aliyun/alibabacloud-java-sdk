@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetCanTrySasRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-guangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,9 +36,17 @@ public class GetCanTrySasRequest extends TeaModel {
     }
 
     public static class GetCanTrySasRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FromEcs")
         public Boolean fromEcs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("Lang")
         public String lang;
 

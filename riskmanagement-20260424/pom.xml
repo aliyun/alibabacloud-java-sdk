@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>riskmanagement20260424</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>riskmanagement20260424</name>
   <description>Alibaba Cloud RiskManagement (20260424) SDK for Java

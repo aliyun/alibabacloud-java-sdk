@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class BindAuthToMachineRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,30 +36,62 @@ public class BindAuthToMachineRequest extends TeaModel {
     }
 
     public static class BindAuthToMachineRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AuthVersion")
         public Integer authVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AutoBind")
         public Integer autoBind;
 
         @NameInMap("Bind")
         public java.util.List<String> bind;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BindAll")
         public Boolean bindAll;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;name\&quot;:\&quot;clientStatus\&quot;,\&quot;value\&quot;:\&quot;online\&quot;},{\&quot;name\&quot;:\&quot;authVersion\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
+         */
         @NameInMap("Criteria")
         public String criteria;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsPreBind")
         public Integer isPreBind;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("LogicalExp")
         public String logicalExp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>level2</p>
+         */
         @NameInMap("NtmVersion")
         public Long ntmVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>263076506250432</p>
+         */
         @NameInMap("PreBindOrderId")
         public Long preBindOrderId;
 

@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UpdatePostPaidBindRelResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6E20BFD0-AA91-594F-B5A7-32CED4777DA0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
     }
 
     public static class UpdatePostPaidBindRelResponseBodyDataBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BindCount")
         public Long bindCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62A7DCE2-7D9C-511B-919E-0F46A9D19AE6</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("ResultCode")
         public Integer resultCode;
 

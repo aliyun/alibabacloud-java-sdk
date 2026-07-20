@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRecordAnalysisResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9b57f0fcf98181df8d8487d1cc91cb8d</p>
+     */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fc312aa0c32ba8a6147db6221fb1c1ee</p>
+     */
     @NameInMap("UniqueInfo")
     public String uniqueInfo;
 
     @NameInMap("UniqueTagList")
     public java.util.List<GetAlertRecordAnalysisResultRequestUniqueTagList> uniqueTagList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ebde6d4e3e4aba728962eec43a69196e9J7tt7H47Pc</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
@@ -65,27 +81,59 @@ public class GetAlertRecordAnalysisResultRequest extends TeaModel {
     }
 
     public static class GetAlertRecordAnalysisResultRequestUniqueTagList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10a19b654e73ff079ede61ce3f4465e0</p>
+         */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ChooseLike")
         public Boolean chooseLike;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pc-bp19up785757dz800</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-rj9c7d4bli38***tuym</p>
+         */
         @NameInMap("MachineInstanceId")
         public String machineInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-27 00:00:00</p>
+         */
         @NameInMap("QueryTime")
         public String queryTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BusinessLicense</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fc312aa0c32ba8a6147db6221fb1c1ee</p>
+         */
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3309e55fcb1ed8d4bc6af098e62e0353RNabnQSO1bx</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

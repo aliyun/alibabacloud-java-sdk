@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeSuspEventsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>67BD8435-6624-5484-A75D-170231B51615</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodyDataBodySuspEventsDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>login with unusual location</p>
+         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/etc/crontab</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/etc/crontab</p>
+         */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -117,12 +149,24 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodyDataBodySuspEventsEventNotes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Note")
         public String note;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2859481</p>
+         */
         @NameInMap("NoteId")
         public Long noteId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
+         */
         @NameInMap("NoteTime")
         public String noteTime;
 
@@ -158,9 +202,17 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodyDataBodySuspEventsTacticItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Malicious scripts-Malicious script code execution</p>
+         */
         @NameInMap("TacticDisplayName")
         public String tacticDisplayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TA0042</p>
+         */
         @NameInMap("TacticId")
         public String tacticId;
 
@@ -188,174 +240,388 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodyDataBodySuspEvents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Advanced")
         public Boolean advanced;
 
+        /**
+         * <strong>example:</strong>
+         * <p>反弹shell_拦截</p>
+         */
         @NameInMap("AlarmEventName")
         public String alarmEventName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
+         */
         @NameInMap("AlarmEventNameDisplay")
         public String alarmEventNameDisplay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
+         */
         @NameInMap("AlarmEventType")
         public String alarmEventType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
+         */
         @NameInMap("AlarmEventTypeDisplay")
         public String alarmEventTypeDisplay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8df914418f****</p>
+         */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dfield-cloud-service-prod</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoBreaking")
         public Boolean autoBreaking;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanBeDealOnLine")
         public Boolean canBeDealOnLine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanCancelFault")
         public Boolean canCancelFault;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c8c87dae64c9947269091f36cfa9adc87</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ContainHwMode")
         public Boolean containHwMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>95878ef8779fae3dd82126812edd910402fc550a72f9bce87e56a4435d018384</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sha256:2e5a3b0ae5f452b3cb458789a9a7542ef40035a84318469a8528c5e444db1****</p>
+         */
         @NameInMap("ContainerImageId")
         public String containerImageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>centos7_apache:v1.0.1</p>
+         */
         @NameInMap("ContainerImageName")
         public String containerImageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("DataSource")
         public String dataSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>webshell</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
         @NameInMap("Details")
         public java.util.List<DescribeSuspEventsResponseBodyDataBodySuspEventsDetails> details;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("DetectSource")
         public String detectSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DisplaySandboxResult")
         public Boolean displaySandboxResult;
 
         @NameInMap("EventNotes")
         public java.util.List<DescribeSuspEventsResponseBodyDataBodySuspEventsEventNotes> eventNotes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EventStatus")
         public Integer eventStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
+         */
         @NameInMap("EventSubType")
         public String eventSubType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasTraceInfo")
         public Boolean hasTraceInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3178</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccdab289-9765-47ef-af50-ba6be09aacd6</p>
+         */
         @NameInMap("ImageUuid")
         public String imageUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-9dp6dwsxdl9z5u1e2f****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nginx</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.137.3*.6</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.36.*6.149</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ce3c41ed427794a7bb3d9da4554fc8039</p>
+         */
         @NameInMap("K8sClusterId")
         public String k8sClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testName</p>
+         */
         @NameInMap("K8sClusterName")
         public String k8sClusterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-bp14a1ay8e0aa9t0****</p>
+         */
         @NameInMap("K8sNodeId")
         public String k8sNodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N/A</p>
+         */
         @NameInMap("K8sNodeName")
         public String k8sNodeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>myapp-pod</p>
+         */
         @NameInMap("K8sPodName")
         public String k8sPodName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("LargeModel")
         public Boolean largeModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
+         */
         @NameInMap("LastTime")
         public String lastTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631699497000</p>
+         */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>remind</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open</p>
+         */
         @NameInMap("MaliciousRuleStatus")
         public String maliciousRuleStatus;
 
         @NameInMap("MarkList")
         public java.util.List<String> markList;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong>1.</strong>&amp;nbsp&amp;nbsppath&amp;nbsp&amp;nbspcontain&amp;nbsp&amp;nbsp232&amp;nbsp&amp;nbsp</p>
+         */
         @NameInMap("MarkMisRules")
         public String markMisRules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Unusual Logon-Login with unusual location</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-26 01:51:01</p>
+         */
         @NameInMap("OccurrenceTime")
         public String occurrenceTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631699497000</p>
+         */
         @NameInMap("OccurrenceTimeStamp")
         public Long occurrenceTimeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kill_and_quara.Success</p>
+         */
         @NameInMap("OperateErrorCode")
         public String operateErrorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("OperateMsg")
         public String operateMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1631699497000</p>
+         */
         @NameInMap("OperateTime")
         public Long operateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SaleVersion")
         public String saleVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>628978308</p>
+         */
         @NameInMap("SecurityEventIds")
         public String securityEventIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>124075**67406</p>
+         */
         @NameInMap("SourceAliUid")
         public Long sourceAliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;[&quot;authority_maintenance&quot;]&quot;</p>
+         */
         @NameInMap("Stages")
         public String stages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AI.false_positive</p>
+         */
         @NameInMap("SupportOperateCode")
         public String supportOperateCode;
 
         @NameInMap("TacticItems")
         public java.util.List<DescribeSuspEventsResponseBodyDataBodySuspEventsTacticItems> tacticItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1dfbdf56c5343b63c4854d08ec20e067</p>
+         */
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9A75F21D3993C0A2B094A4AB132890B2</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -823,21 +1089,41 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeSuspEventsResponseBodyDataBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AD2345D1-A498-58AF-97C0-88940AF87CB7</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
         @NameInMap("SuspEvents")
         public java.util.List<DescribeSuspEventsResponseBodyDataBodySuspEvents> suspEvents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>72</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

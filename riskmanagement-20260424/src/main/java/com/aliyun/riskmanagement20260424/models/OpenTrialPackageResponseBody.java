@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class OpenTrialPackageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public OpenTrialPackageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class OpenTrialPackageResponseBody extends TeaModel {
     }
 
     public static class OpenTrialPackageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5F4B631D-0358-5B7B-8B84-FB924138ED91</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetValidDeductInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-fuzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,12 +36,24 @@ public class GetValidDeductInstancesRequest extends TeaModel {
     }
 
     public static class GetValidDeductInstancesRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sas_cspm_dp_cn-***80001</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sas_vul_dp_cn</p>
+         */
         @NameInMap("Modules")
         public String modules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class BindAuthToMachineResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public BindAuthToMachineResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEE90F8C-EDC2-5394-953B-D07A121612B5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class BindAuthToMachineResponseBody extends TeaModel {
     }
 
     public static class BindAuthToMachineResponseBodyDataBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("BindCount")
         public Integer bindCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("InsufficientCoreCount")
         public Integer insufficientCoreCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InsufficientEcsCount")
         public Integer insufficientEcsCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F799C1E4-D4C6-5964-A6D1-4BA9CCF105F2</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ResultCode")
         public Integer resultCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("UnBindCount")
         public Integer unBindCount;
 

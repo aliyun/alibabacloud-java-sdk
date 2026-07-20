@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class StartDisposalToolServiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DisposalTool</p>
+     */
     @NameInMap("AuthType")
     public String authType;
 

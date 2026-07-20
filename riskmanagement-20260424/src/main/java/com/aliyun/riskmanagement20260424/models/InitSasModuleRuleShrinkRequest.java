@@ -4,15 +4,27 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class InitSasModuleRuleShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AutoBind")
     public Integer autoBind;
 
     @NameInMap("Instances")
     public String instancesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsTrial")
     public Boolean isTrial;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-guangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

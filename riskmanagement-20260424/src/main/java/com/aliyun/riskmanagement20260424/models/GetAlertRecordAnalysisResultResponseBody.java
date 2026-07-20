@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAlertRecordAnalysisResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful‌</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +81,73 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
     }
 
     public static class GetAlertRecordAnalysisResultResponseBodyDataUniqueTagList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>179deb12f25baac9b1e2909c419bcb1f</p>
+         */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1248751055158884</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_code</p>
+         */
         @NameInMap("AnalysisCode")
         public String analysisCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>exception_alert</p>
+         */
         @NameInMap("AnalysisResult")
         public String analysisResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ChooseLike")
         public Boolean chooseLike;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110.22.*8.111</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-adadasd-a**</p>
+         */
         @NameInMap("MachineInstanceId")
         public String machineInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>auto_breaking</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>390317ce81d28bbbd83c05a90b39cd6c</p>
+         */
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bb3051ca-c0dd-4da2-91be-ea5c80926132</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -183,6 +239,12 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
     }
 
     public static class GetAlertRecordAnalysisResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("AnalysisCode")
         public String analysisCode;
 

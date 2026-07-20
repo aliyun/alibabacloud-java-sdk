@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetAliYunSafeCenterResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3C107939-59BD-5EB9-B250-39559C830A85</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,48 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
     }
 
     public static class GetAliYunSafeCenterResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AgentStatus")
         public Boolean agentStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EcsInstanceStatus")
         public Boolean ecsInstanceStatus;
 
         @NameInMap("InstanceIds")
         public java.util.List<Long> instanceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8169D779-3391-541F-936B-11F4EC09AD0D</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SwasInstanceStatus")
         public Boolean swasInstanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12313123</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TaskStatus")
         public Boolean taskStatus;
 

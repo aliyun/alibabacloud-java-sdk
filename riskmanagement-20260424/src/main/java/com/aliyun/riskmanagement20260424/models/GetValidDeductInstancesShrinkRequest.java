@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class GetValidDeductInstancesShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-fuzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

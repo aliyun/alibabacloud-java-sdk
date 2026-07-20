@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class InitSasModuleRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public InitSasModuleRuleResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2E130B0F-9E69-52FA-84FC-187FE1BA9489</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
     }
 
     public static class InitSasModuleRuleResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>14492571-0707-5130-85B4-4DDABB6BDF76</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

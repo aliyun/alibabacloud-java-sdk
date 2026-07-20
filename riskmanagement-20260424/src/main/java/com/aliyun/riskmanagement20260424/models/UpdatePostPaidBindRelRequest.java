@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class UpdatePostPaidBindRelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,12 +36,20 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     }
 
     public static class UpdatePostPaidBindRelRequestSdkRequestBindAction extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BindAll")
         public Boolean bindAll;
 
         @NameInMap("UuidList")
         public java.util.List<String> uuidList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -73,15 +85,27 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
     }
 
     public static class UpdatePostPaidBindRelRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AutoBind")
         public Integer autoBind;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AutoBindVersion")
         public Integer autoBindVersion;
 
         @NameInMap("BindAction")
         public java.util.List<UpdatePostPaidBindRelRequestSdkRequestBindAction> bindAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UpdateIfNecessary")
         public Boolean updateIfNecessary;
 

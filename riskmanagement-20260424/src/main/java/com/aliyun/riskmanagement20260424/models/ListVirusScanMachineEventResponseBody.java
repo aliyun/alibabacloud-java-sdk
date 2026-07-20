@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class ListVirusScanMachineEventResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListVirusScanMachineEventResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful‌</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F0AD8096-E7A2-573D-ACF0-7CE9050CDE38</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,45 +81,97 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanLatestTaskStatistic extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CompleteMachine")
         public Integer completeMachine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testMahine1</p>
+         */
         @NameInMap("MachineName")
         public String machineName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>92</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>medium</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SafeMachine")
         public Integer safeMachine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScanMachine")
         public Integer scanMachine;
 
         @NameInMap("ScanPath")
         public java.util.List<String> scanPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1681145862000</p>
+         */
         @NameInMap("ScanTime")
         public Long scanTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("ScanType")
         public String scanType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SuspiciousCount")
         public Integer suspiciousCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SuspiciousMachine")
         public Integer suspiciousMachine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t-0mqu9dhpi365dp5iyf</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UnCompleteMachine")
         public Integer unCompleteMachine;
 
@@ -227,15 +295,31 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListDataDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>download_url</p>
+         */
         @NameInMap("InfoType")
         public String infoType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Trojan Path</p>
+         */
         @NameInMap("NameDisplay")
         public String nameDisplay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>getopt</p>
+         */
         @NameInMap("ValueDisplay")
         public String valueDisplay;
 
@@ -282,24 +366,52 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
         @NameInMap("Details")
         public java.util.List<ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListDataDetails> details;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123-2CcoavZnCXrJKqk2KQKxp9WGwup</p>
+         */
         @NameInMap("EventId")
         public Long eventId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>恶意脚本代码执行</p>
+         */
         @NameInMap("EventName")
         public String eventName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-wz92q7m5hsbgfhdss***</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47.57.*1.65</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47.57.*1.65</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1682046733628</p>
+         */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>remind</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -375,12 +487,24 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyDataVirusScanMachineEventListPageInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -446,6 +570,10 @@ public class ListVirusScanMachineEventResponseBody extends TeaModel {
     }
 
     public static class ListVirusScanMachineEventResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1E222AB5-5C2B-50AD-8A96-E704AF80F2A0</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class DescribeSuspEventsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-guangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,111 +36,241 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
 
     public static class DescribeSuspEventsRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6838133766c37077d0515b0b557e6510</p>
+         */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;
 
         @NameInMap("AssetsTypeList")
         public java.util.List<String> assetsTypeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxljob-02f023138826b</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instanceId</p>
+         */
         @NameInMap("ContainerFieldName")
         public String containerFieldName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ca9b91db58356b41af2932e8048310ab7daa415701fa62d823cf4f0406d5ce02</p>
+         */
         @NameInMap("ContainerFieldValue")
         public String containerFieldValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public String currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("Dealed")
         public String dealed;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("DetectSource")
         public String detectSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WEBSHELL</p>
+         */
         @NameInMap("EventNames")
         public String eventNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sas</p>
+         */
         @NameInMap("From")
         public String from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18768</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3165</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>serious</p>
+         */
         @NameInMap("Levels")
         public String levels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MultiAccountActionType")
         public Integer multiAccountActionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs-xxx</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("OperateErrorCodeList")
         public java.util.List<String> operateErrorCodeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-06 13:50:38</p>
+         */
         @NameInMap("OperateTimeEnd")
         public String operateTimeEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-06 13:50:38</p>
+         */
         @NameInMap("OperateTimeStart")
         public String operateTimeStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>恶意脚本</p>
+         */
         @NameInMap("ParentEventTypes")
         public String parentEventTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5815612291408486</p>
+         */
         @NameInMap("ResourceDirectoryAccountId")
         public Long resourceDirectoryAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lastTime</p>
+         */
         @NameInMap("SortColumn")
         public String sortColumn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>asc</p>
+         */
         @NameInMap("SortType")
         public String sortType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Source")
         public String source;
 
         @NameInMap("SourceAliUids")
         public java.util.List<Long> sourceAliUids;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2409:8a55:3827:cb50:5ad9:d5ff:fe87:f48c</p>
+         */
         @NameInMap("SourceIp")
         public String sourceIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
         @NameInMap("StrictMode")
         public String strictMode;
 
         @NameInMap("SupportOperateCodeList")
         public java.util.List<String> supportOperateCodeList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TA0003</p>
+         */
         @NameInMap("TacticId")
         public String tacticId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>containerId</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-06 13:50:38</p>
+         */
         @NameInMap("TimeEnd")
         public String timeEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-06 13:50:38</p>
+         */
         @NameInMap("TimeStart")
         public String timeStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f82680d9fdcb74a520fa385b7e9105b7</p>
+         */
         @NameInMap("UniqueInfo")
         public String uniqueInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>inet-eae09bb8-32b1-413b-a8ff-23932e043209</p>
+         */
         @NameInMap("Uuids")
         public String uuids;
 

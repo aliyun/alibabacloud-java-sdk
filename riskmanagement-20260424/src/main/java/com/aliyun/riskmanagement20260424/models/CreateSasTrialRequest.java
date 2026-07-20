@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class CreateSasTrialRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +36,10 @@ public class CreateSasTrialRequest extends TeaModel {
     }
 
     public static class CreateSasTrialRequestSdkRequestRequestForm extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>for poc</p>
+         */
         @NameInMap("TryReason")
         public String tryReason;
 
@@ -51,18 +59,34 @@ public class CreateSasTrialRequest extends TeaModel {
     }
 
     public static class CreateSasTrialRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FromEcs")
         public Boolean fromEcs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>en</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
         @NameInMap("RequestForm")
         public CreateSasTrialRequestSdkRequestRequestForm requestForm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TryType")
         public Integer tryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TryVersion")
         public Integer tryVersion;
 

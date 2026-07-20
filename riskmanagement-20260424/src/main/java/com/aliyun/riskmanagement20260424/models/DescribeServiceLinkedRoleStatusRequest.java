@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceLinkedRoleStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +36,10 @@ public class DescribeServiceLinkedRoleStatusRequest extends TeaModel {
     }
 
     public static class DescribeServiceLinkedRoleStatusRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForSas</p>
+         */
         @NameInMap("ServiceLinkedRole")
         public String serviceLinkedRole;
 

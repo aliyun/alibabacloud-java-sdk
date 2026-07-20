@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateVirusScanOnceTaskResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful‌</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>739705BB-B0EF-554B-B3A8-383F4F93E067</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
     }
 
     public static class CreateVirusScanOnceTaskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>windows</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1D345A09-5ABD-593C-9C26-5C2B28632CD6</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87af4d19-38fc-408d-9549-2bf7b6c2a4b9</p>
+         */
         @NameInMap("SelectionKey")
         public Integer selectionKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>all_instance</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9ef1a02e1de695cb7f9fea2c6c145853eklEsP2JP0Z</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

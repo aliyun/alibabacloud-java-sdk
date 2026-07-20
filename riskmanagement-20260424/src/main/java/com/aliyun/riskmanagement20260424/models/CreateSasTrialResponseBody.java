@@ -4,18 +4,34 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class CreateSasTrialResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public CreateSasTrialResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class CreateSasTrialResponseBody extends TeaModel {
     }
 
     public static class CreateSasTrialResponseBodyDataBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>F7C74264-DF12-56D5-869B-C4B11DD88BA2</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 

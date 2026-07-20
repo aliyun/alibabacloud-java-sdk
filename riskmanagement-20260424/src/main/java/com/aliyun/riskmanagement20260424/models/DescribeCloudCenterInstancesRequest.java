@@ -4,6 +4,10 @@ package com.aliyun.riskmanagement20260424.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,39 +36,87 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     }
 
     public static class DescribeCloudCenterInstancesRequestSdkRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;contactIds\&quot;:[\&quot;job-658854766790086656\&quot;,\&quot;job-658854801112113152\&quot;]}</p>
+         */
         @NameInMap("Criteria")
         public String criteria;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0,10,13</p>
+         */
         @NameInMap("Flags")
         public String flags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Importance")
         public Integer importance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("LogicalExp")
         public String logicalExp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("MachineTypes")
         public String machineTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAAAAZak7VOTMl2OSt/xmc4J6gbg4Z5eXuWnrvKgOsGARL76TVbKERXHXKNFurqjtfDdRw==</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NoGroupTrace")
         public Boolean noGroupTrace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1587359978118481</p>
+         */
         @NameInMap("ResourceDirectoryAccountId")
         public String resourceDirectoryAccountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UseNextToken")
         public Boolean useNextToken;
 
