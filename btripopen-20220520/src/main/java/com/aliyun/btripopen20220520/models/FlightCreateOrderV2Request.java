@@ -4,15 +4,31 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightCreateOrderV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>异步下单key</p>
+     */
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ali_00001</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>云妹</p>
+     */
     @NameInMap("buyer_name")
     public String buyerName;
 
@@ -24,22 +40,35 @@ public class FlightCreateOrderV2Request extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>外部订单号</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("total_price_cent")
     public Long totalPriceCent;
 
@@ -135,15 +164,31 @@ public class FlightCreateOrderV2Request extends TeaModel {
     }
 
     public static class FlightCreateOrderV2RequestContactInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:btrip@example.com">btrip@example.com</a></p>
+         */
         @NameInMap("contact_email")
         public String contactEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>云妹</p>
+         */
         @NameInMap("contact_name")
         public String contactName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>131****8888</p>
+         */
         @NameInMap("contact_phone")
         public String contactPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("send_msg_to_passenger")
         public Boolean sendMsgToPassenger;
 
@@ -189,88 +234,164 @@ public class FlightCreateOrderV2Request extends TeaModel {
     public static class FlightCreateOrderV2RequestTravelers extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1991-01-22</p>
          */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_nation")
         public String certNation;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110101********1234</p>
          */
         @NameInMap("cert_no")
         public String certNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2099-03-12</p>
+         */
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>华北成本中心</p>
+         */
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cost_00001</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dept_00001</p>
+         */
         @NameInMap("dept_id")
         public String deptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>产品部</p>
+         */
         @NameInMap("dept_name")
         public String deptName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("gender")
         public Integer gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州大河发展有限公司</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality_code")
         public String nationalityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>销售部测试</p>
          */
         @NameInMap("passenger_name")
         public String passengerName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131****8888</p>
          */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pro_0001</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>华北项目一</p>
+         */
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>R19235929348590</p>
+         */
         @NameInMap("tax_number")
         public String taxNumber;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18155711459129970552412</p>
          */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 

@@ -4,17 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderChangeApplyShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123122</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3685792244476194816</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>因个人原因导致的行程变更</p>
      */
     @NameInMap("reason")
     public String reason;
@@ -27,6 +37,9 @@ public class HotelOrderChangeApplyShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1402002197440511306</p>
      */
     @NameInMap("sale_order_id")
     public String saleOrderId;

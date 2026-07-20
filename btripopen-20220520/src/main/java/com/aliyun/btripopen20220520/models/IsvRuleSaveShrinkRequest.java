@@ -4,11 +4,18 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IsvRuleSaveShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("apply_need")
     public Boolean applyNeed;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>authorizedPerson</p>
      */
     @NameInMap("book_type")
     public String bookType;
@@ -16,17 +23,27 @@ public class IsvRuleSaveShrinkRequest extends TeaModel {
     @NameInMap("bookuser_list")
     public String bookuserListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("rule_need")
     public Boolean ruleNeed;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("status")
     public Integer status;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("user_id")
     public String userId;

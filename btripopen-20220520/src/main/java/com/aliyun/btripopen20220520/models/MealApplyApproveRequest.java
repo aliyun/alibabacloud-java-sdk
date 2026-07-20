@@ -4,26 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealApplyApproveRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-12 16:12:53</p>
+     */
     @NameInMap("operate_time")
     public String operateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>同意</p>
+     */
     @NameInMap("remark")
     public String remark;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("status")
     public Integer status;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>62141</p>
      */
     @NameInMap("user_id")
     public String userId;

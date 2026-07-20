@@ -7,6 +7,10 @@ public class ChannelCorpCreateHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aqfrefd2321</p>
+     */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 

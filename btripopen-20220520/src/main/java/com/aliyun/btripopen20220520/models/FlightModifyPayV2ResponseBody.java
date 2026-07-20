@@ -4,21 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightModifyPayV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module</p>
+     */
     @NameInMap("module")
     public java.util.Map<String, ?> module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210bc59716837025964391120d3a5e</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 

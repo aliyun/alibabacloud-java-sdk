@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class QueryCorpDetailInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public QueryCorpDetailInfoResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-<strong><strong>-</strong></strong>-****-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce********056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,21 +96,45 @@ public class QueryCorpDetailInfoResponseBody extends TeaModel {
     }
 
     public static class QueryCorpDetailInfoResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>btrip5txxxxxxx</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里巴巴</p>
+         */
         @NameInMap("corp_name")
         public String corpName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open12********012jq</p>
+         */
         @NameInMap("open_agent_id")
         public String openAgentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("super_admin_name")
         public String superAdminName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>138xxxx0001</p>
+         */
         @NameInMap("super_admin_phone")
         public String superAdminPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1234</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

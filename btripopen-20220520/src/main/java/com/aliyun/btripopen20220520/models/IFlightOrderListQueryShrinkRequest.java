@@ -13,15 +13,31 @@ public class IFlightOrderListQueryShrinkRequest extends TeaModel {
     @NameInMap("booker_id")
     public String bookerIdShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd HH:mm:ss</p>
+     */
     @NameInMap("end_date")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4ZGViODFlYmM3MYzM4</p>
+     */
     @NameInMap("scroll_id")
     public String scrollId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyy-MM-dd HH:mm:ss</p>
+     */
     @NameInMap("start_date")
     public String startDate;
 

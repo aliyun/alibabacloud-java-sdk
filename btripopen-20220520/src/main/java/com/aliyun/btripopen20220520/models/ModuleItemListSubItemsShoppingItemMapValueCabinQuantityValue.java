@@ -4,36 +4,76 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleItemListSubItemsShoppingItemMapValueCabinQuantityValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>R</p>
+     */
     @NameInMap("cabin")
     public String cabin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("cabin_class")
     public String cabinClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>经济舱</p>
+     */
     @NameInMap("cabin_class_name")
     public String cabinClassName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>舱位等级描述</p>
+     */
     @NameInMap("cabin_class_memo")
     public String cabinClassMemo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>国内特殊说明</p>
+     */
     @NameInMap("specification")
     public String specification;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A</p>
+     */
     @NameInMap("quantity")
     public String quantity;
 
     @NameInMap("link_cabins")
     public java.util.List<String> linkCabins;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("reshop_change_cabin")
     public Boolean reshopChangeCabin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>儿童舱位类型</p>
+     */
     @NameInMap("child_cabin_type")
     public Integer childCabinType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>婴儿基准舱位</p>
+     */
     @NameInMap("infant_basic_cabin")
     public String infantBasicCabin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("inner_cabin_class")
     public Integer innerCabinClass;
 

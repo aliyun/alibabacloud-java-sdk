@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ApplyExternalNodeStatusUpdateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("node_id")
     public String nodeId;
@@ -15,6 +18,9 @@ public class ApplyExternalNodeStatusUpdateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PROCESS_AGREE</p>
      */
     @NameInMap("process_action_result")
     public String processActionResult;
@@ -49,18 +55,38 @@ public class ApplyExternalNodeStatusUpdateRequest extends TeaModel {
     }
 
     public static class ApplyExternalNodeStatusUpdateRequestOperationRecords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>评论啊</p>
+         */
         @NameInMap("comment")
         public String comment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-28 11:33:28</p>
+         */
         @NameInMap("operate_time")
         public String operateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("operator_name")
         public String operatorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AGREE</p>
+         */
         @NameInMap("result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROCESS_APPROVE</p>
+         */
         @NameInMap("type")
         public String type;
 

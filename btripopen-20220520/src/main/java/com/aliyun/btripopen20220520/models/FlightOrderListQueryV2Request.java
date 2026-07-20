@@ -13,15 +13,31 @@ public class FlightOrderListQueryV2Request extends TeaModel {
     @NameInMap("depart_id")
     public java.util.List<String> departId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("end_date")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("page_Size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4ZGViODFlYmM3MYzM4</p>
+     */
     @NameInMap("scroll_id")
     public String scrollId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("start_date")
     public String startDate;
 
@@ -31,9 +47,17 @@ public class FlightOrderListQueryV2Request extends TeaModel {
     @NameInMap("thirdpart_approve_id")
     public java.util.List<String> thirdpartApproveId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("update_end_date")
     public String updateEndDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01 00:00:00</p>
+     */
     @NameInMap("update_start_date")
     public String updateStartDate;
 

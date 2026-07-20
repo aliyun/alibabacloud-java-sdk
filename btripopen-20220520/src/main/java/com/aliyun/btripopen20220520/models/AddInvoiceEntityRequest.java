@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class AddInvoiceEntityRequest extends TeaModel {
     /**
+     * <p>The list of entities.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("entities")
     public java.util.List<AddInvoiceEntityRequestEntities> entities;
 
     /**
+     * <p>The third-party invoice ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4854821</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;
@@ -39,19 +44,37 @@ public class AddInvoiceEntityRequest extends TeaModel {
 
     public static class AddInvoiceEntityRequestEntities extends TeaModel {
         /**
+         * <p>The entity ID, which can be an employee ID, department ID, role ID, or third-party department ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("entity_id")
         public String entityId;
 
         /**
+         * <p>The entity name, which can be an employee name, department name, role name, or third-party department name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         @NameInMap("entity_name")
         public String entityName;
 
         /**
+         * <p>The entity type. Valid values:</p>
+         * <ul>
+         * <li>1: employee</li>
+         * <li>2: department</li>
+         * <li>3: role</li>
+         * <li>4: third-party department</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("entity_type")
         public String entityType;

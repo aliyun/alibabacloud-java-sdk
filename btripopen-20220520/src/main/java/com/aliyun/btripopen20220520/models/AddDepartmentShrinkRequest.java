@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddDepartmentShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统研发部</p>
      */
     @NameInMap("dept_name")
     public String deptName;
@@ -15,10 +18,17 @@ public class AddDepartmentShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dept123</p>
      */
     @NameInMap("out_dept_id")
     public String outDeptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dept456</p>
+     */
     @NameInMap("out_dept_pid")
     public String outDeptPid;
 

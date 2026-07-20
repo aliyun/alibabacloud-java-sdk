@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightExceedApplyQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>175634</p>
+     */
     @NameInMap("apply_id")
     public Long applyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024060710160003300008684</p>
+     */
     @NameInMap("business_instance_id")
     public String businessInstanceId;
 

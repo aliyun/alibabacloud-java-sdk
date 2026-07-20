@@ -10,12 +10,24 @@ public class MealApplyAddRequest extends TeaModel {
     @NameInMap("apply_user")
     public MealApplyAddRequestApplyUser applyUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("cost_center_id")
     public Long costCenterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;extend_key&quot;:&quot;extend_value&quot;}</p>
+     */
     @NameInMap("extend_field")
     public String extendField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("invoice_id")
     public Long invoiceId;
 
@@ -25,36 +37,65 @@ public class MealApplyAddRequest extends TeaModel {
     @NameInMap("itinerary_list")
     public java.util.List<MealApplyAddRequestItineraryList> itineraryList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("meal_amount")
     public Long mealAmount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
      */
     @NameInMap("meal_cause")
     public String mealCause;
 
+    /**
+     * <strong>example:</strong>
+     * <p>project123</p>
+     */
     @NameInMap("project_code")
     public String projectCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>项目1</p>
+     */
     @NameInMap("project_title")
     public String projectTitle;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("status")
     public Integer status;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1200F00010</p>
+     */
     @NameInMap("third_part_cost_center_id")
     public String thirdPartCostCenterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GA15131</p>
+     */
     @NameInMap("third_part_invoice_id")
     public String thirdPartInvoiceId;
 
@@ -170,6 +211,9 @@ public class MealApplyAddRequest extends TeaModel {
     public static class MealApplyAddRequestApplyUser extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userId1</p>
          */
         @NameInMap("user_id")
         public String userId;
@@ -190,9 +234,17 @@ public class MealApplyAddRequest extends TeaModel {
     }
 
     public static class MealApplyAddRequestItineraryListCities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>330702</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
@@ -228,16 +280,26 @@ public class MealApplyAddRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-05 00:00:00</p>
          */
         @NameInMap("end_date")
         public String endDate;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-05 00:00:00</p>
          */
         @NameInMap("start_date")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2134</p>
+         */
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 

@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarOrderQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1012000000000000</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000000</p>
+     */
     @NameInMap("sub_order_id")
     public Long subOrderId;
 

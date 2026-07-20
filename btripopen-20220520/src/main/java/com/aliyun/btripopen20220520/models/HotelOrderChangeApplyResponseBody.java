@@ -4,21 +4,44 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderChangeApplyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module</p>
+     */
     @NameInMap("module")
     public HotelOrderChangeApplyResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6E9ABA14-5135-58FB-9DFC-C751B5855605</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>215045ec17018285034106091e8ba9</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +99,10 @@ public class HotelOrderChangeApplyResponseBody extends TeaModel {
     }
 
     public static class HotelOrderChangeApplyResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123445443444</p>
+         */
         @NameInMap("change_order_id")
         public String changeOrderId;
 

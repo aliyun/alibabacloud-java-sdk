@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class TicketChangingApplyRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis1234</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mid1243</p>
      */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("is_voluntary")
     public Integer isVoluntary;
 
@@ -27,19 +37,33 @@ public class TicketChangingApplyRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1s8837sh991hsj92h</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>自愿改签测试</p>
+     */
     @NameInMap("reason")
     public String reason;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>us88s2bsbin22hjusd8i</p>
      */
     @NameInMap("session_id")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("whether_retry")
     public Boolean whetherRetry;
 
@@ -115,18 +139,27 @@ public class TicketChangingApplyRequest extends TeaModel {
     public static class TicketChangingApplyRequestModifyFlightInfoListPassengerInfoList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA1703</p>
          */
         @NameInMap("origin_flight_no")
         public String originFlightNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("out_user_id")
         public String outUserId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         @NameInMap("passenger_name")
         public String passengerName;
@@ -165,27 +198,43 @@ public class TicketChangingApplyRequest extends TeaModel {
     public static class TicketChangingApplyRequestModifyFlightInfoList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabin")
         public String cabin;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         @NameInMap("dep_city")
         public String depCity;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-00-00 00:00:00</p>
          */
         @NameInMap("dep_date")
         public String depDate;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CA1704</p>
          */
         @NameInMap("flight_no")
         public String flightNo;

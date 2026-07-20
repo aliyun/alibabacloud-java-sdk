@@ -4,13 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class KeywordSuggestInfo extends TeaModel {
+    /**
+     * <p>The address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州湖墅南路XX号</p>
+     */
     @NameInMap("address")
     public String address;
 
+    /**
+     * <p>The business area.</p>
+     */
     @NameInMap("business_area_with_city")
     public KeywordSuggestInfo businessAreaWithCity;
 
     /**
+     * <p>The city code.</p>
+     * 
      * <strong>example:</strong>
      * <p>300100</p>
      */
@@ -18,6 +29,8 @@ public class KeywordSuggestInfo extends TeaModel {
     public Integer cityCode;
 
     /**
+     * <p>The city name.</p>
+     * 
      * <strong>example:</strong>
      * <p>杭州</p>
      */
@@ -25,23 +38,35 @@ public class KeywordSuggestInfo extends TeaModel {
     public String cityName;
 
     /**
+     * <p>The display name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>杭州东站</p>
+     * <p>杭州JW万豪酒店</p>
      */
     @NameInMap("display_name")
     public String displayName;
 
     /**
+     * <p>The hotel ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>53853318</p>
      */
     @NameInMap("hotel_id")
     public String hotelId;
 
+    /**
+     * <p>The icon.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
+     */
     @NameInMap("icon")
     public String icon;
 
     /**
+     * <p>The rating.</p>
+     * 
      * <strong>example:</strong>
      * <p>4.8分</p>
      */
@@ -49,6 +74,8 @@ public class KeywordSuggestInfo extends TeaModel {
     public String point;
 
     /**
+     * <p>The hotel starting price, in CNY.</p>
+     * 
      * <strong>example:</strong>
      * <p>524</p>
      */
@@ -56,18 +83,28 @@ public class KeywordSuggestInfo extends TeaModel {
     public String price;
 
     /**
+     * <p>The region.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("region")
     public Integer region;
 
+    /**
+     * <p>The type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("type")
     public Integer type;
 
     /**
+     * <p>The type description.</p>
+     * 
      * <strong>example:</strong>
-     * <p>景点</p>
+     * <p>酒店</p>
      */
     @NameInMap("type_desc")
     public String typeDesc;

@@ -4,15 +4,31 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10023</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("cabin_type")
     public Integer cabinType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open12igetbis4o07v10B1TlOWcM00</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
@@ -27,6 +43,9 @@ public class IntlFlightOtaSearchShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;

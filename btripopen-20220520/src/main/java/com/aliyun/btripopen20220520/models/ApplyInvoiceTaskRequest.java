@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ApplyInvoiceTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-12-01</p>
      */
     @NameInMap("bill_date")
     public String billDate;
@@ -38,87 +41,194 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
     }
 
     public static class ApplyInvoiceTaskRequestInvoiceTaskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("contact")
         public String contact;
 
+        /**
+         * <strong>example:</strong>
+         * <p>接收电子发票的电子邮箱地址</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("flight_invoice_fee")
         public String flightInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3.12</p>
+         */
         @NameInMap("fu_point_invoice_fee")
         public String fuPointInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("hotel_normal_invoice_fee")
         public String hotelNormalInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("hotel_special_invoice_fee")
         public String hotelSpecialInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ie_vehicle_normal_invoice_fee")
         public String ieVehicleNormalInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("international_flight_invoice_fee")
         public String internationalFlightInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("international_hotel_invoice_fee")
         public String internationalHotelInvoiceFee;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("invoice_third_part_id")
         public String invoiceThirdPartId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("invoice_type")
         public Integer invoiceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>余杭区仓前街道XX路1号XX大厦101</p>
+         */
         @NameInMap("mail_address")
         public String mailAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州市</p>
+         */
         @NameInMap("mail_city")
         public String mailCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省杭州市余杭区仓前街道XX路1号XX大厦101</p>
+         */
         @NameInMap("mail_full_address")
         public String mailFullAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙江省</p>
+         */
         @NameInMap("mail_province")
         public String mailProvince;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("meal_normal_invoice_fee")
         public String mealNormalInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("meal_tc7_normal_invoice_fee")
         public String mealTc7NormalInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("penalty_fee")
         public String penaltyFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试备注</p>
+         */
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.02</p>
+         */
         @NameInMap("service_fee")
         public String serviceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234567890</p>
+         */
         @NameInMap("telephone")
         public String telephone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("train_acceleration_package_invoice_fee")
         public String trainAccelerationPackageInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("train_invoice_fee")
         public String trainInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("vacation_normal_invoice_fee")
         public String vacationNormalInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("vas_mall_special_invoice_fee")
         public String vasMallSpecialInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("vehicle_invoice_fee")
         public String vehicleInvoiceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("vehicle_normal_invoice_fee")
         public String vehicleNormalInvoiceFee;
 

@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelSearchResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -79,6 +99,10 @@ public class HotelSearchResponseBody extends TeaModel {
         @NameInMap("label_name")
         public java.util.List<String> labelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-¥3</p>
+         */
         @NameInMap("money_desc")
         public String moneyDesc;
 
@@ -106,18 +130,34 @@ public class HotelSearchResponseBody extends TeaModel {
     }
 
     public static class HotelSearchResponseBodyModuleItemsDiscountDesc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("cash_reduce_total")
         public String cashReduceTotal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F3会员价</p>
+         */
         @NameInMap("dinamic_label")
         public String dinamicLabel;
 
         @NameInMap("discount_detail")
         public java.util.List<HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail> discountDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>最终优惠以下单页为准</p>
+         */
         @NameInMap("sub_title")
         public String subTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>每晚优惠说明</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -169,60 +209,132 @@ public class HotelSearchResponseBody extends TeaModel {
     }
 
     public static class HotelSearchResponseBodyModuleItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>万豪</p>
+         */
         @NameInMap("brand_name")
         public String brandName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1902</p>
+         */
         @NameInMap("btand_code")
         public String btandCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
         @NameInMap("discount_desc")
         public HotelSearchResponseBodyModuleItemsDiscountDesc discountDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("distance")
         public Integer distance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("district_code")
         public String districtCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>文一西路998号海创大厦5号楼</p>
+         */
         @NameInMap("hotel_address")
         public String hotelAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>55335212</p>
+         */
         @NameInMap("hotel_code")
         public String hotelCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Business travel hotel</p>
+         */
         @NameInMap("hotel_en_name")
         public String hotelEnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>商旅酒店</p>
+         */
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("hotel_star")
         public String hotelStar;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i3/6000000000003/O1CN01xkZQR41BtPxK1PQCb_!!6000000000003-0-hotel.jpg">https://img.alicdn.com/imgextra/i3/6000000000003/O1CN01xkZQR41BtPxK1PQCb_!!6000000000003-0-hotel.jpg</a></p>
+         */
         @NameInMap("image_url")
         public String imageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_protocol")
         public Boolean isProtocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>119.844005,30.054384</p>
+         */
         @NameInMap("location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("min_price")
         public Double minPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("original_min_price")
         public Double originalMinPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3.2</p>
+         */
         @NameInMap("score")
         public String score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-88886784-8888</p>
+         */
         @NameInMap("tel")
         public String tel;
 
@@ -386,6 +498,10 @@ public class HotelSearchResponseBody extends TeaModel {
     }
 
     public static class HotelSearchResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>173</p>
+         */
         @NameInMap("count")
         public Integer count;
 

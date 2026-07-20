@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelPricePullRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-15</p>
+     */
     @NameInMap("check_in")
     public String checkIn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-15</p>
+     */
     @NameInMap("check_out")
     public String checkOut;
 
+    /**
+     * <strong>example:</strong>
+     * <p>330100</p>
+     */
     @NameInMap("city_code")
     public Integer cityCode;
 
     @NameInMap("hotel_ids")
     public java.util.List<String> hotelIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("payment_type")
     public Integer paymentType;
 

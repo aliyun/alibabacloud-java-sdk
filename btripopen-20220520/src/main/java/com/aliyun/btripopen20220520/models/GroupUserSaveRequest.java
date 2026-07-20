@@ -4,24 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class GroupUserSaveRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123456,654321</p>
+     */
     @NameInMap("base_city_code")
     public String baseCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1999-03-12</p>
+     */
     @NameInMap("birthday")
     public String birthday;
 
     @NameInMap("cert_list")
     public java.util.List<GroupUserSaveRequestCertList> certList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>M</p>
+     */
     @NameInMap("gender")
     public String gender;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("job_no")
     public String jobNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18000000000</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce/shi</p>
+     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
@@ -33,12 +57,18 @@ public class GroupUserSaveRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("user_id")
     public String userId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
      */
     @NameInMap("user_name")
     public String userName;
@@ -129,18 +159,38 @@ public class GroupUserSaveRequest extends TeaModel {
     }
 
     public static class GroupUserSaveRequestCertList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2099-03-12</p>
+         */
         @NameInMap("cert_expired_time")
         public String certExpiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
@@ -195,23 +245,41 @@ public class GroupUserSaveRequest extends TeaModel {
         @NameInMap("depart_ids")
         public java.util.List<String> departIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:btrip@alibaba-inc.com">btrip@alibaba-inc.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("leave_status")
         public Integer leaveStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("manager_user_id")
         public String managerUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("position_level")
         public String positionLevel;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>btrip123</p>
          */
         @NameInMap("sub_corp_id")
         public String subCorpId;

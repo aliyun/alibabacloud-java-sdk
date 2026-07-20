@@ -4,30 +4,57 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightListingSearchV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CA</p>
+     */
     @NameInMap("airline_code")
     public String airlineCode;
 
     @NameInMap("cabin_type_list")
     public java.util.List<Integer> cabinTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("direct_only")
     public Boolean directOnly;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_multi_class_price")
     public Boolean needMultiClassPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("need_query_service_fee")
     public Boolean needQueryServiceFee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("need_share_flight")
     public Boolean needShareFlight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_y_c_best_price")
     public Boolean needYCBestPrice;
 
@@ -39,12 +66,18 @@ public class FlightListingSearchV2Request extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("search_mode")
     public Integer searchMode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("trip_type")
     public Integer tripType;
@@ -143,24 +176,52 @@ public class FlightListingSearchV2Request extends TeaModel {
     }
 
     public static class FlightListingSearchV2RequestSearchJourneysSelectedFlights extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PKX</p>
+         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-01 07:10:00</p>
+         */
         @NameInMap("flight_time")
         public String flightTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO3925</p>
+         */
         @NameInMap("market_flight_no")
         public String marketFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CX601</p>
+         */
         @NameInMap("operate_flight_no")
         public String operateFlightNo;
 
@@ -230,18 +291,27 @@ public class FlightListingSearchV2Request extends TeaModel {
     public static class FlightListingSearchV2RequestSearchJourneys extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HGH</p>
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BJS</p>
          */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-01</p>
          */
         @NameInMap("dep_date")
         public String depDate;

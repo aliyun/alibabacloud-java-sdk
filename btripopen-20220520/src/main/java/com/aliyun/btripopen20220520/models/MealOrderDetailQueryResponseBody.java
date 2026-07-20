@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealOrderDetailQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public MealOrderDetailQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9BCDD5DE-E6CB-5C25-93B9-9BE178A0AA56</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,69 +98,157 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class MealOrderDetailQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>118526587</p>
+         */
         @NameInMap("apply_id")
         public Long applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024032522001423601409393178</p>
+         */
         @NameInMap("corp_code_order_id")
         public String corpCodeOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dingaa15ca45cba9ee744a5</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("corp_pay_amount")
         public Long corpPayAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("corp_refund_amount")
         public Long corpRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>团建用餐</p>
+         */
         @NameInMap("meal_reason")
         public String mealReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>商旅火锅店（杭州店）</p>
+         */
         @NameInMap("merchant_name")
         public String merchantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1034088398073015303</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_sub_status")
         public Integer orderSubStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>到店餐饮</p>
+         */
         @NameInMap("order_type")
         public String orderType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("pay_amount")
         public Long payAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pay_type")
         public Integer payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("person_pay_amount")
         public Long personPayAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("person_refund_amount")
         public Long personRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://url1,http://url1">http://url1,http://url1</a></p>
+         */
         @NameInMap("receipt_image_urls")
         public String receiptImageUrls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("refund_amount")
         public Long refundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>差旅用餐</p>
+         */
         @NameInMap("scene_name")
         public String sceneName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1711702782</p>
+         */
         @NameInMap("settle_time")
         public String settleTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024073128454753</p>
+         */
         @NameInMap("third_part_apply_id")
         public String thirdPartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17509140000</p>
+         */
         @NameInMap("user_alipay_id")
         public String userAlipayId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>014134681304653773</p>
+         */
         @NameInMap("user_id")
         public String userId;
 

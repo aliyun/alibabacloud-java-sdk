@@ -7,11 +7,18 @@ public class TravelStandardRelateAddShrinkRequest extends TeaModel {
     @NameInMap("add_list")
     public String addListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("from_group")
     public Boolean fromGroup;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6516571</p>
      */
     @NameInMap("rule_id")
     public Long ruleId;

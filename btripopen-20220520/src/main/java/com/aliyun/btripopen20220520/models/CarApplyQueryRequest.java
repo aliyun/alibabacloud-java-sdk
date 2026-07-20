@@ -4,21 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarApplyQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-03-18 20:26:56</p>
+     */
     @NameInMap("created_end_at")
     public String createdEndAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-03-18 20:26:56</p>
+     */
     @NameInMap("created_start_at")
     public String createdStartAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_number")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>apply1</p>
+     */
     @NameInMap("third_part_apply_id")
     public String thirdPartApplyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>userid</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

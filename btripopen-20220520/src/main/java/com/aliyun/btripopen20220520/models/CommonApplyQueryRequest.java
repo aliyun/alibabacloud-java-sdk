@@ -4,18 +4,33 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CommonApplyQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1003366164</p>
+     */
     @NameInMap("apply_id")
     public Long applyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("biz_category")
     public Integer bizCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024060510000003300006205</p>
+     */
     @NameInMap("business_instance_id")
     public String businessInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>第三方用户id</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

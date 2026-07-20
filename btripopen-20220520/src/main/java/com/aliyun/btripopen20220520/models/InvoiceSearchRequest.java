@@ -4,12 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceSearchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("third_part_id")
     public String thirdPartId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试抬头</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

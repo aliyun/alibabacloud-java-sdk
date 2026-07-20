@@ -96,27 +96,59 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModulePassengeRefundFeeDetailListRefundFeeDetailRefundReShopFeeDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>21000</p>
+         */
         @NameInMap("non_refundable_re_shop_handling_fee")
         public Long nonRefundableReShopHandlingFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("non_refundable_re_shop_upgrade_fee")
         public Long nonRefundableReShopUpgradeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("non_refundable_tax_diff_fee")
         public Long nonRefundableTaxDiffFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10002340021</p>
+         */
         @NameInMap("re_shop_apply_id")
         public String reShopApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14000</p>
+         */
         @NameInMap("re_shop_refund_amount")
         public Long reShopRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14000</p>
+         */
         @NameInMap("re_shop_service_refund_amount")
         public Long reShopServiceRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("re_shop_upgrade_refund_amount")
         public Long reShopUpgradeRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("refund_tax_diff_amount")
         public Long refundTaxDiffAmount;
 
@@ -192,45 +224,97 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModulePassengeRefundFeeDetailListRefundFeeDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12400</p>
+         */
         @NameInMap("already_used_total_amount")
         public Long alreadyUsedTotalAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21000</p>
+         */
         @NameInMap("non_refundable_re_shop_handling_fee")
         public Long nonRefundableReShopHandlingFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("non_refundable_re_shop_upgrade_fee")
         public Long nonRefundableReShopUpgradeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("non_refundable_tax_diff_fee")
         public Long nonRefundableTaxDiffFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14000</p>
+         */
         @NameInMap("re_shop_refund_amount")
         public Long reShopRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14000</p>
+         */
         @NameInMap("re_shop_service_refund_amount")
         public Long reShopServiceRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("re_shop_upgrade_refund_amount")
         public Long reShopUpgradeRefundAmount;
 
         @NameInMap("refund_re_shop_fee_detail_list")
         public java.util.List<IntlFlightRefundDetailResponseBodyModulePassengeRefundFeeDetailListRefundFeeDetailRefundReShopFeeDetailList> refundReShopFeeDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("refund_tax_diff_amount")
         public Long refundTaxDiffAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>45000</p>
+         */
         @NameInMap("refund_tax_fee")
         public Long refundTaxFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("refund_ticket_fee")
         public Long refundTicketFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("tax_refund_amount")
         public Long taxRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ticket_refund_amount")
         public Long ticketRefundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("total_refund_amount")
         public Long totalRefundAmount;
 
@@ -357,6 +441,10 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
         @NameInMap("segment_key_list")
         public java.util.List<String> segmentKeyList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>784-3553845201</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -384,6 +472,10 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModulePassengeRefundFeeDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100001</p>
+         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
@@ -425,33 +517,73 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModulePassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1996-09-13</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ZHANG/SAN</p>
+         */
         @NameInMap("full_name")
         public String fullName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("gender")
         public Integer gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001101</p>
+         */
         @NameInMap("job_no")
         public String jobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国大陆</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality_code")
         public String nationalityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8432002</p>
+         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>btrip8432002</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -543,39 +675,87 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleRefundOrderInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-16 19:20:00</p>
+         */
         @NameInMap("apply_time")
         public String applyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>该航司暂不支持病退，旅客因病退票均按照自愿退票规定办理，请提交自愿退票</p>
+         */
         @NameInMap("close_reason")
         public String closeReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("handing_amount")
         public Long handingAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025011317110900006</p>
+         */
         @NameInMap("out_refund_apply_id")
         public String outRefundApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("reason_code")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>因个人原因取消行程计划（退票费由个人承担）</p>
+         */
         @NameInMap("reason_desc")
         public String reasonDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10200</p>
+         */
         @NameInMap("refund_amount")
         public Long refundAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000003437017</p>
+         */
         @NameInMap("refund_apply_id")
         public String refundApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000003437020</p>
+         */
         @NameInMap("relation_refund_apply_id")
         public Long relationRefundApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-16 20:20:00</p>
+         */
         @NameInMap("success_time")
         public String successTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("voluntary")
         public Boolean voluntary;
 
@@ -683,12 +863,24 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleSegmentListAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MU</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国东方航空</p>
+         */
         @NameInMap("airline_name")
         public String airlineName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>东航</p>
+         */
         @NameInMap("short_name")
         public String shortName;
 
@@ -724,15 +916,31 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleSegmentListArrAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HKG</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>香港国际机场</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>香港</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T3</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -776,15 +984,31 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleSegmentListDepAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PEK</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>首都国际机场</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>首都</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T1</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -828,12 +1052,24 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleSegmentListFlightShareInfoOperatingAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CA</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国国航</p>
+         */
         @NameInMap("airline_name")
         public String airlineName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>国航</p>
+         */
         @NameInMap("short_name")
         public String shortName;
 
@@ -872,6 +1108,10 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
         @NameInMap("operating_airline_info")
         public IntlFlightRefundDetailResponseBodyModuleSegmentListFlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA0001</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
@@ -899,30 +1139,66 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleSegmentListFlightStopInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("stop_airport")
         public String stopAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>萧山国际机场</p>
+         */
         @NameInMap("stop_airport_name")
         public String stopAirportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T1</p>
+         */
         @NameInMap("stop_arr_term")
         public String stopArrTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 07:25</p>
+         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("stop_city_name")
         public String stopCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T1</p>
+         */
         @NameInMap("stop_dep_term")
         public String stopDepTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 07:45</p>
+         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("stop_time")
         public String stopTime;
 
@@ -1006,9 +1282,17 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleSegmentListLuggageDirectInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dep_city_luggage_direct")
         public Integer depCityLuggageDirect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("stop_city_luggage_direct")
         public Integer stopCityLuggageDirect;
 
@@ -1036,9 +1320,17 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundDetailResponseBodyModuleSegmentListSegmentVisaRemark extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>首尔--签证提示:中国大陆籍旅客需持有护照及中转国签证，请确认证件无误后再购票。</p>
+         */
         @NameInMap("dep_city_visa_remark")
         public String depCityVisaRemark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dep_city_visa_type")
         public Integer depCityVisaType;
 
@@ -1094,81 +1386,165 @@ public class IntlFlightRefundDetailResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public IntlFlightRefundDetailResponseBodyModuleSegmentListArrAirportInfo arrAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HKG</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>香港</p>
+         */
         @NameInMap("arr_city_name")
         public String arrCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 09:25</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
         @NameInMap("dep_airport_info")
         public IntlFlightRefundDetailResponseBodyModuleSegmentListDepAirportInfo depAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>370100</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("dep_city_name")
         public String depCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 07:25</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NS8210</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
         @NameInMap("flight_share_info")
         public IntlFlightRefundDetailResponseBodyModuleSegmentListFlightShareInfo flightShareInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中型机</p>
+         */
         @NameInMap("flight_size")
         public String flightSize;
 
         @NameInMap("flight_stop_info_list")
         public java.util.List<IntlFlightRefundDetailResponseBodyModuleSegmentListFlightStopInfoList> flightStopInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>787</p>
+         */
         @NameInMap("flight_type")
         public String flightType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
         @NameInMap("luggage_direct_info")
         public IntlFlightRefundDetailResponseBodyModuleSegmentListLuggageDirectInfo luggageDirectInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>波音</p>
+         */
         @NameInMap("manufacturer")
         public String manufacturer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小食</p>
+         */
         @NameInMap("meal_desc")
         public String mealDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("one_more")
         public Integer oneMore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>+1天</p>
+         */
         @NameInMap("one_more_show")
         public String oneMoreShow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CZ5009PKXHKG0616</p>
+         */
         @NameInMap("segment_key")
         public String segmentKey;
 
         @NameInMap("segment_visa_remark")
         public IntlFlightRefundDetailResponseBodyModuleSegmentListSegmentVisaRemark segmentVisaRemark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("share")
         public Boolean share;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中</p>
+         */
         @NameInMap("short_flight_size")
         public String shortFlightSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("stop")
         public Boolean stop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2小时</p>
+         */
         @NameInMap("total_time")
         public String totalTime;
 

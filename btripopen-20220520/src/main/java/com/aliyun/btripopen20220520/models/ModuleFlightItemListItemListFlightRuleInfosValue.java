@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleFlightItemListItemListFlightRuleInfosValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>退改规则简述</p>
+     */
     @NameInMap("refund_change_rule_desc")
     public String refundChangeRuleDesc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>行李额规则简述</p>
+     */
     @NameInMap("baggage_desc")
     public String baggageDesc;
 

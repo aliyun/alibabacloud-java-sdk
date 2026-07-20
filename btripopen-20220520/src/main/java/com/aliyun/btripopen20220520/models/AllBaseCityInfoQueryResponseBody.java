@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AllBaseCityInfoQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public AllBaseCityInfoQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 

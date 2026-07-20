@@ -96,9 +96,17 @@ public class IntlFlightRefundApplyResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundApplyResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025011317110900006</p>
+         */
         @NameInMap("out_refund_apply_id")
         public String outRefundApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000005186043</p>
+         */
         @NameInMap("refund_apply_id")
         public String refundApplyId;
 

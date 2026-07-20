@@ -4,24 +4,60 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AccessTokenResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The response data. <strong>Deprecated. Use the</strong> <code>module</code> <strong>field instead</strong>.</p>
+     */
     @NameInMap("data")
     public AccessTokenResponseBodyData data;
 
+    /**
+     * <p>The response message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("module")
     public AccessTokenResponseBodyModule module;
 
+    /**
+     * <p>The unique identifier of this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>407543AF-<strong><strong>-</strong></strong>-****-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The global trace identifier of the request, typically used for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce********056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -87,9 +123,25 @@ public class AccessTokenResponseBody extends TeaModel {
     }
 
     public static class AccessTokenResponseBodyData extends TeaModel {
+        /**
+         * <p><strong>Deprecated. Use the</strong> <code>module</code> <strong>field instead</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("expire")
         public Long expire;
 
+        /**
+         * <p><strong>Deprecated. Use the</strong> <code>module</code> <strong>field instead</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("token")
         public String token;
 
@@ -117,12 +169,30 @@ public class AccessTokenResponseBody extends TeaModel {
     }
 
     public static class AccessTokenResponseBodyModule extends TeaModel {
+        /**
+         * <p>The validity duration of the token. The initial value is 2 hours (7200000 ms). To prevent token expiration, set the refresh interval to: <strong>5 minutes ≤ interval ≤ 2 hours</strong>. If you refresh within this interval, the token obtained from the previous request remains valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200000</p>
+         */
         @NameInMap("expire")
         public Long expire;
 
+        /**
+         * <p>The time when the token takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652410740914</p>
+         */
         @NameInMap("start")
         public Long start;
 
+        /**
+         * <p>The application access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37***df</p>
+         */
         @NameInMap("token")
         public String token;
 

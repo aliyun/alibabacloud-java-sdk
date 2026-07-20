@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IntlFlightReShopListSearchResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -12,16 +14,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>成功</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("module")
     public IntlFlightReShopListSearchResponseBodyModule module;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
      */
@@ -29,6 +38,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The global trace ID of the request, typically used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>210bc4b116835992457938931db4de</p>
      */
@@ -97,6 +110,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListBestPriceItemSubItemsSegmentPositionList extends TeaModel {
         /**
+         * <p>The journey ordinal number (starting from 0).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -104,6 +119,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer journeyIndex;
 
         /**
+         * <p>The segment ordinal number (starting from 0 within the same journey).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -135,22 +152,35 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListBestPriceItemSubItems extends TeaModel {
         /**
+         * <p>The discount value.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.1</p>
          */
         @NameInMap("discount_num")
         public Double discountNum;
 
+        /**
+         * <p>The list of segment keys contained in the sub-item.</p>
+         */
         @NameInMap("segment_keys")
         public java.util.List<String> segmentKeys;
 
+        /**
+         * <p>The list of segment position information contained in the sub-item.</p>
+         */
         @NameInMap("segment_position_list")
         public java.util.List<IntlFlightReShopListSearchResponseBodyModuleReShopItemListBestPriceItemSubItemsSegmentPositionList> segmentPositionList;
 
+        /**
+         * <p>Key: ADT (adult), CHD (child), or INFANT (infant).</p>
+         */
         @NameInMap("shopping_item_map")
         public java.util.Map<String, ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue> shoppingItemMap;
 
         /**
+         * <p>The unique item ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>07df0bd9-f803-4a50-8449-f4bd675d9939</p>
          */
@@ -206,6 +236,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListBestPriceItem extends TeaModel {
         /**
+         * <p>The item ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>b83e3d6ebb8b44dfb94c763abc66c966_2</p>
          */
@@ -213,15 +245,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String itemId;
 
         /**
+         * <p>The item type. Valid values: normal: standard item. combination: combined special offer.</p>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */
         @NameInMap("item_type")
         public String itemType;
 
+        /**
+         * <p>The pricing information mapped by passenger type.</p>
+         */
         @NameInMap("shopping_item_map")
         public java.util.Map<String, ModuleReShopItemListBestPriceItemShoppingItemMapValue> shoppingItemMap;
 
+        /**
+         * <p>The sub-items. Combined products may have multiple sub-items.</p>
+         */
         @NameInMap("sub_items")
         public java.util.List<IntlFlightReShopListSearchResponseBodyModuleReShopItemListBestPriceItemSubItems> subItems;
 
@@ -266,6 +306,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo extends TeaModel {
         /**
+         * <p>The airline code.</p>
+         * 
          * <strong>example:</strong>
          * <p>CA</p>
          */
@@ -273,6 +315,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airlineCode;
 
         /**
+         * <p>The airline name.</p>
+         * 
          * <strong>example:</strong>
          * <p>中国国航</p>
          */
@@ -280,6 +324,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airlineName;
 
         /**
+         * <p>Indicates whether the airline is a low-cost airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -287,6 +333,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Boolean cheapAirline;
 
         /**
+         * <p>The URL of the airline icon.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://</p>
          */
@@ -294,6 +342,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
+         * <p>The short name of the airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>国航</p>
          */
@@ -349,6 +399,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosArrAirportInfo extends TeaModel {
         /**
+         * <p>The airport code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -356,6 +408,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportCode;
 
         /**
+         * <p>The airport name.</p>
+         * 
          * <strong>example:</strong>
          * <p>萧山国际机场</p>
          */
@@ -363,6 +417,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportName;
 
         /**
+         * <p>The short name of the airport.</p>
+         * 
          * <strong>example:</strong>
          * <p>萧山</p>
          */
@@ -370,6 +426,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportShortName;
 
         /**
+         * <p>The terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T3</p>
          */
@@ -417,6 +475,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosDepAirportInfo extends TeaModel {
         /**
+         * <p>The airport code.</p>
+         * 
          * <strong>example:</strong>
          * <p>PKX</p>
          */
@@ -424,6 +484,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportCode;
 
         /**
+         * <p>The airport name.</p>
+         * 
          * <strong>example:</strong>
          * <p>大兴国际机场</p>
          */
@@ -431,6 +493,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportName;
 
         /**
+         * <p>The short name of the airport.</p>
+         * 
          * <strong>example:</strong>
          * <p>大兴</p>
          */
@@ -438,6 +502,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportShortName;
 
         /**
+         * <p>The terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T3</p>
          */
@@ -485,6 +551,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo extends TeaModel {
         /**
+         * <p>The airline code.</p>
+         * 
          * <strong>example:</strong>
          * <p>CA</p>
          */
@@ -492,6 +560,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airlineCode;
 
         /**
+         * <p>The airline name.</p>
+         * 
          * <strong>example:</strong>
          * <p>中国国航</p>
          */
@@ -499,6 +569,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airlineName;
 
         /**
+         * <p>Indicates whether the airline is a low-cost airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -506,6 +578,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Boolean cheapAirline;
 
         /**
+         * <p>The URL of the airline icon.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://</p>
          */
@@ -513,6 +587,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
+         * <p>The short name of the airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>国航</p>
          */
@@ -567,10 +643,15 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfo extends TeaModel {
+        /**
+         * <p>The operating airline information.</p>
+         */
         @NameInMap("operating_airline_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
 
         /**
+         * <p>The operating carrier flight number. This field has a value only for codeshare flights.</p>
+         * 
          * <strong>example:</strong>
          * <p>CX601</p>
          */
@@ -602,6 +683,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoListStopAirportCountyInfo extends TeaModel {
         /**
+         * <p>The administrative division code.</p>
+         * 
          * <strong>example:</strong>
          * <p>330182</p>
          */
@@ -609,6 +692,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String adcode;
 
         /**
+         * <p>The airport city code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -616,6 +701,9 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportCityCode;
 
         /**
+         * <p>The city name of the airport.
+         * [_single.resp.200.props.module.re_shop_item_list.items.flight_journey_infos.items.flight_segment_infos.items.flight_stop_info</p>
+         * 
          * <strong>example:</strong>
          * <p>杭州</p>
          */
@@ -623,6 +711,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportCityName;
 
         /**
+         * <p>The airport code.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -630,6 +720,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportCode;
 
         /**
+         * <p>The airport name.</p>
+         * 
          * <strong>example:</strong>
          * <p>萧山国际机场</p>
          */
@@ -637,6 +729,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportName;
 
         /**
+         * <p>The parent city name of the airport.</p>
+         * 
          * <strong>example:</strong>
          * <p>杭州</p>
          */
@@ -644,6 +738,11 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airportParentCityName;
 
         /**
+         * <p>The administrative division code of the county-level city where the airport is located.</p>
+         * <blockquote>
+         * <p>Notice: This value is null if the airport is not at the county level.</notice></p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>杭州</p>
          */
@@ -651,6 +750,11 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String countyCityAdcode;
 
         /**
+         * <p>The name of the county-level city where the airport is located.</p>
+         * <blockquote>
+         * <p>Notice: This value is null if the airport is not at the county level.</notice></p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>330182</p>
          */
@@ -658,6 +762,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String countyCityName;
 
         /**
+         * <p>The administrative division code of the prefecture-level city where the airport is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>330182</p>
          */
@@ -665,6 +771,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String prefectureCityAdcode;
 
         /**
+         * <p>The name of the prefecture-level city where the airport is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>杭州</p>
          */
@@ -760,16 +868,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList extends TeaModel {
         /**
+         * <p>The stopover airport.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
         @NameInMap("stop_airport")
         public String stopAirport;
 
+        /**
+         * <p>The county information of the stopover airport.</p>
+         */
         @NameInMap("stop_airport_county_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoListStopAirportCountyInfo stopAirportCountyInfo;
 
         /**
+         * <p>The name of the stopover airport.</p>
+         * 
          * <strong>example:</strong>
          * <p>萧山国际机场</p>
          */
@@ -777,6 +892,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String stopAirportName;
 
         /**
+         * <p>The arrival terminal at the stopover.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -784,6 +901,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String stopArrTerm;
 
         /**
+         * <p>The arrival time at the stopover. Format: yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-13 07:25</p>
          */
@@ -791,6 +910,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String stopArrTime;
 
         /**
+         * <p>The three-letter code of the stopover city.</p>
+         * 
          * <strong>example:</strong>
          * <p>BJS</p>
          */
@@ -798,6 +919,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String stopCityCode;
 
         /**
+         * <p>The name of the stopover city.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京</p>
          */
@@ -805,6 +928,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String stopCityName;
 
         /**
+         * <p>The departure terminal at the stopover.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -812,6 +937,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String stopDepTerm;
 
         /**
+         * <p>The departure time from the stopover. Format: yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-13 09:25</p>
          */
@@ -819,6 +946,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String stopDepTime;
 
         /**
+         * <p>The stopover duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -914,6 +1043,13 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosLuggageDirectInfo extends TeaModel {
         /**
+         * <p>The luggage through-check status for the departure city. Valid values:</p>
+         * <ul>
+         * <li>0: re-check required.</li>
+         * <li>1: through-checked.</li>
+         * <li>null: unknown.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -921,6 +1057,13 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer depCityLuggageDirect;
 
         /**
+         * <p>The luggage through-check status for the departure city. Valid values:</p>
+         * <ul>
+         * <li>0: re-check required.</li>
+         * <li>1: through-checked.</li>
+         * <li>null: unknown.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -952,6 +1095,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosOtherInfo extends TeaModel {
         /**
+         * <p>The aircraft age.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.5年</p>
          */
@@ -959,6 +1104,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String aircraftAge;
 
         /**
+         * <p>The average delay time.</p>
+         * 
          * <strong>example:</strong>
          * <p>平均延误58分钟</p>
          */
@@ -966,6 +1113,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String avgDelayTime;
 
         /**
+         * <p>The flight cancellation rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>10%</p>
          */
@@ -973,6 +1122,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String flightCancelRate;
 
         /**
+         * <p>The jet bridge rate.</p>
+         * 
          * <strong>example:</strong>
          * <p>10%</p>
          */
@@ -980,6 +1131,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String jetBridgeRate;
 
         /**
+         * <p>The on-time rate information.</p>
+         * 
          * <strong>example:</strong>
          * <p>到达准点率90%</p>
          */
@@ -987,6 +1140,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String onTimeRate;
 
         /**
+         * <p>Indicates whether Wi-Fi is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1050,6 +1205,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosSegmentVisaRemark extends TeaModel {
         /**
+         * <p>The transit visa information for the departure city.</p>
+         * 
          * <strong>example:</strong>
          * <p>前往菲律宾的旅客，请确保持有往返纸质行程单以及纸质签证办理登记手续，否则可能会被当地政府拒绝入境</p>
          */
@@ -1057,15 +1214,27 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depCityVisaRemark;
 
         /**
+         * <p>The transit visa type for the departure city. Valid values:</p>
+         * <ul>
+         * <li>0: no transit visa required.</li>
+         * <li>1: transit visa required.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("dep_city_visa_type")
         public Integer depCityVisaType;
 
+        /**
+         * <p>The transit visa information for stopover cities, one entry per stopover city.</p>
+         */
         @NameInMap("stop_city_visa_remarks")
         public java.util.List<String> stopCityVisaRemarks;
 
+        /**
+         * <p>The transit visa types for stopover cities, one entry per stopover city.</p>
+         */
         @NameInMap("stop_city_visa_types")
         public java.util.List<Integer> stopCityVisaTypes;
 
@@ -1110,6 +1279,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosTicketingAirlineInfo extends TeaModel {
         /**
+         * <p>The airline code.</p>
+         * 
          * <strong>example:</strong>
          * <p>CA</p>
          */
@@ -1117,6 +1288,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airlineCode;
 
         /**
+         * <p>The airline name.</p>
+         * 
          * <strong>example:</strong>
          * <p>中国国航</p>
          */
@@ -1124,6 +1297,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String airlineName;
 
         /**
+         * <p>Indicates whether the airline is a low-cost airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1131,6 +1306,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Boolean cheapAirline;
 
         /**
+         * <p>The URL of the airline icon.</p>
+         * 
          * <strong>example:</strong>
          * <p>https://</p>
          */
@@ -1138,6 +1315,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
+         * <p>The short name of the airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>国航</p>
          */
@@ -1192,13 +1371,21 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfos extends TeaModel {
+        /**
+         * <p>The marketing airline information.</p>
+         */
         @NameInMap("airline_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo airlineInfo;
 
+        /**
+         * <p>The arrival airport information.</p>
+         */
         @NameInMap("arr_airport_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosArrAirportInfo arrAirportInfo;
 
         /**
+         * <p>The three-letter code of the arrival city.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -1206,6 +1393,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String arrCityCode;
 
         /**
+         * <p>The name of the arrival city.</p>
+         * 
          * <strong>example:</strong>
          * <p>杭州</p>
          */
@@ -1213,6 +1402,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String arrCityName;
 
         /**
+         * <p>The arrival time. Format: yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-13 09:25</p>
          */
@@ -1220,16 +1411,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String arrTime;
 
         /**
+         * <p>The arrival time with time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-06-06T12:56:34Z</p>
          */
         @NameInMap("arr_time_u_t_c")
         public String arrTimeUTC;
 
+        /**
+         * <p>The departure airport information.</p>
+         */
         @NameInMap("dep_airport_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosDepAirportInfo depAirportInfo;
 
         /**
+         * <p>The three-letter code of the departure city.</p>
+         * 
          * <strong>example:</strong>
          * <p>BJS</p>
          */
@@ -1237,6 +1435,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depCityCode;
 
         /**
+         * <p>The name of the departure city.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京</p>
          */
@@ -1244,6 +1444,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depCityName;
 
         /**
+         * <p>The departure time. Format: yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-13 07:25</p>
          */
@@ -1251,6 +1453,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depTime;
 
         /**
+         * <p>The departure time with time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-06-06T12:56:34Z</p>
          */
@@ -1258,6 +1462,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depTimeUTC;
 
         /**
+         * <p>The total duration of the flight segment in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>320</p>
          */
@@ -1265,26 +1471,38 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer duration;
 
         /**
+         * <p>The flight number.</p>
+         * 
          * <strong>example:</strong>
          * <p>CA2013</p>
          */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <p>The codeshare flight information.</p>
+         */
         @NameInMap("flight_share_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfo flightShareInfo;
 
         /**
+         * <p>The aircraft type name.</p>
+         * 
          * <strong>example:</strong>
          * <p>中型机</p>
          */
         @NameInMap("flight_size")
         public String flightSize;
 
+        /**
+         * <p>The flight stopover list.</p>
+         */
         @NameInMap("flight_stop_info_list")
         public java.util.List<IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList> flightStopInfoList;
 
         /**
+         * <p>The aircraft type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>320</p>
          */
@@ -1292,16 +1510,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String flightType;
 
         /**
+         * <p>The journey index.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <p>Indicates whether luggage is through-checked for the current segment.</p>
+         */
         @NameInMap("luggage_direct_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosLuggageDirectInfo luggageDirectInfo;
 
         /**
+         * <p>The manufacturer.</p>
+         * 
          * <strong>example:</strong>
          * <p>空客</p>
          */
@@ -1309,6 +1534,12 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String manufacturer;
 
         /**
+         * <p>Indicates whether a meal is provided. Valid values:</p>
+         * <ul>
+         * <li>0: no meal.</li>
+         * <li>1: meal provided.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1316,6 +1547,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer meal;
 
         /**
+         * <p>The meal description.</p>
+         * 
          * <strong>example:</strong>
          * <p>小食</p>
          */
@@ -1323,6 +1556,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String mealDesc;
 
         /**
+         * <p>The flight mileage.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -1330,6 +1565,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer miles;
 
         /**
+         * <p>The on-time rate information.</p>
+         * 
          * <strong>example:</strong>
          * <p>90%</p>
          */
@@ -1337,6 +1574,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String onTimeRate;
 
         /**
+         * <p>The number of extra days. For example, 1 indicates that the flight crosses 1 day.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1344,16 +1583,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer oneMore;
 
         /**
+         * <p>The cross-day display text.</p>
+         * 
          * <strong>example:</strong>
          * <p>+1天</p>
          */
         @NameInMap("one_more_show")
         public String oneMoreShow;
 
+        /**
+         * <p>The other information about the flight segment.</p>
+         */
         @NameInMap("other_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosOtherInfo otherInfo;
 
         /**
+         * <p>The segment index, starting from 0 within the same journey.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1361,16 +1607,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer segmentIndex;
 
         /**
+         * <p>The unique key of the segment.</p>
+         * 
          * <strong>example:</strong>
          * <p>KN6728HGHPKX0725</p>
          */
         @NameInMap("segment_key")
         public String segmentKey;
 
+        /**
+         * <p>The transit visa information for the current segment.</p>
+         */
         @NameInMap("segment_visa_remark")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosSegmentVisaRemark segmentVisaRemark;
 
         /**
+         * <p>Indicates whether the flight is a codeshare flight.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1378,6 +1631,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Boolean share;
 
         /**
+         * <p>The short name of the aircraft type.</p>
+         * 
          * <strong>example:</strong>
          * <p>中</p>
          */
@@ -1385,16 +1640,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String shortFlightSize;
 
         /**
+         * <p>Indicates whether the flight has a stopover.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("stop")
         public Boolean stop;
 
+        /**
+         * <p>The ticketing airline information.</p>
+         */
         @NameInMap("ticketing_airline_info")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfosTicketingAirlineInfo ticketingAirlineInfo;
 
         /**
+         * <p>The total duration of the flight segment.</p>
+         * 
          * <strong>example:</strong>
          * <p>5小时20分</p>
          */
@@ -1690,6 +1952,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfos extends TeaModel {
         /**
+         * <p>The three-letter code of the arrival city.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -1697,6 +1961,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String arrCityCode;
 
         /**
+         * <p>The name of the arrival city.</p>
+         * 
          * <strong>example:</strong>
          * <p>杭州</p>
          */
@@ -1704,6 +1970,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String arrCityName;
 
         /**
+         * <p>The arrival time. Format: yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-13 09:25</p>
          */
@@ -1711,6 +1979,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String arrTime;
 
         /**
+         * <p>The three-letter code of the departure city.</p>
+         * 
          * <strong>example:</strong>
          * <p>BJS</p>
          */
@@ -1718,6 +1988,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depCityCode;
 
         /**
+         * <p>The name of the departure city.</p>
+         * 
          * <strong>example:</strong>
          * <p>北京</p>
          */
@@ -1725,6 +1997,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depCityName;
 
         /**
+         * <p>The departure time. Format: yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-13 07:25</p>
          */
@@ -1732,16 +2006,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public String depTime;
 
         /**
+         * <p>The total duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>120</p>
          */
         @NameInMap("duration")
         public Integer duration;
 
+        /**
+         * <p>The flight segment information.</p>
+         */
         @NameInMap("flight_segment_infos")
         public java.util.List<IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfosFlightSegmentInfos> flightSegmentInfos;
 
         /**
+         * <p>The journey index, starting from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1749,6 +2030,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Integer journeyIndex;
 
         /**
+         * <p>The transfer duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1843,9 +2126,15 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopListSearchResponseBodyModuleReShopItemList extends TeaModel {
+        /**
+         * <p>The lowest price item.</p>
+         */
         @NameInMap("best_price_item")
         public IntlFlightReShopListSearchResponseBodyModuleReShopItemListBestPriceItem bestPriceItem;
 
+        /**
+         * <p>The flight journey information.</p>
+         */
         @NameInMap("flight_journey_infos")
         public java.util.List<IntlFlightReShopListSearchResponseBodyModuleReShopItemListFlightJourneyInfos> flightJourneyInfos;
 
@@ -1874,6 +2163,8 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
 
     public static class IntlFlightReShopListSearchResponseBodyModule extends TeaModel {
         /**
+         * <p>Indicates whether polling needs to continue.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1881,16 +2172,23 @@ public class IntlFlightReShopListSearchResponseBody extends TeaModel {
         public Boolean needContinue;
 
         /**
+         * <p>The wait time before the next search request, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
         @NameInMap("next_req_wait_time")
         public Integer nextReqWaitTime;
 
+        /**
+         * <p>The flight list.</p>
+         */
         @NameInMap("re_shop_item_list")
         public java.util.List<IntlFlightReShopListSearchResponseBodyModuleReShopItemList> reShopItemList;
 
         /**
+         * <p>The query record token for external polling.</p>
+         * 
          * <strong>example:</strong>
          * <p>284e692fffdf71e8a49aebbe0657a625</p>
          */

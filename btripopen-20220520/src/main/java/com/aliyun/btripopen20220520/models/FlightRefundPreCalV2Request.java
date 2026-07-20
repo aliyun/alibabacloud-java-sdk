@@ -4,24 +4,44 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightRefundPreCalV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3454043907950204159</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467137</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     @NameInMap("passenger_segment_relations")
     public java.util.List<FlightRefundPreCalV2RequestPassengerSegmentRelations> passengerSegmentRelations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("pre_cal_type")
     public Integer preCalType;
 
     @NameInMap("ticket_nos")
     public java.util.List<String> ticketNos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("voluntary")
     public Boolean voluntary;
 
@@ -87,6 +107,10 @@ public class FlightRefundPreCalV2Request extends TeaModel {
     }
 
     public static class FlightRefundPreCalV2RequestPassengerSegmentRelations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3243028</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 

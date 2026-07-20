@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelIndexInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelIndexInfoResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +96,17 @@ public class HotelIndexInfoResponseBody extends TeaModel {
     }
 
     public static class HotelIndexInfoResponseBodyModuleItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>182873</p>
+         */
         @NameInMap("hotel_id")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("hotel_status")
         public String hotelStatus;
 
@@ -109,9 +137,17 @@ public class HotelIndexInfoResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<HotelIndexInfoResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>182873</p>
+         */
         @NameInMap("page_token")
         public String pageToken;
 

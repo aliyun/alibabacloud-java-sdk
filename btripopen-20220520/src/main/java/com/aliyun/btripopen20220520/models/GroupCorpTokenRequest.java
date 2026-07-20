@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GroupCorpTokenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZzljczY5dnFjNDAwVlNofiwoWX5ZWCxlcjVTKnVoZS0</p>
      */
     @NameInMap("app_secret")
     public String appSecret;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open12g9sfbmm5i07v10wDzRSK9w00</p>
      */
     @NameInMap("corp_id")
     public String corpId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>btripuyxmbg3cs286734u_mow6q</p>
      */
     @NameInMap("sub_corp_id")
     public String subCorpId;

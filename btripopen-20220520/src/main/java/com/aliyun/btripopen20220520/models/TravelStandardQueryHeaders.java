@@ -7,6 +7,12 @@ public class TravelStandardQueryHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>A header parameter obtained from the enterprise access credential operation. Add this parameter to the request header. In HTTP mode, you can use corp_token=value in the URL as an alternative.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>feth00jqwls</p>
+     */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 

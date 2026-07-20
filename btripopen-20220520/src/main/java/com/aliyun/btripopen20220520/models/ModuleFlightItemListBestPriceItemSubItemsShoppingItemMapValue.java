@@ -4,6 +4,12 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue extends TeaModel {
+    /**
+     * <p>id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADT07df0bd9-f803-4a50-8449-f4bd675d9939</p>
+     */
     @NameInMap("id")
     public String id;
 
@@ -54,12 +60,24 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue exten
     }
 
     public static class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSearchPricePriceShowInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.8折</p>
+         */
         @NameInMap("discount_info")
         public String discountInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
         @NameInMap("discount_num")
         public Double discountNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("show_ticket_price")
         public Boolean showTicketPrice;
 
@@ -95,72 +113,166 @@ public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValue exten
     }
 
     public static class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueSearchPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>17400</p>
+         */
         @NameInMap("floor_price")
         public Integer floorPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>121000</p>
+         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17400</p>
+         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17400</p>
+         */
         @NameInMap("original_sell_price")
         public Integer originalSellPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>管控总价格（单位：分）</p>
+         */
         @NameInMap("base_total_price")
         public Integer baseTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17400</p>
+         */
         @NameInMap("before_control_price")
         public Integer beforeControlPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11000</p>
+         */
         @NameInMap("tax")
         public Integer tax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>采购产品，服务商的销售价</p>
+         */
         @NameInMap("supply_price")
         public Integer supplyPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>242000</p>
+         */
         @NameInMap("basic_cabin_price")
         public Integer basicCabinPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("build_price")
         public Integer buildPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("oil_price")
         public Integer oilPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>头等舱基准价格</p>
+         */
         @NameInMap("first_standard_price")
         public Integer firstStandardPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>商务舱基准价格</p>
+         */
         @NameInMap("business_standard_price")
         public Integer businessStandardPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>242000</p>
+         */
         @NameInMap("common_standard_price")
         public Integer commonStandardPrice;
 
+        /**
+         * <p>fdPrice</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdPrice</p>
+         */
         @NameInMap("inter_ticket_price")
         public Integer interTicketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>直减往返，航段上减去的钱</p>
+         */
         @NameInMap("subtracted_price")
         public Integer subtractedPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>优惠前价格（一舱多价）[动态优惠专用]</p>
+         */
         @NameInMap("origin_common_price")
         public Integer originCommonPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>动态优惠后的价格 [动态优惠专用]</p>
+         */
         @NameInMap("dynamic_promotion_price")
         public Integer dynamicPromotionPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>分期数</p>
+         */
         @NameInMap("installment_num")
         public Integer installmentNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>分期每期价格</p>
+         */
         @NameInMap("installment_price")
         public Double installmentPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>竞品动态补贴后的目标价格</p>
+         */
         @NameInMap("competition_dynamic_price")
         public Integer competitionDynamicPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>竞品动态补贴，可减的优惠</p>
+         */
         @NameInMap("competition_promotion_price")
         public Integer competitionPromotionPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17400</p>
+         */
         @NameInMap("min_before_control_price_of_normal")
         public Integer minBeforeControlPriceOfNormal;
 

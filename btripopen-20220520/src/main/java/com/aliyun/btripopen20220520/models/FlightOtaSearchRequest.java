@@ -4,35 +4,59 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightOtaSearchRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CA</p>
+     */
     @NameInMap("airline_code")
     public String airlineCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BJS</p>
      */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("cabin_class")
     public String cabinClass;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA2324</p>
+     */
     @NameInMap("carrier_flight_no")
     public String carrierFlightNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HGH</p>
      */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-08-15 19:30:00</p>
      */
     @NameInMap("dep_date")
     public String depDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CA2323</p>
      */
     @NameInMap("flight_no")
     public String flightNo;

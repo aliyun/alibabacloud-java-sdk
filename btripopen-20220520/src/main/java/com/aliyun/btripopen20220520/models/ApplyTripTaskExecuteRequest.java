@@ -6,31 +6,51 @@ import com.aliyun.tea.*;
 public class ApplyTripTaskExecuteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>open</p>
      */
     @NameInMap("action_from")
     public String actionFrom;
 
+    /**
+     * <strong>example:</strong>
+     * <p>这是一条评论</p>
+     */
     @NameInMap("comment")
     public String comment;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agree</p>
      */
     @NameInMap("task_action")
     public String taskAction;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("task_id")
     public Long taskId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>thirdpart12138</p>
      */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("user_name")
     public String userName;
 

@@ -4,18 +4,38 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("disable")
     public Long disable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_org_entity")
     public Boolean needOrgEntity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cost1</p>
+     */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试成本中心</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

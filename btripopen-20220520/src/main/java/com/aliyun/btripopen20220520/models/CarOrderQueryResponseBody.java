@@ -4,21 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CarOrderQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public CarOrderQueryResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +100,31 @@ public class CarOrderQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderQueryResponseBodyModuleCarInfoWayPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>南宁市总部路3号中国-东盟科技企业孵化基地二期7号厂房第四、五层</p>
+         */
         @NameInMap("address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34.26900287757989</p>
+         */
         @NameInMap("latitude")
         public String latitude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>114.058959</p>
+         */
         @NameInMap("longitude")
         public String longitude;
 
@@ -128,87 +168,199 @@ public class CarOrderQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderQueryResponseBodyModuleCarInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TRAVEL</p>
+         */
         @NameInMap("business_category")
         public String businessCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("cancel_time")
         public Long cancelTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>长安 白色</p>
+         */
         @NameInMap("car_info")
         public String carInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>601</p>
+         */
         @NameInMap("car_level")
         public Integer carLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>浙AB8888</p>
+         */
         @NameInMap("driver_card")
         public String driverCard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("driver_confirm_time")
         public Long driverConfirmTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>林师傅</p>
+         */
         @NameInMap("driver_name")
         public String driverName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2900</p>
+         */
         @NameInMap("estimate_price")
         public Long estimatePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>海宁西站</p>
+         */
         @NameInMap("from_address")
         public String fromAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("from_city_ad_code")
         public String fromCityAdCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>嘉兴市</p>
+         */
         @NameInMap("from_city_name")
         public String fromCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_special")
         public Boolean isSpecial;
 
+        /**
+         * <strong>example:</strong>
+         * <p>拜访客户</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("pay_time")
         public Long payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("publish_time")
         public Long publishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>海宁西站</p>
+         */
         @NameInMap("real_from_address")
         public String realFromAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("real_from_city_ad_code")
         public String realFromCityAdCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>嘉兴市</p>
+         */
         @NameInMap("real_from_city_name")
         public String realFromCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州东站</p>
+         */
         @NameInMap("real_to_address")
         public String realToAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("real_to_city_ad_code")
         public String realToCityAdCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州市</p>
+         */
         @NameInMap("real_to_city_name")
         public String realToCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("service_type")
         public Integer serviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v_sp_t_1,v_sp_t_2,v_sp_t_3,v_sp_t_4,v_sp_t_5</p>
+         */
         @NameInMap("special_types")
         public String specialTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("taken_time")
         public Long takenTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州东站</p>
+         */
         @NameInMap("to_address")
         public String toAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("to_city_ad_code")
         public String toCityAdCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州市</p>
+         */
         @NameInMap("to_city_name")
         public String toCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("travel_distance")
         public String travelDistance;
 
@@ -455,9 +607,17 @@ public class CarOrderQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderQueryResponseBodyModuleInvoiceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -485,63 +645,143 @@ public class CarOrderQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderQueryResponseBodyModuleOrderBaseInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>拜访客户</p>
+         */
         @NameInMap("btrip_cause")
         public String btripCause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州出差</p>
+         */
         @NameInMap("btrip_title")
         public String btripTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("car_order_source_type")
         public Long carOrderSourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxxx</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XX公司</p>
+         */
         @NameInMap("corp_name")
         public String corpName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10101010</p>
+         */
         @NameInMap("depart_id")
         public String departId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>部门A</p>
+         */
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("gmt_modified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1012000000000000</p>
+         */
         @NameInMap("order_id")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("sub_order_id")
         public Long subOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thirdpart_1010101010</p>
+         */
         @NameInMap("third_depart_id")
         public String thirdDepartId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00021230711000001Test-2</p>
+         */
         @NameInMap("thirdpart_business_id")
         public String thirdpartBusinessId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxxx</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>李四</p>
+         */
         @NameInMap("user_name")
         public String userName;
 
@@ -713,36 +953,80 @@ public class CarOrderQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderQueryResponseBodyModulePassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>costId</p>
+         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>costName</p>
+         */
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>costNumber</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projectCode1</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>projectId</p>
+         */
         @NameInMap("project_id")
         public Long projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>项目A</p>
+         */
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thirdpartCostId</p>
+         */
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thirdpartProjectId</p>
+         */
         @NameInMap("thirdpart_project_id")
         public String thirdpartProjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>userId</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>李四</p>
+         */
         @NameInMap("user_name")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -842,24 +1126,52 @@ public class CarOrderQueryResponseBody extends TeaModel {
     }
 
     public static class CarOrderQueryResponseBodyModulePriceInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("category_code")
         public Integer categoryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669274251000</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("pay_type")
         public Integer payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("person_price")
         public Long personPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1012000000001</p>
+         */
         @NameInMap("trade_id")
         public String tradeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 

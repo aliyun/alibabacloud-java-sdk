@@ -7,12 +7,24 @@ public class RemoveProjectManagerShrinkRequest extends TeaModel {
     @NameInMap("org_entities")
     public String orgEntitiesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>projectabc</p>
+     */
     @NameInMap("out_project_id")
     public String outProjectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("project_id")
     public Long projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("remove_all")
     public Boolean removeAll;
 

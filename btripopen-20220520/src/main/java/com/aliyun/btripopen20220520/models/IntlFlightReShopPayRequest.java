@@ -6,18 +6,32 @@ import com.aliyun.tea.*;
 public class IntlFlightReShopPayRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1017035200059399795</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JPT2025032400000001</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JPM20241024354</p>
+     */
     @NameInMap("out_re_shop_apply_id")
     public String outReShopApplyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1019202345889633</p>
      */
     @NameInMap("re_shop_apply_id")
     public String reShopApplyId;

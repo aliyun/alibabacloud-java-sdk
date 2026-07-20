@@ -7,6 +7,10 @@ public class FlightBillSettlementQueryHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fet****wls</p>
+     */
     @NameInMap("x-acs-btrip-so-corp-token")
     public String xAcsBtripSoCorpToken;
 

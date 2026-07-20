@@ -4,12 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AddProjectManagerShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of manager group entities. Currently, entityType only supports &quot;1&quot; (employee). The maximum number is 10.</p>
+     */
     @NameInMap("org_entities")
     public String orgEntitiesShrink;
 
+    /**
+     * <p>The third-party project ID. You must specify at least one of project_id and out_project_id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>projectabc</p>
+     */
     @NameInMap("out_project_id")
     public String outProjectId;
 
+    /**
+     * <p>The internal project ID. You must specify at least one of project_id and out_project_id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("project_id")
     public Long projectId;
 

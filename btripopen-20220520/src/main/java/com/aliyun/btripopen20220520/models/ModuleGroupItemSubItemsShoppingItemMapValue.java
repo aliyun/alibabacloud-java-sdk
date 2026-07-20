@@ -21,12 +21,24 @@ public class ModuleGroupItemSubItemsShoppingItemMapValue extends TeaModel {
     }
 
     public static class ModuleGroupItemSubItemsShoppingItemMapValueSearchPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
         @NameInMap("ticket_price")
         public Integer ticketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
         @NameInMap("sell_price")
         public Integer sellPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("tax")
         public Integer tax;
 

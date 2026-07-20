@@ -4,27 +4,59 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class SyncSingleUserRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>按照人员实际邮箱填写</p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("job_no")
     public String jobNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("leave_status")
     public Integer leaveStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72369</p>
+     */
     @NameInMap("manager_user_id")
     public String managerUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16392740204</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>开发</p>
+     */
     @NameInMap("position")
     public String position;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("position_level")
     public String positionLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce/shi</p>
+     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
@@ -33,12 +65,18 @@ public class SyncSingleUserRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>573263</p>
      */
     @NameInMap("user_id")
     public String userId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>天天</p>
      */
     @NameInMap("user_name")
     public String userName;

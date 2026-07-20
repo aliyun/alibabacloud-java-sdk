@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelRoomInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public java.util.List<HotelRoomInfoResponseBodyModule> module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,21 +98,45 @@ public class HotelRoomInfoResponseBody extends TeaModel {
     }
 
     public static class HotelRoomInfoResponseBodyModuleBedInfoGroupListBedInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("bed_desc")
         public String bedDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2张单人床(1.2M)</p>
+         */
         @NameInMap("bed_num")
         public Integer bedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.8*2.0m</p>
+         */
         @NameInMap("bed_size")
         public String bedSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("bed_type")
         public String bedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("length")
         public String length;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("width")
         public String width;
 
@@ -169,21 +215,45 @@ public class HotelRoomInfoResponseBody extends TeaModel {
     }
 
     public static class HotelRoomInfoResponseBodyModuleBedInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2张单人床(1.2M)</p>
+         */
         @NameInMap("bed_desc")
         public String bedDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("bed_num")
         public Integer bedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.8*2.0m</p>
+         */
         @NameInMap("bed_size")
         public String bedSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("bed_type")
         public String bedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("length")
         public String length;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("width")
         public String width;
 
@@ -243,12 +313,24 @@ public class HotelRoomInfoResponseBody extends TeaModel {
     }
 
     public static class HotelRoomInfoResponseBodyModuleRoomImages extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo（暂无）</p>
+         */
         @NameInMap("bed_infos2")
         public String bedInfos2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo（暂无）</p>
+         */
         @NameInMap("tag")
         public Integer tag;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i3/6000000000003/O1CN01xkZQR41BtPxK1PQCb_!!6000000000003-0-hotel.jpg">https://img.alicdn.com/imgextra/i3/6000000000003/O1CN01xkZQR41BtPxK1PQCb_!!6000000000003-0-hotel.jpg</a></p>
+         */
         @NameInMap("url")
         public String url;
 
@@ -290,60 +372,128 @@ public class HotelRoomInfoResponseBody extends TeaModel {
         @NameInMap("bed_infos")
         public java.util.List<HotelRoomInfoResponseBodyModuleBedInfos> bedInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("extra_bed")
         public Integer extraBed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("extra_bed_desc")
         public String extraBedDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("floor")
         public String floor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("internet_way")
         public String internetWay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("max_occupancy")
         public Integer maxOccupancy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo（暂无）</p>
+         */
         @NameInMap("room_desc")
         public String roomDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>免费wifi</p>
+         */
         @NameInMap("room_facilities")
         public String roomFacilities;
 
         @NameInMap("room_facility_list")
         public java.util.List<String> roomFacilityList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>84536009</p>
+         */
         @NameInMap("room_id")
         public String roomId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>//img.alicdn.com/imgextra/i2/6000000007493/O1CN010Vmxaz25DqUblX82A_!!6000000007493-2-hotel.png</p>
+         */
         @NameInMap("room_image")
         public String roomImage;
 
         @NameInMap("room_images")
         public java.util.List<HotelRoomInfoResponseBodyModuleRoomImages> roomImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>大床房测试</p>
+         */
         @NameInMap("room_name")
         public String roomName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo（暂无）</p>
+         */
         @NameInMap("room_type")
         public Integer roomType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35平</p>
+         */
         @NameInMap("roomarea")
         public String roomarea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("rooms")
         public Integer rooms;
 
+        /**
+         * <strong>example:</strong>
+         * <p>部分客房禁烟</p>
+         */
         @NameInMap("smoke")
         public String smoke;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("window")
         public String window;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("window_bad")
         public String windowBad;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("window_view")
         public String windowView;
 

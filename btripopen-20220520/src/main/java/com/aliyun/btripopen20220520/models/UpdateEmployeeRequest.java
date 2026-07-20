@@ -4,15 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class UpdateEmployeeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>j*********@example.com</p>
+     */
     @NameInMap("account_email")
     public String accountEmail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>+86-18812345678</p>
+     */
     @NameInMap("account_phone")
     public String accountPhone;
 
     @NameInMap("attribute")
     public String attribute;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg">https://static-legacy.dingtalk.com/media/lADPF8XMoxJeUkbNA2LNA5s_923_866.jpg</a></p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
@@ -22,6 +34,10 @@ public class UpdateEmployeeRequest extends TeaModel {
     @NameInMap("base_location_list")
     public java.util.List<UpdateEmployeeRequestBaseLocationList> baseLocationList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000-01-02</p>
+     */
     @NameInMap("birthday")
     public String birthday;
 
@@ -31,48 +47,99 @@ public class UpdateEmployeeRequest extends TeaModel {
     @NameInMap("custom_role_code_list")
     public java.util.List<String> customRoleCodeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:123@163.com">123@163.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F</p>
+     */
     @NameInMap("gender")
     public String gender;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("is_admin")
     public Boolean isAdmin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("is_boss")
     public Boolean isBoss;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("is_dept_leader")
     public Boolean isDeptLeader;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("job_no")
     public String jobNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user456</p>
+     */
     @NameInMap("manager_user_id")
     public String managerUserId;
 
     @NameInMap("out_dept_id_list")
     public java.util.List<String> outDeptIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13111111111</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>M4</p>
+     */
     @NameInMap("position_level")
     public String positionLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>张三</p>
+     */
     @NameInMap("real_name")
     public String realName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>John/Wilson</p>
+     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user123</p>
      */
     @NameInMap("user_id")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>小明</p>
+     */
     @NameInMap("user_nick")
     public String userNick;
 
@@ -296,33 +363,73 @@ public class UpdateEmployeeRequest extends TeaModel {
     }
 
     public static class UpdateEmployeeRequestCertList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2000-01-02</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2099-03-12</p>
+         */
         @NameInMap("cert_expired_time")
         public String certExpiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F</p>
+         */
         @NameInMap("gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13111111111</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("real_name")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>John/Wilson</p>
+         */
         @NameInMap("real_name_en")
         public String realNameEn;
 

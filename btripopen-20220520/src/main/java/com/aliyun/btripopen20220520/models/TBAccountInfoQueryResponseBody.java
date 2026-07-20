@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TBAccountInfoQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public TBAccountInfoQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>456456575656757</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f07f316603757445272547d959f</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +96,17 @@ public class TBAccountInfoQueryResponseBody extends TeaModel {
     }
 
     public static class TBAccountInfoQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>下****天</p>
+         */
         @NameInMap("tb_account")
         public String tbAccount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("tb_bond")
         public Boolean tbBond;
 

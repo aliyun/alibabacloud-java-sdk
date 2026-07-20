@@ -12,12 +12,18 @@ public class TrainFeeCalculateChangeRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("distribute_order_id")
     public String distributeOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2627694109810885616</p>
      */
     @NameInMap("order_id")
     public String orderId;
@@ -54,18 +60,27 @@ public class TrainFeeCalculateChangeRequest extends TeaModel {
     public static class TrainFeeCalculateChangeRequestChangeTrainDetailsPassengerInfo extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>949c9f34f677a0e5d249dfc94f5e62cc7</p>
          */
         @NameInMap("passenger_cert_no")
         public String passengerCertNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170d9ac6f8807f9ec603c688f45f78a41</p>
          */
         @NameInMap("passenger_cert_type")
         public String passengerCertType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</p>
          */
         @NameInMap("passenger_name")
         public String passengerName;
@@ -104,30 +119,45 @@ public class TrainFeeCalculateChangeRequest extends TeaModel {
     public static class TrainFeeCalculateChangeRequestChangeTrainDetails extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDC</p>
          */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BTC</p>
          */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
          */
         @NameInMap("dep_time")
         public String depTime;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
          */
         @NameInMap("original_dep_time")
         public String originalDepTime;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K234</p>
          */
         @NameInMap("original_train_no")
         public String originalTrainNo;
@@ -140,12 +170,18 @@ public class TrainFeeCalculateChangeRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("seat_type")
         public String seatType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K2345</p>
          */
         @NameInMap("train_no")
         public String trainNo;

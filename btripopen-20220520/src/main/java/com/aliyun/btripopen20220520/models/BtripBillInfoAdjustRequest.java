@@ -6,22 +6,45 @@ import com.aliyun.tea.*;
 public class BtripBillInfoAdjustRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("primary_id")
     public Long primaryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GA15131</p>
+     */
     @NameInMap("third_part_cost_center_id")
     public String thirdPartCostCenterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GA15131</p>
+     */
     @NameInMap("third_part_department_id")
     public String thirdPartDepartmentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GA15131</p>
+     */
     @NameInMap("third_part_invoice_id")
     public String thirdPartInvoiceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GA15131</p>
+     */
     @NameInMap("third_part_project_id")
     public String thirdPartProjectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

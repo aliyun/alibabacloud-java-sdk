@@ -4,17 +4,28 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InvoiceRuleSaveShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("all_employe")
     public Boolean allEmploye;
 
     @NameInMap("entities")
     public String entitiesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("scope")
     public Integer scope;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i123</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;

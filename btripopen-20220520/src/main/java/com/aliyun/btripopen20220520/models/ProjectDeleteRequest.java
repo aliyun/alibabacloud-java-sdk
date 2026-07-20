@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ProjectDeleteRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;

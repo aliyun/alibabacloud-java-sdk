@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public IntlFlightOtaItemDetailResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +96,38 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>中国东方航空</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>东航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png_80x80.jpg">https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png_80x80.jpg</a></p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -139,15 +179,31 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosArrAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PKX</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>大兴国际机场</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>大兴</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>--</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -191,15 +247,31 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosDepAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>萧山国际机场</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>萧山</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T3</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -243,18 +315,38 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>中国国航</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>国航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KN</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://gw.alicdn.com/tfs/TB1gSXBFUT1gK0jSZFhXXaAtVXa-450-450.png_80x80.jpg">https://gw.alicdn.com/tfs/TB1gSXBFUT1gK0jSZFhXXaAtVXa-450-450.png_80x80.jpg</a></p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -309,6 +401,10 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("operating_airline_info")
         public IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CX601</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
@@ -336,33 +432,69 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightStopInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("stop_airport")
         public String stopAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>萧山国际机场</p>
+         */
         @NameInMap("stop_airport_name")
         public String stopAirportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T3</p>
+         */
         @NameInMap("stop_arr_term")
         public String stopArrTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("stop_city_name")
         public String stopCityName;
 
         @NameInMap("stop_city_names")
         public java.util.List<String> stopCityNames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T4</p>
+         */
         @NameInMap("stop_dep_term")
         public String stopDepTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 07:25</p>
+         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1小时20分钟</p>
+         */
         @NameInMap("stop_time")
         public String stopTime;
 
@@ -454,9 +586,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosLuggageDirectInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dep_city_luggage_direct")
         public Integer depCityLuggageDirect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("stop_city_luggage_direct")
         public Integer stopCityLuggageDirect;
 
@@ -484,9 +624,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosSegmentVisaRemark extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>前往菲律宾的旅客，请确保持有往返纸质行程单以及纸质签证办理登记手续，否则可能会被当地政府拒绝入境</p>
+         */
         @NameInMap("dep_city_visa_remark")
         public String depCityVisaRemark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("dep_city_visa_type")
         public Integer depCityVisaType;
 
@@ -542,90 +690,186 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosArrAirportInfo arrAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("arr_city_name")
         public String arrCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 09:45</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>无免费行李额</p>
+         */
         @NameInMap("baggage_desc")
         public String baggageDesc;
 
         @NameInMap("dep_airport_info")
         public IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosDepAirportInfo depAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("dep_city_name")
         public String depCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 07:25</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>140</p>
+         */
         @NameInMap("duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU5131</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
         @NameInMap("flight_share_info")
         public IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightShareInfo flightShareInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中型机</p>
+         */
         @NameInMap("flight_size")
         public String flightSize;
 
         @NameInMap("flight_stop_info")
         public IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosFlightStopInfo flightStopInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>320</p>
+         */
         @NameInMap("flight_type")
         public String flightType;
 
         @NameInMap("luggage_direct_info")
         public IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosLuggageDirectInfo luggageDirectInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>空客</p>
+         */
         @NameInMap("manufacturer")
         public String manufacturer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小食</p>
+         */
         @NameInMap("meal_desc")
         public String mealDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80%</p>
+         */
         @NameInMap("on_time_rate")
         public String onTimeRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("one_more")
         public Integer oneMore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>+1天</p>
+         */
         @NameInMap("one_more_show")
         public String oneMoreShow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KN6728HGHPKX0725</p>
+         */
         @NameInMap("segment_key")
         public String segmentKey;
 
         @NameInMap("segment_visa_remark")
         public IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfosSegmentVisaRemark segmentVisaRemark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("share")
         public Boolean share;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中</p>
+         */
         @NameInMap("short_flight_size")
         public String shortFlightSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("stop")
         public Boolean stop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2小时20分</p>
+         */
         @NameInMap("total_time")
         public String totalTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1小时20分钟</p>
+         */
         @NameInMap("transfer_time")
         public String transferTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("transfer_time_number")
         public Integer transferTimeNumber;
 
@@ -885,24 +1129,52 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("arr_city_name")
         public String arrCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 09:45</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("dep_city_name")
         public String depCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-08-13 07:25</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>140</p>
+         */
         @NameInMap("duration")
         public Integer duration;
 
@@ -912,9 +1184,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("flight_segment_infos")
         public java.util.List<IntlFlightOtaItemDetailResponseBodyModuleFlightJourneyInfosFlightSegmentInfos> flightSegmentInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("transfer_time")
         public Integer transferTime;
 
@@ -1014,9 +1294,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleGroupItemFlightRuleInfoListFlightRuleInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>无免费行李额</p>
+         */
         @NameInMap("baggage_desc")
         public String baggageDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>免费退改</p>
+         */
         @NameInMap("refund_change_rule_desc")
         public String refundChangeRuleDesc;
 
@@ -1044,9 +1332,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleGroupItemFlightRuleInfoListSegmentPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
@@ -1104,12 +1400,20 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleGroupItemSubItemsBaggageRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>免费退改</p>
+         */
         @NameInMap("baggage_digest")
         public String baggageDigest;
 
         @NameInMap("baggage_info_map")
         public java.util.Map<String, java.util.List<ModuleGroupItemSubItemsBaggageRuleBaggageInfoMapValue>> baggageInfoMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("structured_baggage")
         public Boolean structuredBaggage;
 
@@ -1145,18 +1449,34 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOtaItemDetailResponseBodyModuleGroupItemSubItemsRefundChangeRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cancel_fee_ind")
         public Boolean cancelFeeInd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("change_fee_ind")
         public Boolean changeFeeInd;
 
         @NameInMap("offer_penalty_info_map")
         public java.util.Map<String, java.util.List<ModuleGroupItemSubItemsRefundChangeRuleOfferPenaltyInfoMapValue>> offerPenaltyInfoMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>免费退改</p>
+         */
         @NameInMap("refund_change_digest")
         public String refundChangeDigest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("structured_refund")
         public Boolean structuredRefund;
 
@@ -1220,6 +1540,10 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("shopping_item_map")
         public java.util.Map<String, ModuleGroupItemSubItemsShoppingItemMapValue> shoppingItemMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23412341234124</p>
+         */
         @NameInMap("uniq_key")
         public String uniqKey;
 
@@ -1277,9 +1601,17 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("flight_rule_info_list")
         public java.util.List<IntlFlightOtaItemDetailResponseBodyModuleGroupItemFlightRuleInfoList> flightRuleInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>669845158418</p>
+         */
         @NameInMap("item_id")
         public String itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("item_type")
         public String itemType;
 
@@ -1359,6 +1691,10 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("contents")
         public java.util.List<String> contents;
 
+        /**
+         * <strong>example:</strong>
+         * <p>入境提示</p>
+         */
         @NameInMap("main_title")
         public String mainTitle;
 
@@ -1395,6 +1731,10 @@ public class IntlFlightOtaItemDetailResponseBody extends TeaModel {
         @NameInMap("shutter_docs")
         public java.util.List<IntlFlightOtaItemDetailResponseBodyModuleShutterDocs> shutterDocs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("trip_type")
         public Integer tripType;
 

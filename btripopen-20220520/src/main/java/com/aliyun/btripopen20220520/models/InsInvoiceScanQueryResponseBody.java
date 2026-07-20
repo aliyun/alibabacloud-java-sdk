@@ -4,21 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class InsInvoiceScanQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public InsInvoiceScanQueryResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210e847f16611516748613869de4f6</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,30 +100,84 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails extends TeaModel {
+        /**
+         * <p>金额</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75.21</p>
+         */
         @NameInMap("amount")
         public String amount;
 
+        /**
+         * <p>行号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <p>货物或应税劳务、服务名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>铂金首饰</p>
+         */
         @NameInMap("item_name")
         public String itemName;
 
+        /**
+         * <p>数量</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("quantity")
         public String quantity;
 
+        /**
+         * <p>规格型号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66PT11230069</p>
+         */
         @NameInMap("specification")
         public String specification;
 
+        /**
+         * <p>税额</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.79</p>
+         */
         @NameInMap("tax")
         public String tax;
 
+        /**
+         * <p>税率</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>单位</p>
+         * 
+         * <strong>example:</strong>
+         * <p>件</p>
+         */
         @NameInMap("unit")
         public String unit;
 
+        /**
+         * <p>单价</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75.21</p>
+         */
         @NameInMap("unit_price")
         public String unitPrice;
 
@@ -183,129 +261,328 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
     }
 
     public static class InsInvoiceScanQueryResponseBodyModuleItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("amount_with_tax")
         public String amountWithTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18.87</p>
+         */
         @NameInMap("amount_without_tax")
         public String amountWithoutTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
+         */
         @NameInMap("bill_date")
         public String billDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("category")
         public Integer category;
 
+        /**
+         * <p>校验码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07122942791187744475</p>
+         */
         @NameInMap("check_code")
         public String checkCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试成本中心</p>
+         */
         @NameInMap("cost_center")
         public String costCenter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试公司-测试部门</p>
+         */
         @NameInMap("department")
         public String department;
 
+        /**
+         * <p>开票人</p>
+         * 
+         * <strong>example:</strong>
+         * <p>敏</p>
+         */
         @NameInMap("drawer")
         public String drawer;
 
+        /**
+         * <p>应用ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>566</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>泰康</p>
+         */
         @NameInMap("insurance_company")
         public String insuranceCompany;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T123343234242323232</p>
+         */
         @NameInMap("insurance_order_id")
         public String insuranceOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空意外险</p>
+         */
         @NameInMap("insurance_type")
         public String insuranceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3300111303</p>
+         */
         @NameInMap("invoice_code")
         public String invoiceCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
+         */
         @NameInMap("invoice_day")
         public String invoiceDay;
 
+        /**
+         * <p>发票明细</p>
+         */
         @NameInMap("invoice_details")
         public java.util.List<InsInvoiceScanQueryResponseBodyModuleItemsInvoiceDetails> invoiceDetails;
 
+        /**
+         * <p>发票地区</p>
+         * 
+         * <strong>example:</strong>
+         * <p>上海</p>
+         */
         @NameInMap("invoice_location")
         public String invoiceLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24021111</p>
+         */
         @NameInMap("invoice_no")
         public String invoiceNo;
 
+        /**
+         * <p>发票抬头</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试发票抬头</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("invoice_type")
         public Integer invoiceType;
 
+        /**
+         * <p>机器码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>661619906841</p>
+         */
         @NameInMap("machine_code")
         public String machineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("ofd_oss_url")
         public String ofdOssUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3137168772101111000</p>
+         */
         @NameInMap("order_id")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("oss_url")
         public String ossUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("passenger")
         public String passenger;
 
+        /**
+         * <p>密码区</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;87*&gt;&gt;53&gt;5023&gt;-446&gt;/4+83/5* *&gt;5/81&lt;75/1931&gt;4&gt;&gt;</p>
+         */
         @NameInMap("password_area")
         public String passwordArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试项目</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>购方银行信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国农业银行深圳</p>
+         */
         @NameInMap("purchaser_bank_account_info")
         public String purchaserBankAccountInfo;
 
+        /**
+         * <p>购方联系方式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州余杭区五常街道五常大道168</p>
+         */
         @NameInMap("purchaser_contact_info")
         public String purchaserContactInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试购方抬头</p>
+         */
         @NameInMap("purchaser_name")
         public String purchaserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91441111111111111S</p>
+         */
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
 
+        /**
+         * <p>收款人</p>
+         * 
+         * <strong>example:</strong>
+         * <p>琳</p>
+         */
         @NameInMap("recipient")
         public String recipient;
 
+        /**
+         * <p>备注</p>
+         * 
+         * <strong>example:</strong>
+         * <p>舰店OMS</p>
+         */
         @NameInMap("remarks")
         public String remarks;
 
+        /**
+         * <p>复核人</p>
+         * 
+         * <strong>example:</strong>
+         * <p>敏</p>
+         */
         @NameInMap("reviewer")
         public String reviewer;
 
+        /**
+         * <p>销售方银行信息</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国农业银行深圳东</p>
+         */
         @NameInMap("seller_bank_account_info")
         public String sellerBankAccountInfo;
 
+        /**
+         * <p>销售方联系方式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>深圳市盐田区深盐路黄</p>
+         */
         @NameInMap("seller_contact_info")
         public String sellerContactInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试销方名称</p>
+         */
         @NameInMap("seller_name")
         public String sellerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91441111111111111N</p>
+         */
         @NameInMap("seller_tax_no")
         public String sellerTaxNo;
 
+        /**
+         * <p>校验码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4475</p>
+         */
         @NameInMap("smart_check_code")
         public String smartCheckCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.13</p>
+         */
         @NameInMap("tax_amount")
         public String taxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>大写金额</p>
+         * 
+         * <strong>example:</strong>
+         * <p>叁佰叁拾贰圆整</p>
+         */
         @NameInMap("total_amount_in_words")
         public String totalAmountInWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("xml_oss_url")
         public String xmlOssUrl;
 
@@ -656,15 +933,31 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<InsInvoiceScanQueryResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page_no")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Integer totalSize;
 

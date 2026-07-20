@@ -6,24 +6,41 @@ import com.aliyun.tea.*;
 public class GroupDepartSaveShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试部门</p>
      */
     @NameInMap("dept_name")
     public String deptName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>001|002|003</p>
+     */
     @NameInMap("manager_ids")
     public String managerIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>001</p>
      */
     @NameInMap("outer_dept_id")
     public String outerDeptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>002</p>
+     */
     @NameInMap("outer_dept_pid")
     public String outerDeptPid;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("status")
     public Integer status;
@@ -31,6 +48,12 @@ public class GroupDepartSaveShrinkRequest extends TeaModel {
     @NameInMap("sub_corp_id_list")
     public String subCorpIdListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("sync_group")
     public Boolean syncGroup;
 

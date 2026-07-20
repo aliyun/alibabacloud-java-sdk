@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class TicketChangingEnquiryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BJS</p>
      */
     @NameInMap("arr_city")
     public String arrCity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HGH</p>
      */
     @NameInMap("dep_city")
     public String depCity;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("is_voluntary")
     public Integer isVoluntary;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000-00-00 00:00:00</p>
      */
     @NameInMap("modify_depart_date")
     public String modifyDepartDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CA1704</p>
      */
     @NameInMap("modify_flight_no")
     public String modifyFlightNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ece19e8b1047898a5a98b6487348c2</p>
      */
     @NameInMap("session_id")
     public String sessionId;

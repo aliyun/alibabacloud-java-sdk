@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class CooperatorSyncPayStatusRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("cooperator_order_id")
     public String cooperatorOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("cooperator_pay_no")
     public String cooperatorPayNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1017018197205925373</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
      */
     @NameInMap("pay_status")
     public String payStatus;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1726022215000</p>
      */
     @NameInMap("pay_time")
     public Long payTime;

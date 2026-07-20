@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealApplyQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public MealApplyQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210f07f316603757445272547d959f</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +98,17 @@ public class MealApplyQueryResponseBody extends TeaModel {
     }
 
     public static class MealApplyQueryResponseBodyModuleApplyUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2123</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("user_name")
         public String userName;
 
@@ -106,9 +136,17 @@ public class MealApplyQueryResponseBody extends TeaModel {
     }
 
     public static class MealApplyQueryResponseBodyModuleItineraryListCities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>320200</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
@@ -139,12 +177,24 @@ public class MealApplyQueryResponseBody extends TeaModel {
         @NameInMap("cities")
         public java.util.List<MealApplyQueryResponseBodyModuleItineraryListCities> cities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-25 00:00:00</p>
+         */
         @NameInMap("end_date")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-02-05 00:00:00</p>
+         */
         @NameInMap("start_date")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>thirdpart1234</p>
+         */
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
@@ -191,42 +241,90 @@ public class MealApplyQueryResponseBody extends TeaModel {
         @NameInMap("apply_user")
         public MealApplyQueryResponseBodyModuleApplyUser applyUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11376</p>
+         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;extend_key&quot;:&quot;extend_value&quot;}</p>
+         */
         @NameInMap("extend_field")
         public String extendField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-04T16:13Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11876</p>
+         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
         @NameInMap("itinerary_list")
         public java.util.List<MealApplyQueryResponseBodyModuleItineraryList> itineraryList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("meal_amount")
         public Long mealAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("meal_cause")
         public String mealCause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11546</p>
+         */
         @NameInMap("project_id")
         public Long projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024073128454753</p>
+         */
         @NameInMap("third_part_apply_id")
         public String thirdPartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330000303010292572</p>
+         */
         @NameInMap("third_part_cost_center_id")
         public String thirdPartCostCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>405009</p>
+         */
         @NameInMap("third_part_invoice_id")
         public String thirdPartInvoiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CS-PROJECT</p>
+         */
         @NameInMap("third_part_project_id")
         public String thirdPartProjectId;
 

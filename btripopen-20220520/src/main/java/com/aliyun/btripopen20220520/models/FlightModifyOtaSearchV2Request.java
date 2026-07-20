@@ -10,12 +10,24 @@ public class FlightModifyOtaSearchV2Request extends TeaModel {
     @NameInMap("dep_date")
     public java.util.List<String> depDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467200</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467200</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
@@ -25,9 +37,17 @@ public class FlightModifyOtaSearchV2Request extends TeaModel {
     @NameInMap("selected_segments")
     public java.util.List<FlightModifyOtaSearchV2RequestSelectedSegments> selectedSegments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>590f17eca9374f20ac7e8ed8a7db2f35</p>
+     */
     @NameInMap("session_id")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("voluntary")
     public Boolean voluntary;
 
@@ -109,6 +129,10 @@ public class FlightModifyOtaSearchV2Request extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2RequestPassengerSegmentRelations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3243028</p>
+         */
         @NameInMap("passenger_id")
         public String passengerId;
 
@@ -139,24 +163,52 @@ public class FlightModifyOtaSearchV2Request extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2RequestSelectedSegments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-18 09:10:00</p>
+         */
         @NameInMap("dep_date_time")
         public String depDateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_seq")
         public Integer journeySeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA1110</p>
+         */
         @NameInMap("marketing_flight_no")
         public String marketingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU8625</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_seq")
         public Integer segmentSeq;
 

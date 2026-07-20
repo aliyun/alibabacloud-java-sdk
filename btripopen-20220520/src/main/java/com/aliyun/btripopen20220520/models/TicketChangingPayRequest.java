@@ -4,17 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TicketChangingPayRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("corp_pay_price")
     public Long corpPayPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dis123</p>
      */
     @NameInMap("dis_order_id")
     public String disOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>refun123</p>
      */
     @NameInMap("dis_sub_order_id")
     public String disSubOrderId;
@@ -22,11 +32,18 @@ public class TicketChangingPayRequest extends TeaModel {
     @NameInMap("extra")
     public java.util.Map<String, String> extra;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("personal_pay_price")
     public Long personalPayPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("total_pay_price")
     public Long totalPayPrice;

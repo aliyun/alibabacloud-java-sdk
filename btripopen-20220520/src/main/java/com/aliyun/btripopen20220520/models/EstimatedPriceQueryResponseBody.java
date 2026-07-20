@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class EstimatedPriceQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public EstimatedPriceQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +98,38 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     }
 
     public static class EstimatedPriceQueryResponseBodyModuleHotelFeeDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("city")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("criterion")
         public Long criterion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1245</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("total")
         public Long total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("trip_days")
         public Integer tripDays;
 
@@ -139,18 +181,38 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     }
 
     public static class EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>00:40</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22:20</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30100</p>
+         */
         @NameInMap("fee")
         public Long fee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>硬座</p>
+         */
         @NameInMap("seat_grade")
         public String seatGrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MU9668</p>
+         */
         @NameInMap("vehicle_no")
         public String vehicleNo;
 
@@ -202,18 +264,38 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     }
 
     public static class EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesMostExpensive extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>19:20</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>265000</p>
+         */
         @NameInMap("fee")
         public Long fee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>商务座</p>
+         */
         @NameInMap("seat_grade")
         public String seatGrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA1721</p>
+         */
         @NameInMap("vehicle_no")
         public String vehicleNo;
 
@@ -265,30 +347,58 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
     }
 
     public static class EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("arr_city")
         public String arrCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1670528800000</p>
+         */
         @NameInMap("arr_date")
         public Long arrDate;
 
         @NameInMap("cheapest")
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesCheapest cheapest;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("dep_city")
         public String depCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1670528700000</p>
+         */
         @NameInMap("dep_date")
         public Long depDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("err_msg")
         public String errMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1245</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
         @NameInMap("most_expensive")
         public EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutesMostExpensive mostExpensive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("success")
         public Boolean success;
 
@@ -375,15 +485,31 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("btrip_routes")
         public java.util.List<EstimatedPriceQueryResponseBodyModuleTrafficFeeBtripRoutes> btripRoutes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("err_msg")
         public String errMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>265000</p>
+         */
         @NameInMap("max_fee")
         public Long maxFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30100</p>
+         */
         @NameInMap("min_fee")
         public Long minFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("success")
         public Boolean success;
 
@@ -438,6 +564,12 @@ public class EstimatedPriceQueryResponseBody extends TeaModel {
         @NameInMap("hotel_fee_detail")
         public java.util.List<EstimatedPriceQueryResponseBodyModuleHotelFeeDetail> hotelFeeDetail;
 
+        /**
+         * <p>酒店费用总额，单位为元</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("total_hotel_fee")
         public Long totalHotelFee;
 

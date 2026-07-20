@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MonthBillSplitGetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20240101</p>
+     */
     @NameInMap("bill_batch")
     public String billBatch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>202401</p>
+     */
     @NameInMap("bill_month")
     public String billMonth;
 
@@ -15,6 +23,9 @@ public class MonthBillSplitGetRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>by_invoice_third_part_id</p>
      */
     @NameInMap("bill_split_mode")
     public String billSplitMode;

@@ -5,13 +5,18 @@ import com.aliyun.tea.*;
 
 public class AddInvoiceEntityShrinkRequest extends TeaModel {
     /**
+     * <p>The list of entities.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("entities")
     public String entitiesShrink;
 
     /**
+     * <p>The third-party invoice ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4854821</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;

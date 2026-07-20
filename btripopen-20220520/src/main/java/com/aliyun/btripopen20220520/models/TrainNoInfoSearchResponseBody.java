@@ -4,21 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainNoInfoSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module</p>
+     */
     @NameInMap("module")
     public TrainNoInfoSearchResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2136019116915615924561621e06ee</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +103,31 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoInfoSearchResponseBodyModuleTrainStationSearchVOSeatInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>二等座</p>
+         */
         @NameInMap("seat_name")
         public String seatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>有</p>
+         */
         @NameInMap("stock")
         public String stock;
 
@@ -128,48 +171,104 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoInfoSearchResponseBodyModuleTrainStationSearchVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("arr_day_tag")
         public String arrDayTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDC</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>包头东</p>
+         */
         @NameInMap("arr_station_name")
         public String arrStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-07 15:19:01</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31</p>
+         */
         @NameInMap("cost_time")
         public String costTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>包头</p>
+         */
         @NameInMap("dep_station_name")
         public String depStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("is_end_station")
         public Integer isEndStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("is_start_station")
         public Integer isStartStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>54000</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("sale_flag")
         public String saleFlag;
 
         @NameInMap("seat_infos")
         public java.util.List<TrainNoInfoSearchResponseBodyModuleTrainStationSearchVOSeatInfos> seatInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>k2345</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("train_type")
         public String trainType;
 
@@ -301,15 +400,31 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoInfoSearchResponseBodyModuleTrainTransferStationSearchVOTransferDetailListSeatInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>67000</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>二等座</p>
+         */
         @NameInMap("seat_name")
         public String seatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("seat_type")
         public String seatType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>有</p>
+         */
         @NameInMap("stock")
         public String stock;
 
@@ -353,48 +468,104 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
     }
 
     public static class TrainNoInfoSearchResponseBodyModuleTrainTransferStationSearchVOTransferDetailList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("arr_day_tag")
         public String arrDayTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BDC</p>
+         */
         @NameInMap("arr_station_code")
         public String arrStationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>包头东</p>
+         */
         @NameInMap("arr_station_name")
         public String arrStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("cost_time")
         public String costTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BTC</p>
+         */
         @NameInMap("dep_station_code")
         public String depStationCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>包头</p>
+         */
         @NameInMap("dep_station_name")
         public String depStationName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-06 15:19:01</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("is_end_station")
         public Integer isEndStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("is_start_station")
         public Integer isStartStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>54000</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("sale_flag")
         public String saleFlag;
 
         @NameInMap("seat_infos")
         public java.util.List<TrainNoInfoSearchResponseBodyModuleTrainTransferStationSearchVOTransferDetailListSeatInfos> seatInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>D1234</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("train_type")
         public String trainType;
 
@@ -529,6 +700,10 @@ public class TrainNoInfoSearchResponseBody extends TeaModel {
         @NameInMap("transfer_detail_list")
         public java.util.List<TrainNoInfoSearchResponseBodyModuleTrainTransferStationSearchVOTransferDetailList> transferDetailList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("transfer_type")
         public String transferType;
 

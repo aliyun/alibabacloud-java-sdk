@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class IFlightOrderDetailQueryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1017035199702438072</p>
      */
     @NameInMap("order_id")
     public Long orderId;

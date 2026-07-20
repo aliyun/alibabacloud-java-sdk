@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class TrainOrderQueryV2Request extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12342123212</p>
      */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123121112</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

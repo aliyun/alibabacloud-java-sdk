@@ -7,11 +7,18 @@ public class TravelStandardRelateAddRequest extends TeaModel {
     @NameInMap("add_list")
     public java.util.List<TravelStandardRelateAddRequestAddList> addList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("from_group")
     public Boolean fromGroup;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6516571</p>
      */
     @NameInMap("rule_id")
     public Long ruleId;
@@ -48,12 +55,18 @@ public class TravelStandardRelateAddRequest extends TeaModel {
     public static class TravelStandardRelateAddRequestAddList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>667104628</p>
          */
         @NameInMap("entity_id")
         public String entityId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("entity_type")
         public String entityType;

@@ -4,21 +4,54 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class DeleteInvoiceEntityResponseBody extends TeaModel {
+    /**
+     * <p>The result code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The remarks on the result, such as a description of the result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The return value from the server. An empty value is returned if no result is available or an exception occurs.</p>
+     */
     @NameInMap("module")
     public DeleteInvoiceEntityResponseBodyModule module;
 
+    /**
+     * <p>The unique ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +109,21 @@ public class DeleteInvoiceEntityResponseBody extends TeaModel {
     }
 
     public static class DeleteInvoiceEntityResponseBodyModule extends TeaModel {
+        /**
+         * <p>The number of removed personnel, departments, or roles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("remove_num")
         public Integer removeNum;
 
+        /**
+         * <p>The number of entities under the invoice header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("selected_user_num")
         public Integer selectedUserNum;
 

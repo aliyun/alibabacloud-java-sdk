@@ -9,10 +9,17 @@ public class ChannelCorpCreateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>张三</p>
      */
     @NameInMap("administrator_name")
     public String administratorName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18378889782</p>
+     */
     @NameInMap("administrator_phone")
     public String administratorPhone;
 
@@ -22,11 +29,18 @@ public class ChannelCorpCreateRequest extends TeaModel {
     @NameInMap("btrip_region")
     public String btripRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>杭州市</p>
+     */
     @NameInMap("city")
     public String city;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里巴巴有限公司</p>
      */
     @NameInMap("corp_name")
     public String corpName;
@@ -37,18 +51,33 @@ public class ChannelCorpCreateRequest extends TeaModel {
     @NameInMap("extend_field")
     public String extendField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>浙江省</p>
+     */
     @NameInMap("province")
     public String province;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("scope")
     public Integer scope;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00001</p>
      */
     @NameInMap("third_corp_id")
     public String thirdCorpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_1234</p>
+     */
     @NameInMap("user_id")
     public String userId;
 

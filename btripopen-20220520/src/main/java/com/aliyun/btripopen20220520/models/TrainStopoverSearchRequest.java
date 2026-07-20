@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class TrainStopoverSearchRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>重庆西</p>
      */
     @NameInMap("arr_station")
     public String arrStation;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>巫山站</p>
      */
     @NameInMap("dep_station")
     public String depStation;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-05-08</p>
      */
     @NameInMap("train_date")
     public String trainDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k2345</p>
      */
     @NameInMap("train_no")
     public String trainNo;

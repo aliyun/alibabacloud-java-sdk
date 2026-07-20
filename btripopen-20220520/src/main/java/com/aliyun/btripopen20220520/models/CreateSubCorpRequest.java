@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateSubCorpRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>corp123</p>
      */
     @NameInMap("outer_corp_id")
     public String outerCorpId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试企业</p>
      */
     @NameInMap("outer_corp_name")
     public String outerCorpName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("user_id")
     public String userId;

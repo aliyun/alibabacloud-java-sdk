@@ -4,15 +4,31 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightCreateOrderV2ShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>异步下单key</p>
+     */
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("async_create_order_mode")
     public Boolean asyncCreateOrderMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ali_00001</p>
+     */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>云妹</p>
+     */
     @NameInMap("buyer_name")
     public String buyerName;
 
@@ -24,22 +40,35 @@ public class FlightCreateOrderV2ShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cheshiapi</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7fb731deeb4510b86c17e8c8c25740_11</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>外部订单号</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("total_price_cent")
     public Long totalPriceCent;
 

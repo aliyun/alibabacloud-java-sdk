@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IntlFlightReShopCreateResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -12,16 +14,23 @@ public class IntlFlightReShopCreateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>成功</p>
      */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("module")
     public IntlFlightReShopCreateResponseBodyModule module;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
      */
@@ -29,6 +38,8 @@ public class IntlFlightReShopCreateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -36,6 +47,8 @@ public class IntlFlightReShopCreateResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The global trace ID of the request, typically used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>210bc4b116835992457938931db4de</p>
      */
@@ -96,18 +109,45 @@ public class IntlFlightReShopCreateResponseBody extends TeaModel {
     }
 
     public static class IntlFlightReShopCreateResponseBodyModule extends TeaModel {
+        /**
+         * <p>The asynchronous application key, used in the asynchronous commit pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asyncKey_2390u230slgw023</p>
+         */
         @NameInMap("async_apply_key")
         public String asyncApplyKey;
 
+        /**
+         * <p>Indicates whether a retry is required. This parameter is used in the asynchronous commit pattern.</p>
+         */
         @NameInMap("need_retry")
         public Boolean needRetry;
 
+        /**
+         * <p>The retry time interval, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("next_retry_interval")
         public Long nextRetryInterval;
 
+        /**
+         * <p>The external rebooking application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JPM20241024354</p>
+         */
         @NameInMap("out_re_shop_apply_id")
         public String outReShopApplyId;
 
+        /**
+         * <p>The business travel rebooking application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1017035199374643191</p>
+         */
         @NameInMap("re_shop_apply_id")
         public String reShopApplyId;
 

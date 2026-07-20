@@ -4,24 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class BatchQueryDepartmentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public BatchQueryDepartmentResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-<strong><strong>-</strong></strong>-****-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -87,12 +111,20 @@ public class BatchQueryDepartmentResponseBody extends TeaModel {
     }
 
     public static class BatchQueryDepartmentResponseBodyModuleItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>电磁继电器装配SL10线</p>
+         */
         @NameInMap("dept_name")
         public String deptName;
 
         @NameInMap("manager_employee_id_list")
         public java.util.List<String> managerEmployeeIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1335</p>
+         */
         @NameInMap("out_dept_id")
         public String outDeptId;
 
@@ -128,15 +160,27 @@ public class BatchQueryDepartmentResponseBody extends TeaModel {
     }
 
     public static class BatchQueryDepartmentResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("has_more")
         public Boolean hasMore;
 
         @NameInMap("items")
         public java.util.List<BatchQueryDepartmentResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NjE1OTgwOTY</p>
+         */
         @NameInMap("next_cursor_token")
         public String nextCursorToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("total")
         public Long total;
 

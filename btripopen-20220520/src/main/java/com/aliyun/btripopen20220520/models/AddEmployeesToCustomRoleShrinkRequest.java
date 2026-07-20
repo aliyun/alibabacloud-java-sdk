@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddEmployeesToCustomRoleShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the custom enterprise role.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("role_id")
     public String roleId;
 
     /**
+     * <p>The list of member IDs. The maximum number of members per request is 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>if can be null:</strong>

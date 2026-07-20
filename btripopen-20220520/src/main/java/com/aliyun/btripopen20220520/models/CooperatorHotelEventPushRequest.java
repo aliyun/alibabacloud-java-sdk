@@ -4,35 +4,59 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CooperatorHotelEventPushRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("change_order_status")
     public Integer changeOrderStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>交易成功</p>
+     */
     @NameInMap("change_order_status_desc")
     public String changeOrderStatusDesc;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>coop_123456</p>
      */
     @NameInMap("cooperator_order_id")
     public String cooperatorOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER_LEAVE</p>
      */
     @NameInMap("event")
     public String event;
 
+    /**
+     * <strong>example:</strong>
+     * <p>用户离店</p>
+     */
     @NameInMap("event_desc")
     public String eventDesc;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>204-09-01 10:55:20</p>
      */
     @NameInMap("event_time")
     public String eventTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("order_id")
     public String orderId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModulePriceMapValue extends TeaModel {
     /**
+     * <p>The price, in cents.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -12,6 +14,8 @@ public class ModulePriceMapValue extends TeaModel {
     public Long price;
 
     /**
+     * <p>The service number, such as a flight number or train number.</p>
+     * 
      * <strong>example:</strong>
      * <p>MU1234</p>
      */

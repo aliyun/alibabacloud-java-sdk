@@ -96,9 +96,17 @@ public class IntlFlightRefundConsultResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundConsultResponseBodyModulePassengerJourneyGroupInfoListPassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ZHANG/SAN</p>
+         */
         @NameInMap("full_name")
         public String fullName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000001</p>
+         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
@@ -126,18 +134,38 @@ public class IntlFlightRefundConsultResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundConsultResponseBodyModulePassengerJourneyGroupInfoListPassengerSegmentStatusInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_refund")
         public Boolean canRefund;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000001</p>
+         */
         @NameInMap("passenger_id")
         public Long passengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CZ5009PKXHKG0616</p>
+         */
         @NameInMap("segment_key")
         public String segmentKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>客票已使用，不可退票</p>
+         */
         @NameInMap("un_refund_reason")
         public String unRefundReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("un_refund_reason_code")
         public String unRefundReasonCode;
 
@@ -189,12 +217,24 @@ public class IntlFlightRefundConsultResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundConsultResponseBodyModulePassengerJourneyGroupInfoListRefundReasonInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("reason_code")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>因个人原因取消行程计划（退票费由个人承担）</p>
+         */
         @NameInMap("reason_desc")
         public String reasonDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("voluntary")
         public Boolean voluntary;
 
@@ -230,24 +270,52 @@ public class IntlFlightRefundConsultResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundConsultResponseBodyModulePassengerJourneyGroupInfoListSegmentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HKG</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-16 19:20</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CZ5009</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CZ5009PKXHKG0616</p>
+         */
         @NameInMap("segment_key")
         public String segmentKey;
 
@@ -315,6 +383,10 @@ public class IntlFlightRefundConsultResponseBody extends TeaModel {
     }
 
     public static class IntlFlightRefundConsultResponseBodyModulePassengerJourneyGroupInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>edcac4f4c79d40ccb141ddb6da567e65</p>
+         */
         @NameInMap("passenger_journey_group_key")
         public String passengerJourneyGroupKey;
 

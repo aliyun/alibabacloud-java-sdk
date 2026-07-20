@@ -4,21 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module。</p>
+     */
     @NameInMap("module")
     public HotelOrderQueryResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,51 +103,115 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModuleHotelInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("brand_code")
         public String brandCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>华住集团</p>
+         */
         @NameInMap("brand_group")
         public String brandGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>汉庭</p>
+         */
         @NameInMap("brand_name")
         public String brandName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669344020</p>
+         */
         @NameInMap("check_in")
         public Long checkIn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669344020</p>
+         */
         @NameInMap("check_out")
         public Long checkOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州市</p>
+         */
         @NameInMap("city")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("city_ad_code")
         public String cityAdCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("country_code")
         public String countryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国</p>
+         */
         @NameInMap("country_name")
         public String countryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>红丰路***号</p>
+         */
         @NameInMap("hotel_address")
         public String hotelAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里商旅专营店</p>
+         */
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571-88888888</p>
+         */
         @NameInMap("hotel_phone")
         public String hotelPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("hotel_support_vat_invoice_type")
         public Integer hotelSupportVatInvoiceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("night")
         public Integer night;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("room_num")
         public Integer roomNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>标准间</p>
+         */
         @NameInMap("room_type")
         public String roomType;
 
@@ -271,9 +362,17 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModuleInvoiceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx有限公司</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -301,69 +400,153 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModuleOrderBaseInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>拜访客户</p>
+         */
         @NameInMap("btrip_title")
         public String btripTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("category")
         public Integer category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iscorpId</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里商旅</p>
+         */
         @NameInMap("corp_name")
         public String corpName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("depart_id")
         public String departId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里商旅客户服务</p>
+         */
         @NameInMap("depart_name")
         public String departName;
 
         @NameInMap("exceed_apply_nos")
         public java.util.List<String> exceedApplyNos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>扩展字段</p>
+         */
         @NameInMap("extend_field")
         public String extendField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669344020</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669344020</p>
+         */
         @NameInMap("gmt_modified")
         public Long gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002145190081005400</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order_type")
         public Integer orderType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里商旅</p>
+         */
         @NameInMap("supplier")
         public String supplier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00021230711000001Test-2</p>
+         */
         @NameInMap("thirdpart_business_id")
         public String thirdpartBusinessId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("thirdpart_depart_id")
         public String thirdpartDepartId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("thirdpart_itinerary_id")
         public String thirdpartItineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里小蜜</p>
+         */
         @NameInMap("user_name")
         public String userName;
 
@@ -551,48 +734,108 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModulePassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1004313100</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("cost_center_id")
         public Long costCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>成本中心</p>
+         */
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f7c05571-d1f1-46fa-96c9-d5c29c986c07</p>
+         */
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("occupant_type")
         public Integer occupantType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>项目编码</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("project_id")
         public Long projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx项目</p>
+         */
         @NameInMap("project_title")
         public String projectTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>01-2023-04156</p>
+         */
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("thirdpart_cost_center_id")
         public String thirdpartCostCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("thirdpart_project_id")
         public String thirdpartProjectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("user_name")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -724,21 +967,45 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModulePriceInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("category_code")
         public Integer categoryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1669344020</p>
+         */
         @NameInMap("gmt_create")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pay_type")
         public Integer payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("price")
         public Double price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345678910987654321</p>
+         */
         @NameInMap("trade_id")
         public String tradeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("type")
         public Integer type;
 

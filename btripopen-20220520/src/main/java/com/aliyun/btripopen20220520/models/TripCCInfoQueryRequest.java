@@ -4,12 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TripCCInfoQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2024060710160003300008684</p>
+     */
     @NameInMap("business_instance_id")
     public String businessInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>458003</p>
+     */
     @NameInMap("node_id")
     public String nodeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024060710160003300008684</p>
+     */
     @NameInMap("third_business_id")
     public String thirdBusinessId;
 

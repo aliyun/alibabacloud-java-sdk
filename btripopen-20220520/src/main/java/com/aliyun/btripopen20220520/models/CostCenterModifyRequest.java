@@ -4,29 +4,50 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CostCenterModifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:a@alipay.com">a@alipay.com</a></p>
+     */
     @NameInMap("alipay_no")
     public String alipayNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("disable")
     public Long disable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("number")
     public String number;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("scope")
     public Long scope;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340049</p>
      */
     @NameInMap("thirdpart_id")
     public String thirdpartId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试成本中心</p>
      */
     @NameInMap("title")
     public String title;

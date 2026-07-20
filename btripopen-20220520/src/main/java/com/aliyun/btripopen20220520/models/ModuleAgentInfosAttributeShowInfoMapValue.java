@@ -4,12 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleAgentInfosAttributeShowInfoMapValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FIRST_BAGGAGE</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>行李1</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>行李详情</p>
+     */
     @NameInMap("text")
     public String text;
 

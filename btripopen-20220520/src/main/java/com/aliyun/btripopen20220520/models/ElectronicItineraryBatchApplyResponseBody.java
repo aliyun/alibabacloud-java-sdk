@@ -4,21 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ElectronicItineraryBatchApplyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public ElectronicItineraryBatchApplyResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,12 +100,24 @@ public class ElectronicItineraryBatchApplyResponseBody extends TeaModel {
     }
 
     public static class ElectronicItineraryBatchApplyResponseBodyModuleApplyFailedTicketList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5001</p>
+         */
         @NameInMap("failed_code")
         public Integer failedCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>票号不存在</p>
+         */
         @NameInMap("failed_reason")
         public String failedReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>018-6605785754</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -120,6 +156,10 @@ public class ElectronicItineraryBatchApplyResponseBody extends TeaModel {
         @NameInMap("apply_failed_ticket_list")
         public java.util.List<ElectronicItineraryBatchApplyResponseBodyModuleApplyFailedTicketList> applyFailedTicketList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0c7b5944608953479a9a4d40c1eec618</p>
+         */
         @NameInMap("batch_no")
         public String batchNo;
 

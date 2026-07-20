@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class TrainOrderPayRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1379598062646</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("out_order_id")
     public String outOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("pay_amount")
     public Long payAmount;

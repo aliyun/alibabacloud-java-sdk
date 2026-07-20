@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelGoodsQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelGoodsQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210e847f16611516748613869de4f6</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,9 +96,17 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRuleBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("hour")
         public Long hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("value")
         public Long value;
 
@@ -109,6 +137,10 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("btrip_hotel_cancel_policy_info_d_t_o_list")
         public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRuleBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList> btripHotelCancelPolicyInfoDTOList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cancel_policy_type")
         public Integer cancelPolicyType;
 
@@ -139,9 +171,17 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("btrip_hotel_cancel_policy_d_t_o")
         public HotelGoodsQueryResponseBodyModuleRoomsRatesBtripCancelRuleBtripHotelCancelPolicyDTO btripHotelCancelPolicyDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>不可取消</p>
+         */
         @NameInMap("cancel_policy_title")
         public String cancelPolicyTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-27</p>
+         */
         @NameInMap("check_in")
         public String checkIn;
 
@@ -177,9 +217,17 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRatesBtripHotelCancelDesc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023年3月25日18:00前可免费取消订单。</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023年3月25日18点00分前可免费取消</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -210,6 +258,10 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("label_name")
         public java.util.List<String> labelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-¥3</p>
+         */
         @NameInMap("money_desc")
         public String moneyDesc;
 
@@ -237,18 +289,34 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("cash_reduce_total")
         public String cashReduceTotal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F3会员价</p>
+         */
         @NameInMap("dinamic_label")
         public String dinamicLabel;
 
         @NameInMap("discount_detail")
         public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail> discountDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>最终优惠以下单页为准</p>
+         */
         @NameInMap("sub_title")
         public String subTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>每晚优惠说明</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -300,27 +368,59 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("before_discount_price")
         public Long beforeDiscountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("breakfast")
         public String breakfast;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("discount_price")
         public Long discountPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("last_discounts_price")
         public Long lastDiscountsPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("last_discounts_rounding_price")
         public Long lastDiscountsRoundingPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("last_num")
         public Integer lastNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-25</p>
+         */
         @NameInMap("rate_start_time")
         public String rateStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
@@ -396,15 +496,31 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRatesHotelOnsitePriceDetailAvgOnsitePrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USD</p>
+         */
         @NameInMap("foreign_currency")
         public String foreignCurrency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("foreign_price_cent")
         public Long foreignPriceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("price_cent")
         public Long priceCent;
 
@@ -448,18 +564,38 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRatesHotelOnsitePriceDetailDailyOnsitePrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2026-04-22</p>
+         */
         @NameInMap("day")
         public String day;
 
+        /**
+         * <strong>example:</strong>
+         * <p>USD</p>
+         */
         @NameInMap("foreign_currency")
         public String foreignCurrency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("foreign_price_cent")
         public Long foreignPriceCent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("price_cent")
         public Long priceCent;
 
@@ -541,12 +677,24 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2张单人床(1.2M)</p>
+         */
         @NameInMap("bed_desc")
         public String bedDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2张1.2米单人床</p>
+         */
         @NameInMap("bed_type")
         public String bedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>双早</p>
+         */
         @NameInMap("breakfast")
         public String breakfast;
 
@@ -556,36 +704,72 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("btrip_hotel_cancel_desc")
         public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesBtripHotelCancelDesc> btripHotelCancelDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_smoking")
         public Boolean canSmoking;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023年3月25日18点00分前可免费取消</p>
+         */
         @NameInMap("cancel_policy_desc")
         public String cancelPolicyDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cancel_policy_type")
         public Integer cancelPolicyType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("company_aassist")
         public String companyAassist;
 
         @NameInMap("company_assist_type")
         public String companyAssistType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("confirm_type")
         public Integer confirmType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cny</p>
+         */
         @NameInMap("currency_code")
         public String currencyCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("daily_price_format_yuan")
         public String dailyPriceFormatYuan;
 
+        /**
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("daily_price_view")
         public String dailyPriceView;
 
         @NameInMap("discount_desc")
         public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc discountDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("end_time_daily")
         public String endTimeDaily;
 
@@ -598,93 +782,197 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("hotel_onsite_price_detail")
         public HotelGoodsQueryResponseBodyModuleRoomsRatesHotelOnsitePriceDetail hotelOnsitePriceDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("instant_confirm")
         public Boolean instantConfirm;
 
         @NameInMap("inventory_desc")
         public String inventoryDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("inventory_price")
         public String inventoryPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_business_pay4_goods")
         public Boolean isBusinessPay4Goods;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1（暂无·）</p>
+         */
         @NameInMap("is_guarantee")
         public Integer isGuarantee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_need_email")
         public Boolean isNeedEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>612673015638</p>
+         */
         @NameInMap("item_id")
         public Long itemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("last_cancel_time")
         public String lastCancelTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("max_occupancy")
         public Integer maxOccupancy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("min_adv_hours")
         public Integer minAdvHours;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("min_days")
         public Integer minDays;
 
         @NameInMap("need_certificate")
         public Boolean needCertificate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("nod")
         public Integer nod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("nop")
         public Integer nop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("order_ship_time")
         public Integer orderShipTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("payment_type")
         public Integer paymentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("price_type")
         public Integer priceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("promotion_info")
         public String promotionInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4509447432148</p>
+         */
         @NameInMap("rate_id")
         public Long rateId;
 
         @NameInMap("rate_key")
         public String rateKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>高级双床房</p>
+         */
         @NameInMap("rate_plan_name")
         public String ratePlanName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4509447432148</p>
+         */
         @NameInMap("rp_id")
         public Long rpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4011822148</p>
+         */
         @NameInMap("seller_id")
         public Long sellerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("start_time_daily")
         public String startTimeDaily;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2321</p>
+         */
         @NameInMap("supplier_code")
         public String supplierCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("supplier_name")
         public String supplierName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("support_special_invoice")
         public Boolean supportSpecialInvoice;
 
         @NameInMap("tax_fee_desc")
         public String taxFeeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
         @NameInMap("unrounding_daily_price_format_yuan")
         public String unroundingDailyPriceFormatYuan;
 
@@ -1088,15 +1376,31 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRoomsRoomService extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>#000000</p>
+         */
         @NameInMap("color")
         public String color;
 
+        /**
+         * <strong>example:</strong>
+         * <p><span>免费</span>有线上网 <span>免费</span>wifi</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>#4AA900</p>
+         */
         @NameInMap("highlight_color_color")
         public String highlightColorColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>网络</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -1140,36 +1444,76 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModuleRooms extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
         @NameInMap("area")
         public String area;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2张1.2米单人床</p>
+         */
         @NameInMap("bed_type_string")
         public String bedTypeString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("extra_bed")
         public Boolean extraBed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;facilityList\&quot;:[{\&quot;fee\&quot;:false,\&quot;logoUrl\&quot;:\&quot;<a href="https://gw.alicdn.com/imgextra/i4/O1CN017s2RbJ1JFaKKSdv1c_!!6000000000999-2-tps-96-96.png%5C%5C%22,%5C%5C%22name%5C%5C%22:%5C%5C%22%E7%93%B6%E8%A3%85%E6%B0%B4%5C%5C%22,%5C%5C%22yesNo%5C%5C%22:true%7D%7D%5D">https://gw.alicdn.com/imgextra/i4/O1CN017s2RbJ1JFaKKSdv1c_!!6000000000999-2-tps-96-96.png\\&quot;,\\&quot;name\\&quot;:\\&quot;瓶装水\\&quot;,\\&quot;yesNo\\&quot;:true}}]</a></p>
+         */
         @NameInMap("facility")
         public String facility;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,4,5,6</p>
+         */
         @NameInMap("floor")
         public String floor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("max_occupancy")
         public Integer maxOccupancy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>高级双床房</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("network_service")
         public String networkService;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://img.alicdn.com/imgextra/i4/6000000007171/O1CN01NHHdOw22qMoYHweI9_!!6000000007171-0-hotel.jpg">https://img.alicdn.com/imgextra/i4/6000000007171/O1CN01NHHdOw22qMoYHweI9_!!6000000007171-0-hotel.jpg</a></p>
+         */
         @NameInMap("pics")
         public String pics;
 
         @NameInMap("rates")
         public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRates> rates;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("room_dasc")
         public String roomDasc;
 
@@ -1179,12 +1523,24 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("room_service")
         public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRoomService> roomService;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100929</p>
+         */
         @NameInMap("srid")
         public Long srid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>有窗</p>
+         */
         @NameInMap("window_type")
         public String windowType;
 
@@ -1324,18 +1680,34 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
     }
 
     public static class HotelGoodsQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>贵州省贵阳市贵阳国家高新技术产业开发区沙文园区科学城智谷13-2栋三、四层</p>
+         */
         @NameInMap("address")
         public String address;
 
         @NameInMap("booking_instructions")
         public java.util.Map<String, String> bookingInstructions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("can_foreigner")
         public Boolean canForeigner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-15</p>
+         */
         @NameInMap("check_in")
         public String checkIn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-15</p>
+         */
         @NameInMap("check_out")
         public String checkOut;
 
@@ -1345,24 +1717,44 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("dinamic_banner_pic_urls")
         public java.util.List<String> dinamicBannerPicUrls;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17:00</p>
+         */
         @NameInMap("early_arrival_time")
         public String earlyArrivalTime;
 
         @NameInMap("hotel_group_desc")
         public String hotelGroupDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>29382</p>
+         */
         @NameInMap("hotel_id")
         public Long hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>未来酒店</p>
+         */
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00</p>
+         */
         @NameInMap("late_arrival_time")
         public String lateArrivalTime;
 
         @NameInMap("rooms")
         public java.util.List<HotelGoodsQueryResponseBodyModuleRooms> rooms;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("search_id")
         public String searchId;
 

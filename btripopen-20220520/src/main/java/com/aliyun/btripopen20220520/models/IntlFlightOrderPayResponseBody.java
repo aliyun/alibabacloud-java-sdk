@@ -24,6 +24,10 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -88,9 +92,17 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOrderPayResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("actual_pay_price")
         public Long actualPayPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("pay_status")
         public Integer payStatus;
 

@@ -4,56 +4,108 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightSearchListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CA</p>
+     */
     @NameInMap("airline_code")
     public String airlineCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HGH</p>
      */
     @NameInMap("arr_city_code")
     public String arrCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BJS</p>
+     */
     @NameInMap("arr_city_name")
     public String arrCityName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000-00-00 00:00:00</p>
+     */
     @NameInMap("arr_date")
     public String arrDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
     @NameInMap("cabin_class")
     public String cabinClass;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HGH</p>
      */
     @NameInMap("dep_city_code")
     public String depCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HGH</p>
+     */
     @NameInMap("dep_city_name")
     public String depCityName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000-00-00 00:00:00</p>
      */
     @NameInMap("dep_date")
     public String depDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA2323</p>
+     */
     @NameInMap("flight_no")
     public String flightNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("need_multi_class_price")
     public Boolean needMultiClassPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HGH</p>
+     */
     @NameInMap("transfer_city_code")
     public String transferCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA2323</p>
+     */
     @NameInMap("transfer_flight_no")
     public String transferFlightNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BJS</p>
+     */
     @NameInMap("transfer_leave_date")
     public String transferLeaveDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("trip_type")
     public String tripType;

@@ -4,21 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public CooperatorHotelBillSettlementQueryResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,321 +100,745 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class CooperatorHotelBillSettlementQueryResponseBodyModuleItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025-01-01 00:00:00</p>
+         */
         @NameInMap("adjust_time")
         public String adjustTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>124</p>
+         */
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("apply_arr_city_code")
         public String applyArrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>西安</p>
+         */
         @NameInMap("apply_arr_city_name")
         public String applyArrCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("apply_dep_city_code")
         public String applyDepCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("apply_dep_city_name")
         public String applyDepCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sdasdas123324</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@gmail.com">123@gmail.com</a></p>
+         */
         @NameInMap("approver_email")
         public String approverEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("approver_id")
         public String approverId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("approver_name")
         public String approverName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("average_nights")
         public Double averageNights;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("base_location")
         public String baseLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 00:00:00</p>
+         */
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PC端</p>
+         */
         @NameInMap("book_channel")
         public String bookChannel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>线上预定</p>
+         */
         @NameInMap("book_mode")
         public String bookMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("book_reason")
         public String bookReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 00:00:00</p>
+         */
         @NameInMap("book_time")
         public String bookTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("booker_id")
         public String bookerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zs123</p>
+         */
         @NameInMap("booker_job_no")
         public String bookerJobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("booker_name")
         public String bookerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>万豪</p>
+         */
         @NameInMap("brand_group")
         public String brandGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>万豪</p>
+         */
         @NameInMap("brand_name")
         public String brandName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>采购</p>
+         */
         @NameInMap("business_trip_result")
         public String businessTripResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>支出</p>
+         */
         @NameInMap("capital_direction")
         public String capitalDirection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>技术部-开发部</p>
+         */
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>国内酒店</p>
+         */
         @NameInMap("category_desc")
         public String categoryDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-13</p>
+         */
         @NameInMap("check_in_date")
         public String checkInDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-15</p>
+         */
         @NameInMap("checkout_date")
         public String checkoutDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>西安</p>
+         */
         @NameInMap("city")
         public String city;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>西安</p>
+         */
         @NameInMap("city_county")
         public String cityCounty;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("city_county_code")
         public Integer cityCountyCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>IN240102113438277278</p>
+         */
         @NameInMap("cooperator_bill_code")
         public String cooperatorBillCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里商旅</p>
+         */
         @NameInMap("cooperator_name")
         public String cooperatorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HO20240125162800280928</p>
+         */
         @NameInMap("cooperator_order_id")
         public String cooperatorOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("corp_refund_fee")
         public Double corpRefundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("corp_total_fee")
         public Double corpTotalFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试成本中心</p>
+         */
         @NameInMap("cost_center")
         public String costCenter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>code1</p>
+         */
         @NameInMap("cost_department")
         public String costDepartment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;key1\&quot;:\&quot;value1\&quot;,\&quot;key2\&quot;:\&quot;value2\&quot;,\&quot;key3\&quot;:\&quot;value3\&quot;}&quot;</p>
+         */
         @NameInMap("custom_content")
         public String customContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>开发部</p>
+         */
         @NameInMap("department")
         public String department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("department_id")
         public String departmentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("exceed_reason")
         public String exceedReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>酒店预订</p>
+         */
         @NameInMap("fee_type")
         public String feeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>赔付</p>
+         */
         @NameInMap("fee_type_desc")
         public String feeTypeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
         @NameInMap("fees")
         public Double fees;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("fines")
         public Double fines;
 
+        /**
+         * <strong>example:</strong>
+         * <p>否</p>
+         */
         @NameInMap("foreigners_tag")
         public String foreignersTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
         @NameInMap("fu_point_fee")
         public Double fuPointFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>商旅酒店</p>
+         */
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试发票抬头</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>否</p>
+         */
         @NameInMap("is_early_departure")
         public String isEarlyDeparture;
 
+        /**
+         * <strong>example:</strong>
+         * <p>否</p>
+         */
         @NameInMap("is_negotiation")
         public String isNegotiation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>否</p>
+         */
         @NameInMap("is_share_str")
         public String isShareStr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>新加坡</p>
+         */
         @NameInMap("location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>q1</p>
+         */
         @NameInMap("mapping_company_code")
         public String mappingCompanyCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("nights")
         public Integer nights;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3137168772101111000</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("order_price")
         public Double orderPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>预订成功</p>
+         */
         @NameInMap("order_status_desc")
         public String orderStatusDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>面付</p>
+         */
         @NameInMap("order_type")
         public String orderType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("over_apply_id")
         public String overApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("payment_department_id")
         public String paymentDepartmentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>开发部</p>
+         */
         @NameInMap("payment_department_name")
         public String paymentDepartmentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("person_refund_fee")
         public Double personRefundFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
         @NameInMap("person_settle_price")
         public Double personSettlePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>开发</p>
+         */
         @NameInMap("position")
         public String position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>初级</p>
+         */
         @NameInMap("position_level")
         public String positionLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>72328485</p>
+         */
         @NameInMap("primary_id")
         public Long primaryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>www123</p>
+         */
         @NameInMap("processor_oa_code")
         public String processorOaCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acs</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试项目名称</p>
+         */
         @NameInMap("project_name")
         public String projectName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("promotion_fee")
         public Double promotionFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试单</p>
+         */
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("reserve_rule")
         public Integer reserveRule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>房间1</p>
+         */
         @NameInMap("room_no")
         public String roomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("room_number")
         public Integer roomNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>105.0</p>
+         */
         @NameInMap("room_price")
         public Double roomPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>大床房</p>
+         */
         @NameInMap("room_type")
         public String roomType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5.0</p>
+         */
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>企业月结</p>
+         */
         @NameInMap("settle_type_desc")
         public String settleTypeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110.0</p>
+         */
         @NameInMap("settlement_fee")
         public Double settlementFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("settlement_grant_fee")
         public Double settlementGrantFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-01 00:00:00</p>
+         */
         @NameInMap("settlement_time")
         public String settlementTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>企业月结</p>
+         */
         @NameInMap("settlement_type")
         public String settlementType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SIO</p>
+         */
         @NameInMap("sio")
         public String sio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>一星级</p>
+         */
         @NameInMap("star")
         public String star;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>入账成功</p>
+         */
         @NameInMap("status_desc")
         public String statusDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>166564408</p>
+         */
         @NameInMap("sub_order_id")
         public String subOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("third_invoice_id")
         public String thirdInvoiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("third_itinerary_id")
         public String thirdItineraryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("total_nights")
         public Integer totalNights;
 
+        /**
+         * <strong>example:</strong>
+         * <p>支出</p>
+         */
         @NameInMap("trade_action_desc")
         public String tradeActionDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@gmail.com">123@gmail.com</a></p>
+         */
         @NameInMap("traveler_email")
         public String travelerEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("traveler_id")
         public String travelerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zs123</p>
+         */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>内部员工</p>
+         */
         @NameInMap("traveler_member_type")
         public String travelerMemberType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>内部员工</p>
+         */
         @NameInMap("traveler_member_type_name")
         public String travelerMemberTypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("traveler_name")
         public String travelerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("voucher_type")
         public Integer voucherType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>增值税发票</p>
+         */
         @NameInMap("voucher_type_desc")
         public String voucherTypeDesc;
 
@@ -1250,24 +1698,48 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class CooperatorHotelBillSettlementQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("category")
         public Integer category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open12ilgngll7us7v10Bm5UlMg700</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
         @NameInMap("items")
         public java.util.List<CooperatorHotelBillSettlementQueryResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-14</p>
+         */
         @NameInMap("period_end")
         public String periodEnd;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-13</p>
+         */
         @NameInMap("period_start")
         public String periodStart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1qwe</p>
+         */
         @NameInMap("scroll_id")
         public String scrollId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Long totalSize;
 

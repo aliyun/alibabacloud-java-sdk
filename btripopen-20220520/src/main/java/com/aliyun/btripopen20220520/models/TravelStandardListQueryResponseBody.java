@@ -4,21 +4,54 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TravelStandardListQueryResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The response data. Returned by the server. An empty value is returned if no results are found or an exception occurs.</p>
+     */
     @NameInMap("module")
     public TravelStandardListQueryResponseBodyModule module;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05F9C201-1B53-5905-94AB-0D7444D8466A</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041aa317070996148671005d0a0b</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +109,45 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
     }
 
     public static class TravelStandardListQueryResponseBodyModuleItemsMainReserveRule extends TeaModel {
+        /**
+         * <p>The list of enabled service categories.</p>
+         */
         @NameInMap("open_service_type_list")
         public java.util.List<String> openServiceTypeList;
 
+        /**
+         * <p>The personnel rule code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006516571</p>
+         */
         @NameInMap("rule_code")
         public Long ruleCode;
 
+        /**
+         * <p>The description of the travel standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>普通员工规则的描述</p>
+         */
         @NameInMap("rule_desc")
         public String ruleDesc;
 
+        /**
+         * <p>The ID of the primary travel standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6516571</p>
+         */
         @NameInMap("rule_id")
         public Long ruleId;
 
+        /**
+         * <p>The name of the travel standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>普通员工规则</p>
+         */
         @NameInMap("rule_name")
         public String ruleName;
 
@@ -139,9 +199,21 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
     }
 
     public static class TravelStandardListQueryResponseBodyModuleItemsReserveRuleDescDataList extends TeaModel {
+        /**
+         * <p>The travel standard description item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>舱等</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the travel standard description item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>经济舱,超级经济舱,公务舱,头等舱</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -169,12 +241,27 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
     }
 
     public static class TravelStandardListQueryResponseBodyModuleItemsReserveRuleDesc extends TeaModel {
+        /**
+         * <p>The description of the travel standard.</p>
+         */
         @NameInMap("data_list")
         public java.util.List<TravelStandardListQueryResponseBodyModuleItemsReserveRuleDescDataList> dataList;
 
+        /**
+         * <p>The title of the travel standard detail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>普通员工规则</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>The category of the travel standard detail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flight</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -210,12 +297,24 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
     }
 
     public static class TravelStandardListQueryResponseBodyModuleItems extends TeaModel {
+        /**
+         * <p>The primary travel standard information.</p>
+         */
         @NameInMap("main_reserve_rule")
         public TravelStandardListQueryResponseBodyModuleItemsMainReserveRule mainReserveRule;
 
+        /**
+         * <p>The description of the travel standard.</p>
+         */
         @NameInMap("reserve_rule_desc")
         public java.util.List<TravelStandardListQueryResponseBodyModuleItemsReserveRuleDesc> reserveRuleDesc;
 
+        /**
+         * <p>The applicable personnel scope of the travel standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("scope")
         public Integer scope;
 
@@ -251,9 +350,18 @@ public class TravelStandardListQueryResponseBody extends TeaModel {
     }
 
     public static class TravelStandardListQueryResponseBodyModule extends TeaModel {
+        /**
+         * <p>The list of travel standards.</p>
+         */
         @NameInMap("items")
         public java.util.List<TravelStandardListQueryResponseBodyModuleItems> items;
 
+        /**
+         * <p>The total number of travel standards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Integer totalSize;
 

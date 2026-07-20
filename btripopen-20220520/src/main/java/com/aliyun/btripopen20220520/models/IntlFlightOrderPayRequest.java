@@ -18,11 +18,18 @@ public class IntlFlightOrderPayRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TRAVEL</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1002145190081005400</p>
      */
     @NameInMap("order_id")
     public String orderId;
@@ -30,6 +37,10 @@ public class IntlFlightOrderPayRequest extends TeaModel {
     @NameInMap("order_price")
     public Long orderPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F11372878673688133632</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 

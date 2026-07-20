@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class IntlFlightReShopListSearchRequest extends TeaModel {
     /**
+     * <p>The business travel order ID. Required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The external order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3985893777358602240</p>
      */
@@ -21,6 +24,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
     public String outOrderId;
 
     /**
+     * <p>Specifies whether external polling is enabled. When enabled, the external frontend controls polling to reduce the response time of a single search. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -28,6 +33,7 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
     public Boolean outWheelSearch;
 
     /**
+     * <p>The rebooking group key returned by the consultation API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
     public String passengerJourneyGroupKey;
 
     /**
+     * <p>The rebooking reason code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -44,18 +52,22 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
     public String reShopReasonCode;
 
     /**
+     * <p>The list of journeys selected for rebooking.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("search_journeys")
     public java.util.List<IntlFlightReShopListSearchRequestSearchJourneys> searchJourneys;
 
     /**
+     * <p>The list of passengers selected for rebooking.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("selected_passengers")
     public java.util.List<IntlFlightReShopListSearchRequestSelectedPassengers> selectedPassengers;
 
     /**
+     * <p>The query record token for external polling.</p>
+     * 
      * <strong>example:</strong>
      * <p>0305b8203a7767626f911d97a91a9473</p>
      */
@@ -133,6 +145,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
 
     public static class IntlFlightReShopListSearchRequestSearchJourneysSelectedFlights extends TeaModel {
         /**
+         * <p>The three-letter code of the arrival city.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -140,6 +154,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
         public String arrCityCode;
 
         /**
+         * <p>The three-letter code of the departure city.</p>
+         * 
          * <strong>example:</strong>
          * <p>BJS</p>
          */
@@ -147,6 +163,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
         public String depCityCode;
 
         /**
+         * <p>The departure time. Format: yyyy-MM-dd HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-09-01 07:10</p>
          */
@@ -154,6 +172,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
         public String flightTime;
 
         /**
+         * <p>The marketing carrier flight number.</p>
+         * 
          * <strong>example:</strong>
          * <p>KA5809</p>
          */
@@ -201,6 +221,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
 
     public static class IntlFlightReShopListSearchRequestSearchJourneys extends TeaModel {
         /**
+         * <p>The three-letter code of the arrival city.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -208,6 +230,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
         public String arrCityCode;
 
         /**
+         * <p>The three-letter code of the departure city.</p>
+         * 
          * <strong>example:</strong>
          * <p>BJS</p>
          */
@@ -215,12 +239,17 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
         public String depCityCode;
 
         /**
+         * <p>The preferred date selected by the user. Format: yyyy-MM-dd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-28</p>
          */
         @NameInMap("dep_date")
         public String depDate;
 
+        /**
+         * <p>The selected flight information for rebooking.</p>
+         */
         @NameInMap("selected_flights")
         public java.util.List<IntlFlightReShopListSearchRequestSearchJourneysSelectedFlights> selectedFlights;
 
@@ -265,6 +294,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
 
     public static class IntlFlightReShopListSearchRequestSelectedPassengers extends TeaModel {
         /**
+         * <p>The full name of the passenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZHANG/SAN</p>
          */
@@ -272,6 +303,8 @@ public class IntlFlightReShopListSearchRequest extends TeaModel {
         public String fullName;
 
         /**
+         * <p>The passenger ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000001</p>
          */

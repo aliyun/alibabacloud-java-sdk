@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class EstimatedPriceQueryV2ResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("module")
     public java.util.List<EstimatedPriceQueryV2ResponseBodyModule> module;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
      */
@@ -22,6 +29,8 @@ public class EstimatedPriceQueryV2ResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -29,6 +38,8 @@ public class EstimatedPriceQueryV2ResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>traceId</p>
+     * 
      * <strong>example:</strong>
      * <p>210bcc3a16583004579056128d33d7</p>
      */
@@ -82,16 +93,23 @@ public class EstimatedPriceQueryV2ResponseBody extends TeaModel {
 
     public static class EstimatedPriceQueryV2ResponseBodyModule extends TeaModel {
         /**
+         * <p>The category, such as flight, hotel, or train.</p>
+         * 
          * <strong>example:</strong>
          * <p>flight</p>
          */
         @NameInMap("biz_type")
         public String bizType;
 
+        /**
+         * <p>The price map. Key: min and max.</p>
+         */
         @NameInMap("price_map")
         public java.util.Map<String, ModulePriceMapValue> priceMap;
 
         /**
+         * <p>The type, such as economy class, business class, first class, G/D train, other, or travel standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>经济舱</p>
          */

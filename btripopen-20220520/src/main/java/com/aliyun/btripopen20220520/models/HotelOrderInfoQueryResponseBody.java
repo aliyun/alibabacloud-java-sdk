@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderInfoQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelOrderInfoQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,57 +96,129 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleBaseOrderInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("book_mode")
         public String bookMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1430378</p>
+         */
         @NameInMap("booker_id")
         public String bookerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("booker_name")
         public String bookerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>btripkvxtn1321g49wtul</p>
+         */
         @NameInMap("btrip_corp_id")
         public String btripCorpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("category")
         public Integer category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1721145600000</p>
+         */
         @NameInMap("check_in_time")
         public Long checkInTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1721145600000</p>
+         */
         @NameInMap("check_out_time")
         public Long checkOutTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_agreement_price")
         public Boolean isAgreementPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("nights")
         public Integer nights;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1721145600000</p>
+         */
         @NameInMap("order_create_time")
         public Long orderCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1012053198307958626</p>
+         */
         @NameInMap("order_id")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>待付款</p>
+         */
         @NameInMap("order_status_desc")
         public String orderStatusDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("pay_status")
         public Integer payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1721145600000</p>
+         */
         @NameInMap("pay_time")
         public Long payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("room_num")
         public Integer roomNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("settle_type")
         public Integer settleType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("trip_mode")
         public Integer tripMode;
 
@@ -282,18 +374,38 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleBookerInfoDepartment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0rCUI20hjOsk0sTwlu</p>
+         */
         @NameInMap("cascade_dept_mask")
         public String cascadeDeptMask;
 
+        /**
+         * <strong>example:</strong>
+         * <p>总公司-全国总部-自有品牌商品部-百货-日用百货部</p>
+         */
         @NameInMap("cascade_dept_name")
         public String cascadeDeptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35</p>
+         */
         @NameInMap("depart_id")
         public String departId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>日用百货部</p>
+         */
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330000001815</p>
+         */
         @NameInMap("out_depart_id")
         public String outDepartId;
 
@@ -345,33 +457,69 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleBookerInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>UN_APPLY</p>
+         */
         @NameInMap("booker_role")
         public String bookerRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:13311112222@qq.com">13311112222@qq.com</a></p>
+         */
         @NameInMap("contact_email")
         public String contactEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13311112222</p>
+         */
         @NameInMap("contact_phone")
         public String contactPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open12gddn2kn1i47v10wRJNkMFx00</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
         @NameInMap("department")
         public HotelOrderInfoQueryResponseBodyModuleBookerInfoDepartment department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Tom</p>
+         */
         @NameInMap("en_name")
         public String enName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("job_no")
         public String jobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("need_apply")
         public Boolean needApply;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("real_name")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1430378</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -463,45 +611,101 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleHotelInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("city_code")
         public String cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州市</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("country_code")
         public String countryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国</p>
+         */
         @NameInMap("country_name")
         public String countryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330183</p>
+         */
         @NameInMap("district_code")
         public String districtCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>富阳区</p>
+         */
         @NameInMap("district_name")
         public String districtName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>红丰路***号</p>
+         */
         @NameInMap("hotel_address")
         public String hotelAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("hotel_brand_code")
         public String hotelBrandCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>汉庭酒店</p>
+         */
         @NameInMap("hotel_brand_name")
         public String hotelBrandName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>huazhu</p>
+         */
         @NameInMap("hotel_group")
         public String hotelGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>55335212</p>
+         */
         @NameInMap("hotel_id")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>商旅测试酒店</p>
+         */
         @NameInMap("hotel_name")
         public String hotelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Test Hotel Name</p>
+         */
         @NameInMap("hotel_name_en")
         public String hotelNameEn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("star")
         public String star;
 
@@ -625,18 +829,38 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleHotelOrderFeeInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>35000</p>
+         */
         @NameInMap("order_amount")
         public Long orderAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("other_fee")
         public Long otherFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35000</p>
+         */
         @NameInMap("pay_amount")
         public Long payAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("promotion_amount")
         public Long promotionAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35000</p>
+         */
         @NameInMap("total_room_amount")
         public Long totalRoomAmount;
 
@@ -688,24 +912,52 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleHotelOrderRefundInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("cancel_fine")
         public Long cancelFine;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000002578096</p>
+         */
         @NameInMap("refund_apply_id")
         public Long refundApplyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1721702353700</p>
+         */
         @NameInMap("refund_end_time")
         public Long refundEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34000</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>行程有变</p>
+         */
         @NameInMap("refund_reason")
         public String refundReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1721702353700</p>
+         */
         @NameInMap("refund_start_time")
         public Long refundStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("refund_type")
         public Integer refundType;
 
@@ -773,15 +1025,31 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosApplyInfoExceedApply extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>旅游旺季，房价飙升。</p>
+         */
         @NameInMap("exceed_reason")
         public String exceedReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("exceed_type")
         public Integer exceedType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3321</p>
+         */
         @NameInMap("flow_no")
         public Long flowNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60853</p>
+         */
         @NameInMap("id")
         public Long id;
 
@@ -825,18 +1093,34 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosApplyInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("apply_business_id")
         public String applyBusinessId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>差旅审批</p>
+         */
         @NameInMap("apply_business_name")
         public String applyBusinessName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1424031910085891196</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
         @NameInMap("exceed_apply")
         public java.util.List<HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosApplyInfoExceedApply> exceedApply;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ef5e74dc1f1640b08858fb043f64e477-8</p>
+         */
         @NameInMap("itinerary_no")
         public String itineraryNo;
 
@@ -888,18 +1172,38 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosDepartment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0rCUI20hjOsk0sTwlu</p>
+         */
         @NameInMap("cascade_dept_mask")
         public String cascadeDeptMask;
 
+        /**
+         * <strong>example:</strong>
+         * <p>总公司-全国总部-自有品牌商品部-百货-日用百货部</p>
+         */
         @NameInMap("cascade_dept_name")
         public String cascadeDeptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35</p>
+         */
         @NameInMap("depart_id")
         public String departId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>日用百货部</p>
+         */
         @NameInMap("depart_name")
         public String departName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>330000001815</p>
+         */
         @NameInMap("out_depart_id")
         public String outDepartId;
 
@@ -951,30 +1255,66 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosTripCostCenter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>323431</p>
+         */
         @NameInMap("cost_center_code")
         public String costCenterCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2312</p>
+         */
         @NameInMap("cost_center_id")
         public String costCenterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>综合成本中心</p>
+         */
         @NameInMap("cost_center_name")
         public String costCenterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;extraKey&quot;:&quot;extraVal&quot;}</p>
+         */
         @NameInMap("external_ext_field")
         public String externalExtField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("fee_type")
         public Integer feeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123332</p>
+         */
         @NameInMap("invoice_id")
         public Long invoiceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>发票抬头标题</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1002</p>
+         */
         @NameInMap("project_code")
         public String projectCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>华北项目组</p>
+         */
         @NameInMap("project_title")
         public String projectTitle;
 
@@ -1061,33 +1401,65 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
         @NameInMap("apply_info")
         public HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosApplyInfo applyInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>342229200801010023</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
         @NameInMap("department")
         public HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosDepartment department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
         @NameInMap("job_no")
         public String jobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13311112222</p>
+         */
         @NameInMap("telephone")
         public String telephone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1430378</p>
+         */
         @NameInMap("traveler_id")
         public String travelerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("traveler_name")
         public String travelerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("traveler_type")
         public Integer travelerType;
 
         @NameInMap("trip_cost_center")
         public HotelOrderInfoQueryResponseBodyModuleRoomTraverInfoTraverInfosTripCostCenter tripCostCenter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("user_type")
         public Integer userType;
 
@@ -1187,9 +1559,17 @@ public class HotelOrderInfoQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderInfoQueryResponseBodyModuleRoomTraverInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("live_room_no")
         public String liveRoomNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>大床房</p>
+         */
         @NameInMap("room_type_name")
         public String roomTypeName;
 

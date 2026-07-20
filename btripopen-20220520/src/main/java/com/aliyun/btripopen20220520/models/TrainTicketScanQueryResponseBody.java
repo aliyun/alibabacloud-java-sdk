@@ -4,21 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainTicketScanQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public TrainTicketScanQueryResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,102 +100,238 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
     }
 
     public static class TrainTicketScanQueryResponseBodyModuleItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sdasdas123324</p>
+         */
         @NameInMap("apply_id")
         public String applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州东</p>
+         */
         @NameInMap("arr_station")
         public String arrStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-01</p>
+         */
         @NameInMap("bill_date")
         public String billDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>04车</p>
+         */
         @NameInMap("coach_name")
         public String coachName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试成本中心</p>
+         */
         @NameInMap("cost_center")
         public String costCenter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>上海虹桥</p>
+         */
         @NameInMap("dep_station")
         public String depStation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-12 10:00:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试公司-测试部门</p>
+         */
         @NameInMap("department")
         public String department;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7647889000001X1</p>
+         */
         @NameInMap("electronic_ticket_no")
         public String electronicTicketNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("fee_type_show_code")
         public Integer feeTypeShowCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("has_changed")
         public Boolean hasChanged;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-04-07 00:00:00</p>
+         */
         @NameInMap("invoice_date")
         public String invoiceDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("invoice_material")
         public Integer invoiceMaterial;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试发票抬头</p>
+         */
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("ofd_url")
         public String ofdUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3137168772101111000</p>
+         */
         @NameInMap("order_id")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>112435451313</p>
+         */
         @NameInMap("origin_ticket_no")
         public String originTicketNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("oss_url")
         public String ossUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("passenger")
         public String passenger;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("pdf_url")
         public String pdfUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试项目名称</p>
+         */
         @NameInMap("project")
         public String project;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试购方抬头</p>
+         */
         @NameInMap("purchaser_name")
         public String purchaserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91441111111111111S</p>
+         */
         @NameInMap("purchaser_tax_no")
         public String purchaserTaxNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>二等座</p>
+         */
         @NameInMap("seat")
         public String seat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10C号</p>
+         */
         @NameInMap("seat_no")
         public String seatNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30671211200127U123456</p>
+         */
         @NameInMap("serial_number")
         public String serialNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.26</p>
+         */
         @NameInMap("tax_amount")
         public String taxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9%</p>
+         */
         @NameInMap("tax_rate")
         public String taxRate;
 
+        /**
+         * <p>取票号</p>
+         * 
+         * <strong>example:</strong>
+         * <p>784-1111111111</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
+        /**
+         * <p>车次</p>
+         * 
+         * <strong>example:</strong>
+         * <p>G99</p>
+         */
         @NameInMap("train_no")
         public String trainNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
+         */
         @NameInMap("xml_url")
         public String xmlUrl;
 
@@ -450,15 +610,31 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<TrainTicketScanQueryResponseBodyModuleItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("page_no")
         public Integer pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("page_size")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("total_page")
         public Integer totalPage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("total_size")
         public Integer totalSize;
 

@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TravelStandardRelateQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public TravelStandardRelateQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("resultCode")
     public Integer resultCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210bcc3a16583004579056128d33d7</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,12 +98,24 @@ public class TravelStandardRelateQueryResponseBody extends TeaModel {
     }
 
     public static class TravelStandardRelateQueryResponseBodyModuleReserveBindEntityList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>667104628</p>
+         */
         @NameInMap("entity_id")
         public String entityId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>主管</p>
+         */
         @NameInMap("entity_name")
         public String entityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("entity_type")
         public String entityType;
 
@@ -120,6 +154,10 @@ public class TravelStandardRelateQueryResponseBody extends TeaModel {
         @NameInMap("reserve_bind_entity_list")
         public java.util.List<TravelStandardRelateQueryResponseBodyModuleReserveBindEntityList> reserveBindEntityList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("total")
         public Integer total;
 

@@ -7,6 +7,16 @@ public class AddProjectManagerHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>The enterprise access token.</p>
+     * <ul>
+     * <li>This is a required header parameter for HTTP calls. For information about how to obtain it, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access token</a>.</li>
+     * <li>You can use <code>corp_token=value</code> in the request URL as an alternative.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>feth00jqwls</p>
+     */
     @NameInMap("x-acs-btrip-corp-token")
     public String xAcsBtripCorpToken;
 

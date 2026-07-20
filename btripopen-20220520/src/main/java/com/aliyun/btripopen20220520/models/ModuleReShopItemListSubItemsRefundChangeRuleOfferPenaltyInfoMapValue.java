@@ -4,57 +4,197 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleReShopItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue extends TeaModel {
+    /**
+     * <p>Indicates whether the rule is applicable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("struct")
     public Boolean struct;
 
+    /**
+     * <p>Indicates whether refund is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("cancel_fee_ind")
     public Boolean cancelFeeInd;
 
+    /**
+     * <p>Indicates whether date change is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("change_fee_ind")
     public Boolean changeFeeInd;
 
+    /**
+     * <p>Indicates whether upgrade is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("upgrade_fee_ind")
     public Boolean upgradeFeeInd;
 
+    /**
+     * <p>Indicates whether reissue is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("reissue_ind")
     public Boolean reissueInd;
 
+    /**
+     * <p>The rule type. Valid values:</p>
+     * <ul>
+     * <li>0: Refund fee.</li>
+     * <li>1: Change fee.</li>
+     * <li>2: No-show penalty.</li>
+     * <li>3: Other.</li>
+     * <li>4: Upgrade fee.</li>
+     * <li>5: Endorsement.</li>
+     * <li>6: Deduction for used segments.</li>
+     * <li>100: Tax refund.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("penalty_type_code")
     public Integer penaltyTypeCode;
 
+    /**
+     * <p>The applicability scope of the rule. Valid values:</p>
+     * <ul>
+     * <li>1: All unused.</li>
+     * <li>2: Partially unused.</li>
+     * <li>3: Outbound.</li>
+     * <li>4: Inbound.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("penalty_apply_range_code")
     public Integer penaltyApplyRangeCode;
 
+    /**
+     * <p>The charge method of the rule. Valid values:</p>
+     * <ul>
+     * <li>0: Charged per whole trip.</li>
+     * <li>1: Charged per direction.</li>
+     * <li>2: Charged per segment.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("penalty_charge_type_code")
     public Integer penaltyChargeTypeCode;
 
+    /**
+     * <p>The fee amount.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("fee")
     public Double fee;
 
+    /**
+     * <p>The currency of the fee.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CNY</p>
+     */
     @NameInMap("currency")
     public String currency;
 
+    /**
+     * <p>The fee percentage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("penalty_percent")
     public Double penaltyPercent;
 
+    /**
+     * <p>The start time of the rule time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-720</p>
+     */
     @NameInMap("start_time")
     public Integer startTime;
 
+    /**
+     * <p>The end time of the rule time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-168</p>
+     */
     @NameInMap("end_time")
     public Integer endTime;
 
+    /**
+     * <p>The time unit. Valid values:</p>
+     * <ul>
+     * <li>0: Hours.</li>
+     * <li>1: Days.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("time_unit_code")
     public Integer timeUnitCode;
 
+    /**
+     * <p>The rule title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>退票费用</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>起飞时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-10-01 01:00:00</p>
+     */
     @NameInMap("dep_time")
     public String depTime;
 
+    /**
+     * <p>航段序号，</p>
+     * <ul>
+     * <li><p>OUTBOUND_FIRST(&quot;去程第一段&quot;)</p>
+     * </li>
+     * <li><p>OUTBOUND_SECOND(&quot;去程第二段&quot;)</p>
+     * </li>
+     * <li><p>INBOUND_FIRST(&quot;回程第一段&quot;)</p>
+     * </li>
+     * <li><p>INBOUND_SECOND(&quot;回程第二段&quot;)</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OUTBOUND_FIRST</p>
+     */
     @NameInMap("segment_number")
     public String segmentNumber;
 
+    /**
+     * <p>各类非结构化补充说明</p>
+     */
     @NameInMap("desc_infos")
     public java.util.Map<String, String> descInfos;
 

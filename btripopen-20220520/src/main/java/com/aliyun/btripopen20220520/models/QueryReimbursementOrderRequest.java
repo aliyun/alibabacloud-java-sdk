@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class QueryReimbursementOrderRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RT204396</p>
      */
     @NameInMap("reimb_order_no")
     public String reimbOrderNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ding123</p>
+     */
     @NameInMap("sub_corp_id")
     public String subCorpId;
 

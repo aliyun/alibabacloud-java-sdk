@@ -4,21 +4,45 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public ElectronicItineraryGetApplyResultResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +100,42 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
     }
 
     public static class ElectronicItineraryGetApplyResultResponseBodyModuleApplyTicketList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5001</p>
+         */
         @NameInMap("failed_code")
         public Integer failedCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>开票失败后透出具体原因</p>
+         */
         @NameInMap("failed_reason")
         public String failedReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>行程单状态
+         * 1- 待开票
+         * 2- 开票中
+         * 3- 开票成功
+         * 4- 开票失败</p>
+         */
         @NameInMap("itinerary_status")
         public Integer itineraryStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>实际购方信息与申请不一致，该发票商旅不支持换开，请联系航司进行换开</p>
+         */
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>781-6605285563</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -142,6 +190,10 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         @NameInMap("apply_ticket_list")
         public java.util.List<ElectronicItineraryGetApplyResultResponseBodyModuleApplyTicketList> applyTicketList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0c7b5944618943479a9a4d40c1eec618</p>
+         */
         @NameInMap("batch_apply_no")
         public String batchApplyNo;
 

@@ -4,27 +4,59 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightItineraryScanQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-12-01</p>
+     */
     @NameInMap("bill_date")
     public String billDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("bill_id")
     public Long billId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>456</p>
+     */
     @NameInMap("invoice_sub_task_id")
     public Long invoiceSubTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234566</p>
+     */
     @NameInMap("itinerary_num")
     public String itineraryNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017028203339982120</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>784-911111111</p>
+     */
     @NameInMap("ticket_no")
     public String ticketNo;
 

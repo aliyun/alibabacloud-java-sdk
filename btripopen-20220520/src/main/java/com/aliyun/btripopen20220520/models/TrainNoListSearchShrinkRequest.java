@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class TrainNoListSearchShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>包头东</p>
      */
     @NameInMap("arr_location")
     public String arrLocation;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-05-16</p>
      */
     @NameInMap("dep_date")
     public String depDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>包头</p>
      */
     @NameInMap("dep_location")
     public String depLocation;
@@ -28,6 +37,10 @@ public class TrainNoListSearchShrinkRequest extends TeaModel {
     @NameInMap("option")
     public String optionShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("order_id")
     public String orderId;
 

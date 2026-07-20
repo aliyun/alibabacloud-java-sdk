@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MealApplyAddResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public MealApplyAddResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210e842b16611337974412836dae27</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +98,10 @@ public class MealApplyAddResponseBody extends TeaModel {
     }
 
     public static class MealApplyAddResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024073128454753</p>
+         */
         @NameInMap("third_part_apply_id")
         public String thirdPartApplyId;
 

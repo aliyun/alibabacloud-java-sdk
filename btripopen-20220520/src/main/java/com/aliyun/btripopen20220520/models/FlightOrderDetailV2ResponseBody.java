@@ -4,21 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightOrderDetailV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module</p>
+     */
     @NameInMap("module")
     public FlightOrderDetailV2ResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E5F4ACF5-5677-1515-9999-ABBB5E668032</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210bc60a16917251281873772dac41</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +103,31 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModuleContactInfoDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:178169630111@163.com">178169630111@163.com</a></p>
+         */
         @NameInMap("contact_email")
         public String contactEmail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试联系人</p>
+         */
         @NameInMap("contact_name")
         public String contactName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>178169630111</p>
+         */
         @NameInMap("contact_phone")
         public String contactPhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("send_msg_to_passenger")
         public Boolean sendMsgToPassenger;
 
@@ -128,15 +171,31 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTOJourneysSegmentListFlightChange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>由于测试原因，本航班计划起飞时间延误至03-15 07:30</p>
+         */
         @NameInMap("change_desc")
         public String changeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>出发时间延误</p>
+         */
         @NameInMap("change_status")
         public String changeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DEP_TIME_DELAY</p>
+         */
         @NameInMap("change_status_code")
         public String changeStatusCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>新航段信息</p>
+         */
         @NameInMap("new_segment")
         public Object newSegment;
 
@@ -191,9 +250,17 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTOJourneysSegmentListSegmentPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
@@ -221,156 +288,360 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTOJourneysSegmentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CA</p>
+         */
         @NameInMap("air_line_code")
         public String airLineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Air China Limited</p>
+         */
         @NameInMap("air_line_english_name")
         public String airLineEnglishName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国国航</p>
+         */
         @NameInMap("air_line_name")
         public String airLineName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>95583</p>
+         */
         @NameInMap("air_line_phone")
         public String airLinePhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://gw.alicdn.com/tfs/TB12fJAFHr1gK0jSZR0XXbP8XXa-450-450.png">https://gw.alicdn.com/tfs/TB12fJAFHr1gK0jSZR0XXbP8XXa-450-450.png</a></p>
+         */
         @NameInMap("airline_icon_url")
         public String airlineIconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>国航</p>
+         */
         @NameInMap("airline_short_name")
         public String airlineShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("arr_airport_code")
         public String arrAirportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>锡林浩特机场</p>
+         */
         @NameInMap("arr_airport_name")
         public String arrAirportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>锡林浩特</p>
+         */
         @NameInMap("arr_city_name")
         public String arrCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-20 08:25:00</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航班到达航站楼</p>
+         */
         @NameInMap("arrive_terminal")
         public String arriveTerminal;
 
+        /**
+         * <p>cabin</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全价经济舱</p>
+         */
         @NameInMap("cabin")
         public String cabin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>全价经济舱0.4折</p>
+         */
         @NameInMap("cabin_and_discount")
         public String cabinAndDiscount;
 
+        /**
+         * <p>cabin_class</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
+        /**
+         * <p>cabin_class_name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>全价经济舱</p>
+         */
         @NameInMap("cabin_class_name")
         public String cabinClassName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("code_share")
         public Boolean codeShare;
 
+        /**
+         * <strong>example:</strong>
+         * <p>起飞前45分钟停止办理值机</p>
+         */
         @NameInMap("deadline_text")
         public String deadlineText;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PEK</p>
+         */
         @NameInMap("dep_airport_code")
         public String depAirportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>首都国际机场</p>
+         */
         @NameInMap("dep_airport_name")
         public String depAirportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("dep_city_name")
         public String depCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-29</p>
+         */
         @NameInMap("dep_date")
         public String depDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-20 07:00:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航班到达航站楼</p>
+         */
         @NameInMap("depart_terminal")
         public String departTerminal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.4</p>
+         */
         @NameInMap("discount")
         public Double discount;
 
         @NameInMap("flight_change")
         public FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTOJourneysSegmentListFlightChange flightChange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA1110</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ARJ</p>
+         */
         @NameInMap("flight_type")
         public String flightType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>时长</p>
+         */
         @NameInMap("fly_duration")
         public Integer flyDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>制造商，如&quot;波音&quot;</p>
+         */
         @NameInMap("manufacturer")
         public String manufacturer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>无餐食</p>
+         */
         @NameInMap("meal_desc")
         public String mealDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>准点率</p>
+         */
         @NameInMap("on_time_rate")
         public String onTimeRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>共享/承运航司简称</p>
+         */
         @NameInMap("operating_air_short_name")
         public String operatingAirShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>共享/承运航司code</p>
+         */
         @NameInMap("operating_airline_code")
         public String operatingAirlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>共享/承运航司英文名称</p>
+         */
         @NameInMap("operating_airline_english_name")
         public String operatingAirlineEnglishName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>共享/承运航司图标</p>
+         */
         @NameInMap("operating_airline_icon_url")
         public String operatingAirlineIconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>共享/承运航司名称</p>
+         */
         @NameInMap("operating_airline_name")
         public String operatingAirlineName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>共享/承运航司电话</p>
+         */
         @NameInMap("operating_airline_phone")
         public String operatingAirlinePhone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>共享/承运航班号</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小</p>
+         */
         @NameInMap("plane_type")
         public String planeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>服务费</p>
+         */
         @NameInMap("raise_price")
         public Long raisePrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航段Id</p>
+         */
         @NameInMap("segment_id")
         public String segmentId;
 
+        /**
+         * <p>segmentIndex</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
         @NameInMap("segment_position")
         public FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTOJourneysSegmentListSegmentPosition segmentPosition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停机场</p>
+         */
         @NameInMap("stop_airport")
         public String stopAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停到达时间</p>
+         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停城市</p>
+         */
         @NameInMap("stop_city")
         public String stopCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停城市</p>
+         */
         @NameInMap("stop_city_name")
         public String stopCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停出发时间</p>
+         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停次数</p>
+         */
         @NameInMap("stop_quantity")
         public Integer stopQuantity;
 
@@ -790,51 +1061,117 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTOJourneys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("all_fly_duration")
         public Long allFlyDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("all_fly_duration_after_change")
         public Long allFlyDurationAfterChange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>申请单Id</p>
+         */
         @NameInMap("apply_id")
         public Long applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>锡林浩特</p>
+         */
         @NameInMap("arr_city_name")
         public String arrCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-20 08:25:00</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;baggageDetails\&quot;:[{\&quot;index\&quot;:0,\&quot;title\&quot;:\&quot;行李规定\&quot;,\&quot;type\&quot;:2,\&quot;baggageSubItems\&quot;:[{\&quot;extraContentVisualizes\&quot;:[],\&quot;baggageSubContentVisualizes\&quot;:[{\&quot;baggageDesc\&quot;:[\&quot;每人可携带 1件 登机\&quot;,\&quot;至多 5公斤/件\&quot;,\&quot;尺寸不超过 20<em>40</em>55cm\&quot;],\&quot;baggageSubContentType\&quot;:0,\&quot;imageDO\&quot;:{\&quot;image\&quot;:\&quot;<a href="https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png%5C%5C%22,%5C%5C%22largest%5C%5C%22:%5C%5C%2255%5C%5C%22,%5C%5C%22middle%5C%5C%22:%5C%5C%2240%5C%5C%22,%5C%5C%22smallest%5C%5C%22:%5C%5C%2220%5C%5C%22%7D,%5C%5C%22subTitle%5C%5C%22:%5C%5C%22%E5%85%8D%E8%B4%B9%E6%89%8B%E6%8F%90%E8%A1%8C%E6%9D%8E%5C%5C%22,%5C%5C%22isHighlight%5C%5C%22:false,%5C%5C%22description%5C%5C%22:%7B%5C%5C%22image%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png%5C%5C%22,%5C%5C%22icon%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png%5C%5C%22,%5C%5C%22title%5C%5C%22:%5C%5C%22%E6%89%8B%E6%8F%90%E8%A1%8C%E6%9D%8E%E8%AF%B4%E6%98%8E%5C%5C%22,%5C%5C%22desc%5C%5C%22:%5C%5C%22%E6%82%A8%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E4%B8%8A%E9%A3%9E%E6%9C%BA%E5%AE%A2%E8%88%B1%E5%86%85%E7%9A%84%E8%A1%8C%E6%9D%8E%E7%89%A9%E5%93%81%EF%BC%8C%E7%94%B1%E6%97%85%E5%AE%A2%E8%87%AA%E8%A1%8C%E8%B4%9F%E8%B4%A3%E4%BF%9D%E7%AE%A1%E3%80%82%E5%85%B7%E4%BD%93%E5%B0%BA%E5%AF%B8%E3%80%81%E9%87%8D%E9%87%8F%E3%80%81%E7%B1%BB%E5%9E%8B%E7%AD%89%E4%BB%A5%E5%90%84%E8%88%AA%E7%A9%BA%E5%85%AC%E5%8F%B8%E8%A7%84%E5%AE%9A%E4%B8%BA%E5%87%86%E3%80%82%5C%5C%22%7D%7D,%7B%5C%5C%22baggageDesc%5C%5C%22:%5B%5C%5C%22%E5%B0%BA%E5%AF%B8%E4%B8%8D%E8%B6%85%E8%BF%87">https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png\\&quot;,\\&quot;largest\\&quot;:\\&quot;55\\&quot;,\\&quot;middle\\&quot;:\\&quot;40\\&quot;,\\&quot;smallest\\&quot;:\\&quot;20\\&quot;},\\&quot;subTitle\\&quot;:\\&quot;免费手提行李\\&quot;,\\&quot;isHighlight\\&quot;:false,\\&quot;description\\&quot;:{\\&quot;image\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png\\&quot;,\\&quot;icon\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png\\&quot;,\\&quot;title\\&quot;:\\&quot;手提行李说明\\&quot;,\\&quot;desc\\&quot;:\\&quot;您可以随身携带上飞机客舱内的行李物品，由旅客自行负责保管。具体尺寸、重量、类型等以各航空公司规定为准。\\&quot;}},{\\&quot;baggageDesc\\&quot;:[\\&quot;尺寸不超过</a> 40<em>60</em>100cm\&quot;,\&quot;至多 20公斤/人\&quot;],\&quot;baggageSubContentType\&quot;:1,\&quot;imageDO\&quot;:{\&quot;image\&quot;:\&quot;<a href="https://gw.alicdn.com/imgextra/i1/O1CN013fm4Hf1kc1NlbQ1dV_!!6000000004703-2-tps-280-400.png%5C%5C%22,%5C%5C%22largest%5C%5C%22:%5C%5C%22100%5C%5C%22,%5C%5C%22middle%5C%5C%22:%5C%5C%2260%5C%5C%22,%5C%5C%22smallest%5C%5C%22:%5C%5C%2240%5C%5C%22%7D,%5C%5C%22subTitle%5C%5C%22:%5C%5C%22%E5%85%8D%E8%B4%B9%E6%89%98%E8%BF%90%E8%A1%8C%E6%9D%8E%5C%5C%22,%5C%5C%22isHighlight%5C%5C%22:false,%5C%5C%22description%5C%5C%22:%7B%5C%5C%22image%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN01rX7s431t7ddQuCWjK_!!6000000005855-2-tps-1206-768.png%5C%5C%22,%5C%5C%22icon%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png%5C%5C%22,%5C%5C%22title%5C%5C%22:%5C%5C%22%E6%89%98%E8%BF%90%E8%A1%8C%E6%9D%8E%E8%AF%B4%E6%98%8E%5C%5C%22,%5C%5C%22desc%5C%5C%22:%5C%5C%22%E6%82%A8%E9%9C%80%E8%A6%81%E5%9C%A8%E7%99%BB%E6%9C%BA%E5%89%8D%E5%B0%86%E8%A1%8C%E6%9D%8E%E5%9C%A8%E5%80%BC%E6%9C%BA%E6%9F%9C%E5%8F%B0%E5%8A%9E%E7%90%86%E6%89%98%E8%BF%90%EF%BC%8C%E9%A2%86%E5%8F%96%E6%89%98%E8%BF%90%E5%87%AD%E8%AF%81%EF%BC%8C%E8%AF%A5%E8%A1%8C%E6%9D%8E%E5%9C%A8%E9%A3%9E%E6%9C%BA%E8%B4%A7%E8%88%B1%E4%B8%AD%E9%9A%8F%E9%A3%9E%E6%9C%BA%E5%88%B0%E8%BE%BE%E7%9B%AE%E7%9A%84%E5%9C%B0%EF%BC%8C%E6%8A%B5%E8%BE%BE%E5%90%8E%E6%82%A8%E5%87%AD%E6%89%98%E8%BF%90%E5%87%AD%E8%AF%81%E5%9C%A8%E8%A1%8C%E6%9D%8E%E9%A2%86%E5%8F%96%E5%A4%84%E9%A2%86%E5%8F%96%E3%80%82%5C%5C%22%7D%7D%5D,%5C%5C%22title%5C%5C%22:%5C%5C%22%E6%88%90%E4%BA%BA%E8%A1%8C%E6%9D%8E%5C%5C%22,%5C%5C%22isStruct%5C%5C%22:true,%5C%5C%22ptc%5C%5C%22:%5C%5C%22ADT%5C%5C%22%7D%5D,%5C%5C%22tableHead%5C%5C%22:%5C%5C%22%E5%8C%97%E4%BA%AC-%E9%94%A1%E6%9E%97%E6%B5%A9%E7%89%B9%5C%5C%22,%5C%5C%22tips%5C%5C%22:%7B%5C%5C%22tipsDesc%5C%5C%22:%5C%5C%22%E5%90%84%E4%B8%AA%E5%B0%BA%E5%AF%B8%E7%9A%84%E8%A1%8C%E6%9D%8E%E7%AE%B1%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F%5C%5C%22,%5C%5C%22logo%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png%5C%5C%22,%5C%5C%22tipsImage%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN01X8dK671m3nC7MFAq7_!!6000000004899-2-tps-1050-675.png%5C%5C%22%7D%7D,%7B%5C%5C%22index%5C%5C%22:0,%5C%5C%22type%5C%5C%22:2,%5C%5C%22baggageSubItems%5C%5C%22:%5B%7B%5C%5C%22extraContentVisualizes%5C%5C%22:%5B%5D,%5C%5C%22baggageSubContentVisualizes%5C%5C%22:%5B%7B%5C%5C%22baggageDesc%5C%5C%22:%5B%5C%5C%22%E6%AF%8F%E4%BA%BA%E5%8F%AF%E6%90%BA%E5%B8%A6">https://gw.alicdn.com/imgextra/i1/O1CN013fm4Hf1kc1NlbQ1dV_!!6000000004703-2-tps-280-400.png\\&quot;,\\&quot;largest\\&quot;:\\&quot;100\\&quot;,\\&quot;middle\\&quot;:\\&quot;60\\&quot;,\\&quot;smallest\\&quot;:\\&quot;40\\&quot;},\\&quot;subTitle\\&quot;:\\&quot;免费托运行李\\&quot;,\\&quot;isHighlight\\&quot;:false,\\&quot;description\\&quot;:{\\&quot;image\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN01rX7s431t7ddQuCWjK_!!6000000005855-2-tps-1206-768.png\\&quot;,\\&quot;icon\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png\\&quot;,\\&quot;title\\&quot;:\\&quot;托运行李说明\\&quot;,\\&quot;desc\\&quot;:\\&quot;您需要在登机前将行李在值机柜台办理托运，领取托运凭证，该行李在飞机货舱中随飞机到达目的地，抵达后您凭托运凭证在行李领取处领取。\\&quot;}}],\\&quot;title\\&quot;:\\&quot;成人行李\\&quot;,\\&quot;isStruct\\&quot;:true,\\&quot;ptc\\&quot;:\\&quot;ADT\\&quot;}],\\&quot;tableHead\\&quot;:\\&quot;北京-锡林浩特\\&quot;,\\&quot;tips\\&quot;:{\\&quot;tipsDesc\\&quot;:\\&quot;各个尺寸的行李箱有多大？\\&quot;,\\&quot;logo\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png\\&quot;,\\&quot;tipsImage\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN01X8dK671m3nC7MFAq7_!!6000000004899-2-tps-1050-675.png\\&quot;}},{\\&quot;index\\&quot;:0,\\&quot;type\\&quot;:2,\\&quot;baggageSubItems\\&quot;:[{\\&quot;extraContentVisualizes\\&quot;:[],\\&quot;baggageSubContentVisualizes\\&quot;:[{\\&quot;baggageDesc\\&quot;:[\\&quot;每人可携带</a> 1件 登机\&quot;,\&quot;至多 5公斤/件\&quot;,\&quot;尺寸不超过 20<em>40</em>55cm\&quot;],\&quot;baggageSubContentType\&quot;:0,\&quot;imageDO\&quot;:{\&quot;image\&quot;:\&quot;<a href="https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png%5C%5C%22,%5C%5C%22largest%5C%5C%22:%5C%5C%2255%5C%5C%22,%5C%5C%22middle%5C%5C%22:%5C%5C%2240%5C%5C%22,%5C%5C%22smallest%5C%5C%22:%5C%5C%2220%5C%5C%22%7D,%5C%5C%22subTitle%5C%5C%22:%5C%5C%22%E5%85%8D%E8%B4%B9%E6%89%8B%E6%8F%90%E8%A1%8C%E6%9D%8E%5C%5C%22,%5C%5C%22isHighlight%5C%5C%22:false,%5C%5C%22description%5C%5C%22:%7B%5C%5C%22image%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png%5C%5C%22,%5C%5C%22icon%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png%5C%5C%22,%5C%5C%22title%5C%5C%22:%5C%5C%22%E6%89%8B%E6%8F%90%E8%A1%8C%E6%9D%8E%E8%AF%B4%E6%98%8E%5C%5C%22,%5C%5C%22desc%5C%5C%22:%5C%5C%22%E6%82%A8%E5%8F%AF%E4%BB%A5%E9%9A%8F%E8%BA%AB%E6%90%BA%E5%B8%A6%E4%B8%8A%E9%A3%9E%E6%9C%BA%E5%AE%A2%E8%88%B1%E5%86%85%E7%9A%84%E8%A1%8C%E6%9D%8E%E7%89%A9%E5%93%81%EF%BC%8C%E7%94%B1%E6%97%85%E5%AE%A2%E8%87%AA%E8%A1%8C%E8%B4%9F%E8%B4%A3%E4%BF%9D%E7%AE%A1%E3%80%82%E5%85%B7%E4%BD%93%E5%B0%BA%E5%AF%B8%E3%80%81%E9%87%8D%E9%87%8F%E3%80%81%E7%B1%BB%E5%9E%8B%E7%AD%89%E4%BB%A5%E5%90%84%E8%88%AA%E7%A9%BA%E5%85%AC%E5%8F%B8%E8%A7%84%E5%AE%9A%E4%B8%BA%E5%87%86%E3%80%82%5C%5C%22%7D%7D,%7B%5C%5C%22baggageDesc%5C%5C%22:%5B%5C%5C%22%E5%B0%BA%E5%AF%B8%E4%B8%8D%E8%B6%85%E8%BF%87">https://gw.alicdn.com/imgextra/i3/O1CN01kLt3m923XsUs6WVif_!!6000000007266-2-tps-280-300.png\\&quot;,\\&quot;largest\\&quot;:\\&quot;55\\&quot;,\\&quot;middle\\&quot;:\\&quot;40\\&quot;,\\&quot;smallest\\&quot;:\\&quot;20\\&quot;},\\&quot;subTitle\\&quot;:\\&quot;免费手提行李\\&quot;,\\&quot;isHighlight\\&quot;:false,\\&quot;description\\&quot;:{\\&quot;image\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN01qe7wL21gJ0SmEXXL7_!!6000000004120-2-tps-1206-768.png\\&quot;,\\&quot;icon\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png\\&quot;,\\&quot;title\\&quot;:\\&quot;手提行李说明\\&quot;,\\&quot;desc\\&quot;:\\&quot;您可以随身携带上飞机客舱内的行李物品，由旅客自行负责保管。具体尺寸、重量、类型等以各航空公司规定为准。\\&quot;}},{\\&quot;baggageDesc\\&quot;:[\\&quot;尺寸不超过</a> 40<em>60</em>100cm\&quot;,\&quot;至多 20公斤/人\&quot;],\&quot;baggageSubContentType\&quot;:1,\&quot;imageDO\&quot;:{\&quot;image\&quot;:\&quot;<a href="https://gw.alicdn.com/imgextra/i1/O1CN013fm4Hf1kc1NlbQ1dV_!!6000000004703-2-tps-280-400.png%5C%5C%22,%5C%5C%22largest%5C%5C%22:%5C%5C%22100%5C%5C%22,%5C%5C%22middle%5C%5C%22:%5C%5C%2260%5C%5C%22,%5C%5C%22smallest%5C%5C%22:%5C%5C%2240%5C%5C%22%7D,%5C%5C%22subTitle%5C%5C%22:%5C%5C%22%E5%85%8D%E8%B4%B9%E6%89%98%E8%BF%90%E8%A1%8C%E6%9D%8E%5C%5C%22,%5C%5C%22isHighlight%5C%5C%22:false,%5C%5C%22description%5C%5C%22:%7B%5C%5C%22image%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN01rX7s431t7ddQuCWjK_!!6000000005855-2-tps-1206-768.png%5C%5C%22,%5C%5C%22icon%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png%5C%5C%22,%5C%5C%22title%5C%5C%22:%5C%5C%22%E6%89%98%E8%BF%90%E8%A1%8C%E6%9D%8E%E8%AF%B4%E6%98%8E%5C%5C%22,%5C%5C%22desc%5C%5C%22:%5C%5C%22%E6%82%A8%E9%9C%80%E8%A6%81%E5%9C%A8%E7%99%BB%E6%9C%BA%E5%89%8D%E5%B0%86%E8%A1%8C%E6%9D%8E%E5%9C%A8%E5%80%BC%E6%9C%BA%E6%9F%9C%E5%8F%B0%E5%8A%9E%E7%90%86%E6%89%98%E8%BF%90%EF%BC%8C%E9%A2%86%E5%8F%96%E6%89%98%E8%BF%90%E5%87%AD%E8%AF%81%EF%BC%8C%E8%AF%A5%E8%A1%8C%E6%9D%8E%E5%9C%A8%E9%A3%9E%E6%9C%BA%E8%B4%A7%E8%88%B1%E4%B8%AD%E9%9A%8F%E9%A3%9E%E6%9C%BA%E5%88%B0%E8%BE%BE%E7%9B%AE%E7%9A%84%E5%9C%B0%EF%BC%8C%E6%8A%B5%E8%BE%BE%E5%90%8E%E6%82%A8%E5%87%AD%E6%89%98%E8%BF%90%E5%87%AD%E8%AF%81%E5%9C%A8%E8%A1%8C%E6%9D%8E%E9%A2%86%E5%8F%96%E5%A4%84%E9%A2%86%E5%8F%96%E3%80%82%5C%5C%22%7D%7D%5D,%5C%5C%22title%5C%5C%22:%5C%5C%22%E6%88%90%E4%BA%BA%E8%A1%8C%E6%9D%8E%5C%5C%22,%5C%5C%22isStruct%5C%5C%22:true,%5C%5C%22ptc%5C%5C%22:%5C%5C%22ADT%5C%5C%22%7D%5D,%5C%5C%22tableHead%5C%5C%22:%5C%5C%22%E9%94%A1%E6%9E%97%E6%B5%A9%E7%89%B9-%E5%8C%97%E4%BA%AC%5C%5C%22,%5C%5C%22tips%5C%5C%22:%7B%5C%5C%22tipsDesc%5C%5C%22:%5C%5C%22%E5%90%84%E4%B8%AA%E5%B0%BA%E5%AF%B8%E7%9A%84%E8%A1%8C%E6%9D%8E%E7%AE%B1%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F%5C%5C%22,%5C%5C%22logo%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png%5C%5C%22,%5C%5C%22tipsImage%5C%5C%22:%5C%5C%22https://gw.alicdn.com/imgextra/i1/O1CN01X8dK671m3nC7MFAq7_!!6000000004899-2-tps-1050-675.png%5C%5C%22%7D%7D%5D%7D">https://gw.alicdn.com/imgextra/i1/O1CN013fm4Hf1kc1NlbQ1dV_!!6000000004703-2-tps-280-400.png\\&quot;,\\&quot;largest\\&quot;:\\&quot;100\\&quot;,\\&quot;middle\\&quot;:\\&quot;60\\&quot;,\\&quot;smallest\\&quot;:\\&quot;40\\&quot;},\\&quot;subTitle\\&quot;:\\&quot;免费托运行李\\&quot;,\\&quot;isHighlight\\&quot;:false,\\&quot;description\\&quot;:{\\&quot;image\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN01rX7s431t7ddQuCWjK_!!6000000005855-2-tps-1206-768.png\\&quot;,\\&quot;icon\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i4/O1CN01UynXG31pjsEtA3tMF_!!6000000005397-2-tps-36-36.png\\&quot;,\\&quot;title\\&quot;:\\&quot;托运行李说明\\&quot;,\\&quot;desc\\&quot;:\\&quot;您需要在登机前将行李在值机柜台办理托运，领取托运凭证，该行李在飞机货舱中随飞机到达目的地，抵达后您凭托运凭证在行李领取处领取。\\&quot;}}],\\&quot;title\\&quot;:\\&quot;成人行李\\&quot;,\\&quot;isStruct\\&quot;:true,\\&quot;ptc\\&quot;:\\&quot;ADT\\&quot;}],\\&quot;tableHead\\&quot;:\\&quot;锡林浩特-北京\\&quot;,\\&quot;tips\\&quot;:{\\&quot;tipsDesc\\&quot;:\\&quot;各个尺寸的行李箱有多大？\\&quot;,\\&quot;logo\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN019zl3WZ22fNLxzx2cR_!!6000000007147-2-tps-125-45.png\\&quot;,\\&quot;tipsImage\\&quot;:\\&quot;https://gw.alicdn.com/imgextra/i1/O1CN01X8dK671m3nC7MFAq7_!!6000000004899-2-tps-1050-675.png\\&quot;}}]}</a></p>
+         */
         @NameInMap("baggage_details")
         public String baggageDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>北京</p>
+         */
         @NameInMap("dep_city_name")
         public String depCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-20 07:00:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>标签</p>
+         */
         @NameInMap("flight_status")
         public String flightStatus;
 
+        /**
+         * <p>iata_no</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iata_no</p>
+         */
         @NameInMap("iata_no")
         public String iataNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>是否重新行程</p>
+         */
         @NameInMap("is_reshop_journey")
         public Boolean isReshopJourney;
 
+        /**
+         * <strong>example:</strong>
+         * <p>是否中转</p>
+         */
         @NameInMap("is_transfer")
         public Boolean isTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>去程</p>
+         */
         @NameInMap("journey_title")
         public String journeyTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;refundDetails\&quot;:[{\&quot;refundSubItems\&quot;:[{\&quot;title\&quot;:\&quot;成人\&quot;,\&quot;isStruct\&quot;:true,\&quot;refundSubContents\&quot;:[{\&quot;feeDesc\&quot;:\&quot;￥0/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月6日 07:00 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥32/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月18日 07:00 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥45/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月20日 03:00 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥45/人\&quot;,\&quot;style\&quot;:1,\&quot;feeRange\&quot;:\&quot;7月20日 03:00 后\&quot;}],\&quot;ptc\&quot;:\&quot;ADT\&quot;}],\&quot;index\&quot;:0,\&quot;title\&quot;:\&quot;退票收费规则\&quot;,\&quot;type\&quot;:0,\&quot;tableHead\&quot;:\&quot;北京-锡林浩特\&quot;,\&quot;extraContents\&quot;:[{\&quot;title\&quot;:\&quot;特殊说明\&quot;,\&quot;content\&quot;:\&quot;改期如有差价需同时收取改期费和差价。来回程一体运价（指来回程票价低于单程票价的两倍）客票部分使用后退票，扣除票面价的1/2来回程一体运价，余额按相应舱位退规办理。来回程一体运价（指来回程票价低于单程票价的两倍）客票部分使用后变更，按1/2来回程一体运价计算变更手续费；如变更后舱位有来回程一体运价，则票价差为1/2来回程一体运价的差额；如变更后舱位没有来回程一体运价，则票价差为变更后舱位单程运价与变更前1/2来回程一体运价的差额。客票自填开之日起，一年内必须开始旅行，自首次旅行开始之日起，一年内运输有效。\&quot;}]},{\&quot;refundSubItems\&quot;:[{\&quot;title\&quot;:\&quot;成人\&quot;,\&quot;isStruct\&quot;:true,\&quot;refundSubContents\&quot;:[{\&quot;feeDesc\&quot;:\&quot;￥0/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月15日 09:30 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥32/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月27日 09:30 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥45/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月29日 05:30 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥45/人\&quot;,\&quot;style\&quot;:1,\&quot;feeRange\&quot;:\&quot;7月29日 05:30 后\&quot;}],\&quot;ptc\&quot;:\&quot;ADT\&quot;}],\&quot;index\&quot;:1,\&quot;type\&quot;:0,\&quot;tableHead\&quot;:\&quot;锡林浩特-北京\&quot;,\&quot;extraContents\&quot;:[{\&quot;title\&quot;:\&quot;特殊说明\&quot;,\&quot;content\&quot;:\&quot;改期如有差价需同时收取改期费和差价。来回程一体运价（指来回程票价低于单程票价的两倍）客票部分使用后退票，扣除票面价的1/2来回程一体运价，余额按相应舱位退规办理。来回程一体运价（指来回程票价低于单程票价的两倍）客票部分使用后变更，按1/2来回程一体运价计算变更手续费；如变更后舱位有来回程一体运价，则票价差为1/2来回程一体运价的差额；如变更后舱位没有来回程一体运价，则票价差为变更后舱位单程运价与变更前1/2来回程一体运价的差额。客票自填开之日起，一年内必须开始旅行，自首次旅行开始之日起，一年内运输有效。\&quot;}]}],\&quot;changeDetails\&quot;:[{\&quot;refundSubItems\&quot;:[{\&quot;title\&quot;:\&quot;成人\&quot;,\&quot;isStruct\&quot;:true,\&quot;refundSubContents\&quot;:[{\&quot;feeDesc\&quot;:\&quot;￥0/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月6日 07:00 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥32/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月18日 07:00 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥32/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月20日 03:00 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥45/人\&quot;,\&quot;style\&quot;:1,\&quot;feeRange\&quot;:\&quot;7月20日 03:00 后\&quot;}],\&quot;ptc\&quot;:\&quot;ADT\&quot;}],\&quot;index\&quot;:0,\&quot;title\&quot;:\&quot;同舱改期规则\&quot;,\&quot;type\&quot;:1,\&quot;tableHead\&quot;:\&quot;北京-锡林浩特\&quot;,\&quot;extraContents\&quot;:[{\&quot;title\&quot;:\&quot;签转条件\&quot;,\&quot;content\&quot;:\&quot;可签转\&quot;}]},{\&quot;refundSubItems\&quot;:[{\&quot;title\&quot;:\&quot;成人\&quot;,\&quot;isStruct\&quot;:true,\&quot;refundSubContents\&quot;:[{\&quot;feeDesc\&quot;:\&quot;￥0/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月15日 09:30 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥32/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月27日 09:30 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥32/人\&quot;,\&quot;style\&quot;:0,\&quot;feeRange\&quot;:\&quot;7月29日 05:30 前\&quot;},{\&quot;feeDesc\&quot;:\&quot;￥45/人\&quot;,\&quot;style\&quot;:1,\&quot;feeRange\&quot;:\&quot;7月29日 05:30 后\&quot;}],\&quot;ptc\&quot;:\&quot;ADT\&quot;}],\&quot;index\&quot;:1,\&quot;type\&quot;:1,\&quot;tableHead\&quot;:\&quot;锡林浩特-北京\&quot;},{\&quot;refundSubItems\&quot;:[{\&quot;isStruct\&quot;:false,\&quot;content\&quot;:\&quot;可签转\&quot;}],\&quot;index\&quot;:1,\&quot;type\&quot;:2,\&quot;tableHead\&quot;:\&quot;锡林浩特-北京\&quot;}]}</p>
+         */
         @NameInMap("refund_change_details")
         public String refundChangeDetails;
 
@@ -988,12 +1325,24 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         @NameInMap("journeys")
         public java.util.List<FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTOJourneys> journeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>提醒注意</p>
+         */
         @NameInMap("notice_tips")
         public String noticeTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>往返</p>
+         */
         @NameInMap("trip_type")
         public String tripType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("trip_type_code")
         public Integer tripTypeCode;
 
@@ -1037,39 +1386,87 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModulePassengerListCredential extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1991-06-21 00:00:00</p>
+         */
         @NameInMap("birth_date")
         public String birthDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1991-06-21 00:00:00</p>
+         */
         @NameInMap("cert_issue_date")
         public String certIssueDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>签发地</p>
+         */
         @NameInMap("cert_issue_place")
         public String certIssuePlace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>证件号</p>
+         */
         @NameInMap("credential_no")
         public String credentialNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>驾照首次获取的时间</p>
+         */
         @NameInMap("drive_licence_first")
         public String driveLicenceFirst;
 
+        /**
+         * <strong>example:</strong>
+         * <p>驾照类型</p>
+         */
         @NameInMap("drive_licence_type")
         public String driveLicenceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1991-06-21 00:00:00</p>
+         */
         @NameInMap("expire_date")
         public String expireDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>持有人国籍</p>
+         */
         @NameInMap("holder_nationality")
         public String holderNationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>131332</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>身份证核验结果code</p>
+         */
         @NameInMap("id_check_code")
         public String idCheckCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>发证国家</p>
+         */
         @NameInMap("issue_country")
         public String issueCountry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
@@ -1177,39 +1574,87 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModulePassengerListCredentials extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>生日</p>
+         */
         @NameInMap("birth_date")
         public String birthDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>签发日期</p>
+         */
         @NameInMap("cert_issue_date")
         public String certIssueDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>签发地</p>
+         */
         @NameInMap("cert_issue_place")
         public String certIssuePlace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>证件号</p>
+         */
         @NameInMap("credential_no")
         public String credentialNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>驾照首次获取的时间</p>
+         */
         @NameInMap("drive_licence_first")
         public String driveLicenceFirst;
 
+        /**
+         * <strong>example:</strong>
+         * <p>驾照类型</p>
+         */
         @NameInMap("drive_licence_type")
         public String driveLicenceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>到期时间</p>
+         */
         @NameInMap("expire_date")
         public String expireDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>持有人国籍</p>
+         */
         @NameInMap("holder_nationality")
         public String holderNationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>131332</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>身份证核验结果code</p>
+         */
         @NameInMap("id_check_code")
         public String idCheckCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>发证国家</p>
+         */
         @NameInMap("issue_country")
         public String issueCountry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
@@ -1317,12 +1762,24 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_index")
         public Integer journeyIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("open_ticket_status")
         public Integer openTicketStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_index")
         public Integer segmentIndex;
 
@@ -1358,33 +1815,71 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModulePassengerListTickets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>出票渠道</p>
+         */
         @NameInMap("channel")
         public String channel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>行程 title</p>
+         */
         @NameInMap("journey_title")
         public String journeyTitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_FOR_USE</p>
+         */
         @NameInMap("open_ticket_status")
         public String openTicketStatus;
 
+        /**
+         * <p>pcc/office</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcc/office</p>
+         */
         @NameInMap("pcc")
         public String pcc;
 
         @NameInMap("segment_open_ticket_list")
         public java.util.List<FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList> segmentOpenTicketList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>不需要验真.</p>
+         */
         @NameInMap("ticket_auth_memo")
         public String ticketAuthMemo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ticket_auth_status")
         public Integer ticketAuthStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>444-2023062999</p>
+         */
         @NameInMap("ticket_no")
         public String ticketNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4500</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>出票成功</p>
+         */
         @NameInMap("ticket_status")
         public String ticketStatus;
 
@@ -1476,18 +1971,38 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModulePassengerList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1991-06-21 00:00:00</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12172819047252004460056</p>
+         */
         @NameInMap("btrip_user_id")
         public String btripUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>记录对其进行校验不通过的code</p>
+         */
         @NameInMap("code")
         public Integer code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国大陆</p>
+         */
         @NameInMap("country")
         public String country;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("country_code")
         public String countryCode;
 
@@ -1497,54 +2012,122 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         @NameInMap("credentials")
         public java.util.List<FlightOrderDetailV2ResponseBodyModulePassengerListCredentials> credentials;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:17800000001@163.com">17800000001@163.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>san</p>
+         */
         @NameInMap("en_first_name")
         public String enFirstName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhang</p>
+         */
         @NameInMap("en_last_name")
         public String enLastName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("english_name")
         public String englishName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("gender")
         public Integer gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3243028</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_complete")
         public Boolean isComplete;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("is_frequently")
         public Boolean isFrequently;
 
+        /**
+         * <strong>example:</strong>
+         * <p>备注信息</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("mobile_country_code")
         public String mobileCountryCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17800000001</p>
+         */
         @NameInMap("mobile_phone_number")
         public String mobilePhoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试乘机人</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("oneself")
         public Boolean oneself;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试乘机人</p>
+         */
         @NameInMap("order_name")
         public String orderName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1111</p>
+         */
         @NameInMap("out_passenger_id")
         public String outPassengerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17800000001</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("sheng_pi_pinyin")
         public String shengPiPinyin;
 
@@ -1554,9 +2137,17 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         @NameInMap("tickets")
         public java.util.List<FlightOrderDetailV2ResponseBodyModulePassengerListTickets> tickets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>312312</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
@@ -1792,72 +2383,152 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
     }
 
     public static class FlightOrderDetailV2ResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>协议价编码</p>
+         */
         @NameInMap("b2g_vip_code")
         public String b2gVipCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-29 15:28:44</p>
+         */
         @NameInMap("book_succ_time")
         public String bookSuccTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qingg1234</p>
+         */
         @NameInMap("book_user_id")
         public String bookUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试预定人</p>
+         */
         @NameInMap("book_user_name")
         public String bookUserName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("build_price")
         public Long buildPrice;
 
         @NameInMap("contact_info_d_t_o")
         public FlightOrderDetailV2ResponseBodyModuleContactInfoDTO contactInfoDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-29 15:03:11</p>
+         */
         @NameInMap("create_time")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>126000</p>
+         */
         @NameInMap("facevalue")
         public Long facevalue;
 
         @NameInMap("flight_tale_info_d_t_o")
         public FlightOrderDetailV2ResponseBodyModuleFlightTaleInfoDTO flightTaleInfoDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("is_protocol")
         public Boolean isProtocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("isemergency")
         public Boolean isemergency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("issendmessage")
         public Boolean issendmessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("oil_price")
         public Long oilPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1017002195370467200</p>
+         */
         @NameInMap("order_id")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8500</p>
+         */
         @NameInMap("order_price")
         public Long orderPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1017002195370467137</p>
+         */
         @NameInMap("out_order_id")
         public String outOrderId;
 
         @NameInMap("passenger_list")
         public java.util.List<FlightOrderDetailV2ResponseBodyModulePassengerList> passengerList;
 
+        /**
+         * <p>key :passengerId</p>
+         * <p>value :segmentId</p>
+         */
         @NameInMap("passenger_segment_map")
         public java.util.Map<String, String> passengerSegmentMap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-29 15:03:59</p>
+         */
         @NameInMap("pay_time")
         public String payTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4500</p>
+         */
         @NameInMap("saleprice")
         public Long saleprice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("sendcpsms")
         public Boolean sendcpsms;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("total_service_fee_price")
         public Long totalServiceFeePrice;
 

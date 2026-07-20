@@ -4,21 +4,44 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AirportSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module。</p>
+     */
     @NameInMap("module")
     public AirportSearchResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210f07f316603757445272547d959f</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +99,10 @@ public class AirportSearchResponseBody extends TeaModel {
     }
 
     public static class AirportSearchResponseBodyModuleCities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HGH</p>
+         */
         @NameInMap("code")
         public String code;
 
@@ -86,6 +113,10 @@ public class AirportSearchResponseBody extends TeaModel {
         @NameInMap("distance")
         public Integer distance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -139,6 +170,10 @@ public class AirportSearchResponseBody extends TeaModel {
         @NameInMap("cities")
         public java.util.List<AirportSearchResponseBodyModuleCities> cities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("nearby")
         public Boolean nearby;
 

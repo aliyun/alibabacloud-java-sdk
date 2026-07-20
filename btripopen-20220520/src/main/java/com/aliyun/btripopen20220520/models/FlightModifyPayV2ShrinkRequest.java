@@ -7,21 +7,45 @@ public class FlightModifyPayV2ShrinkRequest extends TeaModel {
     @NameInMap("ext_params")
     public String extParamsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5100</p>
+     */
     @NameInMap("modify_pay_amount")
     public Long modifyPayAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467200</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467200</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1019195786853020</p>
+     */
     @NameInMap("out_sub_order_id")
     public String outSubOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1019195786853020</p>
+     */
     @NameInMap("sub_order_id")
     public Long subOrderId;
 

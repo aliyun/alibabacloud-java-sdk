@@ -4,24 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class GroupUserSaveShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123456,654321</p>
+     */
     @NameInMap("base_city_code")
     public String baseCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1999-03-12</p>
+     */
     @NameInMap("birthday")
     public String birthday;
 
     @NameInMap("cert_list")
     public String certListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>M</p>
+     */
     @NameInMap("gender")
     public String gender;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("job_no")
     public String jobNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>18000000000</p>
+     */
     @NameInMap("phone")
     public String phone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ce/shi</p>
+     */
     @NameInMap("real_name_en")
     public String realNameEn;
 
@@ -33,12 +57,18 @@ public class GroupUserSaveShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("user_id")
     public String userId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试</p>
      */
     @NameInMap("user_name")
     public String userName;

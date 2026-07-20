@@ -7,39 +7,82 @@ public class IeHotelBillSettlementQueryRequest extends TeaModel {
     @NameInMap("apply_id")
     public String applyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20240101</p>
+     */
     @NameInMap("bill_batch")
     public String billBatch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-01-02</p>
+     */
     @NameInMap("bill_record_time_end")
     public String billRecordTimeEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-01-01</p>
+     */
     @NameInMap("bill_record_time_start")
     public String billRecordTimeStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("category")
     public Integer category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-02</p>
+     */
     @NameInMap("period_end")
     public String periodEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-01</p>
+     */
     @NameInMap("period_start")
     public String periodStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1qwf</p>
+     */
     @NameInMap("scroll_id")
     public String scrollId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("scroll_mod")
     public Boolean scrollMod;
 

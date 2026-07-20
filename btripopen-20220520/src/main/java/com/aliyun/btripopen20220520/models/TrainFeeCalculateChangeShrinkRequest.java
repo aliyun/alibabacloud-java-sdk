@@ -12,12 +12,18 @@ public class TrainFeeCalculateChangeShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("distribute_order_id")
     public String distributeOrderId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2627694109810885616</p>
      */
     @NameInMap("order_id")
     public String orderId;

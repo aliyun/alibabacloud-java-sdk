@@ -4,12 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AddProjectManagerRequest extends TeaModel {
+    /**
+     * <p>The list of manager group entities. Currently, entityType only supports &quot;1&quot; (employee). The maximum number is 10.</p>
+     */
     @NameInMap("org_entities")
     public java.util.List<AddProjectManagerRequestOrgEntities> orgEntities;
 
+    /**
+     * <p>The third-party project ID. You must specify at least one of project_id and out_project_id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>projectabc</p>
+     */
     @NameInMap("out_project_id")
     public String outProjectId;
 
+    /**
+     * <p>The internal project ID. You must specify at least one of project_id and out_project_id.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("project_id")
     public Long projectId;
 
@@ -43,9 +58,21 @@ public class AddProjectManagerRequest extends TeaModel {
     }
 
     public static class AddProjectManagerRequestOrgEntities extends TeaModel {
+        /**
+         * <p>The employee ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
+         */
         @NameInMap("entity_id")
         public String entityId;
 
+        /**
+         * <p>Required. Currently only supports &quot;1&quot; (employee).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("entity_type")
         public String entityType;
 

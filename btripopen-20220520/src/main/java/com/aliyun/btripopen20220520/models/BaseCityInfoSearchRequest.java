@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class BaseCityInfoSearchRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州</p>
      */
     @NameInMap("keyword")
     public String keyword;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      * 
      * <strong>if can be null:</strong>
      * <p>false</p>

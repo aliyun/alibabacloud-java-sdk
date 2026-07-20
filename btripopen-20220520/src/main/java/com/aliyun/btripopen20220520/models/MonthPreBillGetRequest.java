@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MonthPreBillGetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20251201</p>
+     */
     @NameInMap("bill_batch")
     public String billBatch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>202207</p>
+     */
     @NameInMap("bill_month")
     public String billMonth;
 

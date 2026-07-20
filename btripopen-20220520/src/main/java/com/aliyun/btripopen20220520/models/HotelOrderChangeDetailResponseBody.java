@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderChangeDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelOrderChangeDetailResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +96,31 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
     }
 
     public static class HotelOrderChangeDetailResponseBodyModuleRoomInfoListRoomDailyRefundInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-10</p>
+         */
         @NameInMap("check_in_date")
         public String checkInDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71000</p>
+         */
         @NameInMap("penalty_price")
         public Long penaltyPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71000</p>
+         */
         @NameInMap("price")
         public Long price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>71000</p>
+         */
         @NameInMap("refund_price")
         public Long refundPrice;
 
@@ -134,6 +170,10 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
         @NameInMap("room_daily_refund_infos")
         public java.util.List<HotelOrderChangeDetailResponseBodyModuleRoomInfoListRoomDailyRefundInfos> roomDailyRefundInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("room_no")
         public Integer roomNo;
 
@@ -169,42 +209,90 @@ public class HotelOrderChangeDetailResponseBody extends TeaModel {
     }
 
     public static class HotelOrderChangeDetailResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("change_order_id")
         public String changeOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("change_type")
         public Integer changeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open12ih3c8jb8o47v10B4r4josN00</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dis1234</p>
+         */
         @NameInMap("dis_order_id")
         public String disOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-07 13:42:49</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-07-07 13:42:49</p>
+         */
         @NameInMap("gmt_modified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>因公司原因导致的行程变更</p>
+         */
         @NameInMap("reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>无</p>
+         */
         @NameInMap("remarks")
         public String remarks;
 
         @NameInMap("room_info_list")
         public java.util.List<HotelOrderChangeDetailResponseBodyModuleRoomInfoList> roomInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1402002197440511306</p>
+         */
         @NameInMap("sale_order_id")
         public String saleOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("source")
         public Integer source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2505048378320666</p>
+         */
         @NameInMap("work_order_id")
         public String workOrderId;
 

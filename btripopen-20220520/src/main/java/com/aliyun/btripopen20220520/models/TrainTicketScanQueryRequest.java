@@ -4,33 +4,73 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class TrainTicketScanQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-12-01</p>
+     */
     @NameInMap("bill_date")
     public String billDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("bill_id")
     public Long billId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-05 00:00:00</p>
+     */
     @NameInMap("invoice_date_end")
     public String invoiceDateEnd;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-11-01 00:00:00</p>
+     */
     @NameInMap("invoice_date_start")
     public String invoiceDateStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>456</p>
+     */
     @NameInMap("invoice_sub_task_id")
     public Long invoiceSubTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1002145190081005400</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("page_no")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("page_size")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32270201111333E012345</p>
+     */
     @NameInMap("serial_number")
     public String serialNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D166E012345</p>
+     */
     @NameInMap("ticket_no")
     public String ticketNo;
 

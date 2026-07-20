@@ -21,18 +21,38 @@ public class IsvUserSaveRequest extends TeaModel {
     }
 
     public static class IsvUserSaveRequestUserListCertList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2050-01-01</p>
+         */
         @NameInMap("cert_expired_time")
         public String certExpiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("cert_nation")
         public String certNation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>110101********1234</p>
+         */
         @NameInMap("cert_no")
         public String certNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality")
         public String nationality;
 
@@ -84,51 +104,107 @@ public class IsvUserSaveRequest extends TeaModel {
     }
 
     public static class IsvUserSaveRequestUserList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>330100,310100</p>
+         */
         @NameInMap("base_city_code")
         public String baseCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000-01-01</p>
+         */
         @NameInMap("birthday")
         public String birthday;
 
         @NameInMap("cert_list")
         public java.util.List<IsvUserSaveRequestUserListCertList> certList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("depart_id")
         public Long departId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:123@163.com">123@163.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>M</p>
+         */
         @NameInMap("gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_admin")
         public Boolean isAdmin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8797</p>
+         */
         @NameInMap("job_no")
         public String jobNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("leave_status")
         public Integer leaveStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("manager_user_id")
         public String managerUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15364762829</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>产品经理</p>
+         */
         @NameInMap("position")
         public String position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("position_level")
         public String positionLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ceshi</p>
+         */
         @NameInMap("real_name_en")
         public String realNameEn;
 
         @NameInMap("role_id_list")
         public java.util.List<String> roleIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("third_depart_id")
         public String thirdDepartId;
 
@@ -137,16 +213,26 @@ public class IsvUserSaveRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("user_id")
         public String userId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         @NameInMap("user_name")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>三儿</p>
+         */
         @NameInMap("user_nick")
         public String userNick;
 

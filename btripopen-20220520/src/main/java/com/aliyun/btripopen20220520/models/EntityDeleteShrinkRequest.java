@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EntityDeleteShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("del_all")
     public Boolean delAll;
@@ -15,6 +18,9 @@ public class EntityDeleteShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("thirdpart_id")
     public String thirdpartId;

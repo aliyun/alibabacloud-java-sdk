@@ -5,18 +5,27 @@ import com.aliyun.tea.*;
 
 public class TravelStandardQueryRequest extends TeaModel {
     /**
+     * <p>Specifies whether to use the group travel standard.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("from_group")
     public Boolean fromGroup;
 
     /**
+     * <p>The personnel rule code.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2006523763</p>
      */
     @NameInMap("rule_code")
     public Long ruleCode;
 
     /**
+     * <p>The service categories to query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("service_type_list")

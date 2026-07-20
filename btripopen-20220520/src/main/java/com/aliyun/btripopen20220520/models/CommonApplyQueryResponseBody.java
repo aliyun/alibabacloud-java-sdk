@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class CommonApplyQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public CommonApplyQueryResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-2BD9-5890-BD92-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,42 +96,166 @@ public class CommonApplyQueryResponseBody extends TeaModel {
     }
 
     public static class CommonApplyQueryResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("apply_id")
         public Long applyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("biz_category")
         public Integer bizCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>改签</p>
+         */
         @NameInMap("cause")
         public String cause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0001A1100000007EX08O</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>改签：
+         * {
+         *     &quot;changeFee&quot;: 100,
+         *     &quot;itineraryId&quot;: &quot;fc2824e458a140b5b950001bc51bcc54-8&quot;,
+         *     &quot;changeReason&quot;: &quot;机票改签测试11302052&quot;,
+         *     &quot;changeFlightOrders&quot;: [
+         *         {
+         *             &quot;arrTime&quot;: 1639008600000,
+         *             &quot;depTime&quot;: 1639000200000,
+         *             &quot;flightNo&quot;: &quot;GJ8988&quot;,
+         *             &quot;arrCityName&quot;: &quot;杭州&quot;,
+         *             &quot;depCityName&quot;: &quot;北京&quot;,
+         *             &quot;passengerInfos&quot;: [
+         *                 {
+         *                     &quot;id&quot;: 993146468,
+         *                     &quot;cabin&quot;: &quot;Y&quot;,
+         *                     &quot;discount&quot;: 10,
+         *                     &quot;changeFee&quot;: 100,
+         *                     &quot;cabinClass&quot;: &quot;2&quot;,
+         *                     &quot;cabinClassStr&quot;: &quot;经济舱&quot;,
+         *                     &quot;passengerName&quot;: &quot;商旅&quot;
+         *                 }
+         *             ]
+         *         }
+         *     ],
+         *     &quot;originFlightOrders&quot;: [
+         *         {
+         *             &quot;arrTime&quot;: 1638923400000,
+         *             &quot;depTime&quot;: 1638915600000,
+         *             &quot;flightNo&quot;: &quot;MU8477&quot;,
+         *             &quot;arrCityName&quot;: &quot;杭州&quot;,
+         *             &quot;depCityName&quot;: &quot;北京&quot;,
+         *             &quot;passengerInfos&quot;: [
+         *                 {
+         *                     &quot;id&quot;: 993146468,
+         *                     &quot;cabin&quot;: &quot;Y&quot;,
+         *                     &quot;discount&quot;: 0.1,
+         *                     &quot;changeFee&quot;: 100,
+         *                     &quot;cabinClass&quot;: &quot;2&quot;,
+         *                     &quot;cabinClassStr&quot;: &quot;经济舱&quot;,
+         *                     &quot;passengerName&quot;: &quot;商旅&quot;
+         *                 }
+         *             ]
+         *         }
+         *     ],
+         *     &quot;cabinAndDiscountDesc&quot;: &quot;可订经济舱2.0折及以下&quot;
+         * }，</p>
+         * <p>退票：
+         * {
+         *     &quot;refundFee&quot;: 7000,
+         *     &quot;itineraryId&quot;: &quot;fc2824e458a140b5b950001bc51bcc54-8&quot;,
+         *     &quot;refundReason&quot;: &quot;行程取消&quot;,
+         *     &quot;originFlightOrders&quot;: [
+         *         {
+         *             &quot;arrTime&quot;: 1638374400000,
+         *             &quot;depTime&quot;: 1638397200000,
+         *             &quot;flightNo&quot;: &quot;MU8477&quot;,
+         *             &quot;arrCityName&quot;: &quot;杭州&quot;,
+         *             &quot;depCityName&quot;: &quot;北京&quot;,
+         *             &quot;passengerInfos&quot;: [
+         *                 {
+         *                     &quot;id&quot;: 281825548,
+         *                     &quot;cabin&quot;: &quot;Y&quot;,
+         *                     &quot;discount&quot;: 0,
+         *                     &quot;refundFee&quot;: 500,
+         *                     &quot;cabinClass&quot;: 2,
+         *                     &quot;cabinClassStr&quot;: &quot;全价经济舱&quot;,
+         *                     &quot;passengerName&quot;: &quot;商旅&quot;
+         *                 }
+         *             ]
+         *         }
+         *     ]
+         * }</p>
+         */
         @NameInMap("extend_value")
         public String extendValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-18T20:26Z</p>
+         */
         @NameInMap("gmt_create")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1017124195788186048</p>
+         */
         @NameInMap("order_id")
         public Long orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1233</p>
+         */
         @NameInMap("thirdpart_corp_id")
         public String thirdpartCorpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12344</p>
+         */
         @NameInMap("thirdpart_id")
         public String thirdpartId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州出差</p>
+         */
         @NameInMap("trip_cause")
         public String tripCause;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("user_id")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
         @NameInMap("user_name")
         public String userName;
 

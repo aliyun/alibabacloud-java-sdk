@@ -4,24 +4,50 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class QueryEmployeeDetailResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public QueryEmployeeDetailResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -87,33 +113,69 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
     }
 
     public static class QueryEmployeeDetailResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>j*********@example.com</p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("is_leave")
         public Boolean isLeave;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;12138&quot;</p>
+         */
         @NameInMap("job_number")
         public String jobNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;张三&quot;</p>
+         */
         @NameInMap("nick_name")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;123456&quot;</p>
+         */
         @NameInMap("out_dept_id")
         public String outDeptId;
 
         @NameInMap("out_dept_id_list")
         public java.util.List<String> outDeptIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;abc12138&quot;</p>
+         */
         @NameInMap("out_employee_id")
         public String outEmployeeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>138****8888</p>
+         */
         @NameInMap("phone_no")
         public String phoneNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;张三&quot;</p>
+         */
         @NameInMap("real_name")
         public String realName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;zhang/san&quot;</p>
+         */
         @NameInMap("real_name_en")
         public String realNameEn;
 

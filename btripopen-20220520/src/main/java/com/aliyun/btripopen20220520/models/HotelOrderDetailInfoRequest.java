@@ -4,9 +4,17 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelOrderDetailInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1002202194207077022</p>
+     */
     @NameInMap("btrip_order_id")
     public String btripOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dis123</p>
+     */
     @NameInMap("dis_order_id")
     public String disOrderId;
 

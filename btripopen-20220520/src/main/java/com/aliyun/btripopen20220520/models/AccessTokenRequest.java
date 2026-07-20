@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class AccessTokenRequest extends TeaModel {
     /**
+     * <p>The API secret of the application. For information about how to obtain the secret, see <a href="/#/document/server/application-of-basic-information?handbookId=development-support">Application credentials</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ggZADk********eDxdaD</p>
      */
     @NameInMap("app_secret")
     public String appSecret;

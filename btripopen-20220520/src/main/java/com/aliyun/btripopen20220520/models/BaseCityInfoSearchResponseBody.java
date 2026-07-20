@@ -4,21 +4,43 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class BaseCityInfoSearchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>参数异常</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public java.util.List<BaseCityInfoSearchResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>traceId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210f079e16603757182131635d866a</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +98,31 @@ public class BaseCityInfoSearchResponseBody extends TeaModel {
     }
 
     public static class BaseCityInfoSearchResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>330100</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中国，浙江省，杭州</p>
+         */
         @NameInMap("nameTree")
         public String nameTree;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("region")
         public String region;
 

@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class QueryGroupCorpListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A3F8DCAB-8301-5770-BD9F-71B0BF9E1A6E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>系统错误</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public java.util.List<QueryGroupCorpListResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("trace_id")
     public String traceId;
 
@@ -76,9 +96,17 @@ public class QueryGroupCorpListResponseBody extends TeaModel {
     }
 
     public static class QueryGroupCorpListResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>corp1</p>
+         */
         @NameInMap("corp_id")
         public String corpId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里巴巴</p>
+         */
         @NameInMap("corp_name")
         public String corpName;
 

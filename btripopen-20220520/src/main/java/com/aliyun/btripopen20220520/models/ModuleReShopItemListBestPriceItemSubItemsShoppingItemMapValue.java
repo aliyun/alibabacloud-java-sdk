@@ -4,12 +4,21 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue extends TeaModel {
+    /**
+     * <p>The cabin remaining inventory per segment.</p>
+     */
     @NameInMap("cabin_quantity_list")
     public java.util.List<ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityList> cabinQuantityList;
 
+    /**
+     * <p>The rebooking search price.</p>
+     */
     @NameInMap("search_price")
     public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSearchPrice searchPrice;
 
+    /**
+     * <p>The price per segment. This field may not have a value because airline bundled products may not have prices split by segment.</p>
+     */
     @NameInMap("segment_price_list")
     public java.util.List<ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceList> segmentPriceList;
 
@@ -44,6 +53,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
 
     public static class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition extends TeaModel {
         /**
+         * <p>The journey ordinal number (starting from 0).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -51,6 +62,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Integer journeyIndex;
 
         /**
+         * <p>The segment ordinal number (starting from 0 within the same journey).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -82,6 +95,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
 
     public static class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityListCabinInfo extends TeaModel {
         /**
+         * <p>The cabin code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -89,6 +104,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public String cabin;
 
         /**
+         * <p>The cabin class. Valid values: F: first class. C: business class. Y: economy class. P: premium economy class.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -96,6 +113,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public String cabinClass;
 
         /**
+         * <p>The cabin class name.</p>
+         * 
          * <strong>example:</strong>
          * <p>经济舱</p>
          */
@@ -103,6 +122,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public String cabinClassName;
 
         /**
+         * <p>The number of remaining seats in the cabin. 0-9: 0 to 9 seats remaining. A: more than 9 seats remaining.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -110,6 +131,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public String quantity;
 
         /**
+         * <p>The cabin class description.</p>
+         * 
          * <strong>example:</strong>
          * <p>经济舱</p>
          */
@@ -117,6 +140,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public String cabinClassMemo;
 
         /**
+         * <p>The domestic special notes.</p>
+         * 
          * <strong>example:</strong>
          * <p>无</p>
          */
@@ -179,9 +204,15 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
     }
 
     public static class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityList extends TeaModel {
+        /**
+         * <p>The segment position information, indicating the journey index and segment index within the overall itinerary.</p>
+         */
         @NameInMap("segment_position")
         public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition segmentPosition;
 
+        /**
+         * <p>The cabin details.</p>
+         */
         @NameInMap("cabin_info")
         public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityListCabinInfo cabinInfo;
 
@@ -210,6 +241,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
 
     public static class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSearchPrice extends TeaModel {
         /**
+         * <p>The total amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -217,6 +250,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long totalAmount;
 
         /**
+         * <p>The service fee amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -224,6 +259,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long handlingAmount;
 
         /**
+         * <p>The cabin upgrade fee amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -231,6 +268,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long upgradeAmount;
 
         /**
+         * <p>The tax difference amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -238,6 +277,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long taxDiffAmount;
 
         /**
+         * <p>Indicates whether a direct price is available. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -245,6 +286,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Boolean hasPrice;
 
         /**
+         * <p>The text prompt displayed when no direct price is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>待服务商确认</p>
          */
@@ -308,6 +351,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
 
     public static class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition extends TeaModel {
         /**
+         * <p>The journey ordinal number (starting from 0).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -315,6 +360,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Integer journeyIndex;
 
         /**
+         * <p>The segment ordinal number (starting from 0 within the same journey).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -346,6 +393,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
 
     public static class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSearchPrice extends TeaModel {
         /**
+         * <p>The total amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -353,6 +402,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long totalAmount;
 
         /**
+         * <p>The service fee amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -360,6 +411,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long handlingAmount;
 
         /**
+         * <p>The cabin upgrade fee amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -367,6 +420,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long upgradeAmount;
 
         /**
+         * <p>The tax difference amount, in cents.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -374,6 +429,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Long taxDiffAmount;
 
         /**
+         * <p>Indicates whether a direct price is available. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -381,6 +438,8 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
         public Boolean hasPrice;
 
         /**
+         * <p>The text prompt displayed when no direct price is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>待服务商确认</p>
          */
@@ -443,9 +502,15 @@ public class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValue exten
     }
 
     public static class ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceList extends TeaModel {
+        /**
+         * <p>The segment position information, indicating the journey index and segment index within the overall itinerary.</p>
+         */
         @NameInMap("segment_position")
         public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition segmentPosition;
 
+        /**
+         * <p>The rebooking price.</p>
+         */
         @NameInMap("search_price")
         public ModuleReShopItemListBestPriceItemSubItemsShoppingItemMapValueSegmentPriceListSearchPrice searchPrice;
 

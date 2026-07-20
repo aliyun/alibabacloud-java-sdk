@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelSuggestV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public HotelSuggestV2ResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce316577904808056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,36 +96,80 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
     }
 
     public static class HotelSuggestV2ResponseBodyModuleGuessSuggestInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>杭州湖墅南路XX号</p>
+         */
         @NameInMap("address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300100</p>
+         */
         @NameInMap("city_code")
         public Integer cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州JW万豪酒店</p>
+         */
         @NameInMap("display_name")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>53853318</p>
+         */
         @NameInMap("hotel_id")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
+         */
         @NameInMap("icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4.8分</p>
+         */
         @NameInMap("point")
         public String point;
 
+        /**
+         * <strong>example:</strong>
+         * <p>524</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("region")
         public Integer region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>酒店</p>
+         */
         @NameInMap("type_desc")
         public String typeDesc;
 
@@ -205,36 +269,80 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
     }
 
     public static class HotelSuggestV2ResponseBodyModuleKeywordSuggestInfosBusinessAreaWithCity extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>成都市高新区天府大道北段1700号1栋2单元18层1801号</p>
+         */
         @NameInMap("address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300100</p>
+         */
         @NameInMap("city_code")
         public Integer cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>阿里巴巴/未来科技城</p>
+         */
         @NameInMap("display_name")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>57140953</p>
+         */
         @NameInMap("hotel_id")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
+         */
         @NameInMap("icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4.8分</p>
+         */
         @NameInMap("point")
         public String point;
 
+        /**
+         * <strong>example:</strong>
+         * <p>524</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("region")
         public Integer region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>商圈</p>
+         */
         @NameInMap("type_desc")
         public String typeDesc;
 
@@ -334,39 +442,83 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
     }
 
     public static class HotelSuggestV2ResponseBodyModuleKeywordSuggestInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>杭州湖墅南路XX号</p>
+         */
         @NameInMap("address")
         public String address;
 
         @NameInMap("business_area_with_city")
         public java.util.List<HotelSuggestV2ResponseBodyModuleKeywordSuggestInfosBusinessAreaWithCity> businessAreaWithCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300100</p>
+         */
         @NameInMap("city_code")
         public Integer cityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州</p>
+         */
         @NameInMap("city_name")
         public String cityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>杭州JW万豪酒店</p>
+         */
         @NameInMap("display_name")
         public String displayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>53853318</p>
+         */
         @NameInMap("hotel_id")
         public String hotelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png">https://gw.alicdn.com/imgextra/i3/O1CN01qKg25r1rKLOKxT3vB_!!6000000005612-2-tps-32-32.png</a></p>
+         */
         @NameInMap("icon")
         public String icon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4.8分</p>
+         */
         @NameInMap("point")
         public String point;
 
+        /**
+         * <strong>example:</strong>
+         * <p>524</p>
+         */
         @NameInMap("price")
         public String price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("region")
         public Integer region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>酒店</p>
+         */
         @NameInMap("type_desc")
         public String typeDesc;
 
@@ -474,6 +626,10 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
     }
 
     public static class HotelSuggestV2ResponseBodyModulePopularSuggestInfosPopularInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>杭州东站</p>
+         */
         @NameInMap("display_name")
         public String displayName;
 
@@ -493,12 +649,20 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
     }
 
     public static class HotelSuggestV2ResponseBodyModulePopularSuggestInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://gw.alicdn.com/imgextra/i1/O1CN01x0q19E1QZSqLHVVNh_!!6000000001990-2-tps-54-54.png">https://gw.alicdn.com/imgextra/i1/O1CN01x0q19E1QZSqLHVVNh_!!6000000001990-2-tps-54-54.png</a></p>
+         */
         @NameInMap("icon")
         public String icon;
 
         @NameInMap("popular_infos")
         public java.util.List<HotelSuggestV2ResponseBodyModulePopularSuggestInfosPopularInfos> popularInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>热门搜索</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -543,6 +707,10 @@ public class HotelSuggestV2ResponseBody extends TeaModel {
         @NameInMap("popular_suggest_infos")
         public java.util.List<HotelSuggestV2ResponseBodyModulePopularSuggestInfos> popularSuggestInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>以下是当前城市和周边的查询结果 (酒店起价为参考)</p>
+         */
         @NameInMap("tips")
         public String tips;
 

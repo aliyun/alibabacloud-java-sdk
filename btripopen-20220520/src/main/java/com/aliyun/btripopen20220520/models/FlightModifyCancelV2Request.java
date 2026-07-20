@@ -4,18 +4,38 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightModifyCancelV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467138</p>
+     */
     @NameInMap("order_id")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1017002195370467137</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1019195786853020</p>
+     */
     @NameInMap("out_sub_order_id")
     public String outSubOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1019195786853020</p>
+     */
     @NameInMap("sub_order_id")
     public Long subOrderId;
 

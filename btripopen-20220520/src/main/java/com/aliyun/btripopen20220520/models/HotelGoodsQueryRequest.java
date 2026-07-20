@@ -4,51 +4,95 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class HotelGoodsQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("adult_num")
     public String adultNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("agreement_price")
     public Boolean agreementPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-27</p>
      */
     @NameInMap("begin_date")
     public String beginDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("breakfast_included")
     public Boolean breakfastIncluded;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("btrip_user_id")
     public String btripUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>330100</p>
+     */
     @NameInMap("city_code")
     public String cityCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-02-28</p>
      */
     @NameInMap("end_date")
     public String endDate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>182873</p>
      */
     @NameInMap("hotel_id")
     public String hotelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("pay_over_type")
     public Integer payOverType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("payment_type")
     public Integer paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("special_invoice")
     public Boolean specialInvoice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("super_man")
     public Integer superMan;
 

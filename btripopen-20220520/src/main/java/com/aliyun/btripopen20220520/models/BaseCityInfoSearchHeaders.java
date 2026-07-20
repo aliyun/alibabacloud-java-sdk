@@ -7,6 +7,10 @@ public class BaseCityInfoSearchHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feth00jqwls</p>
+     */
     @NameInMap("x-acs-btrip-access-token")
     public String xAcsBtripAccessToken;
 

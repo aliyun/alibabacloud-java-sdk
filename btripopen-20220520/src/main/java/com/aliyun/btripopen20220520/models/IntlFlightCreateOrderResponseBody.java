@@ -21,12 +21,24 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
     @NameInMap("module")
     public IntlFlightCreateOrderResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C61ECFF6-606B-5F66-B81D-D77369043A5F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2103ad1116826479016562032da98c</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -84,24 +96,52 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
     }
 
     public static class IntlFlightCreateOrderResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>deb6372db8194f1c94c23bc4fadc508d</p>
+         */
         @NameInMap("async_create_order_key")
         public String asyncCreateOrderKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1003038197806523003</p>
+         */
         @NameInMap("order_id")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F11378244642107293696</p>
+         */
         @NameInMap("out_order_id")
         public String outOrderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-01-01 10:10:19</p>
+         */
         @NameInMap("pay_latest_time")
         public String payLatestTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("pay_status")
         public Integer payStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22300</p>
+         */
         @NameInMap("total_price")
         public Long totalPrice;
 

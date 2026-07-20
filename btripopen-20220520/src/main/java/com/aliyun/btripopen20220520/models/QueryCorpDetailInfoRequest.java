@@ -4,12 +4,24 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class QueryCorpDetailInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2210********668</p>
+     */
     @NameInMap("account_id")
     public String accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>btripxxxxxx</p>
+     */
     @NameInMap("target_corp_id")
     public String targetCorpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alibabaxxxxxxx</p>
+     */
     @NameInMap("target_third_corp_id")
     public String targetThirdCorpId;
 

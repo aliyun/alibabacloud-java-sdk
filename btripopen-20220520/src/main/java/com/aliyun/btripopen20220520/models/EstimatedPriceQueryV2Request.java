@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EstimatedPriceQueryV2Request extends TeaModel {
     /**
+     * <p>The category.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class EstimatedPriceQueryV2Request extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The departure date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class EstimatedPriceQueryV2Request extends TeaModel {
     public String departDate;
 
     /**
+     * <p>The departure or check-in city.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class EstimatedPriceQueryV2Request extends TeaModel {
     public String fromCity;
 
     /**
+     * <p>The arrival date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class EstimatedPriceQueryV2Request extends TeaModel {
     public String leaveDate;
 
     /**
+     * <p>The arrival or check-out city.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,8 @@ public class EstimatedPriceQueryV2Request extends TeaModel {
     public String toCity;
 
     /**
+     * <p>The user ID. This parameter is required for the hotel category.</p>
+     * 
      * <strong>example:</strong>
      * <p>Fei123</p>
      */

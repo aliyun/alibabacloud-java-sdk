@@ -4,21 +4,48 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>module</p>
+     */
     @NameInMap("module")
     public FlightModifyListingSearchV2ResponseBodyModule module;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5009956-1077-52FB-B520-EA8C7E91D722</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2136019116915615924561621e06ee</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,18 +103,38 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>中国国航</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>国航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>//gw.alicdn.com/tfs/TB12fJAFHr1gK0jSZR0XXbP8XXa-450-450.png_80x80.jpg</p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -139,15 +186,31 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListArrAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>锡林浩特机场</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>锡林浩特</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T3</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -191,15 +254,31 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListDepAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PEK</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>首都国际机场</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>首都</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T2</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -243,18 +322,38 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightShareInfoOperatingAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文名, 如：中国国航</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文简称, 如：国航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司代码, 如&quot;HU&quot;, 表示海航</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司logo，如：<a href="https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png">https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png</a></p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -309,6 +408,10 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("operating_airline_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>承运方航班号（共享航班时有值）</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
@@ -336,24 +439,52 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightStopInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>经停机场</p>
+         */
         @NameInMap("stop_airport")
         public String stopAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停航站楼: 降落</p>
+         */
         @NameInMap("stop_arr_term")
         public String stopArrTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停站到达时间</p>
+         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停城市三字码</p>
+         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停城市名称</p>
+         */
         @NameInMap("stop_city_name")
         public String stopCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停航站楼: 起飞</p>
+         */
         @NameInMap("stop_dep_term")
         public String stopDepTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停站出发时间</p>
+         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
@@ -421,18 +552,38 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightTransferInfoTransferAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文名, 如：中国国航</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文简称, 如：国航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司代码, 如&quot;HU&quot;, 表示海航</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司logo，如：<a href="https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png">https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png</a></p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -487,24 +638,52 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("transfer_airline_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightTransferInfoTransferAirlineInfo transferAirlineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转城市三字码</p>
+         */
         @NameInMap("transfer_city_code")
         public String transferCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转城市名称</p>
+         */
         @NameInMap("transfer_city_name")
         public String transferCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转出发时间</p>
+         */
         @NameInMap("transfer_dep_time")
         public String transferDepTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转第二段航班号</p>
+         */
         @NameInMap("transfer_flight_no")
         public String transferFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转第二段航班机型中文名，如&quot;中型机&quot;</p>
+         */
         @NameInMap("transfer_flight_size")
         public String transferFlightSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("transfer_share")
         public Boolean transferShare;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("transfer_stop_time")
         public Integer transferStopTime;
 
@@ -580,30 +759,66 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListPriceInfoDTOReShopPriceInfoDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_change_fee")
         public Integer reShopAdultChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_price")
         public Integer reShopAdultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_price_gap")
         public Integer reShopAdultPriceGap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_change_fee")
         public Integer reShopChildChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_price")
         public Integer reShopChildPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_price_gap")
         public Integer reShopChildPriceGap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_change_fee")
         public Integer reShopInfChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_price")
         public Integer reShopInfPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_price_gap")
         public Integer reShopInfPriceGap;
 
@@ -687,39 +902,87 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListPriceInfoDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>126000</p>
+         */
         @NameInMap("adult_price")
         public Integer adultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11000</p>
+         */
         @NameInMap("adult_tax")
         public Integer adultTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>137000</p>
+         */
         @NameInMap("adult_total_price")
         public Integer adultTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>126000</p>
+         */
         @NameInMap("before_control_price")
         public Integer beforeControlPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64000</p>
+         */
         @NameInMap("child_price")
         public Integer childPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("child_tax")
         public Integer childTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66000</p>
+         */
         @NameInMap("child_total_price")
         public Integer childTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12000</p>
+         */
         @NameInMap("infant_price")
         public Integer infantPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("infant_tax")
         public Integer infantTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12000</p>
+         */
         @NameInMap("infant_total_price")
         public Integer infantTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1300</p>
+         */
         @NameInMap("original_adult_price")
         public Integer originalAdultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12300</p>
+         */
         @NameInMap("original_adult_total_price")
         public Integer originalAdultTotalPrice;
 
@@ -844,36 +1107,72 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListArrAirportInfo arrAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BJS</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-18 10:25:00</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabinClass")
         public String cabinClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经济舱</p>
+         */
         @NameInMap("cabinClassName")
         public String cabinClassName;
 
         @NameInMap("dep_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListDepAirportInfo depAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XIL</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-09-18 09:10:00</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>240</p>
+         */
         @NameInMap("duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CA1110</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
         @NameInMap("flight_share_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightShareInfo flightShareInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小型机</p>
+         */
         @NameInMap("flight_size")
         public String flightSize;
 
@@ -883,39 +1182,83 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("flight_transfer_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListFlightTransferInfo flightTransferInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ARJ</p>
+         */
         @NameInMap("flight_type")
         public String flightType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_seq")
         public Integer journeySeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("left_num")
         public String leftNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>波音</p>
+         */
         @NameInMap("manufacturer")
         public String manufacturer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>餐食描述</p>
+         */
         @NameInMap("meal_desc")
         public String mealDesc;
 
         @NameInMap("price_info_d_t_o")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListPriceInfoDTO priceInfoDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_seq")
         public Integer segmentSeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("share")
         public Boolean share;
 
+        /**
+         * <strong>example:</strong>
+         * <p>小</p>
+         */
         @NameInMap("short_flight_size")
         public String shortFlightSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>跨天展示文案，如&quot;+1天&quot;</p>
+         */
         @NameInMap("span_day")
         public String spanDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("stop")
         public Boolean stop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("transfer")
         public Boolean transfer;
 
@@ -1143,18 +1486,38 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文名, 如：中国国航</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文简称, 如：国航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司代码, 如&quot;HU&quot;, 表示海航</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司logo，如：<a href="https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png">https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png</a></p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>廉航标识</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -1206,15 +1569,31 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListArrAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>机场代码</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>机场名称</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>机场简称</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航站楼</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -1258,15 +1637,31 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListDepAirportInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>机场代码</p>
+         */
         @NameInMap("airport_code")
         public String airportCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>机场名称</p>
+         */
         @NameInMap("airport_name")
         public String airportName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>机场简称</p>
+         */
         @NameInMap("airport_short_name")
         public String airportShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航站楼</p>
+         */
         @NameInMap("terminal")
         public String terminal;
 
@@ -1310,18 +1705,38 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListFlightShareInfoOperatingAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文名, 如：中国国航</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文简称, 如：国航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司代码, 如&quot;HU&quot;, 表示海航</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司logo，如：<a href="https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png">https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png</a></p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -1376,6 +1791,10 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("operating_airline_info")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListFlightShareInfoOperatingAirlineInfo operatingAirlineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>承运方航班号（共享航班时有值）</p>
+         */
         @NameInMap("operating_flight_no")
         public String operatingFlightNo;
 
@@ -1403,24 +1822,52 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListFlightStopInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>经停机场</p>
+         */
         @NameInMap("stop_airport")
         public String stopAirport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停航站楼: 降落</p>
+         */
         @NameInMap("stop_arr_term")
         public String stopArrTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停城市名称</p>
+         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停城市三字码</p>
+         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停城市名称</p>
+         */
         @NameInMap("stop_city_name")
         public String stopCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停航站楼: 起飞</p>
+         */
         @NameInMap("stop_dep_term")
         public String stopDepTerm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经停站出发时间</p>
+         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
@@ -1488,18 +1935,38 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListFlightTransferInfoTransferAirlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文名, 如：中国国航</p>
+         */
         @NameInMap("airline_chinese_name")
         public String airlineChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司中文简称, 如：国航</p>
+         */
         @NameInMap("airline_chinese_short_name")
         public String airlineChineseShortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司代码, 如&quot;HU&quot;, 表示海航</p>
+         */
         @NameInMap("airline_code")
         public String airlineCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航空公司logo，如：<a href="https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png">https://img.alicdn.com/tps/TB1DjLzLXXXXXaoXFXXXXXXXXXX-64-64.png</a></p>
+         */
         @NameInMap("airline_icon")
         public String airlineIcon;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("cheap_flight")
         public Boolean cheapFlight;
 
@@ -1554,24 +2021,52 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("transfer_airline_info")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListFlightTransferInfoTransferAirlineInfo transferAirlineInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转城市三字码</p>
+         */
         @NameInMap("transfer_city_code")
         public String transferCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转城市名称</p>
+         */
         @NameInMap("transfer_city_name")
         public String transferCityName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转出发时间</p>
+         */
         @NameInMap("transfer_dep_time")
         public String transferDepTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转第二段航班号</p>
+         */
         @NameInMap("transfer_flight_no")
         public String transferFlightNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>中转第二段航班机型中文名，如&quot;中型机&quot;</p>
+         */
         @NameInMap("transfer_flight_size")
         public String transferFlightSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("transfer_share")
         public Boolean transferShare;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("transfer_stop_time")
         public Integer transferStopTime;
 
@@ -1647,30 +2142,66 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListPriceInfoDTOReShopPriceInfoDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_change_fee")
         public Integer reShopAdultChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_price")
         public Integer reShopAdultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_adult_price_gap")
         public Integer reShopAdultPriceGap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_change_fee")
         public Integer reShopChildChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_price")
         public Integer reShopChildPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_child_price_gap")
         public Integer reShopChildPriceGap;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_change_fee")
         public Integer reShopInfChangeFee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_price")
         public Integer reShopInfPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("re_shop_inf_price_gap")
         public Integer reShopInfPriceGap;
 
@@ -1754,39 +2285,87 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListPriceInfoDTO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("adult_price")
         public Integer adultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("adult_tax")
         public Integer adultTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("adult_total_price")
         public Integer adultTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("before_control_price")
         public Integer beforeControlPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("child_price")
         public Integer childPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("child_tax")
         public Integer childTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("child_total_price")
         public Integer childTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("infant_price")
         public Integer infantPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("infant_tax")
         public Integer infantTax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("infant_total_price")
         public Integer infantTotalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("original_adult_price")
         public Integer originalAdultPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("original_adult_total_price")
         public Integer originalAdultTotalPrice;
 
@@ -1911,36 +2490,72 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListArrAirportInfo arrAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>到达城市三字码</p>
+         */
         @NameInMap("arr_city_code")
         public String arrCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>到达时间</p>
+         */
         @NameInMap("arr_time")
         public String arrTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
         @NameInMap("cabinClass")
         public String cabinClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>经济舱</p>
+         */
         @NameInMap("cabinClassName")
         public String cabinClassName;
 
         @NameInMap("dep_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListDepAirportInfo depAirportInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>出发城市三字码</p>
+         */
         @NameInMap("dep_city_code")
         public String depCityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>出发时间</p>
+         */
         @NameInMap("dep_time")
         public String depTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>240</p>
+         */
         @NameInMap("duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>航班号，中转多航段为第一程航班号</p>
+         */
         @NameInMap("flight_no")
         public String flightNo;
 
         @NameInMap("flight_share_info")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListFlightShareInfo flightShareInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>机型中文名，如&quot;中型机&quot;</p>
+         */
         @NameInMap("flight_size")
         public String flightSize;
 
@@ -1950,39 +2565,83 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("flight_transfer_info")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListFlightTransferInfo flightTransferInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>机型代码，如738</p>
+         */
         @NameInMap("flight_type")
         public String flightType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("journey_seq")
         public Integer journeySeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("left_num")
         public String leftNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>制造商，如&quot;波音&quot;</p>
+         */
         @NameInMap("manufacturer")
         public String manufacturer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>餐食描述</p>
+         */
         @NameInMap("meal_desc")
         public String mealDesc;
 
         @NameInMap("price_info_d_t_o")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListPriceInfoDTO priceInfoDTO;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("segment_seq")
         public Integer segmentSeq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("share")
         public Boolean share;
 
+        /**
+         * <strong>example:</strong>
+         * <p>机型简称，如&quot;中&quot;</p>
+         */
         @NameInMap("short_flight_size")
         public String shortFlightSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>跨天展示文案，如&quot;+1天&quot;</p>
+         */
         @NameInMap("span_day")
         public String spanDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("stop")
         public Boolean stop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("transfer")
         public Boolean transfer;
 
@@ -2213,21 +2872,41 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("direct_flight_list")
         public java.util.List<FlightModifyListingSearchV2ResponseBodyModuleDirectFlightList> directFlightList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("next_req_wait_time")
         public Long nextReqWaitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("retry")
         public Boolean retry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a2c230080358295f99e03aa4e3ccf1bd</p>
+         */
         @NameInMap("search_retry_token")
         public String searchRetryToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a2ffebfe733742aab5c491d960ba3d59</p>
+         */
         @NameInMap("session_id")
         public String sessionId;
 
         @NameInMap("transfer_flight_list")
         public java.util.List<FlightModifyListingSearchV2ResponseBodyModuleTransferFlightList> transferFlightList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>为您推荐中转航班!</p>
+         */
         @NameInMap("transfer_title")
         public String transferTitle;
 

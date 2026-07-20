@@ -20,14 +20,25 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     @NameInMap("buyer_name")
     public String buyerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ZJTD</p>
+     */
     @NameInMap("isv_name")
     public String isvName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>102000</p>
+     */
     @NameInMap("order_price")
     public Long orderPrice;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22111acaf9ea47c09ed0db6abc45be2d_0</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
@@ -94,22 +105,32 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
     public static class IntlFlightInventoryPriceCheckRequestPassengerListCertInfo extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H123456</p>
          */
         @NameInMap("cert_no")
         public String certNo;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("cert_type")
         public Integer certType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2033-01-09</p>
+         */
         @NameInMap("cert_valid_date")
         public String certValidDate;
 
         /**
          * <strong>example:</strong>
-         * <p>中国大陆</p>
+         * <p>CN</p>
          */
         @NameInMap("issue_place")
         public String issuePlace;
@@ -158,7 +179,7 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1998-12-28</p>
+         * <p>2020-01-01</p>
          */
         @NameInMap("birthday")
         public String birthday;
@@ -173,7 +194,7 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ZHANG/SAN</p>
+         * <p>BRIDGE/KING</p>
          */
         @NameInMap("full_name")
         public String fullName;
@@ -203,6 +224,10 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
         @NameInMap("nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CN</p>
+         */
         @NameInMap("nationality_code")
         public String nationalityCode;
 
@@ -210,7 +235,7 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>13100008888</p>
+         * <p>18012341234</p>
          */
         @NameInMap("phone")
         public String phone;
@@ -219,7 +244,7 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("type")
         public Integer type;
@@ -228,7 +253,7 @@ public class IntlFlightInventoryPriceCheckRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>12292812036903456</p>
+         * <p>10001</p>
          */
         @NameInMap("user_id")
         public String userId;

@@ -8,6 +8,12 @@ public class IntlFlightReShopListSearchHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The enterprise access token.</p>
+     * <ul>
+     * <li>When calling this API over HTTP, this parameter is required and must be appended to the request URL. For more information about how to obtain the token, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5e2a281frQyDQ8&docId=3769985">Enterprise access token</a>.</li>
+     * <li>When appending the token, use crop_token=value instead.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>feth00jqwls</p>
      */

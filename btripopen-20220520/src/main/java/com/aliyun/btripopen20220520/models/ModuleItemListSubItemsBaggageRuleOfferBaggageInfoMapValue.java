@@ -4,87 +4,205 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleItemListSubItemsBaggageRuleOfferBaggageInfoMapValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NNG</p>
+     */
     @NameInMap("start_city_code")
     public String startCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SHA</p>
+     */
     @NameInMap("end_city_code")
     public String endCityCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("carry_free_pc")
     public Integer carryFreePc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("carry_bag_weight")
     public Integer carryBagWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20<em>40</em>55CM、三边之和不超过115CM</p>
+     */
     @NameInMap("carry_bag_size")
     public String carryBagSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("is_all_carry_bag_weight")
     public Boolean isAllCarryBagWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("total_pcs")
     public Long totalPcs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("total_weight")
     public Long totalWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("carry_unknown")
     public Boolean carryUnknown;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("carry_length")
     public Integer carryLength;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("carry_width")
     public Integer carryWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55</p>
+     */
     @NameInMap("carry_height")
     public Integer carryHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>115</p>
+     */
     @NameInMap("carry_sum_of_length_width_height")
     public Integer carrySumOfLengthWidthHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("free_pcs")
     public Long freePcs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("baggage_weight")
     public Long baggageWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>KG</p>
+     */
     @NameInMap("baggage_unit")
     public String baggageUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>长宽高之和≤158CM</p>
+     */
     @NameInMap("baggage_size")
     public String baggageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("all_weight")
     public Boolean allWeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("length")
     public Integer length;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("width")
     public Integer width;
 
+    /**
+     * <strong>example:</strong>
+     * <p>55</p>
+     */
     @NameInMap("height")
     public Integer height;
 
+    /**
+     * <strong>example:</strong>
+     * <p>115</p>
+     */
     @NameInMap("sum_of_length_width_height")
     public Integer sumOfLengthWidthHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("unknown")
     public Boolean unknown;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("cn_desc")
     public String cnDesc;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("en_desc")
     public String enDesc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("attribute")
     public String attribute;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("baggage_price")
     public Integer baggagePrice;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("carry_on_baggage_tips")
     public String carryOnBaggageTips;
 

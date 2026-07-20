@@ -4,14 +4,27 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class DeleteInvoiceEntityShrinkRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to delete all applicable personnel. If del_all is set to true, all entities under the invoice header are deleted, and the entity list parameter is not validated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("del_all")
     public Boolean delAll;
 
+    /**
+     * <p>The entity list. This parameter is required when del_all is set to false or null.</p>
+     */
     @NameInMap("entities")
     public String entitiesShrink;
 
     /**
+     * <p>The third-party invoice ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>340049</p>
      */
     @NameInMap("third_part_id")
     public String thirdPartId;

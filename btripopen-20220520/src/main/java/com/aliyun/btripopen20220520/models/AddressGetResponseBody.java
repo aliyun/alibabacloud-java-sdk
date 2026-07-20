@@ -4,21 +4,54 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class AddressGetResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("module")
     public AddressGetResponseBodyModule module;
 
+    /**
+     * <p>The unique identifier of this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>407543AF-<strong><strong>-</strong></strong>-****-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Use this parameter to determine the result of the call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>The global trace identifier of the request, typically used for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210bcc3a********d33d7</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,6 +109,12 @@ public class AddressGetResponseBody extends TeaModel {
     }
 
     public static class AddressGetResponseBodyModule extends TeaModel {
+        /**
+         * <p>The redirect URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://trip-hisv.taobao.com/ding/trustLogin.htm?********aff8-2c2e58da659b">https://trip-hisv.taobao.com/ding/trustLogin.htm?********aff8-2c2e58da659b</a></p>
+         */
         @NameInMap("url")
         public String url;
 

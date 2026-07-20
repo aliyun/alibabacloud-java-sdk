@@ -21,12 +21,24 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     @NameInMap("module")
     public IntlFlightInventoryPriceCheckResponseBodyModule module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>92359A00-85D8-16C4-AED0-249618DEEC17</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2103ad1516839612078738332dea5c</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -84,9 +96,17 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     }
 
     public static class IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12000</p>
+         */
         @NameInMap("tax_price")
         public Long taxPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90000</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
@@ -114,9 +134,17 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     }
 
     public static class IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12000</p>
+         */
         @NameInMap("tax_price")
         public Long taxPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80000</p>
+         */
         @NameInMap("ticket_price")
         public Long ticketPrice;
 
@@ -144,6 +172,10 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     }
 
     public static class IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("changed")
         public Boolean changed;
 
@@ -153,6 +185,10 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         @NameInMap("original_price")
         public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice originalPrice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("passenger_type")
         public Integer passengerType;
 
@@ -196,15 +232,27 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     }
 
     public static class IntlFlightInventoryPriceCheckResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("check_success")
         public Boolean checkSuccess;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("fail_type")
         public Integer failType;
 
         @NameInMap("passenger_changed_price_info_list")
         public java.util.List<IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoList> passengerChangedPriceInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
+         */
         @NameInMap("render_key")
         public String renderKey;
 

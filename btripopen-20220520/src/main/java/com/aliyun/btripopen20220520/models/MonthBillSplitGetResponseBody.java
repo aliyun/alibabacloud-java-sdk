@@ -4,21 +4,41 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class MonthBillSplitGetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("message")
     public String message;
 
     @NameInMap("module")
     public java.util.List<MonthBillSplitGetResponseBodyModule> module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>407543AF-<strong><strong>-</strong></strong>-****-9D1AB7218B27</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21041ce********056433edbb2</p>
+     */
     @NameInMap("traceId")
     public String traceId;
 
@@ -76,15 +96,31 @@ public class MonthBillSplitGetResponseBody extends TeaModel {
     }
 
     public static class MonthBillSplitGetResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>invoice_third_part_id123</p>
+         */
         @NameInMap("bill_split_key")
         public String billSplitKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-12-31</p>
+         */
         @NameInMap("end_date")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-12-01</p>
+         */
         @NameInMap("start_date")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://alibtrip-oss.oss-cn-hangzhou.aliyuncs.com/">https://alibtrip-oss.oss-cn-hangzhou.aliyuncs.com/</a>********</p>
+         */
         @NameInMap("url")
         public String url;
 

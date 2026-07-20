@@ -6,24 +6,41 @@ import com.aliyun.tea.*;
 public class IntlFlightRefundApplyShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1002145190081005400</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3750656668336001024</p>
+     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>202503251022170001</p>
+     */
     @NameInMap("out_refund_apply_id")
     public String outRefundApplyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>edcac4f4c79d40ccb141ddb6da567e65</p>
      */
     @NameInMap("passenger_journey_group_key")
     public String passengerJourneyGroupKey;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("refund_reason_code")
     public String refundReasonCode;
