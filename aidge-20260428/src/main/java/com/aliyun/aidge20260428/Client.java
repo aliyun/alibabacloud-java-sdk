@@ -3429,6 +3429,138 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>1. 产品简介</h2>
+     * <p>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
+     * API 采用异步调用模式：提交翻译任务后获取 <code>task_id</code>，通过查询接口轮询任务状态直至完成后获取结果。</p>
+     * <h2>2. 适用场景</h2>
+     * <ul>
+     * <li><p><strong>跨境电商视频本地化</strong>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</p>
+     * </li>
+     * <li><p><strong>国际社交媒体营销</strong>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</p>
+     * </li>
+     * <li><p><strong>全球品牌广告投放</strong>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</p>
+     * </li>
+     * <li><p><strong>培训与产品说明</strong>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</p>
+     * </li>
+     * </ul>
+     * <h2>3. 功能介绍</h2>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>能力</th>
+     * <th>标识码</th>
+     * <th>说明</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>画面翻译</td>
+     * <td><code>visual</code></td>
+     * <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+     * </tr>
+     * </tbody></table>
+     * <h2>4. 开发指南</h2>
+     * <h3>4.1 提交翻译任务</h3>
+     * <h4>请求</h4>
+     * <p><code>POST /api/v1/video/translation</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>视频翻译</p>
+     * 
+     * @param tmpReq VideoTranslationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VideoTranslationResponse
+     */
+    public VideoTranslationResponse videoTranslationWithOptions(VideoTranslationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        VideoTranslationShrinkRequest request = new VideoTranslationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.capabilities)) {
+            request.capabilitiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.capabilities, "Capabilities", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.capabilitiesShrink)) {
+            body.put("Capabilities", request.capabilitiesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("TargetLanguage", request.targetLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
+            body.put("VideoUrl", request.videoUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VideoTranslation"),
+            new TeaPair("version", "2026-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VideoTranslationResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>1. 产品简介</h2>
+     * <p>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
+     * API 采用异步调用模式：提交翻译任务后获取 <code>task_id</code>，通过查询接口轮询任务状态直至完成后获取结果。</p>
+     * <h2>2. 适用场景</h2>
+     * <ul>
+     * <li><p><strong>跨境电商视频本地化</strong>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</p>
+     * </li>
+     * <li><p><strong>国际社交媒体营销</strong>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</p>
+     * </li>
+     * <li><p><strong>全球品牌广告投放</strong>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</p>
+     * </li>
+     * <li><p><strong>培训与产品说明</strong>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</p>
+     * </li>
+     * </ul>
+     * <h2>3. 功能介绍</h2>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>能力</th>
+     * <th>标识码</th>
+     * <th>说明</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>画面翻译</td>
+     * <td><code>visual</code></td>
+     * <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+     * </tr>
+     * </tbody></table>
+     * <h2>4. 开发指南</h2>
+     * <h3>4.1 提交翻译任务</h3>
+     * <h4>请求</h4>
+     * <p><code>POST /api/v1/video/translation</code></p>
+     * 
+     * <b>summary</b> : 
+     * <p>视频翻译</p>
+     * 
+     * @param request VideoTranslationRequest
+     * @return VideoTranslationResponse
+     */
+    public VideoTranslationResponse videoTranslation(VideoTranslationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.videoTranslationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h1>1. Product Introduction</h1>
      * <p>A one-stop AI-powered image processing service for e-commerce sellers. Orchestrates seven atomic capabilities — element detection, intelligent matting, intelligent removal, Image Translation Pro, image expansion, intelligent cropping, and HD upscaling — into an image processing workflow. Upload an image once, select the desired capabilities, and complete multiple image optimizations sequentially in a single call to produce product images that meet listing platform requirements. (Asynchronous).</p>
      * <h1>2. Common scenarios</h1>
