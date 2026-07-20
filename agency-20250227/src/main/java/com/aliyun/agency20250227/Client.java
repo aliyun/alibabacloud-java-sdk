@@ -87,6 +87,226 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建客户小记</p>
+     * 
+     * @param request CustomerNoteCreateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CustomerNoteCreateResponse
+     */
+    public CustomerNoteCreateResponse customerNoteCreateWithOptions(CustomerNoteCreateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactInformation)) {
+            body.put("ContactInformation", request.contactInformation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactName)) {
+            body.put("ContactName", request.contactName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerName)) {
+            body.put("CustomerName", request.customerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerUid)) {
+            body.put("CustomerUid", request.customerUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noteContent)) {
+            body.put("NoteContent", request.noteContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.touchDate)) {
+            body.put("TouchDate", request.touchDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CustomerNoteCreate"),
+            new TeaPair("version", "2025-02-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CustomerNoteCreateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建客户小记</p>
+     * 
+     * @param request CustomerNoteCreateRequest
+     * @return CustomerNoteCreateResponse
+     */
+    public CustomerNoteCreateResponse customerNoteCreate(CustomerNoteCreateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.customerNoteCreateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑客户小记</p>
+     * 
+     * @param request CustomerNoteEditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CustomerNoteEditResponse
+     */
+    public CustomerNoteEditResponse customerNoteEditWithOptions(CustomerNoteEditRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contactInformation)) {
+            body.put("ContactInformation", request.contactInformation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactName)) {
+            body.put("ContactName", request.contactName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noteContent)) {
+            body.put("NoteContent", request.noteContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
+            body.put("NoteId", request.noteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.touchDate)) {
+            body.put("TouchDate", request.touchDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CustomerNoteEdit"),
+            new TeaPair("version", "2025-02-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CustomerNoteEditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑客户小记</p>
+     * 
+     * @param request CustomerNoteEditRequest
+     * @return CustomerNoteEditResponse
+     */
+    public CustomerNoteEditResponse customerNoteEdit(CustomerNoteEditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.customerNoteEditWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询客户小记列表</p>
+     * 
+     * @param request CustomerNoteListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CustomerNoteListResponse
+     */
+    public CustomerNoteListResponse customerNoteListWithOptions(CustomerNoteListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customerUid)) {
+            body.put("CustomerUid", request.customerUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            body.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CustomerNoteList"),
+            new TeaPair("version", "2025-02-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CustomerNoteListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询客户小记列表</p>
+     * 
+     * @param request CustomerNoteListRequest
+     * @return CustomerNoteListResponse
+     */
+    public CustomerNoteListResponse customerNoteList(CustomerNoteListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.customerNoteListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询客户小记详情</p>
+     * 
+     * @param request CustomerNoteListDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CustomerNoteListDetailResponse
+     */
+    public CustomerNoteListDetailResponse customerNoteListDetailWithOptions(CustomerNoteListDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.noteId)) {
+            body.put("NoteId", request.noteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CustomerNoteListDetail"),
+            new TeaPair("version", "2025-02-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CustomerNoteListDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询客户小记详情</p>
+     * 
+     * @param request CustomerNoteListDetailRequest
+     * @return CustomerNoteListDetailResponse
+     */
+    public CustomerNoteListDetailResponse customerNoteListDetail(CustomerNoteListDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.customerNoteListDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries exported bill files.</p>
      * 
      * @param request GetBillDetailFileListRequest
