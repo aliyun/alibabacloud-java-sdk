@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRbacRoleRequest extends TeaModel {
     /**
+     * <p>The business ID of the application instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>WD20250703155602000001</p>
      */
@@ -12,6 +14,8 @@ public class DeleteRbacRoleRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The role ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75b2f16f-35a5-4e90-949f-295ea14a4dc8</p>
      */

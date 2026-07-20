@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRbacRoleRequest extends TeaModel {
     /**
+     * <p>The business ID of the customer.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateRbacRoleRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The role data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;name&quot;:&quot;customer&quot;,&quot;label&quot;:&quot;xx
      * &quot;,&quot;is_default&quot;:true,&quot;is_system&quot;:false}</p>

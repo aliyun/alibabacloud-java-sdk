@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRbacRolesResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +32,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,39 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Module")
     public ListRbacRolesResponseBodyModule module;
 
     /**
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>0l45bkwM022Dt+rOvPi/oQ==</p>
      */
@@ -60,6 +81,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -67,6 +90,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -74,6 +99,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -81,6 +108,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>The reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -198,6 +227,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
 
     public static class ListRbacRolesResponseBodyModuleData extends TeaModel {
         /**
+         * <p>The creation date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-28T17:59:55Z</p>
          */
@@ -205,6 +236,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>9953352</p>
          */
@@ -212,16 +245,31 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Indicates whether this is the default report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not the default report.</li>
+         * <li><strong>1</strong>: The default report.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>Indicates whether this is a system-defined approval template. Valid values:</p>
+         * <ul>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
+         * </ul>
+         */
         @NameInMap("IsSystem")
         public Boolean isSystem;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Aliyun:dnm329@cn-shanghai+dir-8452400651</p>
          */
@@ -229,6 +277,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>文件名</p>
          */
@@ -292,6 +342,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
 
     public static class ListRbacRolesResponseBodyModuleNext extends TeaModel {
         /**
+         * <p>The time when the task was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-11-27 16:02:28</p>
          */
@@ -299,6 +351,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000039405002</p>
          */
@@ -306,16 +360,27 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Indicates whether this is the default private gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>Indicates whether this is a system-defined approval template. Valid values:</p>
+         * <ul>
+         * <li>1: Yes.</li>
+         * <li>0: No.</li>
+         * </ul>
+         */
         @NameInMap("IsSystem")
         public Boolean isSystem;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>label-03\&quot;&amp;$(curl D93PCxNZ.popscan.xaliyun.com)%3B</p>
          */
@@ -323,6 +388,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <p>The scenario name.</p>
+         * 
          * <strong>example:</strong>
          * <p>docs</p>
          */
@@ -386,19 +453,29 @@ public class ListRbacRolesResponseBody extends TeaModel {
 
     public static class ListRbacRolesResponseBodyModule extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>The query results.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListRbacRolesResponseBodyModuleData> data;
 
+        /**
+         * <p>The decision weight.</p>
+         */
         @NameInMap("Next")
         public ListRbacRolesResponseBodyModuleNext next;
 
         /**
+         * <p>Indicates whether a next page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -406,6 +483,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -413,6 +492,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Indicates whether a previous page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -420,6 +501,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
+         * <p>Indicates whether the query results exceed the server-side limit of 1,000 records (excluding pagination limits). If the results exceed 1,000 entries, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -427,6 +510,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Boolean resultLimit;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -434,6 +519,8 @@ public class ListRbacRolesResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

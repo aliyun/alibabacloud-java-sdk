@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,12 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed. Valid values:</p>
+     * <ul>
+     * <li>false: Retry is not allowed.</li>
+     * <li>true: Retry is allowed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +27,8 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter, cannot end with a hyphen (-), and cannot exceed 36 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +36,8 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +45,23 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The returned error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>Indicates whether the move was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +69,8 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public Boolean module;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -57,6 +78,8 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -64,6 +87,8 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The exception message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -71,6 +96,8 @@ public class SetRbacRoleHierarchyResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>The reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

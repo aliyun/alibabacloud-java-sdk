@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRbacRoleHierarchyRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250731233102000001</p>
      */
@@ -12,6 +14,9 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +24,8 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -26,6 +33,8 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The field used for sorting.</p>
+     * 
      * <strong>example:</strong>
      * <p>CreationTime</p>
      */
@@ -33,6 +42,8 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public String orderColumn;
 
     /**
+     * <p>The sort type. Valid values: ASC and DESC.</p>
+     * 
      * <strong>example:</strong>
      * <p>DOWNGRADE</p>
      */
@@ -40,6 +51,8 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -47,6 +60,8 @@ public class ListRbacRoleHierarchyRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

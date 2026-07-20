@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportRbacConfigResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>ish-intelligence-store-platform-admin-web</p>
      */
@@ -26,6 +32,8 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +41,26 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <blockquote>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the value of the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The response object.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +68,8 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -57,6 +77,8 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -64,6 +86,8 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The exception message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -71,6 +95,8 @@ public class ExportRbacConfigResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>A reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

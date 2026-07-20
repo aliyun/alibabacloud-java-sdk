@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRbacOrgTreeResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether a retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name. The application with this name is queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +32,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,42 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message, which is used to replace the <code>%s</code> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the <strong>DtsJobId</strong> request parameter is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The maximum number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The task object.</p>
+     */
     @NameInMap("Module")
     public ListRbacOrgTreeResponseBodyModule module;
 
     /**
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -60,6 +84,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -67,6 +93,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -74,6 +102,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The exception message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -81,6 +111,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>A reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -198,6 +230,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
 
     public static class ListRbacOrgTreeResponseBodyModuleData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-05-08T02:28:26Z</p>
          */
@@ -205,6 +239,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The directory level.</p>
+         * 
          * <strong>example:</strong>
          * <p>FirstChildDepth</p>
          */
@@ -212,6 +248,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Integer depth;
 
         /**
+         * <p>The primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>9953352</p>
          */
@@ -219,12 +257,17 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>文件名</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The script path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -277,6 +320,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
 
     public static class ListRbacOrgTreeResponseBodyModuleNext extends TeaModel {
         /**
+         * <p>The creation date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-15T02:29:22Z</p>
          */
@@ -284,6 +329,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The category level. The root category is 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -291,6 +338,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Integer depth;
 
         /**
+         * <p>The primary key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000039405002</p>
          */
@@ -298,6 +347,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The scenario name.</p>
+         * 
          * <strong>example:</strong>
          * <p>docs</p>
          */
@@ -305,6 +356,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The request path of the API.</p>
+         * 
          * <strong>example:</strong>
          * <p>/h6sRMdP&amp;LTdQz/44ImvD/JtjSeUza/wVcp1i/dsxnl0FlL0/bvL/d+0~V6Fi5+R/P8ebktwGxe/l&amp;AqBD_/Y+TstdpTo06U_Q/4i4:EDPGo/7.fIVgd.//AOJtXP5/X</p>
          */
@@ -360,19 +413,29 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
 
     public static class ListRbacOrgTreeResponseBodyModule extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>The request results.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListRbacOrgTreeResponseBodyModuleData> data;
 
+        /**
+         * <p>The next feature ID.</p>
+         */
         @NameInMap("Next")
         public ListRbacOrgTreeResponseBodyModuleNext next;
 
         /**
+         * <p>Indicates whether a next page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -380,6 +443,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -387,6 +452,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Indicates whether a previous page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -394,6 +461,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
+         * <p>Indicates whether the server processes a maximum of 1,000 most recent records beyond the pagination limit. If the results exceed 1,000 entries, <strong>ResultLimit</strong> is <strong>true</strong>, and you must narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -401,6 +470,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Boolean resultLimit;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -408,6 +479,8 @@ public class ListRbacOrgTreeResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

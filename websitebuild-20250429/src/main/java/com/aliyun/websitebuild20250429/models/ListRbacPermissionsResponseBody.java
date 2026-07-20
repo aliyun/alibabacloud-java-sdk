@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRbacPermissionsResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why access was denied.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name.</p>
+     * 
      * <strong>example:</strong>
      * <p>spring-cloud-b</p>
      */
@@ -26,6 +32,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,26 +41,39 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error parameters returned.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The number of entries per query.</p>
+     * <p>Valid values: 10 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The response object.</p>
+     */
     @NameInMap("Module")
     public ListRbacPermissionsResponseBodyModule module;
 
     /**
+     * <p>The token for the next query. This parameter is empty if no more results exist.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</p>
      */
@@ -60,6 +81,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -67,6 +90,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.EROR</p>
      */
@@ -74,6 +99,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The exception message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -81,6 +108,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>The reserved parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -198,6 +227,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
 
     public static class ListRbacPermissionsResponseBodyModuleData extends TeaModel {
         /**
+         * <p>The operation that you want to perform. Set the value to <strong>GetDISyncInstanceInfo</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>monitor</p>
          */
@@ -205,6 +236,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The scenario description.</p>
+         * 
          * <strong>example:</strong>
          * <p>lshm-mysql-coypt</p>
          */
@@ -212,6 +245,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9953352</p>
          */
@@ -219,6 +254,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The allocated log storage space. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>sjapi-h5.aihuishou.com-waf</p>
          */
@@ -266,6 +303,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
 
     public static class ListRbacPermissionsResponseBodyModuleNext extends TeaModel {
         /**
+         * <p>The operation that you want to perform. Set the value to <strong>GetRemind</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>accept</p>
          */
@@ -273,6 +312,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public String action;
 
         /**
+         * <p>The scenario description.</p>
+         * 
          * <strong>example:</strong>
          * <p>lx_supabase_test_02</p>
          */
@@ -280,6 +321,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000039405002</p>
          */
@@ -287,6 +330,10 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The resource metadata declaration.</p>
+         * <p><strong>Note</strong>: The metadata is constrained by <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to the validLeaf level.</p>
+         * <p>Appendix: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation on the international site</a></p>
+         * 
          * <strong>example:</strong>
          * <p>buy</p>
          */
@@ -334,19 +381,29 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
 
     public static class ListRbacPermissionsResponseBodyModule extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("CurrentPageNum")
         public Integer currentPageNum;
 
+        /**
+         * <p>The query results.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListRbacPermissionsResponseBodyModuleData> data;
 
+        /**
+         * <p>The next feature ID.</p>
+         */
         @NameInMap("Next")
         public ListRbacPermissionsResponseBodyModuleNext next;
 
         /**
+         * <p>Indicates whether a next page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -354,6 +411,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public Boolean nextPage;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -361,6 +420,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Indicates whether a previous page exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -368,6 +429,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public Boolean prePage;
 
         /**
+         * <p>Apart from pagination limits, the server processes up to 1000 recent records for the current query. If the results exceed 1000 entries, <strong>ResultLimit</strong> is <strong>true</strong>. Narrow the time range and search again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -375,6 +438,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public Boolean resultLimit;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -382,6 +447,8 @@ public class ListRbacPermissionsResponseBody extends TeaModel {
         public Integer totalItemNum;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

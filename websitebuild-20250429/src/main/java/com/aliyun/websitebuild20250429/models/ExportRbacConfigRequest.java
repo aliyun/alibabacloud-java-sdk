@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportRbacConfigRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250814102215000001</p>
      */

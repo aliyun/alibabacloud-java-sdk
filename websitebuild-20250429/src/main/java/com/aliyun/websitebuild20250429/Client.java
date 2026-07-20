@@ -106,6 +106,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>授予用户角色</p>
+     * 
+     * @param request AssignRbacUserRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssignRbacUserRoleResponse
+     */
+    public AssignRbacUserRoleResponse assignRbacUserRoleWithOptions(AssignRbacUserRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userRoleData)) {
+            query.put("UserRoleData", request.userRoleData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssignRbacUserRole"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssignRbacUserRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>授予用户角色</p>
+     * 
+     * @param request AssignRbacUserRoleRequest
+     * @return AssignRbacUserRoleResponse
+     */
+    public AssignRbacUserRoleResponse assignRbacUserRole(AssignRbacUserRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.assignRbacUserRoleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Grants proxy-based O&amp;M permissions for an application instance.</p>
      * 
      * @param request AuthorizeAppProxyOpsRequest
@@ -1476,11 +1524,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建组织单元</p>
+     * 
+     * @param request CreateRbacOrgUnitRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRbacOrgUnitResponse
+     */
+    public CreateRbacOrgUnitResponse createRbacOrgUnitWithOptions(CreateRbacOrgUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgUnitData)) {
+            query.put("OrgUnitData", request.orgUnitData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRbacOrgUnit"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRbacOrgUnitResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建组织单元</p>
+     * 
+     * @param request CreateRbacOrgUnitRequest
+     * @return CreateRbacOrgUnitResponse
+     */
+    public CreateRbacOrgUnitResponse createRbacOrgUnit(CreateRbacOrgUnitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRbacOrgUnitWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建RBAC权限</p>
+     * 
+     * @param request CreateRbacPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRbacPermissionResponse
+     */
+    public CreateRbacPermissionResponse createRbacPermissionWithOptions(CreateRbacPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionData)) {
+            query.put("PermissionData", request.permissionData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRbacPermission"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRbacPermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建RBAC权限</p>
+     * 
+     * @param request CreateRbacPermissionRequest
+     * @return CreateRbacPermissionResponse
+     */
+    public CreateRbacPermissionResponse createRbacPermission(CreateRbacPermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRbacPermissionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>万小智2.0AI对话</p>
+     * <p>Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建RBAC角色</p>
+     * <p>Creates an RBAC role.</p>
      * 
      * @param request CreateRbacRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1516,10 +1660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>万小智2.0AI对话</p>
+     * <p>Wanxiaozhi 2.0 AI conversation.</p>
      * 
      * <b>summary</b> : 
-     * <p>创建RBAC角色</p>
+     * <p>Creates an RBAC role.</p>
      * 
      * @param request CreateRbacRoleRequest
      * @return CreateRbacRoleResponse
@@ -1940,11 +2084,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除组织单元</p>
+     * 
+     * @param request DeleteRbacOrgUnitRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRbacOrgUnitResponse
+     */
+    public DeleteRbacOrgUnitResponse deleteRbacOrgUnitWithOptions(DeleteRbacOrgUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgUnitId)) {
+            query.put("OrgUnitId", request.orgUnitId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRbacOrgUnit"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRbacOrgUnitResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除组织单元</p>
+     * 
+     * @param request DeleteRbacOrgUnitRequest
+     * @return DeleteRbacOrgUnitResponse
+     */
+    public DeleteRbacOrgUnitResponse deleteRbacOrgUnit(DeleteRbacOrgUnitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRbacOrgUnitWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除RBAC权限</p>
+     * 
+     * @param request DeleteRbacPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRbacPermissionResponse
+     */
+    public DeleteRbacPermissionResponse deleteRbacPermissionWithOptions(DeleteRbacPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.permissionId)) {
+            query.put("PermissionId", request.permissionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRbacPermission"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRbacPermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除RBAC权限</p>
+     * 
+     * @param request DeleteRbacPermissionRequest
+     * @return DeleteRbacPermissionResponse
+     */
+    public DeleteRbacPermissionResponse deleteRbacPermission(DeleteRbacPermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRbacPermissionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除RBAC角色</p>
+     * <p>Deletes an RBAC role.</p>
      * 
      * @param request DeleteRbacRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1980,10 +2220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除RBAC角色</p>
+     * <p>Deletes an RBAC role.</p>
      * 
      * @param request DeleteRbacRoleRequest
      * @return DeleteRbacRoleResponse
@@ -2221,10 +2461,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询资源对应的supabase实例配置信息</p>
+     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>导出RBAC配置</p>
+     * <p>Exports the RBAC configuration.</p>
      * 
      * @param request ExportRbacConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2256,10 +2496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询资源对应的supabase实例配置信息</p>
+     * <p>Queries the Supabase instance configuration information corresponding to a resource.</p>
      * 
      * <b>summary</b> : 
-     * <p>导出RBAC配置</p>
+     * <p>Exports the RBAC configuration.</p>
      * 
      * @param request ExportRbacConfigRequest
      * @return ExportRbacConfigResponse
@@ -5567,10 +5807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC组织树</p>
+     * <p>Queries the RBAC organization tree.</p>
      * 
      * @param request ListRbacOrgTreeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5626,10 +5866,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC组织树</p>
+     * <p>Queries the RBAC organization tree.</p>
      * 
      * @param request ListRbacOrgTreeRequest
      * @return ListRbacOrgTreeResponse
@@ -5641,10 +5881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>万小智2.0创建AI会话接口</p>
+     * <p>Creates an AI conversation session through WanXiaoZhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC权限列表</p>
+     * <p>Queries the RBAC permission list.</p>
      * 
      * @param request ListRbacPermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5700,10 +5940,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>万小智2.0创建AI会话接口</p>
+     * <p>Creates an AI conversation session through WanXiaoZhi 2.0.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC权限列表</p>
+     * <p>Queries the RBAC permission list.</p>
      * 
      * @param request ListRbacPermissionsRequest
      * @return ListRbacPermissionsResponse
@@ -5715,10 +5955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC角色层级</p>
+     * <p>Queries the RBAC role hierarchy.</p>
      * 
      * @param request ListRbacRoleHierarchyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5774,10 +6014,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC角色层级</p>
+     * <p>Queries the RBAC role hierarchy.</p>
      * 
      * @param request ListRbacRoleHierarchyRequest
      * @return ListRbacRoleHierarchyResponse
@@ -5789,10 +6029,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC角色列表</p>
+     * <p>Queries the list of RBAC roles.</p>
      * 
      * @param request ListRbacRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5848,10 +6088,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询RBAC角色列表</p>
+     * <p>Queries the list of RBAC roles.</p>
      * 
      * @param request ListRbacRolesRequest
      * @return ListRbacRolesResponse
@@ -7369,6 +7609,182 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询单个RBAC角色</p>
+     * 
+     * @param request QueryRbacRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRbacRoleResponse
+     */
+    public QueryRbacRoleResponse queryRbacRoleWithOptions(QueryRbacRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            query.put("RoleId", request.roleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRbacRole"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRbacRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单个RBAC角色</p>
+     * 
+     * @param request QueryRbacRoleRequest
+     * @return QueryRbacRoleResponse
+     */
+    public QueryRbacRoleResponse queryRbacRole(QueryRbacRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryRbacRoleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询角色权限列表</p>
+     * 
+     * @param request QueryRbacRolePermissionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRbacRolePermissionsResponse
+     */
+    public QueryRbacRolePermissionsResponse queryRbacRolePermissionsWithOptions(QueryRbacRolePermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("OrderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            query.put("RoleId", request.roleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRbacRolePermissions"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRbacRolePermissionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询角色权限列表</p>
+     * 
+     * @param request QueryRbacRolePermissionsRequest
+     * @return QueryRbacRolePermissionsResponse
+     */
+    public QueryRbacRolePermissionsResponse queryRbacRolePermissions(QueryRbacRolePermissionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryRbacRolePermissionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户角色绑定</p>
+     * 
+     * @param request QueryRbacUserRolesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryRbacUserRolesResponse
+     */
+    public QueryRbacUserRolesResponse queryRbacUserRolesWithOptions(QueryRbacUserRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationUserId)) {
+            query.put("ApplicationUserId", request.applicationUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderColumn)) {
+            query.put("OrderColumn", request.orderColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
+            query.put("OrderType", request.orderType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryRbacUserRoles"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryRbacUserRolesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户角色绑定</p>
+     * 
+     * @param request QueryRbacUserRolesRequest
+     * @return QueryRbacUserRolesResponse
+     */
+    public QueryRbacUserRolesResponse queryRbacUserRoles(QueryRbacUserRolesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryRbacUserRolesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Queries the auth configuration of a Supabase instance associated with a resource.</p>
      * 
@@ -7762,10 +8178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>移除RBAC角色层级</p>
+     * <p>Removes an RBAC role hierarchy.</p>
      * 
      * @param request RemoveRbacRoleHierarchyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7805,10 +8221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>查询应用实例信息</p>
+     * <p>Queries application instance information.</p>
      * 
      * <b>summary</b> : 
-     * <p>移除RBAC角色层级</p>
+     * <p>Removes an RBAC role hierarchy.</p>
      * 
      * @param request RemoveRbacRoleHierarchyRequest
      * @return RemoveRbacRoleHierarchyResponse
@@ -7930,6 +8346,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RenewAppSandboxResponse renewAppSandbox(RenewAppSandboxRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewAppSandboxWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤销用户角色</p>
+     * 
+     * @param request RevokeRbacUserRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokeRbacUserRoleResponse
+     */
+    public RevokeRbacUserRoleResponse revokeRbacUserRoleWithOptions(RevokeRbacUserRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userRoleData)) {
+            query.put("UserRoleData", request.userRoleData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokeRbacUserRole"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeRbacUserRoleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>撤销用户角色</p>
+     * 
+     * @param request RevokeRbacUserRoleRequest
+     * @return RevokeRbacUserRoleResponse
+     */
+    public RevokeRbacUserRoleResponse revokeRbacUserRole(RevokeRbacUserRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokeRbacUserRoleWithOptions(request, runtime);
     }
 
     /**
@@ -8330,10 +8794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>设置RBAC角色层级</p>
+     * <p>Sets the RBAC role hierarchy.</p>
      * 
      * @param request SetRbacRoleHierarchyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8373,10 +8837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plugin.</p>
      * 
      * <b>summary</b> : 
-     * <p>设置RBAC角色层级</p>
+     * <p>Sets the RBAC role hierarchy.</p>
      * 
      * @param request SetRbacRoleHierarchyRequest
      * @return SetRbacRoleHierarchyResponse
@@ -9191,11 +9655,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新组织单元</p>
+     * 
+     * @param request UpdateRbacOrgUnitRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRbacOrgUnitResponse
+     */
+    public UpdateRbacOrgUnitResponse updateRbacOrgUnitWithOptions(UpdateRbacOrgUnitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgUnitData)) {
+            query.put("OrgUnitData", request.orgUnitData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgUnitId)) {
+            query.put("OrgUnitId", request.orgUnitId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRbacOrgUnit"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRbacOrgUnitResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新组织单元</p>
+     * 
+     * @param request UpdateRbacOrgUnitRequest
+     * @return UpdateRbacOrgUnitResponse
+     */
+    public UpdateRbacOrgUnitResponse updateRbacOrgUnit(UpdateRbacOrgUnitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRbacOrgUnitWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新RBAC角色</p>
+     * <p>Updates an RBAC role.</p>
      * 
      * @param request UpdateRbacRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9235,10 +9751,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>获取生码插件配置信息</p>
+     * <p>Retrieves the configuration information of the code generation plug-in.</p>
      * 
      * <b>summary</b> : 
-     * <p>更新RBAC角色</p>
+     * <p>Updates an RBAC role.</p>
      * 
      * @param request UpdateRbacRoleRequest
      * @return UpdateRbacRoleResponse

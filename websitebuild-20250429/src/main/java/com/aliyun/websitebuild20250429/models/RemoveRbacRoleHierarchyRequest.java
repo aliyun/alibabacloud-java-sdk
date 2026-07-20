@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveRbacRoleHierarchyRequest extends TeaModel {
     /**
+     * <p>The business ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>WS20250814102215000001</p>
      */
@@ -12,6 +14,8 @@ public class RemoveRbacRoleHierarchyRequest extends TeaModel {
     public String bizId;
 
     /**
+     * <p>The child role ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>fc94cc51-310f-4485-adb2-ed8c706aff3b</p>
      */
@@ -19,6 +23,8 @@ public class RemoveRbacRoleHierarchyRequest extends TeaModel {
     public String childRoleId;
 
     /**
+     * <p>The parent role ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>71e07711-9a17-49f4-9f83-387a60ee5b64</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     /**
+     * <p>The details of the permission verification failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Indicates whether retry is allowed.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public Boolean allowRetry;
 
     /**
+     * <p>The application name. The application with this name is queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>or</p>
      */
@@ -26,6 +32,8 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String appName;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ERROR-oo1</p>
      */
@@ -33,16 +41,23 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM_ERROR</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The returned error parameters.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
     /**
+     * <p>The application module.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -50,6 +65,8 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public Boolean module;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C6B99AC-39EC-5350-874C-204128C905E6</p>
      */
@@ -57,6 +74,8 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SYSTEM.ERROR</p>
      */
@@ -64,6 +83,8 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String rootErrorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>系统异常</p>
      */
@@ -71,6 +92,8 @@ public class RemoveRbacRoleHierarchyResponseBody extends TeaModel {
     public String rootErrorMsg;
 
     /**
+     * <p>Indicates whether the request is processed synchronously.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
