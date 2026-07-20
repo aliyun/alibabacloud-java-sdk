@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
     /**
-     * <p>The application status information.</p>
+     * <p>The object that describes the application status information.</p>
      */
     @NameInMap("AppStatus")
     public GetEdgeContainerAppStatusResponseBodyAppStatus appStatus;
@@ -72,10 +72,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         /**
          * <p>The deployment status of the application. Valid values:</p>
          * <ul>
-         * <li><strong>undeploy</strong>: not deployed.</li>
-         * <li><strong>deploying</strong>: being deployed.</li>
-         * <li><strong>deployed</strong>: deployed.</li>
-         * <li><strong>undeploying</strong>: being undeployed.</li>
+         * <li><strong>undeploy</strong>: Not deployed.</li>
+         * <li><strong>deploying</strong>: Being deployed.</li>
+         * <li><strong>deployed</strong>: Deployed.</li>
+         * <li><strong>undeploying</strong>: Being undeployed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         public Integer expectPercentage;
 
         /**
-         * <p>Indicates whether a full release is performed. This field takes effect only when PublishType is set to region.</p>
+         * <p>Indicates whether the application is fully released. This field takes effect only when PublishType is set to region.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -123,8 +123,8 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         /**
          * <p>The publishing environment. Valid values:</p>
          * <ul>
-         * <li><strong>prod</strong>: production environment.</li>
-         * <li><strong>staging</strong>: staging environment.</li>
+         * <li><strong>prod</strong>: Production environment.</li>
+         * <li><strong>staging</strong>: Staging environment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,10 +145,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         /**
          * <p>The publishing status of the application. Valid values:</p>
          * <ul>
-         * <li><strong>publishing</strong>: being published.</li>
-         * <li><strong>published</strong>: published.</li>
-         * <li><strong>rollbacking</strong>: being rolled back.</li>
-         * <li><strong>rollbacked</strong>: rolled back.</li>
+         * <li><strong>publishing</strong>: Being published.</li>
+         * <li><strong>published</strong>: Published.</li>
+         * <li><strong>rollbacking</strong>: Being rolled back.</li>
+         * <li><strong>rollbacked</strong>: Rolled back.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -169,9 +169,9 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         /**
          * <p>The publishing type. Valid values:</p>
          * <ul>
-         * <li><p><strong>percentage</strong>: publish by percentage.</p>
+         * <li><p><strong>percentage</strong>: Publish by percentage.</p>
          * </li>
-         * <li><p><strong>region</strong>: publish by region.</p>
+         * <li><p><strong>region</strong>: Publish by region.</p>
          * </li>
          * </ul>
          * <p>If this parameter is not specified, the default value percentage is used.</p>

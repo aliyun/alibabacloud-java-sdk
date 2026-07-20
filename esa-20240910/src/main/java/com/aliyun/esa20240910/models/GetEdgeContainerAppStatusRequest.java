@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppStatusRequest extends TeaModel {
     /**
-     * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
+     * <p>The application ID. You can call <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> to obtain the application ID. Before calling this operation, you must first activate the edge container service by calling OpenEdgeContainer, and then confirm that an available application exists by calling ListEdgeContainerApps or create an application by calling CreateEdgeContainerApp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

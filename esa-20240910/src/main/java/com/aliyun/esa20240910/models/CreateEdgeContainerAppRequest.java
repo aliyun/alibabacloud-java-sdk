@@ -18,7 +18,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckFailTimes;
 
     /**
-     * <p>The domain name used for health checks. If not specified, the value is empty by default.</p>
+     * <p>The domain name used for health checks. If this parameter is not specified, the value is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -27,7 +27,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String healthCheckHost;
 
     /**
-     * <p>The HTTP status code that indicates a Normal health check result. Valid values:</p>
+     * <p>The HTTP status code that indicates the health check is Normal. Valid values:</p>
      * <ul>
      * <li><strong>http_2xx</strong> (default).</li>
      * <li><strong>http_3xx</strong>.</li>
@@ -56,8 +56,8 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     /**
      * <p>The health check method for HTTP-type listeners. Valid values:</p>
      * <ul>
-     * <li><strong>HEAD</strong> (default): requests only the header of the page.</li>
-     * <li><strong>GET</strong>: requests the specified page information and returns the entity body.</li>
+     * <li><strong>HEAD</strong> (default): Requests only the headers of the page.</li>
+     * <li><strong>GET</strong>: Requests the specified page information and returns the entity body.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public Integer healthCheckTimeout;
 
     /**
-     * <p>The health check type, which includes Layer 4 and Layer 7 probing. If not specified, the value is empty by default.</p>
+     * <p>The health check type, which includes Layer 4 and Layer 7 probing. If this parameter is not specified, the value is empty by default.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><strong>l4</strong>: Layer 4 probing.</li>
@@ -123,7 +123,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     /**
      * <p>The URI used for health checks.</p>
      * <ul>
-     * <li>Length limit: <strong>1</strong> to <strong>80</strong> characters.</li>
+     * <li>The length is limited to <strong>1</strong> to <strong>80</strong> characters.</li>
      * <li>Default value: <strong>&quot;/&quot;</strong>.</li>
      * </ul>
      * 
@@ -136,7 +136,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     /**
      * <p>The application name. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name must be 6 to 128 characters in length.</p>
      * <blockquote>
-     * <p>Notice: You must activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</notice></p>
+     * <p>Notice: Activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</notice></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -147,7 +147,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The remarks. If not specified, the value is empty by default.</p>
+     * <p>The remarks. If this parameter is not specified, the value is empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p>test app</p>
@@ -156,7 +156,7 @@ public class CreateEdgeContainerAppRequest extends TeaModel {
     public String remarks;
 
     /**
-     * <p>The service port number. Valid values: 1 to 65535.</p>
+     * <p>The server port number. Only 80 and 443 are accepted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

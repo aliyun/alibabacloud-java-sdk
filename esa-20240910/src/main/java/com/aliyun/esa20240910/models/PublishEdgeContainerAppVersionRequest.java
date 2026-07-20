@@ -8,7 +8,7 @@ public class PublishEdgeContainerAppVersionRequest extends TeaModel {
      * <p>The application ID.</p>
      * <blockquote>
      * <ol>
-     * <li>AppId is obtained by calling CreateEdgeContainerApp. 2) VersionId is obtained by calling CreateEdgeContainerAppVersion (AppId is required). 3) The complete call chain is CreateEdgeContainerApp → CreateEdgeContainerAppVersion → PublishEdgeContainerAppVersion.</li>
+     * <li>Obtain the AppId by calling CreateEdgeContainerApp. 2) Obtain the VersionId by calling CreateEdgeContainerAppVersion (which requires the AppId). 3) The complete call chain is CreateEdgeContainerApp → CreateEdgeContainerAppVersion → PublishEdgeContainerAppVersion.</li>
      * </ol>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -54,9 +54,9 @@ public class PublishEdgeContainerAppVersionRequest extends TeaModel {
     /**
      * <p>The publishing type. Valid values:</p>
      * <ul>
-     * <li><p><strong>percentage</strong>: publishes by percentage.</p>
+     * <li><p><strong>percentage</strong>: Publish by percentage.</p>
      * </li>
-     * <li><p><strong>region</strong>: publishes by region.</p>
+     * <li><p><strong>region</strong>: Publish by region.</p>
      * </li>
      * </ul>
      * <p>If this parameter is not specified, percentage-based publishing is used by default.</p>

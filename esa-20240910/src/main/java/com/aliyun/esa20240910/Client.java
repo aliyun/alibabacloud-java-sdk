@@ -2126,8 +2126,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application for edge containers. You can deploy and release the application through versioning to containerize edge services.
-     * Note: You must activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</p>
+     * <p>Creates an edge container application. You can deploy and release the application by version to containerize edge services.
+     * Note: Activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</p>
      * 
      * @param request CreateEdgeContainerAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2211,8 +2211,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application for edge containers. You can deploy and release the application through versioning to containerize edge services.
-     * Note: You must activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</p>
+     * <p>Creates an edge container application. You can deploy and release the application by version to containerize edge services.
+     * Note: Activate the EdgeContainer service in the console before calling this operation. Calls from accounts that have not activated the service will return a service activation error.</p>
      * 
      * @param request CreateEdgeContainerAppRequest
      * @return CreateEdgeContainerAppResponse
@@ -2280,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an associated domain name for an Edge Container application. When a user sends a request from a client to access the associated domain name, the request is forwarded to the edge application deployed by the user.</p>
+     * <p>Creates an associated domain name for an edge container application. When a user sends a request from a client to access the associated domain name, the request is forwarded to the edge application deployed by the user.</p>
      * 
      * @param request CreateEdgeContainerAppRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2320,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an associated domain name for an Edge Container application. When a user sends a request from a client to access the associated domain name, the request is forwarded to the edge application deployed by the user.</p>
+     * <p>Creates an associated domain name for an edge container application. When a user sends a request from a client to access the associated domain name, the request is forwarded to the edge application deployed by the user.</p>
      * 
      * @param request CreateEdgeContainerAppRecordRequest
      * @return CreateEdgeContainerAppRecordResponse
@@ -11480,6 +11480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must first activate the edge container service by calling OpenEdgeContainer, and then confirm that an available application exists by calling ListEdgeContainerApps or create an application by calling CreateEdgeContainerApp.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the application status information of an edge container, including deployment, publishing, and rollback details.</p>
      * 
@@ -11516,6 +11519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must first activate the edge container service by calling OpenEdgeContainer, and then confirm that an available application exists by calling ListEdgeContainerApps or create an application by calling CreateEdgeContainerApp.</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves the application status information of an edge container, including deployment, publishing, and rollback details.</p>
      * 
@@ -19071,8 +19077,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: 1) Activate the edge container service (by calling the OpenEdgeContainer operation or using the console). 2) Create an application (by calling CreateEdgeContainerApp to obtain the AppId). 3) Create an application version (by calling CreateEdgeContainerAppVersion to obtain the VersionId).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Publishes a specified version of an edge container application. You can use this operation to iterate application versions.</p>
+     * <p>Publishes a specified version of an edge container application, allowing users to iterate application versions through this operation.</p>
      * 
      * @param tmpReq PublishEdgeContainerAppVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19143,8 +19152,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: 1) Activate the edge container service (by calling the OpenEdgeContainer operation or using the console). 2) Create an application (by calling CreateEdgeContainerApp to obtain the AppId). 3) Create an application version (by calling CreateEdgeContainerAppVersion to obtain the VersionId).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Publishes a specified version of an edge container application. You can use this operation to iterate application versions.</p>
+     * <p>Publishes a specified version of an edge container application, allowing users to iterate application versions through this operation.</p>
      * 
      * @param request PublishEdgeContainerAppVersionRequest
      * @return PublishEdgeContainerAppVersionResponse
@@ -23818,6 +23830,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRewriteUrlRuleResponse updateRewriteUrlRule(UpdateRewriteUrlRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRewriteUrlRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the build configuration of an EdgeRoutine (ER).</p>
+     * 
+     * @param tmpReq UpdateRoutineBuildConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRoutineBuildConfigurationResponse
+     */
+    public UpdateRoutineBuildConfigurationResponse updateRoutineBuildConfigurationWithOptions(UpdateRoutineBuildConfigurationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateRoutineBuildConfigurationShrinkRequest request = new UpdateRoutineBuildConfigurationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.environmentVariables)) {
+            request.environmentVariablesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.environmentVariables, "EnvironmentVariables", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetsDirectory)) {
+            query.put("AssetsDirectory", request.assetsDirectory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildBranches)) {
+            query.put("BuildBranches", request.buildBranches);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildCommand)) {
+            query.put("BuildCommand", request.buildCommand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentVariablesShrink)) {
+            query.put("EnvironmentVariables", request.environmentVariablesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gitAccountId)) {
+            query.put("GitAccountId", request.gitAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.installCommand)) {
+            query.put("InstallCommand", request.installCommand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isPrivate)) {
+            query.put("IsPrivate", request.isPrivate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeVersion)) {
+            query.put("NodeVersion", request.nodeVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionBranch)) {
+            query.put("ProductionBranch", request.productionBranch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repository)) {
+            query.put("Repository", request.repository);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rootDirectory)) {
+            query.put("RootDirectory", request.rootDirectory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineEntry)) {
+            query.put("RoutineEntry", request.routineEntry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRoutineBuildConfiguration"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRoutineBuildConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the build configuration of an EdgeRoutine (ER).</p>
+     * 
+     * @param request UpdateRoutineBuildConfigurationRequest
+     * @return UpdateRoutineBuildConfigurationResponse
+     */
+    public UpdateRoutineBuildConfigurationResponse updateRoutineBuildConfiguration(UpdateRoutineBuildConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRoutineBuildConfigurationWithOptions(request, runtime);
     }
 
     /**
