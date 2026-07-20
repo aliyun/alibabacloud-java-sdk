@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSignalRequest extends TeaModel {
     /**
+     * <p>The temporary token used for authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyXXXX-XXXX.XXXXX</p>
      */

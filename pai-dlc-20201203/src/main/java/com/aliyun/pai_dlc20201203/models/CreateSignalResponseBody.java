@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSignalResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc********</p>
      */
@@ -12,6 +14,8 @@ public class CreateSignalResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>019F6385-7481-57A7-BEC9-***********</p>
      */
@@ -19,6 +23,8 @@ public class CreateSignalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The signal code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SIGUSR1</p>
      */
@@ -26,6 +32,8 @@ public class CreateSignalResponseBody extends TeaModel {
     public String signal;
 
     /**
+     * <p>The signal ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>oper************</p>
      */
@@ -33,6 +41,8 @@ public class CreateSignalResponseBody extends TeaModel {
     public String signalId;
 
     /**
+     * <p>The signal status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */

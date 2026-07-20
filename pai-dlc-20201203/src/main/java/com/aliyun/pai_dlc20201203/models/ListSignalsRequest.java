@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSignalsRequest extends TeaModel {
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -12,6 +14,8 @@ public class ListSignalsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListSignalsRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class ListSignalsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The field used for sorting.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -33,6 +41,8 @@ public class ListSignalsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The signal status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */
@@ -40,6 +50,8 @@ public class ListSignalsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The temporary token used for authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyXXXX-XXXX.XXXXX</p>
      */

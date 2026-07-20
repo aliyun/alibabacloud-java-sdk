@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSignalResponseBody extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-18T10:02:04+08:00</p>
      */
@@ -12,6 +14,8 @@ public class GetSignalResponseBody extends TeaModel {
     public String gmtCreated;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2026-03-18T10:02:04+08:00</p>
      */
@@ -19,6 +23,8 @@ public class GetSignalResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>oper***********</p>
      */
@@ -26,16 +32,23 @@ public class GetSignalResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The status description, which contains a summary for each pod (number of successful deliveries, names of failed or pending pods, etc.).</p>
+     * 
      * <strong>example:</strong>
      * <p>signal delivered to 1 pods</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of pod names.</p>
+     */
     @NameInMap("PodNames")
     public java.util.List<String> podNames;
 
     /**
+     * <p>The status reason code, such as <code>Completed</code>, <code>SignalFailed</code>, or <code>StoppedByJobEnded</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Completed</p>
      */
@@ -43,16 +56,23 @@ public class GetSignalResponseBody extends TeaModel {
     public String reason;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of role objects.</p>
+     */
     @NameInMap("Roles")
     public java.util.List<String> roles;
 
     /**
+     * <p>The delivery scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>pods</p>
      */
@@ -60,6 +80,8 @@ public class GetSignalResponseBody extends TeaModel {
     public String scope;
 
     /**
+     * <p>The signal.</p>
+     * 
      * <strong>example:</strong>
      * <p>SIGUSR1</p>
      */
@@ -67,6 +89,8 @@ public class GetSignalResponseBody extends TeaModel {
     public String signal;
 
     /**
+     * <p>The signal ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc***********</p>
      */
@@ -74,6 +98,8 @@ public class GetSignalResponseBody extends TeaModel {
     public String signalId;
 
     /**
+     * <p>The signal status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSignalsResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-...</p>
      */
@@ -12,6 +14,8 @@ public class ListSignalsResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListSignalsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,16 +32,23 @@ public class ListSignalsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of signal records for the job. Each element has the same structure as the response of GetSignal.</p>
+     */
     @NameInMap("Signals")
     public java.util.List<ListSignalsResponseBodySignals> signals;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -97,6 +110,8 @@ public class ListSignalsResponseBody extends TeaModel {
 
     public static class ListSignalsResponseBodySignals extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-30T14:07:38+08:00</p>
          */
@@ -104,6 +119,8 @@ public class ListSignalsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-12-30T14:07:38+08:00</p>
          */
@@ -111,26 +128,38 @@ public class ListSignalsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The message returned with the result.</p>
+         * 
          * <strong>example:</strong>
          * <p>signal delivered to 1 pods</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The list of pod names.</p>
+         */
         @NameInMap("PodNames")
         public java.util.List<String> podNames;
 
         /**
+         * <p>The reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>Completed</p>
          */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The list of role types.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
+         * <p>The delivery scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>pods</p>
          */
@@ -138,6 +167,8 @@ public class ListSignalsResponseBody extends TeaModel {
         public String scope;
 
         /**
+         * <p>The signal code.</p>
+         * 
          * <strong>example:</strong>
          * <p>SIGUSR1</p>
          */
@@ -145,6 +176,8 @@ public class ListSignalsResponseBody extends TeaModel {
         public String signal;
 
         /**
+         * <p>The signal ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>oper*********</p>
          */
@@ -152,6 +185,8 @@ public class ListSignalsResponseBody extends TeaModel {
         public String signalId;
 
         /**
+         * <p>The signal status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Stopped</p>
          */

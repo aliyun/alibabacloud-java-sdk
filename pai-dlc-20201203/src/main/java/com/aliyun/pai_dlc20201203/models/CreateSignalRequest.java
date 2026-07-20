@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateSignalRequest extends TeaModel {
     /**
+     * <p>The signal code.</p>
+     * 
      * <strong>example:</strong>
      * <p>SIGUSR1</p>
      */
     @NameInMap("Signal")
     public String signal;
 
+    /**
+     * <p>The signal delivery scope.</p>
+     */
     @NameInMap("Target")
     public SignalTarget target;
 
