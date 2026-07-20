@@ -13,11 +13,14 @@ public class Permission extends TeaModel {
     @NameInMap("access")
     public String access;
 
+    @NameInMap("columnMasking")
+    public java.util.Map<String, ColumnMask> columnMasking;
+
     @NameInMap("columns")
     public PermissionColumns columns;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>database_name</p>
@@ -41,7 +44,7 @@ public class Permission extends TeaModel {
     public String principal;
 
     /**
-     * <p>The resource type of the permission.</p>
+     * <p>The permission resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>CATALOG</p>
@@ -53,7 +56,7 @@ public class Permission extends TeaModel {
     public RowFilter rowFilter;
 
     /**
-     * <p>The name of the data table.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>table_name</p>
@@ -75,6 +78,14 @@ public class Permission extends TeaModel {
     }
     public String getAccess() {
         return this.access;
+    }
+
+    public Permission setColumnMasking(java.util.Map<String, ColumnMask> columnMasking) {
+        this.columnMasking = columnMasking;
+        return this;
+    }
+    public java.util.Map<String, ColumnMask> getColumnMasking() {
+        return this.columnMasking;
     }
 
     public Permission setColumns(PermissionColumns columns) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+     * <p>The pagination token used to retrieve the next page of data. If null is returned, the current page is the last page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
@@ -14,7 +14,7 @@ public class ListPermissionsResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>The permissions.</p>
+     * <p>The permission list.</p>
      */
     @NameInMap("permissions")
     public java.util.List<Permission> permissions;

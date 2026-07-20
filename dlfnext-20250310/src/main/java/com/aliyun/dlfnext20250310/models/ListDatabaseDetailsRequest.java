@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatabaseDetailsRequest extends TeaModel {
     /**
-     * <p>The database name pattern for fuzzy matching. Supports the percent sign (%).</p>
+     * <p>The SQL-style right fuzzy match pattern for database names. The percent sign (%) wildcard is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>database%</p>
@@ -14,9 +14,9 @@ public class ListDatabaseDetailsRequest extends TeaModel {
     public String databaseNamePattern;
 
     /**
-     * <p>The number of entries to return on each page.
-     * Default value: 1000.
-     * Maximum value: 1000.</p>
+     * <p>The page size.</p>
+     * <p>Default value: 1000.</p>
+     * <p>Maximum value: 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -25,13 +25,16 @@ public class ListDatabaseDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+     * <p>The pagination token used to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("pageToken")
     public String pageToken;
+
+    @NameInMap("status")
+    public String status;
 
     public static ListDatabaseDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDatabaseDetailsRequest self = new ListDatabaseDetailsRequest();
@@ -60,6 +63,14 @@ public class ListDatabaseDetailsRequest extends TeaModel {
     }
     public String getPageToken() {
         return this.pageToken;
+    }
+
+    public ListDatabaseDetailsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

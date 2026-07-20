@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchRevokePermissionsRequest extends TeaModel {
     /**
-     * <p>The permissions to revoke.</p>
+     * <p>The list of permissions to be revoked.</p>
      */
     @NameInMap("permissions")
     public java.util.List<Permission> permissions;

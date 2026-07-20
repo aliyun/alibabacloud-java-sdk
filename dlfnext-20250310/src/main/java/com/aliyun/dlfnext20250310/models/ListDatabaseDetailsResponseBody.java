@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDatabaseDetailsResponseBody extends TeaModel {
     /**
-     * <p>The databases.</p>
+     * <p>The list of databases.</p>
      */
     @NameInMap("databaseDetails")
     public java.util.List<Database> databaseDetails;
 
     /**
-     * <p>The token to retrieve the next page of results. A null value indicates that all results have been retrieved.</p>
+     * <p>The pagination token used to retrieve the next page of results. A value of null indicates that the current page is the last page.</p>
      * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>

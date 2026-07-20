@@ -14,7 +14,7 @@ public class Table extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The user who created the table.</p>
+     * <p>The creator of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -62,7 +62,7 @@ public class Table extends TeaModel {
     public String owner;
 
     /**
-     * <p>The table URI.</p>
+     * <p>The path of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</p>
@@ -71,13 +71,13 @@ public class Table extends TeaModel {
     public String path;
 
     /**
-     * <p>The table schema.</p>
+     * <p>The table schema information.</p>
      */
     @NameInMap("schema")
     public Schema schema;
 
     /**
-     * <p>The ID of the schema.</p>
+     * <p>The ID of the table schema.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,21 +85,15 @@ public class Table extends TeaModel {
     @NameInMap("schemaId")
     public Long schemaId;
 
-    /**
-     * <p>The storage action.</p>
-     */
+    @NameInMap("status")
+    public String status;
+
     @NameInMap("storageAction")
     public String storageAction;
 
-    /**
-     * <p>The timestamp of the storage action.</p>
-     */
     @NameInMap("storageActionTimestamp")
     public Long storageActionTimestamp;
 
-    /**
-     * <p>The storage class of the table.</p>
-     */
     @NameInMap("storageClass")
     public String storageClass;
 
@@ -207,6 +201,14 @@ public class Table extends TeaModel {
     }
     public Long getSchemaId() {
         return this.schemaId;
+    }
+
+    public Table setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public Table setStorageAction(String storageAction) {

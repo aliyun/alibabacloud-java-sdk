@@ -5,55 +5,79 @@ import com.aliyun.tea.*;
 
 public class StatementResult extends TeaModel {
     /**
-     * <p>A temporary URL to download the result set, provided only when the result set is too large to return directly.</p>
+     * <p>The presigned URL of the Arrow IPC file. This parameter is returned when a result set exists. The URL is valid for 1 hour and contains full data. The value is null for an empty result set (rowCount == 0).</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://xxx.oss-cn-hangzhou.aliyuncs.com/xxxx">https://xxx.oss-cn-hangzhou.aliyuncs.com/xxxx</a></p>
      */
     @NameInMap("downloadUrl")
     public String downloadUrl;
 
     /**
-     * <p>The error message, present only if the execution fails.</p>
+     * <p>The error message. This parameter is returned only when the status is FAILED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL_ERROR</p>
      */
     @NameInMap("error")
     public String error;
 
     /**
-     * <p>The error code, present only if the execution fails.</p>
+     * <p>The error code. This parameter is returned only when the status is FAILED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This feature is not implemented: xxx</p>
      */
     @NameInMap("errorCode")
     public String errorCode;
 
     /**
-     * <p>The statement\&quot;s total execution time, in milliseconds.</p>
+     * <p>The execution duration of the statement, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("executionTime")
     public Long executionTime;
 
     /**
-     * <p>The zero-based index of the SQL statement in a batch execution.</p>
+     * <p>The statement sequence number (0-based).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("index")
     public Integer index;
 
     /**
-     * <p>The number of rows affected or returned by the statement.</p>
+     * <p>The total number of rows in the result. The value is 0 for statements that do not return a result set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("rowCount")
     public Integer rowCount;
 
     /**
-     * <p>An array of objects describing the result set\&quot;s schema. Each object defines a column.</p>
+     * <p>The result column information. This parameter is returned when a result set exists.</p>
      */
     @NameInMap("schema")
     public java.util.List<StatementResultSchema> schema;
 
     /**
-     * <p>The original SQL statement.</p>
+     * <p>The SQL text of the statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>select * from table_name;</p>
      */
     @NameInMap("sql")
     public String sql;
 
     /**
-     * <p>The statement\&quot;s execution status. Possible values are <code>RUNNING</code>, <code>FINISHED</code>, <code>CANCELED</code>, or <code>FAILED</code>.</p>
+     * <p>The status of the statement. Valid values: COMPLETED and FAILED.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLETED</p>
      */
     @NameInMap("status")
     public String status;
@@ -137,13 +161,19 @@ public class StatementResult extends TeaModel {
 
     public static class StatementResultSchema extends TeaModel {
         /**
-         * <p>The name of the column.</p>
+         * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The data type of the column.</p>
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("type")
         public String type;

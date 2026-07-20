@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Database extends TeaModel {
     /**
-     * <p>The database creation time.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -14,7 +14,7 @@ public class Database extends TeaModel {
     public Long createdAt;
 
     /**
-     * <p>The database creator.</p>
+     * <p>The creator.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -23,7 +23,7 @@ public class Database extends TeaModel {
     public String createdBy;
 
     /**
-     * <p>The database UUID.</p>
+     * <p>The UUID of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class Database extends TeaModel {
     public String id;
 
     /**
-     * <p>The database URI.</p>
+     * <p>The storage path of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://clg-paimon-xxx/db-xxx</p>
@@ -41,7 +41,7 @@ public class Database extends TeaModel {
     public String location;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>test_database</p>
@@ -56,7 +56,7 @@ public class Database extends TeaModel {
     public java.util.Map<String, String> options;
 
     /**
-     * <p>The owner.</p>
+     * <p>The owner of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -64,14 +64,14 @@ public class Database extends TeaModel {
     @NameInMap("owner")
     public String owner;
 
-    /**
-     * <p>The number of tables in the database.</p>
-     */
+    @NameInMap("status")
+    public String status;
+
     @NameInMap("tableCount")
     public Long tableCount;
 
     /**
-     * <p>The time when the database was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>1744970111419</p>
@@ -80,7 +80,7 @@ public class Database extends TeaModel {
     public Long updatedAt;
 
     /**
-     * <p>The user who last updated the database.</p>
+     * <p>The updater.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:root</p>
@@ -147,6 +147,14 @@ public class Database extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public Database setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public Database setTableCount(Long tableCount) {

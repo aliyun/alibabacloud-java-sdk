@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTableDetailsRequest extends TeaModel {
     /**
-     * <p>The maximum number of records to return in a single request.</p>
+     * <p>The maximum number of records to retrieve in a single request.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -14,7 +14,7 @@ public class ListTableDetailsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. Pass the token that was returned by the previous request. For the first request, pass an empty string (&quot;&quot;).</p>
+     * <p>The pagination token used to retrieve the next page of data. If the response does not provide this value, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,20 @@ public class ListTableDetailsRequest extends TeaModel {
     public String pageToken;
 
     /**
-     * <p>The pattern used to filter table names.</p>
+     * <p>The deletion status of the table. Valid values:</p>
+     * <ul>
+     * <li>retained: The table is deleted and temporarily stored in the recycle bin.</li>
+     * <li>active: The table is in a normal state. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
+    @NameInMap("status")
+    public String status;
+
+    /**
+     * <p>The fuzzy match pattern for the table name.</p>
      * 
      * <strong>example:</strong>
      * <p>table%</p>
@@ -59,6 +72,14 @@ public class ListTableDetailsRequest extends TeaModel {
     }
     public String getPageToken() {
         return this.pageToken;
+    }
+
+    public ListTableDetailsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTableDetailsRequest setTableNamePattern(String tableNamePattern) {

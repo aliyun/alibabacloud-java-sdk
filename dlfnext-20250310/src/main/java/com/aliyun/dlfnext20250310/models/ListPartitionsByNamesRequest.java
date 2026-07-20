@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsByNamesRequest extends TeaModel {
     /**
-     * <p>分区规格列表。</p>
+     * <p>The list of partition specifications.</p>
      */
     @NameInMap("specs")
     public java.util.List<java.util.Map<String, String>> specs;

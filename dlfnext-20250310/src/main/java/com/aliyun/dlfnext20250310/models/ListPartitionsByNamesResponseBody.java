@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPartitionsByNamesResponseBody extends TeaModel {
     /**
-     * <p>分区。</p>
+     * <p>The partitions.</p>
      */
     @NameInMap("partitions")
     public java.util.List<Partition> partitions;

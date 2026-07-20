@@ -446,7 +446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants permissions to one or more DLF users or roles.</p>
+     * <p>Grants permissions in batches.</p>
      * 
      * @param request BatchGrantPermissionsRequest
      * @param headers map
@@ -480,7 +480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Grants permissions to one or more DLF users or roles.</p>
+     * <p>Grants permissions in batches.</p>
      * 
      * @param request BatchGrantPermissionsRequest
      * @return BatchGrantPermissionsResponse
@@ -493,7 +493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes permissions in a batch.</p>
+     * <p>Revokes permissions in batches.</p>
      * 
      * @param request BatchRevokePermissionsRequest
      * @param headers map
@@ -527,7 +527,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes permissions in a batch.</p>
+     * <p>Revokes permissions in batches.</p>
      * 
      * @param request BatchRevokePermissionsRequest
      * @return BatchRevokePermissionsResponse
@@ -1213,6 +1213,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</p>
+     * 
+     * @param request GetCatalogKmsGrantsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCatalogKmsGrantsResponse
+     */
+    public GetCatalogKmsGrantsResponse getCatalogKmsGrantsWithOptions(String catalog, GetCatalogKmsGrantsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCatalogKmsGrants"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/catalogs/" + com.aliyun.openapiutil.Client.getEncodeParam(catalog) + "/kms/grants"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogKmsGrantsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</p>
+     * 
+     * @param request GetCatalogKmsGrantsRequest
+     * @return GetCatalogKmsGrantsResponse
+     */
+    public GetCatalogKmsGrantsResponse getCatalogKmsGrants(String catalog, GetCatalogKmsGrantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCatalogKmsGrantsWithOptions(catalog, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the storage overview of a data catalog.</p>
      * 
      * @param request GetCatalogSummaryRequest
@@ -1348,7 +1389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a database.</p>
+     * <p>Retrieves the details of a specific database in a data lake.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1374,7 +1415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a database.</p>
+     * <p>Retrieves the details of a specific database in a data lake.</p>
      * @return GetDatabaseResponse
      */
     public GetDatabaseResponse getDatabase(String catalogId, String database) throws Exception {
@@ -1502,6 +1543,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIcebergTableWithOptions(catalogId, namespace, table, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a query.</p>
+     * 
+     * @param request GetQueryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQueryResponse
+     */
+    public GetQueryResponse getQueryWithOptions(String queryId, GetQueryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetQuery"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/query/" + com.aliyun.openapiutil.Client.getEncodeParam(queryId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves a query.</p>
+     * 
+     * @param request GetQueryRequest
+     * @return GetQueryResponse
+     */
+    public GetQueryResponse getQuery(String queryId, GetQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getQueryWithOptions(queryId, request, headers, runtime);
     }
 
     /**
@@ -2059,7 +2141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves database details.</p>
+     * <p>Lists databases in a data lake with paged query support.</p>
      * 
      * @param request ListDatabaseDetailsRequest
      * @param headers map
@@ -2079,6 +2161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
             query.put("pageToken", request.pageToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2101,7 +2187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves database details.</p>
+     * <p>Lists databases in a data lake with paged query support.</p>
      * 
      * @param request ListDatabaseDetailsRequest
      * @return ListDatabaseDetailsResponse
@@ -2542,7 +2628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the permissions for a resource or principal.</p>
+     * <p>Retrieves the permission information of a specified resource or a specified principal.</p>
      * 
      * @param request ListPermissionsRequest
      * @param headers map
@@ -2604,7 +2690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the permissions for a resource or principal.</p>
+     * <p>Retrieves the permission information of a specified resource or a specified principal.</p>
      * 
      * @param request ListPermissionsRequest
      * @return ListPermissionsResponse
@@ -3037,7 +3123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the details of one or more tables.</p>
+     * <p>Queries the details of tables.</p>
      * 
      * @param request ListTableDetailsRequest
      * @param headers map
@@ -3053,6 +3139,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
             query.put("pageToken", request.pageToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tableNamePattern)) {
@@ -3083,7 +3173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the details of one or more tables.</p>
+     * <p>Queries the details of tables.</p>
      * 
      * @param request ListTableDetailsRequest
      * @return ListTableDetailsResponse
@@ -3510,6 +3600,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Submits a query.</p>
+     * 
+     * @param request SubmitQueryRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitQueryResponse
+     */
+    public SubmitQueryResponse submitQueryWithOptions(SubmitQueryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultCatalog)) {
+            body.put("defaultCatalog", request.defaultCatalog);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultDatabase)) {
+            body.put("defaultDatabase", request.defaultDatabase);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sql)) {
+            body.put("sql", request.sql);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tier)) {
+            body.put("tier", request.tier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitQuery"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/query"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitQueryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a query.</p>
+     * 
+     * @param request SubmitQueryRequest
+     * @return SubmitQueryResponse
+     */
+    public SubmitQueryResponse submitQuery(SubmitQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitQueryWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Subscribes to DLF in the current region.</p>
      * 
      * @param headers map
@@ -3649,5 +3802,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateRoleUsersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</p>
+     * 
+     * @param request VerifyCatalogKmsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyCatalogKmsResponse
+     */
+    public VerifyCatalogKmsResponse verifyCatalogKmsWithOptions(String catalog, VerifyCatalogKmsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.kmsKeyId)) {
+            body.put("kmsKeyId", request.kmsKeyId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyCatalogKms"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/catalogs/" + com.aliyun.openapiutil.Client.getEncodeParam(catalog) + "/kms/verify"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyCatalogKmsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</p>
+     * 
+     * @param request VerifyCatalogKmsRequest
+     * @return VerifyCatalogKmsResponse
+     */
+    public VerifyCatalogKmsResponse verifyCatalogKms(String catalog, VerifyCatalogKmsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.verifyCatalogKmsWithOptions(catalog, request, headers, runtime);
     }
 }

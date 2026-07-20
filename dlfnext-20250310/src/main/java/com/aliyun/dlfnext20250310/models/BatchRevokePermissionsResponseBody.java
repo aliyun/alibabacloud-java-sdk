@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class BatchRevokePermissionsResponseBody extends TeaModel {
     /**
      * <ul>
-     * <li><p>A business error message is returned if \<code>success\\</code> is \<code>false\\</code>.</p>
+     * <li><p>If success is false, a business error message is returned.</p>
      * </li>
-     * <li><p>This parameter is empty if \<code>success\\</code> is \<code>true\\</code>.</p>
+     * <li><p>If success is true, an empty value is returned.</p>
      * </li>
      * </ul>
      * 
@@ -19,13 +19,17 @@ public class BatchRevokePermissionsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The permissions failed to be revoked.</p>
+     * <p>The results of permissions that failed to be revoked in batches.</p>
      */
     @NameInMap("failurePermissions")
     public java.util.List<FailurePermission> failurePermissions;
 
     /**
-     * <p>Indicates whether the call succeeded.</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The API call is successful.</li>
+     * <li>false: The API call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

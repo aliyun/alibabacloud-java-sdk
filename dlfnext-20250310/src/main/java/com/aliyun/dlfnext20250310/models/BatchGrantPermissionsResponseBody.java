@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGrantPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The error message returned if the request fails. If the request is successful, this parameter is empty.</p>
+     * <p>The error message. This parameter is not empty when success is false, indicating a business error. This parameter is empty when success is true.</p>
      * 
      * <strong>example:</strong>
      * <p>空</p>
@@ -14,13 +14,17 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The permissions failed to be granted.</p>
+     * <p>The list of permissions that failed to be granted.</p>
      */
     @NameInMap("failurePermissions")
     public java.util.List<FailurePermission> failurePermissions;
 
     /**
-     * <p>Indicates whether the API call was successful.</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The API call was successful.</li>
+     * <li>false: The API call failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>True</p>

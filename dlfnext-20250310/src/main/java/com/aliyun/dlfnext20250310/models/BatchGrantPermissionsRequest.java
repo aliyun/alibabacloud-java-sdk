@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGrantPermissionsRequest extends TeaModel {
     /**
-     * <p>The permissions to grant.</p>
+     * <p>The list of permissions.</p>
      */
     @NameInMap("permissions")
     public java.util.List<Permission> permissions;

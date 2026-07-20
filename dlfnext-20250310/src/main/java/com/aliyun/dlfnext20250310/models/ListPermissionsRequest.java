@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPermissionsRequest extends TeaModel {
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>database_name</p>
@@ -14,7 +14,7 @@ public class ListPermissionsRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The name of the function.</p>
+     * <p>The function name.</p>
      * 
      * <strong>example:</strong>
      * <p>function_name</p>
@@ -32,7 +32,7 @@ public class ListPermissionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+     * <p>The pagination token used to retrieve the next page of data. If the response does not include this token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -41,7 +41,7 @@ public class ListPermissionsRequest extends TeaModel {
     public String pageToken;
 
     /**
-     * <p>The resource descriptor of the user.</p>
+     * <p>The user resource descriptor.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::[accountId]:user/user_name</p>
@@ -50,7 +50,7 @@ public class ListPermissionsRequest extends TeaModel {
     public String principal;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The permission resource type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ListPermissionsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The data table name.</p>
      * 
      * <strong>example:</strong>
      * <p>table_name</p>
@@ -69,7 +69,7 @@ public class ListPermissionsRequest extends TeaModel {
     public String table;
 
     /**
-     * <p>The name of the view.</p>
+     * <p>The view name.</p>
      * 
      * <strong>example:</strong>
      * <p>view_name</p>

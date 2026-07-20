@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTableDetailsResponseBody extends TeaModel {
     /**
-     * <p>The token to retrieve the next page of results. A null value indicates that all results have been returned.</p>
+     * <p>The pagination token used to retrieve the next page of data. If null is returned, the current page is the last page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>E8ABEB1C3DB893D16576269017992F57</p>
@@ -14,7 +14,7 @@ public class ListTableDetailsResponseBody extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>A list of tables.</p>
+     * <p>The list of tables.</p>
      */
     @NameInMap("tableDetails")
     public java.util.List<Table> tableDetails;
