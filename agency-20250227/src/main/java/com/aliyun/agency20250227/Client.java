@@ -341,8 +341,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the current caller identity is a T1 distribution partner. 
-     * <notice>Available only for international sites.</notice>.</p>
+     * <p>Ensure that the current caller identity is a T1 distribution partner. 
+     * <notice>Available only for international site.</notice>.</p>
      * 
      * <b>summary</b> : 
      * <p>Downloads the commission details of an international partner.</p>
@@ -401,8 +401,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the current caller identity is a T1 distribution partner. 
-     * <notice>Available only for international sites.</notice>.</p>
+     * <p>Ensure that the current caller identity is a T1 distribution partner. 
+     * <notice>Available only for international site.</notice>.</p>
      * 
      * <b>summary</b> : 
      * <p>Downloads the commission details of an international partner.</p>

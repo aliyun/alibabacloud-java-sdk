@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIntlCommissionDetailFileListRequest extends TeaModel {
     /**
-     * <p>The billing month.</p>
+     * <p>The bill month.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetIntlCommissionDetailFileListRequest extends TeaModel {
     public String ossAccessKeySecret;
 
     /**
-     * <p>The name of the OSS bucket.</p>
+     * <p>The OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class GetIntlCommissionDetailFileListRequest extends TeaModel {
     public String ossBucketName;
 
     /**
-     * <p>The endpoint of the region where the Object Storage Service (OSS) bucket for the file sharing resides.</p>
+     * <p>The endpoint of the region where the Object Storage Service (OSS) bucket for file sharing resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

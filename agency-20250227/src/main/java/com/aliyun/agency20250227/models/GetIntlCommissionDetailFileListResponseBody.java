@@ -23,7 +23,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
      * <p>The message information.</p>
      * 
      * <strong>example:</strong>
-     * <p>成功</p>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
@@ -38,7 +38,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,16 +93,10 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
 
     public static class GetIntlCommissionDetailFileListResponseBodyDataFileList extends TeaModel {
         /**
-         * <p>The push status of the OSS file. Valid values:</p>
-         * <ul>
-         * <li>初始化状态: initialization status</li>
-         * <li>处理中: processing</li>
-         * <li>处理成功: processing succeeded</li>
-         * <li>处理失败: processing failed.</li>
-         * </ul>
+         * <p>The OSS file push status. Valid values: init, processing, succeeded, or failed.</p>
          * 
          * <strong>example:</strong>
-         * <p>处理中</p>
+         * <p>PROCESSING</p>
          */
         @NameInMap("BucketSyncStatus")
         public String bucketSyncStatus;
@@ -111,7 +105,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
          * <p>The commission policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>参考【APS佣金查询下载功能】的政策名称</p>
+         * <p>202606_FY27_TEST</p>
          */
         @NameInMap("CommissionPolicyName")
         public String commissionPolicyName;
@@ -158,7 +152,7 @@ public class GetIntlCommissionDetailFileListResponseBody extends TeaModel {
 
     public static class GetIntlCommissionDetailFileListResponseBodyData extends TeaModel {
         /**
-         * <p>The billing month.</p>
+         * <p>The bill month.</p>
          * 
          * <strong>example:</strong>
          * <p>202502</p>
