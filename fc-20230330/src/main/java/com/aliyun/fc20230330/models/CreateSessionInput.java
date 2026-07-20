@@ -4,8 +4,11 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateSessionInput extends TeaModel {
+    @NameInMap("allowInternetAccess")
+    public Boolean allowInternetAccess;
+
     /**
-     * <p>Specifies whether to disable session ID reuse. Default value: False, which indicates that after a session with a specific SessionID expires, you can send requests with the same SessionID, and the system treats it as a new session bound to a new instance. If this parameter is set to True, the SessionID cannot be reused after the session expires.</p>
+     * <p>Default value: False. This indicates that after a session with a specific SessionID expires, you can send requests with the same SessionID. The system treats it as a new session and binds it to a new instance. If set to True, the SessionID cannot be reused after the session expires.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -28,8 +31,11 @@ public class CreateSessionInput extends TeaModel {
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    @NameInMap("network")
+    public CreateSessionNetworkConfig network;
+
     /**
-     * <p>The OSS configuration. After this parameter is configured, instances associated with the session can access the specified OSS resources.</p>
+     * <p>The OSS mount configuration. After this parameter is configured, instances associated with the session can access the specified OSS resources.</p>
      */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
@@ -41,7 +47,7 @@ public class CreateSessionInput extends TeaModel {
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The custom session ID. If this parameter is not specified, the server generates a session ID. If specified, the value is used as the session ID. This parameter applies only to the HEADER_FIELD affinity mode. Format: the length is limited to [0,64]. The first character must be from <strong>a-zA-Z0-9_</strong>, and subsequent characters can be from <strong>a-zA-Z0-9_-</strong>.</p>
+     * <p>The custom session ID. If not specified, the server generates one. If specified, this value is used as the session ID. This parameter applies only to the HEADER_FIELD affinity mode. Format: the length is limited to [0,64]. The first character must be from <strong>a-zA-Z0-9_</strong>. Subsequent characters can be from <strong>a-zA-Z0-9_-</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>custom-test-session-id</p>
@@ -50,7 +56,7 @@ public class CreateSessionInput extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The session idle timeout period.</p>
+     * <p>The session idle timeout.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -70,6 +76,14 @@ public class CreateSessionInput extends TeaModel {
     public static CreateSessionInput build(java.util.Map<String, ?> map) throws Exception {
         CreateSessionInput self = new CreateSessionInput();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSessionInput setAllowInternetAccess(Boolean allowInternetAccess) {
+        this.allowInternetAccess = allowInternetAccess;
+        return this;
+    }
+    public Boolean getAllowInternetAccess() {
+        return this.allowInternetAccess;
     }
 
     public CreateSessionInput setDisableSessionIdReuse(Boolean disableSessionIdReuse) {
@@ -110,6 +124,14 @@ public class CreateSessionInput extends TeaModel {
     }
     public NASConfig getNasConfig() {
         return this.nasConfig;
+    }
+
+    public CreateSessionInput setNetwork(CreateSessionNetworkConfig network) {
+        this.network = network;
+        return this;
+    }
+    public CreateSessionNetworkConfig getNetwork() {
+        return this.network;
     }
 
     public CreateSessionInput setOssMountConfig(OSSMountConfig ossMountConfig) {

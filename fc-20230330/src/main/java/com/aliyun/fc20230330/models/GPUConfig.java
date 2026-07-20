@@ -17,7 +17,7 @@ public class GPUConfig extends TeaModel {
      * <p>The type of GPU cards. Valid values: fc.gpu.tesla.1: Tesla T4 fc.gpu.ampere.1: Ampere A10</p>
      * 
      * <strong>example:</strong>
-     * <p>fc.gpu.ampere.1</p>
+     * <p>fc.gpu.tesla.1</p>
      */
     @NameInMap("gpuType")
     public String gpuType;

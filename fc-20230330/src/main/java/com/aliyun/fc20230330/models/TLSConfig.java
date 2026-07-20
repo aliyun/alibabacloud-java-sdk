@@ -25,7 +25,7 @@ public class TLSConfig extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>TLSv1.0</p>
+     * <p>TLSv1.2</p>
      */
     @NameInMap("minVersion")
     public String minVersion;

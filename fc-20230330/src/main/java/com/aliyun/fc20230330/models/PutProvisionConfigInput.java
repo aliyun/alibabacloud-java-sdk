@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class PutProvisionConfigInput extends TeaModel {
     /**
-     * <p>是否始终分配CPU，默认为true。</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -14,8 +12,6 @@ public class PutProvisionConfigInput extends TeaModel {
     public Boolean alwaysAllocateCPU;
 
     /**
-     * <p>是否始终分配GPU，默认为true。</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -41,10 +37,6 @@ public class PutProvisionConfigInput extends TeaModel {
     public java.util.List<ScheduledAction> scheduledActions;
 
     /**
-     * <blockquote>
-     * <p>Notice: 建议不再使用该参数，请使用 defaultTarget 参数。 </notice>
-     * 预留的目标资源个数。取值范围为[0,10000]。</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,9 +49,6 @@ public class PutProvisionConfigInput extends TeaModel {
     @Deprecated
     public Long target;
 
-    /**
-     * <p>指标追踪伸缩策略配置。</p>
-     */
     @NameInMap("targetTrackingPolicies")
     public java.util.List<TargetTrackingPolicy> targetTrackingPolicies;
 

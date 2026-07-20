@@ -4,8 +4,11 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Session extends TeaModel {
+    @NameInMap("allowInternetAccess")
+    public Boolean allowInternetAccess;
+
     /**
-     * <p>The instance ID of the function instance associated with the session.</p>
+     * <p>The instance ID of the function associated with the session.</p>
      * 
      * <strong>example:</strong>
      * <p>c-68999e02-16a1955c-d2a03d1ccs</p>
@@ -23,7 +26,12 @@ public class Session extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>Specifies whether to disable session ID reuse. Default value: False, which indicates that after the session expires, you can use the same session ID to initiate requests. The system treats the request as a new session and binds it to a new instance. If you set this parameter to True, the session ID cannot be reused after the session expires.</p>
+     * <p>Specifies whether to disable session ID reuse after the session expires. Valid values:</p>
+     * <ul>
+     * <li>False: After the session expires, you can use the same session ID to initiate requests. The system treats it as a new session and binds it to a new instance.</li>
+     * <li>True: After the session expires, the session ID cannot be reused.</li>
+     * </ul>
+     * <p>Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -64,6 +72,9 @@ public class Session extends TeaModel {
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    @NameInMap("network")
+    public CreateSessionNetworkConfig network;
+
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
@@ -71,7 +82,7 @@ public class Session extends TeaModel {
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The qualifier passed in when the customer created the session. If not specified, the default value is LATEST.</p>
+     * <p>The qualifier passed when the customer created the session. If not specified, the default value is LATEST.</p>
      * 
      * <strong>example:</strong>
      * <p>AliasName1</p>
@@ -98,7 +109,7 @@ public class Session extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The idle timeout period of the session.</p>
+     * <p>The session idle timeout.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -120,7 +131,7 @@ public class Session extends TeaModel {
     public String sessionStatus;
 
     /**
-     * <p>The maximum lifetime of the session.</p>
+     * <p>The maximum session lifetime.</p>
      * 
      * <strong>example:</strong>
      * <p>21600</p>
@@ -128,9 +139,20 @@ public class Session extends TeaModel {
     @NameInMap("sessionTTLInSeconds")
     public Long sessionTTLInSeconds;
 
+    @NameInMap("trafficAccessToken")
+    public String trafficAccessToken;
+
     public static Session build(java.util.Map<String, ?> map) throws Exception {
         Session self = new Session();
         return TeaModel.build(map, self);
+    }
+
+    public Session setAllowInternetAccess(Boolean allowInternetAccess) {
+        this.allowInternetAccess = allowInternetAccess;
+        return this;
+    }
+    public Boolean getAllowInternetAccess() {
+        return this.allowInternetAccess;
     }
 
     public Session setContainerId(String containerId) {
@@ -205,6 +227,14 @@ public class Session extends TeaModel {
         return this.nasConfig;
     }
 
+    public Session setNetwork(CreateSessionNetworkConfig network) {
+        this.network = network;
+        return this;
+    }
+    public CreateSessionNetworkConfig getNetwork() {
+        return this.network;
+    }
+
     public Session setOssMountConfig(OSSMountConfig ossMountConfig) {
         this.ossMountConfig = ossMountConfig;
         return this;
@@ -267,6 +297,14 @@ public class Session extends TeaModel {
     }
     public Long getSessionTTLInSeconds() {
         return this.sessionTTLInSeconds;
+    }
+
+    public Session setTrafficAccessToken(String trafficAccessToken) {
+        this.trafficAccessToken = trafficAccessToken;
+        return this;
+    }
+    public String getTrafficAccessToken() {
+        return this.trafficAccessToken;
     }
 
 }

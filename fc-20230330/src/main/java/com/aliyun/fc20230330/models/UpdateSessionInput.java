@@ -4,13 +4,11 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class UpdateSessionInput extends TeaModel {
+    @NameInMap("allowInternetAccess")
+    public Boolean allowInternetAccess;
+
     /**
-     * <p>Specifies whether to disable session ID reuse after the session expires. Valid values:</p>
-     * <ul>
-     * <li>False: After the session associated with a SessionID expires, you can use the same SessionID to initiate requests. The system treats this as a new session and binds it to a new instance.</li>
-     * <li>True: After the session associated with a SessionID expires, the SessionID cannot be reused.
-     * Default value: False.</li>
-     * </ul>
+     * <p>Specifies whether to disable session ID reuse after the session expires. Default value: False, which indicates that after a session expires, you can use the same session ID to initiate requests. The system treats the request as a new session and binds it to a new instance. If you set this parameter to True, the session ID cannot be reused after the session expires.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,6 +28,9 @@ public class UpdateSessionInput extends TeaModel {
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
+    @NameInMap("network")
+    public UpdateSessionNetworkConfig network;
+
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
@@ -37,7 +38,7 @@ public class UpdateSessionInput extends TeaModel {
     public PolarFsConfig polarFsConfig;
 
     /**
-     * <p>The session idle timeout period.</p>
+     * <p>The session idle timeout.</p>
      * 
      * <strong>example:</strong>
      * <p>1800</p>
@@ -57,6 +58,14 @@ public class UpdateSessionInput extends TeaModel {
     public static UpdateSessionInput build(java.util.Map<String, ?> map) throws Exception {
         UpdateSessionInput self = new UpdateSessionInput();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSessionInput setAllowInternetAccess(Boolean allowInternetAccess) {
+        this.allowInternetAccess = allowInternetAccess;
+        return this;
+    }
+    public Boolean getAllowInternetAccess() {
+        return this.allowInternetAccess;
     }
 
     public UpdateSessionInput setDisableSessionIdReuse(Boolean disableSessionIdReuse) {
@@ -97,6 +106,14 @@ public class UpdateSessionInput extends TeaModel {
     }
     public NASConfig getNasConfig() {
         return this.nasConfig;
+    }
+
+    public UpdateSessionInput setNetwork(UpdateSessionNetworkConfig network) {
+        this.network = network;
+        return this;
+    }
+    public UpdateSessionNetworkConfig getNetwork() {
+        return this.network;
     }
 
     public UpdateSessionInput setOssMountConfig(OSSMountConfig ossMountConfig) {
