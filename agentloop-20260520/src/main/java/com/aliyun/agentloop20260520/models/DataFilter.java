@@ -40,6 +40,9 @@ public class DataFilter extends TeaModel {
     @NameInMap("samplingRate")
     public Integer samplingRate;
 
+    @NameInMap("serviceNames")
+    public java.util.List<String> serviceNames;
+
     public static DataFilter build(java.util.Map<String, ?> map) throws Exception {
         DataFilter self = new DataFilter();
         return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class DataFilter extends TeaModel {
     }
     public Integer getSamplingRate() {
         return this.samplingRate;
+    }
+
+    public DataFilter setServiceNames(java.util.List<String> serviceNames) {
+        this.serviceNames = serviceNames;
+        return this;
+    }
+    public java.util.List<String> getServiceNames() {
+        return this.serviceNames;
     }
 
 }

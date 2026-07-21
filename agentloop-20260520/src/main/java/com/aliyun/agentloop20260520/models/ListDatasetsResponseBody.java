@@ -20,8 +20,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page of results.</p>
-     * <p>If the total number of results exceeds the maxResults limit, the results are truncated. You can use this token to query the next page of results.</p>
+     * <p>The token for the next page of results.</p>
+     * <p>If the total number of results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
      * 
      * <strong>example:</strong>
      * <p>umaQfI7x758Ns4TgWrj8yA3fYlnk7dJgsfhMrSViRY8=</p>
@@ -94,7 +94,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyDatasets extends TeaModel {
         /**
-         * <p>The name of the agent space.</p>
+         * <p>The agent space name.</p>
          * 
          * <strong>example:</strong>
          * <p>sop-agent</p>
@@ -103,7 +103,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String agentSpace;
 
         /**
-         * <p>The time when the dataset was created.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The name of the dataset.</p>
+         * <p>The dataset name.</p>
          * 
          * <strong>example:</strong>
          * <p>product_faq_dataset</p>
@@ -122,13 +122,16 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String datasetName;
 
         /**
-         * <p>The description of the dataset.</p>
+         * <p>The dataset description.</p>
          * 
          * <strong>example:</strong>
          * <p>Product FAQ dataset for semantic search</p>
          */
         @NameInMap("description")
         public String description;
+
+        @NameInMap("isFavorite")
+        public Boolean isFavorite;
 
         /**
          * <p>The region ID.</p>
@@ -140,7 +143,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The time when the dataset was last updated.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +187,14 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListDatasetsResponseBodyDatasets setIsFavorite(Boolean isFavorite) {
+            this.isFavorite = isFavorite;
+            return this;
+        }
+        public Boolean getIsFavorite() {
+            return this.isFavorite;
         }
 
         public ListDatasetsResponseBodyDatasets setRegionId(String regionId) {

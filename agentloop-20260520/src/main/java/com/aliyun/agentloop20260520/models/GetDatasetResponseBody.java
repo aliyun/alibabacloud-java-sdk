@@ -41,6 +41,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("isFavorite")
+    public Boolean isFavorite;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -110,6 +113,14 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetDatasetResponseBody setIsFavorite(Boolean isFavorite) {
+        this.isFavorite = isFavorite;
+        return this;
+    }
+    public Boolean getIsFavorite() {
+        return this.isFavorite;
     }
 
     public GetDatasetResponseBody setRegionId(String regionId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
     /**
-     * <p>The name of the dataset.</p>
+     * <p>The dataset name.</p>
      * 
      * <strong>example:</strong>
      * <p>product_faq_dataset</p>
