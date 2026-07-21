@@ -4,6 +4,9 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class RevokePushTaskResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("PushResult")
     public RevokePushTaskResponseBodyPushResult pushResult;
 
@@ -19,6 +22,14 @@ public class RevokePushTaskResponseBody extends TeaModel {
     public static RevokePushTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RevokePushTaskResponseBody self = new RevokePushTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RevokePushTaskResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public RevokePushTaskResponseBody setPushResult(RevokePushTaskResponseBodyPushResult pushResult) {
