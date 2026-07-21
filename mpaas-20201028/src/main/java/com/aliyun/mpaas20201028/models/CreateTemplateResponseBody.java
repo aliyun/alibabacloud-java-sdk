@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public String code;
 
@@ -22,6 +25,14 @@ public class CreateTemplateResponseBody extends TeaModel {
     public static CreateTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateResponseBody self = new CreateTemplateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTemplateResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CreateTemplateResponseBody setCode(String code) {

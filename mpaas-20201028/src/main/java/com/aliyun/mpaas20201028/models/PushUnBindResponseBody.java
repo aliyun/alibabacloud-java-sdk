@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class PushUnBindResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("PushResult")
     public PushUnBindResponseBodyPushResult pushResult;
 
@@ -19,6 +22,14 @@ public class PushUnBindResponseBody extends TeaModel {
     public static PushUnBindResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PushUnBindResponseBody self = new PushUnBindResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PushUnBindResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public PushUnBindResponseBody setPushResult(PushUnBindResponseBodyPushResult pushResult) {

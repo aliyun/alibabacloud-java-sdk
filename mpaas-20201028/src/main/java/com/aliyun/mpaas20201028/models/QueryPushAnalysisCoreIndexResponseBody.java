@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -19,6 +22,14 @@ public class QueryPushAnalysisCoreIndexResponseBody extends TeaModel {
     public static QueryPushAnalysisCoreIndexResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPushAnalysisCoreIndexResponseBody self = new QueryPushAnalysisCoreIndexResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPushAnalysisCoreIndexResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryPushAnalysisCoreIndexResponseBody setRequestId(String requestId) {

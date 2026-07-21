@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplateResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public String code;
 
@@ -19,6 +22,14 @@ public class DeleteTemplateResponseBody extends TeaModel {
     public static DeleteTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteTemplateResponseBody self = new DeleteTemplateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteTemplateResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DeleteTemplateResponseBody setCode(String code) {

@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CancelPushSchedulerResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -19,6 +22,14 @@ public class CancelPushSchedulerResponseBody extends TeaModel {
     public static CancelPushSchedulerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelPushSchedulerResponseBody self = new CancelPushSchedulerResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CancelPushSchedulerResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CancelPushSchedulerResponseBody setRequestId(String requestId) {
