@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     /**
+     * <p>The data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public java.util.List<ModelRouterQueryNacosProvidersResponseBodyData> data;
 
     /**
+     * <p>The error message code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -122,6 +134,12 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         @NameInMap("extensions")
         public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions extensions;
 
+        /**
+         * <p>The model identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca90f359956e94367470c38676</p>
+         */
         @NameInMap("identifier")
         public String identifier;
 
@@ -132,9 +150,21 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
         @NameInMap("inOut")
         public String inOut;
 
+        /**
+         * <p>The input token limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32K</p>
+         */
         @NameInMap("inputToken")
         public String inputToken;
 
+        /**
+         * <p>The output token limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8K</p>
+         */
         @NameInMap("outputToken")
         public String outputToken;
 
@@ -201,15 +231,36 @@ public class ModelRouterQueryNacosProvidersResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryNacosProvidersResponseBodyData extends TeaModel {
+        /**
+         * <p>The base URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
+         */
         @NameInMap("baseUrl")
         public String baseUrl;
 
+        /**
+         * <p>The list of models.</p>
+         */
         @NameInMap("models")
         public java.util.List<ModelRouterQueryNacosProvidersResponseBodyDataModels> models;
 
+        /**
+         * <p>The provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通义千问</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The provider identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
+         */
         @NameInMap("symbol")
         public String symbol;
 

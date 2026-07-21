@@ -4,20 +4,33 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
+    /**
+     * <p>The data object.</p>
+     */
     @NameInMap("data")
     public ListTextbookAssistantBookDirectoriesResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>B_USER_NOT_FOUND_EXCEPTION</p>
      */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户不存在</p>
+     */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,7 +38,7 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A5E9849-A2F0-551D-A7D8-1A8118557BAB</p>
@@ -34,6 +47,8 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -95,12 +110,20 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeTopic extends TeaModel {
         /**
+         * <p>The label ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1323</p>
          */
         @NameInMap("labelId")
         public String labelId;
 
+        /**
+         * <p>The label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>身边事物环境</p>
+         */
         @NameInMap("labelName")
         public String labelName;
 
@@ -128,9 +151,21 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic extends TeaModel {
+        /**
+         * <p>The label ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1329</p>
+         */
         @NameInMap("labelId")
         public String labelId;
 
+        /**
+         * <p>The label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自我介绍</p>
+         */
         @NameInMap("labelName")
         public String labelName;
 
@@ -158,15 +193,36 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection extends TeaModel {
+        /**
+         * <p>Child nodes for backward compatibility. This property is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>可能存在的子元素，兼容数据使用，不一定存在</p>
+         */
         @NameInMap("children")
         public Object children;
 
+        /**
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05758807ed8e11eebe6e0c42a106bb02</p>
+         */
         @NameInMap("directoryId")
         public String directoryId;
 
+        /**
+         * <p>The directory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>section 2</p>
+         */
         @NameInMap("directoryName")
         public String directoryName;
 
+        /**
+         * <p>The topic.</p>
+         */
         @NameInMap("topic")
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic> topic;
 
@@ -210,9 +266,21 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic extends TeaModel {
+        /**
+         * <p>The label ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1326</p>
+         */
         @NameInMap("labelId")
         public String labelId;
 
+        /**
+         * <p>The label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自我介绍</p>
+         */
         @NameInMap("labelName")
         public String labelName;
 
@@ -240,15 +308,33 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit extends TeaModel {
+        /**
+         * <p>The directory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05758807ed8e11eebe6e0c42a106bb02</p>
+         */
         @NameInMap("directoryId")
         public String directoryId;
 
+        /**
+         * <p>The directory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unit 2</p>
+         */
         @NameInMap("directoryName")
         public String directoryName;
 
+        /**
+         * <p>The section.</p>
+         */
         @NameInMap("section")
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection> section;
 
+        /**
+         * <p>The topic.</p>
+         */
         @NameInMap("topic")
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic> topic;
 
@@ -293,6 +379,8 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTree extends TeaModel {
         /**
+         * <p>The directory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>05758807ed8e11eebe6e0c42a106bb02</p>
          */
@@ -300,15 +388,23 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
+         * <p>The directory name.</p>
+         * 
          * <strong>example:</strong>
          * <p>2 Jobs</p>
          */
         @NameInMap("directoryName")
         public String directoryName;
 
+        /**
+         * <p>The topic.</p>
+         */
         @NameInMap("topic")
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeTopic> topic;
 
+        /**
+         * <p>The unit.</p>
+         */
         @NameInMap("unit")
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit> unit;
 
@@ -353,6 +449,8 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataEditionInfo extends TeaModel {
         /**
+         * <p>The book ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>55857</p>
          */
@@ -360,6 +458,8 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         public String bookId;
 
         /**
+         * <p>The book volume. <code>0</code> indicates a single-volume edition, <code>1</code> indicates Volume 1, and <code>2</code> indicates Volume 2.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -367,6 +467,8 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         public String bookVolume;
 
         /**
+         * <p>The edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>2010-1(2)</p>
          */
@@ -374,6 +476,8 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         public String edition;
 
         /**
+         * <p>The grade. Valid values: 1–9.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -381,6 +485,8 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         public String grade;
 
         /**
+         * <p>The impression.</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-1(10)</p>
          */
@@ -388,22 +494,38 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         public String impression;
 
         /**
+         * <p>The International Standard Book Number (ISBN).</p>
+         * 
          * <strong>example:</strong>
          * <p>9787544413695</p>
          */
         @NameInMap("isbn")
         public String isbn;
 
+        /**
+         * <p>The publisher.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>人民教育出版社</p>
+         */
         @NameInMap("publisher")
         public String publisher;
 
         /**
+         * <p>The subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENGLISH</p>
          */
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>人教版</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -487,9 +609,15 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ListTextbookAssistantBookDirectoriesResponseBodyData extends TeaModel {
+        /**
+         * <p>The directory tree.</p>
+         */
         @NameInMap("directoryTree")
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTree> directoryTree;
 
+        /**
+         * <p>The edition details.</p>
+         */
         @NameInMap("editionInfo")
         public ListTextbookAssistantBookDirectoriesResponseBodyDataEditionInfo editionInfo;
 

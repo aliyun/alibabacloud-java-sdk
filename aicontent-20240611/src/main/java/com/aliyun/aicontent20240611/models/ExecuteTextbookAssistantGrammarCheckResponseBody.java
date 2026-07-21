@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
+    /**
+     * <p>The data object.</p>
+     */
     @NameInMap("data")
     public ExecuteTextbookAssistantGrammarCheckResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc1e96d17091734639835114e12c8</p>
@@ -38,6 +47,8 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +109,18 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantGrammarCheckResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The error analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>主语 \&quot;I\&quot; 后应跟动词 \&quot;am\&quot; 而不是 \&quot;are\&quot;。</p>
+         */
         @NameInMap("analysis")
         public String analysis;
 
         /**
+         * <p>The corrected sentence.</p>
+         * 
          * <strong>example:</strong>
          * <p>I am you.</p>
          */
@@ -109,6 +128,8 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
         public String correction;
 
         /**
+         * <p>The grammar check result. Valid values: <code>Has_Error</code> (an error was found), <code>No_Error</code> (no errors were found), and <code>Invalid_Sentence</code> (the sentence could not be parsed).</p>
+         * 
          * <strong>example:</strong>
          * <p>Has_Error</p>
          */
@@ -147,6 +168,9 @@ public class ExecuteTextbookAssistantGrammarCheckResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantGrammarCheckResponseBodyData extends TeaModel {
+        /**
+         * <p>The result data.</p>
+         */
         @NameInMap("result")
         public ExecuteTextbookAssistantGrammarCheckResponseBodyDataResult result;
 

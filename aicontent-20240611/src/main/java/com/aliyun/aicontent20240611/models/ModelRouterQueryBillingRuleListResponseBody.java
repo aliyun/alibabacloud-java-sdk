@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("data")
     public ModelRouterQueryBillingRuleListResponseBodyData data;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -15,6 +20,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -22,6 +29,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -47,6 +56,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -54,6 +65,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -131,6 +144,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
 
     public static class ModelRouterQueryBillingRuleListResponseBodyDataList extends TeaModel {
         /**
+         * <p>Billing type</p>
+         * 
          * <strong>example:</strong>
          * <p>token_tiered</p>
          */
@@ -138,6 +153,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String billingType;
 
         /**
+         * <p>Delete marker</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -145,6 +162,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public Integer deleteTag;
 
         /**
+         * <p>Effective time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -152,6 +171,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
+         * <p>Expiration time</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
          */
@@ -159,6 +180,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -166,6 +189,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -173,6 +198,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Rule ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -180,6 +207,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Model identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -187,6 +216,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String modelCode;
 
         /**
+         * <p>Model ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -194,6 +225,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public Long modelId;
 
         /**
+         * <p>Model name</p>
+         * 
          * <strong>example:</strong>
          * <p>通义千问Plus</p>
          */
@@ -201,6 +234,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String modelName;
 
         /**
+         * <p>Model type</p>
+         * 
          * <strong>example:</strong>
          * <p>chat</p>
          */
@@ -208,6 +243,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String modelType;
 
         /**
+         * <p>Billing configuration</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -215,6 +252,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public Object pricingConfig;
 
         /**
+         * <p>Vendor identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba</p>
          */
@@ -222,6 +261,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public String symbol;
 
         /**
+         * <p>Version number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -348,10 +389,15 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryBillingRuleListResponseBodyData extends TeaModel {
+        /**
+         * <p>List of billing rules</p>
+         */
         @NameInMap("list")
         public java.util.List<ModelRouterQueryBillingRuleListResponseBodyDataList> list;
 
         /**
+         * <p>Current page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -359,6 +405,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>Number of items per page</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -366,6 +414,8 @@ public class ModelRouterQueryBillingRuleListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of records</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

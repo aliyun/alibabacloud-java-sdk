@@ -5,25 +5,41 @@ import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantDialogueRequest extends TeaModel {
     /**
+     * <p>The authorization token required to call the API. To get this token, use the Textbook Assistant authorization API.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6788e0b475a4631ffc626722</p>
      */
     @NameInMap("authToken")
     public String authToken;
 
     /**
+     * <p>The chat ID for this turn.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6788e0b475a4631ffc626722</p>
      */
     @NameInMap("chatId")
     public String chatId;
 
     /**
+     * <p>The scenario. Valid values: SYNC for synchronous practice and EXPAND for extended practice.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYNC</p>
      */
     @NameInMap("scenario")
     public String scenario;
 
     /**
+     * <p>The user\&quot;s message content.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello</p>
      */
     @NameInMap("userMessage")
     public String userMessage;

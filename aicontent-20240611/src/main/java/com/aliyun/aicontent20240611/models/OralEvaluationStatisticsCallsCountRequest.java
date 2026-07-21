@@ -14,6 +14,8 @@ public class OralEvaluationStatisticsCallsCountRequest extends TeaModel {
     public String applicationAccessId;
 
     /**
+     * <p>End Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-15 07:40:01</p>
      */
@@ -21,6 +23,8 @@ public class OralEvaluationStatisticsCallsCountRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Query granularity (hour, Day, month)</p>
+     * 
      * <strong>example:</strong>
      * <p>DAY</p>
      */
@@ -28,6 +32,8 @@ public class OralEvaluationStatisticsCallsCountRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>project ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -35,6 +41,8 @@ public class OralEvaluationStatisticsCallsCountRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>Start Time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-14 07:40:01</p>
      */

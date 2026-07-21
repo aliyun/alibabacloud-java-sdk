@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class Personalizedtxt2imgQueryInferenceJobInfoRequest extends TeaModel {
     /**
+     * <p>The ID of the inference job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

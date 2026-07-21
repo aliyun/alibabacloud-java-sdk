@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ModelRouterGetClientBalanceLogsResponseBodyData data;
 
     /**
+     * <p>The error code returned on failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -15,6 +20,8 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned on failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -22,6 +29,8 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,7 +47,7 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The pagination token for the next page of results. An empty value indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -45,6 +56,8 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -52,6 +65,8 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -128,10 +143,15 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
     }
 
     public static class ModelRouterGetClientBalanceLogsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of balance change log entries.</p>
+         */
         @NameInMap("list")
         public java.util.List<ClientBalanceLogDTO> list;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -139,6 +159,8 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -146,6 +168,8 @@ public class ModelRouterGetClientBalanceLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of matching entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

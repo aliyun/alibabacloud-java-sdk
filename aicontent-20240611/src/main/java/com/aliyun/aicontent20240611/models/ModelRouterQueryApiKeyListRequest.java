@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     /**
+     * <p>Filters the results by the specified client ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The grouping field.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String groupBy;
 
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Specifies whether to return the total count of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
+     * <p>The token for retrieving the next page of results. An empty value indicates that all results have been returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort field.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -54,6 +68,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -61,6 +77,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>The page number to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +86,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of results per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -75,6 +95,8 @@ public class ModelRouterQueryApiKeyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters the results by the specified status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

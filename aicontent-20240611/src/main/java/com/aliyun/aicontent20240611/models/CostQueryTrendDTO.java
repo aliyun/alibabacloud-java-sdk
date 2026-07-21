@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CostQueryTrendDTO extends TeaModel {
     /**
+     * <p>The default metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>total_amount</p>
      */
@@ -12,15 +14,23 @@ public class CostQueryTrendDTO extends TeaModel {
     public String defaultMetric;
 
     /**
+     * <p>The granularity of the data. Valid values are <code>hourly</code> and <code>daily</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>hourly</p>
      */
     @NameInMap("granularity")
     public String granularity;
 
+    /**
+     * <p>A list of metric definitions.</p>
+     */
     @NameInMap("metrics")
     public java.util.List<MetricDefRespDTO> metrics;
 
+    /**
+     * <p>A list of data points for the trend.</p>
+     */
     @NameInMap("points")
     public java.util.List<TrendPointDTO> points;
 

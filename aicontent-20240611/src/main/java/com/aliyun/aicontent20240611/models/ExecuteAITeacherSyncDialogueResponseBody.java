@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
     /**
+     * <p>The data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
     public ExecuteAITeacherSyncDialogueResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
 
     public static class ExecuteAITeacherSyncDialogueResponseBodyData extends TeaModel {
         /**
+         * <p>The English response from the AI teacher.</p>
+         * 
          * <strong>example:</strong>
          * <p>Thanks, Lily. Do you like meat, Lily?</p>
          */
@@ -108,6 +122,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         public String englishResult;
 
         /**
+         * <p>Indicates whether the dialogue is finished.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -115,6 +131,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         public Boolean isFinish;
 
         /**
+         * <p>Indicates whether the user\&quot;s response is on topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -122,6 +140,8 @@ public class ExecuteAITeacherSyncDialogueResponseBody extends TeaModel {
         public Boolean isOnTopic;
 
         /**
+         * <p>The index of the current question.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

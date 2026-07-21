@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
     /**
+     * <p>A list of dialogue tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("dialogueTasks")
     public java.util.List<GetAITeacherSyncDialogueSuggestionRequestDialogueTasks> dialogueTasks;
 
     /**
+     * <p>The language code.</p>
+     * 
      * <strong>example:</strong>
      * <p>en-gb</p>
      */
@@ -18,12 +21,14 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
     public String languageCode;
 
     /**
+     * <p>A list of dialogue records.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("records")
     public java.util.List<GetAITeacherSyncDialogueSuggestionRequestRecords> records;
 
     /**
+     * <p>The unique identifier for the end-user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +76,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
 
     public static class GetAITeacherSyncDialogueSuggestionRequestDialogueTasks extends TeaModel {
         /**
+         * <p>The assistant\&quot;s message content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +86,8 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public String assistant;
 
         /**
+         * <p>The translation of the assistant\&quot;s message.</p>
+         * 
          * <strong>example:</strong>
          * <p>为什么有些人认为遛狗是份好差事?</p>
          */
@@ -87,6 +95,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public String assistantTranslate;
 
         /**
+         * <p>The sequence number of the dialogue task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +105,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The user\&quot;s message content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +155,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
 
     public static class GetAITeacherSyncDialogueSuggestionRequestRecords extends TeaModel {
         /**
+         * <p>The message content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +165,8 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>A control flag that indicates if a student\&quot;s response is off-topic. The value is based on the previous turn. If the conversation goes off-topic more than twice, the system sets this value to <code>true</code> to force a task switch.</p>
+         * 
          * <strong>example:</strong>
          * <p>跑题：true, 不跑题：false</p>
          */
@@ -161,6 +174,8 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public Boolean isOffTopicControl;
 
         /**
+         * <p>Specifies if the message is on topic. <code>true</code> indicates the message is on topic; <code>false</code> indicates it is off topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>扣题：true, 不扣题：false</p>
          */
@@ -168,6 +183,7 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public Boolean isOnTopic;
 
         /**
+         * <p>The sequence number of the message in the conversation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,10 +193,11 @@ public class GetAITeacherSyncDialogueSuggestionRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The role of the message author. Valid values: <code>assistant</code> (for AI-generated messages) and <code>user</code> (for user-provided messages).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>老师：assistant；学生：user</p>
+         * <p>AI：assistant；用户：user</p>
          */
         @NameInMap("role")
         public String role;

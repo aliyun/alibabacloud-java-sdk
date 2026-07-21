@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListTextbookAssistantSceneDetailsRequest extends TeaModel {
     /**
+     * <p>The API authorization token. You can obtain the token by calling the operation that generates the token for the English Textbook-style AI Teacher feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>tc_e6dc70c890866f4028ca685b6fa29874</p>
      */
     @NameInMap("authToken")
     public String authToken;
 
+    /**
+     * <p>A list of scene IDs.</p>
+     */
     @NameInMap("sceneIdList")
     public java.util.List<String> sceneIdList;
 

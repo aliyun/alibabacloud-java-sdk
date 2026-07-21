@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     /**
+     * <p>The data object containing the billing breakdown. For details, see the response example.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public BillingCostBreakdownRespDTO data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The maximum number of results returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. If this parameter is not empty, pass its value in a subsequent request to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
      */
@@ -47,6 +59,8 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -54,6 +68,8 @@ public class ModelRouterQueryBillingCostBreakdownResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

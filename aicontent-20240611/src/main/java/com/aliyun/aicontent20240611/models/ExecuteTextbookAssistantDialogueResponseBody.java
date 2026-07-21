@@ -4,24 +4,54 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ExecuteTextbookAssistantDialogueResponseBodyData data;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("errMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DBFA232A-1176-50E6-95AE-50F7A62A28AD</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public String success;
 
@@ -79,15 +109,39 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantDialogueResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The Textbook Assistant\&quot;s reply in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>让我们再看一遍课文。迈克说: “我是迈克·布莱克。”你能试着像迈克那样说吗？</p>
+         */
         @NameInMap("chineseResult")
         public String chineseResult;
 
+        /**
+         * <p>The Textbook Assistant\&quot;s reply in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Let\&quot;s look at the text again. Mike says, \&quot;I\&quot;m Mike Black.\&quot; Can you try saying it like Mike?</p>
+         */
         @NameInMap("englishResult")
         public String englishResult;
 
+        /**
+         * <p>Indicates whether the dialogue is finished.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isFinish")
         public Boolean isFinish;
 
+        /**
+         * <p>Indicates whether the task is completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isTaskCompleted")
         public Boolean isTaskCompleted;
 
@@ -131,15 +185,36 @@ public class ExecuteTextbookAssistantDialogueResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantDialogueResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Textbook Assistant\&quot;s message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6788f4935bdfc807f077a984</p>
+         */
         @NameInMap("assistant")
         public String assistant;
 
+        /**
+         * <p>The chat ID for this turn.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6788e0b475a4631ffc626722</p>
+         */
         @NameInMap("chatId")
         public String chatId;
 
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("result")
         public ExecuteTextbookAssistantDialogueResponseBodyDataResult result;
 
+        /**
+         * <p>The ID of the user\&quot;s reply.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6788f4905bdfc807f077a982</p>
+         */
         @NameInMap("user")
         public String user;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     /**
+     * <p>The response payload.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public ModelRouterQueryObservationLogsResponseBodyData data;
 
     /**
+     * <p>The error code for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,7 +41,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
+     * <p>The maximum number of results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +50,7 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -51,6 +59,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -58,6 +68,8 @@ public class ModelRouterQueryObservationLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

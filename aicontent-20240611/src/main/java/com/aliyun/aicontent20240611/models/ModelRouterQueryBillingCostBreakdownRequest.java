@@ -12,6 +12,8 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>The ID of the client to query. If not specified, data for all clients is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -19,6 +21,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The end time for the query, specified as a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +31,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The granularity for data aggregation. Valid values: <code>hourly</code> and <code>daily</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +41,8 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>The maximum number of results to return. This parameter is used for pagination along with <code>nextToken</code> and is mutually exclusive with <code>page</code> and <code>pageSize</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -44,6 +50,8 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The ID of the model to query. If not specified, data for all models is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -51,6 +59,8 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Long modelId;
 
     /**
+     * <p>The types of the models to query, separated by commas. For example: <code>Chat,Embedding</code>. If not specified, data for all model types is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chat</p>
      */
@@ -58,6 +68,8 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public String modelTypes;
 
     /**
+     * <p>The pagination token that is used to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
      */
@@ -65,6 +77,8 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. Default: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -72,6 +86,8 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page. Default: 20. Maximum: 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -79,6 +95,7 @@ public class ModelRouterQueryBillingCostBreakdownRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time for the query, specified as a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

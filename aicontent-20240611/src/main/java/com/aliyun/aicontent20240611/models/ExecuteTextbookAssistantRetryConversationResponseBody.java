@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ExecuteTextbookAssistantRetryConversationResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2F2ABF4B-A4F6-5EC7-B287-7EF5B156F1ED</p>
@@ -38,6 +47,8 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +109,18 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
     }
 
     public static class ExecuteTextbookAssistantRetryConversationResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The Chinese translation of the AI assistant\&quot;s reply.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据文章，迈克·布莱克是如何介绍自己的？</p>
+         */
         @NameInMap("chineseResult")
         public String chineseResult;
 
         /**
+         * <p>The AI assistant\&quot;s reply in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Good evening! From the book, how does Mike Black introduce himself?</p>
          */
@@ -133,6 +152,8 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
 
     public static class ExecuteTextbookAssistantRetryConversationResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the AI assistant\&quot;s reply.</p>
+         * 
          * <strong>example:</strong>
          * <p>6788e0b4b54c5268c1b78638</p>
          */
@@ -140,16 +161,23 @@ public class ExecuteTextbookAssistantRetryConversationResponseBody extends TeaMo
         public String assistant;
 
         /**
+         * <p>The conversation ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6788e0b475a4631ffc626722</p>
          */
         @NameInMap("chatId")
         public String chatId;
 
+        /**
+         * <p>Contains the result data.</p>
+         */
         @NameInMap("result")
         public ExecuteTextbookAssistantRetryConversationResponseBodyDataResult result;
 
         /**
+         * <p>The ID of the user\&quot;s reply.</p>
+         * 
          * <strong>example:</strong>
          * <p>6788e0b45bdfc807f077a5a1</p>
          */

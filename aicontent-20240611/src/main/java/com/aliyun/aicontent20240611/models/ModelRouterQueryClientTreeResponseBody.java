@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
+    /**
+     * <p>An array of objects that form the customer tree.</p>
+     */
     @NameInMap("data")
     public java.util.List<ClientTreeDTO> data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -15,6 +20,8 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -22,6 +29,8 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
+     * <p>The maximum number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +47,7 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to retrieve the next page of results. If this parameter is not returned, it indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -47,6 +56,8 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -54,6 +65,8 @@ public class ModelRouterQueryClientTreeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

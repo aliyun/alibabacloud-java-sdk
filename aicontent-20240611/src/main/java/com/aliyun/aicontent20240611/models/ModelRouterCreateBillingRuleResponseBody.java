@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
+    /**
+     * <p>Contains the details of the billing rule.</p>
+     */
     @NameInMap("data")
     public ModelRouterCreateBillingRuleResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -15,6 +20,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -22,6 +29,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -36,6 +47,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
 
     public static class ModelRouterCreateBillingRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The billing type.</p>
+         * 
          * <strong>example:</strong>
          * <p>token_tiered</p>
          */
@@ -104,6 +119,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String billingType;
 
         /**
+         * <p>The delete marker.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -111,6 +128,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public Integer deleteTag;
 
         /**
+         * <p>The effective time of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -118,6 +137,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
+         * <p>The expiration time of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-01-01T00:00:00Z</p>
          */
@@ -125,6 +146,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The creation time of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -132,6 +155,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The modification time of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -139,6 +164,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -146,6 +173,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The model code.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
@@ -153,6 +182,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String modelCode;
 
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -160,6 +191,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public Long modelId;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>通义千问Plus</p>
          */
@@ -167,6 +200,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String modelName;
 
         /**
+         * <p>The model type.</p>
+         * 
          * <strong>example:</strong>
          * <p>chat</p>
          */
@@ -174,6 +209,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String modelType;
 
         /**
+         * <p>The pricing configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -181,6 +218,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public Object pricingConfig;
 
         /**
+         * <p>The provider identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>alibaba</p>
          */
@@ -188,6 +227,8 @@ public class ModelRouterCreateBillingRuleResponseBody extends TeaModel {
         public String symbol;
 
         /**
+         * <p>The version of the rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

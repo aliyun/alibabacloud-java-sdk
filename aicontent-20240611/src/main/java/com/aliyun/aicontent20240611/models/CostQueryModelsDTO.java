@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class CostQueryModelsDTO extends TeaModel {
+    /**
+     * <p>List of column definitions</p>
+     */
     @NameInMap("columns")
     public java.util.List<MetricDefRespDTO> columns;
 
     /**
+     * <p>Field Name of ID</p>
+     * 
      * <strong>example:</strong>
      * <p>model_id</p>
      */
@@ -15,12 +20,17 @@ public class CostQueryModelsDTO extends TeaModel {
     public String idField;
 
     /**
+     * <p>Field Name of Name</p>
+     * 
      * <strong>example:</strong>
      * <p>model_name</p>
      */
     @NameInMap("nameField")
     public String nameField;
 
+    /**
+     * <p>List of model data rows</p>
+     */
     @NameInMap("rows")
     public java.util.List<ModelRowDTO> rows;
 

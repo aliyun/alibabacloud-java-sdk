@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     /**
+     * <p>The data object that contains the returned metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public java.util.List<MetricValueDTO> data;
 
     /**
+     * <p>The error code that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message that is returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The maximum number of entries returned on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,7 +50,7 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -49,6 +59,8 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -56,6 +68,8 @@ public class ModelRouterQueryCostOverviewMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

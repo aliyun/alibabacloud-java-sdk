@@ -12,6 +12,8 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     public java.util.List<MetricDefRespDTO> columns;
 
     /**
+     * <p>Aggregation granularity: hourly or daily</p>
+     * 
      * <strong>example:</strong>
      * <p>hourly</p>
      */
@@ -19,6 +21,8 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     public String granularity;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +30,8 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of entries per page</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +39,8 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>List of billing details data</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -40,6 +48,8 @@ public class BillingCostBreakdownRespDTO extends TeaModel {
     public java.util.List<BillingCostBreakdownRowDTO> rows;
 
     /**
+     * <p>Total number of entries</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

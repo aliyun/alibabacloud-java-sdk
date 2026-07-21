@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterCreateClientRequest extends TeaModel {
     /**
+     * <p>The company address.</p>
+     * 
      * <strong>example:</strong>
      * <p>杭州市</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>A comma-separated list of model IDs that the client can use. If this parameter is empty, the client can use all available models.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     public String allowedModels;
 
     /**
+     * <p>The contact information.</p>
+     * 
      * <strong>example:</strong>
      * <p>13800138000</p>
      */
@@ -33,6 +39,8 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     public Double discount;
 
     /**
+     * <p>The client name.</p>
+     * 
      * <strong>example:</strong>
      * <p>我的客户</p>
      */
@@ -47,6 +55,8 @@ public class ModelRouterCreateClientRequest extends TeaModel {
     public Long parentId;
 
     /**
+     * <p>Additional remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>备注</p>
      */

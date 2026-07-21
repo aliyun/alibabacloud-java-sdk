@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClientBalanceLogDTO extends TeaModel {
     /**
+     * <p>The new balance.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */
@@ -12,6 +14,8 @@ public class ClientBalanceLogDTO extends TeaModel {
     public Double balanceAfter;
 
     /**
+     * <p>The previous balance.</p>
+     * 
      * <strong>example:</strong>
      * <p>90.00</p>
      */
@@ -19,6 +23,8 @@ public class ClientBalanceLogDTO extends TeaModel {
     public Double balanceBefore;
 
     /**
+     * <p>The change amount. A positive value represents a recharge, and a negative value represents a deduction.</p>
+     * 
      * <strong>example:</strong>
      * <p>10.00</p>
      */
@@ -26,6 +32,8 @@ public class ClientBalanceLogDTO extends TeaModel {
     public Double changeAmount;
 
     /**
+     * <p>The type of change. Possible values are <code>auto_deduct</code>, <code>deduct</code>, or <code>recharge</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>recharge</p>
      */
@@ -33,6 +41,8 @@ public class ClientBalanceLogDTO extends TeaModel {
     public String changeType;
 
     /**
+     * <p>The client ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ClientBalanceLogDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The creation time in ISO 8601 UTC format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -47,12 +59,20 @@ public class ClientBalanceLogDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The unique record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>Notes about the balance change.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>充值</p>
+     */
     @NameInMap("remark")
     public String remark;
 

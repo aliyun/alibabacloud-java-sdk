@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
+    /**
+     * <p>The list of discount modification logs.</p>
+     */
     @NameInMap("data")
     public java.util.List<ModelRouterQueryClientDiscountLogsResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -15,6 +20,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -22,6 +29,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
+     * <p>The maximum number of results returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +47,7 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to use in a subsequent request to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -47,6 +56,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -54,6 +65,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates if the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -131,6 +144,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
 
     public static class ModelRouterQueryClientDiscountLogsResponseBodyData extends TeaModel {
         /**
+         * <p>The client ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -138,6 +153,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         public Long clientId;
 
         /**
+         * <p>A flag that indicates whether the record is deleted. A value of 0 means the record is active.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -145,6 +162,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         public Long deleteTag;
 
         /**
+         * <p>The discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -152,6 +171,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         public Float discount;
 
         /**
+         * <p>The time when the discount took effect.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-01 00:00:00</p>
          */
@@ -159,6 +180,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
+         * <p>The time when the discount expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-09-10 00:00:00</p>
          */
@@ -166,6 +189,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The time when the record was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -173,6 +198,8 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the record was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>
          */
@@ -180,12 +207,20 @@ public class ModelRouterQueryClientDiscountLogsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The record ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>The remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
+         */
         @NameInMap("remark")
         public String remark;
 

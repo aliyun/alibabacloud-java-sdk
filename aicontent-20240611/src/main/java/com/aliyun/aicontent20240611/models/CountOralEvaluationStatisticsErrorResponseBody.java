@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
     /**
+     * <p>An array containing the error statistics.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
     public java.util.List<OralEvaluationStatisticsErrorCountResponse> data;
 
     /**
+     * <p>The error code returned if the request fails. This parameter is returned only when <code>success</code> is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails. This parameter is returned only when <code>success</code> is <code>false</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class CountOralEvaluationStatisticsErrorResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p><code>true</code> if the request succeeded; <code>false</code> otherwise.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

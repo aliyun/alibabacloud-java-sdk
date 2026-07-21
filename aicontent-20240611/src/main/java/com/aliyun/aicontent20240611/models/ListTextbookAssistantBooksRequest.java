@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTextbookAssistantBooksRequest extends TeaModel {
     /**
+     * <p>The authorization token for the API call. You can obtain this token by calling the authorization API for the AI textbook assistant feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListTextbookAssistantBooksRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The book ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>231698</p>
      */
@@ -21,6 +24,8 @@ public class ListTextbookAssistantBooksRequest extends TeaModel {
     public String bookId;
 
     /**
+     * <p>The grade level. The value is a string from &quot;1&quot; to &quot;9&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class ListTextbookAssistantBooksRequest extends TeaModel {
     public String grade;
 
     /**
+     * <p>The maximum number of results to return per page. The value cannot exceed 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -35,16 +42,26 @@ public class ListTextbookAssistantBooksRequest extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("page")
     public String page;
 
+    /**
+     * <p>The textbook version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>人教版</p>
+     */
     @NameInMap("version")
     public String version;
 
     /**
+     * <p>The volume. Valid values: 0 (all-in-one volume), 1 (first volume), and 2 (second volume).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

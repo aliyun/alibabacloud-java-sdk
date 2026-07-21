@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
     /**
+     * <p>The data object that contains the result.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
     public ExecuteAITeacherGrammarCheckResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
 
     public static class ExecuteAITeacherGrammarCheckResponseBodyData extends TeaModel {
         /**
+         * <p>The error analysis.</p>
+         * 
          * <strong>example:</strong>
          * <p>主语 &quot;I&quot; 对应的动词应该是 &quot;am&quot; 而不是 &quot;is&quot;。</p>
          */
@@ -108,6 +122,8 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         public String analysis;
 
         /**
+         * <p>The corrected sentence.</p>
+         * 
          * <strong>example:</strong>
          * <p>I am good.</p>
          */
@@ -115,12 +131,20 @@ public class ExecuteAITeacherGrammarCheckResponseBody extends TeaModel {
         public String correction;
 
         /**
+         * <p>The result of the grammar check.</p>
+         * 
          * <strong>example:</strong>
          * <p>Has_Error</p>
          */
         @NameInMap("correctionStatus")
         public String correctionStatus;
 
+        /**
+         * <p>The error reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暂无返回</p>
+         */
         @NameInMap("errorReason")
         public String errorReason;
 

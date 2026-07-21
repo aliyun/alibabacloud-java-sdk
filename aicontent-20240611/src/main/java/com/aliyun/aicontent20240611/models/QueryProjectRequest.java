@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryProjectRequest extends TeaModel {
     /**
+     * <p>The ID of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

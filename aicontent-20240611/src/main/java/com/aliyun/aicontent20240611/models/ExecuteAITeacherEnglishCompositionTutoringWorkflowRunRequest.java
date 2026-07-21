@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extends TeaModel {
     /**
+     * <p>The essay outline.</p>
+     * 
      * <strong>example:</strong>
      * <p>Title: The Importance of Reading
      * I. Introduction
@@ -15,6 +17,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public String essayOutline;
 
     /**
+     * <p>The essay requirements.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +27,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public String essayRequirements;
 
     /**
+     * <p>The essay topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +37,9 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public String essayTopic;
 
     /**
+     * <p>The essay type. Valid values:</p>
+     * <p><code>outline</code>: an outline</p>
+     * <p>essay: essay</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +49,8 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public String essayType;
 
     /**
+     * <p>The required word count.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -49,6 +58,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public Long essayWordCount;
 
     /**
+     * <p>The student\&quot;s grade level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +68,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public Long grade;
 
     /**
+     * <p>The response mode. For example, set this value to <code>streaming</code> to receive server-sent events.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +78,7 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public String responseMode;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

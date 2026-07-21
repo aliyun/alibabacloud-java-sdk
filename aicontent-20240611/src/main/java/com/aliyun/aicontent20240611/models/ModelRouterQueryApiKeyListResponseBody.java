@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     /**
+     * <p>An array of API key objects.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public ModelRouterQueryApiKeyListResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,7 +41,7 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>maxResults</p>
+     * <p>The maximum number of results per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,6 +50,8 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -49,6 +59,8 @@ public class ModelRouterQueryApiKeyListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

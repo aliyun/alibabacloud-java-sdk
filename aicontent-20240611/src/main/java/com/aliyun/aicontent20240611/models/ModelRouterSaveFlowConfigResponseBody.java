@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public ModelRouterSaveFlowConfigResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -15,6 +20,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -22,6 +29,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -36,6 +47,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
 
     public static class ModelRouterSaveFlowConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-27T18:28:57.987356+08:00</p>
          */
@@ -104,6 +119,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The last modification time of the configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-04-27T18:28:57.987356+08:00</p>
          */
@@ -111,6 +128,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the flow control configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -118,6 +137,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>607</p>
          */
@@ -125,6 +146,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public Integer modelId;
 
         /**
+         * <p>The configured RPM.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -132,6 +155,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public Integer rpm;
 
         /**
+         * <p>Indicates whether smooth flow control is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -139,6 +164,8 @@ public class ModelRouterSaveFlowConfigResponseBody extends TeaModel {
         public Boolean smoothFlowEnabled;
 
         /**
+         * <p>The configured TPM.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     /**
+     * <p>Filters the results by API key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>Filters the results by client ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The end time for a custom time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-02T00:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The grouping field.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String groupBy;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Filters the results by model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Long modelId;
 
     /**
+     * <p>Specifies whether to return the total count of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +68,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
+     * <p>The pagination token from a previous response to retrieve the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort field.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -68,6 +86,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The sort direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -75,6 +95,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +104,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -89,6 +113,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time for a custom time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -96,6 +122,8 @@ public class ModelRouterQueryObservationLogsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The time range for the query. Valid values are <code>1h</code>, <code>6h</code>, <code>24h</code>, <code>7d</code>, and <code>30d</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>24h</p>
      */

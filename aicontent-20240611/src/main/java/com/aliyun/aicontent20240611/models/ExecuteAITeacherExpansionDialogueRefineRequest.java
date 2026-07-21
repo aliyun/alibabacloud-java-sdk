@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
     /**
+     * <p>The background of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,15 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
     public String background;
 
     /**
+     * <p>A collection of dialogue tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("dialogueTasks")
     public java.util.List<ExecuteAITeacherExpansionDialogueRefineRequestDialogueTasks> dialogueTasks;
 
     /**
+     * <p>The language code for the dialogue.</p>
+     * 
      * <strong>example:</strong>
      * <p>en-gb</p>
      */
@@ -27,18 +31,22 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
     public String languageCode;
 
     /**
+     * <p>A list of dialogue records.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("records")
     public java.util.List<ExecuteAITeacherExpansionDialogueRefineRequestRecords> records;
 
     /**
+     * <p>The role settings for the conversation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("roleInfo")
     public ExecuteAITeacherExpansionDialogueRefineRequestRoleInfo roleInfo;
 
     /**
+     * <p>The opening sentence of the dialogue.</p>
+     * 
      * <strong>example:</strong>
      * <p>Hello Lily, could you please come to the kitchen for a moment?</p>
      */
@@ -46,6 +54,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
     public String startSentence;
 
     /**
+     * <p>The main topic of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +64,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>The unique identifier for the user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -134,6 +144,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
 
     public static class ExecuteAITeacherExpansionDialogueRefineRequestDialogueTasks extends TeaModel {
         /**
+         * <p>The AI\&quot;s dialogue content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +154,8 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public String assistant;
 
         /**
+         * <p>The translated content of the AI\&quot;s dialogue.</p>
+         * 
          * <strong>example:</strong>
          * <p>为什么有些人认为遛狗是份好差事?</p>
          */
@@ -150,6 +163,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public String assistantTranslate;
 
         /**
+         * <p>The sequence number of the dialogue task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +173,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The user\&quot;s dialogue content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +223,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
 
     public static class ExecuteAITeacherExpansionDialogueRefineRequestRecords extends TeaModel {
         /**
+         * <p>The content of the dialogue turn.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +233,8 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>Manages the off-topic conversation flow. This flag is forcibly set to <code>true</code> to switch the dialogue task if the conversation has gone off-topic more than twice.</p>
+         * 
          * <strong>example:</strong>
          * <p>跑题：true, 不跑题：false</p>
          */
@@ -224,6 +242,8 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public Boolean isOffTopicControl;
 
         /**
+         * <p>Indicates whether the user\&quot;s response is on-topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>扣题：true, 不扣题：false</p>
          */
@@ -231,6 +251,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public Boolean isOnTopic;
 
         /**
+         * <p>The sequence number of the dialogue turn.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,10 +261,11 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The role of the speaker in the dialogue turn.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>老师：assistant；学生：user</p>
+         * <p>AI：assistant；用户：user</p>
          */
         @NameInMap("role")
         public String role;
@@ -297,6 +319,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
 
     public static class ExecuteAITeacherExpansionDialogueRefineRequestRoleInfo extends TeaModel {
         /**
+         * <p>The name or persona of the AI assistant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,6 +329,7 @@ public class ExecuteAITeacherExpansionDialogueRefineRequest extends TeaModel {
         public String assistant;
 
         /**
+         * <p>The name or persona of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

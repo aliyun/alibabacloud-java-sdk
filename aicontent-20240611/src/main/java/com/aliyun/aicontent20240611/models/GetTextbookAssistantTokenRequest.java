@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTextbookAssistantTokenRequest extends TeaModel {
     /**
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class GetTextbookAssistantTokenRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The device model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

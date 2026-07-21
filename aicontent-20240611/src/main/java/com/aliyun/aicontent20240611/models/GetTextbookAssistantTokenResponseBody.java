@@ -4,20 +4,33 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class GetTextbookAssistantTokenResponseBody extends TeaModel {
+    /**
+     * <p>The data object.</p>
+     */
     @NameInMap("data")
     public GetTextbookAssistantTokenResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>未知错误</p>
+     */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,7 +38,7 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0A5E9849-A2F0-551D-A7D8-1A8118557BAB</p>
@@ -34,6 +47,14 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The API call succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The API call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -95,6 +116,8 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
 
     public static class GetTextbookAssistantTokenResponseBodyData extends TeaModel {
         /**
+         * <p>The authorization token. Use this token to make API calls to the English textbook-style AI teacher service.</p>
+         * 
          * <strong>example:</strong>
          * <p>tc_197bf5bb81889cc79eb51ae9b8c0cea3</p>
          */
@@ -102,6 +125,8 @@ public class GetTextbookAssistantTokenResponseBody extends TeaModel {
         public String authToken;
 
         /**
+         * <p>The expiration time of the authorization token, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>5400</p>
          */

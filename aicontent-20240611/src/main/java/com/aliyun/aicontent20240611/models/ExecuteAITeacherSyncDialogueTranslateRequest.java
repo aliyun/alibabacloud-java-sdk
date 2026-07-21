@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
     /**
+     * <p>An array of dialogue task objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("dialogueTasks")
     public java.util.List<ExecuteAITeacherSyncDialogueTranslateRequestDialogueTasks> dialogueTasks;
 
+    /**
+     * <p>An array of dialogue record objects.</p>
+     */
     @NameInMap("records")
     public java.util.List<ExecuteAITeacherSyncDialogueTranslateRequestRecords> records;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +58,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
 
     public static class ExecuteAITeacherSyncDialogueTranslateRequestDialogueTasks extends TeaModel {
         /**
+         * <p>The content of the assistant\&quot;s message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +68,8 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
         public String assistant;
 
         /**
+         * <p>The translated content of the assistant\&quot;s message.</p>
+         * 
          * <strong>example:</strong>
          * <p>为什么有些人认为遛狗是份好差事?</p>
          */
@@ -69,6 +77,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
         public String assistantTranslate;
 
         /**
+         * <p>The sequence number of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -78,6 +87,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The content of the user\&quot;s message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,6 +137,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
 
     public static class ExecuteAITeacherSyncDialogueTranslateRequestRecords extends TeaModel {
         /**
+         * <p>The content of the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,6 +147,8 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>Indicates whether the message is off-topic. This parameter is used for flow control.</p>
+         * 
          * <strong>example:</strong>
          * <p>跑题：true, 不跑题：false</p>
          */
@@ -143,6 +156,8 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
         public Boolean isOffTopicControl;
 
         /**
+         * <p>Indicates whether the message is on-topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>扣题：true, 不扣题：false</p>
          */
@@ -150,6 +165,7 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
         public Boolean isOnTopic;
 
         /**
+         * <p>The sequence number of the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,10 +175,11 @@ public class ExecuteAITeacherSyncDialogueTranslateRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The message author\&quot;s role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>老师：assistant；学生：user</p>
+         * <p>AI：assistant；用户：user</p>
          */
         @NameInMap("role")
         public String role;

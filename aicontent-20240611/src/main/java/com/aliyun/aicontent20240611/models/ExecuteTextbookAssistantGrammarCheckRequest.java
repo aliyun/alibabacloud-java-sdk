@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantGrammarCheckRequest extends TeaModel {
     /**
+     * <p>The authorization token for the API call. Obtain this token by calling the &quot;Authorization token for the Textbook-style AI English Teacher&quot; API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExecuteTextbookAssistantGrammarCheckRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The ID of the current conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ExecuteTextbookAssistantGrammarCheckRequest extends TeaModel {
     public String chatId;
 
     /**
+     * <p>The use case. Valid values: <code>SYNC</code> for synchronous practice and <code>EXPAND</code> for expansion practice.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ExecuteTextbookAssistantGrammarCheckRequest extends TeaModel {
     public String scenario;
 
     /**
+     * <p>The message ID of the user\&quot;s reply.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

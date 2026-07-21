@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterBillingCostTabsRequest extends TeaModel {
     /**
+     * <p>Specifies the maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,7 +14,7 @@ public class ModelRouterBillingCostTabsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>

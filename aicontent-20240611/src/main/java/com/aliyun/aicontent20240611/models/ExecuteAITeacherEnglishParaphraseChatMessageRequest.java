@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaModel {
     /**
+     * <p>The unique ID for the chat session.</p>
+     * 
      * <strong>example:</strong>
      * <p>6788e0b475a4631ffc626722</p>
      */
@@ -12,6 +14,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String chatId;
 
     /**
+     * <p>The user\&quot;s chat message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String content;
 
     /**
+     * <p>The grade level.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -28,6 +33,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public Long grade;
 
     /**
+     * <p>A unique identifier for the question.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */
@@ -35,6 +42,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String questionId;
 
     /**
+     * <p>The user\&quot;s question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String questionInfo;
 
     /**
+     * <p>The response mode. Set this to <code>streaming</code> to receive the response as a stream of events.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String responseMode;
 
     /**
+     * <p>The user\&quot;s answer to the question.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +72,7 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String userAnswer;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

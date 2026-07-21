@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
     /**
+     * <p>The background of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,15 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
     public String background;
 
     /**
+     * <p>An array of objects that define the dialogue tasks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("dialogueTasks")
     public java.util.List<GetAITeacherExpansionDialogueSuggestionRequestDialogueTasks> dialogueTasks;
 
     /**
+     * <p>The language code, specified as a BCP 47 language tag. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>en-gb</p>
      */
@@ -27,18 +31,22 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
     public String languageCode;
 
     /**
+     * <p>An array of dialogue records.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("records")
     public java.util.List<GetAITeacherExpansionDialogueSuggestionRequestRecords> records;
 
     /**
+     * <p>Contains information about the roles in the conversation.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("roleInfo")
     public GetAITeacherExpansionDialogueSuggestionRequestRoleInfo roleInfo;
 
     /**
+     * <p>The opening sentence of the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Hello Lily, could you please come to the kitchen for a moment?</p>
      */
@@ -46,6 +54,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
     public String startSentence;
 
     /**
+     * <p>The main topic of the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +64,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>A unique identifier for the end user, used for monitoring and abuse detection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -134,6 +144,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
 
     public static class GetAITeacherExpansionDialogueSuggestionRequestDialogueTasks extends TeaModel {
         /**
+         * <p>The content of the assistant\&quot;s dialogue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +154,8 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public String assistant;
 
         /**
+         * <p>The translated content of the assistant\&quot;s dialogue.</p>
+         * 
          * <strong>example:</strong>
          * <p>为什么有些人认为遛狗是份好差事?</p>
          */
@@ -150,6 +163,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public String assistantTranslate;
 
         /**
+         * <p>The sequence number of the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +173,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The content of the user\&quot;s dialogue.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +223,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
 
     public static class GetAITeacherExpansionDialogueSuggestionRequestRecords extends TeaModel {
         /**
+         * <p>The content of the dialogue message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +233,8 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>Indicates if the user\&quot;s response has gone off-topic. This parameter controls the conversation flow based on dialogue history. The system sets this parameter to <code>true</code> to switch tasks if the user goes off-topic more than twice.</p>
+         * 
          * <strong>example:</strong>
          * <p>跑题：true, 不跑题：false</p>
          */
@@ -224,6 +242,8 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public Boolean isOffTopicControl;
 
         /**
+         * <p>Indicates if the response is on topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>扣题：true, 不扣题：false</p>
          */
@@ -231,6 +251,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public Boolean isOnTopic;
 
         /**
+         * <p>The sequence number of the message in the conversation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,10 +261,11 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public Integer order;
 
         /**
+         * <p>The role of the message author. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>老师：assistant；学生：user</p>
+         * <p>AI：assistant；用户：user</p>
          */
         @NameInMap("role")
         public String role;
@@ -297,6 +319,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
 
     public static class GetAITeacherExpansionDialogueSuggestionRequestRoleInfo extends TeaModel {
         /**
+         * <p>The name of the AI assistant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,6 +329,7 @@ public class GetAITeacherExpansionDialogueSuggestionRequest extends TeaModel {
         public String assistant;
 
         /**
+         * <p>The name of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

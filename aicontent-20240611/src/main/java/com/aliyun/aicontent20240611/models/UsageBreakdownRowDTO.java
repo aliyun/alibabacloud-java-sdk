@@ -19,16 +19,26 @@ public class UsageBreakdownRowDTO extends TeaModel {
     public String apiKeyName;
 
     /**
+     * <p>Department ID; 0 indicates no associated department</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("clientId")
     public Long clientId;
 
+    /**
+     * <p>Department name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>研发部</p>
+     */
     @NameInMap("clientName")
     public String clientName;
 
     /**
+     * <p>Array of usage metrics, containing only entries with non-zero values</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;key&quot;: &quot;total_calls&quot;, &quot;value&quot;: 100}]</p>
      */
@@ -36,6 +46,8 @@ public class UsageBreakdownRowDTO extends TeaModel {
     public java.util.List<MetricKVPairDTO> metrics;
 
     /**
+     * <p>Model identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -43,16 +55,26 @@ public class UsageBreakdownRowDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>Model ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("modelId")
     public Long modelId;
 
+    /**
+     * <p>Model name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通义千问-Plus</p>
+     */
     @NameInMap("modelName")
     public String modelName;
 
     /**
+     * <p>Statistics scope</p>
+     * 
      * <strong>example:</strong>
      * <p>llm</p>
      */
@@ -60,6 +82,8 @@ public class UsageBreakdownRowDTO extends TeaModel {
     public String modelType;
 
     /**
+     * <p>Statistics time point, Unix timestamp (seconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1700000000</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     public ModelRouterQueryConversationListResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request succeeded. A value of <code>true</code> indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -100,13 +112,24 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
     }
 
     public static class ModelRouterQueryConversationListResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of conversation objects.</p>
+         */
         @NameInMap("list")
         public java.util.List<ConversationDTO> list;
 
+        /**
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("maxResult")
         public String maxResult;
 
         /**
+         * <p>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */
@@ -114,6 +137,8 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -121,6 +146,8 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of conversations on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -128,8 +155,10 @@ public class ModelRouterQueryConversationListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of conversations.</p>
+         * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>100</p>
          */
         @NameInMap("total")
         public Integer total;

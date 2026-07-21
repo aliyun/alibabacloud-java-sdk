@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class Personalizedtxt2imgQueryModelTrainStatusRequest extends TeaModel {
     /**
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

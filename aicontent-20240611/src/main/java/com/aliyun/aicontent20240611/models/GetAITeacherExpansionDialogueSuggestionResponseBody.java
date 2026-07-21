@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaModel {
     /**
+     * <p>A container for the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
     public GetAITeacherExpansionDialogueSuggestionResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
 
     public static class GetAITeacherExpansionDialogueSuggestionResponseBodyData extends TeaModel {
         /**
+         * <p>The Chinese translation of the suggested response.</p>
+         * 
          * <strong>example:</strong>
          * <p>谢谢莉莉.你喜欢吃肉吗，莉莉？</p>
          */
@@ -108,6 +122,8 @@ public class GetAITeacherExpansionDialogueSuggestionResponseBody extends TeaMode
         public String chineseResult;
 
         /**
+         * <p>The suggested response in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Thanks, Lily. Do you like meat, Lily?</p>
          */

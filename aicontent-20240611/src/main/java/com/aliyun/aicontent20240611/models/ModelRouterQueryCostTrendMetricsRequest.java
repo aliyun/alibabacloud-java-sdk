@@ -12,6 +12,8 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>Filters the results by department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +21,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The end time of the query, specified as a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +31,8 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The granularity of the data. Valid values: <code>hourly</code> and <code>daily</code>. Default: <code>hourly</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>hourly</p>
      */
@@ -35,6 +40,8 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +49,8 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The model types to query, separated by commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>LLM,VL</p>
      */
@@ -49,7 +58,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public String modelTypes;
 
     /**
-     * <p>nextToken</p>
+     * <p>The pagination token from a previous response to retrieve the next page of results. If this parameter is omitted, the first page of results is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -58,6 +67,7 @@ public class ModelRouterQueryCostTrendMetricsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The start time of the query, specified as a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

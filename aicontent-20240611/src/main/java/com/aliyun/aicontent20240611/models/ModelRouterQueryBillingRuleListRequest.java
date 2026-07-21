@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryBillingRuleListRequest extends TeaModel {
     /**
+     * <p>Return only currently effective rules.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +23,8 @@ public class ModelRouterQueryBillingRuleListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Filter by model identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -28,6 +32,8 @@ public class ModelRouterQueryBillingRuleListRequest extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>Filter by model ID (required).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +41,8 @@ public class ModelRouterQueryBillingRuleListRequest extends TeaModel {
     public Integer modelId;
 
     /**
+     * <p>Filter by model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>chat</p>
      */
@@ -51,6 +59,8 @@ public class ModelRouterQueryBillingRuleListRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Page number. Default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -58,6 +68,8 @@ public class ModelRouterQueryBillingRuleListRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Page number (takes precedence).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -65,6 +77,8 @@ public class ModelRouterQueryBillingRuleListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>Number of items per page. Default is 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Personalizedtxt2imgQueryImageAssetRequest extends TeaModel {
     /**
+     * <p>The encoding format of the image. If this parameter is set to <code>base64</code>, the image is returned as a Base64-encoded string. If this parameter is omitted, the raw binary data of the image is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>base64</p>
      */
@@ -12,6 +14,7 @@ public class Personalizedtxt2imgQueryImageAssetRequest extends TeaModel {
     public String encodeFormat;
 
     /**
+     * <p>The ID of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class Personalizedtxt2imgQueryImageAssetRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The ID of the model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class Personalizedtxt2imgQueryImageAssetRequest extends TeaModel {
     public String modelId;
 
     /**
+     * <p>The ID of the prompt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

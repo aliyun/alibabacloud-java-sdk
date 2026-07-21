@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     /**
+     * <p>The data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     public Personalizedtxt2imgAddInferenceJobResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
 
     public static class Personalizedtxt2imgAddInferenceJobResponseBodyData extends TeaModel {
         /**
+         * <p>The inference job\&quot;s creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-25T12:00:00</p>
          */
@@ -108,6 +122,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The model inference job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3220</p>
          */
@@ -115,6 +131,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */
@@ -122,6 +140,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
+         * <p>The inference job progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -129,6 +149,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public Double jobTrainProgress;
 
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>modelId-xxxx-xxxx-xxxx</p>
          */
@@ -136,6 +158,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String modelId;
 
         /**
+         * <p>The prompt ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>promptId-xxxx-xxxx-xxxx</p>
          */
@@ -143,6 +167,8 @@ public class Personalizedtxt2imgAddInferenceJobResponseBody extends TeaModel {
         public String promptId;
 
         /**
+         * <p>A list of URLs for the generated images.</p>
+         * 
          * <strong>example:</strong>
          * <p>0000.png</p>
          */

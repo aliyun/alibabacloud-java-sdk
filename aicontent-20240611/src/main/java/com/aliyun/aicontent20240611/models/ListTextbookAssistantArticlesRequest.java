@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTextbookAssistantArticlesRequest extends TeaModel {
     /**
+     * <p>The authorization token. Obtain this token from the API to send Service Window messages.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListTextbookAssistantArticlesRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The directory ID. Obtain this ID by calling the API to retrieve textbook directories.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

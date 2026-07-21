@@ -19,6 +19,8 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public String apiKeyName;
 
     /**
+     * <p>Billing type; currently fixed as total_amount</p>
+     * 
      * <strong>example:</strong>
      * <p>total_amount</p>
      */
@@ -26,12 +28,20 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public String billingType;
 
     /**
+     * <p>Department ID; 0 indicates no associated department</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("clientId")
     public Long clientId;
 
+    /**
+     * <p>Department name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>研发部</p>
+     */
     @NameInMap("clientName")
     public String clientName;
 
@@ -43,6 +53,8 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public String dimValues;
 
     /**
+     * <p>Model identifier</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -50,16 +62,26 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>Model ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("modelId")
     public Long modelId;
 
+    /**
+     * <p>Model name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通义千问-Plus</p>
+     */
     @NameInMap("modelName")
     public String modelName;
 
     /**
+     * <p>Statistics category</p>
+     * 
      * <strong>example:</strong>
      * <p>llm</p>
      */
@@ -67,6 +89,8 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public String modelType;
 
     /**
+     * <p>Payable amount, rounded to 8 decimal places</p>
+     * 
      * <strong>example:</strong>
      * <p>0.00012800</p>
      */
@@ -74,6 +98,8 @@ public class BillingCostBreakdownRowDTO extends TeaModel {
     public Float payableAmount;
 
     /**
+     * <p>Statistics time point, Unix timestamp (seconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1700000000</p>
      */

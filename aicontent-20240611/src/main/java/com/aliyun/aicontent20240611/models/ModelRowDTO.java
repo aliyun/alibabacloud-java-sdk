@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRowDTO extends TeaModel {
     /**
+     * <p>Model identity</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-plus</p>
      */
@@ -12,16 +14,26 @@ public class ModelRowDTO extends TeaModel {
     public String modelCode;
 
     /**
+     * <p>Model ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("modelId")
     public Long modelId;
 
+    /**
+     * <p>Model name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通义千问-Plus</p>
+     */
     @NameInMap("modelName")
     public String modelName;
 
     /**
+     * <p>Metric value mapping, where the key is the metric name and the value is the numeric value</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;{\&quot;total_calls\&quot;:21,\&quot;video_duration\&quot;:210,\&quot;total_amount\&quot;:126,\&quot;image_count\&quot;:0}&quot;</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
+    /**
+     * <p>The data returned on a successful request.</p>
+     */
     @NameInMap("data")
     public ExecuteTextbookAssistantDifficultyResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -15,6 +20,8 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0D7D382F-9475-572E-BE83-DDFBF5C5EB24</p>
@@ -38,6 +47,8 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
 
     public static class ExecuteTextbookAssistantDifficultyResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The dialogue content after the difficulty adjustment.</p>
+         * 
          * <strong>example:</strong>
          * <p>Let\&quot;s look at the text again. Mike says, \&quot;I\&quot;m Mike Black.\&quot; Can you try saying it like Mike?</p>
          */
@@ -121,6 +134,9 @@ public class ExecuteTextbookAssistantDifficultyResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantDifficultyResponseBodyData extends TeaModel {
+        /**
+         * <p>A container for the result data.</p>
+         */
         @NameInMap("result")
         public ExecuteTextbookAssistantDifficultyResponseBodyDataResult result;
 

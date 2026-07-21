@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterCreateApiKeyRequest extends TeaModel {
     /**
+     * <p>The client ID. A value of <code>null</code> represents the default client.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

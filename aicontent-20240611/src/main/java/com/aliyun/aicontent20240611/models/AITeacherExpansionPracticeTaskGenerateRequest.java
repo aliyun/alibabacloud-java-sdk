@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AITeacherExpansionPracticeTaskGenerateRequest extends TeaModel {
     /**
+     * <p>The grade.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,13 +14,21 @@ public class AITeacherExpansionPracticeTaskGenerateRequest extends TeaModel {
     @NameInMap("grade")
     public String grade;
 
+    /**
+     * <p>A list of key sentences from the <code>textContent</code> to focus on during task generation.</p>
+     */
     @NameInMap("keySentences")
     public java.util.List<String> keySentences;
 
+    /**
+     * <p>A list of keywords from the <code>textContent</code> to focus on during task generation.</p>
+     */
     @NameInMap("keyWords")
     public java.util.List<String> keyWords;
 
     /**
+     * <p>The learning object to guide task generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Understanding unique professions such as dog walkers, hotel test sleepers, and food tasters, including their job responsibilities and the benefits or challenges associated with each role.</p>
      */
@@ -27,6 +36,7 @@ public class AITeacherExpansionPracticeTaskGenerateRequest extends TeaModel {
     public String learningObject;
 
     /**
+     * <p>The reference article used to generate questions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +45,17 @@ public class AITeacherExpansionPracticeTaskGenerateRequest extends TeaModel {
     @NameInMap("textContent")
     public String textContent;
 
+    /**
+     * <p>The name of the textbook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>英语（基础模块）修订版</p>
+     */
     @NameInMap("textbook")
     public String textbook;
 
     /**
+     * <p>The conversation topic.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +65,7 @@ public class AITeacherExpansionPracticeTaskGenerateRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

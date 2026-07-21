@@ -4,22 +4,42 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extends TeaModel {
+    /**
+     * <p>The essay outline.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>题目： 春天的色彩
+     * 开头： 开门见山，点明主题。
+     * 中间： 分段描写春天的不同色彩。
+     * 结尾： 总结全文，抒发情感。</p>
+     */
     @NameInMap("essayOutline")
     public String essayOutline;
 
     /**
+     * <p>The essay requirements.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>生动形象，字数不得少于100字</p>
      */
     @NameInMap("essayRequirements")
     public String essayRequirements;
 
     /**
+     * <p>The essay topic.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>春天的景色</p>
      */
     @NameInMap("essayTopic")
     public String essayTopic;
 
     /**
+     * <p>The essay type.</p>
+     * <p>outline: An outline.</p>
+     * <p>essay: A full essay.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +49,8 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     public String essayType;
 
     /**
+     * <p>The target word count.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -36,6 +58,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     public Long essayWordCount;
 
     /**
+     * <p>The student\&quot;s grade level.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +68,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     public Long grade;
 
     /**
+     * <p>The response mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +78,7 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     public String responseMode;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

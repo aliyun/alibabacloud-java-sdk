@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectResponseBody extends TeaModel {
     /**
+     * <p>The returned data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public CreateProjectResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class CreateProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class CreateProjectResponseBody extends TeaModel {
 
     public static class CreateProjectResponseBodyDataProjectAppsApplicationAccessIds extends TeaModel {
         /**
+         * <p>The app key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890</p>
          */
@@ -108,6 +122,8 @@ public class CreateProjectResponseBody extends TeaModel {
         public String applicationAccessId;
 
         /**
+         * <p>The app secret. This parameter is returned only for requests sent from the console.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyAppSecret</p>
          */
@@ -138,10 +154,15 @@ public class CreateProjectResponseBody extends TeaModel {
     }
 
     public static class CreateProjectResponseBodyDataProjectApps extends TeaModel {
+        /**
+         * <p>The access credentials for the application.</p>
+         */
         @NameInMap("ApplicationAccessIds")
         public java.util.List<CreateProjectResponseBodyDataProjectAppsApplicationAccessIds> applicationAccessIds;
 
         /**
+         * <p>The internal ID of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>4867</p>
          */
@@ -149,6 +170,8 @@ public class CreateProjectResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4910</p>
          */
@@ -188,6 +211,8 @@ public class CreateProjectResponseBody extends TeaModel {
 
     public static class CreateProjectResponseBodyDataProjectSDK extends TeaModel {
         /**
+         * <p>The SDK\&quot;s creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-15T09:17:39Z</p>
          */
@@ -195,16 +220,26 @@ public class CreateProjectResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The demo\&quot;s URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://demo.com/demo">http://demo.com/demo</a></p>
          */
         @NameInMap("DemoUrl")
         public String demoUrl;
 
+        /**
+         * <p>The deployment mode. Valid values: client or server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>客户端</p>
+         */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
+         * <p>The development language.</p>
+         * 
          * <strong>example:</strong>
          * <p>C++</p>
          */
@@ -212,6 +247,8 @@ public class CreateProjectResponseBody extends TeaModel {
         public String developLanguage;
 
         /**
+         * <p>The SDK\&quot;s documentation URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://demo.com/doc">http://demo.com/doc</a></p>
          */
@@ -219,6 +256,8 @@ public class CreateProjectResponseBody extends TeaModel {
         public String docUrl;
 
         /**
+         * <p>The name of the SDK.</p>
+         * 
          * <strong>example:</strong>
          * <p>C SDK</p>
          */
@@ -226,6 +265,8 @@ public class CreateProjectResponseBody extends TeaModel {
         public String sdkName;
 
         /**
+         * <p>The SDK\&quot;s download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://demo.com/sdk.zip">http://demo.com/sdk.zip</a></p>
          */
@@ -233,6 +274,8 @@ public class CreateProjectResponseBody extends TeaModel {
         public String sdkUrl;
 
         /**
+         * <p>The SDK version.</p>
+         * 
          * <strong>example:</strong>
          * <p>4.12.8</p>
          */
@@ -312,16 +355,23 @@ public class CreateProjectResponseBody extends TeaModel {
 
     public static class CreateProjectResponseBodyData extends TeaModel {
         /**
+         * <p>The project\&quot;s creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-15T09:17:39Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The applications in the project.</p>
+         */
         @NameInMap("ProjectApps")
         public java.util.List<CreateProjectResponseBodyDataProjectApps> projectApps;
 
         /**
+         * <p>The project ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>124187</p>
          */
@@ -329,16 +379,23 @@ public class CreateProjectResponseBody extends TeaModel {
         public String projectId;
 
         /**
+         * <p>The project name.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyProject</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
+        /**
+         * <p>The SDKs for the project.</p>
+         */
         @NameInMap("ProjectSDK")
         public java.util.List<CreateProjectResponseBodyDataProjectSDK> projectSDK;
 
         /**
+         * <p>The project type.</p>
+         * 
          * <strong>example:</strong>
          * <p>WebApplication</p>
          */

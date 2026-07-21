@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
+    /**
+     * <p>The data returned by the API.</p>
+     */
     @NameInMap("data")
     public ExecuteTextbookAssistantTranslateResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -22,6 +29,8 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9EB79C1E-36C2-5777-BED6-C23A98DF0637</p>
@@ -38,6 +47,8 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,6 +109,12 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantTranslateResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The translated text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据文章，迈克·布莱克是如何介绍自己的？</p>
+         */
         @NameInMap("result")
         public String result;
 
@@ -117,6 +134,9 @@ public class ExecuteTextbookAssistantTranslateResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantTranslateResponseBodyData extends TeaModel {
+        /**
+         * <p>The result object.</p>
+         */
         @NameInMap("result")
         public ExecuteTextbookAssistantTranslateResponseBodyDataResult result;
 

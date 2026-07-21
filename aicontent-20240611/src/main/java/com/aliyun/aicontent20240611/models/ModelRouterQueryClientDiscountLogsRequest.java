@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryClientDiscountLogsRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,7 +14,7 @@ public class ModelRouterQueryClientDiscountLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to retrieve the next page of results. Omit this parameter to get the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>

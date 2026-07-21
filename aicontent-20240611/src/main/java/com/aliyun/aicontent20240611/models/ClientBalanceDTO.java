@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ClientBalanceDTO extends TeaModel {
     /**
+     * <p>The current balance.</p>
+     * 
      * <strong>example:</strong>
      * <p>100.00</p>
      */
@@ -12,6 +14,8 @@ public class ClientBalanceDTO extends TeaModel {
     public Double balance;
 
     /**
+     * <p>The balance type. Valid values are <code>amount</code> or <code>tokens</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>amount</p>
      */
@@ -19,6 +23,8 @@ public class ClientBalanceDTO extends TeaModel {
     public String balanceType;
 
     /**
+     * <p>The ID of the client.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ClientBalanceDTO extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>Indicates whether balance-based rate limiting is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class ClientBalanceDTO extends TeaModel {
     public Boolean enableBalance;
 
     /**
+     * <p>The creation timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -40,6 +50,8 @@ public class ClientBalanceDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The last modification timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -47,7 +59,7 @@ public class ClientBalanceDTO extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>ID</p>
+     * <p>The unique ID of the balance record.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

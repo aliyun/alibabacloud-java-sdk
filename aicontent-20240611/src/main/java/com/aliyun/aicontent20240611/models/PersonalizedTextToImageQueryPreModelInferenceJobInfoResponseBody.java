@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody extends TeaModel {
     /**
+     * <p>The response data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
     public PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
 
     public static class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time of the inference job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-25T12:00:00</p>
          */
@@ -108,6 +122,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String createTime;
 
         /**
+         * <p>The inference job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3220</p>
          */
@@ -115,6 +131,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String id;
 
         /**
+         * <p>The job status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */
@@ -122,6 +140,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String jobStatus;
 
         /**
+         * <p>The job progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -129,6 +149,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public Double jobTrainProgress;
 
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>modelId-xxxx-xxxx-xxxx</p>
          */
@@ -136,7 +158,7 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String modelId;
 
         /**
-         * <p>promptId</p>
+         * <p>The ID of the prompt used for the job.</p>
          * 
          * <strong>example:</strong>
          * <p>promptId-xxxx-xxxx-xxxx</p>
@@ -145,6 +167,8 @@ public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody ex
         public String promptId;
 
         /**
+         * <p>A list of resource IDs for the generated images.</p>
+         * 
          * <strong>example:</strong>
          * <p>0000.png</p>
          */

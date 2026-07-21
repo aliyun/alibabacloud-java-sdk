@@ -14,16 +14,23 @@ public class OralEvaluationStatisticsErrorCountRequest extends TeaModel {
     public String applicationAccessId;
 
     /**
+     * <p>End time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-08-22 06:24:53</p>
      */
     @NameInMap("endTime")
     public String endTime;
 
+    /**
+     * <p>List of error codes</p>
+     */
     @NameInMap("errorCode")
     public java.util.List<String> errorCode;
 
     /**
+     * <p>Query granularity (Hour, Day, Month)</p>
+     * 
      * <strong>example:</strong>
      * <p>DAY</p>
      */
@@ -31,6 +38,8 @@ public class OralEvaluationStatisticsErrorCountRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>Project ID</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -38,6 +47,8 @@ public class OralEvaluationStatisticsErrorCountRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>Start time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-09-27 09:32:00</p>
      */

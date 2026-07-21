@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantTranslateRequest extends TeaModel {
     /**
+     * <p>The ID of the assistant\&quot;s message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExecuteTextbookAssistantTranslateRequest extends TeaModel {
     public String assistant;
 
     /**
+     * <p>The authorization token. Obtain this token by calling the authorization operation for the AI Textbook Assistant feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ExecuteTextbookAssistantTranslateRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The conversation ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ExecuteTextbookAssistantTranslateRequest extends TeaModel {
     public String chatId;
 
     /**
+     * <p>The practice scenario. Valid values: SYNC for synchronous practice and EXPAND for extended practice.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterGetClientBalanceLogsRequest extends TeaModel {
     /**
+     * <p>Filters the logs by change type. Valid values: auto_deduct, deduct, and recharge.</p>
+     * 
      * <strong>example:</strong>
      * <p>recharge</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterGetClientBalanceLogsRequest extends TeaModel {
     public String changeType;
 
     /**
+     * <p>The maximum number of entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterGetClientBalanceLogsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token for the next page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>None</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterGetClientBalanceLogsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterGetClientBalanceLogsRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

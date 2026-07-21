@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryClientListRequest extends TeaModel {
     /**
+     * <p>The field to group the results by.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public String groupBy;
 
     /**
+     * <p>The search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Specifies whether to return the total count of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
+     * <p>The token for the next page of results. Set this to the nextToken value from the previous response. Omit for the first page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The field to sort the results by.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -47,6 +59,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The sort direction.</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -54,6 +68,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>The page number of the results to return. The first page is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of entries to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -68,6 +86,8 @@ public class ModelRouterQueryClientListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters the results by status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

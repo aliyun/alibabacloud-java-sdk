@@ -8,7 +8,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("public", "aicontent.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "aicontent.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "aicontent.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "aicontent.cn-beijing.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("aicontent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +34,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练问答对生成</p>
+     * <p>Generate Q&amp;A pairs to expand data.</p>
      * 
      * @param request AITeacherExpansionPracticeTaskGenerateRequest
      * @param headers map
@@ -90,7 +96,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练问答对生成</p>
+     * <p>Generate Q&amp;A pairs to expand data.</p>
      * 
      * @param request AITeacherExpansionPracticeTaskGenerateRequest
      * @return AITeacherExpansionPracticeTaskGenerateResponse
@@ -103,7 +109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步基础练问答对生成</p>
+     * <p>Synchronous basic practice is primarily for dialogue tasks with a ground truth. Although this mode allows some deviation from the ground truth, the AI strictly requires users to follow it.</p>
      * 
      * @param request AITeacherSyncPracticeTaskGenerateRequest
      * @param headers map
@@ -165,7 +171,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步基础练问答对生成</p>
+     * <p>Synchronous basic practice is primarily for dialogue tasks with a ground truth. Although this mode allows some deviation from the ground truth, the AI strictly requires users to follow it.</p>
      * 
      * @param request AITeacherSyncPracticeTaskGenerateRequest
      * @return AITeacherSyncPracticeTaskGenerateResponse
@@ -178,7 +184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/列出阿里云控制台上可使用的服务列表</p>
+     * <p>Lists the services available on the Alibaba Cloud Console.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -204,7 +210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/列出阿里云控制台上可使用的服务列表</p>
+     * <p>Lists the services available on the Alibaba Cloud Console.</p>
      * @return AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponse
      */
     public AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponse aliyunConsoleOpenApiQueryAliyunConsoleServcieList() throws Exception {
@@ -215,7 +221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/列出阿里云控制台上可使用的服务列表</p>
+     * <p>Lists the services available in the Alibaba Cloud console.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -241,7 +247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/列出阿里云控制台上可使用的服务列表</p>
+     * <p>Lists the services available in the Alibaba Cloud console.</p>
      * @return AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse
      */
     public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponse aliyunConsoleOpenApiQueryAliyunConsoleServiceList() throws Exception {
@@ -252,7 +258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/列出购买过的资源列表</p>
+     * <p>Alibaba Cloud Management Console / List purchased resources</p>
      * 
      * @param request AliyunConsoleOpenApiQueryPaidResourceRequest
      * @param headers map
@@ -318,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/列出购买过的资源列表</p>
+     * <p>Alibaba Cloud Management Console / List purchased resources</p>
      * 
      * @param request AliyunConsoleOpenApiQueryPaidResourceRequest
      * @return AliyunConsoleOpenApiQueryPaidResourceResponse
@@ -331,7 +337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能批改/口语评测/统计/调用量</p>
+     * <p>Intelligent Correction / Oral Evaluation / Statistics / call volume</p>
      * 
      * @param request CountOralEvaluationStatisticsCallsRequest
      * @param headers map
@@ -360,7 +366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能批改/口语评测/统计/调用量</p>
+     * <p>Intelligent Correction / Oral Evaluation / Statistics / call volume</p>
      * 
      * @param request CountOralEvaluationStatisticsCallsRequest
      * @return CountOralEvaluationStatisticsCallsResponse
@@ -373,7 +379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能批改/口语评测/统计/并发数</p>
+     * <p>Intelligent grading / oral evaluation / statistics / concurrency</p>
      * 
      * @param request CountOralEvaluationStatisticsConcurrentRequest
      * @param headers map
@@ -402,7 +408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能批改/口语评测/统计/并发数</p>
+     * <p>Intelligent grading / oral evaluation / statistics / concurrency</p>
      * 
      * @param request CountOralEvaluationStatisticsConcurrentRequest
      * @return CountOralEvaluationStatisticsConcurrentResponse
@@ -415,7 +421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能批改/口语评测/统计/调用错误</p>
+     * <p>Retrieves statistics about API call errors for the oral evaluation service.</p>
      * 
      * @param request CountOralEvaluationStatisticsErrorRequest
      * @param headers map
@@ -444,7 +450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>智能批改/口语评测/统计/调用错误</p>
+     * <p>Retrieves statistics about API call errors for the oral evaluation service.</p>
      * 
      * @param request CountOralEvaluationStatisticsErrorRequest
      * @return CountOralEvaluationStatisticsErrorResponse
@@ -457,7 +463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/授权凭证创建</p>
+     * <p>Creates an access warrant.</p>
      * 
      * @param request CreateAccessWarrantRequest
      * @param headers map
@@ -511,7 +517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/授权凭证创建</p>
+     * <p>Creates an access warrant.</p>
      * 
      * @param request CreateAccessWarrantRequest
      * @return CreateAccessWarrantResponse
@@ -524,7 +530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/创建项目</p>
+     * <p>Alibaba Cloud console &gt; Create Project</p>
      * 
      * @param request CreateProjectRequest
      * @param headers map
@@ -562,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/创建项目</p>
+     * <p>Alibaba Cloud console &gt; Create Project</p>
      * 
      * @param request CreateProjectRequest
      * @return CreateProjectResponse
@@ -575,7 +581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中文作文辅导</p>
+     * <p>Executes a workflow for Chinese composition tutoring.</p>
      * 
      * @param request ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest
      * @param headers map
@@ -637,7 +643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>中文作文辅导</p>
+     * <p>Executes a workflow for Chinese composition tutoring.</p>
      * 
      * @param request ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest
      * @return ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponse
@@ -650,7 +656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>英语作文辅导</p>
+     * <p>English Composition Tutoring</p>
      * 
      * @param request ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest
      * @param headers map
@@ -712,7 +718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>英语作文辅导</p>
+     * <p>English Composition Tutoring</p>
      * 
      * @param request ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest
      * @return ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponse
@@ -725,7 +731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>英文释义</p>
+     * <p>Answers English-related questions.</p>
      * 
      * @param request ExecuteAITeacherEnglishParaphraseChatMessageRequest
      * @param headers map
@@ -787,7 +793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>英文释义</p>
+     * <p>Answers English-related questions.</p>
      * 
      * @param request ExecuteAITeacherEnglishParaphraseChatMessageRequest
      * @return ExecuteAITeacherEnglishParaphraseChatMessageResponse
@@ -800,7 +806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行拓展练对话</p>
+     * <p>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRequest
      * @param headers map
@@ -862,7 +868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行拓展练对话</p>
+     * <p>Expansion dialogues are for open-ended conversations. In these conversations, the AI poses open-ended questions, but the user must stay on topic. If a user\&quot;s response is off-topic, the AI steers the conversation back on topic. If the user gives two consecutive off-topic responses, the AI moves on to the next topic.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRequest
      * @return ExecuteAITeacherExpansionDialogueResponse
@@ -875,7 +881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练根据上下文进行润色</p>
+     * <p>Uses context to polish the expanded text.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRefineRequest
      * @param headers map
@@ -937,7 +943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练根据上下文进行润色</p>
+     * <p>Uses context to polish the expanded text.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueRefineRequest
      * @return ExecuteAITeacherExpansionDialogueRefineResponse
@@ -950,7 +956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练语境翻译</p>
+     * <p>Further Contextual Translation Practice.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueTranslateRequest
      * @param headers map
@@ -1008,7 +1014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练语境翻译</p>
+     * <p>Further Contextual Translation Practice.</p>
      * 
      * @param request ExecuteAITeacherExpansionDialogueTranslateRequest
      * @return ExecuteAITeacherExpansionDialogueTranslateResponse
@@ -1021,7 +1027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语法检测</p>
+     * <p>Performs a grammar check.</p>
      * 
      * @param request ExecuteAITeacherGrammarCheckRequest
      * @param headers map
@@ -1059,7 +1065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语法检测</p>
+     * <p>Performs a grammar check.</p>
      * 
      * @param request ExecuteAITeacherGrammarCheckRequest
      * @return ExecuteAITeacherGrammarCheckResponse
@@ -1072,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行同步练对话</p>
+     * <p>Practice synchronous dialogue.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueRequest
      * @param headers map
@@ -1118,7 +1124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行同步练对话</p>
+     * <p>Practice synchronous dialogue.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueRequest
      * @return ExecuteAITeacherSyncDialogueResponse
@@ -1131,7 +1137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步练语境翻译</p>
+     * <p>You can practice contextual translation in real-time.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueTranslateRequest
      * @param headers map
@@ -1173,7 +1179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步练语境翻译</p>
+     * <p>You can practice contextual translation in real-time.</p>
      * 
      * @param request ExecuteAITeacherSyncDialogueTranslateRequest
      * @return ExecuteAITeacherSyncDialogueTranslateResponse
@@ -1186,7 +1192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行AI对话</p>
+     * <p>Executes a dialogue turn with the Textbook Assistant.</p>
      * 
      * @param request ExecuteTextbookAssistantDialogueRequest
      * @param headers map
@@ -1232,7 +1238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行AI对话</p>
+     * <p>Executes a dialogue turn with the Textbook Assistant.</p>
      * 
      * @param request ExecuteTextbookAssistantDialogueRequest
      * @return ExecuteTextbookAssistantDialogueResponse
@@ -1245,7 +1251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调整难度</p>
+     * <p>Adjusts the difficulty of the textbook assistant\&quot;s dialogue.</p>
      * 
      * @param request ExecuteTextbookAssistantDifficultyRequest
      * @param headers map
@@ -1295,7 +1301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>调整难度</p>
+     * <p>Adjusts the difficulty of the textbook assistant\&quot;s dialogue.</p>
      * 
      * @param request ExecuteTextbookAssistantDifficultyRequest
      * @return ExecuteTextbookAssistantDifficultyResponse
@@ -1308,7 +1314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语法检测</p>
+     * <p>Performs a grammar check.</p>
      * 
      * @param request ExecuteTextbookAssistantGrammarCheckRequest
      * @param headers map
@@ -1354,7 +1360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>语法检测</p>
+     * <p>Performs a grammar check.</p>
      * 
      * @param request ExecuteTextbookAssistantGrammarCheckRequest
      * @return ExecuteTextbookAssistantGrammarCheckResponse
@@ -1367,7 +1373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>句子润色</p>
+     * <p>Refines a sentence based on the conversational context.</p>
      * 
      * @param request ExecuteTextbookAssistantRefineByContextRequest
      * @param headers map
@@ -1413,7 +1419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>句子润色</p>
+     * <p>Refines a sentence based on the conversational context.</p>
      * 
      * @param request ExecuteTextbookAssistantRefineByContextRequest
      * @return ExecuteTextbookAssistantRefineByContextResponse
@@ -1426,7 +1432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话重试</p>
+     * <p>This operation retries a conversation.</p>
      * 
      * @param request ExecuteTextbookAssistantRetryConversationRequest
      * @param headers map
@@ -1472,7 +1478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话重试</p>
+     * <p>This operation retries a conversation.</p>
      * 
      * @param request ExecuteTextbookAssistantRetryConversationRequest
      * @return ExecuteTextbookAssistantRetryConversationResponse
@@ -1485,7 +1491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行对话-流式输出</p>
+     * <p>Starts a conversation and returns a streaming output.</p>
      * 
      * @param request ExecuteTextbookAssistantSseDialogueRequest
      * @param headers map
@@ -1531,7 +1537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>进行对话-流式输出</p>
+     * <p>Starts a conversation and returns a streaming output.</p>
      * 
      * @param request ExecuteTextbookAssistantSseDialogueRequest
      * @return ExecuteTextbookAssistantSseDialogueResponse
@@ -1544,7 +1550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启自由对话</p>
+     * <p>Starts a conversation with the AI teacher. The teacher then sends the initial message.</p>
      * 
      * @param request ExecuteTextbookAssistantStartConversationRequest
      * @param headers map
@@ -1586,7 +1592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启自由对话</p>
+     * <p>Starts a conversation with the AI teacher. The teacher then sends the initial message.</p>
      * 
      * @param request ExecuteTextbookAssistantStartConversationRequest
      * @return ExecuteTextbookAssistantStartConversationResponse
@@ -1599,7 +1605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取鉴权参数</p>
+     * <p>Generates a suggested response from the textbook-based AI teacher.</p>
      * 
      * @param request ExecuteTextbookAssistantSuggestionRequest
      * @param headers map
@@ -1645,7 +1651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取鉴权参数</p>
+     * <p>Generates a suggested response from the textbook-based AI teacher.</p>
      * 
      * @param request ExecuteTextbookAssistantSuggestionRequest
      * @return ExecuteTextbookAssistantSuggestionResponse
@@ -1658,7 +1664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>翻译消息内容</p>
+     * <p>Translates the content of a message.</p>
      * 
      * @param request ExecuteTextbookAssistantTranslateRequest
      * @param headers map
@@ -1704,7 +1710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>翻译消息内容</p>
+     * <p>Translates the content of a message.</p>
      * 
      * @param request ExecuteTextbookAssistantTranslateRequest
      * @return ExecuteTextbookAssistantTranslateResponse
@@ -1717,7 +1723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练小助手</p>
+     * <p>Supplemental Practice Assistant</p>
      * 
      * @param request GetAITeacherExpansionDialogueSuggestionRequest
      * @param headers map
@@ -1779,7 +1785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>拓展练小助手</p>
+     * <p>Supplemental Practice Assistant</p>
      * 
      * @param request GetAITeacherExpansionDialogueSuggestionRequest
      * @return GetAITeacherExpansionDialogueSuggestionResponse
@@ -1792,7 +1798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步练小助手</p>
+     * <p>Sync Practice Assistant</p>
      * 
      * @param request GetAITeacherSyncDialogueSuggestionRequest
      * @param headers map
@@ -1838,7 +1844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步练小助手</p>
+     * <p>Sync Practice Assistant</p>
      * 
      * @param request GetAITeacherSyncDialogueSuggestionRequest
      * @return GetAITeacherSyncDialogueSuggestionResponse
@@ -1851,7 +1857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取请求鉴权参数</p>
+     * <p>Obtains an authorization token to make API calls.</p>
      * 
      * @param request GetTextbookAssistantTokenRequest
      * @param headers map
@@ -1889,7 +1895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取请求鉴权参数</p>
+     * <p>Obtains an authorization token to make API calls.</p>
      * 
      * @param request GetTextbookAssistantTokenRequest
      * @return GetTextbookAssistantTokenResponse
@@ -1902,7 +1908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取文章详情</p>
+     * <p>Batch get article details</p>
      * 
      * @param request ListTextbookAssistantArticleDetailsRequest
      * @param headers map
@@ -1940,7 +1946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量获取文章详情</p>
+     * <p>Batch get article details</p>
      * 
      * @param request ListTextbookAssistantArticleDetailsRequest
      * @return ListTextbookAssistantArticleDetailsResponse
@@ -1953,7 +1959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文章列表</p>
+     * <p>Returns a list of articles.</p>
      * 
      * @param request ListTextbookAssistantArticlesRequest
      * @param headers map
@@ -1991,7 +1997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文章列表</p>
+     * <p>Returns a list of articles.</p>
      * 
      * @param request ListTextbookAssistantArticlesRequest
      * @return ListTextbookAssistantArticlesResponse
@@ -2004,7 +2010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取书本下的目录信息</p>
+     * <p>Gets the table of contents of a book.</p>
      * 
      * @param request ListTextbookAssistantBookDirectoriesRequest
      * @param headers map
@@ -2046,7 +2052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取书本下的目录信息</p>
+     * <p>Gets the table of contents of a book.</p>
      * 
      * @param request ListTextbookAssistantBookDirectoriesRequest
      * @return ListTextbookAssistantBookDirectoriesResponse
@@ -2059,7 +2065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取包含年级下的书本列表</p>
+     * <p>Retrieves a list of books for a specified grade.</p>
      * 
      * @param request ListTextbookAssistantBooksRequest
      * @param headers map
@@ -2117,7 +2123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取包含年级下的书本列表</p>
+     * <p>Retrieves a list of books for a specified grade.</p>
      * 
      * @param request ListTextbookAssistantBooksRequest
      * @return ListTextbookAssistantBooksResponse
@@ -2130,7 +2136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取有资源的年级信息</p>
+     * <p>Retrieves the available grades and volumes for the Textbook Assistant.</p>
      * 
      * @param request ListTextbookAssistantGradeVolumesRequest
      * @param headers map
@@ -2168,7 +2174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取有资源的年级信息</p>
+     * <p>Retrieves the available grades and volumes for the Textbook Assistant.</p>
      * 
      * @param request ListTextbookAssistantGradeVolumesRequest
      * @return ListTextbookAssistantGradeVolumesResponse
@@ -2181,7 +2187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文章内容详情</p>
+     * <p>Get Article Details</p>
      * 
      * @param request ListTextbookAssistantSceneDetailsRequest
      * @param headers map
@@ -2219,7 +2225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文章内容详情</p>
+     * <p>Get Article Details</p>
      * 
      * @param request ListTextbookAssistantSceneDetailsRequest
      * @return ListTextbookAssistantSceneDetailsResponse
@@ -2232,7 +2238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取成本监控Tab配置</p>
+     * <p>Retrieves the tab configuration for usage monitoring.</p>
      * 
      * @param request ModelRouterBillingCostTabsRequest
      * @param headers map
@@ -2270,7 +2276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取成本监控Tab配置</p>
+     * <p>Retrieves the tab configuration for usage monitoring.</p>
      * 
      * @param request ModelRouterBillingCostTabsRequest
      * @return ModelRouterBillingCostTabsResponse
@@ -2283,7 +2289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>聊天/聊天接口</p>
+     * <p>Generates a chat completion.</p>
      * 
      * @param request ModelRouterChatCompletionsRequest
      * @param headers map
@@ -2312,7 +2318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>聊天/聊天接口</p>
+     * <p>Generates a chat completion.</p>
      * 
      * @param request ModelRouterChatCompletionsRequest
      * @return ModelRouterChatCompletionsResponse
@@ -2325,7 +2331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/启用部门余额限流</p>
+     * <p>Configures balance throttling for a department.</p>
      * 
      * @param request ModelRouterConfigureClientBalanceRequest
      * @param headers map
@@ -2367,7 +2373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/启用部门余额限流</p>
+     * <p>Configures balance throttling for a department.</p>
      * 
      * @param request ModelRouterConfigureClientBalanceRequest
      * @return ModelRouterConfigureClientBalanceResponse
@@ -2380,7 +2386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/复制API密钥</p>
+     * <p>Copies an API key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2406,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/复制API密钥</p>
+     * <p>Copies an API key.</p>
      * @return ModelRouterCopyApiKeyResponse
      */
     public ModelRouterCopyApiKeyResponse modelRouterCopyApiKey(String id) throws Exception {
@@ -2417,7 +2423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/创建API密钥</p>
+     * <p>API key management / Create an API key</p>
      * 
      * @param request ModelRouterCreateApiKeyRequest
      * @param headers map
@@ -2451,7 +2457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/创建API密钥</p>
+     * <p>API key management / Create an API key</p>
      * 
      * @param request ModelRouterCreateApiKeyRequest
      * @return ModelRouterCreateApiKeyResponse
@@ -2463,8 +2469,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is deprecated. Do not use it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>客户管理/创建余额交易</p>
+     * <p>Creates a balance transaction for customer management.</p>
      * 
      * @param request ModelRouterCreateBalanceTransactionRequest
      * @param headers map
@@ -2476,6 +2485,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             body.put("amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotencyKey)) {
+            body.put("idempotencyKey", request.idempotencyKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
@@ -2505,8 +2522,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is deprecated. Do not use it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>客户管理/创建余额交易</p>
+     * <p>Creates a balance transaction for customer management.</p>
      * 
      * @param request ModelRouterCreateBalanceTransactionRequest
      * @return ModelRouterCreateBalanceTransactionResponse
@@ -2519,7 +2539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/创建计费规则</p>
+     * <p>Billing Management/Create Billing Rule</p>
      * 
      * @param request ModelRouterCreateBillingRuleRequest
      * @param headers map
@@ -2573,7 +2593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/创建计费规则</p>
+     * <p>Billing Management/Create Billing Rule</p>
      * 
      * @param request ModelRouterCreateBillingRuleRequest
      * @return ModelRouterCreateBillingRuleResponse
@@ -2586,7 +2606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/创建客户</p>
+     * <p>Client management / Create client</p>
      * 
      * @param request ModelRouterCreateClientRequest
      * @param headers map
@@ -2644,7 +2664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/创建客户</p>
+     * <p>Client management / Create client</p>
      * 
      * @param request ModelRouterCreateClientRequest
      * @return ModelRouterCreateClientResponse
@@ -2657,7 +2677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/新建对话</p>
+     * <p>Conversation management / Create conversation</p>
      * 
      * @param request ModelRouterCreateConversationRequest
      * @param headers map
@@ -2699,7 +2719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/新建对话</p>
+     * <p>Conversation management / Create conversation</p>
      * 
      * @param request ModelRouterCreateConversationRequest
      * @return ModelRouterCreateConversationResponse
@@ -2712,7 +2732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/创建模型</p>
+     * <p>Creates a model.</p>
      * 
      * @param request ModelRouterCreateModelRequest
      * @param headers map
@@ -2790,7 +2810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/创建模型</p>
+     * <p>Creates a model.</p>
      * 
      * @param request ModelRouterCreateModelRequest
      * @return ModelRouterCreateModelResponse
@@ -2802,8 +2822,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该接口已弃用，请勿使用</p>
+     * 
      * <b>summary</b> : 
-     * <p>API密钥管理/删除API密钥</p>
+     * <p>客户管理/创建周期充值订阅</p>
+     * 
+     * @param request ModelRouterCreateSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterCreateSubscriptionResponse
+     */
+    public ModelRouterCreateSubscriptionResponse modelRouterCreateSubscriptionWithOptions(String id, ModelRouterCreateSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            body.put("effectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idempotencyKey)) {
+            body.put("idempotencyKey", request.idempotencyKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionAmount)) {
+            body.put("subscriptionAmount", request.subscriptionAmount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterCreateSubscription"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/subscription"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterCreateSubscriptionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口已弃用，请勿使用</p>
+     * 
+     * <b>summary</b> : 
+     * <p>客户管理/创建周期充值订阅</p>
+     * 
+     * @param request ModelRouterCreateSubscriptionRequest
+     * @return ModelRouterCreateSubscriptionResponse
+     */
+    public ModelRouterCreateSubscriptionResponse modelRouterCreateSubscription(String id, ModelRouterCreateSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterCreateSubscriptionWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>API Key Management / Delete API Key</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2829,7 +2914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/删除API密钥</p>
+     * <p>API Key Management / Delete API Key</p>
      * @return ModelRouterDeleteApiKeyResponse
      */
     public ModelRouterDeleteApiKeyResponse modelRouterDeleteApiKey(String id) throws Exception {
@@ -2840,7 +2925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/删除客户</p>
+     * <p>Deletes a client.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2866,7 +2951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/删除客户</p>
+     * <p>Deletes a client.</p>
      * @return ModelRouterDeleteClientResponse
      */
     public ModelRouterDeleteClientResponse modelRouterDeleteClient(String id) throws Exception {
@@ -2877,7 +2962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/删除对话</p>
+     * <p>Conversation management/Delete conversation</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2903,7 +2988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/删除对话</p>
+     * <p>Conversation management/Delete conversation</p>
      * @return ModelRouterDeleteConversationResponse
      */
     public ModelRouterDeleteConversationResponse modelRouterDeleteConversation(String id) throws Exception {
@@ -2914,7 +2999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/删除模型</p>
+     * <p>Model Management / Delete Model</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2940,7 +3025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/删除模型</p>
+     * <p>Model Management / Delete Model</p>
      * @return ModelRouterDeleteModelResponse
      */
     public ModelRouterDeleteModelResponse modelRouterDeleteModel(String id) throws Exception {
@@ -2951,7 +3036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取部门余额</p>
+     * <p>Client Management/Get department balance</p>
      * 
      * @param request ModelRouterGetClientBalanceRequest
      * @param headers map
@@ -2979,7 +3064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取部门余额</p>
+     * <p>Client Management/Get department balance</p>
      * 
      * @param request ModelRouterGetClientBalanceRequest
      * @return ModelRouterGetClientBalanceResponse
@@ -2992,7 +3077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取部门余额变更日志</p>
+     * <p>Gets the balance change log for a specified department.</p>
      * 
      * @param request ModelRouterGetClientBalanceLogsRequest
      * @param headers map
@@ -3042,7 +3127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取部门余额变更日志</p>
+     * <p>Gets the balance change log for a specified department.</p>
      * 
      * @param request ModelRouterGetClientBalanceLogsRequest
      * @return ModelRouterGetClientBalanceLogsResponse
@@ -3054,8 +3139,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>该接口已弃用，请勿使用</p>
+     * 
      * <b>summary</b> : 
-     * <p>API密钥管理/获取API密钥详情</p>
+     * <p>客户管理/查询周期充值订阅列表</p>
+     * 
+     * @param request ModelRouterListSubscriptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterListSubscriptionsResponse
+     */
+    public ModelRouterListSubscriptionsResponse modelRouterListSubscriptionsWithOptions(String id, ModelRouterListSubscriptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            query.put("balanceType", request.balanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterListSubscriptions"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/subscription"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterListSubscriptionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>该接口已弃用，请勿使用</p>
+     * 
+     * <b>summary</b> : 
+     * <p>客户管理/查询周期充值订阅列表</p>
+     * 
+     * @param request ModelRouterListSubscriptionsRequest
+     * @return ModelRouterListSubscriptionsResponse
+     */
+    public ModelRouterListSubscriptionsResponse modelRouterListSubscriptions(String id, ModelRouterListSubscriptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterListSubscriptionsWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a specific API key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3081,7 +3231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/获取API密钥详情</p>
+     * <p>Retrieves the details of a specific API key.</p>
      * @return ModelRouterQueryApiKeyResponse
      */
     public ModelRouterQueryApiKeyResponse modelRouterQueryApiKey(String id) throws Exception {
@@ -3092,7 +3242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/获取API密钥列表</p>
+     * <p>Retrieves a list of API keys.</p>
      * 
      * @param request ModelRouterQueryApiKeyListRequest
      * @param headers map
@@ -3166,7 +3316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>API密钥管理/获取API密钥列表</p>
+     * <p>Retrieves a list of API keys.</p>
      * 
      * @param request ModelRouterQueryApiKeyListRequest
      * @return ModelRouterQueryApiKeyListResponse
@@ -3179,7 +3329,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/批量查询计费明细</p>
+     * <p>Billing &gt; Query billing cost breakdown</p>
      * 
      * @param request ModelRouterQueryBillingCostBreakdownRequest
      * @param headers map
@@ -3253,7 +3403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/批量查询计费明细</p>
+     * <p>Billing &gt; Query billing cost breakdown</p>
      * 
      * @param request ModelRouterQueryBillingCostBreakdownRequest
      * @return ModelRouterQueryBillingCostBreakdownResponse
@@ -3266,7 +3416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/查询计费规则列表</p>
+     * <p>Billing management / Query billing rule list</p>
      * 
      * @param request ModelRouterQueryBillingRuleListRequest
      * @param headers map
@@ -3332,7 +3482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/查询计费规则列表</p>
+     * <p>Billing management / Query billing rule list</p>
      * 
      * @param request ModelRouterQueryBillingRuleListRequest
      * @return ModelRouterQueryBillingRuleListResponse
@@ -3345,7 +3495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取部门折扣修改历史</p>
+     * <p>Retrieves the discount modification history for a client.</p>
      * 
      * @param request ModelRouterQueryClientDiscountLogsRequest
      * @param headers map
@@ -3383,7 +3533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取部门折扣修改历史</p>
+     * <p>Retrieves the discount modification history for a client.</p>
      * 
      * @param request ModelRouterQueryClientDiscountLogsRequest
      * @return ModelRouterQueryClientDiscountLogsResponse
@@ -3396,7 +3546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取客户列表</p>
+     * <p>Retrieves a list of clients.</p>
      * 
      * @param request ModelRouterQueryClientListRequest
      * @param headers map
@@ -3466,7 +3616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取客户列表</p>
+     * <p>Retrieves a list of clients.</p>
      * 
      * @param request ModelRouterQueryClientListRequest
      * @return ModelRouterQueryClientListResponse
@@ -3479,7 +3629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取客户树</p>
+     * <p>Returns a hierarchical tree of customers.</p>
      * 
      * @param request ModelRouterQueryClientTreeRequest
      * @param headers map
@@ -3517,7 +3667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/获取客户树</p>
+     * <p>Returns a hierarchical tree of customers.</p>
      * 
      * @param request ModelRouterQueryClientTreeRequest
      * @return ModelRouterQueryClientTreeResponse
@@ -3530,7 +3680,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/获取对话详情</p>
+     * <p>Retrieves the details of a conversation.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3556,7 +3706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/获取对话详情</p>
+     * <p>Retrieves the details of a conversation.</p>
      * @return ModelRouterQueryConversationResponse
      */
     public ModelRouterQueryConversationResponse modelRouterQueryConversation(String id) throws Exception {
@@ -3567,7 +3717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/获取对话列表</p>
+     * <p>Conversation management/Conversation list</p>
      * 
      * @param request ModelRouterQueryConversationListRequest
      * @param headers map
@@ -3637,7 +3787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/获取对话列表</p>
+     * <p>Conversation management/Conversation list</p>
      * 
      * @param request ModelRouterQueryConversationListRequest
      * @return ModelRouterQueryConversationListResponse
@@ -3650,7 +3800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取模型明细</p>
+     * <p>billing management / Model details</p>
      * 
      * @param request ModelRouterQueryCostModelDetailRequest
      * @param headers map
@@ -3720,7 +3870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取模型明细</p>
+     * <p>billing management / Model details</p>
      * 
      * @param request ModelRouterQueryCostModelDetailRequest
      * @return ModelRouterQueryCostModelDetailResponse
@@ -3733,7 +3883,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取调用模型列表</p>
+     * <p>billing management / Retrieves a list of invoked models</p>
      * 
      * @param request ModelRouterQueryCostModelListRequest
      * @param headers map
@@ -3799,7 +3949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取调用模型列表</p>
+     * <p>billing management / Retrieves a list of invoked models</p>
      * 
      * @param request ModelRouterQueryCostModelListRequest
      * @return ModelRouterQueryCostModelListResponse
@@ -3812,7 +3962,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取成本概览指标</p>
+     * <p>billing management / Get cost overview metrics</p>
      * 
      * @param request ModelRouterQueryCostOverviewMetricsRequest
      * @param headers map
@@ -3874,7 +4024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取成本概览指标</p>
+     * <p>billing management / Get cost overview metrics</p>
      * 
      * @param request ModelRouterQueryCostOverviewMetricsRequest
      * @return ModelRouterQueryCostOverviewMetricsResponse
@@ -3887,7 +4037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取费用趋势</p>
+     * <p>billing management / Cost trends</p>
      * 
      * @param request ModelRouterQueryCostTrendMetricsRequest
      * @param headers map
@@ -3949,7 +4099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/获取费用趋势</p>
+     * <p>billing management / Cost trends</p>
      * 
      * @param request ModelRouterQueryCostTrendMetricsRequest
      * @return ModelRouterQueryCostTrendMetricsResponse
@@ -3962,7 +4112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/获取模型详情</p>
+     * <p>Retrieves details for a specific model.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3988,7 +4138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/获取模型详情</p>
+     * <p>Retrieves details for a specific model.</p>
      * @return ModelRouterQueryModelResponse
      */
     public ModelRouterQueryModelResponse modelRouterQueryModel(String id) throws Exception {
@@ -3999,7 +4149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/获取模型列表</p>
+     * <p>Model management/Get model list</p>
      * 
      * @param request ModelRouterQueryModelListRequest
      * @param headers map
@@ -4073,7 +4223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/获取模型列表</p>
+     * <p>Model management/Get model list</p>
      * 
      * @param request ModelRouterQueryModelListRequest
      * @return ModelRouterQueryModelListResponse
@@ -4085,8 +4235,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is deprecated. Do not use it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Nacos配置/获取Nacos服务提供者列表</p>
+     * <p>Configures Nacos or retrieves the list of Nacos service providers.</p>
      * 
      * @param request ModelRouterQueryNacosProvidersRequest
      * @param headers map
@@ -4147,8 +4300,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is deprecated. Do not use it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Nacos配置/获取Nacos服务提供者列表</p>
+     * <p>Configures Nacos or retrieves the list of Nacos service providers.</p>
      * 
      * @param request ModelRouterQueryNacosProvidersRequest
      * @return ModelRouterQueryNacosProvidersResponse
@@ -4161,7 +4317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Nacos配置/获取Nacos标签列表</p>
+     * <p>Retrieves a list of tags from Nacos.</p>
      * 
      * @param request ModelRouterQueryNacosTagsRequest
      * @param headers map
@@ -4227,7 +4383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Nacos配置/获取Nacos标签列表</p>
+     * <p>Retrieves a list of tags from Nacos.</p>
      * 
      * @param request ModelRouterQueryNacosTagsRequest
      * @return ModelRouterQueryNacosTagsResponse
@@ -4240,7 +4396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型观测/获取观测图表数据</p>
+     * <p>Retrieves chart data for model observation.</p>
      * 
      * @param request ModelRouterQueryObservationChartsRequest
      * @param headers map
@@ -4294,7 +4450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型观测/获取观测图表数据</p>
+     * <p>Retrieves chart data for model observation.</p>
      * 
      * @param request ModelRouterQueryObservationChartsRequest
      * @return ModelRouterQueryObservationChartsResponse
@@ -4307,7 +4463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型观测/获取观测日志列表</p>
+     * <p>Model Observation / Observation Logs</p>
      * 
      * @param request ModelRouterQueryObservationLogsRequest
      * @param headers map
@@ -4393,7 +4549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型观测/获取观测日志列表</p>
+     * <p>Model Observation / Observation Logs</p>
      * 
      * @param request ModelRouterQueryObservationLogsRequest
      * @return ModelRouterQueryObservationLogsResponse
@@ -4406,7 +4562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型观测/获取观测指标数据</p>
+     * <p>Model Observation &gt; Get Observation Metric Data</p>
      * 
      * @param request ModelRouterQueryObservationMetricsRequest
      * @param headers map
@@ -4492,7 +4648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型观测/获取观测指标数据</p>
+     * <p>Model Observation &gt; Get Observation Metric Data</p>
      * 
      * @param request ModelRouterQueryObservationMetricsRequest
      * @return ModelRouterQueryObservationMetricsResponse
@@ -4505,7 +4661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用量管理/批量查询用量明细</p>
+     * <p>Queries usage details in batches for usage management.</p>
      * 
      * @param request ModelRouterQueryUsageBreakdownRequest
      * @param headers map
@@ -4571,7 +4727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用量管理/批量查询用量明细</p>
+     * <p>Queries usage details in batches for usage management.</p>
      * 
      * @param request ModelRouterQueryUsageBreakdownRequest
      * @return ModelRouterQueryUsageBreakdownResponse
@@ -4584,7 +4740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>流控管理/写入流控配置</p>
+     * <p>Flow control management / Save flow control configuration</p>
      * 
      * @param request ModelRouterSaveFlowConfigRequest
      * @param headers map
@@ -4630,7 +4786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>流控管理/写入流控配置</p>
+     * <p>Flow control management / Save flow control configuration</p>
      * 
      * @param request ModelRouterSaveFlowConfigRequest
      * @return ModelRouterSaveFlowConfigResponse
@@ -4643,7 +4799,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/更新计费规则</p>
+     * <p>客户管理/停止周期充值订阅</p>
+     * 
+     * @param request ModelRouterStopSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModelRouterStopSubscriptionResponse
+     */
+    public ModelRouterStopSubscriptionResponse modelRouterStopSubscriptionWithOptions(String id, ModelRouterStopSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.balanceType)) {
+            body.put("balanceType", request.balanceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModelRouterStopSubscription"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/modelRouter/open/clients/" + com.aliyun.openapiutil.Client.getEncodeParam(id) + "/balance/subscription/stop"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModelRouterStopSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户管理/停止周期充值订阅</p>
+     * 
+     * @param request ModelRouterStopSubscriptionRequest
+     * @return ModelRouterStopSubscriptionResponse
+     */
+    public ModelRouterStopSubscriptionResponse modelRouterStopSubscription(String id, ModelRouterStopSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modelRouterStopSubscriptionWithOptions(id, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Billing management/Update billing rules</p>
      * 
      * @param request ModelRouterUpdateBillingRuleRequest
      * @param headers map
@@ -4697,7 +4900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计费管理/更新计费规则</p>
+     * <p>Billing management/Update billing rules</p>
      * 
      * @param request ModelRouterUpdateBillingRuleRequest
      * @return ModelRouterUpdateBillingRuleResponse
@@ -4710,7 +4913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/更新客户</p>
+     * <p>Updates a specified client\&quot;s information.</p>
      * 
      * @param request ModelRouterUpdateClientRequest
      * @param headers map
@@ -4768,7 +4971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>客户管理/更新客户</p>
+     * <p>Updates a specified client\&quot;s information.</p>
      * 
      * @param request ModelRouterUpdateClientRequest
      * @return ModelRouterUpdateClientResponse
@@ -4781,7 +4984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/更新对话</p>
+     * <p>Conversation management / Update conversation</p>
      * 
      * @param request ModelRouterUpdateConversationRequest
      * @param headers map
@@ -4827,7 +5030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对话管理/更新对话</p>
+     * <p>Conversation management / Update conversation</p>
      * 
      * @param request ModelRouterUpdateConversationRequest
      * @return ModelRouterUpdateConversationResponse
@@ -4840,7 +5043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/更新模型</p>
+     * <p>Model Management / Update Model</p>
      * 
      * @param request ModelRouterUpdateModelRequest
      * @param headers map
@@ -4914,7 +5117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型管理/更新模型</p>
+     * <p>Model Management / Update Model</p>
      * 
      * @param request ModelRouterUpdateModelRequest
      * @return ModelRouterUpdateModelResponse
@@ -4927,7 +5130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/基于一个预训练模型创建图片推理任务</p>
+     * <p>Personalized text-to-image: Create image inference tasks using a pre-trained model.</p>
      * 
      * @param request PersonalizedTextToImageAddInferenceJobRequest
      * @param headers map
@@ -4981,7 +5184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/基于一个预训练模型创建图片推理任务</p>
+     * <p>Personalized text-to-image: Create image inference tasks using a pre-trained model.</p>
      * 
      * @param request PersonalizedTextToImageAddInferenceJobRequest
      * @return PersonalizedTextToImageAddInferenceJobResponse
@@ -4994,7 +5197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/通过唯一的图片编号获取图片内容</p>
+     * <p>Retrieves the content of an image from the personalized text-to-image service using its unique image ID.</p>
      * 
      * @param request PersonalizedTextToImageQueryImageAssetRequest
      * @param headers map
@@ -5032,7 +5235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/通过唯一的图片编号获取图片内容</p>
+     * <p>Retrieves the content of an image from the personalized text-to-image service using its unique image ID.</p>
      * 
      * @param request PersonalizedTextToImageQueryImageAssetRequest
      * @return PersonalizedTextToImageQueryImageAssetResponse
@@ -5045,7 +5248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/查询预制模型推理任务的状态</p>
+     * <p>Queries the status of a personalized text-to-image inference job.</p>
      * 
      * @param request PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest
      * @param headers map
@@ -5079,7 +5282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/查询预制模型推理任务的状态</p>
+     * <p>Queries the status of a personalized text-to-image inference job.</p>
      * 
      * @param request PersonalizedTextToImageQueryPreModelInferenceJobInfoRequest
      * @return PersonalizedTextToImageQueryPreModelInferenceJobInfoResponse
@@ -5092,7 +5295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/基于一个模型创建图片推理任务</p>
+     * <p>Creates an inference job to generate images based on a personalized text-to-image model.</p>
      * 
      * @param request Personalizedtxt2imgAddInferenceJobRequest
      * @param headers map
@@ -5138,7 +5341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/基于一个模型创建图片推理任务</p>
+     * <p>Creates an inference job to generate images based on a personalized text-to-image model.</p>
      * 
      * @param request Personalizedtxt2imgAddInferenceJobRequest
      * @return Personalizedtxt2imgAddInferenceJobResponse
@@ -5151,7 +5354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/创建一个模型训练任务</p>
+     * <p>Personalized text-to-image: Create a model training task.</p>
      * 
      * @param request Personalizedtxt2imgAddModelTrainJobRequest
      * @param headers map
@@ -5197,7 +5400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/创建一个模型训练任务</p>
+     * <p>Personalized text-to-image: Create a model training task.</p>
      * 
      * @param request Personalizedtxt2imgAddModelTrainJobRequest
      * @return Personalizedtxt2imgAddModelTrainJobResponse
@@ -5210,7 +5413,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/图片二进制内容获取</p>
+     * <p>Retrieves the binary data of an image generated by the personalized text-to-image service.</p>
      * 
      * @param request Personalizedtxt2imgQueryImageAssetRequest
      * @param headers map
@@ -5256,7 +5459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/图片二进制内容获取</p>
+     * <p>Retrieves the binary data of an image generated by the personalized text-to-image service.</p>
      * 
      * @param request Personalizedtxt2imgQueryImageAssetRequest
      * @return Personalizedtxt2imgQueryImageAssetResponse
@@ -5269,7 +5472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/查询模型推理任务的状态和结果信息</p>
+     * <p>Retrieves the status and results of a Personalizedtxt2img inference job.</p>
      * 
      * @param request Personalizedtxt2imgQueryInferenceJobInfoRequest
      * @param headers map
@@ -5303,7 +5506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/查询模型推理任务的状态和结果信息</p>
+     * <p>Retrieves the status and results of a Personalizedtxt2img inference job.</p>
      * 
      * @param request Personalizedtxt2imgQueryInferenceJobInfoRequest
      * @return Personalizedtxt2imgQueryInferenceJobInfoResponse
@@ -5316,7 +5519,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/查询模型训练任务列表</p>
+     * <p>Your personalized model training tasks: image generation and query models.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5342,7 +5545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/查询模型训练任务列表</p>
+     * <p>Your personalized model training tasks: image generation and query models.</p>
      * @return Personalizedtxt2imgQueryModelTrainJobListResponse
      */
     public Personalizedtxt2imgQueryModelTrainJobListResponse personalizedtxt2imgQueryModelTrainJobList() throws Exception {
@@ -5353,7 +5556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/模型训练状态查询</p>
+     * <p>Queries the training status of a personalized text-to-image model.</p>
      * 
      * @param request Personalizedtxt2imgQueryModelTrainStatusRequest
      * @param headers map
@@ -5387,7 +5590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>个性化文生图/模型训练状态查询</p>
+     * <p>Queries the training status of a personalized text-to-image model.</p>
      * 
      * @param request Personalizedtxt2imgQueryModelTrainStatusRequest
      * @return Personalizedtxt2imgQueryModelTrainStatusResponse
@@ -5400,7 +5603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/获取应用访问识别码(appkey)信息</p>
+     * <p>Queries information about an application access ID (appkey).</p>
      * 
      * @param request QueryApplicationAccessIdRequest
      * @param headers map
@@ -5434,7 +5637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/获取应用访问识别码(appkey)信息</p>
+     * <p>Queries information about an application access ID (appkey).</p>
      * 
      * @param request QueryApplicationAccessIdRequest
      * @return QueryApplicationAccessIdResponse
@@ -5447,7 +5650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/获取项目列表</p>
+     * <p>Alibaba Cloud console / Project list</p>
      * 
      * @param request QueryProjectRequest
      * @param headers map
@@ -5481,7 +5684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/获取项目列表</p>
+     * <p>Alibaba Cloud console / Project list</p>
      * 
      * @param request QueryProjectRequest
      * @return QueryProjectResponse
@@ -5494,7 +5697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/获取项目列表</p>
+     * <p>Alibaba Cloud console / Project List</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5520,7 +5723,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/获取项目列表</p>
+     * <p>Alibaba Cloud console / Project List</p>
      * @return QueryProjectListResponse
      */
     public QueryProjectListResponse queryProjectList() throws Exception {
@@ -5531,7 +5734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/已经购买过的服务项目</p>
+     * <p>Alibaba Cloud Console / Purchased Services</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5557,7 +5760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/已经购买过的服务项目</p>
+     * <p>Alibaba Cloud Console / Purchased Services</p>
      * @return QueryPurchasedServiceResponse
      */
     public QueryPurchasedServiceResponse queryPurchasedService() throws Exception {
@@ -5568,7 +5771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/更新项目信息</p>
+     * <p>Alibaba Cloud Console / Update project information</p>
      * 
      * @param request UpdateProjectRequest
      * @param headers map
@@ -5606,7 +5809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>阿里云控制台/更新项目信息</p>
+     * <p>Alibaba Cloud Console / Update project information</p>
      * 
      * @param request UpdateProjectRequest
      * @return UpdateProjectResponse

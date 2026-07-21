@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class Personalizedtxt2imgAddModelTrainJobRequest extends TeaModel {
     /**
+     * <p>A list of one or more image URLs for training. For example: [&quot;url_1&quot;, &quot;url_2&quot;, ...]</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("imageUrl")
     public java.util.List<String> imageUrl;
 
     /**
+     * <p>The name of the model training job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,7 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>A single word that defines the object type in the training images, such as &quot;girl&quot;, &quot;person&quot;, &quot;man&quot;, &quot;boy&quot;, or &quot;dog&quot;.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +32,8 @@ public class Personalizedtxt2imgAddModelTrainJobRequest extends TeaModel {
     public String objectType;
 
     /**
+     * <p>The number of training steps for the model training job.</p>
+     * 
      * <strong>example:</strong>
      * <p>800</p>
      */

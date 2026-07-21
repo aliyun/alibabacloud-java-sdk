@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherGrammarCheckRequest extends TeaModel {
     /**
+     * <p>The sentence to check.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExecuteAITeacherGrammarCheckRequest extends TeaModel {
     public String content;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

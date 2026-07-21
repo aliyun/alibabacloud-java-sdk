@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantSseDialogueRequest extends TeaModel {
     /**
+     * <p>The authorization token for the API call. Obtain this token from the authorization API for the AI teacher feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExecuteTextbookAssistantSseDialogueRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The ID of the current conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ExecuteTextbookAssistantSseDialogueRequest extends TeaModel {
     public String chatId;
 
     /**
+     * <p>The scenario. Set the value to SYNC for Synchronous Practice or EXPAND for Expansion Practice.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ExecuteTextbookAssistantSseDialogueRequest extends TeaModel {
     public String scenario;
 
     /**
+     * <p>The content of the user\&quot;s message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterSaveFlowConfigRequest extends TeaModel {
     /**
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModelRouterSaveFlowConfigRequest extends TeaModel {
     public Integer modelId;
 
     /**
+     * <p>The maximum number of requests per minute (RPM).</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -21,6 +24,8 @@ public class ModelRouterSaveFlowConfigRequest extends TeaModel {
     public Integer rpm;
 
     /**
+     * <p>Specifies whether to enable smooth flow control.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,8 @@ public class ModelRouterSaveFlowConfigRequest extends TeaModel {
     public Boolean smoothFlowEnabled;
 
     /**
+     * <p>The maximum number of tokens per minute (TPM).</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */

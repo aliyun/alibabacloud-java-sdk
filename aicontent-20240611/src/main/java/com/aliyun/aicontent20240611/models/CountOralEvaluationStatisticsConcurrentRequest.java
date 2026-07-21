@@ -4,6 +4,9 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class CountOralEvaluationStatisticsConcurrentRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public OralEvaluationStatisticsConcurrentCountRequest body;
 

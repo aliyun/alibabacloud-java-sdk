@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryApplicationAccessIdResponseBody extends TeaModel {
     /**
+     * <p>The data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
     public QueryApplicationAccessIdResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
 
     public static class QueryApplicationAccessIdResponseBodyData extends TeaModel {
         /**
+         * <p>The application access ID (appkey).</p>
+         * 
          * <strong>example:</strong>
          * <p>1234567890</p>
          */
@@ -108,6 +122,8 @@ public class QueryApplicationAccessIdResponseBody extends TeaModel {
         public String applicationAccessId;
 
         /**
+         * <p>The application access secret. This parameter is returned only for requests from the Alibaba Cloud console.</p>
+         * 
          * <strong>example:</strong>
          * <p>MyAppSecret</p>
          */

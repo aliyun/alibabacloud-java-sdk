@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     /**
+     * <p>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>Optional. Filters results by department ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The query end time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The aggregation granularity. Valid values: hourly and daily.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -44,6 +52,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
      */
@@ -51,6 +61,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -58,6 +70,8 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Maximum value: 500.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -65,6 +79,7 @@ public class ModelRouterQueryUsageBreakdownRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query start time, in UNIX timestamp (seconds).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

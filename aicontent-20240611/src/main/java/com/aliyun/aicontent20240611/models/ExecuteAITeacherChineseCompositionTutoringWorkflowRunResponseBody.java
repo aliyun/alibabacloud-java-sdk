@@ -4,10 +4,18 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponseBody extends TeaModel {
+    /**
+     * <p>The content associated with the event.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>春天里常见的景</p>
+     */
     @NameInMap("content")
     public String content;
 
     /**
+     * <p>The event type.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -15,6 +23,8 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponseBody e
     public String event;
 
     /**
+     * <p>The unique ID for the request. This ID is useful for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */

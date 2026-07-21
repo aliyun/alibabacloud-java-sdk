@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModelRouterUpdateModelRequest extends TeaModel {
     /**
-     * <p>API Key</p>
+     * <p>The API key.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxxx</p>
@@ -14,7 +14,7 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>Base URL</p>
+     * <p>The base URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
@@ -23,6 +23,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String baseUrl;
 
     /**
+     * <p>The model description.</p>
+     * 
      * <strong>example:</strong>
      * <p>通义千问大模型</p>
      */
@@ -30,6 +32,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The maximum input length.</p>
+     * 
      * <strong>example:</strong>
      * <p>8192</p>
      */
@@ -37,6 +41,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String maxInputLength;
 
     /**
+     * <p>The maximum output length.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
@@ -44,6 +50,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String maxOutputLength;
 
     /**
+     * <p>The model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen-turbo</p>
      */
@@ -51,6 +59,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String modelId;
 
     /**
+     * <p>The model type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Chat</p>
      */
@@ -58,6 +68,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The model name.</p>
+     * 
      * <strong>example:</strong>
      * <p>通义千问</p>
      */
@@ -65,6 +77,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The model status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -72,6 +86,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The provider symbol.</p>
+     * 
      * <strong>example:</strong>
      * <p>alibaba</p>
      */
@@ -79,6 +95,8 @@ public class ModelRouterUpdateModelRequest extends TeaModel {
     public String symbol;
 
     /**
+     * <p>Comma-separated tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>chat,NLP</p>
      */

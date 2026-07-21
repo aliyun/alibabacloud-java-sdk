@@ -4,6 +4,9 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class CountOralEvaluationStatisticsErrorRequest extends TeaModel {
+    /**
+     * <p>The request body for retrieving error statistics for the oral evaluation service.</p>
+     */
     @NameInMap("body")
     public OralEvaluationStatisticsErrorCountRequest body;
 

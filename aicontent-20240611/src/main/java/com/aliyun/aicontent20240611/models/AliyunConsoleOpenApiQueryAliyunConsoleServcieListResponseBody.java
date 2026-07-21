@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody extends TeaModel {
     /**
+     * <p>The data returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
     public java.util.List<AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBodyData> data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
 
     public static class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBodyData extends TeaModel {
         /**
+         * <p>The free trial concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -108,6 +122,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         public Integer freeConcurrencyCount;
 
         /**
+         * <p>The free trial calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -115,6 +131,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         public Integer freeCount;
 
         /**
+         * <p>The service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>online_ai_algorithm_personalized_text_to_image_call_count</p>
          */
@@ -122,6 +140,8 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServcieListResponseBody exten
         public String serviceCode;
 
         /**
+         * <p>The service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>AI算法模型-个性化文生图-在线按量调用</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherEnglishParaphraseChatMessageResponseBody extends TeaModel {
     /**
+     * <p>The content associated with the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>how</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageResponseBody extends Te
     public String content;
 
     /**
+     * <p>The event type.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageResponseBody extends Te
     public String event;
 
     /**
+     * <p>The request ID. This ID is returned with every response and is useful for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */

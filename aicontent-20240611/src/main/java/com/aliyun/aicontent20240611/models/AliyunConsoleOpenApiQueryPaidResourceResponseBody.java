@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel {
     /**
+     * <p>Data object</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public java.util.List<PaidResourceDTO> data;
 
     /**
+     * <p>Error message encoding</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public String errCode;
 
     /**
+     * <p>error message</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public String errMessage;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -51,6 +59,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public String nextToken;
 
     /**
+     * <p>Page index</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -58,6 +68,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public Integer pageIndex;
 
     /**
+     * <p>Number of items per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -65,6 +77,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -81,6 +95,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public Integer skip;
 
     /**
+     * <p>Indicates whether the request succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -88,6 +104,8 @@ public class AliyunConsoleOpenApiQueryPaidResourceResponseBody extends TeaModel 
     public Boolean success;
 
     /**
+     * <p>Total quantity</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

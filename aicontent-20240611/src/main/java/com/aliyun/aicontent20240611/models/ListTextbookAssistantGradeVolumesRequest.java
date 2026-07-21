@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTextbookAssistantGradeVolumesRequest extends TeaModel {
     /**
+     * <p>The authorization token. Obtain this token by calling the API that authorizes the Textbook Assistant feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>tc_197bf5bb81889cc79eb51ae9b8c0cea3</p>
      */
@@ -12,6 +14,7 @@ public class ListTextbookAssistantGradeVolumesRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The scenario. Valid values: <code>SYNC</code> (synchronized practice) and <code>EXPAND</code> (extended practice).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

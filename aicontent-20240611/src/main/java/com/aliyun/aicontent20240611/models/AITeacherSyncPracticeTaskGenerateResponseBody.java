@@ -4,20 +4,33 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
+    /**
+     * <p>The data object that contains the generated content.</p>
+     */
     @NameInMap("data")
     public AITeacherSyncPracticeTaskGenerateResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>未知错误</p>
+     */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,6 +38,8 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The unique request ID, used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -32,6 +47,8 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
 
     public static class AITeacherSyncPracticeTaskGenerateResponseBodyDataTaskContent extends TeaModel {
         /**
+         * <p>The AI assistant\&quot;s question.</p>
+         * 
          * <strong>example:</strong>
          * <p>Why might some people think dog walking is a great job?</p>
          */
@@ -100,6 +119,8 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
         public String assistant;
 
         /**
+         * <p>The expected user answer to the assistant\&quot;s question.</p>
+         * 
          * <strong>example:</strong>
          * <p>They think it\&quot;s great because they won\&quot;t be stuck in an office.</p>
          */
@@ -130,10 +151,15 @@ public class AITeacherSyncPracticeTaskGenerateResponseBody extends TeaModel {
     }
 
     public static class AITeacherSyncPracticeTaskGenerateResponseBodyData extends TeaModel {
+        /**
+         * <p>An array of Q\&amp;A pairs representing the dialogue task.</p>
+         */
         @NameInMap("taskContent")
         public java.util.List<AITeacherSyncPracticeTaskGenerateResponseBodyDataTaskContent> taskContent;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>textbook_question_answering</p>
          */

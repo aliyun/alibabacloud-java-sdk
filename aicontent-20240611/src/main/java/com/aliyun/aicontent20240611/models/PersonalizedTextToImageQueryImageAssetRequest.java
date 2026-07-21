@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PersonalizedTextToImageQueryImageAssetRequest extends TeaModel {
     /**
+     * <p>The image encoding format. For example, specify <code>base64</code> to receive the image data as a Base64-encoded string.</p>
+     * 
      * <strong>example:</strong>
      * <p>base64</p>
      */
@@ -12,6 +14,7 @@ public class PersonalizedTextToImageQueryImageAssetRequest extends TeaModel {
     public String encodeFormat;
 
     /**
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

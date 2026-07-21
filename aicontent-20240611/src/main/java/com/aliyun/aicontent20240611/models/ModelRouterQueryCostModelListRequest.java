@@ -12,6 +12,8 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>The department ID to filter the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +21,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The query\&quot;s end time, specified as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +31,8 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The time granularity for data aggregation. Valid values: <code>hourly</code> and <code>daily</code>. Default value: <code>hourly</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>hourly</p>
      */
@@ -35,6 +40,8 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>The maximum number of results per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +49,8 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The model types to query. Separate multiple types with a comma.</p>
+     * 
      * <strong>example:</strong>
      * <p>LLM,VL</p>
      */
@@ -49,7 +58,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String modelTypes;
 
     /**
-     * <p>nextToken</p>
+     * <p>A token from a previous response used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -58,6 +67,8 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>A keyword for a fuzzy search on the model name or model code.</p>
+     * 
      * <strong>example:</strong>
      * <p>qwen</p>
      */
@@ -65,6 +76,7 @@ public class ModelRouterQueryCostModelListRequest extends TeaModel {
     public String search;
 
     /**
+     * <p>The query\&quot;s start time, specified as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

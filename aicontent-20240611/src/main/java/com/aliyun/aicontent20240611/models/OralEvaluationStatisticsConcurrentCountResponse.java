@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
     /**
+     * <p>Statistical data for the project.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("projectData")
     public OralEvaluationStatisticsConcurrentCountResponseProjectData projectData;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,12 +44,14 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
 
     public static class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData extends TeaModel {
         /**
+         * <p>The count of the item.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("count")
         public Integer count;
 
         /**
+         * <p>The name of the statistical item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,11 +84,14 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
     }
 
     public static class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData extends TeaModel {
+        /**
+         * <p>A list of data nodes.</p>
+         */
         @NameInMap("Data")
         public java.util.List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData> data;
 
         /**
-         * <p>appkey</p>
+         * <p>The app key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,10 +124,14 @@ public class OralEvaluationStatisticsConcurrentCountResponse extends TeaModel {
     }
 
     public static class OralEvaluationStatisticsConcurrentCountResponseProjectData extends TeaModel {
+        /**
+         * <p>A list of application data.</p>
+         */
         @NameInMap("ApplicationData")
         public java.util.List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData> applicationData;
 
         /**
+         * <p>The internal application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

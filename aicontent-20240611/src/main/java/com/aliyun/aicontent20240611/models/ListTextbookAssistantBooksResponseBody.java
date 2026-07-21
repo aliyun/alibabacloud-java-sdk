@@ -4,20 +4,33 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ListTextbookAssistantBooksResponseBody extends TeaModel {
+    /**
+     * <p>The data object in the response.</p>
+     */
     @NameInMap("data")
     public ListTextbookAssistantBooksResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>B_USER_NOT_FOUND_EXCEPTION</p>
      */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户不存在</p>
+     */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,7 +38,7 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B695B377-7029-5805-9DE2-1AAE06C1BF6B</p>
@@ -34,6 +47,8 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -94,20 +109,36 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
     }
 
     public static class ListTextbookAssistantBooksResponseBodyDataBookList extends TeaModel {
+        /**
+         * <p>The author.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>吴欣</p>
+         */
         @NameInMap("author")
         public String author;
 
         /**
+         * <p>The book ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>231698</p>
          */
         @NameInMap("bookId")
         public String bookId;
 
+        /**
+         * <p>The book name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>K12英语-人教版PEP三起-三年级上册</p>
+         */
         @NameInMap("bookName")
         public String bookName;
 
         /**
+         * <p>The cover image.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -115,6 +146,8 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         public String coverImage;
 
         /**
+         * <p>The edition.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-7（1）</p>
          */
@@ -122,6 +155,8 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         public String edition;
 
         /**
+         * <p>The grade. Valid values are strings from <code>&quot;1&quot;</code> to <code>&quot;9&quot;</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -129,6 +164,8 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         public String grade;
 
         /**
+         * <p>The impression.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-7（1）</p>
          */
@@ -136,26 +173,44 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         public String impression;
 
         /**
+         * <p>The International Standard Book Number (ISBN).</p>
+         * 
          * <strong>example:</strong>
          * <p>9787107382505</p>
          */
         @NameInMap("isbn")
         public String isbn;
 
+        /**
+         * <p>The publisher.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>人民教育出版社</p>
+         */
         @NameInMap("publisher")
         public String publisher;
 
         /**
+         * <p>The subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENGLISH</p>
          */
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <p>The textbook version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>人教版</p>
+         */
         @NameInMap("version")
         public String version;
 
         /**
+         * <p>The volume. Valid values: <code>&quot;0&quot;</code> (all-in-one), <code>&quot;1&quot;</code> (first semester), and <code>&quot;2&quot;</code> (second semester).</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -267,6 +322,8 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantBooksResponseBodyDataPaginationData extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -274,6 +331,8 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The maximum number of items per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -281,6 +340,8 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
+         * <p>The total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -319,9 +380,15 @@ public class ListTextbookAssistantBooksResponseBody extends TeaModel {
     }
 
     public static class ListTextbookAssistantBooksResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of book objects.</p>
+         */
         @NameInMap("bookList")
         public java.util.List<ListTextbookAssistantBooksResponseBodyDataBookList> bookList;
 
+        /**
+         * <p>The pagination data.</p>
+         */
         @NameInMap("paginationData")
         public ListTextbookAssistantBooksResponseBodyDataPaginationData paginationData;
 

@@ -4,10 +4,14 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
+    /**
+     * <p>Contains the statistical data aggregated by project.</p>
+     */
     @NameInMap("ProjectData")
     public OralEvaluationStatisticsErrorCountResponseProjectData projectData;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,7 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
 
     public static class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataDataData extends TeaModel {
         /**
+         * <p>The count for the statistical item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -48,6 +53,7 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The name of the statistical item, which defines the display granularity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,10 +86,15 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
     }
 
     public static class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataData extends TeaModel {
+        /**
+         * <p>A list of statistical items.</p>
+         */
         @NameInMap("Data")
         public java.util.List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataDataData> data;
 
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>51000</p>
          */
@@ -91,6 +102,8 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
         public String errorCode;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>start the core unsuccessfull.</p>
          */
@@ -129,11 +142,14 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
     }
 
     public static class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationData extends TeaModel {
+        /**
+         * <p>A list of datasets.</p>
+         */
         @NameInMap("Data")
         public java.util.List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataData> data;
 
         /**
-         * <p>appId,appkey</p>
+         * <p>The App ID or App Key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,10 +182,14 @@ public class OralEvaluationStatisticsErrorCountResponse extends TeaModel {
     }
 
     public static class OralEvaluationStatisticsErrorCountResponseProjectData extends TeaModel {
+        /**
+         * <p>A list of statistical data objects for the application.</p>
+         */
         @NameInMap("ApplicationData")
         public java.util.List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationData> applicationData;
 
         /**
+         * <p>The internal ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

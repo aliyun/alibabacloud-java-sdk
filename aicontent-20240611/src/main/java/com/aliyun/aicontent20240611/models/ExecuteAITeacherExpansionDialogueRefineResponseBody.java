@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaModel {
     /**
+     * <p>The object that contains the refinement result.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
     public ExecuteAITeacherExpansionDialogueRefineResponseBodyData data;
 
     /**
+     * <p>The error code. Returned only when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
     public String errCode;
 
     /**
+     * <p>The error message. Returned only when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ExecuteAITeacherExpansionDialogueRefineResponseBody extends TeaMode
 
     public static class ExecuteAITeacherExpansionDialogueRefineResponseBodyData extends TeaModel {
         /**
+         * <p>The refinement result.</p>
+         * 
          * <strong>example:</strong>
          * <p>Yes, I\&quot;ll be right there.</p>
          */

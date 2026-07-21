@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class CostTabDTO extends TeaModel {
     /**
+     * <p>Tab UUID</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>Tab display name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>全部</p>
+     */
     @NameInMap("label")
     public String label;
 
+    /**
+     * <p>List of associated model types</p>
+     */
     @NameInMap("modelTypes")
     public java.util.List<String> modelTypes;
 

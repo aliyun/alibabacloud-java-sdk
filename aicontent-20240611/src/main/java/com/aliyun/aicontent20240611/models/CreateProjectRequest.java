@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
+     * <p>Project name</p>
+     * 
      * <strong>example:</strong>
      * <p>MyProject</p>
      */
@@ -12,6 +14,8 @@ public class CreateProjectRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>Project type</p>
+     * 
      * <strong>example:</strong>
      * <p>online_oral_evaluation_post_paid_call_count</p>
      */

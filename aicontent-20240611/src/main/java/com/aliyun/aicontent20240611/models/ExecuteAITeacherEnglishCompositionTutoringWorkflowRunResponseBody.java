@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody extends TeaModel {
     /**
+     * <p>The content of the event.</p>
+     * 
      * <strong>example:</strong>
      * <p>hi</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody e
     public String content;
 
     /**
+     * <p>The event type.</p>
+     * 
      * <strong>example:</strong>
      * <p>message</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody e
     public String event;
 
     /**
+     * <p>The unique ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterUpdateConversationRequest extends TeaModel {
     /**
+     * <p>A JSON string that contains the message history for each model in the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;messages&quot;:[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;你好&quot;}]}</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterUpdateConversationRequest extends TeaModel {
     public String chatData;
 
     /**
+     * <p>The number of messages in the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterUpdateConversationRequest extends TeaModel {
     public Integer messageCount;
 
     /**
+     * <p>A JSON-formatted string that represents an array of model IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[1,2,3]</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterUpdateConversationRequest extends TeaModel {
     public String modelIds;
 
     /**
+     * <p>The new conversation title.</p>
+     * 
      * <strong>example:</strong>
      * <p>我的对话</p>
      */

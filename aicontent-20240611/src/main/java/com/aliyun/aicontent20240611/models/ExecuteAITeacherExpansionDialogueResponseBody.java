@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
     /**
+     * <p>The response data.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
     public ExecuteAITeacherExpansionDialogueResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>A unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
 
     public static class ExecuteAITeacherExpansionDialogueResponseBodyData extends TeaModel {
         /**
+         * <p>The AI teacher\&quot;s response in Chinese.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -108,6 +122,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         public String chineseResult;
 
         /**
+         * <p>The AI teacher\&quot;s response in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -115,6 +131,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         public String englishResult;
 
         /**
+         * <p>Indicates whether the dialogue is finished.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -122,6 +140,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         public Boolean isFinish;
 
         /**
+         * <p>Indicates whether the response is off-topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -129,6 +149,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         public Boolean isOffTopicControl;
 
         /**
+         * <p>Indicates whether the response is on-topic.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -136,6 +158,8 @@ public class ExecuteAITeacherExpansionDialogueResponseBody extends TeaModel {
         public Boolean isOnTopic;
 
         /**
+         * <p>The index of the current question.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

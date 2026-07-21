@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PaidResourceDTO extends TeaModel {
     /**
+     * <p>The time the resource becomes effective.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-09-01 00:00:00</p>
      */
@@ -12,6 +14,8 @@ public class PaidResourceDTO extends TeaModel {
     public String effectiveTime;
 
     /**
+     * <p>The time the resource expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-09-10 00:00:00</p>
      */
@@ -19,6 +23,8 @@ public class PaidResourceDTO extends TeaModel {
     public String expireTime;
 
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>airec-cn-fou41hse8001</p>
      */
@@ -26,6 +32,8 @@ public class PaidResourceDTO extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The total quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -33,6 +41,8 @@ public class PaidResourceDTO extends TeaModel {
     public Integer quantity;
 
     /**
+     * <p>The remaining quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -40,26 +50,44 @@ public class PaidResourceDTO extends TeaModel {
     public Integer remainQuantity;
 
     /**
+     * <p>The code of the resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>AI_ORAL</p>
      */
     @NameInMap("resourceCatalogCode")
     public String resourceCatalogCode;
 
+    /**
+     * <p>The name of the resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>口语评测</p>
+     */
     @NameInMap("resourceCatalogName")
     public String resourceCatalogName;
 
     /**
+     * <p>The code of the resource package.</p>
+     * 
      * <strong>example:</strong>
      * <p>PRE_PAID_RECOURSE_PACKAGE</p>
      */
     @NameInMap("resourcePackageCode")
     public String resourcePackageCode;
 
+    /**
+     * <p>The name of the resource package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>智能批改-资源包</p>
+     */
     @NameInMap("resourcePackageName")
     public String resourcePackageName;
 
     /**
+     * <p>The status of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
      */

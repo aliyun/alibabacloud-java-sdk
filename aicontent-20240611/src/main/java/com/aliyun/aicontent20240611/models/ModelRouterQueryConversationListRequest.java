@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModelRouterQueryConversationListRequest extends TeaModel {
     /**
+     * <p>The grouping field.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -12,6 +14,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public String groupBy;
 
     /**
+     * <p>A keyword to filter the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The maximum number of results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Specifies whether to return the total count of items. Set to <code>true</code> to return the total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public Boolean needTotalCount;
 
     /**
+     * <p>The pagination token for the next page of results. To retrieve the first page, do not specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort field.</p>
+     * 
      * <strong>example:</strong>
      * <p>resourceId</p>
      */
@@ -47,6 +59,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The sort order. Valid values are <code>ASC</code> (ascending) and <code>DESC</code> (descending).</p>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -54,6 +68,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +77,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The number of items to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -68,6 +86,8 @@ public class ModelRouterQueryConversationListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Filters the results by status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

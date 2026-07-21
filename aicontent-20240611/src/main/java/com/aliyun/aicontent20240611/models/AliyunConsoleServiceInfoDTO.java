@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AliyunConsoleServiceInfoDTO extends TeaModel {
     /**
+     * <p>The URL to activate the service.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com/product/ai-algorithm">https://www.aliyun.com/product/ai-algorithm</a></p>
      */
@@ -12,6 +14,8 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
     public String buyUrl;
 
     /**
+     * <p>The URL of the service documentation.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com/product/ai-algorithm">https://www.aliyun.com/product/ai-algorithm</a></p>
      */
@@ -19,6 +23,8 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
     public String documentUrl;
 
     /**
+     * <p>The maximum number of concurrent requests allowed for the free trial.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
     public Integer freeConcurrencyCount;
 
     /**
+     * <p>The number of free API calls available.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,12 +41,20 @@ public class AliyunConsoleServiceInfoDTO extends TeaModel {
     public Integer freeCount;
 
     /**
+     * <p>The unique code for the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>online_ai_algorithm_personalized_text_to_image_call_count</p>
      */
     @NameInMap("serviceCode")
     public String serviceCode;
 
+    /**
+     * <p>The display name of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI算法模型-个性化文生图-在线按量调用</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 

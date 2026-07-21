@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
     public ExecuteAITeacherExpansionDialogueTranslateResponseBodyData data;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
     public String errCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
     public Integer httpStatusCode;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class ExecuteAITeacherExpansionDialogueTranslateResponseBody extends TeaM
 
     public static class ExecuteAITeacherExpansionDialogueTranslateResponseBodyData extends TeaModel {
         /**
+         * <p>The translation result.</p>
+         * 
          * <strong>example:</strong>
          * <p>太好了，谢谢你过来，莉莉。你喜欢吃肉吗？</p>
          */

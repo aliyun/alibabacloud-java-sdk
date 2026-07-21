@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateProjectRequest extends TeaModel {
     /**
+     * <p>The ID of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
@@ -12,6 +14,8 @@ public class UpdateProjectRequest extends TeaModel {
     public String projectId;
 
     /**
+     * <p>The new name of the project.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyProject</p>
      */

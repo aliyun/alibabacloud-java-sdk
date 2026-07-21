@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("data")
     public ExecuteTextbookAssistantRefineByContextResponseBodyData data;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
     public String errCode;
 
     /**
+     * <p>The error message returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
     public Integer errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6F73C114-A76E-51AD-99E3-BC7B941B69E0</p>
@@ -38,6 +47,8 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
     public String requestId;
 
     /**
+     * <p>A value of <code>true</code> indicates that the request succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
 
     public static class ExecuteTextbookAssistantRefineByContextResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The refined sentence.</p>
+         * 
          * <strong>example:</strong>
          * <p>Good evening! From the book, how does Mike Black introduce himself?</p>
          */
@@ -121,6 +134,9 @@ public class ExecuteTextbookAssistantRefineByContextResponseBody extends TeaMode
     }
 
     public static class ExecuteTextbookAssistantRefineByContextResponseBodyData extends TeaModel {
+        /**
+         * <p>The result data.</p>
+         */
         @NameInMap("result")
         public ExecuteTextbookAssistantRefineByContextResponseBodyDataResult result;
 

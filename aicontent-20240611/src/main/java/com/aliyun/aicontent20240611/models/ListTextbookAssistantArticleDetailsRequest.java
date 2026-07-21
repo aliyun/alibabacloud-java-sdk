@@ -4,10 +4,14 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ListTextbookAssistantArticleDetailsRequest extends TeaModel {
+    /**
+     * <p>A list of article IDs to retrieve.</p>
+     */
     @NameInMap("articleIdList")
     public java.util.List<String> articleIdList;
 
     /**
+     * <p>The authorization token obtained from the &quot;Get Authorization Token for the English Textbook-Style AI Teacher&quot; API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

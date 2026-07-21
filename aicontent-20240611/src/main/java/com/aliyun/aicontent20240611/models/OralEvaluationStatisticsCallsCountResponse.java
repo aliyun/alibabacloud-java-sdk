@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
     /**
+     * <p>The project statistics.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("projectData")
     public OralEvaluationStatisticsCallsCountResponseProjectData projectData;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +44,7 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
 
     public static class OralEvaluationStatisticsCallsCountResponseProjectDataApplicationDataData extends TeaModel {
         /**
+         * <p>The corresponding count.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -51,6 +54,7 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The name of the statistic.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -83,11 +87,14 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
     }
 
     public static class OralEvaluationStatisticsCallsCountResponseProjectDataApplicationData extends TeaModel {
+        /**
+         * <p>A list of data objects.</p>
+         */
         @NameInMap("Data")
         public java.util.List<OralEvaluationStatisticsCallsCountResponseProjectDataApplicationDataData> data;
 
         /**
-         * <p>appkey</p>
+         * <p>The appkey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,10 +127,14 @@ public class OralEvaluationStatisticsCallsCountResponse extends TeaModel {
     }
 
     public static class OralEvaluationStatisticsCallsCountResponseProjectData extends TeaModel {
+        /**
+         * <p>A list of application data objects.</p>
+         */
         @NameInMap("ApplicationData")
         public java.util.List<OralEvaluationStatisticsCallsCountResponseProjectDataApplicationData> applicationData;
 
         /**
+         * <p>The internal application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

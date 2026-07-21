@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ConversationDTO extends TeaModel {
     /**
+     * <p>A JSON-formatted string that represents the complete state of the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class ConversationDTO extends TeaModel {
     public String chatData;
 
     /**
+     * <p>The status of the conversation, where 0 means enabled and any non-zero value means disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +23,8 @@ public class ConversationDTO extends TeaModel {
     public Integer deleteTag;
 
     /**
+     * <p>The creation time of the conversation, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class ConversationDTO extends TeaModel {
     public String gmtCreate;
 
     /**
+     * <p>The modification time of the conversation, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01T00:00:00Z</p>
      */
@@ -33,7 +41,7 @@ public class ConversationDTO extends TeaModel {
     public String gmtModified;
 
     /**
-     * <p>ID</p>
+     * <p>The ID of the conversation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,6 +50,8 @@ public class ConversationDTO extends TeaModel {
     public Long id;
 
     /**
+     * <p>The total number of messages in the conversation.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,12 +59,20 @@ public class ConversationDTO extends TeaModel {
     public Integer messageCount;
 
     /**
+     * <p>A JSON-formatted string that contains an array of model IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[1,2,3]</p>
      */
     @NameInMap("modelIds")
     public String modelIds;
 
+    /**
+     * <p>The title of the conversation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>我的对话</p>
+     */
     @NameInMap("title")
     public String title;
 

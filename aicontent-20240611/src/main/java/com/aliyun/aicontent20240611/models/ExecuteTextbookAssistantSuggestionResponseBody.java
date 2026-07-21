@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantSuggestionResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("data")
     public ExecuteTextbookAssistantSuggestionResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class ExecuteTextbookAssistantSuggestionResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ExecuteTextbookAssistantSuggestionResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,7 +38,7 @@ public class ExecuteTextbookAssistantSuggestionResponseBody extends TeaModel {
     public Integer httpstatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0D7D382F-9475-572E-BE83-DDFBF5C5EB24</p>
@@ -38,6 +47,8 @@ public class ExecuteTextbookAssistantSuggestionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -98,10 +109,18 @@ public class ExecuteTextbookAssistantSuggestionResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantSuggestionResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The response from the AI teacher in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据文章，迈克·布莱克是如何介绍自己的？</p>
+         */
         @NameInMap("chineseResult")
         public String chineseResult;
 
         /**
+         * <p>The response from the AI teacher in English.</p>
+         * 
          * <strong>example:</strong>
          * <p>Good evening! From the book, how does Mike Black introduce himself?</p>
          */
@@ -132,6 +151,9 @@ public class ExecuteTextbookAssistantSuggestionResponseBody extends TeaModel {
     }
 
     public static class ExecuteTextbookAssistantSuggestionResponseBodyData extends TeaModel {
+        /**
+         * <p>The result data.</p>
+         */
         @NameInMap("result")
         public ExecuteTextbookAssistantSuggestionResponseBodyDataResult result;
 

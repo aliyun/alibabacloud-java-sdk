@@ -4,20 +4,39 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListTextbookAssistantArticlesResponseBodyData> data;
 
     /**
+     * <p>The error code.</p>
+     * <ul>
+     * <li><p>A value of 0 indicates success.</p>
+     * </li>
+     * <li><p>A value greater than 0 indicates a specific error.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>未知错误</p>
+     */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,7 +44,7 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>70412360-4272-571A-827D-84C2C07C450F</p>
@@ -34,6 +53,14 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call succeeded.</p>
+     * <ul>
+     * <li><p><strong>true</strong>: The call succeeded.</p>
+     * </li>
+     * <li><p><strong>false</strong>: The call failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -95,6 +122,8 @@ public class ListTextbookAssistantArticlesResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantArticlesResponseBodyData extends TeaModel {
         /**
+         * <p>The article ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>0c05700d4d9411efbe6e0c42a106bb02</p>
          */

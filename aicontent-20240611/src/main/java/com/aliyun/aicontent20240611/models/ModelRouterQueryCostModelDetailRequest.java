@@ -12,6 +12,8 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long apiKeyId;
 
     /**
+     * <p>The department ID by which to filter results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +21,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long clientId;
 
     /**
+     * <p>The end of the time range to query, specified as a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +31,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>maxResults</p>
+     * <p>The maximum number of results to return per page. This parameter is recommended for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,6 +40,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The model ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +50,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Long modelId;
 
     /**
-     * <p>nextToken</p>
+     * <p>The token to retrieve the next page of results. Obtain this token from the <code>nextToken</code> field in a previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx-xxx-xxxxx</p>
@@ -55,6 +59,8 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The page number. This parameter is part of an older pagination method. For better performance and consistency, use <code>maxResults</code> and <code>nextToken</code> instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -62,6 +68,8 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The page number. This parameter is part of an older pagination method. For better performance and consistency, use <code>maxResults</code> and <code>nextToken</code> instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -69,6 +77,8 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size. Default: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -76,6 +86,7 @@ public class ModelRouterQueryCostModelDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start of the time range to query, specified as a Unix timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

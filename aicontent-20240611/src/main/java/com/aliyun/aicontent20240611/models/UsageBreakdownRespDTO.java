@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UsageBreakdownRespDTO extends TeaModel {
     /**
+     * <p>Aggregation granularity: hourly or daily</p>
+     * 
      * <strong>example:</strong>
      * <p>hourly</p>
      */
@@ -12,6 +14,8 @@ public class UsageBreakdownRespDTO extends TeaModel {
     public String granularity;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class UsageBreakdownRespDTO extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of entries per page</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,6 +32,8 @@ public class UsageBreakdownRespDTO extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>List of detailed data entries</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -33,6 +41,8 @@ public class UsageBreakdownRespDTO extends TeaModel {
     public java.util.List<UsageBreakdownRowDTO> rows;
 
     /**
+     * <p>Total number of entries</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

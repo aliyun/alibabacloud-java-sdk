@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteTextbookAssistantSuggestionRequest extends TeaModel {
     /**
+     * <p>The unique identifier for the AI teacher\&quot;s message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ExecuteTextbookAssistantSuggestionRequest extends TeaModel {
     public String assistant;
 
     /**
+     * <p>The authorization token for the API call. To obtain this token, call the operation that generates authorization tokens for the AI teacher feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ExecuteTextbookAssistantSuggestionRequest extends TeaModel {
     public String authToken;
 
     /**
+     * <p>The unique identifier for the current chat.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ExecuteTextbookAssistantSuggestionRequest extends TeaModel {
     public String chatId;
 
     /**
+     * <p>The practice scenario. Valid values are <code>SYNC</code> for synchronous practice and <code>EXPAND</code> for extended practice.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

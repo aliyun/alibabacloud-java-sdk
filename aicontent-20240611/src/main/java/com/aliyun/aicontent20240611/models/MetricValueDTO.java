@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class MetricValueDTO extends TeaModel {
     /**
+     * <p>Metric key name</p>
+     * 
      * <strong>example:</strong>
      * <p>total_calls</p>
      */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>Metric display name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>调用次数</p>
+     */
     @NameInMap("label")
     public String label;
 
+    /**
+     * <p>Metric unit</p>
+     * 
+     * <strong>example:</strong>
+     * <p>次</p>
+     */
     @NameInMap("unit")
     public String unit;
 
     /**
+     * <p>Metric value</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

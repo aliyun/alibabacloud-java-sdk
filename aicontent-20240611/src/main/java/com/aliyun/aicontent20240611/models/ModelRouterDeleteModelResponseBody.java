@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ModelRouterDeleteModelResponseBody extends TeaModel {
     /**
+     * <p>Indicates if the model was successfully deleted.</p>
+     * 
      * <strong>example:</strong>
-     * <p>[]</p>
+     * <p>true</p>
      */
     @NameInMap("data")
     public Boolean data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class ModelRouterDeleteModelResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class ModelRouterDeleteModelResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class ModelRouterDeleteModelResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class ModelRouterDeleteModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was processed successfully.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

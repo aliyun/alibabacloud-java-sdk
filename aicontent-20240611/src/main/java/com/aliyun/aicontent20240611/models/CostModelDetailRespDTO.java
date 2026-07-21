@@ -4,10 +4,15 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class CostModelDetailRespDTO extends TeaModel {
+    /**
+     * <p>List of column definitions</p>
+     */
     @NameInMap("columns")
     public java.util.List<MetricDefRespDTO> columns;
 
     /**
+     * <p>Current granularity: daily/hourly</p>
+     * 
      * <strong>example:</strong>
      * <p>hourly</p>
      */
@@ -15,16 +20,26 @@ public class CostModelDetailRespDTO extends TeaModel {
     public String granularity;
 
     /**
+     * <p>Model ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("modelId")
     public Long modelId;
 
+    /**
+     * <p>Model name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>通义千问-Plus</p>
+     */
     @NameInMap("modelName")
     public String modelName;
 
     /**
+     * <p>Current page</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,16 +47,23 @@ public class CostModelDetailRespDTO extends TeaModel {
     public Integer page;
 
     /**
+     * <p>Number of entries per page</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>List of data rows</p>
+     */
     @NameInMap("rows")
     public java.util.List<CostModelDetailRowDTO> rows;
 
     /**
+     * <p>Total number of entries</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

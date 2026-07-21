@@ -4,20 +4,33 @@ package com.aliyun.aicontent20240611.models;
 import com.aliyun.tea.*;
 
 public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel {
+    /**
+     * <p>The data object.</p>
+     */
     @NameInMap("data")
     public AITeacherExpansionPracticeTaskGenerateResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
     @NameInMap("errCode")
     public String errCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>未知错误</p>
+     */
     @NameInMap("errMessage")
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -25,6 +38,8 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -32,6 +47,8 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
     public String requestId;
 
     /**
+     * <p>Indicates if the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -93,6 +110,8 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
 
     public static class AITeacherExpansionPracticeTaskGenerateResponseBodyDataRoleSet extends TeaModel {
         /**
+         * <p>The name of the AI teacher.</p>
+         * 
          * <strong>example:</strong>
          * <p>Alex</p>
          */
@@ -100,6 +119,8 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         public String assistant;
 
         /**
+         * <p>The name of the student.</p>
+         * 
          * <strong>example:</strong>
          * <p>Jamie</p>
          */
@@ -131,6 +152,8 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
 
     public static class AITeacherExpansionPracticeTaskGenerateResponseBodyDataTaskContent extends TeaModel {
         /**
+         * <p>The AI teacher\&quot;s question.</p>
+         * 
          * <strong>example:</strong>
          * <p>Why might some people think dog walking is a great job?</p>
          */
@@ -138,6 +161,8 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
         public String assistant;
 
         /**
+         * <p>The student\&quot;s answer.</p>
+         * 
          * <strong>example:</strong>
          * <p>They think it\&quot;s great because they won\&quot;t be stuck in an office.</p>
          */
@@ -169,26 +194,38 @@ public class AITeacherExpansionPracticeTaskGenerateResponseBody extends TeaModel
 
     public static class AITeacherExpansionPracticeTaskGenerateResponseBodyData extends TeaModel {
         /**
+         * <p>The background of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>In a career counseling session, we are going to discuss our dream jobs and the responsibilities associated with them. Alex, who dreams of becoming a professional travel blogger, will share the tasks and skills required for this role, while Jamie, aspiring to be a wildlife photographer, will outline the responsibilities and challenges of capturing nature\&quot;s moments. Both will explore how their interests align with the practical aspects of their chosen careers, discussing the potential for travel, creativity, and the impact of their work on society and the environment.</p>
          */
         @NameInMap("backgroundDescription")
         public String backgroundDescription;
 
+        /**
+         * <p>The role settings.</p>
+         */
         @NameInMap("roleSet")
         public AITeacherExpansionPracticeTaskGenerateResponseBodyDataRoleSet roleSet;
 
         /**
+         * <p>The opening sentence of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hey Jamie, do you know what a travel blogger does?</p>
          */
         @NameInMap("startSentence")
         public String startSentence;
 
+        /**
+         * <p>A list of Q\&amp;A pairs.</p>
+         */
         @NameInMap("taskContent")
         public java.util.List<AITeacherExpansionPracticeTaskGenerateResponseBodyDataTaskContent> taskContent;
 
         /**
+         * <p>The task type.</p>
+         * 
          * <strong>example:</strong>
          * <p>textbook_dialogue</p>
          */

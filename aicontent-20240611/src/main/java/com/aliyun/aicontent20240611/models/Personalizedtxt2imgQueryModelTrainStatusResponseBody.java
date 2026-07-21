@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaModel {
     /**
+     * <p>The returned data object.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
     public Personalizedtxt2imgQueryModelTrainStatusResponseBodyData data;
 
     /**
+     * <p>The error code returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>UNKNOWN_ERROR</p>
      */
@@ -19,6 +23,8 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
     public String errCode;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>未知错误</p>
      */
@@ -26,6 +32,8 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxxx-xxxx-xxxxxxxx</p>
      */
@@ -40,6 +50,8 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -101,6 +113,8 @@ public class Personalizedtxt2imgQueryModelTrainStatusResponseBody extends TeaMod
 
     public static class Personalizedtxt2imgQueryModelTrainStatusResponseBodyData extends TeaModel {
         /**
+         * <p>The model training status.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */

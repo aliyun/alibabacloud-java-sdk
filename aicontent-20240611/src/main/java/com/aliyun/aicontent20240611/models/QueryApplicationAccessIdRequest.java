@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryApplicationAccessIdRequest extends TeaModel {
     /**
+     * <p>The application access ID (appkey).</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890</p>
      */
