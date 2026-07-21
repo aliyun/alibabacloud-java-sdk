@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class CheckUserAuthToMsceneResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("MpaasUserAuthCheckResponse")
     public CheckUserAuthToMsceneResponseBodyMpaasUserAuthCheckResponse mpaasUserAuthCheckResponse;
 
@@ -22,6 +25,14 @@ public class CheckUserAuthToMsceneResponseBody extends TeaModel {
     public static CheckUserAuthToMsceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CheckUserAuthToMsceneResponseBody self = new CheckUserAuthToMsceneResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CheckUserAuthToMsceneResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CheckUserAuthToMsceneResponseBody setMpaasUserAuthCheckResponse(CheckUserAuthToMsceneResponseBodyMpaasUserAuthCheckResponse mpaasUserAuthCheckResponse) {

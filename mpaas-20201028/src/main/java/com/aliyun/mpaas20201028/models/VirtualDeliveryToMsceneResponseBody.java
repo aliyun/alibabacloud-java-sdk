@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("MpaasUserGamecenterPaymentVirtualdeliveryResponse")
     public VirtualDeliveryToMsceneResponseBodyMpaasUserGamecenterPaymentVirtualdeliveryResponse mpaasUserGamecenterPaymentVirtualdeliveryResponse;
 
@@ -22,6 +25,14 @@ public class VirtualDeliveryToMsceneResponseBody extends TeaModel {
     public static VirtualDeliveryToMsceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         VirtualDeliveryToMsceneResponseBody self = new VirtualDeliveryToMsceneResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public VirtualDeliveryToMsceneResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public VirtualDeliveryToMsceneResponseBody setMpaasUserGamecenterPaymentVirtualdeliveryResponse(VirtualDeliveryToMsceneResponseBodyMpaasUserGamecenterPaymentVirtualdeliveryResponse mpaasUserGamecenterPaymentVirtualdeliveryResponse) {

@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class SaveOrderRelationInfoToMsenceResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("MpaasSaveOrderRelationResponse")
     public SaveOrderRelationInfoToMsenceResponseBodyMpaasSaveOrderRelationResponse mpaasSaveOrderRelationResponse;
 
@@ -22,6 +25,14 @@ public class SaveOrderRelationInfoToMsenceResponseBody extends TeaModel {
     public static SaveOrderRelationInfoToMsenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveOrderRelationInfoToMsenceResponseBody self = new SaveOrderRelationInfoToMsenceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SaveOrderRelationInfoToMsenceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public SaveOrderRelationInfoToMsenceResponseBody setMpaasSaveOrderRelationResponse(SaveOrderRelationInfoToMsenceResponseBodyMpaasSaveOrderRelationResponse mpaasSaveOrderRelationResponse) {

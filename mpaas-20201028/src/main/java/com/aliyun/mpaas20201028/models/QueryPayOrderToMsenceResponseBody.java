@@ -4,6 +4,9 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class QueryPayOrderToMsenceResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("MpaasUserGamecenterPaymentQuerystatusResponse")
     public QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse mpaasUserGamecenterPaymentQuerystatusResponse;
 
@@ -22,6 +25,14 @@ public class QueryPayOrderToMsenceResponseBody extends TeaModel {
     public static QueryPayOrderToMsenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPayOrderToMsenceResponseBody self = new QueryPayOrderToMsenceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPayOrderToMsenceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryPayOrderToMsenceResponseBody setMpaasUserGamecenterPaymentQuerystatusResponse(QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse mpaasUserGamecenterPaymentQuerystatusResponse) {
