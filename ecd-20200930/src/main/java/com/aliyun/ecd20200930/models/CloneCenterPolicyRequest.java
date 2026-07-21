@@ -6,13 +6,6 @@ import com.aliyun.tea.*;
 public class CloneCenterPolicyRequest extends TeaModel {
     /**
      * <p>The business type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>1: public cloud</p>
-     * </li>
-     * <li><p>8: commercial edition.</p>
-     * </li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +15,7 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public Integer businessType;
 
     /**
-     * <p>The name of the cloud computer policy that you want to clone.</p>
+     * <p>The policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +25,7 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the cloud computer policy that you want to clone.</p>
+     * <p>The ID of the target cloud computer policy to clone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +35,7 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The region ID. Set the value to cn-shanghai.</p>
+     * <p>The region ID. This feature is region-independent. Set this parameter to cn-shanghai.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,13 +46,6 @@ public class CloneCenterPolicyRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>app: cloud applications.</p>
-     * </li>
-     * <li><p>desktop: cloud computers.</p>
-     * </li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

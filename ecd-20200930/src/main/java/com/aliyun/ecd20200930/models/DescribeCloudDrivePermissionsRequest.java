@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDrivePermissionsRequest extends TeaModel {
     /**
-     * <p>ID of the created enterprise cloud drive.</p>
+     * <p>The ID of the enterprise cloud drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeCloudDrivePermissionsRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

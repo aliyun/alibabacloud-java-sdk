@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportDesktopGroupInfoRequest extends TeaModel {
     /**
-     * <p>The billing method of the cloud computer share.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>PostPaid: pay-as-you-go.</p>
-     * </li>
-     * <li><p>PrePaid: subscription.</p>
-     * </li>
-     * </ul>
+     * <p>The billing method of the shared cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -21,13 +14,13 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the cloud computer shares.</p>
+     * <p>The list of shared cloud desktop IDs.</p>
      */
     @NameInMap("DesktopGroupId")
     public java.util.List<String> desktopGroupId;
 
     /**
-     * <p>The name of the cloud computer share.</p>
+     * <p>The name of the shared cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>CloudComputerPool01</p>
@@ -36,13 +29,13 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String desktopGroupName;
 
     /**
-     * <p>The IDs of the users to be authorized.</p>
+     * <p>The list of authorized user IDs for the shared cloud desktops.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The expiration date of the subscription cloud computer share.</p>
+     * <p>The expiration time of the subscription shared cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-31T15:59Z</p>
@@ -51,7 +44,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>The language of the response.</p>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -60,9 +53,11 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String langType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries per page for a paged query.    </p>
+     * <ul>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -71,7 +66,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -80,7 +75,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network.</p>
+     * <p>The ID of the office network to which the shared cloud desktops belong.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-467671****</p>
@@ -89,7 +84,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The ID of the security policy.</p>
+     * <p>The ID of the policy associated with the shared cloud desktops.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-53iyi2aar0nd6****</p>
@@ -98,7 +93,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -108,7 +103,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. A maximum of 20 tags can be specified.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ExportDesktopGroupInfoRequestTag> tag;
@@ -216,7 +211,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
 
     public static class ExportDesktopGroupInfoRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. This parameter cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -225,7 +220,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

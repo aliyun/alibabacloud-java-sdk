@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateNetworkPackageRequest extends TeaModel {
     /**
-     * <p>The ID of the premium bandwidth plan. You can call the <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> operation to obtain the ID.</p>
+     * <p>The ID of the premium Internet bandwidth plan. You can call <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DissociateNetworkPackageRequest extends TeaModel {
     public String networkPackageId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

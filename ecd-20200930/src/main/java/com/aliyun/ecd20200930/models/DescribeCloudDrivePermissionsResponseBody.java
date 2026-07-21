@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
     /**
-     * <p>List of enterprise cloud drive permission information.</p>
+     * <p>The list of permission settings for the enterprise cloud drive.</p>
      */
     @NameInMap("CloudDrivePermissionModels")
     public java.util.List<DescribeCloudDrivePermissionsResponseBodyCloudDrivePermissionModels> cloudDrivePermissionModels;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07E5B3</p>
@@ -42,13 +42,18 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
 
     public static class DescribeCloudDrivePermissionsResponseBodyCloudDrivePermissionModels extends TeaModel {
         /**
-         * <p>List of end user IDs.</p>
+         * <p>The list of end user IDs.</p>
          */
         @NameInMap("EndUsers")
         public java.util.List<String> endUsers;
 
         /**
-         * <p>File transfer permission between the enterprise cloud drive and on-premises devices for the user.</p>
+         * <p>The file transfer permission between the enterprise cloud drive and the on-premises device for the user. Valid values:</p>
+         * <ul>
+         * <li>CDS_CREATE_DOWNLOAD: has both upload and download permissions.</li>
+         * <li>CDS_DOWNLOAD: has only download permission.</li>
+         * <li>CDS_CREATE: has only upload permission.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CDS_DOWNLOAD</p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeFotaTasksRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p> This parameter is not publicly available.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,12 +16,7 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public String fotaStatus;
 
     /**
-     * <p>The language of the image version to update.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>en: English.</li>
-     * <li>zh: Simplified Chinese.</li>
-     * </ul>
+     * <p>The language type of the upgrade version description.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -30,10 +25,10 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <ul>
-     * <li>Valid values: 1 to 100</li>
-     * <li>Default value: 20</li>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 20.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +38,7 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results exist.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -52,7 +47,7 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,18 +57,13 @@ public class DescribeFotaTasksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the image update tasks.</p>
+     * <p>The list of image upgrade tasks.</p>
      */
     @NameInMap("TaskUid")
     public java.util.List<String> taskUid;
 
     /**
-     * <p>Specifies whether to automatically push the image update task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Running: automatically pushes the image update task.</li>
-     * <li>Pending: does not automatically push the image update task.</li>
-     * </ul>
+     * <p>Specifies whether the image upgrade task is automatically pushed.</p>
      * 
      * <strong>example:</strong>
      * <p>Pending</p>

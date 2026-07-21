@@ -14,13 +14,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of sessions.</p>
+     * <p>The session details.</p>
      */
     @NameInMap("Sessions")
     public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessions> sessions;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
 
     public static class DescribeGlobalDesktopRecordsResponseBodySessionsResourceGroups extends TeaModel {
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The enterprise resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-f3s3dgt8dtb0vlqc8</p>
@@ -68,7 +68,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The resource group name.</p>
          * 
          * <strong>example:</strong>
          * <p>dms_test</p>
@@ -101,7 +101,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
 
     public static class DescribeGlobalDesktopRecordsResponseBodySessionsSessions extends TeaModel {
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The end user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>TestUser</p>
@@ -110,7 +110,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The time the session was created.</p>
+         * <p>The time when the session was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T06:56:45Z</p>
@@ -160,8 +160,11 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        @NameInMap("CreationTime")
+        public String creationTime;
+
         /**
-         * <p>The ID of the desktop group.</p>
+         * <p>The shared cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-iaqu3bi2xtie****</p>
@@ -170,7 +173,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The name of the desktop group.</p>
+         * <p>The shared cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoCCGroup</p>
@@ -179,7 +182,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopGroupName;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-g6t1ukbaea****</p>
@@ -188,7 +191,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -206,7 +209,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The ID of the end user.</p>
+         * <p>The end user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>TestUser</p>
@@ -215,7 +218,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>A list of assigned end user IDs.</p>
+         * <p>The list of assigned end user IDs.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
@@ -230,7 +233,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The duration of the last connection, in seconds.</p>
+         * <p>The duration of the most recent connection to the cloud desktop. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -239,7 +242,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long latestConnectionTime;
 
         /**
-         * <p>The memory size of the cloud desktop, in MiB.</p>
+         * <p>The memory of the cloud desktop. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4096</p>
@@ -248,7 +251,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long memory;
 
         /**
-         * <p>The ID of the office site.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-8904****</p>
@@ -257,7 +260,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The name of the office site.</p>
+         * <p>The office network name.</p>
          * 
          * <strong>example:</strong>
          * <p>TestOfficeSite</p>
@@ -266,7 +269,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String officeSiteName;
 
         /**
-         * <p>The office site type.</p>
+         * <p>The office network type.</p>
          * 
          * <strong>example:</strong>
          * <p>Simple</p>
@@ -277,10 +280,8 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         /**
          * <p>The operating system type. Valid values:</p>
          * <ul>
-         * <li><p><code>Windows</code></p>
-         * </li>
-         * <li><p><code>Linux</code></p>
-         * </li>
+         * <li>Windows</li>
+         * <li>Linux</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -290,7 +291,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The operating system version.</p>
+         * <p>The specific operating system version.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows 10</p>
@@ -301,10 +302,8 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         /**
          * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><p><code>HDX</code></p>
-         * </li>
-         * <li><p><code>ASP</code></p>
-         * </li>
+         * <li>HDX</li>
+         * <li>ASP</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,7 +313,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -323,13 +322,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>A list of resource groups.</p>
+         * <p>The enterprise resource group name.</p>
          */
         @NameInMap("ResourceGroups")
         public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessionsResourceGroups> resourceGroups;
 
         /**
-         * <p>The idle duration of the session, in minutes.</p>
+         * <p>The session idle duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -338,7 +337,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long sessionIdleTime;
 
         /**
-         * <p>A list of sessions.</p>
+         * <p>The session details.</p>
          */
         @NameInMap("Sessions")
         public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessionsSessions> sessions;
@@ -353,14 +352,11 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long statusChangeTime;
 
         /**
-         * <p>The billing method for the cloud desktop. Valid values:</p>
+         * <p>The billing method of the cloud desktop. Valid values:</p>
          * <ul>
-         * <li><p><code>prePaid</code>: Subscription.</p>
-         * </li>
-         * <li><p><code>postPaid</code>: Pay-as-you-go.</p>
-         * </li>
-         * <li><p><code>monthPackage</code>: Monthly usage package.</p>
-         * </li>
+         * <li>prePaid: monthly subscription with unlimited usage duration.</li>
+         * <li>postPaid: pay-as-you-go.</li>
+         * <li>monthPackage: monthly duration package.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -370,7 +366,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String subPayType;
 
         /**
-         * <p>The total connection duration, in seconds.</p>
+         * <p>The total connection duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>240</p>
@@ -379,7 +375,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long totalConnectionTime;
 
         /**
-         * <p>The cloud desktop uptime, in seconds.</p>
+         * <p>The cloud desktop uptime. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -406,6 +402,14 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public DescribeGlobalDesktopRecordsResponseBodySessions setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeGlobalDesktopRecordsResponseBodySessions setDesktopGroupId(String desktopGroupId) {

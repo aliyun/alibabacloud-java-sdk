@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelCdsFileShareLinkRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The enterprise drive ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CancelCdsFileShareLinkRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the file sharing task.</p>
+     * <p>The share ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

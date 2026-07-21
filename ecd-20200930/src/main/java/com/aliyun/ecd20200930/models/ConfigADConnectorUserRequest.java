@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigADConnectorUserRequest extends TeaModel {
     /**
-     * <p>The password of the AD user that has the permissions to join computers to domains.</p>
+     * <p>The password of the AD user that has the permission to join computers to the domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,7 @@ public class ConfigADConnectorUserRequest extends TeaModel {
     public String domainPassword;
 
     /**
-     * <p>The username of the AD user that has the permissions to join computers to domains.</p>
-     * <p>After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.</p>
+     * <p>The username of the AD user that has the permission to join computers to the domain. After the configuration is complete, cloud computers created in the corresponding AD office network are added to the specified OU.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +25,7 @@ public class ConfigADConnectorUserRequest extends TeaModel {
     public String domainUserName;
 
     /**
-     * <p>The name of the OU in the AD domain. You can call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the OU name.</p>
+     * <p>The organizational unit (OU) of the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the value.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com/Domain Controllers</p>
@@ -35,7 +34,7 @@ public class ConfigADConnectorUserRequest extends TeaModel {
     public String OUName;
 
     /**
-     * <p>The ID of the AD workspace.</p>
+     * <p>The ID of the AD office network.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +44,7 @@ public class ConfigADConnectorUserRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

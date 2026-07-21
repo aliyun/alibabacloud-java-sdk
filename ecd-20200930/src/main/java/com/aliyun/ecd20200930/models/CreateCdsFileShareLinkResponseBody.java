@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCdsFileShareLinkResponseBody extends TeaModel {
     /**
-     * <p>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class CreateCdsFileShareLinkResponseBody extends TeaModel {
     public CdsFileShareLinkModel data;
 
     /**
-     * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+     * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,22 +38,10 @@ public class CreateCdsFileShareLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
-     * <p>Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApproveFotaUpdateRequest extends TeaModel {
     /**
-     * <p>Mirror version.</p>
+     * <p>The image version. You can call <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String appVersion;
 
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The cloud computer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

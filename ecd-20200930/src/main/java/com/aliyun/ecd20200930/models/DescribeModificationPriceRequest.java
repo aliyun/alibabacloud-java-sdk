@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeModificationPriceRequest extends TeaModel {
     /**
-     * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
+     * <p>The peak Internet bandwidth. Unit: Mbit/s.</p>
      * <blockquote>
-     * <p>Valid values when PayByTraffic is set to PayByBandwidth: 10 to 1000.</p>
+     * <p>If you use the pay-by-bandwidth billing method, the valid values range from 10 to 1000.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The ID of either the monthly subscription cloud computer with unlimited hours or the premium bandwidth plan.</p>
+     * <p>The instance ID. The value can be the ID of a monthly-subscribed (unlimited-duration) cloud computer or the ID of a premium Internet bandwidth instance.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-0gfv2z3sf95zvt****</p>
@@ -26,49 +26,31 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The specifications.</p>
+     * <p>The resource specification.</p>
      * <ul>
-     * <li><p>Valid values when you set <code>ResourceType</code> to <code>Desktop</code>:</p>
+     * <li><p>If <code>ResourceType</code> is set to <code>Desktop</code>, valid values include:</p>
      * <ul>
-     * <li><p>ecd.basic.small</p>
-     * </li>
-     * <li><p>ecd.basic.large</p>
-     * </li>
-     * <li><p>ecd.advanced.large</p>
-     * </li>
-     * <li><p>ecd.advanced.xlarge</p>
-     * </li>
-     * <li><p>ecd.performance.2xlarge</p>
-     * </li>
-     * <li><p>ecd.graphics.xlarge</p>
-     * </li>
-     * <li><p>ecd.graphics.2xlarge</p>
-     * </li>
-     * <li><p>ecd.advanced.xlarge_s8d2</p>
-     * </li>
-     * <li><p>ecd.advanced.xlarge_s8d7</p>
-     * </li>
-     * <li><p>ecd.graphics.1g72c</p>
-     * </li>
-     * <li><p>eds.general.2c2g</p>
-     * </li>
-     * <li><p>eds.general.2c4g</p>
-     * </li>
-     * <li><p>eds.general.2c8g</p>
-     * </li>
-     * <li><p>eds.general.4c8g</p>
-     * </li>
-     * <li><p>eds.general.4c16g</p>
-     * </li>
-     * <li><p>eds.general.8c16g</p>
-     * </li>
-     * <li><p>eds.general.8c32g</p>
-     * </li>
-     * <li><p>eds.general.16c32g</p>
-     * </li>
+     * <li>ecd.basic.small</li>
+     * <li>ecd.basic.large</li>
+     * <li>ecd.advanced.large</li>
+     * <li>ecd.advanced.xlarge</li>
+     * <li>ecd.performance.2xlarge</li>
+     * <li>ecd.graphics.xlarge</li>
+     * <li>ecd.graphics.2xlarge</li>
+     * <li>ecd.advanced.xlarge_s8d2</li>
+     * <li>ecd.advanced.xlarge_s8d7</li>
+     * <li>ecd.graphics.1g72c</li>
+     * <li>eds.general.2c2g</li>
+     * <li>eds.general.2c4g</li>
+     * <li>eds.general.2c8g</li>
+     * <li>eds.general.4c8g</li>
+     * <li>eds.general.4c16g</li>
+     * <li>eds.general.8c16g</li>
+     * <li>eds.general.8c32g</li>
+     * <li>eds.general.16c32g</li>
      * </ul>
      * </li>
-     * <li><p>You can skip this parameter if <code>ResourceType</code> is set to <code>NetworkPackage</code>.</p>
+     * <li><p>If <code>ResourceType</code> is set to <code>NetworkPackage</code>, you do not need to specify this parameter.</p>
      * </li>
      * </ul>
      * 
@@ -79,7 +61,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Promotion activity ID.</p>
+     * <p>The promotion ID.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_option_id_for_blank</p>
@@ -88,7 +70,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +80,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>User ID for resource ownership in resale mode. You do not need to specify this parameter if resale mode is not used.</p>
+     * <p>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>1422724566551XXX</p>
@@ -107,18 +89,16 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public Long resellerOwnerUid;
 
     /**
-     * <p>List of resource specification templates.</p>
+     * <p>The list of resource specification templates.</p>
      */
     @NameInMap("ResourceSpecs")
     public java.util.List<DescribeModificationPriceRequestResourceSpecs> resourceSpecs;
 
     /**
-     * <p>The resource type. The required parameters depend on the resource type.</p>
+     * <p>The resource type. The required parameters vary based on the resource type for which you want to query the specification change price:</p>
      * <ul>
-     * <li><p>When <code>ResourceType</code> is set to <code>Desktop</code>, the required parameters are <code>InstanceType</code>, <code>RootDiskSizeGib</code>, and <code>UserDiskSizeGib</code>.</p>
-     * </li>
-     * <li><p>When <code>ResourceType</code> is set to <code>NetworkPackage</code>, the required parameter is <code>Bandwidth</code>.</p>
-     * </li>
+     * <li>If <code>ResourceType</code> is set to <code>Desktop</code>, you must specify the <code>InstanceType</code>, <code>RootDiskSizeGib</code>, and <code>UserDiskSizeGib</code> parameters.</li>
+     * <li>If <code>ResourceType</code> is set to <code>NetworkPackage</code>, you must specify the <code>Bandwidth</code> parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +108,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Performance level of the system disk. When the WUYING Workspace instance type is set to graphics-optimized or high clock speed, you can specify the disk performance level. For differences between performance levels, see <a href="t583241.xdita#"></a>.</p>
+     * <p>The performance level of the system cloud disk. You can configure the disk performance level in Settings when the cloud computer specification is set to graphics-accelerated or high frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD does not support performance level configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -137,7 +117,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The size of the system disk. Unit: GiB.</p>
+     * <p>The system cloud disk size. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -146,7 +126,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public Integer rootDiskSizeGib;
 
     /**
-     * <p>Performance level of the data disk. When the WUYING Workspace instance type is set to graphics-optimized or high clock speed, you can specify the disk performance level. For differences between performance levels, see <a href="t583241.xdita#"></a>.</p>
+     * <p>The performance level of the data cloud disk. You can configure the disk performance level in Settings when the cloud computer specification is set to graphics-accelerated or high frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD does not support performance level configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>PL0</p>
@@ -155,7 +135,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
     public String userDiskPerformanceLevel;
 
     /**
-     * <p>The size of the data disk. Unit: GiB.</p>
+     * <p>The data cloud disk size. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -266,7 +246,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
 
     public static class DescribeModificationPriceRequestResourceSpecs extends TeaModel {
         /**
-         * <p>Cloud computer ID.</p>
+         * <p>The cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-6ghhzivgmnzgeyXXX</p>
@@ -275,7 +255,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>System disk size. Unit: GiB.</p>
+         * <p>The system cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -284,7 +264,7 @@ public class DescribeModificationPriceRequest extends TeaModel {
         public Integer rootDiskSizeGib;
 
         /**
-         * <p>Data disk size. Unit: GiB.</p>
+         * <p>The data cloud disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadCdsFileRequest extends TeaModel {
     /**
-     * <p>The enterprise drive ID.</p>
+     * <p>The enterprise cloud drive ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+cds-643267****</p>

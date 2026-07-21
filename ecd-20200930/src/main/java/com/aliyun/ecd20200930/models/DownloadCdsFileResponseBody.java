@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DownloadCdsFileResponseBody extends TeaModel {
     /**
-     * <p>The download URL of the file.</p>
+     * <p>The URL for downloading the file.</p>
      */
     @NameInMap("DownloadFileModel")
     public DownloadCdsFileResponseBodyDownloadFileModel downloadFileModel;
@@ -76,10 +76,10 @@ public class DownloadCdsFileResponseBody extends TeaModel {
 
     public static class DownloadCdsFileResponseBodyDownloadFileModel extends TeaModel {
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None.</p>
          */
         @NameInMap("DownloadType")
         public String downloadType;
@@ -94,16 +94,16 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         public String downloadUrl;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None.</p>
          */
         @NameInMap("ExpirationSecond")
         public String expirationSecond;
 
         /**
-         * <p>The validity period of the download URL.</p>
+         * <p>The expiration time of the file download URL.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-18T02:55:49.795Z</p>
@@ -121,7 +121,7 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The size of the file. Unit: bytes.</p>
+         * <p>The file size, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1594642</p>
@@ -130,10 +130,10 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None.</p>
          */
         @NameInMap("StreamUrl")
         public String streamUrl;

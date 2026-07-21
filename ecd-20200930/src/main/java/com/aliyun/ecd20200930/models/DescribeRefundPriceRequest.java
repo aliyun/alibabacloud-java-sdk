@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeRefundPriceRequest extends TeaModel {
     /**
-     * <p>A list of cloud desktop IDs. You can specify one or more IDs. The number of IDs (N) must be between 1 and 20.</p>
+     * <p>The list of cloud computer IDs. You can specify one or more IDs. Valid values of N: 1 to 20.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>Refund type.</p>
+     * <p>The unsubscription type.</p>
      * 
      * <strong>example:</strong>
      * <p>RemainRefund</p>
@@ -21,7 +21,7 @@ public class DescribeRefundPriceRequest extends TeaModel {
     public String refundType;
 
     /**
-     * <p>Region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyCdsFileResponseBody extends TeaModel {
     /**
-     * <p>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     * <p>The execution result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,13 +14,13 @@ public class CopyCdsFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details about the file copying.</p>
+     * <p>The result of copying the file.</p>
      */
     @NameInMap("CopyCdsFileModel")
     public CopyCdsFileResponseBodyCopyCdsFileModel copyCdsFileModel;
 
     /**
-     * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+     * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,23 +38,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -109,7 +93,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
 
     public static class CopyCdsFileResponseBodyCopyCdsFileModel extends TeaModel {
         /**
-         * <p>The ID of the asynchronous task. This parameter is not returned if you copy a file. This parameter is returned if you copy a folder in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</p>
+         * <p>The asynchronous task ID. This field is not returned when a file is copied. When a folder is copied, the copy operation is performed asynchronously in the background, so this field is returned. You can call <a href="https://help.aliyun.com/document_detail/2357404.html">GetAsyncTask</a> and pass in this asynchronous task ID to obtain the task details.</p>
          * 
          * <strong>example:</strong>
          * <p>4221bf6e6ab43a255edc4463bffa6f5f5d31****</p>
@@ -118,7 +102,7 @@ public class CopyCdsFileResponseBody extends TeaModel {
         public String asyncTaskId;
 
         /**
-         * <p>The ID of the copied file or folder.</p>
+         * <p>The ID of the new file or folder after the copy operation.</p>
          * 
          * <strong>example:</strong>
          * <p>6400727cb878821bcb414615a609b4072463****</p>

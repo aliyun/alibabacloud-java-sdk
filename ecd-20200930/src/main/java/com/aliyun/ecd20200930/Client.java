@@ -54,10 +54,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</p>
+     * <p>For office networks based on convenience accounts, if no cloud computers are created within 15 consecutive calendar days, the office network is automatically locked and VPC-related resources are released. To use the office network again, call this operation to unlock it.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unlocks a convenience office network that is automatically locked due to a long idle period of time.</p>
+     * <p>Unlocks an office network that was automatically locked after being idle for a period of time.</p>
      * 
      * @param request ActivateOfficeSiteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -93,10 +93,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</p>
+     * <p>For office networks based on convenience accounts, if no cloud computers are created within 15 consecutive calendar days, the office network is automatically locked and VPC-related resources are released. To use the office network again, call this operation to unlock it.</p>
      * 
      * <b>summary</b> : 
-     * <p>Unlocks a convenience office network that is automatically locked due to a long idle period of time.</p>
+     * <p>Unlocks an office network that was automatically locked after being idle for a period of time.</p>
      * 
      * @param request ActivateOfficeSiteRequest
      * @return ActivateOfficeSiteResponse
@@ -226,10 +226,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</p>
+     * <p>You can share a specified folder with other users and set access permissions for the folder.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a shared folder to the network disk.</p>
+     * <p>Creates a shared folder in a cloud disk.</p>
      * 
      * @param tmpReq AddFilePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -287,10 +287,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</p>
+     * <p>You can share a specified folder with other users and set access permissions for the folder.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a shared folder to the network disk.</p>
+     * <p>Creates a shared folder in a cloud disk.</p>
      * 
      * @param request AddFilePermissionRequest
      * @return AddFilePermissionResponse
@@ -558,7 +558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for the coordinate permissions.</p>
+     * <p>Requests permissions for stream coordination operations.</p>
      * 
      * @param request ApplyCoordinatePrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -606,7 +606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for the coordinate permissions.</p>
+     * <p>Requests permissions for stream coordination operations.</p>
      * 
      * @param request ApplyCoordinatePrivilegeRequest
      * @return ApplyCoordinatePrivilegeResponse
@@ -618,7 +618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
+     * <p>Sends a remote assistance request from an administrator to an end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
      * 
      * @param request ApplyCoordinationForMonitoringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -670,7 +670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
+     * <p>Sends a remote assistance request from an administrator to an end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</p>
      * 
      * @param request ApplyCoordinationForMonitoringRequest
      * @return ApplyCoordinationForMonitoringResponse
@@ -682,10 +682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers for which you want to allow image updates must be in the Running state.</p>
+     * <p>The cloud computer must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Allows you to upgrade images.</p>
+     * <p>Allows an image upgrade.</p>
      * 
      * @param request ApproveFotaUpdateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -725,10 +725,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computers for which you want to allow image updates must be in the Running state.</p>
+     * <p>The cloud computer must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Allows you to upgrade images.</p>
+     * <p>Allows an image upgrade.</p>
      * 
      * @param request ApproveFotaUpdateRequest
      * @return ApproveFotaUpdateResponse
@@ -800,7 +800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.</p>
+     * <p>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</p>
      * 
      * @param request AssociateNetworkPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -840,7 +840,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.</p>
+     * <p>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</p>
      * 
      * @param request AssociateNetworkPackageRequest
      * @return AssociateNetworkPackageResponse
@@ -1053,13 +1053,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The target cloud computers must be in the Running state.</li>
-     * <li>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <code>ManagementFlags</code> parameter. A value of <code>ASSIGNING</code> means it is in progress; otherwise, it is complete.</li>
-     * <li>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</li>
+     * <li>The cloud computers must be in the Running state.</li>
+     * <li>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter: <code>ASSIGNING</code> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</li>
+     * <li>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns multiple cloud computers to users in a batch.</p>
+     * <p>Assigns users to multiple cloud computers in a batch.</p>
      * 
      * @param request BatchModifyEntitlementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1116,13 +1116,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The target cloud computers must be in the Running state.</li>
-     * <li>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <code>ManagementFlags</code> parameter. A value of <code>ASSIGNING</code> means it is in progress; otherwise, it is complete.</li>
-     * <li>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</li>
+     * <li>The cloud computers must be in the Running state.</li>
+     * <li>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter: <code>ASSIGNING</code> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</li>
+     * <li>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns multiple cloud computers to users in a batch.</p>
+     * <p>Assigns users to multiple cloud computers in a batch.</p>
      * 
      * @param request BatchModifyEntitlementRequest
      * @return BatchModifyEntitlementResponse
@@ -1238,7 +1238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a file sharing task.</p>
+     * <p>Cancels file sharing.</p>
      * 
      * @param request CancelCdsFileShareLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1274,7 +1274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a file sharing task.</p>
+     * <p>Cancels file sharing.</p>
      * 
      * @param request CancelCdsFileShareLinkRequest
      * @return CancelCdsFileShareLinkResponse
@@ -1286,7 +1286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a remote assistance request to the end user.</p>
+     * <p>Cancels a remote assistance request initiated to an end user.</p>
      * 
      * @param request CancelCoordinationForMonitoringRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1330,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels a remote assistance request to the end user.</p>
+     * <p>Cancels a remote assistance request initiated to an end user.</p>
      * 
      * @param request CancelCoordinationForMonitoringRequest
      * @return CancelCoordinationForMonitoringResponse
@@ -1342,7 +1342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the operation of copying an image to another region.</p>
+     * <p>Cancels an ongoing image copy operation to another region.</p>
      * 
      * @param request CancelCopyImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1378,7 +1378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels the operation of copying an image to another region.</p>
+     * <p>Cancels an ongoing image copy operation to another region.</p>
      * 
      * @param request CancelCopyImageRequest
      * @return CancelCopyImageResponse
@@ -1390,7 +1390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones a policy based on an existing global policy.</p>
+     * <p>Clones a policy based on an existing region-independent policy.</p>
      * 
      * @param request CloneCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1438,7 +1438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones a policy based on an existing global policy.</p>
+     * <p>Clones a policy based on an existing region-independent policy.</p>
      * 
      * @param request CloneCenterPolicyRequest
      * @return CloneCenterPolicyResponse
@@ -1450,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones an existing policy to quickly create a policy.</p>
+     * <p>Clones a cloud computer policy to quickly create a custom cloud computer policy.</p>
      * 
      * @param request ClonePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1490,7 +1490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones an existing policy to quickly create a policy.</p>
+     * <p>Clones a cloud computer policy to quickly create a custom cloud computer policy.</p>
      * 
      * @param request ClonePolicyGroupRequest
      * @return ClonePolicyGroupResponse
@@ -1566,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.</p>
+     * <p>Configures a trust relationship for an AD office network. For office networks (formerly workspaces) that use the HDX protocol, you must configure conditional forwarders and trust relationships before the networks can function properly.</p>
      * 
      * @param request ConfigADConnectorTrustRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1610,7 +1610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.</p>
+     * <p>Configures a trust relationship for an AD office network. For office networks (formerly workspaces) that use the HDX protocol, you must configure conditional forwarders and trust relationships before the networks can function properly.</p>
      * 
      * @param request ConfigADConnectorTrustRequest
      * @return ConfigADConnectorTrustResponse
@@ -1622,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</p>
+     * <p>Specifies the organizational unit (OU) and administrator for an AD office network (formerly workspace).</p>
      * 
      * @param request ConfigADConnectorUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1670,7 +1670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</p>
+     * <p>Specifies the organizational unit (OU) and administrator for an AD office network (formerly workspace).</p>
      * 
      * @param request ConfigADConnectorUserRequest
      * @return ConfigADConnectorUserResponse
@@ -1682,7 +1682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a copy of a file or folder in the cloud drive.</p>
+     * <p>Creates a copy of a file or folder in a cloud drive.</p>
      * 
      * @param request CopyCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1746,7 +1746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a copy of a file or folder in the cloud drive.</p>
+     * <p>Creates a copy of a file or folder in a cloud drive.</p>
      * 
      * @param request CopyCdsFileRequest
      * @return CopyCdsFileResponse
@@ -1758,7 +1758,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.</p>
+     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</p>
      * 
      * @param request CopyImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1806,7 +1806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.</p>
+     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</p>
      * 
      * @param request CopyImageRequest
      * @return CopyImageResponse
@@ -2450,7 +2450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a file share.</p>
+     * <p>Creates a file share.</p>
      * 
      * @param request CreateCdsFileShareLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2534,7 +2534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a file share.</p>
+     * <p>Creates a file share.</p>
      * 
      * @param request CreateCdsFileShareLinkRequest
      * @return CreateCdsFileShareLinkResponse
@@ -2546,7 +2546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create a region-independent cloud desktop policy.</p>
+     * <p>Creates a region-independent Cloud Desktop policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2721,6 +2721,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileTransferAddress)) {
             query.put("FileTransferAddress", request.fileTransferAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferInSize)) {
+            query.put("FileTransferInSize", request.fileTransferInSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferInUnit)) {
+            query.put("FileTransferInUnit", request.fileTransferInUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferOutSize)) {
+            query.put("FileTransferOutSize", request.fileTransferOutSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferOutUnit)) {
+            query.put("FileTransferOutUnit", request.fileTransferOutUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSizeLimit)) {
+            query.put("FileTransferSizeLimit", request.fileTransferSizeLimit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSpeed)) {
@@ -3106,7 +3126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can create a region-independent cloud desktop policy.</p>
+     * <p>Creates a region-independent Cloud Desktop policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @return CreateCenterPolicyResponse
@@ -4222,7 +4242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</p>
+     * <p>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</p>
      * 
      * @param request CreateDiskEncryptionServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4254,7 +4274,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</p>
+     * <p>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</p>
      * 
      * @param request CreateDiskEncryptionServiceRequest
      * @return CreateDiskEncryptionServiceResponse
@@ -5979,7 +5999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete files or folders from the network disk.</p>
+     * <p>Deletes a file or folder from a cloud drive.</p>
      * 
      * @param request DeleteCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6027,7 +6047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete files or folders from the network disk.</p>
+     * <p>Deletes a file or folder from a cloud drive.</p>
      * 
      * @param request DeleteCdsFileRequest
      * @return DeleteCdsFileResponse
@@ -6039,7 +6059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a global policy.</p>
+     * <p>Deletes a non-region-specific policy.</p>
      * 
      * @param request DeleteCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6083,7 +6103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a global policy.</p>
+     * <p>Deletes a non-region-specific policy.</p>
      * 
      * @param request DeleteCenterPolicyRequest
      * @return DeleteCenterPolicyResponse
@@ -7883,7 +7903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</p>
+     * <p>Queries the operation logs of end users, including events such as cloud computer startup, shutdown, and session disconnection.</p>
      * 
      * @param request DescribeClientEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7914,6 +7934,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
             query.put("EndUserId", request.endUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
+            query.put("EndUserIds", request.endUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
@@ -7975,7 +7999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</p>
+     * <p>Queries the operation logs of end users, including events such as cloud computer startup, shutdown, and session disconnection.</p>
      * 
      * @param request DescribeClientEventsRequest
      * @return DescribeClientEventsResponse
@@ -8207,7 +8231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the permission settings details of the enterprise cloud drive.</p>
+     * <p>Queries the permission settings of an enterprise cloud drive.</p>
      * 
      * @param request DescribeCloudDrivePermissionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8243,7 +8267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the permission settings details of the enterprise cloud drive.</p>
+     * <p>Queries the permission settings of an enterprise cloud drive.</p>
      * 
      * @param request DescribeCloudDrivePermissionsRequest
      * @return DescribeCloudDrivePermissionsResponse
@@ -8711,10 +8735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</p>
+     * <p>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists cloud computers and their metadata from all regions.</p>
+     * <p>Queries the list and metadata of cloud desktops across all regions.</p>
      * 
      * @param request DescribeDesktopMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8759,6 +8783,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MaxResults", request.maxResults);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInterfaceIp)) {
+            query.put("NetworkInterfaceIp", request.networkInterfaceIp);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
         }
@@ -8798,10 +8826,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</p>
+     * <p>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists cloud computers and their metadata from all regions.</p>
+     * <p>Queries the list and metadata of cloud desktops across all regions.</p>
      * 
      * @param request DescribeDesktopMetadataRequest
      * @return DescribeDesktopMetadataResponse
@@ -8989,10 +9017,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can retrieve data only from the last 30 days.</p>
+     * <p>Only data within the last 30 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed session information for cloud computers.</p>
+     * <p>Queries the detailed session information of a cloud computer.</p>
      * 
      * @param request DescribeDesktopSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9023,6 +9051,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIdFilter)) {
             query.put("EndUserIdFilter", request.endUserIdFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
+            query.put("EndUserIds", request.endUserIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fillHardwareInfo)) {
@@ -9084,10 +9116,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can retrieve data only from the last 30 days.</p>
+     * <p>Only data within the last 30 days can be queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the detailed session information for cloud computers.</p>
+     * <p>Queries the detailed session information of a cloud computer.</p>
      * 
      * @param request DescribeDesktopSessionsRequest
      * @return DescribeDesktopSessionsResponse
@@ -9227,7 +9259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of your cloud computers.</p>
+     * <p>Queries the details of cloud computers.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9407,7 +9439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of your cloud computers.</p>
+     * <p>Queries the details of cloud computers.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @return DescribeDesktopsResponse
@@ -9967,7 +9999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of update tasks.</p>
+     * <p>Retrieves the list of image upgrade tasks.</p>
      * 
      * @param request DescribeFotaTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10023,7 +10055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of update tasks.</p>
+     * <p>Retrieves the list of image upgrade tasks.</p>
      * 
      * @param request DescribeFotaTasksRequest
      * @return DescribeFotaTasksResponse
@@ -10036,14 +10068,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</li>
-     * <li>By default, this operation returns both active and deleted Cloud Desktops.</li>
-     * <li>You can query only Cloud Desktops deleted within the last three months.</li>
-     * <li>You cannot use the sort condition with other query conditions.</li>
+     * <li>China site users should select Shanghai as the region. International site users should select Singapore.</li>
+     * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
+     * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
+     * <li>Sort conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries basic information and usage duration for all recent Cloud Desktops.</p>
+     * <p>Queries the basic information of all recent cloud desktops and their usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10124,6 +10156,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SubPayType", request.subPayType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userNames)) {
+            query.put("UserNames", request.userNames);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -10144,14 +10180,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</li>
-     * <li>By default, this operation returns both active and deleted Cloud Desktops.</li>
-     * <li>You can query only Cloud Desktops deleted within the last three months.</li>
-     * <li>You cannot use the sort condition with other query conditions.</li>
+     * <li>China site users should select Shanghai as the region. International site users should select Singapore.</li>
+     * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
+     * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
+     * <li>Sort conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries basic information and usage duration for all recent Cloud Desktops.</p>
+     * <p>Queries the basic information of all recent cloud desktops and their usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @return DescribeGlobalDesktopRecordsResponse
@@ -10600,12 +10636,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </li>
-     * <li>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</li>
+     * <li>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</li>
+     * <li>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Used to query the execution list and status of Cloud Assistant scripts.</p>
+     * <p>Queries the execution list and status of Cloud Assistant scripts.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10682,12 +10718,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </li>
-     * <li>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</li>
+     * <li>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</li>
+     * <li>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Used to query the execution list and status of Cloud Assistant scripts.</p>
+     * <p>Queries the execution list and status of Cloud Assistant scripts.</p>
      * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
@@ -10803,7 +10839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</p>
+     * <p>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</p>
      * 
      * @param request DescribeModificationPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10879,7 +10915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</p>
+     * <p>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</p>
      * 
      * @param request DescribeModificationPriceRequest
      * @return DescribeModificationPriceResponse
@@ -11809,7 +11845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the refund amount for monthly subscription WUYING Workspaces.</p>
+     * <p>Queries the unsubscription price of cloud computers purchased on a monthly basis.</p>
      * 
      * @param request DescribeRefundPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11853,7 +11889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the refund amount for monthly subscription WUYING Workspaces.</p>
+     * <p>Queries the unsubscription price of cloud computers purchased on a monthly basis.</p>
      * 
      * @param request DescribeRefundPriceRequest
      * @return DescribeRefundPriceResponse
@@ -12289,7 +12325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshots and their details for a cloud desktop.</p>
+     * <p>Queries the snapshot list and snapshot details of a cloud computer.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12308,6 +12344,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.desktopName)) {
             query.put("DesktopName", request.desktopName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopScenario)) {
+            query.put("DesktopScenario", request.desktopScenario);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -12369,7 +12409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshots and their details for a cloud desktop.</p>
+     * <p>Queries the snapshot list and snapshot details of a cloud computer.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -13359,7 +13399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds a premium bandwidth plan from an office network.</p>
+     * <p>Disassociates a premium Internet bandwidth plan from the office network to which it was previously bound.</p>
      * 
      * @param request DissociateNetworkPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13395,7 +13435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unbinds a premium bandwidth plan from an office network.</p>
+     * <p>Disassociates a premium Internet bandwidth plan from the office network to which it was previously bound.</p>
      * 
      * @param request DissociateNetworkPackageRequest
      * @return DissociateNetworkPackageResponse
@@ -13407,7 +13447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the download link of the target file.</p>
+     * <p>Retrieves the download URL of a specified file.</p>
      * 
      * @param request DownloadCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13455,7 +13495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the download link of the target file.</p>
+     * <p>Retrieves the download URL of a specified file.</p>
      * 
      * @param request DownloadCdsFileRequest
      * @return DownloadCdsFileResponse
@@ -13555,7 +13595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</p>
+     * <p>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</p>
      * 
      * @param request ExportDesktopGroupInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13631,7 +13671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</p>
+     * <p>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</p>
      * 
      * @param request ExportDesktopGroupInfoRequest
      * @return ExportDesktopGroupInfoResponse
@@ -13643,27 +13683,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</p>
+     * <p>The cloud desktop list exported by calling this operation is saved as a CSV file. Each cloud desktop record includes the following fields:</p>
      * <ul>
-     * <li>Cloud computer ID and name</li>
-     * <li>Office network ID and name</li>
-     * <li>The instance type, OS and protocol of the cloud computer</li>
-     * <li>System disk and data disk of the cloud computer</li>
-     * <li>The status</li>
-     * <li>Purchase method</li>
-     * <li>The time when the cloud computer expires</li>
-     * <li>Remaining duration and total duration</li>
-     * <li>Number of assigned users and number of current users</li>
+     * <li>Cloud desktop ID/Cloud desktop name</li>
+     * <li>Office network ID/Office network name</li>
+     * <li>Specifications/System/Protocol</li>
+     * <li>System cloud disk/Data cloud disk</li>
+     * <li>Status</li>
+     * <li>Billing method</li>
+     * <li>Expiration time</li>
+     * <li>Remaining duration/Total duration</li>
+     * <li>Number of assigned users/Current user</li>
      * <li>Office network type</li>
-     * <li>The time when the cloud computer was created</li>
+     * <li>Creation time</li>
      * <li>Tags</li>
-     * <li>Encryption status</li>
+     * <li>Encrypted or not</li>
      * <li>IP</li>
-     * <li>The hostname</li>
+     * <li>Hostname</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Exports a cloud computer list as a CSV file.</p>
+     * <p>Exports the cloud desktop list as a CSV file.</p>
      * 
      * @param request ExportDesktopListInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13751,27 +13791,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</p>
+     * <p>The cloud desktop list exported by calling this operation is saved as a CSV file. Each cloud desktop record includes the following fields:</p>
      * <ul>
-     * <li>Cloud computer ID and name</li>
-     * <li>Office network ID and name</li>
-     * <li>The instance type, OS and protocol of the cloud computer</li>
-     * <li>System disk and data disk of the cloud computer</li>
-     * <li>The status</li>
-     * <li>Purchase method</li>
-     * <li>The time when the cloud computer expires</li>
-     * <li>Remaining duration and total duration</li>
-     * <li>Number of assigned users and number of current users</li>
+     * <li>Cloud desktop ID/Cloud desktop name</li>
+     * <li>Office network ID/Office network name</li>
+     * <li>Specifications/System/Protocol</li>
+     * <li>System cloud disk/Data cloud disk</li>
+     * <li>Status</li>
+     * <li>Billing method</li>
+     * <li>Expiration time</li>
+     * <li>Remaining duration/Total duration</li>
+     * <li>Number of assigned users/Current user</li>
      * <li>Office network type</li>
-     * <li>The time when the cloud computer was created</li>
+     * <li>Creation time</li>
      * <li>Tags</li>
-     * <li>Encryption status</li>
+     * <li>Encrypted or not</li>
      * <li>IP</li>
-     * <li>The hostname</li>
+     * <li>Hostname</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Exports a cloud computer list as a CSV file.</p>
+     * <p>Exports the cloud desktop list as a CSV file.</p>
      * 
      * @param request ExportDesktopListInfoRequest
      * @return ExportDesktopListInfoResponse
@@ -13783,7 +13823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</p>
+     * <p>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</p>
      * 
      * @param request GetAsyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13819,7 +13859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</p>
+     * <p>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</p>
      * 
      * @param request GetAsyncTaskRequest
      * @return GetAsyncTaskResponse
@@ -15555,7 +15595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a configuration that does not have a region-specific policy.</p>
+     * <p>Modifies the configuration of a region-free policy.</p>
      * 
      * @param request ModifyCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15730,6 +15770,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileTransferAddress)) {
             query.put("FileTransferAddress", request.fileTransferAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferInSize)) {
+            query.put("FileTransferInSize", request.fileTransferInSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferInUnit)) {
+            query.put("FileTransferInUnit", request.fileTransferInUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferOutSize)) {
+            query.put("FileTransferOutSize", request.fileTransferOutSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferOutUnit)) {
+            query.put("FileTransferOutUnit", request.fileTransferOutUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSizeLimit)) {
+            query.put("FileTransferSizeLimit", request.fileTransferSizeLimit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSpeed)) {
@@ -16123,7 +16183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a configuration that does not have a region-specific policy.</p>
+     * <p>Modifies the configuration of a region-free policy.</p>
      * 
      * @param request ModifyCenterPolicyRequest
      * @return ModifyCenterPolicyResponse
@@ -18928,7 +18988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Move files or folders.</p>
+     * <p>Moves a file or folder in a cloud disk to a new location.</p>
      * 
      * @param request MoveCdsFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18984,7 +19044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Move files or folders.</p>
+     * <p>Moves a file or folder in a cloud disk to a new location.</p>
      * 
      * @param request MoveCdsFileRequest
      * @return MoveCdsFileResponse
@@ -20190,7 +20250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the coordinate permissions.</p>
+     * <p>Cancels the permission for stream coordination operations.</p>
      * 
      * @param request RevokeCoordinatePrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20238,7 +20298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes the coordinate permissions.</p>
+     * <p>Cancels the permission for stream coordination operations.</p>
      * 
      * @param request RevokeCoordinatePrivilegeRequest
      * @return RevokeCoordinatePrivilegeResponse
@@ -21427,11 +21487,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can upload only Windows images.</p>
+     * <p>Only Windows operating system images can be uploaded.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Uploads your custom Windows image.</p>
+     * <p>Uploads a custom Windows image.</p>
      * 
      * @param request UploadImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21440,6 +21500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UploadImageResponse uploadImageWithOptions(UploadImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bootMode)) {
+            query.put("BootMode", request.bootMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataDiskSize)) {
             query.put("DataDiskSize", request.dataDiskSize);
         }
@@ -21508,11 +21572,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can upload only Windows images.</p>
+     * <p>Only Windows operating system images can be uploaded.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Uploads your custom Windows image.</p>
+     * <p>Uploads a custom Windows image.</p>
      * 
      * @param request UploadImageRequest
      * @return UploadImageResponse

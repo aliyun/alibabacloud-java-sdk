@@ -919,6 +919,21 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         @NameInMap("FileTransferAddress")
         public String fileTransferAddress;
 
+        @NameInMap("FileTransferInSize")
+        public String fileTransferInSize;
+
+        @NameInMap("FileTransferInUnit")
+        public String fileTransferInUnit;
+
+        @NameInMap("FileTransferOutSize")
+        public String fileTransferOutSize;
+
+        @NameInMap("FileTransferOutUnit")
+        public String fileTransferOutUnit;
+
+        @NameInMap("FileTransferSizeLimit")
+        public String fileTransferSizeLimit;
+
         @NameInMap("FileTransferSpeed")
         public String fileTransferSpeed;
 
@@ -2007,6 +2022,46 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
         public String getFileTransferAddress() {
             return this.fileTransferAddress;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFileTransferInSize(String fileTransferInSize) {
+            this.fileTransferInSize = fileTransferInSize;
+            return this;
+        }
+        public String getFileTransferInSize() {
+            return this.fileTransferInSize;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFileTransferInUnit(String fileTransferInUnit) {
+            this.fileTransferInUnit = fileTransferInUnit;
+            return this;
+        }
+        public String getFileTransferInUnit() {
+            return this.fileTransferInUnit;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFileTransferOutSize(String fileTransferOutSize) {
+            this.fileTransferOutSize = fileTransferOutSize;
+            return this;
+        }
+        public String getFileTransferOutSize() {
+            return this.fileTransferOutSize;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFileTransferOutUnit(String fileTransferOutUnit) {
+            this.fileTransferOutUnit = fileTransferOutUnit;
+            return this;
+        }
+        public String getFileTransferOutUnit() {
+            return this.fileTransferOutUnit;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFileTransferSizeLimit(String fileTransferSizeLimit) {
+            this.fileTransferSizeLimit = fileTransferSizeLimit;
+            return this;
+        }
+        public String getFileTransferSizeLimit() {
+            return this.fileTransferSizeLimit;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFileTransferSpeed(String fileTransferSpeed) {

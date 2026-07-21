@@ -8,13 +8,13 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The IDs of the cloud desktops. You can specify up to 100 IDs.</p>
+     * <p>The cloud desktop IDs. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The name of the cloud desktop.</p>
+     * <p>The cloud desktop name.</p>
      * 
      * <strong>example:</strong>
      * <p>DemoComputer</p>
@@ -22,14 +22,11 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     @NameInMap("DesktopName")
     public String desktopName;
 
-    /**
-     * <p>The ID of the resource group.</p>
-     */
     @NameInMap("DesktopStatusList")
     public java.util.List<String> desktopStatusList;
 
     /**
-     * <p>The desktop type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the supported desktop types.</p>
+     * <p>The cloud desktop type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported cloud desktop type IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.enterprise_office.2c4g</p>
@@ -38,7 +35,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String desktopType;
 
     /**
-     * <p>The end time of the query. The time must be in UTC and in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The interval between the start and end times cannot exceed 30 days.</p>
+     * <p>The end time. The maximum interval between the start time and end time is 30 days. Supported format:</p>
      * <ul>
      * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
      * </ul>
@@ -50,13 +47,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the end user.</p>
-     * <ul>
-     * <li><p>Asc: ascending order</p>
-     * </li>
-     * <li><p>Desc: descending order</p>
-     * </li>
-     * </ul>
+     * <p>The end user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>TestUser</p>
@@ -68,13 +59,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public java.util.List<String> excludeDesktopStatusList;
 
     /**
-     * <p>The ID of the office site.</p>
-     * <ul>
-     * <li><p>China (Shanghai)</p>
-     * </li>
-     * <li><p>Singapore</p>
-     * </li>
-     * </ul>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -83,9 +68,9 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The field by which to sort the results. If you do not specify this parameter, the results are sorted by creation time in descending order. Valid value:</p>
+     * <p>The sort field. If not specified, results are sorted by creation time in descending order. Valid values:</p>
      * <ul>
-     * <li><code>uptime</code>: Sorts the results by cloud desktop uptime.</li>
+     * <li>uptime: sorts by cloud desktop uptime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,10 +80,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number to return.<br>Default value: 1.<br></p>
-     * <ul>
-     * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
-     * </ul>
+     * <p>The page number for a paged query.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,12 +98,10 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. Valid values:</p>
      * <ul>
-     * <li><p>Shanghai</p>
-     * </li>
-     * <li><p>Singapore</p>
-     * </li>
+     * <li>Shanghai</li>
+     * <li>Singapore</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -132,7 +112,7 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-3mtuc28rx95lx****</p>
@@ -141,14 +121,9 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The query scope. This parameter is empty by default. Valid value:</p>
+     * <p>The query scope. This parameter is empty by default. Valid values:</p>
      * <ul>
-     * <li><p><code>ADVANCED</code>: Queries statistical records, such as connection duration.</p>
-     * </li>
-     * <li><p>postPaid: Pay-as-you-go.</p>
-     * </li>
-     * <li><p>monthPackage: monthly time-based package.</p>
-     * </li>
+     * <li>ADVANCED: queries statistical records such as connection duration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -158,9 +133,10 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The sort order. The default is <code>Asc</code>. Valid values:</p>
+     * <p>The sort order. Default value: ascending order. Valid values:</p>
      * <ul>
-     * <li><code>Asc</code>: ascending order</li>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,7 +146,10 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     public String sortType;
 
     /**
-     * <p>The start time of the query. The time must be in UTC and in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+     * <p>The start time. Supported format:</p>
+     * <ul>
+     * <li>Format: YYYY-MM-DDThh:mm:ssZ.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>2022-03-23T04:10:21Z</p>
@@ -180,12 +159,20 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
 
     /**
      * <p>The billing method of the cloud desktop. Valid values:</p>
+     * <ul>
+     * <li>prePaid: monthly subscription with unlimited usage duration.</li>
+     * <li>postPaid: pay-as-you-go.</li>
+     * <li>monthPackage: monthly duration package.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>monthPackage</p>
      */
     @NameInMap("SubPayType")
     public String subPayType;
+
+    @NameInMap("UserNames")
+    public java.util.List<String> userNames;
 
     public static DescribeGlobalDesktopRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalDesktopRecordsRequest self = new DescribeGlobalDesktopRecordsRequest();
@@ -334,6 +321,14 @@ public class DescribeGlobalDesktopRecordsRequest extends TeaModel {
     }
     public String getSubPayType() {
         return this.subPayType;
+    }
+
+    public DescribeGlobalDesktopRecordsRequest setUserNames(java.util.List<String> userNames) {
+        this.userNames = userNames;
+        return this;
+    }
+    public java.util.List<String> getUserNames() {
+        return this.userNames;
     }
 
 }

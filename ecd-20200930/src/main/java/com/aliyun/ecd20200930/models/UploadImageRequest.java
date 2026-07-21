@@ -4,8 +4,11 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class UploadImageRequest extends TeaModel {
+    @NameInMap("BootMode")
+    public String bootMode;
+
     /**
-     * <p>The size of the data disk. Valid values: 80 to 500. Unit: GiB.</p>
+     * <p>The data cloud disk size. Valid values: 80 to 500. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -32,7 +35,7 @@ public class UploadImageRequest extends TeaModel {
     public Boolean enableSecurityCheck;
 
     /**
-     * <p>Specifies whether the image is a GPU-accelerated image.</p>
+     * <p>Specifies whether the image is a GPU image.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,12 +45,6 @@ public class UploadImageRequest extends TeaModel {
 
     /**
      * <p>The type of the pre-installed GPU driver.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>gpu_grid9: This GPU driver is used on cloud computers of the following two specifications: graphics – 4 vCPUs, 23 GiB memory, 4 GiB GPU memory, and graphics – 10 vCPUs, 46 GiB memory, 8 GiB GPU memory.</li>
-     * <li>gpu_custom: You can install the driver later.</li>
-     * <li>gpu_grid12: This GPU driver is used on graphical cloud computers of specifications other than the following two specifications: graphics – 4 vCPUs, 23 GiB memory, &amp; 4 GiB GPU memory, and graphics – 10 vCPUs, 46 GiB memory, &amp; 8 GiB GPU memory.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>gpu_grid9</p>
@@ -56,7 +53,7 @@ public class UploadImageRequest extends TeaModel {
     public String gpuDriverType;
 
     /**
-     * <p>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The image name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,15 +63,15 @@ public class UploadImageRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The type of the license that is used to activate the operating system after the image is imported. Valid values:</p>
+     * <p>The license type used to activate the operating system after the image is imported. Valid values:</p>
      * <ul>
-     * <li>Auto: Elastic Desktop Service detects the operating system of the image and allocates a license to the operating system. In this mode, the system first checks whether a license allocated by an official Alibaba Cloud channel is specified in the <code>Platform</code>. If a license allocated by an official Alibaba Cloud channel is specified, the system allocates the license to the imported image. If no such license is specified, the BYOL (Bring Your Own License) mode is used.</li>
-     * <li>Aliyun: The license that is allocated by an official Alibaba Cloud channel and is specified by <code>Platform</code> is used for the operating system distribution.</li>
-     * <li>BYOL: The license that comes with the source operating system is used. When you use the BYOL mode, make sure that your license key is supported by Alibaba Cloud.</li>
+     * <li>Auto: Alibaba Cloud detects the source operating system and assigns a license. In automatic mode, the system first checks whether an Alibaba Cloud official license is available for the <code>Platform</code> you specified and assigns it to the imported image. If no such license is available, the system switches to BYOL (Bring Your Own License) mode.</li>
+     * <li>Aliyun: Uses an Alibaba Cloud official license based on the <code>Platform</code> you specified.</li>
+     * <li>BYOL: Uses the license that comes with the source operating system. When you use BYOL, make sure that your license key supports use on Alibaba Cloud.</li>
      * </ul>
      * <p>Default value: Auto.</p>
      * <blockquote>
-     * <p> Windows 10 cannot be activated by Alibaba Cloud. Set the <code>LicenseType</code> to BYOL for Windows 10.</p>
+     * <p>Systems such as Windows 10 cannot be activated through Alibaba Cloud. Set <code>LicenseType</code> to BYOL for custom activation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,23 +81,7 @@ public class UploadImageRequest extends TeaModel {
     public String licenseType;
 
     /**
-     * <p>The type of the operating system.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Linux</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Windows</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The operating system type.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -109,7 +90,7 @@ public class UploadImageRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The object path of the image file in Object Storage Service (OSS).</p>
+     * <p>The OSS object path of the image file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -120,10 +101,6 @@ public class UploadImageRequest extends TeaModel {
 
     /**
      * <p>The protocol type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>ASP: in-house Adaptive Streaming Protocol (ASP)</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ASP</p>
@@ -132,7 +109,7 @@ public class UploadImageRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -142,9 +119,9 @@ public class UploadImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The size of the system disk. Unit: GiB.</p>
+     * <p>The system cloud disk size. Unit: GiB.</p>
      * <blockquote>
-     * <p> The system disk must be at least as large as the image.</p>
+     * <p>The system cloud disk size cannot be smaller than the image file size.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -156,6 +133,14 @@ public class UploadImageRequest extends TeaModel {
     public static UploadImageRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadImageRequest self = new UploadImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UploadImageRequest setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+    public String getBootMode() {
+        return this.bootMode;
     }
 
     public UploadImageRequest setDataDiskSize(Integer dataDiskSize) {

@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopMetadataRequest extends TeaModel {
     /**
-     * <p>The creation time of the cloud computer. The time must be in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code> format and in UTC.</p>
+     * <p>The time when the cloud desktop was created. The time is in UTC format:
+     * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-01T12:00:00Z</p>
@@ -14,13 +15,13 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String creationTimeStart;
 
     /**
-     * <p>A list of cloud computer IDs.</p>
+     * <p>The list of cloud desktop IDs.</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
     /**
-     * <p>The ID of the end user.</p>
+     * <p>The end user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test-user</p>
@@ -29,7 +30,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the cloud computer share.</p>
+     * <p>The shared cloud desktop ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-i1ruuudp92qpj****</p>
@@ -47,7 +48,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>m-gx2x1dhsmusr2****</p>
@@ -56,7 +57,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Specifies whether to include cloud computers in cloud computer shares in the response.</p>
+     * <p>Specifies whether the response includes cloud desktops in shared cloud desktop groups.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -76,7 +77,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of entries to return per page. Maximum: 100. Default: 10.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -84,8 +85,11 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    @NameInMap("NetworkInterfaceIp")
+    public String networkInterfaceIp;
+
     /**
-     * <p>The token returned from the previous call to retrieve the next page of results.</p>
+     * <p>The token for the next query. An empty value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -94,7 +98,7 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-778418****</p>
@@ -103,7 +107,8 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The start of the time range to query for operations. The time must be in the <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code> format and in UTC.</p>
+     * <p>The start time of the operation performed on the cloud desktop. The time is in UTC format:
+     * <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-01T12:00:00Z</p>
@@ -204,6 +209,14 @@ public class DescribeDesktopMetadataRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeDesktopMetadataRequest setNetworkInterfaceIp(String networkInterfaceIp) {
+        this.networkInterfaceIp = networkInterfaceIp;
+        return this;
+    }
+    public String getNetworkInterfaceIp() {
+        return this.networkInterfaceIp;
     }
 
     public DescribeDesktopMetadataRequest setNextToken(String nextToken) {

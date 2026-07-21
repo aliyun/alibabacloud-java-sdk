@@ -5,16 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyCoordinationForMonitoringRequest extends TeaModel {
     /**
-     * <p>The coordination policy.</p>
-     * <p>Set the value to FULL_CONTROL.</p>
-     * <ul>
-     * <li><p>The value FULL_CONTROL specifies that the cloud desktop is shared and remote access to the cloud desktop is allowed.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The access policy during the remote assistance procedure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +15,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
     public String coordinatePolicyType;
 
     /**
-     * <p>The ID of the end user who initiates the stream collaboration. If the initiator is the administrator, do not specify this parameter.</p>
+     * <p>The ID of the end user who initiates the coordination flow. This parameter is not required if the request is initiated by an administrator.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -33,16 +24,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The type of the initiator.</p>
-     * <p>Set the value to ADMIN_INITIATE.</p>
-     * <ul>
-     * <li><p>The value ADMIN_INITIATE specifies that the administrator initiates the coordination request.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The initiator type.</p>
      * 
      * <strong>example:</strong>
      * <p>ADMIN_INITIATE</p>
@@ -51,7 +33,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
     public String initiatorType;
 
     /**
-     * <p>The region ID. You can call the <a href="https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,14 +43,14 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of cloud desktops that run the collaboration task at the same time.</p>
+     * <p>The list of cloud computers that need to accept remote assistance.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceCandidates")
     public java.util.List<ApplyCoordinationForMonitoringRequestResourceCandidates> resourceCandidates;
 
     /**
-     * <p>The universally unique identifier (UUID) of the device.</p>
+     * <p>The UUID (unique identifier) of the device.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,7 +114,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
 
     public static class ApplyCoordinationForMonitoringRequestResourceCandidates extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the current cloud desktop belongs.</p>
+         * <p>The Alibaba Cloud account ID of the cloud computer administrator.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +124,10 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
         public Long ownerAliUid;
 
         /**
-         * <p>The ID of the current end user.</p>
+         * <p>The username of the current user of the cloud computer.</p>
+         * <blockquote>
+         * <p>This field is required.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -151,7 +136,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
         public String ownerEndUserId;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud computer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +146,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The name of the cloud desktop.</p>
+         * <p>The cloud computer name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +156,7 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The properties of the cloud desktop.</p>
+         * <p>The properties of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>TestProperty</p>
@@ -191,15 +176,6 @@ public class ApplyCoordinationForMonitoringRequest extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <p>Set the value to CLOUD_DESKTOP.</p>
-         * <ul>
-         * <li><p>The value CLOUD_DESKTOP specifies that the resource is a cloud desktop.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneCenterPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the duplicated cloud computer policy.</p>
+     * <p>The ID of the cloned cloud computer policy.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-gx2x1dhsmthe9****</p>

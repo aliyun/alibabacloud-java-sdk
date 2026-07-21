@@ -18,7 +18,7 @@ public class RemoveFilePermissionShrinkRequest extends TeaModel {
      * <p>The ID of the end user.</p>
      * 
      * <strong>example:</strong>
-     * <p>alice</p>
+     * <p>user01</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;

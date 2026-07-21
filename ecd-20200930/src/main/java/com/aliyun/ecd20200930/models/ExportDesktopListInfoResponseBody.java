@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportDesktopListInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -14,7 +14,7 @@ public class ExportDesktopListInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The URL of the exported file of the cloud computer list.</p>
+     * <p>The download URL of the exported cloud desktop list file.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://cn-hangzhou-servicemanager.oss-cn-hangzhou.aliyuncs.com/A0_DESKTOP/EDS_CloudDesktops%20List_2022**********_w3fq******.csv">https://cn-hangzhou-servicemanager.oss-cn-hangzhou.aliyuncs.com/A0_DESKTOP/EDS_CloudDesktops%20List_2022**********_w3fq******.csv</a>?**********</p>

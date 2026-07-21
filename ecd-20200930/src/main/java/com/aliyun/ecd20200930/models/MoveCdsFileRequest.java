@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveCdsFileRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The enterprise cloud disk ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+cds-346063****</p>
@@ -14,41 +14,7 @@ public class MoveCdsFileRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The processing mode of files that have the same name.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><!-- -->
-     * 
-     * <p>refuse</p>
-     * <!-- -->
-     * 
-     * <p>: If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</p>
-     * <!-- -->
-     * </li>
-     * <li><!-- -->
-     * 
-     * <p>auto_rename</p>
-     * <!-- -->
-     * 
-     * <p>: If you want to create a file that uses the same name as an existing file in the cloud, the system renames the file that you want to create by appending the current time point.</p>
-     * <!-- -->
-     * </li>
-     * <li><!-- -->
-     * 
-     * <p>ignore</p>
-     * <!-- -->
-     * 
-     * <p>: The system allows you to create a file that uses the same name as an existing file in the cloud.</p>
-     * <!-- -->
-     * </li>
-     * <li><!-- -->
-     * 
-     * <p>over_write</p>
-     * <!-- -->
-     * 
-     * <p>: After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</p>
-     * <!-- --></li>
-     * </ul>
+     * <p>The policy for handling files with the same name.</p>
      * 
      * <strong>example:</strong>
      * <p>ignore</p>
@@ -57,7 +23,7 @@ public class MoveCdsFileRequest extends TeaModel {
     public String conflictPolicy;
 
     /**
-     * <p>The user ID that you want to use to access the cloud disk.</p>
+     * <p>The ID of the user who uses the cloud disk.</p>
      * 
      * <strong>example:</strong>
      * <p>user01</p>
@@ -66,7 +32,7 @@ public class MoveCdsFileRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the file.</p>
+     * <p>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>63f3257b68b018170b194d87b875512d108f****</p>
@@ -75,7 +41,7 @@ public class MoveCdsFileRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>The group ID.</p>
+     * <p>The team space ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-hvyou5jbob3b0****</p>
@@ -84,7 +50,7 @@ public class MoveCdsFileRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the parent folder that you want to move. If you want to remove the root folder, set the value to root.</p>
+     * <p>The ID of the parent folder at the destination. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file. Set this parameter to <code>root</code> if you want to move the file to the root directory.</p>
      * 
      * <strong>example:</strong>
      * <p>6409848a6da91d6240604e7ba7337d85ba8a1****</p>
@@ -93,7 +59,7 @@ public class MoveCdsFileRequest extends TeaModel {
     public String parentFolderId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

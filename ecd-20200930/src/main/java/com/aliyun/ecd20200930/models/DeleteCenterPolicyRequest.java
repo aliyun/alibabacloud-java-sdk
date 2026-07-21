@@ -6,13 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteCenterPolicyRequest extends TeaModel {
     /**
      * <p>The business type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>1: public cloud.</p>
-     * </li>
-     * <li><p>8: commercial edition.</p>
-     * </li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,14 +15,14 @@ public class DeleteCenterPolicyRequest extends TeaModel {
     public Integer businessType;
 
     /**
-     * <p>The policy IDs.</p>
+     * <p>The list of policy group IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyGroupIds")
     public java.util.List<String> policyGroupIds;
 
     /**
-     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Cloud Computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,13 +33,6 @@ public class DeleteCenterPolicyRequest extends TeaModel {
 
     /**
      * <p>The resource type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>app: cloud applications.</p>
-     * </li>
-     * <li><p>desktop: cloud computers.</p>
-     * </li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

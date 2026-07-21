@@ -32,7 +32,7 @@ public class VerifyCenRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.0.0/16</p>
+     * <p>47.100.XX.XX</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;

@@ -18,7 +18,7 @@ public class ListCdsFilesShrinkRequest extends TeaModel {
      * <p>The ID of the user to which the network disk is assigned.</p>
      * 
      * <strong>example:</strong>
-     * <p>alice</p>
+     * <p>testUser</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -51,7 +51,7 @@ public class ListCdsFilesShrinkRequest extends TeaModel {
      * <p>The query token. Set the value to the value of the <code>NextToken</code> parameter returned in the last call to the operation. You do not need to set this parameter when you call the operation for the first time.</p>
      * 
      * <strong>example:</strong>
-     * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
+     * <p>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

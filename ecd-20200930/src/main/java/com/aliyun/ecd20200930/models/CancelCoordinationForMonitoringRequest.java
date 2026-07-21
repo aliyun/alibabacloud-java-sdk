@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CancelCoordinationForMonitoringRequest extends TeaModel {
     /**
-     * <p>The IDs of stream collaboration tasks.</p>
+     * <p>The list of coordination flow IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CoIds")
     public java.util.List<String> coIds;
 
     /**
-     * <p>The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.</p>
+     * <p>The ID of the end user who initiated the coordination flow. This parameter is not required if the request is initiated by an administrator.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -21,7 +21,7 @@ public class CancelCoordinationForMonitoringRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,11 +31,7 @@ public class CancelCoordinationForMonitoringRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the user.</p>
-     * <p>Valid value:</p>
-     * <ul>
-     * <li>TENANT_ADMIN: administrator.</li>
-     * </ul>
+     * <p>The user type.</p>
      * 
      * <strong>example:</strong>
      * <p>TENANT_ADMIN</p>

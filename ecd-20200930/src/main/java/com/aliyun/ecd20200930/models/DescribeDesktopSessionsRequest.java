@@ -14,13 +14,13 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public Boolean checkOsSession;
 
     /**
-     * <p>The ID of the cloud computer. You can specify 1 to 100 IDs.</p>
+     * <p>The cloud computer IDs. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The name of the cloud computer.</p>
+     * <p>The cloud computer name.</p>
      * 
      * <strong>example:</strong>
      * <p>DemoComputer</p>
@@ -38,7 +38,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the end user.</p>
+     * <p>The end user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -47,7 +47,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The ID of the end user. This parameter is the same as the <code>EndUserId</code> parameter. Specify only one of them.</p>
+     * <p>The end user ID. This parameter is the same as EndUserId. You only need to specify one of them.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -55,14 +55,17 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("EndUserIdFilter")
     public String endUserIdFilter;
 
+    @NameInMap("EndUserIds")
+    public java.util.List<String> endUserIds;
+
     /**
-     * <p>Specifies whether to return information about the terminal.</p>
+     * <p>Specifies whether to include terminal information in the response.</p>
      */
     @NameInMap("FillHardwareInfo")
     public Boolean fillHardwareInfo;
 
     /**
-     * <p>The language of the returned information.</p>
+     * <p>The language type of the response.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -71,7 +74,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The ID of the cloud computer.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -80,7 +83,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The page number for a paged query.</p>
+     * <p>The page number of the current page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -89,7 +92,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries to return on each page for a paged query.</p>
+     * <p>The maximum number of rows per page in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -98,7 +101,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region. Call <a href="t2167755.xdita#"></a>to obtain a list of regions that Elastic Desktop Service (EDS) supports.</p>
+     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +114,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The connection status of the session.</p>
+     * <p>The session connection status.</p>
      * 
      * <strong>example:</strong>
      * <p>Connected</p>
@@ -129,7 +132,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The billing method of the cloud computer.</p>
+     * <p>The purchase method of the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>monthPackage</p>
@@ -188,6 +191,14 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     }
     public String getEndUserIdFilter() {
         return this.endUserIdFilter;
+    }
+
+    public DescribeDesktopSessionsRequest setEndUserIds(java.util.List<String> endUserIds) {
+        this.endUserIds = endUserIds;
+        return this;
+    }
+    public java.util.List<String> getEndUserIds() {
+        return this.endUserIds;
     }
 
     public DescribeDesktopSessionsRequest setFillHardwareInfo(Boolean fillHardwareInfo) {

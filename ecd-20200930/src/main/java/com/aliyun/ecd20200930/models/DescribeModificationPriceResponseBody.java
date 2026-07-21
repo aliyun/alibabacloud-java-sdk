@@ -42,7 +42,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeModificationPriceResponseBodyPriceInfoPricePromotions extends TeaModel {
         /**
-         * <p>The description of the promotion rule.</p>
+         * <p>The promotion rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -54,13 +54,13 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
          * <p>The promotion description.</p>
          * 
          * <strong>example:</strong>
-         * <p>新品上市，立享优惠</p>
+         * <p>New product launch with exclusive discounts.</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
-         * <p>The ID of the promotion activity.</p>
+         * <p>The promotion ID.</p>
          * 
          * <strong>example:</strong>
          * <p>promo_option</p>
@@ -69,7 +69,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
         public String promotionId;
 
         /**
-         * <p>The name of the promotion activity.</p>
+         * <p>The promotion name.</p>
          * 
          * <strong>example:</strong>
          * <p>Featured deals</p>
@@ -78,7 +78,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
-         * <p>Indicates whether an item is selected.</p>
+         * <p>Indicates whether the promotion is selected.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -135,7 +135,8 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
 
     public static class DescribeModificationPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;The unit of currency (CNY).&lt;props=&quot;intl&quot;&gt;The unit of currency (USD).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+         * &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -144,7 +145,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discounted amount.</p>
+         * <p>The discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>15.8</p>
@@ -153,7 +154,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
-         * <p>The orders.</p>
+         * <p>The order information.</p>
          */
         @NameInMap("OrderLines")
         public java.util.Map<String, String> orderLines;
@@ -168,13 +169,13 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The promotion activities.</p>
+         * <p>The list of promotion information.</p>
          */
         @NameInMap("Promotions")
         public java.util.List<DescribeModificationPriceResponseBodyPriceInfoPricePromotions> promotions;
 
         /**
-         * <p>The actual price. The actual price is the original price minus the discount.</p>
+         * <p>The actual payment price. The value is the original price minus the discount amount.</p>
          * 
          * <strong>example:</strong>
          * <p>63.2</p>
@@ -242,7 +243,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
          * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
-         * <p>买满1年，立享官网价格8.5折优惠。</p>
+         * <p>Get 15% off the list price for a one-year purchase.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -287,7 +288,7 @@ public class DescribeModificationPriceResponseBody extends TeaModel {
         public DescribeModificationPriceResponseBodyPriceInfoPrice price;
 
         /**
-         * <p>The promotion rules.</p>
+         * <p>The promotion rule information.</p>
          */
         @NameInMap("Rules")
         public java.util.List<DescribeModificationPriceResponseBodyPriceInfoRules> rules;

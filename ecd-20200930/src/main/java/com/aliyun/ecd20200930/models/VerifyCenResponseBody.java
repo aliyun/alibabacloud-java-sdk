@@ -85,7 +85,7 @@ public class VerifyCenResponseBody extends TeaModel {
          * <p>The CIDR block of the route.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.XX.XX</p>
+         * <p>172.16.111.3****</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;

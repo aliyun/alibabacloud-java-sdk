@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ActivateOfficeSiteResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>

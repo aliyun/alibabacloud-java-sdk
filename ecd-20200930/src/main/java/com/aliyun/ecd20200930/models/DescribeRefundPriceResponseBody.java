@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRefundPriceResponseBody extends TeaModel {
     /**
-     * <p>Price details.</p>
+     * <p>The price details.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeRefundPriceResponseBodyPriceInfo priceInfo;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,8 +42,8 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
 
     public static class DescribeRefundPriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;Currency unit (CNY).
-         * &lt;props=&quot;intl&quot;&gt;Currency unit (USD).</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+         * &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -52,7 +52,7 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>This refund amount.</p>
+         * <p>The refund amount for this unsubscription.</p>
          * 
          * <strong>example:</strong>
          * <p>3990.75</p>

@@ -5,23 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportDesktopListInfoRequest extends TeaModel {
     /**
-     * <p>The billing method of the cloud computer.</p>
-     * <p>Default value: Postpaid. Valid values:</p>
-     * <ul>
-     * <li><p>Postpaid: pay-as-you-go</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>PrePaid: subscription</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The billing method of the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -30,13 +14,13 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
+     * <p>The cloud desktop IDs. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The name of the cloud computer.</p>
+     * <p>The name of the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>DemoComputer01</p>
@@ -45,65 +29,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String desktopName;
 
     /**
-     * <p>The status of the cloud computers.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Stopped</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Starting</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Rebuilding</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Running</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Stopping</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Expired</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Deleted</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>Pending</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The status of the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -112,16 +38,16 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String desktopStatus;
 
     /**
-     * <p>The IDs of the end users of the cloud computer. You can specify 1 to 100 IDs.</p>
+     * <p>The list of authorized usernames for the cloud desktop. You can specify 1 to 100 usernames.</p>
      * <blockquote>
-     * <p> During a specific period of time, only one user can connect to and use the cloud computer.</p>
+     * <p>Only one user can connect to and use the cloud desktop at a time.</p>
      * </blockquote>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The time when a subscription cloud computer expires.</p>
+     * <p>The expiration time of the subscription cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-31T15:59Z</p>
@@ -130,7 +56,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>The ID of the cloud computer pool to which the cloud computers belong.</p>
+     * <p>The ID of the cloud desktop pool to which the cloud desktop belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-boyczi8enfyc5***</p>
@@ -139,23 +65,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The language in which the cloud computer is displayed in the console UI. You can export the list of cloud computers in the specified language.</p>
-     * <p>Default value: zh-CN. Valid values:</p>
-     * <ul>
-     * <li><p>zh-CN: Simplified Chinese</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>en-GB: British English</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>The language type displayed on the frontend page. The backend sets the language type of the exported file based on this value.</p>
      * 
      * <strong>example:</strong>
      * <p><code>zh-CN</code></p>
@@ -164,7 +74,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String langType;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.</p>
      * <p>Maximum value: 100.</p>
      * <p>Default value: 10.</p>
      * 
@@ -175,7 +85,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. If this parameter is empty, all results are returned.</p>
+     * <p>The pagination token for the next query. An empty value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -193,7 +103,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The ID of the policy that is attached to the cloud computer.</p>
+     * <p>The ID of the policy associated with the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>system-all-enabled-policy</p>
@@ -202,7 +112,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -212,13 +122,13 @@ public class ExportDesktopListInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tags that are added to the cloud computer. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud computers by group. This facilitates search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
+     * <p>The list of tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud desktops for easier searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ExportDesktopListInfoRequestTag> tag;
 
     /**
-     * <p>The username of the end user who is using the cloud computer.</p>
+     * <p>The username of the user who is currently using the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -353,7 +263,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
 
     public static class ExportDesktopListInfoRequestTag extends TeaModel {
         /**
-         * <p>The tag key. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain only spaces.</p>
+         * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. It also cannot consist of only spaces.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -362,7 +272,7 @@ public class ExportDesktopListInfoRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The tag value. The tag value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

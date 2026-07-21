@@ -102,7 +102,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
      * <p>The number of times that the shared files are downloaded. The value of this parameter must be equal to or greater than 0.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0</p>
      */
     @NameInMap("DownloadCount")
     public Long downloadCount;
@@ -111,7 +111,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
      * <p>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0</p>
      */
     @NameInMap("DownloadLimit")
     public Long downloadLimit;
@@ -129,7 +129,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
      * <p>The number of times that the shared files are previewed. The value of this parameter must be equal to or greater than 0.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0</p>
      */
     @NameInMap("PreviewCount")
     public Long previewCount;
@@ -147,7 +147,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
      * <p>The number of times that the shared files are reported. The value of this parameter must be equal to or greater than 0.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0</p>
      */
     @NameInMap("ReportCount")
     public Long reportCount;
@@ -156,7 +156,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
      * <p>The number of times that the shared files are dumped. The value of this parameter must be equal to or greater than 0.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0</p>
      */
     @NameInMap("SaveCount")
     public Long saveCount;
@@ -230,7 +230,7 @@ public class ModifyCdsFileShareLinkRequest extends TeaModel {
      * <p>The number of times that the videos are previewed in the shared files. The value of this parameter must be equal to or greater than 0.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>0</p>
      */
     @NameInMap("VideoPreviewCount")
     public Long videoPreviewCount;

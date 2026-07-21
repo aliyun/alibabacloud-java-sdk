@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchModifyEntitlementResponseBody extends TeaModel {
     /**
-     * <p>The results.</p>
+     * <p>The collection of assignment results.</p>
      */
     @NameInMap("Entitlements")
     public BatchModifyEntitlementResponseBodyEntitlements entitlements;
@@ -51,26 +51,13 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The authorized user IDs for the cloud computer.</p>
+         * <p>The user IDs (usernames) authorized for the cloud computer.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The assign result for each cloud computer.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>FAILED</p>
-         * </li>
-         * <li><p>NOT_STARTED</p>
-         * </li>
-         * <li><p>STARTED</p>
-         * </li>
-         * <li><p>PROCESSING</p>
-         * </li>
-         * <li><p>FINISHED</p>
-         * </li>
-         * </ul>
+         * <p>The assignment result of a single cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -117,20 +104,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         public java.util.List<BatchModifyEntitlementResponseBodyEntitlementsAssignModels> assignModels;
 
         /**
-         * <p>The result.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>FAILED</p>
-         * </li>
-         * <li><p>NOT_STARTED</p>
-         * </li>
-         * <li><p>STARTED</p>
-         * </li>
-         * <li><p>PROCESSING</p>
-         * </li>
-         * <li><p>FINISHED</p>
-         * </li>
-         * </ul>
+         * <p>The overall assignment result.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>

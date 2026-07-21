@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCdsFileShareLinkRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk.</p>
+     * <p>The enterprise cloud disk ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The description of the file sharing task. The description must be 0 to 1,024 characters in length.</p>
+     * <p>The share description. Length range: 0 to 1024 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>SharedFile</p>
@@ -24,31 +24,10 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to prohibit the download of the files that are being shared.</p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to disable downloading of files in the share. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>prohibits file download</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>allows file download</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
+     * <li>true: Downloading is disabled.</li>
+     * <li>false: Downloading is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,31 +37,10 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public Boolean disableDownload;
 
     /**
-     * <p>Specifies whether to prohibit the preview of the files that are being shared.</p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to disable previewing of files in the share. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>prohibits file preview</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>allows file preview</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
+     * <li>true: Preview is disabled.</li>
+     * <li>false: Preview is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,31 +50,10 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public Boolean disablePreview;
 
     /**
-     * <p>Specifies whether to prohibit the dump of the files that are being shared.</p>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to disable saving of files in the share. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>prohibits file dump</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <p>:</p>
-     * <!-- -->
-     * 
-     * <p>allows file dump</p>
-     * <!-- -->
-     * 
-     * <p>.</p>
-     * </li>
+     * <li>true: Saving is disabled.</li>
+     * <li>false: Saving is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +63,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public Boolean disableSave;
 
     /**
-     * <p>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
+     * <p>The maximum number of times the shared files can be downloaded. The value is an integer. A value of 0 indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -135,7 +72,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public Long downloadLimit;
 
     /**
-     * <p>The ID of the end user.</p>
+     * <p>The ID of the user who uses the cloud disk.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -144,7 +81,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The time when the file sharing link expires. The value of this parameter follows the RFC 3339 standard. Example: &quot;2020-06-28T11:33:00.000+08:00&quot;. If this parameter is set to &quot;&quot;, the file sharing link never expires.</p>
+     * <p>The expiration time in RFC 3339 format. If this parameter is left empty, the share is permanently valid.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-06-28T11:33:00.000+08:00</p>
@@ -153,13 +90,13 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public String expiration;
 
     /**
-     * <p>The file IDs.</p>
+     * <p>The list of file IDs.</p>
      */
     @NameInMap("FileIds")
     public java.util.List<String> fileIds;
 
     /**
-     * <p>Team space ID.</p>
+     * <p>The team space ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cg-i1ruuudp92qpj****</p>
@@ -168,7 +105,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be previewed.</p>
+     * <p>The maximum number of times the shared files can be previewed. The value is an integer. A value of 0 indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -177,7 +114,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public Long previewLimit;
 
     /**
-     * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be dumped.</p>
+     * <p>The maximum number of times the shared files can be saved. The value is an integer. A value of 0 indicates no limit.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -186,7 +123,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public Long saveLimit;
 
     /**
-     * <p>The name of the file sharing task. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.</p>
+     * <p>The share name. If this parameter is not set, the file name corresponding to the first ID in <code>file_id_list</code> is used by default. Length range: 0 to 128 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>view.txt</p>
@@ -195,7 +132,7 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
     public String shareName;
 
     /**
-     * <p>The length of the access code. Valid values: 6 to 8. Unit: bytes. If you leave this parameter empty or set it to null, no access code is required. If you use a token to share files, you do not need to configure this parameter. The access code can contain only visible ASCII characters.</p>
+     * <p>The extraction code. Length range: 0 to 64 bytes. If this parameter is not set or is set to empty, no extraction code is required, and you do not need to specify the extraction code parameter when obtaining the share token. Only printable ASCII characters are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>12345678</p>

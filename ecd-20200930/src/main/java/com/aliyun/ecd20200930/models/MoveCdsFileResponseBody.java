@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveCdsFileResponseBody extends TeaModel {
     /**
-     * <p>The result of the modification. A value of success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+     * <p>The execution result. The value <code>success</code> indicates that the operation is successful. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -14,7 +14,7 @@ public class MoveCdsFileResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+     * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,13 +23,13 @@ public class MoveCdsFileResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The response object when you move a file.</p>
+     * <p>The result of the move file operation.</p>
      */
     @NameInMap("MoveCdsFileModel")
     public MoveCdsFileResponseBodyMoveCdsFileModel moveCdsFileModel;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -38,23 +38,7 @@ public class MoveCdsFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><!-- -->
-     * 
-     * <p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><!-- -->
-     * 
-     * <p>false</p>
-     * <!-- -->
-     * 
-     * <!-- --></li>
-     * </ul>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -109,7 +93,7 @@ public class MoveCdsFileResponseBody extends TeaModel {
 
     public static class MoveCdsFileResponseBodyMoveCdsFileModel extends TeaModel {
         /**
-         * <p>The ID of the asynchronous task. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</p>
+         * <p>The asynchronous task ID. This field is not returned when a file is copied. When a folder is copied, the copy operation is performed asynchronously in the background, so this field is returned. You can call <a href="https://help.aliyun.com/document_detail/2357404.html">GetAsyncTask</a> and pass in this asynchronous task ID to obtain the task details.</p>
          * 
          * <strong>example:</strong>
          * <p>fe307518-825a-4c8b-a69c-958f0e8a****</p>
@@ -118,23 +102,7 @@ public class MoveCdsFileResponseBody extends TeaModel {
         public String asyncTaskId;
 
         /**
-         * <p>Indicates whether the file exists.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><!-- -->
-         * 
-         * <p>true</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><!-- -->
-         * 
-         * <p>false</p>
-         * <!-- -->
-         * 
-         * <!-- --></li>
-         * </ul>
+         * <p>Indicates whether the file already exists.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -143,7 +111,7 @@ public class MoveCdsFileResponseBody extends TeaModel {
         public Boolean exist;
 
         /**
-         * <p>The ID of the file.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>63636837e47e5a24a8a940218bef395c210e****</p>

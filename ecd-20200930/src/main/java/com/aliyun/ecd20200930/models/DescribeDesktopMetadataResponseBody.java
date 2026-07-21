@@ -11,7 +11,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
     public java.util.List<DescribeDesktopMetadataResponseBodyDesktops> desktops;
 
     /**
-     * <p>The token used to retrieve the next page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The token for the next query. An empty value indicates that there are no more results.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -59,18 +59,16 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
 
     public static class DescribeDesktopMetadataResponseBodyDesktops extends TeaModel {
         /**
-         * <p>A list of agents that the cloud computer supports.</p>
+         * <p>The agents supported by the current cloud desktop.</p>
          */
         @NameInMap("AgentProviderList")
         public java.util.List<String> agentProviderList;
 
         /**
-         * <p>The billing method of the cloud desktop. Valid values:</p>
+         * <p>The billing type of the cloud desktop. Valid values:</p>
          * <ul>
-         * <li><p><code>PostPaid</code>: pay-as-you-go</p>
-         * </li>
-         * <li><p><code>PrePaid</code>: subscription</p>
-         * </li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -80,7 +78,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The creation time of the cloud desktop.</p>
+         * <p>The time when the cloud desktop was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:28Z</p>
@@ -89,7 +87,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the desktop group.</p>
+         * <p>The shared cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-3uiojcc0j4kh7****</p>
@@ -98,7 +96,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The ID of the cloud desktop.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -118,22 +116,14 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         /**
          * <p>The status of the cloud desktop. Valid values:</p>
          * <ul>
-         * <li><p><code>Stopped</code></p>
-         * </li>
-         * <li><p><code>Starting</code></p>
-         * </li>
-         * <li><p><code>Rebuilding</code></p>
-         * </li>
-         * <li><p><code>Running</code></p>
-         * </li>
-         * <li><p><code>Stopping</code></p>
-         * </li>
-         * <li><p><code>Expired</code></p>
-         * </li>
-         * <li><p><code>Deleted</code></p>
-         * </li>
-         * <li><p><code>Pending</code></p>
-         * </li>
+         * <li>Stopped</li>
+         * <li>Starting</li>
+         * <li>Rebuilding</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Expired</li>
+         * <li>Deleted</li>
+         * <li>Pending</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,7 +133,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The instance type of the cloud desktop.</p>
+         * <p>The cloud desktop specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.general.2c8g</p>
@@ -152,7 +142,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String desktopType;
 
         /**
-         * <p>The expiration time of the cloud desktop. This parameter is returned only for cloud desktops that use the subscription billing method.</p>
+         * <p>The time when the cloud desktop expires. This value is returned only for cloud desktops whose billable methods is subscription.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-31T15:59Z</p>
@@ -161,7 +151,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>m-4zfb6zj728hhr****</p>
@@ -170,22 +160,22 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The local name of the region where the cloud desktop resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>华东2（上海）</p>
+         * <p>China (Shanghai)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The management flags for the cloud computer.</p>
+         * <p>The management status of the cloud desktop.</p>
          */
         @NameInMap("ManagementFlags")
         public java.util.List<String> managementFlags;
 
         /**
-         * <p>The private IP address of the instance\&quot;s network interface.</p>
+         * <p>The IP address of the member elastic network interface (ENI) of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.2.1</p>
@@ -194,7 +184,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String memberEniIp;
 
         /**
-         * <p>The ID of the office network.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>
@@ -203,7 +193,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The operating system of the cloud desktop.</p>
+         * <p>The operating system platform information.</p>
          * 
          * <strong>example:</strong>
          * <p>Ubuntu</p>
@@ -212,7 +202,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -221,7 +211,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-f3s3dgt8dtb0vlqc8</p>
@@ -230,7 +220,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The name of the resource group.</p>
+         * <p>The resource group name.</p>
          * 
          * <strong>example:</strong>
          * <p>serverless_new</p>
@@ -239,7 +229,7 @@ public class DescribeDesktopMetadataResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
-         * <p>The time when the cloud desktop started.</p>
+         * <p>The start time of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:31Z</p>
