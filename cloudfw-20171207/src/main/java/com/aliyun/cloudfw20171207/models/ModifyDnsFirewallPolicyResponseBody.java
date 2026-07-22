@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDnsFirewallPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C50C2A9-4BBB-5504-8ADA-C41A79****</p>

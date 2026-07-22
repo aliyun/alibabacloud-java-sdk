@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeTrFirewallsV2DetailRequest extends TeaModel {
     /**
-     * <p>The ID of the VPC firewall instance.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <blockquote>
+     * <p>FirewallId is required. If this parameter is not specified, ErrorParameters(400) is returned. You can call DescribeTrFirewallsV2List to query existing FirewallId values. If no VPC firewall exists, create a CEN instance and a transit router first, and then call CreateTrFirewallV2 to obtain a FirewallId.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-a5a6b89f46764928****</p>
@@ -16,10 +19,8 @@ public class DescribeTrFirewallsV2DetailRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>

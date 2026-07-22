@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateIpsPrivateAssocRequest extends TeaModel {
     /**
-     * <p>The language of the request and response messages.</p>
+     * <p>The language type for the request and response messages. Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Chinese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +18,7 @@ public class CreateIpsPrivateAssocRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance ID. This parameter is required. If this parameter is not specified, the API returns error code -103201. Only NAT gateway instance IDs (in the format ngw-<em>) that are protected by Cloud Firewall are accepted. Other resource types such as vpc-</em> or eip-* are rejected.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-c5vhmjdfp5t****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSdlLastPayloadRequest extends TeaModel {
     /**
-     * <p>The destination IP address.</p>
+     * <p>The destination IP address. This is an optional parameter used to filter by destination IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.102.XXX</p>
@@ -14,7 +14,7 @@ public class DescribeSdlLastPayloadRequest extends TeaModel {
     public String dstIp;
 
     /**
-     * <p>The end of the time range to query. Specify the value as a UNIX timestamp in seconds.</p>
+     * <p>The end time of the query (UNIX timestamp in seconds). This parameter is required. If this parameter is not specified, the API returns an error.</p>
      * 
      * <strong>example:</strong>
      * <p>1534408267</p>
@@ -36,7 +36,7 @@ public class DescribeSdlLastPayloadRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of sensitive credential.</p>
+     * <p>The type of sensitive credential. This parameter is required. If this parameter is not specified, the API returns an error.</p>
      * 
      * <strong>example:</strong>
      * <p>id_card</p>
@@ -45,7 +45,7 @@ public class DescribeSdlLastPayloadRequest extends TeaModel {
     public String sensitiveCategory;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The source IP address. This is an optional parameter used to filter by source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>121.40.84.XXX</p>
@@ -54,7 +54,7 @@ public class DescribeSdlLastPayloadRequest extends TeaModel {
     public String srcIp;
 
     /**
-     * <p>The beginning of the time range to query. Specify the value as a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query (UNIX timestamp in seconds). This parameter is required. If this parameter is not specified, the API returns an error.</p>
      * 
      * <strong>example:</strong>
      * <p>1656837360</p>

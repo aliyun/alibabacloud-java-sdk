@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
     /**
-     * <p>The data entries.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallAccessDetailResponseBodyDataList> dataList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8EAC2347-E85A-5DFF-9F49-B8E1BAFB****</p>
@@ -59,7 +59,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallAccessDetailResponseBodyDataList extends TeaModel {
         /**
-         * <p>The number of received bytes.</p>
+         * <p>The number of bytes received. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>17845821669.0</p>
@@ -68,7 +68,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>The number of sent bytes.</p>
+         * <p>The number of bytes sent. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1123</p>
@@ -77,7 +77,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The IP address of the peer asset.</p>
+         * <p>The source IP address of the peer.</p>
          * 
          * <strong>example:</strong>
          * <p>10.125.1.XX</p>
@@ -86,7 +86,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         public String peerAssetIP;
 
         /**
-         * <p>The instance ID of the peer asset.</p>
+         * <p>The instance ID of the peer.</p>
          * 
          * <strong>example:</strong>
          * <p>i-123451</p>
@@ -95,7 +95,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         public String peerAssetInstanceId;
 
         /**
-         * <p>The instance name of the peer asset.</p>
+         * <p>The instance name of the peer.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -104,7 +104,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         public String peerAssetInstanceName;
 
         /**
-         * <p>The ID of the peer VPC.</p>
+         * <p>The instance ID of the peer VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-123411</p>
@@ -113,7 +113,7 @@ public class DescribeVpcFirewallAccessDetailResponseBody extends TeaModel {
         public String peerVpcId;
 
         /**
-         * <p>The ID of the region where the asset is located.</p>
+         * <p>The region ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>

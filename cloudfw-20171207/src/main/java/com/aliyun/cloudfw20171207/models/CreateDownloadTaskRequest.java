@@ -8,7 +8,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
      * <p>The language of the received messages.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: (default) Chinese</li>
+     * <li><strong>zh</strong>: (default) Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -19,7 +19,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The query conditions for the download task.</p>
+     * <p>The request query conditions for the download task. This parameter is required. If this parameter is not specified, the API returns error code -340408 (download task TaskData invalid).</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;SearchItem\&quot;:\&quot;\&quot;,\&quot;UserType\&quot;:\&quot;buy\&quot;,\&quot;IpVersion\&quot;:\&quot;4\&quot;}</p>
@@ -28,7 +28,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String taskData;
 
     /**
-     * <p>The task type. For valid values, call the API operation that queries file download task types.</p>
+     * <p>The task type. For valid values, call the operation that queries file download task types.</p>
      * 
      * <strong>example:</strong>
      * <p>InternetFirewallAsset</p>
@@ -37,7 +37,7 @@ public class CreateDownloadTaskRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The time zone for time information in the downloaded file. The value is an IANA time zone identifier. Default value: Asia/Shanghai (UTC+8).</p>
+     * <p>The time zone for time information in the downloaded file. Specify the value in IANA time zone identity format. Default value: Asia/Shanghai (UTC+8).</p>
      * 
      * <strong>example:</strong>
      * <p>Asia/Shanghai</p>

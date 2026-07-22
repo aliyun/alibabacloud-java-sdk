@@ -68,7 +68,7 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
-     * <p>The steps of the task.</p>
+     * <p>The task steps.</p>
      */
     @NameInMap("TaskSteps")
     public java.util.List<DescribeAccessInstanceTaskResponseBodyTaskSteps> taskSteps;
@@ -144,7 +144,7 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
 
     public static class DescribeAccessInstanceTaskResponseBodyTaskSteps extends TeaModel {
         /**
-         * <p>The name of the step.</p>
+         * <p>The step name.</p>
          * 
          * <strong>example:</strong>
          * <p>Obtain ACK cluster information</p>
@@ -153,7 +153,7 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         public String stepName;
 
         /**
-         * <p>The progress of the step.</p>
+         * <p>The step progress.</p>
          * 
          * <strong>example:</strong>
          * <p>100%</p>
@@ -162,7 +162,7 @@ public class DescribeAccessInstanceTaskResponseBody extends TeaModel {
         public String stepProgress;
 
         /**
-         * <p>The status of the step.</p>
+         * <p>The step status.</p>
          * 
          * <strong>example:</strong>
          * <p>finished</p>

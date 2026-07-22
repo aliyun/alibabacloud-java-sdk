@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallTrafficTrendRequest extends TeaModel {
     /**
-     * <p>The end time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds. This parameter is required. If this parameter is not specified, the API returns ErrorTimeError(400). The value must be a UNIX timestamp in seconds, and EndTime must be later than StartTime.</p>
      * 
      * <strong>example:</strong>
      * <p>1758474000</p>
@@ -14,7 +14,7 @@ public class DescribeFirewallTrafficTrendRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message.</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -27,7 +27,7 @@ public class DescribeFirewallTrafficTrendRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The start time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds. This parameter is required. If this parameter is not specified, the API returns ErrorTimeError(400). The value must be a UNIX timestamp in seconds, and StartTime must be earlier than EndTime.</p>
      * 
      * <strong>example:</strong>
      * <p>1758470400</p>

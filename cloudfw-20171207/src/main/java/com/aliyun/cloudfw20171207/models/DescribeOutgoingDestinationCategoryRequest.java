@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     /**
-     * <p>The category ID.</p>
+     * <p>The category ID. Valid values are predefined destination category enumerations (25+ in total), such as TrustedDomain (trusted websites), AliPay (Alipay products), and CDN (CDN services). For the complete list of enumeration values and their semantics, refer to the product documentation.</p>
      * 
      * <strong>example:</strong>
      * <p>All</p>
@@ -14,7 +14,11 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The destination type.</p>
+     * <p>The destination type. This parameter is required. If this parameter is not specified, ErrorDstType is returned. Valid values:</p>
+     * <ul>
+     * <li>Domain: domain name.</li>
+     * <li>DstIP: IP address.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>domain</p>
@@ -23,7 +27,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String dstType;
 
     /**
-     * <p>The end time of the query. This is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query. Specify the value as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +37,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language type of the response message.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -42,16 +46,17 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>59.82.45.XXX</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     /**
-     * <p>The start time of the query. This is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. Specify the value as a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -106,6 +111,7 @@ public class DescribeOutgoingDestinationCategoryRequest extends TeaModel {
         return this.lang;
     }
 
+    @Deprecated
     public DescribeOutgoingDestinationCategoryRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

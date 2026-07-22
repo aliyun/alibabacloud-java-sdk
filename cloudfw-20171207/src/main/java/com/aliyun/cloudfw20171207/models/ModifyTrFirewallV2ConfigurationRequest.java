@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
     /**
-     * <p>The ID of the VPC firewall instance.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <blockquote>
+     * <p>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-bcdf89d405ce4bd2****</p>
@@ -14,7 +17,10 @@ public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The name of the VPC firewall instance.</p>
+     * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
+     * <blockquote>
+     * <p>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vpc-firewall</p>
@@ -23,12 +29,10 @@ public class ModifyTrFirewallV2ConfigurationRequest extends TeaModel {
     public String firewallName;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the content within the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>

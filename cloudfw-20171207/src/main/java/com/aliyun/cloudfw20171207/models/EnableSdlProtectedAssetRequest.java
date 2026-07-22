@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableSdlProtectedAssetRequest extends TeaModel {
     /**
-     * <p>The list of IP assets.</p>
+     * <p>The list of IP assets. At least one IP address is required to enable protection.</p>
      */
     @NameInMap("IpList")
     public java.util.List<String> ipList;
@@ -13,10 +13,8 @@ public class EnableSdlProtectedAssetRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>

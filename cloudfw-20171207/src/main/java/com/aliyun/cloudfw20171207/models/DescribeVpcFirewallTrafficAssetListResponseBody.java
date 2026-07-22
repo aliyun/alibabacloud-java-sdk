@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallTrafficAssetListResponseBodyDataList> dataList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</p>
@@ -68,7 +68,7 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         public String IP;
 
         /**
-         * <p>The number of intrusion prevention system (IPS) hits.</p>
+         * <p>The number of IPS hits.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -86,7 +86,7 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
-         * <p>The total traffic in bytes.</p>
+         * <p>The total traffic. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>253023143</p>
@@ -95,7 +95,7 @@ public class DescribeVpcFirewallTrafficAssetListResponseBody extends TeaModel {
         public Long totalBytes;
 
         /**
-         * <p>The VPC where the asset resides.</p>
+         * <p>The ID of the VPC where the asset resides.</p>
          * 
          * <strong>example:</strong>
          * <p>a.com</p>

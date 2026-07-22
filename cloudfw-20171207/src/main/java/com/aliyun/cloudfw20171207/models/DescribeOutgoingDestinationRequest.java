@@ -32,7 +32,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String dstIP;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to count only the traffic to AI services. The default value is false.</p>
+     * <p>Specifies whether to collect statistics only on traffic that accesses AI services. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -69,7 +69,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String isAITraffic;
 
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language type of the received message.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -78,7 +78,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sorting order.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -87,7 +87,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -123,7 +123,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The security policy for the outbound connection.</p>
+     * <p>The security policy for Outbound Domain of outbound connections.</p>
      * 
      * <strong>example:</strong>
      * <p>pass</p>
@@ -132,7 +132,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String securitySuggest;
 
     /**
-     * <p>The field to use for sorting.</p>
+     * <p>The field by which to sort the results.</p>
      * 
      * <strong>example:</strong>
      * <p>InBytes</p>
@@ -141,16 +141,17 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The IP address of the access source. (This field is deprecated.)</p>
      * 
      * <strong>example:</strong>
      * <p>106.3.198.XXX</p>
      */
     @NameInMap("SourceIp")
+    @Deprecated
     public String sourceIp;
 
     /**
-     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -293,6 +294,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
         return this.sort;
     }
 
+    @Deprecated
     public DescribeOutgoingDestinationRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;

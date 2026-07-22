@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -14,7 +14,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The Cloud Firewall type.</p>
+     * <p>The type of the cloud firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>internet</p>
@@ -23,7 +23,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The supported IP address version.</p>
+     * <p>The supported IP address version. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -32,11 +32,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public Integer ipVersion;
 
     /**
-     * <p>The language type. Valid values:</p>
-     * <ul>
-     * <li><strong>en</strong>: English</li>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * </ul>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -45,7 +41,7 @@ public class DescribeControlPolicyDomainResolveRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTrFirewallsV2RouteListRequest extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number in a paging query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,10 @@ public class DescribeTrFirewallsV2RouteListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The instance ID of the VPC firewall for the transit router.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls.</p>
+     * <blockquote>
+     * <p>FirewallId is required. If it is not specified, ErrorParameters(400) is returned. TrFirewallRoutePolicyId must be used together with FirewallId. If TrFirewallRoutePolicyId is specified without FirewallId, ErrorParameters(400) is returned. If the value is invalid or does not exist, ErrorTrFirewallPolicyNotFound is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-8bcfa0f2f12d411e****</p>
@@ -25,10 +28,8 @@ public class DescribeTrFirewallsV2RouteListRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +39,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The maximum number of entries per page in a paging query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

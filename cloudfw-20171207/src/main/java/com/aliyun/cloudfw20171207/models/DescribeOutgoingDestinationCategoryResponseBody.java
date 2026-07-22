@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C1ED80BC-FFC8-57DB-8151-705DC31****</p>
@@ -23,7 +23,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of outbound connection categories.</p>
+     * <p>The list of outbound connections categorizations.</p>
      */
     @NameInMap("TypeList")
     public java.util.List<DescribeOutgoingDestinationCategoryResponseBodyTypeList> typeList;
@@ -59,7 +59,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationCategoryResponseBodyTypeListCategoryList extends TeaModel {
         /**
-         * <p>The description of the outbound connection category.</p>
+         * <p>The outbound connections categorization description.</p>
          * 
          * <strong>example:</strong>
          * <p>AliYun</p>
@@ -68,7 +68,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
         public String categoryDescribe;
 
         /**
-         * <p>The ID of the outbound connection category.</p>
+         * <p>The outbound connections categorization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -77,7 +77,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The name of the outbound connection category.</p>
+         * <p>The outbound connections categorization name.</p>
          * 
          * <strong>example:</strong>
          * <p>AliYun</p>
@@ -86,7 +86,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
         public String categoryName;
 
         /**
-         * <p>The classification ID of the outbound connection category.</p>
+         * <p>The outbound connections categorization level ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Trusted</p>
@@ -135,13 +135,13 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationCategoryResponseBodyTypeList extends TeaModel {
         /**
-         * <p>The list of outbound connection categories.</p>
+         * <p>The list of outbound connections categorizations.</p>
          */
         @NameInMap("CategoryList")
         public java.util.List<DescribeOutgoingDestinationCategoryResponseBodyTypeListCategoryList> categoryList;
 
         /**
-         * <p>The description of the fixed category.</p>
+         * <p>The fixed category description.</p>
          * 
          * <strong>example:</strong>
          * <p>AliYun</p>
@@ -159,7 +159,7 @@ public class DescribeOutgoingDestinationCategoryResponseBody extends TeaModel {
         public String typeId;
 
         /**
-         * <p>The name of the fixed category.</p>
+         * <p>The fixed category name.</p>
          * 
          * <strong>example:</strong>
          * <p>AliYun</p>

@@ -11,7 +11,7 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
     public java.util.List<DescribeFirewallTrafficTrendResponseBodyDataList> dataList;
 
     /**
-     * <p>The timestamp when the peak total traffic occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The timestamp when the peak total traffic occurred. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1758470400</p>
@@ -91,8 +91,8 @@ public class DescribeFirewallTrafficTrendResponseBody extends TeaModel {
         public Long natBps;
 
         /**
-         * <p>The time when the traffic occurred. The value is a UNIX timestamp. Unit: seconds.</p>
-         * <p>If the data at this point in time has not been processed, the values of all other fields are -1.</p>
+         * <p>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</p>
+         * <p>If the data at this point in time has not been processed, the values of other fields are -1.</p>
          * 
          * <strong>example:</strong>
          * <p>1758470400</p>

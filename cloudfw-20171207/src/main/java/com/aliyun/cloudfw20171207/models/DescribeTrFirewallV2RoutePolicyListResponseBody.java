@@ -14,7 +14,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -143,13 +143,13 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
 
     public static class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies extends TeaModel {
         /**
-         * <p>The list of destination traffic redirection instances.</p>
+         * <p>The list of secondary traffic redirection instances.</p>
          */
         @NameInMap("DestCandidateList")
         public java.util.List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesDestCandidateList> destCandidateList;
 
         /**
-         * <p>The description of the policy.</p>
+         * <p>The policy description.</p>
          * 
          * <strong>example:</strong>
          * <p>Point to multipoint</p>
@@ -158,7 +158,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         public String policyDescription;
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>Singapore Point to Multipoint</p>
@@ -167,19 +167,19 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The status of the policy. Valid values:</p>
+         * <p>The policy status. Valid values:</p>
          * <ul>
-         * <li><p>creating: The policy is being created.</p>
+         * <li><p>creating: being created</p>
          * </li>
-         * <li><p>deleting: The policy is being deleted.</p>
+         * <li><p>deleting: being deleted</p>
          * </li>
-         * <li><p>opening: The policy is being enabled.</p>
+         * <li><p>opening: being enabled</p>
          * </li>
-         * <li><p>opened: The policy is enabled.</p>
+         * <li><p>opened: enabled</p>
          * </li>
-         * <li><p>closing: The policy is being disabled.</p>
+         * <li><p>closing: being disabled</p>
          * </li>
-         * <li><p>closed: The policy is disabled.</p>
+         * <li><p>closed: disabled</p>
          * </li>
          * </ul>
          * 
@@ -190,9 +190,9 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         public String policyStatus;
 
         /**
-         * <p>The type of traffic redirection scenario for the VPC firewall. The firewall is created for a transit router that belongs to an Enterprise Edition Cloud Enterprise Network (CEN) instance. Valid values:</p>
+         * <p>The traffic redirection scenario type for the virtual private cloud (VPC) firewall on CEN Enterprise Edition. Valid values:</p>
          * <ul>
-         * <li><p><strong>fullmesh</strong>: full-mesh</p>
+         * <li><p><strong>fullmesh</strong>: multi-point interconnection</p>
          * </li>
          * <li><p><strong>one_to_one</strong>: point-to-point</p>
          * </li>
@@ -207,7 +207,7 @@ public class DescribeTrFirewallV2RoutePolicyListResponseBody extends TeaModel {
         public String policyType;
 
         /**
-         * <p>The list of source traffic redirection instances.</p>
+         * <p>The list of primary traffic redirection instances.</p>
          */
         @NameInMap("SrcCandidateList")
         public java.util.List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePoliciesSrcCandidateList> srcCandidateList;

@@ -14,13 +14,10 @@ public class UpdatePostpayUserVpcStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the request and response.</p>
-     * <p>Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p>en: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,9 +27,9 @@ public class UpdatePostpayUserVpcStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The operation to perform. Currently, only the open operation is supported.</p>
+     * <p>The operation type. Currently, only the activation operation is supported. Valid values:</p>
      * <ul>
-     * <li>open: Enables the VPC border firewall.</li>
+     * <li>open: activation</li>
      * </ul>
      * 
      * <strong>example:</strong>

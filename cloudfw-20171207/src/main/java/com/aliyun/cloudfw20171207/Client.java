@@ -378,10 +378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to create a policy that allows, denies, or observes traffic passing through a NAT firewall.</p>
+     * <p>Creates an access control policy that allows, denies, or monitors traffic that passes through a NAT firewall.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add a DNS firewall ACL</p>
+     * <p>Adds a DNS firewall access control list (ACL).</p>
      * 
      * @param request AddDnsFirewallPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -457,10 +457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to create a policy that allows, denies, or observes traffic passing through a NAT firewall.</p>
+     * <p>Creates an access control policy that allows, denies, or monitors traffic that passes through a NAT firewall.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add a DNS firewall ACL</p>
+     * <p>Adds a DNS firewall access control list (ACL).</p>
      * 
      * @param request AddDnsFirewallPolicyRequest
      * @return AddDnsFirewallPolicyResponse
@@ -524,9 +524,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to add member accounts to Cloud Firewall.</p>
+     * <p>Adds member accounts to Cloud Firewall. The caller must be a delegated administrator (DA) or management account (MA) of the resource directory. Call DescribeInstanceRdAccounts to verify your identity before calling this operation.</p>
      * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds member accounts to Cloud Firewall.</p>
@@ -561,9 +561,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to add member accounts to Cloud Firewall.</p>
+     * <p>Adds member accounts to Cloud Firewall. The caller must be a delegated administrator (DA) or management account (MA) of the resource directory. Call DescribeInstanceRdAccounts to verify your identity before calling this operation.</p>
      * <h2>QPS limit</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds member accounts to Cloud Firewall.</p>
@@ -1051,8 +1051,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an IPS private network association. This feature is in public preview. Before calling this operation, contact your account manager to activate the feature. You can call DescribeIpsPrivateAssoc to query the FunctionAssocStatus field to confirm the activation status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an association for private IP traffic tracing with the Intrusion Prevention System (IPS).</p>
+     * <p>Creates an IPS Private IP Tracing configuration. This feature is in public preview. Before calling this operation, contact your account manager to activate the feature. You can call DescribeIpsPrivateAssoc to query the FunctionAssocStatus field to confirm the activation status.</p>
      * 
      * @param request CreateIpsPrivateAssocRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1087,8 +1090,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an IPS private network association. This feature is in public preview. Before calling this operation, contact your account manager to activate the feature. You can call DescribeIpsPrivateAssoc to query the FunctionAssocStatus field to confirm the activation status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Creates an association for private IP traffic tracing with the Intrusion Prevention System (IPS).</p>
+     * <p>Creates an IPS Private IP Tracing configuration. This feature is in public preview. Before calling this operation, contact your account manager to activate the feature. You can call DescribeIpsPrivateAssoc to query the FunctionAssocStatus field to confirm the activation status.</p>
      * 
      * @param request CreateIpsPrivateAssocRequest
      * @return CreateIpsPrivateAssocResponse
@@ -1350,10 +1356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a private DNS endpoint for traffic that passes through the NAT Firewall to allow, deny, or monitor the traffic.</p>
+     * <p>Creates a policy to allow, deny, or monitor traffic that passes through a NAT firewall.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a private DNS endpoint</p>
+     * <p>Creates a private DNS endpoint.</p>
      * 
      * @param request CreatePrivateDnsEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1437,10 +1443,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a private DNS endpoint for traffic that passes through the NAT Firewall to allow, deny, or monitor the traffic.</p>
+     * <p>Creates a policy to allow, deny, or monitor traffic that passes through a NAT firewall.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a private DNS endpoint</p>
+     * <p>Creates a private DNS endpoint.</p>
      * 
      * @param request CreatePrivateDnsEndpointRequest
      * @return CreatePrivateDnsEndpointResponse
@@ -1588,7 +1594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a VPC firewall for a transit router.</p>
+     * <p>Creates a VPC firewall for a transit router. Prerequisites: (1) Purchase Cloud Firewall. (2) A Cloud Enterprise Network (CEN) instance is created and an Enterprise Edition transit router is enabled. (3) The transit router is synchronized to Cloud Firewall.</p>
      * 
      * @param request CreateTrFirewallV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1676,7 +1682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a VPC firewall for a transit router.</p>
+     * <p>Creates a VPC firewall for a transit router. Prerequisites: (1) Purchase Cloud Firewall. (2) A Cloud Enterprise Network (CEN) instance is created and an Enterprise Edition transit router is enabled. (3) The transit router is synchronized to Cloud Firewall.</p>
      * 
      * @param request CreateTrFirewallV2Request
      * @return CreateTrFirewallV2Response
@@ -1688,7 +1694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a TR firewall routing rule.</p>
+     * <p>Creates a routing rule for a VPC firewall for a transit router. Prerequisites: Activate Cloud Firewall → Create a CEN instance → Create an Enterprise Edition transit router → Add VPCs to the transit router route table → Call CreateTrFirewallV2 to create a VPC firewall for the transit router.</p>
      * 
      * @param tmpReq CreateTrFirewallV2RoutePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1754,7 +1760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a TR firewall routing rule.</p>
+     * <p>Creates a routing rule for a VPC firewall for a transit router. Prerequisites: Activate Cloud Firewall → Create a CEN instance → Create an Enterprise Edition transit router → Add VPCs to the transit router route table → Call CreateTrFirewallV2 to create a VPC firewall for the transit router.</p>
      * 
      * @param request CreateTrFirewallV2RoutePolicyRequest
      * @return CreateTrFirewallV2RoutePolicyResponse
@@ -1766,12 +1772,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to create a VPC firewall for VPC-connected instances in a CEN instance. The virtual private cloud (VPC) firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in the CEN instance and a specified VPC. The VPC firewall does not protect traffic between VBRs, between CCNs, or between VBRs and CCNs. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</p>
+     * <p>This operation is used to create a virtual private cloud (VPC) firewall for VPC-connected instances in a CEN instance. The VPC firewall protects mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in the CEN instance and a specified VPC. The VPC firewall does not protect mutual access traffic between VBRs, between CCNs, or between VBRs and CCNs. <strong>Prerequisites</strong>: (1) Invoke the Cbn CreateCen operation to create a CEN instance. (2) Create at least two VPCs. (3) Invoke the Cbn AttachCenChildInstance operation to associate the VPCs with the CEN instance. (4) Ensure that no conflicting RouteMaps or transit router (TR) routing entries exist in the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC border firewall limits</a>.</p>
+     * <h2>Rate limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a virtual private cloud (VPC) firewall to protect traffic between network instances in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
+     * <p>Creates a virtual private cloud (VPC) firewall to protect mutual access traffic between network instances in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
      * 
      * @param request CreateVpcFirewallCenConfigureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1847,12 +1853,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to create a VPC firewall for VPC-connected instances in a CEN instance. The virtual private cloud (VPC) firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in the CEN instance and a specified VPC. The VPC firewall does not protect traffic between VBRs, between CCNs, or between VBRs and CCNs. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Invoke this operation within the limit.</p>
+     * <p>This operation is used to create a virtual private cloud (VPC) firewall for VPC-connected instances in a CEN instance. The VPC firewall protects mutual access traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in the CEN instance and a specified VPC. The VPC firewall does not protect mutual access traffic between VBRs, between CCNs, or between VBRs and CCNs. <strong>Prerequisites</strong>: (1) Invoke the Cbn CreateCen operation to create a CEN instance. (2) Create at least two VPCs. (3) Invoke the Cbn AttachCenChildInstance operation to associate the VPCs with the CEN instance. (4) Ensure that no conflicting RouteMaps or transit router (TR) routing entries exist in the CEN instance. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC border firewall limits</a>.</p>
+     * <h2>Rate limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a virtual private cloud (VPC) firewall to protect traffic between network instances in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
+     * <p>Creates a virtual private cloud (VPC) firewall to protect mutual access traffic between network instances in a Cloud Enterprise Network (CEN) instance and a specified VPC.</p>
      * 
      * @param request CreateVpcFirewallCenConfigureRequest
      * @return CreateVpcFirewallCenConfigureResponse
@@ -2036,9 +2042,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through Cloud Enterprise Network (CEN) or traffic between two VPCs connected through Express Connect.</p>
+     * <p>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through a Cloud Enterprise Network (CEN) instance or traffic between two VPCs connected through an Express Connect circuit.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation properly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds an access control policy to a specified VPC firewall policy group.</p>
@@ -2165,9 +2171,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through Cloud Enterprise Network (CEN) or traffic between two VPCs connected through Express Connect.</p>
+     * <p>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through a Cloud Enterprise Network (CEN) instance or traffic between two VPCs connected through an Express Connect circuit.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation properly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds an access control policy to a specified VPC firewall policy group.</p>
@@ -3341,9 +3347,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
-     * Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
-     * <h2>Rate limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.
+     * This operation is asynchronous. After a successful invocation, the status changes to deleting. Poll DescribeVpcFirewallList until the target VpcFirewallId no longer appears. The firewall to be deleted must be in the opened or closed state. Firewalls in the notconfigured or deleting state cannot be deleted, and the ErrorFirewallStatus error is returned.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</p>
@@ -3387,9 +3394,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
-     * Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</p>
-     * <h2>Rate limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
+     * Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.
+     * This operation is asynchronous. After a successful invocation, the status changes to deleting. Poll DescribeVpcFirewallList until the target VpcFirewallId no longer appears. The firewall to be deleted must be in the opened or closed state. Firewalls in the notconfigured or deleting state cannot be deleted, and the ErrorFirewallStatus error is returned.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</p>
@@ -3613,7 +3621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the progress of a synchronization task on a node.</p>
+     * <p>Queries the progress of a synchronization node task.</p>
      * 
      * @param request DescribeAccessInstanceTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3641,7 +3649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the progress of a synchronization task on a node.</p>
+     * <p>Queries the progress of a synchronization node task.</p>
      * 
      * @param request DescribeAccessInstanceTaskRequest
      * @return DescribeAccessInstanceTaskResponse
@@ -4619,7 +4627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of asset risk levels.</p>
+     * <p>Retrieves the risk levels of assets.</p>
      * 
      * @param request DescribeAssetRiskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4663,7 +4671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of asset risk levels.</p>
+     * <p>Retrieves the risk levels of assets.</p>
      * 
      * @param request DescribeAssetRiskListRequest
      * @return DescribeAssetRiskListResponse
@@ -5196,7 +5204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain name resolution results of an access control policy.</p>
+     * <p>Queries the domain name parse results of an access control policy.</p>
      * 
      * @param request DescribeControlPolicyDomainResolveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5224,7 +5232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the domain name resolution results of an access control policy.</p>
+     * <p>Queries the domain name parse results of an access control policy.</p>
      * 
      * @param request DescribeControlPolicyDomainResolveRequest
      * @return DescribeControlPolicyDomainResolveResponse
@@ -5690,7 +5698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the overall firewall interception trend, including Internet, VPC, and NAT traffic.</p>
+     * <p>Retrieves the overall firewall interception trends, including Internet, VPC, and NAT traffic.</p>
      * 
      * @param request DescribeFirewallDropTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5730,7 +5738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the overall firewall interception trend, including Internet, VPC, and NAT traffic.</p>
+     * <p>Retrieves the overall firewall interception trends, including Internet, VPC, and NAT traffic.</p>
      * 
      * @param request DescribeFirewallDropTrendRequest
      * @return DescribeFirewallDropTrendResponse
@@ -5743,10 +5751,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>You can make up to 10 queries per second (QPS). If you exceed this limit, API calls are throttled, which may impact your business. We recommend that you plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a firewall task.</p>
+     * <p>Retrieves a firewall task.</p>
      * 
      * @param request DescribeFirewallTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5795,10 +5803,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
-     * <p>You can make up to 10 queries per second (QPS). If you exceed this limit, API calls are throttled, which may impact your business. We recommend that you plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a firewall task.</p>
+     * <p>Retrieves a firewall task.</p>
      * 
      * @param request DescribeFirewallTaskRequest
      * @return DescribeFirewallTaskResponse
@@ -8069,7 +8077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Overview - NAT firewall blocking trends</p>
+     * <p>Queries the NAT firewall interception trend on the overview page.</p>
      * 
      * @param request DescribeNatFirewallDropTrafficTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8097,7 +8105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Overview - NAT firewall blocking trends</p>
+     * <p>Queries the NAT firewall interception trend on the overview page.</p>
      * 
      * @param request DescribeNatFirewallDropTrafficTrendRequest
      * @return DescribeNatFirewallDropTrafficTrendResponse
@@ -8819,7 +8827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation queries outbound destinations.</p>
+     * <p>Queries outbound connection destinations.</p>
      * 
      * @param request DescribeOutgoingDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8923,7 +8931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>This operation queries outbound destinations.</p>
+     * <p>Queries outbound connection destinations.</p>
      * 
      * @param request DescribeOutgoingDestinationRequest
      * @return DescribeOutgoingDestinationResponse
@@ -8935,7 +8943,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the categories of outbound connection destinations.</p>
+     * <p>Queries the destination categories of outbound connections.</p>
      * 
      * @param request DescribeOutgoingDestinationCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8995,7 +9003,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the categories of outbound connection destinations.</p>
+     * <p>Queries the destination categories of outbound connections.</p>
      * 
      * @param request DescribeOutgoingDestinationCategoryRequest
      * @return DescribeOutgoingDestinationCategoryResponse
@@ -9207,7 +9215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about outbound domain names.</p>
+     * <p>Queries domain name information about outbound connections.</p>
      * 
      * @param request DescribeOutgoingDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9287,7 +9295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about outbound domain names.</p>
+     * <p>Queries domain name information about outbound connections.</p>
      * 
      * @param request DescribeOutgoingDomainRequest
      * @return DescribeOutgoingDomainResponse
@@ -9299,7 +9307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an outbound domain.</p>
+     * <p>Retrieves the details of outbound domains.</p>
      * 
      * @param request DescribeOutgoingDomainDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9395,7 +9403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an outbound domain.</p>
+     * <p>Retrieves the details of outbound domains.</p>
      * 
      * @param request DescribeOutgoingDomainDetailRequest
      * @return DescribeOutgoingDomainDetailResponse
@@ -9851,7 +9859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For pay-as-you-go users, the bill details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</p>
+     * <p>For pay-as-you-go users, the bill details are accurate to the specific resource instance granularity. For subscription users, only overall queries are supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries pay-as-you-go 2.0 bills.</p>
@@ -9906,7 +9914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For pay-as-you-go users, the bill details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</p>
+     * <p>For pay-as-you-go users, the bill details are accurate to the specific resource instance granularity. For subscription users, only overall queries are supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries pay-as-you-go 2.0 bills.</p>
@@ -11562,7 +11570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the packet payload of a sensitive data leak event.</p>
@@ -11618,7 +11626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
+     * <p>The single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the packet payload of a sensitive data leak event.</p>
@@ -12084,6 +12092,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Before calling this operation, call ModifySlsDispatchConfig to obtain the TaskId.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status of a log configuration modification task.</p>
+     * 
+     * @param request DescribeTaskDispatchStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTaskDispatchStatusResponse
+     */
+    public DescribeTaskDispatchStatusResponse describeTaskDispatchStatusWithOptions(DescribeTaskDispatchStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTaskDispatchStatus"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTaskDispatchStatusResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call ModifySlsDispatchConfig to obtain the TaskId.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status of a log configuration modification task.</p>
+     * 
+     * @param request DescribeTaskDispatchStatusRequest
+     * @return DescribeTaskDispatchStatusResponse
+     */
+    public DescribeTaskDispatchStatusResponse describeTaskDispatchStatus(DescribeTaskDispatchStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTaskDispatchStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation is generally used to perform a paged query on the information about access control policies of NAT firewalls.</p>
      * 
      * <b>summary</b> : 
@@ -12185,7 +12243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of routing policies for a VPC firewall for a transit router.</p>
+     * <p>Retrieves the list of routing policies for a VPC firewall for a transit router.</p>
      * 
      * @param request DescribeTrFirewallV2RoutePolicyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12233,7 +12291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of routing policies for a VPC firewall for a transit router.</p>
+     * <p>Retrieves the list of routing policies for a VPC firewall for a transit router.</p>
      * 
      * @param request DescribeTrFirewallV2RoutePolicyListRequest
      * @return DescribeTrFirewallV2RoutePolicyListResponse
@@ -12377,7 +12435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route tables for a VPC firewall for a transit router.</p>
+     * <p>Retrieves the route table list of a VPC firewall for a transit router. Prerequisites: CEN → Enterprise Edition transit router → VPC connection → CreateTrFirewallV2 → routing policy.</p>
      * 
      * @param request DescribeTrFirewallsV2RouteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12425,7 +12483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the route tables for a VPC firewall for a transit router.</p>
+     * <p>Retrieves the route table list of a VPC firewall for a transit router. Prerequisites: CEN → Enterprise Edition transit router → VPC connection → CreateTrFirewallV2 → routing policy.</p>
      * 
      * @param request DescribeTrFirewallsV2RouteListRequest
      * @return DescribeTrFirewallsV2RouteListResponse
@@ -12552,6 +12610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryId)) {
+            query.put("QueryId", request.queryId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
@@ -13103,11 +13165,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which can affect your business. We recommend that you call this API at a reasonable rate.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access details of a VPC firewall.</p>
+     * <p>Retrieves the access details of a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallAccessDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13207,11 +13269,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>QPS limits</h2>
-     * <p>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, API calls are throttled, which can affect your business. We recommend that you call this API at a reasonable rate.</p>
+     * <h2>QPS limit</h2>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access details of a VPC firewall.</p>
+     * <p>Retrieves the access details of a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallAccessDetailRequest
      * @return DescribeVpcFirewallAccessDetailResponse
@@ -14292,8 +14354,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the vSwitch list in manual mode for a firewall. <strong>Required parameters</strong>: If OwnerId (owner user ID, Long type) is empty, ErrorOwnerId is returned. If regionNo (region) is empty, ErrorRegionNoError is returned. If vpcId is empty, ErrorVpcIdError is returned. <strong>Before you begin</strong>: Call <a href="~~DescribeVpcFirewallList~~">DescribeVpcFirewallList</a> to obtain VpcFirewallId, OwnerId (from LocalVpc.OwnerId or PeerVpc.OwnerId in the response), and VpcId (from LocalVpc.VpcId or PeerVpc.VpcId in the response).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of vSwitches for a VPC firewall created in manual mode.</p>
+     * <p>Queries the vSwitch list in manual mode for a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallManualVSwitchListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14344,8 +14409,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the vSwitch list in manual mode for a firewall. <strong>Required parameters</strong>: If OwnerId (owner user ID, Long type) is empty, ErrorOwnerId is returned. If regionNo (region) is empty, ErrorRegionNoError is returned. If vpcId is empty, ErrorVpcIdError is returned. <strong>Before you begin</strong>: Call <a href="~~DescribeVpcFirewallList~~">DescribeVpcFirewallList</a> to obtain VpcFirewallId, OwnerId (from LocalVpc.OwnerId or PeerVpc.OwnerId in the response), and VpcId (from LocalVpc.VpcId or PeerVpc.VpcId in the response).</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the list of vSwitches for a VPC firewall created in manual mode.</p>
+     * <p>Queries the vSwitch list in manual mode for a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallManualVSwitchListRequest
      * @return DescribeVpcFirewallManualVSwitchListResponse
@@ -14416,10 +14484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled. This may impact your business. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a VPC firewall precheck.</p>
+     * <p>Retrieves the precheck details of a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallPrecheckDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14480,10 +14548,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>QPS limit</h2>
-     * <p>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled. This may impact your business. Plan your calls accordingly.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a VPC firewall precheck.</p>
+     * <p>Retrieves the precheck details of a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallPrecheckDetailRequest
      * @return DescribeVpcFirewallPrecheckDetailResponse
@@ -14554,8 +14622,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries asset information for VPC Access. When calling this operation, set IsAITraffic to &quot;true&quot;. Otherwise, error code -340103 is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of assets that access domain names through a VPC firewall.</p>
+     * <p>Queries the list of assets that access domain names through a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallTrafficAssetListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14626,8 +14697,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries asset information for VPC Access. When calling this operation, set IsAITraffic to &quot;true&quot;. Otherwise, error code -340103 is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of assets that access domain names through a VPC firewall.</p>
+     * <p>Queries the list of assets that access domain names through a VPC firewall.</p>
      * 
      * @param request DescribeVpcFirewallTrafficAssetListRequest
      * @return DescribeVpcFirewallTrafficAssetListResponse
@@ -15054,8 +15128,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enables data leak detection (SDL) protection for specified assets.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Enables data breach protection for assets.</p>
+     * <p>Enables data leak protection for assets. Before calling this operation, ensure that the Sensitive Data Leak (SDL) feature is activated (query DescribeUserBuyVersion.Sdl, where 1 indicates activated).</p>
      * 
      * @param request EnableSdlProtectedAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15090,8 +15167,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Enables data leak detection (SDL) protection for specified assets.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Enables data breach protection for assets.</p>
+     * <p>Enables data leak protection for assets. Before calling this operation, ensure that the Sensitive Data Leak (SDL) feature is activated (query DescribeUserBuyVersion.Sdl, where 1 indicates activated).</p>
      * 
      * @param request EnableSdlProtectedAssetRequest
      * @return EnableSdlProtectedAssetResponse
@@ -15721,7 +15801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify a DNS firewall policy to accept, deny, or monitor traffic.</p>
+     * <p>Modifies a policy that allows, denies, or monitors traffic that passes through the DNS firewall.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies a DNS firewall rule.</p>
@@ -15796,7 +15876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify a DNS firewall policy to accept, deny, or monitor traffic.</p>
+     * <p>Modifies a policy that allows, denies, or monitors traffic that passes through the DNS firewall.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies a DNS firewall rule.</p>
@@ -15993,7 +16073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets Intrusion Prevention System (IPS) rules to the default settings.</p>
+     * <p>Resets IPS rules to default.</p>
      * 
      * @param request ModifyIpsRulesToDefaultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16049,7 +16129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets Intrusion Prevention System (IPS) rules to the default settings.</p>
+     * <p>Resets IPS rules to default.</p>
      * 
      * @param request ModifyIpsRulesToDefaultRequest
      * @return ModifyIpsRulesToDefaultResponse
@@ -16561,6 +16641,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Before calling this operation, call DescribeUserBuyVersion to obtain the LogVersion of the user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations for log delivery to Simple Log Service (SLS).</p>
+     * 
+     * @param request ModifySlsDispatchConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySlsDispatchConfigResponse
+     */
+    public ModifySlsDispatchConfigResponse modifySlsDispatchConfigWithOptions(ModifySlsDispatchConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.detailConfig)) {
+            query.put("DetailConfig", request.detailConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logVersion)) {
+            query.put("LogVersion", request.logVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
+            query.put("ModifyType", request.modifyType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySlsDispatchConfig"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySlsDispatchConfigResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call DescribeUserBuyVersion to obtain the LogVersion of the user.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations for log delivery to Simple Log Service (SLS).</p>
+     * 
+     * @param request ModifySlsDispatchConfigRequest
+     * @return ModifySlsDispatchConfigResponse
+     */
+    public ModifySlsDispatchConfigResponse modifySlsDispatchConfig(ModifySlsDispatchConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySlsDispatchConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>QPS limit</h2>
      * <p>You can call this API up to 10 times per second per user. If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</p>
      * 
@@ -16673,7 +16811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a VPC firewall for a transit router.</p>
+     * <p>Modifies the configuration of a VPC firewall for a transit router. Prerequisites: Create a Cloud Enterprise Network (CEN) Enterprise Edition transit router, call CreateTrFirewallV2 to create a VPC firewall for the transit router, and obtain the FirewallId before calling this operation.</p>
      * 
      * @param request ModifyTrFirewallV2ConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16713,7 +16851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a VPC firewall for a transit router.</p>
+     * <p>Modifies the configuration of a VPC firewall for a transit router. Prerequisites: Create a Cloud Enterprise Network (CEN) Enterprise Edition transit router, call CreateTrFirewallV2 to create a VPC firewall for the transit router, and obtain the FirewallId before calling this operation.</p>
      * 
      * @param request ModifyTrFirewallV2ConfigurationRequest
      * @return ModifyTrFirewallV2ConfigurationResponse
@@ -17779,12 +17917,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation disables a firewall switch. After a firewall switch is disabled, traffic is no longer routed through Cloud Firewall.</p>
+     * <p>Disables the firewall switch. After the firewall switch is disabled, traffic does not pass through Cloud Firewall.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for this operation is 10 requests per second per user. Calls that exceed this limit are throttled, which may affect your business.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables a firewall switch.</p>
+     * <p>Disables the firewall switch.</p>
      * 
      * @param request PutDisableFwSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17793,6 +17931,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutDisableFwSwitchResponse putDisableFwSwitchWithOptions(PutDisableFwSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
             query.put("IpVersion", request.ipVersion);
         }
@@ -17840,12 +17986,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation disables a firewall switch. After a firewall switch is disabled, traffic is no longer routed through Cloud Firewall.</p>
+     * <p>Disables the firewall switch. After the firewall switch is disabled, traffic does not pass through Cloud Firewall.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for this operation is 10 requests per second per user. Calls that exceed this limit are throttled, which may affect your business.</p>
+     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables a firewall switch.</p>
+     * <p>Disables the firewall switch.</p>
      * 
      * @param request PutDisableFwSwitchRequest
      * @return PutDisableFwSwitchResponse
@@ -17919,12 +18065,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API enables the firewall switch. Once enabled, traffic is routed through Cloud Firewall.</p>
+     * <p>Enables a firewall switch. Traffic passes through Cloud Firewall only after the firewall switch is enabled.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for this API is 5 requests per second for a single user. If you exceed this limit, the system throttles API calls, which may affect your business.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enable the firewall.</p>
+     * <p>Enables a firewall switch.</p>
      * 
      * @param request PutEnableFwSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17933,6 +18079,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutEnableFwSwitchResponse putEnableFwSwitchWithOptions(PutEnableFwSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
             query.put("IpVersion", request.ipVersion);
         }
@@ -17980,12 +18134,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API enables the firewall switch. Once enabled, traffic is routed through Cloud Firewall.</p>
+     * <p>Enables a firewall switch. Traffic passes through Cloud Firewall only after the firewall switch is enabled.</p>
      * <h2>QPS limit</h2>
-     * <p>The QPS limit for this API is 5 requests per second for a single user. If you exceed this limit, the system throttles API calls, which may affect your business.</p>
+     * <p>The single-user QPS limit for this operation is 5 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as appropriate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enable the firewall.</p>
+     * <p>Enables a firewall switch.</p>
      * 
      * @param request PutEnableFwSwitchRequest
      * @return PutEnableFwSwitchResponse
@@ -18637,7 +18791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of the VPC border firewall for a pay-as-you-go user.</p>
+     * <p>Updates the status of the virtual private cloud (VPC) firewall switch module for a pay-as-you-go user.</p>
      * 
      * @param request UpdatePostpayUserVpcStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18677,7 +18831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the status of the VPC border firewall for a pay-as-you-go user.</p>
+     * <p>Updates the status of the virtual private cloud (VPC) firewall switch module for a pay-as-you-go user.</p>
      * 
      * @param request UpdatePostpayUserVpcStatusRequest
      * @return UpdatePostpayUserVpcStatusResponse

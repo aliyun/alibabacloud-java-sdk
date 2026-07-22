@@ -17,6 +17,15 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
     public DescribeTrafficLogResponseBodyPageInfo pageInfo;
 
     /**
+     * <p>The query ID. If the query is too large, a query ID is returned first. Use this query ID to retrieve results in subsequent requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>398542bf-e001-47a3-aee2-b132b588e3c8</p>
+     */
+    @NameInMap("QueryId")
+    public String queryId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +55,14 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         return this.pageInfo;
     }
 
+    public DescribeTrafficLogResponseBody setQueryId(String queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    public String getQueryId() {
+        return this.queryId;
+    }
+
     public DescribeTrafficLogResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -65,7 +82,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The VPC-connected instance ID.</p>
+         * <p>The VPC instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vba1c1em97h0ji71b****</p>
@@ -233,7 +250,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
     public static class DescribeTrafficLogResponseBodyDataList extends TeaModel {
         /**
-         * <p>The policy ID of the ACL pre-match. If this parameter is not specified, all policies are included.</p>
+         * <p>The policy ID of the ACL pre-match. If this parameter is empty, all policies are included.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -252,9 +269,9 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
         /**
          * <p>The ACL pre-match status. Valid values:</p>
-         * <p><strong>app_unknown</strong>: application not identified</p>
-         * <p><strong>domain_unknown</strong>: domain name not identified</p>
-         * <p><strong>normal</strong>: normal</p>
+         * <p><strong>app_unknown</strong>: application not identified.</p>
+         * <p><strong>domain_unknown</strong>: domain name not identified.</p>
+         * <p><strong>normal</strong>: normal.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -264,14 +281,14 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
 
         /**
          * <p>The application identification status. Valid values:</p>
-         * <p><strong>none</strong>: initial state</p>
-         * <p><strong>policy_discard</strong>: connection establishment failed because the connection was blocked by a user ACL or threat intelligence rule</p>
-         * <p><strong>tcp_not_establish</strong>: TCP connection establishment failed</p>
-         * <p><strong>no_payload</strong>: connection established, but DPI has analyzed 0 payloads</p>
-         * <p><strong>analysing</strong>: identification in progress</p>
-         * <p><strong>unknown_loose</strong>: loose mode, identification failed, continuing identification</p>
-         * <p><strong>unknown_strict</strong>: strict mode, identification failed</p>
-         * <p><strong>success</strong>: identification succeeded</p>
+         * <p><strong>none</strong>: initial state.</p>
+         * <p><strong>policy_discard</strong>: connection establishment failed because the connection was blocked by a user ACL or threat intelligence rule.</p>
+         * <p><strong>tcp_not_establish</strong>: TCP connection establishment failed.</p>
+         * <p><strong>no_payload</strong>: connection established, but DPI has analyzed 0 payloads.</p>
+         * <p><strong>analysing</strong>: identification in progress.</p>
+         * <p><strong>unknown_loose</strong>: loose mode. Identification failed. Identification continues.</p>
+         * <p><strong>unknown_strict</strong>: strict mode. Identification failed.</p>
+         * <p><strong>success</strong>: identification succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -374,7 +391,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The URL of the flow log.</p>
+         * <p>The URL in the flow log.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx.com</p>
@@ -416,7 +433,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>Other extended data.</p>
+         * <p>The additional extended data.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -425,7 +442,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String ext;
 
         /**
-         * <p>The inbound traffic.</p>
+         * <p>The inbound traffic in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>125</p>
@@ -488,7 +505,7 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public String memberUid;
 
         /**
-         * <p>The outbound traffic.</p>
+         * <p>The outbound traffic in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>230</p>
@@ -571,9 +588,9 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         /**
          * <p>The final result of the traffic. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Allow.</li>
-         * <li><strong>1</strong>: Alert.</li>
-         * <li><strong>2</strong>: Drop.</li>
+         * <li><strong>0</strong>: allowed.</li>
+         * <li><strong>1</strong>: alerted.</li>
+         * <li><strong>2</strong>: dropped.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -583,13 +600,13 @@ public class DescribeTrafficLogResponseBody extends TeaModel {
         public Integer ruleResult;
 
         /**
-         * <p>The source of the matched detection rule. Valid values:</p>
+         * <p>The source of the hit detection rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: None.</li>
-         * <li><strong>1</strong>: Basic protection.</li>
-         * <li><strong>2</strong>: Virtual patches.</li>
-         * <li><strong>3</strong>: Access control.</li>
-         * <li><strong>4</strong>: Threat intelligence.</li>
+         * <li><strong>0</strong>: none.</li>
+         * <li><strong>1</strong>: basic protection.</li>
+         * <li><strong>2</strong>: Virtual Patches.</li>
+         * <li><strong>3</strong>: access control.</li>
+         * <li><strong>4</strong>: threat intelligence.</li>
          * </ul>
          * 
          * <strong>example:</strong>

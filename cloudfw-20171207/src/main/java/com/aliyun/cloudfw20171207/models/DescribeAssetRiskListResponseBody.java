@@ -11,7 +11,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
     public java.util.List<DescribeAssetRiskListResponseBodyAssetList> assetList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>443C5781-1C03-5FCD-8EC5-FB9C0B9AC396</p>
@@ -68,12 +68,12 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+         * <p>The IP version of the asset protected by Cloud Firewall.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><strong>4</strong>: IPv4 address</p>
+         * <li><p><strong>4</strong>: IPv4</p>
          * </li>
-         * <li><p><strong>6</strong>: IPv6 address</p>
+         * <li><p><strong>6</strong>: IPv6</p>
          * </li>
          * </ul>
          * 
@@ -95,12 +95,9 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><p><strong>low</strong>: low risk</p>
-         * </li>
-         * <li><p><strong>middle</strong>: medium risk</p>
-         * </li>
-         * <li><p><strong>high</strong>: high risk</p>
-         * </li>
+         * <li><strong>low</strong>: low risk</li>
+         * <li><strong>middle</strong>: medium risk</li>
+         * <li><strong>high</strong>: high risk</li>
          * </ul>
          * 
          * <strong>example:</strong>

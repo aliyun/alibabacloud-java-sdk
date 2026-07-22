@@ -144,7 +144,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
 
     public static class DescribePostpayBillResponseBodyBillList extends TeaModel {
         /**
-         * <p>The end time, expressed as a UNIX timestamp in seconds. The value is on the hour or on the day.</p>
+         * <p>The end time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</p>
          * 
          * <strong>example:</strong>
          * <p>1733710015</p>
@@ -171,9 +171,9 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float internetTraffic;
 
         /**
-         * <p>Indicates whether a deduction is applied. A value of 0 indicates that no deduction is applied. Any value greater than 0 indicates that a deduction is applied. If a deduction is applied, the bill is not generated.</p>
+         * <p>Indicates whether the bill is deducted. A value of 0 indicates that the bill is not deducted. Any value greater than 0 indicates that the bill is deducted. If the bill is deducted, it is not charged.</p>
          * <blockquote>
-         * <p>This field is meaningful only when you query data at the hourly level.</p>
+         * <p>This field is meaningful only when you query hourly data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Integer isDerated;
 
         /**
-         * <p>The log service usage duration, in TB × hours.</p>
+         * <p>The log service usage duration, in T × h.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -210,7 +210,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float natTraffic;
 
         /**
-         * <p>The sensitive data leak detection usage duration, in hours.</p>
+         * <p>The data leak detection usage duration, in hours.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -228,7 +228,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float sdlTraffic;
 
         /**
-         * <p>The start time, expressed as a UNIX timestamp in seconds. The value is on the hour or on the day.</p>
+         * <p>The start time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</p>
          * 
          * <strong>example:</strong>
          * <p>1710206070000</p>

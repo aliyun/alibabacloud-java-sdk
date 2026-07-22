@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalResponseBody extends TeaModel {
     /**
-     * <p>The bill list, aggregated by day.</p>
+     * <p>The bill list, with each entry representing a day.</p>
      */
     @NameInMap("BillList")
     public java.util.List<DescribePrepayBillTotalResponseBodyBillList> billList;
@@ -95,7 +95,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long defaultBandwidth;
 
         /**
-         * <p>The elastic bandwidth. Unit: Mbit/s.</p>
+         * <p>The elastic bandwidth value. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long elasticBandwidth;
 
         /**
-         * <p>The end time of the day. The value is a UNIX timestamp in seconds.</p>
+         * <p>The end time of the day. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761667200</p>
@@ -131,7 +131,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float internetTrafficBandwidth;
 
         /**
-         * <p>The monthly free traffic quota for sensitive data detection. Unit: GB.</p>
+         * <p>The monthly free traffic for sensitive data detection. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,7 +149,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Float natTrafficBandwidth;
 
         /**
-         * <p>The timestamp when the maximum combined bandwidth (Internet + VPC + NAT) occurred on that day.</p>
+         * <p>The timestamp when the maximum bandwidth (Internet + VPC + NAT) of the day occurred.</p>
          * 
          * <strong>example:</strong>
          * <p>1761588300</p>
@@ -158,7 +158,7 @@ public class DescribePrepayBillTotalResponseBody extends TeaModel {
         public Long overflowTime;
 
         /**
-         * <p>The start time of the day. The value is a UNIX timestamp in seconds.</p>
+         * <p>The start time of the day. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761580800</p>

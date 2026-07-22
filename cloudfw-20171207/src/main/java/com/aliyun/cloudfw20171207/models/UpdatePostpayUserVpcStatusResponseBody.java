@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePostpayUserVpcStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>450D47F5-956E-543E-8502-2F71C8******</p>

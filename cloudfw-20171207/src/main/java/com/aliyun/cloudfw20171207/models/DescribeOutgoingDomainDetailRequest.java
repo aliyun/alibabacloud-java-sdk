@@ -23,7 +23,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The destination domain name to query. You must specify at least one of Domain or DomainList. If neither is specified, the API returns ErrorDomainName.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -32,13 +32,13 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The list of domain names.</p>
+     * <p>The list of destination domain names to query. You must specify at least one of Domain or DomainList. If neither is specified, the API returns ErrorDomainName.</p>
      */
     @NameInMap("DomainList")
     public java.util.List<String> domainList;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp in seconds.</p>
+     * <p>The end time of the query. Specify a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to query NAT private network outbound connections.</p>
+     * <p>Specifies whether to query outbound connections from NAT private IP addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>NatPrivate</p>
@@ -129,7 +129,7 @@ public class DescribeOutgoingDomainDetailRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The beginning of the time range to query. The value is a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. Specify a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

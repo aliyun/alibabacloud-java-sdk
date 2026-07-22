@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallManualVSwitchListRequest extends TeaModel {
     /**
-     * <p>The language of request and response messages.</p>
+     * <p>The language of the request and response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +18,7 @@ public class DescribeVpcFirewallManualVSwitchListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>18820897691****</p>
@@ -39,7 +43,7 @@ public class DescribeVpcFirewallManualVSwitchListRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The ID of the VPC instance.</p>
+     * <p>The VPC-connected instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

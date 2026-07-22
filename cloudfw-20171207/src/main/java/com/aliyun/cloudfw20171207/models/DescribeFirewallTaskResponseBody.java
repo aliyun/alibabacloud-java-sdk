@@ -14,7 +14,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public Boolean isFound;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7D5483BF-2262-586D-8706-BDDB8B42****</p>
@@ -23,7 +23,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The timestamp when the task was completed.</p>
+     * <p>The time when the task was completed.</p>
      * 
      * <strong>example:</strong>
      * <p>17151381075</p>
@@ -32,7 +32,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String taskFinishTimestamp;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>189997648</p>
@@ -41,7 +41,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The name of the task.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>egressgw</p>
@@ -50,7 +50,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The timestamp when the task started.</p>
+     * <p>The time when the task was created.</p>
      * 
      * <strong>example:</strong>
      * <p>17151361285</p>
@@ -59,7 +59,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String taskStartTimestamp;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The task status. Valid values:</p>
      * <ul>
      * <li><p><strong>init</strong></p>
      * </li>
@@ -80,13 +80,13 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
-     * <p>The steps of the task.</p>
+     * <p>The task steps.</p>
      */
     @NameInMap("TaskSteps")
     public java.util.List<DescribeFirewallTaskResponseBodyTaskSteps> taskSteps;
 
     /**
-     * <p>The waiting time in minutes.</p>
+     * <p>The waiting time, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -173,7 +173,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
 
     public static class DescribeFirewallTaskResponseBodyTaskSteps extends TeaModel {
         /**
-         * <p>The information about the task step.</p>
+         * <p>The task information.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -182,7 +182,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         public String stepInfo;
 
         /**
-         * <p>Creating the Cloud Firewall.</p>
+         * <p>The name of the Cloud Firewall security step.</p>
          * 
          * <strong>example:</strong>
          * <p>Create Firewall</p>
@@ -202,7 +202,7 @@ public class DescribeFirewallTaskResponseBody extends TeaModel {
         /**
          * <p>The status of the task step. Valid values:</p>
          * <ul>
-         * <li><p><strong>init</strong></p>
+         * <li><p><strong>init</strong> </p>
          * </li>
          * <li><p><strong>running</strong></p>
          * </li>

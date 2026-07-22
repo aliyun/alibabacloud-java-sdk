@@ -15,7 +15,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String accessInstanceName;
 
     /**
-     * <p>The type of cloud firewall. Valid values:</p>
+     * <p>The type of the cloud firewall. Valid values:</p>
      * <ul>
      * <li><strong>internet</strong></li>
      * <li><strong>vpc</strong></li>
@@ -40,7 +40,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The UID of the Alibaba Cloud member account.</p>
+     * <p>The UID of the Alibaba Cloud member account. This parameter is required when you use Cloud Firewall to manage member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -58,7 +58,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The primary DNS.</p>
+     * <p>The primary DNS server.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>
@@ -67,7 +67,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String primaryDns;
 
     /**
-     * <p>The ID of the primary vSwitch.</p>
+     * <p>The ID of the primary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, an error is returned. The region must also be in the supported list.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6b0dkyryer8******</p>
@@ -85,7 +85,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String primaryVSwitchIp;
 
     /**
-     * <p>The type of private DNS. Valid values:</p>
+     * <p>The private DNS type. When PrivateDnsType is set to Custom, Port and IpProtocol are required. When PrivateDnsType is set to PrivateZone, the backend automatically sets the port to 53 and uses the default protocol. Valid values:</p>
      * <ul>
      * <li><strong>PrivateZone</strong></li>
      * <li><strong>Custom</strong> (default)</li>
@@ -109,7 +109,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The standby DNS.</p>
+     * <p>The secondary DNS server.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.1.2</p>
@@ -118,7 +118,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String standbyDns;
 
     /**
-     * <p>The ID of the standby vSwitch.</p>
+     * <p>The ID of the secondary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, error code -200534 is returned. The region must also be in the supported list.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-8vb6jk75wfcwn******</p>
@@ -127,7 +127,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String standbyVSwitchId;
 
     /**
-     * <p>The IP address of the standby vSwitch.</p>
+     * <p>The IP address of the secondary vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>10.2.2.2</p>
@@ -136,7 +136,7 @@ public class CreatePrivateDnsEndpointRequest extends TeaModel {
     public String standbyVSwitchIp;
 
     /**
-     * <p>The VPC instance ID.</p>
+     * <p>The instance ID of the VPC-connected instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

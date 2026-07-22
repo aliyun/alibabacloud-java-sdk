@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDestinationResponseBody extends TeaModel {
     /**
-     * <p>The information about the destination addresses.</p>
+     * <p>The destination address information.</p>
      */
     @NameInMap("DstList")
     public java.util.List<DescribeOutgoingDestinationResponseBodyDstList> dstList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A2845BA9-1642-5B27-9F04-8014DD94****</p>
@@ -135,7 +135,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDestinationResponseBodyDstList extends TeaModel {
         /**
-         * <p>The recommended Access Control List (ACL) details.</p>
+         * <p>The recommended ACL content.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -153,7 +153,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String aclStatus;
 
         /**
-         * <p>The business to which the domain name belongs.</p>
+         * <p>The domain name business.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -171,7 +171,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public String categoryId;
 
         /**
-         * <p>The category name of the service.</p>
+         * <p>The category name of the product.</p>
          * 
          * <strong>example:</strong>
          * <p>categor_test</p>
@@ -234,7 +234,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>Indicates whether the destination is manually marked as normal.</p>
+         * <p>Indicates whether the entry is manually marked as normal by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -261,7 +261,7 @@ public class DescribeOutgoingDestinationResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag list.</p>
          */
         @NameInMap("TagList")
         public java.util.List<DescribeOutgoingDestinationResponseBodyDstListTagList> tagList;

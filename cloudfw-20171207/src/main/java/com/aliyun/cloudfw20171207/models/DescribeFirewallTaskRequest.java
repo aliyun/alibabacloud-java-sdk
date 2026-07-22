@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFirewallTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the VPC instance.</p>
+     * <p>The VPC-connected instance ID. You must specify at least one of TaskId and ChildInstanceId. If neither is specified, the API returns ErrorParameters(400).</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-cd6000c588214403****</p>
@@ -14,12 +14,10 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     public String childInstanceId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language type. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The task ID. You must specify at least one of TaskId and ChildInstanceId. If neither is specified, the API returns ErrorParameters(400).</p>
      * 
      * <strong>example:</strong>
      * <p>199431783</p>
@@ -40,9 +38,9 @@ public class DescribeFirewallTaskRequest extends TeaModel {
     /**
      * <p>The type of the task. Valid values:</p>
      * <ul>
-     * <li><p><strong>NAT</strong>: NAT border task</p>
+     * <li><p><strong>NAT</strong>: NAT firewall task</p>
      * </li>
-     * <li><p><strong>VPC</strong>: VPC border task</p>
+     * <li><p><strong>VPC</strong>: VPC firewall task</p>
      * </li>
      * </ul>
      * 

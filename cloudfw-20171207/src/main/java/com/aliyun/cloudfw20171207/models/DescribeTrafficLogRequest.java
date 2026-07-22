@@ -59,7 +59,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String attackType;
 
     /**
-     * <p>The page number of the query.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -86,7 +86,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The URL of the flow log.</p>
+     * <p>The URL in the flow log.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -186,7 +186,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The language type of the received message. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -208,7 +208,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String location;
 
     /**
-     * <p>The UID of the member accounts.</p>
+     * <p>The UID of one of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>128599825273****</p>
@@ -242,6 +242,15 @@ public class DescribeTrafficLogRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public String pageSize;
+
+    /**
+     * <p>The query ID. If the query is too large, a query ID is returned. Use this query ID to retrieve results in subsequent requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d158c8ed-bc57-40fd-86d3-468169d4cfe2</p>
+     */
+    @NameInMap("QueryId")
+    public String queryId;
 
     /**
      * <p>The rule ID.</p>
@@ -344,7 +353,7 @@ public class DescribeTrafficLogRequest extends TeaModel {
     public String srcVpcRegionNo;
 
     /**
-     * <p>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. A single query should not exceed one day.</p>
+     * <p>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. We recommend that a single query span no more than one day.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -591,6 +600,14 @@ public class DescribeTrafficLogRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTrafficLogRequest setQueryId(String queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    public String getQueryId() {
+        return this.queryId;
     }
 
     public DescribeTrafficLogRequest setRuleId(String ruleId) {

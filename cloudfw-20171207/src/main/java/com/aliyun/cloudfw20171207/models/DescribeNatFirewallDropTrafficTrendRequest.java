@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallDropTrafficTrendRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time. Specify a UNIX timestamp in seconds. This parameter is required. If this parameter is not specified, the API returns ErrorTimeError (400). Specify a UNIX timestamp in seconds. The value of EndTime must be later than the value of StartTime.</p>
      * 
      * <strong>example:</strong>
      * <p>1758334822</p>
@@ -14,7 +14,7 @@ public class DescribeNatFirewallDropTrafficTrendRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The source IP address.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>122.190.56.XXX</p>
@@ -23,7 +23,7 @@ public class DescribeNatFirewallDropTrafficTrendRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time. Specify a UNIX timestamp in seconds. This parameter is required. If this parameter is not specified, the API returns ErrorTimeError (400). Specify a UNIX timestamp in seconds. The value of StartTime must be earlier than the value of EndTime.</p>
      * 
      * <strong>example:</strong>
      * <p>1740968766</p>

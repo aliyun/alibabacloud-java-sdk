@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2RoutePolicyResponseBody extends TeaModel {
     /**
-     * <p>The request ID of the returned result.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C91D68BA-A0BE-51BF-A0F1-1CB5C57FE58D</p>
@@ -14,7 +14,7 @@ public class CreateTrFirewallV2RoutePolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The firewall routing policy ID.</p>
+     * <p>The ID of the firewall routing policy.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-8ebed27e13e14ce2****</p>

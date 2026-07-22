@@ -14,7 +14,7 @@ public class DescribePostpayBillRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The end time of the query, expressed as a UNIX timestamp in seconds.</p>
+     * <p>The end time of the bill query, expressed as a second-level UNIX timestamp. The value must be later than StartTime.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class DescribePostpayBillRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time interval for querying data. This is an enumeration value. Valid values:</p>
+     * <p>Specifies the time interval for querying data. This is an enumeration value. This parameter is required. If this parameter is not specified, ERR_PARAMS_INVALID is returned. Valid values:</p>
      * <ul>
-     * <li>3600: queries data at the hourly level.</li>
-     * <li>86400: queries data at the daily level.</li>
+     * <li>3600: queries hourly data.</li>
+     * <li>86400: queries daily data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribePostpayBillRequest extends TeaModel {
     /**
      * <p>The language. This is an enumeration value.
      * Default value: zh.
-     * Valid values: en.</p>
+     * Valid value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -57,7 +57,7 @@ public class DescribePostpayBillRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time of the query, expressed as a UNIX timestamp in seconds.</p>
+     * <p>The start time of the bill query, expressed as a second-level UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

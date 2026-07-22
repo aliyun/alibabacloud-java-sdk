@@ -82,13 +82,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String classId;
 
         /**
-         * <p>The risk level. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: no risk.</li>
-         * <li><strong>1</strong>: low risk.</li>
-         * <li><strong>2</strong>: medium risk.</li>
-         * <li><strong>3</strong>: high risk.</li>
-         * </ul>
+         * <p>The risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -235,7 +229,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The NAT gateway name.</p>
+         * <p>The name of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
@@ -298,7 +292,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String resourceInstanceName;
 
         /**
-         * <p>The type of the public IP address of the asset.</p>
+         * <p>The public IP address type of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>NatEIP</p>
@@ -349,7 +343,7 @@ public class DescribeOutgoingDomainDetailResponseBody extends TeaModel {
         public String totalBytes;
 
         /**
-         * <p>The VPC instance ID.</p>
+         * <p>The instance ID of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-9dp16jgwgyvn****</p>

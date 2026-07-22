@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalRequest extends TeaModel {
     /**
-     * <p>The billing type. Valid values:</p>
+     * <p>The bill type of the user. This parameter is required. An error is returned if this parameter is not specified. Valid values:</p>
      * <ul>
-     * <li>elastic_traffic: elastic traffic.</li>
-     * <li>sdl: sensitive data leak detection traffic.</li>
+     * <li>elastic_traffic: elastic traffic</li>
+     * <li>sdl: sensitive data leak detection traffic</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The end time. Specify a UNIX timestamp in seconds.</p>
+     * <p>The end time. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,12 +37,9 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language. Valid values:</p>
-     * <ul>
-     * <li>zh</li>
-     * <li>en</li>
-     * </ul>
-     * <p>Default value: zh.</p>
+     * <p>The language. Enumeration value.
+     * Default value: zh.
+     * Valid value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -60,7 +57,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time of the query. Specify a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

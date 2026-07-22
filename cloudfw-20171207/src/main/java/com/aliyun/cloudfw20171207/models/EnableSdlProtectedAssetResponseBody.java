@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableSdlProtectedAssetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>

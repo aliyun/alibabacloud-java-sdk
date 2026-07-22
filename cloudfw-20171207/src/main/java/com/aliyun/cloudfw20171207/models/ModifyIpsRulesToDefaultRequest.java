@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     /**
-     * <p>The application that is affected by the attack.</p>
+     * <p>The attack application.</p>
      * 
      * <strong>example:</strong>
      * <p>PHP</p>
@@ -14,12 +14,10 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String attackApp;
 
     /**
-     * <p>The type of the Cloud Firewall. Valid values:</p>
+     * <p>The type of the cloud firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>VpcFirewall</strong>: VPC firewall.</p>
-     * </li>
-     * <li><p><strong>InternetFirewall</strong> (default): Internet firewall.</p>
-     * </li>
+     * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewalls.</li>
+     * <li><strong>InternetFirewall</strong> (default): the Internet border firewall.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,12 +42,10 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The type of the rule. Valid values:</p>
+     * <p>The rule type. Valid values:</p>
      * <ul>
-     * <li><p><strong>basicRule</strong></p>
-     * </li>
-     * <li><p><strong>customize</strong></p>
-     * </li>
+     * <li><strong>basicRule</strong></li>
+     * <li><strong>customize</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -60,7 +56,7 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The list of rules.</p>
+     * <p>The rule list. Conditional requirement: when RuleType is set to customize, you must specify at least one of this parameter or AttackApp. If you specify only RuleType without Rules or AttackApp, the API returns ErrorParameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -72,7 +68,7 @@ public class ModifyIpsRulesToDefaultRequest extends TeaModel {
     public String rules;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>140.205.118.XXX</p>

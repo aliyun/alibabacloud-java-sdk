@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
      * 
      * <strong>example:</strong>
      * <p>cen-37nddhri7jf0d2****</p>
@@ -23,7 +23,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallDescription;
 
     /**
-     * <p>The ID of the elastic network interface (ENI) of the firewall.</p>
+     * <p>The ID of the firewall ENI.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-uf621u00nafypeex****</p>
@@ -32,7 +32,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallEniId;
 
     /**
-     * <p>The ID of the VPC to which the ENI of the firewall belongs.</p>
+     * <p>The ID of the VPC in which the firewall ENI resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-2zeppcci782zeh2bk****</p>
@@ -41,7 +41,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallEniVpcId;
 
     /**
-     * <p>The ID of the vSwitch to which the ENI of the firewall belongs.</p>
+     * <p>The ID of the vSwitch in which the firewall ENI resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6ptq1kl1c1d9pw9****</p>
@@ -50,7 +50,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallEniVswitchId;
 
     /**
-     * <p>The ID of the VPC firewall instance.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-9c7c711abdfa4d80****</p>
@@ -59,7 +59,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The name of the VPC firewall instance.</p>
+     * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>cloudfirewall-manual</p>
@@ -85,7 +85,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallStatus;
 
     /**
-     * <p>The CIDR block of the vSwitch that is automatically created in the firewall VPC to host the ENI of the firewall in automatic mode.</p>
+     * <p>The subnet CIDR block that is used to store the firewall ENI in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.1.0/24</p>
@@ -94,25 +94,25 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallSubnetCidr;
 
     /**
-     * <p>The status of the VPC firewall. Valid values:</p>
+     * <p>The status of the virtual private cloud (VPC) firewall. Valid values:</p>
      * <ul>
      * <li><p><strong>opened</strong>: The firewall is enabled.</p>
      * </li>
      * <li><p><strong>closed</strong>: The firewall is disabled.</p>
      * </li>
-     * <li><p><strong>notconfigured</strong>: The firewall is not configured.</p>
+     * <li><p><strong>notconfigured</strong>: The virtual private cloud (VPC) firewall is not configured.</p>
      * </li>
-     * <li><p><strong>configured</strong>: The firewall is configured.</p>
+     * <li><p><strong>configured</strong>: The virtual private cloud (VPC) firewall is configured.</p>
      * </li>
-     * <li><p><strong>creating</strong>: The firewall is being created.</p>
+     * <li><p><strong>creating</strong>: The virtual private cloud (VPC) firewall is being created.</p>
      * </li>
-     * <li><p><strong>opening</strong>: The firewall is being enabled.</p>
+     * <li><p><strong>opening</strong>: The virtual private cloud (VPC) firewall is being enabled.</p>
      * </li>
-     * <li><p><strong>deleting</strong>: The firewall is being deleted.</p>
+     * <li><p><strong>deleting</strong>: The virtual private cloud (VPC) firewall is being deleted.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * <p>If this parameter is not set, virtual private cloud (VPC) firewalls in all states are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String firewallSwitchStatus;
 
     /**
-     * <p>The CIDR block of the VPC that is automatically created for the firewall in automatic mode.</p>
+     * <p>The CIDR block of the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/16</p>
@@ -140,7 +140,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7E53A7FB-3EB9-5E33-8E50-B8F417D1E02B</p>
@@ -151,10 +151,8 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     /**
      * <p>The routing mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>managed</strong>: automatic mode</p>
-     * </li>
-     * <li><p><strong>manual</strong>: manual mode</p>
-     * </li>
+     * <li><strong>managed</strong>: automatic mode</li>
+     * <li><strong>manual</strong>: manual mode</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,7 +162,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String routeMode;
 
     /**
-     * <p>The ID of the transit router attachment.</p>
+     * <p>The attachment ID that is used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-attach-r1llaxxeha71jsm36v</p>
@@ -173,7 +171,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentId;
 
     /**
-     * <p>The primary CIDR block of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</p>
+     * <p>The primary subnet CIDR block that is used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.2.0/24</p>
@@ -182,7 +180,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentMasterCidr;
 
     /**
-     * <p>The primary zone of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</p>
+     * <p>The primary zone of the subnet that is used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
@@ -191,7 +189,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentMasterZone;
 
     /**
-     * <p>The secondary CIDR block of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</p>
+     * <p>The secondary subnet CIDR block that is used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.3.0/24</p>
@@ -200,7 +198,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentSlaveCidr;
 
     /**
-     * <p>The secondary zone of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</p>
+     * <p>The secondary zone of the subnet that is used to connect to the transit router in the firewall VPC in automatic mode.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
@@ -209,7 +207,7 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     public String trAttachmentSlaveZone;
 
     /**
-     * <p>The ID of the transit router instance.</p>
+     * <p>The instance ID of the forward routing router.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-wz9y8sgug8b1xb416****</p>

@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetRiskListRequest extends TeaModel {
     /**
-     * <p>The IP addresses to query. Separate multiple IP addresses with commas (,). You can query a maximum of 20 IP addresses at a time.</p>
+     * <p>The list of IP addresses to query. Separate multiple IP addresses with commas (,). You can query up to 20 IP addresses at a time. This parameter is required in practice. If you do not specify this parameter, the API returns a 400 error.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Example of an IPv4 address: 47.97.XX.XX.</p>
-     * </li>
-     * <li><p>Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</p>
-     * </li>
+     * <li>IPv4 example: 47.97.XX.XX.</li>
+     * <li>IPv6 example: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</li>
      * </ul>
      * </blockquote>
      */
@@ -19,7 +17,7 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public java.util.List<String> ipAddrList;
 
     /**
-     * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
+     * <p>The IP version of the assets protected by Cloud Firewall.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><p><strong>4</strong> (default): IPv4</p>
@@ -36,12 +34,10 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public Integer ipVersion;
 
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +47,7 @@ public class DescribeAssetRiskListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the visitor.</p>
+     * <p>The source IP address of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>

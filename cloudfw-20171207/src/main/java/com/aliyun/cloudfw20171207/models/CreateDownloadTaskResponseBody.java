@@ -16,7 +16,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><p>finish: The task is complete. You can query the task to obtain the download URL of the task file.</p>
+     * <li><p>finish: The task is completed. You can call a task query operation to obtain the download URL of the task file.</p>
      * </li>
      * <li><p>start: The task has started.</p>
      * </li>
@@ -25,6 +25,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
      * <li><p>expire: The task has expired. The task file is no longer valid and cannot be downloaded.</p>
      * </li>
      * </ul>
+     * <p>This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned. Use a task query operation to obtain the real-time status.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -33,7 +34,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The task ID, which uniquely identifies the task.</p>
+     * <p>The task ID, which uniquely identifies the task. This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned. Use a task query operation to obtain the task status and download URL.</p>
      * 
      * <strong>example:</strong>
      * <p>132</p>
@@ -42,7 +43,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The name of the file download task.</p>
+     * <p>The name of the file download task. This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test-IPv4</p>

@@ -95,7 +95,7 @@ public class DescribeFirewallDropTrendResponseBody extends TeaModel {
 
         /**
          * <p>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</p>
-         * <p>If the data at this point in time has not been processed, the values of all other fields are -1.</p>
+         * <p>If the data at this point in time has not been processed, the values of other fields are -1.</p>
          * 
          * <strong>example:</strong>
          * <p>1758474000</p>

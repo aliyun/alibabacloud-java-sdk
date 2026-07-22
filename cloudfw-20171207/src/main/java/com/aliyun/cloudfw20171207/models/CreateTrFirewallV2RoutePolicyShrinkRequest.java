@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2RoutePolicyShrinkRequest extends TeaModel {
     /**
-     * <p>The list of secondary traffic redirection instances.</p>
+     * <p>The secondary traffic redirection instances.</p>
      */
     @NameInMap("DestCandidateList")
     public String destCandidateListShrink;
 
     /**
-     * <p>The VPC border firewall instance ID.</p>
+     * <p>The ID of the virtual private cloud (VPC) firewall instance.</p>
+     * <blockquote>
+     * <p>FirewallId is required. If it is not specified, ErrorParameters(400) is returned. You can call DescribeTrFirewallsV2List to obtain the instance ID.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-f8ce36689b224f77****</p>
@@ -20,7 +23,7 @@ public class CreateTrFirewallV2RoutePolicyShrinkRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language type for receiving messages. Valid values:</p>
+     * <p>The language of the content within the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -33,7 +36,7 @@ public class CreateTrFirewallV2RoutePolicyShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The traffic redirection description.</p>
+     * <p>The description of the traffic redirection configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>Singapore Point to Multipoint</p>
@@ -42,7 +45,7 @@ public class CreateTrFirewallV2RoutePolicyShrinkRequest extends TeaModel {
     public String policyDescription;
 
     /**
-     * <p>The traffic redirection name.</p>
+     * <p>The name of the traffic redirection configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>Singapore Point to Multipoint</p>
@@ -51,13 +54,13 @@ public class CreateTrFirewallV2RoutePolicyShrinkRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The traffic redirection scenario type for the VPC border firewall with Cloud Enterprise Network Enterprise Edition. Valid values:</p>
+     * <p>The traffic redirection scenario type for the virtual private cloud (VPC) firewall on a Cloud Enterprise Network (CEN) Enterprise Edition transit router. Valid values:</p>
      * <ul>
-     * <li><p><strong>fullmesh</strong>: Multi-point interconnection</p>
+     * <li><p><strong>fullmesh</strong>: multi-point interconnection</p>
      * </li>
-     * <li><p><strong>one_to_one</strong>: Point-to-point</p>
+     * <li><p><strong>one_to_one</strong>: point-to-point</p>
      * </li>
-     * <li><p><strong>end_to_end</strong>: Point-to-multipoint</p>
+     * <li><p><strong>end_to_end</strong>: point-to-multipoint</p>
      * </li>
      * </ul>
      * 
@@ -68,7 +71,7 @@ public class CreateTrFirewallV2RoutePolicyShrinkRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The list of primary traffic redirection instances.</p>
+     * <p>The primary traffic redirection instances.</p>
      */
     @NameInMap("SrcCandidateList")
     public String srcCandidateListShrink;

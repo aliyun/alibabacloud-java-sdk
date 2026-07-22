@@ -36,7 +36,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <li><strong>MongoDB</strong></li>
      * <li><strong>Memcache</strong></li>
      * <li><strong>SSL</strong></li>
-     * <li><strong>ANY</strong>: all application types.</li>
+     * <li><strong>ANY</strong>: all application types</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,9 +63,9 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination port of traffic in the virtual private cloud (VPC) firewall access control policy.</p>
+     * <p>The destination port in the virtual private cloud (VPC) firewall access control policy for traffic access.</p>
      * <blockquote>
-     * <p>Set this parameter when <strong>DestPortType</strong> is set to <code>port</code>.</p>
+     * <p>When <strong>DestPortType</strong> is set to <code>port</code>, configure this parameter. When Proto is set to TCP/UDP/ICMP, either DestPort (with DestPortType=port) or DestPortGroup (with DestPortType=group) is conditionally required. Otherwise, ErrorParametersDestPort(400) is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,9 +75,9 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     public String destPort;
 
     /**
-     * <p>The name of the destination port address book of traffic in the virtual private cloud (VPC) firewall access control policy.</p>
+     * <p>The name of the destination port address book for traffic access in the virtual private cloud (VPC) firewall access control policy.</p>
      * <blockquote>
-     * <p>Set this parameter when <strong>DestPortType</strong> is set to <code>group</code>.</p>
+     * <p>When <strong>DestPortType</strong> is set to <code>group</code>, configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,10 +87,10 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     public String destPortGroup;
 
     /**
-     * <p>The type of the destination port of traffic in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
+     * <p>The type of the destination port for traffic access in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
      * <ul>
      * <li><strong>port</strong>: port</li>
-     * <li><strong>group</strong>: port address book.</li>
+     * <li><strong>group</strong>: port address book</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     public String destPortType;
 
     /**
-     * <p>The destination address of traffic in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
+     * <p>The destination address in the virtual private cloud (VPC) firewall access control policy for traffic access. Valid values:</p>
      * <ul>
      * <li><p>If <strong>DestinationType</strong> is set to <code>net</code>, the value of <strong>Destination</strong> is a destination CIDR block.</p>
      * </li>
@@ -122,7 +122,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <ul>
      * <li><strong>net</strong>: destination CIDR block</li>
      * <li><strong>group</strong>: destination address book</li>
-     * <li><strong>domain</strong>: destination domain name.</li>
+     * <li><strong>domain</strong>: destination domain name</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -135,9 +135,9 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The domain name resolution method of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>FQDN</strong>: FQDN-based resolution</li>
+     * <li><strong>FQDN</strong>: FQDN-based</li>
      * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
-     * <li><strong>FQDN_AND_DNS</strong>: FQDN-based and DNS-based dynamic resolution.</li>
+     * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or on the half hour and must be at least 30 minutes later than the start time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent, EndTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</p>
+     * <p>When RepeatType is set to Permanent, EndTime is empty. When RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must have a value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -192,12 +192,12 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     public String newOrder;
 
     /**
-     * <p>The security protocol type of traffic in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
+     * <p>The security protocol type for traffic access in the virtual private cloud (VPC) firewall access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>ANY</strong>: any protocol type. Set this value if the protocol type is uncertain.</li>
+     * <li><strong>ANY</strong>: any protocol type</li>
      * <li><strong>TCP</strong></li>
      * <li><strong>UDP</strong></li>
-     * <li><strong>ICMP</strong>.</li>
+     * <li><strong>ICMP</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -221,18 +221,18 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The days of the recurrence for the policy validity period of the access control policy.</p>
+     * <p>The days of a week or of a month on which the access control policy takes effect.</p>
      * <ul>
-     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty collection.
+     * <li>When RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty collection.
      * Example: []</li>
-     * <li>If RepeatType is set to Weekly, RepeatDays cannot be empty.
+     * <li>When RepeatType is set to Weekly, RepeatDays cannot be empty.
      * Example: [0, 6]<blockquote>
-     * <p>If RepeatType is set to Weekly, the values in RepeatDays cannot be repeated.</p>
+     * <p>When RepeatType is set to Weekly, RepeatDays does not allow duplicate values.</p>
      * </blockquote>
      * </li>
-     * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
+     * <li>When RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
      * Example: [1, 31]<blockquote>
-     * <p>If RepeatType is set to Monthly, the values in RepeatDays cannot be repeated.</p>
+     * <p>When RepeatType is set to Monthly, RepeatDays does not allow duplicate values.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -243,7 +243,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The recurrence end time of the policy validity period for the access control policy. Example: 23:30. The value must be on the hour or on the half hour and must be at least 30 minutes later than the recurrence start time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent or None, RepeatEndTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified. The format is HH:MM (24-hour clock), such as 08:00.</p>
+     * <p>When RepeatType is set to Permanent or None, RepeatEndTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must have a value. Format: HH:MM (24-hour clock). Example: 08:00.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The recurrence start time of the policy validity period for the access control policy. Example: 08:00. The value must be on the hour or on the half hour and must be at least 30 minutes earlier than the recurrence end time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent or None, RepeatStartTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must be specified. The format is HH:MM (24-hour clock), such as 08:00.</p>
+     * <p>When RepeatType is set to Permanent or None, RepeatStartTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must have a value. Format: HH:MM (24-hour clock). Example: 08:00.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -267,11 +267,11 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>Permanent</strong> (default): The policy is always valid.</li>
-     * <li><strong>None</strong>: The policy is valid for a specified single time period.</li>
-     * <li><strong>Daily</strong>: The policy is valid on a daily basis.</li>
-     * <li><strong>Weekly</strong>: The policy is valid on a weekly basis.</li>
-     * <li><strong>Monthly</strong>: The policy is valid on a monthly basis.</li>
+     * <li><strong>Permanent</strong> (default): always</li>
+     * <li><strong>None</strong>: one-time</li>
+     * <li><strong>Daily</strong>: daily</li>
+     * <li><strong>Weekly</strong>: weekly</li>
+     * <li><strong>Monthly</strong>: monthly</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      * <ul>
      * <li><p><strong>net</strong>: source CIDR block</p>
      * </li>
-     * <li><p><strong>group</strong>: source address book.</p>
+     * <li><p><strong>group</strong>: source address book</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -313,7 +313,7 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or on the half hour and must be at least 30 minutes earlier than the end time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent, StartTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</p>
+     * <p>When RepeatType is set to Permanent, StartTime is empty. When RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must have a value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -325,13 +325,13 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the virtual private cloud (VPC) firewall access control policy group.</p>
      * <ul>
-     * <li><p>If the VPC firewall protects traffic between two VPCs connected through CEN, the value of this parameter is the CEN instance ID.</p>
+     * <li><p>If the VPC firewall protects traffic between two VPCs connected through a CEN instance, the value of this parameter is the CEN instance ID.</p>
      * </li>
-     * <li><p>If the VPC firewall protects traffic between two VPCs connected through Express Connect, the value of this parameter is the VPC firewall instance ID.</p>
+     * <li><p>If the VPC firewall protects traffic between two VPCs connected through an Express Connect circuit, the value of this parameter is the VPC firewall instance ID.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

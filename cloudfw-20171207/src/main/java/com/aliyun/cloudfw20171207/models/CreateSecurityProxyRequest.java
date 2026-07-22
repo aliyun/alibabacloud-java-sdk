@@ -7,8 +7,8 @@ public class CreateSecurityProxyRequest extends TeaModel {
     /**
      * <p>The security protection switch. Valid values:</p>
      * <ul>
-     * <li><strong>open</strong>: enabled</li>
-     * <li><strong>close</strong>: disabled.</li>
+     * <li><strong>open</strong>: Enabled.</li>
+     * <li><strong>close</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public String fwVswitchZoneId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language of the response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,8 +105,11 @@ public class CreateSecurityProxyRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the automatic vSwitch mode. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: automatic mode</li>
-     * <li><strong>false</strong>: manual mode.</li>
+     * <li><strong>true</strong>: Automatic mode.</li>
+     * <li><strong>false</strong>: Manual mode.<blockquote>
+     * <p>The default value of VswitchAuto is true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
