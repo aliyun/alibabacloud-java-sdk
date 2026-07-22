@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TextTranslateResponseBody extends TeaModel {
     /**
-     * <p>The response code. Returns &quot;success&quot; for successful calls.</p>
+     * <p>The response code. Returns &quot;success&quot; for normal calls.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -20,7 +20,7 @@ public class TextTranslateResponseBody extends TeaModel {
     public TextTranslateResponseBodyData data;
 
     /**
-     * <p>The error message. Returns &quot;Success&quot; for successful calls. Returns specific error information for exceptions, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+     * <p>The error message. Returns &quot;Success&quot; for normal calls. Returns specific error information for exceptions, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -93,7 +93,7 @@ public class TextTranslateResponseBody extends TeaModel {
 
     public static class TextTranslateResponseBodyDataTranslations extends TeaModel {
         /**
-         * <p>The number of characters in the source text.</p>
+         * <p>The source text character count.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -114,7 +114,7 @@ public class TextTranslateResponseBody extends TeaModel {
          * <p>The translated text.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好世界</p>
+         * <p>Hello World.</p>
          */
         @NameInMap("TranslatedText")
         public String translatedText;

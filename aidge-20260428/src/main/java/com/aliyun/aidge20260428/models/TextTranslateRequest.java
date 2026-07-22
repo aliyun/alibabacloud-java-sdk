@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TextTranslateRequest extends TeaModel {
     /**
+     * <p>The business scenario identifier. Optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or invalid, the general translation strategy is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyCompany-Chat</p>
      */
@@ -12,7 +14,7 @@ public class TextTranslateRequest extends TeaModel {
     public String bizName;
 
     /**
-     * <p>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</p>
+     * <p>The format type of the source text. Optional. Supports text (plain text format) and html (web page format, preserving HTML tags).</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -21,7 +23,7 @@ public class TextTranslateRequest extends TeaModel {
     public String formatType;
 
     /**
-     * <p>The intervention glossary ID. This parameter is optional. The glossary must be created separately in the console and its ID provided here. If the glossary ID is empty, the translation result is not modified.</p>
+     * <p>The intervention glossary ID. Optional. The glossary must be created separately in the console and its ID provided. If the glossary ID is empty, the translation result is not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -30,7 +32,7 @@ public class TextTranslateRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The source language code. This parameter is optional. If not specified, the language is automatically detected. You can pass auto for language detection.</p>
+     * <p>The source language code. Optional. If not specified, the language is automatically detected. You can pass auto for language detection.</p>
      * 
      * <strong>example:</strong>
      * <p>auto</p>
@@ -39,7 +41,7 @@ public class TextTranslateRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The list of texts to translate. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</p>
+     * <p>The list of texts to translate. Required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +51,7 @@ public class TextTranslateRequest extends TeaModel {
     public java.util.List<String> sourceTextList;
 
     /**
-     * <p>The target language code. This parameter is required. More than 100 language directions are supported. For details, refer to the supported language directions list.</p>
+     * <p>The target language code. Required. Supports more than 100 language directions. For details, refer to the supported language directions list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +61,8 @@ public class TextTranslateRequest extends TeaModel {
     public String targetLanguage;
 
     /**
+     * <p>The format of the translation text. <strong>html</strong> (web page format. This setting processes both the source text and translated text in HTML format). <strong>text</strong> (text format. This setting processes both the source text and translated result as plain text without format processing).</p>
+     * 
      * <strong>example:</strong>
      * <p>e-commerce-title</p>
      */

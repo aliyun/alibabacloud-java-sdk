@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationStandardRequest extends TeaModel {
     /**
-     * <p>The ID of the intervention glossary. This parameter is optional. Create the glossary in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The intervention glossary ID. Optional. You must create the glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results will not be modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -14,7 +14,12 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The URL of the original image. This parameter is required. Image requirements: the width and height cannot exceed 4000 × 4000 pixels, the file size cannot exceed 10 MB, and the supported formats are png, jpeg, jpg, bmp, and webp.</p>
+     * <ul>
+     * <li>Image URL: Must be publicly accessible.</li>
+     * <li>Format: png, jpeg, jpg, bmp, webp</li>
+     * <li>Pixels: Width and height must not exceed 4000</li>
+     * <li>File size: Original file ≤ 10 MB</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +29,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the product subject in the image. This parameter is optional. Default value: false. This helps protect information by preventing translation of embedded information such as product names.</p>
+     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps protect information and avoids translating embedded information such as product names.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -33,7 +38,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The source language code. This parameter is required. For supported language directions, see the supported language directions list.</p>
+     * <p>The source language code. Required. For supported language directions, see the supported language direction list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +48,7 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. This parameter is required. For supported language directions, see the supported language directions list.</p>
+     * <p>The target language code. Required. For supported language directions, see the supported language direction list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,13 +58,22 @@ public class ImageTranslationStandardRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps protect brand name information from being translated.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("TranslatingBrandInTheProduct")
     public Boolean translatingBrandInTheProduct;
+
+    /**
+     * <p>Specifies whether to return layer information such as text position, font, and color. When set to true, layer information is returned for secondary editing through an image editor. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("UseImageEditor")
+    public Boolean useImageEditor;
 
     public static ImageTranslationStandardRequest build(java.util.Map<String, ?> map) throws Exception {
         ImageTranslationStandardRequest self = new ImageTranslationStandardRequest();
@@ -112,6 +126,14 @@ public class ImageTranslationStandardRequest extends TeaModel {
     }
     public Boolean getTranslatingBrandInTheProduct() {
         return this.translatingBrandInTheProduct;
+    }
+
+    public ImageTranslationStandardRequest setUseImageEditor(Boolean useImageEditor) {
+        this.useImageEditor = useImageEditor;
+        return this;
+    }
+    public Boolean getUseImageEditor() {
+        return this.useImageEditor;
     }
 
 }
