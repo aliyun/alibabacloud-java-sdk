@@ -23,7 +23,7 @@ public class OperateEnableJobsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID generated for the request. Use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>4CC4132F-B798-5D6E-9F06-D44B33E417E9</p>
@@ -32,12 +32,10 @@ public class OperateEnableJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The call was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The call failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

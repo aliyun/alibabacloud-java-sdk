@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateExecuteJobRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -25,7 +28,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The custom parameters for the job instance.</p>
+     * <p>The instance parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>name=zhangsan</p>
@@ -34,7 +37,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String instanceParameters;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +47,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The label used to select a specific worker.</p>
+     * <p>The label of the specified machine.</p>
      * 
      * <strong>example:</strong>
      * <p>gray</p>
@@ -53,7 +56,7 @@ public class OperateExecuteJobRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The address (<code>workerAddr</code>) of a specific worker.</p>
+     * <p>The workerAddr of the specified machine.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://192.168.***.5:9999/">http://192.168.***.5:9999/</a></p>
@@ -64,6 +67,14 @@ public class OperateExecuteJobRequest extends TeaModel {
     public static OperateExecuteJobRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateExecuteJobRequest self = new OperateExecuteJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OperateExecuteJobRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public OperateExecuteJobRequest setAppName(String appName) {

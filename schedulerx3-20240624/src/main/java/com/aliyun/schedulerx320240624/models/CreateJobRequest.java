@@ -15,7 +15,7 @@ public class CreateJobRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The retry interval upon failure. Unit: seconds. Default value: 30.</p>
+     * <p>The retry interval. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -24,7 +24,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer attemptInterval;
 
     /**
-     * <p>The custom calendar. This parameter is available only for the cron time type.</p>
+     * <p>The custom calendar. This parameter is optional for the cron time type.</p>
      * 
      * <strong>example:</strong>
      * <p>workday</p>
@@ -76,7 +76,7 @@ public class CreateJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The client-side blocking strategy. Valid values:</p>
+     * <p>The client blocking strategy. Valid values:</p>
      * <ul>
      * <li>1: serial execution on a single machine</li>
      * <li>2: ignore subsequent scheduling</li>
@@ -90,7 +90,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer executorBlockStrategy;
 
     /**
-     * <p>The JobHandler name.</p>
+     * <p>The jobhandler name.</p>
      * 
      * <strong>example:</strong>
      * <p>testJobVoidHandler</p>
@@ -222,7 +222,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer startTimeType;
 
     /**
-     * <p>The node status. Default value: enabled. Valid values:</p>
+     * <p>The node status. Default value: 1 (enabled). Valid values:</p>
      * <ul>
      * <li>0: disabled</li>
      * <li>1: enabled</li>
@@ -237,11 +237,11 @@ public class CreateJobRequest extends TeaModel {
     /**
      * <p>The time expression. Set this parameter based on the selected time type.</p>
      * <ul>
-     * <li><strong>none</strong>: no value required.</li>
-     * <li><strong>cron</strong>: a standard cron expression. Online verification is supported.</li>
-     * <li><strong>api</strong>: no value required.</li>
-     * <li><strong>fixed_rate</strong>: a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</li>
-     * <li><strong>one_time</strong>: a scheduling time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+     * <li><strong>none</strong>: No value is required.</li>
+     * <li><strong>cron</strong>: Specify a standard cron expression. Online verification is supported.</li>
+     * <li><strong>api</strong>: No value is required.</li>
+     * <li><strong>fixed_rate</strong>: Specify a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</li>
+     * <li><strong>one_time</strong>: Specify a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateJobRequest extends TeaModel {
     public Integer weight;
 
     /**
-     * <p>The extended attributes. This parameter is required for K8s node types.
+     * <p>The configuration for K8s node types. Set this parameter if the node type is K8s.
      * Job node: {&quot;resource&quot;:&quot;job&quot;}
      * Shell node: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
      * 
@@ -613,10 +613,10 @@ public class CreateJobRequest extends TeaModel {
         public Boolean endEarlyEnable;
 
         /**
-         * <p>Specifies whether to enable failure alerting. Valid values:</p>
+         * <p>Specifies whether to enable the failure alert. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Failure alerting is enabled.</li>
-         * <li><strong>false</strong>: Failure alerting is disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -638,10 +638,10 @@ public class CreateJobRequest extends TeaModel {
         public Integer failLimitTimes;
 
         /**
-         * <p>Specifies whether to enable alerting when no workers are available. Valid values:</p>
+         * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Alerting for no available workers is enabled.</li>
-         * <li><strong>false</strong>: Alerting for no available workers is disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -653,7 +653,7 @@ public class CreateJobRequest extends TeaModel {
         /**
          * <p>The notification channel. Valid values:</p>
          * <ul>
-         * <li>sms: text message</li>
+         * <li>sms: SMS</li>
          * <li>phone: phone call</li>
          * <li>mail: email</li>
          * <li>webhook: webhook<blockquote>
@@ -669,7 +669,7 @@ public class CreateJobRequest extends TeaModel {
         public String sendChannel;
 
         /**
-         * <p>Specifies whether to enable success notification. Valid values:</p>
+         * <p>Specifies whether to enable the success notification. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.</li>
@@ -691,7 +691,7 @@ public class CreateJobRequest extends TeaModel {
         public Long timeout;
 
         /**
-         * <p>Specifies whether to enable timeout alerting. Valid values:</p>
+         * <p>Specifies whether to enable the timeout alert. Valid values:</p>
          * <ul>
          * <li><p><strong>true</strong>: Enabled.</p>
          * </li>
@@ -706,10 +706,10 @@ public class CreateJobRequest extends TeaModel {
         public Boolean timeoutEnable;
 
         /**
-         * <p>Specifies whether to enable timeout termination. Valid values:</p>
+         * <p>Specifies whether to enable the timeout termination feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Timeout termination is enabled.</li>
-         * <li><strong>false</strong>: Timeout termination is disabled.</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -807,7 +807,7 @@ public class CreateJobRequest extends TeaModel {
 
     public static class CreateJobRequestNoticeContacts extends TeaModel {
         /**
-         * <p>The Notification Recipient type. Valid values:</p>
+         * <p>The object type of the notification recipient. Valid values:</p>
          * <ul>
          * <li><p>1: alert contact</p>
          * </li>

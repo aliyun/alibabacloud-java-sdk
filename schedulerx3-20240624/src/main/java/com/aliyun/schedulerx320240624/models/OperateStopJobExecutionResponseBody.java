@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateStopJobExecutionResponseBody extends TeaModel {
     /**
-     * <p>The Response Code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class OperateStopJobExecutionResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter check error</p>
@@ -23,7 +23,7 @@ public class OperateStopJobExecutionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>E82D8B33-204D-58E1-8F56-909F6B48F3D1</p>
@@ -32,7 +32,7 @@ public class OperateStopJobExecutionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of <strong>true</strong> indicates success, and a value of <strong>false</strong> indicates failure.</p>
+     * <p>Indicates whether the call was successful. <strong>true</strong>: The call was successful. <strong>false</strong>: The call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

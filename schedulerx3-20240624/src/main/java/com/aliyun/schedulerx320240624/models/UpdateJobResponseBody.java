@@ -23,7 +23,7 @@ public class UpdateJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>3808cf26-dde2-4286-8503-b0a2cd4065a7</p>

@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class ListExecutorsRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -45,6 +48,14 @@ public class ListExecutorsRequest extends TeaModel {
     public static ListExecutorsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExecutorsRequest self = new ListExecutorsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListExecutorsRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public ListExecutorsRequest setAppName(String appName) {

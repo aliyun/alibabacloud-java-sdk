@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateDisableJobsShrinkRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -24,15 +27,20 @@ public class OperateDisableJobsShrinkRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The IDs of the jobs to disable.</p>
-     */
     @NameInMap("JobIds")
     public String jobIdsShrink;
 
     public static OperateDisableJobsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateDisableJobsShrinkRequest self = new OperateDisableJobsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OperateDisableJobsShrinkRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public OperateDisableJobsShrinkRequest setAppName(String appName) {

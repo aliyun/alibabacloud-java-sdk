@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class GetDesigateInfoRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -25,7 +28,7 @@ public class GetDesigateInfoRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +40,14 @@ public class GetDesigateInfoRequest extends TeaModel {
     public static GetDesigateInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDesigateInfoRequest self = new GetDesigateInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetDesigateInfoRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public GetDesigateInfoRequest setAppName(String appName) {

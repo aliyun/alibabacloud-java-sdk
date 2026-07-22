@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class GetJobExecutionProgressRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -25,7 +28,7 @@ public class GetJobExecutionProgressRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The job execution ID.</p>
+     * <p>The task execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +40,14 @@ public class GetJobExecutionProgressRequest extends TeaModel {
     public static GetJobExecutionProgressRequest build(java.util.Map<String, ?> map) throws Exception {
         GetJobExecutionProgressRequest self = new GetJobExecutionProgressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetJobExecutionProgressRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public GetJobExecutionProgressRequest setAppName(String appName) {

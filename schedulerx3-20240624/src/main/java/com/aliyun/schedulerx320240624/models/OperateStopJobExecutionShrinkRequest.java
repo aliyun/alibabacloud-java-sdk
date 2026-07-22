@@ -4,8 +4,11 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateStopJobExecutionShrinkRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
-     * <p>The name of the Application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The ID of the Cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the Job Execution.</p>
+     * <p>The job execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +38,7 @@ public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
-     * <p>A list of Task IDs.</p>
+     * <p>The subtask IDs.</p>
      */
     @NameInMap("TaskList")
     public String taskListShrink;
@@ -43,6 +46,14 @@ public class OperateStopJobExecutionShrinkRequest extends TeaModel {
     public static OperateStopJobExecutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateStopJobExecutionShrinkRequest self = new OperateStopJobExecutionShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OperateStopJobExecutionShrinkRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public OperateStopJobExecutionShrinkRequest setAppName(String appName) {

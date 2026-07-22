@@ -1098,7 +1098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes multiple jobs in a batch.</p>
+     * <p>Deletes nodes in batches.</p>
      * 
      * @param tmpReq DeleteJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1113,6 +1113,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            body.put("AppGroupId", request.appGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             body.put("AppName", request.appName);
         }
@@ -1144,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes multiple jobs in a batch.</p>
+     * <p>Deletes nodes in batches.</p>
      * 
      * @param request DeleteJobsRequest
      * @return DeleteJobsResponse
@@ -1534,7 +1538,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the designation information for a job.</p>
+     * <p>Retrieves the information about a specified machine.</p>
      * 
      * @param request GetDesigateInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1562,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the designation information for a job.</p>
+     * <p>Retrieves the information about a specified machine.</p>
      * 
      * @param request GetDesigateInfoRequest
      * @return GetDesigateInfoResponse
@@ -1690,13 +1694,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Add the enhancement plugin</h1>
-     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to enhance the capabilities of the Executor.
-     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml.
-     * <strong>See also</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></p>
+     * <h1>Import the enhanced plugin</h1>
+     * <p>Add the enhanced plugin to the <code>pom.xml</code> file to improve the capabilities of the Executor.
+     * <strong>Note</strong>: Make sure this plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom file.
+     * <strong>For more information, refer to</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the details of a sharding task execution.</p>
+     * <p>Retrieves the execution details of a sharding task.</p>
      * 
      * @param request GetJobExecutionProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1724,13 +1728,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1>Add the enhancement plugin</h1>
-     * <p>Add the Enhancement Plugin to your <code>pom.xml</code> file to enhance the capabilities of the Executor.
-     * <strong>Note</strong>: Place this plugin <strong>above</strong> the <code>xxl-job-core</code> dependency in your pom.xml.
-     * <strong>See also</strong>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></p>
+     * <h1>Import the enhanced plugin</h1>
+     * <p>Add the enhanced plugin to the <code>pom.xml</code> file to improve the capabilities of the Executor.
+     * <strong>Note</strong>: Make sure this plugin is placed <strong>above</strong> the <code>xxl-job-core</code> dependency in the pom file.
+     * <strong>For more information, refer to</strong>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the details of a sharding task execution.</p>
+     * <p>Retrieves the execution details of a sharding task.</p>
      * 
      * @param request GetJobExecutionProgressRequest
      * @return GetJobExecutionProgressResponse
@@ -2178,6 +2182,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWorkflowExecutionDAGResponse getWorkflowExecutionDAG(GetWorkflowExecutionDAGRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getWorkflowExecutionDAGWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</p>
+     * 
+     * @param request ImportAgentJobsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportAgentJobsResponse
+     */
+    public ImportAgentJobsResponse importAgentJobsWithOptions(ImportAgentJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentName)) {
+            body.put("AgentName", request.agentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrateStrategy)) {
+            body.put("MigrateStrategy", request.migrateStrategy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportAgentJobs"),
+            new TeaPair("version", "2024-06-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportAgentJobsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</p>
+     * 
+     * @param request ImportAgentJobsRequest
+     * @return ImportAgentJobsResponse
+     */
+    public ImportAgentJobsResponse importAgentJobs(ImportAgentJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importAgentJobsWithOptions(request, runtime);
     }
 
     /**
@@ -2820,7 +2882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists executors.</p>
+     * <p>Queries the list of executors.</p>
      * 
      * @param request ListExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2848,7 +2910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists executors.</p>
+     * <p>Queries the list of executors.</p>
      * 
      * @param request ListExecutorsRequest
      * @return ListExecutorsResponse
@@ -2860,7 +2922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of task instances.</p>
+     * <p>Retrieves a list of job instances.</p>
      * 
      * @param request ListJobExecutionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2932,7 +2994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of task instances.</p>
+     * <p>Retrieves a list of job instances.</p>
      * 
      * @param request ListJobExecutionsRequest
      * @return ListJobExecutionsResponse
@@ -3004,7 +3066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a task list.</p>
+     * <p>Retrieves a list of jobs.</p>
      * 
      * @param request ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3072,7 +3134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a task list.</p>
+     * <p>Retrieves a list of jobs.</p>
      * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
@@ -3686,7 +3748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Designates one or more executors for a job.</p>
+     * <p>Specifies the executor.</p>
      * 
      * @param tmpReq OperateDesignateExecutorsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3703,6 +3765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.addressListShrink)) {
             body.put("AddressList", request.addressListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            body.put("AppGroupId", request.appGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
@@ -3744,7 +3810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Designates one or more executors for a job.</p>
+     * <p>Specifies the executor.</p>
      * 
      * @param request OperateDesignateExecutorsRequest
      * @return OperateDesignateExecutorsResponse
@@ -3756,7 +3822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables multiple jobs.</p>
+     * <p>Disables nodes in batches.</p>
      * 
      * @param tmpReq OperateDisableJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3771,6 +3837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            body.put("AppGroupId", request.appGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             body.put("AppName", request.appName);
         }
@@ -3802,7 +3872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables multiple jobs.</p>
+     * <p>Disables nodes in batches.</p>
      * 
      * @param request OperateDisableJobsRequest
      * @return OperateDisableJobsResponse
@@ -3878,7 +3948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables multiple jobs in a batch.</p>
+     * <p>Starts nodes in batches.</p>
      * 
      * @param tmpReq OperateEnableJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3893,6 +3963,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            body.put("AppGroupId", request.appGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             body.put("AppName", request.appName);
         }
@@ -3924,7 +3998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables multiple jobs in a batch.</p>
+     * <p>Starts nodes in batches.</p>
      * 
      * @param request OperateEnableJobsRequest
      * @return OperateEnableJobsResponse
@@ -3994,7 +4068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a job on demand.</p>
+     * <p>Runs a node once.</p>
      * 
      * @param request OperateExecuteJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4003,6 +4077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OperateExecuteJobResponse operateExecuteJobWithOptions(OperateExecuteJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            body.put("AppGroupId", request.appGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             body.put("AppName", request.appName);
         }
@@ -4046,7 +4124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Executes a job on demand.</p>
+     * <p>Runs a node once.</p>
      * 
      * @param request OperateExecuteJobRequest
      * @return OperateExecuteJobResponse
@@ -4324,7 +4402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns historical data for a job within a specified time range.</p>
+     * <p>Reruns historical data for a node.</p>
      * 
      * @param request OperateRerunJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4333,6 +4411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OperateRerunJobResponse operateRerunJobWithOptions(OperateRerunJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
         }
@@ -4376,7 +4458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reruns historical data for a job within a specified time range.</p>
+     * <p>Reruns historical data for a node.</p>
      * 
      * @param request OperateRerunJobRequest
      * @return OperateRerunJobResponse
@@ -4388,7 +4470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a failed Job Instance.</p>
+     * <p>Reruns a failed job instance.</p>
      * 
      * @param tmpReq OperateRetryJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4403,6 +4485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            query.put("AppGroupId", request.appGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
         }
@@ -4442,7 +4528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a failed Job Instance.</p>
+     * <p>Reruns a failed job instance.</p>
      * 
      * @param request OperateRetryJobExecutionRequest
      * @return OperateRetryJobExecutionResponse
@@ -4562,7 +4648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a running Job Execution.</p>
+     * <p>Stops a running task instance.</p>
      * 
      * @param tmpReq OperateStopJobExecutionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4577,6 +4663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            query.put("AppGroupId", request.appGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
         }
@@ -4612,7 +4702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a running Job Execution.</p>
+     * <p>Stops a running task instance.</p>
      * 
      * @param request OperateStopJobExecutionRequest
      * @return OperateStopJobExecutionResponse
@@ -5403,6 +5493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appGroupId)) {
+            body.put("AppGroupId", request.appGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             body.put("AppName", request.appName);
         }

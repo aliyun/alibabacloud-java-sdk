@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class OperateDesignateExecutorsRequest extends TeaModel {
     /**
-     * <p>A list of machine addresses to designate.</p>
+     * <p>The address list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddressList")
     public java.util.List<String> addressList;
+
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
 
     /**
      * <p>The application name.</p>
@@ -32,12 +35,10 @@ public class OperateDesignateExecutorsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The designation type. Valid values:</p>
+     * <p>The type of the designated machine. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: By worker.</p>
-     * </li>
-     * <li><p><strong>2</strong>: By label.</p>
-     * </li>
+     * <li><strong>1</strong>: designated worker.</li>
+     * <li><strong>2</strong>: designated label.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,7 +49,7 @@ public class OperateDesignateExecutorsRequest extends TeaModel {
     public Integer designateType;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +78,14 @@ public class OperateDesignateExecutorsRequest extends TeaModel {
     }
     public java.util.List<String> getAddressList() {
         return this.addressList;
+    }
+
+    public OperateDesignateExecutorsRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public OperateDesignateExecutorsRequest setAppName(String appName) {

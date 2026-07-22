@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateDisableJobsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class OperateDisableJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message. Contains error details if the request fails.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
@@ -23,7 +23,7 @@ public class OperateDisableJobsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A unique ID generated for this request. If you encounter an issue, provide this ID for troubleshooting.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>29ED6209-5DE6-5E1D-89B0-B7B1D823A1BF</p>
@@ -32,12 +32,10 @@ public class OperateDisableJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the request succeeded.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The request was successful.</p>
-     * </li>
-     * <li><p><code>false</code>: The request failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

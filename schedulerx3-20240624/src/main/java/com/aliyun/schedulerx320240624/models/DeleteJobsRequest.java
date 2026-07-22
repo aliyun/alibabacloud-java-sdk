@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobsRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -24,15 +27,20 @@ public class DeleteJobsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The IDs of the jobs to delete.</p>
-     */
     @NameInMap("JobIds")
     public java.util.List<Long> jobIds;
 
     public static DeleteJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteJobsRequest self = new DeleteJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteJobsRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public DeleteJobsRequest setAppName(String appName) {

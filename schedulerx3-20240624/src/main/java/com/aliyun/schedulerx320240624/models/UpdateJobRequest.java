@@ -4,6 +4,9 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
      * <p>The application name.</p>
      * <p>This parameter is required.</p>
@@ -112,9 +115,9 @@ public class UpdateJobRequest extends TeaModel {
     public Integer maxAttempt;
 
     /**
-     * <p>The maximum number of concurrent instances of the node.</p>
+     * <p>The maximum number of concurrent instances for the node.</p>
      * <blockquote>
-     * <p>The maximum number of instances that can run at the same time for the same node. A value of 1 indicates that repeated execution is not allowed. If the concurrency limit is exceeded, the current scheduling is skipped.</p>
+     * <p>The maximum number of instances that can run simultaneously for the same node. A value of 1 indicates that repeated execution is not allowed. If the concurrency limit is exceeded, the current scheduling is skipped.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class UpdateJobRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The execution priority of the node. Valid values:</p>
+     * <p>The node execution priority. Valid values:</p>
      * <ul>
      * <li>1: low</li>
      * <li>5: medium</li>
@@ -169,7 +172,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The routing policy. Valid values:</p>
+     * <p>The routing strategy. Valid values:</p>
      * <ul>
      * <li>1: round robin</li>
      * <li>2: random</li>
@@ -188,7 +191,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer routeStrategy;
 
     /**
-     * <p>The script for non-BEAN nodes. Use this field to configure the script.</p>
+     * <p>The script content for non-BEAN nodes. Use this field to configure the script.</p>
      * 
      * <strong>example:</strong>
      * <p>echo &quot;hello world&quot;</p>
@@ -221,7 +224,7 @@ public class UpdateJobRequest extends TeaModel {
      * <li>cron: Specify a standard cron expression. Online verification is supported.</li>
      * <li>api: No value is required.</li>
      * <li>fixed_rate: Specify a fixed frequency value in seconds. For example, 30 indicates that the node is triggered every 30 seconds.</li>
-     * <li>one_time: Specify a scheduling time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+     * <li>one_time: Specify a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -249,7 +252,7 @@ public class UpdateJobRequest extends TeaModel {
     /**
      * <p>The time zone.</p>
      * <blockquote>
-     * <p>By default, the time zone of the SchedulerX server is used.</p>
+     * <p>The default value is the time zone of the SchedulerX server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -277,6 +280,14 @@ public class UpdateJobRequest extends TeaModel {
     public static UpdateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateJobRequest self = new UpdateJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateJobRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public UpdateJobRequest setAppName(String appName) {
@@ -489,17 +500,22 @@ public class UpdateJobRequest extends TeaModel {
 
     public static class UpdateJobRequestNoticeConfig extends TeaModel {
         /**
+         * <p>The early termination threshold, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
         @NameInMap("EndEarly")
         public Integer endEarly;
 
+        /**
+         * <p>Specifies whether to enable the early termination alert.</p>
+         */
         @NameInMap("EndEarlyEnable")
         public Boolean endEarlyEnable;
 
         /**
-         * <p>Specifies whether to enable the failure alerting switch. Valid values:</p>
+         * <p>Specifies whether to enable the failure alert. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
@@ -524,7 +540,7 @@ public class UpdateJobRequest extends TeaModel {
         public Integer failLimitTimes;
 
         /**
-         * <p>Specifies whether to enable the no-available-machine alerting switch. Valid values:</p>
+         * <p>Specifies whether to enable the no-available-machine alert. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>
@@ -555,7 +571,7 @@ public class UpdateJobRequest extends TeaModel {
         public String sendChannel;
 
         /**
-         * <p>Specifies whether to enable the success notification switch. Valid values:</p>
+         * <p>Specifies whether to enable the success notification. Valid values:</p>
          * <ul>
          * <li>true: Enabled.</li>
          * <li>false: Disabled.</li>
@@ -577,7 +593,7 @@ public class UpdateJobRequest extends TeaModel {
         public Long timeout;
 
         /**
-         * <p>Specifies whether to enable timeout alerting. Valid values:</p>
+         * <p>Specifies whether to enable the timeout alert. Valid values:</p>
          * <ul>
          * <li><p>true: Enabled.</p>
          * </li>
@@ -592,7 +608,7 @@ public class UpdateJobRequest extends TeaModel {
         public Boolean timeoutEnable;
 
         /**
-         * <p>Specifies whether to enable the timeout termination switch for the current trigger. Valid values:</p>
+         * <p>Specifies whether to enable the timeout termination for the current trigger. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Enabled.</li>
          * <li><strong>false</strong>: Disabled.</li>

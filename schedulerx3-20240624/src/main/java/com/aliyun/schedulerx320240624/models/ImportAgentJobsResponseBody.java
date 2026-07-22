@@ -3,10 +3,8 @@ package com.aliyun.schedulerx320240624.models;
 
 import com.aliyun.tea.*;
 
-public class OperateDesignateExecutorsResponseBody extends TeaModel {
+public class ImportAgentJobsResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -14,42 +12,32 @@ public class OperateDesignateExecutorsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message.</p>
-     * 
      * <strong>example:</strong>
-     * <p>Parameter check error</p>
+     * <p>Parameter error: content is null.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
-     * 
      * <strong>example:</strong>
-     * <p>AFD5B166-4A7D-50DF-91BF-EFAFD41F7335</p>
+     * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static OperateDesignateExecutorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        OperateDesignateExecutorsResponseBody self = new OperateDesignateExecutorsResponseBody();
+    public static ImportAgentJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ImportAgentJobsResponseBody self = new ImportAgentJobsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public OperateDesignateExecutorsResponseBody setCode(Integer code) {
+    public ImportAgentJobsResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -57,7 +45,7 @@ public class OperateDesignateExecutorsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public OperateDesignateExecutorsResponseBody setMessage(String message) {
+    public ImportAgentJobsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -65,7 +53,7 @@ public class OperateDesignateExecutorsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public OperateDesignateExecutorsResponseBody setRequestId(String requestId) {
+    public ImportAgentJobsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,7 +61,7 @@ public class OperateDesignateExecutorsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OperateDesignateExecutorsResponseBody setSuccess(Boolean success) {
+    public ImportAgentJobsResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -4,8 +4,11 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
+    @NameInMap("AppGroupId")
+    public Long appGroupId;
+
     /**
-     * <p>The Application Name.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The Job Execution ID.</p>
+     * <p>The job execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,16 +38,16 @@ public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     public String jobExecutionId;
 
     /**
-     * <p>A list of Sub-task execution IDs for a Broadcast Sharding Job.</p>
+     * <p>The list of subtask execution IDs (for broadcast jobs).</p>
      * <blockquote>
-     * <p>To retry a specific Sub-task of a Broadcast Sharding Job, set this parameter to the execution ID of that Sub-task.</p>
+     * <p>To rerun a subtask of a broadcast job, set this field to the execution ID of the corresponding subtask.</p>
      * </blockquote>
      */
     @NameInMap("TaskList")
     public String taskListShrink;
 
     /**
-     * <p>Specifies whether to trigger downstream jobs.</p>
+     * <p>Specifies whether to trigger downstream nodes.</p>
      */
     @NameInMap("TriggerChild")
     public Boolean triggerChild;
@@ -52,6 +55,14 @@ public class OperateRetryJobExecutionShrinkRequest extends TeaModel {
     public static OperateRetryJobExecutionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateRetryJobExecutionShrinkRequest self = new OperateRetryJobExecutionShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OperateRetryJobExecutionShrinkRequest setAppGroupId(Long appGroupId) {
+        this.appGroupId = appGroupId;
+        return this;
+    }
+    public Long getAppGroupId() {
+        return this.appGroupId;
     }
 
     public OperateRetryJobExecutionShrinkRequest setAppName(String appName) {

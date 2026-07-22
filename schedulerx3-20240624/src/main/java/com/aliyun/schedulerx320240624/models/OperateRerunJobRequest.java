@@ -4,8 +4,11 @@ package com.aliyun.schedulerx320240624.models;
 import com.aliyun.tea.*;
 
 public class OperateRerunJobRequest extends TeaModel {
+    @NameInMap("AppId")
+    public Long appId;
+
     /**
-     * <p>The name of the application.</p>
+     * <p>The application name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The unique identifier of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +28,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The specific time of day for which to rerun the data. The format is <code>HH:mm:ss</code>.</p>
+     * <p>The data timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +38,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public String dataTime;
 
     /**
-     * <p>The end of the time range to rerun, specified as a Unix timestamp in milliseconds.</p>
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +48,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public Long endDate;
 
     /**
-     * <p>The unique identifier of the job.</p>
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +58,7 @@ public class OperateRerunJobRequest extends TeaModel {
     public Long jobId;
 
     /**
-     * <p>The start of the time range to rerun, specified as a Unix timestamp in milliseconds.</p>
+     * <p>The start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +70,14 @@ public class OperateRerunJobRequest extends TeaModel {
     public static OperateRerunJobRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateRerunJobRequest self = new OperateRerunJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OperateRerunJobRequest setAppId(Long appId) {
+        this.appId = appId;
+        return this;
+    }
+    public Long getAppId() {
+        return this.appId;
     }
 
     public OperateRerunJobRequest setAppName(String appName) {

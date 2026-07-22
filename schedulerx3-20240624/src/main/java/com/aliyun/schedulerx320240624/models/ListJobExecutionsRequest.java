@@ -69,7 +69,7 @@ public class ListJobExecutionsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -89,32 +89,19 @@ public class ListJobExecutionsRequest extends TeaModel {
     /**
      * <p>The job execution status. Valid values:</p>
      * <ul>
-     * <li><p>0: <strong>UNKNOWN</strong>.</p>
-     * </li>
-     * <li><p>1: <strong>WAITING</strong>.</p>
-     * </li>
-     * <li><p>2: <strong>READY</strong>.</p>
-     * </li>
-     * <li><p>3: <strong>RUNNING</strong>.</p>
-     * </li>
-     * <li><p>4: <strong>SUCCESS</strong>.</p>
-     * </li>
-     * <li><p>5: <strong>FAILED</strong>.</p>
-     * </li>
-     * <li><p>6: <strong>PAUSED</strong>.</p>
-     * </li>
-     * <li><p>7: <strong>SUBMITTED</strong>.</p>
-     * </li>
-     * <li><p>8: <strong>REJECTED</strong>.</p>
-     * </li>
-     * <li><p>9: <strong>ACCEPTED</strong>.</p>
-     * </li>
-     * <li><p>10: <strong>PARTIAL_FAILED</strong>.</p>
-     * </li>
-     * <li><p>11: <strong>SKIPPED</strong>.</p>
-     * </li>
-     * <li><p>12: <strong>REMOVED</strong>.</p>
-     * </li>
+     * <li>0: <strong>UNKNOWN</strong>.</li>
+     * <li>1: <strong>WAITING</strong>.</li>
+     * <li>2: <strong>READY</strong>.</li>
+     * <li>3: <strong>RUNNING</strong>.</li>
+     * <li>4: <strong>SUCCESS</strong>.</li>
+     * <li>5: <strong>FAILED</strong>.</li>
+     * <li>6: <strong>PAUSED</strong>.</li>
+     * <li>7: <strong>SUBMITTED</strong>.</li>
+     * <li>8: <strong>REJECTED</strong>.</li>
+     * <li>9: <strong>ACCEPTED</strong>.</li>
+     * <li>10: <strong>PARTIAL_FAILED</strong>.</li>
+     * <li>11: <strong>SKIPPED</strong>.</li>
+     * <li>12: <strong>REMOVED</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +111,7 @@ public class ListJobExecutionsRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The workflow execution ID.</p>
+     * <p>The workflow instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

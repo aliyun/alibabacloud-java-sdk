@@ -14,7 +14,7 @@ public class DeleteJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message. An error message is returned if the request is unsuccessful.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter error: content is null.</p>
@@ -23,7 +23,7 @@ public class DeleteJobsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. This ID is unique to each request and can be used for troubleshooting.</p>
+     * <p>The request ID. Alibaba Cloud generates a unique ID for each API request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>91143E1D-E235-5BE0-9364-C2EE28FFB5A6</p>
@@ -32,12 +32,10 @@ public class DeleteJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

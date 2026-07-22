@@ -15,7 +15,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The retry interval upon failure. Unit: seconds. Default value: 30.</p>
+     * <p>The retry interval. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -24,7 +24,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer attemptInterval;
 
     /**
-     * <p>The custom calendar. This parameter is available only for the cron time type.</p>
+     * <p>The custom calendar. This parameter is optional for the cron time type.</p>
      * 
      * <strong>example:</strong>
      * <p>workday</p>
@@ -76,7 +76,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The client-side blocking strategy. Valid values:</p>
+     * <p>The client blocking strategy. Valid values:</p>
      * <ul>
      * <li>1: serial execution on a single machine</li>
      * <li>2: ignore subsequent scheduling</li>
@@ -90,7 +90,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer executorBlockStrategy;
 
     /**
-     * <p>The JobHandler name.</p>
+     * <p>The jobhandler name.</p>
      * 
      * <strong>example:</strong>
      * <p>testJobVoidHandler</p>
@@ -222,7 +222,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer startTimeType;
 
     /**
-     * <p>The node status. Default value: enabled. Valid values:</p>
+     * <p>The node status. Default value: 1 (enabled). Valid values:</p>
      * <ul>
      * <li>0: disabled</li>
      * <li>1: enabled</li>
@@ -237,11 +237,11 @@ public class CreateJobShrinkRequest extends TeaModel {
     /**
      * <p>The time expression. Set this parameter based on the selected time type.</p>
      * <ul>
-     * <li><strong>none</strong>: no value required.</li>
-     * <li><strong>cron</strong>: a standard cron expression. Online verification is supported.</li>
-     * <li><strong>api</strong>: no value required.</li>
-     * <li><strong>fixed_rate</strong>: a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</li>
-     * <li><strong>one_time</strong>: a scheduling time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
+     * <li><strong>none</strong>: No value is required.</li>
+     * <li><strong>cron</strong>: Specify a standard cron expression. Online verification is supported.</li>
+     * <li><strong>api</strong>: No value is required.</li>
+     * <li><strong>fixed_rate</strong>: Specify a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</li>
+     * <li><strong>one_time</strong>: Specify a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer weight;
 
     /**
-     * <p>The extended attributes. This parameter is required for K8s node types.
+     * <p>The configuration for K8s node types. Set this parameter if the node type is K8s.
      * Job node: {&quot;resource&quot;:&quot;job&quot;}
      * Shell node: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</p>
      * 
