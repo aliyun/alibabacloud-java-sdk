@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodesRequest extends TeaModel {
     /**
-     * <p>The ID of the bandwidth plan instance.</p>
+     * <p>The instance ID of the bandwidth plan.</p>
      * 
      * <strong>example:</strong>
      * <p>cbwp-bp17psa7fhxqmm*****</p>
@@ -23,7 +23,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The billing method. Only the subscription billing method is supported.</p>
+     * <p>The billing type. Only subscription is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -32,7 +32,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The maximum number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</p>
+     * <p>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The token for the next query. If a query does not return all results, NextToken is not empty. Use the returned NextToken in your next query to continue.</p>
+     * <p>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can pass the returned NextToken in the next request to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -50,13 +50,13 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A list of Cloud Phone matrix IDs.</p>
+     * <p>The list of cloud phone matrix IDs.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
-     * <p>The name of the Cloud Phone matrix.</p>
+     * <p>The name of the cloud phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>node_name</p>
@@ -68,7 +68,7 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public java.util.List<String> nodeNameList;
 
     /**
-     * <p>The instance type of the Cloud Phone matrix.</p>
+     * <p>The specifications of the cloud phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>cpm.gx7.10xlarge</p>
@@ -76,8 +76,14 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     @NameInMap("ServerType")
     public String serverType;
 
+    @NameInMap("SortKey")
+    public String sortKey;
+
+    @NameInMap("SortType")
+    public String sortType;
+
     /**
-     * <p>The status of the Cloud Phone matrix.</p>
+     * <p>The status of the cloud phone matrix.</p>
      * 
      * <strong>example:</strong>
      * <p>CREATING</p>
@@ -163,6 +169,22 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     }
     public String getServerType() {
         return this.serverType;
+    }
+
+    public DescribeCloudPhoneNodesRequest setSortKey(String sortKey) {
+        this.sortKey = sortKey;
+        return this;
+    }
+    public String getSortKey() {
+        return this.sortKey;
+    }
+
+    public DescribeCloudPhoneNodesRequest setSortType(String sortType) {
+        this.sortType = sortType;
+        return this;
+    }
+    public String getSortType() {
+        return this.sortType;
     }
 
     public DescribeCloudPhoneNodesRequest setStatus(String status) {

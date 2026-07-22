@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The details of the instance group.</p>
+     * <p>The details of the instance groups.</p>
      */
     @NameInMap("InstanceGroupModel")
     public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel> instanceGroupModel;
 
     /**
-     * <p>The pagination token that indicates the position where the current call returns. An empty value indicates that all data has been read.</p>
+     * <p>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -85,7 +85,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the public network bandwidth throttling rule. This rule applies only to premium bandwidth.</p>
+         * <p>The ID of the public network bandwidth limit rule (applies only to premium bandwidth).</p>
          * 
          * <strong>example:</strong>
          * <p>qos-3kh93uu0vdbka****</p>
@@ -118,13 +118,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules extends TeaModel {
         /**
-         * <p>The public network bandwidth throttling rules bound to the instance.</p>
+         * <p>The public network bandwidth limit rule bound to the instance.</p>
          */
         @NameInMap("InstanceQosRule")
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRulesInstanceQosRule> instanceQosRule;
 
         /**
-         * <p>The total number of public network bandwidth throttling rules for the instance group.</p>
+         * <p>The total number of public network bandwidth limit rules for the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -157,7 +157,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks extends TeaModel {
         /**
-         * <p>The disk size, in GB.</p>
+         * <p>The disk size (unit: GB).</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -259,9 +259,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String architectureType;
 
         /**
-         * <p>The number of active instances.</p>
+         * <p>The number of available instances.</p>
          * <blockquote>
-         * <p>An instance is considered active if its instance status is not &quot;Deleting&quot; or &quot;Deleted&quot;.</p>
+         * <p>Available means the instance status is not &quot;being deleted&quot; or &quot;deleted&quot;.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String bandwidthPackageType;
 
         /**
-         * <p>The public network bandwidth throttling rules for the instance group.</p>
+         * <p>The public network bandwidth limit rules for the instance group.</p>
          */
         @NameInMap("BindQosRules")
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules bindQosRules;
@@ -481,7 +481,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance.</p>
          * <blockquote>
-         * <p>This field is returned only for instance groups with a standard network.</p>
+         * <p>This field is returned only for instance groups with standard networking.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -530,7 +530,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The rendering type of the instance group.</p>
+         * <p>The rendering method of the instance group.</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
