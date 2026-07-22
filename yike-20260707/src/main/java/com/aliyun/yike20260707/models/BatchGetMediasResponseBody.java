@@ -1080,6 +1080,12 @@ public class BatchGetMediasResponseBody extends TeaModel {
     }
 
     public static class BatchGetMediasResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
+        @NameInMap("CategoryId")
+        public Long categoryId;
+
+        @NameInMap("CategoryName")
+        public String categoryName;
+
         /**
          * <strong>example:</strong>
          * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></p>
@@ -1181,6 +1187,22 @@ public class BatchGetMediasResponseBody extends TeaModel {
         public static BatchGetMediasResponseBodyMediaInfosMediaBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             BatchGetMediasResponseBodyMediaInfosMediaBasicInfo self = new BatchGetMediasResponseBodyMediaInfosMediaBasicInfo();
             return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediasResponseBodyMediaInfosMediaBasicInfo setCategoryId(Long categoryId) {
+            this.categoryId = categoryId;
+            return this;
+        }
+        public Long getCategoryId() {
+            return this.categoryId;
+        }
+
+        public BatchGetMediasResponseBodyMediaInfosMediaBasicInfo setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
+            return this;
+        }
+        public String getCategoryName() {
+            return this.categoryName;
         }
 
         public BatchGetMediasResponseBodyMediaInfosMediaBasicInfo setCoverURL(String coverURL) {

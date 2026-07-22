@@ -87,6 +87,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建分类</p>
+     * 
+     * @param request CreateAssetCategoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAssetCategoryResponse
+     */
+    public CreateAssetCategoryResponse createAssetCategoryWithOptions(CreateAssetCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryName)) {
+            query.put("CategoryName", request.categoryName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentId)) {
+            query.put("ParentId", request.parentId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAssetCategory"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAssetCategoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分类最多支持三级分类，每级分类最多支持创建 100 个子分类。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>创建分类</p>
+     * 
+     * @param request CreateAssetCategoryRequest
+     * @return CreateAssetCategoryResponse
+     */
+    public CreateAssetCategoryResponse createAssetCategory(CreateAssetCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAssetCategoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除分类</p>
+     * 
+     * @param request DeleteAssetCategoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAssetCategoryResponse
+     */
+    public DeleteAssetCategoryResponse deleteAssetCategoryWithOptions(DeleteAssetCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAssetCategory"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAssetCategoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>此接口会同时删除其子分类（包括二级分类和三级分类），请慎重操作。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除分类</p>
+     * 
+     * @param request DeleteAssetCategoryRequest
+     * @return DeleteAssetCategoryResponse
+     */
+    public DeleteAssetCategoryResponse deleteAssetCategory(DeleteAssetCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAssetCategoryWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>删除媒资信息</p>
      * 
@@ -136,6 +240,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMediasResponse deleteMedias(DeleteMediasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMediasWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询分类</p>
+     * 
+     * @param request GetAssetCategoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAssetCategoryResponse
+     */
+    public GetAssetCategoryResponse getAssetCategoryWithOptions(GetAssetCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAssetCategory"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAssetCategoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询分类</p>
+     * 
+     * @param request GetAssetCategoryRequest
+     * @return GetAssetCategoryResponse
+     */
+    public GetAssetCategoryResponse getAssetCategory(GetAssetCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAssetCategoryWithOptions(request, runtime);
     }
 
     /**
@@ -349,6 +497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportMediaResponse importMediaWithOptions(ImportMediaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.coverURL)) {
             query.put("CoverURL", request.coverURL);
         }
@@ -428,6 +580,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportMediaResponse importMedia(ImportMediaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importMediaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出分类</p>
+     * 
+     * @param request ListAssetCategoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAssetCategoriesResponse
+     */
+    public ListAssetCategoriesResponse listAssetCategoriesWithOptions(ListAssetCategoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAssetCategories"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAssetCategoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出分类</p>
+     * 
+     * @param request ListAssetCategoriesRequest
+     * @return ListAssetCategoriesResponse
+     */
+    public ListAssetCategoriesResponse listAssetCategories(ListAssetCategoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAssetCategoriesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索媒资</p>
+     * 
+     * @param request SearchMediaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchMediaResponse
+     */
+    public SearchMediaResponse searchMediaWithOptions(SearchMediaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityId)) {
+            query.put("EntityId", request.entityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.match)) {
+            query.put("Match", request.match);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scrollToken)) {
+            query.put("ScrollToken", request.scrollToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchMedia"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchMediaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索媒资</p>
+     * 
+     * @param request SearchMediaRequest
+     * @return SearchMediaResponse
+     */
+    public SearchMediaResponse searchMedia(SearchMediaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchMediaWithOptions(request, runtime);
     }
 
     /**
@@ -644,6 +916,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新媒资分类</p>
+     * 
+     * @param request UpdateAssetCategoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAssetCategoryResponse
+     */
+    public UpdateAssetCategoryResponse updateAssetCategoryWithOptions(UpdateAssetCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryName)) {
+            query.put("CategoryName", request.categoryName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAssetCategory"),
+            new TeaPair("version", "2026-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAssetCategoryResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>创建媒资分类后，可调用本接口通过分类 ID 来定位并更新媒资分类的名称。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>更新媒资分类</p>
+     * 
+     * @param request UpdateAssetCategoryRequest
+     * @return UpdateAssetCategoryResponse
+     */
+    public UpdateAssetCategoryResponse updateAssetCategory(UpdateAssetCategoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAssetCategoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>请求说明</h2>
      * <p>该API用于查询媒资内容理解作业。</p>
      * 
@@ -659,6 +985,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appendTags)) {
             query.put("AppendTags", request.appendTags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.coverURL)) {

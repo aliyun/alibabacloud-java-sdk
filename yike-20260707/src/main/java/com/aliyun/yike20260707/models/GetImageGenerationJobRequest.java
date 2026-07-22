@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class GetImageGenerationJobRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>68ca759e798b40b4903b255*******</p>
+     * <p>ag_68ca759b4903b255*******</p>
      */
     @NameInMap("JobId")
     public String jobId;

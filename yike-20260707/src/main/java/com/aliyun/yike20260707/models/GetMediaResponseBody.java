@@ -1102,6 +1102,12 @@ public class GetMediaResponseBody extends TeaModel {
         @NameInMap("BusinessType")
         public String businessType;
 
+        @NameInMap("CategoryId")
+        public Long categoryId;
+
+        @NameInMap("CategoryName")
+        public String categoryName;
+
         /**
          * <strong>example:</strong>
          * <p><a href="https://dtlive-vip.oss-cn-shanghai.aliyuncs.com/cover/4e88a055-75fc-4ff5-8b8a-f32224917514_open_live_cover.jpg">https://dtlive-vip.oss-cn-shanghai.aliyuncs.com/cover/4e88a055-75fc-4ff5-8b8a-f32224917514_open_live_cover.jpg</a></p>
@@ -1225,6 +1231,22 @@ public class GetMediaResponseBody extends TeaModel {
         }
         public String getBusinessType() {
             return this.businessType;
+        }
+
+        public GetMediaResponseBodyMediaInfoMediaBasicInfo setCategoryId(Long categoryId) {
+            this.categoryId = categoryId;
+            return this;
+        }
+        public Long getCategoryId() {
+            return this.categoryId;
+        }
+
+        public GetMediaResponseBodyMediaInfoMediaBasicInfo setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
+            return this;
+        }
+        public String getCategoryName() {
+            return this.categoryName;
         }
 
         public GetMediaResponseBodyMediaInfoMediaBasicInfo setCoverURL(String coverURL) {

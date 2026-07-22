@@ -4,6 +4,9 @@ package com.aliyun.yike20260707.models;
 import com.aliyun.tea.*;
 
 public class ImportMediaRequest extends TeaModel {
+    @NameInMap("CategoryId")
+    public Long categoryId;
+
     /**
      * <strong>example:</strong>
      * <p><a href="https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png">https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png</a></p>
@@ -91,6 +94,14 @@ public class ImportMediaRequest extends TeaModel {
     public static ImportMediaRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportMediaRequest self = new ImportMediaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportMediaRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Long getCategoryId() {
+        return this.categoryId;
     }
 
     public ImportMediaRequest setCoverURL(String coverURL) {

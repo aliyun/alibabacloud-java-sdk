@@ -59,7 +59,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>fdc7f121056249c2b64e04bba27bcc8c</p>
+         * <p>ag_68ca759b4903b255*******</p>
          */
         @NameInMap("JobId")
         public String jobId;
