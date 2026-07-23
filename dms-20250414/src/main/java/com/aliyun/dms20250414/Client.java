@@ -685,6 +685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Dataset", request.dataset);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.datasource)) {
+            query.put("Datasource", request.datasource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
             query.put("Desc", request.desc);
         }
@@ -886,7 +890,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a DataAgent collaborative workspace.</p>
+     * <p>Creates a DataAgent workspace.</p>
      * 
      * @param request CreateDataAgentWorkspaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -930,7 +934,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a DataAgent collaborative workspace.</p>
+     * <p>Creates a DataAgent workspace.</p>
      * 
      * @param request CreateDataAgentWorkspaceRequest
      * @return CreateDataAgentWorkspaceResponse
@@ -1328,6 +1332,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCustomAgentResponse deleteCustomAgent(DeleteCustomAgentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCustomAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Releases a DataAgent seat.</p>
+     * 
+     * @param request DeleteDataAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDataAgentResponse
+     */
+    public DeleteDataAgentResponse deleteDataAgentWithOptions(DeleteDataAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DMSUnit)) {
+            query.put("DMSUnit", request.DMSUnit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDataAgent"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDataAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Releases a DataAgent seat.</p>
+     * 
+     * @param request DeleteDataAgentRequest
+     * @return DeleteDataAgentResponse
+     */
+    public DeleteDataAgentResponse deleteDataAgent(DeleteDataAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDataAgentWithOptions(request, runtime);
     }
 
     /**
@@ -2012,6 +2060,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries DataAgent metrics.</p>
+     * 
+     * @param request DescribeDataAgentMetricsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDataAgentMetricsResponse
+     */
+    public DescribeDataAgentMetricsResponse describeDataAgentMetricsWithOptions(DescribeDataAgentMetricsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricNames)) {
+            query.put("MetricNames", request.metricNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricType)) {
+            query.put("MetricType", request.metricType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDataAgentMetrics"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataAgentMetricsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries DataAgent metrics.</p>
+     * 
+     * @param request DescribeDataAgentMetricsRequest
+     * @return DescribeDataAgentMetricsResponse
+     */
+    public DescribeDataAgentMetricsResponse describeDataAgentMetrics(DescribeDataAgentMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDataAgentMetricsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Retrieves the description of a DataAgent session.</p>
      * 
      * @param request DescribeDataAgentSessionRequest
@@ -2112,7 +2216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeFileUploadSignature</p>
+     * <p>Retrieves the signature information for file uploads.</p>
      * 
      * @param request DescribeFileUploadSignatureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2127,6 +2231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dmsUnit)) {
             query.put("DmsUnit", request.dmsUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2148,7 +2256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DescribeFileUploadSignature</p>
+     * <p>Retrieves the signature information for file uploads.</p>
      * 
      * @param request DescribeFileUploadSignatureRequest
      * @return DescribeFileUploadSignatureResponse
@@ -2248,7 +2356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FileUploadCallback</p>
+     * <p>Calls back after a file is uploaded.</p>
      * 
      * @param request FileUploadCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2281,6 +2389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UploadLocation", request.uploadLocation);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2300,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>FileUploadCallback</p>
+     * <p>Calls back after a file is uploaded.</p>
      * 
      * @param request FileUploadCallbackRequest
      * @return FileUploadCallbackResponse
@@ -2308,6 +2420,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FileUploadCallbackResponse fileUploadCallback(FileUploadCallbackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.fileUploadCallbackWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries agent information by install token.</p>
+     * 
+     * @param request GetAgenticAgentByInstallTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAgenticAgentByInstallTokenResponse
+     */
+    public GetAgenticAgentByInstallTokenResponse getAgenticAgentByInstallTokenWithOptions(GetAgenticAgentByInstallTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.installToken)) {
+            query.put("InstallToken", request.installToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAgenticAgentByInstallToken"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAgenticAgentByInstallTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries agent information by install token.</p>
+     * 
+     * @param request GetAgenticAgentByInstallTokenRequest
+     * @return GetAgenticAgentByInstallTokenResponse
+     */
+    public GetAgenticAgentByInstallTokenResponse getAgenticAgentByInstallToken(GetAgenticAgentByInstallTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAgenticAgentByInstallTokenWithOptions(request, runtime);
     }
 
     /**
@@ -3498,11 +3654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the running status of self-test tasks by paging.
-     * If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</p>
+     * <p>Queries the running status of self-test nodes by using paging. If AccuracyTestInsId or AccuracyTestTaskId is empty, all test nodes are queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the running status of self-test tasks by paging.</p>
+     * <p>Queries the running status of accuracy test nodes by using paging.</p>
      * 
      * @param request ListDataAgentAccuracyTestTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3558,11 +3713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the running status of self-test tasks by paging.
-     * If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</p>
+     * <p>Queries the running status of self-test nodes by using paging. If AccuracyTestInsId or AccuracyTestTaskId is empty, all test nodes are queried.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the running status of self-test tasks by paging.</p>
+     * <p>Queries the running status of accuracy test nodes by using paging.</p>
      * 
      * @param request ListDataAgentAccuracyTestTasksRequest
      * @return ListDataAgentAccuracyTestTasksResponse
@@ -3814,7 +3968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists user-uploaded files in a data center, excluding databases.</p>
+     * <p>Retrieves the list of files uploaded by users in the data center. Only file types are supported. Database types are not supported.</p>
      * 
      * @param request ListDataCenterDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3843,6 +3997,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SearchKey", request.searchKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3862,7 +4020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists user-uploaded files in a data center, excluding databases.</p>
+     * <p>Retrieves the list of files uploaded by users in the data center. Only file types are supported. Database types are not supported.</p>
      * 
      * @param request ListDataCenterDatabaseRequest
      * @return ListDataCenterDatabaseResponse
@@ -5418,10 +5576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
      * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
-     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
-     * <li>The <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> fields are optional but provide more detailed context information.</li>
+     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5535,10 +5693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li><code>agent_id</code> and <code>session_id</code> are required fields.</li>
      * <li><code>message_type</code> defaults to <code>primary</code>. Set it to <code>additional</code> or <code>cancel</code> when you need to append information or cancel a session.</li>
-     * <li>The <code>reply_to</code> field indicates which Agent message this message is responding to. The default value is <code>0</code>.</li>
+     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
      * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
      * <li><code>quoted_message</code> can be used to quote the content of a previous user message.</li>
-     * <li>The <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> fields are optional but provide more detailed context information.</li>
+     * <li>Fields such as <code>data_source</code>, <code>dms_user</code>, <code>db_metadata</code>, and <code>session_config</code> are optional but provide more detailed context information.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5924,6 +6082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataset)) {
             query.put("Dataset", request.dataset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasource)) {
+            query.put("Datasource", request.datasource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.desc)) {

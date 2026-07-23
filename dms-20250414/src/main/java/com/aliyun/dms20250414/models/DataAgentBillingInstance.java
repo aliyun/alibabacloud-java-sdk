@@ -25,6 +25,9 @@ public class DataAgentBillingInstance extends TeaModel {
     @NameInMap("FreeAgentSeats")
     public Integer freeAgentSeats;
 
+    @NameInMap("FreeLLM")
+    public Integer freeLLM;
+
     @NameInMap("GmtCreated")
     public Long gmtCreated;
 
@@ -108,6 +111,14 @@ public class DataAgentBillingInstance extends TeaModel {
     }
     public Integer getFreeAgentSeats() {
         return this.freeAgentSeats;
+    }
+
+    public DataAgentBillingInstance setFreeLLM(Integer freeLLM) {
+        this.freeLLM = freeLLM;
+        return this;
+    }
+    public Integer getFreeLLM() {
+        return this.freeLLM;
     }
 
     public DataAgentBillingInstance setGmtCreated(Long gmtCreated) {

@@ -31,6 +31,9 @@ public class UpdateDataAgentAccuracyTestRequest extends TeaModel {
     @NameInMap("Dataset")
     public String dataset;
 
+    @NameInMap("Datasource")
+    public String datasource;
+
     /**
      * <p>The description.</p>
      * 
@@ -41,7 +44,7 @@ public class UpdateDataAgentAccuracyTestRequest extends TeaModel {
     public String desc;
 
     /**
-     * <p>The current DMS unit.</p>
+     * <p>The current Data Management unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -148,6 +151,14 @@ public class UpdateDataAgentAccuracyTestRequest extends TeaModel {
     }
     public String getDataset() {
         return this.dataset;
+    }
+
+    public UpdateDataAgentAccuracyTestRequest setDatasource(String datasource) {
+        this.datasource = datasource;
+        return this;
+    }
+    public String getDatasource() {
+        return this.datasource;
     }
 
     public UpdateDataAgentAccuracyTestRequest setDesc(String desc) {

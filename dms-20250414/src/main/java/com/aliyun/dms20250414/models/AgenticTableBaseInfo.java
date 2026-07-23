@@ -4,53 +4,26 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticTableBaseInfo extends TeaModel {
-    /**
-     * <p>The catalog type.</p>
-     */
     @NameInMap("CatalogType")
     public String catalogType;
 
-    /**
-     * <p>The database\&quot;s unique identifier.</p>
-     */
     @NameInMap("DatabaseUuid")
     public String databaseUuid;
 
-    /**
-     * <p>The table description.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The engine metadata.</p>
-     */
     @NameInMap("EngineMeta")
     public AgenticTableEngineMeta engineMeta;
 
-    /**
-     * <p>The table name.</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The table\&quot;s qualified name.</p>
-     */
     @NameInMap("QualifiedName")
     public String qualifiedName;
 
-    /**
-     * <p>The table type.</p>
-     */
     @NameInMap("TableType")
     public String tableType;
-
-    /**
-     * <p>The table\&quot;s unique identifier.</p>
-     */
-    @NameInMap("TableUuid")
-    public String tableUuid;
 
     public static AgenticTableBaseInfo build(java.util.Map<String, ?> map) throws Exception {
         AgenticTableBaseInfo self = new AgenticTableBaseInfo();
@@ -111,14 +84,6 @@ public class AgenticTableBaseInfo extends TeaModel {
     }
     public String getTableType() {
         return this.tableType;
-    }
-
-    public AgenticTableBaseInfo setTableUuid(String tableUuid) {
-        this.tableUuid = tableUuid;
-        return this;
-    }
-    public String getTableUuid() {
-        return this.tableUuid;
     }
 
 }

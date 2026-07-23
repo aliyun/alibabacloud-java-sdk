@@ -221,8 +221,11 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
+        @NameInMap("Datasource")
+        public String datasource;
+
         /**
-         * <p>The test set file ID.</p>
+         * <p>The ID of the test set file.</p>
          * 
          * <strong>example:</strong>
          * <p>f-8*******01m</p>
@@ -258,7 +261,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The maximum number of concurrent sessions during testing.</p>
+         * <p>The maximum number of concurrent sessions during the test.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -285,7 +288,7 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether sessions are displayed after analysis. This feature is not currently supported.</p>
+         * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -329,6 +332,14 @@ public class ListDataAgentAccuracyTestInstancesResponseBody extends TeaModel {
         }
         public String getCreator() {
             return this.creator;
+        }
+
+        public ListDataAgentAccuracyTestInstancesResponseBodyData setDatasource(String datasource) {
+            this.datasource = datasource;
+            return this;
+        }
+        public String getDatasource() {
+            return this.datasource;
         }
 
         public ListDataAgentAccuracyTestInstancesResponseBodyData setFileId(String fileId) {

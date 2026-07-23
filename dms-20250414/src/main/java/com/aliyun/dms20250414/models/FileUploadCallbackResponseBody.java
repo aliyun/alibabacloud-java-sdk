@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FileUploadCallbackResponseBody extends TeaModel {
     /**
-     * <p>The returned struct.</p>
+     * <p>The response struct.</p>
      */
     @NameInMap("Data")
     public FileUploadCallbackResponseBodyData data;
@@ -20,7 +20,7 @@ public class FileUploadCallbackResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter Tid is not valid.</p>
@@ -29,7 +29,7 @@ public class FileUploadCallbackResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>841BC14F-8E21-56B0-A7D6-593C5841AC84</p>
@@ -38,12 +38,10 @@ public class FileUploadCallbackResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. The following values are returned:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request was successful.                                 </li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

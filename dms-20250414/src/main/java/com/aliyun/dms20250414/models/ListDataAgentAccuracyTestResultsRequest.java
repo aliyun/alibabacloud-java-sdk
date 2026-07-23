@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAgentAccuracyTestResultsRequest extends TeaModel {
     /**
-     * <p>The instance ID of the accuracy test to which the task belongs.</p>
+     * <p>The instance ID of the accuracy test.</p>
      * 
      * <strong>example:</strong>
      * <p>at-106n4rg17gv9fxxxxxxxxxx</p>

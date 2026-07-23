@@ -4,6 +4,9 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class OpenClawInstanceVO extends TeaModel {
+    @NameInMap("AgentType")
+    public String agentType;
+
     @NameInMap("AliyunAccountUid")
     public String aliyunAccountUid;
 
@@ -52,6 +55,12 @@ public class OpenClawInstanceVO extends TeaModel {
     @NameInMap("MemorySize")
     public Integer memorySize;
 
+    @NameInMap("ModelCallQuota")
+    public Long modelCallQuota;
+
+    @NameInMap("ModelCallUsed")
+    public Long modelCallUsed;
+
     @NameInMap("OpenclawToken")
     public String openclawToken;
 
@@ -79,6 +88,14 @@ public class OpenClawInstanceVO extends TeaModel {
     public static OpenClawInstanceVO build(java.util.Map<String, ?> map) throws Exception {
         OpenClawInstanceVO self = new OpenClawInstanceVO();
         return TeaModel.build(map, self);
+    }
+
+    public OpenClawInstanceVO setAgentType(String agentType) {
+        this.agentType = agentType;
+        return this;
+    }
+    public String getAgentType() {
+        return this.agentType;
     }
 
     public OpenClawInstanceVO setAliyunAccountUid(String aliyunAccountUid) {
@@ -207,6 +224,22 @@ public class OpenClawInstanceVO extends TeaModel {
     }
     public Integer getMemorySize() {
         return this.memorySize;
+    }
+
+    public OpenClawInstanceVO setModelCallQuota(Long modelCallQuota) {
+        this.modelCallQuota = modelCallQuota;
+        return this;
+    }
+    public Long getModelCallQuota() {
+        return this.modelCallQuota;
+    }
+
+    public OpenClawInstanceVO setModelCallUsed(Long modelCallUsed) {
+        this.modelCallUsed = modelCallUsed;
+        return this;
+    }
+    public Long getModelCallUsed() {
+        return this.modelCallUsed;
     }
 
     public OpenClawInstanceVO setOpenclawToken(String openclawToken) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataCenterDatabaseRequest extends TeaModel {
     /**
-     * <p>This parameter is for internal use.</p>
+     * <p>Used only by the frontend.</p>
      * 
      * <strong>example:</strong>
      * <p>Frontend only</p>
@@ -14,7 +14,7 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     public String callFrom;
 
     /**
-     * <p>The DMS unit.</p>
+     * <p>The current Data Management unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -35,7 +35,7 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     public String importType;
 
     /**
-     * <p>This parameter is for internal use.</p>
+     * <p>Used only by the frontend.</p>
      * 
      * <strong>example:</strong>
      * <p>Frontend only</p>
@@ -44,13 +44,16 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The keyword for a fuzzy search for databases.</p>
+     * <p>The keyword for fuzzy match of databases.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static ListDataCenterDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataCenterDatabaseRequest self = new ListDataCenterDatabaseRequest();
@@ -95,6 +98,14 @@ public class ListDataCenterDatabaseRequest extends TeaModel {
     }
     public String getSearchKey() {
         return this.searchKey;
+    }
+
+    public ListDataCenterDatabaseRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

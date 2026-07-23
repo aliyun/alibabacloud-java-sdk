@@ -13,11 +13,17 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     @NameInMap("DMSUnit")
     public String DMSUnit;
 
+    /**
+     * <p>Specifies whether session sharing is enabled within the workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSessionShareEnabled")
     public Boolean isSessionShareEnabled;
 
     /**
-     * <p>The description of the collaborative workspace.</p>
+     * <p>The description of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>Space for test</p>
@@ -26,7 +32,7 @@ public class CreateDataAgentWorkspaceRequest extends TeaModel {
     public String workspaceDesc;
 
     /**
-     * <p>The name of the collaborative workspace.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspaceTest</p>

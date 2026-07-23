@@ -16,6 +16,12 @@ public class DmsGatewayOrder extends TeaModel {
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    @NameInMap("FreeOrder")
+    public Boolean freeOrder;
+
+    @NameInMap("GmtCreate")
+    public String gmtCreate;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -69,6 +75,22 @@ public class DmsGatewayOrder extends TeaModel {
     }
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    public DmsGatewayOrder setFreeOrder(Boolean freeOrder) {
+        this.freeOrder = freeOrder;
+        return this;
+    }
+    public Boolean getFreeOrder() {
+        return this.freeOrder;
+    }
+
+    public DmsGatewayOrder setGmtCreate(String gmtCreate) {
+        this.gmtCreate = gmtCreate;
+        return this;
+    }
+    public String getGmtCreate() {
+        return this.gmtCreate;
     }
 
     public DmsGatewayOrder setInstanceId(String instanceId) {

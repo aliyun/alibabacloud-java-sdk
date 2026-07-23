@@ -11,7 +11,7 @@ public class StartDataAgentAccuracyTestTaskResponseBody extends TeaModel {
     public StartDataAgentAccuracyTestTaskResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -38,10 +38,10 @@ public class StartDataAgentAccuracyTestTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>True: The request is successful.                                 </li>
-     * <li>False: The request fails.</li>
+     * <li>True: The request was successful.                                 </li>
+     * <li>False: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

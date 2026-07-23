@@ -115,13 +115,19 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The data source. We recommend that you configure this in the custom agent.</p>
+         * <p>The data source. We recommend that you configure this parameter in a custom agent.</p>
          * 
          * <strong>example:</strong>
          * <p>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</p>
          */
         @NameInMap("Dataset")
         public String dataset;
+
+        @NameInMap("Datasource")
+        public String datasource;
+
+        @NameInMap("Desc")
+        public String desc;
 
         /**
          * <p>The accuracy evaluation criteria. An empty value indicates the default criteria.</p>
@@ -141,6 +147,9 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
         @NameInMap("FileId")
         public String fileId;
 
+        @NameInMap("MaxConcurrent")
+        public Integer maxConcurrent;
+
         /**
          * <p>The analysis mode.</p>
          * 
@@ -149,6 +158,12 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
          */
         @NameInMap("Mode")
         public Integer mode;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NeedDelete")
+        public Boolean needDelete;
 
         /**
          * <p>The workspace ID.</p>
@@ -188,6 +203,22 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             return this.dataset;
         }
 
+        public UpdateDataAgentAccuracyTestResponseBodyData setDatasource(String datasource) {
+            this.datasource = datasource;
+            return this;
+        }
+        public String getDatasource() {
+            return this.datasource;
+        }
+
+        public UpdateDataAgentAccuracyTestResponseBodyData setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
         public UpdateDataAgentAccuracyTestResponseBodyData setEvaluationPrompt(String evaluationPrompt) {
             this.evaluationPrompt = evaluationPrompt;
             return this;
@@ -204,12 +235,36 @@ public class UpdateDataAgentAccuracyTestResponseBody extends TeaModel {
             return this.fileId;
         }
 
+        public UpdateDataAgentAccuracyTestResponseBodyData setMaxConcurrent(Integer maxConcurrent) {
+            this.maxConcurrent = maxConcurrent;
+            return this;
+        }
+        public Integer getMaxConcurrent() {
+            return this.maxConcurrent;
+        }
+
         public UpdateDataAgentAccuracyTestResponseBodyData setMode(Integer mode) {
             this.mode = mode;
             return this;
         }
         public Integer getMode() {
             return this.mode;
+        }
+
+        public UpdateDataAgentAccuracyTestResponseBodyData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateDataAgentAccuracyTestResponseBodyData setNeedDelete(Boolean needDelete) {
+            this.needDelete = needDelete;
+            return this;
+        }
+        public Boolean getNeedDelete() {
+            return this.needDelete;
         }
 
         public UpdateDataAgentAccuracyTestResponseBodyData setWorkspaceId(String workspaceId) {

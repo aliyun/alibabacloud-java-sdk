@@ -93,7 +93,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
 
     public static class CreateDataAgentWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the workspace was created. The value is a UNIX timestamp in seconds.</p>
+         * <p>The creation time of the workspace. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765960516</p>
@@ -110,11 +110,17 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>Indicates whether session sharing is enabled within the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSessionShareEnabled")
         public Boolean isSessionShareEnabled;
 
         /**
-         * <p>The time when the workspace was last modified. The value is a UNIX timestamp in seconds.</p>
+         * <p>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1765961516</p>
@@ -132,7 +138,7 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         public String roleName;
 
         /**
-         * <p>The number of members in the workspace.</p>
+         * <p>The total number of members in the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -140,6 +146,16 @@ public class CreateDataAgentWorkspaceResponseBody extends TeaModel {
         @NameInMap("TotalMember")
         public Long totalMember;
 
+        /**
+         * <p>The workspace type. Valid values:</p>
+         * <ul>
+         * <li>personal: personal workspace.</li>
+         * <li>common/null: multi-user collaborative workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>personal/common</p>
+         */
         @NameInMap("Type")
         public String type;
 

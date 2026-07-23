@@ -14,7 +14,7 @@ public class StartDataAgentAccuracyTestTaskRequest extends TeaModel {
     public String accuracyTestInsId;
 
     /**
-     * <p>The accuracy test sample.</p>
+     * <p>The accuracy test sample file.</p>
      * 
      * <strong>example:</strong>
      * <p>包含问题、答案[、SQL]的文件</p>
@@ -41,7 +41,7 @@ public class StartDataAgentAccuracyTestTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8wfig6l33n4f4xxxxxxxxxx</p>

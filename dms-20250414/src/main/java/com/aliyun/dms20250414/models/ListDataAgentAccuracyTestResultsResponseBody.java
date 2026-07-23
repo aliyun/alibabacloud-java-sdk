@@ -140,13 +140,16 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         public String accuracyTestTaskId;
 
         /**
-         * <p>The actual answer returned by the agent.</p>
+         * <p>The actual answer from the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>在公司历史职位记录中，共有97,750名员工曾拥有Senior Engineer头衔。</p>
          */
         @NameInMap("AgentResult")
         public String agentResult;
+
+        @NameInMap("AgentSql")
+        public String agentSql;
 
         /**
          * <p>The expected answer.</p>
@@ -158,7 +161,7 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         public String answerResult;
 
         /**
-         * <p>The expected SQL statement.</p>
+         * <p>The expected SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT COUNT(*) FROM titles WHERE title = \&quot;Senior Engineer\&quot;;</p>
@@ -211,6 +214,9 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         @NameInMap("ResultId")
         public String resultId;
 
+        @NameInMap("SessionId")
+        public String sessionId;
+
         /**
          * <p>The subtask ID.</p>
          * 
@@ -239,6 +245,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
         public String getAgentResult() {
             return this.agentResult;
+        }
+
+        public ListDataAgentAccuracyTestResultsResponseBodyDataContent setAgentSql(String agentSql) {
+            this.agentSql = agentSql;
+            return this;
+        }
+        public String getAgentSql() {
+            return this.agentSql;
         }
 
         public ListDataAgentAccuracyTestResultsResponseBodyDataContent setAnswerResult(String answerResult) {
@@ -297,6 +311,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             return this.resultId;
         }
 
+        public ListDataAgentAccuracyTestResultsResponseBodyDataContent setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
         public ListDataAgentAccuracyTestResultsResponseBodyDataContent setSubtaskId(String subtaskId) {
             this.subtaskId = subtaskId;
             return this;
@@ -341,6 +363,9 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         @NameInMap("CorrectCount")
         public Long correctCount;
 
+        @NameInMap("FailedCount")
+        public String failedCount;
+
         /**
          * <p>The page number.</p>
          * 
@@ -358,6 +383,9 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
          */
         @NameInMap("PageSize")
         public Long pageSize;
+
+        @NameInMap("PendingCount")
+        public String pendingCount;
 
         /**
          * <p>The total number of results.</p>
@@ -414,6 +442,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
             return this.correctCount;
         }
 
+        public ListDataAgentAccuracyTestResultsResponseBodyData setFailedCount(String failedCount) {
+            this.failedCount = failedCount;
+            return this;
+        }
+        public String getFailedCount() {
+            return this.failedCount;
+        }
+
         public ListDataAgentAccuracyTestResultsResponseBodyData setPageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
             return this;
@@ -428,6 +464,14 @@ public class ListDataAgentAccuracyTestResultsResponseBody extends TeaModel {
         }
         public Long getPageSize() {
             return this.pageSize;
+        }
+
+        public ListDataAgentAccuracyTestResultsResponseBodyData setPendingCount(String pendingCount) {
+            this.pendingCount = pendingCount;
+            return this;
+        }
+        public String getPendingCount() {
+            return this.pendingCount;
         }
 
         public ListDataAgentAccuracyTestResultsResponseBodyData setTotalElements(Integer totalElements) {

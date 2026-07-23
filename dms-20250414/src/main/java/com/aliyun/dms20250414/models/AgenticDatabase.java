@@ -23,12 +23,6 @@ public class AgenticDatabase extends TeaModel {
     public String catalogUuid;
 
     /**
-     * <p>The data source type, such as <code>MySQL</code> or <code>PostgreSQL</code>.</p>
-     */
-    @NameInMap("DataSourceType")
-    public String dataSourceType;
-
-    /**
      * <p>The database\&quot;s business attributes.</p>
      */
     @NameInMap("DatabaseBizAttrs")
@@ -39,6 +33,9 @@ public class AgenticDatabase extends TeaModel {
      */
     @NameInMap("DatabaseUuid")
     public String databaseUuid;
+
+    @NameInMap("DbType")
+    public String dbType;
 
     /**
      * <p>The database description.</p>
@@ -123,14 +120,6 @@ public class AgenticDatabase extends TeaModel {
         return this.catalogUuid;
     }
 
-    public AgenticDatabase setDataSourceType(String dataSourceType) {
-        this.dataSourceType = dataSourceType;
-        return this;
-    }
-    public String getDataSourceType() {
-        return this.dataSourceType;
-    }
-
     public AgenticDatabase setDatabaseBizAttrs(java.util.Map<String, ?> databaseBizAttrs) {
         this.databaseBizAttrs = databaseBizAttrs;
         return this;
@@ -145,6 +134,14 @@ public class AgenticDatabase extends TeaModel {
     }
     public String getDatabaseUuid() {
         return this.databaseUuid;
+    }
+
+    public AgenticDatabase setDbType(String dbType) {
+        this.dbType = dbType;
+        return this;
+    }
+    public String getDbType() {
+        return this.dbType;
     }
 
     public AgenticDatabase setDescription(String description) {

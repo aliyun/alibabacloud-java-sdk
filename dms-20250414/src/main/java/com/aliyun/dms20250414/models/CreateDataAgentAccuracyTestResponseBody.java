@@ -20,7 +20,7 @@ public class CreateDataAgentAccuracyTestResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>UnknownError</p>
@@ -97,7 +97,7 @@ public class CreateDataAgentAccuracyTestResponseBody extends TeaModel {
 
     public static class CreateDataAgentAccuracyTestResponseBodyData extends TeaModel {
         /**
-         * <p>The instance ID of the accuracy test.</p>
+         * <p>The accuracy test instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>at-xxxxxxxxxxxxxxxxxxxx</p>

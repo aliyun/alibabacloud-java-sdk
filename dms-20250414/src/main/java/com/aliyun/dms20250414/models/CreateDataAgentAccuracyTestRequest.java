@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentAccuracyTestRequest extends TeaModel {
     /**
-     * <p>The ID of the custom agent for which you want to run the accuracy test.</p>
+     * <p>The ID of the custom agent to be tested for accuracy.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-xxxxxxxxxxxxxxxxxxxx</p>
@@ -17,10 +17,18 @@ public class CreateDataAgentAccuracyTestRequest extends TeaModel {
      * <p>The data source. We recommend that you configure this in the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxx49\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;75xxx6\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</p>
+     * <p>null</p>
      */
     @NameInMap("Dataset")
     public String dataset;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;isInternal&quot;:&quot;N&quot;,&quot;TableIds&quot;:[&quot;51<em><strong>70&quot;,&quot;51</strong></em>71&quot;],&quot;DataSourceType&quot;:&quot;database&quot;,&quot;Database&quot;:&quot;internal_data_employees&quot;,&quot;DmsInstanceId&quot;:&quot;27<em><strong>5&quot;,&quot;DmsDatabaseId&quot;:&quot;71</strong></em>04&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;],&quot;FileId&quot;:&quot;rm-
+     * ***&quot;,&quot;DbName&quot;:&quot;internal_data_employees&quot;,&quot;CatalogName&quot;:&quot;def&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;Engine&quot;:&quot;mysql&quot;}]</p>
+     */
+    @NameInMap("Datasource")
+    public String datasource;
 
     /**
      * <p>The description.</p>
@@ -95,7 +103,7 @@ public class CreateDataAgentAccuracyTestRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether sessions are displayed after the analysis. This parameter is not supported.</p>
+     * <p>Specifies whether sessions are displayed after analysis. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -140,6 +148,14 @@ public class CreateDataAgentAccuracyTestRequest extends TeaModel {
     }
     public String getDataset() {
         return this.dataset;
+    }
+
+    public CreateDataAgentAccuracyTestRequest setDatasource(String datasource) {
+        this.datasource = datasource;
+        return this;
+    }
+    public String getDatasource() {
+        return this.datasource;
     }
 
     public CreateDataAgentAccuracyTestRequest setDesc(String desc) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFileUploadSignatureRequest extends TeaModel {
     /**
-     * <p>Used by the frontend only</p>
+     * <p>The parameter used only by the frontend.</p>
      * 
      * <strong>example:</strong>
      * <p>仅前端使用</p>
@@ -14,13 +14,16 @@ public class DescribeFileUploadSignatureRequest extends TeaModel {
     public String callFrom;
 
     /**
-     * <p>Current DMS unit</p>
+     * <p>The current DMS unit.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("DmsUnit")
     public String dmsUnit;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static DescribeFileUploadSignatureRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFileUploadSignatureRequest self = new DescribeFileUploadSignatureRequest();
@@ -41,6 +44,14 @@ public class DescribeFileUploadSignatureRequest extends TeaModel {
     }
     public String getDmsUnit() {
         return this.dmsUnit;
+    }
+
+    public DescribeFileUploadSignatureRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

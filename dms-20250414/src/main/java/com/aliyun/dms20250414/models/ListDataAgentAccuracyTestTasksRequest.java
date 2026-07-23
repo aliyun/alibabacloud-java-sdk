@@ -14,7 +14,7 @@ public class ListDataAgentAccuracyTestTasksRequest extends TeaModel {
     public String accuracyTestInsId;
 
     /**
-     * <p>The task ID used for exact filtering.</p>
+     * <p>Filters by the exact task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>

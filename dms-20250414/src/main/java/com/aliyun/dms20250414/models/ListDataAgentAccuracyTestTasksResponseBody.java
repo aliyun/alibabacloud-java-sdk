@@ -182,7 +182,7 @@ public class ListDataAgentAccuracyTestTasksResponseBody extends TeaModel {
 
     public static class ListDataAgentAccuracyTestTasksResponseBodyData extends TeaModel {
         /**
-         * <p>The instance ID of the accuracy test to which the task belongs.</p>
+         * <p>The accuracy test instance ID to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>at-106n4rg17gv9fxxxxxxxxxx</p>
