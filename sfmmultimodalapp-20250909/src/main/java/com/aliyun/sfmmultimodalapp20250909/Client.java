@@ -776,6 +776,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>并行仲裁的仲裁结果上传</p>
+     * 
+     * @param tmpReq InterruptForArbitrationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InterruptForArbitrationResponse
+     */
+    public InterruptForArbitrationResponse interruptForArbitrationWithOptions(InterruptForArbitrationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InterruptForArbitrationShrinkRequest request = new InterruptForArbitrationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.interrupt)) {
+            request.interruptShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.interrupt, "Interrupt", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatId)) {
+            query.put("ChatId", request.chatId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hubRequestId)) {
+            query.put("HubRequestId", request.hubRequestId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interruptShrink)) {
+            query.put("Interrupt", request.interruptShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InterruptForArbitration"),
+            new TeaPair("version", "2025-09-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InterruptForArbitrationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>并行仲裁的仲裁结果上传</p>
+     * 
+     * @param request InterruptForArbitrationRequest
+     * @return InterruptForArbitrationResponse
+     */
+    public InterruptForArbitrationResponse interruptForArbitration(InterruptForArbitrationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.interruptForArbitrationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>指令列表</p>
      * 
      * @param request ListCommandRequest

@@ -1,3 +1,6 @@
+2026-07-23 Version: 1.2.2
+- Generated java 2025-09-09 for SfmMultiModalApp.
+
 2026-06-11 Version: 1.3.0
 - Support API DevicePage.
 - Support API DeviceUpdate.
