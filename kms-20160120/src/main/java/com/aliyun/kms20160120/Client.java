@@ -42,9 +42,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "kms.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "kms.ap-south-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com")
         );
@@ -3426,6 +3424,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>For information about the access policy that must be granted to a RAM user or RAM role to call this operation, refer to access control.
+     * This operation can be called through a shared gateway. For more information, refer to Alibaba Cloud SDK.</p>
+     * <ul>
+     * <li>Shared gateway: Access KMS through public or VPC endpoints.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the plaintext of a managed data key (DK).</p>
+     * 
+     * @param request GetManagedDataKeyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetManagedDataKeyResponse
+     */
+    public GetManagedDataKeyResponse getManagedDataKeyWithOptions(GetManagedDataKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataKeyName)) {
+            query.put("DataKeyName", request.dataKeyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataKeyVersionId)) {
+            query.put("DataKeyVersionId", request.dataKeyVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useLatest)) {
+            query.put("UseLatest", request.useLatest);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetManagedDataKey"),
+            new TeaPair("version", "2016-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetManagedDataKeyResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For information about the access policy that must be granted to a RAM user or RAM role to call this operation, refer to access control.
+     * This operation can be called through a shared gateway. For more information, refer to Alibaba Cloud SDK.</p>
+     * <ul>
+     * <li>Shared gateway: Access KMS through public or VPC endpoints.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieves the plaintext of a managed data key (DK).</p>
+     * 
+     * @param request GetManagedDataKeyRequest
+     * @return GetManagedDataKeyResponse
+     */
+    public GetManagedDataKeyResponse getManagedDataKey(GetManagedDataKeyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getManagedDataKeyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>The returned parameters can be used to call the <a href="https://www.alibabacloud.com/help/en/key-management-service/latest/importkeymaterial">ImportKeyMaterial</a> operation.</p>
      * <ul>
      * <li>You can import key material only for CMKs whose Origin parameter is set to EXTERNAL.</li>
@@ -4336,6 +4400,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+     * This operation can be invoked through the shared gateway. For more information, refer to Alibaba Cloud SDK.</p>
+     * <ul>
+     * <li>Shared gateway: Access KMS through public or VPC endpoints.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the key versions of a specified managed data key (DK).</p>
+     * 
+     * @param request ListManagedDataKeyVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListManagedDataKeyVersionsResponse
+     */
+    public ListManagedDataKeyVersionsResponse listManagedDataKeyVersionsWithOptions(ListManagedDataKeyVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataKeyName)) {
+            query.put("DataKeyName", request.dataKeyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListManagedDataKeyVersions"),
+            new TeaPair("version", "2016-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListManagedDataKeyVersionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+     * This operation can be invoked through the shared gateway. For more information, refer to Alibaba Cloud SDK.</p>
+     * <ul>
+     * <li>Shared gateway: Access KMS through public or VPC endpoints.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Lists the key versions of a specified managed data key (DK).</p>
+     * 
+     * @param request ListManagedDataKeyVersionsRequest
+     * @return ListManagedDataKeyVersionsResponse
+     */
+    public ListManagedDataKeyVersionsResponse listManagedDataKeyVersions(ListManagedDataKeyVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listManagedDataKeyVersionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>For more information about the access policy required by a RAM user or RAM role to call this API, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</p>
      * 
      * <b>summary</b> : 
@@ -5196,9 +5326,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</li>
-     * <li>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</li>
-     * <li>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</li>
+     * <li>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>After you enable deletion protection for a CMK, you cannot delete the CMK. To delete the CMK, disable deletion protection first.  </li>
+     * <li>Before you invoke the SetDeletionProtection operation, make sure that the CMK is not in the PendingDeletion state. You can invoke the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status (KeyState) of the CMK.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5251,9 +5381,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</li>
-     * <li>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</li>
-     * <li>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</li>
+     * <li>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</li>
+     * <li>After you enable deletion protection for a CMK, you cannot delete the CMK. To delete the CMK, disable deletion protection first.  </li>
+     * <li>Before you invoke the SetDeletionProtection operation, make sure that the CMK is not in the PendingDeletion state. You can invoke the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status (KeyState) of the CMK.</li>
      * </ul>
      * 
      * <b>summary</b> : 

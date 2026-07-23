@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetDeletionProtectionRequest extends TeaModel {
     /**
-     * <p>The description of deletion protection.</p>
+     * <p>The description of deletion protection.  </p>
      * <blockquote>
-     * <p>This parameter is available only when EnableDeletionProtection is set to true.</p>
+     * <p>This parameter is valid only when EnableDeletionProtection is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class SetDeletionProtectionRequest extends TeaModel {
      * <ul>
      * <li><p>true: enables deletion protection.</p>
      * </li>
-     * <li><p>false: disables deletion protection. This is the default value.</p>
+     * <li><p>false (default): disables deletion protection.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -45,8 +45,7 @@ public class SetDeletionProtectionRequest extends TeaModel {
     public String kmsInstanceId;
 
     /**
-     * <p>The ARN of the CMK for which you want to configure deletion protection.<br>
-     * You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the ARN of the CMK.<br><br></p>
+     * <p>The ARN of the CMK for which you want to set deletion protection.<br>You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK ARN (Arn).</p>
      * 
      * <strong>example:</strong>
      * <p>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</p>

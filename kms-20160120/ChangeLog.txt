@@ -1,3 +1,8 @@
+2026-07-23 Version: 2.1.0
+- Support API GetManagedDataKey.
+- Support API ListManagedDataKeyVersions.
+
+
 2026-07-02 Version: 2.0.0
 - Support API GenerateMac.
 - Support API VerifyMac.
