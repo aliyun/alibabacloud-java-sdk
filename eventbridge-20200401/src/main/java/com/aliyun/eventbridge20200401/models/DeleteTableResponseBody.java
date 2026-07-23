@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteTableResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteTableResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response message of the API</p>
+     * 
      * <strong>example:</strong>
      * <p>Operation success</p>
      */
@@ -19,6 +23,8 @@ public class DeleteTableResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
      */
@@ -26,6 +32,8 @@ public class DeleteTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

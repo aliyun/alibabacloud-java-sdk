@@ -89,12 +89,18 @@ public class UpdateApiDestinationRequest extends TeaModel {
         /**
          * <p>The HTTP request method. Valid values:</p>
          * <ul>
-         * <li>GET</li>
-         * <li>POST</li>
-         * <li>HEAD</li>
-         * <li>DELETE</li>
-         * <li>PUT</li>
-         * <li>PATCH</li>
+         * <li><p>GET</p>
+         * </li>
+         * <li><p>POST</p>
+         * </li>
+         * <li><p>HEAD</p>
+         * </li>
+         * <li><p>DELETE</p>
+         * </li>
+         * <li><p>PUT</p>
+         * </li>
+         * <li><p>PATCH</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

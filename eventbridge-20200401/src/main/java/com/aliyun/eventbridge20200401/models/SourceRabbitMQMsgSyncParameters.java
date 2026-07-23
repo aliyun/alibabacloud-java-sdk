@@ -7,6 +7,15 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
     @NameInMap("BodyDataType")
     public String bodyDataType;
 
+    @NameInMap("CloudMigrationTaskId")
+    public String cloudMigrationTaskId;
+
+    @NameInMap("DstClusterHost")
+    public String dstClusterHost;
+
+    @NameInMap("DstClusterType")
+    public String dstClusterType;
+
     @NameInMap("Endpoint")
     public String endpoint;
 
@@ -28,8 +37,20 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
     @NameInMap("PrefetchCount")
     public String prefetchCount;
 
+    @NameInMap("Regex")
+    public String regex;
+
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("SrcClusterHost")
+    public String srcClusterHost;
+
+    @NameInMap("SrcClusterType")
+    public String srcClusterType;
+
+    @NameInMap("SyncMetaType")
+    public String syncMetaType;
 
     @NameInMap("Username")
     public String username;
@@ -54,6 +75,30 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
     }
     public String getBodyDataType() {
         return this.bodyDataType;
+    }
+
+    public SourceRabbitMQMsgSyncParameters setCloudMigrationTaskId(String cloudMigrationTaskId) {
+        this.cloudMigrationTaskId = cloudMigrationTaskId;
+        return this;
+    }
+    public String getCloudMigrationTaskId() {
+        return this.cloudMigrationTaskId;
+    }
+
+    public SourceRabbitMQMsgSyncParameters setDstClusterHost(String dstClusterHost) {
+        this.dstClusterHost = dstClusterHost;
+        return this;
+    }
+    public String getDstClusterHost() {
+        return this.dstClusterHost;
+    }
+
+    public SourceRabbitMQMsgSyncParameters setDstClusterType(String dstClusterType) {
+        this.dstClusterType = dstClusterType;
+        return this;
+    }
+    public String getDstClusterType() {
+        return this.dstClusterType;
     }
 
     public SourceRabbitMQMsgSyncParameters setEndpoint(String endpoint) {
@@ -112,12 +157,44 @@ public class SourceRabbitMQMsgSyncParameters extends TeaModel {
         return this.prefetchCount;
     }
 
+    public SourceRabbitMQMsgSyncParameters setRegex(String regex) {
+        this.regex = regex;
+        return this;
+    }
+    public String getRegex() {
+        return this.regex;
+    }
+
     public SourceRabbitMQMsgSyncParameters setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public SourceRabbitMQMsgSyncParameters setSrcClusterHost(String srcClusterHost) {
+        this.srcClusterHost = srcClusterHost;
+        return this;
+    }
+    public String getSrcClusterHost() {
+        return this.srcClusterHost;
+    }
+
+    public SourceRabbitMQMsgSyncParameters setSrcClusterType(String srcClusterType) {
+        this.srcClusterType = srcClusterType;
+        return this;
+    }
+    public String getSrcClusterType() {
+        return this.srcClusterType;
+    }
+
+    public SourceRabbitMQMsgSyncParameters setSyncMetaType(String syncMetaType) {
+        this.syncMetaType = syncMetaType;
+        return this;
+    }
+    public String getSyncMetaType() {
+        return this.syncMetaType;
     }
 
     public SourceRabbitMQMsgSyncParameters setUsername(String username) {

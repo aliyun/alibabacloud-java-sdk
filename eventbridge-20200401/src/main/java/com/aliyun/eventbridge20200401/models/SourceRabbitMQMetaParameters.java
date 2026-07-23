@@ -34,6 +34,9 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("SyncMetaType")
+    public String syncMetaType;
+
     @NameInMap("Username")
     public String username;
 
@@ -129,6 +132,14 @@ public class SourceRabbitMQMetaParameters extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public SourceRabbitMQMetaParameters setSyncMetaType(String syncMetaType) {
+        this.syncMetaType = syncMetaType;
+        return this;
+    }
+    public String getSyncMetaType() {
+        return this.syncMetaType;
     }
 
     public SourceRabbitMQMetaParameters setUsername(String username) {

@@ -26,7 +26,7 @@ public class DisableRuleResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>C36345A1-75F3-5A1A-BFCF-33B8271971FA</p>
+     * <p>C36345A1-75F3-5A1A-BFCF-33B82719****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateRuleResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateRuleResponseBodyData data;
 
     /**
-     * <p>The returned error message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Remote error. requestId: [xxxx], error code: [xxx], message: [The target in event rule is invalid! Endpoint is xxx</p>
@@ -38,7 +38,7 @@ public class CreateRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class CreateRuleResponseBody extends TeaModel {
 
     public static class CreateRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The ARN of the event rule. The ARN is used for authorization.</p>
+         * <p>The ARN of the event rule, which is used for authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:eventbridge:cn-hangzhou:123456789098****:eventbus/default/rule/MNSRule</p>

@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class DiscoverEventSourceShrinkRequest extends TeaModel {
+    /**
+     * <p>The MySQL source parameters.</p>
+     */
     @NameInMap("SourceMySQLParameters")
     public String sourceMySQLParametersShrink;
 

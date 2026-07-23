@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TestEventPatternRequest extends TeaModel {
     /**
-     * <p>The event.</p>
+     * <p>The event to test, which must be a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class TestEventPatternRequest extends TeaModel {
     public String event;
 
     /**
-     * <p>The event pattern.</p>
+     * <p>The event pattern to test, which must be a JSON string.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

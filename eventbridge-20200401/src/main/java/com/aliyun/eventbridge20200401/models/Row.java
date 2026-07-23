@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class Row extends TeaModel {
+    /**
+     * <p>Column data for each row.</p>
+     */
     @NameInMap("Columns")
     public java.util.List<Column> columns;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListTablesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response data</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;Tables&quot;:[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Comment&quot;:&quot;测试事件表&quot;}],&quot;NextToken&quot;:&quot;10&quot;,&quot;Total&quot;:1}</p>
      */
@@ -19,6 +23,8 @@ public class ListTablesResponseBody extends TeaModel {
     public ListTablesResponseBodyData data;
 
     /**
+     * <p>API response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Operation success</p>
      */
@@ -26,6 +32,8 @@ public class ListTablesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
      */
@@ -33,6 +41,8 @@ public class ListTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -86,16 +96,23 @@ public class ListTablesResponseBody extends TeaModel {
 
     public static class ListTablesResponseBodyData extends TeaModel {
         /**
+         * <p>Next page token</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>Table entities. Each element represents a specific table, including but not limited to information such as table name and table ID.</p>
+         */
         @NameInMap("Tables")
         public java.util.List<Table> tables;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

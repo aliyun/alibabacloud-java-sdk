@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class Metadata extends TeaModel {
+    /**
+     * <p>Associated data</p>
+     */
     @NameInMap("Attachments")
     public java.util.List<MetadataAttachments> attachments;
 
@@ -22,6 +25,8 @@ public class Metadata extends TeaModel {
 
     public static class MetadataAttachments extends TeaModel {
         /**
+         * <p>ARN of the associated data</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</p>
          */
@@ -29,6 +34,8 @@ public class Metadata extends TeaModel {
         public String arn;
 
         /**
+         * <p>Data type</p>
+         * 
          * <strong>example:</strong>
          * <p>inner-resource/event-table</p>
          */

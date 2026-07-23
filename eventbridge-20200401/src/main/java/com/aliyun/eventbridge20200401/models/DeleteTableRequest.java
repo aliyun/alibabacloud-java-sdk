@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTableRequest extends TeaModel {
     /**
-     * <p>表所属的数据目录名称。可通过 ListCatalogs 获取</p>
+     * <p>Data catalog the table belongs to</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -14,7 +14,7 @@ public class DeleteTableRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>用于保证请求幂等性的Token。建议使用 UUID</p>
+     * <p>Idempotent token</p>
      * 
      * <strong>example:</strong>
      * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -23,7 +23,7 @@ public class DeleteTableRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>要删除的事件表名称。删除后不可恢复，表中的所有数据将被永久清除。需同时指定所属 Catalog 和 Namespace。可通过 ListTables 获取</p>
+     * <p>Table name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DeleteTableRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>表所属的命名空间名称。可通过 ListNamespaces 获取</p>
+     * <p>Namespace the table belongs to</p>
      * 
      * <strong>example:</strong>
      * <p>my_namespace</p>

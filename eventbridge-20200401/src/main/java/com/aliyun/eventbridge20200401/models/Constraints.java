@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Constraints extends TeaModel {
     /**
+     * <p>Start of the query time window (Unix milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1717200000000</p>
      */
@@ -12,6 +14,8 @@ public class Constraints extends TeaModel {
     public Long beginTime;
 
     /**
+     * <p>End of the query time window (Unix milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1717200000000</p>
      */

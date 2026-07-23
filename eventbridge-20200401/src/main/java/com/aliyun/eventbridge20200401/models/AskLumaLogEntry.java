@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AskLumaLogEntry extends TeaModel {
     /**
+     * <p>Agent name</p>
+     * 
      * <strong>example:</strong>
      * <p>my-agent</p>
      */
@@ -12,19 +14,32 @@ public class AskLumaLogEntry extends TeaModel {
     public String agentName;
 
     /**
+     * <p>Whether clarification is needed</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("ClarificationNeeded")
     public Boolean clarificationNeeded;
 
+    /**
+     * <p>Clarification question text</p>
+     * 
+     * <strong>example:</strong>
+     * <p>您指的是哪张表？</p>
+     */
     @NameInMap("ClarificationQuestion")
     public String clarificationQuestion;
 
+    /**
+     * <p>Structured result body</p>
+     */
     @NameInMap("Content")
     public Content content;
 
     /**
+     * <p>Conversation ID</p>
+     * 
      * <strong>example:</strong>
      * <p>conv_xxx</p>
      */
@@ -32,6 +47,8 @@ public class AskLumaLogEntry extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>Creation time (milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1717200000000</p>
      */
@@ -39,6 +56,8 @@ public class AskLumaLogEntry extends TeaModel {
     public String createdAt;
 
     /**
+     * <p>Invocation duration (milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>3200</p>
      */
@@ -46,6 +65,8 @@ public class AskLumaLogEntry extends TeaModel {
     public Long durationMs;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ExecutionFailed</p>
      */
@@ -53,6 +74,8 @@ public class AskLumaLogEntry extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error details</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
      */
@@ -60,6 +83,8 @@ public class AskLumaLogEntry extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Whether it is an error</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -67,16 +92,26 @@ public class AskLumaLogEntry extends TeaModel {
     public Boolean isError;
 
     /**
+     * <p>Message ID</p>
+     * 
      * <strong>example:</strong>
      * <p>msg_xxx</p>
      */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>Input question</p>
+     * 
+     * <strong>example:</strong>
+     * <p>帮我统计一下最近的订单数据。</p>
+     */
     @NameInMap("Question")
     public String question;
 
     /**
+     * <p>Log source</p>
+     * 
      * <strong>example:</strong>
      * <p>MCP, CHAT</p>
      */
@@ -84,6 +119,8 @@ public class AskLumaLogEntry extends TeaModel {
     public String source;
 
     /**
+     * <p>Execution status</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING, SUCCEEDED, FAILED, TIMEOUT</p>
      */

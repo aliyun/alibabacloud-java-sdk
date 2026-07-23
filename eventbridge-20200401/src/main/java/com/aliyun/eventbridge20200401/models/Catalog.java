@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Catalog extends TeaModel {
     /**
-     * <p>数据目录的备注描述信息</p>
+     * <p>The comment or description of the data catalog</p>
      * 
      * <strong>example:</strong>
      * <p>测试数据目录</p>
@@ -14,7 +14,7 @@ public class Catalog extends TeaModel {
     public String comment;
 
     /**
-     * <p>挂载类型 Catalog 关联的连接名称。仅 Provider 为 MySQL/PostgreSQL/Elasticsearch 时有值</p>
+     * <p>The connection name associated with a mounted-type Catalog. Only has a value when Provider is MySQL/PostgreSQL/Elasticsearch</p>
      * 
      * <strong>example:</strong>
      * <p>my_connection</p>
@@ -23,7 +23,7 @@ public class Catalog extends TeaModel {
     public String connectionName;
 
     /**
-     * <p>数据目录的唯一标识名称</p>
+     * <p>The unique identifier name of the data catalog</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -32,7 +32,7 @@ public class Catalog extends TeaModel {
     public String name;
 
     /**
-     * <p>扩展属性（JSON 对象）。Elasticsearch 类型包含 IndexPattern 等信息</p>
+     * <p>Extended properties (JSON object). The Elasticsearch type contains information such as IndexPattern</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;IndexPattern&quot;:&quot;my-index-*&quot;}</p>
@@ -41,7 +41,7 @@ public class Catalog extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
-     * <p>数据源提供方。EventHouse 为内置存储，MySQL/PostgreSQL/Elasticsearch 为外部挂载</p>
+     * <p>The data source provider. EventHouse is the built-in storage; MySQL/PostgreSQL/Elasticsearch are externally mounted</p>
      * 
      * <strong>example:</strong>
      * <p>EventHouse</p>
@@ -50,7 +50,7 @@ public class Catalog extends TeaModel {
     public String provider;
 
     /**
-     * <p>数据目录类型，如 RELATIONAL</p>
+     * <p>The type of the data catalog, such as RELATIONAL</p>
      * 
      * <strong>example:</strong>
      * <p>RELATIONAL</p>

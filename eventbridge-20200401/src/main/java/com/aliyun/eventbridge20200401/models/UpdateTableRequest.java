@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableRequest extends TeaModel {
     /**
-     * <p>新增列定义（JSON 对象）。包含 Name（列名，必填）、Type（数据类型，必填，如 STRING、INT32、INT64、FLOAT、DOUBLE、BOOLEAN、TIMESTAMP）、Comment（列备注，选填）。每次调用只能新增一列</p>
+     * <p>Add column</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}</p>
@@ -14,7 +14,7 @@ public class UpdateTableRequest extends TeaModel {
     public UpdateTableRequestAddColumn addColumn;
 
     /**
-     * <p>表所属的数据目录名称。可通过 ListCatalogs 获取</p>
+     * <p>Data catalog to which it belongs</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -23,7 +23,7 @@ public class UpdateTableRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>用于保证请求幂等性的Token。建议使用 UUID</p>
+     * <p>Idempotency token</p>
      * 
      * <strong>example:</strong>
      * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -32,7 +32,7 @@ public class UpdateTableRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>删除列定义（JSON 对象）。包含 Name（要删除的列名，必填）。删除后不可恢复，已有数据中该列的值将丢失。每次调用只能删除一列</p>
+     * <p>Delete column</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Name&quot;:&quot;old_column&quot;}</p>
@@ -41,7 +41,7 @@ public class UpdateTableRequest extends TeaModel {
     public UpdateTableRequestDeleteColumn deleteColumn;
 
     /**
-     * <p>要修改的事件表名称。名称本身不可修改，此处用于定位目标表。需同时指定所属 Catalog 和 Namespace。可通过 ListTables 获取</p>
+     * <p>Table name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class UpdateTableRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>表所属的命名空间名称。可通过 ListNamespaces 获取</p>
+     * <p>Namespace to which it belongs</p>
      * 
      * <strong>example:</strong>
      * <p>my_namespace</p>
@@ -60,7 +60,7 @@ public class UpdateTableRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>重命名列（JSON 对象）。包含 Name（原列名，必填）、NewName（新列名，必填）。每次调用只能重命名一列</p>
+     * <p>Rename column</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Name&quot;:&quot;old_name&quot;,&quot;NewName&quot;:&quot;new_name&quot;}</p>
@@ -69,7 +69,7 @@ public class UpdateTableRequest extends TeaModel {
     public UpdateTableRequestRenameColumn renameColumn;
 
     /**
-     * <p>修改列的备注信息（JSON 对象）。包含 Name（目标列名，必填）、Comment（新备注内容，必填，传空字符串可清除备注）。每次调用只能修改一列</p>
+     * <p>Update column comment</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Comment&quot;:&quot;主键ID&quot;}</p>
@@ -78,7 +78,7 @@ public class UpdateTableRequest extends TeaModel {
     public UpdateTableRequestUpdateColumnComment updateColumnComment;
 
     /**
-     * <p>修改列的数据类型（JSON 对象）。包含 Name（目标列名，必填）、Type（新数据类型，必填）。仅支持兼容类型转换，每次调用只能修改一列</p>
+     * <p>Update column type</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;}</p>
@@ -87,7 +87,7 @@ public class UpdateTableRequest extends TeaModel {
     public UpdateTableRequestUpdateColumnType updateColumnType;
 
     /**
-     * <p>修改表的备注描述。传入新的备注内容替换原有备注，传空字符串可清除备注</p>
+     * <p>Update table comment</p>
      * 
      * <strong>example:</strong>
      * <p>更新后的备注</p>
@@ -96,7 +96,7 @@ public class UpdateTableRequest extends TeaModel {
     public String updateComment;
 
     /**
-     * <p>修改数据保留策略（JSON 对象）。包含 HotTTL（热数据保留天数）、ColdTTL（冷数据保留天数）。传入后会替换原有策略</p>
+     * <p>Update retention policy</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;HotTTL&quot;:7,&quot;ColdTTL&quot;:30}</p>
@@ -198,10 +198,18 @@ public class UpdateTableRequest extends TeaModel {
     }
 
     public static class UpdateTableRequestAddColumn extends TeaModel {
+        /**
+         * <p>Comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>接口授权_刘宏月_申请测试环境服务器资源访问权限_2026-07-06</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>The full name of the queried event type.</p>
+         * 
          * <strong>example:</strong>
          * <p>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</p>
          */
@@ -209,6 +217,8 @@ public class UpdateTableRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The event target type. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom</p>
          */
@@ -248,6 +258,8 @@ public class UpdateTableRequest extends TeaModel {
 
     public static class UpdateTableRequestDeleteColumn extends TeaModel {
         /**
+         * <p>Connector name.</p>
+         * 
          * <strong>example:</strong>
          * <p>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</p>
          */
@@ -271,6 +283,8 @@ public class UpdateTableRequest extends TeaModel {
 
     public static class UpdateTableRequestRenameColumn extends TeaModel {
         /**
+         * <p>Connector name.</p>
+         * 
          * <strong>example:</strong>
          * <p>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</p>
          */
@@ -278,6 +292,8 @@ public class UpdateTableRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The updated name. Enter this when you need to modify the metric name.</p>
+         * 
          * <strong>example:</strong>
          * <p>fvt-oos-application-group-56ca74b000</p>
          */
@@ -308,10 +324,18 @@ public class UpdateTableRequest extends TeaModel {
     }
 
     public static class UpdateTableRequestUpdateColumnComment extends TeaModel {
+        /**
+         * <p>Comment information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIUS Dev 环境</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>Extended data name</p>
+         * 
          * <strong>example:</strong>
          * <p>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</p>
          */
@@ -343,6 +367,8 @@ public class UpdateTableRequest extends TeaModel {
 
     public static class UpdateTableRequestUpdateColumnType extends TeaModel {
         /**
+         * <p>Connector name</p>
+         * 
          * <strong>example:</strong>
          * <p>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</p>
          */
@@ -350,6 +376,8 @@ public class UpdateTableRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Column type</p>
+         * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
          */
@@ -381,6 +409,8 @@ public class UpdateTableRequest extends TeaModel {
 
     public static class UpdateTableRequestUpdateRetentionPolicy extends TeaModel {
         /**
+         * <p>Cold storage duration</p>
+         * 
          * <strong>example:</strong>
          * <p>17</p>
          */
@@ -388,6 +418,8 @@ public class UpdateTableRequest extends TeaModel {
         public Integer coldTTL;
 
         /**
+         * <p>Hot storage duration</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateEventSourceShrinkRequest extends TeaModel {
     /**
      * <p>The description of the event source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RabbitMQ event source</p>
      */
     @NameInMap("Description")
     public String description;

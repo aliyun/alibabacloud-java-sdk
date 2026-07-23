@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryAttachment extends TeaModel {
     /**
+     * <p>Query statement</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;SELECT city, COUNT(*) AS cnt FROM events GROUP BY city&quot;</p>
      */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <p>Query execution result</p>
+     */
     @NameInMap("Result")
     public ExecutionResult result;
 

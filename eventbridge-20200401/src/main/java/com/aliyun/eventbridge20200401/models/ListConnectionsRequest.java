@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConnectionsRequest extends TeaModel {
     /**
-     * <p>The key word that you specify to query connections. Connections can be queried by prefixes.</p>
+     * <p>The name prefix of the connection configurations to query. Supports prefix matching.</p>
      * 
      * <strong>example:</strong>
      * <p>connection-name</p>
@@ -14,9 +14,9 @@ public class ListConnectionsRequest extends TeaModel {
     public String connectionNamePrefix;
 
     /**
-     * <p>The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging.</p>
+     * <p>The maximum number of entries to return on each page. Can be used together with NextToken to implement pagination.</p>
      * <ul>
-     * <li>Default value: 10.</li>
+     * <li>Default value: 10</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class ListConnectionsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>If you set the Limit parameter and excess return values exist, this parameter is returned.</p>
+     * <p>When MaxResults is specified, NextToken is returned if there are more results to fetch.</p>
      * <ul>
-     * <li>Default value: 0.</li>
+     * <li>NextToken starts from 0 by default. Default value: 0.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListConnectionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>按连接类型过滤查询结果。可选值：Http、MySQL、PostgreSQL、Elasticsearch。不传则返回所有类型</p>
+     * <p>Filters query results by connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch. If left empty, connections of all types are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>

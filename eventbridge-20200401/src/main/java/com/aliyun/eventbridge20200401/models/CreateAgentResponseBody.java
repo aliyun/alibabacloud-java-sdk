@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class CreateAgentResponseBody extends TeaModel {
     /**
+     * <p>The response code. Valid values:</p>
+     * <ul>
+     * <li><p>Success: The request was successful.</p>
+     * </li>
+     * <li><p>Other values: An error occurred. For more information, see Error codes.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateAgentResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent with name \&quot;XXX\&quot; already exists for account 12345</p>
      */
@@ -22,6 +35,8 @@ public class CreateAgentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B896B484-XXXXXX-DD0E5C361108</p>
      */
@@ -29,6 +44,8 @@ public class CreateAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

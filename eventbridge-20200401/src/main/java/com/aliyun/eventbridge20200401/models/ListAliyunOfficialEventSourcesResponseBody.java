@@ -96,7 +96,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The name of the event source.</p>
          * 
          * <strong>example:</strong>
-         * <p>name</p>
+         * <p>acs.arms</p>
          */
         @NameInMap("EventSourceName")
         public String eventSourceName;
@@ -105,7 +105,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The name of the group to which the event type belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>aliyuncvc:MeetingEvent</p>
+         * <p>ActionTrail</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -114,7 +114,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The full name of the event type.</p>
          * 
          * <strong>example:</strong>
-         * <p>aliyuncvc:MeetingEvent:MeetingStateEvent</p>
+         * <p>arms:ActionTrail:AliyunServiceEvent</p>
          */
         @NameInMap("Name")
         public String name;
@@ -123,7 +123,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The short name of the event type.</p>
          * 
          * <strong>example:</strong>
-         * <p>MeetingStateEvent</p>
+         * <p>AliyunServiceEven</p>
          */
         @NameInMap("ShortName")
         public String shortName;
@@ -172,7 +172,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:eventbridge:cn-hangzhou:SYSTEM:eventsource/acs.aliyuncvc</p>
+         * <p>acs:eventbridge:cn-hangzhou:SYSTEM:eventbus/default/eventsource/acs.arms</p>
          */
         @NameInMap("Arn")
         public String arn;
@@ -181,13 +181,16 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The time when the event source was created. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
-         * <p>1607071602000</p>
+         * <p>1602730025890</p>
          */
         @NameInMap("Ctime")
         public Float ctime;
 
         /**
          * <p>The description of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service</p>
          */
         @NameInMap("Description")
         public String description;
@@ -196,7 +199,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The name of the event source to which the event type belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs.aliyuncvc</p>
+         * <p>default</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
@@ -211,7 +214,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The full name of the event source.</p>
          * 
          * <strong>example:</strong>
-         * <p>E-MapReduce</p>
+         * <p>Application Real-Time Monitoring Service</p>
          */
         @NameInMap("FullName")
         public String fullName;
@@ -220,7 +223,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The name of the event source.</p>
          * 
          * <strong>example:</strong>
-         * <p>acs.aliyuncvc</p>
+         * <p>acs.arms</p>
          */
         @NameInMap("Name")
         public String name;
@@ -238,7 +241,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
          * <p>The type of the event source.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>AliyunOfficial</p>
          */
         @NameInMap("Type")
         public String type;

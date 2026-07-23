@@ -4,20 +4,36 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class AguiMessage extends TeaModel {
+    /**
+     * <p>The text content of the message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>根据您的问题，我将查询过去7天的事件量...</p>
+     */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The unique identifier of the message.</p>
+     * 
      * <strong>example:</strong>
      * <p>msg_123456_a1b2c3d4</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The extension metadata.</p>
+     */
     @NameInMap("Metadata")
     public AguiMessageMetadata metadata;
 
+    @NameInMap("Reasoning")
+    public String reasoning;
+
     /**
+     * <p>The role of the message.</p>
+     * 
      * <strong>example:</strong>
      * <p>assistant</p>
      */
@@ -25,12 +41,17 @@ public class AguiMessage extends TeaModel {
     public String role;
 
     /**
+     * <p>The associated tool invocation ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>call_xxx</p>
      */
     @NameInMap("ToolCallId")
     public String toolCallId;
 
+    /**
+     * <p>The tool invocation list.</p>
+     */
     @NameInMap("ToolCalls")
     public java.util.List<AguiMessageToolCalls> toolCalls;
 
@@ -63,6 +84,14 @@ public class AguiMessage extends TeaModel {
         return this.metadata;
     }
 
+    public AguiMessage setReasoning(String reasoning) {
+        this.reasoning = reasoning;
+        return this;
+    }
+    public String getReasoning() {
+        return this.reasoning;
+    }
+
     public AguiMessage setRole(String role) {
         this.role = role;
         return this;
@@ -89,6 +118,8 @@ public class AguiMessage extends TeaModel {
 
     public static class AguiMessageMetadataAttachments extends TeaModel {
         /**
+         * <p>The name of the extension data.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</p>
          */
@@ -96,6 +127,8 @@ public class AguiMessage extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the extension data.</p>
+         * 
          * <strong>example:</strong>
          * <p>inner-resource/event-table</p>
          */
@@ -126,6 +159,9 @@ public class AguiMessage extends TeaModel {
     }
 
     public static class AguiMessageMetadata extends TeaModel {
+        /**
+         * <p>The extension data.</p>
+         */
         @NameInMap("Attachments")
         public AguiMessageMetadataAttachments attachments;
 
@@ -146,6 +182,8 @@ public class AguiMessage extends TeaModel {
 
     public static class AguiMessageToolCallsFunction extends TeaModel {
         /**
+         * <p>The arguments of the tool calling function.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -153,6 +191,8 @@ public class AguiMessage extends TeaModel {
         public String arguments;
 
         /**
+         * <p>The name of the tool calling function.</p>
+         * 
          * <strong>example:</strong>
          * <p>discoverMetadata</p>
          */
@@ -183,10 +223,15 @@ public class AguiMessage extends TeaModel {
     }
 
     public static class AguiMessageToolCalls extends TeaModel {
+        /**
+         * <p>The tool calling function.</p>
+         */
         @NameInMap("Function")
         public AguiMessageToolCallsFunction function;
 
         /**
+         * <p>The tool calling ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>call_xxx</p>
          */
@@ -194,6 +239,8 @@ public class AguiMessage extends TeaModel {
         public String id;
 
         /**
+         * <p>The tool calling type.</p>
+         * 
          * <strong>example:</strong>
          * <p>function</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConnectionRequest extends TeaModel {
     /**
-     * <p>The connection name.</p>
+     * <p>The name of the connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

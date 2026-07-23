@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AskLumaRequest extends TeaModel {
     /**
+     * <p>The name of the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AskLumaRequest extends TeaModel {
     public String agentName;
 
     /**
+     * <p>The conversation ID. This parameter is required for multi-turn conversations.</p>
+     * 
      * <strong>example:</strong>
      * <p>conv_1474xxx32_593b9d08-9</p>
      */
@@ -21,6 +24,8 @@ public class AskLumaRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The maximum number of rows to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -28,7 +33,11 @@ public class AskLumaRequest extends TeaModel {
     public Integer maxRows;
 
     /**
+     * <p>The natural language question.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>帮我统计一下最近的订单数据。</p>
      */
     @NameInMap("Question")
     public String question;

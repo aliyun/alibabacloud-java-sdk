@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecutionResult extends TeaModel {
     /**
+     * <p>Whether truncated due to the maxRows limit</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,19 +14,32 @@ public class ExecutionResult extends TeaModel {
     public Boolean isTruncated;
 
     /**
+     * <p>Number of rows returned this time</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("RowCount")
     public Integer rowCount;
 
+    /**
+     * <p>Two-dimensional array, one array per row</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[[&quot;北京&quot;,120],[&quot;上海&quot;,98]]</p>
+     */
     @NameInMap("Rows")
     public String rows;
 
+    /**
+     * <p>Schema information</p>
+     */
     @NameInMap("Schema")
     public java.util.List<SchemaColumn> schema;
 
     /**
+     * <p>Total number of rows that meet the criteria. Different from RowCount when IsTruncated=true</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

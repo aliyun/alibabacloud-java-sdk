@@ -24,35 +24,60 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String eventStreamingName;
 
     /**
-     * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
-     * <p>This parameter is required.</p>
+     * <p>The event filtering rule. If not specified, all events are matched.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     * &quot;source&quot;: [
+     * {
+     * &quot;prefix&quot;: &quot;acs:mns&quot;
+     * }
+     * ],
+     * &quot;type&quot;: [
+     * {
+     * &quot;prefix&quot;: &quot;mns:Queue&quot;
+     * }
+     * ],
+     * &quot;subject&quot;: [
+     * {
+     * &quot;prefix&quot;: &quot;acs:mns:cn-hangzhou:123456789098****:queues/zeus&quot;
+     * }
+     * ]
+     * }</p>
      */
     @NameInMap("FilterPattern")
     public String filterPattern;
 
+    @NameInMap("Metadata")
+    public String metadata;
+
     /**
-     * <p>The parameters that are configured for the runtime environment.</p>
+     * <p>The runtime environment parameters.</p>
      */
     @NameInMap("RunOptions")
     public String runOptionsShrink;
 
     /**
-     * <p>The event target. You must and can specify only one event target.</p>
-     * <p>This parameter is required.</p>
+     * <p>The event target. You must select exactly one Sink type.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
-     * <p>The event provider, which is also known as the event source. You must and can specify only one event source.</p>
-     * <p>This parameter is required.</p>
+     * <p>The event provider. You must select exactly one Source type.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;
 
+    /**
+     * <p>The tag list. A maximum of 20 items are supported.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateEventStreamingShrinkRequestTags> tags;
 
+    /**
+     * <p>The Transform-related configurations.</p>
+     */
     @NameInMap("Transforms")
     public String transformsShrink;
 
@@ -83,6 +108,14 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     }
     public String getFilterPattern() {
         return this.filterPattern;
+    }
+
+    public CreateEventStreamingShrinkRequest setMetadata(String metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    public String getMetadata() {
+        return this.metadata;
     }
 
     public CreateEventStreamingShrinkRequest setRunOptionsShrink(String runOptionsShrink) {
@@ -126,9 +159,15 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingShrinkRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCatalogRequest extends TeaModel {
     /**
-     * <p>用于保证请求幂等性的Token。建议使用 UUID</p>
+     * <p>Idempotency token</p>
      * 
      * <strong>example:</strong>
      * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -14,7 +14,7 @@ public class GetCatalogRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>要查询的数据目录名称。可通过 ListCatalogs 接口获取已有目录列表</p>
+     * <p>Data catalog name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

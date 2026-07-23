@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectionShrinkRequest extends TeaModel {
     /**
-     * <p>The parameters that are configured for authentication.</p>
+     * <p>The data structure of the authentication parameters.</p>
      */
     @NameInMap("AuthParameters")
     public String authParametersShrink;
 
     /**
-     * <p>The name of the connection that you want to update. The name must be 2 to 127 characters in length.</p>
+     * <p>The name of the connection to be updated. The maximum length is 127 characters. The minimum length is 2 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,23 +21,23 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
     public String connectionName;
 
     /**
-     * <p>The description of the connection. The description can be up to 255 characters in length.</p>
+     * <p>The description. The maximum length is 255 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>The description of the connection.</p>
+     * <p>Description of the connection configuration</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The parameters that are configured for the network.</p>
+     * <p>The data structure of the network configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkParameters")
     public String networkParametersShrink;
 
     /**
-     * <p>数据源连接参数（JSON 对象）。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</p>
+     * <p>The data source connection parameters (JSON object). For specific field definitions, call the GetConnectionType API and refer to the ParamsSchema in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</p>
@@ -46,7 +46,7 @@ public class UpdateConnectionShrinkRequest extends TeaModel {
     public String parametersShrink;
 
     /**
-     * <p>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http</p>
+     * <p>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, and Http.</p>
      * 
      * <strong>example:</strong>
      * <p>Http</p>

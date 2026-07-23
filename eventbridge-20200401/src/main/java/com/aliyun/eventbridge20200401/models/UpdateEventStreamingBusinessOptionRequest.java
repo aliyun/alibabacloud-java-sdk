@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateEventStreamingBusinessOptionRequest extends TeaModel {
     /**
+     * <p>The billing mode. Valid values are CapacityUnitMode for the CU mode and EventNumMode for the pay-by-event mode.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CapacityUnitMode</p>
      */
     @NameInMap("BusinessMode")
     public String businessMode;
 
     /**
+     * <p>The name of the event stream.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +25,8 @@ public class UpdateEventStreamingBusinessOptionRequest extends TeaModel {
     public String eventStreamingName;
 
     /**
+     * <p>The maximum number of CUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -27,6 +34,8 @@ public class UpdateEventStreamingBusinessOptionRequest extends TeaModel {
     public Long maxCapacityUnitCount;
 
     /**
+     * <p>The minimum number of CUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

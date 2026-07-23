@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     /**
-     * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * <p>The status code of the request. \<code>Success\\</code> indicates that the request was successful. For more information about error codes, see the Error codes section.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,6 +14,19 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li><p><strong>2xx</strong>: a 2xx status code.</p>
+     * </li>
+     * <li><p><strong>3xx</strong>: a 3xx status code.</p>
+     * </li>
+     * <li><p><strong>4xx</strong>: a 4xx status code.</p>
+     * </li>
+     * <li><p><strong>5xx</strong>: a 5xx status code.</p>
+     * </li>
+     * </ul>
+     * <p>If this parameter is not specified, all HTTP status codes are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -21,7 +34,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The returned message. If the request is successful, success is returned.</p>
+     * <p>The returned message. If the request is successful, \<code>success\\</code> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -30,7 +43,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C36345A1-75F3-5A1A-BFCF-33B8271971FA</p>
@@ -39,7 +52,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+     * <p>Indicates whether the request was successful. If the request is successful, \<code>true\\</code> is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

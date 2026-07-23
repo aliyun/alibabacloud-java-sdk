@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of \<code>Success\\</code> indicates that the request is successful. For more information about other error codes, see Error codes.</p>
+     * <p>Success: The request is successful.</p>
+     * <p>Other codes indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -18,6 +22,8 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
     public CheckServiceLinkedRoleForProductResponseBodyData data;
 
     /**
+     * <p>The returned message. If the request is successful, \<code>Success\\</code> is returned. If the request fails, an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -25,6 +31,8 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
      */
@@ -32,6 +40,8 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. \<code>true\\</code>: The request was successful. \<code>false\\</code>: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

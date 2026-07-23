@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
     /**
+     * <p>The status code returned.</p>
+     * <ul>
+     * <li><p>Success: The request was successful.</p>
+     * </li>
+     * <li><p>Other values indicate an error. For more information, see the Error codes section.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +20,8 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the configuration was updated. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +29,8 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The error message returned if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +38,8 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
      */
@@ -33,6 +47,8 @@ public class UpdateEventStreamingBusinessOptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

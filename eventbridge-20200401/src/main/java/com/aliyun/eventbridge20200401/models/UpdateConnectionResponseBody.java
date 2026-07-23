@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectionResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid value: 200, which indicates that the request was successful.</p>
+     * <p>The API status code or POP error code. Description: 200 indicates success.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,7 +23,7 @@ public class UpdateConnectionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8346BE8F-40F3-533D-A0B8-1359C31BD5BA</p>

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class PutTargetsResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The response code.</p>
      * <ul>
-     * <li>Success: The call succeeded.</li>
-     * <li>Other codes: The call failed. For more information about error codes, see Error codes.</li>
+     * <li><p>Success: The request was successful.</p>
+     * </li>
+     * <li><p>Other values indicate an error. For details, see Error codes.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +20,13 @@ public class PutTargetsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public PutTargetsResponseBodyData data;
 
     /**
-     * <p>The error message that is returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The event rule not existed!</p>
@@ -33,7 +35,7 @@ public class PutTargetsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID that Alibaba Cloud generates for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6FB52207-7621-5292-BDF2-A17E2E984160</p>
@@ -42,11 +44,7 @@ public class PutTargetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
-     * </ul>
+     * <p>Returns true if the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +108,7 @@ public class PutTargetsResponseBody extends TeaModel {
         public String entryId;
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>EventRuleTargetIdDuplicate</p>
@@ -119,7 +117,7 @@ public class PutTargetsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The description of the error.</p>
          * 
          * <strong>example:</strong>
          * <p>The id of event target is duplicate!</p>
@@ -160,16 +158,16 @@ public class PutTargetsResponseBody extends TeaModel {
 
     public static class PutTargetsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the failed event target.</p>
+         * <p>Details about the event targets that failed to be processed.</p>
          */
         @NameInMap("ErrorEntries")
         public java.util.List<PutTargetsResponseBodyDataErrorEntries> errorEntries;
 
         /**
-         * <p>The number of failed event targets. Valid values:</p>
+         * <p>The number of event targets that failed to be processed. A value of 0 indicates that all event targets were processed successfully.</p>
          * <ul>
-         * <li>0: All event targets succeeded.</li>
-         * <li>An integer other than 0: indicates the number of failed event targets.</li>
+         * <li></li>
+         * <li></li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Column extends TeaModel {
     /**
+     * <p>Whether the value is NULL. When true, it should be treated as NULL.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class Column extends TeaModel {
     public Boolean isNull;
 
     /**
+     * <p>Column name.</p>
+     * 
      * <strong>example:</strong>
      * <p>index</p>
      */
@@ -19,6 +23,8 @@ public class Column extends TeaModel {
     public String name;
 
     /**
+     * <p>Column type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
@@ -26,6 +32,8 @@ public class Column extends TeaModel {
     public String type;
 
     /**
+     * <p>Column value.</p>
+     * 
      * <strong>example:</strong>
      * <p>product_info</p>
      */

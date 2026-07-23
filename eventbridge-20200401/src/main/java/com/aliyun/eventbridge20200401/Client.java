@@ -8,7 +8,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "eventbridge-console.cn-wulanchabu.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "eventbridge-console.cn-qingdao.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "eventbridge-console.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "eventbridge-console.cn-heyuan.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "eventbridge-console.ap-northeast-2.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eventbridge", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</p>
+     * <p>Queries data using natural language.</p>
      * 
      * @param request AskLumaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</p>
+     * <p>Queries data using natural language.</p>
      * 
      * @param request AskLumaRequest
      * @return AskLumaResponse
@@ -83,8 +111,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Checks for a service-linked role by name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Checks whether a service-linked role is created for an Alibaba Cloud account.</p>
+     * <p>Checks whether a service-linked role is authorized for an account.</p>
      * 
      * @param request CheckServiceLinkedRoleForProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -115,8 +146,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Checks for a service-linked role by name.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Checks whether a service-linked role is created for an Alibaba Cloud account.</p>
+     * <p>Checks whether a service-linked role is authorized for an account.</p>
      * 
      * @param request CheckServiceLinkedRoleForProductRequest
      * @return CheckServiceLinkedRoleForProductResponse
@@ -128,7 +162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史会话</p>
+     * <p>Creates a custom agent.</p>
      * 
      * @param tmpReq CreateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -178,7 +212,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史会话</p>
+     * <p>Creates a custom agent.</p>
      * 
      * @param request CreateAgentRequest
      * @return CreateAgentResponse
@@ -258,10 +292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create a connection.</p>
+     * <p>Creates a connection configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a connection.</p>
+     * <p>Creates a connection configuration.</p>
      * 
      * @param tmpReq CreateConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -327,10 +361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create a connection.</p>
+     * <p>Creates a connection configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a connection.</p>
+     * <p>Creates a connection configuration.</p>
      * 
      * @param request CreateConnectionRequest
      * @return CreateConnectionResponse
@@ -396,10 +430,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create an event source.</p>
+     * <p>Creates an external event source.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an event source.</p>
+     * <p>Creates an external event source.</p>
      * 
      * @param tmpReq CreateEventSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -521,10 +555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to create an event source.</p>
+     * <p>Creates an external event source.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an event source.</p>
+     * <p>Creates an external event source.</p>
      * 
      * @param request CreateEventSourceRequest
      * @return CreateEventSourceResponse
@@ -536,7 +570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an event stream.</p>
+     * <p>Creates an event stream.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an event stream.</p>
@@ -578,6 +612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FilterPattern", request.filterPattern);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
+            body.put("Metadata", request.metadata);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.runOptionsShrink)) {
             body.put("RunOptions", request.runOptionsShrink);
         }
@@ -617,7 +655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an event stream.</p>
+     * <p>Creates an event stream.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an event stream.</p>
@@ -632,7 +670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建命名空间</p>
+     * <p>Create Namespace</p>
      * 
      * @param request CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -678,7 +716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建命名空间</p>
+     * <p>Create Namespace</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -690,7 +728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an event rule.</p>
+     * <p>Creates an event rule.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an event rule.</p>
@@ -751,7 +789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an event rule.</p>
+     * <p>Creates an event rule.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an event rule.</p>
@@ -766,10 +804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create a service-linked role for your cloud service.</p>
+     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a service-linked role for your cloud service.</p>
+     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
      * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -801,10 +839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create a service-linked role for your cloud service.</p>
+     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a service-linked role for your cloud service.</p>
+     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
      * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
@@ -815,8 +853,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an event target under the specified rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建表</p>
+     * <p>Create a data catalog</p>
      * 
      * @param tmpReq CreateTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -881,8 +922,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an event target under the specified rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建表</p>
+     * <p>Create a data catalog</p>
      * 
      * @param request CreateTableRequest
      * @return CreateTableResponse
@@ -894,7 +938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteAgent</p>
+     * <p>Deletes a custom agent.</p>
      * 
      * @param request DeleteAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -926,7 +970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>DeleteAgent</p>
+     * <p>Deletes a custom agent.</p>
      * 
      * @param request DeleteAgentRequest
      * @return DeleteAgentResponse
@@ -1037,8 +1081,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a data integration job.</p>
+     * 
+     * @param tmpReq DeleteEventAnalysisJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventAnalysisJobResponse
+     */
+    public DeleteEventAnalysisJobResponse deleteEventAnalysisJobWithOptions(DeleteEventAnalysisJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteEventAnalysisJobShrinkRequest request = new DeleteEventAnalysisJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceResource)) {
+            request.sourceResourceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceResource, "SourceResource", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceResourceShrink)) {
+            body.put("SourceResource", request.sourceResourceShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEventAnalysisJob"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEventAnalysisJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a data integration job.</p>
+     * 
+     * @param request DeleteEventAnalysisJobRequest
+     * @return DeleteEventAnalysisJobResponse
+     */
+    public DeleteEventAnalysisJobResponse deleteEventAnalysisJob(DeleteEventAnalysisJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEventAnalysisJobWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event bus.</p>
+     * <p>Deletes an event bus.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event bus.</p>
@@ -1073,7 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event bus.</p>
+     * <p>Deletes an event bus.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event bus.</p>
@@ -1087,8 +1181,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an EventHouse Runtime.</p>
+     * 
+     * @param request DeleteEventHouseRuntimeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventHouseRuntimeResponse
+     */
+    public DeleteEventHouseRuntimeResponse deleteEventHouseRuntimeWithOptions(DeleteEventHouseRuntimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEventHouseRuntime"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEventHouseRuntimeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an EventHouse Runtime.</p>
+     * 
+     * @param request DeleteEventHouseRuntimeRequest
+     * @return DeleteEventHouseRuntimeResponse
+     */
+    public DeleteEventHouseRuntimeResponse deleteEventHouseRuntime(DeleteEventHouseRuntimeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEventHouseRuntimeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event source.</p>
+     * <p>Deletes an event source.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event source.</p>
@@ -1127,7 +1265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event source.</p>
+     * <p>Deletes an event source.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event source.</p>
@@ -1142,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event stream.</p>
+     * <p>Deletes an event stream.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event stream.</p>
@@ -1177,7 +1315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an event stream.</p>
+     * <p>Deletes an event stream.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an event stream.</p>
@@ -1192,7 +1330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除命名空间</p>
+     * <p>Delete Namespace</p>
      * 
      * @param request DeleteNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1234,7 +1372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除命名空间</p>
+     * <p>Delete Namespace</p>
      * 
      * @param request DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
@@ -1300,7 +1438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除表</p>
+     * <p>Delete table</p>
      * 
      * @param request DeleteTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1346,7 +1484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除表</p>
+     * <p>Delete table</p>
      * 
      * @param request DeleteTableRequest
      * @return DeleteTableResponse
@@ -1475,8 +1613,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Discovers information about an event source.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Discovers the schema and simple data of an event source (such as MySQL).</p>
+     * <p>Discovers the schema and simple data of an event source, such as MySQL.</p>
      * 
      * @param tmpReq DiscoverEventSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1513,8 +1654,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Discovers information about an event source.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Discovers the schema and simple data of an event source (such as MySQL).</p>
+     * <p>Discovers the schema and simple data of an event source, such as MySQL.</p>
      * 
      * @param request DiscoverEventSourceRequest
      * @return DiscoverEventSourceResponse
@@ -1580,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>EventCenterQueryEvents</p>
+     * <p>Queries events from the event center.</p>
      * 
      * @param tmpReq EventCenterQueryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1632,7 +1776,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>EventCenterQueryEvents</p>
+     * <p>Queries events from the event center.</p>
      * 
      * @param request EventCenterQueryEventsRequest
      * @return EventCenterQueryEventsResponse
@@ -1644,7 +1788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</p>
+     * <p>Retrieves agent metadata.</p>
      * 
      * @param request GetAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1676,7 +1820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</p>
+     * <p>Retrieves agent metadata.</p>
      * 
      * @param request GetAgentRequest
      * @return GetAgentResponse
@@ -1738,7 +1882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定数据目录的详细信息，包括目录名称和描述。传入Name即可查询。</p>
+     * <p>Get data catalog</p>
      * 
      * @param request GetCatalogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1776,7 +1920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定数据目录的详细信息，包括目录名称和描述。传入Name即可查询。</p>
+     * <p>Get data catalog</p>
      * 
      * @param request GetCatalogRequest
      * @return GetCatalogResponse
@@ -1788,10 +1932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the configurations of a connection.</p>
+     * <p>Queries the configuration information of a single connection.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configurations of a connection.</p>
+     * <p>Queries the configuration information of a single connection.</p>
      * 
      * @param request GetConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1823,10 +1967,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the configurations of a connection.</p>
+     * <p>Queries the configuration information of a single connection.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configurations of a connection.</p>
+     * <p>Queries the configuration information of a single connection.</p>
      * 
      * @param request GetConnectionRequest
      * @return GetConnectionResponse
@@ -1887,11 +2031,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the status and operation progress of an EventHouse Runtime.</p>
+     * 
+     * @param request GetEventHouseRuntimeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEventHouseRuntimeResponse
+     */
+    public GetEventHouseRuntimeResponse getEventHouseRuntimeWithOptions(GetEventHouseRuntimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEventHouseRuntime"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEventHouseRuntimeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status and operation progress of an EventHouse Runtime.</p>
+     * 
+     * @param request GetEventHouseRuntimeRequest
+     * @return GetEventHouseRuntimeResponse
+     */
+    public GetEventHouseRuntimeResponse getEventHouseRuntime(GetEventHouseRuntimeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEventHouseRuntimeWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the details of an event stream.</p>
+     * <p>Retrieves the details of an event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an event stream.</p>
+     * <p>Retrieves the details of an event stream.</p>
      * 
      * @param request GetEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1923,10 +2111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the details of an event stream.</p>
+     * <p>Retrieves the details of an event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an event stream.</p>
+     * <p>Retrieves the details of an event stream.</p>
      * 
      * @param request GetEventStreamingRequest
      * @return GetEventStreamingResponse
@@ -1938,7 +2126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定命名空间的详细信息。需传入Catalog和Name。</p>
+     * <p>Get namespace</p>
      * 
      * @param request GetNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1980,7 +2168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定命名空间的详细信息。需传入Catalog和Name。</p>
+     * <p>Get namespace</p>
      * 
      * @param request GetNamespaceRequest
      * @return GetNamespaceResponse
@@ -1992,10 +2180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the details of an event rule.</p>
+     * <p>Gets the details of an event rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an event rule.</p>
+     * <p>Retrieves the details of an event rule.</p>
      * 
      * @param request GetRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2031,10 +2219,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query the details of an event rule.</p>
+     * <p>Gets the details of an event rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an event rule.</p>
+     * <p>Retrieves the details of an event rule.</p>
      * 
      * @param request GetRuleRequest
      * @return GetRuleResponse
@@ -2046,7 +2234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定数据表的完整结构，包括所有列的名称、类型和描述。在编写查询前调用此工具了解表结构。</p>
+     * <p>Get Table</p>
      * 
      * @param request GetTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2092,7 +2280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定数据表的完整结构，包括所有列的名称、类型和描述。在编写查询前调用此工具了解表结构。</p>
+     * <p>Get Table</p>
      * 
      * @param request GetTableRequest
      * @return GetTableResponse
@@ -2104,7 +2292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Agent 列表</p>
+     * <p>Retrieves a list of custom agents.</p>
      * 
      * @param request ListAgentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2144,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询 Agent 列表</p>
+     * <p>Retrieves a list of custom agents.</p>
      * 
      * @param request ListAgentsRequest
      * @return ListAgentsResponse
@@ -2257,7 +2445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出当前Agent可访问的所有数据目录。每个Catalog是一个独立的数据源，内含多个命名空间和表。支持分页。</p>
+     * <p>Query data catalog list</p>
      * 
      * @param request ListCatalogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2293,7 +2481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出当前Agent可访问的所有数据目录。每个Catalog是一个独立的数据源，内含多个命名空间和表。支持分页。</p>
+     * <p>Query data catalog list</p>
      * 
      * @param request ListCatalogsRequest
      * @return ListCatalogsResponse
@@ -2305,10 +2493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query connections.</p>
+     * <p>Queries the list of connection configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries connections.</p>
+     * <p>Queries the list of connection configurations.</p>
      * 
      * @param request ListConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2352,10 +2540,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query connections.</p>
+     * <p>Queries the list of connection configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries connections.</p>
+     * <p>Queries the list of connection configurations.</p>
      * 
      * @param request ListConnectionsRequest
      * @return ListConnectionsResponse
@@ -2424,8 +2612,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the list of EventHouse runtimes.</p>
+     * 
+     * @param request ListEventHouseRuntimesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEventHouseRuntimesResponse
+     */
+    public ListEventHouseRuntimesResponse listEventHouseRuntimesWithOptions(ListEventHouseRuntimesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEventHouseRuntimes"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventHouseRuntimesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the list of EventHouse runtimes.</p>
+     * 
+     * @param request ListEventHouseRuntimesRequest
+     * @return ListEventHouseRuntimesResponse
+     */
+    public ListEventHouseRuntimesResponse listEventHouseRuntimes(ListEventHouseRuntimesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEventHouseRuntimesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>You can call this API operation to query event streams.</p>
+     * <p>Queries event streams.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries event streams.</p>
@@ -2480,7 +2716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query event streams.</p>
+     * <p>Queries event streams.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries event streams.</p>
@@ -2495,7 +2731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出指定数据目录下的所有命名空间。命名空间用于组织同一目录内的表，类似数据库中的schema。支持分页。</p>
+     * <p>Query namespace list</p>
      * 
      * @param request ListNamespacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2535,7 +2771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出指定数据目录下的所有命名空间。命名空间用于组织同一目录内的表，类似数据库中的schema。支持分页。</p>
+     * <p>Query namespace list</p>
      * 
      * @param request ListNamespacesRequest
      * @return ListNamespacesResponse
@@ -2609,7 +2845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出指定命名空间下的数据表，支持按表名模糊搜索。返回表名和描述列表，支持分页。</p>
+     * <p>Query table list</p>
      * 
      * @param request ListTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2653,7 +2889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出指定命名空间下的数据表，支持按表名模糊搜索。返回表名和描述列表，支持分页。</p>
+     * <p>Query table list</p>
      * 
      * @param request ListTablesRequest
      * @return ListTablesResponse
@@ -2725,10 +2961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query custom event sources.</p>
+     * <p>Queries all custom event sources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all custom event sources.</p>
+     * <p>This operation queries all custom event sources.</p>
      * 
      * @param request ListUserDefinedEventSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2772,10 +3008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query custom event sources.</p>
+     * <p>Queries all custom event sources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all custom event sources.</p>
+     * <p>This operation queries all custom event sources.</p>
      * 
      * @param request ListUserDefinedEventSourcesRequest
      * @return ListUserDefinedEventSourcesResponse
@@ -2787,10 +3023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to stop an event stream that is running.</p>
+     * <p>Pauses a running event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops an event stream that is running.</p>
+     * <p>Pauses a running event stream.</p>
      * 
      * @param request PauseEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2822,10 +3058,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to stop an event stream that is running.</p>
+     * <p>Pauses a running event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Stops an event stream that is running.</p>
+     * <p>Pauses a running event stream.</p>
      * 
      * @param request PauseEventStreamingRequest
      * @return PauseEventStreamingResponse
@@ -2837,7 +3073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</p>
+     * <p>Polls for natural language query results.</p>
      * 
      * @param request PollAskResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2873,7 +3109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</p>
+     * <p>Polls for natural language query results.</p>
      * 
      * @param request PollAskResultRequest
      * @return PollAskResultResponse
@@ -2885,10 +3121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create or update event targets under a rule.</p>
+     * <p>Creates or updates event targets for a specified rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates or updates event targets under a rule.</p>
+     * <p>Create or update event targets for the specified rule.</p>
      * 
      * @param tmpReq PutTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2934,10 +3170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create or update event targets under a rule.</p>
+     * <p>Creates or updates event targets for a specified rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates or updates event targets under a rule.</p>
+     * <p>Create or update event targets for the specified rule.</p>
      * 
      * @param request PutTargetsRequest
      * @return PutTargetsResponse
@@ -2949,7 +3185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史会话</p>
+     * <p>Queries the history logs of natural language queries.</p>
      * 
      * @param request QueryAskLumaLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2989,7 +3225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史会话</p>
+     * <p>Queries the history logs of natural language queries.</p>
      * 
      * @param request QueryAskLumaLogRequest
      * @return QueryAskLumaLogResponse
@@ -3059,7 +3295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>直接执行SQL语句查询事件仓数据。适用于已知确切SQL的场景，无需自然语言转换，无对话上下文。返回结构化结果集。</p>
+     * <p>Query event store data</p>
      * 
      * @param request QueryEventHouseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3095,7 +3331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>直接执行SQL语句查询事件仓数据。适用于已知确切SQL的场景，无需自然语言转换，无对话上下文。返回结构化结果集。</p>
+     * <p>Query event store data</p>
      * 
      * @param request QueryEventHouseRequest
      * @return QueryEventHouseResponse
@@ -3219,10 +3455,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query event traces by time range.</p>
+     * <p>Queries for event traces within a specified time range.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries event traces by time range.</p>
+     * <p>This operation queries <code>event trace</code> data within a <code>time range</code>.</p>
      * 
      * @param request QueryTracedEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3286,10 +3522,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query event traces by time range.</p>
+     * <p>Queries for event traces within a specified time range.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries event traces by time range.</p>
+     * <p>This operation queries <code>event trace</code> data within a <code>time range</code>.</p>
      * 
      * @param request QueryTracedEventsRequest
      * @return QueryTracedEventsResponse
@@ -3301,10 +3537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to enable a created or deactivated event stream.</p>
+     * <p>Enables a created or disabled event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a created or deactivated event stream.</p>
+     * <p>Enables a created or disabled event stream.</p>
      * 
      * @param request StartEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3336,10 +3572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to enable a created or deactivated event stream.</p>
+     * <p>Enables a created or disabled event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a created or deactivated event stream.</p>
+     * <p>Enables a created or disabled event stream.</p>
      * 
      * @param request StartEventStreamingRequest
      * @return StartEventStreamingResponse
@@ -3351,10 +3587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to check whether the event pattern matches the provided JSON format.</p>
+     * <p>Use this action to test an event pattern before you apply it to a rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether the event pattern matches the provided JSON format.</p>
+     * <p>Tests if an event pattern matches a given event.</p>
      * 
      * @param request TestEventPatternRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3390,10 +3626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to check whether the event pattern matches the provided JSON format.</p>
+     * <p>Use this action to test an event pattern before you apply it to a rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether the event pattern matches the provided JSON format.</p>
+     * <p>Tests if an event pattern matches a given event.</p>
      * 
      * @param request TestEventPatternRequest
      * @return TestEventPatternResponse
@@ -3405,10 +3641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query all custom event sources.</p>
+     * <p>Returns a list of all external event sources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether event source configurations are available.</p>
+     * <p>Checks whether the event source configuration is active.</p>
      * 
      * @param tmpReq TestEventSourceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3446,10 +3682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to query all custom event sources.</p>
+     * <p>Returns a list of all external event sources.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether event source configurations are available.</p>
+     * <p>Checks whether the event source configuration is active.</p>
      * 
      * @param request TestEventSourceConfigRequest
      * @return TestEventSourceConfigResponse
@@ -3461,7 +3697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史会话</p>
+     * <p>Updates a custom agent.</p>
      * 
      * @param tmpReq UpdateAgentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3515,7 +3751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询历史会话</p>
+     * <p>Updates a custom agent.</p>
      * 
      * @param request UpdateAgentRequest
      * @return UpdateAgentResponse
@@ -3595,10 +3831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to update a connection.</p>
+     * <p>Updates the connection configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a connection.</p>
+     * <p>Updates the connection configuration.</p>
      * 
      * @param tmpReq UpdateConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3664,10 +3900,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to update a connection.</p>
+     * <p>Updates the connection configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates a connection.</p>
+     * <p>Updates the connection configuration.</p>
      * 
      * @param request UpdateConnectionRequest
      * @return UpdateConnectionResponse
@@ -3729,6 +3965,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEventBusResponse updateEventBus(UpdateEventBusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEventBusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an EventHouse Runtime.</p>
+     * 
+     * @param request UpdateEventHouseRuntimeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEventHouseRuntimeResponse
+     */
+    public UpdateEventHouseRuntimeResponse updateEventHouseRuntimeWithOptions(UpdateEventHouseRuntimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cu)) {
+            query.put("Cu", request.cu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEventHouseRuntime"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEventHouseRuntimeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an EventHouse Runtime.</p>
+     * 
+     * @param request UpdateEventHouseRuntimeRequest
+     * @return UpdateEventHouseRuntimeResponse
+     */
+    public UpdateEventHouseRuntimeResponse updateEventHouseRuntime(UpdateEventHouseRuntimeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateEventHouseRuntimeWithOptions(request, runtime);
     }
 
     /**
@@ -3873,10 +4157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
      * 
      * @param tmpReq UpdateEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3915,6 +4199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FilterPattern", request.filterPattern);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
+            body.put("Metadata", request.metadata);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.runOptionsShrink)) {
             body.put("RunOptions", request.runOptionsShrink);
         }
@@ -3950,10 +4238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * <p>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</p>
      * 
      * @param request UpdateEventStreamingRequest
      * @return UpdateEventStreamingResponse
@@ -3964,8 +4252,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the billing method, compute unit (CU) resources, and other configurations of an event stream.</p>
+     * 
      * <b>summary</b> : 
-     * <p>This API operation allows you to query event streams.</p>
+     * <p>Querying an event stream</p>
      * 
      * @param request UpdateEventStreamingBusinessOptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4008,8 +4299,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the billing method, compute unit (CU) resources, and other configurations of an event stream.</p>
+     * 
      * <b>summary</b> : 
-     * <p>This API operation allows you to query event streams.</p>
+     * <p>Querying an event stream</p>
      * 
      * @param request UpdateEventStreamingBusinessOptionRequest
      * @return UpdateEventStreamingBusinessOptionResponse
@@ -4021,7 +4315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改命名空间</p>
+     * <p>Modify namespace</p>
      * 
      * @param request UpdateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4067,7 +4361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改命名空间</p>
+     * <p>Modify namespace</p>
      * 
      * @param request UpdateNamespaceRequest
      * @return UpdateNamespaceResponse
@@ -4144,8 +4438,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of an event rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改表</p>
+     * <p>Update table</p>
      * 
      * @param tmpReq UpdateTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4242,8 +4539,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of an event rule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改表</p>
+     * <p>Update table</p>
      * 
      * @param request UpdateTableRequest
      * @return UpdateTableResponse

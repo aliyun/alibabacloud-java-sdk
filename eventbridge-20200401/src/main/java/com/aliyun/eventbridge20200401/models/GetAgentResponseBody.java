@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
     /**
+     * <p>The API status or POP error code. Valid values: Success: succeeded.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class GetAgentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class GetAgentResponseBody extends TeaModel {
     public Agent data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
      */
@@ -26,6 +32,8 @@ public class GetAgentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E0FFAB67-XXXXXX-CAD4D37448C4</p>
      */
@@ -33,6 +41,8 @@ public class GetAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returns true if the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

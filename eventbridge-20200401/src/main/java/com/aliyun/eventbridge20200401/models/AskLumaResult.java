@@ -5,22 +5,38 @@ import com.aliyun.tea.*;
 
 public class AskLumaResult extends TeaModel {
     /**
+     * <p>Whether clarification is needed</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("ClarificationNeeded")
     public Boolean clarificationNeeded;
 
+    /**
+     * <p>Clarification question text</p>
+     * 
+     * <strong>example:</strong>
+     * <p>您指的是哪个数据库中的员工表？</p>
+     */
     @NameInMap("ClarificationQuestion")
     public String clarificationQuestion;
 
+    /**
+     * <p>Query constraints</p>
+     */
     @NameInMap("Constraints")
     public Constraints constraints;
 
+    /**
+     * <p>Structured result body</p>
+     */
     @NameInMap("Content")
     public Content content;
 
     /**
+     * <p>Conversation identifier, used for multi-turn follow-up questions</p>
+     * 
      * <strong>example:</strong>
      * <p>conv_xxx</p>
      */
@@ -28,6 +44,8 @@ public class AskLumaResult extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>ExecutionFailed, Timeout, RateLimited, InternalError, ConversationExpired</p>
      */
@@ -35,6 +53,8 @@ public class AskLumaResult extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error details</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
      */
@@ -42,6 +62,8 @@ public class AskLumaResult extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>Whether it is an error. false = query succeeded or clarification (including empty result set); true = execution failed / timeout / rate limited / internal error</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -49,6 +71,8 @@ public class AskLumaResult extends TeaModel {
     public Boolean isError;
 
     /**
+     * <p>Message identifier, used for PollAskResult polling</p>
+     * 
      * <strong>example:</strong>
      * <p>msg_xxx</p>
      */
@@ -56,6 +80,8 @@ public class AskLumaResult extends TeaModel {
     public String messageId;
 
     /**
+     * <p>Execution status</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING, SUCCEEDED, FAILED, TIMEOUT</p>
      */
@@ -63,6 +89,8 @@ public class AskLumaResult extends TeaModel {
     public String status;
 
     /**
+     * <p>Whether the result was truncated due to exceeding the storage limit. Only appears in large result set scenarios</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

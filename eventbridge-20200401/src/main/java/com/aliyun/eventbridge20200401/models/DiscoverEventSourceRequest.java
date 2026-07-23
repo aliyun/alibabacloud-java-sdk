@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class DiscoverEventSourceRequest extends TeaModel {
+    /**
+     * <p>The MySQL source parameters.</p>
+     */
     @NameInMap("SourceMySQLParameters")
     public DiscoverEventSourceRequestSourceMySQLParameters sourceMySQLParameters;
 
@@ -22,6 +25,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
 
     public static class DiscoverEventSourceRequestSourceMySQLParameters extends TeaModel {
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>database1</p>
          */
@@ -29,6 +34,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>The database endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-xxx.mysql.rds.aliyuncs.com</p>
          */
@@ -36,6 +43,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String hostName;
 
         /**
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -43,6 +52,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String limit;
 
         /**
+         * <p>The network type.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrivateNetwork</p>
          */
@@ -50,6 +61,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String networkType;
 
         /**
+         * <p>The offset for paging the query results.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -57,6 +70,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String offset;
 
         /**
+         * <p>The database password.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234xxx</p>
          */
@@ -64,6 +79,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The connection port of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -71,6 +88,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -78,6 +97,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-bp1ic0vsbwyv176e9inx</p>
          */
@@ -85,6 +106,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The name of the database table. The database name must be added as a prefix in the ${DatabaseName}.${TableName} format.</p>
+         * 
          * <strong>example:</strong>
          * <p>database1.table1</p>
          */
@@ -92,6 +115,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The database username.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1</p>
          */
@@ -99,6 +124,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String user;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-gw824tpaptxtlo256lqub</p>
          */
@@ -106,6 +133,8 @@ public class DiscoverEventSourceRequest extends TeaModel {
         public String vSwitchIds;
 
         /**
+         * <p>The ID of the Virtual Private Cloud (VPC).</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf6hwiei8u5uil3bfahc1</p>
          */

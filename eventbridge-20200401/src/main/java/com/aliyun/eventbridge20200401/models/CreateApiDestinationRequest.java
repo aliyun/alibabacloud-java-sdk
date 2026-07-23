@@ -17,7 +17,7 @@ public class CreateApiDestinationRequest extends TeaModel {
     /**
      * <p>The name of the connection. The name must be 2 to 127 characters in length.</p>
      * <blockquote>
-     * <p> Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
+     * <p>Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,6 +29,9 @@ public class CreateApiDestinationRequest extends TeaModel {
 
     /**
      * <p>The description of the API destination. The description can be up to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description of the connection configuration</p>
      */
     @NameInMap("Description")
     public String description;
@@ -91,12 +94,18 @@ public class CreateApiDestinationRequest extends TeaModel {
         /**
          * <p>The HTTP request method. Valid values:</p>
          * <ul>
-         * <li>GET</li>
-         * <li>POST</li>
-         * <li>HEAD</li>
-         * <li>DELETE</li>
-         * <li>PUT</li>
-         * <li>PATCH</li>
+         * <li><p>GET</p>
+         * </li>
+         * <li><p>POST</p>
+         * </li>
+         * <li><p>HEAD</p>
+         * </li>
+         * <li><p>DELETE</p>
+         * </li>
+         * <li><p>PUT</p>
+         * </li>
+         * <li><p>PATCH</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

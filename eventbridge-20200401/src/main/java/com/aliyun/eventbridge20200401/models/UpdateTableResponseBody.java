@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTableResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateTableResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Returned data</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;TableARN&quot;:&quot;acs:eventbridge:cn-hangzhou:123456789:catalog/my_catalog/namespace/my_namespace/table/my_table&quot;}</p>
      */
@@ -19,6 +23,8 @@ public class UpdateTableResponseBody extends TeaModel {
     public UpdateTableResponseBodyData data;
 
     /**
+     * <p>API return message</p>
+     * 
      * <strong>example:</strong>
      * <p>Operation success</p>
      */
@@ -26,6 +32,8 @@ public class UpdateTableResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
      */
@@ -33,6 +41,8 @@ public class UpdateTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -86,6 +96,8 @@ public class UpdateTableResponseBody extends TeaModel {
 
     public static class UpdateTableResponseBodyData extends TeaModel {
         /**
+         * <p>Table ARN</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:eventbridge:cn-hangzhou:123456789:catalog/my_catalog/namespace/my_namespace/table/my_table</p>
          */

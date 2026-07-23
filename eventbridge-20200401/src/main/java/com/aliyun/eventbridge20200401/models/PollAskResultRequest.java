@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PollAskResultRequest extends TeaModel {
     /**
+     * <p>The name of the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class PollAskResultRequest extends TeaModel {
     public String agentName;
 
     /**
+     * <p>The message ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

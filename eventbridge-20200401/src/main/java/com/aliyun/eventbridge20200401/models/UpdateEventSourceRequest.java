@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateEventSourceRequest extends TeaModel {
     /**
      * <p>The description of the event source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RabbitMQ event source</p>
      */
     @NameInMap("Description")
     public String description;
@@ -338,7 +341,7 @@ public class UpdateEventSourceRequest extends TeaModel {
          * <p>The ID of the Message Queue for Apache Kafka instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>cbwp-bp1o3m66wcjgbkssm3k5m</p>
+         * <p>cbwp-bp1o3m66wcjgbkssm3****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -383,7 +386,7 @@ public class UpdateEventSourceRequest extends TeaModel {
          * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required only if you set Network to PublicNetwork.</p>
          * 
          * <strong>example:</strong>
-         * <p>sg-5wz3mjgo9wpvdnwpwnhkjdjwn</p>
+         * <p>sg-5wz3mjgo9wpvdnwpwnhkj****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -401,7 +404,7 @@ public class UpdateEventSourceRequest extends TeaModel {
          * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required only if you set Network to PublicNetwork.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp1xyntcxiwplhqxjybuk</p>
+         * <p>vsw-bp1xyntcxiwplhqxj****</p>
          */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
@@ -410,7 +413,7 @@ public class UpdateEventSourceRequest extends TeaModel {
          * <p>The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required only if you set Network to PublicNetwork.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-2zefu4vfmx6siogujmo0b</p>
+         * <p>vpc-2zefu4vfmx6sioguj****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -659,7 +662,7 @@ public class UpdateEventSourceRequest extends TeaModel {
          * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>bastionhost-cn-7mz2zkyff09</p>
+         * <p>bastionhost-cn-7mz2zky****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -762,7 +765,7 @@ public class UpdateEventSourceRequest extends TeaModel {
          * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>dbaudit-cn-i7m2nx2or01</p>
+         * <p>dbaudit-cn-i7m2nx****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -829,7 +832,7 @@ public class UpdateEventSourceRequest extends TeaModel {
          * <p>The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-bp1a4gmlk31hyg6ptl3ss</p>
+         * <p>vpc-bp1a4gmlk31hyg6pt****</p>
          */
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;

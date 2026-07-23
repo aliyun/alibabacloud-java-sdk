@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListAgentsResponseBody extends TeaModel {
     /**
+     * <p>The API status code or POP error code. Valid values: Success: The operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListAgentsResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Failed to list agents</p>
      */
@@ -22,6 +29,8 @@ public class ListAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID. Alibaba Cloud generates a unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7DA60DED-CD36-5837-B848-C01A23D2****</p>
      */
@@ -29,6 +38,8 @@ public class ListAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returns true if the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,10 +92,15 @@ public class ListAgentsResponseBody extends TeaModel {
     }
 
     public static class ListAgentsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of agents.</p>
+         */
         @NameInMap("Agents")
         public java.util.List<Agent> agents;
 
         /**
+         * <p>The ID of the first record.</p>
+         * 
          * <strong>example:</strong>
          * <p>uat-agent</p>
          */
@@ -92,6 +108,14 @@ public class ListAgentsResponseBody extends TeaModel {
         public String firstId;
 
         /**
+         * <p>Indicates whether more pages are available. Valid values:</p>
+         * <ul>
+         * <li><p>true: More pages are available.</p>
+         * </li>
+         * <li><p>false: No more pages are available.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -99,6 +123,8 @@ public class ListAgentsResponseBody extends TeaModel {
         public String hasMore;
 
         /**
+         * <p>The ID of the last record.</p>
+         * 
          * <strong>example:</strong>
          * <p>last-agent</p>
          */

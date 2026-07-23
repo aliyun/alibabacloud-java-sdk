@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTableShrinkRequest extends TeaModel {
     /**
-     * <p>表所属的数据目录名称。可通过 ListCatalogs 获取已有目录列表</p>
+     * <p>The data catalog to which the table belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -14,7 +14,7 @@ public class CreateTableShrinkRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>用于保证请求幂等性的Token，防止因网络重试导致重复创建。建议使用 UUID</p>
+     * <p>The idempotency token.</p>
      * 
      * <strong>example:</strong>
      * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -23,7 +23,7 @@ public class CreateTableShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>表的列定义（JSON 数组）。每列包含 Name（列名，必填）、Type（数据类型，必填，如 STRING、INT32、INT64、FLOAT、DOUBLE、BOOLEAN、TIMESTAMP）、Comment（列备注，选填）</p>
+     * <p>The column definitions.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</p>
@@ -32,7 +32,7 @@ public class CreateTableShrinkRequest extends TeaModel {
     public String columnsShrink;
 
     /**
-     * <p>表的备注描述信息，无格式限制</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>测试事件表</p>
@@ -41,7 +41,7 @@ public class CreateTableShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>事件表名称。以字母或数字开头，支持字母、数字、下划线和短横线，长度1~127。在同一命名空间下唯一</p>
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateTableShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>表所属的命名空间名称。可通过 ListNamespaces 获取已有命名空间列表</p>
+     * <p>The namespace to which the table belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>my_namespace</p>
@@ -60,7 +60,7 @@ public class CreateTableShrinkRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>数据保留策略（JSON 对象）。包含 HotTTL（热数据保留天数，高性能查询）和 ColdTTL（冷数据保留天数，低成本存储）。不传则使用系统默认值</p>
+     * <p>The data retention policy.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;HotTTL&quot;:7,&quot;ColdTTL&quot;:30}</p>

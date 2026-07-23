@@ -15,7 +15,7 @@ public class GetRuleRequest extends TeaModel {
     public String eventBusName;
 
     /**
-     * <p>The name of the event rule.</p>
+     * <p>The name of the rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

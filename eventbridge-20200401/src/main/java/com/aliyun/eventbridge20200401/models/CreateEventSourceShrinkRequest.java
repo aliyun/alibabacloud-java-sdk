@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class CreateEventSourceShrinkRequest extends TeaModel {
     /**
      * <p>The description of the event source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RabbitMQ event source</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the event bus with which the event source is associated.</p>
+     * <p>The name of the event bus associated with the event source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +34,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public String eventSourceName;
 
     /**
-     * <p>The configurations of the external data source.</p>
+     * <p>The configuration of the external data source.</p>
      */
     @NameInMap("ExternalSourceConfig")
     public String externalSourceConfigShrink;
@@ -46,7 +49,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public byte[] externalSourceType;
 
     /**
-     * <p>Specify whether to connect to an external data source.</p>
+     * <p>Specifies whether to connect to an external data source.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -55,46 +58,49 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public Boolean linkedExternalSource;
 
     /**
-     * <p>The parameters that are configured if the event source is HTTP events.</p>
+     * <p>Parameters for an HTTP endpoint event source.</p>
      */
     @NameInMap("SourceHttpEventParameters")
     public String sourceHttpEventParametersShrink;
 
     /**
-     * <p>The parameters that are configured if the event source is Message Queue for Apache Kafka.</p>
+     * <p>Parameters for the Message Queue for Apache Kafka event source.</p>
      */
     @NameInMap("SourceKafkaParameters")
     public String sourceKafkaParametersShrink;
 
     /**
-     * <p>The parameters that are configured if you specify Simple Message Queue (formerly MNS) (SMQ) as the event source. If you specify SMQ as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</p>
+     * <p>Parameters for the Message Service (MNS) event source. The <code>RegionId</code>, <code>IsBase64Decode</code>, and <code>QueueName</code> parameters are required for this type.</p>
      */
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;
 
+    /**
+     * <p>Parameters for the Object Storage Service (OSS) event source.</p>
+     */
     @NameInMap("SourceOSSEventParameters")
     public String sourceOSSEventParametersShrink;
 
     /**
-     * <p>The parameters that are configured if the event source is Message Queue for RabbitMQ.</p>
+     * <p>Parameters for the Message Queue for RabbitMQ event source.</p>
      */
     @NameInMap("SourceRabbitMQParameters")
     public String sourceRabbitMQParametersShrink;
 
     /**
-     * <p>The parameters that are configured if the event source is Message Queue for Apache RocketMQ.</p>
+     * <p>Parameters for the Message Queue for Apache RocketMQ event source.</p>
      */
     @NameInMap("SourceRocketMQParameters")
     public String sourceRocketMQParametersShrink;
 
     /**
-     * <p>The parameters that are configured if the event source is Log Service.</p>
+     * <p>Parameters for the Simple Log Service (SLS) event source.</p>
      */
     @NameInMap("SourceSLSParameters")
     public String sourceSLSParametersShrink;
 
     /**
-     * <p>The parameters that are configured if you specify scheduled events as the event source.</p>
+     * <p>Parameters for a scheduled event source.</p>
      */
     @NameInMap("SourceScheduledEventParameters")
     public String sourceScheduledEventParametersShrink;

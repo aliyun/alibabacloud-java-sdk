@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListNamespacesResponseBody extends TeaModel {
     /**
+     * <p>Response code. 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("Data")
     public ListNamespacesResponseBodyData data;
 
     /**
+     * <p>Response message</p>
+     * 
      * <strong>example:</strong>
      * <p>Operation success</p>
      */
@@ -22,6 +29,8 @@ public class ListNamespacesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
      */
@@ -29,6 +38,8 @@ public class ListNamespacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the operation succeeded</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -81,10 +92,15 @@ public class ListNamespacesResponseBody extends TeaModel {
     }
 
     public static class ListNamespacesResponseBodyData extends TeaModel {
+        /**
+         * <p>Namespace list</p>
+         */
         @NameInMap("Namespaces")
         public java.util.List<Namespace> namespaces;
 
         /**
+         * <p>Next page token</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -92,6 +108,8 @@ public class ListNamespacesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
+         * <p>Total count</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -36,7 +36,7 @@ public class ListRulesResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>C7043799-F4DA-5290-9249-97C359876D97</p>
+     * <p>C7043799-F4DA-5290-9249-97C35987****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -122,7 +122,7 @@ public class ListRulesResponseBody extends TeaModel {
          * <p>The ID of the custom event target.</p>
          * 
          * <strong>example:</strong>
-         * <p>177</p>
+         * <p>Mlm123456JHd2Rs****</p>
          */
         @NameInMap("Id")
         public String id;
@@ -131,7 +131,7 @@ public class ListRulesResponseBody extends TeaModel {
          * <p>The transformer that is used to push events.</p>
          * 
          * <strong>example:</strong>
-         * <p>MATCHED_EVENT</p>
+         * <p>PARAM_TRANSFORMER</p>
          */
         @NameInMap("PushSelector")
         public String pushSelector;

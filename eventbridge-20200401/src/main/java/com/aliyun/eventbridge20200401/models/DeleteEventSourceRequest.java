@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventSourceRequest extends TeaModel {
+    /**
+     * <p>The event bus to which the event source is attached.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 

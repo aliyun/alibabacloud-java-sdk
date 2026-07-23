@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentResponseBody extends TeaModel {
     /**
+     * <p>The API status or POP error code. Valid values:</p>
+     * <ul>
+     * <li>Success: the operation is successful.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AgentNotFound</p>
      */
@@ -12,6 +17,8 @@ public class DeleteAgentResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
      */
@@ -19,6 +26,8 @@ public class DeleteAgentResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B896B484-F16D-59DE-9E23-DD0E5C361108</p>
      */

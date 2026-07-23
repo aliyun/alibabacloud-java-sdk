@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryAskLumaLogRequest extends TeaModel {
     /**
+     * <p>The cursor. Set this parameter to the messageId of the last entry on the previous page.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJ0cyI6MTcxN...</p>
      */
@@ -12,6 +14,8 @@ public class QueryAskLumaLogRequest extends TeaModel {
     public String after;
 
     /**
+     * <p>The agent name. If this parameter is not specified, logs of all agents are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>demo-luma-agent</p>
      */
@@ -19,6 +23,8 @@ public class QueryAskLumaLogRequest extends TeaModel {
     public String agentName;
 
     /**
+     * <p>The number of entries to return. Default value: 20. Maximum value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Table extends TeaModel {
     /**
-     * <p>表所属的数据目录名称</p>
+     * <p>The name of the data catalog to which the table belongs</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -14,7 +14,7 @@ public class Table extends TeaModel {
     public String catalog;
 
     /**
-     * <p>表的列定义列表。每列包含 Name（列名）、Type（数据类型）、Comment（备注）</p>
+     * <p>The column definition list of the table. Each column contains Name (column name), Type (data type), and Comment (remarks)</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</p>
@@ -23,7 +23,7 @@ public class Table extends TeaModel {
     public java.util.List<TableColumns> columns;
 
     /**
-     * <p>表的备注描述信息</p>
+     * <p>Comment description of the table</p>
      * 
      * <strong>example:</strong>
      * <p>测试事件表</p>
@@ -32,7 +32,7 @@ public class Table extends TeaModel {
     public String comment;
 
     /**
-     * <p>表的创建时间（Unix 时间戳，毫秒）</p>
+     * <p>The creation time of the table (Unix timestamp, in milliseconds)</p>
      * 
      * <strong>example:</strong>
      * <p>1717948800000</p>
@@ -41,7 +41,7 @@ public class Table extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>事件表的唯一标识名称</p>
+     * <p>The unique identifier name of the event table</p>
      * 
      * <strong>example:</strong>
      * <p>my_table</p>
@@ -50,7 +50,7 @@ public class Table extends TeaModel {
     public String name;
 
     /**
-     * <p>表所属的命名空间名称</p>
+     * <p>The name of the namespace to which the table belongs</p>
      * 
      * <strong>example:</strong>
      * <p>my_namespace</p>
@@ -59,13 +59,13 @@ public class Table extends TeaModel {
     public String namespace;
 
     /**
-     * <p>数据保留策略。包含热数据和冷数据的保留天数</p>
+     * <p>Data retention policy. Includes the retention days for hot data and cold data</p>
      */
     @NameInMap("RetentionPolicy")
     public TableRetentionPolicy retentionPolicy;
 
     /**
-     * <p>表的最后更新时间（Unix 时间戳，毫秒）</p>
+     * <p>The last update time of the table (Unix timestamp, in milliseconds)</p>
      * 
      * <strong>example:</strong>
      * <p>1717948800000</p>
@@ -197,7 +197,7 @@ public class Table extends TeaModel {
 
     public static class TableRetentionPolicy extends TeaModel {
         /**
-         * <p>冷数据保留天数，低成本归档存储</p>
+         * <p>Retention days for cold data, used for low-cost archival storage</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -206,7 +206,7 @@ public class Table extends TeaModel {
         public Integer coldTTL;
 
         /**
-         * <p>热数据保留天数，高性能查询存储</p>
+         * <p>Retention days for hot data, used for high-performance query storage</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

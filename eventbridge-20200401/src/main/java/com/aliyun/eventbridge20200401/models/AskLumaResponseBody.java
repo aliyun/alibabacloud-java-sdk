@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AskLumaResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>AgentNotFound</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response body.</p>
+     */
     @NameInMap("Data")
     public AskLumaResult data;
 
     /**
+     * <p>The error message. This value is null if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</p>
      */
@@ -22,6 +29,8 @@ public class AskLumaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>97FB3BAE-XXXXXX-36435495B7EB</p>
      */
@@ -29,6 +38,8 @@ public class AskLumaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAgentsRequest extends TeaModel {
     /**
+     * <p>The name of the agent from which the next page of results starts.</p>
+     * 
      * <strong>example:</strong>
      * <p>my-agent</p>
      */
@@ -12,6 +14,8 @@ public class ListAgentsRequest extends TeaModel {
     public String after;
 
     /**
+     * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +23,12 @@ public class ListAgentsRequest extends TeaModel {
     public String limit;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>desc</li>
+     * <li>asc.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>acs</p>
      */

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListEventStreamingsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. A maximum of 100 entries can be returned in a call.</p>
+     * <p>The maximum number of entries returned per request. You can use this parameter together with NextToken to implement paging.</p>
+     * <blockquote>
+     * <p>Notice: The maximum number of entries returned per request cannot exceed 100.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +17,7 @@ public class ListEventStreamingsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The name of the event stream that you want to query.</p>
+     * <p>The name prefix of the event stream.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -23,7 +26,7 @@ public class ListEventStreamingsRequest extends TeaModel {
     public String namePrefix;
 
     /**
-     * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+     * <p>If the number of entries exceeds the value of Limit, a NextToken is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,11 +44,14 @@ public class ListEventStreamingsRequest extends TeaModel {
     public String sinkArn;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+     * <p>The ARN of the event source.</p>
      */
     @NameInMap("SourceArn")
     public String sourceArn;
 
+    /**
+     * <p>The tags used for filtering.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListEventStreamingsRequestTags> tags;
 
@@ -104,6 +110,8 @@ public class ListEventStreamingsRequest extends TeaModel {
 
     public static class ListEventStreamingsRequestTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>mns</p>
          */
@@ -111,6 +119,8 @@ public class ListEventStreamingsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>mnstest</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Namespace extends TeaModel {
     /**
-     * <p>命名空间所属的数据目录名称</p>
+     * <p>The name of the data catalog to which the namespace belongs</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class Namespace extends TeaModel {
     public String catalog;
 
     /**
-     * <p>命名空间的备注描述信息</p>
+     * <p>The description information of the namespace</p>
      * 
      * <strong>example:</strong>
      * <p>测试命名空间</p>
@@ -24,7 +24,7 @@ public class Namespace extends TeaModel {
     public String comment;
 
     /**
-     * <p>命名空间的唯一标识名称</p>
+     * <p>The unique identifier name of the namespace</p>
      * 
      * <strong>example:</strong>
      * <p>my_namespace</p>
@@ -33,7 +33,7 @@ public class Namespace extends TeaModel {
     public String name;
 
     /**
-     * <p>命名空间的扩展属性</p>
+     * <p>The extended properties of the namespace</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;:&quot;value&quot;}</p>

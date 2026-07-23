@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SinkApiDestinationParameters extends TeaModel {
+    /**
+     * <p>The parameters for the HTTP request body, specified as key-value pairs.</p>
+     */
     @NameInMap("BodyParameters")
     public SinkApiDestinationParametersBodyParameters bodyParameters;
 
+    /**
+     * <p>The custom HTTP header parameters to add to the request, specified as key-value pairs.</p>
+     */
     @NameInMap("HeaderParameters")
     public SinkApiDestinationParametersHeaderParameters headerParameters;
 
+    /**
+     * <p>The name of the API destination.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The query string parameters to add to the endpoint URL, specified as key-value pairs.</p>
+     */
     @NameInMap("QueryStringParameters")
     public SinkApiDestinationParametersQueryStringParameters queryStringParameters;
 
+    /**
+     * <p>The timeout for the API call, in seconds. If the endpoint does not respond within this period, the call fails. The valid range is 1 to 60.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 
@@ -65,12 +80,21 @@ public class SinkApiDestinationParameters extends TeaModel {
     }
 
     public static class SinkApiDestinationParametersBodyParameters extends TeaModel {
+        /**
+         * <p>Defines how the parameter\&quot;s value is created. Use <code>CONSTANT</code> to specify a static string in the <code>value</code> field. Use <code>JSONPATH</code> to extract data from the event payload with a JSONPath expression in the <code>value</code> field. Use <code>TEMPLATE</code> to build the value from the <code>template</code> field.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template to use to build the parameter value. This field is used only when the <code>form</code> is set to <code>TEMPLATE</code>. You can use variables, such as <code>${event.id}</code>, in the template to reference event data.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The static value or JSONPath expression for the parameter. This field applies only when the <code>form</code> is set to <code>CONSTANT</code> or <code>JSONPATH</code>.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -106,12 +130,21 @@ public class SinkApiDestinationParameters extends TeaModel {
     }
 
     public static class SinkApiDestinationParametersHeaderParameters extends TeaModel {
+        /**
+         * <p>Defines how the parameter\&quot;s value is created. Use <code>CONSTANT</code> to specify a static string in the <code>value</code> field. Use <code>JSONPATH</code> to extract data from the event payload with a JSONPath expression in the <code>value</code> field. Use <code>TEMPLATE</code> to build the value from the <code>template</code> field.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template to use to build the parameter value. This field is used only when the <code>form</code> is set to <code>TEMPLATE</code>. You can use variables, such as <code>${event.id}</code>, in the template to reference event data.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The static value or JSONPath expression for the parameter. This field applies only when the <code>form</code> is set to <code>CONSTANT</code> or <code>JSONPATH</code>.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -147,12 +180,21 @@ public class SinkApiDestinationParameters extends TeaModel {
     }
 
     public static class SinkApiDestinationParametersQueryStringParameters extends TeaModel {
+        /**
+         * <p>Defines how the parameter\&quot;s value is created. Use <code>CONSTANT</code> to specify a static string in the <code>value</code> field. Use <code>JSONPATH</code> to extract data from the event payload with a JSONPath expression in the <code>value</code> field. Use <code>TEMPLATE</code> to build the value from the <code>template</code> field.</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template to use to build the parameter value. This field is used only when the <code>form</code> is set to <code>TEMPLATE</code>. You can use variables, such as <code>${event.id}</code>, in the template to reference event data.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The static value or JSONPath expression for the parameter. This field applies only when the <code>form</code> is set to <code>CONSTANT</code> or <code>JSONPATH</code>.</p>
+         */
         @NameInMap("Value")
         public String value;
 

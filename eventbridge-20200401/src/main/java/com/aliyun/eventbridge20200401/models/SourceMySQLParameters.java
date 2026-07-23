@@ -4,42 +4,81 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SourceMySQLParameters extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The hostname or IP address of the database server.</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>Indicates whether to include schema changes.</p>
+     */
     @NameInMap("IncludeSchemaChanges")
     public String includeSchemaChanges;
 
+    /**
+     * <p>The network type.</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The password for the user.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The database server port.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The ID of the region that contains the data source.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the security group.</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The snapshot mode.</p>
+     */
     @NameInMap("SnapshotMode")
     public String snapshotMode;
 
+    /**
+     * <p>The names of tables to synchronize. Separate multiple table names with a comma.</p>
+     */
     @NameInMap("TableNames")
     public String tableNames;
 
+    /**
+     * <p>The database username.</p>
+     */
     @NameInMap("User")
     public String user;
 
+    /**
+     * <p>The VSwitch IDs. Separate multiple IDs with a comma.</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>The ID of the VPC.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

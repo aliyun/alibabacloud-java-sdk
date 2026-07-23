@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTablesRequest extends TeaModel {
     /**
-     * <p>表所属的数据目录名称。可通过 ListCatalogs 获取</p>
+     * <p>Data catalog</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -14,7 +14,7 @@ public class ListTablesRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>每页返回的最大数据条数。不传时默认 10，最大 100</p>
+     * <p>Items per page</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListTablesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>表所属的命名空间名称。可通过 ListNamespaces 获取</p>
+     * <p>Namespace</p>
      * 
      * <strong>example:</strong>
      * <p>my_namespace</p>
@@ -32,7 +32,7 @@ public class ListTablesRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>分页查询的起始Token。首次查询不传或传 &quot;0&quot;；后续翻页使用上一次响应中返回的 NextToken 值</p>
+     * <p>Pagination token</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

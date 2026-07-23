@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTracedEventsRequest extends TeaModel {
     /**
-     * <p>The end of the time range when event traces are queried. Unit: milliseconds.</p>
+     * <p>The end of the time range for the query, specified as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,10 +43,7 @@ public class QueryTracedEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</p>
-     * <blockquote>
-     * <p> A maximum of 100 entries can be returned in a request.</p>
-     * </blockquote>
+     * <p>The maximum number of entries to return per page. Use this parameter with NextToken to paginate the results.&gt;Notice: The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -55,7 +52,7 @@ public class QueryTracedEventsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The name of the event rule that is matched.</p>
+     * <p>The name of the matched rule.</p>
      * 
      * <strong>example:</strong>
      * <p>test-mnsrule</p>
@@ -64,7 +61,7 @@ public class QueryTracedEventsRequest extends TeaModel {
     public String matchedRule;
 
     /**
-     * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+     * <p>The token for retrieving the next page of results. It is returned in the response to a previous request if more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -73,7 +70,7 @@ public class QueryTracedEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The beginning of the time range to query event traces. Unit: milliseconds.</p>
+     * <p>The beginning of the time range for the query, specified as a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +79,9 @@ public class QueryTracedEventsRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The event subject.</p>
+     */
     @NameInMap("Subject")
     public String subject;
 

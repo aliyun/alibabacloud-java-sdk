@@ -24,8 +24,7 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     public String eventStreamingName;
 
     /**
-     * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
-     * <p>This parameter is required.</p>
+     * <p>The event filtering rule. If you do not specify this parameter, all events are matched. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns">https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-patterns</a></p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -49,26 +48,30 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     @NameInMap("FilterPattern")
     public String filterPattern;
 
+    @NameInMap("Metadata")
+    public String metadata;
+
     /**
-     * <p>The parameters that are configured for the runtime environment.</p>
+     * <p>The runtime parameters.</p>
      */
     @NameInMap("RunOptions")
     public String runOptionsShrink;
 
     /**
-     * <p>The event target. You must and can specify only one event target.</p>
-     * <p>This parameter is required.</p>
+     * <p>The event target. You must select one and only one Sink type.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
-     * <p>The event provider, which is also known as the event source. You must and can specify only one event source.</p>
-     * <p>This parameter is required.</p>
+     * <p>The event provider. You must select one and only one Source type.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;
 
+    /**
+     * <p>The Transform-related configurations.</p>
+     */
     @NameInMap("Transforms")
     public String transformsShrink;
 
@@ -99,6 +102,14 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     }
     public String getFilterPattern() {
         return this.filterPattern;
+    }
+
+    public UpdateEventStreamingShrinkRequest setMetadata(String metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    public String getMetadata() {
+        return this.metadata;
     }
 
     public UpdateEventStreamingShrinkRequest setRunOptionsShrink(String runOptionsShrink) {

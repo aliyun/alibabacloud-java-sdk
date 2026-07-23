@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the event bus.</p>
+     * <p>The description of the event rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMQ filter rule</p>
      */
     @NameInMap("Description")
     public String description;
@@ -21,18 +24,34 @@ public class CreateRuleShrinkRequest extends TeaModel {
     public String eventBusName;
 
     /**
-     * <p>The event targets.</p>
+     * <p>A list of event targets.</p>
      */
     @NameInMap("EventTargets")
     public String eventTargetsShrink;
 
     /**
-     * <p>The event pattern, in JSON format. Valid values: stringEqual and stringExpression. You can specify up to five expressions in the map data structure in each field.</p>
-     * <p>You can specify up to five expressions in the map data structure in each field.</p>
+     * <p>The event pattern, in JSON format. Supported pattern types are <code>stringEqual</code> and <code>stringExpression</code>. Each field can contain a maximum of five expressions in a map structure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;source\&quot;: [{\&quot;prefix\&quot;: \&quot;acs.\&quot;}],\&quot;type\&quot;: [{\&quot;prefix\&quot;:\&quot;oss:ObjectReplication\&quot;}],\&quot;subject\&quot;:[{\&quot;prefix\&quot;:\&quot;acs:oss:cn-hangzhou:123456789098****:my-movie-bucket/\&quot;, \&quot;suffix\&quot;:\&quot;.txt\&quot;}]}</p>
+     * <p>{
+     *   &quot;source&quot;: [
+     *     {
+     *       &quot;prefix&quot;: &quot;acs.&quot;
+     *     }
+     *   ],
+     *   &quot;type&quot;: [
+     *     {
+     *       &quot;prefix&quot;: &quot;oss:ObjectReplication&quot;
+     *     }
+     *   ],
+     *   &quot;subject&quot;: [
+     *     {
+     *       &quot;prefix&quot;: &quot;acs:oss:cn-hangzhou:123456789098****:my-movie-bucket/&quot;,
+     *       &quot;suffix&quot;: &quot;.txt&quot;
+     *     }
+     *   ]
+     * }</p>
      */
     @NameInMap("FilterPattern")
     public String filterPattern;
@@ -42,13 +61,13 @@ public class CreateRuleShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MNSRule</p>
+     * <p>SMQRule</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The status of the event rule. Valid values: ENABLE: enables the event rule. It is the default status of the event rule. DISABLE: disables the event rule.</p>
+     * <p>The status of the event rule. Valid values: <code>ENABLE</code>: The rule is enabled. This is the default value. <code>DISABLE</code>: The rule is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>

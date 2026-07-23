@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
     /**
-     * <p>命名空间所属的数据目录名称。可通过 ListCatalogs 接口获取已有目录列表</p>
+     * <p>Data catalog</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -14,7 +14,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>用于保证请求幂等性的Token</p>
+     * <p>Idempotent Token</p>
      * 
      * <strong>example:</strong>
      * <p>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</p>
@@ -23,7 +23,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>命名空间的备注描述信息</p>
+     * <p>Remarks</p>
      * 
      * <strong>example:</strong>
      * <p>测试命名空间</p>
@@ -32,7 +32,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>命名空间名称，在同一数据目录下唯一。以字母或数字开头，支持字母、数字、下划线和短横线，长度1~127</p>
+     * <p>Namespace name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

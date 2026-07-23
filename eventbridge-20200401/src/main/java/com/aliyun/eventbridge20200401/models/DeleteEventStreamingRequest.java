@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventStreamingRequest extends TeaModel {
     /**
-     * <p>The name of the event stream that you want to delete.</p>
+     * <p>The name of the event stream to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

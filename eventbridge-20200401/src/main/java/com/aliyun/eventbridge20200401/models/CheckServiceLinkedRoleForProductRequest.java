@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleForProductRequest extends TeaModel {
     /**
+     * <p>The name of the service-linked role (SLR) for the cloud product.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunServiceRoleForEventBridgeConnectVPC</p>
      */
