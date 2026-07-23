@@ -635,6 +635,182 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an experiment plan.</p>
+     * 
+     * @param request CreateExperimentPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateExperimentPlanResponse
+     */
+    public CreateExperimentPlanResponse createExperimentPlanWithOptions(String agentSpace, CreateExperimentPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            body.put("datasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluators)) {
+            body.put("evaluators", request.evaluators);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.experimentType)) {
+            body.put("experimentType", request.experimentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.experiments)) {
+            body.put("experiments", request.experiments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
+            body.put("planName", request.planName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.querySql)) {
+            body.put("querySql", request.querySql);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedItemIds)) {
+            body.put("selectedItemIds", request.selectedItemIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExperimentPlan"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experiments/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/plans"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExperimentPlanResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an experiment plan.</p>
+     * 
+     * @param request CreateExperimentPlanRequest
+     * @return CreateExperimentPlanResponse
+     */
+    public CreateExperimentPlanResponse createExperimentPlan(String agentSpace, CreateExperimentPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createExperimentPlanWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you need to pass <code>offlineExperiments</code> (1 to 5 items).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes an experiment.</p>
+     * 
+     * @param request CreateExperimentRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateExperimentRunResponse
+     */
+    public CreateExperimentRunResponse createExperimentRunWithOptions(String agentSpace, CreateExperimentRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.completedAt)) {
+            body.put("completedAt", request.completedAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.completedTasks)) {
+            body.put("completedTasks", request.completedTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executedAt)) {
+            body.put("executedAt", request.executedAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.experimentPlanId)) {
+            body.put("experimentPlanId", request.experimentPlanId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.failedTasks)) {
+            body.put("failedTasks", request.failedTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offlineExperiments)) {
+            body.put("offlineExperiments", request.offlineExperiments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordName)) {
+            body.put("recordName", request.recordName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalTasks)) {
+            body.put("totalTasks", request.totalTasks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateExperimentRun"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experimentruns/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/execute"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateExperimentRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <code>experimentPlanId</code>. For offline experiments, you need to pass <code>offlineExperiments</code> (1 to 5 items).</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Executes an experiment.</p>
+     * 
+     * @param request CreateExperimentRunRequest
+     * @return CreateExperimentRunResponse
+     */
+    public CreateExperimentRunResponse createExperimentRun(String agentSpace, CreateExperimentRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createExperimentRunWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates a pipeline.</p>
      * 
@@ -1059,6 +1235,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteEvaluatorSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls DeleteExperimentPlan to delete a specified experiment plan. After deletion, no new executions can be initiated based on this plan. Existing experiment records can still be queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an experiment plan.</p>
+     * 
+     * @param request DeleteExperimentPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteExperimentPlanResponse
+     */
+    public DeleteExperimentPlanResponse deleteExperimentPlanWithOptions(String agentSpace, String planId, DeleteExperimentPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExperimentPlan"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experiments/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/plans/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExperimentPlanResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls DeleteExperimentPlan to delete a specified experiment plan. After deletion, no new executions can be initiated based on this plan. Existing experiment records can still be queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an experiment plan.</p>
+     * 
+     * @param request DeleteExperimentPlanRequest
+     * @return DeleteExperimentPlanResponse
+     */
+    public DeleteExperimentPlanResponse deleteExperimentPlan(String agentSpace, String planId, DeleteExperimentPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteExperimentPlanWithOptions(agentSpace, planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an experiment record.</p>
+     * 
+     * @param request DeleteExperimentRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteExperimentRunResponse
+     */
+    public DeleteExperimentRunResponse deleteExperimentRunWithOptions(String agentSpace, String recordId, DeleteExperimentRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteExperimentRun"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experimentruns/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/records/" + com.aliyun.openapiutil.Client.getEncodeParam(recordId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteExperimentRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an experiment record.</p>
+     * 
+     * @param request DeleteExperimentRunRequest
+     * @return DeleteExperimentRunResponse
+     */
+    public DeleteExperimentRunResponse deleteExperimentRun(String agentSpace, String recordId, DeleteExperimentRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteExperimentRunWithOptions(agentSpace, recordId, request, headers, runtime);
     }
 
     /**
@@ -1574,6 +1844,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getEvaluatorSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query an experiment plan</p>
+     * 
+     * @param request GetExperimentPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetExperimentPlanResponse
+     */
+    public GetExperimentPlanResponse getExperimentPlanWithOptions(String agentSpace, String planId, GetExperimentPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetExperimentPlan"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experiments/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/plans/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetExperimentPlanResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query an experiment plan</p>
+     * 
+     * @param request GetExperimentPlanRequest
+     * @return GetExperimentPlanResponse
+     */
+    public GetExperimentPlanResponse getExperimentPlan(String agentSpace, String planId, GetExperimentPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getExperimentPlanWithOptions(agentSpace, planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an experiment run record.</p>
+     * 
+     * @param request GetExperimentRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetExperimentRunResponse
+     */
+    public GetExperimentRunResponse getExperimentRunWithOptions(String agentSpace, String recordId, GetExperimentRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetExperimentRun"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experimentruns/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/records/" + com.aliyun.openapiutil.Client.getEncodeParam(recordId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetExperimentRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an experiment run record.</p>
+     * 
+     * @param request GetExperimentRunRequest
+     * @return GetExperimentRunResponse
+     */
+    public GetExperimentRunResponse getExperimentRun(String agentSpace, String recordId, GetExperimentRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getExperimentRunWithOptions(agentSpace, recordId, request, headers, runtime);
     }
 
     /**
@@ -2191,6 +2555,160 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listEvaluatorsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <code>offset</code>/<code>limit</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of experiment plans.</p>
+     * 
+     * @param request ListExperimentPlansRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExperimentPlansResponse
+     */
+    public ListExperimentPlansResponse listExperimentPlansWithOptions(String agentSpace, ListExperimentPlansRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
+            query.put("planName", request.planName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListExperimentPlans"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experiments/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/plans"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListExperimentPlansResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <code>offset</code>/<code>limit</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of experiment plans.</p>
+     * 
+     * @param request ListExperimentPlansRequest
+     * @return ListExperimentPlansResponse
+     */
+    public ListExperimentPlansResponse listExperimentPlans(String agentSpace, ListExperimentPlansRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listExperimentPlansWithOptions(agentSpace, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <code>page</code>/<code>pageSize</code> for pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of experiment run records.</p>
+     * 
+     * @param request ListExperimentRunsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListExperimentRunsResponse
+     */
+    public ListExperimentRunsResponse listExperimentRunsWithOptions(String agentSpace, ListExperimentRunsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            query.put("datasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.experimentName)) {
+            query.put("experimentName", request.experimentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
+            query.put("planName", request.planName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListExperimentRuns"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experimentruns/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/records"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListExperimentRunsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <code>page</code>/<code>pageSize</code> for pagination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of experiment run records.</p>
+     * 
+     * @param request ListExperimentRunsRequest
+     * @return ListExperimentRunsResponse
+     */
+    public ListExperimentRunsResponse listExperimentRuns(String agentSpace, ListExperimentRunsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listExperimentRunsWithOptions(agentSpace, request, headers, runtime);
     }
 
     /**
@@ -3106,6 +3624,178 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateEvaluatorSkillWithOptions(name, skillName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an experiment plan.</p>
+     * 
+     * @param request UpdateExperimentPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateExperimentPlanResponse
+     */
+    public UpdateExperimentPlanResponse updateExperimentPlanWithOptions(String agentSpace, String planId, UpdateExperimentPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetId)) {
+            body.put("datasetId", request.datasetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetProject)) {
+            body.put("datasetProject", request.datasetProject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluators)) {
+            body.put("evaluators", request.evaluators);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.experimentType)) {
+            body.put("experimentType", request.experimentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.experiments)) {
+            body.put("experiments", request.experiments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
+            body.put("planName", request.planName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.querySql)) {
+            body.put("querySql", request.querySql);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.selectedItemIds)) {
+            body.put("selectedItemIds", request.selectedItemIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateExperimentPlan"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experiments/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/plans/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateExperimentPlanResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an experiment plan.</p>
+     * 
+     * @param request UpdateExperimentPlanRequest
+     * @return UpdateExperimentPlanResponse
+     */
+    public UpdateExperimentPlanResponse updateExperimentPlan(String agentSpace, String planId, UpdateExperimentPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateExperimentPlanWithOptions(agentSpace, planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an experiment run.</p>
+     * 
+     * @param request UpdateExperimentRunRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateExperimentRunResponse
+     */
+    public UpdateExperimentRunResponse updateExperimentRunWithOptions(String agentSpace, String recordId, UpdateExperimentRunRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("clientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.completedAt)) {
+            body.put("completedAt", request.completedAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.completedTasks)) {
+            body.put("completedTasks", request.completedTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executedAt)) {
+            body.put("executedAt", request.executedAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.failedTasks)) {
+            body.put("failedTasks", request.failedTasks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordName)) {
+            body.put("recordName", request.recordName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalTasks)) {
+            body.put("totalTasks", request.totalTasks);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateExperimentRun"),
+            new TeaPair("version", "2026-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/experimentruns/" + com.aliyun.openapiutil.Client.getEncodeParam(agentSpace) + "/records/" + com.aliyun.openapiutil.Client.getEncodeParam(recordId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateExperimentRunResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an experiment run.</p>
+     * 
+     * @param request UpdateExperimentRunRequest
+     * @return UpdateExperimentRunResponse
+     */
+    public UpdateExperimentRunResponse updateExperimentRun(String agentSpace, String recordId, UpdateExperimentRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateExperimentRunWithOptions(agentSpace, recordId, request, headers, runtime);
     }
 
     /**
