@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
+     * <p>The billing method of the instance. The value is fixed as Subscription.</p>
+     * 
      * <strong>example:</strong>
      * <p>Subscription</p>
      */
@@ -12,16 +14,23 @@ public class GetInstanceResponseBody extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The commodity code of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>airec_developers_public_cn</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The instance configurations.</p>
+     */
     @NameInMap("Config")
     public GetInstanceResponseBodyConfig config;
 
     /**
+     * <p>The time when the instance expires.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-12-14 00:00:00.0</p>
      */
@@ -29,6 +38,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
+     * <p>The time when the instance was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-10-13 17:34:52.0</p>
      */
@@ -36,6 +47,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the instance was last updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-11-05 09:02:30.0</p>
      */
@@ -43,16 +56,23 @@ public class GetInstanceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The operating tool configurations.</p>
+     */
     @NameInMap("OperatingTool")
     public GetInstanceResponseBodyOperatingTool operatingTool;
 
     /**
+     * <p>The region ID. Valid values:<br>● cn-shenzhen: Shenzhen<br>● cn-hangzhou: Hangzhou<br>● cn-beijing: Beijing<br>● cn-shanghai: Shanghai<br><br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -60,6 +80,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -67,6 +89,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The instance status. Valid values:<br>● Initializing<br>● Stopped<br>● Running<br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>Initializing</p>
      */
@@ -74,6 +98,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The instance type. Valid values:<br>● basic: Basic<br>● highlevel: High-level<br>● advanced: Advanced<br>● standard: Standard<br><br><br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -183,16 +209,23 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyConfigDataManagements extends TeaModel {
         /**
+         * <p>The component code.</p>
+         * 
          * <strong>example:</strong>
          * <p>storage</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
         /**
+         * <p>The component type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -232,16 +265,23 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyConfigEngines extends TeaModel {
         /**
+         * <p>The component code.</p>
+         * 
          * <strong>example:</strong>
          * <p>feature</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
         /**
+         * <p>The component type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hologres</p>
          */
@@ -281,16 +321,23 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyConfigMonitors extends TeaModel {
         /**
+         * <p>The component code.</p>
+         * 
          * <strong>example:</strong>
          * <p>featuresets</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
         /**
+         * <p>The component type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Platform</p>
          */
@@ -329,12 +376,21 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyConfig extends TeaModel {
+        /**
+         * <p>The list of modeling environments.</p>
+         */
         @NameInMap("DataManagements")
         public java.util.List<GetInstanceResponseBodyConfigDataManagements> dataManagements;
 
+        /**
+         * <p>The list of service engines.</p>
+         */
         @NameInMap("Engines")
         public java.util.List<GetInstanceResponseBodyConfigEngines> engines;
 
+        /**
+         * <p>The list of monitoring components.</p>
+         */
         @NameInMap("Monitors")
         public java.util.List<GetInstanceResponseBodyConfigMonitors> monitors;
 
@@ -370,6 +426,18 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyOperatingTool extends TeaModel {
+        /**
+         * <p>Indicates whether the operating tool is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><p>True: Enabled</p>
+         * </li>
+         * <li><p>False: Disabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsEnable")
         public Boolean isEnable;
 

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTrafficControlTaskItemReportRequest extends TeaModel {
     /**
+     * <p>The end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QueryTrafficControlTaskItemReportRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The execution environment for the task. Valid values: Daily (development environment), Pre (staging environment), Prod (production environment).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class QueryTrafficControlTaskItemReportRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class QueryTrafficControlTaskItemReportRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

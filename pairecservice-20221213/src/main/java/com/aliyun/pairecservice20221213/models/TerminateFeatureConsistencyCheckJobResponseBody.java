@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TerminateFeatureConsistencyCheckJobResponseBody extends TeaModel {
     /**
+     * <p>The unique ID generated for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A6C01890-54CA-5C49-BC91-AD85A98E4A98</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScenesResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B8987BF7-6028-5B17-80E0-251B7BD67BBA</p>
@@ -13,10 +13,15 @@ public class ListScenesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of scenes.</p>
+     */
     @NameInMap("Scenes")
     public java.util.List<ListScenesResponseBodyScenes> scenes;
 
     /**
+     * <p>The total number of scenes.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +59,8 @@ public class ListScenesResponseBody extends TeaModel {
 
     public static class ListScenesResponseBodyScenesFlows extends TeaModel {
         /**
+         * <p>The code of the flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>liuliang1</p>
          */
@@ -61,6 +68,8 @@ public class ListScenesResponseBody extends TeaModel {
         public String flowCode;
 
         /**
+         * <p>The name of the flow.</p>
+         * 
          * <strong>example:</strong>
          * <p>流量1</p>
          */
@@ -92,16 +101,23 @@ public class ListScenesResponseBody extends TeaModel {
 
     public static class ListScenesResponseBodyScenes extends TeaModel {
         /**
+         * <p>The description of the scene.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The list of flows associated with the scene.</p>
+         */
         @NameInMap("Flows")
         public java.util.List<ListScenesResponseBodyScenesFlows> flows;
 
         /**
+         * <p>The name of the scene.</p>
+         * 
          * <strong>example:</strong>
          * <p>scene1</p>
          */
@@ -109,6 +125,8 @@ public class ListScenesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The unique ID of the scene.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

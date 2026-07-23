@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckTrafficControlTaskExpressionRequest extends TeaModel {
     /**
+     * <p>The expression to validate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CheckTrafficControlTaskExpressionRequest extends TeaModel {
     public String expression;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CheckTrafficControlTaskExpressionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

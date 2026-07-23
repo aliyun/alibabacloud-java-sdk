@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRecallManagementConfigRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>learn-pairec-xxx</p>
      */

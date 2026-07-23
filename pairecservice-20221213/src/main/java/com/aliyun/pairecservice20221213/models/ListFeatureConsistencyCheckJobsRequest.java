@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobsRequest extends TeaModel {
     /**
+     * <p>The instance ID. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ListFeatureConsistencyCheckJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p><code>ASC</code>: Ascending order.</p>
+     * </li>
+     * <li><p><code>DESC</code>: Descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -21,6 +30,8 @@ public class ListFeatureConsistencyCheckJobsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +39,8 @@ public class ListFeatureConsistencyCheckJobsRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +48,14 @@ public class ListFeatureConsistencyCheckJobsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The field to sort the results by. Valid values:</p>
+     * <ul>
+     * <li><p><code>GmtCreateTime</code>: Sorts by creation time.</p>
+     * </li>
+     * <li><p><code>GmtModifiedTime</code>: Sorts by modification time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -42,6 +63,20 @@ public class ListFeatureConsistencyCheckJobsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The status of the job. Valid values:</p>
+     * <ul>
+     * <li><p><code>ToRun</code>: Waiting to run.</p>
+     * </li>
+     * <li><p><code>Running</code>: In progress.</p>
+     * </li>
+     * <li><p><code>Success</code>: Successful.</p>
+     * </li>
+     * <li><p><code>Failure</code>: Failed.</p>
+     * </li>
+     * <li><p><code>Stopped</code>: Stopped or canceled.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */

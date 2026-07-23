@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateRecallManagementConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The network configuration.</p>
+     */
     @NameInMap("NetworkConfigs")
     public java.util.List<UpdateRecallManagementConfigRequestNetworkConfigs> networkConfigs;
 
     /**
+     * <p>The password.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */
@@ -52,6 +59,8 @@ public class UpdateRecallManagementConfigRequest extends TeaModel {
 
     public static class UpdateRecallManagementConfigRequestNetworkConfigs extends TeaModel {
         /**
+         * <p>The ID of the VPC.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
@@ -59,6 +68,8 @@ public class UpdateRecallManagementConfigRequest extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>A map of availability zones to VSwitch IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

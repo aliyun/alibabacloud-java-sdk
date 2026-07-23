@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRecallManagementServiceResponseBody extends TeaModel {
     /**
+     * <p>The recall management service ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateRecallManagementServiceResponseBody extends TeaModel {
     public String recallManagementServiceId;
 
     /**
+     * <p>The recall management service version ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,6 +23,8 @@ public class CreateRecallManagementServiceResponseBody extends TeaModel {
     public String recallManagementServiceVersionId;
 
     /**
+     * <p><strong>The request ID.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */

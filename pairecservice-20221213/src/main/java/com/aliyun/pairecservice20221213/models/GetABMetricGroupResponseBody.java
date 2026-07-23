@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetABMetricGroupResponseBody extends TeaModel {
     /**
+     * <p>A comma-separated list of A/B testing metric IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2</p>
      */
@@ -12,16 +14,26 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String ABMetricIds;
 
     /**
+     * <p>A comma-separated list of A/B testing metric names.</p>
+     * 
      * <strong>example:</strong>
      * <p>pv,uv</p>
      */
     @NameInMap("ABMetricNames")
     public String ABMetricNames;
 
+    /**
+     * <p>The metric group description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>访问量相关指标</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The metric group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>visits</p>
      */
@@ -29,6 +41,8 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The owner.</p>
+     * 
      * <strong>example:</strong>
      * <p>2799614***</p>
      */
@@ -36,6 +50,8 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String owner;
 
     /**
+     * <p>Whether the metric group is a real-time metric group.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,6 +59,8 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public Boolean realtime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
      */
@@ -50,6 +68,8 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The scene ID. You can get this ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1%5C&m=16768%5C&n=4298955">ListScenes</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

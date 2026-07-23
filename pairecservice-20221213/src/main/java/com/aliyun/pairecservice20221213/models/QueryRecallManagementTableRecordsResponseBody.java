@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class QueryRecallManagementTableRecordsResponseBody extends TeaModel {
+    /**
+     * <p>A list of the retrieved records.</p>
+     */
     @NameInMap("Records")
     public java.util.List<java.util.Map<String, ?>> records;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D59453C-48AA-5FC5-8848-2D373BD1A17F</p>
      */

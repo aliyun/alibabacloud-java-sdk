@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of feature consistency check jobs.</p>
+     */
     @NameInMap("FeatureConsistencyCheckJobs")
     public java.util.List<ListFeatureConsistencyCheckJobsResponseBodyFeatureConsistencyCheckJobs> featureConsistencyCheckJobs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A04CB8C0-E74A-5E83-BC61-64D153574EC7</p>
      */
@@ -15,6 +20,8 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of jobs.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
 
     public static class ListFeatureConsistencyCheckJobsResponseBodyFeatureConsistencyCheckJobs extends TeaModel {
         /**
+         * <p>The configuration of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -59,6 +68,8 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The ID of the feature consistency check configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -66,6 +77,8 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         public String featureConsistencyCheckJobConfigId;
 
         /**
+         * <p>The name of the feature consistency check job configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>feature_consistency_check_1</p>
          */
@@ -73,6 +86,8 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         public String featureConsistencyCheckJobConfigName;
 
         /**
+         * <p>The ID of the feature consistency check job.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -80,6 +95,8 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         public String featureConsistencyCheckJobId;
 
         /**
+         * <p>The end time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -87,16 +104,35 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         public String gmtEndTime;
 
         /**
+         * <p>The start time of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         @NameInMap("GmtStartTime")
         public String gmtStartTime;
 
+        /**
+         * <p>A list of log entries.</p>
+         */
         @NameInMap("Logs")
         public java.util.List<String> logs;
 
         /**
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li><p><code>ToRun</code>: Waiting to run.</p>
+         * </li>
+         * <li><p><code>Running</code>: In progress.</p>
+         * </li>
+         * <li><p><code>Success</code>: Successful.</p>
+         * </li>
+         * <li><p><code>Failure</code>: Failed.</p>
+         * </li>
+         * <li><p><code>Stopped</code>: Stopped or canceled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */

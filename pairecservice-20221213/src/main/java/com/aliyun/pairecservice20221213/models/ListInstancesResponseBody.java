@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>A list of instances.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BDB621CB-A81E-5D39-8793-39A365CBCC74</p>
      */
@@ -15,6 +20,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -52,16 +59,23 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesConfigDataManagements extends TeaModel {
         /**
+         * <p>The component code.</p>
+         * 
          * <strong>example:</strong>
          * <p>storage</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The metadata of the component.</p>
+         */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
         /**
+         * <p>The component type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -101,16 +115,23 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesConfigEngines extends TeaModel {
         /**
+         * <p>The component code.</p>
+         * 
          * <strong>example:</strong>
          * <p>feature</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The metadata of the component.</p>
+         */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
         /**
+         * <p>The component type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Hologres</p>
          */
@@ -150,16 +171,23 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesConfigMonitors extends TeaModel {
         /**
+         * <p>The component code.</p>
+         * 
          * <strong>example:</strong>
          * <p>featuresets</p>
          */
         @NameInMap("ComponentCode")
         public String componentCode;
 
+        /**
+         * <p>The metadata of the component.</p>
+         */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
         /**
+         * <p>The component type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Platform</p>
          */
@@ -198,12 +226,21 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesConfig extends TeaModel {
+        /**
+         * <p>A list of data management configurations.</p>
+         */
         @NameInMap("DataManagements")
         public java.util.List<ListInstancesResponseBodyInstancesConfigDataManagements> dataManagements;
 
+        /**
+         * <p>A list of service engines.</p>
+         */
         @NameInMap("Engines")
         public java.util.List<ListInstancesResponseBodyInstancesConfigEngines> engines;
 
+        /**
+         * <p>A list of monitoring components.</p>
+         */
         @NameInMap("Monitors")
         public java.util.List<ListInstancesResponseBodyInstancesConfigMonitors> monitors;
 
@@ -239,6 +276,18 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesOperatingTool extends TeaModel {
+        /**
+         * <p>Specifies whether the operating tool is enabled for the instance. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The tool is enabled.</p>
+         * </li>
+         * <li><p><code>false</code>: The tool is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsEnable")
         public Boolean isEnable;
 
@@ -259,6 +308,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
+         * <p>The billing method of the instance. Only <code>Subscription</code> (prepaid) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>Subscription</p>
          */
@@ -266,16 +317,23 @@ public class ListInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The commodity code of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>airec_developers_public_cn</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The instance configuration.</p>
+         */
         @NameInMap("Config")
         public ListInstancesResponseBodyInstancesConfig config;
 
         /**
+         * <p>The time when the instance expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-14 00:00:00.0</p>
          */
@@ -283,6 +341,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-13 17:34:52.0</p>
          */
@@ -290,6 +350,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the instance was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-11-05 09:02:30.0</p>
          */
@@ -297,16 +359,33 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pairec-test1</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The configuration of the operating tool.</p>
+         */
         @NameInMap("OperatingTool")
         public ListInstancesResponseBodyInstancesOperatingTool operatingTool;
 
         /**
+         * <p>The region ID. Valid values:</p>
+         * <ul>
+         * <li><p><code>cn-shenzhen</code>: China (Shenzhen)</p>
+         * </li>
+         * <li><p><code>cn-hangzhou</code>: China (Hangzhou)</p>
+         * </li>
+         * <li><p><code>cn-beijing</code>: China (Beijing)</p>
+         * </li>
+         * <li><p><code>cn-shanghai</code>: China (Shanghai)</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -314,6 +393,16 @@ public class ListInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><p><code>Initializing</code>: The instance is initializing.</p>
+         * </li>
+         * <li><p><code>Stopped</code>: The instance is stopped.</p>
+         * </li>
+         * <li><p><code>Running</code>: The instance is running.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Initializing</p>
          */
@@ -321,6 +410,18 @@ public class ListInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><p><code>basic</code>: Basic Edition</p>
+         * </li>
+         * <li><p><code>high-level</code>: High-level Edition</p>
+         * </li>
+         * <li><p><code>advanced</code>: Advanced Edition</p>
+         * </li>
+         * <li><p><code>standard</code>: Standard Edition</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>basic</p>
          */

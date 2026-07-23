@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementServiceVersionsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-test123</p>
      */
@@ -12,6 +14,8 @@ public class ListRecallManagementServiceVersionsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The sort order. Valid values: <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -19,6 +23,8 @@ public class ListRecallManagementServiceVersionsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListRecallManagementServiceVersionsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -33,6 +41,8 @@ public class ListRecallManagementServiceVersionsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The field to sort the results by. Valid values: <code>GmtCreateTime</code> for creation time and <code>GmtModifiedTime</code> for modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */

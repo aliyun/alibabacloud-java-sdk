@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     /**
+     * <p>The end of the time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-10 13:13:20</p>
      */
@@ -12,6 +14,8 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The target environment. Valid values: Daily, Pre, and Prod.</p>
+     * 
      * <strong>example:</strong>
      * <p>Pre</p>
      */
@@ -19,6 +23,8 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The ID of the experiment group.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -26,6 +32,8 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String experimentGroupId;
 
     /**
+     * <p>The ID of the experiment.</p>
+     * 
      * <strong>example:</strong>
      * <p>ER_All</p>
      */
@@ -33,6 +41,8 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String experimentId;
 
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-1324***</p>
      */
@@ -40,6 +50,8 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the item.</p>
+     * 
      * <strong>example:</strong>
      * <p>1001</p>
      */
@@ -47,6 +59,8 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String itemId;
 
     /**
+     * <p>The start of the time range.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-01 13:13:20</p>
      */
@@ -54,6 +68,8 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The threshold value.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

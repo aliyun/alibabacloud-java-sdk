@@ -8,6 +8,16 @@ public class ListParamsRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
+     * <p>The environment to which the parameter belongs. Valid values:</p>
+     * <ul>
+     * <li><p>Daily: A test environment for daily use.</p>
+     * </li>
+     * <li><p>Prepub: A staging environment that mirrors the production environment.</p>
+     * </li>
+     * <li><p>Product: The production environment.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -15,6 +25,7 @@ public class ListParamsRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID. You can call the ListInstances operation to obtain it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +35,8 @@ public class ListParamsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The parameter name.</p>
+     * 
      * <strong>example:</strong>
      * <p>home</p>
      */
@@ -31,6 +44,8 @@ public class ListParamsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -38,6 +53,8 @@ public class ListParamsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -45,6 +62,7 @@ public class ListParamsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The scene ID. You can call the ListScenes operation to obtain it.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

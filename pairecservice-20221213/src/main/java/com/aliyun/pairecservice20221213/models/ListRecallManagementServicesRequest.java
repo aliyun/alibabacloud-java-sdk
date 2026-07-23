@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementServicesRequest extends TeaModel {
     /**
+     * <p><strong>The ID of the instance.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-test123</p>
      */
@@ -12,6 +14,8 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>This parameter is not yet available.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>This parameter is not yet available.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,14 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p><strong>The sort order.</strong> Valid values:</p>
+     * <ul>
+     * <li><p>ASC: ascending order.</p>
+     * </li>
+     * <li><p>DESC: descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -33,6 +47,8 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p><strong>The number of the page to return.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +56,8 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p><strong>The number of entries to return on each page.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -47,6 +65,14 @@ public class ListRecallManagementServicesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p><strong>The field to sort by.</strong> Valid values:</p>
+     * <ul>
+     * <li><p>GmtCreateTime: Sort by creation time.</p>
+     * </li>
+     * <li><p>GmtModifiedTime: Sort by modification time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */

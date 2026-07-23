@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ApplyEngineConfigRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can obtain this by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> API.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
      */

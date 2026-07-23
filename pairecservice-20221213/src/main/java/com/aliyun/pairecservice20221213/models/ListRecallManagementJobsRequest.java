@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementJobsRequest extends TeaModel {
     /**
+     * <p>The filter condition. Filtering is supported only for the <code>Table</code> type. For example: <code>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</code></p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public java.util.Map<String, ?> condition;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-test1</p>
      */
@@ -19,6 +23,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>This parameter is not used.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -26,6 +32,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>This parameter is not used.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -33,6 +41,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The sort order. Valid values: <code>ASC</code> (ascending) and <code>DESC</code> (descending).</p>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -40,6 +50,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +59,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +68,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sorting basis. Valid values: <code>GmtCreateTime</code> (creation time) and <code>GmtModifiedTime</code> (update time).</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -61,6 +77,8 @@ public class ListRecallManagementJobsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Table</p>
      */

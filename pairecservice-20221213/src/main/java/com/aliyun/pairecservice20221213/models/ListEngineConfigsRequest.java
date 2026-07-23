@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListEngineConfigsRequest extends TeaModel {
     /**
+     * <p>The environment. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Daily</strong>: the development and test environment.</p>
+     * </li>
+     * <li><p><strong>Pre</strong>: the pre-production environment.</p>
+     * </li>
+     * <li><p><strong>Prod</strong>: the production environment.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Pre</p>
      */
@@ -12,6 +22,7 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +32,8 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the engine configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>engine_config_v1</p>
      */
@@ -28,6 +41,8 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +50,8 @@ public class ListEngineConfigsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -42,6 +59,14 @@ public class ListEngineConfigsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The status to filter by. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Released</strong>: returns only released configurations.</p>
+     * </li>
+     * <li><p><strong>Unreleased</strong>: returns only unreleased configurations.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Released</p>
      */
@@ -49,6 +74,9 @@ public class ListEngineConfigsRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The version to filter by.</p>
+     * <p>Set this parameter to <code>latest</code> to retrieve the most recently updated version.</p>
+     * 
      * <strong>example:</strong>
      * <p>latest</p>
      */

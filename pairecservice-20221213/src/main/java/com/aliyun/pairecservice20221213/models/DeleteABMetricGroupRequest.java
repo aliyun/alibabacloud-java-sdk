@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteABMetricGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the instance. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

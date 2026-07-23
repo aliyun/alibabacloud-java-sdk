@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     /**
+     * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,14 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The sort order.</p>
+     * <ul>
+     * <li><p><code>ASC</code>: Ascending order.</p>
+     * </li>
+     * <li><p><code>DESC</code>: Descending order.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ASC</p>
      */
@@ -21,6 +30,8 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. The value starts at 1. The default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +39,8 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +48,14 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The field to sort by.</p>
+     * <ul>
+     * <li><p><code>GmtCreateTime</code>: Creation time.</p>
+     * </li>
+     * <li><p><code>GmtModifiedTime</code>: Modified time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */

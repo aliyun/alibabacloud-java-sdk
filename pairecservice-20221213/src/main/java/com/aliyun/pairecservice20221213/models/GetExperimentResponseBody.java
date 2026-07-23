@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetExperimentResponseBody extends TeaModel {
     /**
+     * <p>The alias of the experiment.</p>
+     * 
      * <strong>example:</strong>
      * <p>L1#EG1#E1</p>
      */
@@ -12,6 +14,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String aliasExperimentId;
 
     /**
+     * <p>A comma-separated list of bucket numbers.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */
@@ -19,13 +23,17 @@ public class GetExperimentResponseBody extends TeaModel {
     public String buckets;
 
     /**
+     * <p>The experiment configuration, in JSON format.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{}</p>
+     * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
+     * <p>The debug crowd ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -33,13 +41,17 @@ public class GetExperimentResponseBody extends TeaModel {
     public String debugCrowdId;
 
     /**
+     * <p>The UIDs of debug users, which can be the UIDs of an Alibaba Cloud main account or a RAM user. Separate multiple UIDs with a comma (,).</p>
+     * 
      * <strong>example:</strong>
-     * <p>uid1,uid2,uid3</p>
+     * <p>1124512470******,1124512471******,1124512472******</p>
      */
     @NameInMap("DebugUsers")
     public String debugUsers;
 
     /**
+     * <p>The experiment description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
@@ -47,6 +59,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The experiment group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -54,6 +68,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String experimentGroupId;
 
     /**
+     * <p>The traffic percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -61,6 +77,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public Integer flowPercent;
 
     /**
+     * <p>The creation time, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -68,6 +86,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time, in ISO 8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -75,6 +95,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The laboratory ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -82,6 +104,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String laboratoryId;
 
     /**
+     * <p>The layer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -89,6 +113,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String layerId;
 
     /**
+     * <p>The experiment name.</p>
+     * 
      * <strong>example:</strong>
      * <p>experiment_test1</p>
      */
@@ -96,7 +122,7 @@ public class GetExperimentResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
@@ -105,6 +131,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The scene ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -112,6 +140,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String sceneId;
 
     /**
+     * <p>The status of the experiment. Valid values:<br>● Offline<br>● Online<br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>Offline</p>
      */
@@ -119,6 +149,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The type of the experiment. Valid values:<br>● Baseline: a baseline experiment.<br>● Normal: a normal experiment.<br><br></p>
+     * 
      * <strong>example:</strong>
      * <p>Baseline</p>
      */

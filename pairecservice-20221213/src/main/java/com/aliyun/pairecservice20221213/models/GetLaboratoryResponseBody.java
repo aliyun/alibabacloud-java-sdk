@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLaboratoryResponseBody extends TeaModel {
     /**
+     * <p>The number of buckets.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public Integer bucketCount;
 
     /**
+     * <p>The bucketing method. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>Filter</p>
      */
@@ -19,6 +23,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String bucketType;
 
     /**
+     * <p>The assigned buckets.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3,10-20</p>
      */
@@ -26,6 +32,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String buckets;
 
     /**
+     * <p>The crowd ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -33,6 +41,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String crowdId;
 
     /**
+     * <p>The debug crowd ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -40,6 +50,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String debugCrowdId;
 
     /**
+     * <p>The debug users.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1,user2,user3</p>
      */
@@ -47,6 +59,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String debugUsers;
 
     /**
+     * <p>The laboratory description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
@@ -54,6 +68,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The environment. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -61,6 +77,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String environment;
 
     /**
+     * <p>The filter.</p>
+     * 
      * <strong>example:</strong>
      * <p>filter=xxx</p>
      */
@@ -68,6 +86,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String filter;
 
     /**
+     * <p>The laboratory name.</p>
+     * 
      * <strong>example:</strong>
      * <p>laboratory1</p>
      */
@@ -75,7 +95,7 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1C0898E5-9220-5443-B2D9-445FF0688215</p>
@@ -84,6 +104,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The scene ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -91,6 +113,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String sceneId;
 
     /**
+     * <p>The status of the laboratory. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>Offline</p>
      */
@@ -98,6 +122,8 @@ public class GetLaboratoryResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The laboratory type. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>Base</p>
      */

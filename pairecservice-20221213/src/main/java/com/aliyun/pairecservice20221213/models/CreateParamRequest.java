@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateParamRequest extends TeaModel {
     /**
+     * <p>The environment to which the parameter belongs. Valid values:</p>
+     * <ul>
+     * <li>Daily: daily environment.</li>
+     * <li>Pre: staging environment.</li>
+     * <li>Prod: production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -12,6 +19,8 @@ public class CreateParamRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>
      */
@@ -19,6 +28,8 @@ public class CreateParamRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The parameter name.</p>
+     * 
      * <strong>example:</strong>
      * <p>home</p>
      */
@@ -26,16 +37,32 @@ public class CreateParamRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The scene ID. You can call the ListScenes operation to obtain the scene ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>The parameter type. Valid values:</p>
+     * <ul>
+     * <li><p>Normal: common parameter.</p>
+     * </li>
+     * <li><p>Encryption: encrypted parameter.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("Type")
     public String type;
 
     /**
+     * <p>The parameter value.</p>
+     * 
      * <strong>example:</strong>
      * <p>house</p>
      */

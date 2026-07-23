@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExperimentGroupsRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListExperimentGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The layer ID. You can get this ID by calling the ListLayers operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -21,15 +24,29 @@ public class ListExperimentGroupsRequest extends TeaModel {
     public String layerId;
 
     /**
+     * <p>The status of the experiment group. Valid values: Offline, Online, and Pushed.</p>
+     * 
      * <strong>example:</strong>
      * <p>Online</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The end time for filtering experiment groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-08-31 12:00:00</p>
+     */
     @NameInMap("TimeRangeEnd")
     public String timeRangeEnd;
 
+    /**
+     * <p>The start time for filtering experiment groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-08-30 12:00:00</p>
+     */
     @NameInMap("TimeRangeStart")
     public String timeRangeStart;
 

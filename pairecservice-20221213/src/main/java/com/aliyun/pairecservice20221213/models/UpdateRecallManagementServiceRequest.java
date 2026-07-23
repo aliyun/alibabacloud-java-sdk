@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRecallManagementServiceRequest extends TeaModel {
     /**
+     * <p>The description of the recall management service.</p>
+     * 
      * <strong>example:</strong>
      * <p>reso-2s416t146ffjc3yefx</p>
      */
@@ -12,6 +14,8 @@ public class UpdateRecallManagementServiceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-test123</p>
      */

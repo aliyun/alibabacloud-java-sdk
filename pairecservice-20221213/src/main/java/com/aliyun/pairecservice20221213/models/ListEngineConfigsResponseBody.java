@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListEngineConfigsResponseBody extends TeaModel {
+    /**
+     * <p>A list of engine configurations.</p>
+     */
     @NameInMap("EngineConfigs")
     public java.util.List<ListEngineConfigsResponseBodyEngineConfigs> engineConfigs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
      */
@@ -15,6 +20,8 @@ public class ListEngineConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,16 +59,23 @@ public class ListEngineConfigsResponseBody extends TeaModel {
 
     public static class ListEngineConfigsResponseBodyEngineConfigs extends TeaModel {
         /**
+         * <p>The content of the engine configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("ConfigValue")
         public String configValue;
 
+        /**
+         * <p>The description of the engine configuration.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the engine configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -69,6 +83,16 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String engineConfigId;
 
         /**
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Daily</strong>: the development and test environment.</p>
+         * </li>
+         * <li><p><strong>Pre</strong>: the pre-production environment.</p>
+         * </li>
+         * <li><p><strong>Prod</strong>: the production environment.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Pre</p>
          */
@@ -76,6 +100,8 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String environment;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-07T01:43:42Z</p>
          */
@@ -83,6 +109,8 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-27T12:00:00Z</p>
          */
@@ -90,6 +118,8 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The release time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-29 12:00:00</p>
          */
@@ -97,6 +127,8 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String gmtReleasedTime;
 
         /**
+         * <p>The name of the engine configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>engine_config_v1</p>
          */
@@ -104,6 +136,14 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The status of the engine configuration. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Released</strong>: The configuration has been released.</p>
+         * </li>
+         * <li><p><strong>Unreleased</strong>: The configuration has not been released.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Released</p>
          */
@@ -111,6 +151,8 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The version of the currently released or most recently updated engine configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>20230509161300</p>
          */

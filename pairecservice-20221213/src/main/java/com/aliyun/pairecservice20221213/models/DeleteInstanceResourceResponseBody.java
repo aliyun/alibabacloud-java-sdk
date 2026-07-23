@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7D59453C-48AA-5FC5-8848-2D373BD1A17F</p>
      */

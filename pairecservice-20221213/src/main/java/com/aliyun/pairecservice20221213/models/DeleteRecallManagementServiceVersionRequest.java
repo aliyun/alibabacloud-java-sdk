@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteRecallManagementServiceVersionRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-test123</p>
      */

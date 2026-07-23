@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResourcesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of resource objects.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<ListInstanceResourcesResponseBodyResources> resources;
 
     /**
+     * <p>The total number of resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,16 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
 
     public static class ListInstanceResourcesResponseBodyResources extends TeaModel {
         /**
+         * <p>The category of the resource. Valid values:</p>
+         * <ul>
+         * <li><p>DataManagement</p>
+         * </li>
+         * <li><p>Engine</p>
+         * </li>
+         * <li><p>Monitor</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DataManagement</p>
          */
@@ -59,6 +76,8 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>The configuration of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -66,6 +85,8 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-13 17:34:52</p>
          */
@@ -73,6 +94,8 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         public String gmtCreateAt;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2020-10-13 17:34:52</p>
          */
@@ -80,6 +103,41 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         public String gmtModifiedAt;
 
         /**
+         * <p>The group of the resource.</p>
+         * <p>If <code>Category</code> is <code>DataManagement</code>, valid values are:</p>
+         * <ul>
+         * <li><p>storage</p>
+         * </li>
+         * <li><p>modelpipeline</p>
+         * </li>
+         * <li><p>datastorage</p>
+         * </li>
+         * <li><p>modeltrain</p>
+         * </li>
+         * </ul>
+         * <p>If <code>Category</code> is <code>Engine</code>, valid values are:</p>
+         * <ul>
+         * <li><p>feature</p>
+         * </li>
+         * <li><p>predict</p>
+         * </li>
+         * <li><p>recall</p>
+         * </li>
+         * <li><p>recengine</p>
+         * </li>
+         * </ul>
+         * <p>If <code>Category</code> is <code>Monitor</code>, valid values are:</p>
+         * <ul>
+         * <li><p>logs</p>
+         * </li>
+         * <li><p>logsback</p>
+         * </li>
+         * <li><p>coldstart</p>
+         * </li>
+         * <li><p>deploy</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>storage</p>
          */
@@ -87,6 +145,8 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         public String group;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>reso-2s416t***</p>
          */
@@ -94,6 +154,42 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The type of the resource.</p>
+         * <ul>
+         * <li><p>Hologres</p>
+         * </li>
+         * <li><p>EAS</p>
+         * </li>
+         * <li><p>BE</p>
+         * </li>
+         * <li><p>Rec</p>
+         * </li>
+         * <li><p>Platform</p>
+         * </li>
+         * <li><p>SLS</p>
+         * </li>
+         * <li><p>DataHub</p>
+         * </li>
+         * <li><p>ApsaraMQ for Kafka</p>
+         * </li>
+         * <li><p>Realtime Compute for Apache Flink</p>
+         * </li>
+         * <li><p>ACR</p>
+         * </li>
+         * <li><p>OSS</p>
+         * </li>
+         * <li><p>DataWorks</p>
+         * </li>
+         * <li><p>PAI</p>
+         * </li>
+         * <li><p>MaxCompute</p>
+         * </li>
+         * <li><p>Graph Compute Service</p>
+         * </li>
+         * <li><p>ApsaraDB for Redis</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -101,6 +197,8 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The resource URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>bucket-test-123</p>
          */

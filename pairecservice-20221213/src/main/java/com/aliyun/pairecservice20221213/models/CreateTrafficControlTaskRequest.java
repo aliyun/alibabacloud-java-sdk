@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTrafficControlTaskRequest extends TeaModel {
     /**
+     * <p>The behavior table ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String behaviorTableMetaId;
 
     /**
+     * <p>The control granularity. Valid values: Global (applies globally) and Single (applies to a specific item).</p>
+     * 
      * <strong>example:</strong>
      * <p>Global</p>
      */
@@ -19,6 +23,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String controlGranularity;
 
     /**
+     * <p>The control logic.</p>
+     * <ul>
+     * <li><p>Guaranteed: The system strictly enforces the control target.</p>
+     * </li>
+     * <li><p>Approach: The system attempts to meet the control target, but enforcement is not strict.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Guaranteed</p>
      */
@@ -26,6 +38,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String controlLogic;
 
     /**
+     * <p>The control type.</p>
+     * <ul>
+     * <li><p>Percent: Controls traffic by percentage.</p>
+     * </li>
+     * <li><p>Quantity: Controls traffic by quantity.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Percent</p>
      */
@@ -33,16 +53,23 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String controlType;
 
     /**
+     * <p>The description of the traffic control task.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test task</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>A list of effective scene IDs.</p>
+     */
     @NameInMap("EffectiveSceneIds")
     public java.util.List<Integer> effectiveSceneIds;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-26</p>
      */
@@ -50,16 +77,32 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The execution time.</p>
+     * <ul>
+     * <li><p>Permanent: The task runs permanently.</p>
+     * </li>
+     * <li><p>TimeRange: The task runs within a specified time range. This option requires you to also specify the StartTime and EndTime parameters.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>TimeRange</p>
      */
     @NameInMap("ExecutionTime")
     public String executionTime;
 
+    /**
+     * <p>The Flink data source ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>res-***</p>
+     */
     @NameInMap("FlinkResourceId")
     public String flinkResourceId;
 
     /**
+     * <p>The instance ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
      */
@@ -67,6 +110,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The item condition in array format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
      */
@@ -74,6 +119,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String itemConditionArray;
 
     /**
+     * <p>The item condition in expression format.</p>
+     * 
      * <strong>example:</strong>
      * <p>status=1</p>
      */
@@ -81,6 +128,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String itemConditionExpress;
 
     /**
+     * <p>The item condition type.</p>
+     * <ul>
+     * <li><p>Array: Specifies the array format.</p>
+     * </li>
+     * <li><p>Expression: Specifies the expression format.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Array</p>
      */
@@ -88,6 +143,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String itemConditionType;
 
     /**
+     * <p>The item table ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -95,19 +152,35 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String itemTableMetaId;
 
     /**
+     * <p>The name of the traffic control task.</p>
+     * 
      * <strong>example:</strong>
      * <p>task-1</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The experiment IDs for the staging environment. Separate multiple IDs with a comma (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
     @NameInMap("PreExperimentIds")
     public String preExperimentIds;
 
+    /**
+     * <p>The experiment IDs for the production environment. Separate multiple IDs with a comma (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4,5,6</p>
+     */
     @NameInMap("ProdExperimentIds")
     public String prodExperimentIds;
 
     /**
+     * <p>The scene ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -115,15 +188,24 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String sceneId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>A list of bound engine service IDs.</p>
+     */
     @NameInMap("ServiceIds")
     public java.util.List<Integer> serviceIds;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-25</p>
      */
@@ -131,6 +213,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The statistical behavior condition in array format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;field\&quot;:\&quot;click\&quot;,\&quot;option\&quot;:\&quot;&lt;=\&quot;,\&quot;value\&quot;:\&quot;30\&quot;}]</p>
      */
@@ -138,6 +222,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String statisBehaviorConditionArray;
 
     /**
+     * <p>The statistical behavior condition in expression format.</p>
+     * 
      * <strong>example:</strong>
      * <p>click=30</p>
      */
@@ -145,16 +231,29 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String statisBehaviorConditionExpress;
 
     /**
+     * <p>The condition type for the statistical behavior.</p>
+     * <ul>
+     * <li><p>Array: Specifies the array format.</p>
+     * </li>
+     * <li><p>Expression: Specifies the expression format.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Array</p>
      */
     @NameInMap("StatisBehaviorConditionType")
     public String statisBehaviorConditionType;
 
+    /**
+     * <p>A list of traffic control targets.</p>
+     */
     @NameInMap("TrafficControlTargets")
     public java.util.List<CreateTrafficControlTaskRequestTrafficControlTargets> trafficControlTargets;
 
     /**
+     * <p>The intervention user group condition in array format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;field\&quot;:\&quot;gender\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;male\&quot;}]</p>
      */
@@ -162,6 +261,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String userConditionArray;
 
     /**
+     * <p>The intervention user group condition in expression format.</p>
+     * 
      * <strong>example:</strong>
      * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
      */
@@ -169,6 +270,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String userConditionExpress;
 
     /**
+     * <p>The condition type for the intervention user group.</p>
+     * <ul>
+     * <li><p>Array: Specifies the array format.</p>
+     * </li>
+     * <li><p>Expression: Specifies the expression format.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Array</p>
      */
@@ -176,6 +285,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     public String userConditionType;
 
     /**
+     * <p>The user table ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -421,6 +532,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
 
     public static class CreateTrafficControlTaskRequestTrafficControlTargets extends TeaModel {
         /**
+         * <p>The end time of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-25</p>
          */
@@ -428,6 +541,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The event for the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>click</p>
          */
@@ -435,6 +550,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String event;
 
         /**
+         * <p>The item condition in array format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{\&quot;field\&quot;:\&quot;status\&quot;,\&quot;option\&quot;:\&quot;=\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
          */
@@ -442,6 +559,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String itemConditionArray;
 
         /**
+         * <p>The item condition in expression format.</p>
+         * 
          * <strong>example:</strong>
          * <p>status=1</p>
          */
@@ -449,6 +568,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String itemConditionExpress;
 
         /**
+         * <p>The condition type for item control.</p>
+         * <ul>
+         * <li><p>Array: Specifies the array format.</p>
+         * </li>
+         * <li><p>Expression: Specifies the expression format.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Array</p>
          */
@@ -456,6 +583,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String itemConditionType;
 
         /**
+         * <p>The name of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>target_1</p>
          */
@@ -463,6 +592,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Specifies whether to enable new product regulation.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -470,6 +601,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public Boolean newProductRegulation;
 
         /**
+         * <p>The name of the recall strategy.</p>
+         * 
          * <strong>example:</strong>
          * <p>recall_1</p>
          */
@@ -477,6 +610,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String recallName;
 
         /**
+         * <p>The start time of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>
          */
@@ -484,6 +619,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The statistics period.</p>
+         * <ul>
+         * <li><p>Daily: Statistics are aggregated daily.</p>
+         * </li>
+         * <li><p>Hour: Statistics are aggregated hourly.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Daily</p>
          */
@@ -491,6 +634,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String statisPeriod;
 
         /**
+         * <p>The status of the traffic control target.</p>
+         * <ul>
+         * <li><p>Opened: The traffic control target is enabled.</p>
+         * </li>
+         * <li><p>Closed: The traffic control target is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Opened</p>
          */
@@ -498,6 +649,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public String status;
 
         /**
+         * <p>The tolerance value for the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -505,6 +658,8 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         public Long toleranceValue;
 
         /**
+         * <p>The value of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

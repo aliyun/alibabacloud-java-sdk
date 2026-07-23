@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneExperimentRequest extends TeaModel {
     /**
+     * <p>The instance ID. Call the ListInstances operation to get the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListABMetricGroupsRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,24 @@ public class ListABMetricGroupsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p>ASC: ascending.</p>
+     * </li>
+     * <li><p>DESC: descending.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -24,6 +39,8 @@ public class ListABMetricGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -31,6 +48,8 @@ public class ListABMetricGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to return only real-time A/B metric groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -38,12 +57,26 @@ public class ListABMetricGroupsRequest extends TeaModel {
     public Boolean realtime;
 
     /**
+     * <p>The scene ID. You can call the <a href="%5C(~~2402581~~%5C)">ListScenes</a> operation to obtain this ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>The field to sort the results by. Valid values:</p>
+     * <ul>
+     * <li><p>GmtCreateTime: creation time.</p>
+     * </li>
+     * <li><p>GmtModifiedTime: modification time.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 

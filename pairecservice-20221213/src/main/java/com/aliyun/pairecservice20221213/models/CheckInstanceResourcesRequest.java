@@ -8,6 +8,41 @@ public class CheckInstanceResourcesRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><p>Hologres</p>
+     * </li>
+     * <li><p>EAS</p>
+     * </li>
+     * <li><p>BE</p>
+     * </li>
+     * <li><p>Rec</p>
+     * </li>
+     * <li><p>Platform</p>
+     * </li>
+     * <li><p>SLS</p>
+     * </li>
+     * <li><p>DataHub</p>
+     * </li>
+     * <li><p>Kafka</p>
+     * </li>
+     * <li><p>Flinkvvp</p>
+     * </li>
+     * <li><p>ACR</p>
+     * </li>
+     * <li><p>OSS</p>
+     * </li>
+     * <li><p>DataWorks</p>
+     * </li>
+     * <li><p>PAI</p>
+     * </li>
+     * <li><p>MaxCompute</p>
+     * </li>
+     * <li><p>GraphCompute</p>
+     * </li>
+     * <li><p>Redis</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +52,8 @@ public class CheckInstanceResourcesRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The resource URI.</p>
+     * 
      * <strong>example:</strong>
      * <p>bucket-test-123</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListABMetricsRequest extends TeaModel {
     /**
+     * <p>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListABMetricsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name to use for filtering metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>home</p>
      */
@@ -21,6 +24,8 @@ public class ListABMetricsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,8 @@ public class ListABMetricsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +42,8 @@ public class ListABMetricsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Specifies whether to filter for real-time metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -42,6 +51,8 @@ public class ListABMetricsRequest extends TeaModel {
     public Boolean realtime;
 
     /**
+     * <p>The scene ID. Call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -49,6 +60,8 @@ public class ListABMetricsRequest extends TeaModel {
     public String sceneId;
 
     /**
+     * <p>The data table ID. Call the ListTableMetas operation to obtain the ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -56,6 +69,14 @@ public class ListABMetricsRequest extends TeaModel {
     public String tableMetaId;
 
     /**
+     * <p>The metric type. You can use this parameter to filter the results. Valid values:</p>
+     * <ul>
+     * <li><p><code>Single</code>: A single metric.</p>
+     * </li>
+     * <li><p><code>Derived</code>: A derived metric.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Single</p>
      */

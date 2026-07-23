@@ -4,11 +4,14 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListLayersResponseBody extends TeaModel {
+    /**
+     * <p>An array of layers.</p>
+     */
     @NameInMap("Layers")
     public java.util.List<ListLayersResponseBodyLayers> layers;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>518C64F6-DFF7-11ED-85B0-00163E14B3D1</p>
@@ -17,6 +20,8 @@ public class ListLayersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count of layers.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,16 +59,26 @@ public class ListLayersResponseBody extends TeaModel {
 
     public static class ListLayersResponseBodyLayers extends TeaModel {
         /**
+         * <p>The layer description.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the layer was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-05-30T02:02:28.000Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
         /**
+         * <p>The laboratory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -71,6 +86,8 @@ public class ListLayersResponseBody extends TeaModel {
         public String laboratoryId;
 
         /**
+         * <p>The layer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -78,16 +95,26 @@ public class ListLayersResponseBody extends TeaModel {
         public String layerId;
 
         /**
+         * <p>The layer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>layer1</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The remaining traffic for the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ResidualFlow")
         public Long residualFlow;
 
         /**
+         * <p>The scene ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

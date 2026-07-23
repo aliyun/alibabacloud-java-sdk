@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array of item control reports.</p>
+     */
     @NameInMap("TrafficControlTaskItemReports")
     public java.util.List<QueryTrafficControlTaskItemReportResponseBodyTrafficControlTaskItemReports> trafficControlTaskItemReports;
 
@@ -37,6 +42,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
 
     public static class QueryTrafficControlTaskItemReportResponseBodyTrafficControlTaskItemReports extends TeaModel {
         /**
+         * <p>The actual number of controlled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -44,6 +51,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public Long actualItemControlNum;
 
         /**
+         * <p>The actual traffic of controlled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -51,6 +60,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public Long actualItemControlTraffic;
 
         /**
+         * <p>The number of items that reached the control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>6</p>
          */
@@ -58,6 +69,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public Long doneItemControlNum;
 
         /**
+         * <p>The number of items that reached the control target, as a percentage of the expected number of controlled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>20%</p>
          */
@@ -65,6 +78,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public String doneItemControlPercentage;
 
         /**
+         * <p>The actual number of controlled items as a percentage of the expected number.</p>
+         * 
          * <strong>example:</strong>
          * <p>10%</p>
          */
@@ -72,6 +87,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public String itemControlNumPercentage;
 
         /**
+         * <p>The actual traffic from controlled items as a percentage of the expected traffic.</p>
+         * 
          * <strong>example:</strong>
          * <p>20%</p>
          */
@@ -79,6 +96,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public String itemControlTrafficPercentage;
 
         /**
+         * <p>The expected number of controlled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -86,6 +105,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public Long oughtItemControlNum;
 
         /**
+         * <p>The expected traffic of controlled items.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -93,6 +114,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public Long oughtItemControlTraffic;
 
         /**
+         * <p>The ID of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -100,6 +123,8 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         public String trafficControlTargetId;
 
         /**
+         * <p>The name of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>item-1</p>
          */

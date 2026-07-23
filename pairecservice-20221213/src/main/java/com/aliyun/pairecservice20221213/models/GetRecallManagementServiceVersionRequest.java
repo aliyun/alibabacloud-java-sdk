@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRecallManagementServiceVersionRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>learn-pairec-xxx</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateCalculationJobsResponseBody extends TeaModel {
+    /**
+     * <p>A list of calculation job IDs.</p>
+     */
     @NameInMap("CalculationJobIds")
     public java.util.List<String> calculationJobIds;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8C27790E-CCA5-56BB-BA17-646295DEC0A2</p>
      */

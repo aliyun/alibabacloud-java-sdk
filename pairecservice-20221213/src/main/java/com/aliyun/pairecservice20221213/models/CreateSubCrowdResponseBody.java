@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSubCrowdResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
@@ -14,6 +14,8 @@ public class CreateSubCrowdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The sub-crowd ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTrafficControlTaskRequest extends TeaModel {
     /**
+     * <p>The filter for traffic control targets.</p>
+     * 
      * <strong>example:</strong>
      * <p>All</p>
      */
@@ -12,6 +14,13 @@ public class GetTrafficControlTaskRequest extends TeaModel {
     public String controlTargetFilter;
 
     /**
+     * <p>The environment to which the parameter belongs. Valid values:</p>
+     * <ul>
+     * <li>Daily: daily environment</li>
+     * <li>Pre: staging environment</li>
+     * <li>Prod: production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -19,6 +28,8 @@ public class GetTrafficControlTaskRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-1324***</p>
      */
@@ -26,6 +37,8 @@ public class GetTrafficControlTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -33,6 +46,8 @@ public class GetTrafficControlTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The version.</p>
+     * 
      * <strong>example:</strong>
      * <p>Latest</p>
      */

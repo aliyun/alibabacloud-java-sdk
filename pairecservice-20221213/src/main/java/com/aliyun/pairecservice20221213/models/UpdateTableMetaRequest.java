@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateTableMetaRequest extends TeaModel {
     /**
+     * <p>The description of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test table</p>
      */
@@ -12,12 +14,14 @@ public class UpdateTableMetaRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The fields of the data table.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
     public java.util.List<UpdateTableMetaRequestFields> fields;
 
     /**
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +31,15 @@ public class UpdateTableMetaRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The module to which the data table belongs.</p>
+     * <ul>
+     * <li><p>ABTest: a data table for A/B testing.</p>
+     * </li>
+     * <li><p>ExperimentTool: a data table for experiment tools.</p>
+     * </li>
+     * <li><p>DataDiagnosis: a data table for data diagnosis.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +49,7 @@ public class UpdateTableMetaRequest extends TeaModel {
     public String module;
 
     /**
+     * <p>The name of the data table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +59,7 @@ public class UpdateTableMetaRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The resource ID. You can call the <a href="https://help.aliyun.com/document_detail/2672886.html">ListInstanceResource</a> operation to obtain the resource ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +69,7 @@ public class UpdateTableMetaRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The name of the table in the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,10 +140,17 @@ public class UpdateTableMetaRequest extends TeaModel {
     }
 
     public static class UpdateTableMetaRequestFields extends TeaModel {
+        /**
+         * <p>The data type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary_key</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
         /**
+         * <p>Indicates whether the field is a dimension field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,18 +160,27 @@ public class UpdateTableMetaRequest extends TeaModel {
         public Boolean isDimensionField;
 
         /**
+         * <p>Indicates whether the field is a partition field.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPartitionField")
         public String isPartitionField;
 
         /**
+         * <p>The business meaning of the field.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称字段</p>
          */
         @NameInMap("Meaning")
         public String meaning;
 
         /**
+         * <p>The field name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +190,7 @@ public class UpdateTableMetaRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The data type of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLaboratoryRequest extends TeaModel {
     /**
+     * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

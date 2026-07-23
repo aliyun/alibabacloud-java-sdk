@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaModel {
     /**
+     * <p>The reported traffic for this target within the experiment.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -12,6 +14,8 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
     public Double traffic;
 
     /**
+     * <p>The timestamp indicating when the data was reported.</p>
+     * 
      * <strong>example:</strong>
      * <p>1760319273</p>
      */

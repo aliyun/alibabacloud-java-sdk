@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRecallManagementServiceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the active version of the recall management service.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String currentRecallManagementServiceVersionId;
 
     /**
+     * <p>The name of the active version of the recall management service.</p>
+     * 
      * <strong>example:</strong>
      * <p>version-1</p>
      */
@@ -19,6 +23,8 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String currentRecallManagementServiceVersionName;
 
     /**
+     * <p>The description of the recall management service.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test recall</p>
      */
@@ -26,6 +32,8 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -33,6 +41,8 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -40,6 +50,8 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The name of the recall management service.</p>
+     * 
      * <strong>example:</strong>
      * <p>hot_group_recall</p>
      */
@@ -47,6 +59,8 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the recall management service.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -54,6 +68,8 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String recallManagementServiceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -61,6 +77,14 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The status of the recall management service. Valid values:</p>
+     * <ul>
+     * <li><p>Online: The service is running and available.</p>
+     * </li>
+     * <li><p>Offline: The service is stopped or unavailable.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Online</p>
      */

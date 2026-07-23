@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A04CB8C0-E74A-5E83-BC61-64D153574EC7</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateExperimentRequest extends TeaModel {
     /**
+     * <p>The experiment configuration, specified as a JSON string.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateExperimentRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The ID of the debug crowd. To obtain this ID, call the ListCrowds operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,6 +23,8 @@ public class UpdateExperimentRequest extends TeaModel {
     public String debugCrowdId;
 
     /**
+     * <p>The UIDs for debug users, specified as a comma-separated string. Each UID must belong to an Alibaba Cloud account or RAM user.</p>
+     * 
      * <strong>example:</strong>
      * <p>1124512470******,1124512471******,1124512472******</p>
      */
@@ -26,6 +32,7 @@ public class UpdateExperimentRequest extends TeaModel {
     public String debugUsers;
 
     /**
+     * <p>The description of the experiment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class UpdateExperimentRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The percentage of traffic to allocate to the experiment.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -42,6 +51,7 @@ public class UpdateExperimentRequest extends TeaModel {
     public Integer flowPercent;
 
     /**
+     * <p>The ID of the instance. To obtain this ID, call the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +61,7 @@ public class UpdateExperimentRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the experiment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +71,7 @@ public class UpdateExperimentRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The type of the experiment. Valid values: ● Baseline: A baseline experiment. ● Normal: A normal experiment.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

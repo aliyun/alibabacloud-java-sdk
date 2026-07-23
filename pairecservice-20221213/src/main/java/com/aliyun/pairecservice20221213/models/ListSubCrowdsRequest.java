@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSubCrowdsRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call the ListInstances operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

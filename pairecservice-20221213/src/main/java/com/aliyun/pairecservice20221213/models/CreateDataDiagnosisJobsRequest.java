@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataDiagnosisJobsRequest extends TeaModel {
     /**
+     * <p>The data diagnosis ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateDataDiagnosisJobsRequest extends TeaModel {
     public String dataDiagnosisId;
 
     /**
+     * <p>The end date for the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateDataDiagnosisJobsRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CreateDataDiagnosisJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The start date for the job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

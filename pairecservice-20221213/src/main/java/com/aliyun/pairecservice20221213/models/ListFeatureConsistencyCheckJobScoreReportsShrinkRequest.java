@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobScoreReportsShrinkRequest extends TeaModel {
+    /**
+     * <p>A list of request IDs to exclude from the feature comparison.</p>
+     */
     @NameInMap("ExcludeRequestIds")
     public String excludeRequestIdsShrink;
 
     /**
+     * <p>The ID of the instance. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-********</p>
      */

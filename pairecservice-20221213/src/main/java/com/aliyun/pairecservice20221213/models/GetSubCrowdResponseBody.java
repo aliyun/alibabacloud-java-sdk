@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSubCrowdResponseBody extends TeaModel {
     /**
+     * <p>The time when the sub-crowd was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -12,6 +14,8 @@ public class GetSubCrowdResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The number of users in the sub-crowd.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,7 +23,7 @@ public class GetSubCrowdResponseBody extends TeaModel {
     public String quantity;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
@@ -28,6 +32,8 @@ public class GetSubCrowdResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The source of the sub-crowd. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>ManualInput</p>
      */
@@ -35,6 +41,8 @@ public class GetSubCrowdResponseBody extends TeaModel {
     public String source;
 
     /**
+     * <p>The users in the sub-crowd.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1,user2</p>
      */

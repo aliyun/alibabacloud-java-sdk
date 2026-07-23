@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDataDiagnosisRequest extends TeaModel {
     /**
+     * <p>The configuration for the data diagnosis task, specified as a JSON string. The required fields in this object depend on the value of the <code>Type</code> parameter.</p>
+     * <ul>
+     * <li><p>If <code>Type</code> is set to <code>ChangeRate</code>, specify the following fields: <code>AnalysisField</code> and <code>PartitionFieldFormat</code>.</p>
+     * </li>
+     * <li><p>If <code>Type</code> is set to <code>PreferenceStatisticsCycle</code>, specify the following fields: <code>UserIdField</code>, <code>RemainDays</code>, <code>EverAppearedDays</code>, <code>RemainRatePeriods</code>, and <code>PartitionFieldFormat</code>.</p>
+     * </li>
+     * <li><p>If <code>Type</code> is set to <code>JoinTables</code>, specify the following fields: <code>LeftTableAnalysisField</code>, <code>RightTableAnalysisField</code>, <code>LeftJoinField</code>, <code>RightJoinField</code>, <code>SampleQuantity</code>, <code>LeftTablePartitionFieldFormat</code>, and <code>RightTablePartitionFieldFormat</code>.</p>
+     * </li>
+     * <li><p>If <code>Type</code> is set to <code>BaseStatistics</code>, specify the following fields: <code>TagField</code>, <code>TagFieldSeparator</code>, <code>KVField</code>, <code>KVFieldSeparator</code>, <code>KVPairSeparator</code>, <code>TextField</code>, <code>Quantiles</code>, <code>DefaultValueOfString</code>, <code>NullStringField</code>, and <code>PartitionFieldFormat</code>.</p>
+     * </li>
+     * <li><p>If <code>Type</code> is set to <code>AbnormalBehavior</code>, specify the following fields: <code>UserId</code>, <code>ItemId</code>, <code>EventField</code>, <code>UpStreamBehavior</code>, <code>DownstreamBehavior</code>, <code>NumericHistogramBins</code>, and <code>PartitionFieldFormat</code>.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +27,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The scheduled time to run the task. If this parameter is omitted, the task runs only once.</p>
+     * 
      * <strong>example:</strong>
      * <p>08:00</p>
      */
@@ -21,6 +36,7 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String cycleTime;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +46,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the left data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -37,6 +55,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String leftTableMetaId;
 
     /**
+     * <p>The partition field for the left data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -44,6 +64,7 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String leftTablePartitionField;
 
     /**
+     * <p>The name of the data diagnosis task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +74,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The partition field.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -60,6 +83,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String partitionField;
 
     /**
+     * <p>The ID of the right data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -67,6 +92,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String rightTableMetaId;
 
     /**
+     * <p>The partition field for the right data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -74,6 +101,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String rightTablePartitionField;
 
     /**
+     * <p>The ID of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -81,6 +110,8 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String tableMetaId;
 
     /**
+     * <p>The number of top results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -88,6 +119,19 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public Long topNQuantity;
 
     /**
+     * <p>The type of the data diagnosis task. Valid values:</p>
+     * <ul>
+     * <li><p>ChangeRate: Item or user change rate analysis.</p>
+     * </li>
+     * <li><p>PreferenceStatisticsCycle: User preference statistics cycle analysis.</p>
+     * </li>
+     * <li><p>JoinTables: Two-table join analysis.</p>
+     * </li>
+     * <li><p>BaseStatistics: Basic statistical analysis.</p>
+     * </li>
+     * <li><p>AbnormalBehavior: Abnormal behavior analysis.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

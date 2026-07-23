@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateAlgorithmCustomizationScriptResponseBody extends TeaModel {
     /**
+     * <p>The log ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -12,6 +14,8 @@ public class GenerateAlgorithmCustomizationScriptResponseBody extends TeaModel {
     public String logId;
 
     /**
+     * <p>The OSS address of the generated package.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss:xxxx</p>
      */
@@ -19,6 +23,8 @@ public class GenerateAlgorithmCustomizationScriptResponseBody extends TeaModel {
     public String ossAddress;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CF1E160-3F36-5E73-A170-C75504F05BBC</p>
      */

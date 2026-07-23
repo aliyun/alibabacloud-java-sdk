@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListABMetricGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The A/B metric groups.</p>
+     */
     @NameInMap("ABMetricGroups")
     public java.util.List<ListABMetricGroupsResponseBodyABMetricGroups> ABMetricGroups;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E15A1443-7917-5BE0-AE70-25538ECF398D</p>
      */
@@ -15,6 +20,8 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of A/B metric groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
 
     public static class ListABMetricGroupsResponseBodyABMetricGroups extends TeaModel {
         /**
+         * <p>The A/B metric group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +68,8 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         public String ABMetricGroupId;
 
         /**
+         * <p>The comma-separated IDs of the A/B metrics in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1,2</p>
          */
@@ -66,16 +77,26 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         public String ABMetricIds;
 
         /**
+         * <p>The comma-separated names of the A/B metrics in the group.</p>
+         * 
          * <strong>example:</strong>
          * <p>pv,uv</p>
          */
         @NameInMap("ABMetricNames")
         public String ABMetricNames;
 
+        /**
+         * <p>The description of the A/B metric group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>访问量相关指标</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The A/B metric group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>visits</p>
          */
@@ -83,6 +104,8 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>2799614***</p>
          */
@@ -90,6 +113,8 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         public String owner;
 
         /**
+         * <p>Indicates whether the A/B metric group is a real-time group.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -97,6 +122,8 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         public Boolean realtime;
 
         /**
+         * <p>The scene ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

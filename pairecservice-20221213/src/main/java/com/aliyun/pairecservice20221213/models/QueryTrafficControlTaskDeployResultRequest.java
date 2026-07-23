@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryTrafficControlTaskDeployResultRequest extends TeaModel {
     /**
+     * <p>The environment. Valid values:</p>
+     * <ul>
+     * <li>Daily: daily environment.</li>
+     * <li>Pre: staging environment.</li>
+     * <li>Prod: production environment.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -12,6 +19,8 @@ public class QueryTrafficControlTaskDeployResultRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec_123****</p>
      */

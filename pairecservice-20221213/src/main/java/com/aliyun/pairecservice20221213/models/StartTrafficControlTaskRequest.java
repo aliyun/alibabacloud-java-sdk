@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartTrafficControlTaskRequest extends TeaModel {
     /**
+     * <p>The target environment. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>Pre</p>
      */
@@ -12,6 +14,8 @@ public class StartTrafficControlTaskRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-123***</p>
      */

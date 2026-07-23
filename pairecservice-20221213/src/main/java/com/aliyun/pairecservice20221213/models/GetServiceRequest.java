@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServiceRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> to obtain the instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-test-xxx</p>
      */

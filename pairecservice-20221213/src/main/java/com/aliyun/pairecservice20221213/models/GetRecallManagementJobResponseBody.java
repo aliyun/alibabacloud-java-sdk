@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRecallManagementJobResponseBody extends TeaModel {
     /**
+     * <p>The time when the job ended.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132</p>
      */
@@ -12,6 +14,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The log of the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;success&quot;</p>
      */
@@ -19,19 +23,29 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     public String log;
 
     /**
+     * <p>The recall management job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("RecallManagementJobId")
     public String recallManagementJobId;
 
+    /**
+     * <p>Details of the recall management table.</p>
+     */
     @NameInMap("RecallManagementTableInfo")
     public GetRecallManagementJobResponseBodyRecallManagementTableInfo recallManagementTableInfo;
 
+    /**
+     * <p>Details of the recall management table.</p>
+     */
     @NameInMap("RecallManagerTableInfo")
     public GetRecallManagementJobResponseBodyRecallManagerTableInfo recallManagerTableInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -39,6 +53,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The time when the job started.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T22:24:33.132</p>
      */
@@ -46,6 +62,18 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The status of the job. Valid values are:</p>
+     * <ul>
+     * <li><p><code>Init</code>: Initializing.</p>
+     * </li>
+     * <li><p><code>Running</code>: Running.</p>
+     * </li>
+     * <li><p><code>Success</code>: Successful.</p>
+     * </li>
+     * <li><p><code>Failed</code>: Failed.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -123,6 +151,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
 
     public static class GetRecallManagementJobResponseBodyRecallManagementTableInfo extends TeaModel {
         /**
+         * <p>The data version.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20250701</p>
          */
@@ -130,6 +160,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         public String dataVersion;
 
         /**
+         * <p>The recall management table version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20250101000</p>
          */
@@ -137,6 +169,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         public String recallManagementTableVersionId;
 
         /**
+         * <p>The data size of the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -144,6 +178,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         public String sourceTableDataSize;
 
         /**
+         * <p>The number of rows in the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -191,6 +227,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
 
     public static class GetRecallManagementJobResponseBodyRecallManagerTableInfo extends TeaModel {
         /**
+         * <p>The data version.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20250701</p>
          */
@@ -198,6 +236,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         public String dataVersion;
 
         /**
+         * <p>The recall management table version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20250101000</p>
          */
@@ -205,6 +245,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         public String recallManagerTableVersionId;
 
         /**
+         * <p>The data size of the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -212,6 +254,8 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         public String sourceTableDataSize;
 
         /**
+         * <p>The number of rows in the source table.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

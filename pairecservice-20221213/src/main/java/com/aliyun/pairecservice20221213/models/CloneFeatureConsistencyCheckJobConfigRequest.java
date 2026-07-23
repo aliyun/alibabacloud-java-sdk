@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     /**
+     * <p>The instance ID. To get the ID, call <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

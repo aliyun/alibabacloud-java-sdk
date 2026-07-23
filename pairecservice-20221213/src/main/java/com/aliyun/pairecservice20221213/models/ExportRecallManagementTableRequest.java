@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportRecallManagementTableRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-test1</p>
      */
@@ -12,6 +14,8 @@ public class ExportRecallManagementTableRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The MaxCompute project name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -19,7 +23,7 @@ public class ExportRecallManagementTableRequest extends TeaModel {
     public String maxcomputeProjectName;
 
     /**
-     * <p>maxcompute schema。</p>
+     * <p>The MaxCompute project schema.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -28,16 +32,23 @@ public class ExportRecallManagementTableRequest extends TeaModel {
     public String maxcomputeSchema;
 
     /**
+     * <p>The name of the destination table in MaxCompute.</p>
+     * 
      * <strong>example:</strong>
      * <p>table-1</p>
      */
     @NameInMap("MaxcomputeTableName")
     public String maxcomputeTableName;
 
+    /**
+     * <p>The table partitions to export. The value must be a JSON object where each key is a partition field and its value is the corresponding partition value.</p>
+     */
     @NameInMap("Partitions")
     public java.util.Map<String, String> partitions;
 
     /**
+     * <p>The version ID of the recall management table. This parameter defaults to the current published version.</p>
+     * 
      * <strong>example:</strong>
      * <p>20250213000000</p>
      */

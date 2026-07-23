@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResourceTablesResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
@@ -13,10 +13,15 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of data tables.</p>
+     */
     @NameInMap("Tables")
     public java.util.List<ListInstanceResourceTablesResponseBodyTables> tables;
 
     /**
+     * <p>The total count of data tables.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -54,6 +59,8 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
 
     public static class ListInstanceResourceTablesResponseBodyTables extends TeaModel {
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>table-1</p>
          */

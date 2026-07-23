@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteTableMetaRequest extends TeaModel {
     /**
+     * <p>The ID of the instance. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>实例ID	pairec-cn-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSubCrowdRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can obtain the instance ID by calling the ListInstances API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateSubCrowdRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The source of users for the sub-crowd. Valid values: ● ManualInput: manual input ● UploadFile: file upload</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateSubCrowdRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>A comma-separated list of users in the sub-crowd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,36 +5,59 @@ import com.aliyun.tea.*;
 
 public class GetTableMetaResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the table can be deleted. The value is <code>false</code> if other resources reference the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("CanDelete")
     public Boolean canDelete;
 
+    /**
+     * <p>Additional configurations for the table, provided as a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;table_type&quot;:&quot;item&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
     /**
+     * <p>The table description.</p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test table</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The fields in the table.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<GetTableMetaResponseBodyFields> fields;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15:24:33</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>The import time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtImportedTime")
     public String gmtImportedTime;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15:24:33</p>
      */
@@ -42,6 +65,16 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The table module. Valid values:</p>
+     * <ul>
+     * <li><p><code>ABTest</code>: An A/B testing data table.</p>
+     * </li>
+     * <li><p><code>ExperimentTool</code>: An experiment tool table.</p>
+     * </li>
+     * <li><p><code>DataDiagnosis</code>: A table for data diagnosis.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ABTest</p>
      */
@@ -49,6 +82,8 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String module;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table</p>
      */
@@ -56,6 +91,8 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>28C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -63,6 +100,8 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>reso-wkgo***</p>
      */
@@ -83,10 +122,18 @@ public class GetTableMetaResponseBody extends TeaModel {
     @NameInMap("ResourceUri")
     public String resourceUri;
 
+    /**
+     * <p>The table ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TableMetaId")
     public String tableMetaId;
 
     /**
+     * <p>The name of the table in the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_mysql</p>
      */
@@ -94,6 +141,14 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The table type. Valid values:</p>
+     * <ul>
+     * <li><p><code>MaxCompute</code></p>
+     * </li>
+     * <li><p><code>Hologres</code></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
      */
@@ -101,6 +156,8 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The URL of the table in Data Map. This parameter is returned only for MaxCompute tables.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dmc-xxx.com/dm/table/xxx">https://dmc-xxx.com/dm/table/xxx</a></p>
      */
@@ -250,6 +307,8 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     public static class GetTableMetaResponseBodyFields extends TeaModel {
         /**
+         * <p>Whether the field is a dimension field.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -257,6 +316,8 @@ public class GetTableMetaResponseBody extends TeaModel {
         public Boolean isDimensionField;
 
         /**
+         * <p>The field meaning.</p>
+         * 
          * <strong>example:</strong>
          * <p>the gender of people</p>
          */
@@ -264,6 +325,8 @@ public class GetTableMetaResponseBody extends TeaModel {
         public String meaning;
 
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>gender</p>
          */
@@ -271,6 +334,8 @@ public class GetTableMetaResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The field type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BIGINT</p>
          */

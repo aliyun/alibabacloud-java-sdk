@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the expression is valid.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
     public Boolean isValie;
 
     /**
+     * <p>If <code>IsValid</code> is <code>false</code>, this field provides the reason for the failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -19,6 +23,8 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
     public String reason;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */

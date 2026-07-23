@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChatConversationRequest extends TeaModel {
     /**
+     * <p>The additional information input in JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,12 +14,18 @@ public class ChatConversationRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The message content.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>校验引擎配置</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
+     * <p>The session ID. If this parameter is not specified, a new session is created. If this parameter is specified, the conversation continues in the context of the existing session.</p>
+     * 
      * <strong>example:</strong>
      * <p>e47cfae9-c0cc-42e1-91e2-e67cdb0e7b96</p>
      */
@@ -25,6 +33,7 @@ public class ChatConversationRequest extends TeaModel {
     public String conversationId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CF1E160-3F36-5E73-A170-C75504F05BBC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the reported traffic data.</p>
+     */
     @NameInMap("TrafficControlTaskTrafficInfo")
     public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo;
 
@@ -36,10 +41,15 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
     }
 
     public static class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics extends TeaModel {
+        /**
+         * <p>The detailed data reported for this traffic control target.</p>
+         */
         @NameInMap("Data")
         public java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data;
 
         /**
+         * <p>The traffic control target ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -70,9 +80,15 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
     }
 
     public static class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo extends TeaModel {
+        /**
+         * <p>The traffic data for each traffic control target.</p>
+         */
         @NameInMap("TargetTraffics")
         public java.util.List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics> targetTraffics;
 
+        /**
+         * <p>The reported traffic data for the traffic control task.</p>
+         */
         @NameInMap("TaskTraffics")
         public java.util.Map<String, TrafficControlTaskTrafficInfoTaskTrafficsValue> taskTraffics;
 

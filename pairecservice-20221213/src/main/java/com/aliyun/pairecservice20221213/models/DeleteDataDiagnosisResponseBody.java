@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDataDiagnosisResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
      */

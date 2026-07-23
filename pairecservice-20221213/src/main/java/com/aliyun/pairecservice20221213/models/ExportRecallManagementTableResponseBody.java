@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportRecallManagementTableResponseBody extends TeaModel {
     /**
+     * <p>The export job ID. Use this ID to track the job\&quot;s status.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ExportRecallManagementTableResponseBody extends TeaModel {
     public String recallManagementJobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */

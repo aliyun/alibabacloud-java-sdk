@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTrafficControlTasksResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3AAA45F6-0798-5461-9360-81D133823CE7</p>
      */
@@ -12,12 +14,17 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of traffic control tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
 
+    /**
+     * <p>The list of traffic control tasks.</p>
+     */
     @NameInMap("TrafficControlTasks")
     public java.util.List<ListTrafficControlTasksResponseBodyTrafficControlTasks> trafficControlTasks;
 
@@ -51,9 +58,15 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
     }
 
     public static class ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargetsSplitParts extends TeaModel {
+        /**
+         * <p>The list of value-based split points for the target.</p>
+         */
         @NameInMap("SetValues")
         public java.util.List<Long> setValues;
 
+        /**
+         * <p>The list of time-based split points.</p>
+         */
         @NameInMap("TimePoints")
         public java.util.List<Long> timePoints;
 
@@ -82,6 +95,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
 
     public static class ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets extends TeaModel {
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-25</p>
          */
@@ -89,6 +104,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The event for the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>click</p>
          */
@@ -96,6 +113,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String event;
 
         /**
+         * <p>The creation time of the target.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-03T15:08:10.58+08:00</p>
          */
@@ -103,6 +122,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The last update time of the target.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-11-21T16:26:58.57+08:00</p>
          */
@@ -110,6 +131,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The item condition, in an array format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
          */
@@ -117,6 +140,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String itemConditionArray;
 
         /**
+         * <p>The item condition, in an expression format.</p>
+         * 
          * <strong>example:</strong>
          * <p>status=1</p>
          */
@@ -124,6 +149,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String itemConditionExpress;
 
         /**
+         * <p>The item condition type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Array</p>
          */
@@ -131,6 +158,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String itemConditionType;
 
         /**
+         * <p>The name of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>target-1</p>
          */
@@ -138,6 +167,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Indicates whether the traffic control target is for a new product recall.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -145,16 +176,23 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public Boolean newProductRegulation;
 
         /**
+         * <p>The name of the recall strategy.</p>
+         * 
          * <strong>example:</strong>
          * <p>recall-1</p>
          */
         @NameInMap("RecallName")
         public String recallName;
 
+        /**
+         * <p>The details of the split points.</p>
+         */
         @NameInMap("SplitParts")
         public ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargetsSplitParts splitParts;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>
          */
@@ -162,6 +200,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The statistics period.</p>
+         * 
          * <strong>example:</strong>
          * <p>Daily</p>
          */
@@ -169,6 +209,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String statisPeriod;
 
         /**
+         * <p>The status of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>Opened</p>
          */
@@ -176,6 +218,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tolerance value for the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -183,6 +227,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public Long toleranceValue;
 
         /**
+         * <p>The traffic control target ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,6 +236,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String trafficControlTargetId;
 
         /**
+         * <p>The traffic control task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -197,6 +245,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String trafficControlTaskId;
 
         /**
+         * <p>The value of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -356,6 +406,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
 
     public static class ListTrafficControlTasksResponseBodyTrafficControlTasks extends TeaModel {
         /**
+         * <p>The behavior table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -363,6 +415,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String behaviorTableMetaId;
 
         /**
+         * <p>The control granularity.</p>
+         * 
          * <strong>example:</strong>
          * <p>Global</p>
          */
@@ -370,6 +424,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String controlGranularity;
 
         /**
+         * <p>The control logic.</p>
+         * 
          * <strong>example:</strong>
          * <p>Guaranteed</p>
          */
@@ -377,6 +433,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String controlLogic;
 
         /**
+         * <p>The control type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Percent</p>
          */
@@ -384,22 +442,35 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String controlType;
 
         /**
+         * <p>The description of the traffic control task.</p>
+         * 
          * <strong>example:</strong>
          * <p>this is a test task</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The list of effective scene IDs.</p>
+         */
         @NameInMap("EffectiveSceneIds")
         public java.util.List<Integer> effectiveSceneIds;
 
+        /**
+         * <p>The list of effective scene names.</p>
+         */
         @NameInMap("EffectiveSceneNameList")
         public java.util.List<String> effectiveSceneNameList;
 
+        /**
+         * <p>The list of effective scene names.</p>
+         */
         @NameInMap("EffectiveSceneNames")
         public java.util.List<Integer> effectiveSceneNames;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-25</p>
          */
@@ -407,6 +478,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Indicates whether the task has ever been published.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -414,6 +487,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public Boolean everPublished;
 
         /**
+         * <p>The execution schedule for the task. Valid values:</p>
+         * <ul>
+         * <li><p><code>Permanent</code>: The task runs indefinitely.</p>
+         * </li>
+         * <li><p><code>TimeRange</code>: The task runs within a specified time range. If you set this parameter to this value, you must also specify the <code>StartTime</code> and <code>EndTime</code> parameters.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Permanent</p>
          */
@@ -421,6 +502,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String executionTime;
 
         /**
+         * <p>The Flink resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>resource-xxx</p>
          */
@@ -428,6 +511,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String flinkResourceId;
 
         /**
+         * <p>The name of the Flink resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>flink_test</p>
          */
@@ -435,6 +520,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String flinkResourceName;
 
         /**
+         * <p>The creation time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-25T06:04:28.441Z</p>
          */
@@ -442,6 +529,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The last update time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-25T06:04:28.441Z</p>
          */
@@ -449,6 +538,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The item condition, in an array format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
          */
@@ -456,6 +547,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String itemConditionArray;
 
         /**
+         * <p>The item condition, in an expression format.</p>
+         * 
          * <strong>example:</strong>
          * <p>status=1</p>
          */
@@ -463,6 +556,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String itemConditionExpress;
 
         /**
+         * <p>The item condition type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Array</p>
          */
@@ -470,6 +565,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String itemConditionType;
 
         /**
+         * <p>The item table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -477,6 +574,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String itemTableMetaId;
 
         /**
+         * <p>The name of the traffic control task.</p>
+         * 
          * <strong>example:</strong>
          * <p>task_1</p>
          */
@@ -484,6 +583,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>A comma-separated list of staging experiment IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1,2</p>
          */
@@ -491,6 +592,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String preExperimentIds;
 
         /**
+         * <p>The staging environment status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Runnning</p>
          */
@@ -498,6 +601,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String prepubStatus;
 
         /**
+         * <p>A comma-separated list of production experiment IDs.</p>
+         * 
          * <strong>example:</strong>
          * <p>6,7</p>
          */
@@ -505,6 +610,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String prodExperimentIds;
 
         /**
+         * <p>The production environment status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Runnning</p>
          */
@@ -512,6 +619,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String productStatus;
 
         /**
+         * <p>The scene ID. You can obtain this ID by calling the <code>ListScenes</code> operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -519,6 +628,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String sceneId;
 
         /**
+         * <p>The name of the scene.</p>
+         * 
          * <strong>example:</strong>
          * <p>home_feed</p>
          */
@@ -526,19 +637,29 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String sceneName;
 
         /**
+         * <p>The service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <p>The list of service IDs.</p>
+         */
         @NameInMap("ServiceIdList")
         public java.util.List<Integer> serviceIdList;
 
+        /**
+         * <p>The list of bound engine service IDs.</p>
+         */
         @NameInMap("ServiceIds")
         public java.util.List<String> serviceIds;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-25</p>
          */
@@ -546,6 +667,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The behavior statistics expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>event=click</p>
          */
@@ -553,6 +676,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String statisBahaviorConditionExpress;
 
         /**
+         * <p>The behavior statistics condition, in an array format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</p>
          */
@@ -560,6 +685,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String statisBehaviorConditionArray;
 
         /**
+         * <p>The behavior statistics expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>event=exposure</p>
          */
@@ -567,16 +694,23 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String statisBehaviorConditionExpress;
 
         /**
+         * <p>The condition type for behavior statistics.</p>
+         * 
          * <strong>example:</strong>
          * <p>Array</p>
          */
         @NameInMap("StatisBehaviorConditionType")
         public String statisBehaviorConditionType;
 
+        /**
+         * <p>The list of traffic control targets.</p>
+         */
         @NameInMap("TrafficControlTargets")
         public java.util.List<ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets> trafficControlTargets;
 
         /**
+         * <p>The traffic control task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -584,6 +718,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String trafficControlTaskId;
 
         /**
+         * <p>The condition for the target user group, in an array format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
          */
@@ -591,6 +727,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String userConditionArray;
 
         /**
+         * <p>The condition for the target user group, in an expression format.</p>
+         * 
          * <strong>example:</strong>
          * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
          */
@@ -598,6 +736,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String userConditionExpress;
 
         /**
+         * <p>The condition type for the target user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Array</p>
          */
@@ -605,6 +745,8 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         public String userConditionType;
 
         /**
+         * <p>The user table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

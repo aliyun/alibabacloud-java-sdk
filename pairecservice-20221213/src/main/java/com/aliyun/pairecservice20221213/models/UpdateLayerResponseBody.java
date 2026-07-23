@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLayerResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0EA9215E-EC21-53AB-B8D9-D3DEA90D040A</p>

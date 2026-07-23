@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OnlineRecallManagementServiceRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-test123</p>
      */

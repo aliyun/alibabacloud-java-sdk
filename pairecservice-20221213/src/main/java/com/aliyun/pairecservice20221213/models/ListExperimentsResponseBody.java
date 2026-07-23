@@ -4,11 +4,14 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListExperimentsResponseBody extends TeaModel {
+    /**
+     * <p>The list of experiments.</p>
+     */
     @NameInMap("Experiments")
     public java.util.List<ListExperimentsResponseBodyExperiments> experiments;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>68075085-1A7D-55C2-B51D-7AD9B02A6DD6</p>
@@ -17,6 +20,8 @@ public class ListExperimentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of experiments returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +59,8 @@ public class ListExperimentsResponseBody extends TeaModel {
 
     public static class ListExperimentsResponseBodyExperiments extends TeaModel {
         /**
+         * <p>The alias for the experiment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>L1#EG1#E1</p>
          */
@@ -61,6 +68,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String aliasExperimentId;
 
         /**
+         * <p>The allocated bucket numbers.</p>
+         * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
          */
@@ -68,6 +77,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String buckets;
 
         /**
+         * <p>The configuration of the experiment.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -75,6 +86,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The ID of the debug crowd.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -82,6 +95,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String debugCrowdId;
 
         /**
+         * <p>A comma-separated list of user IDs for debugging.</p>
+         * 
          * <strong>example:</strong>
          * <p>uid1,uid2,uid3</p>
          */
@@ -89,6 +104,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String debugUsers;
 
         /**
+         * <p>The description of the experiment.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
          */
@@ -96,6 +113,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the experiment group.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -103,6 +122,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String experimentGroupId;
 
         /**
+         * <p>The ID of the experiment.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -110,6 +131,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String experimentId;
 
         /**
+         * <p>The percentage of flow allocated to the experiment.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -117,6 +140,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public Integer flowPercent;
 
         /**
+         * <p>The timestamp indicating when the experiment was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -124,6 +149,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The timestamp indicating when the experiment was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -131,6 +158,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The ID of the laboratory.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -138,6 +167,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String laboratoryId;
 
         /**
+         * <p>The ID of the layer.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -145,6 +176,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String layerId;
 
         /**
+         * <p>The name of the experiment.</p>
+         * 
          * <strong>example:</strong>
          * <p>experiment_test1</p>
          */
@@ -152,6 +185,8 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the scene.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -159,6 +194,14 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String sceneId;
 
         /**
+         * <p>The status of the experiment. Valid values:</p>
+         * <ul>
+         * <li><p><code>Offline</code>: The experiment is inactive and does not receive flow.</p>
+         * </li>
+         * <li><p><code>Online</code>: The experiment is active and can receive flow.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Offline</p>
          */
@@ -166,6 +209,14 @@ public class ListExperimentsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the experiment. Valid values:</p>
+         * <ul>
+         * <li><p><code>Baseline</code>: The control experiment.</p>
+         * </li>
+         * <li><p><code>Normal</code>: A variant experiment.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Baseline</p>
          */

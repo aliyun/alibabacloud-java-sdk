@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTrafficControlTaskResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>42391E6D-822C-58F8-9F7E-D991BB86D6AD</p>
      */
@@ -12,6 +14,8 @@ public class CreateTrafficControlTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the new traffic control task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListCalculationJobsResponseBody extends TeaModel {
+    /**
+     * <p>A list of calculation jobs.</p>
+     */
     @NameInMap("CalculationJobs")
     public java.util.List<ListCalculationJobsResponseBodyCalculationJobs> calculationJobs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
      */
@@ -15,6 +20,8 @@ public class ListCalculationJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListCalculationJobsResponseBody extends TeaModel {
 
     public static class ListCalculationJobsResponseBodyCalculationJobs extends TeaModel {
         /**
+         * <p>The name of the A/B metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>pv</p>
          */
@@ -59,6 +68,8 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         public String ABMetricName;
 
         /**
+         * <p>The business date.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15</p>
          */
@@ -66,6 +77,8 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         public String bizDate;
 
         /**
+         * <p>The calculation job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -73,6 +86,8 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         public String calculationJobId;
 
         /**
+         * <p>The job configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -80,16 +95,29 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The time when the job was run.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         @NameInMap("GmtRanTime")
         public String gmtRanTime;
 
+        /**
+         * <p>The job messages.</p>
+         */
         @NameInMap("JobMessage")
         public java.util.List<String> jobMessage;
 
         /**
+         * <p>The source of the job. Valid values:</p>
+         * <ul>
+         * <li><p>CronOffline: The job is an offline scheduled task.</p>
+         * </li>
+         * <li><p>DataRerun: The job is a data rerun task.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CronOffline</p>
          */
@@ -97,6 +125,18 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         public String jobSource;
 
         /**
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li><p>Success</p>
+         * </li>
+         * <li><p>Failure</p>
+         * </li>
+         * <li><p>Initializing</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

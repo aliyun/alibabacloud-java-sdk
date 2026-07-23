@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetExperimentRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pairec-test1</p>
+     * <p>pairec-cn-abcdefg1234</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateExperimentGroupRequest extends TeaModel {
     /**
+     * <p>The configuration of the experiment group.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
      */
@@ -12,16 +14,36 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The ID of the crowd for crowd targeting. You can obtain this ID by calling the ListCrowds API.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("CrowdId")
     public String crowdId;
 
+    /**
+     * <p>The type of crowd targeting for the experiment group. Valid values:</p>
+     * <ul>
+     * <li><p>All: all traffic</p>
+     * </li>
+     * <li><p>Filter: traffic that matches the filter condition</p>
+     * </li>
+     * <li><p>CrowdId: traffic from the specified crowd ID</p>
+     * </li>
+     * <li><p>Random: a random percentage of traffic</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
+     */
     @NameInMap("CrowdTargetType")
     public String crowdTargetType;
 
     /**
+     * <p>The ID of the debug crowd. You can obtain this ID by calling the ListCrowds API.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -29,6 +51,8 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String debugCrowdId;
 
     /**
+     * <p>A comma-separated list of UIDs for debug users. The UIDs can belong to Alibaba Cloud main accounts or sub-accounts.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1,user2,user3</p>
      */
@@ -36,6 +60,7 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String debugUsers;
 
     /**
+     * <p>The description of the experiment group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +70,8 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The time duration for traffic distribution.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -52,6 +79,8 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public Integer distributionTimeDuration;
 
     /**
+     * <p>The distribution type. ● UserId: Distributes traffic by user ID. ● TimeDuration: Distributes traffic by time duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>UserId</p>
      */
@@ -59,6 +88,8 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String distributionType;
 
     /**
+     * <p>The filter condition for crowd targeting.</p>
+     * 
      * <strong>example:</strong>
      * <p>gender=male</p>
      */
@@ -66,6 +97,7 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The ID of the instance. You can obtain this ID by calling the ListInstances API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +107,7 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the layer. You can obtain this ID by calling the ListLayers API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +117,7 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String layerId;
 
     /**
+     * <p>The name of the experiment group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,16 +127,26 @@ public class UpdateExperimentGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Specifies whether an AA experiment group is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("NeedAA")
     public Boolean needAA;
 
+    /**
+     * <p>If CrowdTargetType is set to Random, this parameter specifies the percentage of traffic (from 0 to 100) to route to the experiment group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("RandomFlow")
     public Long randomFlow;
 
     /**
+     * <p>The reserved buckets.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3</p>
      */

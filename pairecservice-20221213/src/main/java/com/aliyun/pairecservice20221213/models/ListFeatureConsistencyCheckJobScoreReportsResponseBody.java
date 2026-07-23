@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaModel {
     /**
+     * <p>The data path.</p>
+     * 
      * <strong>example:</strong>
      * <p>http://*******</p>
      */
@@ -12,16 +14,23 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
     public String dataPath;
 
     /**
+     * <p>The OSS path.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://********</p>
      */
     @NameInMap("OssPath")
     public String ossPath;
 
+    /**
+     * <p>A list of score difference reports.</p>
+     */
     @NameInMap("ReportsOfScoreDiff")
     public java.util.List<ListFeatureConsistencyCheckJobScoreReportsResponseBodyReportsOfScoreDiff> reportsOfScoreDiff;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0AB6527-093F-5C44-B3BD-42C8C210C619</p>
      */
@@ -67,6 +76,8 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
 
     public static class ListFeatureConsistencyCheckJobScoreReportsResponseBodyReportsOfScoreDiff extends TeaModel {
         /**
+         * <p>The item ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -74,6 +85,8 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         public String logItemId;
 
         /**
+         * <p>The request ID recorded in the log.</p>
+         * 
          * <strong>example:</strong>
          * <p>323</p>
          */
@@ -81,6 +94,8 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         public String logRequestId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -88,6 +103,8 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         public String logUserId;
 
         /**
+         * <p>The score difference.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.00000234</p>
          */
@@ -95,6 +112,8 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         public String scoreDiff;
 
         /**
+         * <p>The score difference details.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */

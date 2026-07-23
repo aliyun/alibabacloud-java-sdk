@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLayerRequest extends TeaModel {
     /**
+     * <p>The layer description.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateLayerRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class UpdateLayerRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The layer name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

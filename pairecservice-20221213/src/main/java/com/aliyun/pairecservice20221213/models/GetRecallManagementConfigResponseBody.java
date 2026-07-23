@@ -4,6 +4,9 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetRecallManagementConfigResponseBody extends TeaModel {
+    /**
+     * <p>The network configuration information.</p>
+     */
     @NameInMap("NetworkConfigs")
     public java.util.List<GetRecallManagementConfigResponseBodyNetworkConfigs> networkConfigs;
 
@@ -17,6 +20,8 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>scene_test</p>
      */
@@ -54,6 +59,8 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
 
     public static class GetRecallManagementConfigResponseBodyNetworkConfigs extends TeaModel {
         /**
+         * <p>The private endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
          */
@@ -61,6 +68,8 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         public String privateLinkAddress;
 
         /**
+         * <p>The public endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -68,6 +77,20 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         public String publicEndpoint;
 
         /**
+         * <p>The network connectivity status. Valid values:</p>
+         * <ul>
+         * <li><p>Connecting: connecting.</p>
+         * </li>
+         * <li><p>Connected: connected.</p>
+         * </li>
+         * <li><p>ConnectionFailed: connection failed.</p>
+         * </li>
+         * <li><p>Updating: updating.</p>
+         * </li>
+         * <li><p>UpdateFailed: update failed.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Connecting</p>
          */
@@ -75,6 +98,8 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The public network connection token.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -82,12 +107,17 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         public String token;
 
         /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The zones.</p>
+         */
         @NameInMap("VswitchIds")
         public java.util.Map<String, String> vswitchIds;
 

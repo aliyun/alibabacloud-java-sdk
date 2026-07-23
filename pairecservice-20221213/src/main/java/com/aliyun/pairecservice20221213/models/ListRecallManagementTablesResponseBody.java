@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementTablesResponseBody extends TeaModel {
     /**
+     * <p>This parameter is reserved for future use.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,16 +14,23 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>This parameter is reserved for future use.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>A list of recall management tables.</p>
+     */
     @NameInMap("RecallManagementTables")
     public java.util.List<ListRecallManagementTablesResponseBodyRecallManagementTables> recallManagementTables;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -29,6 +38,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of recall management tables.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -82,6 +93,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
 
     public static class ListRecallManagementTablesResponseBodyRecallManagementTables extends TeaModel {
         /**
+         * <p>Indicates whether the table can be deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -89,6 +102,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
+         * <p>The data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>Api</p>
          */
@@ -96,6 +111,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String dataSource;
 
         /**
+         * <p>The description of the recall management table.</p>
+         * 
          * <strong>example:</strong>
          * <p>this is a test</p>
          */
@@ -103,6 +120,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The time when the table was created. The time is in the ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -110,6 +129,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the table was last modified. The time is in the ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -117,6 +138,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The time when the index takes effect. The time is in the ISO 8601 format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -124,6 +147,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String indexEffectiveTime;
 
         /**
+         * <p>The ID of the index version.</p>
+         * 
          * <strong>example:</strong>
          * <p>20250701</p>
          */
@@ -131,6 +156,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String indexVersionId;
 
         /**
+         * <p>The name of the MaxCompute project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -138,7 +165,7 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String maxcomputeProjectName;
 
         /**
-         * <p>maxcompute schema。</p>
+         * <p>The schema of the MaxCompute table.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -147,6 +174,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String maxcomputeSchema;
 
         /**
+         * <p>The name of the table in MaxCompute.</p>
+         * 
          * <strong>example:</strong>
          * <p>table-1</p>
          */
@@ -154,6 +183,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String maxcomputeTableName;
 
         /**
+         * <p>The name of the recall management table.</p>
+         * 
          * <strong>example:</strong>
          * <p>table-123</p>
          */
@@ -161,6 +192,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The partition fields of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>dt</p>
          */
@@ -168,6 +201,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String partitionFields;
 
         /**
+         * <p>The ID of the recall management table.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -175,6 +210,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String recallManagementTableId;
 
         /**
+         * <p>The recall type of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>X2I</p>
          */
@@ -182,6 +219,8 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         public String recallType;
 
         /**
+         * <p>The type of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>Recall</p>
          */

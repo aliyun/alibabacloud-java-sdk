@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetLayerResponseBody extends TeaModel {
     /**
+     * <p>The description of the layer.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The time when the experiment layer was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10-13 17:34:52.0</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
+     * <p>The ID of the laboratory.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -22,6 +32,8 @@ public class GetLayerResponseBody extends TeaModel {
     public String laboratoryId;
 
     /**
+     * <p>The name of the layer.</p>
+     * 
      * <strong>example:</strong>
      * <p>layer1</p>
      */
@@ -29,7 +41,7 @@ public class GetLayerResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EE97D06A-2AA0-5AD9-B6CF-8A267924D691</p>
@@ -37,10 +49,18 @@ public class GetLayerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The residual traffic in the experiment layer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("ResidualFlow")
     public Long residualFlow;
 
     /**
+     * <p>The ID of the scene.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

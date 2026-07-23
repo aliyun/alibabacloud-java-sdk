@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLaboratoryRequest extends TeaModel {
     /**
+     * <p>The number of buckets.</p>
+     * 
      * <strong>example:</strong>
      * <p>24</p>
      */
@@ -12,6 +14,7 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public Integer bucketCount;
 
     /**
+     * <p>The bucketing method. Valid values: ● Uid: Bucketing by UID (default). ● UidHash: Bucketing by UID hash. ● Filter: Bucketing by a filter condition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String bucketType;
 
     /**
+     * <p>The assigned bucket numbers.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3,10-20</p>
      */
@@ -28,6 +33,8 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String buckets;
 
     /**
+     * <p>The debug crowd ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -35,6 +42,8 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String debugCrowdId;
 
     /**
+     * <p>The UIDs of debugging users. These UIDs must belong to an Alibaba Cloud main account or a sub-account. Separate multiple UIDs with a comma (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>1124512470******,1124512471******,1124512472******</p>
      */
@@ -42,6 +51,8 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String debugUsers;
 
     /**
+     * <p>The laboratory description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
@@ -49,6 +60,8 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The environment. Valid values: ● Daily: The daily environment. ● Pre: The staging environment. ● Prod: The production environment.</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -56,6 +69,8 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The filter condition.</p>
+     * 
      * <strong>example:</strong>
      * <p>filter=xxx</p>
      */
@@ -63,6 +78,7 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The instance ID. Call the ListInstances operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,6 +88,7 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The laboratory name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +98,7 @@ public class UpdateLaboratoryRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The laboratory type. Valid values: ● Base ● NonBase</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

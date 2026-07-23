@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ExperimentReportValue extends TeaModel {
     /**
+     * <p>Indicates whether the data is from the baseline experiment.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Baseline")
     public Boolean baseline;
 
+    /**
+     * <p>The metric results.</p>
+     */
     @NameInMap("MetricResults")
     public java.util.Map<String, java.util.Map<String, ?>> metricResults;
 

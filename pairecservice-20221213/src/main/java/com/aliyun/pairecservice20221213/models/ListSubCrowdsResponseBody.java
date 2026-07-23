@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSubCrowdsResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C5AEB79E-FAA4-5DCE-8CD7-1CAF549ECC3E</p>
@@ -13,10 +13,15 @@ public class ListSubCrowdsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of subcrowds.</p>
+     */
     @NameInMap("SubCrowds")
     public java.util.List<ListSubCrowdsResponseBodySubCrowds> subCrowds;
 
     /**
+     * <p>The total number of subcrowds.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +59,8 @@ public class ListSubCrowdsResponseBody extends TeaModel {
 
     public static class ListSubCrowdsResponseBodySubCrowds extends TeaModel {
         /**
+         * <p>The time when the subcrowd was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -61,6 +68,8 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The number of users in the subcrowd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -68,6 +77,8 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         public Integer quantity;
 
         /**
+         * <p>The source of the subcrowd.<br>● ManualInput: Users were added manually.<br>● UploadFile: Users were added by uploading a file.<br><br></p>
+         * 
          * <strong>example:</strong>
          * <p>ManualInput</p>
          */
@@ -75,6 +86,8 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         public String source;
 
         /**
+         * <p>The subcrowd ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -82,6 +95,8 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         public String subCrowdId;
 
         /**
+         * <p>The users in the subcrowd.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1,user2</p>
          */

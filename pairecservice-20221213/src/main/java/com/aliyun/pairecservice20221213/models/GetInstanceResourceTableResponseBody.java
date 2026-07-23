@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResourceTableResponseBody extends TeaModel {
+    /**
+     * <p>The list of fields in the data table.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<GetInstanceResourceTableResponseBodyFields> fields;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
      */
@@ -15,6 +20,8 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_table</p>
      */
@@ -52,16 +59,26 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
 
     public static class GetInstanceResourceTableResponseBodyFields extends TeaModel {
         /**
+         * <p>Indicates whether the field is a dimension field.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
 
+        /**
+         * <p>Indicates whether the field is a partition field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsPartitionField")
         public Boolean isPartitionField;
 
         /**
+         * <p>The meaning of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -69,6 +86,8 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         public String meaning;
 
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>age</p>
          */
@@ -76,6 +95,8 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The field type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BIGINT</p>
          */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataDiagnosisRequest extends TeaModel {
     /**
+     * <p>The configuration of the data diagnosis task, provided as a JSON string. The required fields vary based on the <code>Type</code> parameter. For <code>ChangeRate</code>, specify <code>AnalysisField</code> and <code>PartitionFieldFormat</code>. For <code>PreferenceStatisticsCycle</code>, specify <code>UserIdField</code>, <code>RemainDays</code>, <code>EverAppearedDays</code>, <code>RemainRatePeriods</code>, and <code>PartitionFieldFormat</code>. For <code>JoinTables</code>, specify <code>LeftTableAnalysisField</code>, <code>RightTableAnalysisField</code>, <code>LeftJoinField</code>, <code>RightJoinField</code>, <code>SampleQuantity</code>, <code>LeftTablePartitionFieldFormat</code>, and <code>RightTablePartitionFieldFormat</code>. For <code>BaseStatistics</code>, specify <code>TagField</code>, <code>TagFieldSeparator</code>, <code>KVField</code>, <code>KVFieldSeparator</code>, <code>KVPairSeparator</code>, <code>TextField</code>, <code>Quantiles</code>, <code>DefaultValueOfString</code>, <code>NullStringField</code>, and <code>PartitionFieldFormat</code>. For <code>AbnormalBehavior</code>, specify <code>UserId</code>, <code>ItemId</code>, <code>EventField</code>, <code>UpStreamBehavior</code>, <code>DownstreamBehavior</code>, <code>NumericHistogramBins</code>, and <code>PartitionFieldFormat</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The execution time for periodic runs. If this field is omitted, the task does not run periodically.</p>
+     * 
      * <strong>example:</strong>
      * <p>08:00</p>
      */
@@ -21,6 +24,7 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String cycleTime;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the left data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -37,6 +43,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String leftTableMetaId;
 
     /**
+     * <p>The partition field of the left table.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -44,6 +52,7 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String leftTablePartitionField;
 
     /**
+     * <p>The name of the data diagnosis task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +62,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The partition field.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -60,6 +71,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String partitionField;
 
     /**
+     * <p>The ID of the right data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -67,6 +80,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String rightTableMetaId;
 
     /**
+     * <p>The partition field of the right table.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -74,6 +89,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String rightTablePartitionField;
 
     /**
+     * <p>The ID of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -81,6 +98,8 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public String tableMetaId;
 
     /**
+     * <p>The number of top-ranked results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -88,6 +107,19 @@ public class UpdateDataDiagnosisRequest extends TeaModel {
     public Long topNQuantity;
 
     /**
+     * <p>The type of the data diagnosis task. Valid values:</p>
+     * <ul>
+     * <li><p><code>ChangeRate</code>: item/user change rate analysis.</p>
+     * </li>
+     * <li><p><code>PreferenceStatisticsCycle</code>: user preference statistics cycle analysis.</p>
+     * </li>
+     * <li><p><code>JoinTables</code>: two-table join analysis.</p>
+     * </li>
+     * <li><p><code>BaseStatistics</code>: basic statistical analysis.</p>
+     * </li>
+     * <li><p><code>AbnormalBehavior</code>: abnormal behavior analysis.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

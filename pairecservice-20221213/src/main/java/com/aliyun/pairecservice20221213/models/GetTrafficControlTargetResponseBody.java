@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTrafficControlTargetResponseBody extends TeaModel {
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-25</p>
      */
@@ -12,6 +14,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The event of the control target.</p>
+     * 
      * <strong>example:</strong>
      * <p>click</p>
      */
@@ -19,6 +23,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String event;
 
     /**
+     * <p>The time when the traffic control target was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-03T02:28:00.000Z</p>
      */
@@ -26,6 +32,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The item condition, specified in an array format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
      */
@@ -33,6 +41,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String itemConditionArray;
 
     /**
+     * <p>The item condition, specified in an expression format.</p>
+     * 
      * <strong>example:</strong>
      * <p>status=1</p>
      */
@@ -40,6 +50,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String itemConditionExpress;
 
     /**
+     * <p>The item condition type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Array</p>
      */
@@ -47,6 +59,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String itemConditionType;
 
     /**
+     * <p>The name of the traffic control target.</p>
+     * 
      * <strong>example:</strong>
      * <p>target-1</p>
      */
@@ -54,6 +68,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>Indicates whether new product regulation is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -61,6 +77,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public Boolean newProductRegulation;
 
     /**
+     * <p>The name of the recall strategy.</p>
+     * 
      * <strong>example:</strong>
      * <p>recall-1</p>
      */
@@ -68,16 +86,23 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String recallName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The piecewise control settings.</p>
+     */
     @NameInMap("SplitParts")
     public GetTrafficControlTargetResponseBodySplitParts splitParts;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-25</p>
      */
@@ -85,16 +110,26 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The statistics period.</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
     @NameInMap("StatisPeriod")
     public String statisPeriod;
 
+    /**
+     * <p>The status of the traffic control target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>枚举值：开启：Opened关闭：Closed</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
+     * <p>The tolerance value.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -102,6 +137,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public Long toleranceValue;
 
     /**
+     * <p>The ID of the traffic control target.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -109,6 +146,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String trafficControlTargetId;
 
     /**
+     * <p>The ID of the traffic control task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -116,6 +155,8 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     public String trafficControlTaskId;
 
     /**
+     * <p>The value of the control target.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -272,12 +313,21 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     }
 
     public static class GetTrafficControlTargetResponseBodySplitParts extends TeaModel {
+        /**
+         * <p>The set points.</p>
+         */
         @NameInMap("SetPoints")
         public java.util.List<Long> setPoints;
 
+        /**
+         * <p>The set values.</p>
+         */
         @NameInMap("SetValues")
         public java.util.List<Long> setValues;
 
+        /**
+         * <p>The time points.</p>
+         */
         @NameInMap("TimePoints")
         public java.util.List<Long> timePoints;
 

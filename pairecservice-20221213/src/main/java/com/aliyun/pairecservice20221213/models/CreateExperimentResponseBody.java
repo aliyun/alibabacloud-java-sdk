@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentResponseBody extends TeaModel {
     /**
+     * <p>The experiment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,7 +14,7 @@ public class CreateExperimentResponseBody extends TeaModel {
     public String experimentId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The unique identifier for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>3AAA45F6-0798-5461-9360-81D133823CE7</p>

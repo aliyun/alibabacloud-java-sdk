@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishRecallManagementTableRequest extends TeaModel {
     /**
+     * <p><strong>The instance ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,19 +15,32 @@ public class PublishRecallManagementTableRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p><strong>The synchronization mode.</strong> Valid values:</p>
+     * <ul>
+     * <li><code>Merge</code>: Adds new data and updates existing data.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Merge</p>
      */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>The table partitions to publish.</p>
+     */
     @NameInMap("Partition")
     public java.util.Map<String, String> partition;
 
+    /**
+     * <p>The table partitions to publish.</p>
+     */
     @NameInMap("Partitions")
     public java.util.Map<String, String> partitions;
 
     /**
+     * <p><strong>Specifies whether to skip the threshold check during table synchronization.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

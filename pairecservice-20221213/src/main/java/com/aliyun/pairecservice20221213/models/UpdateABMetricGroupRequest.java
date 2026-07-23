@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateABMetricGroupRequest extends TeaModel {
     /**
+     * <p>A comma-separated list of A/B test metric IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,17 @@ public class UpdateABMetricGroupRequest extends TeaModel {
     public String ABMetricIds;
 
     /**
+     * <p>The metric group description.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>访问量相关指标</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +35,7 @@ public class UpdateABMetricGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The metric group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +45,7 @@ public class UpdateABMetricGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Whether the metric group is a real-time metric group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +55,7 @@ public class UpdateABMetricGroupRequest extends TeaModel {
     public Boolean realtime;
 
     /**
+     * <p>The scene ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,11 +4,14 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListExperimentGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The list of experiment groups.</p>
+     */
     @NameInMap("ExperimentGroups")
     public java.util.List<ListExperimentGroupsResponseBodyExperimentGroups> experimentGroups;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
@@ -17,6 +20,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +59,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
 
     public static class ListExperimentGroupsResponseBodyExperimentGroups extends TeaModel {
         /**
+         * <p>The configuration for the experiment group, in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -61,16 +68,36 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The crowd ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("CrowdId")
         public String crowdId;
 
+        /**
+         * <p>The traffic targeting method for the experiment group. Valid values:</p>
+         * <ul>
+         * <li><p><code>All</code>: All traffic.</p>
+         * </li>
+         * <li><p><code>Filter</code>: Traffic that matches the filter.</p>
+         * </li>
+         * <li><p><code>CrowdId</code>: Traffic from a specified crowd.</p>
+         * </li>
+         * <li><p><code>Random</code>: A random percentage of traffic.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
+         */
         @NameInMap("CrowdTargetType")
         public String crowdTargetType;
 
         /**
+         * <p>The debug crowd ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -78,6 +105,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String debugCrowdId;
 
         /**
+         * <p>The IDs of debug users, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>1124512470******,1124512471******,1124512472******</p>
          */
@@ -85,6 +114,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String debugUsers;
 
         /**
+         * <p>The experiment group description.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
          */
@@ -92,6 +123,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The distribution duration. This parameter is required only when <code>DistributionType</code> is <code>TimeDuration</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -99,6 +132,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public Integer distributionTimeDuration;
 
         /**
+         * <p>The traffic distribution method.<br>● <code>UserId</code>: by user ID<br>● <code>TimeDuration</code>: by time duration<br><br></p>
+         * 
          * <strong>example:</strong>
          * <p>UserId</p>
          */
@@ -106,6 +141,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String distributionType;
 
         /**
+         * <p>The experiment group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -113,16 +150,26 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String experimentGroupId;
 
         /**
+         * <p>The filter condition.</p>
+         * 
          * <strong>example:</strong>
          * <p>gender=female</p>
          */
         @NameInMap("Filter")
         public String filter;
 
+        /**
+         * <p>If <code>CrowdTargetType</code> is set to <code>Random</code>, this parameter returns the comma-separated IDs of buckets allocated based on the <code>RandomFlow</code> value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
+         */
         @NameInMap("HoldingBuckets")
         public String holdingBuckets;
 
         /**
+         * <p>The laboratory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -130,6 +177,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String laboratoryId;
 
         /**
+         * <p>The layer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -137,6 +186,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String layerId;
 
         /**
+         * <p>The experiment group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>experiment_group1</p>
          */
@@ -144,6 +195,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Specifies whether to enable A/B testing for the experiment group.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -151,16 +204,26 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public Boolean needAA;
 
         /**
+         * <p>The owner of the experiment group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1124512470******</p>
          */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>If <code>CrowdTargetType</code> is set to <code>Random</code>, this parameter specifies the percentage of traffic (an integer from 0 to 100) randomly allocated to the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("RandomFlow")
         public Long randomFlow;
 
         /**
+         * <p>The IDs of reserved buckets, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>1,2,3,4</p>
          */
@@ -168,6 +231,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String reservedBuckets;
 
         /**
+         * <p>The scene ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -175,6 +240,8 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String sceneId;
 
         /**
+         * <p>The status of the experiment group. Valid values:<br>● <code>Offline</code>: The experiment group is inactive.<br>● <code>Online</code>: The experiment group is active.<br>● <code>Pushed</code>: The experiment group is fully rolled out.<br><br><br></p>
+         * 
          * <strong>example:</strong>
          * <p>Offline</p>
          */

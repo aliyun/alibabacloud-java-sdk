@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryRecallManagementTableRecordsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-test123</p>
      */
@@ -12,6 +14,8 @@ public class QueryRecallManagementTableRecordsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The primary keys of the records to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;1001&quot;,&quot;1002&quot;]</p>
      */
@@ -19,6 +23,8 @@ public class QueryRecallManagementTableRecordsRequest extends TeaModel {
     public byte[] primaryKeys;
 
     /**
+     * <p>The recall management table version ID. If you omit this parameter, the API uses the currently published version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

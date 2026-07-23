@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
     /**
+     * <p>The generated Flink code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Create Table xxx.......</p>
      */
@@ -12,6 +14,8 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the engine configuration for the pre-release environment is incomplete.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -19,6 +23,8 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
     public Boolean preNeedConfig;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */

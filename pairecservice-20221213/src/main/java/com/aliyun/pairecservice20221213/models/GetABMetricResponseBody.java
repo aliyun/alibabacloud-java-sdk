@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetABMetricResponseBody extends TeaModel {
+    /**
+     * <p>Specifies whether to aggregate metrics by user.</p>
+     */
     @NameInMap("AggregationByUser")
     public Boolean aggregationByUser;
 
     /**
+     * <p>The metric definition.</p>
+     * 
      * <strong>example:</strong>
      * <p>sum(click_cnt)</p>
      */
@@ -15,19 +20,32 @@ public class GetABMetricResponseBody extends TeaModel {
     public String definition;
 
     /**
+     * <p>The denominator of the derived metric formula.</p>
+     * 
      * <strong>example:</strong>
      * <p>pv</p>
      */
     @NameInMap("Denominator")
     public String denominator;
 
+    /**
+     * <p>The metric description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>页面访问次数</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Specifies whether the metric follows a binomial distribution. This affects how significance is calculated.</p>
+     */
     @NameInMap("IsBinomialDistribution")
     public Boolean isBinomialDistribution;
 
     /**
+     * <p>The ID of the left operand metric for a derived metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -35,16 +53,23 @@ public class GetABMetricResponseBody extends TeaModel {
     public String leftMetricId;
 
     /**
+     * <p>The metric name.</p>
+     * 
      * <strong>example:</strong>
      * <p>pv</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Specifies whether significance testing is required for this metric.</p>
+     */
     @NameInMap("NeedSignificance")
     public Boolean needSignificance;
 
     /**
+     * <p>The numerator of the derived metric formula.</p>
+     * 
      * <strong>example:</strong>
      * <p>click</p>
      */
@@ -52,6 +77,18 @@ public class GetABMetricResponseBody extends TeaModel {
     public String numerator;
 
     /**
+     * <p>The operator for the derived metric. Valid values:</p>
+     * <ul>
+     * <li><p><code>Plus</code>: addition</p>
+     * </li>
+     * <li><p><code>Minus</code>: subtraction</p>
+     * </li>
+     * <li><p><code>Multiplication</code>: multiplication</p>
+     * </li>
+     * <li><p><code>Division</code>: division</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Division</p>
      */
@@ -59,6 +96,14 @@ public class GetABMetricResponseBody extends TeaModel {
     public String operator;
 
     /**
+     * <p>Specifies whether the metric is real-time. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The metric is real-time.</p>
+     * </li>
+     * <li><p><code>false</code>: The metric is not real-time.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -66,6 +111,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public String realtime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -73,6 +120,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the data source for the results table.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -80,6 +129,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public String resultResourceId;
 
     /**
+     * <p>The ID of the results table.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -87,6 +138,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public String resultTableMetaId;
 
     /**
+     * <p>The ID of the right operand metric for a derived metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -94,6 +147,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public String rightMetricId;
 
     /**
+     * <p>The scene ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -101,6 +156,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public String sceneId;
 
     /**
+     * <p>The scene name.</p>
+     * 
      * <strong>example:</strong>
      * <p>home_feed</p>
      */
@@ -108,6 +165,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public String sceneName;
 
     /**
+     * <p>The statistics cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -115,6 +174,8 @@ public class GetABMetricResponseBody extends TeaModel {
     public Integer statisticsCycle;
 
     /**
+     * <p>The ID of the source table.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -122,6 +183,14 @@ public class GetABMetricResponseBody extends TeaModel {
     public String tableMetaId;
 
     /**
+     * <p>The type of the metric. Valid values:</p>
+     * <ul>
+     * <li><p><code>Single</code>: a single metric.</p>
+     * </li>
+     * <li><p><code>Derived</code>: a derived metric.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Single</p>
      */

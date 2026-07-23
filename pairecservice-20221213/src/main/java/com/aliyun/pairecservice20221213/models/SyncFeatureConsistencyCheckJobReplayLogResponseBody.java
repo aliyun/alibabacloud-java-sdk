@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SyncFeatureConsistencyCheckJobReplayLogResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C7D0B48F-0105-52B9-B60A-FA7606E2234D</p>
      */

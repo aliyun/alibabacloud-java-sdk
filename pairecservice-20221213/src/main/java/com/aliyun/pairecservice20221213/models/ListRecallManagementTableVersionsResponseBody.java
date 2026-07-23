@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of RecallManagementTable versions.</p>
+     */
     @NameInMap("RecallManagementTableVersions")
     public java.util.List<ListRecallManagementTableVersionsResponseBodyRecallManagementTableVersions> recallManagementTableVersions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -15,6 +20,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
 
     public static class ListRecallManagementTableVersionsResponseBodyRecallManagementTableVersions extends TeaModel {
         /**
+         * <p>The data version.</p>
+         * 
          * <strong>example:</strong>
          * <p>ds=20250701</p>
          */
@@ -59,6 +68,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         public String dataVersion;
 
         /**
+         * <p>The effective time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132</p>
          */
@@ -66,6 +77,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
+         * <p>The sync end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132</p>
          */
@@ -73,6 +86,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         public String publishEndTime;
 
         /**
+         * <p>The sync start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T22:24:33.132</p>
          */
@@ -80,6 +95,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         public String publishStartTime;
 
         /**
+         * <p>The ID of the RecallManagementTable version.</p>
+         * 
          * <strong>example:</strong>
          * <p>202507010000</p>
          */
@@ -87,6 +104,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         public String recallManagementTableVersionId;
 
         /**
+         * <p>The source table data size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -94,6 +113,8 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         public Long sourceTableDataSize;
 
         /**
+         * <p>The source table row count.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -101,6 +122,14 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         public Long sourceTableRowCount;
 
         /**
+         * <p>The status of the version. Valid values:</p>
+         * <ul>
+         * <li><p>Online: The version is online.</p>
+         * </li>
+         * <li><p>Offline: The version is offline.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Online</p>
          */

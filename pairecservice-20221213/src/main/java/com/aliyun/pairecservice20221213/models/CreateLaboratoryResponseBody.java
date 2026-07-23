@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLaboratoryResponseBody extends TeaModel {
     /**
+     * <p>The laboratory ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,7 +14,7 @@ public class CreateLaboratoryResponseBody extends TeaModel {
     public String laboratoryId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>42391E6D-822C-58F8-9F7E-D991BB86D6AD</p>

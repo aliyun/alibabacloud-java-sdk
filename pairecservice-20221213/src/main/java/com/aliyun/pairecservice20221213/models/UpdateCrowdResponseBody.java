@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCrowdResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8C27790E-CCA5-56BB-BA17-646295DEC0A2</p>

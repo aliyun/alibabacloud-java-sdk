@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OnlineLaboratoryRequest extends TeaModel {
     /**
+     * <p>The instance ID. This ID is returned by the ListInstances API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneExperimentGroupRequest extends TeaModel {
     /**
+     * <p>The target environment for the experiment group. ● Daily: Daily environment ● Pre: pre-release environment ● Prod: production environment</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CloneExperimentGroupRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CloneExperimentGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The layer ID. You can get this ID by calling the ListLayers operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

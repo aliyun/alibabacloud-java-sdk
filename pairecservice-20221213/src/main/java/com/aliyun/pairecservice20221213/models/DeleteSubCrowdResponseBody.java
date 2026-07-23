@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSubCrowdResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE97D06A-2AA0-5AD9-B6CF-8A267924D691</p>

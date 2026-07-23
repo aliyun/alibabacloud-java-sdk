@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateParamRequest extends TeaModel {
     /**
+     * <p>The instance ID. You can retrieve this ID by calling the ListInstances API.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>
      */
@@ -12,6 +14,8 @@ public class UpdateParamRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The parameter\&quot;s value.</p>
+     * 
      * <strong>example:</strong>
      * <p>house</p>
      */

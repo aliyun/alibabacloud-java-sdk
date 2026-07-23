@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopTrafficControlTaskRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class StopTrafficControlTaskRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The environment. Valid values: <code>Daily</code> (daily environment), <code>Pre</code> (pre-production environment), and <code>Prod</code> (production environment).</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -19,6 +23,8 @@ public class StopTrafficControlTaskRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec_123****</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataDiagnosisReportsRequest extends TeaModel {
     /**
+     * <p>The end date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDataDiagnosisReportsRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The feature name.</p>
+     * 
      * <strong>example:</strong>
      * <p>feature1</p>
      */
@@ -21,6 +24,7 @@ public class ListDataDiagnosisReportsRequest extends TeaModel {
     public String featureName;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,11 @@ public class ListDataDiagnosisReportsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The retention rate report type.</p>
+     * <ul>
+     * <li>Period: A report for the specified time period.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Period</p>
      */
@@ -37,6 +46,7 @@ public class ListDataDiagnosisReportsRequest extends TeaModel {
     public String remainRateType;
 
     /**
+     * <p>The start date.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +56,8 @@ public class ListDataDiagnosisReportsRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>The number of top results to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

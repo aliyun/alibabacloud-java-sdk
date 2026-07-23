@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateSceneRequest extends TeaModel {
     /**
+     * <p>The scene description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The flows.</p>
+     */
     @NameInMap("Flows")
     public java.util.List<UpdateSceneRequestFlows> flows;
 
     /**
+     * <p>The instance ID. To obtain the ID, call the <code>ListInstances</code> API.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>
      */
@@ -22,6 +29,8 @@ public class UpdateSceneRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The scene name.</p>
+     * 
      * <strong>example:</strong>
      * <p>scene1</p>
      */
@@ -67,6 +76,8 @@ public class UpdateSceneRequest extends TeaModel {
 
     public static class UpdateSceneRequestFlows extends TeaModel {
         /**
+         * <p>The flow code.</p>
+         * 
          * <strong>example:</strong>
          * <p>liuliang1</p>
          */
@@ -74,6 +85,8 @@ public class UpdateSceneRequest extends TeaModel {
         public String flowCode;
 
         /**
+         * <p>The flow name.</p>
+         * 
          * <strong>example:</strong>
          * <p>流量1</p>
          */

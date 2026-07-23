@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
+    /**
+     * <p>The configuration details.</p>
+     */
     @NameInMap("Configs")
     public GetRecallManagementServiceVersionResponseBodyConfigs configs;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -15,16 +20,23 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>Indicates whether the current version is effective.</p>
+     */
     @NameInMap("IsEffective")
     public Boolean isEffective;
 
     /**
+     * <p>The name of the recall service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>V1</p>
      */
@@ -32,6 +44,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The identifier of the recall service version.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -39,7 +53,7 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     public String recallManagementServiceVersionId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E15A1443-7917-5BE0-AE70-25538ECF398D</p>
@@ -110,6 +124,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigsMergeConfig extends TeaModel {
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -117,26 +133,38 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String extendedConfig;
 
         /**
+         * <p>The filter expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>age&gt;20</p>
          */
         @NameInMap("FilterExpression")
         public String filterExpression;
 
+        /**
+         * <p>The identifiers of the tables to filter.</p>
+         */
         @NameInMap("FilterRecallManagementTableIds")
         public java.util.List<String> filterRecallManagementTableIds;
 
         /**
+         * <p>The identifier of the item table.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("ItemRecallManagementTableId")
         public String itemRecallManagementTableId;
 
+        /**
+         * <p>The output fields from the item table.</p>
+         */
         @NameInMap("ItemTableFields")
         public java.util.List<String> itemTableFields;
 
         /**
+         * <p>The merge type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Weight</p>
          */
@@ -144,6 +172,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String mergeType;
 
         /**
+         * <p>The identifier of the recall service version configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -215,6 +245,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsFeatureConfig extends TeaModel {
         /**
+         * <p>The feature expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>city = \&quot;hangzhou\&quot;</p>
          */
@@ -222,6 +254,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <p>The feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>city</p>
          */
@@ -229,6 +263,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The feature type.</p>
+         * 
          * <strong>example:</strong>
          * <p>STRING</p>
          */
@@ -268,6 +304,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsFilterConfig extends TeaModel {
         /**
+         * <p>The filter expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>age &gt; 10</p>
          */
@@ -291,16 +329,23 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsJoinConfig extends TeaModel {
         /**
+         * <p>The join field.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
         @NameInMap("Field")
         public String field;
 
+        /**
+         * <p>The fields to return.</p>
+         */
         @NameInMap("OutputFields")
         public java.util.List<String> outputFields;
 
         /**
+         * <p>The identifier of the join table.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -340,6 +385,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsTriggerConfig extends TeaModel {
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_id</p>
          */
@@ -347,6 +394,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String field;
 
         /**
+         * <p>The maximum number of fields.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -354,6 +403,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public Integer fieldQuantityLimit;
 
         /**
+         * <p>Indicates whether to perform a random sort.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -361,6 +412,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public Boolean isRandSort;
 
         /**
+         * <p>The sort field.</p>
+         * 
          * <strong>example:</strong>
          * <p>create_time</p>
          */
@@ -407,22 +460,36 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     }
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperators extends TeaModel {
+        /**
+         * <p>The configuration for the Feature operator.</p>
+         */
         @NameInMap("FeatureConfig")
         public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsFeatureConfig featureConfig;
 
+        /**
+         * <p>The configuration for the Filter operator.</p>
+         */
         @NameInMap("FilterConfig")
         public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsFilterConfig filterConfig;
 
+        /**
+         * <p>The configuration for the Join operator.</p>
+         */
         @NameInMap("JoinConfig")
         public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsJoinConfig joinConfig;
 
         /**
+         * <p>The operator type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Filter</p>
          */
         @NameInMap("OperatorType")
         public String operatorType;
 
+        /**
+         * <p>The configuration for the Trigger operator.</p>
+         */
         @NameInMap("TriggerConfig")
         public GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperatorsTriggerConfig triggerConfig;
 
@@ -475,6 +542,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigs extends TeaModel {
         /**
+         * <p>The recall description.</p>
+         * 
          * <strong>example:</strong>
          * <p>this is etrec recall</p>
          */
@@ -482,6 +551,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -489,6 +560,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String extendedConfig;
 
         /**
+         * <p>The item conditions, specified as a string in JSON array format.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;option&quot;:&quot;&lt;&quot;,&quot;field&quot;:&quot;category&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;value&quot;:&quot;10&quot;}]</p>
          */
@@ -496,6 +569,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String itemConditionArray;
 
         /**
+         * <p>The item condition expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>age&gt;20</p>
          */
@@ -503,6 +578,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String itemConditionExpression;
 
         /**
+         * <p>The item vector field.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_embedding</p>
          */
@@ -510,6 +587,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String itemVectorField;
 
         /**
+         * <p>The identifier of the item vector recall table.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -517,16 +596,23 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String itemVectorRecallManagementTableId;
 
         /**
+         * <p>The recall name.</p>
+         * 
          * <strong>example:</strong>
          * <p>etrec</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of operators to apply.</p>
+         */
         @NameInMap("Operators")
         public java.util.List<GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigsOperators> operators;
 
         /**
+         * <p>The priority. A smaller value indicates a higher priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -534,6 +620,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public Long priority;
 
         /**
+         * <p>The identifier of the recall service version configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -541,6 +629,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String recallManagementServiceVersionConfigId;
 
         /**
+         * <p>The identifier of the recall management table.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -548,16 +638,26 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String recallManagementTableId;
 
         /**
+         * <p>The recall type.</p>
+         * 
          * <strong>example:</strong>
          * <p>X2I</p>
          */
         @NameInMap("RecallType")
         public String recallType;
 
+        /**
+         * <p>The sort fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("SortFields")
         public String sortFields;
 
         /**
+         * <p>The user vector field.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_embedding</p>
          */
@@ -565,6 +665,8 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
         public String userVectorField;
 
         /**
+         * <p>The identifier of the user vector recall table.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -699,9 +801,15 @@ public class GetRecallManagementServiceVersionResponseBody extends TeaModel {
     }
 
     public static class GetRecallManagementServiceVersionResponseBodyConfigs extends TeaModel {
+        /**
+         * <p>The merge configuration.</p>
+         */
         @NameInMap("MergeConfig")
         public GetRecallManagementServiceVersionResponseBodyConfigsMergeConfig mergeConfig;
 
+        /**
+         * <p>The recall service version configurations.</p>
+         */
         @NameInMap("RecallConfigs")
         public java.util.List<GetRecallManagementServiceVersionResponseBodyConfigsRecallConfigs> recallConfigs;
 

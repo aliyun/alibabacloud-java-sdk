@@ -8,7 +8,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("us-west-1", "pairecservice.us-west-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "pairecservice.us-east-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "pairecservice.eu-central-1.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "pairecservice.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "pairecservice.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "pairecservice.cn-hongkong.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "pairecservice.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "pairecservice.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "pairecservice.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "pairecservice.ap-southeast-1.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("pairecservice", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +40,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用/发布指定的推荐引擎配置</p>
+     * <p>Applies an engine configuration.</p>
      * 
      * @param request ApplyEngineConfigRequest
      * @param headers map
@@ -62,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>应用/发布指定的推荐引擎配置</p>
+     * <p>Applies an engine configuration.</p>
      * 
      * @param request ApplyEngineConfigRequest
      * @return ApplyEngineConfigResponse
@@ -75,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>特征一致性检查数据回流。</p>
+     * <p>Performs data backflow for the latest job of a specified feature consistency check job configuration.</p>
      * 
      * @param request BackflowFeatureConsistencyCheckJobDataRequest
      * @param headers map
@@ -149,7 +161,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>特征一致性检查数据回流。</p>
+     * <p>Performs data backflow for the latest job of a specified feature consistency check job configuration.</p>
      * 
      * @param request BackflowFeatureConsistencyCheckJobDataRequest
      * @return BackflowFeatureConsistencyCheckJobDataResponse
@@ -161,8 +173,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to change the version of a recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid, and that you have the required permissions for these resources.</p>
+     * <ul>
+     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service.</li>
+     * <li><strong>InstanceId</strong>: The instance ID associated with the recall management service.</li>
+     * <li><strong>RecallManagementServiceVersionId</strong>: The target version ID to switch to.
+     * Note: Before changing the version, confirm that the new version is fully tested and ready for production.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更改召回管理服务的版本</p>
+     * <p>This API changes the version of a recall management service.</p>
      * 
      * @param request ChangeRecallManagementServiceVersionRequest
      * @param headers map
@@ -199,8 +221,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to change the version of a recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid, and that you have the required permissions for these resources.</p>
+     * <ul>
+     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service.</li>
+     * <li><strong>InstanceId</strong>: The instance ID associated with the recall management service.</li>
+     * <li><strong>RecallManagementServiceVersionId</strong>: The target version ID to switch to.
+     * Note: Before changing the version, confirm that the new version is fully tested and ready for production.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更改召回管理服务的版本</p>
+     * <p>This API changes the version of a recall management service.</p>
      * 
      * @param request ChangeRecallManagementServiceVersionRequest
      * @return ChangeRecallManagementServiceVersionResponse
@@ -212,8 +244,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</li>
+     * <li>If the <code>ConversationId</code> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</li>
+     * <li>The <code>Config</code> field allows you to pass additional information input. The value must be in JSON format.</li>
+     * <li>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>向智能体发送对话消息</p>
+     * <p>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</p>
      * 
      * @param request ChatConversationRequest
      * @param headers map
@@ -258,8 +299,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</li>
+     * <li>If the <code>ConversationId</code> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</li>
+     * <li>The <code>Config</code> field allows you to pass additional information input. The value must be in JSON format.</li>
+     * <li>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>向智能体发送对话消息</p>
+     * <p>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</p>
      * 
      * @param request ChatConversationRequest
      * @return ChatConversationResponse
@@ -272,7 +322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检测实例下配置的资源的连接状态。</p>
+     * <p>Verifies access to resources configured for an instance.</p>
      * 
      * @param request CheckInstanceResourcesRequest
      * @param headers map
@@ -314,7 +364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>检测实例下配置的资源的连接状态。</p>
+     * <p>Verifies access to resources configured for an instance.</p>
      * 
      * @param request CheckInstanceResourcesRequest
      * @return CheckInstanceResourcesResponse
@@ -326,8 +376,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>校验流量调控任务中的表达式</p>
+     * <p>Validates a traffic control task expression.</p>
      * 
      * @param request CheckTrafficControlTaskExpressionRequest
      * @param headers map
@@ -368,8 +422,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>校验流量调控任务中的表达式</p>
+     * <p>Validates a traffic control task expression.</p>
      * 
      * @param request CheckTrafficControlTaskExpressionRequest
      * @return CheckTrafficControlTaskExpressionResponse
@@ -382,7 +440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆指定的推荐引擎配置</p>
+     * <p>Clones an engine configuration.</p>
      * 
      * @param request CloneEngineConfigRequest
      * @param headers map
@@ -428,7 +486,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆指定的推荐引擎配置</p>
+     * <p>Clones an engine configuration.</p>
      * 
      * @param request CloneEngineConfigRequest
      * @return CloneEngineConfigResponse
@@ -441,7 +499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆实验。</p>
+     * <p>Clones a specified experiment.</p>
      * 
      * @param request CloneExperimentRequest
      * @param headers map
@@ -475,7 +533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆实验。</p>
+     * <p>Clones a specified experiment.</p>
      * 
      * @param request CloneExperimentRequest
      * @return CloneExperimentResponse
@@ -488,7 +546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆实验组，并克隆实验组下的所有实验至新的实验组中。</p>
+     * <p>Clones an experiment group to a specified environment.</p>
      * 
      * @param request CloneExperimentGroupRequest
      * @param headers map
@@ -530,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆实验组，并克隆实验组下的所有实验至新的实验组中。</p>
+     * <p>Clones an experiment group to a specified environment.</p>
      * 
      * @param request CloneExperimentGroupRequest
      * @return CloneExperimentGroupResponse
@@ -543,7 +601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆特征一致性检查配置。</p>
+     * <p>Clones a feature consistency check job configuration.</p>
      * 
      * @param request CloneFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -577,7 +635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆特征一致性检查配置。</p>
+     * <p>Clones a feature consistency check job configuration.</p>
      * 
      * @param request CloneFeatureConsistencyCheckJobConfigRequest
      * @return CloneFeatureConsistencyCheckJobConfigResponse
@@ -590,7 +648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆实验室。</p>
+     * <p>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</p>
      * 
      * @param request CloneLaboratoryRequest
      * @param headers map
@@ -632,7 +690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>克隆实验室。</p>
+     * <p>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</p>
      * 
      * @param request CloneLaboratoryRequest
      * @return CloneLaboratoryResponse
@@ -644,8 +702,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API clones an existing traffic control task to another specified instance. Ensure that the <code>InstanceId</code> you provide is valid and that you have the required permissions for the target instance.
+     * Note: The cloning process does not affect the status or configuration of the original task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>克隆流量调控任务</p>
+     * <p>Clones a specified traffic control task to a new instance.</p>
      * 
      * @param request CloneTrafficControlTaskRequest
      * @param headers map
@@ -678,8 +741,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API clones an existing traffic control task to another specified instance. Ensure that the <code>InstanceId</code> you provide is valid and that you have the required permissions for the target instance.
+     * Note: The cloning process does not affect the status or configuration of the original task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>克隆流量调控任务</p>
+     * <p>Clones a specified traffic control task to a new instance.</p>
      * 
      * @param request CloneTrafficControlTaskRequest
      * @return CloneTrafficControlTaskResponse
@@ -739,7 +807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建AB test实验指标</p>
+     * <p>Creates an AB metric.</p>
      * 
      * @param request CreateABMetricRequest
      * @param headers map
@@ -841,7 +909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建AB test实验指标</p>
+     * <p>Creates an AB metric.</p>
      * 
      * @param request CreateABMetricRequest
      * @return CreateABMetricResponse
@@ -854,7 +922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建指标组</p>
+     * <p>Creates an A/B metric group.</p>
      * 
      * @param request CreateABMetricGroupRequest
      * @param headers map
@@ -908,7 +976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建指标组</p>
+     * <p>Creates an A/B metric group.</p>
      * 
      * @param request CreateABMetricGroupRequest
      * @return CreateABMetricGroupResponse
@@ -921,7 +989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建AB指标的计算任务。</p>
+     * <p>Creates multiple calculation jobs.</p>
      * 
      * @param request CreateCalculationJobsRequest
      * @param headers map
@@ -967,7 +1035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建AB指标的计算任务。</p>
+     * <p>Creates multiple calculation jobs.</p>
      * 
      * @param request CreateCalculationJobsRequest
      * @return CreateCalculationJobsResponse
@@ -980,7 +1048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建人群。</p>
+     * <p>Creates a crowd that represents a group of users.</p>
      * 
      * @param request CreateCrowdRequest
      * @param headers map
@@ -1034,7 +1102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建人群。</p>
+     * <p>Creates a crowd that represents a group of users.</p>
      * 
      * @param request CreateCrowdRequest
      * @return CreateCrowdResponse
@@ -1046,8 +1114,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</li>
+     * <li>The content of the <code>Config</code> parameter depends on the value of the <code>Type</code> parameter. For more information, see the example configurations in this topic.</li>
+     * <li>To run the task on a schedule, specify the <code>CycleTime</code> parameter. If this parameter is omitted, the task runs only once.</li>
+     * <li>The optional <code>TopNQuantity</code> parameter specifies the number of top results to return.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据诊断。</p>
+     * <p>Creates a data diagnosis task. This API supports various analysis types.</p>
      * 
      * @param request CreateDataDiagnosisRequest
      * @param headers map
@@ -1124,8 +1201,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</li>
+     * <li>The content of the <code>Config</code> parameter depends on the value of the <code>Type</code> parameter. For more information, see the example configurations in this topic.</li>
+     * <li>To run the task on a schedule, specify the <code>CycleTime</code> parameter. If this parameter is omitted, the task runs only once.</li>
+     * <li>The optional <code>TopNQuantity</code> parameter specifies the number of top results to return.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据诊断。</p>
+     * <p>Creates a data diagnosis task. This API supports various analysis types.</p>
      * 
      * @param request CreateDataDiagnosisRequest
      * @return CreateDataDiagnosisResponse
@@ -1137,8 +1223,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <code>DataDiagnosisId</code>, <code>InstanceId</code>, <code>StartDate</code>, and <code>EndDate</code> parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据诊断（重跑）任务。</p>
+     * <p>Creates a data diagnosis (rerun) job for a specified time period.</p>
      * 
      * @param request CreateDataDiagnosisJobsRequest
      * @param headers map
@@ -1183,8 +1273,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <code>DataDiagnosisId</code>, <code>InstanceId</code>, <code>StartDate</code>, and <code>EndDate</code> parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据诊断（重跑）任务。</p>
+     * <p>Creates a data diagnosis (rerun) job for a specified time period.</p>
      * 
      * @param request CreateDataDiagnosisJobsRequest
      * @return CreateDataDiagnosisJobsResponse
@@ -1197,7 +1291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建引擎配置</p>
+     * <p>Creates an engine config.</p>
      * 
      * @param request CreateEngineConfigRequest
      * @param headers map
@@ -1247,7 +1341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建引擎配置</p>
+     * <p>Creates an engine config.</p>
      * 
      * @param request CreateEngineConfigRequest
      * @return CreateEngineConfigResponse
@@ -1260,7 +1354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实验。</p>
+     * <p>Creates an experiment in a specified experiment group.</p>
      * 
      * @param request CreateExperimentRequest
      * @param headers map
@@ -1326,7 +1420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实验。</p>
+     * <p>Creates an experiment in a specified experiment group.</p>
      * 
      * @param request CreateExperimentRequest
      * @return CreateExperimentResponse
@@ -1339,7 +1433,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实验组。</p>
+     * <p>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</p>
      * 
      * @param request CreateExperimentGroupRequest
      * @param headers map
@@ -1429,7 +1523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实验组。</p>
+     * <p>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</p>
      * 
      * @param request CreateExperimentGroupRequest
      * @return CreateExperimentGroupResponse
@@ -1442,7 +1536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征一致性检查任务。</p>
+     * <p>Creates a feature consistency check job.</p>
      * 
      * @param request CreateFeatureConsistencyCheckJobRequest
      * @param headers map
@@ -1488,7 +1582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征一致性检查任务。</p>
+     * <p>Creates a feature consistency check job.</p>
      * 
      * @param request CreateFeatureConsistencyCheckJobRequest
      * @return CreateFeatureConsistencyCheckJobResponse
@@ -1501,7 +1595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征一致性检查配置。</p>
+     * <p>Configure a feature consistency check task.</p>
      * 
      * @param request CreateFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -1619,6 +1713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ItemTablePartitionFieldFormat", request.itemTablePartitionFieldFormat);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxcomputeSchema)) {
+            body.put("MaxcomputeSchema", request.maxcomputeSchema);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
@@ -1715,7 +1813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建特征一致性检查配置。</p>
+     * <p>Configure a feature consistency check task.</p>
      * 
      * @param request CreateFeatureConsistencyCheckJobConfigRequest
      * @return CreateFeatureConsistencyCheckJobConfigResponse
@@ -1728,7 +1826,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定实例配置创建新的配置资源</p>
+     * <p>Creates a configuration resource for a specified instance.</p>
      * 
      * @param request CreateInstanceResourceRequest
      * @param headers map
@@ -1774,7 +1872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为指定实例配置创建新的配置资源</p>
+     * <p>Creates a configuration resource for a specified instance.</p>
      * 
      * @param request CreateInstanceResourceRequest
      * @return CreateInstanceResourceResponse
@@ -1787,7 +1885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实验室</p>
+     * <p>Creates a laboratory. A laboratory isolates a segment of traffic for running experiments.</p>
      * 
      * @param request CreateLaboratoryRequest
      * @param headers map
@@ -1865,7 +1963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实验室</p>
+     * <p>Creates a laboratory. A laboratory isolates a segment of traffic for running experiments.</p>
      * 
      * @param request CreateLaboratoryRequest
      * @return CreateLaboratoryResponse
@@ -1878,7 +1976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建层。</p>
+     * <p>Creates a layer in a specified laboratory for layered experiments. Layers are orthogonal to each other, allowing experiments to run independently and preventing traffic starvation.</p>
      * 
      * @param request CreateLayerRequest
      * @param headers map
@@ -1924,7 +2022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建层。</p>
+     * <p>Creates a layer in a specified laboratory for layered experiments. Layers are orthogonal to each other, allowing experiments to run independently and preventing traffic starvation.</p>
      * 
      * @param request CreateLayerRequest
      * @return CreateLayerResponse
@@ -1936,8 +2034,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description.</h2>
+     * 
      * <b>summary</b> : 
-     * <p>创建参数。</p>
+     * <p>Creates an ABTest parameter for a specific scene in a specified environment.</p>
      * 
      * @param request CreateParamRequest
      * @param headers map
@@ -1990,8 +2091,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description.</h2>
+     * 
      * <b>summary</b> : 
-     * <p>创建参数。</p>
+     * <p>Creates an ABTest parameter for a specific scene in a specified environment.</p>
      * 
      * @param request CreateParamRequest
      * @return CreateParamResponse
@@ -2003,8 +2107,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理初始化配置。</p>
+     * <p>Initializes a Recall Management configuration, including the instance ID, user information, and network configurations.</p>
      * 
      * @param request CreateRecallManagementConfigRequest
      * @param headers map
@@ -2049,8 +2156,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理初始化配置。</p>
+     * <p>Initializes a Recall Management configuration, including the instance ID, user information, and network configurations.</p>
      * 
      * @param request CreateRecallManagementConfigRequest
      * @return CreateRecallManagementConfigResponse
@@ -2062,8 +2172,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>To create a recall management service, call this API with a specified instance ID, service name, and service description. Ensure that the <code>InstanceId</code> parameter is valid.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理服务</p>
+     * <p>Creates a new recall management service.</p>
      * 
      * @param request CreateRecallManagementServiceRequest
      * @param headers map
@@ -2104,8 +2218,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>To create a recall management service, call this API with a specified instance ID, service name, and service description. Ensure that the <code>InstanceId</code> parameter is valid.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理服务</p>
+     * <p>Creates a new recall management service.</p>
      * 
      * @param request CreateRecallManagementServiceRequest
      * @return CreateRecallManagementServiceResponse
@@ -2117,8 +2235,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API to create a new version of a recall management service.</li>
+     * <li>To create a new version from an existing one, specify the source recall management service version ID.</li>
+     * <li>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</li>
+     * <li>Configure operators such as filter, trigger, feature extraction, and join.</li>
+     * <li>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</li>
+     * <li>All configuration items are optional.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理版本</p>
+     * <p>Creates a new recall management service version that supports configuring multiple recall strategies.</p>
      * 
      * @param request CreateRecallManagementServiceVersionRequest
      * @param headers map
@@ -2159,8 +2288,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API to create a new version of a recall management service.</li>
+     * <li>To create a new version from an existing one, specify the source recall management service version ID.</li>
+     * <li>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</li>
+     * <li>Configure operators such as filter, trigger, feature extraction, and join.</li>
+     * <li>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</li>
+     * <li>All configuration items are optional.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理版本</p>
+     * <p>Creates a new recall management service version that supports configuring multiple recall strategies.</p>
      * 
      * @param request CreateRecallManagementServiceVersionRequest
      * @return CreateRecallManagementServiceVersionResponse
@@ -2172,8 +2312,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API creates a configuration for a specific version of the Recall Management Service.</li>
+     * <li>The <code>ConfigType</code> parameter specifies the configuration type, which can be either recall or merge.</li>
+     * <li>Use the <code>RecallConfig</code> and <code>MergeConfig</code> parameters to provide the recall and merge configurations, respectively.</li>
+     * <li>Required parameters must be provided in the specified data formats.</li>
+     * <li>Optional parameter values must be consistent with your business logic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理服务版本配置</p>
+     * <p>Creates a configuration for a specified version of the Recall Manager service, including its recall and merge settings.</p>
      * 
      * @param request CreateRecallManagementServiceVersionConfigRequest
      * @param headers map
@@ -2218,8 +2368,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API creates a configuration for a specific version of the Recall Management Service.</li>
+     * <li>The <code>ConfigType</code> parameter specifies the configuration type, which can be either recall or merge.</li>
+     * <li>Use the <code>RecallConfig</code> and <code>MergeConfig</code> parameters to provide the recall and merge configurations, respectively.</li>
+     * <li>Required parameters must be provided in the specified data formats.</li>
+     * <li>Optional parameter values must be consistent with your business logic.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理服务版本配置</p>
+     * <p>Creates a configuration for a specified version of the Recall Manager service, including its recall and merge settings.</p>
      * 
      * @param request CreateRecallManagementServiceVersionConfigRequest
      * @return CreateRecallManagementServiceVersionConfigResponse
@@ -2231,8 +2391,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>The <strong>InstanceId</strong>, <strong>Name</strong>, <strong>Description</strong>, <strong>Type</strong>, and <strong>DataSource</strong> parameters are required.</li>
+     * <li>The <strong>RecallType</strong> parameter is optional. If provided, it must be a valid enum value.</li>
+     * <li>For each field in the <strong>Fields</strong> parameter, you must define its name, type, and attributes. You must mark at least one field as Primary.</li>
+     * <li>If you use MaxCompute as the data source, you must specify the <strong>MaxcomputeProjectName</strong> and <strong>MaxcomputeTableName</strong> parameters. The <strong>MaxcomputeSchema</strong> parameter is optional.</li>
+     * <li>For vector fields, the values of the <strong>VectorDimension</strong> and <strong>VectorMetricType</strong> parameters must match the actual data.</li>
+     * <li>Use the <strong>Config</strong> field to provide additional configuration as a JSON string.</li>
+     * <li>Use fluctuation threshold parameters, such as <strong>EnableRowCountFluctuationThreshold</strong>, to monitor changes in row count or table size. Enable these parameters and set appropriate thresholds as needed.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理表。</p>
+     * <p>Creates a recall management table that supports multiple data sources and configuration options.</p>
      * 
      * @param request CreateRecallManagementTableRequest
      * @param headers map
@@ -2329,8 +2501,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>The <strong>InstanceId</strong>, <strong>Name</strong>, <strong>Description</strong>, <strong>Type</strong>, and <strong>DataSource</strong> parameters are required.</li>
+     * <li>The <strong>RecallType</strong> parameter is optional. If provided, it must be a valid enum value.</li>
+     * <li>For each field in the <strong>Fields</strong> parameter, you must define its name, type, and attributes. You must mark at least one field as Primary.</li>
+     * <li>If you use MaxCompute as the data source, you must specify the <strong>MaxcomputeProjectName</strong> and <strong>MaxcomputeTableName</strong> parameters. The <strong>MaxcomputeSchema</strong> parameter is optional.</li>
+     * <li>For vector fields, the values of the <strong>VectorDimension</strong> and <strong>VectorMetricType</strong> parameters must match the actual data.</li>
+     * <li>Use the <strong>Config</strong> field to provide additional configuration as a JSON string.</li>
+     * <li>Use fluctuation threshold parameters, such as <strong>EnableRowCountFluctuationThreshold</strong>, to monitor changes in row count or table size. Enable these parameters and set appropriate thresholds as needed.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建召回管理表。</p>
+     * <p>Creates a recall management table that supports multiple data sources and configuration options.</p>
      * 
      * @param request CreateRecallManagementTableRequest
      * @return CreateRecallManagementTableResponse
@@ -2580,7 +2764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建场景</p>
+     * <p>Creates a scene for metric and experiment analysis.</p>
      * 
      * @param request CreateSceneRequest
      * @param headers map
@@ -2626,7 +2810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建场景</p>
+     * <p>Creates a scene for metric and experiment analysis.</p>
      * 
      * @param request CreateSceneRequest
      * @return CreateSceneResponse
@@ -2639,7 +2823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在指定人群下创建子人群。</p>
+     * <p>Creates a sub-crowd for a specified crowd.</p>
      * 
      * @param request CreateSubCrowdRequest
      * @param headers map
@@ -2681,7 +2865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在指定人群下创建子人群。</p>
+     * <p>Creates a sub-crowd for a specified crowd.</p>
      * 
      * @param request CreateSubCrowdRequest
      * @return CreateSubCrowdResponse
@@ -2694,7 +2878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据表。</p>
+     * <p>Creates a data table.</p>
      * 
      * @param request CreateTableMetaRequest
      * @param headers map
@@ -2752,7 +2936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据表。</p>
+     * <p>Creates a data table.</p>
      * 
      * @param request CreateTableMetaRequest
      * @return CreateTableMetaResponse
@@ -2764,8 +2948,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The <code>ItemConditionType</code> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <code>ItemConditionArray</code> or <code>ItemConditionExpress</code>.</li>
+     * <li>The <code>StatisPeriod</code> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</li>
+     * <li>The <code>ToleranceValue</code> and <code>NewProductRegulation</code> parameters are optional.</li>
+     * <li>The <code>Status</code> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建流量调控目标</p>
+     * <p>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</p>
      * 
      * @param request CreateTrafficControlTargetRequest
      * @param headers map
@@ -2850,8 +3043,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The <code>ItemConditionType</code> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <code>ItemConditionArray</code> or <code>ItemConditionExpress</code>.</li>
+     * <li>The <code>StatisPeriod</code> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</li>
+     * <li>The <code>ToleranceValue</code> and <code>NewProductRegulation</code> parameters are optional.</li>
+     * <li>The <code>Status</code> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建流量调控目标</p>
+     * <p>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</p>
      * 
      * @param request CreateTrafficControlTargetRequest
      * @return CreateTrafficControlTargetResponse
@@ -2863,8 +3065,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</li>
+     * <li>The <code>ExecutionTime</code> parameter specifies the execution time mode for the task. If you select the <code>TimeRange</code> mode, you must provide both the <code>StartTime</code> and <code>EndTime</code> parameters.</li>
+     * <li>The <code>TrafficControlTargets</code> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</li>
+     * <li>You can use the <code>UserConditionType</code> and <code>ItemConditionType</code> parameters to define conditions for the target user group and items.</li>
+     * <li>Set the <code>ControlLogic</code> parameter to <code>Guaranteed</code> for guaranteed control or to <code>Approach</code> for approach control.</li>
+     * <li>To configure new product regulation, use the <code>NewProductRegulation</code> field.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建流量调控任务</p>
+     * <p>Creates a new traffic control task with multiple conditions and target configurations.</p>
      * 
      * @param request CreateTrafficControlTaskRequest
      * @param headers map
@@ -3009,8 +3222,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</li>
+     * <li>The <code>ExecutionTime</code> parameter specifies the execution time mode for the task. If you select the <code>TimeRange</code> mode, you must provide both the <code>StartTime</code> and <code>EndTime</code> parameters.</li>
+     * <li>The <code>TrafficControlTargets</code> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</li>
+     * <li>You can use the <code>UserConditionType</code> and <code>ItemConditionType</code> parameters to define conditions for the target user group and items.</li>
+     * <li>Set the <code>ControlLogic</code> parameter to <code>Guaranteed</code> for guaranteed control or to <code>Approach</code> for approach control.</li>
+     * <li>To configure new product regulation, use the <code>NewProductRegulation</code> field.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建流量调控任务</p>
+     * <p>Creates a new traffic control task with multiple conditions and target configurations.</p>
      * 
      * @param request CreateTrafficControlTaskRequest
      * @return CreateTrafficControlTaskResponse
@@ -3084,7 +3308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定AB实验指标。</p>
+     * <p>Deletes the specified A/B test metric.</p>
      * 
      * @param request DeleteABMetricRequest
      * @param headers map
@@ -3118,7 +3342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定AB实验指标。</p>
+     * <p>Deletes the specified A/B test metric.</p>
      * 
      * @param request DeleteABMetricRequest
      * @return DeleteABMetricResponse
@@ -3131,7 +3355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除AB实验指标组。</p>
+     * <p>Deletes an A/B test metric group.</p>
      * 
      * @param request DeleteABMetricGroupRequest
      * @param headers map
@@ -3165,7 +3389,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除AB实验指标组。</p>
+     * <p>Deletes an A/B test metric group.</p>
      * 
      * @param request DeleteABMetricGroupRequest
      * @return DeleteABMetricGroupResponse
@@ -3178,7 +3402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定人群。</p>
+     * <p>Delete the specified audience.</p>
      * 
      * @param request DeleteCrowdRequest
      * @param headers map
@@ -3212,7 +3436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定人群。</p>
+     * <p>Delete the specified audience.</p>
      * 
      * @param request DeleteCrowdRequest
      * @return DeleteCrowdResponse
@@ -3224,8 +3448,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Ensure you provide the correct <code>DataDiagnosisId</code> and <code>InstanceId</code> to avoid accidental deletion.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定数据诊断。</p>
+     * <p>Deletes a data diagnosis configuration using the specified DataDiagnosisId and InstanceId.</p>
      * 
      * @param request DeleteDataDiagnosisRequest
      * @param headers map
@@ -3258,8 +3486,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Ensure you provide the correct <code>DataDiagnosisId</code> and <code>InstanceId</code> to avoid accidental deletion.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定数据诊断。</p>
+     * <p>Deletes a data diagnosis configuration using the specified DataDiagnosisId and InstanceId.</p>
      * 
      * @param request DeleteDataDiagnosisRequest
      * @return DeleteDataDiagnosisResponse
@@ -3271,8 +3503,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified engine configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定推荐引擎配置。</p>
+     * <p>Deletes a specified engine configuration.</p>
      * 
      * @param request DeleteEngineConfigRequest
      * @param headers map
@@ -3309,8 +3544,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified engine configuration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定推荐引擎配置。</p>
+     * <p>Deletes a specified engine configuration.</p>
      * 
      * @param request DeleteEngineConfigRequest
      * @return DeleteEngineConfigResponse
@@ -3323,7 +3561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实验。</p>
+     * <p>Delete the specified experiment.</p>
      * 
      * @param request DeleteExperimentRequest
      * @param headers map
@@ -3357,7 +3595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实验。</p>
+     * <p>Delete the specified experiment.</p>
      * 
      * @param request DeleteExperimentRequest
      * @return DeleteExperimentResponse
@@ -3370,7 +3608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定实验组。</p>
+     * <p>Delete the specified experiment group.</p>
      * 
      * @param request DeleteExperimentGroupRequest
      * @param headers map
@@ -3404,7 +3642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定实验组。</p>
+     * <p>Delete the specified experiment group.</p>
      * 
      * @param request DeleteExperimentGroupRequest
      * @return DeleteExperimentGroupResponse
@@ -3417,7 +3655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定实例下的指定配置资源。</p>
+     * <p>Deletes a configuration resource from an instance.</p>
      * 
      * @param request DeleteInstanceResourceRequest
      * @param headers map
@@ -3445,7 +3683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定实例下的指定配置资源。</p>
+     * <p>Deletes a configuration resource from an instance.</p>
      * 
      * @param request DeleteInstanceResourceRequest
      * @return DeleteInstanceResourceResponse
@@ -3458,7 +3696,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实验室。</p>
+     * <p>Delete the specified Lab.</p>
      * 
      * @param request DeleteLaboratoryRequest
      * @param headers map
@@ -3492,7 +3730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实验室。</p>
+     * <p>Delete the specified Lab.</p>
      * 
      * @param request DeleteLaboratoryRequest
      * @return DeleteLaboratoryResponse
@@ -3505,7 +3743,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除层。</p>
+     * <p>Delete the specified layer.</p>
      * 
      * @param request DeleteLayerRequest
      * @param headers map
@@ -3539,7 +3777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除层。</p>
+     * <p>Delete the specified layer.</p>
      * 
      * @param request DeleteLayerRequest
      * @return DeleteLayerResponse
@@ -3552,7 +3790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定参数。</p>
+     * <p>Delete the specified parameter.</p>
      * 
      * @param request DeleteParamRequest
      * @param headers map
@@ -3586,7 +3824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定参数。</p>
+     * <p>Delete the specified parameter.</p>
      * 
      * @param request DeleteParamRequest
      * @return DeleteParamResponse
@@ -3598,8 +3836,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定召回管理服务</p>
+     * <p>Deletes a recall management service.</p>
      * 
      * @param request DeleteRecallManagementServiceRequest
      * @param headers map
@@ -3632,8 +3874,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定召回管理服务</p>
+     * <p>Deletes a recall management service.</p>
      * 
      * @param request DeleteRecallManagementServiceRequest
      * @return DeleteRecallManagementServiceResponse
@@ -3645,8 +3891,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定召回管理服务版本</p>
+     * <p>Deletes a specified version of a recall management service.</p>
      * 
      * @param request DeleteRecallManagementServiceVersionRequest
      * @param headers map
@@ -3679,8 +3929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定召回管理服务版本</p>
+     * <p>Deletes a specified version of a recall management service.</p>
      * 
      * @param request DeleteRecallManagementServiceVersionRequest
      * @return DeleteRecallManagementServiceVersionResponse
@@ -3692,8 +3946,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>Specify the recall management service ID, recall management version ID, and recall management configuration ID.</li>
+     * <li><code>InstanceId</code> is a required query parameter.</li>
+     * <li>The request fails if any of the specified IDs are invalid.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除召回管理服务版本配置</p>
+     * <p>Deletes the specified recall management service version configuration.</p>
      * 
      * @param request DeleteRecallManagementServiceVersionConfigRequest
      * @param headers map
@@ -3726,8 +3988,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>Specify the recall management service ID, recall management version ID, and recall management configuration ID.</li>
+     * <li><code>InstanceId</code> is a required query parameter.</li>
+     * <li>The request fails if any of the specified IDs are invalid.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除召回管理服务版本配置</p>
+     * <p>Deletes the specified recall management service version configuration.</p>
      * 
      * @param request DeleteRecallManagementServiceVersionConfigRequest
      * @return DeleteRecallManagementServiceVersionConfigResponse
@@ -3739,8 +4009,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>The required <strong>path parameter</strong> <code>RecallManagementTableId</code> specifies the ID of the recall management table to delete.</li>
+     * <li>The required <strong>query parameter</strong> <code>InstanceId</code> specifies the ID of the instance.</li>
+     * <li>A successful operation returns a <code>RequestId</code> in the response body for request tracking.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定召回管理表。</p>
+     * <p>This API deletes a recall management table using the specified recall management table ID and instance ID.</p>
      * 
      * @param request DeleteRecallManagementTableRequest
      * @param headers map
@@ -3773,8 +4051,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>The required <strong>path parameter</strong> <code>RecallManagementTableId</code> specifies the ID of the recall management table to delete.</li>
+     * <li>The required <strong>query parameter</strong> <code>InstanceId</code> specifies the ID of the instance.</li>
+     * <li>A successful operation returns a <code>RequestId</code> in the response body for request tracking.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定召回管理表。</p>
+     * <p>This API deletes a recall management table using the specified recall management table ID and instance ID.</p>
      * 
      * @param request DeleteRecallManagementTableRequest
      * @return DeleteRecallManagementTableResponse
@@ -3928,7 +4214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除场景</p>
+     * <p>Delete the specified scenario.</p>
      * 
      * @param request DeleteSceneRequest
      * @param headers map
@@ -3962,7 +4248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除场景</p>
+     * <p>Delete the specified scenario.</p>
      * 
      * @param request DeleteSceneRequest
      * @return DeleteSceneResponse
@@ -3975,7 +4261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定人群下的指定子人群。</p>
+     * <p>Deletes the specified subcrowd.</p>
      * 
      * @param request DeleteSubCrowdRequest
      * @param headers map
@@ -4009,7 +4295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除指定人群下的指定子人群。</p>
+     * <p>Deletes the specified subcrowd.</p>
      * 
      * @param request DeleteSubCrowdRequest
      * @return DeleteSubCrowdResponse
@@ -4022,7 +4308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据表。</p>
+     * <p>Deletes a data table.</p>
      * 
      * @param request DeleteTableMetaRequest
      * @param headers map
@@ -4056,7 +4342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据表。</p>
+     * <p>Deletes a data table.</p>
      * 
      * @param request DeleteTableMetaRequest
      * @return DeleteTableMetaResponse
@@ -4068,8 +4354,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>TrafficControlTargetId</strong> is a required path parameter that specifies the traffic control target to delete.</li>
+     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID for this operation.</li>
+     * <li>A successful response includes a <code>RequestId</code> field to track the request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控目标</p>
+     * <p>Deletes the specified traffic control target.</p>
      * 
      * @param request DeleteTrafficControlTargetRequest
      * @param headers map
@@ -4102,8 +4396,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>TrafficControlTargetId</strong> is a required path parameter that specifies the traffic control target to delete.</li>
+     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID for this operation.</li>
+     * <li>A successful response includes a <code>RequestId</code> field to track the request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控目标</p>
+     * <p>Deletes the specified traffic control target.</p>
      * 
      * @param request DeleteTrafficControlTargetRequest
      * @return DeleteTrafficControlTargetResponse
@@ -4115,8 +4417,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API uses <code>TrafficControlTaskId</code> and <code>InstanceId</code> to delete a traffic control task.</li>
+     * <li>Ensure the <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct, or the operation may fail.</li>
+     * <li>This operation is irreversible. Proceed with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定的流量调控任务</p>
+     * <p>Deletes a specified traffic control task.</p>
      * 
      * @param request DeleteTrafficControlTaskRequest
      * @param headers map
@@ -4149,8 +4459,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API uses <code>TrafficControlTaskId</code> and <code>InstanceId</code> to delete a traffic control task.</li>
+     * <li>Ensure the <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct, or the operation may fail.</li>
+     * <li>This operation is irreversible. Proceed with caution.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除指定的流量调控任务</p>
+     * <p>Deletes a specified traffic control task.</p>
      * 
      * @param request DeleteTrafficControlTaskRequest
      * @return DeleteTrafficControlTaskResponse
@@ -4162,8 +4480,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Overview</h2>
+     * <ul>
+     * <li>This API deploys Flink code for a specific traffic control task.</li>
+     * <li><code>TrafficControlTaskId</code> is a path parameter and requires a valid task ID.</li>
+     * <li><code>InstanceId</code> and <code>Environment</code> are required request body parameters that specify the instance ID and the target deployment environment.</li>
+     * <li>The optional <code>RetryDeploy</code> parameter specifies whether to automatically retry the deployment on failure. The default value is <code>false</code>.</li>
+     * <li>The value for <code>Environment</code> must be one of the following: Daily, Pre, or Prod.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>部署流量调控任务的flink code</p>
+     * <p>Deploys Flink code for a traffic control task in a specified environment.</p>
      * 
      * @param request DeployTrafficControlTaskCodeRequest
      * @param headers map
@@ -4204,8 +4532,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Overview</h2>
+     * <ul>
+     * <li>This API deploys Flink code for a specific traffic control task.</li>
+     * <li><code>TrafficControlTaskId</code> is a path parameter and requires a valid task ID.</li>
+     * <li><code>InstanceId</code> and <code>Environment</code> are required request body parameters that specify the instance ID and the target deployment environment.</li>
+     * <li>The optional <code>RetryDeploy</code> parameter specifies whether to automatically retry the deployment on failure. The default value is <code>false</code>.</li>
+     * <li>The value for <code>Environment</code> must be one of the following: Daily, Pre, or Prod.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>部署流量调控任务的flink code</p>
+     * <p>Deploys Flink code for a traffic control task in a specified environment.</p>
      * 
      * @param request DeployTrafficControlTaskCodeRequest
      * @return DeployTrafficControlTaskCodeResponse
@@ -4217,8 +4555,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Use this API to export a specific table from the recall engine to Alibaba Cloud MaxCompute for further data processing or analysis. Ensure the provided MaxCompute project name, schema, and table name are valid and that you have the required permissions.</p>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>The <code>Partitions</code> field must be a JSON object that specifies the table partitions to export.</li>
+     * <li>The request may fail if any required parameters are missing or incorrect.</li>
+     * <li>The export process is asynchronous and may take some time. You can use the returned job ID to track the status of the job.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>召回管理表导出</p>
+     * <p>Exports a specified table from the recall engine to a MaxCompute project.</p>
      * 
      * @param request ExportRecallManagementTableRequest
      * @param headers map
@@ -4271,8 +4619,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Use this API to export a specific table from the recall engine to Alibaba Cloud MaxCompute for further data processing or analysis. Ensure the provided MaxCompute project name, schema, and table name are valid and that you have the required permissions.</p>
+     * <h3>Usage notes</h3>
+     * <ul>
+     * <li>The <code>Partitions</code> field must be a JSON object that specifies the table partitions to export.</li>
+     * <li>The request may fail if any required parameters are missing or incorrect.</li>
+     * <li>The export process is asynchronous and may take some time. You can use the returned job ID to track the status of the job.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>召回管理表导出</p>
+     * <p>Exports a specified table from the recall engine to a MaxCompute project.</p>
      * 
      * @param request ExportRecallManagementTableRequest
      * @return ExportRecallManagementTableResponse
@@ -4285,7 +4643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成算法定制脚本</p>
+     * <p>Generates an algorithm customization script.</p>
      * 
      * @param request GenerateAlgorithmCustomizationScriptRequest
      * @param headers map
@@ -4327,7 +4685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成算法定制脚本</p>
+     * <p>Generates an algorithm customization script.</p>
      * 
      * @param request GenerateAlgorithmCustomizationScriptRequest
      * @return GenerateAlgorithmCustomizationScriptResponse
@@ -4339,8 +4697,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</li>
+     * <li>The <code>Environment</code> parameter accepts three values: <code>Daily</code> for the daily environment, <code>Pre</code> for the pre-release environment, and <code>Prod</code> for the production environment.</li>
+     * <li>Check the <code>PreNeedConfig</code> field in the response. A <code>true</code> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>产生流量调控的相关代码</p>
+     * <p>Generates Flink code for a specified traffic control task ID and instance information.</p>
      * 
      * @param request GenerateTrafficControlTaskCodeRequest
      * @param headers map
@@ -4377,8 +4743,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</li>
+     * <li>The <code>Environment</code> parameter accepts three values: <code>Daily</code> for the daily environment, <code>Pre</code> for the pre-release environment, and <code>Prod</code> for the production environment.</li>
+     * <li>Check the <code>PreNeedConfig</code> field in the response. A <code>true</code> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>产生流量调控的相关代码</p>
+     * <p>Generates Flink code for a specified traffic control task ID and instance information.</p>
      * 
      * @param request GenerateTrafficControlTaskCodeRequest
      * @return GenerateTrafficControlTaskCodeResponse
@@ -4438,7 +4812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB Test实验指标详细信息。</p>
+     * <p>Gets the details of an A/B metric.</p>
      * 
      * @param request GetABMetricRequest
      * @param headers map
@@ -4472,7 +4846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB Test实验指标详细信息。</p>
+     * <p>Gets the details of an A/B metric.</p>
      * 
      * @param request GetABMetricRequest
      * @return GetABMetricResponse
@@ -4485,7 +4859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB实验指标组详细信息。</p>
+     * <p>Retrieves the details of an A/B testing metric group.</p>
      * 
      * @param request GetABMetricGroupRequest
      * @param headers map
@@ -4519,7 +4893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB实验指标组详细信息。</p>
+     * <p>Retrieves the details of an A/B testing metric group.</p>
      * 
      * @param request GetABMetricGroupRequest
      * @return GetABMetricGroupResponse
@@ -4532,7 +4906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定计算任务详细信息。</p>
+     * <p>Gets the details of a specified calculation job.</p>
      * 
      * @param request GetCalculationJobRequest
      * @param headers map
@@ -4566,7 +4940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定计算任务详细信息。</p>
+     * <p>Gets the details of a specified calculation job.</p>
      * 
      * @param request GetCalculationJobRequest
      * @return GetCalculationJobResponse
@@ -4578,8 +4952,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves the details of a specific data diagnosis task using the provided <code>DataDiagnosisId</code> (data diagnosis task configuration ID) and <code>InstanceId</code> (instance ID).</li>
+     * <li>The <code>CycleTime</code> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</li>
+     * <li>The value of <code>Type</code> determines the content of the <code>Config</code> field. For details about the required configuration for each type, see the relevant documentation.</li>
+     * <li><code>GmtCreateTime</code> and <code>GmtModifiedTime</code> are timestamps for the record\&quot;s creation and modification times, respectively.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断详细信息。</p>
+     * <p>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</p>
      * 
      * @param request GetDataDiagnosisRequest
      * @param headers map
@@ -4612,8 +4995,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves the details of a specific data diagnosis task using the provided <code>DataDiagnosisId</code> (data diagnosis task configuration ID) and <code>InstanceId</code> (instance ID).</li>
+     * <li>The <code>CycleTime</code> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</li>
+     * <li>The value of <code>Type</code> determines the content of the <code>Config</code> field. For details about the required configuration for each type, see the relevant documentation.</li>
+     * <li><code>GmtCreateTime</code> and <code>GmtModifiedTime</code> are timestamps for the record\&quot;s creation and modification times, respectively.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断详细信息。</p>
+     * <p>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</p>
      * 
      * @param request GetDataDiagnosisRequest
      * @return GetDataDiagnosisResponse
@@ -4626,7 +5018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取引擎配置详细信息。</p>
+     * <p>Gets the details of an engine configuration.</p>
      * 
      * @param request GetEngineConfigRequest
      * @param headers map
@@ -4660,7 +5052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取引擎配置详细信息。</p>
+     * <p>Gets the details of an engine configuration.</p>
      * 
      * @param request GetEngineConfigRequest
      * @return GetEngineConfigResponse
@@ -4673,7 +5065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验详细信息。</p>
+     * <p>Retrieves the details of a specified experiment.</p>
      * 
      * @param request GetExperimentRequest
      * @param headers map
@@ -4707,7 +5099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验详细信息。</p>
+     * <p>Retrieves the details of a specified experiment.</p>
      * 
      * @param request GetExperimentRequest
      * @return GetExperimentResponse
@@ -4720,7 +5112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定实验组详细信息。</p>
+     * <p>Retrieves details for a specified experiment group.</p>
      * 
      * @param request GetExperimentGroupRequest
      * @param headers map
@@ -4754,7 +5146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定实验组详细信息。</p>
+     * <p>Retrieves details for a specified experiment group.</p>
      * 
      * @param request GetExperimentGroupRequest
      * @return GetExperimentGroupResponse
@@ -4767,7 +5159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务详细信息。</p>
+     * <p>Gets the details of a feature consistency check job.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobRequest
      * @param headers map
@@ -4801,7 +5193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务详细信息。</p>
+     * <p>Gets the details of a feature consistency check job.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobRequest
      * @return GetFeatureConsistencyCheckJobResponse
@@ -4814,7 +5206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检测配置详情。</p>
+     * <p>Retrieves the configuration details of a feature consistency check task.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -4848,7 +5240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检测配置详情。</p>
+     * <p>Retrieves the configuration details of a feature consistency check task.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobConfigRequest
      * @return GetFeatureConsistencyCheckJobConfigResponse
@@ -4861,7 +5253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定推荐全链路深度定制开发平台实例信息。</p>
+     * <p>Gets the details of a specified PAI-REC instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param headers map
@@ -4889,7 +5281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定推荐全链路深度定制开发平台实例信息。</p>
+     * <p>Gets the details of a specified PAI-REC instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -4902,7 +5294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定实例下指定资源的详细信息。</p>
+     * <p>Retrieves the details of a specific resource in a specified instance.</p>
      * 
      * @param request GetInstanceResourceRequest
      * @param headers map
@@ -4930,7 +5322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定实例下指定资源的详细信息。</p>
+     * <p>Retrieves the details of a specific resource in a specified instance.</p>
      * 
      * @param request GetInstanceResourceRequest
      * @return GetInstanceResourceResponse
@@ -4943,7 +5335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下指定表的详细信息。</p>
+     * <p>Retrieves the schema of a specified data table within a resource.</p>
      * 
      * @param request GetInstanceResourceTableRequest
      * @param headers map
@@ -4971,7 +5363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据源下指定表的详细信息。</p>
+     * <p>Retrieves the schema of a specified data table within a resource.</p>
      * 
      * @param request GetInstanceResourceTableRequest
      * @return GetInstanceResourceTableResponse
@@ -4984,7 +5376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验室详细信息。</p>
+     * <p>Retrieves the details of a specified laboratory.</p>
      * 
      * @param request GetLaboratoryRequest
      * @param headers map
@@ -5018,7 +5410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验室详细信息。</p>
+     * <p>Retrieves the details of a specified laboratory.</p>
      * 
      * @param request GetLaboratoryRequest
      * @return GetLaboratoryResponse
@@ -5031,7 +5423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取层详细信息。</p>
+     * <p>Retrieves the details of a specified layer.</p>
      * 
      * @param request GetLayerRequest
      * @param headers map
@@ -5065,7 +5457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取层详细信息。</p>
+     * <p>Retrieves the details of a specified layer.</p>
      * 
      * @param request GetLayerRequest
      * @return GetLayerResponse
@@ -5078,7 +5470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取召回管理初始化配置。</p>
+     * <p>Retrieves the recall management configuration.</p>
      * 
      * @param request GetRecallManagementConfigRequest
      * @param headers map
@@ -5112,7 +5504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取召回管理初始化配置。</p>
+     * <p>Retrieves the recall management configuration.</p>
      * 
      * @param request GetRecallManagementConfigRequest
      * @return GetRecallManagementConfigResponse
@@ -5124,8 +5516,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Retrieves the details of a specific recall management job using its <code>RecallManagementJobId</code> and <code>InstanceId</code>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <code>RecallManagementJobId</code> as a path parameter and the <code>InstanceId</code> as a query parameter.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理任务详情。</p>
+     * <p>Retrieves the details of a specific recall management job, including its status and log.</p>
      * 
      * @param request GetRecallManagementJobRequest
      * @param headers map
@@ -5158,8 +5554,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Retrieves the details of a specific recall management job using its <code>RecallManagementJobId</code> and <code>InstanceId</code>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <code>RecallManagementJobId</code> as a path parameter and the <code>InstanceId</code> as a query parameter.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理任务详情。</p>
+     * <p>Retrieves the details of a specific recall management job, including its status and log.</p>
      * 
      * @param request GetRecallManagementJobRequest
      * @return GetRecallManagementJobResponse
@@ -5171,8 +5571,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定召回管理服务详细信息</p>
+     * <p>Retrieves the details of a specified recall management service, including its status and version.</p>
      * 
      * @param request GetRecallManagementServiceRequest
      * @param headers map
@@ -5205,8 +5608,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定召回管理服务详细信息</p>
+     * <p>Retrieves the details of a specified recall management service, including its status and version.</p>
      * 
      * @param request GetRecallManagementServiceRequest
      * @return GetRecallManagementServiceResponse
@@ -5219,7 +5625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定召回管理版本详细信息</p>
+     * <p>Retrieves the version details of the recall management service.</p>
      * 
      * @param request GetRecallManagementServiceVersionRequest
      * @param headers map
@@ -5253,7 +5659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定召回管理版本详细信息</p>
+     * <p>Retrieves the version details of the recall management service.</p>
      * 
      * @param request GetRecallManagementServiceVersionRequest
      * @return GetRecallManagementServiceVersionResponse
@@ -5265,8 +5671,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <code>InstanceId</code> is crucial for locating the correct instance.</p>
+     * <ul>
+     * <li><strong>Note</strong>: All path parameters (<code>RecallManagementServiceId</code>, <code>RecallManagementServiceVersionId</code>, and <code>RecallManagementServiceVersionConfigId</code>) are required and must reference an existing resource.</li>
+     * <li><strong>Extended configuration</strong>: The response includes the <code>ExtendedConfig</code> field, which is used for future extensions and custom settings. Parse this field as needed.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理服务版本配置详细信息</p>
+     * <p>This API retrieves the configuration details of a specific recall management service version.</p>
      * 
      * @param request GetRecallManagementServiceVersionConfigRequest
      * @param headers map
@@ -5299,8 +5713,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <code>InstanceId</code> is crucial for locating the correct instance.</p>
+     * <ul>
+     * <li><strong>Note</strong>: All path parameters (<code>RecallManagementServiceId</code>, <code>RecallManagementServiceVersionId</code>, and <code>RecallManagementServiceVersionConfigId</code>) are required and must reference an existing resource.</li>
+     * <li><strong>Extended configuration</strong>: The response includes the <code>ExtendedConfig</code> field, which is used for future extensions and custom settings. Parse this field as needed.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理服务版本配置详细信息</p>
+     * <p>This API retrieves the configuration details of a specific recall management service version.</p>
      * 
      * @param request GetRecallManagementServiceVersionConfigRequest
      * @return GetRecallManagementServiceVersionConfigResponse
@@ -5312,8 +5734,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API retrieves details of a specific recall management table using the provided <code>RecallManagementTableId</code> and <code>InstanceId</code>. Ensure you provide the correct values for these parameters.</p>
+     * <ul>
+     * <li><strong>Note</strong>: The <code>CanDelete</code> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</li>
+     * <li>The <code>Fields</code> list contains the definitions for each field in the data table, including their name, type, and properties.</li>
+     * <li>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定召回管理表详细信息。</p>
+     * <p>Retrieves the details of a specified recall management table, including its table structure and configuration.</p>
      * 
      * @param request GetRecallManagementTableRequest
      * @param headers map
@@ -5346,8 +5777,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API retrieves details of a specific recall management table using the provided <code>RecallManagementTableId</code> and <code>InstanceId</code>. Ensure you provide the correct values for these parameters.</p>
+     * <ul>
+     * <li><strong>Note</strong>: The <code>CanDelete</code> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</li>
+     * <li>The <code>Fields</code> list contains the definitions for each field in the data table, including their name, type, and properties.</li>
+     * <li>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取指定召回管理表详细信息。</p>
+     * <p>Retrieves the details of a specified recall management table, including its table structure and configuration.</p>
      * 
      * @param request GetRecallManagementTableRequest
      * @return GetRecallManagementTableResponse
@@ -5454,7 +5894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取场景详细信息</p>
+     * <p>Retrieves the details of a specified scene.</p>
      * 
      * @param request GetSceneRequest
      * @param headers map
@@ -5488,7 +5928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取场景详细信息</p>
+     * <p>Retrieves the details of a specified scene.</p>
      * 
      * @param request GetSceneRequest
      * @return GetSceneResponse
@@ -5501,7 +5941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务详细信息。</p>
+     * <p>Retrieves the details of a service.</p>
      * 
      * @param request GetServiceRequest
      * @param headers map
@@ -5535,7 +5975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务详细信息。</p>
+     * <p>Retrieves the details of a service.</p>
      * 
      * @param request GetServiceRequest
      * @return GetServiceResponse
@@ -5548,7 +5988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定人群下的指定子人群的详细信息。</p>
+     * <p>Retrieves the details of a sub-crowd.</p>
      * 
      * @param request GetSubCrowdRequest
      * @param headers map
@@ -5582,7 +6022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定人群下的指定子人群的详细信息。</p>
+     * <p>Retrieves the details of a sub-crowd.</p>
      * 
      * @param request GetSubCrowdRequest
      * @return GetSubCrowdResponse
@@ -5595,7 +6035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据表详细信息。</p>
+     * <p>Returns the details of a table.</p>
      * 
      * @param request GetTableMetaRequest
      * @param headers map
@@ -5629,7 +6069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据表详细信息。</p>
+     * <p>Returns the details of a table.</p>
      * 
      * @param request GetTableMetaRequest
      * @return GetTableMetaResponse
@@ -5641,8 +6081,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <code>TrafficControlTargetId</code> and <code>InstanceId</code> parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控目标详情</p>
+     * <p>Gets the details of a traffic throttling objective by its ID.</p>
      * 
      * @param request GetTrafficControlTargetRequest
      * @param headers map
@@ -5675,8 +6119,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <code>TrafficControlTargetId</code> and <code>InstanceId</code> parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控目标详情</p>
+     * <p>Gets the details of a traffic throttling objective by its ID.</p>
      * 
      * @param request GetTrafficControlTargetRequest
      * @return GetTrafficControlTargetResponse
@@ -5688,8 +6136,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</li>
+     * <li>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</li>
+     * <li>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</li>
+     * <li>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务详情</p>
+     * <p>Queries the details of a traffic control task with a specified ID.</p>
      * 
      * @param request GetTrafficControlTaskRequest
      * @param headers map
@@ -5738,8 +6195,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This operation retrieves the details of a specific traffic control task, including but not limited to the task name, description, and status.</li>
+     * <li>TrafficControlTaskId and InstanceId are required parameters that specify the task ID and instance ID to query.</li>
+     * <li>Optional parameters such as Environment, Version, and ControlTargetFilter help refine the request to retrieve more specific task data or version information.</li>
+     * <li>Check the returned data structure, especially the TrafficControlTargets section, which contains multiple control targets and their related properties.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务详情</p>
+     * <p>Queries the details of a traffic control task with a specified ID.</p>
      * 
      * @param request GetTrafficControlTaskRequest
      * @return GetTrafficControlTaskResponse
@@ -5751,8 +6217,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API retrieves the traffic details for a specific traffic control task. The request must include the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code>.</p>
+     * <ul>
+     * <li><code>TrafficControlTaskId</code>: The unique identifier for the traffic control task.</li>
+     * <li><code>InstanceId</code>: The instance ID.</li>
+     * <li><code>Environment</code>: The environment type, such as the production environment (Prod).
+     * The response includes the traffic allocation for each experiment and traffic control target. This data allows you to analyze and manage your traffic control strategies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务的流量详情</p>
+     * <p>Retrieves traffic allocation details for a specific traffic control task.</p>
      * 
      * @param request GetTrafficControlTaskTrafficRequest
      * @param headers map
@@ -5789,8 +6265,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API retrieves the traffic details for a specific traffic control task. The request must include the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code>.</p>
+     * <ul>
+     * <li><code>TrafficControlTaskId</code>: The unique identifier for the traffic control task.</li>
+     * <li><code>InstanceId</code>: The instance ID.</li>
+     * <li><code>Environment</code>: The environment type, such as the production environment (Prod).
+     * The response includes the traffic allocation for each experiment and traffic control target. This data allows you to analyze and manage your traffic control strategies.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务的流量详情</p>
+     * <p>Retrieves traffic allocation details for a specific traffic control task.</p>
      * 
      * @param request GetTrafficControlTaskTrafficRequest
      * @return GetTrafficControlTaskTrafficResponse
@@ -5803,7 +6289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB Test实验指标组列表。</p>
+     * <p>Retrieves a list of A/B metric groups.</p>
      * 
      * @param request ListABMetricGroupsRequest
      * @param headers map
@@ -5861,7 +6347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB Test实验指标组列表。</p>
+     * <p>Retrieves a list of A/B metric groups.</p>
      * 
      * @param request ListABMetricGroupsRequest
      * @return ListABMetricGroupsResponse
@@ -5874,7 +6360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB Test实验指标列表。</p>
+     * <p>Lists A/B testing metrics.</p>
      * 
      * @param request ListABMetricsRequest
      * @param headers map
@@ -5936,7 +6422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取AB Test实验指标列表。</p>
+     * <p>Lists A/B testing metrics.</p>
      * 
      * @param request ListABMetricsRequest
      * @return ListABMetricsResponse
@@ -5949,7 +6435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取计算任务列表。</p>
+     * <p>Lists calculation jobs.</p>
      * 
      * @param request ListCalculationJobsRequest
      * @param headers map
@@ -5999,7 +6485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取计算任务列表。</p>
+     * <p>Lists calculation jobs.</p>
      * 
      * @param request ListCalculationJobsRequest
      * @return ListCalculationJobsResponse
@@ -6012,7 +6498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取人群下的所有用户。</p>
+     * <p>Retrieves all users within a specified crowd, including those in its sub-crowds.</p>
      * 
      * @param request ListCrowdUsersRequest
      * @param headers map
@@ -6046,7 +6532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取人群下的所有用户。</p>
+     * <p>Retrieves all users within a specified crowd, including those in its sub-crowds.</p>
      * 
      * @param request ListCrowdUsersRequest
      * @return ListCrowdUsersResponse
@@ -6059,7 +6545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取人群列表。</p>
+     * <p>Lists the Crowds in a specified instance.</p>
      * 
      * @param request ListCrowdsRequest
      * @param headers map
@@ -6093,7 +6579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取人群列表。</p>
+     * <p>Lists the Crowds in a specified instance.</p>
      * 
      * @param request ListCrowdsRequest
      * @return ListCrowdsResponse
@@ -6105,8 +6591,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API retrieves a list of data diagnosis tasks. It requires the <code>InstanceId</code> parameter and accepts optional parameters—such as data diagnosis type, page number, and page size—for filtering and pagination.</p>
+     * <ul>
+     * <li>The <strong>Types</strong> parameter accepts multiple data diagnosis types, allowing you to view reports for all selected types at once.</li>
+     * <li>To paginate results, use the <code>PageNumber</code> and <code>PageSize</code> parameters.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断列表。</p>
+     * <p>Lists the data diagnostic tasks for the specified instance.</p>
      * 
      * @param tmpReq ListDataDiagnosesRequest
      * @param headers map
@@ -6157,8 +6651,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API retrieves a list of data diagnosis tasks. It requires the <code>InstanceId</code> parameter and accepts optional parameters—such as data diagnosis type, page number, and page size—for filtering and pagination.</p>
+     * <ul>
+     * <li>The <strong>Types</strong> parameter accepts multiple data diagnosis types, allowing you to view reports for all selected types at once.</li>
+     * <li>To paginate results, use the <code>PageNumber</code> and <code>PageSize</code> parameters.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断列表。</p>
+     * <p>Lists the data diagnostic tasks for the specified instance.</p>
      * 
      * @param request ListDataDiagnosesRequest
      * @return ListDataDiagnosesResponse
@@ -6170,8 +6672,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <code>InstanceId</code> and <code>Status</code>, and use the <code>PageNumber</code> and <code>PageSize</code> parameters to control pagination.</p>
+     * <ul>
+     * <li>The <strong>InstanceId</strong> parameter is required and specifies the instance to query.</li>
+     * <li>Optional parameters include <strong>Status</strong>, <strong>Types</strong>, <strong>PageNumber</strong>, and <strong>PageSize</strong>.</li>
+     * <li>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断任务列表。</p>
+     * <p>Queries data diagnosis jobs for a specified instance.</p>
      * 
      * @param tmpReq ListDataDiagnosisJobsRequest
      * @param headers map
@@ -6226,8 +6737,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <code>InstanceId</code> and <code>Status</code>, and use the <code>PageNumber</code> and <code>PageSize</code> parameters to control pagination.</p>
+     * <ul>
+     * <li>The <strong>InstanceId</strong> parameter is required and specifies the instance to query.</li>
+     * <li>Optional parameters include <strong>Status</strong>, <strong>Types</strong>, <strong>PageNumber</strong>, and <strong>PageSize</strong>.</li>
+     * <li>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断任务列表。</p>
+     * <p>Queries data diagnosis jobs for a specified instance.</p>
      * 
      * @param request ListDataDiagnosisJobsRequest
      * @return ListDataDiagnosisJobsResponse
@@ -6239,8 +6759,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</li>
+     * <li>The <code>FeatureName</code> parameter filters reports by a specific feature, and the <code>TopN</code> parameter limits the number of results.</li>
+     * <li>The <code>RemainRateType</code> parameter specifies the type of retention rate report, such as a periodic report.</li>
+     * <li>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</li>
+     * <li>Important: All date values must use the <code>YYYY-MM-DD</code> format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断报告。</p>
+     * <p>Specify parameters to retrieve data diagnosis reports for a specific time range.</p>
      * 
      * @param request ListDataDiagnosisReportsRequest
      * @param headers map
@@ -6293,8 +6823,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</li>
+     * <li>The <code>FeatureName</code> parameter filters reports by a specific feature, and the <code>TopN</code> parameter limits the number of results.</li>
+     * <li>The <code>RemainRateType</code> parameter specifies the type of retention rate report, such as a periodic report.</li>
+     * <li>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</li>
+     * <li>Important: All date values must use the <code>YYYY-MM-DD</code> format.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据诊断报告。</p>
+     * <p>Specify parameters to retrieve data diagnosis reports for a specific time range.</p>
      * 
      * @param request ListDataDiagnosisReportsRequest
      * @return ListDataDiagnosisReportsResponse
@@ -6307,7 +6847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取引擎配置列表。</p>
+     * <p>Retrieves a list of engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @param headers map
@@ -6365,7 +6905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取引擎配置列表。</p>
+     * <p>Retrieves a list of engine configurations.</p>
      * 
      * @param request ListEngineConfigsRequest
      * @return ListEngineConfigsResponse
@@ -6378,7 +6918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验组列表。</p>
+     * <p>Returns a list of experiment groups.</p>
      * 
      * @param request ListExperimentGroupsRequest
      * @param headers map
@@ -6428,7 +6968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验组列表。</p>
+     * <p>Returns a list of experiment groups.</p>
      * 
      * @param request ListExperimentGroupsRequest
      * @return ListExperimentGroupsResponse
@@ -6441,7 +6981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验列表。</p>
+     * <p>Lists the experiments in the specified experiment group.</p>
      * 
      * @param request ListExperimentsRequest
      * @param headers map
@@ -6487,7 +7027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验列表。</p>
+     * <p>Lists the experiments in the specified experiment group.</p>
      * 
      * @param request ListExperimentsRequest
      * @return ListExperimentsResponse
@@ -6500,7 +7040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查配置列表。</p>
+     * <p>Retrieves a list of feature consistency check task configurations.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobConfigsRequest
      * @param headers map
@@ -6550,7 +7090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查配置列表。</p>
+     * <p>Retrieves a list of feature consistency check task configurations.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobConfigsRequest
      * @return ListFeatureConsistencyCheckJobConfigsResponse
@@ -6563,7 +7103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务的特征报表/比对结果。</p>
+     * <p>Lists feature reports for a feature consistency check job.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobFeatureReportsRequest
      * @param headers map
@@ -6609,7 +7149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务的特征报表/比对结果。</p>
+     * <p>Lists feature reports for a feature consistency check job.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobFeatureReportsRequest
      * @return ListFeatureConsistencyCheckJobFeatureReportsResponse
@@ -6622,7 +7162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务分数报表/比对结果。</p>
+     * <p>Retrieves the score difference reports for a feature consistency check job.</p>
      * 
      * @param tmpReq ListFeatureConsistencyCheckJobScoreReportsRequest
      * @param headers map
@@ -6666,7 +7206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务分数报表/比对结果。</p>
+     * <p>Retrieves the score difference reports for a feature consistency check job.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobScoreReportsRequest
      * @return ListFeatureConsistencyCheckJobScoreReportsResponse
@@ -6679,7 +7219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务列表。</p>
+     * <p>Retrieves a list of feature consistency check jobs.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobsRequest
      * @param headers map
@@ -6733,7 +7273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取特征一致性检查任务列表。</p>
+     * <p>Retrieves a list of feature consistency check jobs.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobsRequest
      * @return ListFeatureConsistencyCheckJobsResponse
@@ -6745,8 +7285,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据资源下的Schema列表。</p>
+     * <p>Lists all schemas for a specified resource in an instance.</p>
      * 
      * @param request ListInstanceResourceSchemasRequest
      * @param headers map
@@ -6779,8 +7323,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据资源下的Schema列表。</p>
+     * <p>Lists all schemas for a specified resource in an instance.</p>
      * 
      * @param request ListInstanceResourceSchemasRequest
      * @return ListInstanceResourceSchemasResponse
@@ -6792,8 +7340,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <code>MaxcomputeSchema</code> parameter to filter the results by a MaxCompute schema.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据源下数据表的列表。</p>
+     * <p>Retrieves a list of data tables for a specified instance and data source.</p>
      * 
      * @param request ListInstanceResourceTablesRequest
      * @param headers map
@@ -6826,8 +7378,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <code>MaxcomputeSchema</code> parameter to filter the results by a MaxCompute schema.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据源下数据表的列表。</p>
+     * <p>Retrieves a list of data tables for a specified instance and data source.</p>
      * 
      * @param request ListInstanceResourceTablesRequest
      * @return ListInstanceResourceTablesResponse
@@ -6840,7 +7396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例下配置的资源列表。</p>
+     * <p>Lists the resources configured for an instance.</p>
      * 
      * @param request ListInstanceResourcesRequest
      * @param headers map
@@ -6882,7 +7438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例下配置的资源列表。</p>
+     * <p>Lists the resources configured for an instance.</p>
      * 
      * @param request ListInstanceResourcesRequest
      * @return ListInstanceResourcesResponse
@@ -6895,7 +7451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取推荐全链路深度定制开发平台实例信息列表。</p>
+     * <p>Gets a list of PAIRec instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param headers map
@@ -6949,7 +7505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取推荐全链路深度定制开发平台实例信息列表。</p>
+     * <p>Gets a list of PAIRec instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -6962,7 +7518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验室列表。</p>
+     * <p>Retrieves the laboratories in a specified scene.</p>
      * 
      * @param request ListLaboratoriesRequest
      * @param headers map
@@ -7008,7 +7564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实验室列表。</p>
+     * <p>Retrieves the laboratories in a specified scene.</p>
      * 
      * @param request ListLaboratoriesRequest
      * @return ListLaboratoriesResponse
@@ -7021,7 +7577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取层列表。</p>
+     * <p>Retrieves a list of layers in a specified laboratory.</p>
      * 
      * @param request ListLayersRequest
      * @param headers map
@@ -7059,7 +7615,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取层列表。</p>
+     * <p>Retrieves a list of layers in a specified laboratory.</p>
      * 
      * @param request ListLayersRequest
      * @return ListLayersResponse
@@ -7072,7 +7628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取参数列表。</p>
+     * <p>Lists parameters.</p>
      * 
      * @param request ListParamsRequest
      * @param headers map
@@ -7130,7 +7686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取参数列表。</p>
+     * <p>Lists parameters.</p>
      * 
      * @param request ListParamsRequest
      * @return ListParamsResponse
@@ -7142,8 +7698,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API operation to retrieve a list of recall management tasks.</li>
+     * <li>The <code>InstanceId</code> and <code>Type</code> parameters are required. All other parameters are optional.</li>
+     * <li>Use the <code>Condition</code> parameter to set filter conditions on specific table types, such as filtering by <code>RecallManagementTableId</code>.</li>
+     * <li>Use the <code>SortBy</code> and <code>Order</code> parameters to control the sort order of the results. The default sort order is ascending by creation time.</li>
+     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. The <code>PageNumber</code> parameter defaults to 1, and the <code>PageSize</code> parameter defaults to 10.</li>
+     * <li>The response includes details about each recall management task, such as its basic information and status.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理任务列表。</p>
+     * <p>Retrieves a list of recall management tasks that match specified conditions.</p>
      * 
      * @param request ListRecallManagementJobsRequest
      * @param headers map
@@ -7208,8 +7775,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Use this API operation to retrieve a list of recall management tasks.</li>
+     * <li>The <code>InstanceId</code> and <code>Type</code> parameters are required. All other parameters are optional.</li>
+     * <li>Use the <code>Condition</code> parameter to set filter conditions on specific table types, such as filtering by <code>RecallManagementTableId</code>.</li>
+     * <li>Use the <code>SortBy</code> and <code>Order</code> parameters to control the sort order of the results. The default sort order is ascending by creation time.</li>
+     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. The <code>PageNumber</code> parameter defaults to 1, and the <code>PageSize</code> parameter defaults to 10.</li>
+     * <li>The response includes details about each recall management task, such as its basic information and status.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理任务列表。</p>
+     * <p>Retrieves a list of recall management tasks that match specified conditions.</p>
      * 
      * @param request ListRecallManagementJobsRequest
      * @return ListRecallManagementJobsResponse
@@ -7221,8 +7799,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <code>RecallManagementServiceId</code> and <code>InstanceId</code>.</p>
+     * <ul>
+     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</li>
+     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</li>
+     * <li>The <code>Order</code> parameter specifies the sort order. Valid values are <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理服务下的版本列表</p>
+     * <p>Retrieves a list of all versions for a specified Recall Management Service.</p>
      * 
      * @param request ListRecallManagementServiceVersionsRequest
      * @param headers map
@@ -7271,8 +7858,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <code>RecallManagementServiceId</code> and <code>InstanceId</code>.</p>
+     * <ul>
+     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</li>
+     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</li>
+     * <li>The <code>Order</code> parameter specifies the sort order. Valid values are <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理服务下的版本列表</p>
+     * <p>Retrieves a list of all versions for a specified Recall Management Service.</p>
      * 
      * @param request ListRecallManagementServiceVersionsRequest
      * @return ListRecallManagementServiceVersionsResponse
@@ -7284,8 +7880,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Call <code>ListRecallManagementServices</code> to retrieve a list of recall management services for a specified instance based on parameters such as <code>InstanceId</code>, <code>PageNumber</code>, and <code>PageSize</code>. You can sort the results by creation time or modification time in ascending or descending order.</p>
+     * <ul>
+     * <li><strong>InstanceId</strong> is required. It specifies the target instance.</li>
+     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</li>
+     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sort order of the list.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理服务列表</p>
+     * <p>This API returns a list of recall management services for a specified instance.</p>
      * 
      * @param request ListRecallManagementServicesRequest
      * @param headers map
@@ -7342,8 +7947,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Call <code>ListRecallManagementServices</code> to retrieve a list of recall management services for a specified instance based on parameters such as <code>InstanceId</code>, <code>PageNumber</code>, and <code>PageSize</code>. You can sort the results by creation time or modification time in ascending or descending order.</p>
+     * <ul>
+     * <li><strong>InstanceId</strong> is required. It specifies the target instance.</li>
+     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> control the number of returned items and the page from which to start. This operation returns the first page of results by default.</li>
+     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sort order of the list.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理服务列表</p>
+     * <p>This API returns a list of recall management services for a specified instance.</p>
      * 
      * @param request ListRecallManagementServicesRequest
      * @return ListRecallManagementServicesResponse
@@ -7355,8 +7969,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage</h2>
+     * <ul>
+     * <li>To retrieve the version history of a specific RecallManagementTable, provide the <code>RecallManagementTableId</code> and <code>InstanceId</code>.</li>
+     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters enable pagination, which allows you to control the number of items to return and the page to display.</li>
+     * <li>If the <code>Order</code> parameter is not specified, the results are sorted in ascending order by default.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理表版本列表。</p>
+     * <p>Lists all versions of a specified RecallManagementTable.</p>
      * 
      * @param request ListRecallManagementTableVersionsRequest
      * @param headers map
@@ -7405,8 +8028,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage</h2>
+     * <ul>
+     * <li>To retrieve the version history of a specific RecallManagementTable, provide the <code>RecallManagementTableId</code> and <code>InstanceId</code>.</li>
+     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters enable pagination, which allows you to control the number of items to return and the page to display.</li>
+     * <li>If the <code>Order</code> parameter is not specified, the results are sorted in ascending order by default.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理表版本列表。</p>
+     * <p>Lists all versions of a specified RecallManagementTable.</p>
      * 
      * @param request ListRecallManagementTableVersionsRequest
      * @return ListRecallManagementTableVersionsResponse
@@ -7418,8 +8050,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>InstanceId</strong> is a required parameter specifying the instance to query.</li>
+     * <li>The <strong>Name</strong> and <strong>Type</strong> parameters filter recall management tables by name or type.</li>
+     * <li>The <strong>PageNumber</strong> and <strong>PageSize</strong> parameters control pagination. By default, the query returns the first 50 records.</li>
+     * <li>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理表列表。</p>
+     * <p>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</p>
      * 
      * @param request ListRecallManagementTablesRequest
      * @param headers map
@@ -7484,8 +8125,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><strong>InstanceId</strong> is a required parameter specifying the instance to query.</li>
+     * <li>The <strong>Name</strong> and <strong>Type</strong> parameters filter recall management tables by name or type.</li>
+     * <li>The <strong>PageNumber</strong> and <strong>PageSize</strong> parameters control pagination. By default, the query returns the first 50 records.</li>
+     * <li>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取召回管理表列表。</p>
+     * <p>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</p>
      * 
      * @param request ListRecallManagementTablesRequest
      * @return ListRecallManagementTablesResponse
@@ -7636,7 +8286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取场景列表</p>
+     * <p>Retrieves a list of scenes.</p>
      * 
      * @param request ListScenesRequest
      * @param headers map
@@ -7674,7 +8324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取场景列表</p>
+     * <p>Retrieves a list of scenes.</p>
      * 
      * @param request ListScenesRequest
      * @return ListScenesResponse
@@ -7687,7 +8337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取人群下的所有子人群。</p>
+     * <p>Lists the subcrowds for a specified crowd.</p>
      * 
      * @param request ListSubCrowdsRequest
      * @param headers map
@@ -7721,7 +8371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取人群下的所有子人群。</p>
+     * <p>Lists the subcrowds for a specified crowd.</p>
      * 
      * @param request ListSubCrowdsRequest
      * @return ListSubCrowdsResponse
@@ -7734,7 +8384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据表列表。</p>
+     * <p>Retrieves a list of data tables.</p>
      * 
      * @param request ListTableMetasRequest
      * @param headers map
@@ -7788,7 +8438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据表列表。</p>
+     * <p>Retrieves a list of data tables.</p>
      * 
      * @param request ListTableMetasRequest
      * @return ListTableMetasResponse
@@ -7800,8 +8450,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are required.</li>
+     * <li>You can use <code>StartTime</code> and <code>EndTime</code> to specify the time range.</li>
+     * <li>The <code>Threshold</code> parameter is optional.</li>
+     * <li>Use <code>ExperimentId</code> and <code>ExperimentGroupId</code> to filter data for a specific experiment or experiment group.</li>
+     * <li>Use <code>ItemId</code> to filter traffic data for a specific item.</li>
+     * <li>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务流量变更的历史列表</p>
+     * <p>Retrieves the historical traffic records for a specific traffic control target.</p>
      * 
      * @param request ListTrafficControlTargetTrafficHistoryRequest
      * @param headers map
@@ -7862,8 +8523,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>The <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are required.</li>
+     * <li>You can use <code>StartTime</code> and <code>EndTime</code> to specify the time range.</li>
+     * <li>The <code>Threshold</code> parameter is optional.</li>
+     * <li>Use <code>ExperimentId</code> and <code>ExperimentGroupId</code> to filter data for a specific experiment or experiment group.</li>
+     * <li>Use <code>ItemId</code> to filter traffic data for a specific item.</li>
+     * <li>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务流量变更的历史列表</p>
+     * <p>Retrieves the historical traffic records for a specific traffic control target.</p>
      * 
      * @param request ListTrafficControlTargetTrafficHistoryRequest
      * @return ListTrafficControlTargetTrafficHistoryResponse
@@ -7875,8 +8547,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves a list of traffic control tasks.</li>
+     * <li>Use query parameters to filter and sort the results.</li>
+     * <li>This operation supports pagination. You can also retrieve all results in a single response.</li>
+     * <li>Note: The <code>InstanceId</code> is a required parameter. All other parameters are optional.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控列表</p>
+     * <p>Lists traffic control tasks that meet specified conditions.</p>
      * 
      * @param request ListTrafficControlTasksRequest
      * @param headers map
@@ -7957,8 +8638,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API retrieves a list of traffic control tasks.</li>
+     * <li>Use query parameters to filter and sort the results.</li>
+     * <li>This operation supports pagination. You can also retrieve all results in a single response.</li>
+     * <li>Note: The <code>InstanceId</code> is a required parameter. All other parameters are optional.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控列表</p>
+     * <p>Lists traffic control tasks that meet specified conditions.</p>
      * 
      * @param request ListTrafficControlTasksRequest
      * @return ListTrafficControlTasksResponse
@@ -7971,7 +8661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验。</p>
+     * <p>Takes an experiment offline.</p>
      * 
      * @param request OfflineExperimentRequest
      * @param headers map
@@ -8005,7 +8695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验。</p>
+     * <p>Takes an experiment offline.</p>
      * 
      * @param request OfflineExperimentRequest
      * @return OfflineExperimentResponse
@@ -8018,7 +8708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线实验组。</p>
+     * <p>Takes a specified experiment group offline.</p>
      * 
      * @param request OfflineExperimentGroupRequest
      * @param headers map
@@ -8052,7 +8742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线实验组。</p>
+     * <p>Takes a specified experiment group offline.</p>
      * 
      * @param request OfflineExperimentGroupRequest
      * @return OfflineExperimentGroupResponse
@@ -8065,7 +8755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线实验室。</p>
+     * <p>Takes the specified laboratory offline.</p>
      * 
      * @param request OfflineLaboratoryRequest
      * @param headers map
@@ -8099,7 +8789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下线实验室。</p>
+     * <p>Takes the specified laboratory offline.</p>
      * 
      * @param request OfflineLaboratoryRequest
      * @return OfflineLaboratoryResponse
@@ -8111,8 +8801,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Use this API to take a specific recall management service offline. Ensure that the provided <code>RecallManagementServiceId</code> and <code>InstanceId</code> are accurate to prevent unintended operations.</p>
+     * <ul>
+     * <li><strong>Important</strong>: Once a recall management service is taken offline, it stops processing new requests until you reactivate it.</li>
+     * <li>Back up any required data or configurations before you perform this operation in case you need to restore the current state.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>下线召回管理服务</p>
+     * <p>Takes a specified recall management service offline.</p>
      * 
      * @param request OfflineRecallManagementServiceRequest
      * @param headers map
@@ -8145,8 +8843,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Use this API to take a specific recall management service offline. Ensure that the provided <code>RecallManagementServiceId</code> and <code>InstanceId</code> are accurate to prevent unintended operations.</p>
+     * <ul>
+     * <li><strong>Important</strong>: Once a recall management service is taken offline, it stops processing new requests until you reactivate it.</li>
+     * <li>Back up any required data or configurations before you perform this operation in case you need to restore the current state.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>下线召回管理服务</p>
+     * <p>Takes a specified recall management service offline.</p>
      * 
      * @param request OfflineRecallManagementServiceRequest
      * @return OfflineRecallManagementServiceResponse
@@ -8159,7 +8865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验</p>
+     * <p>Brings a specified experiment online.</p>
      * 
      * @param request OnlineExperimentRequest
      * @param headers map
@@ -8193,7 +8899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验</p>
+     * <p>Brings a specified experiment online.</p>
      * 
      * @param request OnlineExperimentRequest
      * @return OnlineExperimentResponse
@@ -8206,7 +8912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验组。</p>
+     * <p>Brings a specified experiment group online.</p>
      * 
      * @param request OnlineExperimentGroupRequest
      * @param headers map
@@ -8240,7 +8946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验组。</p>
+     * <p>Brings a specified experiment group online.</p>
      * 
      * @param request OnlineExperimentGroupRequest
      * @return OnlineExperimentGroupResponse
@@ -8253,7 +8959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验室。</p>
+     * <p>Publishes a specified laboratory for experimental analysis.</p>
      * 
      * @param request OnlineLaboratoryRequest
      * @param headers map
@@ -8287,7 +8993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上线实验室。</p>
+     * <p>Publishes a specified laboratory for experimental analysis.</p>
      * 
      * @param request OnlineLaboratoryRequest
      * @return OnlineLaboratoryResponse
@@ -8299,8 +9005,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>You can use this operation to bring a Recall Management Service online by specifying the Recall Management Service ID and the instance ID. Ensure that the <code>RecallManagementServiceId</code> and <code>InstanceId</code> are correct and that you have the required permissions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>上线召回管理服务</p>
+     * <p>This operation brings a specified Recall Management Service online.</p>
      * 
      * @param request OnlineRecallManagementServiceRequest
      * @param headers map
@@ -8333,8 +9043,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>You can use this operation to bring a Recall Management Service online by specifying the Recall Management Service ID and the instance ID. Ensure that the <code>RecallManagementServiceId</code> and <code>InstanceId</code> are correct and that you have the required permissions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>上线召回管理服务</p>
+     * <p>This operation brings a specified Recall Management Service online.</p>
      * 
      * @param request OnlineRecallManagementServiceRequest
      * @return OnlineRecallManagementServiceResponse
@@ -8346,8 +9060,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <p>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <code>RecallManagementTableId</code> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <code>Partitions</code> field.</p>
+     * 
      * <b>summary</b> : 
-     * <p>将maxcompute的表同步到召回引擎中。</p>
+     * <p>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</p>
      * 
      * @param request PublishRecallManagementTableRequest
      * @param headers map
@@ -8396,8 +9114,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <p>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <code>RecallManagementTableId</code> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <code>Partitions</code> field.</p>
+     * 
      * <b>summary</b> : 
-     * <p>将maxcompute的表同步到召回引擎中。</p>
+     * <p>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</p>
      * 
      * @param request PublishRecallManagementTableRequest
      * @return PublishRecallManagementTableResponse
@@ -8410,7 +9132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>推全。</p>
+     * <p>If an experiment is stable and performs well, you can push all traffic to it. This action retires the original experiment group and creates a new one that contains only this experiment. The new group receives 100% of the traffic.</p>
      * 
      * @param request PushAllExperimentRequest
      * @param headers map
@@ -8444,7 +9166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>推全。</p>
+     * <p>If an experiment is stable and performs well, you can push all traffic to it. This action retires the original experiment group and creates a new one that contains only this experiment. The new group receives 100% of the traffic.</p>
      * 
      * @param request PushAllExperimentRequest
      * @return PushAllExperimentResponse
@@ -8513,8 +9235,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>The <code>DataDiagnosisId</code> parameter is required and specifies the data diagnosis task.</li>
+     * <li>The <code>InstanceId</code> parameter is also required and specifies the instance.</li>
+     * <li>The <code>StartDate</code> and <code>EndDate</code> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</li>
+     * <li>The <code>RemainRateType</code> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</li>
+     * <li>The response includes the request ID (<code>RequestId</code>) and a <code>Statistics</code> object. This object contains the dates of task failures (<code>FailedDates</code>) and dates with missing task data (<code>NoDataDates</code>).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>QueryDataDiagnosisStatistics</p>
+     * <p>Retrieves statistics for a specified data diagnosis task within a time range.</p>
      * 
      * @param request QueryDataDiagnosisStatisticsRequest
      * @param headers map
@@ -8559,8 +9291,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>The <code>DataDiagnosisId</code> parameter is required and specifies the data diagnosis task.</li>
+     * <li>The <code>InstanceId</code> parameter is also required and specifies the instance.</li>
+     * <li>The <code>StartDate</code> and <code>EndDate</code> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</li>
+     * <li>The <code>RemainRateType</code> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</li>
+     * <li>The response includes the request ID (<code>RequestId</code>) and a <code>Statistics</code> object. This object contains the dates of task failures (<code>FailedDates</code>) and dates with missing task data (<code>NoDataDates</code>).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>QueryDataDiagnosisStatistics</p>
+     * <p>Retrieves statistics for a specified data diagnosis task within a time range.</p>
      * 
      * @param request QueryDataDiagnosisStatisticsRequest
      * @return QueryDataDiagnosisStatisticsResponse
@@ -8572,8 +9314,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <code>InstanceId</code> and <code>RecallManagementTableId</code>, and a non-empty <code>PrimaryKeys</code> list. If you specify <code>RecallManagementTableVersionId</code>, the API returns records from that version; otherwise, it uses the currently published version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询召回管理表数据</p>
+     * <p>Retrieves records from a specified recall management table.</p>
      * 
      * @param request QueryRecallManagementTableRecordsRequest
      * @param headers map
@@ -8614,8 +9360,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <code>InstanceId</code> and <code>RecallManagementTableId</code>, and a non-empty <code>PrimaryKeys</code> list. If you specify <code>RecallManagementTableVersionId</code>, the API returns records from that version; otherwise, it uses the currently published version.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询召回管理表数据</p>
+     * <p>Retrieves records from a specified recall management table.</p>
      * 
      * @param request QueryRecallManagementTableRecordsRequest
      * @return QueryRecallManagementTableRecordsResponse
@@ -8682,8 +9432,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are accurate, and that the <code>Date</code> is in YYYY-MM-DD format. Although the <code>Date</code> parameter is optional, we recommend specifying a date for meaningful results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询流量调控目标的单品调控报表详情。</p>
+     * <p>Retrieves the traffic control details of a target item for a given environment and date range.</p>
      * 
      * @param request QueryTrafficControlTargetItemReportDetailRequest
      * @param headers map
@@ -8724,8 +9478,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are accurate, and that the <code>Date</code> is in YYYY-MM-DD format. Although the <code>Date</code> parameter is optional, we recommend specifying a date for meaningful results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询流量调控目标的单品调控报表详情。</p>
+     * <p>Retrieves the traffic control details of a target item for a given environment and date range.</p>
      * 
      * @param request QueryTrafficControlTargetItemReportDetailRequest
      * @return QueryTrafficControlTargetItemReportDetailResponse
@@ -8737,8 +9495,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务部署的结果。</p>
+     * <p>Retrieves the deployment status and related information of a specified traffic control task in a specific environment.</p>
      * 
      * @param request QueryTrafficControlTaskDeployResultRequest
      * @param headers map
@@ -8775,8 +9537,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取流量调控任务部署的结果。</p>
+     * <p>Retrieves the deployment status and related information of a specified traffic control task in a specific environment.</p>
      * 
      * @param request QueryTrafficControlTaskDeployResultRequest
      * @return QueryTrafficControlTaskDeployResultResponse
@@ -8788,8 +9554,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API retrieves the item control results for a specific traffic control task within a given time range.</li>
+     * <li><code>TrafficControlTaskId</code> is the unique identifier for a traffic control task.</li>
+     * <li><code>InstanceId</code> specifies the instance that runs the task.</li>
+     * <li>The <code>Environment</code> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</li>
+     * <li><code>StartTime</code> and <code>EndTime</code> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</li>
+     * <li>The specified start and end times must be valid and span no more than two consecutive calendar days.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询流量调控任务单品调控报表。</p>
+     * <p>Retrieves a detailed report on item control for a specified traffic control task.</p>
      * 
      * @param request QueryTrafficControlTaskItemReportRequest
      * @param headers map
@@ -8834,8 +9611,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>This API retrieves the item control results for a specific traffic control task within a given time range.</li>
+     * <li><code>TrafficControlTaskId</code> is the unique identifier for a traffic control task.</li>
+     * <li><code>InstanceId</code> specifies the instance that runs the task.</li>
+     * <li>The <code>Environment</code> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</li>
+     * <li><code>StartTime</code> and <code>EndTime</code> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</li>
+     * <li>The specified start and end times must be valid and span no more than two consecutive calendar days.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询流量调控任务单品调控报表。</p>
+     * <p>Retrieves a detailed report on item control for a specified traffic control task.</p>
      * 
      * @param request QueryTrafficControlTaskItemReportRequest
      * @return QueryTrafficControlTaskItemReportResponse
@@ -8847,8 +9635,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters.</p>
+     * <ul>
+     * <li><code>TrafficControlTaskId</code>: The unique ID of the traffic control task.</li>
+     * <li><code>InstanceId</code>: The ID of the target instance.</li>
+     * <li><code>Environment</code>: The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.
+     * The request succeeds only if all required parameters are provided correctly. A successful response includes a <code>RequestId</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发布流量调控任务</p>
+     * <p>Releases a traffic control task for the specified instance and environment.</p>
      * 
      * @param request ReleaseTrafficControlTaskRequest
      * @param headers map
@@ -8885,8 +9683,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters.</p>
+     * <ul>
+     * <li><code>TrafficControlTaskId</code>: The unique ID of the traffic control task.</li>
+     * <li><code>InstanceId</code>: The ID of the target instance.</li>
+     * <li><code>Environment</code>: The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.
+     * The request succeeds only if all required parameters are provided correctly. A successful response includes a <code>RequestId</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>发布流量调控任务</p>
+     * <p>Releases a traffic control task for the specified instance and environment.</p>
      * 
      * @param request ReleaseTrafficControlTaskRequest
      * @return ReleaseTrafficControlTaskResponse
@@ -8899,7 +9707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对指标组进行报表。</p>
+     * <p>Retrieve a metric group\&quot;s report.</p>
      * 
      * @param request ReportABMetricGroupRequest
      * @param headers map
@@ -8969,7 +9777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>对指标组进行报表。</p>
+     * <p>Retrieve a metric group\&quot;s report.</p>
      * 
      * @param request ReportABMetricGroupRequest
      * @return ReportABMetricGroupResponse
@@ -9028,8 +9836,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</li>
+     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</li>
+     * <li>The <code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
+     * <li>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</li>
+     * <li>Check the returned <code>StopReason</code> field to understand whether the session has ended and the reason.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>拆分流量调控目标</p>
+     * <p>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</p>
+     * 
+     * @param request ShoppingAssistantRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ShoppingAssistantResponse
+     */
+    public ShoppingAssistantResponse shoppingAssistantWithOptions(ShoppingAssistantRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contents)) {
+            body.put("Contents", request.contents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationId)) {
+            body.put("ConversationId", request.conversationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
+            body.put("Environment", request.environment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputMessage)) {
+            body.put("InputMessage", request.inputMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneId)) {
+            body.put("SceneId", request.sceneId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ShoppingAssistant"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/conversations/shopping_assistant/chat"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ShoppingAssistantResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</li>
+     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</li>
+     * <li>The <code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
+     * <li>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</li>
+     * <li>Check the returned <code>StopReason</code> field to understand whether the session has ended and the reason.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Conducts conversations with users through an AI shopping guide to provide product recommendation services.</p>
+     * 
+     * @param request ShoppingAssistantRequest
+     * @return ShoppingAssistantResponse
+     */
+    public ShoppingAssistantResponse shoppingAssistant(ShoppingAssistantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.shoppingAssistantWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Splits the target values for a traffic control target into time intervals.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Splits the target values for a traffic control target into time intervals.</p>
      * 
      * @param request SplitTrafficControlTargetRequest
      * @param headers map
@@ -9078,8 +9996,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Splits the target values for a traffic control target into time intervals.</p>
+     * 
      * <b>summary</b> : 
-     * <p>拆分流量调控目标</p>
+     * <p>Splits the target values for a traffic control target into time intervals.</p>
      * 
      * @param request SplitTrafficControlTargetRequest
      * @return SplitTrafficControlTargetResponse
@@ -9091,8 +10012,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Call this operation to start a traffic control task by providing the <code>TrafficControlTargetId</code> and <code>InstanceId</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启流量调控目标</p>
+     * <p>Starts a traffic control task for a specific traffic control target.</p>
      * 
      * @param request StartTrafficControlTargetRequest
      * @param headers map
@@ -9125,8 +10050,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Call this operation to start a traffic control task by providing the <code>TrafficControlTargetId</code> and <code>InstanceId</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>开启流量调控目标</p>
+     * <p>Starts a traffic control task for a specific traffic control target.</p>
      * 
      * @param request StartTrafficControlTargetRequest
      * @return StartTrafficControlTargetResponse
@@ -9138,8 +10067,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <ul>
+     * <li>This operation starts the traffic control task identified by <code>TrafficControlTaskId</code>.</li>
+     * <li><code>InstanceId</code> specifies the target instance.</li>
+     * <li><code>Environment</code> specifies the target environment. Valid values: Daily, Pre, and Prod.</li>
+     * <li>Ensure that all required parameters are set correctly before you call this operation. The specified <code>TrafficControlTaskId</code> must exist in the system.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>开启流量调控任务</p>
+     * <p>Starts a traffic control task with a specified ID for instances in different environments.</p>
      * 
      * @param request StartTrafficControlTaskRequest
      * @param headers map
@@ -9176,8 +10114,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <ul>
+     * <li>This operation starts the traffic control task identified by <code>TrafficControlTaskId</code>.</li>
+     * <li><code>InstanceId</code> specifies the target instance.</li>
+     * <li><code>Environment</code> specifies the target environment. Valid values: Daily, Pre, and Prod.</li>
+     * <li>Ensure that all required parameters are set correctly before you call this operation. The specified <code>TrafficControlTaskId</code> must exist in the system.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>开启流量调控任务</p>
+     * <p>Starts a traffic control task with a specified ID for instances in different environments.</p>
      * 
      * @param request StartTrafficControlTaskRequest
      * @return StartTrafficControlTaskResponse
@@ -9236,8 +10183,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>You can call this operation to stop a specific traffic control Flink task based on the specified TrafficControlTaskId. Make sure that you have prepared the correct InstanceId and the environment to which the instance belongs (Daily for daily environment, Pre for staging environment, Prod for production environment). Include this information in the request body to ensure that the operation is correctly performed.</p>
+     * 
      * <b>summary</b> : 
-     * <p>停止流量调控目标</p>
+     * <p>Stops a traffic control Flink task with the specified ID.</p>
+     * 
+     * @param request StopTrafficControlFlinkTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopTrafficControlFlinkTaskResponse
+     */
+    public StopTrafficControlFlinkTaskResponse stopTrafficControlFlinkTaskWithOptions(String TrafficControlTaskId, StopTrafficControlFlinkTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
+            body.put("Environment", request.environment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopTrafficControlFlinkTask"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/trafficcontroltasks/" + com.aliyun.openapiutil.Client.getEncodeParam(TrafficControlTaskId) + "/action/stopflink"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopTrafficControlFlinkTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>You can call this operation to stop a specific traffic control Flink task based on the specified TrafficControlTaskId. Make sure that you have prepared the correct InstanceId and the environment to which the instance belongs (Daily for daily environment, Pre for staging environment, Prod for production environment). Include this information in the request body to ensure that the operation is correctly performed.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a traffic control Flink task with the specified ID.</p>
+     * 
+     * @param request StopTrafficControlFlinkTaskRequest
+     * @return StopTrafficControlFlinkTaskResponse
+     */
+    public StopTrafficControlFlinkTaskResponse stopTrafficControlFlinkTask(String TrafficControlTaskId, StopTrafficControlFlinkTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopTrafficControlFlinkTaskWithOptions(TrafficControlTaskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation stops a traffic control task using the provided <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a specific traffic control target.</p>
      * 
      * @param request StopTrafficControlTargetRequest
      * @param headers map
@@ -9270,8 +10280,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation stops a traffic control task using the provided <code>TrafficControlTargetId</code> and <code>InstanceId</code>. Ensure that the parameter values are accurate to avoid stopping the wrong target or instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>停止流量调控目标</p>
+     * <p>Stops a specific traffic control target.</p>
      * 
      * @param request StopTrafficControlTargetRequest
      * @return StopTrafficControlTargetResponse
@@ -9283,8 +10297,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>This API stops a traffic control task identified by a specific <code>TrafficControlTaskId</code>.</li>
+     * <li>The <code>InstanceId</code> and <code>Environment</code> parameters are required to identify the target instance and its environment.</li>
+     * <li>Ensure that you provide the correct <code>TrafficControlTaskId</code> to prevent the request from failing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>停止流量调控任务</p>
+     * <p>Stops a traffic control task for a specific instance and environment.</p>
      * 
      * @param request StopTrafficControlTaskRequest
      * @param headers map
@@ -9327,8 +10349,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>This API stops a traffic control task identified by a specific <code>TrafficControlTaskId</code>.</li>
+     * <li>The <code>InstanceId</code> and <code>Environment</code> parameters are required to identify the target instance and its environment.</li>
+     * <li>Ensure that you provide the correct <code>TrafficControlTaskId</code> to prevent the request from failing.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>停止流量调控任务</p>
+     * <p>Stops a traffic control task for a specific instance and environment.</p>
      * 
      * @param request StopTrafficControlTaskRequest
      * @return StopTrafficControlTaskResponse
@@ -9341,7 +10371,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步特征一致性检测任务重放日志。</p>
+     * <p>Syncs the replay log for a feature consistency check job.</p>
      * 
      * @param request SyncFeatureConsistencyCheckJobReplayLogRequest
      * @param headers map
@@ -9411,7 +10441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>同步特征一致性检测任务重放日志。</p>
+     * <p>Syncs the replay log for a feature consistency check job.</p>
      * 
      * @param request SyncFeatureConsistencyCheckJobReplayLogRequest
      * @return SyncFeatureConsistencyCheckJobReplayLogResponse
@@ -9424,7 +10454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消指定特征一致性检查正在运行中的任务。</p>
+     * <p>Terminates a feature consistency check job.</p>
      * 
      * @param request TerminateFeatureConsistencyCheckJobRequest
      * @param headers map
@@ -9458,7 +10488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消指定特征一致性检查正在运行中的任务。</p>
+     * <p>Terminates a feature consistency check job.</p>
      * 
      * @param request TerminateFeatureConsistencyCheckJobRequest
      * @return TerminateFeatureConsistencyCheckJobResponse
@@ -9470,8 +10500,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
+     * <ul>
+     * <li><code>NeedSignificance</code>: Specifies whether to perform significance analysis on the current metric. Default value: <code>false</code>.</li>
+     * <li><code>AggregationByUser</code>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
+     * <li><code>Numerator</code> and <code>Denominator</code>: The specific definitions of the numerator and denominator used in significance calculation.</li>
+     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+     * Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新AB Test实验指标。</p>
+     * <p>Modifies the metric configuration of an existing ABTest experiment.</p>
      * 
      * @param request UpdateABMetricRequest
      * @param headers map
@@ -9572,8 +10613,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
+     * <ul>
+     * <li><code>NeedSignificance</code>: Specifies whether to perform significance analysis on the current metric. Default value: <code>false</code>.</li>
+     * <li><code>AggregationByUser</code>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
+     * <li><code>Numerator</code> and <code>Denominator</code>: The specific definitions of the numerator and denominator used in significance calculation.</li>
+     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+     * Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新AB Test实验指标。</p>
+     * <p>Modifies the metric configuration of an existing ABTest experiment.</p>
      * 
      * @param request UpdateABMetricRequest
      * @return UpdateABMetricResponse
@@ -9586,7 +10638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AB test实验指标组。</p>
+     * <p>Updates an A/B test metric group.</p>
      * 
      * @param request UpdateABMetricGroupRequest
      * @param headers map
@@ -9640,7 +10692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新AB test实验指标组。</p>
+     * <p>Updates an A/B test metric group.</p>
      * 
      * @param request UpdateABMetricGroupRequest
      * @return UpdateABMetricGroupResponse
@@ -9653,7 +10705,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定人群。</p>
+     * <p>Updates a crowd\&quot;s information, such as its name and description.</p>
      * 
      * @param request UpdateCrowdRequest
      * @param headers map
@@ -9695,7 +10747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定人群。</p>
+     * <p>Updates a crowd\&quot;s information, such as its name and description.</p>
      * 
      * @param request UpdateCrowdRequest
      * @return UpdateCrowdResponse
@@ -9707,8 +10759,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <code>DataDiagnosisId</code> in the request path to identify the task to update. You must also specify the <code>Config</code> parameter based on the task <code>Type</code>. For periodic runs, set the execution time in the <code>CycleTime</code> field. If a periodic run is not required, omit this field.</p>
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li><code>DataDiagnosisId</code> is a required path parameter that uniquely identifies a data diagnosis task.</li>
+     * <li>The structure of the <code>Config</code> field varies depending on the value of <code>Type</code>. Refer to the examples in this document for configuration details.</li>
+     * <li>To disable periodic runs, omit the <code>CycleTime</code> field.</li>
+     * <li>When updating a task for two-table join analysis (<code>JoinTables</code>), provide the information for the left and right tables, including <code>LeftTableMetaId</code> and <code>RightTableMetaId</code>.</li>
+     * <li>The <code>InstanceId</code>, <code>Name</code>, and <code>Type</code> parameters are required for all types of data diagnosis tasks.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据诊断。</p>
+     * <p>Updates the configuration of a specified data diagnosis task.</p>
      * 
      * @param request UpdateDataDiagnosisRequest
      * @param headers map
@@ -9785,8 +10849,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <code>DataDiagnosisId</code> in the request path to identify the task to update. You must also specify the <code>Config</code> parameter based on the task <code>Type</code>. For periodic runs, set the execution time in the <code>CycleTime</code> field. If a periodic run is not required, omit this field.</p>
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li><code>DataDiagnosisId</code> is a required path parameter that uniquely identifies a data diagnosis task.</li>
+     * <li>The structure of the <code>Config</code> field varies depending on the value of <code>Type</code>. Refer to the examples in this document for configuration details.</li>
+     * <li>To disable periodic runs, omit the <code>CycleTime</code> field.</li>
+     * <li>When updating a task for two-table join analysis (<code>JoinTables</code>), provide the information for the left and right tables, including <code>LeftTableMetaId</code> and <code>RightTableMetaId</code>.</li>
+     * <li>The <code>InstanceId</code>, <code>Name</code>, and <code>Type</code> parameters are required for all types of data diagnosis tasks.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据诊断。</p>
+     * <p>Updates the configuration of a specified data diagnosis task.</p>
      * 
      * @param request UpdateDataDiagnosisRequest
      * @return UpdateDataDiagnosisResponse
@@ -9799,7 +10875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新引擎配置。</p>
+     * <p>Updates an engine configuration.</p>
      * 
      * @param request UpdateEngineConfigRequest
      * @param headers map
@@ -9849,7 +10925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新引擎配置。</p>
+     * <p>Updates an engine configuration.</p>
      * 
      * @param request UpdateEngineConfigRequest
      * @return UpdateEngineConfigResponse
@@ -9862,7 +10938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实验。</p>
+     * <p>Updates the properties of a specified experiment, such as its name.</p>
      * 
      * @param request UpdateExperimentRequest
      * @param headers map
@@ -9924,7 +11000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实验。</p>
+     * <p>Updates the properties of a specified experiment, such as its name.</p>
      * 
      * @param request UpdateExperimentRequest
      * @return UpdateExperimentResponse
@@ -9937,7 +11013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定实验组。</p>
+     * <p>Updates information for a specified experiment group, such as its name and description.</p>
      * 
      * @param request UpdateExperimentGroupRequest
      * @param headers map
@@ -10027,7 +11103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定实验组。</p>
+     * <p>Updates information for a specified experiment group, such as its name and description.</p>
      * 
      * @param request UpdateExperimentGroupRequest
      * @return UpdateExperimentGroupResponse
@@ -10039,8 +11115,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</p>
+     * <ul>
+     * <li><strong>FeatureConsistencyCheckJobConfigId</strong> is a path parameter that specifies the feature consistency check task to update.</li>
+     * <li>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</li>
+     * <li>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</li>
+     * <li>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</li>
+     * <li>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新特征一致性检查配置信息。</p>
+     * <p>Updates the configuration details of a feature consistency check task, such as the name.</p>
      * 
      * @param request UpdateFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -10162,6 +11249,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ItemTablePartitionFieldFormat", request.itemTablePartitionFieldFormat);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxcomputeSchema)) {
+            body.put("MaxcomputeSchema", request.maxcomputeSchema);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
@@ -10253,8 +11344,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</p>
+     * <ul>
+     * <li><strong>FeatureConsistencyCheckJobConfigId</strong> is a path parameter that specifies the feature consistency check task to update.</li>
+     * <li>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</li>
+     * <li>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</li>
+     * <li>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</li>
+     * <li>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新特征一致性检查配置信息。</p>
+     * <p>Updates the configuration details of a feature consistency check task, such as the name.</p>
      * 
      * @param request UpdateFeatureConsistencyCheckJobConfigRequest
      * @return UpdateFeatureConsistencyCheckJobConfigResponse
@@ -10267,7 +11369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定实例下指定资源的信息。</p>
+     * <p>Updates a specified resource for a specified instance.</p>
      * 
      * @param request UpdateInstanceResourceRequest
      * @param headers map
@@ -10305,7 +11407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新指定实例下指定资源的信息。</p>
+     * <p>Updates a specified resource for a specified instance.</p>
      * 
      * @param request UpdateInstanceResourceRequest
      * @return UpdateInstanceResourceResponse
@@ -10318,7 +11420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实验室。</p>
+     * <p>Updates a laboratory\&quot;s information, such as its name.</p>
      * 
      * @param request UpdateLaboratoryRequest
      * @param headers map
@@ -10392,7 +11494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实验室。</p>
+     * <p>Updates a laboratory\&quot;s information, such as its name.</p>
      * 
      * @param request UpdateLaboratoryRequest
      * @return UpdateLaboratoryResponse
@@ -10405,7 +11507,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新层。</p>
+     * <p>Updates the name and description of a specified layer.</p>
      * 
      * @param request UpdateLayerRequest
      * @param headers map
@@ -10447,7 +11549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新层。</p>
+     * <p>Updates the name and description of a specified layer.</p>
      * 
      * @param request UpdateLayerRequest
      * @return UpdateLayerResponse
@@ -10460,7 +11562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新参数。</p>
+     * <p>Updates information for a specified parameter, such as its value.</p>
      * 
      * @param request UpdateParamRequest
      * @param headers map
@@ -10498,7 +11600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新参数。</p>
+     * <p>Updates information for a specified parameter, such as its value.</p>
      * 
      * @param request UpdateParamRequest
      * @return UpdateParamResponse
@@ -10510,8 +11612,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><code>InstanceId</code> is required. It specifies the instance to update.</li>
+     * <li><code>Password</code> and <code>NetworkConfigs</code> are optional.</li>
+     * <li>Use <code>NetworkConfigs</code> to define the network by specifying the Virtual Private Cloud (VPC) ID (<code>VpcId</code>) and mapping availability zones to VSwitch IDs (<code>VswitchIds</code>).</li>
+     * <li>Note: Ensure that sensitive information, such as the password, is transmitted securely.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理初始化配置。</p>
+     * <p>Updates the recall management configuration, including the instance ID, password, and network configuration.</p>
      * 
      * @param request UpdateRecallManagementConfigRequest
      * @param headers map
@@ -10552,8 +11663,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><code>InstanceId</code> is required. It specifies the instance to update.</li>
+     * <li><code>Password</code> and <code>NetworkConfigs</code> are optional.</li>
+     * <li>Use <code>NetworkConfigs</code> to define the network by specifying the Virtual Private Cloud (VPC) ID (<code>VpcId</code>) and mapping availability zones to VSwitch IDs (<code>VswitchIds</code>).</li>
+     * <li>Note: Ensure that sensitive information, such as the password, is transmitted securely.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理初始化配置。</p>
+     * <p>Updates the recall management configuration, including the instance ID, password, and network configuration.</p>
      * 
      * @param request UpdateRecallManagementConfigRequest
      * @return UpdateRecallManagementConfigResponse
@@ -10565,8 +11685,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation updates the instance ID and description of a specific recall management service. Make sure to specify the <code>InstanceId</code> and <code>Description</code> fields in the request body.</p>
+     * <ul>
+     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service.</li>
+     * <li><strong>InstanceId</strong>: The instance ID to associate with this recall management service.</li>
+     * <li><strong>Description</strong>: A new description for the recall management service.
+     * Note: You must provide all required parameters, or the update may fail.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理服务信息</p>
+     * <p>Updates the instance ID and description of a specified recall management service.</p>
      * 
      * @param request UpdateRecallManagementServiceRequest
      * @param headers map
@@ -10603,8 +11733,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation updates the instance ID and description of a specific recall management service. Make sure to specify the <code>InstanceId</code> and <code>Description</code> fields in the request body.</p>
+     * <ul>
+     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service.</li>
+     * <li><strong>InstanceId</strong>: The instance ID to associate with this recall management service.</li>
+     * <li><strong>Description</strong>: A new description for the recall management service.
+     * Note: You must provide all required parameters, or the update may fail.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理服务信息</p>
+     * <p>Updates the instance ID and description of a specified recall management service.</p>
      * 
      * @param request UpdateRecallManagementServiceRequest
      * @return UpdateRecallManagementServiceResponse
@@ -10616,8 +11756,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API updates the recall and merge configurations for a specific recall management service version. Your request must include the correct <code>InstanceId</code> and the configurations to update. Refer to the parameter descriptions for details on required parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理服务版本配置</p>
+     * <p>Updates the configuration of a specific Recall Management Service version.</p>
      * 
      * @param request UpdateRecallManagementServiceVersionConfigRequest
      * @param headers map
@@ -10662,8 +11806,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API updates the recall and merge configurations for a specific recall management service version. Your request must include the correct <code>InstanceId</code> and the configurations to update. Refer to the parameter descriptions for details on required parameters.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理服务版本配置</p>
+     * <p>Updates the configuration of a specific Recall Management Service version.</p>
      * 
      * @param request UpdateRecallManagementServiceVersionConfigRequest
      * @return UpdateRecallManagementServiceVersionConfigResponse
@@ -10675,8 +11823,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <ul>
+     * <li>Updates the recall management table specified by <code>RecallManagementTableId</code>.</li>
+     * <li>You can enable fluctuation thresholds for the row count or data size and define the specific ranges for these thresholds.</li>
+     * <li>You can add or modify fields in the table, including their names, types, and attributes.</li>
+     * <li>The <code>InstanceId</code> parameter is required and identifies the specific instance.</li>
+     * <li>For vector-related fields, you can also specify the vector dimension and metric type.</li>
+     * <li>Note: Optional parameters in the request body selectively update the target table.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理表。</p>
+     * <p>Updates the configuration of a recall management table specified by its ID.</p>
      * 
      * @param request UpdateRecallManagementTableRequest
      * @param headers map
@@ -10741,8 +11900,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request details</h2>
+     * <ul>
+     * <li>Updates the recall management table specified by <code>RecallManagementTableId</code>.</li>
+     * <li>You can enable fluctuation thresholds for the row count or data size and define the specific ranges for these thresholds.</li>
+     * <li>You can add or modify fields in the table, including their names, types, and attributes.</li>
+     * <li>The <code>InstanceId</code> parameter is required and identifies the specific instance.</li>
+     * <li>For vector-related fields, you can also specify the vector dimension and metric type.</li>
+     * <li>Note: Optional parameters in the request body selectively update the target table.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新召回管理表。</p>
+     * <p>Updates the configuration of a recall management table specified by its ID.</p>
      * 
      * @param request UpdateRecallManagementTableRequest
      * @return UpdateRecallManagementTableResponse
@@ -10893,7 +12063,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新场景</p>
+     * <p>Updates information for a scene, such as its name and description.</p>
      * 
      * @param request UpdateSceneRequest
      * @param headers map
@@ -10939,7 +12109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新场景</p>
+     * <p>Updates information for a scene, such as its name and description.</p>
      * 
      * @param request UpdateSceneRequest
      * @return UpdateSceneResponse
@@ -10952,7 +12122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据表详细信息。</p>
+     * <p>Updates a data table.</p>
      * 
      * @param request UpdateTableMetaRequest
      * @param headers map
@@ -11010,7 +12180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据表详细信息。</p>
+     * <p>Updates a data table.</p>
      * 
      * @param request UpdateTableMetaRequest
      * @return UpdateTableMetaResponse
@@ -11022,8 +12192,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Updates a traffic control target specified by its ID.</li>
+     * <li><code>TrafficControlTargetId</code> is a path parameter that specifies the ID of the traffic control target to update.</li>
+     * <li>The <code>ItemConditionType</code> parameter specifies the format of the item condition, which can be either <code>Array</code> or <code>Expression</code>. Based on your selection, you must provide a value for either the <code>ItemConditionArray</code> or <code>ItemConditionExpress</code> parameter.</li>
+     * <li>If <code>NewProductRegulation</code> is set to <code>true</code>, the control rule applies to a new product.</li>
+     * <li>The <code>StatisPeriod</code> parameter specifies the statistics period. Valid values are <code>Daily</code> and <code>hourly</code>.</li>
+     * <li>Ensure that the time interval between <code>StartTime</code> and <code>EndTime</code> is reasonable and meets your business requirements.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控目标</p>
+     * <p>Updates the configuration of a traffic control target, including its control period, conditions, and value.</p>
      * 
      * @param request UpdateTrafficControlTargetRequest
      * @param headers map
@@ -11110,8 +12291,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Updates a traffic control target specified by its ID.</li>
+     * <li><code>TrafficControlTargetId</code> is a path parameter that specifies the ID of the traffic control target to update.</li>
+     * <li>The <code>ItemConditionType</code> parameter specifies the format of the item condition, which can be either <code>Array</code> or <code>Expression</code>. Based on your selection, you must provide a value for either the <code>ItemConditionArray</code> or <code>ItemConditionExpress</code> parameter.</li>
+     * <li>If <code>NewProductRegulation</code> is set to <code>true</code>, the control rule applies to a new product.</li>
+     * <li>The <code>StatisPeriod</code> parameter specifies the statistics period. Valid values are <code>Daily</code> and <code>hourly</code>.</li>
+     * <li>Ensure that the time interval between <code>StartTime</code> and <code>EndTime</code> is reasonable and meets your business requirements.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控目标</p>
+     * <p>Updates the configuration of a traffic control target, including its control period, conditions, and value.</p>
      * 
      * @param request UpdateTrafficControlTargetRequest
      * @return UpdateTrafficControlTargetResponse
@@ -11123,8 +12315,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>Use this API to update an existing traffic control task.</li>
+     * <li>When <code>ExecutionTime</code> is set to <code>TimeRange</code>, you must also provide <code>StartTime</code> and <code>EndTime</code>.</li>
+     * <li>Each element in the <code>TrafficControlTargets</code> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</li>
+     * <li>If you set <code>UserConditionType</code> or <code>ItemConditionType</code> to <code>Expression</code>, you must specify the corresponding expression field (for example, <code>UserConditionExpress</code>).</li>
+     * <li><code>ServiceIds</code> and <code>EffectiveSceneIds</code> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</li>
+     * <li>Ensure you complete all required fields to avoid a failed request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控任务</p>
+     * <p>Updates the configuration and target of a specified traffic control task.</p>
      * 
      * @param request UpdateTrafficControlTaskRequest
      * @param headers map
@@ -11273,8 +12476,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>Use this API to update an existing traffic control task.</li>
+     * <li>When <code>ExecutionTime</code> is set to <code>TimeRange</code>, you must also provide <code>StartTime</code> and <code>EndTime</code>.</li>
+     * <li>Each element in the <code>TrafficControlTargets</code> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</li>
+     * <li>If you set <code>UserConditionType</code> or <code>ItemConditionType</code> to <code>Expression</code>, you must specify the corresponding expression field (for example, <code>UserConditionExpress</code>).</li>
+     * <li><code>ServiceIds</code> and <code>EffectiveSceneIds</code> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</li>
+     * <li>Ensure you complete all required fields to avoid a failed request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控任务</p>
+     * <p>Updates the configuration and target of a specified traffic control task.</p>
      * 
      * @param request UpdateTrafficControlTaskRequest
      * @return UpdateTrafficControlTaskResponse
@@ -11286,8 +12500,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<code>TrafficControlTaskId</code> is valid and within your permission scope. Additionally, each object in the<code>Traffics</code> array must contain the required fields.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控任务的流量参数</p>
+     * <p>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</p>
      * 
      * @param request UpdateTrafficControlTaskTrafficRequest
      * @param headers map
@@ -11334,8 +12552,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<code>TrafficControlTaskId</code> is valid and within your permission scope. Additionally, each object in the<code>Traffics</code> array must contain the required fields.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新流量调控任务的流量参数</p>
+     * <p>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</p>
      * 
      * @param request UpdateTrafficControlTaskTrafficRequest
      * @return UpdateTrafficControlTaskTrafficResponse

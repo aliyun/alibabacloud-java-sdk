@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataDiagnosesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDataDiagnosesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,12 +24,17 @@ public class ListDataDiagnosesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>A list of diagnosis types.</p>
+     */
     @NameInMap("Types")
     public java.util.List<String> types;
 

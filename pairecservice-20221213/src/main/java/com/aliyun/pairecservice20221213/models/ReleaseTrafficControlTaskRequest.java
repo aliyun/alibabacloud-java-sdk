@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReleaseTrafficControlTaskRequest extends TeaModel {
     /**
+     * <p>The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -12,6 +14,8 @@ public class ReleaseTrafficControlTaskRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec_123****</p>
      */

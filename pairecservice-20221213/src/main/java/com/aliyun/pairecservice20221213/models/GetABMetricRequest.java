@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetABMetricRequest extends TeaModel {
     /**
+     * <p>The instance ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

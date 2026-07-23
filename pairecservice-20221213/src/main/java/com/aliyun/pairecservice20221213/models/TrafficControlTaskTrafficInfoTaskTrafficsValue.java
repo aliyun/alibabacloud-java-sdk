@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TrafficControlTaskTrafficInfoTaskTrafficsValue extends TeaModel {
     /**
+     * <p>The reported traffic for this experiment.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends TeaModel {
     /**
+     * <p>The data path.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://********</p>
      */
@@ -12,16 +14,23 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
     public String dataPath;
 
     /**
+     * <p>The OSS path.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://********</p>
      */
     @NameInMap("OssPath")
     public String ossPath;
 
+    /**
+     * <p>The feature comparison reports.</p>
+     */
     @NameInMap("ReportsOfFeatureDiff")
     public java.util.List<ListFeatureConsistencyCheckJobFeatureReportsResponseBodyReportsOfFeatureDiff> reportsOfFeatureDiff;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BBD41FBF-E75C-551A-92FA-CAD654AA006F</p>
      */
@@ -67,6 +76,8 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
 
     public static class ListFeatureConsistencyCheckJobFeatureReportsResponseBodyReportsOfFeatureDiff extends TeaModel {
         /**
+         * <p>The feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>gender</p>
          */
@@ -74,6 +85,8 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         public String featureName;
 
         /**
+         * <p>The item ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9010</p>
          */
@@ -81,6 +94,8 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         public String logItemId;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
          */
@@ -88,6 +103,8 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         public String logRequestId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1010</p>
          */
@@ -95,6 +112,8 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         public String logUserId;
 
         /**
+         * <p>The offline value.</p>
+         * 
          * <strong>example:</strong>
          * <p>male</p>
          */
@@ -102,6 +121,8 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         public String offlineValue;
 
         /**
+         * <p>The online value.</p>
+         * 
          * <strong>example:</strong>
          * <p>male</p>
          */

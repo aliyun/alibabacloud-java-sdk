@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCrowdRequest extends TeaModel {
     /**
+     * <p>The description of the crowd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateCrowdRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The instance ID. To get this ID, call the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CreateCrowdRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The crowd label.</p>
+     * 
      * <strong>example:</strong>
      * <p>os=android</p>
      */
@@ -30,6 +34,7 @@ public class CreateCrowdRequest extends TeaModel {
     public String label;
 
     /**
+     * <p>The crowd name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,8 @@ public class CreateCrowdRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The source of the user data. Valid values: ● ManualInput: Users are provided in the Users parameter. ● UploadFile: Users are provided from an uploaded file.</p>
+     * 
      * <strong>example:</strong>
      * <p>ManualInput</p>
      */
@@ -46,6 +53,8 @@ public class CreateCrowdRequest extends TeaModel {
     public String source;
 
     /**
+     * <p>The users to include in the crowd. Separate multiple users with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>user1,user2,user3</p>
      */

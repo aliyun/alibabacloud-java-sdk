@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataDiagnosisJobsShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListDataDiagnosisJobsShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListDataDiagnosisJobsShrinkRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,12 +33,27 @@ public class ListDataDiagnosisJobsShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The task status. Valid values:</p>
+     * <ul>
+     * <li><p>Initializing: The job is being initialized.</p>
+     * </li>
+     * <li><p>Running: The job is in progress.</p>
+     * </li>
+     * <li><p>Success: The job succeeded.</p>
+     * </li>
+     * <li><p>Failure: The job failed to complete.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Initializing</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>A list of data diagnosis types.</p>
+     */
     @NameInMap("Types")
     public String typesShrink;
 

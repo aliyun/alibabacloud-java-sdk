@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloneEngineConfigRequest extends TeaModel {
     /**
+     * <p>The content of the engine configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +17,16 @@ public class CloneEngineConfigRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The environment. Valid values:</p>
+     * <ul>
+     * <li><p>Daily: The daily environment.</p>
+     * </li>
+     * <li><p>Pre: The pre-release environment.</p>
+     * </li>
+     * <li><p>Prod: The production environment.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Pre</p>
      */
@@ -22,6 +34,8 @@ public class CloneEngineConfigRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-********</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateEngineConfigRequest extends TeaModel {
     /**
+     * <p>The content of the engine configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;ListenConf&quot;: {
@@ -20,6 +22,16 @@ public class UpdateEngineConfigRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The environment.</p>
+     * <ul>
+     * <li><p>Daily: Daily environment.</p>
+     * </li>
+     * <li><p>Pre: Pre-production environment.</p>
+     * </li>
+     * <li><p>Prod: Production environment.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Pre</p>
      */
@@ -27,6 +39,8 @@ public class UpdateEngineConfigRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID. To get the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
      */
@@ -34,6 +48,8 @@ public class UpdateEngineConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the engine configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>engine_config_v1</p>
      */

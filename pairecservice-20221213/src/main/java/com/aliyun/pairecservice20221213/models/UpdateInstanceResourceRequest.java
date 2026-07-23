@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceResourceRequest extends TeaModel {
     /**
+     * <p>The resource configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateInstanceResourceRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The resource address.</p>
+     * 
      * <strong>example:</strong>
      * <p>bucket-test-123</p>
      */

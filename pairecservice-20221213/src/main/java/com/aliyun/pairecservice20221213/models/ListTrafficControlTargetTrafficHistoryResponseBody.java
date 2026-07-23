@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -12,12 +14,17 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
     public String requestId;
 
     /**
+     * <p>The total count of historical records.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
 
+    /**
+     * <p>A list of the traffic control history records.</p>
+     */
     @NameInMap("TrafficControlTaskTrafficHistories")
     public java.util.List<ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories;
 
@@ -52,6 +59,8 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
 
     public static class ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories extends TeaModel {
         /**
+         * <p>The ID of the experiment.</p>
+         * 
          * <strong>example:</strong>
          * <p>E1</p>
          */
@@ -59,6 +68,8 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         public String experimentId;
 
         /**
+         * <p>The ID of the item.</p>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -66,6 +77,8 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         public String itemId;
 
         /**
+         * <p>The timestamp of the record.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-10-10 10:10:58</p>
          */
@@ -73,6 +86,8 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         public String recordTime;
 
         /**
+         * <p>The intended traffic for the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -80,6 +95,8 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         public Double trafficControlTargetAimTraffic;
 
         /**
+         * <p>The actual traffic of the traffic control target.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -87,6 +104,8 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         public Double trafficControlTargetTraffic;
 
         /**
+         * <p>The overall traffic of the traffic control task.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */

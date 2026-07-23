@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryDataDiagnosisStatisticsRequest extends TeaModel {
     /**
+     * <p>The end date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-08</p>
      */
@@ -12,6 +14,8 @@ public class QueryDataDiagnosisStatisticsRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>learn-pairec-xxx</p>
      */
@@ -19,6 +23,11 @@ public class QueryDataDiagnosisStatisticsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The retention rate report type.</p>
+     * <ul>
+     * <li>Period: A periodic report.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Period</p>
      */
@@ -26,6 +35,8 @@ public class QueryDataDiagnosisStatisticsRequest extends TeaModel {
     public String remainRateType;
 
     /**
+     * <p>The start date.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-01</p>
      */

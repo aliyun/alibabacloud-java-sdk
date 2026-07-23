@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     /**
+     * <p>Specifies whether to compare features.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,25 +14,62 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("CompareFeature")
     public Boolean compareFeature;
 
+    /**
+     * <p>The dataset ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-xxx</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <p>The dataset mount path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mnt/xxx</p>
+     */
     @NameInMap("DatasetMountPath")
     public String datasetMountPath;
 
+    /**
+     * <p>The dataset name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>The dataset type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("DatasetType")
     public String datasetType;
 
+    /**
+     * <p>The dataset URI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-xxx</p>
+     */
     @NameInMap("DatasetUri")
     public String datasetUri;
 
+    /**
+     * <p>The default route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Eth0</p>
+     */
     @NameInMap("DefaultRoute")
     public String defaultRoute;
 
     /**
+     * <p>The name of the PAI-EAS service. To obtain this name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +79,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String easServiceName;
 
     /**
+     * <p>The path of the OSS bucket where the EasyRec package is stored.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://*******</p>
      */
@@ -48,6 +88,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String easyRecPackagePath;
 
     /**
+     * <p>The EasyRec version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.3.60</p>
      */
@@ -55,6 +97,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String easyRecVersion;
 
     /**
+     * <p>The features to exclude from the display. Use a comma (,) to separate multiple features.</p>
+     * 
      * <strong>example:</strong>
      * <p>feature1,feature2</p>
      */
@@ -62,6 +106,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featureDisplayExclude;
 
     /**
+     * <p>The ID of the data source where the feature data is saved.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,31 +116,71 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featureLandingResourceId;
 
     /**
+     * <p>The feature priority. Use a comma (,) to separate multiple features.</p>
+     * 
      * <strong>example:</strong>
      * <p>feature1,feature2,feature3</p>
      */
     @NameInMap("FeaturePriority")
     public String featurePriority;
 
+    /**
+     * <p>The primary key for the item side in the feature store.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>item</p>
+     */
     @NameInMap("FeatureStoreItemId")
     public String featureStoreItemId;
 
+    /**
+     * <p>The feature store model ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("FeatureStoreModelId")
     public String featureStoreModelId;
 
+    /**
+     * <p>The feature store project ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prj-01</p>
+     */
     @NameInMap("FeatureStoreProjectId")
     public String featureStoreProjectId;
 
+    /**
+     * <p>The feature store project name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project-1</p>
+     */
     @NameInMap("FeatureStoreProjectName")
     public String featureStoreProjectName;
 
+    /**
+     * <p>The name of the feature view that contains the item features within sequence features.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>item-1</p>
+     */
     @NameInMap("FeatureStoreSeqFeatureView")
     public String featureStoreSeqFeatureView;
 
+    /**
+     * <p>The primary key for the user side in the feature store.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("FeatureStoreUserId")
     public String featureStoreUserId;
 
     /**
+     * <p>The <code>fg_jar</code> version.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
      */
@@ -103,6 +188,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String fgJarVersion;
 
     /**
+     * <p>The name of the <code>fg_json</code> file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,6 +198,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String fgJsonFileName;
 
     /**
+     * <p>Specifies whether to generate a ZIP package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,6 +208,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public Boolean generateZip;
 
     /**
+     * <p>The instance ID. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,6 +218,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the <code>item_id</code> field.</p>
+     * 
      * <strong>example:</strong>
      * <p>item_id</p>
      */
@@ -137,6 +227,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String itemIdField;
 
     /**
+     * <p>The name of the item table.</p>
+     * 
      * <strong>example:</strong>
      * <p>item_table</p>
      */
@@ -144,6 +236,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String itemTable;
 
     /**
+     * <p>The partition field of the item table.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds</p>
      */
@@ -151,6 +245,14 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String itemTablePartitionField;
 
     /**
+     * <p>The format of the partition field in the item table. Valid values:</p>
+     * <ul>
+     * <li><p><code>yyyymmdd</code></p>
+     * </li>
+     * <li><p><code>yyyy-mm-dd</code></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>yyyymmdd</p>
      */
@@ -158,6 +260,16 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String itemTablePartitionFieldFormat;
 
     /**
+     * <p>The schema of the MaxCompute project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("MaxcomputeSchema")
+    public String maxcomputeSchema;
+
+    /**
+     * <p>The name of the feature consistency check.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -167,25 +279,52 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The OSS data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>reso-********</p>
      */
     @NameInMap("OssResourceId")
     public String ossResourceId;
 
+    /**
+     * <p>The number of prediction workers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PredictWorkerCount")
     public Integer predictWorkerCount;
 
+    /**
+     * <p>The number of CPU cores for each prediction worker.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("PredictWorkerCpu")
     public Integer predictWorkerCpu;
 
+    /**
+     * <p>The memory size for each prediction worker, in megabytes (MB).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32000</p>
+     */
     @NameInMap("PredictWorkerMemory")
     public Integer predictWorkerMemory;
 
+    /**
+     * <p>The resource configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ResourceConfig")
     public String resourceConfig;
 
     /**
+     * <p>The sample rate. The value must be between 0 and 1, inclusive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -195,6 +334,7 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public Double sampleRate;
 
     /**
+     * <p>The scene ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -203,10 +343,17 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <p>The security group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>thax-xxx</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -215,16 +362,34 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vswitch-xxx</p>
+     */
     @NameInMap("SwitchId")
     public String switchId;
 
     /**
+     * <p>Specifies whether to use a feature store. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: Use a feature store. The <code>FeatureStoreProjectId</code>, <code>FeatureStoreProjectName</code>, <code>FeatureStoreModelId</code>, <code>FeatureStoreUserId</code>, and <code>FeatureStoreItemId</code> parameters are required.</p>
+     * </li>
+     * <li><p><code>false</code>: Do not use a feature store. The <code>UserTable</code>, <code>UserIdField</code>, <code>UserTablePartitionField</code>, <code>UserTablePartitionFieldFormat</code>, <code>ItemTable</code>, <code>ItemIdField</code>, <code>ItemTablePartitionField</code>, and <code>ItemTablePartitionFieldFormat</code> parameters are required.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UseFeatureStore")
     public Boolean useFeatureStore;
 
     /**
+     * <p>The name of the <code>user_id</code> field.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_id</p>
      */
@@ -232,6 +397,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String userIdField;
 
     /**
+     * <p>The name of the user table.</p>
+     * 
      * <strong>example:</strong>
      * <p>user_table</p>
      */
@@ -239,6 +406,8 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String userTable;
 
     /**
+     * <p>The partition field of the user table.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds</p>
      */
@@ -246,22 +415,44 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String userTablePartitionField;
 
     /**
+     * <p>The format of the partition field in the user table. Valid values:</p>
+     * <ul>
+     * <li><p><code>yyyymmdd</code></p>
+     * </li>
+     * <li><p><code>yyyy-mm-dd</code></p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>yyyymmdd</p>
      */
     @NameInMap("UserTablePartitionFieldFormat")
     public String userTablePartitionFieldFormat;
 
+    /**
+     * <p>The VPC ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxx</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
+     * <p>The workflow name.</p>
+     * 
      * <strong>example:</strong>
      * <p>work_flow_1</p>
      */
     @NameInMap("WorkflowName")
     public String workflowName;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -484,6 +675,14 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     }
     public String getItemTablePartitionFieldFormat() {
         return this.itemTablePartitionFieldFormat;
+    }
+
+    public CreateFeatureConsistencyCheckJobConfigRequest setMaxcomputeSchema(String maxcomputeSchema) {
+        this.maxcomputeSchema = maxcomputeSchema;
+        return this;
+    }
+    public String getMaxcomputeSchema() {
+        return this.maxcomputeSchema;
     }
 
     public CreateFeatureConsistencyCheckJobConfigRequest setName(String name) {

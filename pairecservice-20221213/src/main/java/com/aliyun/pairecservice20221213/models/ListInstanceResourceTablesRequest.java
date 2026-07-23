@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResourceTablesRequest extends TeaModel {
     /**
+     * <p>The MaxCompute schema.</p>
+     * 
      * <strong>example:</strong>
      * <p>jackal</p>
      */

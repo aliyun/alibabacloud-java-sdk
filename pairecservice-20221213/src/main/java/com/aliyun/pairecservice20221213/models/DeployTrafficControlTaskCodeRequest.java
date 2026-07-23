@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeployTrafficControlTaskCodeRequest extends TeaModel {
     /**
+     * <p>The deployment environment. Valid values: Daily (daily environment), Pre (pre-production environment), and Prod (production environment).</p>
+     * 
      * <strong>example:</strong>
      * <p>Daily</p>
      */
@@ -12,12 +14,17 @@ public class DeployTrafficControlTaskCodeRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to automatically retry a failed deployment.</p>
+     */
     @NameInMap("RetryDeploy")
     public Boolean retryDeploy;
 

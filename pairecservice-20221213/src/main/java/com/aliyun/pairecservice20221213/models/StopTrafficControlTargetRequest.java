@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopTrafficControlTargetRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-1324***</p>
      */

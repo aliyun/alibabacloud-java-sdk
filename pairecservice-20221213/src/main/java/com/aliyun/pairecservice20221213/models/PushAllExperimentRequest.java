@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PushAllExperimentRequest extends TeaModel {
     /**
+     * <p>The instance ID. Call the ListInstances API to obtain this ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSceneResponseBody extends TeaModel {
     /**
+     * <p>The scene description.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>A list of flows.</p>
+     */
     @NameInMap("Flows")
     public java.util.List<GetSceneResponseBodyFlows> flows;
 
     /**
+     * <p>The scene name.</p>
+     * 
      * <strong>example:</strong>
      * <p>scene1</p>
      */
@@ -22,7 +29,7 @@ public class GetSceneResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B8987BF7-6028-5B17-80E0-251B7BD67BBA</p>
@@ -69,6 +76,8 @@ public class GetSceneResponseBody extends TeaModel {
 
     public static class GetSceneResponseBodyFlows extends TeaModel {
         /**
+         * <p>The flow code.</p>
+         * 
          * <strong>example:</strong>
          * <p>liuliang1</p>
          */
@@ -76,6 +85,8 @@ public class GetSceneResponseBody extends TeaModel {
         public String flowCode;
 
         /**
+         * <p>The flow name.</p>
+         * 
          * <strong>example:</strong>
          * <p>流量1</p>
          */

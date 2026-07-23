@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateEngineConfigResponseBody extends TeaModel {
     /**
+     * <p>The ID of the engine config.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class CreateEngineConfigResponseBody extends TeaModel {
     public String engineConfigId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E15A1443-7917-5BE0-AE70-25538ECF398D</p>
      */

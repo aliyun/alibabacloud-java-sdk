@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     /**
+     * <p>The message returned for the Flink platform deployment operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>deploy job draft success</p>
      */
@@ -12,6 +14,13 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String deployMessage;
 
     /**
+     * <p>The status of deploying the draft. Valid values:</p>
+     * <ul>
+     * <li>Failed: failed.</li>
+     * <li>Running: running.</li>
+     * <li>Success: succeeded.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -19,6 +28,8 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String deployStatus;
 
     /**
+     * <p>The message returned for pushing the draft to Flink.</p>
+     * 
      * <strong>example:</strong>
      * <p>push draft success</p>
      */
@@ -26,6 +37,13 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String draftMessage;
 
     /**
+     * <p>The status of pushing the draft to Flink. Valid values:</p>
+     * <ul>
+     * <li>Failed: failed.</li>
+     * <li>Running: running.</li>
+     * <li>Success: succeeded.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +51,8 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String draftStatus;
 
     /**
+     * <p>The message returned for the preparation phase.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -40,6 +60,13 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String prepareMessage;
 
     /**
+     * <p>The status of the preparation phase. Valid values:</p>
+     * <ul>
+     * <li>Failed: failed.</li>
+     * <li>Running: running.</li>
+     * <li>Success: succeeded.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -47,6 +74,8 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String prepareStatus;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -54,6 +83,8 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The message returned for starting the Flink task.</p>
+     * 
      * <strong>example:</strong>
      * <p>start job success</p>
      */
@@ -61,6 +92,13 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String startMessage;
 
     /**
+     * <p>The status of starting the Flink task. Valid values:</p>
+     * <ul>
+     * <li>Failed: failed.</li>
+     * <li>Running: running.</li>
+     * <li>Success: succeeded.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -68,6 +106,26 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String startStatus;
 
     /**
+     * <p>The stop details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
+    @NameInMap("StopMessage")
+    public String stopMessage;
+
+    /**
+     * <p>The stop status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
+    @NameInMap("StopStatus")
+    public String stopStatus;
+
+    /**
+     * <p>The traffic control task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -149,6 +207,22 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     }
     public String getStartStatus() {
         return this.startStatus;
+    }
+
+    public QueryTrafficControlTaskDeployResultResponseBody setStopMessage(String stopMessage) {
+        this.stopMessage = stopMessage;
+        return this;
+    }
+    public String getStopMessage() {
+        return this.stopMessage;
+    }
+
+    public QueryTrafficControlTaskDeployResultResponseBody setStopStatus(String stopStatus) {
+        this.stopStatus = stopStatus;
+        return this;
+    }
+    public String getStopStatus() {
+        return this.stopStatus;
     }
 
     public QueryTrafficControlTaskDeployResultResponseBody setTrafficControlTaskId(String trafficControlTaskId) {

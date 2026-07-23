@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLayerRequest extends TeaModel {
     /**
+     * <p>The description of the layer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateLayerRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The ID of the instance. Call the <code>ListInstances</code> operation to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateLayerRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the laboratory. Call the <code>ListLaboratories</code> operation to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class CreateLayerRequest extends TeaModel {
     public String laboratoryId;
 
     /**
+     * <p>The name of the layer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CloneTrafficControlTaskResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -12,6 +14,8 @@ public class CloneTrafficControlTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Traffic control task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

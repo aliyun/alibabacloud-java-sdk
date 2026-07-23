@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRecallManagementTableRequest extends TeaModel {
     /**
+     * <p>Additional settings for the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;&quot;:&quot;&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>MaxcomputeAndApiApi</p>
      */
@@ -19,6 +23,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String dataSource;
 
     /**
+     * <p><strong>The description of the table.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>this is a test table</p>
      */
@@ -26,6 +32,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Whether to enable the data size fluctuation threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -33,16 +41,22 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public Boolean enableDataSizeFluctuationThreshold;
 
     /**
+     * <p>Whether to enable the row count fluctuation threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableRowCountFluctuationThreshold")
     public Boolean enableRowCountFluctuationThreshold;
 
+    /**
+     * <p>The list of fields.</p>
+     */
     @NameInMap("Fields")
     public java.util.List<CreateRecallManagementTableRequestFields> fields;
 
     /**
+     * <p><strong>The instance ID.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +66,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The maximum data size fluctuation threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -59,6 +75,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public Long maxDataSizeFluctuationThreshold;
 
     /**
+     * <p>The maximum row count fluctuation threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -66,6 +84,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public Long maxRowCountFluctuationThreshold;
 
     /**
+     * <p>The MaxCompute project.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -73,6 +93,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String maxcomputeProjectName;
 
     /**
+     * <p><strong>The schema in MaxCompute.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -80,6 +102,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String maxcomputeSchema;
 
     /**
+     * <p>The name of the table in MaxCompute.</p>
+     * 
      * <strong>example:</strong>
      * <p>table-1</p>
      */
@@ -87,6 +111,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String maxcomputeTableName;
 
     /**
+     * <p>The minimum data size fluctuation threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -94,6 +120,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public Long minDataSizeFluctuationThreshold;
 
     /**
+     * <p>The minimum row count fluctuation threshold.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -101,6 +129,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public Long minRowCountFluctuationThreshold;
 
     /**
+     * <p><strong>The name of the table.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>table-123</p>
      */
@@ -108,6 +138,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The recall type of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>X2I</p>
      */
@@ -115,6 +147,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     public String recallType;
 
     /**
+     * <p><strong>The table type.</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>Recall</p>
      */
@@ -263,20 +297,45 @@ public class CreateRecallManagementTableRequest extends TeaModel {
     }
 
     public static class CreateRecallManagementTableRequestFields extends TeaModel {
+        /**
+         * <p>The attributes of the field. Valid values:</p>
+         * <ul>
+         * <li><p><code>Primary</code>: The primary key field.</p>
+         * </li>
+         * <li><p><code>Item</code>: The item field.</p>
+         * </li>
+         * <li><p><code>Score</code>: The recall score field.</p>
+         * </li>
+         * <li><p><code>Vector</code>: The vector field.</p>
+         * </li>
+         * <li><p><code>Index</code>: The index field.</p>
+         * </li>
+         * </ul>
+         */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
 
         /**
+         * <p>The name of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>age</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The data type of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING(全大写)</p>
+         */
         @NameInMap("Type")
         public String type;
 
         /**
+         * <p>The vector dimension.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -284,6 +343,8 @@ public class CreateRecallManagementTableRequest extends TeaModel {
         public Integer vectorDimension;
 
         /**
+         * <p>The vector metric type.</p>
+         * 
          * <strong>example:</strong>
          * <p>L2</p>
          */

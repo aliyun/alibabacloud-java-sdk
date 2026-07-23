@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
+    /**
+     * <p>A list of Recall Management Service versions.</p>
+     */
     @NameInMap("RecallManagementServiceVersions")
     public java.util.List<ListRecallManagementServiceVersionsResponseBodyRecallManagementServiceVersions> recallManagementServiceVersions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -15,6 +20,8 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -52,6 +59,8 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
 
     public static class ListRecallManagementServiceVersionsResponseBodyRecallManagementServiceVersions extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
@@ -59,16 +68,23 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <p>Indicates whether the version is effective.</p>
+         */
         @NameInMap("IsEffective")
         public Boolean isEffective;
 
         /**
+         * <p>The version name.</p>
+         * 
          * <strong>example:</strong>
          * <p>version-1</p>
          */
@@ -76,6 +92,8 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The version ID of the Recall Management Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

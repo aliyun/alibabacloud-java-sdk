@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics for the data diagnosis task.</p>
+     */
     @NameInMap("Statistics")
     public QueryDataDiagnosisStatisticsResponseBodyStatistics statistics;
 
@@ -36,9 +41,15 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
     }
 
     public static class QueryDataDiagnosisStatisticsResponseBodyStatistics extends TeaModel {
+        /**
+         * <p>The dates of task failures.</p>
+         */
         @NameInMap("FailedDates")
         public java.util.List<String> failedDates;
 
+        /**
+         * <p>The dates with missing task data.</p>
+         */
         @NameInMap("NoDataDates")
         public java.util.List<String> noDataDates;
 

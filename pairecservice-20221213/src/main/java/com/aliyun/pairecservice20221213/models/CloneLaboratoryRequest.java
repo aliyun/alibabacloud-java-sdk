@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CloneLaboratoryRequest extends TeaModel {
     /**
+     * <p>Specifies whether to clone the experiment groups.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CloneLaboratoryRequest extends TeaModel {
     public Boolean cloneExperimentGroup;
 
     /**
+     * <p>The destination environment. Valid values: Daily, Pre (pre-release), and Prod (production).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CloneLaboratoryRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The instance ID. To obtain this ID, call the <code>ListInstances</code> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

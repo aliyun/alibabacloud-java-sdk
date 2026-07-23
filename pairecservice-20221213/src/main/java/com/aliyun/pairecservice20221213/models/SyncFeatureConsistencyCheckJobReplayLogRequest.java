@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     /**
+     * <p>The context features.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String contextFeatures;
 
     /**
+     * <p>The feature consistency check job configuration ID. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String featureConsistencyCheckJobConfigId;
 
     /**
+     * <p>The generated features.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String generatedFeatures;
 
     /**
+     * <p>The instance ID. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The item ID from the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String logItemId;
 
     /**
+     * <p>The request ID from the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +65,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String logRequestId;
 
     /**
+     * <p>The request time from the log, provided as a UNIX epoch timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,7 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public Long logRequestTime;
 
     /**
+     * <p>The user ID from the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,12 +85,17 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     public String logUserId;
 
     /**
+     * <p>The raw features.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>author__kv_city_expr_cnt_15d：北京市 | tem__min_age_15d:28</p>
      */
     @NameInMap("RawFeatures")
     public String rawFeatures;
 
     /**
+     * <p>The scene name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

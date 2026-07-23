@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLayerResponseBody extends TeaModel {
     /**
+     * <p>The ID of the layer.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,7 +14,7 @@ public class CreateLayerResponseBody extends TeaModel {
     public String layerId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>

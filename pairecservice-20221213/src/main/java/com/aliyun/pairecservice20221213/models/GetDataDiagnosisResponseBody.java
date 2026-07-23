@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataDiagnosisResponseBody extends TeaModel {
     /**
+     * <p>The configuration of the data diagnosis task.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;AnalysisField&quot;:&quot;userid&quot;,&quot;PartitionFieldFormat&quot;:&quot;yyyymmdd&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The time for periodic execution. If this field is empty, the task does not execute periodically.</p>
+     * 
      * <strong>example:</strong>
      * <p>08:00</p>
      */
@@ -19,6 +23,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String cycleTime;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -26,6 +32,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
      */
@@ -33,6 +41,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The ID of the left data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -40,6 +50,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String leftTableMetaId;
 
     /**
+     * <p>The partition field of the left data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -47,6 +59,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String leftTablePartitionField;
 
     /**
+     * <p>The name of the data diagnosis task.</p>
+     * 
      * <strong>example:</strong>
      * <p>data_diagnosis_job1</p>
      */
@@ -54,6 +68,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The partition field.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -61,6 +77,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String partitionField;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
@@ -68,6 +86,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the right data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -75,6 +95,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String rightTableMetaId;
 
     /**
+     * <p>The partition field of the right data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>dt</p>
      */
@@ -82,6 +104,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String rightTablePartitionField;
 
     /**
+     * <p>The ID of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -89,6 +113,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String tableMetaId;
 
     /**
+     * <p>The name of the data table.</p>
+     * 
      * <strong>example:</strong>
      * <p>table_meta_1</p>
      */
@@ -96,6 +122,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public String tableMetaName;
 
     /**
+     * <p>The Top-N quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -103,6 +131,8 @@ public class GetDataDiagnosisResponseBody extends TeaModel {
     public Long topNQuantity;
 
     /**
+     * <p>The type of the data diagnosis task.</p>
+     * 
      * <strong>example:</strong>
      * <p>ChangeRate</p>
      */

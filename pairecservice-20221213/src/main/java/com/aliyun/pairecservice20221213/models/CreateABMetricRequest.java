@@ -8,6 +8,7 @@ public class CreateABMetricRequest extends TeaModel {
     public Boolean aggregationByUser;
 
     /**
+     * <p>The metric definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,12 +25,17 @@ public class CreateABMetricRequest extends TeaModel {
     public String denominator;
 
     /**
+     * <p>The metric description.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pv指标</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +48,8 @@ public class CreateABMetricRequest extends TeaModel {
     public Boolean isBinomialDistribution;
 
     /**
+     * <p>The ID of the left metric used to calculate the derived metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -49,6 +57,7 @@ public class CreateABMetricRequest extends TeaModel {
     public String leftMetricId;
 
     /**
+     * <p>The metric name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +77,18 @@ public class CreateABMetricRequest extends TeaModel {
     public String numerator;
 
     /**
+     * <p>The operator used to calculate the derived metric. Valid values:</p>
+     * <ul>
+     * <li><p><code>Plus</code>: Addition</p>
+     * </li>
+     * <li><p><code>Minus</code>: Subtraction</p>
+     * </li>
+     * <li><p><code>Multiplication</code>: Multiplication</p>
+     * </li>
+     * <li><p><code>Division</code>: Division</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Division</p>
      */
@@ -75,6 +96,13 @@ public class CreateABMetricRequest extends TeaModel {
     public String operator;
 
     /**
+     * <p>Specifies whether the metric is a real-time metric. Valid values:</p>
+     * <ul>
+     * <li><p><code>true</code>: The metric is real-time.</p>
+     * </li>
+     * <li><p><code>false</code>: The metric is not real-time.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +112,8 @@ public class CreateABMetricRequest extends TeaModel {
     public Boolean realtime;
 
     /**
+     * <p>The data source ID to which the results are written back. Call the ListInstanceResources operation to obtain this ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -91,6 +121,8 @@ public class CreateABMetricRequest extends TeaModel {
     public String resultResourceId;
 
     /**
+     * <p>The ID of the right metric used to calculate the derived metric.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -98,6 +130,7 @@ public class CreateABMetricRequest extends TeaModel {
     public String rightMetricId;
 
     /**
+     * <p>The scene ID. Call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,6 +140,8 @@ public class CreateABMetricRequest extends TeaModel {
     public String sceneId;
 
     /**
+     * <p>The statistics cycle.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -114,6 +149,7 @@ public class CreateABMetricRequest extends TeaModel {
     public Integer statisticsCycle;
 
     /**
+     * <p>The data table ID. Call the ListTableMetas operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,6 +159,13 @@ public class CreateABMetricRequest extends TeaModel {
     public String tableMetaId;
 
     /**
+     * <p>The metric type. Valid values:</p>
+     * <ul>
+     * <li><p><code>Single</code>: A single metric.</p>
+     * </li>
+     * <li><p><code>Derived</code>: A derived metric.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

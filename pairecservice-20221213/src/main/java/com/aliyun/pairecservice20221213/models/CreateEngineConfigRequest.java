@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateEngineConfigRequest extends TeaModel {
     /**
+     * <p>The content of the engine config.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -15,6 +17,16 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The environment. Valid values:</p>
+     * <ul>
+     * <li><p><code>Daily</code>: The daily environment.</p>
+     * </li>
+     * <li><p><code>Pre</code>: The pre-production environment.</p>
+     * </li>
+     * <li><p><code>Prod</code>: The production environment.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Pre</p>
      */
@@ -22,6 +34,8 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String environment;
 
     /**
+     * <p>The ID of the instance. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
      */
@@ -29,6 +43,8 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The name of the engine config.</p>
+     * 
      * <strong>example:</strong>
      * <p>engine_config_v1</p>
      */

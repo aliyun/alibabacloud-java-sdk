@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     /**
+     * <p>The feature consistency check job configuration ID. To obtain the configuration ID, call the <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String featureConsistencyCheckJobConfigId;
 
     /**
+     * <p>The instance ID. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The item features.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String itemFeatures;
 
     /**
+     * <p>The item ID in the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String logItemId;
 
     /**
+     * <p>The log request ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String logRequestId;
 
     /**
+     * <p>The log request time (UNIX epoch timestamp).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +65,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public Long logRequestTime;
 
     /**
+     * <p>The user ID in the log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String logUserId;
 
     /**
+     * <p>The scene name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +85,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String sceneName;
 
     /**
+     * <p>The scores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,6 +98,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String serviceName;
 
     /**
+     * <p>The user features.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

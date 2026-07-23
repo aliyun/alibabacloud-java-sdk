@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6CF1E160-3F36-5E73-A170-C75504F05BBC</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>reso-2s416t***</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OfflineLaboratoryRequest extends TeaModel {
     /**
+     * <p>The instance ID. Call the <code>ListInstances</code> operation to obtain this ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

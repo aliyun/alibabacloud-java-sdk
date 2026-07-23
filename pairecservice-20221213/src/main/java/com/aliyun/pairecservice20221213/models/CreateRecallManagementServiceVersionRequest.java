@@ -4,10 +4,15 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateRecallManagementServiceVersionRequest extends TeaModel {
+    /**
+     * <p>The configuration details.</p>
+     */
     @NameInMap("Configs")
     public CreateRecallManagementServiceVersionRequestConfigs configs;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>learn-pairec-xxx</p>
      */
@@ -15,6 +20,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The source recall management service version ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -52,6 +59,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsMergeConfig extends TeaModel {
         /**
+         * <p>This parameter is reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;&quot;:&quot;&quot;}</p>
          */
@@ -59,26 +68,38 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String extendedConfig;
 
         /**
+         * <p>The filter expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>age&gt;10</p>
          */
         @NameInMap("FilterExpression")
         public String filterExpression;
 
+        /**
+         * <p>The IDs of tables to use for filtering results.</p>
+         */
         @NameInMap("FilterRecallManagementTableIds")
         public java.util.List<String> filterRecallManagementTableIds;
 
         /**
+         * <p>The item recall management table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("ItemRecallManagementTableId")
         public String itemRecallManagementTableId;
 
+        /**
+         * <p>The fields to return from the item table.</p>
+         */
         @NameInMap("ItemTableFields")
         public java.util.List<String> itemTableFields;
 
         /**
+         * <p>The merge type. Valid values: <code>Weight</code> and <code>Alternate</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>Weight</p>
          */
@@ -86,6 +107,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String mergeType;
 
         /**
+         * <p>The recall management service version configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -157,6 +180,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsFeatureConfig extends TeaModel {
         /**
+         * <p>The feature expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>category=3</p>
          */
@@ -164,6 +189,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String expression;
 
         /**
+         * <p>The feature name.</p>
+         * 
          * <strong>example:</strong>
          * <p>city</p>
          */
@@ -171,6 +198,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The feature type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -210,6 +239,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsFilterConfig extends TeaModel {
         /**
+         * <p>The filter expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>age&gt;20</p>
          */
@@ -233,6 +264,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsJoinConfig extends TeaModel {
         /**
+         * <p><strong>The field to join on.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -240,6 +273,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String field;
 
         /**
+         * <p><strong>The fields to include from the joined table.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>item_id</p>
          */
@@ -247,6 +282,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public java.util.List<String> outputFields;
 
         /**
+         * <p><strong>The ID of the table to join with.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -286,6 +323,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsTriggerConfig extends TeaModel {
         /**
+         * <p>The field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_id</p>
          */
@@ -293,6 +332,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String field;
 
         /**
+         * <p>The limit on the number of fields.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -300,6 +341,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public Integer fieldQuantityLimit;
 
         /**
+         * <p>Specifies whether to sort randomly.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -307,6 +350,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public Boolean isRandSort;
 
         /**
+         * <p>The sort field.</p>
+         * 
          * <strong>example:</strong>
          * <p>create_time</p>
          */
@@ -353,22 +398,36 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
     }
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperators extends TeaModel {
+        /**
+         * <p>The configuration for the feature operator.</p>
+         */
         @NameInMap("FeatureConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsFeatureConfig featureConfig;
 
+        /**
+         * <p>The configuration for the filter operator.</p>
+         */
         @NameInMap("FilterConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsFilterConfig filterConfig;
 
+        /**
+         * <p>The configuration for the Join operator.</p>
+         */
         @NameInMap("JoinConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsJoinConfig joinConfig;
 
         /**
+         * <p>The operator type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Filter</p>
          */
         @NameInMap("OperatorType")
         public String operatorType;
 
+        /**
+         * <p>The configuration for the Trigger operator.</p>
+         */
         @NameInMap("TriggerConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsTriggerConfig triggerConfig;
 
@@ -421,6 +480,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigs extends TeaModel {
         /**
+         * <p>The recall description.</p>
+         * 
          * <strong>example:</strong>
          * <p>this is etrec recall</p>
          */
@@ -428,6 +489,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String description;
 
         /**
+         * <p><strong>This parameter is reserved for future use.</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
          */
@@ -435,6 +498,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String extendedConfig;
 
         /**
+         * <p>The conditions for an item, formatted as an array.</p>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;option&quot;:&quot;&lt;&quot;,&quot;field&quot;:&quot;category&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;value&quot;:&quot;10&quot;}]</p>
          */
@@ -442,13 +507,17 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String itemConditionArray;
 
         /**
+         * <p>The item condition expression.</p>
+         * 
          * <strong>example:</strong>
-         * <p>age&gt;10</p>
+         * <p>age&gt;20</p>
          */
         @NameInMap("ItemConditionExpression")
         public String itemConditionExpression;
 
         /**
+         * <p>The item vector field.</p>
+         * 
          * <strong>example:</strong>
          * <p>item_embedding</p>
          */
@@ -456,6 +525,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String itemVectorField;
 
         /**
+         * <p>The item vector recall management table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -463,16 +534,23 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String itemVectorRecallManagementTableId;
 
         /**
+         * <p>The recall name.</p>
+         * 
          * <strong>example:</strong>
          * <p>etrec</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>A list of operators.</p>
+         */
         @NameInMap("Operators")
         public java.util.List<CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperators> operators;
 
         /**
+         * <p>The priority. A lower value indicates a higher priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -480,6 +558,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public Long priority;
 
         /**
+         * <p>The recall management table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -487,16 +567,26 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String recallManagementTableId;
 
         /**
+         * <p>The recall type.</p>
+         * 
          * <strong>example:</strong>
          * <p>X2I</p>
          */
         @NameInMap("RecallType")
         public String recallType;
 
+        /**
+         * <p>The sort fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("SortFields")
         public String sortFields;
 
         /**
+         * <p>The user vector field.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_embedding</p>
          */
@@ -504,6 +594,8 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String userVectorField;
 
         /**
+         * <p>The user vector recall management table ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -630,9 +722,15 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
     }
 
     public static class CreateRecallManagementServiceVersionRequestConfigs extends TeaModel {
+        /**
+         * <p><strong>Specifies how to merge recall results.</strong></p>
+         */
         @NameInMap("MergeConfig")
         public CreateRecallManagementServiceVersionRequestConfigsMergeConfig mergeConfig;
 
+        /**
+         * <p>A list of recall configurations.</p>
+         */
         @NameInMap("RecallConfigs")
         public java.util.List<CreateRecallManagementServiceVersionRequestConfigsRecallConfigs> recallConfigs;
 
