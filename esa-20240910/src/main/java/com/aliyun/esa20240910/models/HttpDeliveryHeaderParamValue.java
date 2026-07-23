@@ -4,9 +4,6 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class HttpDeliveryHeaderParamValue extends TeaModel {
-    /**
-     * <p>The static variable.</p>
-     */
     @NameInMap("StaticValue")
     public String staticValue;
 

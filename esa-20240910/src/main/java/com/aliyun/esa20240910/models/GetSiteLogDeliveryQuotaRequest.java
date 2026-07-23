@@ -5,17 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetSiteLogDeliveryQuotaRequest extends TeaModel {
     /**
-     * <p>The log category. Valid values:</p>
-     * <ol>
-     * <li><p>dcdn_log_access_l1 (default): access logs.</p>
-     * </li>
-     * <li><p>dcdn_log_er: Edge Routine logs.</p>
-     * </li>
-     * <li><p>dcdn_log_waf: firewall logs.</p>
-     * </li>
-     * <li><p>dcdn_log_ipa: TCP/UDP proxy logs.</p>
-     * </li>
-     * </ol>
+     * <p>The type of real-time logs. Valid values:</p>
+     * <ul>
+     * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
+     * <li><strong>dcdn_log_er</strong>: edge function logs.</li>
+     * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
+     * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +21,7 @@ public class GetSiteLogDeliveryQuotaRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

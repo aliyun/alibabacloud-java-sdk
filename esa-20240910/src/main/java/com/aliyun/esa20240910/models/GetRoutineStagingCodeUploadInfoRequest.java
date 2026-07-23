@@ -14,7 +14,7 @@ public class GetRoutineStagingCodeUploadInfoRequest extends TeaModel {
     public String codeDescription;
 
     /**
-     * <p>The routine name.</p>
+     * <p>The name of the Edge Routine.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

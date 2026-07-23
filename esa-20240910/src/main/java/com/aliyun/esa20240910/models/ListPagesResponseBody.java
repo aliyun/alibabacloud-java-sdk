@@ -108,6 +108,44 @@ public class ListPagesResponseBody extends TeaModel {
         return this.usage;
     }
 
+    public static class ListPagesResponseBodyPagesModeration extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
+        @NameInMap("Reasons")
+        public java.util.List<String> reasons;
+
+        /**
+         * <strong>example:</strong>
+         * <p>pending</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static ListPagesResponseBodyPagesModeration build(java.util.Map<String, ?> map) throws Exception {
+            ListPagesResponseBodyPagesModeration self = new ListPagesResponseBodyPagesModeration();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPagesResponseBodyPagesModeration setReasons(java.util.List<String> reasons) {
+            this.reasons = reasons;
+            return this;
+        }
+        public java.util.List<String> getReasons() {
+            return this.reasons;
+        }
+
+        public ListPagesResponseBodyPagesModeration setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListPagesResponseBodyPages extends TeaModel {
         /**
          * <p>The Base64-encoded response page content corresponding to the Content-Type.</p>
@@ -139,7 +177,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the custom response page. You can call the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation to obtain the ID.</p>
+         * <p>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>50000001</p>
@@ -157,6 +195,13 @@ public class ListPagesResponseBody extends TeaModel {
         public String kind;
 
         /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("Moderation")
+        public ListPagesResponseBodyPagesModeration moderation;
+
+        /**
          * <p>The name of the custom response page.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +211,7 @@ public class ListPagesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The time when the custom response page was last modified.</p>
+         * <p>The last modification time of the custom response page.</p>
          * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
          * <p>Example: 2026-06-10T14:23:45Z</p>
          * 
@@ -219,6 +264,14 @@ public class ListPagesResponseBody extends TeaModel {
         }
         public String getKind() {
             return this.kind;
+        }
+
+        public ListPagesResponseBodyPages setModeration(ListPagesResponseBodyPagesModeration moderation) {
+            this.moderation = moderation;
+            return this;
+        }
+        public ListPagesResponseBodyPagesModeration getModeration() {
+            return this.moderation;
         }
 
         public ListPagesResponseBodyPages setName(String name) {

@@ -14,8 +14,7 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>Specifies whether to enable automatic payment.
-     * Set this parameter to true when you directly call this operation.</p>
+     * <p>Specifies whether to enable automatic payment. Set this parameter to true when you directly call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,7 +26,7 @@ public class PurchaseRatePlanRequest extends TeaModel {
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
      * <li>true: Auto-renewal is enabled.</li>
-     * <li>false: Auto-renewal is disabled.</li>
+     * <li>false: Auto-renewal is not enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,9 +48,9 @@ public class PurchaseRatePlanRequest extends TeaModel {
      * <p>The billing method. Valid values:</p>
      * <ul>
      * <li>PREPAY: subscription.</li>
-     * <li>POSTPAY: pay-as-you-go.
-     * Set this parameter to PREPAY when you directly call this operation.</li>
+     * <li>POSTPAY: pay-as-you-go.</li>
      * </ul>
+     * <p>Set this parameter to PREPAY when you directly call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
@@ -73,9 +72,11 @@ public class PurchaseRatePlanRequest extends TeaModel {
     @NameInMap("Coverage")
     public String coverage;
 
+    @NameInMap("OveragePolicy")
+    public String overagePolicy;
+
     /**
-     * <p>The purchase period, in months.
-     * This parameter is required when you directly call this operation.</p>
+     * <p>The purchase period, in months. This parameter is required when you directly call this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,18 +86,18 @@ public class PurchaseRatePlanRequest extends TeaModel {
 
     /**
      * <p>The plan code.</p>
-     * <p>China site</p>
+     * <p>Chinese site</p>
      * <ul>
      * <li>Free Edition: entranceplan</li>
      * <li>Basic: basicplan</li>
      * <li>Standard: standardplan</li>
-     * <li>Premium: advancedplan</li>
+     * <li>Advanced: advancedplan</li>
      * </ul>
      * <p>International site</p>
      * <ul>
      * <li>Entrance: entranceplan</li>
      * <li>Pro: standardplan</li>
-     * <li>Premium: advancedpla.</li>
+     * <li>Premium: advancedpla</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,12 +108,12 @@ public class PurchaseRatePlanRequest extends TeaModel {
 
     /**
      * <p>The plan name.</p>
-     * <p>China site</p>
+     * <p>Chinese site</p>
      * <ul>
      * <li>Free Edition: entranceplan</li>
      * <li>Basic: basic</li>
      * <li>Standard: medium</li>
-     * <li>Premium: high</li>
+     * <li>Advanced: high</li>
      * </ul>
      * <p>International site</p>
      * <ul>
@@ -120,9 +121,7 @@ public class PurchaseRatePlanRequest extends TeaModel {
      * <li>Pro: basicplan_intl</li>
      * <li>Premium: vipplan_intl</li>
      * </ul>
-     * <blockquote>
      * <p>Note: For Enterprise Edition plans, the plan name is provided after backend configuration.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -203,6 +202,14 @@ public class PurchaseRatePlanRequest extends TeaModel {
     }
     public String getCoverage() {
         return this.coverage;
+    }
+
+    public PurchaseRatePlanRequest setOveragePolicy(String overagePolicy) {
+        this.overagePolicy = overagePolicy;
+        return this;
+    }
+    public String getOveragePolicy() {
+        return this.overagePolicy;
     }
 
     public PurchaseRatePlanRequest setPeriod(Integer period) {

@@ -18,7 +18,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public String checkRemainingSiteQuota;
 
     /**
-     * <p>The plan instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>The plan instance ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-xcdn-96wblslz****</p>
@@ -26,8 +26,11 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IsShared")
+    public Boolean isShared;
+
     /**
-     * <p>The page number to return in a paged query. Default value: <strong>1</strong>. Valid values: <strong>1</strong> to <strong>100000</strong>. Settings for paging take effect only when this parameter is specified.</p>
+     * <p>The page number settings for paging. Default value: <strong>1</strong>. Valid values: <strong>1 to 100000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +39,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Valid values: 1 to 500. This parameter is used for paging.</p>
+     * <p>The number of entries per page for paging. Valid values: 1 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -45,7 +48,7 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The plan name in English.</p>
+     * <p>The plan name (English).</p>
      * 
      * <strong>example:</strong>
      * <p>entranceplan</p>
@@ -56,8 +59,8 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     /**
      * <p>The plan type. Valid values:</p>
      * <ul>
-     * <li>normal: fixed-version plan</li>
-     * <li>enterprise: Enterprise Edition plan.</li>
+     * <li>normal: fixed edition plan</li>
+     * <li>enterprise: enterprise edition plan</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,11 +78,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     @NameInMap("RemainingExpireDays")
     public Integer remainingExpireDays;
 
+    @NameInMap("ResourceOwner")
+    public Long resourceOwner;
+
     /**
-     * <p>The field by which to sort the results. By default, results are sorted by purchase time. Valid values:</p>
+     * <p>The sort field. By default, results are sorted by purchase time. Valid values:</p>
      * <ul>
-     * <li><strong>CreateTime</strong>: purchase time.</li>
-     * <li><strong>ExpireTime</strong>: expiration time.</li>
+     * <li><strong>CreateTime</strong>: Purchase time.</li>
+     * <li><strong>ExpireTime</strong>: Expiration time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,8 +97,8 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     /**
      * <p>The sort order. Default value: desc. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong>: ascending order.</li>
-     * <li><strong>desc</strong>: descending order.</li>
+     * <li><strong>asc</strong>: Ascending order.</li>
+     * <li><strong>desc</strong>: Descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -104,10 +110,10 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>online</strong>: The plan instance is in normal service.</li>
-     * <li><strong>offline</strong>: The plan instance has expired but has not exceeded the grace period and is not active.</li>
-     * <li><strong>disable</strong>: The plan instance has been released.</li>
-     * <li><strong>overdue</strong>: The plan instance has an overdue payment.</li>
+     * <li><strong>online</strong>: Normal service status.</li>
+     * <li><strong>offline</strong>: Expired but not overdue, in an inactive state.</li>
+     * <li><strong>disable</strong>: Released.</li>
+     * <li><strong>overdue</strong>: Overdue payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,12 +128,12 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     /**
      * <p>The plan subscription type. Valid values:</p>
      * <ul>
-     * <li>entranceplan: Free Edition (Chinese mainland)</li>
-     * <li>entranceplan_intl: Free Edition (International)</li>
-     * <li>basicplan: Basic Edition</li>
-     * <li>standardplan: Standard Edition</li>
-     * <li>advancedplan: Premium Edition</li>
-     * <li>enterpriseplan: Enterprise Edition.</li>
+     * <li>Free Edition (Chinese mainland): entranceplan</li>
+     * <li>Free Edition (International): entranceplan_intl</li>
+     * <li>Basic Edition: basicplan</li>
+     * <li>Standard Edition: standardplan</li>
+     * <li>Premium Edition: advancedplan</li>
+     * <li>Enterprise Edition: enterpriseplan</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,6 +161,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListUserRatePlanInstancesRequest setIsShared(Boolean isShared) {
+        this.isShared = isShared;
+        return this;
+    }
+    public Boolean getIsShared() {
+        return this.isShared;
     }
 
     public ListUserRatePlanInstancesRequest setPageNumber(Integer pageNumber) {
@@ -195,6 +209,14 @@ public class ListUserRatePlanInstancesRequest extends TeaModel {
     }
     public Integer getRemainingExpireDays() {
         return this.remainingExpireDays;
+    }
+
+    public ListUserRatePlanInstancesRequest setResourceOwner(Long resourceOwner) {
+        this.resourceOwner = resourceOwner;
+        return this;
+    }
+    public Long getResourceOwner() {
+        return this.resourceOwner;
     }
 
     public ListUserRatePlanInstancesRequest setSortBy(String sortBy) {

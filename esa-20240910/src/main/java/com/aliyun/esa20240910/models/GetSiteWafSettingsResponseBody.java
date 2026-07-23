@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSiteWafSettingsResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -14,7 +14,7 @@ public class GetSiteWafSettingsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of site WAF configuration.</p>
+     * <p>The site WAF configuration details.</p>
      */
     @NameInMap("Settings")
     public WafSiteSettings settings;

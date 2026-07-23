@@ -14,7 +14,7 @@ public class UpdateRoutineBuildConfigurationShrinkRequest extends TeaModel {
     public String assetsDirectory;
 
     /**
-     * <p>The branches that trigger a build. Set this parameter to * for all branches. To specify multiple branches, separate branch names with commas.</p>
+     * <p>The branches that trigger a build. Set this to * for all branches. To specify multiple branches, separate branch names with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>int,abc</p>
@@ -26,13 +26,16 @@ public class UpdateRoutineBuildConfigurationShrinkRequest extends TeaModel {
      * <p>The build command.</p>
      * 
      * <strong>example:</strong>
-     * <p>npm xxx</p>
+     * <p>npm run build</p>
      */
     @NameInMap("BuildCommand")
     public String buildCommand;
 
     /**
      * <p>The environment variables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("EnvironmentVariables")
     public String environmentVariablesShrink;
@@ -47,10 +50,19 @@ public class UpdateRoutineBuildConfigurationShrinkRequest extends TeaModel {
     public Long gitAccountId;
 
     /**
+     * <p>The Git platform. Valid values: github, gitee, and upload.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>github</p>
+     */
+    @NameInMap("GitPlatform")
+    public String gitPlatform;
+
+    /**
      * <p>The install command.</p>
      * 
      * <strong>example:</strong>
-     * <p>npm install xxx</p>
+     * <p>npm install</p>
      */
     @NameInMap("InstallCommand")
     public String installCommand;
@@ -69,7 +81,7 @@ public class UpdateRoutineBuildConfigurationShrinkRequest extends TeaModel {
     public Boolean isPrivate;
 
     /**
-     * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, and <code>12.x</code>.</p>
+     * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, <code>12.x</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>22.x</p>
@@ -105,7 +117,7 @@ public class UpdateRoutineBuildConfigurationShrinkRequest extends TeaModel {
     public String rootDirectory;
 
     /**
-     * <p>The path of the ER entry file.</p>
+     * <p>The ER entry file path.</p>
      * 
      * <strong>example:</strong>
      * <p>/home</p>
@@ -166,6 +178,14 @@ public class UpdateRoutineBuildConfigurationShrinkRequest extends TeaModel {
     }
     public Long getGitAccountId() {
         return this.gitAccountId;
+    }
+
+    public UpdateRoutineBuildConfigurationShrinkRequest setGitPlatform(String gitPlatform) {
+        this.gitPlatform = gitPlatform;
+        return this;
+    }
+    public String getGitPlatform() {
+        return this.gitPlatform;
     }
 
     public UpdateRoutineBuildConfigurationShrinkRequest setInstallCommand(String installCommand) {

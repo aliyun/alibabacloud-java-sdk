@@ -34,7 +34,7 @@ public class CreateSiteRequest extends TeaModel {
     public String coverage;
 
     /**
-     * <p>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation. You must specify at least one of the instance ID and site ID. If both are specified, the instance ID takes precedence.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation to obtain the instance ID. You must specify at least one of the instance ID and site ID. If both are specified, the instance ID takes precedence.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,6 +51,9 @@ public class CreateSiteRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("ResourceOwner")
+    public Long resourceOwner;
 
     /**
      * <p>The site name.</p>
@@ -97,6 +100,14 @@ public class CreateSiteRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateSiteRequest setResourceOwner(Long resourceOwner) {
+        this.resourceOwner = resourceOwner;
+        return this;
+    }
+    public Long getResourceOwner() {
+        return this.resourceOwner;
     }
 
     public CreateSiteRequest setSiteName(String siteName) {

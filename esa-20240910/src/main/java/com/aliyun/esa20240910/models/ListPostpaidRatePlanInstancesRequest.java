@@ -20,7 +20,7 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     public String checkRemainingSiteQuota;
 
     /**
-     * <p>The instance ID. Specify this parameter to query a specific instance.</p>
+     * <p>The instance ID. Use this parameter to query a specific instance.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-dps-xxxxxx</p>
@@ -46,8 +46,11 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceOwner")
+    public Long resourceOwner;
+
     /**
-     * <p>The field by which to sort the results. Valid values:</p>
+     * <p>The field by which to sort results. Valid values:</p>
      * <ul>
      * <li>CreateTime: sorted by creation time</li>
      * </ul>
@@ -134,6 +137,14 @@ public class ListPostpaidRatePlanInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListPostpaidRatePlanInstancesRequest setResourceOwner(Long resourceOwner) {
+        this.resourceOwner = resourceOwner;
+        return this;
+    }
+    public Long getResourceOwner() {
+        return this.resourceOwner;
     }
 
     public ListPostpaidRatePlanInstancesRequest setSortBy(String sortBy) {

@@ -133,7 +133,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
          * <li>pending: The site is pending configuration.</li>
          * <li>active: The site is activated.</li>
          * <li>offline: The site is offline.</li>
-         * <li>moved: The site has been replaced.</li>
+         * <li>moved: The site has been superseded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing mode. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: pay-as-you-go.</li>
+         * <li>POSTPAY: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,11 +199,11 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String billingMode;
 
         /**
-         * <p>The acceleration regions to which sites can be associated with this instance. Multiple values are separated by commas (,). Valid values:</p>
+         * <p>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</p>
          * <ul>
-         * <li>domestic: the Chinese mainland.</li>
-         * <li>overseas: global (excluding the Chinese mainland).</li>
-         * <li>global: global (including the Chinese mainland).</li>
+         * <li>domestic: The Chinese mainland.</li>
+         * <li>overseas: Global (excluding the Chinese mainland).</li>
+         * <li>global: Global (including the Chinese mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String coverages;
 
         /**
-         * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the instance was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-19T11:15:20Z</p>
@@ -222,7 +222,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The scheduled specification change time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The scheduled specification change time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-19T11:15:20Z</p>
@@ -239,8 +239,11 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("OwnerId")
+        public String ownerId;
+
         /**
-         * <p>The plan name in English.</p>
+         * <p>The English name of the plan.</p>
          * 
          * <strong>example:</strong>
          * <p>basic</p>
@@ -249,7 +252,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         public String planName;
 
         /**
-         * <p>The plan name in Chinese.</p>
+         * <p>The Chinese name of the plan.</p>
          * 
          * <strong>example:</strong>
          * <p>test-plan</p>
@@ -269,6 +272,9 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
          */
         @NameInMap("PlanType")
         public String planType;
+
+        @NameInMap("ShareType")
+        public String shareType;
 
         /**
          * <p>The site quota.</p>
@@ -347,6 +353,14 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public ListPostpaidRatePlanInstancesResponseBodyInstanceInfo setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
         public ListPostpaidRatePlanInstancesResponseBodyInstanceInfo setPlanName(String planName) {
             this.planName = planName;
             return this;
@@ -369,6 +383,14 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         }
         public String getPlanType() {
             return this.planType;
+        }
+
+        public ListPostpaidRatePlanInstancesResponseBodyInstanceInfo setShareType(String shareType) {
+            this.shareType = shareType;
+            return this;
+        }
+        public String getShareType() {
+            return this.shareType;
         }
 
         public ListPostpaidRatePlanInstancesResponseBodyInstanceInfo setSiteQuota(String siteQuota) {

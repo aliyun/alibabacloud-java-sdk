@@ -7,14 +7,10 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     /**
      * <p>The real-time log type. Valid values:</p>
      * <ul>
-     * <li><p><strong>dcdn_log_access_l1</strong> (default): access log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_er</strong>: edge function log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_waf</strong>: WAF log.</p>
-     * </li>
-     * <li><p><strong>dcdn_log_ipa</strong>: Layer-4 acceleration log.</p>
-     * </li>
+     * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
+     * <li><strong>dcdn_log_er</strong>: edge function logs.</li>
+     * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
+     * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -27,10 +23,8 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     /**
      * <p>The data center. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn</strong>: Chinese mainland.</p>
-     * </li>
-     * <li><p><strong>sg</strong>: global (excluding the Chinese mainland).</p>
-     * </li>
+     * <li><strong>cn</strong>: Chinese mainland.</li>
+     * <li><strong>sg</strong>: global (excluding the Chinese mainland).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,20 +34,14 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public String dataCenter;
 
     /**
-     * <p>The log delivery destination. Valid values:</p>
+     * <p>The delivery type. Valid values:</p>
      * <ul>
-     * <li><p><strong>sls</strong>: Log Service (SLS).</p>
-     * </li>
-     * <li><p><strong>http</strong>: an HTTP service.</p>
-     * </li>
-     * <li><p><strong>aws3</strong>: Amazon S3.</p>
-     * </li>
-     * <li><p><strong>oss</strong>: Object Storage Service (OSS).</p>
-     * </li>
-     * <li><p><strong>kafka</strong>: Kafka.</p>
-     * </li>
-     * <li><p><strong>aws3cmpt</strong>: an S3-compatible service.</p>
-     * </li>
+     * <li><strong>sls</strong>: Alibaba Cloud Simple Log Service.</li>
+     * <li><strong>http</strong>: HTTP service.</li>
+     * <li><strong>aws3</strong>: Amazon S3 service.</li>
+     * <li><strong>oss</strong>: Alibaba Cloud Object Storage Service.</li>
+     * <li><strong>kafka</strong>: Kafka service.</li>
+     * <li><strong>aws3cmpt</strong>: Amazon S3-compatible service.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -67,7 +55,7 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public String details;
 
     /**
-     * <p>The log discard rate. Defaults to 0.</p>
+     * <p>The discard rate. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,7 +64,7 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public Float discardRate;
 
     /**
-     * <p>The fields to be delivered. Separate multiple fields with a comma.</p>
+     * <p>The fields to be selected, separated by commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,31 +77,31 @@ public class CreateUserDeliveryTaskShrinkRequest extends TeaModel {
     public String filterVer;
 
     /**
-     * <p>Configuration for delivering logs to an HTTP or HTTPS endpoint.</p>
+     * <p>The HTTP delivery configuration parameters.</p>
      */
     @NameInMap("HttpDelivery")
     public String httpDeliveryShrink;
 
     /**
-     * <p>Configuration for delivering logs to Kafka.</p>
+     * <p>The Kafka delivery configuration parameters.</p>
      */
     @NameInMap("KafkaDelivery")
     public String kafkaDeliveryShrink;
 
     /**
-     * <p>Configuration for delivering logs to Object Storage Service (OSS).</p>
+     * <p>The OSS delivery configuration parameters.</p>
      */
     @NameInMap("OssDelivery")
     public String ossDeliveryShrink;
 
     /**
-     * <p>Configuration for delivering logs to Amazon S3 or an S3-compatible service.</p>
+     * <p>The S3 or S3-compatible delivery configuration parameters.</p>
      */
     @NameInMap("S3Delivery")
     public String s3DeliveryShrink;
 
     /**
-     * <p>Configuration for delivering logs to Log Service (SLS).</p>
+     * <p>The SLS delivery configuration.</p>
      */
     @NameInMap("SlsDelivery")
     public String slsDeliveryShrink;

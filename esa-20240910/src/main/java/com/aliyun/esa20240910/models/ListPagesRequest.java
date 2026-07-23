@@ -72,7 +72,7 @@ public class ListPagesRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The keyword used for fuzzy matching against the name or description of custom pages.</p>
+         * <p>The fuzzy match string for the name or description of a custom page.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>

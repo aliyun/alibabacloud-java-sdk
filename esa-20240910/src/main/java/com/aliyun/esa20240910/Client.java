@@ -4009,6 +4009,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an Edge Routine (ER) build configuration.</p>
+     * 
+     * @param tmpReq CreateRoutineBuildConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRoutineBuildConfigurationResponse
+     */
+    public CreateRoutineBuildConfigurationResponse createRoutineBuildConfigurationWithOptions(CreateRoutineBuildConfigurationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateRoutineBuildConfigurationShrinkRequest request = new CreateRoutineBuildConfigurationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.environmentVariables)) {
+            request.environmentVariablesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.environmentVariables, "EnvironmentVariables", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetsDirectory)) {
+            query.put("AssetsDirectory", request.assetsDirectory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildBranches)) {
+            query.put("BuildBranches", request.buildBranches);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildCommand)) {
+            query.put("BuildCommand", request.buildCommand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentVariablesShrink)) {
+            query.put("EnvironmentVariables", request.environmentVariablesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gitAccountId)) {
+            query.put("GitAccountId", request.gitAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gitPlatform)) {
+            query.put("GitPlatform", request.gitPlatform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.installCommand)) {
+            query.put("InstallCommand", request.installCommand);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isPrivate)) {
+            query.put("IsPrivate", request.isPrivate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeVersion)) {
+            query.put("NodeVersion", request.nodeVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productionBranch)) {
+            query.put("ProductionBranch", request.productionBranch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repository)) {
+            query.put("Repository", request.repository);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rootDirectory)) {
+            query.put("RootDirectory", request.rootDirectory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineEntry)) {
+            query.put("RoutineEntry", request.routineEntry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRoutineBuildConfiguration"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoutineBuildConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an Edge Routine (ER) build configuration.</p>
+     * 
+     * @param request CreateRoutineBuildConfigurationRequest
+     * @return CreateRoutineBuildConfigurationResponse
+     */
+    public CreateRoutineBuildConfigurationResponse createRoutineBuildConfiguration(CreateRoutineBuildConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRoutineBuildConfigurationWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>Usage notes</h2>
      * <ul>
@@ -4402,7 +4508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Before creating a site, you must have an active plan instance.</li>
-     * <li>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a completed Internet Content Provider (ICP) filing.</li>
+     * <li>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</li>
      * <li>Each user can invoke this operation up to 100 times per hour.</li>
      * </ul>
      * 
@@ -4432,6 +4538,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwner)) {
+            query.put("ResourceOwner", request.resourceOwner);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.siteName)) {
             query.put("SiteName", request.siteName);
         }
@@ -4457,7 +4567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Before creating a site, you must have an active plan instance.</li>
-     * <li>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a completed Internet Content Provider (ICP) filing.</li>
+     * <li>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</li>
      * <li>Each user can invoke this operation up to 100 times per hour.</li>
      * </ul>
      * 
@@ -4558,7 +4668,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a real-time log shipping task.</p>
+     * <p>Creates a real-time log delivery task.</p>
      * 
      * @param tmpReq CreateSiteDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4660,7 +4770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a real-time log shipping task.</p>
+     * <p>Creates a real-time log delivery task.</p>
      * 
      * @param request CreateSiteDeliveryTaskRequest
      * @return CreateSiteDeliveryTaskResponse
@@ -4841,22 +4951,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to create a delivery task for specific log data. It supports multiple delivery destinations, including SLS, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can set a custom task name, select log fields, specify a data center, set the discard rate, choose a delivery type, and configure delivery details for the selected type.</p>
+     * <p>This operation allows you to create a delivery task for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to SLS storage, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can customize the task name, select log fields, specify the data center, set the discard rate, choose the delivery type, and configure the delivery details based on the selected type.</p>
      * <ul>
-     * <li><strong>Field Filtering</strong>: Use <code>FieldName</code> to specify the log fields to deliver.</li>
-     * <li><strong>Filter Rules</strong>: Use <code>FilterRules</code> to filter log data before delivery.</li>
-     * <li><strong>Supported delivery destinations</strong>: Deliver logs to various destinations, including SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka. Each method has specific configuration parameters.</li>
+     * <li><strong>Field selection</strong>: Use <code>FieldName</code> to specify the log fields to be delivered.</li>
+     * <li><strong>Filter rules</strong>: Use <code>FilterRules</code> to preprocess and filter log data.</li>
+     * <li><strong>Diverse delivery</strong>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka, each with its specific configuration parameters.</li>
      * </ul>
-     * <h2>Notes</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>Ensure that your AccessKey and SecretKey have the required permissions for the delivery operation.</li>
-     * <li>If a delivery method requires encryption or authentication, configure its security parameters accordingly.</li>
-     * <li>Verify that the <code>FilterRules</code> syntax is correct.</li>
-     * <li>Adjust advanced parameters, such as the number of retries and timeout, to optimize delivery efficiency and stability.</li>
+     * <li>Ensure that the authentication information (such as AccessKey and SecretKey) has sufficient permissions to perform the delivery operation.</li>
+     * <li>When you select an encrypted or authenticated delivery method, correctly configure the related security parameters.</li>
+     * <li>Verify the syntax correctness of <code>FilterRules</code> to ensure that the filtering logic meets expectations.</li>
+     * <li>Adjust advanced parameters such as retries and timeout based on actual requirements to optimize delivery efficiency and stability.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom log shipping task to SLS, HTTP, OSS, S3, or Kafka.</p>
+     * <p>Creates a custom log delivery task for the user to destinations such as Simple Log Service (SLS), HTTP, Object Storage Service (OSS), S3, or Kafka.</p>
      * 
      * @param tmpReq CreateUserDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4958,22 +5068,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this API to create a delivery task for specific log data. It supports multiple delivery destinations, including SLS, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can set a custom task name, select log fields, specify a data center, set the discard rate, choose a delivery type, and configure delivery details for the selected type.</p>
+     * <p>This operation allows you to create a delivery task for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to SLS storage, HTTP services, Alibaba Cloud OSS, S3-compatible storage, and Kafka message queues. You can customize the task name, select log fields, specify the data center, set the discard rate, choose the delivery type, and configure the delivery details based on the selected type.</p>
      * <ul>
-     * <li><strong>Field Filtering</strong>: Use <code>FieldName</code> to specify the log fields to deliver.</li>
-     * <li><strong>Filter Rules</strong>: Use <code>FilterRules</code> to filter log data before delivery.</li>
-     * <li><strong>Supported delivery destinations</strong>: Deliver logs to various destinations, including SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka. Each method has specific configuration parameters.</li>
+     * <li><strong>Field selection</strong>: Use <code>FieldName</code> to specify the log fields to be delivered.</li>
+     * <li><strong>Filter rules</strong>: Use <code>FilterRules</code> to preprocess and filter log data.</li>
+     * <li><strong>Diverse delivery</strong>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka, each with its specific configuration parameters.</li>
      * </ul>
-     * <h2>Notes</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>Ensure that your AccessKey and SecretKey have the required permissions for the delivery operation.</li>
-     * <li>If a delivery method requires encryption or authentication, configure its security parameters accordingly.</li>
-     * <li>Verify that the <code>FilterRules</code> syntax is correct.</li>
-     * <li>Adjust advanced parameters, such as the number of retries and timeout, to optimize delivery efficiency and stability.</li>
+     * <li>Ensure that the authentication information (such as AccessKey and SecretKey) has sufficient permissions to perform the delivery operation.</li>
+     * <li>When you select an encrypted or authenticated delivery method, correctly configure the related security parameters.</li>
+     * <li>Verify the syntax correctness of <code>FilterRules</code> to ensure that the filtering logic meets expectations.</li>
+     * <li>Adjust advanced parameters such as retries and timeout based on actual requirements to optimize delivery efficiency and stability.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a custom log shipping task to SLS, HTTP, OSS, S3, or Kafka.</p>
+     * <p>Creates a custom log delivery task for the user to destinations such as Simple Log Service (SLS), HTTP, Object Storage Service (OSS), S3, or Kafka.</p>
      * 
      * @param request CreateUserDeliveryTaskRequest
      * @return CreateUserDeliveryTaskResponse
@@ -7381,6 +7491,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes the ER build configuration.</p>
+     * 
+     * @param request DeleteRoutineBuildConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRoutineBuildConfigurationResponse
+     */
+    public DeleteRoutineBuildConfigurationResponse deleteRoutineBuildConfigurationWithOptions(DeleteRoutineBuildConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRoutineBuildConfiguration"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRoutineBuildConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes the ER build configuration.</p>
+     * 
+     * @param request DeleteRoutineBuildConfigurationRequest
+     * @return DeleteRoutineBuildConfigurationResponse
+     */
+    public DeleteRoutineBuildConfigurationResponse deleteRoutineBuildConfiguration(DeleteRoutineBuildConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRoutineBuildConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a code version of a routine.</p>
      * 
      * @param request DeleteRoutineCodeVersionRequest
@@ -7671,7 +7825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a real-time log delivery task.</p>
+     * <p>Deletes an ongoing log delivery task.</p>
      * 
      * @param request DeleteSiteDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7707,7 +7861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a real-time log delivery task.</p>
+     * <p>Deletes an ongoing log delivery task.</p>
      * 
      * @param request DeleteSiteDeliveryTaskRequest
      * @return DeleteSiteDeliveryTaskResponse
@@ -7855,15 +8009,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*****&gt; </p>
+     * <p>This operation allows you to delete an existing task delivery configuration based on the specified <strong>task name</strong> and <strong>Alibaba Cloud UID</strong>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+     * <strong>Note:</strong></p>
      * <ul>
-     * <li>Deleted tasks cannot be restored. Proceed with caution.</li>
-     * <li>To call this operation, you must have an account that has the required permissions.</li>
-     * <li>The returned <code>RequestId</code> value can be used to track the request processing progress and troubleshoot issues.</li>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
+     * <li>Only accounts with the required permissions can call this operation.</li>
+     * <li>You can use the returned <code>RequestId</code> to track the request progress and troubleshoot issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a log delivery task from your Alibaba Cloud account.</p>
+     * <p>Deletes a user task delivery configuration based on the specified task name and Alibaba Cloud UID.</p>
      * 
      * @param request DeleteUserDeliveryTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7895,15 +8050,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>*****&gt; </p>
+     * <p>This operation allows you to delete an existing task delivery configuration based on the specified <strong>task name</strong> and <strong>Alibaba Cloud UID</strong>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+     * <strong>Note:</strong></p>
      * <ul>
-     * <li>Deleted tasks cannot be restored. Proceed with caution.</li>
-     * <li>To call this operation, you must have an account that has the required permissions.</li>
-     * <li>The returned <code>RequestId</code> value can be used to track the request processing progress and troubleshoot issues.</li>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
+     * <li>Only accounts with the required permissions can call this operation.</li>
+     * <li>You can use the returned <code>RequestId</code> to track the request progress and troubleshoot issues.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a log delivery task from your Alibaba Cloud account.</p>
+     * <p>Deletes a user task delivery configuration based on the specified task name and Alibaba Cloud UID.</p>
      * 
      * @param request DeleteUserDeliveryTaskRequest
      * @return DeleteUserDeliveryTaskResponse
@@ -9302,10 +9458,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the status of an instance after you purchase a plan for the instance.</p>
+     * <p>You can query the status of a plan instance only after you purchase and create the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of an instance that uses a plan.</p>
+     * <p>Queries the status of a plan instance.</p>
      * 
      * @param request DescribeRatePlanInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9316,6 +9472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwner)) {
+            query.put("ResourceOwner", request.resourceOwner);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -9337,10 +9497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can query the status of an instance after you purchase a plan for the instance.</p>
+     * <p>You can query the status of a plan instance only after you purchase and create the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of an instance that uses a plan.</p>
+     * <p>Queries the status of a plan instance.</p>
      * 
      * @param request DescribeRatePlanInstanceStatusRequest
      * @return DescribeRatePlanInstanceStatusResponse
@@ -10192,7 +10352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit WAF Configuration for a Site</p>
+     * <p>Modifies the Web Application Firewall (WAF) configuration of a site. You can call this operation to update WAF settings for a site, such as modifying the client IP address identified by WAF.</p>
      * 
      * @param tmpReq EditSiteWafSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10240,7 +10400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit WAF Configuration for a Site</p>
+     * <p>Modifies the Web Application Firewall (WAF) configuration of a site. You can call this operation to update WAF settings for a site, such as modifying the client IP address identified by WAF.</p>
      * 
      * @param request EditSiteWafSettingsRequest
      * @return EditSiteWafSettingsResponse
@@ -13276,6 +13436,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Queries a single ER build task.</p>
+     * 
+     * @param request GetRoutineBuildRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRoutineBuildResponse
+     */
+    public GetRoutineBuildResponse getRoutineBuildWithOptions(GetRoutineBuildRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.routineBuildId)) {
+            query.put("RoutineBuildId", request.routineBuildId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRoutineBuild"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoutineBuildResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a single ER build task.</p>
+     * 
+     * @param request GetRoutineBuildRequest
+     * @return GetRoutineBuildResponse
+     */
+    public GetRoutineBuildResponse getRoutineBuild(GetRoutineBuildRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRoutineBuildWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the build configuration.</p>
+     * 
+     * @param request GetRoutineBuildConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRoutineBuildConfigurationResponse
+     */
+    public GetRoutineBuildConfigurationResponse getRoutineBuildConfigurationWithOptions(GetRoutineBuildConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRoutineBuildConfiguration"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoutineBuildConfigurationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the build configuration.</p>
+     * 
+     * @param request GetRoutineBuildConfigurationRequest
+     * @return GetRoutineBuildConfigurationResponse
+     */
+    public GetRoutineBuildConfigurationResponse getRoutineBuildConfiguration(GetRoutineBuildConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRoutineBuildConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the code information of a specific version of an Edge Routine.</p>
      * 
      * @param request GetRoutineCodeVersionRequest
@@ -13428,13 +13676,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</p>
      * <ul>
-     * <li>A routine can retain a maximum of 10 code versions. If the number of versions reaches the limit, you must call the DeleteRoutineCodeRevision operation to delete unwanted versions.</li>
+     * <li>Each upload of test code for an Edge Routine generates a version number, which occupies one CodeRev code version slot. This is used for testing purposes only.</li>
+     * <li>An Edge Routine can retain a maximum of 10 version numbers. After the limit is exceeded, manually call DeleteRoutineCodeRevision to delete unused versions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the release information about the routine code that is released to the staging environment. This information can be used to upload the test code to Object Storage Service (OSS).</p>
+     * <p>Retrieves the upload information for uploading test version code of an Edge Routine to OSS.</p>
      * 
      * @param request GetRoutineStagingCodeUploadInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13470,13 +13718,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</p>
      * <ul>
-     * <li>A routine can retain a maximum of 10 code versions. If the number of versions reaches the limit, you must call the DeleteRoutineCodeRevision operation to delete unwanted versions.</li>
+     * <li>Each upload of test code for an Edge Routine generates a version number, which occupies one CodeRev code version slot. This is used for testing purposes only.</li>
+     * <li>An Edge Routine can retain a maximum of 10 version numbers. After the limit is exceeded, manually call DeleteRoutineCodeRevision to delete unused versions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the release information about the routine code that is released to the staging environment. This information can be used to upload the test code to Object Storage Service (OSS).</p>
+     * <p>Retrieves the upload information for uploading test version code of an Edge Routine to OSS.</p>
      * 
      * @param request GetRoutineStagingCodeUploadInfoRequest
      * @return GetRoutineStagingCodeUploadInfoResponse
@@ -13808,18 +14056,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
-     * <strong>Take note of the following parameters:</strong></p>
+     * <p>You can call this operation to query the remaining quota of the real-time log delivery service for a specific site and business type under a specified Alibaba Cloud account. This is important for monitoring and managing your log delivery capacity to ensure that logs can be smoothly pushed to the destination storage and to prevent data loss or delays caused by insufficient quota.
+     * <strong>Parameter notes:</strong></p>
      * <ul>
-     * <li>\<code>\\</code></li>
-     * <li><code>BusinessType</code> is required. You must specify a log category to obtain the corresponding quota information.</li>
-     * <li><code>SiteId</code> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
+     * <li><code>BusinessType</code> is required. Specify the business type to obtain the corresponding quota information.</li>
+     * <li><code>SiteId</code> must be a valid site ID in integer format and must correspond to the site configured in Alibaba Cloud.
      * <strong>Response:</strong></li>
-     * <li>If a request is successful, the system returns the remaining log delivery quota (<code>FreeQuota</code>), request ID (<code>RequestId</code>), website ID (<code>SiteId</code>), and log category (<code>BusinessType</code>). You can confirm and record the returned data.</li>
+     * <li>A successful response returns the delivery quota (<code>FreeQuota</code>), request ID (<code>RequestId</code>), site ID (<code>SiteId</code>), and business type (<code>BusinessType</code>) for confirmation and logging purposes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the remaining quota for delivering a specific category of real-time logs in a website.</p>
+     * <p>Queries the remaining real-time log delivery quota for a specified site and business type.</p>
      * 
      * @param request GetSiteLogDeliveryQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13847,18 +14094,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
-     * <strong>Take note of the following parameters:</strong></p>
+     * <p>You can call this operation to query the remaining quota of the real-time log delivery service for a specific site and business type under a specified Alibaba Cloud account. This is important for monitoring and managing your log delivery capacity to ensure that logs can be smoothly pushed to the destination storage and to prevent data loss or delays caused by insufficient quota.
+     * <strong>Parameter notes:</strong></p>
      * <ul>
-     * <li>\<code>\\</code></li>
-     * <li><code>BusinessType</code> is required. You must specify a log category to obtain the corresponding quota information.</li>
-     * <li><code>SiteId</code> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
+     * <li><code>BusinessType</code> is required. Specify the business type to obtain the corresponding quota information.</li>
+     * <li><code>SiteId</code> must be a valid site ID in integer format and must correspond to the site configured in Alibaba Cloud.
      * <strong>Response:</strong></li>
-     * <li>If a request is successful, the system returns the remaining log delivery quota (<code>FreeQuota</code>), request ID (<code>RequestId</code>), website ID (<code>SiteId</code>), and log category (<code>BusinessType</code>). You can confirm and record the returned data.</li>
+     * <li>A successful response returns the delivery quota (<code>FreeQuota</code>), request ID (<code>RequestId</code>), site ID (<code>SiteId</code>), and business type (<code>BusinessType</code>) for confirmation and logging purposes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the remaining quota for delivering a specific category of real-time logs in a website.</p>
+     * <p>Queries the remaining real-time log delivery quota for a specified site and business type.</p>
      * 
      * @param request GetSiteLogDeliveryQuotaRequest
      * @return GetSiteLogDeliveryQuotaResponse
@@ -14036,7 +14282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get WAF Configuration for a Site</p>
+     * <p>Retrieves the WAF configuration of a site.</p>
      * 
      * @param request GetSiteWafSettingsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14076,7 +14322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get WAF Configuration for a Site</p>
+     * <p>Retrieves the WAF configuration of a site.</p>
      * 
      * @param request GetSiteWafSettingsRequest
      * @return GetSiteWafSettingsResponse
@@ -16842,7 +17088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list by specifying the page number and page size.</p>
+     * <p>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list based on page number and page size.</p>
      * 
      * @param tmpReq ListPagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16888,7 +17134,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list by specifying the page number and page size.</p>
+     * <p>Lists all custom response pages created by the user. This operation supports pagination and allows you to retrieve the response page list based on page number and page size.</p>
      * 
      * @param request ListPagesRequest
      * @return ListPagesResponse
@@ -16900,7 +17146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of pay-as-you-go plan instances under your account. You can filter and sort the results by multiple conditions.</p>
+     * <p>This operation queries the list of pay-as-you-go plan instances under your account. You can filter and sort results by multiple conditions.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of pay-as-you-go plan instances.</p>
@@ -16931,7 +17177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of pay-as-you-go plan instances under your account. You can filter and sort the results by multiple conditions.</p>
+     * <p>This operation queries the list of pay-as-you-go plan instances under your account. You can filter and sort results by multiple conditions.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of pay-as-you-go plan instances.</p>
@@ -17151,6 +17397,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListRewriteUrlRulesResponse listRewriteUrlRules(ListRewriteUrlRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRewriteUrlRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the build configurations for multiple routines by name.</p>
+     * 
+     * @param request ListRoutineBuildConfigurationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRoutineBuildConfigurationsResponse
+     */
+    public ListRoutineBuildConfigurationsResponse listRoutineBuildConfigurationsWithOptions(ListRoutineBuildConfigurationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.routineNames)) {
+            query.put("RoutineNames", request.routineNames);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRoutineBuildConfigurations"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoutineBuildConfigurationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the build configurations for multiple routines by name.</p>
+     * 
+     * @param request ListRoutineBuildConfigurationsRequest
+     * @return ListRoutineBuildConfigurationsResponse
+     */
+    public ListRoutineBuildConfigurationsResponse listRoutineBuildConfigurations(ListRoutineBuildConfigurationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRoutineBuildConfigurationsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of ER build tasks.</p>
+     * 
+     * @param request ListRoutineBuildsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRoutineBuildsResponse
+     */
+    public ListRoutineBuildsResponse listRoutineBuildsWithOptions(ListRoutineBuildsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            query.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRoutineBuilds"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoutineBuildsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the list of ER build tasks.</p>
+     * 
+     * @param request ListRoutineBuildsRequest
+     * @return ListRoutineBuildsResponse
+     */
+    public ListRoutineBuildsResponse listRoutineBuilds(ListRoutineBuildsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRoutineBuildsWithOptions(request, runtime);
     }
 
     /**
@@ -19331,14 +19685,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>新购DDoS实例</p>
+     * 
+     * @param request PurchaseDDoSInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PurchaseDDoSInstanceResponse
+     */
+    public PurchaseDDoSInstanceResponse purchaseDDoSInstanceWithOptions(PurchaseDDoSInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DDoSBillingMode)) {
+            query.put("DDoSBillingMode", request.DDoSBillingMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DDoSBurstableDomesticProtection)) {
+            query.put("DDoSBurstableDomesticProtection", request.DDoSBurstableDomesticProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DDoSBurstableOverseasProtection)) {
+            query.put("DDoSBurstableOverseasProtection", request.DDoSBurstableOverseasProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteInstanceId)) {
+            query.put("SiteInstanceId", request.siteInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PurchaseDDoSInstance"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PurchaseDDoSInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新购DDoS实例</p>
+     * 
+     * @param request PurchaseDDoSInstanceRequest
+     * @return PurchaseDDoSInstanceResponse
+     */
+    public PurchaseDDoSInstanceResponse purchaseDDoSInstance(PurchaseDDoSInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.purchaseDDoSInstanceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <ol>
-     * <li>Obtain the plan name and plan code by calling the DescribeRatePlanPrice operation.</li>
-     * <li>If the acceleration region is not set to overseas, the site must have a valid China Internet Content Provider (ICP) filing.</li>
+     * <li>You can obtain the plan name and plan code by calling the DescribeRatePlanPrice operation.</li>
+     * <li>If the acceleration region is not set to overseas, the site must have a valid Internet Content Provider (ICP) filing.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a plan by calling PurchaseRatePlan.</p>
+     * <p>Calls the PurchaseRatePlan operation to purchase a plan.</p>
      * 
      * @param request PurchaseRatePlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19369,6 +19779,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.coverage)) {
             query.put("Coverage", request.coverage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overagePolicy)) {
+            query.put("OveragePolicy", request.overagePolicy);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -19411,12 +19825,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Obtain the plan name and plan code by calling the DescribeRatePlanPrice operation.</li>
-     * <li>If the acceleration region is not set to overseas, the site must have a valid China Internet Content Provider (ICP) filing.</li>
+     * <li>You can obtain the plan name and plan code by calling the DescribeRatePlanPrice operation.</li>
+     * <li>If the acceleration region is not set to overseas, the site must have a valid Internet Content Provider (ICP) filing.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Purchases a plan by calling PurchaseRatePlan.</p>
+     * <p>Calls the PurchaseRatePlan operation to purchase a plan.</p>
      * 
      * @param request PurchaseRatePlanRequest
      * @return PurchaseRatePlanResponse
@@ -19774,6 +20188,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         PutKvWithHighCapacityResponse putKvWithHighCapacityResp = this.putKvWithHighCapacityWithOptions(putKvWithHighCapacityReq, runtime);
         return putKvWithHighCapacityResp;
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retries a task replication.</p>
+     * 
+     * @param request ReDoRoutineBuildRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReDoRoutineBuildResponse
+     */
+    public ReDoRoutineBuildResponse reDoRoutineBuildWithOptions(ReDoRoutineBuildRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.routineBuildId)) {
+            query.put("RoutineBuildId", request.routineBuildId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReDoRoutineBuild"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReDoRoutineBuildResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retries a task replication.</p>
+     * 
+     * @param request ReDoRoutineBuildRequest
+     * @return ReDoRoutineBuildResponse
+     */
+    public ReDoRoutineBuildResponse reDoRoutineBuild(ReDoRoutineBuildRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.reDoRoutineBuildWithOptions(request, runtime);
     }
 
     /**
@@ -20796,6 +21254,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartScheduledPreloadExecutionResponse startScheduledPreloadExecution(StartScheduledPreloadExecutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startScheduledPreloadExecutionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a task.</p>
+     * 
+     * @param request StopRoutineBuildRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopRoutineBuildResponse
+     */
+    public StopRoutineBuildResponse stopRoutineBuildWithOptions(StopRoutineBuildRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.routineBuildId)) {
+            query.put("RoutineBuildId", request.routineBuildId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopRoutineBuild"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopRoutineBuildResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Stops a task.</p>
+     * 
+     * @param request StopRoutineBuildRequest
+     * @return StopRoutineBuildResponse
+     */
+    public StopRoutineBuildResponse stopRoutineBuild(StopRoutineBuildRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopRoutineBuildWithOptions(request, runtime);
     }
 
     /**
@@ -23834,7 +24336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the build configuration of an EdgeRoutine (ER).</p>
+     * <p>Modifies the ER build configuration.</p>
      * 
      * @param tmpReq UpdateRoutineBuildConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23867,6 +24369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.gitAccountId)) {
             query.put("GitAccountId", request.gitAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gitPlatform)) {
+            query.put("GitPlatform", request.gitPlatform);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.installCommand)) {
@@ -23920,7 +24426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the build configuration of an EdgeRoutine (ER).</p>
+     * <p>Modifies the ER build configuration.</p>
      * 
      * @param request UpdateRoutineBuildConfigurationRequest
      * @return UpdateRoutineBuildConfigurationResponse
@@ -24450,6 +24956,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSiteDeliveryTaskStatusResponse updateSiteDeliveryTaskStatus(UpdateSiteDeliveryTaskStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSiteDeliveryTaskStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the plan instance associated with a site.</p>
+     * 
+     * @param request UpdateSiteInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSiteInstanceResponse
+     */
+    public UpdateSiteInstanceResponse updateSiteInstanceWithOptions(UpdateSiteInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.newInstanceId)) {
+            query.put("NewInstanceId", request.newInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwner)) {
+            query.put("ResourceOwner", request.resourceOwner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSiteInstance"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSiteInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the plan instance associated with a site.</p>
+     * 
+     * @param request UpdateSiteInstanceRequest
+     * @return UpdateSiteInstanceResponse
+     */
+    public UpdateSiteInstanceResponse updateSiteInstance(UpdateSiteInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSiteInstanceWithOptions(request, runtime);
     }
 
     /**
