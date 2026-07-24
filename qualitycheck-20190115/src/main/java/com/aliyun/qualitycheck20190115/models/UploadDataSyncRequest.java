@@ -11,7 +11,7 @@ public class UploadDataSyncRequest extends TeaModel {
     public Long baseMeAgentId;
 
     /**
-     * <p>A JSON string that contains the custom parameters for the operation. See the <strong>jsonStr attributes</strong> section for details.</p>
+     * <p>A JSON string that contains all custom parameters for this operation. For more information, see the <strong>jsonStr property description</strong> below.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

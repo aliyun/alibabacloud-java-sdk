@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadDataSyncResponseBody extends TeaModel {
     /**
-     * <p>The result <code>code</code>. A value of <strong>200</strong> indicates that the request was successful. Other values indicate failure. Use this field to identify the cause of the failure.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
     public UploadDataSyncResponseBodyData data;
 
     /**
-     * <p>The response message. If the request succeeds, the value is <strong>successful</strong>. Otherwise, this parameter provides error details.</p>
+     * <p>The error details when an error occurs. The value is <strong>successful</strong> when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -26,7 +26,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The <code>request ID</code>.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4987D326-83D9-4A42-B9A5-0B27F9B***</p>
@@ -35,7 +35,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specifies whether the request succeeded. <code>true</code> indicates success; <code>false</code> or <code>null</code> indicates failure.</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false/null.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -412,6 +412,9 @@ public class UploadDataSyncResponseBody extends TeaModel {
         @NameInMap("LlmResponse")
         public String llmResponse;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Rid")
         public String rid;
 
@@ -445,6 +448,14 @@ public class UploadDataSyncResponseBody extends TeaModel {
         }
         public String getLlmResponse() {
             return this.llmResponse;
+        }
+
+        public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public UploadDataSyncResponseBodyDataResultInfoRulesRuleHitInfo setRid(String rid) {

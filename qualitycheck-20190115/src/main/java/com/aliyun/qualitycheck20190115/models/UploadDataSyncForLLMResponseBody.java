@@ -4,18 +4,42 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class UploadDataSyncForLLMResponseBody extends TeaModel {
+    /**
+     * <p>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UploadDataSyncForLLMResponseBodyData data;
 
+    /**
+     * <p>The error message if the request fails. The value is <strong>successful</strong> if the request succeeds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3CEA0495-341B-4482-9AD9-8191EF4***</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false/null: The request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -366,6 +390,9 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         @NameInMap("Hit")
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHit hit;
 
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Rid")
         public String rid;
 
@@ -391,6 +418,14 @@ public class UploadDataSyncForLLMResponseBody extends TeaModel {
         }
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHit getHit() {
             return this.hit;
+        }
+
+        public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfo setRid(String rid) {

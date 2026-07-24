@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadAudioDataResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of a failure.</p>
+     * <p>The response code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The task ID. Use this ID to get the task result.</p>
+     * <p>The task ID, which is used when retrieving task results.</p>
      * 
      * <strong>example:</strong>
      * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5***</p>
@@ -23,7 +23,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error details if the request fails. If the request is successful, the value is \<code>successful\\</code>.</p>
+     * <p>The error message when the request fails. The value is &quot;successful&quot; when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class UploadAudioDataResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. This is the unique identifier of the request.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>76DB5D8C-5BD9-42A7-B527-5AF3A5F8***</p>
@@ -41,7 +41,11 @@ public class UploadAudioDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. You can use this field to determine if the request succeeded. A value of \<code>true\\</code> indicates success. A value of \<code>false\\</code> or \<code>null\\</code> indicates failure.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false/null: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

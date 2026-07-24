@@ -5816,37 +5816,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Process description</h3>
-     * <p>The process is as follows: An API call uploads the audio file for quality inspection → The audio file is converted to text → The transcribed text is separated by speaker role (agent and customer), based on the specified channel separation method → The role-separated text is analyzed using quality inspection rules → Quality inspection completes.</p>
+     * <p>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</p>
      * <h3>Task execution efficiency</h3>
-     * <p>Task execution speed depends on how quickly the audio file is transcribed. A 5-minute audio file is typically transcribed in about 2 minutes. However, if the transcription service queue is long, a waiting period occurs. Transcription usually completes within 6 hours, except when large volumes of data are uploaded simultaneously—more than 500 hours of audio within 30 minutes. After transcription, quality inspection analysis completes in milliseconds.</p>
-     * <h3>Audio file URL requirements</h3>
+     * <p>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</p>
+     * <h3>Recording file URL requirements</h3>
      * <ul>
-     * <li>Supports single-channel or dual-channel audio files in WAV or MP3 format. File size must be less than 512 MB.</li>
-     * <li>The URL must be accessible over HTTP. Local files are not supported. The audio file must have public access permissions.</li>
-     * <li>The URL must use a domain name, not an IP address. The URL cannot contain spaces or Chinese characters.</li>
-     * <li>After transcription, the system deletes the downloaded audio file. No copy of the recording is retained.</li>
-     * <li>If your audio URL has an expiration period—such as a presigned URL for an audio file stored in Alibaba Cloud Object Storage Service (OSS)—set the validity period to at least 12 hours. Ideally, set it to 24 hours. Because transcription may involve queuing, the audio file is downloaded only when transcription begins. A longer validity period prevents the URL from expiring before download starts.</li>
-     * <li>After quality inspection completes, the provided URL is used for playback when you review the file in the console. Ensure the URL remains valid long-term. Otherwise, audio playback fails.</li>
+     * <li>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</li>
+     * <li>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</li>
+     * <li>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</li>
+     * <li>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</li>
+     * <li>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</li>
+     * <li>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</li>
      * </ul>
-     * <h3>Role separation</h3>
-     * <p>After transcription, the system automatically separates the text into two speaker roles but cannot determine which role corresponds to the agent and which to the customer. You must define rules for role separation. Role separation accuracy is critical because many quality inspection rules apply to a specific role—for example, checking only agent or only customer utterances. Incorrect role separation significantly reduces quality inspection accuracy.
-     * Audio files are typically either single-channel (mono) or dual-channel (stereo):</p>
+     * <h3>Role separation description</h3>
+     * <p>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
+     * Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</p>
      * <ul>
-     * <li>Single-channel recording: The voices of the agent and customer are mixed on one channel. After transcription, the system uses a built-in algorithm to separate dialogue into two roles. You can provide a list of keywords commonly spoken by agents. The system analyzes the transcribed text sentence by sentence. When a sentence contains a keyword, that speaker is identified as the agent, and the other speaker is identified as the customer. For more information, see the recognizeRoleDataSetId and serviceChannelKeywords request parameters. Because conversations can be unpredictable—for example, speakers may talk over each other—role separation for single-channel recordings cannot achieve 100% accuracy. We strongly recommend saving recordings as dual-channel audio.</li>
-     * <li>Dual-channel recording: The voices of the agent and customer are stored on separate channels. Even if speakers talk over each other, transcription accurately distinguishes between them. Specify the agent and customer channels using the serviceChannel and clientChannel request parameters.</li>
+     * <li>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</li>
+     * <li>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</li>
      * </ul>
-     * <h3>Retrieve quality inspection results</h3>
-     * <p>Because audio analysis is asynchronous, you must retrieve results asynchronously. You can retrieve results in one of the following three ways:</p>
+     * <h3>Retrieve quality inspection analysis results</h3>
+     * <p>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</p>
      * <ul>
-     * <li>Message notification: For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. After you receive a message, call the GetResult operation to retrieve detailed results. (Recommended)</li>
-     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task completes. After you receive the callback, call the GetResult operation to retrieve detailed results.</li>
-     * <li>Polling: The operation returns a task ID (taskId). Use the taskId to poll the getResult operation and retrieve the result asynchronously. Check the <code>status</code> parameter in the response to determine whether the task is complete. We recommend a polling interval of 30 seconds or longer because analysis typically completes within a few minutes. (Not recommended)</li>
+     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</li>
+     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</li>
+     * <li>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <code>getResult</code> operation to asynchronously retrieve results. Check whether the <code>status</code> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads offline audio data—such as recorded call session files—for quality inspection. This operation supports two call center agent scenarios.
-     * Scenario 1: Native integration with Alibaba Cloud Call Center (CC). No development is required. You can push call data to Smart Conversation Analysis (SCA) with a single click.
-     * Scenario 2: Integration with your own call center system. Each time a recording is generated, the call center pushes it to SCA for analysis.</p>
+     * <p>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</p>
      * 
      * @param request UploadAudioDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5883,37 +5881,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Process description</h3>
-     * <p>The process is as follows: An API call uploads the audio file for quality inspection → The audio file is converted to text → The transcribed text is separated by speaker role (agent and customer), based on the specified channel separation method → The role-separated text is analyzed using quality inspection rules → Quality inspection completes.</p>
+     * <p>Call the API to upload audio quality inspection =&gt; Convert the recording file to text =&gt; Separate roles in the text based on the specified channel splitting method (distinguish between agent and customer) =&gt; Analyze using quality inspection rules =&gt; Quality inspection complete.</p>
      * <h3>Task execution efficiency</h3>
-     * <p>Task execution speed depends on how quickly the audio file is transcribed. A 5-minute audio file is typically transcribed in about 2 minutes. However, if the transcription service queue is long, a waiting period occurs. Transcription usually completes within 6 hours, except when large volumes of data are uploaded simultaneously—more than 500 hours of audio within 30 minutes. After transcription, quality inspection analysis completes in milliseconds.</p>
-     * <h3>Audio file URL requirements</h3>
+     * <p>The speed of task execution depends on the speed of converting the recording file to text. Ideally, a 5-minute recording file can be transcribed within 2 minutes. However, when the transcription service has many queued tasks, there will be a queuing wait time. Generally, transcription completes within 6 hours, except for bulk uploads of large-scale data (more than 500 hours of recordings uploaded within 30 minutes). After transcription is complete, quality inspection analysis takes only milliseconds.</p>
+     * <h3>Recording file URL requirements</h3>
      * <ul>
-     * <li>Supports single-channel or dual-channel audio files in WAV or MP3 format. File size must be less than 512 MB.</li>
-     * <li>The URL must be accessible over HTTP. Local files are not supported. The audio file must have public access permissions.</li>
-     * <li>The URL must use a domain name, not an IP address. The URL cannot contain spaces or Chinese characters.</li>
-     * <li>After transcription, the system deletes the downloaded audio file. No copy of the recording is retained.</li>
-     * <li>If your audio URL has an expiration period—such as a presigned URL for an audio file stored in Alibaba Cloud Object Storage Service (OSS)—set the validity period to at least 12 hours. Ideally, set it to 24 hours. Because transcription may involve queuing, the audio file is downloaded only when transcription begins. A longer validity period prevents the URL from expiring before download starts.</li>
-     * <li>After quality inspection completes, the provided URL is used for playback when you review the file in the console. Ensure the URL remains valid long-term. Otherwise, audio playback fails.</li>
+     * <li>Supports single-channel/dual-channel WAV and MP3 format recording files. The file size must be less than 512 MB.</li>
+     * <li>The URL must be an HTTP-accessible URL address. Local file submission is not supported. The recording file access permissions must be set to public.</li>
+     * <li>The URL can only use domain names, not IP addresses. The URL cannot contain spaces. Avoid using Chinese characters.</li>
+     * <li>After converting the recording to text, the system deletes the downloaded recording file and does not retain a copy.</li>
+     * <li>If your recording URL has an access expiration period (for example, the recording is stored in Alibaba Cloud OSS and you specified an expiration period when generating the recording URL through OSS), set the expiration period to at least 12 hours, or 24 hours if possible. This is because file transcription takes time and occasional queuing may occur. If the queuing time is long, the recording is downloaded only when transcription begins. This prevents the recording URL from expiring before the download.</li>
+     * <li>After quality inspection analysis is complete, the recording is still played using the URL you provided when reviewing files in the console. Ensure that the URL remains active long-term. Otherwise, the recording cannot be played.</li>
      * </ul>
-     * <h3>Role separation</h3>
-     * <p>After transcription, the system automatically separates the text into two speaker roles but cannot determine which role corresponds to the agent and which to the customer. You must define rules for role separation. Role separation accuracy is critical because many quality inspection rules apply to a specific role—for example, checking only agent or only customer utterances. Incorrect role separation significantly reduces quality inspection accuracy.
-     * Audio files are typically either single-channel (mono) or dual-channel (stereo):</p>
+     * <h3>Role separation description</h3>
+     * <p>After the recording is converted to text, the system automatically separates the text into two conversation roles. However, the system cannot determine which role is the agent and which is the customer. You need to perform role separation based on certain rules. The accuracy of role separation is critical because the rules used for quality inspection analysis often have role detection restrictions (a rule only checks the agent or the customer). If role separation is incorrect, the accuracy of quality inspection results is significantly affected.
+     * Recording files are typically divided into two types: single-channel (mono) and dual-channel (stereo):</p>
      * <ul>
-     * <li>Single-channel recording: The voices of the agent and customer are mixed on one channel. After transcription, the system uses a built-in algorithm to separate dialogue into two roles. You can provide a list of keywords commonly spoken by agents. The system analyzes the transcribed text sentence by sentence. When a sentence contains a keyword, that speaker is identified as the agent, and the other speaker is identified as the customer. For more information, see the recognizeRoleDataSetId and serviceChannelKeywords request parameters. Because conversations can be unpredictable—for example, speakers may talk over each other—role separation for single-channel recordings cannot achieve 100% accuracy. We strongly recommend saving recordings as dual-channel audio.</li>
-     * <li>Dual-channel recording: The voices of the agent and customer are stored on separate channels. Even if speakers talk over each other, transcription accurately distinguishes between them. Specify the agent and customer channels using the serviceChannel and clientChannel request parameters.</li>
+     * <li>Single-channel recording: The voices of both the agent and customer are stored on one channel. After the recording file is converted to text, the system uses a built-in algorithm to distinguish between two roles. By setting a list of keywords that the agent is likely to say, the system analyzes the transcribed text sentence by sentence from top to bottom. When a sentence matches a keyword, the role of that sentence is determined to be the agent, and the other role is the customer. For details, see recognizeRoleDataSetId and serviceChannelKeywords in the request parameters. Due to the unpredictability of conversation content (for example, cross-talk between two roles or both people speaking simultaneously), role separation for single-channel recordings cannot be guaranteed to be 100% accurate. Save recording files as dual-channel recordings whenever possible.</li>
+     * <li>Dual-channel recording: The voices of the agent and customer are stored on two separate channels. Even if the conversation overlaps, the recording-to-text conversion can accurately distinguish between the two. Specify the agent and customer by using the serviceChannel and clientChannel request parameters.</li>
      * </ul>
-     * <h3>Retrieve quality inspection results</h3>
-     * <p>Because audio analysis is asynchronous, you must retrieve results asynchronously. You can retrieve results in one of the following three ways:</p>
+     * <h3>Retrieve quality inspection analysis results</h3>
+     * <p>Because recording file recognition is not real-time, you need to asynchronously retrieve quality inspection analysis results. The following three methods are available:</p>
      * <ul>
-     * <li>Message notification: For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. After you receive a message, call the GetResult operation to retrieve detailed results. (Recommended)</li>
-     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task completes. After you receive the callback, call the GetResult operation to retrieve detailed results.</li>
-     * <li>Polling: The operation returns a task ID (taskId). Use the taskId to poll the getResult operation and retrieve the result asynchronously. Check the <code>status</code> parameter in the response to determine whether the task is complete. We recommend a polling interval of 30 seconds or longer because analysis typically completes within a few minutes. (Not recommended)</li>
+     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">MSMQ</a>. After receiving a message, invoke the GetResult operation to retrieve detailed results. (Recommended)</li>
+     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is complete. After receiving the callback, invoke the GetResult operation to retrieve detailed results.</li>
+     * <li>Polling: The operation returns a task ID (taskId). Use the taskId to poll the <code>getResult</code> operation to asynchronously retrieve results. Check whether the <code>status</code> in the response parameters indicates completion. Do not set the polling interval too short. Analysis normally completes within a few minutes. Set the polling interval to 30 seconds or more. (Not recommended)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads offline audio data—such as recorded call session files—for quality inspection. This operation supports two call center agent scenarios.
-     * Scenario 1: Native integration with Alibaba Cloud Call Center (CC). No development is required. You can push call data to Smart Conversation Analysis (SCA) with a single click.
-     * Scenario 2: Integration with your own call center system. Each time a recording is generated, the call center pushes it to SCA for analysis.</p>
+     * <p>Uploads offline voice quality inspection data (recording session files). This operation is applicable to hotline agent scenarios. Scenario 1: Natively integrates with Alibaba Cloud Call Center (CCC), requiring no development. You can enable one-click push of call data to SCA. Scenario 2: Integrates with your own call center system. Each time the call center generates a recording, it pushes the recording to SCA for analysis.</p>
      * 
      * @param request UploadAudioDataRequest
      * @return UploadAudioDataResponse
@@ -5997,14 +5993,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API pushes text data to SCA for real-time quality inspection based on specified rules and synchronously returns the analysis results. Unlike post-call quality inspection, which requires uploading the full transcript after a dialogue ends, real-time quality inspection offers lower latency by analyzing text immediately after a speaker completes one or more utterances.</p>
+     * <p>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</p>
      * <ul>
-     * <li>If you push a single utterance from one speaker, some rule operators may fail because the required dialogue context is missing. Examples include the context repetition check, speech interruption check, and call mute check.</li>
-     * <li>SCA returns analysis results synchronously and does not save call records, so you cannot query the results later via an API.</li>
+     * <li>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</li>
+     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Real-time text quality check</p>
+     * <p>Performs real-time text-based quality inspection.</p>
      * 
      * @param request UploadDataSyncRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6040,14 +6036,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API pushes text data to SCA for real-time quality inspection based on specified rules and synchronously returns the analysis results. Unlike post-call quality inspection, which requires uploading the full transcript after a dialogue ends, real-time quality inspection offers lower latency by analyzing text immediately after a speaker completes one or more utterances.</p>
+     * <p>Pushes text data in a specific format to SCA for real-time quality inspection analysis based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Notes:</p>
      * <ul>
-     * <li>If you push a single utterance from one speaker, some rule operators may fail because the required dialogue context is missing. Examples include the context repetition check, speech interruption check, and call mute check.</li>
-     * <li>SCA returns analysis results synchronously and does not save call records, so you cannot query the results later via an API.</li>
+     * <li>If the pushed text is a single sentence from one role, some operators in the rules become ineffective due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.</li>
+     * <li>Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Real-time text quality check</p>
+     * <p>Performs real-time text-based quality inspection.</p>
      * 
      * @param request UploadDataSyncRequest
      * @return UploadDataSyncResponse
@@ -6058,8 +6054,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pushes text data in a specific format to Smart Conversation Analysis (SCA) for real-time quality inspection based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Special notes:
+     * If the pushed text is a single sentence from one role, some operators in the rules may not work due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.
+     * Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>http_hsf</p>
+     * <p>Performs real-time text quality inspection using a large language model.</p>
      * 
      * @param request UploadDataSyncForLLMRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6096,8 +6097,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Pushes text data in a specific format to Smart Conversation Analysis (SCA) for real-time quality inspection based on user-specified rules, and synchronously returns the analysis results. Compared with uploaded text quality inspection, which typically uploads the complete conversation text after a conversation ends, real-time text quality inspection allows you to push text to SCA for analysis after one role finishes one or more sentences, providing higher real-time performance. Special notes:
+     * If the pushed text is a single sentence from one role, some operators in the rules may not work due to the lack of conversation context, such as context repetition check, interruption check, and call silence check.
+     * Real-time quality inspection synchronously returns analysis results. SCA does not save call records, so you cannot query quality inspection results through APIs.</p>
+     * 
      * <b>summary</b> : 
-     * <p>http_hsf</p>
+     * <p>Performs real-time text quality inspection using a large language model.</p>
      * 
      * @param request UploadDataSyncForLLMRequest
      * @return UploadDataSyncForLLMResponse
