@@ -647,6 +647,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The original interface for creating deployment targets only supports creating deployment targets with fixed resources or elastic resources. The new interface supports creating deployment targets with fixed resources, elastic resources, or mixed pattern.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a SQL query script job file.</p>
+     * 
+     * @param request CreateSqlFileRequest
+     * @param headers CreateSqlFileHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSqlFileResponse
+     */
+    public CreateSqlFileResponse createSqlFileWithOptions(String namespace, CreateSqlFileRequest request, CreateSqlFileHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSqlFile"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-file"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSqlFileResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The original interface for creating deployment targets only supports creating deployment targets with fixed resources or elastic resources. The new interface supports creating deployment targets with fixed resources, elastic resources, or mixed pattern.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a SQL query script job file.</p>
+     * 
+     * @param request CreateSqlFileRequest
+     * @return CreateSqlFileResponse
+     */
+    public CreateSqlFileResponse createSqlFile(String namespace, CreateSqlFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateSqlFileHeaders headers = new CreateSqlFileHeaders();
+        return this.createSqlFileWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Parses all user-defined function (UDF) methods in your JAR or Python file and creates an artifact configuration for a UDF.</p>
      * 
@@ -838,6 +895,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         DeleteDeploymentHeaders headers = new DeleteDeploymentHeaders();
         return this.deleteDeploymentWithOptions(namespace, deploymentId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name. This operation is applicable to scenarios where you want to quickly locate job details by deployment identifier.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name.</p>
+     * 
+     * @param request DeleteDeploymentByNameRequest
+     * @param headers DeleteDeploymentByNameHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDeploymentByNameResponse
+     */
+    public DeleteDeploymentByNameResponse deleteDeploymentByNameWithOptions(String namespace, DeleteDeploymentByNameRequest request, DeleteDeploymentByNameHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentName)) {
+            query.put("deploymentName", request.deploymentName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDeploymentByName"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/deleteDeployment/byName"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeploymentByNameResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name. This operation is applicable to scenarios where you want to quickly locate job details by deployment identifier.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name.</p>
+     * 
+     * @param request DeleteDeploymentByNameRequest
+     * @return DeleteDeploymentByNameResponse
+     */
+    public DeleteDeploymentByNameResponse deleteDeploymentByName(String namespace, DeleteDeploymentByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteDeploymentByNameHeaders headers = new DeleteDeploymentByNameHeaders();
+        return this.deleteDeploymentByNameWithOptions(namespace, request, headers, runtime);
     }
 
     /**
@@ -1209,6 +1328,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of deployed jobs that are associated with a specified job label and their details. Exact matching by labelKey and labelValue is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a created SQL query script file.</p>
+     * 
+     * @param request DeleteSqlFileRequest
+     * @param headers DeleteSqlFileHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSqlFileResponse
+     */
+    public DeleteSqlFileResponse deleteSqlFileWithOptions(String namespace, String sqlFileId, DeleteSqlFileRequest request, DeleteSqlFileHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSqlFile"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-file/" + com.aliyun.openapiutil.Client.getEncodeParam(sqlFileId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSqlFileResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of deployed jobs that are associated with a specified job label and their details. Exact matching by labelKey and labelValue is supported.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a created SQL query script file.</p>
+     * 
+     * @param request DeleteSqlFileRequest
+     * @return DeleteSqlFileResponse
+     */
+    public DeleteSqlFileResponse deleteSqlFile(String namespace, String sqlFileId, DeleteSqlFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteSqlFileHeaders headers = new DeleteSqlFileHeaders();
+        return this.deleteSqlFileWithOptions(namespace, sqlFileId, request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes a user-defined function (UDF) resource. You must delete all UDFs registered with the resource before you can delete the resource.</p>
      * 
@@ -1460,6 +1635,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ExecuteSqlStatementHeaders headers = new ExecuteSqlStatementHeaders();
         return this.executeSqlStatementWithOptions(namespace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the execution result of an SQL data query submitted through the platform.</p>
+     * 
+     * @param request FetchSqlExecutionResultRequest
+     * @param headers FetchSqlExecutionResultHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FetchSqlExecutionResultResponse
+     */
+    public FetchSqlExecutionResultResponse fetchSqlExecutionResultWithOptions(String namespace, String sqlExecutionId, FetchSqlExecutionResultRequest request, FetchSqlExecutionResultHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FetchSqlExecutionResult"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-execution/" + com.aliyun.openapiutil.Client.getEncodeParam(sqlExecutionId) + "%3AfetchSqlExecutionResult"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FetchSqlExecutionResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the execution result of an SQL data query submitted through the platform.</p>
+     * 
+     * @param request FetchSqlExecutionResultRequest
+     * @return FetchSqlExecutionResultResponse
+     */
+    public FetchSqlExecutionResultResponse fetchSqlExecutionResult(String namespace, String sqlExecutionId, FetchSqlExecutionResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        FetchSqlExecutionResultHeaders headers = new FetchSqlExecutionResultHeaders();
+        return this.fetchSqlExecutionResultWithOptions(namespace, sqlExecutionId, request, headers, runtime);
     }
 
     /**
@@ -2824,6 +3049,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetSessionClusterHeaders headers = new GetSessionClusterHeaders();
         return this.getSessionClusterWithOptions(namespace, sessionClusterName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a created SQL query script.</p>
+     * 
+     * @param request GetSqlFileRequest
+     * @param headers GetSqlFileHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSqlFileResponse
+     */
+    public GetSqlFileResponse getSqlFileWithOptions(String namespace, String sqlFileId, GetSqlFileRequest request, GetSqlFileHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSqlFile"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-file/" + com.aliyun.openapiutil.Client.getEncodeParam(sqlFileId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSqlFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the details of a created SQL query script.</p>
+     * 
+     * @param request GetSqlFileRequest
+     * @return GetSqlFileResponse
+     */
+    public GetSqlFileResponse getSqlFile(String namespace, String sqlFileId, GetSqlFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetSqlFileHeaders headers = new GetSqlFileHeaders();
+        return this.getSqlFileWithOptions(namespace, sqlFileId, request, headers, runtime);
     }
 
     /**
@@ -4299,6 +4574,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Executes an SQL query script task.</p>
+     * 
+     * @param request StopSqlExecutionRequest
+     * @param headers StopSqlExecutionHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopSqlExecutionResponse
+     */
+    public StopSqlExecutionResponse stopSqlExecutionWithOptions(String namespace, String sqlExecutionId, StopSqlExecutionRequest request, StopSqlExecutionHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopSqlExecution"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-execution/" + com.aliyun.openapiutil.Client.getEncodeParam(sqlExecutionId) + "%3Astop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopSqlExecutionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Executes an SQL query script task.</p>
+     * 
+     * @param request StopSqlExecutionRequest
+     * @return StopSqlExecutionResponse
+     */
+    public StopSqlExecutionResponse stopSqlExecution(String namespace, String sqlExecutionId, StopSqlExecutionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        StopSqlExecutionHeaders headers = new StopSqlExecutionHeaders();
+        return this.stopSqlExecutionWithOptions(namespace, sqlExecutionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>提交sql调试</p>
      * 
      * @param request SubmitSqlPreviewRequest
@@ -4403,6 +4728,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateDeploymentHeaders headers = new UpdateDeploymentHeaders();
         return this.updateDeploymentWithOptions(namespace, deploymentId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the details and configuration parameters of a deployment job by its name.</p>
+     * 
+     * @param request UpdateDeploymentByNameRequest
+     * @param headers UpdateDeploymentByNameHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDeploymentByNameResponse
+     */
+    public UpdateDeploymentByNameResponse updateDeploymentByNameWithOptions(String namespace, UpdateDeploymentByNameRequest request, UpdateDeploymentByNameHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deploymentName)) {
+            query.put("deploymentName", request.deploymentName);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDeploymentByName"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/deployments/updateDeployment/byName"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDeploymentByNameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the details and configuration parameters of a deployment job by its name.</p>
+     * 
+     * @param request UpdateDeploymentByNameRequest
+     * @return UpdateDeploymentByNameResponse
+     */
+    public UpdateDeploymentByNameResponse updateDeploymentByName(String namespace, UpdateDeploymentByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateDeploymentByNameHeaders headers = new UpdateDeploymentByNameHeaders();
+        return this.updateDeploymentByNameWithOptions(namespace, request, headers, runtime);
     }
 
     /**
@@ -4766,6 +5148,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateSessionClusterHeaders headers = new UpdateSessionClusterHeaders();
         return this.updateSessionClusterWithOptions(namespace, sessionClusterName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a created SQL query script.</p>
+     * 
+     * @param request UpdateSqlFileRequest
+     * @param headers UpdateSqlFileHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSqlFileResponse
+     */
+    public UpdateSqlFileResponse updateSqlFileWithOptions(String namespace, String sqlFileId, UpdateSqlFileRequest request, UpdateSqlFileHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSqlFile"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/sql-file/" + com.aliyun.openapiutil.Client.getEncodeParam(sqlFileId) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSqlFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a created SQL query script.</p>
+     * 
+     * @param request UpdateSqlFileRequest
+     * @return UpdateSqlFileResponse
+     */
+    public UpdateSqlFileResponse updateSqlFile(String namespace, String sqlFileId, UpdateSqlFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateSqlFileHeaders headers = new UpdateSqlFileHeaders();
+        return this.updateSqlFileWithOptions(namespace, sqlFileId, request, headers, runtime);
     }
 
     /**
