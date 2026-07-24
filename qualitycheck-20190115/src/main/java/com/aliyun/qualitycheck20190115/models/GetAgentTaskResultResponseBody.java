@@ -40,7 +40,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. You can use this field to determine whether the request succeeded:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>true</strong>: The request succeeded.</li>
      * <li><strong>false/null</strong>: The request failed.</li>
      * </ul>
      * 
@@ -185,7 +185,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The result returned by the large language model.</p>
          * 
          * <strong>example:</strong>
-         * <p>175/xl the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</p>
+         * <p>175/xl the fabric feels very comfortable, looks quite slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</p>
          */
         @NameInMap("Text")
         public String text;
@@ -225,7 +225,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The reasoning for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined by the first sentence of the agent.</p>
+         * <p>Determined based on the first sentence of the agent.</p>
          */
         @NameInMap("Remarks")
         public String remarks;
@@ -329,7 +329,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The reasoning for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined by the first sentence of the agent.</p>
+         * <p>Determined based on the first sentence of the agent.</p>
          */
         @NameInMap("Remarks")
         public String remarks;
@@ -424,7 +424,7 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          * <p>The reasoning for the judgment.</p>
          * 
          * <strong>example:</strong>
-         * <p>Determined by the first sentence of the agent.</p>
+         * <p>Determined based on the first sentence of the agent.</p>
          */
         @NameInMap("Remarks")
         public String remarks;
@@ -504,6 +504,236 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
 
     }
 
+    public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions extends TeaModel {
+        @NameInMap("Age")
+        public String age;
+
+        @NameInMap("AgeGroup")
+        public String ageGroup;
+
+        @NameInMap("AgeScore")
+        public Float ageScore;
+
+        @NameInMap("BestVoiceprintScore")
+        public Float bestVoiceprintScore;
+
+        @NameInMap("Emotion")
+        public String emotion;
+
+        @NameInMap("EmotionScore")
+        public Float emotionScore;
+
+        @NameInMap("Gender")
+        public String gender;
+
+        @NameInMap("GenderScore")
+        public Float genderScore;
+
+        @NameInMap("IsKnownVoiceprint")
+        public Boolean isKnownVoiceprint;
+
+        @NameInMap("Speaker")
+        public String speaker;
+
+        public static GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions self = new GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setAge(String age) {
+            this.age = age;
+            return this;
+        }
+        public String getAge() {
+            return this.age;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setAgeGroup(String ageGroup) {
+            this.ageGroup = ageGroup;
+            return this;
+        }
+        public String getAgeGroup() {
+            return this.ageGroup;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setAgeScore(Float ageScore) {
+            this.ageScore = ageScore;
+            return this;
+        }
+        public Float getAgeScore() {
+            return this.ageScore;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setBestVoiceprintScore(Float bestVoiceprintScore) {
+            this.bestVoiceprintScore = bestVoiceprintScore;
+            return this;
+        }
+        public Float getBestVoiceprintScore() {
+            return this.bestVoiceprintScore;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setEmotion(String emotion) {
+            this.emotion = emotion;
+            return this;
+        }
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setEmotionScore(Float emotionScore) {
+            this.emotionScore = emotionScore;
+            return this;
+        }
+        public Float getEmotionScore() {
+            return this.emotionScore;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setGender(String gender) {
+            this.gender = gender;
+            return this;
+        }
+        public String getGender() {
+            return this.gender;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setGenderScore(Float genderScore) {
+            this.genderScore = genderScore;
+            return this;
+        }
+        public Float getGenderScore() {
+            return this.genderScore;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setIsKnownVoiceprint(Boolean isKnownVoiceprint) {
+            this.isKnownVoiceprint = isKnownVoiceprint;
+            return this;
+        }
+        public Boolean getIsKnownVoiceprint() {
+            return this.isKnownVoiceprint;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions setSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+        public String getSpeaker() {
+            return this.speaker;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue extends TeaModel {
+        @NameInMap("Additions")
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions additions;
+
+        @NameInMap("Begin")
+        public Long begin;
+
+        @NameInMap("End")
+        public Long end;
+
+        @NameInMap("Words")
+        public String words;
+
+        public static GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue self = new GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue setAdditions(GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions additions) {
+            this.additions = additions;
+            return this;
+        }
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions getAdditions() {
+            return this.additions;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue setBegin(Long begin) {
+            this.begin = begin;
+            return this;
+        }
+        public Long getBegin() {
+            return this.begin;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue setEnd(Long end) {
+            this.end = end;
+            return this;
+        }
+        public Long getEnd() {
+            return this.end;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue setWords(String words) {
+            this.words = words;
+            return this;
+        }
+        public String getWords() {
+            return this.words;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("Message")
+        public String message;
+
+        public static GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors self = new GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+    }
+
+    public static class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse extends TeaModel {
+        @NameInMap("Dialogue")
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue> dialogue;
+
+        @NameInMap("Errors")
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors> errors;
+
+        public static GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse build(java.util.Map<String, ?> map) throws Exception {
+            GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse self = new GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse setDialogue(java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue> dialogue) {
+            this.dialogue = dialogue;
+            return this;
+        }
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogue> getDialogue() {
+            return this.dialogue;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse setErrors(java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors> errors) {
+            this.errors = errors;
+            return this;
+        }
+        public java.util.List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors> getErrors() {
+            return this.errors;
+        }
+
+    }
+
     public static class GetAgentTaskResultResponseBodyDataResponse extends TeaModel {
         /**
          * <p>The result of the custom prompt.</p>
@@ -528,6 +758,9 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
          */
         @NameInMap("TagCategoryResponse")
         public GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse tagCategoryResponse;
+
+        @NameInMap("VoiceprintResponse")
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse voiceprintResponse;
 
         public static GetAgentTaskResultResponseBodyDataResponse build(java.util.Map<String, ?> map) throws Exception {
             GetAgentTaskResultResponseBodyDataResponse self = new GetAgentTaskResultResponseBodyDataResponse();
@@ -564,6 +797,14 @@ public class GetAgentTaskResultResponseBody extends TeaModel {
         }
         public GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse getTagCategoryResponse() {
             return this.tagCategoryResponse;
+        }
+
+        public GetAgentTaskResultResponseBodyDataResponse setVoiceprintResponse(GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse voiceprintResponse) {
+            this.voiceprintResponse = voiceprintResponse;
+            return this;
+        }
+        public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponse getVoiceprintResponse() {
+            return this.voiceprintResponse;
         }
 
     }

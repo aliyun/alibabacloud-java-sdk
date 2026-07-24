@@ -6115,15 +6115,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the UploadData.json operation to upload text data for quality inspection. The text usually comes from sources such as online customer service and tickets. The API returns a task ID. You can retrieve the results in one of the following three ways:</p>
+     * <p>Calls UploadData.json to upload text quality inspection data. The text typically comes from online customer service or tickets. The operation returns a taskId. You can obtain results in three ways:</p>
      * <ul>
-     * <li>Message notifications: After you receive a notification, call the GetResult API to obtain the detailed results. For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. (Recommended)</li>
-     * <li>Callbacks: Specify a callbackUrl in the request parameters. The system automatically initiates a callback after the task is complete. After you receive the callback, call the GetResult API to retrieve the detailed results.</li>
-     * <li>Polling: Use the task ID returned by this API to poll the GetResult API and asynchronously retrieve the results. Check the status in the response to determine whether the task is complete. (Not recommended)</li>
+     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">Message channel</a>. After receiving a message, call the GetResult operation to obtain detailed results. (Recommended)</li>
+     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is completed. After receiving the callback, call the GetResult operation to obtain detailed results.</li>
+     * <li>Polling: Use the task ID returned by this operation to poll the GetResult operation asynchronously. Check whether the status in the response indicates completion. (Not recommended)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads offline plain text conversation data for quality inspection in online agent scenarios. We recommend that you use the UploadDataV4 API. Compared to the UploadData API, UploadDataV4 supports only POST requests and allows a longer JsonStr.</p>
+     * <p>Uploads offline text quality inspection data (plain text conversations) applicable to online agent scenarios. We recommend using the UploadDataV4 operation. Differences between UploadDataV4 and UploadData: 1. V4 supports only POST requests. 2. V4 supports longer JsonStr values.</p>
      * 
      * @param request UploadDataV4Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -6159,15 +6159,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call the UploadData.json operation to upload text data for quality inspection. The text usually comes from sources such as online customer service and tickets. The API returns a task ID. You can retrieve the results in one of the following three ways:</p>
+     * <p>Calls UploadData.json to upload text quality inspection data. The text typically comes from online customer service or tickets. The operation returns a taskId. You can obtain results in three ways:</p>
      * <ul>
-     * <li>Message notifications: After you receive a notification, call the GetResult API to obtain the detailed results. For more information, see <a href="https://help.aliyun.com/document_detail/213237.html">Message Queue</a>. (Recommended)</li>
-     * <li>Callbacks: Specify a callbackUrl in the request parameters. The system automatically initiates a callback after the task is complete. After you receive the callback, call the GetResult API to retrieve the detailed results.</li>
-     * <li>Polling: Use the task ID returned by this API to poll the GetResult API and asynchronously retrieve the results. Check the status in the response to determine whether the task is complete. (Not recommended)</li>
+     * <li>Message notification: For details, see <a href="https://help.aliyun.com/document_detail/213237.html">Message channel</a>. After receiving a message, call the GetResult operation to obtain detailed results. (Recommended)</li>
+     * <li>Callback: Specify a callbackUrl in the request parameters. The system initiates a callback after the task is completed. After receiving the callback, call the GetResult operation to obtain detailed results.</li>
+     * <li>Polling: Use the task ID returned by this operation to poll the GetResult operation asynchronously. Check whether the status in the response indicates completion. (Not recommended)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Uploads offline plain text conversation data for quality inspection in online agent scenarios. We recommend that you use the UploadDataV4 API. Compared to the UploadData API, UploadDataV4 supports only POST requests and allows a longer JsonStr.</p>
+     * <p>Uploads offline text quality inspection data (plain text conversations) applicable to online agent scenarios. We recommend using the UploadDataV4 operation. Differences between UploadDataV4 and UploadData: 1. V4 supports only POST requests. 2. V4 supports longer JsonStr values.</p>
      * 
      * @param request UploadDataV4Request
      * @return UploadDataV4Response

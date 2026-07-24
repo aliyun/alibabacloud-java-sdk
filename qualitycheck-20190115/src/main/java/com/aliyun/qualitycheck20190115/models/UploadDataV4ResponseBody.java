@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadDataV4ResponseBody extends TeaModel {
     /**
-     * <p>The result code. A value of 200 indicates success. Other values indicate failure. Use this field to determine the cause of a failure.</p>
+     * <p>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UploadDataV4ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The taskId of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>6F5934C7-C223-4F0F-BBF3-5B3594***</p>
@@ -23,7 +23,7 @@ public class UploadDataV4ResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The details of the error if the request fails. If the request is successful, the value is &quot;successful&quot;.</p>
+     * <p>The error details when the request fails. The value is &quot;successful&quot; when the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class UploadDataV4ResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. This is a unique identifier for the request that can be used for tracking.</p>
+     * <p>The request ID. A unique identifier for the request that can be used to locate and trace the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6F5934C7-C223-4F0F-BBF3-5B3594***</p>
@@ -41,7 +41,7 @@ public class UploadDataV4ResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Use this field to determine if the request succeeded. A value of true indicates success. A value of false or null indicates failure.</p>
+     * <p>Indicates whether the request was successful. Valid values: true: successful. false/null: failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
