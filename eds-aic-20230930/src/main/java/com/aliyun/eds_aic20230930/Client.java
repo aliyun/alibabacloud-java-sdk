@@ -719,6 +719,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an AI cloud phone.</p>
+     * 
+     * @param request CreateAICloudPhoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAICloudPhoneResponse
+     */
+    public CreateAICloudPhoneResponse createAICloudPhoneWithOptions(CreateAICloudPhoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            query.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageId)) {
+            query.put("BandwidthPackageId", request.bandwidthPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupName)) {
+            query.put("InstanceGroupName", request.instanceGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceGroupSpec)) {
+            query.put("InstanceGroupSpec", request.instanceGroupSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAICloudPhone"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAICloudPhoneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an AI cloud phone.</p>
+     * 
+     * @param request CreateAICloudPhoneRequest
+     * @return CreateAICloudPhoneResponse
+     */
+    public CreateAICloudPhoneResponse createAICloudPhone(CreateAICloudPhoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAICloudPhoneWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>&lt;props=&quot;china&quot;&gt;Before creating a cloud phone instance group, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">verify your identity - Individual account</a>.
      * When you create a cloud phone instance group, note that creating an instance group incurs resource charges. Familiarize yourself with the <a href="https://help.aliyun.com/document_detail/2807121.html">billable methods</a> of cloud phone instance groups in advance.</p>
@@ -2979,6 +3063,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceIds", request.instanceIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.packageIds)) {
             query.put("PackageIds", request.packageIds);
         }
@@ -3648,7 +3740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of one or more node packages.</p>
+     * <p>Queries the details of node packages.</p>
      * 
      * @param request DescribeMobileAgentPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3700,7 +3792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of one or more node packages.</p>
+     * <p>Queries the details of node packages.</p>
      * 
      * @param request DescribeMobileAgentPackageRequest
      * @return DescribeMobileAgentPackageResponse
@@ -5631,6 +5723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.creditConfig)) {
             query.put("CreditConfig", request.creditConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {

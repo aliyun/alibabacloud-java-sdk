@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates that the request was successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>A list of packages.</p>
+     * <p>The list of package information.</p>
      */
     @NameInMap("PackageList")
     public java.util.List<DescribeMobileAgentPackageResponseBodyPackageList> packageList;
@@ -108,7 +108,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The total package credit.</p>
+         * <p>The credit quota of the package.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -146,8 +146,14 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         @NameInMap("PackageStatus")
         public String packageStatus;
 
+        @NameInMap("PeriodEndTime")
+        public String periodEndTime;
+
+        @NameInMap("PeriodStartTime")
+        public String periodStartTime;
+
         /**
-         * <p>The amount of credit used.</p>
+         * <p>The number of credits that have been used.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -214,6 +220,22 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
         public String getPackageStatus() {
             return this.packageStatus;
+        }
+
+        public DescribeMobileAgentPackageResponseBodyPackageList setPeriodEndTime(String periodEndTime) {
+            this.periodEndTime = periodEndTime;
+            return this;
+        }
+        public String getPeriodEndTime() {
+            return this.periodEndTime;
+        }
+
+        public DescribeMobileAgentPackageResponseBodyPackageList setPeriodStartTime(String periodStartTime) {
+            this.periodStartTime = periodStartTime;
+            return this;
+        }
+        public String getPeriodStartTime() {
+            return this.periodStartTime;
         }
 
         public DescribeMobileAgentPackageResponseBodyPackageList setUsedCredit(String usedCredit) {

@@ -14,19 +14,22 @@ public class ModifyJVSInstanceRequest extends TeaModel {
     public Boolean applyToAll;
 
     /**
-     * <p>The credit limit configuration. New configurations overwrite existing ones.</p>
+     * <p>The credit limit configuration. Subsequent configurations overwrite previous ones.</p>
      */
     @NameInMap("CreditConfig")
     public java.util.List<ModifyJVSInstanceRequestCreditConfig> creditConfig;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The new instance name.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>defaultInstanceName</p>
@@ -53,6 +56,14 @@ public class ModifyJVSInstanceRequest extends TeaModel {
     }
     public java.util.List<ModifyJVSInstanceRequestCreditConfig> getCreditConfig() {
         return this.creditConfig;
+    }
+
+    public ModifyJVSInstanceRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public ModifyJVSInstanceRequest setInstanceIds(java.util.List<String> instanceIds) {
@@ -82,7 +93,12 @@ public class ModifyJVSInstanceRequest extends TeaModel {
         public Long creditLimit;
 
         /**
-         * <p>The credit limit period.</p>
+         * <p>The dimension of the current credit. Valid values:</p>
+         * <ul>
+         * <li>total: total usage limit.</li>
+         * <li>month: monthly. The limit resets based on the resource activation time cycle.</li>
+         * <li>day: daily. The limit resets at 00:00.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>day</p>

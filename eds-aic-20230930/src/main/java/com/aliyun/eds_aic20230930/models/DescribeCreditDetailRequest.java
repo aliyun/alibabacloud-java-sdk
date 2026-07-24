@@ -19,8 +19,14 @@ public class DescribeCreditDetailRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
-     * <p>The list of resource plan or credit booster pack IDs.</p>
+     * <p>The list of plan packages or credit top-up packages.</p>
      */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;
@@ -71,6 +77,22 @@ public class DescribeCreditDetailRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeCreditDetailRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeCreditDetailRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeCreditDetailRequest setPackageIds(java.util.List<String> packageIds) {

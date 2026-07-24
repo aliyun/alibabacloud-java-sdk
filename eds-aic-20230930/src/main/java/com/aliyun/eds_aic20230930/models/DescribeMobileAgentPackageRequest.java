@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMobileAgentPackageRequest extends TeaModel {
     /**
-     * <p>An array of node instance IDs.</p>
+     * <p>The list of node instance IDs.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>An array of package IDs.</p>
+     * <p>The list of package IDs.</p>
      */
     @NameInMap("PackageIds")
     public java.util.List<String> packageIds;

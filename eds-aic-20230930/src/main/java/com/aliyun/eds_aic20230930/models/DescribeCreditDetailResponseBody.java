@@ -41,6 +41,12 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeCreditDetailResponseBodyDataDetails extends TeaModel {
+        @NameInMap("ApiKeyName")
+        public String apiKeyName;
+
+        @NameInMap("CachedTokens")
+        public Long cachedTokens;
+
         /**
          * <p>The time when the change occurred.</p>
          * 
@@ -63,10 +69,13 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
          * <p>The task description.</p>
          * 
          * <strong>example:</strong>
-         * <p>打开小红书</p>
+         * <p>Open Xiaohongshu.</p>
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("InputTokens")
+        public Long inputTokens;
 
         /**
          * <p>The instance ID.</p>
@@ -77,14 +86,26 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("ModelId")
+        public String modelId;
+
+        @NameInMap("OutputTokens")
+        public Long outputTokens;
+
         /**
-         * <p>The credit or resource plan ID.</p>
+         * <p>The ID of the credit or plan package.</p>
          * 
          * <strong>example:</strong>
          * <p>cmag-0c1g77wjljl9h****</p>
          */
         @NameInMap("PackageId")
         public String packageId;
+
+        @NameInMap("RequestId")
+        public String requestId;
 
         /**
          * <p>The task ID, which is globally unique.</p>
@@ -95,9 +116,28 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        @NameInMap("TotalTokens")
+        public Long totalTokens;
+
         public static DescribeCreditDetailResponseBodyDataDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeCreditDetailResponseBodyDataDetails self = new DescribeCreditDetailResponseBodyDataDetails();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setApiKeyName(String apiKeyName) {
+            this.apiKeyName = apiKeyName;
+            return this;
+        }
+        public String getApiKeyName() {
+            return this.apiKeyName;
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setCachedTokens(Long cachedTokens) {
+            this.cachedTokens = cachedTokens;
+            return this;
+        }
+        public Long getCachedTokens() {
+            return this.cachedTokens;
         }
 
         public DescribeCreditDetailResponseBodyDataDetails setChangeTime(String changeTime) {
@@ -124,12 +164,44 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeCreditDetailResponseBodyDataDetails setInputTokens(Long inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Long getInputTokens() {
+            return this.inputTokens;
+        }
+
         public DescribeCreditDetailResponseBodyDataDetails setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setOutputTokens(Long outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Long getOutputTokens() {
+            return this.outputTokens;
         }
 
         public DescribeCreditDetailResponseBodyDataDetails setPackageId(String packageId) {
@@ -140,12 +212,28 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             return this.packageId;
         }
 
+        public DescribeCreditDetailResponseBodyDataDetails setRequestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+        public String getRequestId() {
+            return this.requestId;
+        }
+
         public DescribeCreditDetailResponseBodyDataDetails setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public DescribeCreditDetailResponseBodyDataDetails setTotalTokens(Long totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public Long getTotalTokens() {
+            return this.totalTokens;
         }
 
     }
@@ -156,6 +244,9 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
          */
         @NameInMap("Details")
         public java.util.List<DescribeCreditDetailResponseBodyDataDetails> details;
+
+        @NameInMap("NextToken")
+        public String nextToken;
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -204,6 +295,14 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCreditDetailResponseBodyDataDetails> getDetails() {
             return this.details;
+        }
+
+        public DescribeCreditDetailResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public DescribeCreditDetailResponseBodyData setPageNum(Integer pageNum) {
