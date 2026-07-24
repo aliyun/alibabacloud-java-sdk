@@ -14,7 +14,7 @@ public class GetRoutineBuildResponseBody extends TeaModel {
     public String assetsDirectory;
 
     /**
-     * <p>The build branch.</p>
+     * <p>The branch used for the build.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -114,7 +114,7 @@ public class GetRoutineBuildResponseBody extends TeaModel {
     public String nodeVersion;
 
     /**
-     * <p>The pipeline ID.</p>
+     * <p>The pipeline ID in Yunxiao.</p>
      * 
      * <strong>example:</strong>
      * <p>4371588</p>
@@ -123,7 +123,7 @@ public class GetRoutineBuildResponseBody extends TeaModel {
     public Long pipelineId;
 
     /**
-     * <p>The pipeline run ID.</p>
+     * <p>The build task ID in Yunxiao.</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>

@@ -3,12 +3,12 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class ReDoRoutineBuildResponseBody extends TeaModel {
+public class CreateRoutineBuildResponseBody extends TeaModel {
     /**
-     * <p>The ID of the build task in Yunxiao.</p>
+     * <p>The build ID in Apsara Devops.</p>
      * 
      * <strong>example:</strong>
-     * <p>70</p>
+     * <p>1</p>
      */
     @NameInMap("PipeLineRunId")
     public Long pipeLineRunId;
@@ -17,26 +17,26 @@ public class ReDoRoutineBuildResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED</p>
+     * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the ER build task.</p>
+     * <p>The ER build task ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>156773519472872</p>
+     * <p>159782040838348</p>
      */
     @NameInMap("RoutineBuildId")
     public Long routineBuildId;
 
-    public static ReDoRoutineBuildResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ReDoRoutineBuildResponseBody self = new ReDoRoutineBuildResponseBody();
+    public static CreateRoutineBuildResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateRoutineBuildResponseBody self = new CreateRoutineBuildResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ReDoRoutineBuildResponseBody setPipeLineRunId(Long pipeLineRunId) {
+    public CreateRoutineBuildResponseBody setPipeLineRunId(Long pipeLineRunId) {
         this.pipeLineRunId = pipeLineRunId;
         return this;
     }
@@ -44,7 +44,7 @@ public class ReDoRoutineBuildResponseBody extends TeaModel {
         return this.pipeLineRunId;
     }
 
-    public ReDoRoutineBuildResponseBody setRequestId(String requestId) {
+    public CreateRoutineBuildResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -52,7 +52,7 @@ public class ReDoRoutineBuildResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ReDoRoutineBuildResponseBody setRoutineBuildId(Long routineBuildId) {
+    public CreateRoutineBuildResponseBody setRoutineBuildId(Long routineBuildId) {
         this.routineBuildId = routineBuildId;
         return this;
     }

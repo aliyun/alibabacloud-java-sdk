@@ -4010,6 +4010,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates an ER build task.</p>
+     * 
+     * @param request CreateRoutineBuildRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRoutineBuildResponse
+     */
+    public CreateRoutineBuildResponse createRoutineBuildWithOptions(CreateRoutineBuildRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.artifactUrl)) {
+            query.put("ArtifactUrl", request.artifactUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.branch)) {
+            query.put("Branch", request.branch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRoutineBuild"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoutineBuildResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an ER build task.</p>
+     * 
+     * @param request CreateRoutineBuildRequest
+     * @return CreateRoutineBuildResponse
+     */
+    public CreateRoutineBuildResponse createRoutineBuild(CreateRoutineBuildRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRoutineBuildWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates an Edge Routine (ER) build configuration.</p>
      * 
      * @param tmpReq CreateRoutineBuildConfigurationRequest
@@ -9009,6 +9061,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDDoSOverseasAttackCountResponse describeDDoSOverseasAttackCount(DescribeDDoSOverseasAttackCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDDoSOverseasAttackCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the price of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * 
+     * @param request DescribeDDoSPriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDDoSPriceResponse
+     */
+    public DescribeDDoSPriceResponse describeDDoSPriceWithOptions(DescribeDDoSPriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DDoSBillingMode)) {
+            query.put("DDoSBillingMode", request.DDoSBillingMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DDoSBurstableDomesticProtection)) {
+            query.put("DDoSBurstableDomesticProtection", request.DDoSBurstableDomesticProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DDoSBurstableOverseasProtection)) {
+            query.put("DDoSBurstableOverseasProtection", request.DDoSBurstableOverseasProtection);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDDoSPrice"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDoSPriceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the price of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * 
+     * @param request DescribeDDoSPriceRequest
+     * @return DescribeDDoSPriceResponse
+     */
+    public DescribeDDoSPriceResponse describeDDoSPrice(DescribeDDoSPriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDDoSPriceWithOptions(request, runtime);
     }
 
     /**
@@ -20192,7 +20296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a task replication.</p>
+     * <p>Retries a routine replication task.</p>
      * 
      * @param request ReDoRoutineBuildRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20224,7 +20328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retries a task replication.</p>
+     * <p>Retries a routine replication task.</p>
      * 
      * @param request ReDoRoutineBuildRequest
      * @return ReDoRoutineBuildResponse

@@ -11,7 +11,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
     public java.util.List<ListRoutineBuildsResponseBodyData> data;
 
     /**
-     * <p>The page number, same as the PageIndex request parameter.</p>
+     * <p>The page number, which is the same as the PageIndex request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -155,7 +155,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         public String commitMessage;
 
         /**
-         * <p>The creation time, in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The creation time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-26T02:19:34Z</p>
@@ -210,7 +210,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         public Boolean isPrivate;
 
         /**
-         * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, and <code>12.x</code>.</p>
+         * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, <code>12.x</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>22.x</p>
@@ -219,7 +219,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         public String nodeVersion;
 
         /**
-         * <p>The pipeline ID.</p>
+         * <p>The Yunxiao pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3850166</p>
@@ -228,7 +228,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         public Long pipelineId;
 
         /**
-         * <p>The pipeline execution ID.</p>
+         * <p>The Yunxiao build task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -317,7 +317,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The modification time, in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The modification time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-20T00:44:23Z</p>
