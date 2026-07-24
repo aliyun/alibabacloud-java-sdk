@@ -4,6 +4,9 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class TransitVisaShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of flight segments that constitute an itinerary. Maximum size: 2.</p>
+     */
     @NameInMap("flight_segment_param_list")
     public String flightSegmentParamListShrink;
 

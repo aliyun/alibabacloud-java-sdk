@@ -8,7 +8,7 @@ public class AccountFlowListHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>access_token</p>
+     * <p>access_token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +18,8 @@ public class AccountFlowListHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
+     * <p>The language. Default value: the language configured for the buyer account.</p>
+     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TicketingResponseBody extends TeaModel {
     /**
-     * <p>request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -14,13 +14,13 @@ public class TicketingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>data</p>
+     * <p>The data returned for a successful request.</p>
      */
     @NameInMap("data")
     public TicketingResponseBodyData data;
 
     /**
-     * <p>error code</p>
+     * <p>The business error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -29,7 +29,7 @@ public class TicketingResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>error data</p>
+     * <p>The data returned for a failed request.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class TicketingResponseBody extends TeaModel {
     public Object errorData;
 
     /**
-     * <p>error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -47,7 +47,7 @@ public class TicketingResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>http reqeust has been processed successfully，status code is 200</p>
+     * <p>The HTTP status code. The value is always 200 for successful requests.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class TicketingResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>true represents success, false represents failure</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class TicketingResponseBody extends TeaModel {
 
     public static class TicketingResponseBodyData extends TeaModel {
         /**
-         * <p>order number</p>
+         * <p>The order number.</p>
          * 
          * <strong>example:</strong>
          * <p>496***2617111</p>
@@ -143,7 +143,7 @@ public class TicketingResponseBody extends TeaModel {
         public Long payTime;
 
         /**
-         * <p>transaction serial number</p>
+         * <p>The transaction number.</p>
          * 
          * <strong>example:</strong>
          * <p>hkduendkd-2023-dj0</p>

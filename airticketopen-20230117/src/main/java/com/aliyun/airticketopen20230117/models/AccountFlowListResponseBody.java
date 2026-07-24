@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AccountFlowListResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned for a successful request.</p>
+     */
     @NameInMap("data")
     public AccountFlowListResponseBodyData data;
 
     /**
+     * <p>The business error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class AccountFlowListResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned with the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +38,8 @@ public class AccountFlowListResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class AccountFlowListResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class AccountFlowListResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class AccountFlowListResponseBody extends TeaModel {
 
     public static class AccountFlowListResponseBodyDataList extends TeaModel {
         /**
+         * <p>The available balance after the operation, in CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -119,6 +136,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Double afterAvailableAmount;
 
         /**
+         * <p>The available balance before the operation, in CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>1950.5</p>
          */
@@ -126,6 +145,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Double beforeAvailableAmount;
 
         /**
+         * <p>The change order number. This value is not empty if the flow is related to a ticket change.</p>
+         * 
          * <strong>example:</strong>
          * <p>49880***971</p>
          */
@@ -133,6 +154,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Long changeOrderNum;
 
         /**
+         * <p>The flow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1627239841225842666</p>
          */
@@ -140,6 +163,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Long flowId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1676799185000</p>
          */
@@ -147,6 +172,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1676966530000</p>
          */
@@ -154,6 +181,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
+         * <p>The operation amount, in CNY.</p>
+         * 
          * <strong>example:</strong>
          * <p>950.5</p>
          */
@@ -161,6 +190,13 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Double opAmount;
 
         /**
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>1: payment</li>
+         * <li>2: refund</li>
+         * <li>3: top-up.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -168,6 +204,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Integer opType;
 
         /**
+         * <p>The original order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>4988430***971</p>
          */
@@ -175,6 +213,13 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Long orderNum;
 
         /**
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>0: original transaction</li>
+         * <li>1: change order payment</li>
+         * <li>2: refund.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -182,6 +227,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Integer orderType;
 
         /**
+         * <p>The external order number of the original order.</p>
+         * 
          * <strong>example:</strong>
          * <p>4988430***971</p>
          */
@@ -189,6 +236,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public String outOrderNum;
 
         /**
+         * <p>The refund order number. This value is not empty if the flow is related to a refund.</p>
+         * 
          * <strong>example:</strong>
          * <p>48430***971</p>
          */
@@ -300,6 +349,8 @@ public class AccountFlowListResponseBody extends TeaModel {
 
     public static class AccountFlowListResponseBodyDataPagination extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -307,6 +358,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -314,6 +367,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -321,6 +376,8 @@ public class AccountFlowListResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -367,9 +424,15 @@ public class AccountFlowListResponseBody extends TeaModel {
     }
 
     public static class AccountFlowListResponseBodyData extends TeaModel {
+        /**
+         * <p>The data list.</p>
+         */
         @NameInMap("list")
         public java.util.List<AccountFlowListResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("pagination")
         public AccountFlowListResponseBodyDataPagination pagination;
 

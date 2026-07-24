@@ -8,7 +8,7 @@ public class AncillarySuggestHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>access_token</p>
+     * <p>The access_token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class AncillarySuggestHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
-     * <p>Language Code(refer to ISO_639)</p>
+     * <p>The language setting. Defaults to the buyer account configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>en_US</p>

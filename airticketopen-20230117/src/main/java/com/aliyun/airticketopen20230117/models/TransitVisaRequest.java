@@ -4,6 +4,9 @@ package com.aliyun.airticketopen20230117.models;
 import com.aliyun.tea.*;
 
 public class TransitVisaRequest extends TeaModel {
+    /**
+     * <p>The list of flight segments that constitute an itinerary. Maximum size: 2.</p>
+     */
     @NameInMap("flight_segment_param_list")
     public java.util.List<TransitVisaRequestFlightSegmentParamList> flightSegmentParamList;
 
@@ -22,6 +25,7 @@ public class TransitVisaRequest extends TeaModel {
 
     public static class TransitVisaRequestFlightSegmentParamList extends TeaModel {
         /**
+         * <p>The three-letter IATA code of the arrival airport.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -31,6 +35,8 @@ public class TransitVisaRequest extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>The arrival terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -38,6 +44,7 @@ public class TransitVisaRequest extends TeaModel {
         public String arrivalTerminal;
 
         /**
+         * <p>The arrival time. A 13-digit UNIX timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -47,6 +54,7 @@ public class TransitVisaRequest extends TeaModel {
         public Long arrivalTime;
 
         /**
+         * <p>Indicates whether the flight is a codeshare flight.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -56,6 +64,7 @@ public class TransitVisaRequest extends TeaModel {
         public Boolean codeShare;
 
         /**
+         * <p>The three-letter IATA code of the departure airport.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -65,6 +74,8 @@ public class TransitVisaRequest extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>The departure terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -72,6 +83,7 @@ public class TransitVisaRequest extends TeaModel {
         public String departureTerminal;
 
         /**
+         * <p>The departure time. A 13-digit UNIX timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -81,6 +93,7 @@ public class TransitVisaRequest extends TeaModel {
         public Long departureTime;
 
         /**
+         * <p>The marketing airline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,6 +103,7 @@ public class TransitVisaRequest extends TeaModel {
         public String marketingAirline;
 
         /**
+         * <p>The flight number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -99,6 +113,8 @@ public class TransitVisaRequest extends TeaModel {
         public String marketingFlightNo;
 
         /**
+         * <p>The operating airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>CZ</p>
          */
@@ -106,6 +122,8 @@ public class TransitVisaRequest extends TeaModel {
         public String operatingAirline;
 
         /**
+         * <p>The three-letter IATA codes of stopover cities.</p>
+         * 
          * <strong>example:</strong>
          * <p>SEL,HKG</p>
          */
@@ -113,6 +131,8 @@ public class TransitVisaRequest extends TeaModel {
         public String stopCityList;
 
         /**
+         * <p>The ticketing airline.</p>
+         * 
          * <strong>example:</strong>
          * <p>CZ</p>
          */

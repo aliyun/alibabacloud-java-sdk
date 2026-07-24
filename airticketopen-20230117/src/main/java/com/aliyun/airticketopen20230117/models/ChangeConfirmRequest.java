@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeConfirmRequest extends TeaModel {
     /**
+     * <p>The change order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

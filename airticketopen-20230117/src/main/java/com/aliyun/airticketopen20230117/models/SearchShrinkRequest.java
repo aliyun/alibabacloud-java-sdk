@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchShrinkRequest extends TeaModel {
     /**
-     * <p>adult passenger amount 1-9</p>
+     * <p>The number of adult passengers. Valid values: 1 to 9.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -14,22 +14,14 @@ public class SearchShrinkRequest extends TeaModel {
     public Integer adults;
 
     /**
-     * <p>itinerary list</p>
+     * <p>The journey array.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("air_legs")
     public String airLegsShrink;
 
     /**
-     * <p>cabin class</p>
-     * <ol>
-     * <li><strong>ALL_CABIN</strong> : all cabin class</li>
-     * <li><strong>Y</strong> : economy class</li>
-     * <li><strong>FC</strong> : first class and business class</li>
-     * <li><strong>S</strong> : premium economy class</li>
-     * <li><strong>YS</strong> : economy class and premium economy class</li>
-     * <li><strong>YSC</strong> : economy class, premium economy class and business class</li>
-     * </ol>
+     * <p>The cabin class. Valid values: ALL_CABIN: all cabin classes. Y: economy class. FC: first class and business class. S: premium economy class. YS: economy class and premium economy class. YSC: economy class, premium economy class, and business class.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL_CABIN</p>
@@ -38,7 +30,7 @@ public class SearchShrinkRequest extends TeaModel {
     public String cabinClass;
 
     /**
-     * <p>child passenger amount 0-9</p>
+     * <p>The number of child passengers. Valid values: 0 to 9.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +39,7 @@ public class SearchShrinkRequest extends TeaModel {
     public Integer children;
 
     /**
-     * <p>infant passenger amount 0-9</p>
+     * <p>The number of infant passengers. Valid values: 0 to 9.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +48,7 @@ public class SearchShrinkRequest extends TeaModel {
     public Integer infants;
 
     /**
-     * <p>search controls</p>
+     * <p>The search control options. This parameter is optional.</p>
      */
     @NameInMap("search_control_options")
     public String searchControlOptionsShrink;

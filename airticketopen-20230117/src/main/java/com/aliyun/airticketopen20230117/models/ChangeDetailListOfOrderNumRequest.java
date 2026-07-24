@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeDetailListOfOrderNumRequest extends TeaModel {
     /**
+     * <p>The order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ChangeDetailListOfOrderNumRequest extends TeaModel {
     public Long orderNum;
 
     /**
+     * <p>The page index.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ChangeDetailListOfOrderNumRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

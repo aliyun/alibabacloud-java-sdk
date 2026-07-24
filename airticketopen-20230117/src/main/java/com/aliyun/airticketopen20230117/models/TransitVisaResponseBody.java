@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class TransitVisaResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned for a successful request.</p>
+     */
     @NameInMap("data")
     public java.util.List<TransitVisaResponseBodyData> data;
 
     /**
+     * <p>The business error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class TransitVisaResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned with an error response.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +38,8 @@ public class TransitVisaResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class TransitVisaResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class TransitVisaResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class TransitVisaResponseBody extends TeaModel {
 
     public static class TransitVisaResponseBodyData extends TeaModel {
         /**
+         * <p>The three-letter IATA code of the stopover or transfer city.</p>
+         * 
          * <strong>example:</strong>
          * <p>HGH</p>
          */
@@ -119,6 +136,12 @@ public class TransitVisaResponseBody extends TeaModel {
         public String cityCode;
 
         /**
+         * <p>The transit visa type. Valid values:</p>
+         * <ul>
+         * <li>0: no transit visa required.</li>
+         * <li>1: transit visa required.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

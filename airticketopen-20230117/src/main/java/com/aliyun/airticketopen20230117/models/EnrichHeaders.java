@@ -18,7 +18,7 @@ public class EnrichHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
-     * <p>Multi-language, default is based on the buyer\&quot;s account configuration</p>
+     * <p>Multilingual, defaults to buyer account configuration</p>
      * 
      * <strong>example:</strong>
      * <p>en_US</p>

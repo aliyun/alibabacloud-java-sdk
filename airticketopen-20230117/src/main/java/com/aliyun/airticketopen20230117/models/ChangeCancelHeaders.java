@@ -18,6 +18,8 @@ public class ChangeCancelHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
+     * <p>Language. Uses the buyer account configuration by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */

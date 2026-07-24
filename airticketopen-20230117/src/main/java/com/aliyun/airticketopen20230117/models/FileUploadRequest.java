@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FileUploadRequest extends TeaModel {
     /**
+     * <p>The Base64-encoded string of the attachment image file. Supported image types: .jpg, .png, and .jpeg.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +17,7 @@ public class FileUploadRequest extends TeaModel {
     public String fileContent;
 
     /**
+     * <p>The forward order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

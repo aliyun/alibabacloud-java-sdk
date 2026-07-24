@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BookResponseBody extends TeaModel {
     /**
-     * <p>request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -14,13 +14,13 @@ public class BookResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>data</p>
+     * <p>The data returned for a successful request.</p>
      */
     @NameInMap("data")
     public BookResponseBodyData data;
 
     /**
-     * <p>error code</p>
+     * <p>The business error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -29,7 +29,7 @@ public class BookResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>error data</p>
+     * <p>The data returned with the error.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class BookResponseBody extends TeaModel {
     public BookResponseBodyErrorData errorData;
 
     /**
-     * <p>error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -47,7 +47,7 @@ public class BookResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>http reqeust has been processed successfully，status code is 200</p>
+     * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class BookResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>true represents success, false represents failure</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -217,7 +217,7 @@ public class BookResponseBody extends TeaModel {
         public BookResponseBodyDataOrderListOrderAttribute orderAttribute;
 
         /**
-         * <p>order number</p>
+         * <p>The order number.</p>
          * 
          * <strong>example:</strong>
          * <p>4966***617111</p>
@@ -250,7 +250,7 @@ public class BookResponseBody extends TeaModel {
 
     public static class BookResponseBodyData extends TeaModel {
         /**
-         * <p>order information list</p>
+         * <p>The list of order information.</p>
          */
         @NameInMap("order_list")
         public java.util.List<BookResponseBodyDataOrderList> orderList;
@@ -362,7 +362,7 @@ public class BookResponseBody extends TeaModel {
         public BookResponseBodyErrorDataOrderListOrderAttribute orderAttribute;
 
         /**
-         * <p>order number</p>
+         * <p>The order number.</p>
          * 
          * <strong>example:</strong>
          * <p>4966***617111</p>
@@ -395,7 +395,7 @@ public class BookResponseBody extends TeaModel {
 
     public static class BookResponseBodyErrorData extends TeaModel {
         /**
-         * <p>order information list. When the same input parameters are used to repeat a Book, if the booking has already been successful, the order number will be returned.</p>
+         * <p>The list of order information. If you call the Book operation again with the same parameters after a successful booking, the order number is returned.</p>
          */
         @NameInMap("order_list")
         public java.util.List<BookResponseBodyErrorDataOrderList> orderList;

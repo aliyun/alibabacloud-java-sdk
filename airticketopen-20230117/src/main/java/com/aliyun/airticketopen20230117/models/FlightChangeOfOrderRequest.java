@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlightChangeOfOrderRequest extends TeaModel {
     /**
+     * <p>The order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

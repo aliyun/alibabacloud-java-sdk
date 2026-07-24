@@ -5,24 +5,28 @@ import com.aliyun.tea.*;
 
 public class ChangeApplyRequest extends TeaModel {
     /**
+     * <p>The list of passengers for the change.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("change_passenger_list")
     public java.util.List<ChangeApplyRequestChangePassengerList> changePassengerList;
 
     /**
+     * <p>The target journey for the change.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("changed_journeys")
     public java.util.List<ChangeApplyRequestChangedJourneys> changedJourneys;
 
     /**
+     * <p>The contact information for the change.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("contact")
     public ChangeApplyRequestContact contact;
 
     /**
+     * <p>The order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +36,8 @@ public class ChangeApplyRequest extends TeaModel {
     public Long orderNum;
 
     /**
+     * <p>The buyer remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>remark desc</p>
      */
@@ -39,6 +45,11 @@ public class ChangeApplyRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The change type. Valid values:</p>
+     * <ul>
+     * <li>0: voluntary change</li>
+     * <li>1: flight schedule change or flight cancellation.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,6 +113,8 @@ public class ChangeApplyRequest extends TeaModel {
 
     public static class ChangeApplyRequestChangePassengerList extends TeaModel {
         /**
+         * <p>The document number.</p>
+         * 
          * <strong>example:</strong>
          * <p>411***********4411</p>
          */
@@ -109,6 +122,7 @@ public class ChangeApplyRequest extends TeaModel {
         public String document;
 
         /**
+         * <p>The first name of the passenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +132,7 @@ public class ChangeApplyRequest extends TeaModel {
         public String firstName;
 
         /**
+         * <p>The last name of the passenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +174,8 @@ public class ChangeApplyRequest extends TeaModel {
 
     public static class ChangeApplyRequestChangedJourneysSegmentList extends TeaModel {
         /**
+         * <p>The three-letter IATA code of the arrival airport.</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -166,6 +183,7 @@ public class ChangeApplyRequest extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>The three-letter IATA code of the arrival city.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +193,8 @@ public class ChangeApplyRequest extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>The arrival terminal of the flight.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -182,16 +202,26 @@ public class ChangeApplyRequest extends TeaModel {
         public String arriveTerminal;
 
         /**
+         * <p>(该属性废弃)航班到达日期时间，utc时间戳</p>
+         * 
          * <strong>example:</strong>
          * <p>1677232999000</p>
          */
         @NameInMap("arrive_time")
         public Long arriveTime;
 
+        /**
+         * <p>(必填参数)航班到达日期时间，航班的旅行时间，格式：yyyy-MM-dd HH:mm:ss</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-20 12:30:00</p>
+         */
         @NameInMap("arrive_time_str")
         public String arriveTimeStr;
 
         /**
+         * <p>Indicates whether the flight is a codeshare flight.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -199,6 +229,8 @@ public class ChangeApplyRequest extends TeaModel {
         public Boolean codeShare;
 
         /**
+         * <p>The three-letter IATA code of the departure airport.</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -206,6 +238,7 @@ public class ChangeApplyRequest extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>The three-letter IATA code of the departure city.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,6 +248,11 @@ public class ChangeApplyRequest extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>The departure date (for example, yyyyMMdd).
+         * <a href="Deprecated">_single.params.changed_journeys.items.segment_list.items.departure_time.desc</a> The departure date and time of the flight, in UTC timestamp.
+         * <a href="Required">_single.params.changed_journeys.items.segment_list.items.departure_time_str.desc</a> The departure date and time of the flight, in local travel time. Format: yyyy-MM-dd HH:mm:ss.
+         * <a href="Deprecated">_single.params.changed_journeys.items.segment_list.items.arrive_time.desc</a> The arrival date and time of the flight, in UTC timestamp.
+         * <a href="Required">_single.params.changed_journeys.items.segment_list.items.arrive_time_str.desc</a> The arrival date and time of the flight, in local travel time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +262,8 @@ public class ChangeApplyRequest extends TeaModel {
         public String departureDate;
 
         /**
+         * <p>The departure terminal of the flight.</p>
+         * 
          * <strong>example:</strong>
          * <p>T2</p>
          */
@@ -231,16 +271,25 @@ public class ChangeApplyRequest extends TeaModel {
         public String departureTerminal;
 
         /**
+         * <p>(该属性废弃)航班起飞日期，utc时间戳</p>
+         * 
          * <strong>example:</strong>
          * <p>1677232998000</p>
          */
         @NameInMap("departure_time")
         public Long departureTime;
 
+        /**
+         * <p>(必填参数)航班起飞日期时间，航班的旅行时间，格式：yyyy-MM-dd HH:mm:ss</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-20 09:30:00</p>
+         */
         @NameInMap("departure_time_str")
         public String departureTimeStr;
 
         /**
+         * <p>The marketing flight number (such as KA5809).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,6 +299,8 @@ public class ChangeApplyRequest extends TeaModel {
         public String marketingFlightNo;
 
         /**
+         * <p>The operating flight number (such as CX601).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -376,6 +427,9 @@ public class ChangeApplyRequest extends TeaModel {
     }
 
     public static class ChangeApplyRequestChangedJourneys extends TeaModel {
+        /**
+         * <p>The list of target segments for the change.</p>
+         */
         @NameInMap("segment_list")
         public java.util.List<ChangeApplyRequestChangedJourneysSegmentList> segmentList;
 
@@ -396,6 +450,8 @@ public class ChangeApplyRequest extends TeaModel {
 
     public static class ChangeApplyRequestContact extends TeaModel {
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>gao******@gmail.com</p>
          */
@@ -403,6 +459,8 @@ public class ChangeApplyRequest extends TeaModel {
         public String email;
 
         /**
+         * <p>The country calling code.</p>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
@@ -410,6 +468,8 @@ public class ChangeApplyRequest extends TeaModel {
         public String mobileCountryCode;
 
         /**
+         * <p>The mobile phone number of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>183*****92</p>
          */

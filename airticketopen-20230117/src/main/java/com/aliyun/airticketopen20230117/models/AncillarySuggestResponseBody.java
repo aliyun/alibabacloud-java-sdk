@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AncillarySuggestResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -14,13 +14,13 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Properly processed return data</p>
+     * <p>The data returned for a successful request.</p>
      */
     @NameInMap("data")
     public AncillarySuggestResponseBodyData data;
 
     /**
-     * <p>error code</p>
+     * <p>The business error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -29,7 +29,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Data carried in error handling</p>
+     * <p>The data returned with the error.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public Object errorData;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -47,7 +47,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>http request successful, status value is always 200</p>
+     * <p>The HTTP status code. The value is always 200 for successful requests.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>true represents success, false represents failure</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary extends TeaModel {
         /**
-         * <p>baggage quantity, values such as: 3, 2, 1, 0, -2.     -2 indicates weight-based</p>
+         * <p>The number of baggage pieces. Valid values: 3, 2, 1, 0, and -2. A value of -2 indicates weight-based calculation.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -136,7 +136,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Integer baggageAmount;
 
         /**
-         * <p>Baggage weight, 0-50. When isAllWeight=true, it represents the total weight of all baggages.</p>
+         * <p>The baggage weight, ranging from 0 to 50. If isAllWeight is set to true, this value represents the total weight of all pieces.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -145,7 +145,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Integer baggageWeight;
 
         /**
-         * <p>Unit of baggage weight</p>
+         * <p>The unit of baggage weight.</p>
          * 
          * <strong>example:</strong>
          * <p>KG</p>
@@ -154,7 +154,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public String baggageWeightUnit;
 
         /**
-         * <p>Whether the weight is for all baggages</p>
+         * <p>Indicates whether the weight represents the total weight of all baggage pieces.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +163,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Boolean isAllWeight;
 
         /**
-         * <p>Total price</p>
+         * <p>The total price.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0</p>
@@ -220,7 +220,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary extends TeaModel {
         /**
-         * <p>Ancillary product ID</p>
+         * <p>The ancillary product ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eJwz8DeySEo0NjQ01TU3TU</p>
@@ -229,7 +229,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public String ancillaryId;
 
         /**
-         * <p>Ancillary product type. currently supports 4: paid luggage</p>
+         * <p>The ancillary product type. Currently supported value: 4 (paid baggage).</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -238,7 +238,7 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public Integer ancillaryType;
 
         /**
-         * <p>Baggage details</p>
+         * <p>The baggage ancillary details.</p>
          */
         @NameInMap("baggage_ancillary")
         public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary baggageAncillary;
@@ -276,13 +276,13 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     public static class AncillarySuggestResponseBodyDataSegAncillaryMapList extends TeaModel {
         /**
-         * <p>Ancillary product</p>
+         * <p>The ancillary product.</p>
          */
         @NameInMap("ancillary")
         public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary ancillary;
 
         /**
-         * <p>Segment ID list, these segments share the same ancillary</p>
+         * <p>The list of segment IDs. These segments share the same ancillary product.</p>
          */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
@@ -312,13 +312,13 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     public static class AncillarySuggestResponseBodyData extends TeaModel {
         /**
-         * <p>ancillary detail list</p>
+         * <p>The mapping between flights and ancillary products.</p>
          */
         @NameInMap("seg_ancillary_map_list")
         public java.util.List<AncillarySuggestResponseBodyDataSegAncillaryMapList> segAncillaryMapList;
 
         /**
-         * <p>solution_id, equals to solution_id in request</p>
+         * <p>The solution_id of the flight.</p>
          * 
          * <strong>example:</strong>
          * <p>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</p>

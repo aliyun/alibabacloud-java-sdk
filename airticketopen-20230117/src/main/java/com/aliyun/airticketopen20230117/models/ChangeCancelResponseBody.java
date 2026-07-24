@@ -12,6 +12,8 @@ public class ChangeCancelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The data returned for a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +21,8 @@ public class ChangeCancelResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>Business error code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -26,6 +30,8 @@ public class ChangeCancelResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -33,6 +39,8 @@ public class ChangeCancelResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -40,6 +48,8 @@ public class ChangeCancelResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>If the HTTP request is successful, the status value is 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -47,6 +57,8 @@ public class ChangeCancelResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

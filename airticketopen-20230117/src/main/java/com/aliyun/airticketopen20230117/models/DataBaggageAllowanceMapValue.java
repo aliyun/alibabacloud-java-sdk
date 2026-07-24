@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataBaggageAllowanceMapValue extends TeaModel {
     /**
-     * <p>checked baggage quantity</p>
+     * <p>托运行李件数</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
     public Integer baggageAmount;
 
     /**
-     * <p>checked baggage weight</p>
+     * <p>托运行李重量</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
     public Integer baggageWeight;
 
     /**
-     * <p>checked baggage weight unit</p>
+     * <p>托运行李重量单位</p>
      * 
      * <strong>example:</strong>
      * <p>KG</p>
@@ -32,7 +32,7 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
     public String baggageWeightUnit;
 
     /**
-     * <p>Whether the weight is for all baggages</p>
+     * <p>是否所有托运行李重量</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
     public Boolean isAllWeight;
 
     /**
-     * <p>carry-on baggage quantity</p>
+     * <p>手提行李件数</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
     public Integer carryOnAmount;
 
     /**
-     * <p>carry-on baggage weight</p>
+     * <p>手提行李重量</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -59,7 +59,7 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
     public Integer carryOnWeight;
 
     /**
-     * <p>carry-on baggage weight unit</p>
+     * <p>手提行李重量单位</p>
      * 
      * <strong>example:</strong>
      * <p>KG</p>
@@ -68,7 +68,7 @@ public class DataBaggageAllowanceMapValue extends TeaModel {
     public String carryOnWeightUnit;
 
     /**
-     * <p>Whether the weight is for all baggages</p>
+     * <p>是否所有手提行李重量</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

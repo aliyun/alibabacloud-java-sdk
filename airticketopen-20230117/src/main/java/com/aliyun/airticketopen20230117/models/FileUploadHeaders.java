@@ -8,7 +8,7 @@ public class FileUploadHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>access_token</p>
+     * <p>The access_token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +18,8 @@ public class FileUploadHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
+     * <p>The language setting. Uses the buyer account configuration by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */

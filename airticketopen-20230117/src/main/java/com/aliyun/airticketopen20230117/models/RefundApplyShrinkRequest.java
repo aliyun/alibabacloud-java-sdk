@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundApplyShrinkRequest extends TeaModel {
     /**
-     * <p>Order number</p>
+     * <p>The order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,22 +15,21 @@ public class RefundApplyShrinkRequest extends TeaModel {
     public Long orderNum;
 
     /**
-     * <p>Itinerary for which a refund is being requested</p>
+     * <p>The journeys for the refund application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("refund_journeys")
     public String refundJourneysShrink;
 
     /**
-     * <p>List of passengers applying for a refund</p>
+     * <p>The list of passengers for the refund application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("refund_passenger_list")
     public String refundPassengerListShrink;
 
     /**
-     * <p>Refund type - involuntary or voluntary. 
-     * attachments are required for involuntary refund application.</p>
+     * <p>The refund type. Attachments are required for involuntary refund applications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("refund_type")

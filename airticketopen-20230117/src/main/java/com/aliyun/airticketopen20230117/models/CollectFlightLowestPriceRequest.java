@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CollectFlightLowestPriceRequest extends TeaModel {
     /**
+     * <p>The lowest-price flight information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("lowest_price_flight_info_list")
@@ -25,6 +26,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
 
     public static class CollectFlightLowestPriceRequestLowestPriceFlightInfoList extends TeaModel {
         /**
+         * <p>The arrival city.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>The departure city.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -43,6 +46,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>The departure date. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -52,6 +56,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String departureDate;
 
         /**
+         * <p>The list of outbound flight numbers. Multiple segments are split by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -61,6 +66,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String departureFlightNumber;
 
         /**
+         * <p>The lowest competitor price in the market, including fare and taxes. The currency is USD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -70,6 +76,8 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public Double marketTotalPrice;
 
         /**
+         * <p>The request ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789dacd</p>
          */
@@ -77,6 +85,8 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The return date for round-trip scenarios. Format: yyyy-MM-dd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-11</p>
          */
@@ -84,6 +94,8 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String returnDate;
 
         /**
+         * <p>The list of return flight numbers. Multiple segments are split by commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>CA123,CA456</p>
          */
@@ -91,6 +103,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String returnFlightNumber;
 
         /**
+         * <p>The solution_id returned by Search/Enrich.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,6 +113,7 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public String solutionId;
 
         /**
+         * <p>The Suez quoted price, including fare and taxes. The currency is USD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,6 +123,11 @@ public class CollectFlightLowestPriceRequest extends TeaModel {
         public Double suezTotalPrice;
 
         /**
+         * <p>The trip type. Valid values:</p>
+         * <ul>
+         * <li>1: one-way</li>
+         * <li>2: round-trip.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

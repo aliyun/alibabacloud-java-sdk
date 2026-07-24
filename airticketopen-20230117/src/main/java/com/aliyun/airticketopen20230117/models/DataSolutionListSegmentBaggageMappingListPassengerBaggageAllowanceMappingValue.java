@@ -14,7 +14,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer baggageAmount;
 
     /**
-     * <p>Weight of checked baggage</p>
+     * <p>Checked baggage weight</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -23,7 +23,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer baggageWeight;
 
     /**
-     * <p>Unit of checked baggage weight (KG)</p>
+     * <p>Checked baggage weight unit KG</p>
      * 
      * <strong>example:</strong>
      * <p>KG</p>
@@ -32,7 +32,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public String baggageWeightUnit;
 
     /**
-     * <p>Whether the weight applies to all checked baggage</p>
+     * <p>Whether it is total checked baggage weight</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,7 +50,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryOnAmount;
 
     /**
-     * <p>Weight of carry-on baggage</p>
+     * <p>Carry-on baggage weight</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -59,7 +59,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryOnWeight;
 
     /**
-     * <p>Carry-on luggage weight unit KG</p>
+     * <p>Carry-on baggage weight unit KG</p>
      * 
      * <strong>example:</strong>
      * <p>KG</p>
@@ -68,7 +68,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public String carryOnWeightUnit;
 
     /**
-     * <p>Whether it is the total carry-on luggage weight</p>
+     * <p>Whether it is total carry-on baggage weight</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,8 +77,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Boolean isAllCarryOnWeight;
 
     /**
-     * <p>Carry-on luggage length (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>55</p>
      */
@@ -86,8 +84,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryLength;
 
     /**
-     * <p>Carry-on luggage width (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -95,8 +91,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryWidth;
 
     /**
-     * <p>Carry-on luggage height (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -104,8 +98,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carryHeight;
 
     /**
-     * <p>Sum of three sides of the Carry-on luggage (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>115</p>
      */
@@ -113,8 +105,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer carrySumOfLengthWidthHeight;
 
     /**
-     * <p>Check-in luggage length (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -122,8 +112,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer length;
 
     /**
-     * <p>Check-in luggage width (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -131,8 +119,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer width;
 
     /**
-     * <p>Check-in luggage height (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -140,8 +126,6 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
     public Integer height;
 
     /**
-     * <p>Sum of three sides of the Check-in luggage (unit: centimeters)</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */

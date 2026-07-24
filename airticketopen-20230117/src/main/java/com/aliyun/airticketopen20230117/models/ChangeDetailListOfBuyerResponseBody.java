@@ -11,10 +11,15 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned for a successful request.</p>
+     */
     @NameInMap("data")
     public ChangeDetailListOfBuyerResponseBodyData data;
 
     /**
+     * <p>The business error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +27,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned with the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +36,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +45,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +54,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +125,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfBuyerResponseBodyDataList extends TeaModel {
         /**
+         * <p>The change order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>4988430***950</p>
          */
@@ -119,6 +134,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public Long changeOrderNum;
 
         /**
+         * <p>The order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>4988430***971</p>
          */
@@ -126,6 +143,15 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public Long orderNum;
 
         /**
+         * <p>The application order status. Valid values:</p>
+         * <ul>
+         * <li>0: initial state</li>
+         * <li>1: pending payment</li>
+         * <li>2: payment successful</li>
+         * <li>3: change successful</li>
+         * <li>4: change closed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -133,6 +159,16 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public Integer orderStatus;
 
         /**
+         * <p>The payment status. Valid values:</p>
+         * <ul>
+         * <li>0: initial state</li>
+         * <li>1: pending payment</li>
+         * <li>2: payment successful</li>
+         * <li>3: transaction successful</li>
+         * <li>4: paid order closed successfully</li>
+         * <li>5: unpaid order closed successfully.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -140,6 +176,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public Integer payStatus;
 
         /**
+         * <p>The transaction number.</p>
+         * 
          * <strong>example:</strong>
          * <p>hkduendkd-2023-dj0</p>
          */
@@ -147,6 +185,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public String transactionNo;
 
         /**
+         * <p>The order creation time. The value is a UTC timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1677415274000</p>
          */
@@ -210,6 +250,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfBuyerResponseBodyDataPagination extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -217,6 +259,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -224,6 +268,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -231,6 +277,8 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -277,9 +325,15 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfBuyerResponseBodyData extends TeaModel {
+        /**
+         * <p>The data list.</p>
+         */
         @NameInMap("list")
         public java.util.List<ChangeDetailListOfBuyerResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("pagination")
         public ChangeDetailListOfBuyerResponseBodyDataPagination pagination;
 

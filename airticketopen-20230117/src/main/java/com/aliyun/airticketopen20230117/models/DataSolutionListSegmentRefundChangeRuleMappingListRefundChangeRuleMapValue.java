@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue extends TeaModel {
     /**
-     * <p>Full unused ticket refund rules</p>
+     * <p>Fully unused refund rules</p>
      */
     @NameInMap("refund_rule_all_unused_list")
     public java.util.List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRuleAllUnusedList> refundRuleAllUnusedList;
 
     /**
-     * <p>Partial unused ticket refund rules</p>
+     * <p>Partially unused refund rules</p>
      */
     @NameInMap("refund_rule_part_unused_list")
     public java.util.List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRulePartUnusedList> refundRulePartUnusedList;
 
     /**
-     * <p>Unused return flight change rules</p>
+     * <p>Return/inbound unused change rules</p>
      */
     @NameInMap("change_rule_in_unused_list")
     public java.util.List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleInUnusedList> changeRuleInUnusedList;
 
     /**
-     * <p>Unused outbound change rules</p>
+     * <p>Outbound unused change rules</p>
      */
     @NameInMap("change_rule_out_unused_list")
     public java.util.List<DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleOutUnusedList> changeRuleOutUnusedList;
@@ -67,7 +67,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
 
     public static class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRuleAllUnusedList extends TeaModel {
         /**
-         * <p>The type of itinerary this refund rule applies to 0: fully unused; 1: partially unused</p>
+         * <p>Refund rule applicable journey usage type 0: fully unused; 1: partially unused</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -85,7 +85,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public String timeUnit;
 
         /**
-         * <p>The start time of the refund time interval for this refund rule, in units of (days/hours)</p>
+         * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>
@@ -94,7 +94,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleStartTime;
 
         /**
-         * <p>The end time of the refund time interval for this refund rule, in units of (days/hours)</p>
+         * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -103,7 +103,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleEndTime;
 
         /**
-         * <p>Whether a refund is allowed X-Y hours (days) before departure</p>
+         * <p>Whether refund is allowed X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -121,7 +121,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Double refundFee;
 
         /**
-         * <p>Whether full tax refund is allowed X-Y hours (days) before departure</p>
+         * <p>Whether full tax refund is available X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -211,7 +211,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
 
     public static class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueRefundRulePartUnusedList extends TeaModel {
         /**
-         * <p>The type of itinerary usage for this refund rule. 0: Entirely unused; 1: Partially unused</p>
+         * <p>Refund rule applicable journey usage type 0: fully unused; 1: partially unused</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +229,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public String timeUnit;
 
         /**
-         * <p>The start time of the refund time interval for this refund rule, in units of days/hours</p>
+         * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>
@@ -238,7 +238,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleStartTime;
 
         /**
-         * <p>The end time of the refund time interval for this refund rule, in units of days/hours</p>
+         * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -247,7 +247,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleEndTime;
 
         /**
-         * <p>Whether a refund is allowed X-Y hours (days) before departure</p>
+         * <p>Whether refund is allowed X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -265,7 +265,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Double refundFee;
 
         /**
-         * <p>Whether full tax refund is allowed X-Y hours (days) before departure</p>
+         * <p>Whether full tax refund is available X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -355,7 +355,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
 
     public static class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleInUnusedList extends TeaModel {
         /**
-         * <p>Type of itinerary usage for the change rule 2: outbound unused; 3: return unused</p>
+         * <p>Change rule applicable journey usage type 2: outbound unused; 3: return/inbound unused</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -373,7 +373,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public String timeUnit;
 
         /**
-         * <p>Start time of the refund time interval, in units of days/hours, to which this refund rule applies</p>
+         * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>
@@ -382,7 +382,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleStartTime;
 
         /**
-         * <p>End time of the refund time interval, in units of days/hours, to which this refund rule applies</p>
+         * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -391,7 +391,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleEndTime;
 
         /**
-         * <p>Whether it is possible to change the ticket X-Y hours (days) before departure</p>
+         * <p>Whether rebooking is allowed X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -400,7 +400,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Boolean canChange;
 
         /**
-         * <p>Change fee X-Y hours (days) before departure</p>
+         * <p>Rebooking fee X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -465,7 +465,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
 
     public static class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValueChangeRuleOutUnusedList extends TeaModel {
         /**
-         * <p>The type of itinerary usage for this change rule 2: unused outbound; 3: unused return</p>
+         * <p>Change rule applicable journey usage type 2: outbound unused; 3: return/inbound unused</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -483,7 +483,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public String timeUnit;
 
         /**
-         * <p>Start time of the refund time interval for this refund rule, in days/hours</p>
+         * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>
@@ -492,7 +492,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleStartTime;
 
         /**
-         * <p>End time of the refund time interval for this refund rule, in days/hours</p>
+         * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -501,7 +501,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Integer ruleEndTime;
 
         /**
-         * <p>Whether it is possible to change the ticket X-Y hours (days) before departure</p>
+         * <p>Whether rebooking is allowed X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -510,7 +510,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         public Boolean canChange;
 
         /**
-         * <p>Change fee X-Y hours (days) before departure</p>
+         * <p>Rebooking fee X-Y hours (days) before departure</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

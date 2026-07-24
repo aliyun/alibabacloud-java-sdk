@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CollectFlightLowestPriceShrinkRequest extends TeaModel {
     /**
+     * <p>The lowest-price flight information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("lowest_price_flight_info_list")

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ChangeApplyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned for a successful request.</p>
+     */
     @NameInMap("data")
     public ChangeApplyResponseBodyData data;
 
     /**
+     * <p>The business error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class ChangeApplyResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned with the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +38,8 @@ public class ChangeApplyResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class ChangeApplyResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code. The value is always 200 for successful requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class ChangeApplyResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class ChangeApplyResponseBody extends TeaModel {
 
     public static class ChangeApplyResponseBodyDataChangeOrdersPassengers extends TeaModel {
         /**
+         * <p>The document number.</p>
+         * 
          * <strong>example:</strong>
          * <p>411***********4411</p>
          */
@@ -119,6 +136,8 @@ public class ChangeApplyResponseBody extends TeaModel {
         public String document;
 
         /**
+         * <p>The first name of the passenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>SAN</p>
          */
@@ -126,6 +145,8 @@ public class ChangeApplyResponseBody extends TeaModel {
         public String firstName;
 
         /**
+         * <p>The last name of the passenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZHANG</p>
          */
@@ -165,6 +186,8 @@ public class ChangeApplyResponseBody extends TeaModel {
 
     public static class ChangeApplyResponseBodyDataChangeOrders extends TeaModel {
         /**
+         * <p>The change order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>49884*****950</p>
          */
@@ -172,6 +195,12 @@ public class ChangeApplyResponseBody extends TeaModel {
         public Long changeOrderNum;
 
         /**
+         * <p>The change order status. Valid values:</p>
+         * <ul>
+         * <li>0: Change order created.</li>
+         * <li>5: Change order creation failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -179,12 +208,17 @@ public class ChangeApplyResponseBody extends TeaModel {
         public Integer changeOrderStatus;
 
         /**
+         * <p>The reason for the change order creation failure.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc reason</p>
          */
         @NameInMap("fail_reason")
         public String failReason;
 
+        /**
+         * <p>The passenger information of the change order.</p>
+         */
         @NameInMap("passengers")
         public java.util.List<ChangeApplyResponseBodyDataChangeOrdersPassengers> passengers;
 
@@ -228,10 +262,15 @@ public class ChangeApplyResponseBody extends TeaModel {
     }
 
     public static class ChangeApplyResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of change order application results.</p>
+         */
         @NameInMap("change_orders")
         public java.util.List<ChangeApplyResponseBodyDataChangeOrders> changeOrders;
 
         /**
+         * <p>The order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>4988430***950</p>
          */

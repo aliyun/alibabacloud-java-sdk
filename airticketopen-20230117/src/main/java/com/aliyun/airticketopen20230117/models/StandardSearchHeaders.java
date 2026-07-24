@@ -18,6 +18,8 @@ public class StandardSearchHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
+     * <p>Language setting, defaults to buyer account configuration</p>
+     * 
      * <strong>example:</strong>
      * <p>en_US</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundDetailListRequest extends TeaModel {
     /**
-     * <p>Order number</p>
+     * <p>The order number.</p>
      * 
      * <strong>example:</strong>
      * <p>49884*****950</p>
@@ -14,7 +14,7 @@ public class RefundDetailListRequest extends TeaModel {
     public Long orderNum;
 
     /**
-     * <p>Page index</p>
+     * <p>The page index.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class RefundDetailListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
-     * <p>Page size</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class RefundDetailListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Refund order creation start time, UTC timestamp</p>
+     * <p>The start time for refund order creation. The value is a UTC timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class RefundDetailListRequest extends TeaModel {
     public Long refundCreateBeginTime;
 
     /**
-     * <p>Refund order creation end time, UTC timestamp</p>
+     * <p>The end time for refund order creation. The value is a UTC timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

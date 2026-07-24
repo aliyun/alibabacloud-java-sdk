@@ -8,7 +8,7 @@ public class ChangeDetailHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>access token</p>
+     * <p>The access_token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ChangeDetailHeaders extends TeaModel {
     public String xAcsAirticketAccessToken;
 
     /**
-     * <p>Multi-language, default to buyer\&quot;s account configuration</p>
+     * <p>The language. The buyer account configuration is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>en_US</p>

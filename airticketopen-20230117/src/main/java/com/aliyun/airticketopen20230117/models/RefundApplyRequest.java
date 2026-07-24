@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundApplyRequest extends TeaModel {
     /**
-     * <p>Order number</p>
+     * <p>The order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,22 +15,21 @@ public class RefundApplyRequest extends TeaModel {
     public Long orderNum;
 
     /**
-     * <p>Itinerary for which a refund is being requested</p>
+     * <p>The journeys for the refund application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("refund_journeys")
     public java.util.List<RefundApplyRequestRefundJourneys> refundJourneys;
 
     /**
-     * <p>List of passengers applying for a refund</p>
+     * <p>The list of passengers for the refund application.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("refund_passenger_list")
     public java.util.List<RefundApplyRequestRefundPassengerList> refundPassengerList;
 
     /**
-     * <p>Refund type - involuntary or voluntary. 
-     * attachments are required for involuntary refund application.</p>
+     * <p>The refund type. Attachments are required for involuntary refund applications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("refund_type")
@@ -75,7 +74,7 @@ public class RefundApplyRequest extends TeaModel {
 
     public static class RefundApplyRequestRefundJourneysSegmentList extends TeaModel {
         /**
-         * <p>Three-letter code of the arrival airport (uppercase)</p>
+         * <p>The three-letter IATA code of the arrival airport (uppercase).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -85,7 +84,7 @@ public class RefundApplyRequest extends TeaModel {
         public String arrivalAirport;
 
         /**
-         * <p>Three-letter code of the arrival city (uppercase)</p>
+         * <p>The three-letter IATA code of the arrival city (uppercase).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,7 +94,7 @@ public class RefundApplyRequest extends TeaModel {
         public String arrivalCity;
 
         /**
-         * <p>Three-letter code of the departure airport (uppercase)</p>
+         * <p>The three-letter IATA code of the departure airport (uppercase).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,7 +104,7 @@ public class RefundApplyRequest extends TeaModel {
         public String departureAirport;
 
         /**
-         * <p>Three-letter code of the departure city (uppercase)</p>
+         * <p>The three-letter IATA code of the departure city (uppercase).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +154,7 @@ public class RefundApplyRequest extends TeaModel {
 
     public static class RefundApplyRequestRefundJourneys extends TeaModel {
         /**
-         * <p>Flight segment information</p>
+         * <p>The segment information.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("segment_list")
@@ -178,7 +177,7 @@ public class RefundApplyRequest extends TeaModel {
 
     public static class RefundApplyRequestRefundPassengerList extends TeaModel {
         /**
-         * <p>Document number</p>
+         * <p>The document number of the passenger.</p>
          * 
          * <strong>example:</strong>
          * <p>411***********4411</p>
@@ -187,7 +186,7 @@ public class RefundApplyRequest extends TeaModel {
         public String document;
 
         /**
-         * <p>Passenger\&quot;s first name</p>
+         * <p>The first name of the passenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +196,7 @@ public class RefundApplyRequest extends TeaModel {
         public String firstName;
 
         /**
-         * <p>Passenger\&quot;s last name</p>
+         * <p>The last name of the passenger.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +238,7 @@ public class RefundApplyRequest extends TeaModel {
 
     public static class RefundApplyRequestRefundType extends TeaModel {
         /**
-         * <p>Array of attachment file URLs. First, upload the files using a separate file upload interface to get the file URLs.</p>
+         * <p>The array of attachment file URLs. Upload files first by using the dedicated file upload operation to obtain the file URLs.</p>
          * 
          * <strong>example:</strong>
          * <p>[xxx,yyy]</p>
@@ -248,9 +247,13 @@ public class RefundApplyRequest extends TeaModel {
         public java.util.List<String> file;
 
         /**
-         * <p>2: Voluntary (I want to change my travel plan/I don\&quot;t want to fly). 
-         * 5: Involuntary, due to flight delay or cancellation, schedule changes, or other airline reasons. 
-         * 6: Involuntary, due to health reasons with a medical report from a hospital of at least secondary level A or above.</p>
+         * <p>The refund type. Valid values:</p>
+         * <ul>
+         * <li>2: Voluntary refund (change of travel plans or decision not to fly).</li>
+         * <li>5: Involuntary refund due to airline reasons such as flight delay, cancellation, or schedule change.</li>
+         * <li>6: Involuntary refund due to medical reasons with a certificate from a Grade II Class A hospital or above.</li>
+         * </ul>
+         * <p>Note: Attachments are not mandatory, but providing attachments for involuntary refunds can improve the success rate of the refund application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +263,7 @@ public class RefundApplyRequest extends TeaModel {
         public Integer refundTypeId;
 
         /**
-         * <p>Remark: detailed description about the refund application</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark desc</p>

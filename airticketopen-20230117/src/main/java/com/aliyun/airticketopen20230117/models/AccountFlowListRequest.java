@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AccountFlowListRequest extends TeaModel {
     /**
+     * <p>The number of days to search. Maximum value: 30. Valid values: 0 to 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class AccountFlowListRequest extends TeaModel {
     public Integer dayNum;
 
     /**
+     * <p>The page index.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class AccountFlowListRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -28,6 +33,7 @@ public class AccountFlowListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start search timestamp, effective to the day. Specify a 13-digit UTC timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

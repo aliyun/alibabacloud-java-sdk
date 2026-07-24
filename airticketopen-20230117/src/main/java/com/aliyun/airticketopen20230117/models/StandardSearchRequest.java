@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StandardSearchRequest extends TeaModel {
     /**
+     * <p>Number of adult passengers, range 1-9</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,12 +14,15 @@ public class StandardSearchRequest extends TeaModel {
     public Integer adults;
 
     /**
+     * <p>Journey array. At least one of departure_city and departure_airport_list must be non-empty; when departure_airport_list has values, they must belong to the same city. At least one of arrival_city and arrival_airport_list must be non-empty; when arrival_airport_list has values, they must belong to the same city.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("air_legs")
     public java.util.List<StandardSearchRequestAirLegs> airLegs;
 
     /**
+     * <p>Defaults to ALL_CABIN if not specified. Cabin class ALL_CABIN: All cabin classes; Y: Economy class; FC: First class and Business class; S: Premium Economy class; YS: Economy class and Premium Economy class; YSC: Economy class, Premium Economy class, and Business class;</p>
+     * 
      * <strong>example:</strong>
      * <p>ALL_CABIN</p>
      */
@@ -25,6 +30,8 @@ public class StandardSearchRequest extends TeaModel {
     public String cabinClass;
 
     /**
+     * <p>Number of child passengers, range 0-9</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -32,12 +39,17 @@ public class StandardSearchRequest extends TeaModel {
     public Integer children;
 
     /**
+     * <p>Number of infant passengers, range 0-9</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("infants")
     public Integer infants;
 
+    /**
+     * <p>Search control options, optional</p>
+     */
     @NameInMap("search_control_options")
     public StandardSearchRequestSearchControlOptions searchControlOptions;
 
@@ -96,6 +108,8 @@ public class StandardSearchRequest extends TeaModel {
 
     public static class StandardSearchRequestAirLegs extends TeaModel {
         /**
+         * <p>Arrival airport three-letter code</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -103,6 +117,8 @@ public class StandardSearchRequest extends TeaModel {
         public java.util.List<String> arrivalAirportList;
 
         /**
+         * <p>Arrival city three-letter code</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -110,6 +126,8 @@ public class StandardSearchRequest extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>Departure airport three-letter code</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -117,6 +135,8 @@ public class StandardSearchRequest extends TeaModel {
         public java.util.List<String> departureAirportList;
 
         /**
+         * <p>Departure city three-letter code</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -124,6 +144,7 @@ public class StandardSearchRequest extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>Departure date (e.g.: yyyyMMdd)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,6 +202,8 @@ public class StandardSearchRequest extends TeaModel {
 
     public static class StandardSearchRequestSearchControlOptions extends TeaModel {
         /**
+         * <p>Excluded airlines list</p>
+         * 
          * <strong>example:</strong>
          * <p>7C</p>
          */
@@ -188,6 +211,8 @@ public class StandardSearchRequest extends TeaModel {
         public java.util.List<String> airlineExcludedList;
 
         /**
+         * <p>Preferred airlines list</p>
+         * 
          * <strong>example:</strong>
          * <p>FD</p>
          */
@@ -195,6 +220,8 @@ public class StandardSearchRequest extends TeaModel {
         public java.util.List<String> airlinePreferList;
 
         /**
+         * <p>Ticketing service quality</p>
+         * 
          * <strong>example:</strong>
          * <p>A1</p>
          */

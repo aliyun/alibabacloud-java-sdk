@@ -11,10 +11,15 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned for a successful request.</p>
+     */
     @NameInMap("data")
     public java.util.List<FlightChangeOfOrderResponseBodyData> data;
 
     /**
+     * <p>The business error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +27,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned with the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +36,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +45,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code. The value is always 200 for successful requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +54,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +125,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
 
     public static class FlightChangeOfOrderResponseBodyDataFlightChangeDetail extends TeaModel {
         /**
+         * <p>The reason for the flight change.</p>
+         * 
          * <strong>example:</strong>
          * <p>天气</p>
          */
@@ -119,6 +134,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String changeReason;
 
         /**
+         * <p>The time of the flight change in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-01 10:01:00</p>
          */
@@ -126,6 +143,12 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String changeTime;
 
         /**
+         * <p>The type of the flight change. Valid values:</p>
+         * <ul>
+         * <li>1: cancellation</li>
+         * <li>2: schedule change.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +156,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public Integer changeType;
 
         /**
+         * <p>The three-letter IATA code of the new arrival airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -140,6 +165,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String newArrivalAirport;
 
         /**
+         * <p>The arrival date and time of the new flight in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-01 15:01:00</p>
          */
@@ -147,6 +174,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String newArrivalTime;
 
         /**
+         * <p>The three-letter IATA code of the new departure airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -154,6 +183,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String newDepartureAirport;
 
         /**
+         * <p>The departure date and time of the new flight in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-01 13:01:00</p>
          */
@@ -161,6 +192,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String newDepartureTime;
 
         /**
+         * <p>The new flight number.</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -168,6 +201,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String newFlightNo;
 
         /**
+         * <p>The three-letter IATA code of the original arrival airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -175,6 +210,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String oldArrivalAirport;
 
         /**
+         * <p>The arrival date and time of the original flight in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>023-02-01 14:01:00</p>
          */
@@ -182,6 +219,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String oldArrivalTime;
 
         /**
+         * <p>The three-letter IATA code of the original departure airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -189,6 +228,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String oldDepartureAirport;
 
         /**
+         * <p>The departure date and time of the original flight in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-01 12:01:00</p>
          */
@@ -196,6 +237,8 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public String oldDepartureTime;
 
         /**
+         * <p>The original flight number.</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -314,10 +357,15 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     }
 
     public static class FlightChangeOfOrderResponseBodyData extends TeaModel {
+        /**
+         * <p>The flight change information.</p>
+         */
         @NameInMap("flight_change_detail")
         public FlightChangeOfOrderResponseBodyDataFlightChangeDetail flightChangeDetail;
 
         /**
+         * <p>The order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>4966***617111</p>
          */

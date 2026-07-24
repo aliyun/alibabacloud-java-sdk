@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
     /**
-     * <p>appKey</p>
+     * <p>The appKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetTokenRequest extends TeaModel {
     public String appKey;
 
     /**
-     * <p>appSecret</p>
+     * <p>The appSecret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OrderDetailRequest extends TeaModel {
     /**
-     * <p>order number created by book</p>
+     * <p>The order number.</p>
      * 
      * <strong>example:</strong>
      * <p>4966***617111</p>
@@ -14,7 +14,7 @@ public class OrderDetailRequest extends TeaModel {
     public Long orderNum;
 
     /**
-     * <p>external order number(customized by buyer when book)</p>
+     * <p>The external order number.</p>
      * 
      * <strong>example:</strong>
      * <p>x091-2023-0220-j-0001</p>

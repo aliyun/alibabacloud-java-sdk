@@ -5,36 +5,36 @@ import com.aliyun.tea.*;
 
 public class OrderListRequest extends TeaModel {
     /**
-     * <p>latest booking time (timestamp)</p>
+     * <p>The query end time. The value is a 13-digit UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1677229005000</p>
+     * <p>1677229006000</p>
      */
     @NameInMap("book_time_end")
     public Long bookTimeEnd;
 
     /**
-     * <p>earliest book time(timestamp)</p>
+     * <p>The query start time. The value is a 13-digit UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1677227005000</p>
+     * <p>1677229005000</p>
      */
     @NameInMap("book_time_start")
     public Long bookTimeStart;
 
     /**
-     * <p>pagination query parameters, from which page to start querying,querying starts with 0</p>
+     * <p>The page index. The value starts from 1.</p>
      * 
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>1</p>
      */
     @NameInMap("page_index")
     public Integer pageIndex;
 
     /**
-     * <p>pagination query parameters, how many orders to return</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,12 +43,13 @@ public class OrderListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>which order status will be query</p>
-     * <p>1: order reservation in process</p>
-     * <p>2: order reservation successful</p>
-     * <p>3: order paid</p>
-     * <p>4: order successful</p>
-     * <p>5: order closed</p>
+     * <p>The order status. Valid values:</p>
+     * <ul>
+     * <li>2: order creation succeeded.</li>
+     * <li>3: order paid.</li>
+     * <li>4: order succeeded.</li>
+     * <li>5: order closed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>4</p>

@@ -5,24 +5,28 @@ import com.aliyun.tea.*;
 
 public class ChangeApplyShrinkRequest extends TeaModel {
     /**
+     * <p>The list of passengers for the change.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("change_passenger_list")
     public String changePassengerListShrink;
 
     /**
+     * <p>The target journey for the change.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("changed_journeys")
     public String changedJourneysShrink;
 
     /**
+     * <p>The contact information for the change.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("contact")
     public String contactShrink;
 
     /**
+     * <p>The order number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +36,8 @@ public class ChangeApplyShrinkRequest extends TeaModel {
     public Long orderNum;
 
     /**
+     * <p>The buyer remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>remark desc</p>
      */
@@ -39,6 +45,11 @@ public class ChangeApplyShrinkRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>The change type. Valid values:</p>
+     * <ul>
+     * <li>0: voluntary change</li>
+     * <li>1: flight schedule change or flight cancellation.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

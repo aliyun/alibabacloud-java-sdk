@@ -11,10 +11,15 @@ public class ChangeConfirmResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned for a successful request.</p>
+     */
     @NameInMap("data")
     public ChangeConfirmResponseBodyData data;
 
     /**
+     * <p>The business error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +27,8 @@ public class ChangeConfirmResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned for a failed request.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +36,8 @@ public class ChangeConfirmResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +45,8 @@ public class ChangeConfirmResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code. The value is always 200 for successful requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +54,8 @@ public class ChangeConfirmResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +125,8 @@ public class ChangeConfirmResponseBody extends TeaModel {
 
     public static class ChangeConfirmResponseBodyData extends TeaModel {
         /**
+         * <p>The payment amount for the flight change.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -126,6 +141,8 @@ public class ChangeConfirmResponseBody extends TeaModel {
         public Long payTime;
 
         /**
+         * <p>The payment transaction number for the flight change.</p>
+         * 
          * <strong>example:</strong>
          * <p>hkduendkd-2023-dj0</p>
          */

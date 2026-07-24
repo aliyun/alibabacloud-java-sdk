@@ -11,10 +11,15 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The data returned for a successful request.</p>
+     */
     @NameInMap("data")
     public ChangeDetailListOfOrderNumResponseBodyData data;
 
     /**
+     * <p>The business error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +27,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The data returned with the error.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +36,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +45,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>The HTTP status code. The value is always 200 for successful requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +54,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,13 +125,20 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsChangeFee extends TeaModel {
         /**
+         * <p>The service fee.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
         @NameInMap("service_fee")
         public Double serviceFee;
 
+        @NameInMap("suez_service_fee")
+        public Double suezServiceFee;
+
         /**
+         * <p>The change tax fee.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -126,6 +146,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Double taxFee;
 
         /**
+         * <p>The upgrade fee.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -143,6 +165,14 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         }
         public Double getServiceFee() {
             return this.serviceFee;
+        }
+
+        public ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsChangeFee setSuezServiceFee(Double suezServiceFee) {
+            this.suezServiceFee = suezServiceFee;
+            return this;
+        }
+        public Double getSuezServiceFee() {
+            return this.suezServiceFee;
         }
 
         public ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsChangeFee setTaxFee(Double taxFee) {
@@ -165,6 +195,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsPassenger extends TeaModel {
         /**
+         * <p>The document number.</p>
+         * 
          * <strong>example:</strong>
          * <p>411***********4411</p>
          */
@@ -172,6 +204,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String document;
 
         /**
+         * <p>The first name of the passenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>SAN</p>
          */
@@ -179,6 +213,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String firstName;
 
         /**
+         * <p>The last name of the passenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZHANG</p>
          */
@@ -217,9 +253,15 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetails extends TeaModel {
+        /**
+         * <p>The change fee details for the passenger.</p>
+         */
         @NameInMap("change_fee")
         public ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsChangeFee changeFee;
 
+        /**
+         * <p>The passenger information for the change.</p>
+         */
         @NameInMap("passenger")
         public ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetailsPassenger passenger;
 
@@ -248,6 +290,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListChangePassengers extends TeaModel {
         /**
+         * <p>The document number.</p>
+         * 
          * <strong>example:</strong>
          * <p>411***********4411</p>
          */
@@ -255,6 +299,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String document;
 
         /**
+         * <p>The first name of the passenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>SAN</p>
          */
@@ -262,6 +308,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String firstName;
 
         /**
+         * <p>The last name of the passenger.</p>
+         * 
          * <strong>example:</strong>
          * <p>ZHANG</p>
          */
@@ -301,6 +349,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneysSegmentList extends TeaModel {
         /**
+         * <p>The three-letter IATA code of the arrival airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -308,6 +358,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>The three-letter IATA code of the arrival city (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -315,6 +367,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>The arrival terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -322,6 +376,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalTerminal;
 
         /**
+         * <p>The arrival date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 10:40:00</p>
          */
@@ -329,6 +385,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalTime;
 
         /**
+         * <p>The number of remaining seats.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -336,6 +394,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String availability;
 
         /**
+         * <p>The cabin code.</p>
+         * 
          * <strong>example:</strong>
          * <p>V</p>
          */
@@ -343,6 +403,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String cabin;
 
         /**
+         * <p>The cabin class.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -350,6 +412,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String cabinClass;
 
         /**
+         * <p>Indicates whether this is a codeshare flight.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -357,6 +421,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Boolean codeShare;
 
         /**
+         * <p>The three-letter IATA code of the departure airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -364,6 +430,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>The three-letter IATA code of the departure city (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -371,6 +439,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>The departure terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T2</p>
          */
@@ -378,6 +448,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureTerminal;
 
         /**
+         * <p>The departure date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
          */
@@ -385,6 +457,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureTime;
 
         /**
+         * <p>The aircraft type.</p>
+         * 
          * <strong>example:</strong>
          * <p>32Q</p>
          */
@@ -392,6 +466,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String equipType;
 
         /**
+         * <p>The flight duration in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -399,6 +475,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer flightDuration;
 
         /**
+         * <p>The marketing airline code (such as HO).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -406,6 +484,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String marketingAirline;
 
         /**
+         * <p>The marketing flight number (such as HO1295).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -413,6 +493,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String marketingFlightNo;
 
         /**
+         * <p>The numeric marketing flight number (such as 1295).</p>
+         * 
          * <strong>example:</strong>
          * <p>1295</p>
          */
@@ -420,6 +502,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer marketingFlightNoInt;
 
         /**
+         * <p>The operating airline code (such as CX).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -427,6 +511,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String operatingAirline;
 
         /**
+         * <p>The operating flight number (such as CX601).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -434,6 +520,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String operatingFlightNo;
 
         /**
+         * <p>The segment ID. Format: flight number + departure airport + arrival airport + departure date (MMdd).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295-PVG-MFM-20230310</p>
          */
@@ -441,6 +529,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String segmentId;
 
         /**
+         * <p>The list of stopover cities. This field has a value when stopQuantity is greater than 0. Multiple cities are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>SEL,HKG</p>
          */
@@ -448,6 +538,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String stopCityList;
 
         /**
+         * <p>The number of stopover cities.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -638,10 +730,15 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneys extends TeaModel {
+        /**
+         * <p>The segment information.</p>
+         */
         @NameInMap("segment_list")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneysSegmentList> segmentList;
 
         /**
+         * <p>The number of transfers.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -673,6 +770,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListContact extends TeaModel {
         /**
+         * <p>The email address.</p>
+         * 
          * <strong>example:</strong>
          * <p>gao******@gmail.com</p>
          */
@@ -680,6 +779,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>The country calling code.</p>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
@@ -687,6 +788,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String mobileCountryCode;
 
         /**
+         * <p>The mobile phone number of the contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>183*****92</p>
          */
@@ -726,6 +829,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListLastJourneysSegmentList extends TeaModel {
         /**
+         * <p>The three-letter IATA code of the arrival airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -733,6 +838,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>The three-letter IATA code of the arrival city (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -740,6 +847,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>The arrival terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -747,6 +856,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalTerminal;
 
         /**
+         * <p>The arrival date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 10:40:00</p>
          */
@@ -754,6 +865,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalTime;
 
         /**
+         * <p>The number of remaining seats.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -761,6 +874,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String availability;
 
         /**
+         * <p>The cabin code.</p>
+         * 
          * <strong>example:</strong>
          * <p>V</p>
          */
@@ -768,6 +883,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String cabin;
 
         /**
+         * <p>The cabin class.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -775,6 +892,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String cabinClass;
 
         /**
+         * <p>Indicates whether this is a codeshare flight.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -782,6 +901,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Boolean codeShare;
 
         /**
+         * <p>The three-letter IATA code of the departure airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -789,6 +910,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>The three-letter IATA code of the departure city (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -796,6 +919,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>The departure terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T2</p>
          */
@@ -803,6 +928,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureTerminal;
 
         /**
+         * <p>The departure date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
          */
@@ -810,6 +937,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureTime;
 
         /**
+         * <p>The aircraft type.</p>
+         * 
          * <strong>example:</strong>
          * <p>32Q</p>
          */
@@ -817,6 +946,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String equipType;
 
         /**
+         * <p>The flight duration in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -824,6 +955,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer flightDuration;
 
         /**
+         * <p>The marketing airline code (such as HO).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -831,6 +964,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String marketingAirline;
 
         /**
+         * <p>The marketing flight number (such as HO1295).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -838,6 +973,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String marketingFlightNo;
 
         /**
+         * <p>The numeric marketing flight number (such as 1295).</p>
+         * 
          * <strong>example:</strong>
          * <p>1295</p>
          */
@@ -845,6 +982,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer marketingFlightNoInt;
 
         /**
+         * <p>The operating airline code (such as CX).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -852,6 +991,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String operatingAirline;
 
         /**
+         * <p>The operating flight number (such as CX601).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -859,6 +1000,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String operatingFlightNo;
 
         /**
+         * <p>The segment ID. Format: flight number + departure airport + arrival airport + departure date (MMdd).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295-PVG-MFM-20230310</p>
          */
@@ -866,6 +1009,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String segmentId;
 
         /**
+         * <p>The list of stopover cities. This field has a value when stopQuantity is greater than 0. Multiple cities are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>SEL,HKG</p>
          */
@@ -873,6 +1018,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String stopCityList;
 
         /**
+         * <p>The number of stopover cities.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1063,10 +1210,15 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListLastJourneys extends TeaModel {
+        /**
+         * <p>The segment information.</p>
+         */
         @NameInMap("segment_list")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListLastJourneysSegmentList> segmentList;
 
         /**
+         * <p>The number of transfers.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1098,6 +1250,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneysSegmentList extends TeaModel {
         /**
+         * <p>The three-letter IATA code of the arrival airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -1105,6 +1259,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>The three-letter IATA code of the arrival city (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -1112,6 +1268,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>The arrival terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -1119,6 +1277,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalTerminal;
 
         /**
+         * <p>The arrival date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 10:40:00</p>
          */
@@ -1126,6 +1286,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String arrivalTime;
 
         /**
+         * <p>The number of remaining seats.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -1133,6 +1295,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String availability;
 
         /**
+         * <p>The cabin code.</p>
+         * 
          * <strong>example:</strong>
          * <p>V</p>
          */
@@ -1140,6 +1304,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String cabin;
 
         /**
+         * <p>The cabin class.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -1147,6 +1313,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String cabinClass;
 
         /**
+         * <p>Indicates whether this is a codeshare flight.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1154,6 +1322,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Boolean codeShare;
 
         /**
+         * <p>The three-letter IATA code of the departure airport (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -1161,6 +1331,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>The three-letter IATA code of the departure city (uppercase).</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -1168,6 +1340,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>The departure terminal.</p>
+         * 
          * <strong>example:</strong>
          * <p>T2</p>
          */
@@ -1175,6 +1349,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureTerminal;
 
         /**
+         * <p>The departure date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
          */
@@ -1182,6 +1358,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String departureTime;
 
         /**
+         * <p>The aircraft type.</p>
+         * 
          * <strong>example:</strong>
          * <p>32Q</p>
          */
@@ -1189,6 +1367,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String equipType;
 
         /**
+         * <p>The flight duration in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -1196,6 +1376,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer flightDuration;
 
         /**
+         * <p>The marketing airline code (such as HO).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -1203,6 +1385,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String marketingAirline;
 
         /**
+         * <p>The marketing flight number (such as HO1295).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -1210,6 +1394,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String marketingFlightNo;
 
         /**
+         * <p>The numeric marketing flight number (such as 1295).</p>
+         * 
          * <strong>example:</strong>
          * <p>1295</p>
          */
@@ -1217,6 +1403,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer marketingFlightNoInt;
 
         /**
+         * <p>The operating airline code (such as CX).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -1224,6 +1412,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String operatingAirline;
 
         /**
+         * <p>The operating flight number (such as CX601).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -1231,6 +1421,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String operatingFlightNo;
 
         /**
+         * <p>The segment ID. Format: flight number + departure airport + arrival airport + departure date (MMdd).</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295-PVG-MFM-20230310</p>
          */
@@ -1238,6 +1430,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String segmentId;
 
         /**
+         * <p>The list of stopover cities. This field has a value when stopQuantity is greater than 0. Multiple cities are separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>SEL,HKG</p>
          */
@@ -1245,6 +1439,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String stopCityList;
 
         /**
+         * <p>The number of stopover cities.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1435,10 +1631,15 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneys extends TeaModel {
+        /**
+         * <p>The segment information.</p>
+         */
         @NameInMap("segment_list")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneysSegmentList> segmentList;
 
         /**
+         * <p>The number of transfers.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1469,30 +1670,50 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The change fee details at the passenger level.</p>
+         */
         @NameInMap("change_fee_details")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListChangeFeeDetails> changeFeeDetails;
 
         /**
+         * <p>The change order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>4988430***950</p>
          */
         @NameInMap("change_order_num")
         public Long changeOrderNum;
 
+        /**
+         * <p>The list of passengers for the change order.</p>
+         */
         @NameInMap("change_passengers")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListChangePassengers> changePassengers;
 
         /**
+         * <p>The change reason type. Valid values:</p>
+         * <ul>
+         * <li>0: voluntary date change</li>
+         * <li>1: flight schedule change or flight cancellation</li>
+         * <li>2: change due to epidemic.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("change_reason_type")
         public Integer changeReasonType;
 
+        /**
+         * <p>The journeys after the change.</p>
+         */
         @NameInMap("changed_journeys")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListChangedJourneys> changedJourneys;
 
         /**
+         * <p>The reason for closing the change order.</p>
+         * 
          * <strong>example:</strong>
          * <p>reason desc</p>
          */
@@ -1500,16 +1721,23 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public String closeReason;
 
         /**
+         * <p>The time when the order was closed, in UTC timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1677415244000</p>
          */
         @NameInMap("close_utc_time")
         public Long closeUtcTime;
 
+        /**
+         * <p>The contact information for the change order.</p>
+         */
         @NameInMap("contact")
         public ChangeDetailListOfOrderNumResponseBodyDataListContact contact;
 
         /**
+         * <p>The creation time of the change order, in UTC timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1677415276000</p>
          */
@@ -1517,16 +1745,23 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Long createUtcTime;
 
         /**
+         * <p>The latest payment deadline for the buyer, in UTC timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1677415278000</p>
          */
         @NameInMap("last_confirm_utc_time")
         public Long lastConfirmUtcTime;
 
+        /**
+         * <p>The journeys from the previous change.</p>
+         */
         @NameInMap("last_journeys")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListLastJourneys> lastJourneys;
 
         /**
+         * <p>The order number.</p>
+         * 
          * <strong>example:</strong>
          * <p>5988430***541</p>
          */
@@ -1534,16 +1769,38 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Long orderNum;
 
         /**
+         * <p>The change order status. Valid values:</p>
+         * <ul>
+         * <li>0: initial state</li>
+         * <li>1: pending payment</li>
+         * <li>2: payment successful</li>
+         * <li>3: change successful</li>
+         * <li>4: change closed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        /**
+         * <p>The original journeys.</p>
+         */
         @NameInMap("original_journeys")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataListOriginalJourneys> originalJourneys;
 
         /**
+         * <p>The payment status. Valid values:</p>
+         * <ul>
+         * <li>0: initial state</li>
+         * <li>1: pending payment</li>
+         * <li>2: payment successful</li>
+         * <li>3: transaction transfer successful</li>
+         * <li>4: paid order closed successfully</li>
+         * <li>5: unpaid order closed successfully.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -1551,6 +1808,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer payStatus;
 
         /**
+         * <p>The time when the buyer completed the payment, in UTC timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1677415255000</p>
          */
@@ -1558,6 +1817,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Long paySuccessUtcTime;
 
         /**
+         * <p>The total payment amount of the change order.</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -1565,6 +1826,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Double totalAmount;
 
         /**
+         * <p>The transaction number.</p>
+         * 
          * <strong>example:</strong>
          * <p>hkduendkd-2023-dj0</p>
          */
@@ -1724,6 +1987,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
 
     public static class ChangeDetailListOfOrderNumResponseBodyDataPagination extends TeaModel {
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1731,6 +1996,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
+         * <p>The number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1738,6 +2005,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -1745,6 +2014,8 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1791,9 +2062,15 @@ public class ChangeDetailListOfOrderNumResponseBody extends TeaModel {
     }
 
     public static class ChangeDetailListOfOrderNumResponseBodyData extends TeaModel {
+        /**
+         * <p>The data list.</p>
+         */
         @NameInMap("list")
         public java.util.List<ChangeDetailListOfOrderNumResponseBodyDataList> list;
 
+        /**
+         * <p>The pagination information.</p>
+         */
         @NameInMap("pagination")
         public ChangeDetailListOfOrderNumResponseBodyDataPagination pagination;
 

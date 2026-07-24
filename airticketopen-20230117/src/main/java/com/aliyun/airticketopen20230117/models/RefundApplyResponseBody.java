@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefundApplyResponseBody extends TeaModel {
     /**
-     * <p>Request RequestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -14,13 +14,13 @@ public class RefundApplyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Correctly processed return data</p>
+     * <p>The data returned for a successful request.</p>
      */
     @NameInMap("data")
     public RefundApplyResponseBodyData data;
 
     /**
-     * <p>error code</p>
+     * <p>The business error code.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -29,7 +29,7 @@ public class RefundApplyResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>Data carried in error handling</p>
+     * <p>The data returned with the error.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class RefundApplyResponseBody extends TeaModel {
     public Object errorData;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -47,7 +47,7 @@ public class RefundApplyResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
-     * <p>HTTP request successful, status value is always 200</p>
+     * <p>The HTTP status code. The value is always 200 for successful requests.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -56,7 +56,7 @@ public class RefundApplyResponseBody extends TeaModel {
     public Integer status;
 
     /**
-     * <p>Whether the request was successful</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -127,7 +127,7 @@ public class RefundApplyResponseBody extends TeaModel {
 
     public static class RefundApplyResponseBodyDataRefundResultsRefundPassengers extends TeaModel {
         /**
-         * <p>Document number</p>
+         * <p>The document number of the passenger.</p>
          * 
          * <strong>example:</strong>
          * <p>411***********4411</p>
@@ -136,7 +136,7 @@ public class RefundApplyResponseBody extends TeaModel {
         public String document;
 
         /**
-         * <p>Passenger first name</p>
+         * <p>The first name of the passenger.</p>
          * 
          * <strong>example:</strong>
          * <p>SAN</p>
@@ -145,7 +145,7 @@ public class RefundApplyResponseBody extends TeaModel {
         public String firstName;
 
         /**
-         * <p>Passenger last name</p>
+         * <p>The last name of the passenger.</p>
          * 
          * <strong>example:</strong>
          * <p>ZHANG</p>
@@ -186,7 +186,7 @@ public class RefundApplyResponseBody extends TeaModel {
 
     public static class RefundApplyResponseBodyDataRefundResults extends TeaModel {
         /**
-         * <p>Reason for refund application failure</p>
+         * <p>The reason for the refund application failure.</p>
          * 
          * <strong>example:</strong>
          * <p>desc reason</p>
@@ -195,7 +195,7 @@ public class RefundApplyResponseBody extends TeaModel {
         public String failReason;
 
         /**
-         * <p>Refund order number</p>
+         * <p>The refund order number.</p>
          * 
          * <strong>example:</strong>
          * <p>4966***617202</p>
@@ -204,13 +204,17 @@ public class RefundApplyResponseBody extends TeaModel {
         public Long refundOrderNum;
 
         /**
-         * <p>List of passengers for the refund order</p>
+         * <p>The list of passengers included in the refund order.</p>
          */
         @NameInMap("refund_passengers")
         public java.util.List<RefundApplyResponseBodyDataRefundResultsRefundPassengers> refundPassengers;
 
         /**
-         * <p>Refund order status 0: Refund order created successfully; 1: Refund order creation failed</p>
+         * <p>The refund order status. Valid values:</p>
+         * <ul>
+         * <li>0: The refund order is created.</li>
+         * <li>1: The refund order failed to be created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -259,7 +263,7 @@ public class RefundApplyResponseBody extends TeaModel {
 
     public static class RefundApplyResponseBodyData extends TeaModel {
         /**
-         * <p>Order number</p>
+         * <p>The order number.</p>
          * 
          * <strong>example:</strong>
          * <p>4966***617111</p>
@@ -268,7 +272,7 @@ public class RefundApplyResponseBody extends TeaModel {
         public Long orderNum;
 
         /**
-         * <p>List of refund application results</p>
+         * <p>The list of refund application results.</p>
          */
         @NameInMap("refund_results")
         public java.util.List<RefundApplyResponseBodyDataRefundResults> refundResults;

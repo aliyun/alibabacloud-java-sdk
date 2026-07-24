@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class StandardSearchResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Data returned on successful processing</p>
+     */
     @NameInMap("data")
     public StandardSearchResponseBodyData data;
 
     /**
+     * <p>Business error code</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +29,8 @@ public class StandardSearchResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Data carried with error handling</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -29,6 +38,8 @@ public class StandardSearchResponseBody extends TeaModel {
     public Object errorData;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -36,6 +47,8 @@ public class StandardSearchResponseBody extends TeaModel {
     public String errorMsg;
 
     /**
+     * <p>When HTTP request is successful, status value is always 200</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +56,8 @@ public class StandardSearchResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>Whether the request is successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class StandardSearchResponseBody extends TeaModel {
 
     public static class StandardSearchResponseBodyDataSolutionListJourneyListSegmentList extends TeaModel {
         /**
+         * <p>Flight arrival airport three-letter code (uppercase)</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -119,6 +136,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String arrivalAirport;
 
         /**
+         * <p>Flight arrival city three-letter code (uppercase)</p>
+         * 
          * <strong>example:</strong>
          * <p>MFM</p>
          */
@@ -126,6 +145,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String arrivalCity;
 
         /**
+         * <p>Flight arrival terminal</p>
+         * 
          * <strong>example:</strong>
          * <p>T1</p>
          */
@@ -133,6 +154,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String arrivalTerminal;
 
         /**
+         * <p>Flight arrival date and time, string format (yyyy-MM-dd HH:mm:ss)</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 10:40:00</p>
          */
@@ -140,6 +163,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String arrivalTime;
 
         /**
+         * <p>Remaining seat count. Value range: 1,2,3,4,5,6,7,8,9,A; A indicates more than 9 seats available.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -147,6 +172,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String availability;
 
         /**
+         * <p>Cabin</p>
+         * 
          * <strong>example:</strong>
          * <p>V</p>
          */
@@ -154,6 +181,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String cabin;
 
         /**
+         * <p>Cabin class</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -161,6 +190,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String cabinClass;
 
         /**
+         * <p>Whether it is a codeshare flight</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -168,6 +199,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public Boolean codeShare;
 
         /**
+         * <p>Flight departure airport three-letter code (uppercase)</p>
+         * 
          * <strong>example:</strong>
          * <p>PVG</p>
          */
@@ -175,6 +208,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String departureAirport;
 
         /**
+         * <p>Flight departure city three-letter code (uppercase)</p>
+         * 
          * <strong>example:</strong>
          * <p>SHA</p>
          */
@@ -182,6 +217,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String departureCity;
 
         /**
+         * <p>Flight departure terminal</p>
+         * 
          * <strong>example:</strong>
          * <p>T2</p>
          */
@@ -189,6 +226,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String departureTerminal;
 
         /**
+         * <p>Flight departure date and time, string format (yyyy-MM-dd HH:mm:ss)</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
          */
@@ -196,6 +235,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String departureTime;
 
         /**
+         * <p>Aircraft type</p>
+         * 
          * <strong>example:</strong>
          * <p>32Q</p>
          */
@@ -203,6 +244,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String equipType;
 
         /**
+         * <p>Flight duration, unit: minutes</p>
+         * 
          * <strong>example:</strong>
          * <p>165</p>
          */
@@ -210,6 +253,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public Integer flightDuration;
 
         /**
+         * <p>Marketing airline (e.g.: HO)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -217,6 +262,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String marketingAirline;
 
         /**
+         * <p>Marketing flight number (e.g.: HO1295)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -224,6 +271,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String marketingFlightNo;
 
         /**
+         * <p>Marketing flight number in integer format (e.g.: 1295)</p>
+         * 
          * <strong>example:</strong>
          * <p>1295</p>
          */
@@ -231,6 +280,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public Integer marketingFlightNoInt;
 
         /**
+         * <p>Operating airline (e.g.: CX)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO</p>
          */
@@ -238,6 +289,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String operatingAirline;
 
         /**
+         * <p>Operating flight number (e.g.: CX601)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295</p>
          */
@@ -245,6 +298,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String operatingFlightNo;
 
         /**
+         * <p>Segment ID, format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
+         * 
          * <strong>example:</strong>
          * <p>HO1295-PVG-MFM-20230310</p>
          */
@@ -252,6 +307,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String segmentId;
 
         /**
+         * <p>Stopover city list, has values when stopQuantity &gt; 0, multiple values separated by commas</p>
+         * 
          * <strong>example:</strong>
          * <p>SEL,HKG</p>
          */
@@ -259,6 +316,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public String stopCityList;
 
         /**
+         * <p>Number of stopover cities</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -449,10 +508,15 @@ public class StandardSearchResponseBody extends TeaModel {
     }
 
     public static class StandardSearchResponseBodyDataSolutionListJourneyList extends TeaModel {
+        /**
+         * <p>Segment information</p>
+         */
         @NameInMap("segment_list")
         public java.util.List<StandardSearchResponseBodyDataSolutionListJourneyListSegmentList> segmentList;
 
         /**
+         * <p>Number of transfers</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -484,12 +548,17 @@ public class StandardSearchResponseBody extends TeaModel {
 
     public static class StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList extends TeaModel {
         /**
+         * <p>Baggage through-check rule type. 1: Baggage direct transfer between segments; 2: Baggage re-check between segments; 3: Baggage direct transfer at stopover city; 4: Baggage re-check at stopover city</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("luggage_direct_info_type")
         public Integer luggageDirectInfoType;
 
+        /**
+         * <p>Segment ID list. These segment IDs share the same baggage through-check rule</p>
+         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
@@ -517,9 +586,15 @@ public class StandardSearchResponseBody extends TeaModel {
     }
 
     public static class StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList extends TeaModel {
+        /**
+         * <p>Passenger type to free baggage allowance mapping. Key values: ADT: Adult; CHD: Child; INF: Infant</p>
+         */
         @NameInMap("passenger_baggage_allowance_mapping")
         public java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping;
 
+        /**
+         * <p>Segment ID list. These segment IDs share the same free baggage allowance rule</p>
+         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
@@ -547,9 +622,15 @@ public class StandardSearchResponseBody extends TeaModel {
     }
 
     public static class StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList extends TeaModel {
+        /**
+         * <p>Passenger type to refund and change rule mapping. Key values: ADT: Adult; CHD: Child; INF: Infant</p>
+         */
         @NameInMap("refund_change_rule_map")
         public java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap;
 
+        /**
+         * <p>Segment ID list. These segment IDs share the same refund and change rule</p>
+         */
         @NameInMap("segment_id_list")
         public java.util.List<String> segmentIdList;
 
@@ -577,9 +658,21 @@ public class StandardSearchResponseBody extends TeaModel {
     }
 
     public static class StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo extends TeaModel {
+        /**
+         * <p>Ticketing type. 1: After payment; 2: Before departure; -1: Unknown</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("issue_ticket_type")
         public Integer issueTicketType;
 
+        /**
+         * <p>Estimated ticketing duration, unit: minutes</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("issue_time_limit")
         public Integer issueTimeLimit;
 
@@ -607,10 +700,15 @@ public class StandardSearchResponseBody extends TeaModel {
     }
 
     public static class StandardSearchResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
+        /**
+         * <p>Ticketing time information</p>
+         */
         @NameInMap("issue_time_info")
         public StandardSearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo issueTimeInfo;
 
         /**
+         * <p>Supply source type. 1: Self-operated; 2: Agent; 3: Flagship store</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -642,6 +740,8 @@ public class StandardSearchResponseBody extends TeaModel {
 
     public static class StandardSearchResponseBodyDataSolutionList extends TeaModel {
         /**
+         * <p>Adult unit price</p>
+         * 
          * <strong>example:</strong>
          * <p>300</p>
          */
@@ -649,6 +749,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public Double adultPrice;
 
         /**
+         * <p>Adult tax</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -656,6 +758,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public Double adultTax;
 
         /**
+         * <p>Child unit price</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -663,6 +767,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public Double childPrice;
 
         /**
+         * <p>Child tax</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -670,6 +776,8 @@ public class StandardSearchResponseBody extends TeaModel {
         public Double childTax;
 
         /**
+         * <p>Infant unit price</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -677,24 +785,41 @@ public class StandardSearchResponseBody extends TeaModel {
         public Double infantPrice;
 
         /**
+         * <p>Infant tax</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("infant_tax")
         public Double infantTax;
 
+        /**
+         * <p>Journey</p>
+         */
         @NameInMap("journey_list")
         public java.util.List<StandardSearchResponseBodyDataSolutionListJourneyList> journeyList;
 
+        /**
+         * <p>Baggage through-check rules</p>
+         */
         @NameInMap("segment_baggage_check_in_info_list")
         public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList;
 
+        /**
+         * <p>Free baggage allowance rules</p>
+         */
         @NameInMap("segment_baggage_mapping_list")
         public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentBaggageMappingList> segmentBaggageMappingList;
 
+        /**
+         * <p>Refund and change rules</p>
+         */
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<StandardSearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
 
+        /**
+         * <p>Quote attributes</p>
+         */
         @NameInMap("solution_attribute")
         public StandardSearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute;
 
@@ -811,6 +936,9 @@ public class StandardSearchResponseBody extends TeaModel {
     }
 
     public static class StandardSearchResponseBodyData extends TeaModel {
+        /**
+         * <p>Search and quote results</p>
+         */
         @NameInMap("solution_list")
         public java.util.List<StandardSearchResponseBodyDataSolutionList> solutionList;
 

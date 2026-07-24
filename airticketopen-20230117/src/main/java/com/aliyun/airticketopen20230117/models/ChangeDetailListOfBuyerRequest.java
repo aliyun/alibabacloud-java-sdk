@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeDetailListOfBuyerRequest extends TeaModel {
     /**
+     * <p>The page index.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ChangeDetailListOfBuyerRequest extends TeaModel {
     public Integer pageIndex;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ChangeDetailListOfBuyerRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The start time for change order creation. The value is a 13-digit UTC timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1677415276000</p>
      */
@@ -26,6 +32,8 @@ public class ChangeDetailListOfBuyerRequest extends TeaModel {
     public Long utcCreateBegin;
 
     /**
+     * <p>The end time for change order creation. The value is a 13-digit UTC timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1677415279000</p>
      */

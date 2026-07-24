@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("airticketopen", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>账号资金流水</p>
+     * <p>Queries the account fund flow list.</p>
      * 
      * @param request AccountFlowListRequest
      * @param headers AccountFlowListHeaders
@@ -87,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>账号资金流水</p>
+     * <p>Queries the account fund flow list.</p>
      * 
      * @param request AccountFlowListRequest
      * @return AccountFlowListResponse
@@ -99,11 +99,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>search ancillary for selected solution, you should enter the solution_id returned by enrich.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Ancillary - Suggestion</p>
+     * <p>Recommends ancillary products.</p>
      * 
      * @param request AncillarySuggestRequest
      * @param headers AncillarySuggestHeaders
@@ -149,11 +146,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>search ancillary for selected solution, you should enter the solution_id returned by enrich.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Ancillary - Suggestion</p>
+     * <p>Recommends ancillary products.</p>
      * 
      * @param request AncillarySuggestRequest
      * @return AncillarySuggestResponse
@@ -165,16 +159,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
-     * There are two issues should be noticed:</p>
-     * <ol>
-     * <li>the solution_id must be processed by pricing.</li>
-     * <li>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</li>
-     * </ol>
-     * 
      * <b>summary</b> : 
-     * <p>Transaction-Reservation</p>
+     * <p>Creates a booking order.</p>
      * 
      * @param tmpReq BookRequest
      * @param headers BookHeaders
@@ -250,16 +236,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
-     * There are two issues should be noticed:</p>
-     * <ol>
-     * <li>the solution_id must be processed by pricing.</li>
-     * <li>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</li>
-     * </ol>
-     * 
      * <b>summary</b> : 
-     * <p>Transaction-Reservation</p>
+     * <p>Creates a booking order.</p>
      * 
      * @param request BookRequest
      * @return BookResponse
@@ -271,11 +249,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>close an unpaid order</p>
-     * 
      * <b>summary</b> : 
-     * <p>Transaction - Unpaid Cancellation</p>
+     * <p>Cancels an unpaid order.</p>
      * 
      * @param request CancelRequest
      * @param headers CancelHeaders
@@ -321,11 +296,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>close an unpaid order</p>
-     * 
      * <b>summary</b> : 
-     * <p>Transaction - Unpaid Cancellation</p>
+     * <p>Cancels an unpaid order.</p>
      * 
      * @param request CancelRequest
      * @return CancelResponse
@@ -338,7 +310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-Apply</p>
+     * <p>Submits a change application.</p>
      * 
      * @param tmpReq ChangeApplyRequest
      * @param headers ChangeApplyHeaders
@@ -419,7 +391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-Apply</p>
+     * <p>Submits a change application.</p>
      * 
      * @param request ChangeApplyRequest
      * @return ChangeApplyResponse
@@ -432,7 +404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-取消</p>
+     * <p>Cancel the change order.</p>
      * 
      * @param request ChangeCancelRequest
      * @param headers ChangeCancelHeaders
@@ -479,7 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-取消</p>
+     * <p>Cancel the change order.</p>
      * 
      * @param request ChangeCancelRequest
      * @return ChangeCancelResponse
@@ -492,7 +464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-确认</p>
+     * <p>Confirms a flight change order.</p>
      * 
      * @param request ChangeConfirmRequest
      * @param headers ChangeConfirmHeaders
@@ -539,7 +511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签-确认</p>
+     * <p>Confirms a flight change order.</p>
      * 
      * @param request ChangeConfirmRequest
      * @return ChangeConfirmResponse
@@ -552,7 +524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change-Detail</p>
+     * <p>Retrieves the details of a flight change order.</p>
      * 
      * @param request ChangeDetailRequest
      * @param headers ChangeDetailHeaders
@@ -599,7 +571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Change-Detail</p>
+     * <p>Retrieves the details of a flight change order.</p>
      * 
      * @param request ChangeDetailRequest
      * @return ChangeDetailResponse
@@ -612,7 +584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签单列表-关于买家账号</p>
+     * <p>Queries a paging list of change order summaries by buyer account.</p>
      * 
      * @param request ChangeDetailListOfBuyerRequest
      * @param headers ChangeDetailListOfBuyerHeaders
@@ -671,7 +643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签单列表-关于买家账号</p>
+     * <p>Queries a paging list of change order summaries by buyer account.</p>
      * 
      * @param request ChangeDetailListOfBuyerRequest
      * @return ChangeDetailListOfBuyerResponse
@@ -684,7 +656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签单列表-关于正向订单</p>
+     * <p>Queries the list of change orders by the original order number.</p>
      * 
      * @param request ChangeDetailListOfOrderNumRequest
      * @param headers ChangeDetailListOfOrderNumHeaders
@@ -739,7 +711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>改签单列表-关于正向订单</p>
+     * <p>Queries the list of change orders by the original order number.</p>
      * 
      * @param request ChangeDetailListOfOrderNumRequest
      * @return ChangeDetailListOfOrderNumResponse
@@ -751,8 +723,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Collects lowest-price flight information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>数据收集-低价航班信息</p>
+     * <p>Collects lowest-price flight information.</p>
      * 
      * @param tmpReq CollectFlightLowestPriceRequest
      * @param headers CollectFlightLowestPriceHeaders
@@ -804,8 +779,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Collects lowest-price flight information.</p>
+     * 
      * <b>summary</b> : 
-     * <p>数据收集-低价航班信息</p>
+     * <p>Collects lowest-price flight information.</p>
      * 
      * @param request CollectFlightLowestPriceRequest
      * @return CollectFlightLowestPriceResponse
@@ -818,10 +796,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Choose either <code>solution_id</code> or <code>journey_param_list</code> in the parameters, and <code>solution_id</code> needs to be obtained from the Search interface.</p>
+     * <p>In the input parameters, choose either solution_id or journey_param_list. solution_id must be obtained from the Search API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Search-Enrich</p>
+     * <p>Find richer quote information for the itinerary, including free baggage allowance, refund and change rules, and baggage through-check rules.</p>
      * 
      * @param tmpReq EnrichRequest
      * @param headers EnrichHeaders
@@ -894,10 +872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Choose either <code>solution_id</code> or <code>journey_param_list</code> in the parameters, and <code>solution_id</code> needs to be obtained from the Search interface.</p>
+     * <p>In the input parameters, choose either solution_id or journey_param_list. solution_id must be obtained from the Search API.</p>
      * 
      * <b>summary</b> : 
-     * <p>Search-Enrich</p>
+     * <p>Find richer quote information for the itinerary, including free baggage allowance, refund and change rules, and baggage through-check rules.</p>
      * 
      * @param request EnrichRequest
      * @return EnrichResponse
@@ -910,7 +888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>附件上传</p>
+     * <p>Uploads a file as an attachment image. The file size is limited to 300 KB or less.</p>
      * 
      * @param request FileUploadRequest
      * @param headers FileUploadHeaders
@@ -961,7 +939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>附件上传</p>
+     * <p>Uploads a file as an attachment image. The file size is limited to 300 KB or less.</p>
      * 
      * @param request FileUploadRequest
      * @return FileUploadResponse
@@ -974,7 +952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>航变信息-关于订单</p>
+     * <p>Queries flight change information by order number.</p>
      * 
      * @param request FlightChangeOfOrderRequest
      * @param headers FlightChangeOfOrderHeaders
@@ -1021,7 +999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>航变信息-关于订单</p>
+     * <p>Queries flight change information by order number.</p>
      * 
      * @param request FlightChangeOfOrderRequest
      * @return FlightChangeOfOrderResponse
@@ -1034,7 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Token</p>
+     * <p>Obtains a token for API calls. The token is valid for 2 hours.</p>
      * 
      * @param request GetTokenRequest
      * @param headers map
@@ -1072,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Token</p>
+     * <p>Obtains a token for API calls. The token is valid for 2 hours.</p>
      * 
      * @param request GetTokenRequest
      * @return GetTokenResponse
@@ -1084,8 +1062,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries luggage through-check information for an itinerary. Provide itinerary information as input, and the API returns whether luggage through-check is supported for the itinerary. Luggage through-check applies to transfer and stopover scenarios.</p>
+     * 
      * <b>summary</b> : 
-     * <p>航程行李直挂</p>
+     * <p>Queries luggage through-check information for an itinerary.</p>
      * 
      * @param tmpReq LuggageDirectRequest
      * @param headers LuggageDirectHeaders
@@ -1137,8 +1118,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries luggage through-check information for an itinerary. Provide itinerary information as input, and the API returns whether luggage through-check is supported for the itinerary. Luggage through-check applies to transfer and stopover scenarios.</p>
+     * 
      * <b>summary</b> : 
-     * <p>航程行李直挂</p>
+     * <p>Queries luggage through-check information for an itinerary.</p>
      * 
      * @param request LuggageDirectRequest
      * @return LuggageDirectResponse
@@ -1150,11 +1134,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>query order detail</p>
-     * 
      * <b>summary</b> : 
-     * <p>Trade-Order Details</p>
+     * <p>Queries order details.</p>
      * 
      * @param request OrderDetailRequest
      * @param headers OrderDetailHeaders
@@ -1204,11 +1185,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>query order detail</p>
-     * 
      * <b>summary</b> : 
-     * <p>Trade-Order Details</p>
+     * <p>Queries order details.</p>
      * 
      * @param request OrderDetailRequest
      * @return OrderDetailResponse
@@ -1220,11 +1198,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>query order list</p>
-     * 
      * <b>summary</b> : 
-     * <p>Trade - Order List</p>
+     * <p>Queries the order list.</p>
      * 
      * @param request OrderListRequest
      * @param headers OrderListHeaders
@@ -1286,11 +1261,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>query order list</p>
-     * 
      * <b>summary</b> : 
-     * <p>Trade - Order List</p>
+     * <p>Queries the order list.</p>
      * 
      * @param request OrderListRequest
      * @return OrderListResponse
@@ -1302,11 +1274,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Transaction - Seat and Price Verification</p>
+     * <p>Verifies seat availability and pricing. If the price has changed, the developer can proceed with Book at the updated price. If the price has not changed, the order is placed at the original price.</p>
      * 
      * @param request PricingRequest
      * @param headers PricingHeaders
@@ -1352,11 +1321,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Transaction - Seat and Price Verification</p>
+     * <p>Verifies seat availability and pricing. If the price has changed, the developer can proceed with Book at the updated price. If the price has not changed, the order is placed at the original price.</p>
      * 
      * @param request PricingRequest
      * @return PricingResponse
@@ -1369,7 +1335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ticket Refund - Application</p>
+     * <p>Submits a refund application for an air ticket.</p>
      * 
      * @param tmpReq RefundApplyRequest
      * @param headers RefundApplyHeaders
@@ -1442,7 +1408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Ticket Refund - Application</p>
+     * <p>Submits a refund application for an air ticket.</p>
      * 
      * @param request RefundApplyRequest
      * @return RefundApplyResponse
@@ -1455,7 +1421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refund - Detail</p>
+     * <p>Retrieves the details of a refund order.</p>
      * 
      * @param request RefundDetailRequest
      * @param headers RefundDetailHeaders
@@ -1502,7 +1468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refund - Detail</p>
+     * <p>Retrieves the details of a refund order.</p>
      * 
      * @param request RefundDetailRequest
      * @return RefundDetailResponse
@@ -1515,7 +1481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refund - Detail List</p>
+     * <p>Queries the details of refund orders.</p>
      * 
      * @param request RefundDetailListRequest
      * @param headers RefundDetailListHeaders
@@ -1578,7 +1544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Refund - Detail List</p>
+     * <p>Queries the details of refund orders.</p>
      * 
      * @param request RefundDetailListRequest
      * @return RefundDetailListResponse
@@ -1590,11 +1556,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Search</p>
+     * <p>Searches for flight quotes and returns the lowest price across multiple flights. Note that the response of this operation does not include refund and change rules, free baggage allowance, or baggage through-check rules.</p>
      * 
      * @param tmpReq SearchRequest
      * @param headers SearchHeaders
@@ -1670,11 +1633,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Search</p>
+     * <p>Searches for flight quotes and returns the lowest price across multiple flights. Note that the response of this operation does not include refund and change rules, free baggage allowance, or baggage through-check rules.</p>
      * 
      * @param request SearchRequest
      * @return SearchResponse
@@ -1687,7 +1647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标准搜索</p>
+     * <p>Search and quote prices, currently providing the lowest price across multiple flights. Note that this API response includes refund/change rules, free baggage allowance, and baggage through-check rules.</p>
      * 
      * @param tmpReq StandardSearchRequest
      * @param headers StandardSearchHeaders
@@ -1764,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>标准搜索</p>
+     * <p>Search and quote prices, currently providing the lowest price across multiple flights. Note that this API response includes refund/change rules, free baggage allowance, and baggage through-check rules.</p>
      * 
      * @param request StandardSearchRequest
      * @return StandardSearchResponse
@@ -1777,7 +1737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transaction - Payment and Ticket Issuance</p>
+     * <p>Pays for and issues a ticket.</p>
      * 
      * @param request TicketingRequest
      * @param headers TicketingHeaders
@@ -1824,7 +1784,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Transaction - Payment and Ticket Issuance</p>
+     * <p>Pays for and issues a ticket.</p>
      * 
      * @param request TicketingRequest
      * @return TicketingResponse
@@ -1837,10 +1797,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pre-check for Ticketing, this interface is optional to use.</p>
+     * <p>Performs a pre-ticketing check. This operation is optional.</p>
      * 
      * <b>summary</b> : 
-     * <p>Transaction - Pre-payment verification</p>
+     * <p>Performs a pre-ticketing check. This operation is optional.</p>
      * 
      * @param request TicketingCheckRequest
      * @param headers TicketingCheckHeaders
@@ -1887,10 +1847,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Pre-check for Ticketing, this interface is optional to use.</p>
+     * <p>Performs a pre-ticketing check. This operation is optional.</p>
      * 
      * <b>summary</b> : 
-     * <p>Transaction - Pre-payment verification</p>
+     * <p>Performs a pre-ticketing check. This operation is optional.</p>
      * 
      * @param request TicketingCheckRequest
      * @return TicketingCheckResponse
@@ -1902,8 +1862,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>航程过境签</p>
+     * <p>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</p>
      * 
      * @param tmpReq TransitVisaRequest
      * @param headers TransitVisaHeaders
@@ -1955,8 +1918,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</p>
+     * 
      * <b>summary</b> : 
-     * <p>航程过境签</p>
+     * <p>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</p>
      * 
      * @param request TransitVisaRequest
      * @return TransitVisaResponse
