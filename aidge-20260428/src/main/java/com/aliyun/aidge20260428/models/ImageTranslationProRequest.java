@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationProRequest extends TeaModel {
     /**
-     * <p>Specifies whether to call the operation asynchronously.</p>
+     * <p>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). When set to true, the operation immediately returns a TaskId, and you must call the query translation result operation to obtain the final result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
-     * <p>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+     * <p>The glossary ID. Optional. Create a glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
      * 
      * <strong>example:</strong>
      * <p>glossary_1</p>
@@ -20,7 +23,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String glossary;
 
     /**
-     * <p>The URL of the original image. Required. Image requirements: width and height must not exceed 4000 × 4000. Size must not exceed 10 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</p>
+     * <p>The URL of the original image. Required. Image requirements: width and height cannot exceed 4000 × 4000 pixels, size cannot exceed 10 MB, and supported formats include png, jpeg, jpg, bmp, and webp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +33,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps you protect information and avoid translating embedded information such as product names.</p>
+     * <p>Specifies whether to translate text on the image subject body. Optional. Default value: false. This helps you protect information and avoid translating embedded information such as product names.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -39,7 +42,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean includingProductArea;
 
     /**
-     * <p>The source language code. Required. For supported language directions, see the supported language direction list.</p>
+     * <p>The source language code. Required. For supported language pairs, see the supported language pair list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +52,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String sourceLanguage;
 
     /**
-     * <p>The target language code. Required. For supported language directions, see the supported language direction list.</p>
+     * <p>The target language code. Required. For supported language pairs, see the supported language pair list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +62,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public String targetLanguage;
 
     /**
-     * <p>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps you protect brand name information from being translated.</p>
+     * <p>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps you protect brand name information and avoid unintended translation.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -68,7 +71,7 @@ public class ImageTranslationProRequest extends TeaModel {
     public Boolean translatingBrandInTheProduct;
 
     /**
-     * <p>Specifies whether to return layout information such as text position, font, and color. Optional. Default value: false. This can be used for secondary editing when integrated with an image editor.</p>
+     * <p>Specifies whether to return layout information such as text position, font, and color. When set to true, layer information is returned, which can be used with an image editor for secondary editing. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

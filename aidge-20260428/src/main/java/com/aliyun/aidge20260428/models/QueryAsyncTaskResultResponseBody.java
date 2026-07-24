@@ -14,7 +14,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The asynchronous task result.</p>
+     * <p>The asynchronous node result.</p>
      */
     @NameInMap("Data")
     public QueryAsyncTaskResultResponseBodyData data;
@@ -106,7 +106,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The task status.</p>
+         * <p>The status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -115,7 +115,7 @@ public class QueryAsyncTaskResultResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The downstream task ID.</p>
+         * <p>The ID of the downstream task.</p>
          * 
          * <strong>example:</strong>
          * <p>task-xxxxx</p>

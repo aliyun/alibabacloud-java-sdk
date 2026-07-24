@@ -20,7 +20,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public ImageTranslationStandardResponseBodyData data;
 
     /**
-     * <p>The error message. Returns &quot;Success&quot; for successful calls and specific error information for exceptions.</p>
+     * <p>The error message. Returns &quot;Success&quot; for successful calls, and returns specific error information for failed calls.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -29,7 +29,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, used to identify a unique request call.</p>
+     * <p>The request ID, which uniquely identifies the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CEC4D94-905A-1ED1-A7B4-1BFEFFB3D850</p>
@@ -38,7 +38,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -378,15 +378,6 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public Integer lineCount;
 
         /**
-         * <p>The OVIS error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>desc</p>
-         */
-        @NameInMap("OvisErrMsg")
-        public String ovisErrMsg;
-
-        /**
          * <p>The text area.</p>
          */
         @NameInMap("TextRect")
@@ -405,7 +396,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
          * <p>The text value.</p>
          * 
          * <strong>example:</strong>
-         * <p>Solid wood wardrobe.</p>
+         * <p>Solid Wood Wardrobe.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -470,14 +461,6 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         }
         public Integer getLineCount() {
             return this.lineCount;
-        }
-
-        public ImageTranslationStandardResponseBodyDataEditInfoTextAreasTexts setOvisErrMsg(String ovisErrMsg) {
-            this.ovisErrMsg = ovisErrMsg;
-            return this;
-        }
-        public String getOvisErrMsg() {
-            return this.ovisErrMsg;
         }
 
         public ImageTranslationStandardResponseBodyDataEditInfoTextAreasTexts setTextRect(ImageTranslationStandardResponseBodyDataEditInfoTextAreasTextsTextRect textRect) {
@@ -649,7 +632,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public java.util.List<String> font;
 
         /**
-         * <p>The product area rectangle.</p>
+         * <p>The product area rectangles.</p>
          */
         @NameInMap("GoodsRects")
         public ImageTranslationStandardResponseBodyDataEditInfoGoodsRects goodsRects;
@@ -827,7 +810,7 @@ public class ImageTranslationStandardResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The usage information, including the number of processed images.</p>
+         * <p>The usage information, including the number of images processed.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ProcessedImageCount&quot;:1}</p>

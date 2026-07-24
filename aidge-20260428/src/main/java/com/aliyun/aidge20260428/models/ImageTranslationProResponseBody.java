@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImageTranslationProResponseBody extends TeaModel {
     /**
-     * <p>The response code. 200 indicates a successful call. For other response codes, see the error code information.</p>
+     * <p>The response code. 200 indicates a successful call. For other response codes, refer to the error code information.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The translation result data. ResultList contains the URL of the translation result. GenFiles contains EditInfo with the recognized text information.</p>
+     * <p>The translation result data. ResultList contains the URLs of translation results, and GenFiles contains EditInfo with the recognized text information.</p>
      */
     @NameInMap("Data")
     public ImageTranslationProResponseBodyData data;
 
     /**
-     * <p>The error message. Returns &quot;Success&quot; for successful calls. Returns specific error information for exceptions, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
+     * <p>The error message. &quot;Success&quot; is returned for successful calls. Specific error information is returned for failed calls, such as &quot;The content contains sensitive data. Try other input.&quot;</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. true indicates success. false indicates failure.</p>
+     * <p>Indicates whether the call is successful. true indicates success, and false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -372,7 +372,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
 
     public static class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts extends TeaModel {
         /**
-         * <p>The color of the translated text.</p>
+         * <p>The text color after translation.</p>
          * 
          * <strong>example:</strong>
          * <p>#515151</p>
@@ -421,15 +421,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
          */
         @NameInMap("LineCount")
         public Integer lineCount;
-
-        /**
-         * <p>The Ovis model error message and execution time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>| ovis time: 0.748</p>
-         */
-        @NameInMap("OvisErrMsg")
-        public String ovisErrMsg;
 
         /**
          * <p>The coordinates of the text box area.</p>
@@ -517,14 +508,6 @@ public class ImageTranslationProResponseBody extends TeaModel {
             return this.lineCount;
         }
 
-        public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts setOvisErrMsg(String ovisErrMsg) {
-            this.ovisErrMsg = ovisErrMsg;
-            return this;
-        }
-        public String getOvisErrMsg() {
-            return this.ovisErrMsg;
-        }
-
         public ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts setTextRect(ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTextsTextRect textRect) {
             this.textRect = textRect;
             return this;
@@ -573,7 +556,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
          * <p>The original text before translation.</p>
          * 
          * <strong>example:</strong>
-         * <p>萌趣造型·清脆响铃</p>
+         * <p>Cute Shape · Crisp Bell.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -606,7 +589,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public Integer lineCount;
 
         /**
-         * <p>The list of translated texts. Each element corresponds to the translation result for one target language.</p>
+         * <p>The list of translated texts. Each element corresponds to the translation result for a target language.</p>
          */
         @NameInMap("Texts")
         public java.util.List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts> texts;
@@ -697,13 +680,13 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public ImageTranslationProResponseBodyDataGenFilesEditInfoGoodsRects goodsRects;
 
         /**
-         * <p>The list of translation target languages.</p>
+         * <p>The list of target languages for translation.</p>
          */
         @NameInMap("Languages")
         public java.util.List<String> languages;
 
         /**
-         * <p>The URL of the image with all text removed.</p>
+         * <p>The URL of the image after all text has been erased.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png</a></p>
@@ -718,7 +701,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public java.util.List<String> resultImageIds;
 
         /**
-         * <p>The list of text boxes, including all recognized text area information.</p>
+         * <p>The list of text boxes, which contains information about all recognized text areas.</p>
          */
         @NameInMap("TextAreas")
         public java.util.List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreas> textAreas;
@@ -789,7 +772,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>The translation target language.</p>
+         * <p>The target language for translation.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -822,7 +805,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
 
     public static class ImageTranslationProResponseBodyDataGenFiles extends TeaModel {
         /**
-         * <p>The editor information, including recognized text areas, product areas, fonts, and other information.</p>
+         * <p>The editor information, which contains recognition information such as text areas, product areas, and fonts.</p>
          */
         @NameInMap("EditInfo")
         public ImageTranslationProResponseBodyDataGenFilesEditInfo editInfo;
@@ -884,7 +867,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>The target language of the image translation.</p>
+         * <p>The target language for image translation.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>
@@ -917,7 +900,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
 
     public static class ImageTranslationProResponseBodyData extends TeaModel {
         /**
-         * <p>The editor protocol, including translation result files and editing information.</p>
+         * <p>The editor protocol, which contains translation result files and editing information.</p>
          */
         @NameInMap("GenFiles")
         public java.util.List<ImageTranslationProResponseBodyDataGenFiles> genFiles;
@@ -929,7 +912,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public java.util.List<ImageTranslationProResponseBodyDataResultList> resultList;
 
         /**
-         * <p>The asynchronous task ID. Not returned for synchronous calls.</p>
+         * <p>The asynchronous task ID. This parameter is not returned for synchronous calls.</p>
          * 
          * <strong>example:</strong>
          * <p>abc123-task-id</p>
@@ -938,7 +921,7 @@ public class ImageTranslationProResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The usage information, including the number of processed images.</p>
+         * <p>The usage information, which contains the number of processed images.</p>
          */
         @NameInMap("UsageMap")
         public java.util.Map<String, Long> usageMap;
