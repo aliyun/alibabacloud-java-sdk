@@ -2849,7 +2849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
+     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2865,6 +2865,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoRegistration)) {
             body.put("AutoRegistration", request.autoRegistration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceAttributeCheck)) {
+            body.put("FaceAttributeCheck", request.faceAttributeCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCodes)) {
@@ -2947,7 +2951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a retained face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
+     * <p>Performs face duplication check (FaceDuplicationCheckIntl) for scenarios where SDK integration is not feasible. Submits face images through the API to verify whether a user is a real person, compare the face against a stored face image for identity verification, search a face library to determine whether the face already exists, and automatically register the face in a specified face library after successful verification.</p>
      * 
      * @param request FaceDuplicationCheckIntlRequest
      * @return FaceDuplicationCheckIntlResponse
@@ -3019,7 +3023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the server-side passive liveness detection API.</p>
+     * <p>Provides the server-side API for passive liveness detection.</p>
      * 
      * @param request FaceLivenessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3030,6 +3034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.crop)) {
             query.put("Crop", request.crop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceAttributeCheck)) {
+            query.put("FaceAttributeCheck", request.faceAttributeCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.facePictureUrl)) {
@@ -3085,7 +3093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Provides the server-side passive liveness detection API.</p>
+     * <p>Provides the server-side API for passive liveness detection.</p>
      * 
      * @param request FaceLivenessRequest
      * @return FaceLivenessResponse
@@ -3100,7 +3108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
+     * <p>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
      * 
      * @param request FaceLivenessV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -3109,6 +3117,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FaceLivenessV2Response faceLivenessV2WithOptions(FaceLivenessV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceAttributeCheck)) {
+            query.put("FaceAttributeCheck", request.faceAttributeCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.facePictureFile)) {
             query.put("FacePictureFile", request.facePictureFile);
         }
@@ -3161,7 +3173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceLivenessV2 operation to perform liveness detection on a face image.</p>
      * 
      * <b>summary</b> : 
-     * <p>Detects whether a face in an image is from a real person by using an API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
+     * <p>Detects whether a face in an image is from a real person by using the API operation. This service combines the Qwen-VL large model for in-depth forgery risk detection to determine face liveness.</p>
      * 
      * @param request FaceLivenessV2Request
      * @return FaceLivenessV2Response
@@ -3264,7 +3276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
+     * <p>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3275,6 +3287,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoRegistration)) {
             query.put("AutoRegistration", request.autoRegistration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceAttributeCheck)) {
+            query.put("FaceAttributeCheck", request.faceAttributeCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCodes)) {
@@ -3357,7 +3373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Calls the FaceVerifyIntl operation to perform liveness detection on face images.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs real face detection by using face images obtained in advance through the API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render fake faces, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
+     * <p>Performs real face detection by using face images obtained in advance through an API operation. The algorithm identifies whether a face is a screen recapture or printed photo to detect basic presentation liveness attacks that render such attack types, and supports comparison with another face image to authenticate whether they belong to the same person.</p>
      * 
      * @param request FaceVerifyIntlRequest
      * @return FaceVerifyIntlResponse
@@ -3882,6 +3898,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Authorize", request.authorize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDocPageConfig)) {
+            query.put("AutoDocPageConfig", request.autoDocPageConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRegistration)) {
             query.put("AutoRegistration", request.autoRegistration);
         }
@@ -3948,6 +3968,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.experienceCode)) {
             query.put("ExperienceCode", request.experienceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceAttributeCheck)) {
+            query.put("FaceAttributeCheck", request.faceAttributeCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCodes)) {
@@ -4154,6 +4178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Authorize", request.authorize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoDocPageConfig)) {
+            query.put("AutoDocPageConfig", request.autoDocPageConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRegistration)) {
             query.put("AutoRegistration", request.autoRegistration);
         }
@@ -4220,6 +4248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.experienceCode)) {
             query.put("ExperienceCode", request.experienceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceAttributeCheck)) {
+            query.put("FaceAttributeCheck", request.faceAttributeCheck);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.faceGroupCodes)) {

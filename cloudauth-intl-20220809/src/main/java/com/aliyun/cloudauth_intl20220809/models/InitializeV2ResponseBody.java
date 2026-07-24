@@ -87,7 +87,7 @@ public class InitializeV2ResponseBody extends TeaModel {
         /**
          * <p>The standard authentication encryption protocol.</p>
          * <blockquote>
-         * <p>This field is required when you use iframe embedding for H5 web page integration.</p>
+         * <p>This field is required for H5 web integration using iframe embedding.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class InitializeV2ResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The unique ID of the authentication request.</p>
+         * <p>The unique identifier of the authentication request.</p>
          * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>

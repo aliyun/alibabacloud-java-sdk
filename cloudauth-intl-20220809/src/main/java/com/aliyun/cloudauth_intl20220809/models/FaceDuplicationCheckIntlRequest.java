@@ -7,8 +7,8 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically register the face in the specified face library when no duplicate face is found during the search. Valid values:</p>
      * <ul>
-     * <li>0: Automatic registration.</li>
-     * <li>1: No registration (default).</li>
+     * <li>0: automatic registration</li>
+     * <li>1: no registration (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,11 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     @NameInMap("AutoRegistration")
     public String autoRegistration;
 
+    @NameInMap("FaceAttributeCheck")
+    public String faceAttributeCheck;
+
     /**
-     * <p>The face library codes created by the customer in the console. A maximum of 10 face libraries can be queried at the same time. Separate multiple face library codes with commas (,).</p>
+     * <p>The face library codes created through the console. A maximum of 10 face libraries can be queried at the same time. Separate multiple face library codes with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>1232344，23444</p>
@@ -27,7 +30,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String faceGroupCodes;
 
     /**
-     * <p>Specifies whether to enable face quality check.</p>
+     * <p>The face quality check.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -56,8 +59,8 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable passive liveness detection. Valid values:</p>
      * <ul>
-     * <li>0: Disabled.</li>
-     * <li>1: Enabled.</li>
+     * <li>0: disabled</li>
+     * <li>1: enabled</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +70,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String liveness;
 
     /**
-     * <p>The custom unique business identifier, used for subsequent troubleshooting. The value is a combination of letters and digits up to 32 characters in length. Ensure that the value is unique.</p>
+     * <p>The custom unique business identifier used for subsequent troubleshooting. The value is a combination of letters and digits up to 32 characters in length. Ensure that the value is unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +80,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The custom user ID, or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</p>
+     * <p>The custom user ID or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize this field value in advance, for example, by hashing the value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +100,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>Specifies the number of faces to return when multiple faces above the matching threshold exist.</p>
+     * <p>The number of faces to return when multiple faces above the matching threshold are found. You can use this parameter to customize the number of returned faces.</p>
      * <ul>
      * <li>Default value: 1.</li>
      * <li>Maximum value: 5.</li>
@@ -110,7 +113,7 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String returnFaces;
 
     /**
-     * <p>Specifies the type of face data to save. Valid values:</p>
+     * <p>The type of face data to save. Valid values:</p>
      * <ul>
      * <li>0: face image (default)</li>
      * <li>1: feature<blockquote>
@@ -171,29 +174,29 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     public String targetFacePictureUrl;
 
     /**
-     * <p>The authentication type. Valid values:</p>
+     * <p>The verification type. Valid values:</p>
      * <ul>
-     * <li><p>0: retrieval pattern</p>
+     * <li><p>0: retrieve pattern</p>
      * <blockquote>
      * <ul>
-     * <li>Feature: Submits a face library and a user face image (sourceFacePicture). The system automatically retrieves faces from the face library to determine whether the specified face image (sourceFacePicture) already exists. Passive liveness detection can be enabled for the face image (sourceFacePicture).</li>
-     * <li>Recommended scenario: Real-person scenarios where you want to create an account and duplicate registration is not allowed.</li>
+     * <li>Feature: Submits a face library and a user face image (sourceFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) already exists. Passive liveness detection can be enabled for the face image (sourceFacePicture).</li>
+     * <li>Recommended scenario: Real-person create an account where duplicate registration is not allowed.</li>
      * </ul>
      * </blockquote>
      * </li>
-     * <li><p>1 (default): authentication pattern</p>
+     * <li><p>1 (default): authenticate pattern</p>
      * <blockquote>
      * <ul>
-     * <li>Feature: Submits a specified face image (sourceFacePicture) and a retained face image (TargetFacePicture). The system automatically authenticates whether the faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
-     * <li>Recommended scenario: Authenticating the identity of the operator when logon credentials or account information is modified.</li>
+     * <li>Feature: Submits a specified face image (sourceFacePicture) and a stored face image (TargetFacePicture). The system automatically authenticates whether the two faces match. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
+     * <li>Recommended scenario: Authenticating the identity of the operator when modifying logon credentials or account information.</li>
      * </ul>
      * </blockquote>
      * </li>
      * <li><p>2: comprehensive pattern</p>
      * <blockquote>
      * <ul>
-     * <li>Feature: Submits a face library, a specified face image (sourceFacePicture), and a retained face image (TargetFacePicture). The system automatically retrieves faces from the face library to determine whether the specified face image (sourceFacePicture) exists and whether it matches the retained face image. Passive liveness detection can be enabled for the specified face image (sourceFacePicture).</li>
-     * <li>Recommended scenario: Authenticating that the user is new and the operation is performed by the user in person.</li>
+     * <li>Feature: Submits a face library, a specified face image (sourceFacePicture), and a stored face image (TargetFacePicture). The system automatically retrieves the face library to determine whether the specified face image (sourceFacePicture) exists, authenticates whether it matches the stored face, and supports passive liveness detection for the specified face image (sourceFacePicture).</li>
+     * <li>Recommended scenario: Verifying that the user is new and the operation is performed by the user in person.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -217,6 +220,14 @@ public class FaceDuplicationCheckIntlRequest extends TeaModel {
     }
     public String getAutoRegistration() {
         return this.autoRegistration;
+    }
+
+    public FaceDuplicationCheckIntlRequest setFaceAttributeCheck(String faceAttributeCheck) {
+        this.faceAttributeCheck = faceAttributeCheck;
+        return this;
+    }
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     public FaceDuplicationCheckIntlRequest setFaceGroupCodes(String faceGroupCodes) {

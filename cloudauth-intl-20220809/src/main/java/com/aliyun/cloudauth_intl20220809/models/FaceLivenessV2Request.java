@@ -4,6 +4,9 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class FaceLivenessV2Request extends TeaModel {
+    @NameInMap("FaceAttributeCheck")
+    public String faceAttributeCheck;
+
     /**
      * <p>The Base64-encoded face image.</p>
      * <blockquote>
@@ -82,6 +85,14 @@ public class FaceLivenessV2Request extends TeaModel {
     public static FaceLivenessV2Request build(java.util.Map<String, ?> map) throws Exception {
         FaceLivenessV2Request self = new FaceLivenessV2Request();
         return TeaModel.build(map, self);
+    }
+
+    public FaceLivenessV2Request setFaceAttributeCheck(String faceAttributeCheck) {
+        this.faceAttributeCheck = faceAttributeCheck;
+        return this;
+    }
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     public FaceLivenessV2Request setFacePictureBase64(String facePictureBase64) {

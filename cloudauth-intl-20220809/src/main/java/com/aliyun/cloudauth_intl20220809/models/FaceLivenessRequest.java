@@ -7,8 +7,8 @@ public class FaceLivenessRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow cropping. Default value: F. Valid values:</p>
      * <ul>
-     * <li>T: Allow cropping.</li>
-     * <li>F: Do not allow cropping.</li>
+     * <li>T: enabled.</li>
+     * <li>F: disabled. (Default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -16,6 +16,9 @@ public class FaceLivenessRequest extends TeaModel {
      */
     @NameInMap("Crop")
     public String crop;
+
+    @NameInMap("FaceAttributeCheck")
+    public String faceAttributeCheck;
 
     /**
      * <p>The Base64-encoded face photo.</p>
@@ -42,8 +45,8 @@ public class FaceLivenessRequest extends TeaModel {
     /**
      * <p>Specifies whether to output the face quality score. Default value: F. Valid values:</p>
      * <ul>
-     * <li>T: Output the face quality score.</li>
-     * <li>F: Do not output the face quality score.</li>
+     * <li>T: enabled.</li>
+     * <li>F: disabled. (Default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +56,7 @@ public class FaceLivenessRequest extends TeaModel {
     public String faceQuality;
 
     /**
-     * <p>Specifies whether to perform a face quality check.</p>
+     * <p>The face quality check.</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -62,7 +65,7 @@ public class FaceLivenessRequest extends TeaModel {
     public String faceQualityCheck;
 
     /**
-     * <p>The merchant-defined unique business ID for subsequent troubleshooting. The value supports a combination of letters and numbers with a maximum length of 32 characters. Ensure that the value is unique.</p>
+     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -71,7 +74,7 @@ public class FaceLivenessRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>The merchant user ID or other identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you pre-desensitize the value of the userId field, such as by hashing the value.</p>
+     * <p>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of the userId field before passing it in, for example, by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -82,8 +85,8 @@ public class FaceLivenessRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform occlusion detection. Default value: F. Valid values:</p>
      * <ul>
-     * <li>T: Perform occlusion detection.</li>
-     * <li>F: Do not perform occlusion detection.</li>
+     * <li>T: enabled.</li>
+     * <li>F: disabled. (Default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,6 +115,14 @@ public class FaceLivenessRequest extends TeaModel {
     }
     public String getCrop() {
         return this.crop;
+    }
+
+    public FaceLivenessRequest setFaceAttributeCheck(String faceAttributeCheck) {
+        this.faceAttributeCheck = faceAttributeCheck;
+        return this;
+    }
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     public FaceLivenessRequest setFacePictureBase64(String facePictureBase64) {

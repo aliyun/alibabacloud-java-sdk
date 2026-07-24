@@ -87,7 +87,7 @@ public class InitializeResponseBody extends TeaModel {
         /**
          * <p>The authentication standard encryption protocol.</p>
          * <blockquote>
-         * <p>This field is required when you use iframe embedding for H5 web page integration.</p>
+         * <p>This field is required when integrating H5 web pages using iframe embedding.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class FaceLivenessResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message returned with the result.</p>
+     * <p>The description of the return result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -76,7 +76,7 @@ public class FaceLivenessResponseBody extends TeaModel {
 
     public static class FaceLivenessResponseBodyResultExtFaceInfo extends TeaModel {
         /**
-         * <p>The predicted reference age of the face. The prediction may fail and return no value.</p>
+         * <p>The predicted reference age based on the face image. The prediction may fail, in which case no value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -97,10 +97,10 @@ public class FaceLivenessResponseBody extends TeaModel {
         public String faceAttributeInfo;
 
         /**
-         * <p>The predicted gender of the face in the photo. The prediction may fail and return no value. Valid values:</p>
+         * <p>The predicted gender based on the face image. The prediction may fail, in which case no value is returned. Valid values:</p>
          * <ul>
-         * <li>M: Male.</li>
-         * <li>F: Female.</li>
+         * <li>M: male.</li>
+         * <li>F: female.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         public String faceGender;
 
         /**
-         * <p>The face quality score (0 to 100). This parameter is returned only when the face quality score switch is enabled.</p>
+         * <p>The face quality score (0 to 100). This value is returned only when the face quality score switch is enabled in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>87.19</p>
@@ -137,7 +137,7 @@ public class FaceLivenessResponseBody extends TeaModel {
         public Double kaOcclusionScore;
 
         /**
-         * <p>The occlusion detection result. Valid values: Y (occluded) and N (not occluded). This parameter is returned only when the occlusion detection switch is enabled.</p>
+         * <p>The occlusion detection result. Valid values: Y (occluded) and N (not occluded). This value is returned only when the occlusion detection switch is enabled in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>Y</p>
@@ -258,10 +258,10 @@ public class FaceLivenessResponseBody extends TeaModel {
         public FaceLivenessResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>Indicates whether the authentication is passed. Valid values:</p>
+         * <p>Indicates whether the authentication passed. Valid values:</p>
          * <ul>
-         * <li>Y: Passed.</li>
-         * <li>N: Not passed.</li>
+         * <li>Y: passed.</li>
+         * <li>N: not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

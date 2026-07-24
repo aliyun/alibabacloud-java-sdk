@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FaceLivenessV2ResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -119,7 +119,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double faceQualityScore;
 
         /**
-         * <p>The algorithm score for illumination as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for illumination, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>97.43</p>
@@ -128,7 +128,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double illuminationScore;
 
         /**
-         * <p>The algorithm score for key area occlusion as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for key area occlusion, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -146,7 +146,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public String occlusionResult;
 
         /**
-         * <p>The algorithm score for occlusion as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The algorithm score for occlusion, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>50.26</p>
@@ -155,7 +155,7 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         public Double occlusionScore;
 
         /**
-         * <p>The algorithm score for image sharpness as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</p>
+         * <p>The image sharpness score, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</p>
          * 
          * <strong>example:</strong>
          * <p>60.78</p>
@@ -260,8 +260,8 @@ public class FaceLivenessV2ResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the authentication is passed. Valid values:</p>
          * <ul>
-         * <li>Y: passed.</li>
-         * <li>N: not passed.</li>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

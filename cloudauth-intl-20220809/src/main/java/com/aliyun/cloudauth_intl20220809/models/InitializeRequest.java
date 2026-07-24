@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class InitializeRequest extends TeaModel {
     /**
-     * <p><warning>This feature is <strong>not supported by the Web SDK</strong>. To use this feature, integrate the App SDK.</warning></p>
+     * <p><warning>This feature is <strong>not supported by Web SDK</strong>. To use this feature, refer to App SDK integration.</warning></p>
      * <p>Specifies whether to enable strict face quality detection:</p>
      * <ul>
-     * <li>Y: enabled (default)</li>
-     * <li>N: disabled.</li>
+     * <li>Y: enable (default)</li>
+     * <li>N: do not enable</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class InitializeRequest extends TeaModel {
     public String appQualityCheck;
 
     /**
-     * <p>Specifies whether to enable authoritative identity verification. Currently, this applies only to second-generation ID cards in the Chinese mainland. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to enable authoritative identity verification. Currently, this applies only to second-generation ID cards in the Chinese mainland. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -27,8 +27,11 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("Authorize")
     public String authorize;
 
+    @NameInMap("AutoDocPageConfig")
+    public String autoDocPageConfig;
+
     /**
-     * <p>Specifies whether to enable auto-registration.</p>
+     * <p>Specifies whether to enable automatic registration.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -37,7 +40,7 @@ public class InitializeRequest extends TeaModel {
     public String autoRegistration;
 
     /**
-     * <p>The security token used for anti-replay and anti-tampering verification. If this parameter is specified, the CallbackToken field is included in the callback URL.</p>
+     * <p>The security token used for anti-replay and anti-tampering verification. If this parameter is passed in, the CallbackToken field is displayed in the callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p>7ca5c68d869344ea8eeb30cdfd544544-6358700</p>
@@ -46,7 +49,7 @@ public class InitializeRequest extends TeaModel {
     public String callbackToken;
 
     /**
-     * <p>The callback URL for the authentication result. The callback request method is GET by default. The callback URL must start with https. After the authentication is complete, the platform calls back this URL and automatically appends the transactionId, passed, and subcode fields.</p>
+     * <p>The callback notification URL for the authentication result. The default callback request method is GET, and the callback URL must start with https. After authentication is completed, the platform calls back this URL and automatically adds the transactionId, passed, and subcode fields.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com?callbackToken=1000004826&transactionId=shaxxxx&passed=Y&subCode=200">https://www.aliyun.com?callbackToken=1000004826&amp;transactionId=shaxxxx&amp;passed=Y&amp;subCode=200</a></p>
@@ -57,8 +60,8 @@ public class InitializeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the adaptive color-changing window frame.</p>
      * <ul>
-     * <li><strong>Y</strong>: enabled</li>
-     * <li><strong>N</strong>: disabled.</li>
+     * <li><strong>Y</strong>: enable</li>
+     * <li><strong>N</strong>: do not enable</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +71,7 @@ public class InitializeRequest extends TeaModel {
     public String chameleonFrameEnable;
 
     /**
-     * <p>Specifies whether to enable cropping. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to crop. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>N</p>
@@ -89,7 +92,7 @@ public class InitializeRequest extends TeaModel {
     public String dateOfBirth;
 
     /**
-     * <p>The expiration date on the document.</p>
+     * <p>The expiry date on the document.</p>
      * <p>Required when <strong>MRTDInput</strong> = 2.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +107,7 @@ public class InitializeRequest extends TeaModel {
      * <p>The real name of the user.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>John Smith.</p>
      */
     @NameInMap("DocName")
     public String docName;
@@ -127,8 +130,8 @@ public class InitializeRequest extends TeaModel {
     /**
      * <p>The document capture photo mode.</p>
      * <ul>
-     * <li>manual: manual photo capture.</li>
-     * <li>auto: automatic photo capture (default).</li>
+     * <li>manual: manual capture.</li>
+     * <li>auto: automatic capture (default).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -140,10 +143,10 @@ public class InitializeRequest extends TeaModel {
     /**
      * <p>The document type.</p>
      * <blockquote>
-     * <p>For the eKYC_PRO and ID_OCR_MAX solutions, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></p>
+     * <p>For eKYC_PRO and ID_OCR_MAX solutions, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></p>
      * </blockquote>
      * <blockquote>
-     * <p>For the ID_OCR, eKYC, and eKYC_MIN solutions, see the document type list in the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a>.</p>
+     * <p>For ID_OCR, eKYC, and eKYC_MIN solutions, see the official documentation for the document type list: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,15 +156,15 @@ public class InitializeRequest extends TeaModel {
     public String docType;
 
     /**
-     * <p>Specifies whether to save an evidence video.</p>
+     * <p>Specifies whether to store the verification video.</p>
      * <ul>
      * <li><p>N: not required (default).</p>
      * </li>
-     * <li><p>Y: a face verification video (1 to 2 seconds) is captured during the authentication process and returned through the query API.</p>
+     * <li><p>Y: during authentication, the system simultaneously captures the user\&quot;s face verification video (1–2s video file) and returns it through the query operation.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Because video files are large, the system discards the video file when the network is unstable to prioritize the transmission of images required for authentication.</p>
+     * <p>Because video files are large, the system discards video files when the network is unstable to prioritize the transmission of essential authentication images.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -183,11 +186,11 @@ public class InitializeRequest extends TeaModel {
     public String documentNumber;
 
     /**
-     * <p>Specifies whether the recognition result page is editable during the document OCR recognition step:</p>
+     * <p>Specifies whether the recognition result page is editable during the document OCR recognition phase:</p>
      * <ul>
      * <li><p><strong>0</strong>: not editable</p>
      * </li>
-     * <li><p><strong>1</strong> (default): editable.</p>
+     * <li><p><strong>1</strong> (default): editable</p>
      * </li>
      * </ul>
      * 
@@ -198,7 +201,7 @@ public class InitializeRequest extends TeaModel {
     public String editOcrResult;
 
     /**
-     * <p>The Indonesian email address. This field takes effect only when Authorize is set to T.</p>
+     * <p>The Indonesian email address. This field takes effect only when Authorize=T.</p>
      * <blockquote>
      * <ul>
      * <li>This field is required only when the Indonesian data source is enabled.</li>
@@ -220,6 +223,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("ExperienceCode")
     public String experienceCode;
 
+    @NameInMap("FaceAttributeCheck")
+    public String faceAttributeCheck;
+
     /**
      * <p>The face libraries for comparison.</p>
      * 
@@ -239,7 +245,7 @@ public class InitializeRequest extends TeaModel {
     public String facePictureBase64;
 
     /**
-     * <p>The URL of the face photo. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The face photo URL. A publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -248,7 +254,7 @@ public class InitializeRequest extends TeaModel {
     public String facePictureUrl;
 
     /**
-     * <p>The face registration library.</p>
+     * <p>The registration face library.</p>
      * 
      * <strong>example:</strong>
      * <p>0e0c34a77f</p>
@@ -266,7 +272,7 @@ public class InitializeRequest extends TeaModel {
     public String faceVerifyThreshold;
 
     /**
-     * <p>The face image quality. This is an input parameter for the IDV product.</p>
+     * <p>The face image quality. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -275,7 +281,7 @@ public class InitializeRequest extends TeaModel {
     public String idFaceQuality;
 
     /**
-     * <p>Specifies whether to enable document anti-spoofing detection. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to enable document anti-forgery detection. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -289,7 +295,7 @@ public class InitializeRequest extends TeaModel {
      * <li><strong>0</strong>: standard mode</li>
      * <li><strong>1</strong>: strict mode</li>
      * <li><strong>2</strong>: loose mode</li>
-     * <li><strong>3</strong> (default): quality detection disabled.</li>
+     * <li><strong>3</strong> (default): disable quality detection</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -299,7 +305,7 @@ public class InitializeRequest extends TeaModel {
     public String idThreshold;
 
     /**
-     * <p>The language configuration. This is an input parameter for the IDV product.</p>
+     * <p>The language configuration. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -308,13 +314,13 @@ public class InitializeRequest extends TeaModel {
     public String languageConfig;
 
     /**
-     * <p>The input source for MRTD verification parameters. This parameter is required for decrypting information when reading document chip data via NFC.</p>
+     * <p>The MRTD verification parameter input source. This parameter is required to decrypt information when reading document chip information via NFC.</p>
      * <ul>
      * <li><p><strong>0</strong>: user input</p>
      * </li>
      * <li><p><strong>1</strong>: OCR reading</p>
      * </li>
-     * <li><p><strong>2</strong>: API input.</p>
+     * <li><p><strong>2</strong>: API input</p>
      * </li>
      * </ul>
      * 
@@ -325,7 +331,7 @@ public class InitializeRequest extends TeaModel {
     public String MRTDInput;
 
     /**
-     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Make sure the value is unique.</p>
+     * <p>The merchant-defined unique business ID used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</p>
      * 
      * <strong>example:</strong>
      * <p>e0c34a***353888</p>
@@ -334,7 +340,7 @@ public class InitializeRequest extends TeaModel {
     public String merchantBizId;
 
     /**
-     * <p>Your custom user ID or another identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize this field value in advance, such as by hashing the value.</p>
+     * <p>Your custom user ID or other identifier that can identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize this field value in advance, such as by hashing the value.</p>
      * 
      * <strong>example:</strong>
      * <p>1221****6543</p>
@@ -343,7 +349,7 @@ public class InitializeRequest extends TeaModel {
     public String merchantUserId;
 
     /**
-     * <p>The MetaInfo environment parameter. Obtain this value by using the client SDK.</p>
+     * <p>The Metainfo environment parameter, which must be obtained through the client SDK.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;bioMetaInfo\&quot;:\&quot;4.1.0:2916352,0\&quot;,\&quot;deviceType\&quot;:\&quot;web\&quot;,\&quot;ua\&quot;:\&quot;Mozilla/5.0 (Macintosh</p>
@@ -352,7 +358,7 @@ public class InitializeRequest extends TeaModel {
     public String metaInfo;
 
     /**
-     * <p>The Indonesian phone number. The format must start with +62 followed by 9 to 11 digits. This field takes effect only when Authorize is set to T.</p>
+     * <p>The Indonesian phone number. The format must be verified (starting with +62, followed by 9–11 digits). This field takes effect only when Authorize=T.</p>
      * <blockquote>
      * <ul>
      * <li>This field is required only when the Indonesian data source is enabled.</li>
@@ -366,7 +372,7 @@ public class InitializeRequest extends TeaModel {
     public String mobile;
 
     /**
-     * <p>The type of liveness detection:</p>
+     * <p>The type of liveness detection to perform:</p>
      * <ul>
      * <li><p><strong>LIVENESS</strong> (default): blink action liveness detection.</p>
      * </li>
@@ -376,7 +382,7 @@ public class InitializeRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK release notes</a>.</li>
-     * <li>Colorful liveness dual detection is not supported on PC.</li>
+     * <li>PC does not support colorful liveness dual detection.</li>
      * </ul>
      * </blockquote>
      * 
@@ -387,7 +393,7 @@ public class InitializeRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>Specifies whether to enable OCR. This is an input parameter for the IDV product.</p>
+     * <p>Specifies whether to enable OCR. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>Y</p>
@@ -398,7 +404,7 @@ public class InitializeRequest extends TeaModel {
     /**
      * <p>Specifies whether to return additional OCR recognition standardized format fields:</p>
      * <p>0: no (default)</p>
-     * <p>1: yes.</p>
+     * <p>1: yes</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -407,15 +413,15 @@ public class InitializeRequest extends TeaModel {
     public String ocrValueStandard;
 
     /**
-     * <p>The capture page configuration. Use commas (,) to connect multiple pages. Valid values:</p>
+     * <p>The collection page configuration. Use commas to connect multiple pages. Valid values:</p>
      * <ul>
-     * <li><p><strong>01</strong>: portrait side of the document</p>
+     * <li><p><strong>01</strong>: document portrait page</p>
      * </li>
-     * <li><p><strong>01,02</strong>: portrait side and back side of the document</p>
+     * <li><p><strong>01,02</strong>: document portrait page and back page</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>When this value is set to 01,02, only Chinese ID cards and Vietnamese ID cards are supported.</p>
+     * <p>When this value is set to 01,02, only Chinese ID cards and Vietnamese ID cards are currently supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -427,14 +433,14 @@ public class InitializeRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow a degraded processing method when compatibility issues occur during mobile H5 authentication.</p>
      * <ul>
-     * <li><p><strong>url (default)</strong>: degradation supported. The page displays the authentication URL, and the user can copy the URL or switch browsers to continue authentication.</p>
+     * <li><p><strong>url (default)</strong>: supports degradation. The page displays the authentication URL, and the user can copy the URL or switch browsers to continue authentication.</p>
      * </li>
-     * <li><p><strong>keep</strong>: degradation not supported. The error reason is returned directly and the authentication flow ends.</p>
+     * <li><p><strong>keep</strong>: does not support degradation. Directly returns the error reason and ends the authentication flow.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This switch is not supported on PC.</li>
+     * <li>PC does not support this switch.</li>
      * <li>If the business scenario involves completing authentication within an in-app embedded web page, set this parameter to keep to disallow URL degradation.</li>
      * </ul>
      * </blockquote>
@@ -446,9 +452,9 @@ public class InitializeRequest extends TeaModel {
     public String procedurePriority;
 
     /**
-     * <p>The product solution to use.</p>
+     * <p>The product solution to be integrated.</p>
      * <blockquote>
-     * <p>For more information, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1">https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1</a>.</p>
+     * <p>For more information, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1">https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1</a></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -458,12 +464,12 @@ public class InitializeRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The order of document and face capture:</p>
+     * <p>Specifies the order of document and face capture:</p>
      * <ul>
      * <li>DOC_FACE (default)</li>
      * <li>FACE_DOC</li>
      * </ul>
-     * <p>Note: This parameter is required only when ProductCode is set to KYC_GLOBAL.</p>
+     * <p>Note: This parameter is required only when ProductCode is KYC_GLOBAL.</p>
      * 
      * <strong>example:</strong>
      * <p>DOC_FACE</p>
@@ -499,7 +505,7 @@ public class InitializeRequest extends TeaModel {
     public String saveFacePicture;
 
     /**
-     * <p>The scene code. This is an input parameter for the IDV product.</p>
+     * <p>The scene code. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>123****123</p>
@@ -510,7 +516,7 @@ public class InitializeRequest extends TeaModel {
     /**
      * <p>The pattern that represents different security levels of the authentication flow. Valid values:</p>
      * <p>01: normal pattern (default).
-     * 02: safe mode, a relatively strict pattern that is active for high-risk scenarios. This is an input parameter for the IDV product.</p>
+     * 02: safe mode, a relatively strict pattern that is active for high-risk scenarios. (IDV product input parameter)</p>
      * 
      * <strong>example:</strong>
      * <p>01</p>
@@ -519,11 +525,11 @@ public class InitializeRequest extends TeaModel {
     public String securityLevel;
 
     /**
-     * <p>Specifies whether to display the album upload entry during the document OCR recognition step:</p>
+     * <p>Specifies whether to display the album upload entry during the document OCR recognition phase:</p>
      * <ul>
      * <li><p><strong>1</strong>: display (default)</p>
      * </li>
-     * <li><p><strong>0</strong>: do not display.</p>
+     * <li><p><strong>0</strong>: do not display</p>
      * </li>
      * </ul>
      * 
@@ -538,7 +544,7 @@ public class InitializeRequest extends TeaModel {
      * <ul>
      * <li><p><strong>1</strong>: display (default)</p>
      * </li>
-     * <li><p><strong>0</strong>: do not display.</p>
+     * <li><p><strong>0</strong>: do not display</p>
      * </li>
      * </ul>
      * 
@@ -549,11 +555,11 @@ public class InitializeRequest extends TeaModel {
     public String showGuidePage;
 
     /**
-     * <p>Specifies whether to display the recognition result page during the document OCR recognition step:</p>
+     * <p>Specifies whether to display the recognition result page during the document OCR recognition phase:</p>
      * <ul>
      * <li><p><strong>1</strong>: display (default)</p>
      * </li>
-     * <li><p><strong>0</strong>: do not display.</p>
+     * <li><p><strong>0</strong>: do not display</p>
      * </li>
      * </ul>
      * 
@@ -564,7 +570,7 @@ public class InitializeRequest extends TeaModel {
     public String showOcrResult;
 
     /**
-     * <p>The custom UI configuration. Convert your custom UI configuration to a JSON string based on the configuration template and pass it in through this parameter. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI style customization</a>.</p>
+     * <p>The custom UI configuration. Convert your custom UI configuration to a JSON string based on the configuration template and pass it in through this operation. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI style customization</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -587,7 +593,7 @@ public class InitializeRequest extends TeaModel {
     public String targetFacePicture;
 
     /**
-     * <p>The URL of the portrait image. The URL must be a publicly accessible HTTP or HTTPS link.</p>
+     * <p>The portrait image URL. A publicly accessible HTTP or HTTPS link.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.xxxxx.com/1.jpg">https://www.xxxxx.com/1.jpg</a></p>
@@ -597,8 +603,8 @@ public class InitializeRequest extends TeaModel {
 
     /**
      * <p>The custom action pool configuration for liveness detection.
-     * This parameter is required when Model is set to TEMPLATE.
-     * Configuration rule: separate multiple action codes with commas (,). Best practices: include at least one frontal face action (such as blink) and no more than 3 actions in total.
+     * This parameter is required when Model is TEMPLATE.
+     * Configuration rule: separate multiple action codes with commas. Best Practices: include at least one frontal face action (such as blink), and do not exceed 3 actions in total.
      * Action lookup table:</p>
      * <ul>
      * <li>Blink: 01</li>
@@ -607,7 +613,7 @@ public class InitializeRequest extends TeaModel {
      * <li>Shake Head Right: 04</li>
      * <li>Move Farther: 05</li>
      * <li>Move Closer: 06</li>
-     * <li>Photinus: 07.</li>
+     * <li>Photinus: 07</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -618,7 +624,7 @@ public class InitializeRequest extends TeaModel {
 
     /**
      * <p>The number of actions randomly selected from TemplateConfig.
-     * This parameter takes effect only when TemplateType is set to Ran.</p>
+     * Takes effect only when TemplateType is Ran.</p>
      * <ul>
      * <li>Validation rules:</li>
      * <li>The value must be greater than 1. The value must be less than or equal to the total number of actions configured in TemplateConfig. If not specified, the default value equals the total number of actions in TemplateConfig.</li>
@@ -632,10 +638,10 @@ public class InitializeRequest extends TeaModel {
 
     /**
      * <p>The execution order of liveness detection actions in TemplateConfig.
-     * This parameter is required when Model is set to TEMPLATE.</p>
+     * This parameter is required when Model is TEMPLATE.</p>
      * <ul>
-     * <li>Seq: actions are executed in the order configured in TemplateConfig from left to right.</li>
-     * <li>Ran: actions are executed in random order. When this option is selected, TemplateConfig must contain more than one action.</li>
+     * <li>Seq: executes in the order configured in TemplateConfig from left to right.</li>
+     * <li>Ran: executes in random order. When this option is selected, TemplateConfig must contain more than one action.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -645,10 +651,10 @@ public class InitializeRequest extends TeaModel {
     public String templateType;
 
     /**
-     * <p>Specifies whether to enable NFC verification when <strong>DocType</strong> is set to 01000000 (global passport).</p>
+     * <p>When <strong>DocType</strong> = 01000000 (global passport), specifies whether to enable NFC verification.</p>
      * <ul>
-     * <li><strong>Y</strong>: enabled</li>
-     * <li><strong>N</strong>: disabled.</li>
+     * <li><strong>Y</strong> (enable)</li>
+     * <li><strong>N</strong> (do not enable)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -685,6 +691,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getAuthorize() {
         return this.authorize;
+    }
+
+    public InitializeRequest setAutoDocPageConfig(String autoDocPageConfig) {
+        this.autoDocPageConfig = autoDocPageConfig;
+        return this;
+    }
+    public String getAutoDocPageConfig() {
+        return this.autoDocPageConfig;
     }
 
     public InitializeRequest setAutoRegistration(String autoRegistration) {
@@ -821,6 +835,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getExperienceCode() {
         return this.experienceCode;
+    }
+
+    public InitializeRequest setFaceAttributeCheck(String faceAttributeCheck) {
+        this.faceAttributeCheck = faceAttributeCheck;
+        return this;
+    }
+    public String getFaceAttributeCheck() {
+        return this.faceAttributeCheck;
     }
 
     public InitializeRequest setFaceGroupCodes(String faceGroupCodes) {

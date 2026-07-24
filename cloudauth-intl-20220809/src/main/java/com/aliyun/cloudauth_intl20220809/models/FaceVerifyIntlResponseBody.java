@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FaceVerifyIntlResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -256,7 +256,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public FaceVerifyIntlResponseBodyResultExtFaceInfo extFaceInfo;
 
         /**
-         * <p>The predicted reference age of the face. Prediction may fail and the value may not be returned.</p>
+         * <p>The estimated age of the face. This value may not be returned if the prediction fails.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -267,8 +267,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the captured face involves a liveness attack. Valid values:</p>
          * <ul>
-         * <li>Y: attack detected.</li>
-         * <li>N: no attack detected.</li>
+         * <li>Y: Attack detected.</li>
+         * <li>N: No attack detected.</li>
          * </ul>
          * <p>This field is returned only when passive liveness detection is enabled.</p>
          * 
@@ -297,10 +297,10 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public Double faceComparisonScore;
 
         /**
-         * <p>The predicted gender of the face image. Prediction may fail and the value may not be returned. Valid values:</p>
+         * <p>The predicted gender of the face image. This value may not be returned if the prediction fails. Valid values:</p>
          * <ul>
-         * <li>M: male.</li>
-         * <li>F: female.</li>
+         * <li>M: Male.</li>
+         * <li>F: Female.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -312,8 +312,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>The final verification result. Valid values:</p>
          * <ul>
-         * <li>Y: passed.</li>
-         * <li>N: not passed.</li>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -323,7 +323,7 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         public String facePassed;
 
         /**
-         * <p>The corresponding face ID returned only when the customer has enabled automatic registration and the face is registered successfully.</p>
+         * <p>The face ID returned only when the customer has enabled automatic registration and the face is registered successfully.</p>
          * 
          * <strong>example:</strong>
          * <p>9e792ec84c8f0ca592a</p>
@@ -334,8 +334,8 @@ public class FaceVerifyIntlResponseBody extends TeaModel {
         /**
          * <p>The face registration result. Valid values: </p>
          * <ul>
-         * <li>0: failed. </li>
-         * <li>1: succeeded.</li>
+         * <li>0: Failed. </li>
+         * <li>1: Succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
