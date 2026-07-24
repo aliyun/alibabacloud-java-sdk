@@ -28,6 +28,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>发起实时外呼</p>
+     * 
+     * @param request CreateCallOutboundInstantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCallOutboundInstantResponse
+     */
+    public CreateCallOutboundInstantResponse createCallOutboundInstantWithOptions(CreateCallOutboundInstantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            body.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerName)) {
+            body.put("CustomerName", request.customerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptCall)) {
+            body.put("EncryptCall", request.encryptCall);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptVariables)) {
+            body.put("PromptVariables", request.promptVariables);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCallOutboundInstant"),
+            new TeaPair("version", "2025-11-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCallOutboundInstantResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发起实时外呼</p>
+     * 
+     * @param request CreateCallOutboundInstantRequest
+     * @return CreateCallOutboundInstantResponse
+     */
+    public CreateCallOutboundInstantResponse createCallOutboundInstant(CreateCallOutboundInstantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCallOutboundInstantWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询当前任务的并发数</p>
      * 
      * @param request QueryTaskConcurrencyRequest
