@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceConfigRequest extends TeaModel {
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -14,7 +14,7 @@ public class GetServiceConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -23,7 +23,7 @@ public class GetServiceConfigRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Service code.</p>
+     * <p>The service code.</p>
      * 
      * <strong>example:</strong>
      * <p>nickname_detection</p>

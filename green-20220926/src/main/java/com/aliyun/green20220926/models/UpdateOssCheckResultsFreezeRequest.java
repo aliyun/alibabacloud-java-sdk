@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOssCheckResultsFreezeRequest extends TeaModel {
     /**
+     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-10-21 16:08:38</p>
      */
@@ -12,16 +14,26 @@ public class UpdateOssCheckResultsFreezeRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The items to freeze.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
     @NameInMap("FreezeItems")
     public String freezeItems;
 
+    /**
+     * <p>The directory to which the frozen files are moved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uploadTest/</p>
+     */
     @NameInMap("FreezeRestorePath")
     public String freezeRestorePath;
 
     /**
+     * <p>The freeze type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACL</p>
      */
@@ -29,6 +41,8 @@ public class UpdateOssCheckResultsFreezeRequest extends TeaModel {
     public String freezeType;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -36,6 +50,8 @@ public class UpdateOssCheckResultsFreezeRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38</p>
      */
@@ -43,6 +59,8 @@ public class UpdateOssCheckResultsFreezeRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>P_15BU42</p>
      */

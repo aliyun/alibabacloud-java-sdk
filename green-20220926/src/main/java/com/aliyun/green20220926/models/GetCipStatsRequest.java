@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetCipStatsRequest extends TeaModel {
     /**
+     * <p>Specifies whether monthly indexing is supported. Valid values:</p>
+     * <ul>
+     * <li>true: Supported.</li>
+     * <li>false: Not supported.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class GetCipStatsRequest extends TeaModel {
     public Boolean byMonth;
 
     /**
+     * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-11 10:00:00</p>
      */
@@ -19,16 +27,26 @@ public class GetCipStatsRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The label.</p>
+     * 
      * <strong>example:</strong>
      * <p>xx</p>
      */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>The query condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -36,16 +54,26 @@ public class GetCipStatsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The service code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>baselineCheck</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
     /**
+     * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-03-10 10:00:00</p>
      */
@@ -53,12 +81,27 @@ public class GetCipStatsRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>The UID of the RAM user.</p>
+     * 
      * <strong>example:</strong>
      * <p>253552244990701265</p>
      */
     @NameInMap("SubUid")
     public String subUid;
 
+    /**
+     * <p>The type. Valid values:</p>
+     * <ul>
+     * <li><strong>cip</strong>: Content Moderation invocation usage statistics.</li>
+     * <li><strong>risk_level</strong>: Content Moderation risk level statistics.</li>
+     * <li><strong>content_moderation</strong>: AI safety guardrail content compliance risk level and tag statistics.</li>
+     * <li><strong>sensitive_data</strong>: AI safety guardrail sensitive data risk level and tag statistics.</li>
+     * <li><strong>prompt_attack</strong>: AI safety guardrail prompt risk level and tag statistics.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>risk_level</p>
+     */
     @NameInMap("Type")
     public String type;
 

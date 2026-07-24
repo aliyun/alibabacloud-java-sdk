@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ExportCipStatsRequest extends TeaModel {
     /**
-     * <p>Whether to support monthly indexing. Values: -<strong>true</strong>: Supported. -<strong>false</strong>: Not supported.</p>
+     * <p>Specifies whether monthly indexing is supported. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: Supported.</li>
+     * <li><strong>false</strong>: Not supported.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +18,7 @@ public class ExportCipStatsRequest extends TeaModel {
     public Boolean byMonth;
 
     /**
-     * <p>The end time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-04-16 09:00:00</p>
@@ -23,7 +27,11 @@ public class ExportCipStatsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Export type. Values: -<strong>level</strong>: Export by risk level. -<strong>label</strong>: Export by label.</p>
+     * <p>The export type. Valid values:</p>
+     * <ul>
+     * <li><strong>level</strong>: export by risk level.</li>
+     * <li><strong>label</strong>: export by label.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>label</p>
@@ -32,7 +40,7 @@ public class ExportCipStatsRequest extends TeaModel {
     public String exportType;
 
     /**
-     * <p>The label of the task to be exported.</p>
+     * <p>The task label to export.</p>
      * 
      * <strong>example:</strong>
      * <p>xx</p>
@@ -41,7 +49,7 @@ public class ExportCipStatsRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -50,7 +58,7 @@ public class ExportCipStatsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -59,7 +67,7 @@ public class ExportCipStatsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Service code.</p>
+     * <p>The service code.</p>
      * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
@@ -68,7 +76,7 @@ public class ExportCipStatsRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>The start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-04-15 09:00:00</p>
@@ -77,7 +85,7 @@ public class ExportCipStatsRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>Sub-account UID.</p>
+     * <p>The UID of the RAM user.</p>
      * 
      * <strong>example:</strong>
      * <p>268220485413130979</p>
@@ -86,7 +94,14 @@ public class ExportCipStatsRequest extends TeaModel {
     public String subUid;
 
     /**
-     * <p>Type, values: -<strong>cip</strong>: Content Security Invocation Count Statistics. -<strong>risk_level</strong>: Content Security Risk Level Statistics. -<strong>content_moderation</strong>: AI Safety Guardrail Content Compliance Risk Level and Label Statistics. -<strong>sensitive_data</strong>: AI Safety Guardrail Sensitive Data Risk Level and Label Statistics. -<strong>prompt_attack</strong>: AI Safety Guardrail Prompt Word Risk Level and Label Statistics.</p>
+     * <p>The type. Valid values:</p>
+     * <ul>
+     * <li><strong>cip</strong>: Content Moderation invocation volume statistics.</li>
+     * <li><strong>risk_level</strong>: Content Moderation risk level statistics.</li>
+     * <li><strong>content_moderation</strong>: AI safety guardrail content compliance risk level and tag statistics.</li>
+     * <li><strong>sensitive_data</strong>: AI safety guardrail sensitive data risk level and tag statistics.</li>
+     * <li><strong>prompt_attack</strong>: AI safety guardrail prompt risk level and tag statistics.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>risk_level</p>

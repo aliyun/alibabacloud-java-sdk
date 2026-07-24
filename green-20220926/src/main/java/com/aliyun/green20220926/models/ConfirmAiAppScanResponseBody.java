@@ -3,9 +3,9 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteAnswerLibResponseBody extends TeaModel {
+public class ConfirmAiAppScanResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -14,7 +14,7 @@ public class DeleteAnswerLibResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The ID assigned by the backend that uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -22,12 +22,12 @@ public class DeleteAnswerLibResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteAnswerLibResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteAnswerLibResponseBody self = new DeleteAnswerLibResponseBody();
+    public static ConfirmAiAppScanResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ConfirmAiAppScanResponseBody self = new ConfirmAiAppScanResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAnswerLibResponseBody setData(Boolean data) {
+    public ConfirmAiAppScanResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
@@ -35,7 +35,7 @@ public class DeleteAnswerLibResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeleteAnswerLibResponseBody setRequestId(String requestId) {
+    public ConfirmAiAppScanResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopOnlineTestResponseBody extends TeaModel {
     /**
+     * <p>Backend-assigned ID used as the UUID of a Request. It can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -12,13 +14,17 @@ public class StopOnlineTestResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Service encoding</p>
+     * 
      * <strong>example:</strong>
-     * <p>VideoModeration</p>
+     * <p>baselineCheck</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
     /**
+     * <p>Detection Job ID</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxxx</p>
      */
@@ -26,6 +32,8 @@ public class StopOnlineTestResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>Detection Status</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -33,6 +41,8 @@ public class StopOnlineTestResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
+     * <p>Detection URL</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxx.com/data/data.png">https://xxxxxxxx.com/data/data.png</a></p>
      */

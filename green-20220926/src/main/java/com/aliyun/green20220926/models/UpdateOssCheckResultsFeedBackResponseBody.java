@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOssCheckResultsFeedBackResponseBody extends TeaModel {
     /**
+     * <p>Return Result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class UpdateOssCheckResultsFeedBackResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */

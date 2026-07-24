@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddAnswerSampleRequest extends TeaModel {
     /**
+     * <p>The ID of the proxy answer library.</p>
+     * 
      * <strong>example:</strong>
      * <p>alxxxx</p>
      */
@@ -12,6 +14,8 @@ public class AddAnswerSampleRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -19,12 +23,20 @@ public class AddAnswerSampleRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The file name of the proxy answer sample to be added.</p>
+     * 
      * <strong>example:</strong>
      * <p>data/xxx.xlsx</p>
      */
     @NameInMap("SampleObject")
     public String sampleObject;
 
+    /**
+     * <p>The samples to be added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>代答答案1\n代答答案2</p>
+     */
     @NameInMap("Samples")
     public String samples;
 

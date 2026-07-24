@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetPromptTestResultResponseBody extends TeaModel {
     /**
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<GetPromptTestResultResponseBodyResult> result;
 
@@ -36,16 +41,30 @@ public class GetPromptTestResultResponseBody extends TeaModel {
     }
 
     public static class GetPromptTestResultResponseBodyResultLabelDetails extends TeaModel {
+        /**
+         * <p>The label description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暴恐</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>terrorism</p>
          */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The reason why the model determined this risk level for the text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>该文本涉及暴力恐怖信息</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
@@ -81,13 +100,34 @@ public class GetPromptTestResultResponseBody extends TeaModel {
     }
 
     public static class GetPromptTestResultResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文本</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The labels.</p>
+         */
         @NameInMap("LabelDetails")
         public java.util.List<GetPromptTestResultResponseBodyResultLabelDetails> labelDetails;
 
         /**
+         * <p>The risk level, which is returned based on the configured high and low risk scores. Valid values:</p>
+         * <ul>
+         * <li><p>high: High risk.</p>
+         * </li>
+         * <li><p>medium: Medium risk.</p>
+         * </li>
+         * <li><p>low: Low risk.</p>
+         * </li>
+         * <li><p>none: No risk detected.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */

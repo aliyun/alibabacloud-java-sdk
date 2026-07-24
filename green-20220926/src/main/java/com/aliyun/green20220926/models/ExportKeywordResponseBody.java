@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportKeywordResponseBody extends TeaModel {
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ExportKeywordResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Export result.</p>
+     * <p>The export result.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/console_data/export/production/keyword/export_keywordO4ee1Bok1R8IIDVpcT9viU-1xxWr">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/console_data/export/production/keyword/export_keywordO4ee1Bok1R8IIDVpcT9viU-1xxWr</a></p>
@@ -23,7 +23,7 @@ public class ExportKeywordResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Further description of the error code.</p>
+     * <p>The description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class ExportKeywordResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -41,7 +41,7 @@ public class ExportKeywordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

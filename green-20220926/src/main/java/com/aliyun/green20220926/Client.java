@@ -27,7 +27,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hangzhou-finance", "green.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "green.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "green.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "green.aliyuncs.com")
+            new TeaPair("cn-north-2-gov-1", "green.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "green-cip.cn-shenzhen.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com"),
+            new TeaPair("cn-beijing", "green-cip.cn-beijing.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("green", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -48,7 +53,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加代答样本</p>
+     * <p>Adds a proxy answer.</p>
      * 
      * @param request AddAnswerSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -92,7 +97,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加代答样本</p>
+     * <p>Adds a proxy answer.</p>
      * 
      * @param request AddAnswerSampleRequest
      * @return AddAnswerSampleResponse
@@ -104,7 +109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Image Library</p>
+     * <p>Creates an image library.</p>
      * 
      * @param request AddImageLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -146,7 +151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Image Library</p>
+     * <p>Creates an image library.</p>
      * 
      * @param request AddImageLibRequest
      * @return AddImageLibResponse
@@ -158,7 +163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add image to image lib</p>
+     * <p>Adds images in batches.</p>
      * 
      * @param request AddImages2LibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -200,7 +205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add image to image lib</p>
+     * <p>Adds images in batches.</p>
      * 
      * @param request AddImages2LibRequest
      * @return AddImages2LibResponse
@@ -212,7 +217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create keyword library</p>
+     * <p>Creates a keyword library.</p>
      * 
      * @param request AddKeywordLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -266,7 +271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create keyword library</p>
+     * <p>Creates a keyword library.</p>
      * 
      * @param request AddKeywordLibRequest
      * @return AddKeywordLibResponse
@@ -278,7 +283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add keywords</p>
+     * <p>Adds keywords.</p>
      * 
      * @param request AddKeywordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -328,7 +333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add keywords</p>
+     * <p>Adds keywords.</p>
      * 
      * @param request AddKeywordsRequest
      * @return AddKeywordsResponse
@@ -340,7 +345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add keywords to keyword library.</p>
+     * <p>Adds keywords.</p>
      * 
      * @param request AddKeywordsToLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -394,7 +399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add keywords to keyword library.</p>
+     * <p>Adds keywords.</p>
      * 
      * @param request AddKeywordsToLibRequest
      * @return AddKeywordsToLibResponse
@@ -406,7 +411,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancel OSS detection task</p>
+     * <p>Cancels an OSS scan task.</p>
      * 
      * @param request CancelStockOssCheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -442,7 +447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancel OSS detection task</p>
+     * <p>Cancels an OSS scan task.</p>
      * 
      * @param request CancelStockOssCheckTaskRequest
      * @return CancelStockOssCheckTaskResponse
@@ -454,7 +459,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>copy service config</p>
+     * <p>Confirms the activation of AI application protection.</p>
+     * 
+     * @param request ConfirmAiAppScanRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfirmAiAppScanResponse
+     */
+    public ConfirmAiAppScanResponse confirmAiAppScanWithOptions(ConfirmAiAppScanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
+            query.put("CommodityCode", request.commodityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConfirmAiAppScan"),
+            new TeaPair("version", "2022-09-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ConfirmAiAppScanResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Confirms the activation of AI application protection.</p>
+     * 
+     * @param request ConfirmAiAppScanRequest
+     * @return ConfirmAiAppScanResponse
+     */
+    public ConfirmAiAppScanResponse confirmAiAppScan(ConfirmAiAppScanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.confirmAiAppScanWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Copies a service.</p>
      * 
      * @param request CopyServiceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -504,7 +557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>copy service config</p>
+     * <p>Copies a service.</p>
      * 
      * @param request CopyServiceConfigRequest
      * @return CopyServiceConfigResponse
@@ -516,7 +569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create stock oss check task</p>
+     * <p>Creates an OSS scan task.</p>
      * 
      * @param request CreatStockOssCheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -660,7 +713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create stock oss check task</p>
+     * <p>Creates an OSS scan task.</p>
      * 
      * @param request CreatStockOssCheckTaskRequest
      * @return CreatStockOssCheckTaskResponse
@@ -672,7 +725,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建代答库</p>
+     * <p>Creates a proxy answer library.</p>
      * 
      * @param request CreateAnswerLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -722,7 +775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建代答库</p>
+     * <p>Creates a proxy answer library.</p>
      * 
      * @param request CreateAnswerLibRequest
      * @return CreateAnswerLibResponse
@@ -734,7 +787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new message notification</p>
+     * <p>Creates a message notification.</p>
      * 
      * @param request CreateCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -784,7 +837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a new message notification</p>
+     * <p>Creates a message notification.</p>
      * 
      * @param request CreateCallbackRequest
      * @return CreateCallbackResponse
@@ -795,8 +848,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this operation, complete the following steps:</p>
+     * <ol>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</li>
+     * <li>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</li>
+     * <li>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建图库</p>
+     * <p>Creates an image library.</p>
      * 
      * @param request CreateImageLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -837,8 +898,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before using this operation, complete the following steps:</p>
+     * <ol>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate Content Moderation Enhanced Edition</a>.</li>
+     * <li>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of Image Moderation Enhanced Edition.</li>
+     * <li>For more information about API operations and parameters, see <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>创建图库</p>
+     * <p>Creates an image library.</p>
      * 
      * @param request CreateImageLibRequest
      * @return CreateImageLibResponse
@@ -906,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check before creating an OSS scan task</p>
+     * <p>Performs a pre-check before creating an OSS scan task.</p>
      * 
      * @param request CreatePreCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -996,7 +1065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Check before creating an OSS scan task</p>
+     * <p>Performs a pre-check before creating an OSS scan task.</p>
      * 
      * @param request CreatePreCheckRequest
      * @return CreatePreCheckResponse
@@ -1008,7 +1077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代答库</p>
+     * <p>Deletes a proxy answer library.</p>
      * 
      * @param request DeleteAnswerLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1044,7 +1113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代答库</p>
+     * <p>Deletes a proxy answer library.</p>
      * 
      * @param request DeleteAnswerLibRequest
      * @return DeleteAnswerLibResponse
@@ -1056,7 +1125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代答答案</p>
+     * <p>Deletes proxy answers.</p>
      * 
      * @param request DeleteAnswerSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1098,7 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除代答答案</p>
+     * <p>Deletes proxy answers.</p>
      * 
      * @param request DeleteAnswerSampleRequest
      * @return DeleteAnswerSampleResponse
@@ -1110,7 +1179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete callback</p>
+     * <p>Deletes a message notification.</p>
      * 
      * @param request DeleteCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1148,7 +1217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>delete callback</p>
+     * <p>Deletes a message notification.</p>
      * 
      * @param request DeleteCallbackRequest
      * @return DeleteCallbackResponse
@@ -1222,7 +1291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete images from library.</p>
+     * <p>Deletes images in batches.</p>
      * 
      * @param request DeleteImagesFromLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1264,7 +1333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete images from library.</p>
+     * <p>Deletes images in batches.</p>
      * 
      * @param request DeleteImagesFromLibRequest
      * @return DeleteImagesFromLibResponse
@@ -1276,7 +1345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete keyword</p>
+     * <p>Deletes keywords.</p>
      * 
      * @param request DeleteKeywordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1326,7 +1395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete keyword</p>
+     * <p>Deletes keywords.</p>
      * 
      * @param request DeleteKeywordRequest
      * @return DeleteKeywordResponse
@@ -1338,7 +1407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Keyword Library</p>
+     * <p>Deletes a keyword library.</p>
      * 
      * @param request DeleteKeywordLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1380,7 +1449,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete Keyword Library</p>
+     * <p>Deletes a keyword library.</p>
      * 
      * @param request DeleteKeywordLibRequest
      * @return DeleteKeywordLibResponse
@@ -1440,7 +1509,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询在线测试结果</p>
+     * <p>Queries the detection results of online moderation.</p>
      * 
      * @param request DescribeOnlineTestResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1480,7 +1549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询在线测试结果</p>
+     * <p>Queries the detection results of online moderation.</p>
      * 
      * @param request DescribeOnlineTestResultRequest
      * @return DescribeOnlineTestResultResponse
@@ -1560,7 +1629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出代答答案</p>
+     * <p>Exports proxy answer responses.</p>
      * 
      * @param request ExportAnswerSampleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1598,7 +1667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>导出代答答案</p>
+     * <p>Exports proxy answer responses.</p>
      * 
      * @param request ExportAnswerSampleRequest
      * @return ExportAnswerSampleResponse
@@ -1610,7 +1679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export Call Volume</p>
+     * <p>Exports call usage statistics.</p>
      * 
      * @param request ExportCipStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1680,7 +1749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export Call Volume</p>
+     * <p>Exports call usage statistics.</p>
      * 
      * @param request ExportCipStatsRequest
      * @return ExportCipStatsResponse
@@ -1692,7 +1761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export Keywords</p>
+     * <p>Exports keywords.</p>
      * 
      * @param request ExportKeywordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1734,7 +1803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export Keywords</p>
+     * <p>Exports keywords.</p>
      * 
      * @param request ExportKeywordRequest
      * @return ExportKeywordResponse
@@ -1746,7 +1815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS Usage Statistics Export</p>
+     * <p>Exports OSS usage statistics.</p>
      * 
      * @param request ExportOssCheckStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1796,7 +1865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS Usage Statistics Export</p>
+     * <p>Exports OSS usage statistics.</p>
      * 
      * @param request ExportOssCheckStatRequest
      * @return ExportOssCheckStatResponse
@@ -1808,7 +1877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export OSS scan results</p>
+     * <p>Exports OSS scan results.</p>
      * 
      * @param tmpReq ExportResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1876,7 +1945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export OSS scan results</p>
+     * <p>Exports OSS scan results.</p>
      * 
      * @param request ExportResultRequest
      * @return ExportResultResponse
@@ -1888,7 +1957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export scan results, Excel file</p>
+     * <p>Exports call results as an Excel file.</p>
      * 
      * @param tmpReq ExportScanResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1960,7 +2029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export scan results, Excel file</p>
+     * <p>Exports call results as an Excel file.</p>
      * 
      * @param request ExportScanResultRequest
      * @return ExportScanResultResponse
@@ -1972,7 +2041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export text scan results, Excel file</p>
+     * <p>Exports call results as an Excel file.</p>
      * 
      * @param tmpReq ExportTextScanResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,7 +2093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Export text scan results, Excel file</p>
+     * <p>Exports call results as an Excel file.</p>
      * 
      * @param request ExportTextScanResultRequest
      * @return ExportTextScanResultResponse
@@ -2036,7 +2105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取代答样本导入进度</p>
+     * <p>Retrieves the import progress of proxy answer samples.</p>
      * 
      * @param request GetAnswerImportProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2072,7 +2141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取代答样本导入进度</p>
+     * <p>Retrieves the import progress of proxy answer samples.</p>
      * 
      * @param request GetAnswerImportProgressRequest
      * @return GetAnswerImportProgressResponse
@@ -2084,7 +2153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Evidence Transfer to Get User\&quot;s Bucket List</p>
+     * <p>Retrieves the list of user buckets for evidence dumping.</p>
      * 
      * @param request GetBackupBucketsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2116,7 +2185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Evidence Transfer to Get User\&quot;s Bucket List</p>
+     * <p>Retrieves the list of user buckets for evidence dumping.</p>
      * 
      * @param request GetBackupBucketsListRequest
      * @return GetBackupBucketsListResponse
@@ -2180,7 +2249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>User Backup Authorization Verification</p>
+     * <p>Verifies user authorization.</p>
      * 
      * @param request GetBackupStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2212,7 +2281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>User Backup Authorization Verification</p>
+     * <p>Verifies user authorization.</p>
      * 
      * @param request GetBackupStatusRequest
      * @return GetBackupStatusResponse
@@ -2224,7 +2293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get User OSS Scan Bucket List</p>
+     * <p>Lists buckets.</p>
      * 
      * @param request GetBucketsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2256,7 +2325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get User OSS Scan Bucket List</p>
+     * <p>Lists buckets.</p>
      * 
      * @param request GetBucketsListRequest
      * @return GetBucketsListResponse
@@ -2268,7 +2337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Call Volume</p>
+     * <p>Queries the call volume.</p>
      * 
      * @param request GetCipStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2338,7 +2407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Call Volume</p>
+     * <p>Queries the call volume.</p>
      * 
      * @param request GetCipStatsRequest
      * @return GetCipStatsResponse
@@ -2350,7 +2419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Scheduled  OSS Scan  Task Estimated Execution Time</p>
+     * <p>Retrieves the estimated execution time of a scheduled task.</p>
      * 
      * @param request GetExecuteTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2382,7 +2451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Scheduled  OSS Scan  Task Estimated Execution Time</p>
+     * <p>Retrieves the estimated execution time of a scheduled task.</p>
      * 
      * @param request GetExecuteTimeRequest
      * @return GetExecuteTimeResponse
@@ -2394,7 +2463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Feature Configuration</p>
+     * <p>Retrieves feature configurations.</p>
      * 
      * @param request GetFeatureConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2444,7 +2513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Feature Configuration</p>
+     * <p>Retrieves feature configurations.</p>
      * 
      * @param request GetFeatureConfigRequest
      * @return GetFeatureConfigResponse
@@ -2456,7 +2525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Image Rule Label Information</p>
+     * <p>Retrieves image rule tag information.</p>
      * 
      * @param request GetImageSceneLabelConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2488,7 +2557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Image Rule Label Information</p>
+     * <p>Retrieves image rule tag information.</p>
      * 
      * @param request GetImageSceneLabelConfRequest
      * @return GetImageSceneLabelConfResponse
@@ -2500,7 +2569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Image Rule Label Information</p>
+     * <p>Retrieves image rule tag information.</p>
      * 
      * @param request GetImageSceneLabelListConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2536,7 +2605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Image Rule Label Information</p>
+     * <p>Retrieves image rule tag information.</p>
      * 
      * @param request GetImageSceneLabelListConfRequest
      * @return GetImageSceneLabelListConfResponse
@@ -2548,7 +2617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS scheduled scan detection cycle query</p>
+     * <p>Queries the scheduled scan detection cycle for OSS.</p>
      * 
      * @param tmpReq GetJobNameListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2602,7 +2671,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS scheduled scan detection cycle query</p>
+     * <p>Queries the scheduled scan detection cycle for OSS.</p>
      * 
      * @param request GetJobNameListRequest
      * @return GetJobNameListResponse
@@ -2614,7 +2683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the result of keyword import</p>
+     * <p>Queries the result of a keyword import task.</p>
      * 
      * @param request GetKeywordImportResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2652,7 +2721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the result of keyword import</p>
+     * <p>Queries the result of a keyword import task.</p>
      * 
      * @param request GetKeywordImportResultRequest
      * @return GetKeywordImportResultResponse
@@ -2664,7 +2733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Keyword Library Information</p>
+     * <p>Retrieves keyword library information.</p>
      * 
      * @param request GetKeywordLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2706,7 +2775,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Keyword Library Information</p>
+     * <p>Retrieves keyword library information.</p>
      * 
      * @param request GetKeywordLibRequest
      * @return GetKeywordLibResponse
@@ -2718,7 +2787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query OSS freeze result</p>
+     * <p>Queries the results of OSS scan and freeze operations.</p>
      * 
      * @param tmpReq GetOssCheckFreezeResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2788,7 +2857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query OSS freeze result</p>
+     * <p>Queries the results of OSS scan and freeze operations.</p>
      * 
      * @param request GetOssCheckFreezeResultRequest
      * @return GetOssCheckFreezeResultResponse
@@ -2800,7 +2869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS result details</p>
+     * <p>Retrieves the detailed information of OSS check results.</p>
      * 
      * @param request GetOssCheckResultDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2856,7 +2925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS result details</p>
+     * <p>Retrieves the detailed information of OSS check results.</p>
      * 
      * @param request GetOssCheckResultDetailRequest
      * @return GetOssCheckResultDetailResponse
@@ -2868,7 +2937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS Check Usage Statistics</p>
+     * <p>Queries OSS usage statistics.</p>
      * 
      * @param request GetOssCheckStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2918,7 +2987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS Check Usage Statistics</p>
+     * <p>Queries OSS usage statistics.</p>
      * 
      * @param request GetOssCheckStatRequest
      * @return GetOssCheckStatResponse
@@ -2930,7 +2999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get User OSS check user status</p>
+     * <p>Queries the OSS detection status of a user.</p>
      * 
      * @param request GetOssCheckStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2962,7 +3031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get User OSS check user status</p>
+     * <p>Queries the OSS detection status of a user.</p>
      * 
      * @param request GetOssCheckStatusRequest
      * @return GetOssCheckStatusResponse
@@ -2974,7 +3043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询oss扫描任务详情</p>
+     * <p>Queries the details of an OSS scan task.</p>
      * 
      * @param request GetOssCheckTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3006,7 +3075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询oss扫描任务详情</p>
+     * <p>Queries the details of an OSS scan task.</p>
      * 
      * @param request GetOssCheckTaskInfoRequest
      * @return GetOssCheckTaskInfoResponse
@@ -3018,7 +3087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>测试特性配置</p>
+     * <p>Tests the attribute configuration.</p>
      * 
      * @param request GetPromptTestResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3066,7 +3135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>测试特性配置</p>
+     * <p>Tests the attribute configuration.</p>
      * 
      * @param request GetPromptTestResultRequest
      * @return GetPromptTestResultResponse
@@ -3078,7 +3147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>User OSS Check Task Pending Inspection Information</p>
+     * <p>Queries the information about files pending detection for a user.</p>
      * 
      * @param request GetScanNumRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3118,7 +3187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>User OSS Check Task Pending Inspection Information</p>
+     * <p>Queries the information about files pending detection for a user.</p>
      * 
      * @param request GetScanNumRequest
      * @return GetScanNumResponse
@@ -3130,7 +3199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Scan results</p>
+     * <p>Queries the detection results.</p>
      * 
      * @param tmpReq GetScanResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3202,7 +3271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the Scan results</p>
+     * <p>Queries the detection results.</p>
      * 
      * @param request GetScanResultRequest
      * @return GetScanResultResponse
@@ -3214,7 +3283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a Single Service Configuration</p>
+     * <p>Get a Single Service</p>
      * 
      * @param request GetServiceConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3264,7 +3333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a Single Service Configuration</p>
+     * <p>Get a Single Service</p>
      * 
      * @param request GetServiceConfRequest
      * @return GetServiceConfResponse
@@ -3276,7 +3345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a Single Service Configuration</p>
+     * <p>Retrieves a single service.</p>
      * 
      * @param request GetServiceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3318,7 +3387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a Single Service Configuration</p>
+     * <p>Retrieves a single service.</p>
      * 
      * @param request GetServiceConfigRequest
      * @return GetServiceConfigResponse
@@ -3330,7 +3399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the label configuration of a single service</p>
+     * <p>Retrieves the tag configuration of a single service.</p>
      * 
      * @param request GetServiceLabelConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3372,7 +3441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the label configuration of a single service</p>
+     * <p>Retrieves the tag configuration of a single service.</p>
      * 
      * @param request GetServiceLabelConfigRequest
      * @return GetServiceLabelConfigResponse
@@ -3384,7 +3453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query OSS Scan Task List</p>
+     * <p>Queries the list of OSS scan tasks.</p>
      * 
      * @param tmpReq GetStockOssCheckTasksListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3456,7 +3525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query OSS Scan Task List</p>
+     * <p>Queries the list of OSS scan tasks.</p>
      * 
      * @param request GetStockOssCheckTasksListRequest
      * @return GetStockOssCheckTasksListResponse
@@ -3468,7 +3537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the invocation result</p>
+     * <p>Queries the call results.</p>
      * 
      * @param tmpReq GetTextScanResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3536,7 +3605,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the invocation result</p>
+     * <p>Queries the call results.</p>
      * 
      * @param request GetTextScanResultRequest
      * @return GetTextScanResultResponse
@@ -3547,8 +3616,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取开关配置调优意见</p>
+     * <p>Retrieves tuning suggestions for switch configurations.</p>
      * 
      * @param request GetTuneProposalByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3579,8 +3651,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>API operation is used together with the enhanced image moderation API. After you call the enhanced image moderation API, call API operation to retrieve additional detection information. API operation is free of charge.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取开关配置调优意见</p>
+     * <p>Retrieves tuning suggestions for switch configurations.</p>
      * 
      * @param request GetTuneProposalByIdRequest
      * @return GetTuneProposalByIdResponse
@@ -3592,7 +3667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the corresponding information for file upload</p>
+     * <p>Retrieves the relevant information for file upload.</p>
      * 
      * @param request GetUploadInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3634,7 +3709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the corresponding information for file upload</p>
+     * <p>Retrieves the relevant information for file upload.</p>
      * 
      * @param request GetUploadInfoRequest
      * @return GetUploadInfoResponse
@@ -3646,7 +3721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取上传链接</p>
+     * <p>Obtain an upload link</p>
      * 
      * @param request GetUploadLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3678,7 +3753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取上传链接</p>
+     * <p>Obtain an upload link</p>
      * 
      * @param request GetUploadLinkRequest
      * @return GetUploadLinkResponse
@@ -3690,7 +3765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get User Purchase Status</p>
+     * <p>Retrieves the purchase status of a user.</p>
      * 
      * @param request GetUserBuyStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3728,7 +3803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get User Purchase Status</p>
+     * <p>Retrieves the purchase status of a user.</p>
      * 
      * @param request GetUserBuyStatusRequest
      * @return GetUserBuyStatusResponse
@@ -3740,7 +3815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>代答库列表</p>
+     * <p>Queries the list of proxy answer libraries.</p>
      * 
      * @param request ListAnswerLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3772,7 +3847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>代答库列表</p>
+     * <p>Queries the list of proxy answer libraries.</p>
      * 
      * @param request ListAnswerLibRequest
      * @return ListAnswerLibResponse
@@ -3784,7 +3859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Callback List</p>
+     * <p>Queries the list of message notifications.</p>
      * 
      * @param request ListCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3816,7 +3891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Callback List</p>
+     * <p>Queries the list of message notifications.</p>
      * 
      * @param request ListCallbackRequest
      * @return ListCallbackResponse
@@ -3828,7 +3903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Image Library List</p>
+     * <p>Queries the list of image libraries.</p>
      * 
      * @param request ListImageLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3866,7 +3941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Image Library List</p>
+     * <p>Queries the list of image libraries.</p>
      * 
      * @param request ListImageLibRequest
      * @return ListImageLibResponse
@@ -3878,7 +3953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Image List</p>
+     * <p>Queries a paginated list of images.</p>
      * 
      * @param tmpReq ListImagesFromLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3946,7 +4021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paged Image List</p>
+     * <p>Queries a paginated list of images.</p>
      * 
      * @param request ListImagesFromLibRequest
      * @return ListImagesFromLibResponse
@@ -3958,7 +4033,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Keyword Library List</p>
+     * <p>Queries the list of keyword libraries.</p>
      * 
      * @param request ListKeywordLibsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3994,7 +4069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Keyword Library List</p>
+     * <p>Queries the list of keyword libraries.</p>
      * 
      * @param request ListKeywordLibsRequest
      * @return ListKeywordLibsResponse
@@ -4006,7 +4081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Keyword List</p>
+     * <p>Queries a list of keywords.</p>
      * 
      * @param tmpReq ListKeywordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4070,7 +4145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Keyword List</p>
+     * <p>Queries a list of keywords.</p>
      * 
      * @param request ListKeywordsRequest
      * @return ListKeywordsResponse
@@ -4082,7 +4157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>query OSS scan result list</p>
+     * <p>Queries OSS scan results.</p>
      * 
      * @param tmpReq ListOssCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4152,7 +4227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>query OSS scan result list</p>
+     * <p>Queries OSS scan results.</p>
      * 
      * @param request ListOssCheckResultRequest
      * @return ListOssCheckResultResponse
@@ -4164,7 +4239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service List</p>
+     * <p>Retrieves the service list.</p>
      * 
      * @param request ListServiceConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4214,7 +4289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service List</p>
+     * <p>Retrieves the service list.</p>
      * 
      * @param request ListServiceConfigsRequest
      * @return ListServiceConfigsResponse
@@ -4350,7 +4425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新代答库</p>
+     * <p>Updates a proxy response library.</p>
      * 
      * @param request ModifyAnswerLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4390,7 +4465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新代答库</p>
+     * <p>Updates a proxy response library.</p>
      * 
      * @param request ModifyAnswerLibRequest
      * @return ModifyAnswerLibResponse
@@ -4402,7 +4477,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Message Notification</p>
+     * <p>Modifies a message notification.</p>
      * 
      * @param request ModifyCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4456,7 +4531,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify Message Notification</p>
+     * <p>Modifies a message notification.</p>
      * 
      * @param request ModifyCallbackRequest
      * @return ModifyCallbackResponse
@@ -4468,7 +4543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Save Feature Configuration</p>
+     * <p>Saves an attribute configuration.</p>
      * 
      * @param request ModifyFeatureConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4526,7 +4601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Save Feature Configuration</p>
+     * <p>Saves an attribute configuration.</p>
      * 
      * @param request ModifyFeatureConfigRequest
      * @return ModifyFeatureConfigResponse
@@ -4538,7 +4613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Service</p>
+     * <p>Edits a service.</p>
      * 
      * @param request ModifyServiceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4588,7 +4663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Service</p>
+     * <p>Edits a service.</p>
      * 
      * @param request ModifyServiceInfoRequest
      * @return ModifyServiceInfoResponse
@@ -4600,7 +4675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS scan result query</p>
+     * <p>Retrieves the list of OSS detection results.</p>
      * 
      * @param tmpReq OssCheckResultListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4670,7 +4745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>OSS scan result query</p>
+     * <p>Retrieves the list of OSS detection results.</p>
      * 
      * @param request OssCheckResultListRequest
      * @return OssCheckResultListResponse
@@ -4682,7 +4757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询代答样本</p>
+     * <p>Queries proxy answer samples by paging.</p>
      * 
      * @param tmpReq QueryAnswerSampleByPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4740,7 +4815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>分页查询代答样本</p>
+     * <p>Queries proxy answer samples by paging.</p>
      * 
      * @param request QueryAnswerSampleByPageRequest
      * @return QueryAnswerSampleByPageResponse
@@ -4752,7 +4827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a Single Callback Configuration</p>
+     * <p>Queries a single callback configuration.</p>
      * 
      * @param request QueryCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4794,7 +4869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query a Single Callback Configuration</p>
+     * <p>Queries a single callback configuration.</p>
      * 
      * @param request QueryCallbackRequest
      * @return QueryCallbackResponse
@@ -4806,7 +4881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paginated Query of Message Notification List</p>
+     * <p>Message notification.</p>
      * 
      * @param request QueryCallbackByPageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4848,7 +4923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Paginated Query of Message Notification List</p>
+     * <p>Message notification.</p>
      * 
      * @param request QueryCallbackByPageRequest
      * @return QueryCallbackByPageResponse
@@ -4860,7 +4935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止在线测试</p>
+     * <p>Abort an online Detection Job</p>
      * 
      * @param request StopOnlineTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4900,7 +4975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止在线测试</p>
+     * <p>Abort an online Detection Job</p>
      * 
      * @param request StopOnlineTestRequest
      * @return StopOnlineTestResponse
@@ -4912,7 +4987,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Evidence Backup Configuration</p>
+     * <p>Updates the evidence transfer configuration.</p>
      * 
      * @param request UpdateBackupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4956,7 +5031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Evidence Backup Configuration</p>
+     * <p>Updates the evidence transfer configuration.</p>
      * 
      * @param request UpdateBackupConfigRequest
      * @return UpdateBackupConfigResponse
@@ -4968,7 +5043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Image Library</p>
+     * <p>Edits an image library.</p>
      * 
      * @param request UpdateImageLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5018,7 +5093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Image Library</p>
+     * <p>Edits an image library.</p>
      * 
      * @param request UpdateImageLibRequest
      * @return UpdateImageLibResponse
@@ -5030,7 +5105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Image Library Free Inspection Configuration</p>
+     * <p>Edits the inspection-exempt configuration of an image library.</p>
      * 
      * @param tmpReq UpdateImageLibFreeInspectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5078,7 +5153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Image Library Free Inspection Configuration</p>
+     * <p>Edits the inspection-exempt configuration of an image library.</p>
      * 
      * @param request UpdateImageLibFreeInspectionRequest
      * @return UpdateImageLibFreeInspectionResponse
@@ -5090,7 +5165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Keyword Library</p>
+     * <p>Edits a keyword library.</p>
      * 
      * @param request UpdateKeywordLibRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5136,7 +5211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edit Keyword Library</p>
+     * <p>Edits a keyword library.</p>
      * 
      * @param request UpdateKeywordLibRequest
      * @return UpdateKeywordLibResponse
@@ -5148,7 +5223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量反馈任务</p>
+     * <p>Batch update OSS detection result feedback</p>
      * 
      * @param request UpdateOssCheckResultsBatchFeedbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5188,7 +5263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量反馈任务</p>
+     * <p>Batch update OSS detection result feedback</p>
      * 
      * @param request UpdateOssCheckResultsBatchFeedbackRequest
      * @return UpdateOssCheckResultsBatchFeedbackResponse
@@ -5200,7 +5275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>oss结果反馈</p>
+     * <p>Update OSS detection result feedback</p>
      * 
      * @param request UpdateOssCheckResultsFeedBackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5248,7 +5323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>oss结果反馈</p>
+     * <p>Update OSS detection result feedback</p>
      * 
      * @param request UpdateOssCheckResultsFeedBackRequest
      * @return UpdateOssCheckResultsFeedBackResponse
@@ -5260,7 +5335,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量冻结任务</p>
+     * <p>Freezes OSS scan results in batches.</p>
      * 
      * @param request UpdateOssCheckResultsFreezeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5316,7 +5391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量冻结任务</p>
+     * <p>Freezes OSS scan results in batches.</p>
      * 
      * @param request UpdateOssCheckResultsFreezeRequest
      * @return UpdateOssCheckResultsFreezeResponse
@@ -5328,7 +5403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量解冻任务</p>
+     * <p>Unfreezes OSS detection results in batches.</p>
      * 
      * @param request UpdateOssCheckResultsUnfreezeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5376,7 +5451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量解冻任务</p>
+     * <p>Unfreezes OSS detection results in batches.</p>
      * 
      * @param request UpdateOssCheckResultsUnfreezeRequest
      * @return UpdateOssCheckResultsUnfreezeResponse
@@ -5388,7 +5463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Feedback on Scan Results</p>
+     * <p>Submits feedback on detection results.</p>
      * 
      * @param request UpdateScanResultFeedbackRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5442,7 +5517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Feedback on Scan Results</p>
+     * <p>Submits feedback on detection results.</p>
      * 
      * @param request UpdateScanResultFeedbackRequest
      * @return UpdateScanResultFeedbackResponse
@@ -5454,7 +5529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务</p>
+     * <p>Updates a service.</p>
      * 
      * @param request UpdateServiceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5528,7 +5603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新服务</p>
+     * <p>Updates a service.</p>
      * 
      * @param request UpdateServiceConfigRequest
      * @return UpdateServiceConfigResponse

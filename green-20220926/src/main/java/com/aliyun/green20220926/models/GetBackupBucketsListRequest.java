@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBackupBucketsListRequest extends TeaModel {
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckStatResponseBody extends TeaModel {
     /**
-     * <p>Bar chart</p>
+     * <p>The bar chart data.</p>
      */
     @NameInMap("BarChart")
     public GetOssCheckStatResponseBodyBarChart barChart;
 
     /**
-     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -42,13 +42,13 @@ public class GetOssCheckStatResponseBody extends TeaModel {
 
     public static class GetOssCheckStatResponseBodyBarChartY extends TeaModel {
         /**
-         * <p>Data.</p>
+         * <p>The data.</p>
          */
         @NameInMap("Data")
         public java.util.List<Long> data;
 
         /**
-         * <p>Name.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>document_detection</p>
@@ -81,13 +81,13 @@ public class GetOssCheckStatResponseBody extends TeaModel {
 
     public static class GetOssCheckStatResponseBodyBarChart extends TeaModel {
         /**
-         * <p>X values of the coordinates.</p>
+         * <p>The X value of the coordinate point.</p>
          */
         @NameInMap("X")
         public java.util.List<String> x;
 
         /**
-         * <p>Y values of the coordinates.</p>
+         * <p>The Y value of the coordinate point.</p>
          */
         @NameInMap("Y")
         public java.util.List<GetOssCheckStatResponseBodyBarChartY> y;

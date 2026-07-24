@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScanNumResponseBody extends TeaModel {
     /**
-     * <p>Upper limit of the quantity.</p>
+     * <p>The upper limit on the number.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class GetScanNumResponseBody extends TeaModel {
     public Long limitNumber;
 
     /**
-     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -23,7 +23,7 @@ public class GetScanNumResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of files pending inspection.</p>
+     * <p>The total number of files pending detection.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class GetScanNumResponseBody extends TeaModel {
     public Long scanNumber;
 
     /**
-     * <p>Total number of files.</p>
+     * <p>The total number of files.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class GetScanNumResponseBody extends TeaModel {
     public Long sumNumber;
 
     /**
-     * <p>Whether it is a whitelist user.</p>
+     * <p>Indicates whether the user is a whitelisted user.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceConfigsRequest extends TeaModel {
     /**
-     * <p>Category.</p>
+     * <p>The classification.</p>
      * 
      * <strong>example:</strong>
      * <p>guard-scene</p>
@@ -13,11 +13,25 @@ public class ListServiceConfigsRequest extends TeaModel {
     @NameInMap("Classify")
     public String classify;
 
+    /**
+     * <p>The protection type. Valid values:</p>
+     * <ul>
+     * <li><p>modelProtection: model protection.</p>
+     * </li>
+     * <li><p>agentRealtimeProtection: agent real-time protection.</p>
+     * </li>
+     * <li><p>agentBehaviorAudit: agent behavior audit.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>modelProtection</p>
+     */
     @NameInMap("ProtectionType")
     public String protectionType;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -26,7 +40,7 @@ public class ListServiceConfigsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -35,7 +49,7 @@ public class ListServiceConfigsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Usage status.</p>
+     * <p>The usage status.</p>
      * 
      * <strong>example:</strong>
      * <p>in</p>

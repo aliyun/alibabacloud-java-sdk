@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateImageLibResponseBody extends TeaModel {
     /**
+     * <p>The error code, which is consistent with the HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateImageLibResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class CreateImageLibResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,6 +38,8 @@ public class CreateImageLibResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -36,6 +47,8 @@ public class CreateImageLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -97,6 +110,8 @@ public class CreateImageLibResponseBody extends TeaModel {
 
     public static class CreateImageLibResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the custom image library.</p>
+         * 
          * <strong>example:</strong>
          * <p>138xxxxx</p>
          */

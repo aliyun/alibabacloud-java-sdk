@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     /**
+     * <p>The OSS buckets.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{\&quot;Bucket\&quot;:\&quot;aileshijie\&quot;,\&quot;Region\&quot;:\&quot;cn-hangzhou\&quot;}]</p>
      */
     @NameInMap("Buckets")
     public String buckets;
 
+    /**
+     * <p>The configuration item.</p>
+     */
     @NameInMap("Config")
     public GetOssCheckTaskInfoResponseBodyConfig config;
 
     /**
+     * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-07-09 10:30:00</p>
      */
@@ -22,6 +29,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The number of completed tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>56</p>
      */
@@ -29,6 +38,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Long finishNum;
 
     /**
+     * <p>Indicates whether this is a scheduled scan task.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +47,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Boolean isInc;
 
     /**
+     * <p>The next execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-07-09 10:30:00</p>
      */
@@ -43,6 +56,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String lastExecuteDate;
 
     /**
+     * <p>The media asset type.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -50,6 +65,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Integer mediaType;
 
     /**
+     * <p>The previous execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-07-08 10:30:00</p>
      */
@@ -57,6 +74,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String nextExecuteDate;
 
     /**
+     * <p>The total number of files in the bucket.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -64,6 +83,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Long objectNum;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -71,6 +92,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of scan tasks.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -78,6 +101,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Long searchNum;
 
     /**
+     * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38</p>
      */
@@ -85,6 +110,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -92,16 +119,26 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx-xxx</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>文档存量任务 20240914100517757</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
+     * <p>The task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>increment</p>
      */
@@ -243,6 +280,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
 
     public static class GetOssCheckTaskInfoResponseBodyConfigScanServiceInfos extends TeaModel {
         /**
+         * <p>The primary service.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss_baselineCheck</p>
          */
@@ -250,6 +289,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String copyFrom;
 
         /**
+         * <p>Indicates whether the service is a copy.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -257,12 +298,20 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean isCopy;
 
         /**
+         * <p>The service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss_baselineCheck</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>内容检测</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
@@ -307,6 +356,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
 
     public static class GetOssCheckTaskInfoResponseBodyConfigUserFreezeConfig extends TeaModel {
         /**
+         * <p>The transfer directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -314,6 +365,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String freezeRestorePath;
 
         /**
+         * <p>The freeze type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACL</p>
          */
@@ -344,10 +397,15 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetOssCheckTaskInfoResponseBodyConfig extends TeaModel {
+        /**
+         * <p>The filter configuration for each bucket. The key is the bucket name, and the value is the filter configuration, which includes prefix and suffix filters and filter character lists.</p>
+         */
         @NameInMap("BucketPrefixFilterConfig")
         public java.util.Map<String, ConfigBucketPrefixFilterConfigValue> bucketPrefixFilterConfig;
 
         /**
+         * <p>The callback notification ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>188</p>
          */
@@ -355,6 +413,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Long callbackId;
 
         /**
+         * <p>Indicates whether to deduplicate historically scanned tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -362,6 +422,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean distinctHistoryTasks;
 
         /**
+         * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-09 10:30:00</p>
          */
@@ -369,6 +431,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The execution date of the scheduled task. The value is an integer.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -376,6 +440,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Integer executeDate;
 
         /**
+         * <p>The estimated execution time of the scheduled task. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-07-09 10:30:00</p>
          */
@@ -383,6 +449,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String executeTime;
 
         /**
+         * <p>Indicates whether freezing is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -390,6 +458,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean freeze;
 
         /**
+         * <p>Indicates whether to freeze high-risk images.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -397,6 +467,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean freezeHighRisk1;
 
         /**
+         * <p>Indicates whether to freeze high-risk audio and text.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -404,6 +476,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean freezeHighRisk2;
 
         /**
+         * <p>Indicates whether to freeze medium-risk images.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -411,6 +485,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean freezeMediumRisk1;
 
         /**
+         * <p>Indicates whether to freeze medium-risk audio and text.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -418,6 +494,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean freezeMediumRisk2;
 
         /**
+         * <p>The transfer path.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -425,6 +503,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String freezeRestorePath;
 
         /**
+         * <p>The freeze type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACL</p>
          */
@@ -432,16 +512,23 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String freezeType;
 
         /**
+         * <p>The prefix filter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>all</p>
          */
         @NameInMap("PrefixFilterType")
         public String prefixFilterType;
 
+        /**
+         * <p>The prefixes.</p>
+         */
         @NameInMap("PrefixFilters")
         public java.util.List<String> prefixFilters;
 
         /**
+         * <p>The priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -458,6 +545,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String referer;
 
         /**
+         * <p>The scan limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -465,6 +554,8 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Long scanLimit;
 
         /**
+         * <p>Indicates whether to scan images without file extensions.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -472,19 +563,29 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public Boolean scanNoFileType;
 
         /**
+         * <p>The type of files to scan.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("ScanResourceType")
         public Integer scanResourceType;
 
+        /**
+         * <p>The scan service code.</p>
+         */
         @NameInMap("ScanService")
         public java.util.List<String> scanService;
 
+        /**
+         * <p>The scan service information.</p>
+         */
         @NameInMap("ScanServiceInfos")
         public java.util.List<GetOssCheckTaskInfoResponseBodyConfigScanServiceInfos> scanServiceInfos;
 
         /**
+         * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-08-21 16:08:38</p>
          */
@@ -492,12 +593,17 @@ public class GetOssCheckTaskInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The scheduling date.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("TaskCycle")
         public Integer taskCycle;
 
+        /**
+         * <p>The user freeze configuration.</p>
+         */
         @NameInMap("UserFreezeConfig")
         public GetOssCheckTaskInfoResponseBodyConfigUserFreezeConfig userFreezeConfig;
 

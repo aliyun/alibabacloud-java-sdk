@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateImageLibFreeInspectionShrinkRequest extends TeaModel {
     /**
-     * <p>Configuration.</p>
+     * <p>The configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;2833014490001\&quot;:0}</p>
      */
     @NameInMap("Config")
     public String configShrink;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -19,6 +22,12 @@ public class UpdateImageLibFreeInspectionShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The selected service identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>response_security_check</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

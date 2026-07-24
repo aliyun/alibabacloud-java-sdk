@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCipStatsResponseBody extends TeaModel {
     /**
+     * <p>The error code, which is the same as the HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetCipStatsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetCipStatsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -29,6 +38,8 @@ public class GetCipStatsResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID assigned by the backend. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -36,6 +47,8 @@ public class GetCipStatsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -96,12 +109,30 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChartImageTreeChar extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未检测出风险</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nonLabel</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The label proportion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0274</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -137,12 +168,30 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChartTextTreeChart extends TeaModel {
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>未检测出风险</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nonLabel</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The proportion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0274</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -178,10 +227,18 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChartTreeChart extends TeaModel {
+        /**
+         * <p>The label description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似政治人物</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The label.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
          */
@@ -189,6 +246,8 @@ public class GetCipStatsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The score.</p>
+         * 
          * <strong>example:</strong>
          * <p>99.91</p>
          */
@@ -227,10 +286,18 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart extends TeaModel {
+        /**
+         * <p>The label description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>疑似特定歌曲</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The label.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
          */
@@ -238,6 +305,8 @@ public class GetCipStatsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The score.</p>
+         * 
          * <strong>example:</strong>
          * <p>99.91</p>
          */
@@ -276,10 +345,15 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChartY extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Data")
         public java.util.List<Long> data;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
          */
@@ -310,35 +384,57 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChart extends TeaModel {
+        /**
+         * <p>The image label statistics.</p>
+         */
         @NameInMap("ImageTreeChar")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChartImageTreeChar> imageTreeChar;
 
         /**
+         * <p>The service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
          */
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>The text label statistics.</p>
+         */
         @NameInMap("TextTreeChart")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChartTextTreeChart> textTreeChart;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>117</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The tree view.</p>
+         */
         @NameInMap("TreeChart")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChartTreeChart> treeChart;
 
+        /**
+         * <p>The audio tree view.</p>
+         */
         @NameInMap("VoiceTreeChart")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart> voiceTreeChart;
 
+        /**
+         * <p>The X value of the coordinate point.</p>
+         */
         @NameInMap("X")
         public java.util.List<String> x;
 
+        /**
+         * <p>The Y value of the coordinate point.</p>
+         */
         @NameInMap("Y")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChartY> y;
 
@@ -414,10 +510,15 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataY extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Data")
         public java.util.List<Long> data;
 
         /**
+         * <p>The name.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
          */
@@ -448,10 +549,15 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataZ extends TeaModel {
+        /**
+         * <p>The count.</p>
+         */
         @NameInMap("Data")
         public java.util.List<Long> data;
 
         /**
+         * <p>The service code.</p>
+         * 
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
          */
@@ -482,21 +588,39 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyData extends TeaModel {
+        /**
+         * <p>The label usage chart.</p>
+         */
         @NameInMap("LabelStatChart")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChart> labelStatChart;
 
+        /**
+         * <p>The total count by category.</p>
+         */
         @NameInMap("TotalStat")
         public java.util.Map<String, java.util.Map<String, ?>> totalStat;
 
+        /**
+         * <p>The list of UIDs.</p>
+         */
         @NameInMap("Uids")
         public java.util.List<String> uids;
 
+        /**
+         * <p>The X value of the coordinate point.</p>
+         */
         @NameInMap("X")
         public java.util.List<String> x;
 
+        /**
+         * <p>The Y value of the coordinate point.</p>
+         */
         @NameInMap("Y")
         public java.util.List<GetCipStatsResponseBodyDataY> y;
 
+        /**
+         * <p>The hit data.</p>
+         */
         @NameInMap("Z")
         public java.util.List<GetCipStatsResponseBodyDataZ> z;
 

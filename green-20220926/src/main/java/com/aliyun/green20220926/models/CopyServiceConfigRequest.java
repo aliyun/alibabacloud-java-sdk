@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyServiceConfigRequest extends TeaModel {
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -14,7 +14,7 @@ public class CopyServiceConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -23,7 +23,7 @@ public class CopyServiceConfigRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Service code.</p>
+     * <p>The service code.</p>
      * 
      * <strong>example:</strong>
      * <p>nickname_detection</p>
@@ -32,10 +32,10 @@ public class CopyServiceConfigRequest extends TeaModel {
     public String serviceCode;
 
     /**
-     * <p>Service description</p>
+     * <p>The service description.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>服务备注</p>
      */
     @NameInMap("ServiceDesc")
     public String serviceDesc;
@@ -44,7 +44,7 @@ public class CopyServiceConfigRequest extends TeaModel {
      * <p>The service name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <p>用户昵称检测</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

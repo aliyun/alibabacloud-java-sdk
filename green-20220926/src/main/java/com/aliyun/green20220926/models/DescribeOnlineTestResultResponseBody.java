@@ -4,13 +4,21 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnlineTestResultResponseBody extends TeaModel {
+    /**
+     * <p>The audio data.</p>
+     */
     @NameInMap("AudioData")
     public DescribeOnlineTestResultResponseBodyAudioData audioData;
 
+    /**
+     * <p>The video frame data.</p>
+     */
     @NameInMap("FrameData")
     public DescribeOnlineTestResultResponseBodyFrameData frameData;
 
     /**
+     * <p>The detection time, represented as a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1725761005419</p>
      */
@@ -18,6 +26,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
     public String moderationTime;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -25,6 +35,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The risk level.</p>
+     * 
      * <strong>example:</strong>
      * <p>high</p>
      */
@@ -32,16 +44,23 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
     public String riskLevel;
 
     /**
+     * <p>The service code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>VideoModeration</p>
+     * <p>videoDetection</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>The list of detection results.</p>
+     */
     @NameInMap("SummaryList")
     public java.util.List<DescribeOnlineTestResultResponseBodySummaryList> summaryList;
 
     /**
+     * <p>The ID of the detection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxxx</p>
      */
@@ -49,6 +68,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The detection status.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -56,6 +77,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
     public String taskStatus;
 
     /**
+     * <p>The detection URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://xxxxxxxxx.com/data/data.png">https://xxxxxxxxx.com/data/data.png</a></p>
      */
@@ -149,6 +172,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
 
     public static class DescribeOnlineTestResultResponseBodyAudioData extends TeaModel {
         /**
+         * <p>The timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1724378510396</p>
          */
@@ -172,6 +197,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
 
     public static class DescribeOnlineTestResultResponseBodyFrameData extends TeaModel {
         /**
+         * <p>The timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1725761005419</p>
          */
@@ -179,6 +206,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
+         * <p>The detection URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://xxxxxxxxx.com/data/data.mp4">https://xxxxxxxxx.com/data/data.mp4</a></p>
          */
@@ -210,6 +239,8 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
 
     public static class DescribeOnlineTestResultResponseBodySummaryList extends TeaModel {
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>video</p>
          */
@@ -217,16 +248,23 @@ public class DescribeOnlineTestResultResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The risk level.</p>
+         * 
          * <strong>example:</strong>
          * <p>high</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The risk level summary.</p>
+         */
         @NameInMap("RiskLevelSummary")
         public java.util.Map<String, Long> riskLevelSummary;
 
         /**
+         * <p>The number of shards.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

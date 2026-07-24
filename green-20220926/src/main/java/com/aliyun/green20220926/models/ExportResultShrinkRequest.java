@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportResultShrinkRequest extends TeaModel {
     /**
-     * <p>Page number of the query result. Default is 1.</p>
+     * <p>The page number of the paginated query results. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ExportResultShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>End date.</p>
+     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
@@ -23,7 +23,7 @@ public class ExportResultShrinkRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Number of items per page in the query result.</p>
+     * <p>The number of entries per page in the paginated query results.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +32,7 @@ public class ExportResultShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Query condition.</p>
+     * <p>The query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
@@ -41,7 +41,7 @@ public class ExportResultShrinkRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -50,13 +50,13 @@ public class ExportResultShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Sort field.</p>
+     * <p>The sort field.</p>
      */
     @NameInMap("Sort")
     public String sortShrink;
 
     /**
-     * <p>Operation source.</p>
+     * <p>The operation source.</p>
      * 
      * <strong>example:</strong>
      * <p>disposal</p>
@@ -65,7 +65,7 @@ public class ExportResultShrinkRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>Start date.</p>
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>

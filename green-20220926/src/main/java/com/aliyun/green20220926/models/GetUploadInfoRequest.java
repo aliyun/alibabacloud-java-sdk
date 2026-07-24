@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUploadInfoRequest extends TeaModel {
     /**
-     * <p>Upload name.</p>
+     * <p>The upload name.</p>
      * 
      * <strong>example:</strong>
      * <p>测试</p>
@@ -14,7 +14,7 @@ public class GetUploadInfoRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -23,7 +23,7 @@ public class GetUploadInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>image</p>

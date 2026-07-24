@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportOssCheckStatResponseBody extends TeaModel {
     /**
-     * <p>Export result.</p>
+     * <p>The export result.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/console_data/production/scanResult/osscheck/ossCheckStat_aliUf5B3lJfOkLpqozLIn94Uy-1XxKyX.xlsx">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/console_data/production/scanResult/osscheck/ossCheckStat_aliUf5B3lJfOkLpqozLIn94Uy-1XxKyX.xlsx</a></p>
@@ -14,7 +14,7 @@ public class ExportOssCheckStatResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>ID assigned by the backend, used to uniquely identify a request. It can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

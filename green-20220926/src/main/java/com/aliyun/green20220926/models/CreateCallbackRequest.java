@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCallbackRequest extends TeaModel {
     /**
-     * <p>Encryption algorithm.</p>
+     * <p>The encryption algorithm.</p>
      * 
      * <strong>example:</strong>
      * <p>SHA256</p>
@@ -14,7 +14,7 @@ public class CreateCallbackRequest extends TeaModel {
     public String cryptType;
 
     /**
-     * <p>Plan name.</p>
+     * <p>The name of the scheme.</p>
      * 
      * <strong>example:</strong>
      * <p>消息通知1</p>
@@ -23,7 +23,7 @@ public class CreateCallbackRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -32,7 +32,7 @@ public class CreateCallbackRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Review result.</p>
+     * <p>The moderation result.</p>
      * 
      * <strong>example:</strong>
      * <p>all</p>
@@ -41,7 +41,7 @@ public class CreateCallbackRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>Callback URL.</p>
+     * <p>The callback URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://console.aliyun.com">https://console.aliyun.com</a></p>

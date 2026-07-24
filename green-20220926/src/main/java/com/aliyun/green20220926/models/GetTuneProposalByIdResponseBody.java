@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTuneProposalByIdResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetTuneProposalByIdResponseBodyData data;
 
     /**
+     * <p>The description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -69,6 +76,8 @@ public class GetTuneProposalByIdResponseBody extends TeaModel {
 
     public static class GetTuneProposalByIdResponseBodyData extends TeaModel {
         /**
+         * <p>The response data in JSON format.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;example&quot;:&quot;xxxx&quot;}</p>
          */

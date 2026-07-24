@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportAnswerSampleResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -12,6 +14,8 @@ public class ExportAnswerSampleResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */

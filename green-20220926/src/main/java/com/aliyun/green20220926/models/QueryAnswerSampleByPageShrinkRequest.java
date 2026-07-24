@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class QueryAnswerSampleByPageShrinkRequest extends TeaModel {
+    /**
+     * <p>The answer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>答案</p>
+     */
     @NameInMap("Answer")
     public String answer;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,8 @@ public class QueryAnswerSampleByPageShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The ID of the proxy answer library.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
      */
@@ -22,6 +32,8 @@ public class QueryAnswerSampleByPageShrinkRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,12 +41,17 @@ public class QueryAnswerSampleByPageShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The sort field.</p>
+     */
     @NameInMap("Sort")
     public String sortShrink;
 

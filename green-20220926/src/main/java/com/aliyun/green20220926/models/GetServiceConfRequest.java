@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceConfRequest extends TeaModel {
     /**
-     * <p>Query default configuration</p>
+     * <p>Queries the default configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -32,7 +32,7 @@ public class GetServiceConfRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Audit scenario.</p>
+     * <p>Moderation scenario.</p>
      * 
      * <strong>example:</strong>
      * <p>pornographic</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKeywordImportResultRequest extends TeaModel {
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -14,7 +14,7 @@ public class GetKeywordImportResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Task ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxx</p>

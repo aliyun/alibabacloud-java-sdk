@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImageLibRequest extends TeaModel {
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -13,6 +13,12 @@ public class ListImageLibRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The selected service identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>response_security_check</p>
+     */
     @NameInMap("ServiceCode")
     public String serviceCode;
 

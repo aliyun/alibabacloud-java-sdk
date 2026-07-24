@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
     /**
-     * <p>Error code, consistent with the HTTP status.</p>
+     * <p>The error code, which is the same as the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Return result.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -23,7 +23,7 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Further description of the error code.</p>
+     * <p>The detailed description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +41,7 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -50,7 +50,7 @@ public class UpdateImageLibFreeInspectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

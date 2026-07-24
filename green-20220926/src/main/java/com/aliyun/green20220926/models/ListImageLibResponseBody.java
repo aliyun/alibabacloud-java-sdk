@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImageLibResponseBody extends TeaModel {
     /**
-     * <p>Error code, consistent with HTTP status.</p>
+     * <p>The error code, which is consistent with the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListImageLibResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,16 +23,22 @@ public class ListImageLibResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>List of image library information.</p>
+     * <p>The list of image library information.</p>
      */
     @NameInMap("LibList")
     public java.util.List<ListImageLibResponseBodyLibList> libList;
 
+    /**
+     * <p>The maximum number of libraries supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MaxLibCount")
     public Integer maxLibCount;
 
     /**
-     * <p>Further description of the error code.</p>
+     * <p>The further description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +47,7 @@ public class ListImageLibResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -50,7 +56,7 @@ public class ListImageLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>The success flag.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -121,7 +127,7 @@ public class ListImageLibResponseBody extends TeaModel {
 
     public static class ListImageLibResponseBodyLibList extends TeaModel {
         /**
-         * <p>Comment.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>备注</p>
@@ -130,7 +136,7 @@ public class ListImageLibResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>Exempt from inspection configuration.</p>
+         * <p>The review-free configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +145,7 @@ public class ListImageLibResponseBody extends TeaModel {
         public Integer freeInspection;
 
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
@@ -148,7 +154,7 @@ public class ListImageLibResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-03 15:20:14</p>
@@ -157,7 +163,7 @@ public class ListImageLibResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Number of images in the library.</p>
+         * <p>The number of images in the library.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +172,7 @@ public class ListImageLibResponseBody extends TeaModel {
         public Long imageNum;
 
         /**
-         * <p>Library ID.</p>
+         * <p>The image library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
@@ -175,7 +181,7 @@ public class ListImageLibResponseBody extends TeaModel {
         public String libId;
 
         /**
-         * <p>Library name.</p>
+         * <p>The image library name.</p>
          * 
          * <strong>example:</strong>
          * <p>测试</p>

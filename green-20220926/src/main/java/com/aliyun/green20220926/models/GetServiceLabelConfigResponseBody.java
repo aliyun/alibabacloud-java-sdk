@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetServiceLabelConfigResponseBody extends TeaModel {
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<?> data;
 
     /**
-     * <p>ID assigned by the backend, used to uniquely identify a request. It can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

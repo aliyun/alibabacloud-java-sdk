@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceConfigResponseBody extends TeaModel {
     /**
-     * <p>Error code.</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetServiceConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetServiceConfigResponseBodyData data;
 
     /**
-     * <p>Further description of the error code.</p>
+     * <p>The further description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -38,7 +38,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>The success flag.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,13 +93,13 @@ public class GetServiceConfigResponseBody extends TeaModel {
 
     public static class GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig extends TeaModel {
         /**
-         * <p>Risk levels.</p>
+         * <p>The risk levels.</p>
          */
         @NameInMap("AuditRiskLevels")
         public java.util.List<String> auditRiskLevels;
 
         /**
-         * <p>Callback notification ID</p>
+         * <p>The callback notification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -108,10 +108,10 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public Long callbackId;
 
         /**
-         * <p>Whether to enable. Values:</p>
+         * <p>Specifies whether to enable the feature. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enabled</li>
-         * <li><strong>false</strong>: Disabled</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>Manual review service</p>
+         * <p>The manual review service.</p>
          * 
          * <strong>example:</strong>
          * <p>imageManualCheck</p>
@@ -170,25 +170,25 @@ public class GetServiceConfigResponseBody extends TeaModel {
 
     public static class GetServiceConfigResponseBodyDataCustomServiceConf extends TeaModel {
         /**
-         * <p>Ignore word libraries.</p>
+         * <p>The ignored keyword libraries.</p>
          */
         @NameInMap("KeywordFilterLibs")
         public java.util.List<String> keywordFilterLibs;
 
         /**
-         * <p>Hit word libraries.</p>
+         * <p>The hit keyword libraries.</p>
          */
         @NameInMap("KeywordHitLibs")
         public java.util.List<String> keywordHitLibs;
 
         /**
-         * <p>Human-machine review configuration.</p>
+         * <p>The machine-assisted moderation configuration.</p>
          */
         @NameInMap("ManualMachineConfig")
         public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig manualMachineConfig;
 
         /**
-         * <p>Hit similar text libraries.</p>
+         * <p>The hit similar text libraries.</p>
          */
         @NameInMap("SimilarTextHitLibs")
         public java.util.List<String> similarTextHitLibs;
@@ -234,13 +234,13 @@ public class GetServiceConfigResponseBody extends TeaModel {
 
     public static class GetServiceConfigResponseBodyData extends TeaModel {
         /**
-         * <p>Custom service details</p>
+         * <p>The custom service details.</p>
          */
         @NameInMap("CustomServiceConf")
         public GetServiceConfigResponseBodyDataCustomServiceConf customServiceConf;
 
         /**
-         * <p>Modification time.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-06 03:07:44</p>
@@ -249,7 +249,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>
@@ -258,7 +258,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>Service code.</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
@@ -267,7 +267,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>UID.</p>
+         * <p>UID。</p>
          * 
          * <strong>example:</strong>
          * <p>165379****31937</p>

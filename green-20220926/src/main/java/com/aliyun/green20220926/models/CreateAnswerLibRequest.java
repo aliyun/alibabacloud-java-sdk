@@ -4,10 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class CreateAnswerLibRequest extends TeaModel {
+    /**
+     * <p>The name of the proxy answer library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试代答库</p>
+     */
     @NameInMap("LibName")
     public String libName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -15,6 +23,8 @@ public class CreateAnswerLibRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the storage space.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss-cip-shanghai</p>
      */
@@ -22,12 +32,20 @@ public class CreateAnswerLibRequest extends TeaModel {
     public String sampleBucket;
 
     /**
+     * <p>The file name of the proxy answer sample to be added.</p>
+     * 
      * <strong>example:</strong>
      * <p>data/xxx.xlsx</p>
      */
     @NameInMap("SampleObject")
     public String sampleObject;
 
+    /**
+     * <p>The samples to be added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>代答答案1\n代答答案2</p>
+     */
     @NameInMap("Samples")
     public String samples;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportAnswerSampleRequest extends TeaModel {
     /**
+     * <p>The ID of the proxy answer library.</p>
+     * 
      * <strong>example:</strong>
      * <p>alxxx</p>
      */
@@ -12,6 +14,8 @@ public class ExportAnswerSampleRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

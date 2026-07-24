@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOssCheckResultsUnfreezeRequest extends TeaModel {
     /**
+     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-10-21 16:08:38</p>
      */
@@ -12,6 +14,8 @@ public class UpdateOssCheckResultsUnfreezeRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The frozen items.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -19,6 +23,8 @@ public class UpdateOssCheckResultsUnfreezeRequest extends TeaModel {
     public String freezeItems;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -26,6 +32,8 @@ public class UpdateOssCheckResultsUnfreezeRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38</p>
      */
@@ -33,6 +41,8 @@ public class UpdateOssCheckResultsUnfreezeRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>P_B6YRVD</p>
      */

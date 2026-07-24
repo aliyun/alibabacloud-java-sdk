@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportTextScanResultRequest extends TeaModel {
     /**
-     * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-11 10:00:00</p>
@@ -14,13 +14,13 @@ public class ExportTextScanResultRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Query conditions.</p>
+     * <p>The query condition.</p>
      */
     @NameInMap("Query")
     public java.util.Map<String, String> query;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -29,7 +29,7 @@ public class ExportTextScanResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-10 10:00:00</p>

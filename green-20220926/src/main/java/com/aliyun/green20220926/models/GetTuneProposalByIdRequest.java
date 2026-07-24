@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTuneProposalByIdRequest extends TeaModel {
     /**
+     * <p>The primary key ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>prop-xxxxxxxx</p>
      */

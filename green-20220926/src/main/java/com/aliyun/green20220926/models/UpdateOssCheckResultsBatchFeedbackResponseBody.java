@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     /**
+     * <p>Quantity of invalid items.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     public Integer invalidCount;
 
     /**
+     * <p>Quantity of duplicates.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     public Integer repeatCount;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -26,6 +32,8 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Number of succeeded items.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -33,6 +41,8 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
+     * <p>Tips message.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -40,6 +50,8 @@ public class UpdateOssCheckResultsBatchFeedbackResponseBody extends TeaModel {
     public String tips;
 
     /**
+     * <p>Total quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class ListAnswerLibResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAnswerLibResponseBodyData> data;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -37,6 +42,8 @@ public class ListAnswerLibResponseBody extends TeaModel {
 
     public static class ListAnswerLibResponseBodyData extends TeaModel {
         /**
+         * <p>The number of proxy answers.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -44,6 +51,8 @@ public class ListAnswerLibResponseBody extends TeaModel {
         public Integer answerCount;
 
         /**
+         * <p>The modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-03 18:15:01</p>
          */
@@ -51,12 +60,20 @@ public class ListAnswerLibResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the proxy answer library.</p>
+         * 
          * <strong>example:</strong>
          * <p>alxxx</p>
          */
         @NameInMap("LibId")
         public String libId;
 
+        /**
+         * <p>The name of the library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>代答库名称</p>
+         */
         @NameInMap("LibName")
         public String libName;
 

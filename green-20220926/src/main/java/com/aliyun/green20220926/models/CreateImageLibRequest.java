@@ -4,13 +4,27 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class CreateImageLibRequest extends TeaModel {
+    /**
+     * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Politically sensitive.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The name of the image library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Malicious ads.</p>
+     */
     @NameInMap("LibName")
     public String libName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

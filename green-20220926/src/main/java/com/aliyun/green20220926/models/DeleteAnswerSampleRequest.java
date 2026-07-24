@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteAnswerSampleRequest extends TeaModel {
     /**
+     * <p>The IDs of the proxy answers to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p>[15463605]</p>
      */
@@ -12,6 +14,8 @@ public class DeleteAnswerSampleRequest extends TeaModel {
     public String ids;
 
     /**
+     * <p>The ID of the proxy answer library.</p>
+     * 
      * <strong>example:</strong>
      * <p>alxxx</p>
      */
@@ -19,6 +23,8 @@ public class DeleteAnswerSampleRequest extends TeaModel {
     public String libId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OssCheckResultListRequest extends TeaModel {
     /**
-     * <p>Page size.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class OssCheckResultListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Start date.</p>
+     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-10-21 16:08:38</p>
@@ -23,7 +23,7 @@ public class OssCheckResultListRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The number of completed items.</p>
      * 
      * <strong>example:</strong>
      * <p>55</p>
@@ -32,7 +32,7 @@ public class OssCheckResultListRequest extends TeaModel {
     public Long finishNum;
 
     /**
-     * <p>Query condition.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class OssCheckResultListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>End date.</p>
+     * <p>The query condition.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -50,7 +50,7 @@ public class OssCheckResultListRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Sort field.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -59,13 +59,13 @@ public class OssCheckResultListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Current page number.</p>
+     * <p>The sort field.</p>
      */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
     /**
-     * <p>System-defined parameter. Value: <strong>OssCheckResultList</strong>.</p>
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-21 16:08:38</p>
@@ -74,7 +74,7 @@ public class OssCheckResultListRequest extends TeaModel {
     public String startDate;
 
     /**
-     * <p>Number of completed items.</p>
+     * <p>The task status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

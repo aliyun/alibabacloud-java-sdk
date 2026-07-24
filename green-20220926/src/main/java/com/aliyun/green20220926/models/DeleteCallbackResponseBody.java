@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCallbackResponseBody extends TeaModel {
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -14,7 +14,7 @@ public class DeleteCallbackResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

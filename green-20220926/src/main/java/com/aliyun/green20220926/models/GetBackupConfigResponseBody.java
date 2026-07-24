@@ -14,7 +14,7 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public Integer backupMode;
 
     /**
-     * <p>File server OSS Bucket.</p>
+     * <p>File server OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>buckect_test</p>
@@ -23,10 +23,10 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String bucket;
 
     /**
-     * <p>Whether it is enabled. Values:</p>
+     * <p>Indicates whether the feature is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled</li>
-     * <li><strong>false</strong>: Disabled</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>Whether to enable backup.</p>
+     * <p>Indicates whether backup is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -45,7 +45,7 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public Boolean enableBackup;
 
     /**
-     * <p>Whether to enable audio backup.</p>
+     * <p>Indicates whether audio backup is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -54,7 +54,7 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public Boolean enableBackupVoice;
 
     /**
-     * <p>Expiration time in seconds.</p>
+     * <p>Expiration time, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -99,7 +99,7 @@ public class GetBackupConfigResponseBody extends TeaModel {
     public String region;
 
     /**
-     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

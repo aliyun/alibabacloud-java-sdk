@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUploadInfoResponseBody extends TeaModel {
     /**
-     * <p>Upload authorization ID.</p>
+     * <p>The upload authorization ID.</p>
      * 
      * <strong>example:</strong>
      * <p>LTAI5t9HM*****EXQmw3DVH</p>
@@ -14,7 +14,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String accessId;
 
     /**
-     * <p>Error code, consistent with HTTP status.</p>
+     * <p>The error code, consistent with the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>In seconds.</p>
+     * <p>Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>900</p>
@@ -32,7 +32,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Long expire;
 
     /**
-     * <p>Folder name.</p>
+     * <p>The file name.</p>
      * 
      * <strong>example:</strong>
      * <p>image/upload/xxx</p>
@@ -41,7 +41,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String folder;
 
     /**
-     * <p>Upload host.</p>
+     * <p>The upload host.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com</a></p>
@@ -50,7 +50,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String host;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -59,7 +59,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Key used for uploading files.</p>
+     * <p>The key used for file upload.</p>
      * 
      * <strong>example:</strong>
      * <p>image/upload/xxx</p>
@@ -68,7 +68,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String key;
 
     /**
-     * <p>Further description of the error code.</p>
+     * <p>The further description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -77,7 +77,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Used for front-end image upload.</p>
+     * <p>Used for frontend image upload.</p>
      * 
      * <strong>example:</strong>
      * <p>测试</p>
@@ -86,7 +86,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>OSS upload file Policy.</p>
+     * <p>The OSS file upload policy.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxx</p>
@@ -95,7 +95,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String policy;
 
     /**
-     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -103,8 +103,11 @@ public class GetUploadInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
     /**
-     * <p>Upload signature information.</p>
+     * <p>The upload signature information.</p>
      * 
      * <strong>example:</strong>
      * <p>iyu7VHblYj+mEF9p46cdGOlNPAw=</p>
@@ -113,7 +116,7 @@ public class GetUploadInfoResponseBody extends TeaModel {
     public String signature;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>The success flag.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -212,6 +215,14 @@ public class GetUploadInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetUploadInfoResponseBody setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public GetUploadInfoResponseBody setSignature(String signature) {

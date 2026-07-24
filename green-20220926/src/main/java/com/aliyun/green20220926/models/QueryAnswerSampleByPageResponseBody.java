@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryAnswerSampleByPageResponseBody extends TeaModel {
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The data on the current page.</p>
+     */
     @NameInMap("Items")
     public java.util.List<QueryAnswerSampleByPageResponseBodyItems> items;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -29,6 +38,8 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>58</p>
      */
@@ -81,10 +92,18 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
     }
 
     public static class QueryAnswerSampleByPageResponseBodyItems extends TeaModel {
+        /**
+         * <p>The answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>答案</p>
+         */
         @NameInMap("Answer")
         public String answer;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-07-31 06:16:06</p>
          */
@@ -92,6 +111,8 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The primary key ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1666</p>
          */
@@ -99,6 +120,8 @@ public class QueryAnswerSampleByPageResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The ID of the proxy answer library.</p>
+         * 
          * <strong>example:</strong>
          * <p>custom_xxxx</p>
          */

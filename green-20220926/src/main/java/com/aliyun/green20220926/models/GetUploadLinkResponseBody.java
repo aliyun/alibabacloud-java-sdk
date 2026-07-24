@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUploadLinkResponseBody extends TeaModel {
     /**
+     * <p>Returned Data.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>
      */
@@ -12,6 +14,8 @@ public class GetUploadLinkResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>An ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>E37E2B77-A664-5278-8219-23BBC0EB2A35</p>
      */

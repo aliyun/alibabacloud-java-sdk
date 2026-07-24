@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTextScanResultShrinkRequest extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class GetTextScanResultShrinkRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>End date and time.</p>
+     * <p>The end time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-24 10:01:55</p>
@@ -23,7 +23,7 @@ public class GetTextScanResultShrinkRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class GetTextScanResultShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Search criteria.</p>
+     * <p>The search condition.</p>
      */
     @NameInMap("Query")
     public String queryShrink;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -47,13 +47,13 @@ public class GetTextScanResultShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Sort fields.</p>
+     * <p>The sort field.</p>
      */
     @NameInMap("Sort")
     public String sortShrink;
 
     /**
-     * <p>Start date and time.</p>
+     * <p>The start time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-11 09:00:19</p>

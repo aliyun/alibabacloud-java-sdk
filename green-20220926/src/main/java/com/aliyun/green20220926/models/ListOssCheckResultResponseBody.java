@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOssCheckResultResponseBody extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class ListOssCheckResultResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Data of the current page.</p>
+     * <p>The data on the current page.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListOssCheckResultResponseBodyItems> items;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -38,7 +38,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of records.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>
@@ -91,9 +91,93 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListOssCheckResultResponseBodyItemsLabelDetails extends TeaModel {
+        /**
+         * <p>The description of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>影音娱乐类</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The label hit by the video frame.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logo_streaming</p>
+         */
+        @NameInMap("Label")
+        public String label;
+
+        public static ListOssCheckResultResponseBodyItemsLabelDetails build(java.util.Map<String, ?> map) throws Exception {
+            ListOssCheckResultResponseBodyItemsLabelDetails self = new ListOssCheckResultResponseBodyItemsLabelDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOssCheckResultResponseBodyItemsLabelDetails setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListOssCheckResultResponseBodyItemsLabelDetails setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
+    public static class ListOssCheckResultResponseBodyItemsLabelDetails2 extends TeaModel {
+        /**
+         * <p>The description of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>辱骂内容</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The label hit by the audio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abuse</p>
+         */
+        @NameInMap("Label")
+        public String label;
+
+        public static ListOssCheckResultResponseBodyItemsLabelDetails2 build(java.util.Map<String, ?> map) throws Exception {
+            ListOssCheckResultResponseBodyItemsLabelDetails2 self = new ListOssCheckResultResponseBodyItemsLabelDetails2();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOssCheckResultResponseBodyItemsLabelDetails2 setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListOssCheckResultResponseBodyItemsLabelDetails2 setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
     public static class ListOssCheckResultResponseBodyItems extends TeaModel {
         /**
-         * <p>Storage space.</p>
+         * <p>The OSS bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>tmp</p>
@@ -102,7 +186,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>Error code, consistent with HTTP status.</p>
+         * <p>The error code, which is consistent with the HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -111,7 +195,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>Audio and video detection type.</p>
+         * <p>The audio and video detection type.</p>
          * 
          * <strong>example:</strong>
          * <p>audio</p>
@@ -120,7 +204,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>Primary service.</p>
+         * <p>The primary service.</p>
          * 
          * <strong>example:</strong>
          * <p>audio_media_detection</p>
@@ -129,7 +213,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String copyFrom;
 
         /**
-         * <p>Freeze status.</p>
+         * <p>The freeze status.</p>
          * 
          * <strong>example:</strong>
          * <p>FREEZED</p>
@@ -138,7 +222,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String freezeStatus;
 
         /**
-         * <p>Freeze type.</p>
+         * <p>The freeze type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACL</p>
@@ -147,7 +231,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String freezeType;
 
         /**
-         * <p>Image URL address.</p>
+         * <p>The URL of the image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></p>
@@ -156,7 +240,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>Whether to copy.</p>
+         * <p>Indicates whether the task is copied.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -165,7 +249,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public Boolean isCopy;
 
         /**
-         * <p>Job name.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>dhT20X2310</p>
@@ -174,19 +258,31 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>Image labels.</p>
+         * <p>The list of labels hit by video frames.</p>
+         */
+        @NameInMap("LabelDetails")
+        public java.util.List<ListOssCheckResultResponseBodyItemsLabelDetails> labelDetails;
+
+        /**
+         * <p>The list of labels hit by video audio.</p>
+         */
+        @NameInMap("LabelDetails2")
+        public java.util.List<ListOssCheckResultResponseBodyItemsLabelDetails2> labelDetails2;
+
+        /**
+         * <p>The image labels.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
-         * <p>Text labels.</p>
+         * <p>The text labels.</p>
          */
         @NameInMap("Labels2")
         public java.util.List<String> labels2;
 
         /**
-         * <p>File MD5.</p>
+         * <p>The MD5 hash of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>54416c9b159df4a60ae03c04ccb94cb5</p>
@@ -195,7 +291,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String md5;
 
         /**
-         * <p>Further description of the error code.</p>
+         * <p>The description of the error code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -204,7 +300,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>Object name.</p>
+         * <p>The object name.</p>
          * 
          * <strong>example:</strong>
          * <p>1713014531569_958.png.jpeg</p>
@@ -213,7 +309,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String object;
 
         /**
-         * <p>Image risk level</p>
+         * <p>The image risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>high</p>
@@ -222,7 +318,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String riskLevel;
 
         /**
-         * <p>Overall risk level</p>
+         * <p>The overall risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>low</p>
@@ -231,7 +327,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String riskLevel0;
 
         /**
-         * <p>Text risk level</p>
+         * <p>The text risk level.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -240,7 +336,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String riskLevel2;
 
         /**
-         * <p>Details of the result.</p>
+         * <p>The scan result details.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -249,7 +345,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String scanResult;
 
         /**
-         * <p>Service code.</p>
+         * <p>The service code.</p>
          * 
          * <strong>example:</strong>
          * <p>audio_media_detection_01</p>
@@ -258,7 +354,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>服务名称</p>
@@ -267,7 +363,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Task ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EP6TI7_au_Zo25ITvCbkocNuF801QOQX</p>
@@ -276,7 +372,7 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>Task URL.</p>
+         * <p>The task URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></p>
@@ -359,6 +455,22 @@ public class ListOssCheckResultResponseBody extends TeaModel {
         }
         public String getJobName() {
             return this.jobName;
+        }
+
+        public ListOssCheckResultResponseBodyItems setLabelDetails(java.util.List<ListOssCheckResultResponseBodyItemsLabelDetails> labelDetails) {
+            this.labelDetails = labelDetails;
+            return this;
+        }
+        public java.util.List<ListOssCheckResultResponseBodyItemsLabelDetails> getLabelDetails() {
+            return this.labelDetails;
+        }
+
+        public ListOssCheckResultResponseBodyItems setLabelDetails2(java.util.List<ListOssCheckResultResponseBodyItemsLabelDetails2> labelDetails2) {
+            this.labelDetails2 = labelDetails2;
+            return this;
+        }
+        public java.util.List<ListOssCheckResultResponseBodyItemsLabelDetails2> getLabelDetails2() {
+            return this.labelDetails2;
         }
 
         public ListOssCheckResultResponseBodyItems setLabels(java.util.List<String> labels) {

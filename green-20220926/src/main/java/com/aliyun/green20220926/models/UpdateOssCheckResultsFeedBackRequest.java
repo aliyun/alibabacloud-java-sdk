@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOssCheckResultsFeedBackRequest extends TeaModel {
     /**
+     * <p>Feedback.</p>
+     * 
      * <strong>example:</strong>
      * <p>misreport</p>
      */
@@ -12,6 +14,8 @@ public class UpdateOssCheckResultsFeedBackRequest extends TeaModel {
     public String feedback;
 
     /**
+     * <p>The request ID to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -19,6 +23,8 @@ public class UpdateOssCheckResultsFeedBackRequest extends TeaModel {
     public String queryRequestId;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -26,6 +32,8 @@ public class UpdateOssCheckResultsFeedBackRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>Service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
@@ -33,6 +41,8 @@ public class UpdateOssCheckResultsFeedBackRequest extends TeaModel {
     public String serviceCode;
 
     /**
+     * <p>Job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>P_7SCUK8</p>
      */

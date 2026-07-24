@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImagesFromLibRequest extends TeaModel {
     /**
-     * <p>The IDs of the images.</p>
+     * <p>The IDs of the images to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>[158794]</p>
@@ -14,7 +14,7 @@ public class DeleteImagesFromLibRequest extends TeaModel {
     public String imageIds;
 
     /**
-     * <p>Library ID.</p>
+     * <p>The ID of the image library.</p>
      * 
      * <strong>example:</strong>
      * <p>customxx_xxxx</p>
@@ -23,7 +23,7 @@ public class DeleteImagesFromLibRequest extends TeaModel {
     public String libId;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

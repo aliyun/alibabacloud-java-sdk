@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ModifyAnswerLibRequest extends TeaModel {
     /**
+     * <p>The ID of the proxy response library.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
      */
     @NameInMap("LibId")
     public String libId;
 
+    /**
+     * <p>The name of the library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试库</p>
+     */
     @NameInMap("LibName")
     public String libName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */

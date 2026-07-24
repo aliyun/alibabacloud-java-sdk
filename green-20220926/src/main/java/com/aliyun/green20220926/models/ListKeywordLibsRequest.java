@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKeywordLibsRequest extends TeaModel {
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -13,6 +13,15 @@ public class ListKeywordLibsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The library code.</p>
+     * <ul>
+     * <li>desensitize: desensitization library.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desensitize</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 

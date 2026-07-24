@@ -4,9 +4,18 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class ConfigBucketPrefixFilterConfigValue extends TeaModel {
+    /**
+     * <p>The prefix filter type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
+     */
     @NameInMap("PrefixFilterType")
     public String prefixFilterType;
 
+    /**
+     * <p>The prefix list.</p>
+     */
     @NameInMap("PrefixFilters")
     public java.util.List<String> prefixFilters;
 

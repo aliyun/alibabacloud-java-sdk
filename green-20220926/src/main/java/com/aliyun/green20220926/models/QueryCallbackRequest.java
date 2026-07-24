@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCallbackRequest extends TeaModel {
     /**
-     * <p>Query data under the OSS detection task.</p>
+     * <p>Queries data under the OSS detection task.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class QueryCallbackRequest extends TeaModel {
     public Boolean checkForOss;
 
     /**
-     * <p>Primary key ID.</p>
+     * <p>The primary key ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class QueryCallbackRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

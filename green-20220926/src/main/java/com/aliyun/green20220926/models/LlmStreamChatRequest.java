@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class LlmStreamChatRequest extends TeaModel {
     /**
+     * <p>channel</p>
+     * 
      * <strong>example:</strong>
      * <p>guardCustomTest</p>
      */

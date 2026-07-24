@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportScanResultRequest extends TeaModel {
     /**
-     * <p>Current page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ExportScanResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-11 10:00:00</p>
@@ -23,7 +23,7 @@ public class ExportScanResultRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,13 +32,13 @@ public class ExportScanResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Query content.</p>
+     * <p>The query content.</p>
      */
     @NameInMap("Query")
     public java.util.Map<String, String> query;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -47,7 +47,7 @@ public class ExportScanResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Resource type.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>text</p>
@@ -56,13 +56,13 @@ public class ExportScanResultRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>Sort fields.</p>
+     * <p>The sort field.</p>
      */
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
     /**
-     * <p>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-10 10:00:00</p>

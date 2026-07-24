@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScanNumRequest extends TeaModel {
     /**
-     * <p>Storage space.</p>
+     * <p>The storage space.</p>
      * 
      * <strong>example:</strong>
      * <p>tmpsample</p>
@@ -14,16 +14,16 @@ public class GetScanNumRequest extends TeaModel {
     public String buckets;
 
     /**
-     * <p>Media type.</p>
+     * <p>The media asset type.</p>
      * 
      * <strong>example:</strong>
-     * <p>image</p>
+     * <p>1</p>
      */
     @NameInMap("MediaType")
     public Integer mediaType;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

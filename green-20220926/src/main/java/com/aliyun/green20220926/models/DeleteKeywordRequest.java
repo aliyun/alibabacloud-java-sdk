@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKeywordRequest extends TeaModel {
     /**
-     * <p>The ids\&quot; list of keywords.</p>
+     * <p>The IDs of the keywords to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>[6715465]</p>
@@ -14,7 +14,7 @@ public class DeleteKeywordRequest extends TeaModel {
     public String keywordIdList;
 
     /**
-     * <p>The ids of keywords.</p>
+     * <p>The IDs of the keywords to delete.</p>
      * 
      * <strong>example:</strong>
      * <p>[16754493]</p>
@@ -23,7 +23,7 @@ public class DeleteKeywordRequest extends TeaModel {
     public String keywordIds;
 
     /**
-     * <p>Library id</p>
+     * <p>The ID of the keyword library.</p>
      * 
      * <strong>example:</strong>
      * <p>customxx_xxxx</p>
@@ -32,7 +32,7 @@ public class DeleteKeywordRequest extends TeaModel {
     public String libId;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -40,6 +40,15 @@ public class DeleteKeywordRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The code of the keyword library.</p>
+     * <ul>
+     * <li>desensitize: masking keyword library.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desensitize</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 

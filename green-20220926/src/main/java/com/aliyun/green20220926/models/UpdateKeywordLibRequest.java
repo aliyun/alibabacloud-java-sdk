@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateKeywordLibRequest extends TeaModel {
     /**
-     * <p>Library ID.</p>
+     * <p>The ID of the keyword library.</p>
      * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
@@ -14,16 +14,16 @@ public class UpdateKeywordLibRequest extends TeaModel {
     public String libId;
 
     /**
-     * <p>Keyword library name.</p>
+     * <p>The name of the keyword library.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试库</p>
+     * <p>TestLibrary.</p>
      */
     @NameInMap("LibName")
     public String libName;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -31,6 +31,15 @@ public class UpdateKeywordLibRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The keyword library code.</p>
+     * <ul>
+     * <li>desensitize: desensitization keyword library</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desensitize</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 

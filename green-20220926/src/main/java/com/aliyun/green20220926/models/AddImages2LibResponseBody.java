@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddImages2LibResponseBody extends TeaModel {
     /**
-     * <p>Status code</p>
+     * <p>The error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class AddImages2LibResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public AddImages2LibResponseBodyData data;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class AddImages2LibResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message that is returned in response to the request.</p>
+     * <p>The description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -38,7 +38,7 @@ public class AddImages2LibResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The request ID, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -47,7 +47,7 @@ public class AddImages2LibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -110,7 +110,7 @@ public class AddImages2LibResponseBody extends TeaModel {
 
     public static class AddImages2LibResponseBodyData extends TeaModel {
         /**
-         * <p>The id of the uploaded image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>

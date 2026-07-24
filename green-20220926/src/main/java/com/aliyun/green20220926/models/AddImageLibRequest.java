@@ -8,16 +8,16 @@ public class AddImageLibRequest extends TeaModel {
      * <p>The remarks of the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>Explicit_Content_Blacklist_Image_lib</p>
+     * <p>色情内容黑名单图库</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The name of image library</p>
+     * <p>The name of the image library.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_image_lib</p>
+     * <p>测试图库</p>
      */
     @NameInMap("LibName")
     public String libName;

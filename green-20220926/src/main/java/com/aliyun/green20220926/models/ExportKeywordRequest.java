@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportKeywordRequest extends TeaModel {
     /**
-     * <p>Keyword library ID.</p>
+     * <p>The keyword library ID.</p>
      * 
      * <strong>example:</strong>
      * <p>customxx_xxxx</p>
@@ -14,7 +14,7 @@ public class ExportKeywordRequest extends TeaModel {
     public String libId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -22,6 +22,15 @@ public class ExportKeywordRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The vocabulary encoding.</p>
+     * <ul>
+     * <li>desensitize: sensitive data masking vocabulary</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desensitize</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 

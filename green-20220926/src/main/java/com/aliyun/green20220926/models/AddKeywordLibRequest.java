@@ -5,16 +5,17 @@ import com.aliyun.tea.*;
 
 public class AddKeywordLibRequest extends TeaModel {
     /**
-     * <p>Keywords, with multiple keywords separated by \n.</p>
+     * <p>The keywords. Separate multiple keywords with 
+     * .</p>
      * 
      * <strong>example:</strong>
-     * <p>keywords1\nkeywords2</p>
+     * <p>keyword1\nkeyword2</p>
      */
     @NameInMap("Keywords")
     public String keywords;
 
     /**
-     * <p>The name of the keywords file.</p>
+     * <p>The name of the keyword file.</p>
      * 
      * <strong>example:</strong>
      * <p>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</p>
@@ -26,16 +27,22 @@ public class AddKeywordLibRequest extends TeaModel {
      * <p>The name of the keyword library.</p>
      * 
      * <strong>example:</strong>
-     * <p>test_keyword_lib</p>
+     * <p>TestLibrary.</p>
      */
     @NameInMap("LibName")
     public String libName;
 
+    /**
+     * <p>The properties.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;attribute&quot;:&quot;xx&quot;}</p>
+     */
     @NameInMap("Properties")
     public String properties;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -43,6 +50,15 @@ public class AddKeywordLibRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The library code.</p>
+     * <ul>
+     * <li>desensitize: desensitization library</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desensitize</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 

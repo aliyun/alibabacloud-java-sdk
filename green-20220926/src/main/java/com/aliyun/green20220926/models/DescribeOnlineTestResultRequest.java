@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeOnlineTestResultRequest extends TeaModel {
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -12,13 +14,17 @@ public class DescribeOnlineTestResultRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The service code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>VideoModeration</p>
+     * <p>videoDetection</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
     /**
+     * <p>The ID of the detection task.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxxx</p>
      */

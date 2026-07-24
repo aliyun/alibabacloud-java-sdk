@@ -3,18 +3,19 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class GetUserBuyStatusRequest extends TeaModel {
+public class ConfirmAiAppScanRequest extends TeaModel {
     /**
      * <p>The commodity code.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>lvwang_public_cn</p>
+     * <p>xxx</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region where the application resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -22,12 +23,12 @@ public class GetUserBuyStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static GetUserBuyStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetUserBuyStatusRequest self = new GetUserBuyStatusRequest();
+    public static ConfirmAiAppScanRequest build(java.util.Map<String, ?> map) throws Exception {
+        ConfirmAiAppScanRequest self = new ConfirmAiAppScanRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetUserBuyStatusRequest setCommodityCode(String commodityCode) {
+    public ConfirmAiAppScanRequest setCommodityCode(String commodityCode) {
         this.commodityCode = commodityCode;
         return this;
     }
@@ -35,7 +36,7 @@ public class GetUserBuyStatusRequest extends TeaModel {
         return this.commodityCode;
     }
 
-    public GetUserBuyStatusRequest setRegionId(String regionId) {
+    public ConfirmAiAppScanRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

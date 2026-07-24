@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceConfigResponseBody extends TeaModel {
     /**
+     * <p>The error code, which is consistent with the HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -19,6 +23,8 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The further description of the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -40,6 +50,8 @@ public class UpdateServiceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

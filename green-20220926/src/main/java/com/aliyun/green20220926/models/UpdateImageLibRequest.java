@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateImageLibRequest extends TeaModel {
     /**
-     * <p>Comment information for the library.</p>
+     * <p>The remarks of the image library.</p>
      * 
      * <strong>example:</strong>
      * <p>备注</p>
@@ -14,7 +14,7 @@ public class UpdateImageLibRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>Exemption from review configuration.</p>
+     * <p>The review-free configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -23,7 +23,7 @@ public class UpdateImageLibRequest extends TeaModel {
     public Integer freeInspection;
 
     /**
-     * <p>Library ID.</p>
+     * <p>The ID of the image library.</p>
      * 
      * <strong>example:</strong>
      * <p>custom_xxxx</p>
@@ -32,7 +32,7 @@ public class UpdateImageLibRequest extends TeaModel {
     public String libId;
 
     /**
-     * <p>Library name.</p>
+     * <p>The name of the image library.</p>
      * 
      * <strong>example:</strong>
      * <p>测试图库</p>
@@ -41,7 +41,7 @@ public class UpdateImageLibRequest extends TeaModel {
     public String libName;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>

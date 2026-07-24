@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOssCheckResultsBatchFeedbackRequest extends TeaModel {
     /**
+     * <p>Feedback.</p>
+     * 
      * <strong>example:</strong>
      * <p>misreport</p>
      */
@@ -12,6 +14,8 @@ public class UpdateOssCheckResultsBatchFeedbackRequest extends TeaModel {
     public String feedback;
 
     /**
+     * <p>Result items.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -19,6 +23,8 @@ public class UpdateOssCheckResultsBatchFeedbackRequest extends TeaModel {
     public String items;
 
     /**
+     * <p>Parent job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>P_XHDUS</p>
      */

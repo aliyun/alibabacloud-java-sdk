@@ -14,7 +14,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     public String classify;
 
     /**
-     * <p>Error code, consistent with HTTP status.</p>
+     * <p>Error code, consistent with the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Service details</p>
+     * <p>Service details.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -59,7 +59,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     public java.util.Map<String, ?> option;
 
     /**
-     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>6CF2815C-<strong><strong>-</strong></strong>-B52E-FF6E2****492</p>
@@ -95,7 +95,7 @@ public class GetServiceConfResponseBody extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>Success indicator</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>

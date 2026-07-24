@@ -4,10 +4,15 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public UpdateOssCheckResultsFreezeResponseBodyData data;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
@@ -37,6 +42,8 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
 
     public static class UpdateOssCheckResultsFreezeResponseBodyData extends TeaModel {
         /**
+         * <p>The number of invalid records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -44,6 +51,8 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
         public Integer invalidCount;
 
         /**
+         * <p>The number of duplicate records.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
         public Integer repeatCount;
 
         /**
+         * <p>The number of successful operations.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -58,6 +69,8 @@ public class UpdateOssCheckResultsFreezeResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>The total number of records.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */

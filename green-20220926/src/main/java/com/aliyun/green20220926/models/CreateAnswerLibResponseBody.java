@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAnswerLibResponseBody extends TeaModel {
     /**
+     * <p>The ID of the proxy answer library.</p>
+     * 
      * <strong>example:</strong>
      * <p>alxxxx</p>
      */
@@ -12,16 +14,23 @@ public class CreateAnswerLibResponseBody extends TeaModel {
     public String libId;
 
     /**
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result.</p>
+     */
     @NameInMap("Result")
     public CreateAnswerLibResponseBodyResult result;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>alAxbbxxxx-xxx</p>
      */
@@ -67,16 +76,23 @@ public class CreateAnswerLibResponseBody extends TeaModel {
 
     public static class CreateAnswerLibResponseBodyResult extends TeaModel {
         /**
+         * <p>The internationalization key.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("I18nKey")
         public String i18nKey;
 
+        /**
+         * <p>The list of invalid proxy answers.</p>
+         */
         @NameInMap("IllegalLengthSamples")
         public java.util.List<String> illegalLengthSamples;
 
         /**
+         * <p>The number of invalid samples.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -84,6 +100,8 @@ public class CreateAnswerLibResponseBody extends TeaModel {
         public Integer invalidCount;
 
         /**
+         * <p>The ID of the proxy answer library.</p>
+         * 
          * <strong>example:</strong>
          * <p>alxxxx</p>
          */
@@ -91,6 +109,8 @@ public class CreateAnswerLibResponseBody extends TeaModel {
         public String libId;
 
         /**
+         * <p>The task progress percentage.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -98,16 +118,23 @@ public class CreateAnswerLibResponseBody extends TeaModel {
         public Integer progress;
 
         /**
+         * <p>The number of duplicate samples.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RepeatCount")
         public Integer repeatCount;
 
+        /**
+         * <p>The list of duplicate proxy answers.</p>
+         */
         @NameInMap("RepeatSamples")
         public java.util.List<String> repeatSamples;
 
         /**
+         * <p>The number of successful samples.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -115,6 +142,8 @@ public class CreateAnswerLibResponseBody extends TeaModel {
         public Integer successCount;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alAaaaxxx-xxx</p>
          */
@@ -122,6 +151,8 @@ public class CreateAnswerLibResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

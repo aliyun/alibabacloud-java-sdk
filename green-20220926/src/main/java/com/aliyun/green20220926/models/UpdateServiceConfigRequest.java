@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceConfigRequest extends TeaModel {
     /**
+     * <p>The document configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public String fileConfig;
 
     /**
+     * <p>The keyword filter libraries.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -19,16 +23,26 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public String keywordFilterLibs;
 
     /**
+     * <p>The keyword hit libraries.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
     @NameInMap("KeywordHitLibs")
     public String keywordHitLibs;
 
+    /**
+     * <p>The machine-assisted moderation configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ManualMachineConfig")
     public String manualMachineConfig;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -36,6 +50,8 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -43,6 +59,8 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The moderation scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>pornographic</p>
      */
@@ -50,6 +68,8 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public String scene;
 
     /**
+     * <p>The scenario configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -57,16 +77,26 @@ public class UpdateServiceConfigRequest extends TeaModel {
     public String sceneConfig;
 
     /**
+     * <p>The service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>The service configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
     /**
+     * <p>The video configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */

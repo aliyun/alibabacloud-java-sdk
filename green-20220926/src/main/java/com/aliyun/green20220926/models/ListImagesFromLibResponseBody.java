@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImagesFromLibResponseBody extends TeaModel {
     /**
-     * <p>Error code, consistent with HTTP status.</p>
+     * <p>The error code, which is consistent with the HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,13 +32,13 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Data of the current page.</p>
+     * <p>The data on the current page.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListImagesFromLibResponseBodyItems> items;
 
     /**
-     * <p>Further description of the error code.</p>
+     * <p>The further description of the error code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -65,7 +65,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Success indicator.</p>
+     * <p>The success flag.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -74,7 +74,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Total number of images.</p>
+     * <p>The total number of images.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -161,7 +161,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
 
     public static class ListImagesFromLibResponseBodyItems extends TeaModel {
         /**
-         * <p>Creation time.</p>
+         * <p>The creation time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-30 16:30:29</p>
@@ -170,7 +170,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>Image ID.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>112</p>
@@ -179,7 +179,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Image URL.</p>
+         * <p>The URL of the image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg</a></p>
@@ -188,7 +188,7 @@ public class ListImagesFromLibResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>Thumbnail URL.</p>
+         * <p>The URL of the thumbnail.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg</a></p>

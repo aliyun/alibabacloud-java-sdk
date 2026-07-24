@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyServiceConfigResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -14,7 +14,7 @@ public class CopyServiceConfigResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

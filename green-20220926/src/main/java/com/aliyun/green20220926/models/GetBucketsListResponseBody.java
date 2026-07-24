@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBucketsListResponseBody extends TeaModel {
     /**
-     * <p>Returned data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetBucketsListResponseBodyData> data;
 
     /**
-     * <p>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</p>
+     * <p>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -42,7 +42,7 @@ public class GetBucketsListResponseBody extends TeaModel {
 
     public static class GetBucketsListResponseBodyData extends TeaModel {
         /**
-         * <p>OSS file storage bucket name.</p>
+         * <p>The name of the OSS bucket in which files are stored.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket_test</p>
@@ -51,7 +51,7 @@ public class GetBucketsListResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

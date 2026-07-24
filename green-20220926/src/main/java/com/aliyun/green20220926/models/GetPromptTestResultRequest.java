@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPromptTestResultRequest extends TeaModel {
     /**
+     * <p>The configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;enable\&quot;:false}</p>
      */
@@ -12,6 +14,8 @@ public class GetPromptTestResultRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>image</p>
      */
@@ -19,16 +23,26 @@ public class GetPromptTestResultRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The service code.</p>
+     * 
      * <strong>example:</strong>
      * <p>baselineCheck</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    /**
+     * <p>The text content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试文本</p>
+     */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>The business type.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom_llm_template</p>
      */
