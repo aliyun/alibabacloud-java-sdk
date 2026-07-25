@@ -60,7 +60,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
+         * <p>The error message. This parameter is returned when the task is in the Failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
@@ -87,7 +87,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The task feature configuration. This parameter does not need to be set.</p>
+         * <p>The task feature configuration. You do not need to set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -124,9 +124,9 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
 
         /**
          * <p>The generation result. The value is a JSON string that contains the following fields:</p>
-         * <p>Medias: a list of Media objects. Each Media object contains the following fields:
+         * <p>Medias: a list of media information (Media objects). A Media object contains the following fields:
          * MediaId: String. The media asset ID.
-         * OutputUrl: String. The media URL (with the authentication string).</p>
+         * OutputUrl: String. The media URL (with an authentication string).</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Medias\&quot;:[{\&quot;MediaId\&quot;:\&quot;<em><strong><strong>470732171f1bfcaf7f6d44</strong></strong></em>\&quot;,\&quot;OutputUrl\&quot;:\&quot;<a href="https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&OSSAccessKeyId=xxx&Signature=xxxx%5C%5C%22%7D%5D%7D">https://xxxxxxx/.../xxxxx.mp4?Expires=xxxx&amp;OSSAccessKeyId=xxx&amp;Signature=xxxx\\&quot;}]}</a></p>
@@ -169,7 +169,7 @@ public class GetVideoGenerationJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The user business information.</p>
+         * <p>The custom business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

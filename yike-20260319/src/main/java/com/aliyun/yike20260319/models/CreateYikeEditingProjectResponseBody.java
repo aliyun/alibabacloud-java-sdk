@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateYikeEditingProjectResponseBody extends TeaModel {
     /**
+     * <p>The ID of the online editing project.</p>
+     * 
      * <strong>example:</strong>
      * <p><em><strong>545bc38a94aa9840c89aff017b</strong></em></p>
      */
@@ -12,6 +14,8 @@ public class CreateYikeEditingProjectResponseBody extends TeaModel {
     public String editingProjectId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */

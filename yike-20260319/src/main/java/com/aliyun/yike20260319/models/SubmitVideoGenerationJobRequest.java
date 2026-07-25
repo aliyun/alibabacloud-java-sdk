@@ -14,7 +14,7 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String aspectRatio;
 
     /**
-     * <p>The idempotency token.</p>
+     * <p>The idempotence parameter.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>3e761e9d11edba640c42a1b7</strong></strong></p>
@@ -35,11 +35,11 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
      * <p>The task input in JSON string format. The following fields are included:</p>
      * <ul>
      * <li>Prompt: String. Required. The prompt.</li>
-     * <li>Medias: The media list.<ul>
-     * <li>When JobType is image_to_video, this field is required. Only 1 Media item is needed.</li>
-     * <li>When JobType is first_last_frame, this field is required. Only 2 Media items are needed.</li>
-     * <li>When JobType is reference_to_video, this field is required. A maximum of 9 Media items are supported.<blockquote>
-     * <p>The Media structure contains: Type, the media type (String). Valid values: <code>image</code>, <code>video</code>, or <code>audio</code>. URL, the media download URL (String).</p>
+     * <li>Medias: The list of media items.<ul>
+     * <li>When JobType is set to image_to_video, this field is required. Only 1 Media item is needed.</li>
+     * <li>When JobType is set to first_last_frame, this field is required. Only 2 Media items are needed.</li>
+     * <li>When JobType is set to reference_to_video, this field is required. A maximum of 9 Media items are supported.<blockquote>
+     * <p>The Media struct contains: Type, the media type, String, valid values are <code>image</code>/<code>video</code>/<code>audio</code>. URL, the media download URL, String.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -53,7 +53,7 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String input;
 
     /**
-     * <p>The task function parameters. No configuration is required at this time.</p>
+     * <p>The task feature parameters. No configuration is required at this time.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -108,7 +108,7 @@ public class SubmitVideoGenerationJobRequest extends TeaModel {
     public String resolution;
 
     /**
-     * <p>The scenario type. Currently only <code>general</code> is supported.</p>
+     * <p>The scene type. Currently only <code>general</code> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>general</p>

@@ -42,7 +42,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
 
     public static class GetImageGenerationJobResponseBodyImageGenerationJob extends TeaModel {
         /**
-         * <p>The video aspect ratio.</p>
+         * <p>The aspect ratio of the video.</p>
          * 
          * <strong>example:</strong>
          * <p>16:9</p>
@@ -51,7 +51,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String aspectRatio;
 
         /**
-         * <p>The error message. This parameter is returned only when the task is in the Failed state.</p>
+         * <p>The error message. The value is of the String type. This parameter is returned when the task is in the Failed state.</p>
          * 
          * <strong>example:</strong>
          * <p>Input file not found.</p>
@@ -78,7 +78,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The task feature configuration. No configuration is required at this time.</p>
+         * <p>The task feature configuration. You do not need to set this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -114,11 +114,11 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String n;
 
         /**
-         * <p>The generation result in JSON string format. Fields:</p>
+         * <p>The generation result. The value is a JSON string that contains the following fields:</p>
          * <ul>
-         * <li>Medias: a list of media information (Media objects). Fields of a Media object:<ul>
-         * <li>MediaId: String. The media asset ID.</li>
-         * <li>OutputUrl: String. The media URL (with authentication string).</li>
+         * <li>Medias: a list of media information (Media objects). A Media object contains the following fields:<ul>
+         * <li>MediaId: the media asset ID. The value is of the String type.</li>
+         * <li>OutputUrl: the media URL (with an authentication string). The value is of the String type.</li>
          * </ul>
          * </li>
          * </ul>
@@ -139,7 +139,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String resolution;
 
         /**
-         * <p>The scenario type. Currently, only <code>general</code> is supported.</p>
+         * <p>The scene type. Currently, only <code>general</code> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>general</p>
@@ -164,7 +164,7 @@ public class GetImageGenerationJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The custom business information.</p>
+         * <p>The user business information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

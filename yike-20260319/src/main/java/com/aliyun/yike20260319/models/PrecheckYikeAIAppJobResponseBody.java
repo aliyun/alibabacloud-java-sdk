@@ -14,7 +14,7 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The parameters that failed the pre-check. This parameter is returned only when the pre-check fails.</p>
+     * <p>The check results returned when the pre-check fails. Only the parameters that failed the check are returned.</p>
      */
     @NameInMap("Result")
     public java.util.List<PrecheckYikeAIAppJobResponseBodyResult> result;
@@ -63,7 +63,7 @@ public class PrecheckYikeAIAppJobResponseBody extends TeaModel {
 
     public static class PrecheckYikeAIAppJobResponseBodyResult extends TeaModel {
         /**
-         * <p>The cause of the parameter check failure.</p>
+         * <p>The cause of the parameter check exception.</p>
          * 
          * <strong>example:</strong>
          * <p>ImageCheckFailed</p>
