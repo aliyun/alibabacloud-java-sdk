@@ -3010,6 +3010,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Binds an Agent to a Squad.</p>
+     * 
+     * @param request CreateApplicationAgentRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateApplicationAgentRelationResponse
+     */
+    public CreateApplicationAgentRelationResponse createApplicationAgentRelationWithOptions(CreateApplicationAgentRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("AgentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateApplicationAgentRelation"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateApplicationAgentRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Binds an Agent to a Squad.</p>
+     * 
+     * @param request CreateApplicationAgentRelationRequest
+     * @return CreateApplicationAgentRelationResponse
+     */
+    public CreateApplicationAgentRelationResponse createApplicationAgentRelation(CreateApplicationAgentRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createApplicationAgentRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a connection address for a specified application.</p>
      * 
      * @param request CreateApplicationEndpointAddressRequest
@@ -21591,6 +21643,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves the Lakebase tenant token (SPG tenant mount URL).</p>
+     * 
+     * @param request GetLakebaseTenantTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLakebaseTenantTokenResponse
+     */
+    public GetLakebaseTenantTokenResponse getLakebaseTenantTokenWithOptions(GetLakebaseTenantTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.polarFsInstanceId)) {
+            query.put("PolarFsInstanceId", request.polarFsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subdir)) {
+            query.put("Subdir", request.subdir);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenant)) {
+            query.put("Tenant", request.tenant);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLakebaseTenantToken"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLakebaseTenantTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves the Lakebase tenant token (SPG tenant mount URL).</p>
+     * 
+     * @param request GetLakebaseTenantTokenRequest
+     * @return GetLakebaseTenantTokenResponse
+     */
+    public GetLakebaseTenantTokenResponse getLakebaseTenantToken(GetLakebaseTenantTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLakebaseTenantTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a chat record.</p>
      * 
      * @param request GetPolarAgentRequest
@@ -28855,6 +28963,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetGlobalDatabaseNetworkResponse resetGlobalDatabaseNetwork(ResetGlobalDatabaseNetworkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetGlobalDatabaseNetworkWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Restarts an AI cluster.</p>
+     * 
+     * @param request RestartAIDBClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartAIDBClusterResponse
+     */
+    public RestartAIDBClusterResponse restartAIDBClusterWithOptions(RestartAIDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartAIDBCluster"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartAIDBClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Restarts an AI cluster.</p>
+     * 
+     * @param request RestartAIDBClusterRequest
+     * @return RestartAIDBClusterResponse
+     */
+    public RestartAIDBClusterResponse restartAIDBCluster(RestartAIDBClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartAIDBClusterWithOptions(request, runtime);
     }
 
     /**
