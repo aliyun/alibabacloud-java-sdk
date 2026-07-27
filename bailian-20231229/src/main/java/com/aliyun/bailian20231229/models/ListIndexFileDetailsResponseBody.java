@@ -14,7 +14,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data field returned by the operation.</p>
+     * <p>The business data field of the operation.</p>
      */
     @NameInMap("Data")
     public ListIndexFileDetailsResponseBodyData data;
@@ -123,7 +123,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String chunkMode;
 
         /**
-         * <p>The segment length, which is the number of characters in each text chunk.</p>
+         * <p>The chunk length, which is the number of characters in a text chunk.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -132,7 +132,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String chunkSize;
 
         /**
-         * <p>The error status code for file import.</p>
+         * <p>The file import error status code.</p>
          * 
          * <strong>example:</strong>
          * <p>110002</p>
@@ -141,7 +141,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, and EXCEL.</p>
+         * <p>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, EXCEL.</p>
          * 
          * <strong>example:</strong>
          * <p>pdf</p>
@@ -159,7 +159,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String enableHeaders;
 
         /**
-         * <p>The time when the file was imported to the knowledge base, in UNIX timestamp format.</p>
+         * <p>The time when the file was imported to the knowledge base, in Unix timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>1744856423000</p>
@@ -177,7 +177,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The error message for file import.</p>
+         * <p>The file import error message.</p>
          * 
          * <strong>example:</strong>
          * <p>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</p>
@@ -185,17 +185,20 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("MetaExtractInfo")
+        public String metaExtractInfo;
+
         /**
          * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>翻译平台运维文档</p>
+         * <p>TranslationPlatformO&amp;MDocument.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The overlap length between segments.</p>
+         * <p>The chunk overlap length.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -314,6 +317,14 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
             return this.message;
         }
 
+        public ListIndexFileDetailsResponseBodyDataDocuments setMetaExtractInfo(String metaExtractInfo) {
+            this.metaExtractInfo = metaExtractInfo;
+            return this;
+        }
+        public String getMetaExtractInfo() {
+            return this.metaExtractInfo;
+        }
+
         public ListIndexFileDetailsResponseBodyDataDocuments setName(String name) {
             this.name = name;
             return this;
@@ -381,7 +392,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public String indexId;
 
         /**
-         * <p>The returned page number.</p>
+         * <p>The specified page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -390,7 +401,7 @@ public class ListIndexFileDetailsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The returned number of entries per page.</p>
+         * <p>The specified number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

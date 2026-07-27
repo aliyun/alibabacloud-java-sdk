@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListIndexFileDetailsRequest extends TeaModel {
     /**
-     * <p>Filters the returned file details list by file name. Default value: empty, which means no filtering by file name.</p>
+     * <p>Filters the returned file details list by file name. Default value: empty, which means the results are not filtered by file name.</p>
      * 
      * <strong>example:</strong>
-     * <p>翻译平台运维文档</p>
+     * <p>TranslationPlatformO&amp;MDocument.</p>
      */
     @NameInMap("DocumentName")
     public String documentName;
@@ -16,14 +16,14 @@ public class ListIndexFileDetailsRequest extends TeaModel {
     /**
      * <p>Filters the returned file list by file import status. Valid values:</p>
      * <ul>
-     * <li>INSERT_ERROR: Failed to import to the index.</li>
+     * <li>INSERT_ERROR: Import to index failed.</li>
      * <li>RUNNING: Index building in progress.</li>
      * <li>DELETED: Deleted.</li>
      * <li>FINISH: Index building succeeded.</li>
      * <li>PARSE_FAILED: Parsing failed.</li>
      * <li>DOC_PARSING: Parsing in progress.</li>
      * </ul>
-     * <p>Default value: empty, which means no filtering by file import status.</p>
+     * <p>Default value: empty, which means the results are not filtered by file import status.</p>
      * 
      * <strong>example:</strong>
      * <p>FINISH</p>
@@ -64,7 +64,7 @@ public class ListIndexFileDetailsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of files to display per page for paging. Maximum value: 10.</p>
+     * <p>The number of files to display per page in a paginated query. Maximum value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

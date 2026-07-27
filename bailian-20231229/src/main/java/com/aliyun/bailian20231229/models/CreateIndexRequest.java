@@ -5,25 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateIndexRequest extends TeaModel {
     /**
-     * <p>You can import files when you create a knowledge base. Specify category IDs to import all files under the corresponding categories. We recommend importing no more than 10,000 files. If you have more files, you can call the <strong>SubmitIndexAddDocumentsJob</strong> operation to import them later.</p>
+     * <p>The list of category IDs to import when creating the knowledge base. All files under the specified categories are imported. We recommend importing no more than 500 files. For remaining files, call the <strong>SubmitIndexAddDocumentsJob</strong> operation to continue importing.</p>
      */
     @NameInMap("CategoryIds")
     public java.util.List<String> categoryIds;
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The chunk size, which is the maximum number of characters for each text chunk. If this length is exceeded:</p>
+     * <p>The chunk size, which specifies the maximum number of characters per text chunk. When this length is exceeded:</p>
      * <ul>
-     * <li><p><strong>Smart chunking</strong> (the \<code>chunkMode\\</code> parameter is not specified): The text is likely to be truncated.</p>
-     * </li>
-     * <li><p><strong>Custom chunking</strong> (the \<code>chunkMode\\</code> parameter is specified): The text is forcibly truncated.</p>
-     * </li>
+     * <li><strong>Intelligent chunking</strong> (when <code>chunkMode</code> is not specified): The text is likely to be truncated.</li>
+     * <li><strong>Custom chunking</strong> (when <code>chunkMode</code> is specified): The text is forcibly truncated.</li>
      * </ul>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The chunk size, which is the maximum number of characters for each text chunk. If this length is exceeded, the text is likely to be truncated.</p>
-     * <p>The value must be between 1 and 6000. If you do not specify this parameter, the default value 500 is used.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;
+     * The chunk size, which specifies the maximum number of characters per text chunk. When this length is exceeded, the text is likely to be truncated.</p>
+     * <p>Value range: [1-6000]. If not specified, the default value is 500.</p>
      * <blockquote>
-     * <p>If you set \<code>ChunkSize\\</code> to a value less than 100, you must also set \<code>OverlapSize\\</code>. You can also leave both parameters unspecified, and the system will use the default values.</p>
+     * <p>If <code>ChunkSize</code> is set to a value less than 100, you must also set <code>OverlapSize</code>. You can also leave both parameters unspecified, and the system uses default values.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,11 +31,11 @@ public class CreateIndexRequest extends TeaModel {
     public Integer chunkSize;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The structure of the data table (column names, types, etc.).</p>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * The structure of the data table (column names, types, etc.).</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      */
     @NameInMap("Columns")
@@ -45,7 +43,7 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,39 +53,38 @@ public class CreateIndexRequest extends TeaModel {
     public String createIndexType;
 
     /**
-     * <p>The description of the knowledge base. The description can be 0 to 1,000 English or Chinese characters in length.
-     * The default value is empty.</p>
+     * <p>The knowledge base description. The description can be up to 1000 characters in length.
+     * Default value: empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>企业帮助文档库包括了公司制度、产品清单等重要资料。</p>
+     * <p>The enterprise help document library includes important materials such as company policies and product catalogs.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>You can import files when you create a knowledge base. Specify a list of files to import by providing their IDs. We recommend importing no more than 10,000 files. If you have more files, you can call the <strong>SubmitIndexAddDocumentsJob</strong> operation to import them later.</p>
+     * <p>The list of files to import when creating the knowledge base. Specify file IDs here. We recommend importing no more than 10,000 files. For remaining files, call the <strong>SubmitIndexAddDocumentsJob</strong> operation to continue importing.</p>
      */
     @NameInMap("DocumentIds")
     public java.util.List<String> documentIds;
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The vector model used by the knowledge base. A vector model converts the original input prompt and knowledge text into numerical vectors to compare their similarity. The text-embedding-v4 model is a comprehensive upgrade over the text-embedding-v3 model in terms of language support, vectorization of code snippets, and vector dimension selection. It is suitable for most scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</p>
+     * <p>The embedding model used by the knowledge base. The embedding model transforms the original input prompt and knowledge text into numerical vectors for similarity comparison. The text-embedding-v4 model is a comprehensive upgrade over text-embedding-v3 in terms of language support, code snippet quantization, and vector dimensions selection, and is suitable for most scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</p>
      * <ul>
-     * <li><p>text-embedding-v4</p>
-     * </li>
-     * <li><p>text-embedding-v3</p>
-     * </li>
+     * <li>text-embedding-v4</li>
+     * <li>text-embedding-v3</li>
      * </ul>
-     * <p>If you do not specify this parameter, \<code>text-embedding-v3\\</code> is used.</p>
+     * <p>Default value: empty, which uses the text-embedding-v3 model.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <p>The embedding model used by the knowledge base. The embedding model transforms the original input prompt and knowledge text into numerical vectors for similarity comparison. The default text-embedding-v2 model (cannot be changed) supports Chinese, English, and multiple other languages, and performs normalization on vector results. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</p>
      * <ul>
-     * <li><p>The vector model used by the knowledge base. A vector model converts the original input prompt and knowledge text into numerical vectors to compare their similarity. The default text-embedding-v2 model (which cannot be changed for now) supports both Chinese and English, along with multiple other languages, and normalizes the vector results. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</p>
-     * </li>
-     * <li><p>text-embedding-v2</p>
-     * </li>
+     * <li>text-embedding-v2</li>
      * </ul>
-     * <p>If you do not specify this parameter, \<code>text-embedding-v2\\</code> is used.</p>
+     * <p>Default value: empty, which uses the text-embedding-v2 model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>text-embedding-v4</p>
      */
     @NameInMap("EmbeddingModelName")
     public String embeddingModelName;
@@ -95,12 +92,10 @@ public class CreateIndexRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable multi-turn conversation rewriting. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
-     * </li>
-     * <li><p>false: Disabled.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
-     * <p>If you do not specify this parameter, this feature is enabled by default.</p>
+     * <p>If not specified, this feature is enabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -109,20 +104,20 @@ public class CreateIndexRequest extends TeaModel {
     public Boolean enableRewrite;
 
     /**
-     * <p>The name of the knowledge base. The name can be 1 to 20 characters in length and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:).</p>
+     * <p>The knowledge base name. The name must be 1 to 20 characters in length and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>企业帮助文档库</p>
+     * <p>EnterpriseHelpDocLibrary.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The overlap size, which is the number of overlapping characters between the current text chunk and the previous one. The value must be between 0 and 1024.</p>
-     * <p>If you do not specify this parameter, the default value 100 is used.</p>
+     * <p>The chunk overlap size, which specifies the number of overlapping characters between the current text chunk and the previous text chunk. Value range: [0-1024].</p>
+     * <p>If not specified, the default value is 100.</p>
      * <blockquote>
-     * <p>\<code>OverlapSize\\</code> must be smaller than \<code>ChunkSize\\</code>. Otherwise, chunking errors will occur.</p>
+     * <p><code>OverlapSize</code> must be less than <code>ChunkSize</code>. Otherwise, chunking exceptions occur.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,15 +127,16 @@ public class CreateIndexRequest extends TeaModel {
     public Integer overlapSize;
 
     /**
-     * <p>The name of the database. This parameter is required when creating a data query knowledge base.</p>
-     * <p>The database must exist in the data source specified by \<code>datasourceCode\\</code>.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass this parameter.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;A natural language instruction for fine-grained control of the reranking model\&quot;s behavior.
+     * <notice>This parameter takes effect only when rerank_mode is set to &quot;custom&quot;.</p>
      */
     @NameInMap("RerankInstruct")
     public String rerankInstruct;
 
     /**
-     * <p>The similarity threshold. Only text chunks with a similarity score greater than this value are recalled. This is used to filter the text chunks returned by the reranking model. The value must be between 0.01 and 1.00.</p>
-     * <p>If you do not specify this parameter, the default value 0.01 is used.</p>
+     * <p>The similarity threshold. Only text chunks with similarity scores exceeding this value are recalled. This parameter filters the text chunks returned by the reranking model. Value range: [0.01-1.00].</p>
+     * <p>If not specified, the default value is 0.01.</p>
      * 
      * <strong>example:</strong>
      * <p>0.20</p>
@@ -149,8 +145,24 @@ public class CreateIndexRequest extends TeaModel {
     public Double rerankMinScore;
 
     /**
-     * <p>The name of the data table. This parameter is required when creating a data query knowledge base.</p>
-     * <p>The data table must exist in the data source specified by \<code>connectId\\</code> or \<code>datasourceCode\\</code>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * Specifies the instruction intervention mode for the reranking model to determine its scoring preference.</p>
+     * <p><strong>Valid values:</strong></p>
+     * <ul>
+     * <li><p><strong>qa</strong>: (Default) Q&amp;A mode. The model tends to assign higher scores to candidates that directly answer the query. Recommended for Q&amp;A scenarios.</p>
+     * </li>
+     * <li><p><strong>similar</strong>: Similarity mode. The model tends to assign higher scores to candidates with high content consistency with the query. Recommended for matching and retrieval scenarios.</p>
+     * </li>
+     * <li><p><strong>custom</strong>: Custom mode. The model\&quot;s ranking behavior is determined by the instruction in the rerank_instruct parameter.</p>
+     * </li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass this parameter.
+     * [_single.params.RerankMode.enum.similar: 相似模式。]similar: Similarity mode.
+     * [_single.params.RerankMode.enum.custom: 自定义模式。]custom: Custom mode.
+     * [_single.params.RerankMode.enum.qa:（默认值） 问答模式。]qa: (Default) Q&amp;A mode.
+     * [parameters.33.schema.enumValueTitles.similar: 相似模式。]similar: Similarity mode.
+     * [parameters.33.schema.enumValueTitles.custom: 自定义模式。]custom: Custom mode.
+     * [parameters.33.schema.enumValueTitles.qa:（默认值） 问答模式。]qa: (Default) Q&amp;A mode.</p>
      * 
      * <strong>example:</strong>
      * <p>qa</p>
@@ -159,38 +171,32 @@ public class CreateIndexRequest extends TeaModel {
     public String rerankMode;
 
     /**
-     * <p>The reranking model used by the knowledge base. The reranking model is an external scoring system that calculates a similarity score between the user\&quot;s question and each text chunk in the knowledge base, sorts them in descending order, and returns the top K text chunks. Valid values:</p>
+     * <p>The reranking model used by the knowledge base. The reranking model is an external scoring system that calculates the similarity score between the user query and each text chunk in the knowledge base, sorts them in descending order, and returns the top K text chunks with the highest scores. Valid values:</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li><p>qwen3-rerank-hybrid: qwen3-rerank (hybrid) reranking.</p>
-     * </li>
-     * <li><p>qwen3-rerank: qwen3-rerank reranking.</p>
-     * </li>
-     * <li><p>gte-rerank-hybrid: gte-rerank (hybrid) reranking.</p>
-     * </li>
-     * <li><p>gte-rerank: gte-rerank reranking.</p>
-     * </li>
+     * <li>qwen3-rerank-hybrid: qwen3-rerank(hybrid) reranking.</li>
+     * <li>qwen3-rerank: qwen3-rerank reranking.</li>
+     * <li>gte-rerank-hybrid: gte-rerank(hybrid) reranking.</li>
+     * <li>gte-rerank: gte-rerank reranking.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <ul>
-     * <li><p>gte-rerank-hybrid: Official reranking.</p>
-     * </li>
-     * <li><p>gte-rerank: gte-rerank reranking.</p>
-     * </li>
+     * <li>gte-rerank-hybrid: official reranking.</li>
+     * <li>gte-rerank: gte-rerank reranking.</li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>If you do not specify this parameter, \<code>qwen3-rerank\\</code> is used.</p>
+     * <p>Default value: empty, which uses qwen3-rerank.</p>
      * <blockquote>
-     * <p>Use \<code>qwen3-rerank\\</code> if you only need semantic sorting. Use \<code>qwen3-rerank-hybrid\\</code> if you need both semantic sorting and text-matching features to ensure relevance.</p>
+     * <p>If you only need semantic reranking, use <code>qwen3-rerank</code>. If you need both semantic reranking and text matching features to ensure relevance, use <code>qwen3-rerank-hybrid</code>.</p>
      * </blockquote>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>If you do not specify this parameter, \<code>gte-rerank-hybrid\\</code> is used.</p>
+     * <p>Default value: empty, which uses gte-rerank-hybrid.</p>
      * <blockquote>
-     * <p>Use \<code>gte-rerank\\</code> if you only need semantic sorting. Use \<code>gte-rerank-hybrid\\</code> if you need both semantic sorting and text-matching features to ensure relevance.</p>
+     * <p>If you only need semantic reranking, use <code>gte-rerank</code>. If you need both semantic reranking and text matching features to ensure relevance, use <code>gte-rerank-hybrid</code>.</p>
      * </blockquote>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>The \<code>gte-rerank-hybrid\\</code> and \<code>gte-rerank\\</code> models are no longer updated and are not recommended.</p>
+     * <p><code>gte-rerank-hybrid</code> and <code>gte-rerank</code> will no longer be updated and are not recommended.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -201,11 +207,11 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The sentence separator. This parameter takes effect only when \<code>chunkMode\\</code> is set to <strong>regex</strong>. It is ignored in other modes, even if specified. You can enter a regular expression (multiple expressions are not supported) to split the file into smaller text chunks.</p>
-     * <p>For smart chunking (the \<code>chunkMode\\</code> parameter is not specified), you can leave this parameter empty.</p>
+     * <p>The sentence separator, which takes effect only when <code>chunkMode</code>=<strong>regex</strong> (it does not take effect in other modes even if specified). You can pass a single regular expression (multiple expressions are not supported) to split files into small text chunks.</p>
+     * <p>When using intelligent chunking (when <code>chunkMode</code> is not specified), keep the default empty value.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -215,7 +221,7 @@ public class CreateIndexRequest extends TeaModel {
     public String separator;
 
     /**
-     * <p>The ID of the AnalyticDB for PostgreSQL instance. This parameter is required only when \<code>SinkType\\</code> is set to ADB. Go to the <a href="https://gpdbnext.console.aliyun.com/gpdb/list">AnalyticDB for PostgreSQL instance list</a> page to obtain this ID.</p>
+     * <p>The AnalyticDB for PostgreSQL instance ID (required only when <code>SinkType</code> is set to ADB). Obtain this ID from the <a href="https://gpdbnext.console.aliyun.com/gpdb/list">AnalyticDB for PostgreSQL instance list</a> page.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-bp32109xxxx</p>
@@ -224,7 +230,7 @@ public class CreateIndexRequest extends TeaModel {
     public String sinkInstanceId;
 
     /**
-     * <p>The region where the AnalyticDB for PostgreSQL instance is located. This parameter is required only when \<code>SinkType\\</code> is set to ADB. You can call the &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions?spm=a2c63.p38356.0.i3">DescribeRegions </a>operation to obtain a list of regions.</p>
+     * <p>The region of the AnalyticDB for PostgreSQL instance (required only when <code>SinkType</code> is set to ADB). Call &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions">DescribeRegions</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/analyticdb/analyticdb-for-postgresql/developer-reference/api-gpdb-2016-05-03-describeregions?spm=a2c63.p38356.0.i3">DescribeRegions</a> to obtain the list of regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -233,16 +239,14 @@ public class CreateIndexRequest extends TeaModel {
     public String sinkRegion;
 
     /**
-     * <p>The storage class for the knowledge base vectors. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge bases</a>. Valid values:</p>
+     * <p>The vector storage type of the knowledge base. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values:</p>
      * <ul>
-     * <li><p>BUILT_IN: Hosts the vector data on the Alibaba Cloud Model Studio platform.</p>
-     * </li>
-     * <li><p>ADB: AnalyticDB for PostgreSQL. We recommend choosing ADB if you need advanced features such as database management, auditing, and monitoring.</p>
+     * <li>BUILT_IN: Vector data is hosted on the Alibaba Cloud Model Studio platform.</li>
+     * <li>ADB: AnalyticDB for PostgreSQL database. If you need advanced features such as database management, auditing, and monitoring, select ADB.<blockquote>
+     * <p>If you have not used ADB storage on Alibaba Cloud Model Studio before, go to the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/#/knowledge-base/create">Create Knowledge Base</a>&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/#/knowledge-base/create">Create Knowledge Base</a> page, select ADB-PG as the vector storage type, and complete authorization as prompted. If you pass ADB, you must specify the <code>SinkInstanceId</code> and <code>SinkRegion</code> parameters.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>If you have not used ADB storage on Alibaba Cloud Model Studio, go to the &lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/#/knowledge-base/create">Create Knowledge Base</a> page, set the vector storage class to ADB-PG, and follow the on-screen instructions to grant the required permissions. If you set this parameter to ADB, you must specify the \<code>SinkInstanceId\\</code> and \<code>SinkRegion\\</code> parameters.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -253,21 +257,18 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>Notice: </p>
+     * <p>Notice: This parameter is required in the latest SDK. Otherwise, calling the SubmitIndexJob operation returns an error: Required parameter(data_sources) missing or invalid.</p>
      * </blockquote>
-     * <p>In the latest SDK version, this parameter is required. Otherwise, calling the SubmitIndexJob operation will result in the error: Required parameter(data_sources) missing or invalid.</p>
-     * <p>The source of the imported data. Valid values:</p>
+     * <p>The data source type. Valid values:</p>
      * <ul>
-     * <li><p>DATA_CENTER_CATEGORY: Category type. Imports all files under the specified categories in &lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. You can import multiple categories at the same time.</p>
-     * </li>
-     * <li><p>DATA_CENTER_FILE: File type. Imports the specified files from &lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. You can import multiple files at the same time.</p>
-     * </li>
+     * <li>DATA_CENTER_CATEGORY: Category type. Imports all files under specified categories in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. Multiple categories can be imported simultaneously.</li>
+     * <li>DATA_CENTER_FILE: File type. Imports specified files from &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. Multiple files can be imported simultaneously.</li>
      * </ul>
      * <blockquote>
-     * <p>If you set this parameter to DATA_CENTER_CATEGORY, you must specify the \<code>CategoryIds\\</code> parameter. If you set this parameter to DATA_CENTER_FILE, you must specify the \<code>DocumentIds\\</code> parameter.</p>
+     * <p>If this parameter is set to DATA_CENTER_CATEGORY, you must specify the <code>CategoryIds</code> parameter. If this parameter is set to DATA_CENTER_FILE, you must specify the <code>DocumentIds</code> parameter.</p>
      * </blockquote>
      * <blockquote>
-     * <p>To create an empty knowledge base, use an empty category that contains no files. Set this parameter to DATA_CENTER_CATEGORY and specify the ID of the empty category for \<code>CategoryIds\\</code>.</p>
+     * <p>To create an empty knowledge base, use an empty category that contains no files: set this parameter to DATA_CENTER_CATEGORY and pass the empty category ID in <code>CategoryIds</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -280,17 +281,17 @@ public class CreateIndexRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The type of the knowledge base.</p>
-     * <p><strong>Valid values</strong>:</p>
+     * <p>The knowledge base type.</p>
+     * <p><strong>Valid values:</strong></p>
      * <ul>
-     * <li>unstructured: A knowledge base for document search, audio, or video. The default scenario for document search is basic document Q\&amp;A.</li>
+     * <li>unstructured: A document search or audio/video knowledge base. The default scenario for document search type is basic document Q&amp;A. &lt;props=&quot;china&quot;&gt;To create other scenarios, pass the knowledgeType and knowledgeScene parameters.</li>
      * </ul>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>structured: A knowledge base for data query or image Q\&amp;A.</li>
+     * <li>structured: A data query or image-based Q&amp;A knowledge base.</li>
      * </ul>
      * <blockquote>
-     * <p>The type of a knowledge base cannot be changed after it is created.</p>
+     * <p>The knowledge base type cannot be changed after creation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -302,10 +303,10 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>Obtain the table ID on the Tables tab of the table connector in Data Connections by clicking the ID icon next to the table name. If the list contains multiple IDs, only the first one is used.</p>
+     * <p>Obtained by clicking the ID icon next to the table name on the Tables tab of <a href="https://bailian.console.aliyun.com/cn-beijing?tab=app#/connector/list">Data Connections</a> table connector. If the list contains multiple IDs, only the first one is used.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      */
     @NameInMap("TableIds")
@@ -320,24 +321,19 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>Enables custom chunking and specifies the chunking policy. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge bases</a>.</p>
-     * <p>Possible values (only one value can be specified at a time):</p>
+     * <p>Enables custom chunking and specifies the chunking strategy. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
+     * <p>Valid values (only one value can be passed at a time):</p>
      * <ul>
-     * <li><p><strong>length</strong>: Chunks by length. The text is strictly chunked according to the \<code>ChunkSize\\</code> and \<code>OverlapSize\\</code> you specify. If you do not specify these two parameters, the system uses the default values (\<code>ChunkSize\\</code> is 500, \<code>OverlapSize\\</code> is 100). Chunking by length does not support \<code>Separator\\</code> (it is ignored even if specified).</p>
-     * </li>
-     * <li><p><strong>page</strong>: Chunks by page. If \<code>ChunkSize\\</code> is specified, it is also considered during chunking (if not specified, the default value 500 is used). Chunking by page does not support \<code>OverlapSize\\</code> or \<code>Separator\\</code> (they are ignored even if specified).</p>
-     * </li>
-     * <li><p><strong>h1</strong>: Chunks by level-1 heading. If \<code>ChunkSize\\</code> is specified, it is also considered during chunking (if not specified, the default value 500 is used). Chunking by level-1 heading does not support \<code>OverlapSize\\</code> or \<code>Separator\\</code> (they are ignored even if specified).</p>
-     * </li>
-     * <li><p><strong>h2</strong>: Chunks by level-2 heading. If \<code>ChunkSize\\</code> is specified, it is also considered during chunking (if not specified, the default value 500 is used). Chunking by level-2 heading does not support \<code>OverlapSize\\</code> or \<code>Separator\\</code> (they are ignored even if specified).</p>
-     * </li>
-     * <li><p><strong>regex</strong>: Chunks by regular expression. You must specify the \<code>Separator\\</code> parameter. If \<code>ChunkSize\\</code> is specified, it is also considered during chunking (if not specified, the default value 500 is used). Chunking by regular expression does not support \<code>OverlapSize\\</code> (it is ignored even if specified).</p>
-     * </li>
+     * <li><strong>length</strong>: Chunk by length. Strictly chunks according to the specified <code>ChunkSize</code> and <code>OverlapSize</code>. If these two parameters are not passed, the system uses default values (<code>ChunkSize</code> of 500 and <code>OverlapSize</code> of 100). Chunking by length does not support <code>Separator</code> (it does not take effect even if specified).</li>
+     * <li><strong>page</strong>: Chunk by page. If <code>ChunkSize</code> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by page does not support <code>OverlapSize</code> or <code>Separator</code> (they do not take effect even if specified).</li>
+     * <li><strong>h1</strong>: Chunk by first-level headings. If <code>ChunkSize</code> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by first-level headings does not support <code>OverlapSize</code> or <code>Separator</code> (they do not take effect even if specified).</li>
+     * <li><strong>h2</strong>: Chunk by second-level headings. If <code>ChunkSize</code> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by second-level headings does not support <code>OverlapSize</code> or <code>Separator</code> (they do not take effect even if specified).</li>
+     * <li><strong>regex</strong>: Chunk by regular expression. The <code>Separator</code> parameter must be specified. If <code>ChunkSize</code> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by regular expression does not support <code>OverlapSize</code> (it does not take effect even if specified).</li>
      * </ul>
-     * <p>If you do not specify this parameter, smart chunking is used by default.</p>
+     * <p>If not specified, intelligent chunking is used by default.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -360,18 +356,16 @@ public class CreateIndexRequest extends TeaModel {
     public String datasourceCode;
 
     /**
-     * <p>Specifies whether to treat the first row of all .xlsx and .xls files as the table header and append it to each text chunk. This prevents the LLM from treating the header as a regular data row.</p>
+     * <p>Specifies whether to treat the first row of all xlsx and xls files as headers and concatenate them into each text chunk, preventing the large language model from treating headers as regular data rows.</p>
      * <blockquote>
-     * <p>We recommend enabling this feature only when all imported files are in .xlsx or .xls format and contain a header. Otherwise, do not enable it.</p>
+     * <p>Enable this feature only when all imported files are in .xlsx or .xls format and contain headers. Otherwise, do not enable it.</p>
      * </blockquote>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
-     * </li>
-     * <li><p>false: Disabled.</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
-     * <p>If you do not specify this parameter, this feature is disabled by default.</p>
+     * <p>If not specified, this feature is disabled by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -383,14 +377,18 @@ public class CreateIndexRequest extends TeaModel {
     public String knowledgeScene;
 
     /**
-     * <p>The data source code. This parameter is required when creating a data query knowledge base and is used with \<code>table\\</code> and \<code>database\\</code>.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>We recommend using the new \<code>connectId\\</code> parameter, which you can obtain from the data connector card on the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/connector/list">Data Connections</a> page. This parameter is still compatible but will no longer be maintained in the future.</p>
-     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;
+     * The specific knowledge type, which further specifies the type of data processed by the knowledge base.
+     * <notice>This parameter and knowledgeScene must be provided together or omitted together. They cannot be set independently. If both are omitted, the system uses default configurations based on structureType.</p>
+     * <p><strong>Settings constraint</strong>: The value of this parameter must match the selected structureType and determines the active values for knowledgeScene.</p>
+     * <p><strong>Valid values</strong>:</p>
      * <ul>
-     * <li>This operation does not support associating custom databases. Use the Alibaba Cloud Model Studio console to create them.</li>
+     * <li>document: Document search. Must be used with structureType: unstructured.</li>
+     * <li>table: Data query. Must be used with structureType: structured.</li>
+     * <li>image: Image-based Q&amp;A. Must be used with structureType: structured.</li>
+     * <li>multimedia: Audio/video search. Must be used with structureType: unstructured.</li>
      * </ul>
-     * </blockquote>
+     * <p>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>document</p>
@@ -399,17 +397,16 @@ public class CreateIndexRequest extends TeaModel {
     public String knowledgeType;
 
     /**
-     * <p>The metadata extraction configuration. Metadata is a series of additional attributes related to unstructured data content. These attributes are integrated into text chunks as key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge bases</a>.</p>
+     * <p>The metadata extraction configuration. Metadata is a set of additional attributes related to unstructured data content. These attributes are integrated into text chunks as key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</p>
      */
     @NameInMap("metaExtractColumns")
     public java.util.List<CreateIndexRequestMetaExtractColumns> metaExtractColumns;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The number of RCUs for the knowledge base. This parameter is required only when \<code>pipelineCommercialType\\</code> is set to \<code>enterprise\\</code>. The value must be between 1 and 200.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The number of RCUs for the knowledge base (required only when pipelineCommercialType is set to enterprise). Value range: [1-200].</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -420,16 +417,14 @@ public class CreateIndexRequest extends TeaModel {
 
     /**
      * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The <a href="https://help.aliyun.com/document_detail/2997110.html">edition type</a> of the knowledge base. Valid values:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/2997110.html">specification type</a> of the knowledge base. Valid values:</p>
      * <ul>
-     * <li><p>standard: Standard Edition</p>
-     * </li>
-     * <li><p>enterprise: Ultimate Edition</p>
-     * </li>
+     * <li>standard: Standard Edition.</li>
+     * <li>enterprise: Ultimate Edition.</li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -439,14 +434,13 @@ public class CreateIndexRequest extends TeaModel {
     public String pipelineCommercialType;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The rate limiting policy for the knowledge base dependency chain. This parameter is required only when \<code>pipelineCommercialType\\</code> is set to \<code>enterprise\\</code>.
-     * Value:
-     * downgrade: Degrades the service (switches to using a lightweight retrieval chain).
-     * If you do not specify this parameter, the default value \<code>downgrade\\</code> is used.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The rate limiting strategy for knowledge base dependent links (required only when pipelineCommercialType is set to enterprise).
+     * Valid values:
+     * downgrade: Downgrade processing (switch to lightweight link retrieval).
+     * If not specified, the default value is downgrade.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This parameter is not yet available. Do not specify it.</p>
+     * <p>This parameter is not available. Do not pass this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -738,7 +732,7 @@ public class CreateIndexRequest extends TeaModel {
     public static class CreateIndexRequestColumns extends TeaModel {
         /**
          * <blockquote>
-         * <p>This parameter is not yet available. Do not specify it.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -749,16 +743,14 @@ public class CreateIndexRequest extends TeaModel {
 
         /**
          * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>Specifies whether to participate in model response generation. If enabled, the retrieval results from this column are used as input for the LLM to generate an answer. Valid values:</p>
+         * <p>Specifies whether this column participates in model responses. When enabled, the search results of this column are used as input for the large language model to generate answers. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled.</p>
-         * </li>
-         * <li><p>false: Disabled.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not yet available. Do not specify it.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -769,16 +761,14 @@ public class CreateIndexRequest extends TeaModel {
 
         /**
          * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>Specifies whether to participate in knowledge base retrieval. If enabled, the knowledge base is allowed to search for data in this column. Valid values:</p>
+         * <p>Specifies whether this column participates in knowledge base retrieval. When enabled, the knowledge base can search within the data of this column. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled.</p>
-         * </li>
-         * <li><p>false: Disabled.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not yet available. Do not specify it.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -788,37 +778,32 @@ public class CreateIndexRequest extends TeaModel {
         public Boolean isSearch;
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>The field name. It must be consistent with the table header of the data table created in Application Data.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;
+         * The field name. Must be consistent with the header of the data table created in Application Data.</p>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not yet available. Do not specify it.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>学校</p>
+         * <p>School.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>The field type. It must be consistent with the table header of the data table created in Application Data. Valid values:</p>
+         * <p>The field type. Must be consistent with the header of the data table created in Application Data. Valid values:</p>
          * <ul>
-         * <li><p>string</p>
-         * </li>
-         * <li><p>double</p>
-         * </li>
-         * <li><p>long</p>
-         * </li>
-         * <li><p>datetime</p>
-         * </li>
-         * <li><p>image_url</p>
-         * </li>
+         * <li>string</li>
+         * <li>double</li>
+         * <li>long</li>
+         * <li>datetime</li>
+         * <li>image_url</li>
          * </ul>
          * <p>&lt;props=&quot;intl&quot;&gt;</p>
          * <blockquote>
-         * <p>This parameter is not yet available. Do not specify it.</p>
+         * <p>This parameter is not available. Do not pass this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -876,23 +861,21 @@ public class CreateIndexRequest extends TeaModel {
 
     public static class CreateIndexRequestMetaExtractColumns extends TeaModel {
         /**
-         * <p>The Chinese description of the metadata field. The description can be 0 to 1,000 characters in length and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:). The default value is empty.</p>
+         * <p>The Chinese description of the metadata field. The description can be up to 1000 characters in length and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:). Default value: empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>作者名</p>
+         * <p>AuthorName.</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
-         * <p>If enabled, the metadata field and its value are used along with the text chunk content in the answer generation process of the LLM. Valid values:</p>
+         * <p>Specifies whether this metadata field and its value participate in the large language model\&quot;s answer generation process along with the text chunk content. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled.</p>
-         * </li>
-         * <li><p>false: Disabled.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
-         * <p>The default value is false.</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -901,14 +884,12 @@ public class CreateIndexRequest extends TeaModel {
         public Boolean enableLlm;
 
         /**
-         * <p>If enabled, the metadata field and its value are used along with the text chunk content in the knowledge base retrieval process. Valid values:</p>
+         * <p>Specifies whether this metadata field and its value participate in knowledge base retrieval along with the text chunk content. Valid values:</p>
          * <ul>
-         * <li><p>true: Enabled.</p>
-         * </li>
-         * <li><p>false: Disabled.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
-         * <p>The default value is false.</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -917,7 +898,7 @@ public class CreateIndexRequest extends TeaModel {
         public Boolean enableSearch;
 
         /**
-         * <p>The metadata field. The field name can be 1 to 50 characters in length and must consist of letters or underscores. If you specify this parameter, you must also specify the \<code>Value\\</code> and \<code>Type\\</code> parameters.</p>
+         * <p>The metadata field. The field must be 1 to 50 characters in length and can contain only letters and underscores. If this parameter is specified, you must also specify the <code>Value</code> and <code>Type</code> parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>author</p>
@@ -926,18 +907,13 @@ public class CreateIndexRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The method for obtaining the value of the metadata field. Valid values:</p>
+         * <p>The extraction method for the metadata field. Valid values:</p>
          * <ul>
-         * <li><p>constant: Constant.</p>
-         * </li>
-         * <li><p>variable: Variable.</p>
-         * </li>
-         * <li><p>custom_prompt: Large Language Model (LLM).</p>
-         * </li>
-         * <li><p>regular: Regular expression.</p>
-         * </li>
-         * <li><p>keywords: Keyword search.</p>
-         * </li>
+         * <li>constant: Constant.</li>
+         * <li>variable: Variable.</li>
+         * <li>custom_prompt: Large language model.</li>
+         * <li>regular: Regular expression.</li>
+         * <li>keywords: Keyword search.</li>
          * </ul>
          * 
          * <strong>example:</strong>

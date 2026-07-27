@@ -28,7 +28,7 @@ public class AddChunkShrinkRequest extends TeaModel {
      * <ul>
      * <li>content (<strong>String</strong>): <strong>Required</strong>. The body content of the chunk.</li>
      * <li>title (<strong>String</strong>): <strong>Optional</strong>. The title of the chunk.</li>
-     * <li>image_urls (<strong>Array</strong>): <strong>Optional</strong>. Image URLs contained in the chunk. A maximum of 10 images are supported.</li>
+     * <li>image_urls (<strong>Array</strong>): <strong>Optional</strong>. Image URLs included in the chunk. A maximum of 10 images are supported.</li>
      * </ul>
      * <p>For data query and image Q&amp;A knowledge bases, the keys are not fixed and are determined by the data source spreadsheet of the knowledge base. The key is the Excel column header, and the value is the corresponding column value.</p>
      * 

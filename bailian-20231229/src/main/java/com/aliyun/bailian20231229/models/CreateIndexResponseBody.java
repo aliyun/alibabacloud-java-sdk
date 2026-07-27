@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateIndexResponseBody extends TeaModel {
     /**
-     * <p>Error status code</p>
+     * <p>The error status code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The business data returned when the request is successful.</p>
+     * <p>The business data returned when the request succeeds.</p>
      */
     @NameInMap("Data")
     public CreateIndexResponseBodyData data;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17204B98-xxxx-4F9A--2446A84821CA</p>
@@ -32,7 +32,7 @@ public class CreateIndexResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code returned by the interface.</p>
+     * <p>The status code returned by the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;200&quot;</p>
@@ -41,12 +41,10 @@ public class CreateIndexResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Successful</p>
-     * </li>
-     * <li><p>false: Failed</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,9 +108,9 @@ public class CreateIndexResponseBody extends TeaModel {
 
     public static class CreateIndexResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the knowledge base, also known as \<code>IndexId\\</code>. This is the unique identifier of the created knowledge base.</p>
+         * <p>The knowledge base ID, also known as <code>IndexId</code>. This is the unique identifier of the created knowledge base.</p>
          * <blockquote>
-         * <p>Keep this value safe. It will be used for all subsequent API operations related to this knowledge base.</p>
+         * <p>Store this value properly. It is required for all subsequent API operations related to this knowledge base.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
