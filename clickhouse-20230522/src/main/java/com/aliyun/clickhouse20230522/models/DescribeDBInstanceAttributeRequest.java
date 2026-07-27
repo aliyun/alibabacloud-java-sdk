@@ -15,7 +15,8 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The region ID. You can call the <a href="cdb.doc.dita#doc-api-clickhouse-DescribeRegions"><del>DescribeRegions</del></a> operation to query the most recent region list.</p>
+     * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

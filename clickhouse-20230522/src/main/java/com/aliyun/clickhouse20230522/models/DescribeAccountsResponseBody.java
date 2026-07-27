@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>The result returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DescribeAccountsResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     public static class DescribeAccountsResponseBodyDataAccounts extends TeaModel {
         /**
-         * <p>The username of the database account.</p>
+         * <p>The database account.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -53,10 +53,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The type of the database account. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: standard account</p>
-         * </li>
-         * <li><p><strong>6</strong>: privileged account</p>
-         * </li>
+         * <li><strong>1</strong>: Standard account.</li>
+         * <li><strong>6</strong>: Privileged account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,7 +64,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>For testing</p>
@@ -75,13 +73,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The state of the database account. Valid values:</p>
+         * <p>The account status. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: The database account is being created.</p>
+         * <li><p><strong>0</strong>: Being created.</p>
          * </li>
-         * <li><p><strong>1</strong>: The database account is in use.</p>
+         * <li><p><strong>1</strong>: In use.</p>
          * </li>
-         * <li><p><strong>3</strong>: The database account is being deleted.</p>
+         * <li><p><strong>3</strong>: Being deleted.</p>
          * </li>
          * </ul>
          * 
@@ -132,7 +130,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     public static class DescribeAccountsResponseBodyData extends TeaModel {
         /**
-         * <p>The database accounts.</p>
+         * <p>The list of accounts.</p>
          */
         @NameInMap("Accounts")
         public java.util.List<DescribeAccountsResponseBodyDataAccounts> accounts;
@@ -149,12 +147,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong> (default)</p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +159,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

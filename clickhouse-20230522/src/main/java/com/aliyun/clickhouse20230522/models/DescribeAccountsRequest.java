@@ -21,27 +21,24 @@ public class DescribeAccountsRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
-     * <p>The code of the cloud service.</p>
+     * <p>The product code.</p>
      * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
@@ -71,19 +68,19 @@ public class DescribeAccountsRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeAccountsRequest setPageNumber(String pageNumber) {
+    public DescribeAccountsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public DescribeAccountsRequest setPageSize(String pageSize) {
+    public DescribeAccountsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

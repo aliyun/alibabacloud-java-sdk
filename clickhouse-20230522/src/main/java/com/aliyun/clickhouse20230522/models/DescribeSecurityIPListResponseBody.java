@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityIPListResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DescribeSecurityIPListResponseBodyData data;
@@ -60,7 +60,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>The IP addresses in the whitelist group.</p>
+         * <p>The list of IP addresses in the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.XX.XX</p>
@@ -69,7 +69,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
-         * <p>The IP address type.</p>
+         * <p>The type of the IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>ipv4</p>
@@ -153,7 +153,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The whitelist groups.</p>
+         * <p>The list of whitelist groups.</p>
          */
         @NameInMap("GroupItems")
         public java.util.List<DescribeSecurityIPListResponseBodyDataGroupItems> groupItems;

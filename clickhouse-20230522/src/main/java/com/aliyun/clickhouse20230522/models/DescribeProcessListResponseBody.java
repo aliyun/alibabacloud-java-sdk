@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
     /**
-     * <p>The data object.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DescribeProcessListResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
     public static class DescribeProcessListResponseBodyDataResultSet extends TeaModel {
         /**
-         * <p>The address from which the query was initiated.</p>
+         * <p>The query address.</p>
          * 
          * <strong>example:</strong>
          * <p>0:0:0:0:0:ffff:1edd65ea</p>
@@ -60,7 +60,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String initialQueryId;
 
         /**
-         * <p>The user who initiated the query.</p>
+         * <p>The query user.</p>
          * 
          * <strong>example:</strong>
          * <p>bany</p>
@@ -69,7 +69,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String initialUser;
 
         /**
-         * <p>The query statement.</p>
+         * <p>The statement that is being queried.</p>
          * 
          * <strong>example:</strong>
          * <p>select * from test</p>
@@ -78,7 +78,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The execution duration of the query, in milliseconds (ms).</p>
+         * <p>The minimum query duration. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -87,7 +87,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public Long queryDurationMs;
 
         /**
-         * <p>The start time of the query. The time is in UTC and follows the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
+         * <p>The time when the query started. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-07-23T10:13:23Z</p>
@@ -176,7 +176,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public java.util.List<DescribeProcessListResponseBodyDataResultSet> resultSet;
 
         /**
-         * <p>The total number of entries that match the filter criteria.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

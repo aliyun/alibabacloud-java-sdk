@@ -58,7 +58,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "clickhouse.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "clickhouse.cn-wulanchabu.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"),
@@ -1512,7 +1512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries database accounts for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the list of database accounts for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1560,7 +1560,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries database accounts for an ApsaraDB for ClickHouse cluster.</p>
+     * <p>Queries the list of database accounts for a specified ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -1688,7 +1688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</p>
+     * <p>Queries the details of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1724,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</p>
+     * <p>Queries the details of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -1948,7 +1948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To retrieve the cluster endpoints, call DescribeEndpoints.</p>
+     * <p>Calls the DescribeEndpoints operation to query the endpoints of a cluster.</p>
      * 
      * @param request DescribeEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1988,7 +1988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To retrieve the cluster endpoints, call DescribeEndpoints.</p>
+     * <p>Calls the DescribeEndpoints operation to query the endpoints of a cluster.</p>
      * 
      * @param request DescribeEndpointsRequest
      * @return DescribeEndpointsResponse
@@ -2444,7 +2444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes currently running queries.</p>
+     * <p>Calls the DescribeProcessList operation to view queries that are currently running.</p>
      * 
      * @param request DescribeProcessListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2512,7 +2512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describes currently running queries.</p>
+     * <p>Calls the DescribeProcessList operation to view queries that are currently running.</p>
      * 
      * @param request DescribeProcessListRequest
      * @return DescribeProcessListResponse
@@ -2557,7 +2557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a whitelist.</p>
+     * <p>Queries the IP address whitelist of a cluster by calling the DescribeSecurityIPList operation.</p>
      * 
      * @param request DescribeSecurityIPListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2593,7 +2593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a whitelist.</p>
+     * <p>Queries the IP address whitelist of a cluster by calling the DescribeSecurityIPList operation.</p>
      * 
      * @param request DescribeSecurityIPListRequest
      * @return DescribeSecurityIPListResponse

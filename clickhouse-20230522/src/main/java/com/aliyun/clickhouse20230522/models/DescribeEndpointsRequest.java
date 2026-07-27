@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEndpointsRequest extends TeaModel {
     /**
-     * <p>The computing group ID.</p>
+     * <p>The compute group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cc-*****-clickhouse</p>
@@ -25,6 +25,7 @@ public class DescribeEndpointsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
